@@ -1,146 +1,110 @@
-import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
-  title: 'Systemic Diagnosis – King Klown & KOA',
-  description: 'A radical lucidity assessment of the interlocking crises facing modern society: the 9 systemic failures we must solve.',
+  title: 'King Klown & KOA – Civic Utilities',
+  description: 'Shared infrastructure for learning, coordination, and meritocratic governance.',
 };
 
-export default function DiagnosisPage() {
+export default function HomePage() {
   return (
     <main className="min-h-screen bg-white">
-      {/* HEADER SECTION */}
-      <section className="bg-slate-900 text-white py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="uppercase tracking-widest text-sm text-primary mb-4 font-bold">
-            The Manifesto
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
-            Global Context & Systemic Diagnosis
+      {/* HERO SECTION */}
+      <section className="bg-slate-900 text-white pt-24 pb-32 px-6 relative overflow-hidden">
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight font-serif">
+            King Klown <span className="text-primary">&</span> KOA
           </h1>
-          <p className="text-xl opacity-90 leading-relaxed max-w-2xl mx-auto">
-            We cannot fix what we refuse to see. Before proposing solutions, we must 
-            practice <strong>Radical Lucidity</strong>: facing the harsh reality of our 
-            interlocking crises without illusion or optimism bias.
+          <p className="text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+            We build <strong>civic utilities</strong> for a fragmented world. <br />
+            An ecosystem for radical learning, secure coordination, and meaningful governance.
           </p>
-        </div>
-      </section>
-
-      {/* INTRODUCTION */}
-      <section className="max-w-4xl mx-auto px-6 py-16">
-        <div className="prose prose-lg text-gray-700">
-          <p>
-            The contemporary world faces an unprecedented convergence of crises. 
-            Social fragmentation, ecological instability, and rapid technological upheaval 
-            have created an environment where traditional reforms—incremental, isolated, 
-            or technocratic—are no longer sufficient.
-          </p>
-          <p>
-            Our institutions were designed for a slower, more stable century. Today, 
-            they are buckling under the weight of nine specific, mutually reinforcing failures.
-          </p>
-        </div>
-      </section>
-
-      {/* THE 9 SYSTEMIC FAILURES */}
-      <section className="bg-slate-50 py-16 px-6 border-y border-gray-200">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">The 9 Systemic Failures</h2>
           
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Failure 1 */}
-            <FailureCard 
-              number="01"
-              title="Image-Over-Substance"
-              description="Politics and business now prioritize visibility, charisma, and narrative control over competence. Metrics like follower counts overshadow evidence-based track records, creating a feedback loop of spectacle."
-            />
-            {/* Failure 2 */}
-            <FailureCard 
-              number="02"
-              title="Debt-Laden Education"
-              description="The prevailing model ties credential value to institutional brands while financing itself through crushing student debt. Curricula lag behind reality, perpetuating barriers to mobility."
-            />
-            {/* Failure 3 */}
-            <FailureCard 
-              number="03"
-              title="Fragmented Information"
-              description="Digital ecosystems prioritize engagement over truth. Algorithms amplify conflict and micro-target realities, making shared public discourse and crisis response nearly impossible."
-            />
-            {/* Failure 4 */}
-            <FailureCard 
-              number="04"
-              title="Legacy Workflow Drag"
-              description="Institutions remain anchored to outdated processes that have been digitized but not redesigned. Hierarchical bottlenecks create opacity and inequity for those without intermediaries."
-            />
-            {/* Failure 5 */}
-            <FailureCard 
-              number="05"
-              title="Elite Capture of Regulation"
-              description="Complex regulations and selective enforcement benefit incumbents. Wealth shapes the design of rules, eroding public trust and reinforcing systemic asymmetries."
-            />
-            {/* Failure 6 */}
-            <FailureCard 
-              number="06"
-              title="Rent-Extracting Intermediaries"
-              description="Wherever friction exists, middlemen arise to monetize it without adding value. This diverts resources from productive use and raises barriers to entry for creators."
-            />
-            {/* Failure 7 */}
-            <FailureCard 
-              number="07"
-              title="Fossil-Centric Lock-In"
-              description="Our economy remains physically anchored to fossil energy and plastics. Sunk-cost infrastructure and lobbying slow the transition, prioritizing short-term profit over survival."
-            />
-            {/* Failure 8 */}
-            <FailureCard 
-              number="08"
-              title="Social Fragmentation"
-              description="The decline of shared civic rituals and the rise of hyper-mobility have weakened social ties. This isolation weakens collective action and increases vulnerability to shocks."
-            />
-            {/* Failure 9 */}
-            <FailureCard 
-              number="09"
-              title="The Hyper-Individualist Myth"
-              description="A cultural narrative that celebrates personal aspiration detached from community. This inflates expectations and leads to disillusionment when individual effort fails to overcome structural barriers."
-            />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/platforms" 
+              className="px-8 py-4 bg-primary text-white rounded-lg font-bold text-lg hover:bg-opacity-90 transition shadow-lg shadow-primary/25"
+            >
+              Explore the Platforms
+            </Link>
+            <Link 
+              href="/diagnosis" 
+              className="px-8 py-4 bg-white/10 border border-white/20 backdrop-blur-sm text-white rounded-lg font-bold text-lg hover:bg-white/20 transition"
+            >
+              Read the Diagnosis
+            </Link>
           </div>
         </div>
+        
+        {/* Abstract Background Element */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+           <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-primary to-transparent" />
+        </div>
       </section>
 
-      {/* CONCLUSION / CALL TO ACTION */}
-      <section className="max-w-4xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-3xl font-bold mb-6">The Path Forward</h2>
-        <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-          These failures are interconnected; they cannot be solved in isolation. 
-          This diagnosis sets the stage for <strong>King Klown & KOA</strong>: a systemic response 
-          built on radical openness, meritocratic governance, and constructive radicalism.
-        </p>
-        <div className="flex justify-center gap-4">
-          <a 
-            href="/principles" 
-            className="px-8 py-3 bg-primary text-white rounded-lg font-bold hover:bg-opacity-90 transition"
-          >
-            Explore Our Principles
-          </a>
-          <a 
-            href="/platforms" 
-            className="px-8 py-3 border border-gray-300 rounded-lg font-bold hover:bg-gray-50 transition"
-          >
-            See the Solutions
-          </a>
+      {/* THE THREE PILLARS (Navigation Hub) */}
+      <section className="max-w-6xl mx-auto px-6 py-20 -mt-20 relative z-20">
+        <div className="grid md:grid-cols-3 gap-6">
+          
+          {/* Pillar 1: THE CONTEXT */}
+          <NavCard 
+            title="The Diagnosis"
+            subtitle="Global Context"
+            icon="🌐"
+            description="We cannot fix what we refuse to see. A radical assessment of the 9 systemic failures facing modern society."
+            href="/diagnosis"
+            accent="border-blue-500"
+          />
+
+          {/* Pillar 2: THE SOLUTION */}
+          <NavCard 
+            title="The Platforms"
+            subtitle="Our Ecosystem"
+            icon="🛠️"
+            description="Tools for the new world: Konnaxion (Public Engine), Orgo (Private Engine), and Kristal Farms (Infrastructure)."
+            href="/platforms"
+            accent="border-primary"
+          />
+
+          {/* Pillar 3: THE SOUL */}
+          <NavCard 
+            title="Kréature (FR)"
+            subtitle="The Interface"
+            icon="🎭"
+            description="The mythopoetic perspective. Enter the organism through King Klown's narrative lens."
+            href="/platforms/kreature"
+            accent="border-purple-500"
+          />
+        </div>
+      </section>
+
+      {/* REJEAN'S FOOTER / TECH LINK */}
+      <section className="max-w-4xl mx-auto px-6 pb-20 text-center">
+        <div className="border-t border-gray-100 pt-10">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">Built on Rigorous Engineering</h3>
+          <p className="text-gray-500 mb-6">
+            Beyond the myth lies the machine. Explore the architectural specifications, invariants, and service definitions.
+          </p>
+          <Link href="/technology" className="text-sm font-mono text-primary hover:underline bg-gray-50 px-4 py-2 rounded-full border border-gray-200">
+            View Technology Stack (Réjean McCormick) →
+          </Link>
         </div>
       </section>
     </main>
   );
 }
 
-// Helper Component for the Grid
-function FailureCard({ number, title, description }: { number: string, title: string, description: string }) {
+function NavCard({ title, subtitle, icon, description, href, accent }) {
   return (
-    <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-      <div className="text-4xl font-bold text-gray-200 mb-4">{number}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 leading-relaxed text-sm">
+    <Link href={href} className={`group block bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 border-t-4 ${accent}`}>
+      <div className="text-4xl mb-4 group-transform group-hover:scale-110 transition-transform duration-300">{icon}</div>
+      <div className="uppercase tracking-wider text-xs font-bold text-gray-400 mb-2">{subtitle}</div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">{title}</h2>
+      <p className="text-gray-600 leading-relaxed">
         {description}
       </p>
-    </div>
+      <div className="mt-6 font-semibold text-sm text-primary flex items-center">
+        Learn more <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+      </div>
+    </Link>
   );
 }

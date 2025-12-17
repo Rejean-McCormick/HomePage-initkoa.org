@@ -6,8 +6,10 @@ import Link from 'next/link';
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Added Kréature to the main navigation for visibility
   const navLinks = [
     { href: '/platforms', label: 'Platforms' },
+    { href: '/platforms/kreature', label: 'Kréature (FR)' }, // New entry
     { href: '/initiatives', label: 'Initiatives' },
     { href: '/principles', label: 'Principles' },
     { href: '/contact', label: 'Contact' },
