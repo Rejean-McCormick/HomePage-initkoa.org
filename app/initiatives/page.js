@@ -17,7 +17,7 @@ export default function InitiativesPage() {
           href="/initiatives/koa-political-movement"
           className="group block h-full p-8 border border-gray-200 rounded-2xl hover:border-primary hover:shadow-lg transition duration-300 bg-white"
         >
-          <div className="mb-4 text-primary text-4xl">🏛️</div>
+          <div className="mb-4 text-primary text-4xl"></div>
           <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
             KOA Political Movement
           </h2>
@@ -34,7 +34,7 @@ export default function InitiativesPage() {
           href="/initiatives/desjardins-cooperative-transformation"
           className="group block h-full p-8 border border-gray-200 rounded-2xl hover:border-primary hover:shadow-lg transition duration-300 bg-white"
         >
-          <div className="mb-4 text-primary text-4xl">🤝</div>
+          <div className="mb-4 text-primary text-4xl"></div>
           <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
             Cooperative Transformation
           </h2>
@@ -51,7 +51,7 @@ export default function InitiativesPage() {
           href="/initiatives/ukraine-peace-and-reconstruction-plan"
           className="group block h-full p-8 border border-gray-200 rounded-2xl hover:border-primary hover:shadow-lg transition duration-300 bg-white"
         >
-          <div className="mb-4 text-primary text-4xl">🕊️</div>
+          <div className="mb-4 text-primary text-4xl"></div>
           <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
             Ukraine Peace & Reconstruction
           </h2>

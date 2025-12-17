@@ -17,7 +17,7 @@ export default function ContactPage() {
         </p>
 
         <div className="flex items-center space-x-3">
-          <span className="text-2xl">✉️</span>
+          <span className="text-2xl"></span>
           <a 
             href="mailto:k@kingklown.com" 
             className="text-2xl font-bold text-primary hover:underline"

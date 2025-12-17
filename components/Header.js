@@ -46,7 +46,7 @@ export default function Header() {
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-gray-600 hover:text-primary focus:outline-none"
             >
-              {menuOpen ? '✕' : '☰'}
+              {menuOpen ? '' : ''}
             </button>
           </div>
         </div>
