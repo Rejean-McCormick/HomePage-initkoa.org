@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,jsx,ts,tsx}",
+    "./app/**/*.{js,jsx,ts,tsx,md,mdx}", // <--- Updated to include Markdown files
     "./components/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
@@ -14,5 +14,7 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [
+    require('@tailwindcss/typography'), // <--- Added for beautiful Markdown rendering
+  ]
 };

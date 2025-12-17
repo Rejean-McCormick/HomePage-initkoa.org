@@ -5,97 +5,127 @@ export default function HomePage() {
   return (
     <>
       {/* ===== HERO ===== */}
-      <section className="bg-primary text-white py-20">
+      <section className="bg-primary text-white py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            King Klown &amp; KOA
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+            King Klown & KOA
           </h1>
-          <p className="text-xl md:text-2xl opacity-95">
-            Un mouvement sociotechnique mêlant fiction surréaliste et innovation
-            concrète pour transformer la société.
+          <p className="text-xl md:text-2xl opacity-90 leading-relaxed">
+            A socio-technical movement merging surrealist narrative with 
+            concrete innovation to solve systemic crises and transform global governance.
           </p>
         </div>
       </section>
 
-      {/* ===== PLATEFORMES ===== */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold mb-8">Nos Plateformes</h2>
-        <div className="grid gap-6 md:grid-cols-3">
+      {/* ===== PLATFORMS (The Core Ecosystem) ===== */}
+      <section className="max-w-5xl mx-auto px-4 py-16">
+        <h2 className="text-3xl font-bold mb-10 text-center">Our Technology Stack</h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           <Card
             title="Konnaxion"
-            description="Plateforme qui connecte l’humanité et amplifie son intelligence collective."
+            description="A knowledge-sharing platform designed to amplify collective intelligence and verify global insights."
             href="/platforms/konnaxion"
           />
           <Card
-            title="Kristal Farms"
-            description="Infrastructure d’IA verte alimentée par énergie propre pour démocratiser le savoir."
+            title="Kristal Farms"
+            description="Green AI infrastructure powered by clean energy to provide sustainable and open-access computing."
             href="/platforms/kristal-farms"
           />
           <Card
             title="Orgo"
-            description="Outil organisationnel open‑source pour une gestion plus agile et collaborative."
+            description="Our open-source organizational framework for agile, role-based management and transparent coordination."
             href="/platforms/orgo"
           />
-        </div>
-      </section>
-
-      {/* ===== INITIATIVES ===== */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold mb-8">Nos Initiatives</h2>
-        <div className="grid gap-6">
           <Card
-            title="Le Surreal"
-            description="Approche mêlant la fiction surréaliste et l’action concrète pour inspirer le changement."
-            href="/initiatives/surreal"
+            title="Ekoh"
+            description="A meritocratic voting system where influence is weighted by validated competence and ethical alignment."
+            href="/platforms/ekoh"
           />
         </div>
       </section>
 
-      {/* ===== TOUS LES LIENS ===== */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold mb-8">Tous nos liens</h2>
+      {/* ===== INITIATIVES (Strategic Impact) ===== */}
+      <section className="bg-gray-50 border-y border-gray-200 py-16">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-10 text-center">Active Initiatives</h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            <Card
+              title="Ukraine Peace & Reconstruction"
+              description="A 3-phase geopolitical roadmap: Freeze (Peace), Vote (Self-determination), and Rebuild (Construction Olympics)."
+              href="/initiatives/ukraine-peace-plan"
+            />
+            <Card
+              title="KOA Political Movement"
+              description="Modernizing public policy through technology, radical transparency, and collaborative governance."
+              href="/initiatives/koa-political-movement"
+            />
+            <Card
+              title="Cooperative Transformation"
+              description="Redesigning the Desjardins model into a digital direct democracy with volunteer leadership."
+              href="/initiatives/desjardins-cooperative-transformation"
+            />
+            <Card
+              title="The Surreal"
+              description="Our core methodology: Transforming surrealist fiction into tangible social and political leverage."
+              href="/initiatives/surreal"
+            />
+          </div>
+        </div>
+      </section>
 
-        <ul className="grid gap-4 sm:grid-cols-2">
-          {[
-            ['https://kingklown.xyz/koa', 'Plans / Roadmap KOA'],
-            ['https://kingklown.com', 'Présentation générale'],
-            ['https://kingklown.ca/', 'Mouvement politique (EN)'],
-            ['https://www.kingklown.wiki', 'Konnaxion (Wiki)'],
-            ['https://kingklown.store', 'Branded Clothes'],
-            [
-              'https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4?si=69f66bdd97e34071',
-              'Podcast « Mythos King Klown »'
-            ],
-            ['https://www.youtube.com/@KingKlownXYZ', 'YouTube'],
-            ['https://www.tumblr.com/blog/kingklownxyz', 'Tumblr'],
-            ['https://www.tiktok.com/@kingklown.xyz', 'TikTok'],
-            ['https://x.com/KingKlownXYZ', 'X (Twitter)'],
-            ['https://www.twitch.tv/kingklownxyz', 'Twitch'],
-            [
-              'https://www.facebook.com/profile.php?id=61567073454490',
-              'Facebook'
-            ],
-            ['https://www.instagram.com/kingklown.xyz/', 'Instagram'],
-            ['https://github.com/Rejean-McCormick/', 'GitHub (dev)'],
-            ['mailto:k@kingklown.com', 'k@kingklown.com']
-          ].map(([url, label]) => (
-            <li key={url}>
-              <a
-                href={url}
-                target={url.startsWith('mailto') ? '_self' : '_blank'}
-                rel={
-                  url.startsWith('mailto') ? undefined : 'noopener noreferrer'
-                }
-                className="block w-full bg-white border border-gray-200 rounded-lg
-                           px-4 py-3 text-center text-primary
-                           hover:bg-primary hover:text-white transition"
-              >
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
+      {/* ===== GLOBAL ECOSYSTEM (External Links) ===== */}
+      <section className="max-w-5xl mx-auto px-4 py-16">
+        <h2 className="text-3xl font-bold mb-12 text-center">Global Ecosystem</h2>
+        
+        <div className="grid gap-12 md:grid-cols-3">
+          {/* Group 1: Strategic & Development */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-gray-500 uppercase tracking-wider">Strategy & Code</h3>
+            <ul className="space-y-3">
+              <NavLink url="https://kingklown.xyz/koa" label="Roadmap & Plans" />
+              <NavLink url="https://github.com/Rejean-McCormick/" label="GitHub (Source Code)" />
+              <NavLink url="https://www.kingklown.wiki" label="Konnaxion Wiki" />
+            </ul>
+          </div>
+
+          {/* Group 2: Media & Content */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-gray-500 uppercase tracking-wider">Media & Social</h3>
+            <ul className="space-y-3">
+              <NavLink url="https://www.youtube.com/@KingKlownXYZ" label="YouTube Channel" />
+              <NavLink url="https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4?si=69f66bdd97e34071" label="Mythos Podcast" />
+              <NavLink url="https://x.com/KingKlownXYZ" label="X (Twitter)" />
+              <NavLink url="https://www.tiktok.com/@kingklown.xyz" label="TikTok" />
+            </ul>
+          </div>
+
+          {/* Group 3: Contact & Commerce */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-gray-500 uppercase tracking-wider">Network</h3>
+            <ul className="space-y-3">
+              <NavLink url="https://kingklown.store" label="Branded Apparel" />
+              <NavLink url="mailto:k@kingklown.com" label="Contact k@kingklown.com" isMail />
+              <NavLink url="https://kingklown.com" label="Main Presentation" />
+            </ul>
+          </div>
+        </div>
       </section>
     </>
+  );
+}
+
+// Helper component for clean link management
+function NavLink({ url, label, isMail = false }) {
+  return (
+    <li>
+      <a
+        href={url}
+        target={isMail ? '_self' : '_blank'}
+        rel={isMail ? undefined : 'noopener noreferrer'}
+        className="text-primary hover:underline font-medium transition duration-200"
+      >
+        {label}
+      </a>
+    </li>
   );
 }

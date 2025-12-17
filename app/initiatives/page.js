@@ -1,57 +1,68 @@
-// app/initiatives/page.js
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Nos initiatives – KOA',
+  title: 'Strategic Initiatives – KOA',
+  description: 'Our active projects for systemic change: Ukraine Peace Plan, Political Reform, and Cooperative Transformation.',
 };
 
-export default function Initiatives() {
+export default function InitiativesPage() {
   return (
-    <main className="max-w-5xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-10">Nos Initiatives Stratégiques</h1>
+    <main className="max-w-5xl mx-auto px-6 py-12">
+      <h1 className="text-4xl font-bold mb-12 text-center">Strategic Initiatives</h1>
 
       <div className="grid gap-8 md:grid-cols-3">
+        
+        {/* KOA Politics */}
         <Link
           href="/initiatives/koa-political-movement"
-          className="block h-full p-6 border border-gray-300 rounded-lg hover:shadow-xl transition"
+          className="group block h-full p-8 border border-gray-200 rounded-2xl hover:border-primary hover:shadow-lg transition duration-300 bg-white"
         >
-          <h2 className="text-xl font-extrabold mb-3">
-            Mouvement Politique KOA →
+          <div className="mb-4 text-primary text-4xl">🏛️</div>
+          <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+            KOA Political Movement
           </h2>
-          <p>
-            Transformation systémique fondée sur l’intelligence collective,
-            le vote méritocratique et la transparence intégrale pour moderniser
-            gouvernance, éducation, justice, santé et économie coopérative.
+          <p className="text-gray-600 leading-relaxed">
+            A systemic transformation platform founded on collective intelligence, 
+            meritocratic voting, and radical transparency to modernize governance, 
+            education, and justice.
           </p>
+          <div className="mt-6 font-semibold text-primary">Read Roadmap →</div>
         </Link>
 
+        {/* Desjardins */}
         <Link
           href="/initiatives/desjardins-cooperative-transformation"
-          className="block h-full p-6 border border-gray-300 rounded-lg hover:shadow-xl transition"
+          className="group block h-full p-8 border border-gray-200 rounded-2xl hover:border-primary hover:shadow-lg transition duration-300 bg-white"
         >
-          <h2 className="text-xl font-extrabold mb-3">
-            Transformation Coopérative Desjardins →
+          <div className="mb-4 text-primary text-4xl">🤝</div>
+          <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+            Cooperative Transformation
           </h2>
-          <p>
-            Projet pilote : présidence bénévole, plafonnement des salaires,
-            votes numériques, budgets participatifs locaux et canal philanthropique
-            transparent pour redonner le plein pouvoir aux membres.
+          <p className="text-gray-600 leading-relaxed">
+            A pilot project to redesign the Desjardins model: volunteer leadership, 
+            salary caps, digital direct democracy, and transparent philanthropy 
+            to return power to members.
           </p>
+          <div className="mt-6 font-semibold text-primary">Explore the Plan →</div>
         </Link>
 
+        {/* Ukraine */}
         <Link
           href="/initiatives/ukraine-peace-and-reconstruction-plan"
-          className="block h-full p-6 border border-gray-300 rounded-lg hover:shadow-xl transition"
+          className="group block h-full p-8 border border-gray-200 rounded-2xl hover:border-primary hover:shadow-lg transition duration-300 bg-white"
         >
-          <h2 className="text-xl font-extrabold mb-3">
-            Paix &amp; Reconstruction Ukraine →
+          <div className="mb-4 text-primary text-4xl">🕊️</div>
+          <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+            Ukraine Peace & Reconstruction
           </h2>
-          <p>
-            Cessez‑le‑feu supervisé, neutralité constitutionnelle, force neutre
-            de maintien de la paix, référendums encadrés et fonds mondial pour
-            rebâtir infrastructures, économie et cohésion sociale.
+          <p className="text-gray-600 leading-relaxed">
+            A comprehensive 3-phase framework: <strong>Freeze</strong> (Ceasefire), 
+            <strong>Vote</strong> (Self-determination), and <strong>Rebuild</strong> 
+            (The Construction Olympics).
           </p>
+          <div className="mt-6 font-semibold text-primary">View the Framework →</div>
         </Link>
+
       </div>
     </main>
   );
