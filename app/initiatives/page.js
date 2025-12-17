@@ -12,7 +12,7 @@ export default function Initiatives() {
 
       <div className="grid gap-8 md:grid-cols-3">
         <Link
-          href="/initiatives/mouvement-politique-koa"
+          href="/initiatives/koa-political-movement"
           className="block h-full p-6 border border-gray-300 rounded-lg hover:shadow-xl transition"
         >
           <h2 className="text-xl font-extrabold mb-3">
@@ -26,7 +26,7 @@ export default function Initiatives() {
         </Link>
 
         <Link
-          href="/initiatives/transformation-cooperative-desjardins"
+          href="/initiatives/desjardins-cooperative-transformation"
           className="block h-full p-6 border border-gray-300 rounded-lg hover:shadow-xl transition"
         >
           <h2 className="text-xl font-extrabold mb-3">
@@ -40,7 +40,7 @@ export default function Initiatives() {
         </Link>
 
         <Link
-          href="/initiatives/plan-paix-reconstruction-ukraine"
+          href="/initiatives/ukraine-peace-and-reconstruction-plan"
           className="block h-full p-6 border border-gray-300 rounded-lg hover:shadow-xl transition"
         >
           <h2 className="text-xl font-extrabold mb-3">

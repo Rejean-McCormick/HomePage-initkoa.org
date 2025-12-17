@@ -38,7 +38,7 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/principes" className="text-gray-800 hover:text-primary" onClick={() => setMenuOpen(false)}>
+              <Link href="/principles" className="text-gray-800 hover:text-primary" onClick={() => setMenuOpen(false)}>
                 Principes
               </Link>
             </li>
