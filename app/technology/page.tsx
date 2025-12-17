@@ -44,8 +44,9 @@ export default function TechIndex() {
               <strong className="text-xl text-primary group-hover:underline">SenTient</strong>
               <span className="text-xs font-mono bg-gray-100 px-2 py-1 rounded">Sens / Input</span>
             </div>
+            {/* FIXED: &apos; used for apostrophe */}
             <p className="text-gray-700 mb-4">
-              A tool to deconstruct natural language and format it for Wikidata. Inspired by Falcon 2.0, OpenRefine, and OpenTapioca to secure the system's entry point.
+              A tool to deconstruct natural language and format it for Wikidata. Inspired by Falcon 2.0, OpenRefine, and OpenTapioca to secure the system&apos;s entry point.
             </p>
           </Link>
           <a href="https://github.com/Rejean-McCormick/SenTient" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
