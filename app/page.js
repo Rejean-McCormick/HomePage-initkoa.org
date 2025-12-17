@@ -7,84 +7,81 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* HERO SECTION */}
-      <section className="bg-slate-900 text-white pt-24 pb-32 px-6 relative overflow-hidden">
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight font-serif">
-            King Klown <span className="text-primary">&</span> KOA
+    <main className="min-h-screen bg-white text-slate-900 selection:bg-primary selection:text-white">
+      
+      {/* HERO SECTION: Strict, Editorial, Institutional */}
+      <section className="pt-32 pb-24 px-6 border-b border-gray-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-6xl md:text-8xl font-serif font-medium mb-8 tracking-tight text-slate-900">
+            King Klown <span className="text-primary italic">&</span> KOA
           </h1>
-          <p className="text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-            We build <strong>civic utilities</strong> for a fragmented world. <br />
-            An ecosystem for radical learning, secure coordination, and meaningful governance.
+          
+          <p className="text-xl md:text-2xl text-slate-500 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+            Building <strong>civic utilities</strong> for a fragmented world. <br />
+            Shared infrastructure for radical learning, secure coordination, and meaningful governance.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link 
               href="/platforms" 
-              className="px-8 py-4 bg-primary text-white rounded-lg font-bold text-lg hover:bg-opacity-90 transition shadow-lg shadow-primary/25"
+              className="px-8 py-3 bg-slate-900 text-white rounded-sm font-medium hover:bg-primary transition-colors duration-300 min-w-[200px]"
             >
-              Explore the Platforms
+              Explore Ecosystem
             </Link>
             <Link 
               href="/diagnosis" 
-              className="px-8 py-4 bg-white/10 border border-white/20 backdrop-blur-sm text-white rounded-lg font-bold text-lg hover:bg-white/20 transition"
+              className="px-8 py-3 border border-gray-300 text-slate-600 rounded-sm font-medium hover:border-slate-900 hover:text-slate-900 transition-all duration-300 min-w-[200px]"
             >
-              Read the Diagnosis
+              The Diagnosis
             </Link>
           </div>
         </div>
-        
-        {/* Abstract Background Element */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-           <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-primary to-transparent" />
-        </div>
       </section>
 
-      {/* THE THREE PILLARS (Navigation Hub) */}
-      <section className="max-w-6xl mx-auto px-6 py-20 -mt-20 relative z-20">
-        <div className="grid md:grid-cols-3 gap-6">
+      {/* NAVIGATION HUB: Clean Grid, No Shadows, SVG Icons */}
+      <section className="max-w-6xl mx-auto px-6 py-24">
+        <div className="grid md:grid-cols-3 gap-12">
           
-          {/* Pillar 1: THE CONTEXT */}
+          {/* Pillar 1: CONTEXT */}
           <NavCard 
+            href="/diagnosis"
             title="The Diagnosis"
             subtitle="Global Context"
-            icon="🌐"
             description="We cannot fix what we refuse to see. A radical assessment of the 9 systemic failures facing modern society."
-            href="/diagnosis"
-            accent="border-blue-500"
+            icon={<IconGlobe />}
           />
 
-          {/* Pillar 2: THE SOLUTION */}
+          {/* Pillar 2: SOLUTION */}
           <NavCard 
-            title="The Platforms"
-            subtitle="Our Ecosystem"
-            icon="🛠️"
-            description="Tools for the new world: Konnaxion (Public Engine), Orgo (Private Engine), and Kristal Farms (Infrastructure)."
             href="/platforms"
-            accent="border-primary"
+            title="The Platforms"
+            subtitle="The Architecture"
+            description="Tools for the new world: Konnaxion (Public Engine), Orgo (Private Engine), and Kristal Farms (Infrastructure)."
+            icon={<IconStack />}
           />
 
-          {/* Pillar 3: THE SOUL */}
+          {/* Pillar 3: INTERFACE */}
           <NavCard 
-            title="Kréature (FR)"
-            subtitle="The Interface"
-            icon="🎭"
-            description="The mythopoetic perspective. Enter the organism through King Klown's narrative lens."
             href="/platforms/kreature"
-            accent="border-purple-500"
+            title="Kréature (FR)"
+            subtitle="The Metaphor"
+            description="The organic interface. Exploring the ecosystem through a biological and narrative lens."
+            icon={<IconEye />}
           />
         </div>
       </section>
 
-      {/* REJEAN'S FOOTER / TECH LINK */}
-      <section className="max-w-4xl mx-auto px-6 pb-20 text-center">
-        <div className="border-t border-gray-100 pt-10">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">Built on Rigorous Engineering</h3>
-          <p className="text-gray-500 mb-6">
-            Beyond the myth lies the machine. Explore the architectural specifications, invariants, and service definitions.
+      {/* TECHNICAL FOOTER: Minimalist */}
+      <section className="bg-slate-50 border-t border-gray-100 py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Engineering & Specs</h3>
+          <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto font-serif italic">
+            "Beyond the myth lies the machine."
           </p>
-          <Link href="/technology" className="text-sm font-mono text-primary hover:underline bg-gray-50 px-4 py-2 rounded-full border border-gray-200">
+          <Link 
+            href="/technology" 
+            className="text-sm font-mono text-primary hover:text-slate-900 border-b border-primary/30 hover:border-slate-900 transition-colors pb-0.5"
+          >
             View Technology Stack (Réjean McCormick) →
           </Link>
         </div>
@@ -93,18 +90,52 @@ export default function HomePage() {
   );
 }
 
-function NavCard({ title, subtitle, icon, description, href, accent }) {
+// --- COMPONENTS ---
+
+function NavCard({ title, subtitle, description, href, icon }) {
   return (
-    <Link href={href} className={`group block bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 border-t-4 ${accent}`}>
-      <div className="text-4xl mb-4 group-transform group-hover:scale-110 transition-transform duration-300">{icon}</div>
-      <div className="uppercase tracking-wider text-xs font-bold text-gray-400 mb-2">{subtitle}</div>
-      <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">{title}</h2>
-      <p className="text-gray-600 leading-relaxed">
+    <Link href={href} className="group block h-full">
+      <div className="mb-6 text-slate-300 group-hover:text-primary transition-colors duration-300">
+        {icon}
+      </div>
+      <div className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">
+        {subtitle}
+      </div>
+      <h2 className="text-3xl font-serif font-medium text-slate-900 mb-4 group-hover:underline decoration-1 underline-offset-4 decoration-slate-300">
+        {title}
+      </h2>
+      <p className="text-slate-600 leading-relaxed text-sm">
         {description}
       </p>
-      <div className="mt-6 font-semibold text-sm text-primary flex items-center">
-        Learn more <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-      </div>
     </Link>
+  );
+}
+
+// --- ICONS (Minimalist SVGs) ---
+
+function IconGlobe() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="2" y1="12" x2="22" y2="12"></line>
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+    </svg>
+  );
+}
+
+function IconStack() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter">
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+    </svg>
+  );
+}
+
+function IconEye() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </svg>
   );
 }
