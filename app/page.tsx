@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ReactNode } from 'react';
 
 export const metadata = {
   title: 'King Klown & KOA – Civic Utilities',
@@ -9,7 +10,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-slate-900 selection:bg-primary selection:text-white">
       
-      {/* HERO SECTION: Strict, Editorial, Institutional */}
+      {/* HERO SECTION */}
       <section className="pt-32 pb-24 px-6 border-b border-gray-100">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-6xl md:text-8xl font-serif font-medium mb-8 tracking-tight text-slate-900">
@@ -38,7 +39,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* NAVIGATION HUB: Clean Grid, No Shadows, SVG Icons */}
+      {/* NAVIGATION HUB */}
       <section className="max-w-6xl mx-auto px-6 py-24">
         <div className="grid md:grid-cols-3 gap-12">
           
@@ -71,13 +72,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TECHNICAL FOOTER: Minimalist */}
+      {/* TECHNICAL FOOTER */}
       <section className="bg-slate-50 border-t border-gray-100 py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Engineering & Specs</h3>
+          
+          {/* FIXED: Quotes escaped with &quot; */}
           <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto font-serif italic">
-            "Beyond the myth lies the machine."
+            &quot;Beyond the myth lies the machine.&quot;
           </p>
+          
           <Link 
             href="/technology" 
             className="text-sm font-mono text-primary hover:text-slate-900 border-b border-primary/30 hover:border-slate-900 transition-colors pb-0.5"
@@ -90,9 +94,17 @@ export default function HomePage() {
   );
 }
 
-// --- COMPONENTS ---
+// --- TYPES & COMPONENTS ---
 
-function NavCard({ title, subtitle, description, href, icon }) {
+interface NavCardProps {
+  title: string;
+  subtitle: string;
+  description: string;
+  href: string;
+  icon: ReactNode;
+}
+
+function NavCard({ title, subtitle, description, href, icon }: NavCardProps) {
   return (
     <Link href={href} className="group block h-full">
       <div className="mb-6 text-slate-300 group-hover:text-primary transition-colors duration-300">
@@ -111,7 +123,7 @@ function NavCard({ title, subtitle, description, href, icon }) {
   );
 }
 
-// --- ICONS (Minimalist SVGs) ---
+// --- ICONS ---
 
 function IconGlobe() {
   return (
