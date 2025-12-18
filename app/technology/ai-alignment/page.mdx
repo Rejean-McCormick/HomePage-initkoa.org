@@ -1,86 +1,111 @@
+import Link from 'next/link';
+import { Card } from '@/components/Card';
+
 export const metadata = {
-  title: "Konnaxion – Civic Workflows & Module Interactions"
+  title: "Ame-Artificielle (AI Alignment)",
+  description: "Functional specifications for the EL Engine, meta-cognition, and ethical governance.",
 };
 
-# Konnaxion – Civic Workflows & Module Interactions
+export default function AiAlignmentHub() {
+  return (
+    <main className="min-h-screen bg-white text-slate-900 selection:bg-primary selection:text-white pb-24">
+      
+      {/* HERO SECTION */}
+      <section className="max-w-4xl mx-auto px-6 pt-24 pb-12 border-b border-gray-100">
+        <h1 className="text-5xl font-serif font-medium mb-6 text-slate-900">
+          Ame-Artificielle
+        </h1>
+        <h2 className="text-xl text-primary font-mono uppercase tracking-widest mb-8">
+          AI Alignment & Meta-Cognition
+        </h2>
+        
+        <div className="prose prose-slate prose-lg text-slate-600 leading-relaxed">
+          <p>
+            **The EL Engine** is an AI architecture designed around anthropocentric thinking. It goes beyond simple language models by integrating meta-cognitive control structures, strict ethical management, and psychic modeling.
+          </p>
+          <p>
+            This hub documents the functional specifications, control modules, and ethical governance systems that define the "Artificial Soul."
+          </p>
+        </div>
+      </section>
 
-Konnaxion is a socio‑technical framework for coordinating people, knowledge, and action through an ethical, modular civic architecture built on the KOA model: **KonnectED, Ethikos, Kreative, keenKonnect, EkoH, Smart Vote**.
+      <div className="max-w-4xl mx-auto px-6 py-16 space-y-20">
 
-This page is the **hub** for the wiki. It summarizes how modules relate to each other, and it links to detailed pages for each sub‑module. For implementation details (models, services, parameters), use the dedicated technical page linked at the end.
+        {/* CORE SPECS */}
+        <section>
+          <div className="bg-slate-50 border border-slate-200 p-8 rounded-sm">
+            <h2 className="text-2xl font-serif font-medium mb-4 text-slate-900">Core Specifications</h2>
+            <p className="text-slate-600 mb-6">
+              The foundational philosophy: KingClown (Human Centricity) and the Clown System (Conflict Resolution).
+            </p>
+            <Link 
+              href="/technology/ai-alignment/Specifications-Fonctionnelles" 
+              className="inline-flex items-center justify-center px-6 py-3 bg-slate-900 text-white font-medium rounded-sm hover:bg-primary transition-colors"
+            >
+              Read Functional Specs →
+            </Link>
+          </div>
+        </section>
 
- [Visit the Dashboard](https://konnaxion.com/ekoh/dashboard)
+        {/* MODULES GRID */}
+        <section>
+          <h2 className="text-3xl font-serif font-medium mb-8 text-slate-900">Functional Modules</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            
+            {/* Module 1 */}
+            <Card 
+              title="1. Control & Personalization" 
+              href="/technology/ai-alignment/Controle-Et-Personnalisation"
+            >
+              <p className="mb-2"><strong>Gérer la &quot;Texture&quot; de l'Âme.</strong></p>
+              <p>Granular control over output: Politeness, Humor, Objectivity sliders, and Tense/Perspective switches.</p>
+            </Card>
 
-[For an illustrated presentation of the purpose of Konnaxion, the "Knowledge Plateform".](https://kingklown.wiki/)
+            {/* Module 2 */}
+            <Card 
+              title="2. Meta-Cognition" 
+              href="/technology/ai-alignment/Meta-Cognition-Et-Resolution"
+            >
+              <p className="mb-2"><strong>The brain that thinks before speaking.</strong></p>
+              <p>Self-questioning loops, automatic outlining, gap filling, and structured problem solving.</p>
+            </Card>
 
----
+            {/* Module 3 */}
+            <Card 
+              title="3. Path Creation" 
+              href="/technology/ai-alignment/Creation-De-Chemins"
+            >
+              <p className="mb-2"><strong>Visualizing logical and narrative links.</strong></p>
+              <p>A graph engine for linking disparate concepts around a logical &quot;backbone&quot; (Main Steps & nodes).</p>
+            </Card>
 
-## Wiki structure
+            {/* Module 4 */}
+            <Card 
+              title="4. Ethics & Governance" 
+              href="/technology/ai-alignment/Ethique-Et-Gouvernance"
+            >
+              <p className="mb-2"><strong>The moral conscience.</strong></p>
+              <p>Ethical decision making, benevolent rating systems (Top 50%), and conflict mediation via Clown entities.</p>
+            </Card>
 
-Overall structure:
+          </div>
+        </section>
 
-* **Konnaxion – Civic Workflows & Module Interactions** *(this page)*
+        {/* NAVIGATION FOOTER */}
+        <section className="border-t border-gray-100 pt-10">
+          <h3 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">Related Systems</h3>
+          <div className="flex gap-6 text-sm font-medium">
+            <Link href="/technology/swarmcraft" className="text-primary hover:underline">
+              SwarmCraft (Narrative Engine)
+            </Link>
+            <span className="text-slate-300">|</span>
+            <Link href="/technology/sentient" className="text-primary hover:underline">
+              SenTient (Input Processing)
+            </Link>
+          </div>
+        </section>
 
-### KonnectED
-
-* [Knowledge](../Knowledge) — Collaborative Learning Library: catalog, recommendations, co‑creation, forums, progress tracking.
-* [CertifiKation](../CertifiKation) — Skills & Certification: paths, evaluations, peer validation, portfolios, credentials.
-
-### Ethikos
-
-* [Korum](../Korum) — Structured Debates: topics, −3…+3 stances, threaded arguments, expert cohorts, summaries.
-* [Konsultations](../Konsultations) — Public Consultations & Feedback: time‑boxed consultations, citizen suggestions, weighted ballots, impact tracking.
-
-### Kreative
-
-* [Konservation](../Konservation) — Creative Content & Cultural Preservation: digital archives, virtual exhibitions, AI‑enriched catalog, partner collections.
-* [Kontact](../Kontact) — Collaboration & Networking: profiles, intelligent matching, collaboration rooms, opportunities, endorsements.
-
-### keenKonnect
-
-* [Konstruct](../Konstruct) — Project Collaboration Spaces: project workspaces, tasks, chat, AI insights, project ratings.
-* [Stockage](../Stockage) — Secure Repository & Versioned Storage: document/blueprint storage, versioning, indexing, real‑time sync.
-
-### Kollective Intelligence
-
-* [EkoH](../EkoH) — Reputation & Expertise: multidimensional scoring, ethical multipliers, privacy controls, audit trails.
-* [Smart Vote](../Smart-Vote) — Weighted Voting System: EkoH‑weighted voting, multiple modalities, emerging‑expert detection, analytics.
-
-Use this section as the navigation menu for the wiki: start from the KOA area you care about, then dive into its sub‑module page for details.
-
----
-
-## Civic workflow at a glance
-
-The README outlines a civic workflow “proposal → deliberation → decision → action.”
-The KOA modules map onto that pipeline as follows:
-
-1. **Learn & build competence – KonnectED**
-   People explore resources and courses in **[Knowledge](../Knowledge)**, then earn certifications through **[CertifiKation](../CertifiKation)**, building skills and portfolios.
-
-2. **Deliberate & consult – Ethikos**
-   Complex issues are debated in **[Korum](../Korum)** with nuanced stances and arguments, while broader participation is organized via **[Konsultations](../Konsultations)** for structured public input.
-
-3. **Weigh & decide – Kollective Intelligence**
-   **[EkoH](../EkoH)** computes domain‑specific reputation and ethics scores; **[Smart Vote](../Smart-Vote)** uses them to weight ballots and stances, exposing both raw and weighted outcomes.
-
-4. **Execute & coordinate – keenKonnect**
-   Adopted proposals become projects in **[Konstruct](../Konstruct)**, with tasks, chat, and AI summaries, while **[Stockage](../Stockage)** manages all related documents and blueprints.
-
-5. **Preserve & connect – Kreative**
-   Outputs are archived and exhibited through **[Konservation](../Konservation)**, and relationships and opportunities are managed via **[Kontact](../Kontact)**, feeding back into future cycles of work.
-
----
-
-## Technical architecture and services
-
-For details about:
-
-* service code‑names and how they map to Django modules
-* core models and configuration parameters (thresholds, limits, routes)
-* real‑time infrastructure (Channels/Redis), ETL jobs, and analytics flows
-
-see the dedicated technical page:
-
-* [Konnaxion – Technical Architecture & Services](../Konnaxion-Technical-Architecture-And-Services)
-
-That page consolidates the “technicalities” from the module specifications and the original system‑overview draft, so this hub can stay focused on workflows and navigation.
+      </div>
+    </main>
+  );
+}
