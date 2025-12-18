@@ -1,0 +1,17 @@
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Specifically allow Next.js static assets and build chunks
+# (Fixes the "Blocked by robots.txt" error for .js files)
+Allow: /_next/
+Allow: /static/
+Allow: /public/
+
+# Disallow private API routes or admin areas if you have them
+Disallow: /api/auth/
+Disallow: /admin/
+
+# Point bots to your Sitemap
+Sitemap: https://www.okido.wiki/sitemap.xml
