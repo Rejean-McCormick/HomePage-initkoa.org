@@ -1,3 +1,4 @@
+// app\diagnosis\page.js
 import React from 'react';
 
 export const metadata = {

@@ -1,48 +1,92 @@
-import PageSection from '../../components/PageSection';
+// app\principles\page.js
+import PageSection from '././components/PageSection';
 
 export const metadata = {
-  title: 'Our Principles – King Klown & KOA',
-  description: 'Radical Lucidity, Integral Cooperation, and Open Technology.',
+  title: 'Principles – kOA / King Klown',
+  description:
+    'Core axioms and the three domains: AI Alignment, Civic Principles & Ethics, and Cosmic Etherism (optional).',
 };
 
 export default function PrinciplesPage() {
   return (
     <PageSection>
-      <h1 className="text-4xl font-bold mb-8">Core Principles</h1>
-      
-      <p className="text-xl text-gray-600 mb-12">
-        We do not adhere to traditional left/right ideologies. 
-        Instead, we operate on three foundational axioms designed for the 21st century.
+      <h1 className="text-4xl font-bold mb-6">Principles</h1>
+
+      <p className="text-xl text-gray-600 mb-10">
+        Three axioms. Three domains. Clear separation where required.
       </p>
 
-      <div className="space-y-12">
-        <section>
-          <h2 className="text-2xl font-bold mb-3 text-primary">1. Radical Lucidity</h2>
-          <p>
-            We must face reality as it is, not as we wish it to be. This means accepting 
-            hard data about climate change, resource scarcity, and technological disruption, 
-            and crafting policy based on evidence rather than wishful thinking.
-          </p>
-        </section>
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4 text-primary">Core axioms</h2>
+        <div className="space-y-6">
+          <div className="p-5 rounded-lg border border-gray-200 bg-white">
+            <h3 className="text-lg font-bold mb-2">1. Radical Lucidity</h3>
+            <p>Face reality as it is. Prefer evidence, clarity, and honest diagnosis over ideology.</p>
+          </div>
 
-        <section>
-          <h2 className="text-2xl font-bold mb-3 text-primary">2. Integral Cooperation</h2>
-          <p>
-            Competition has limits; survival now requires coordination. We advocate for 
-            systems that reward collaboration over zero-sum conflict, whether in international 
-            diplomacy or local cooperative economics.
-          </p>
-        </section>
+          <div className="p-5 rounded-lg border border-gray-200 bg-white">
+            <h3 className="text-lg font-bold mb-2">2. Integral Cooperation</h3>
+            <p>Design for coordination at scale. Reward collaboration over zero-sum conflict.</p>
+          </div>
 
-        <section>
-          <h2 className="text-2xl font-bold mb-3 text-primary">3. Open Technology</h2>
-          <p>
-            The tools that govern our lives must be transparent. We mandate open-source code 
-            for all public governance infrastructure (voting, budget, administration) to ensure 
-            trust is based on verification, not faith.
-          </p>
-        </section>
-      </div>
+          <div className="p-5 rounded-lg border border-gray-200 bg-white">
+            <h3 className="text-lg font-bold mb-2">3. Open Technology</h3>
+            <p>Public infrastructure must be verifiable. Transparency through open systems.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4 text-primary">Domains</h2>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          <a
+            href="/principles/ai-alignment"
+            className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
+          >
+            <h3 className="text-lg font-bold mb-2">AI Alignment</h3>
+            <p className="text-gray-700">
+              Technical and governance principles for building and deploying AI safely.
+            </p>
+          </a>
+
+          <a
+            href="/principles/civic-principles-ethics"
+            className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
+          >
+            <h3 className="text-lg font-bold mb-2">Civic Principles & Ethics</h3>
+            <p className="text-gray-700">
+              Public institutions, rights and duties, accountability, transparency, and ethics.
+            </p>
+          </a>
+
+          <a
+            href="/principles/cosmic-etherism"
+            className="block p-5 rounded-lg border border-amber-300 bg-amber-50 hover:shadow-sm"
+          >
+            <h3 className="text-lg font-bold mb-2">Cosmic Etherism (Optional)</h3>
+            <p className="text-gray-800">
+              Personal Pi symbolism and worldview. 100% separated from all other initiatives,
+              except Artificial Soul and its use in King Klown fiction.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <section className="flex flex-wrap gap-4">
+        <a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        >
+          Map
+        </a>
+        <a
+          href="/principles/glossary"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        >
+          Glossary
+        </a>
+      </section>
     </PageSection>
   );
 }

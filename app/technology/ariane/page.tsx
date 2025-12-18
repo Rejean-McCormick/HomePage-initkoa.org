@@ -1,3 +1,4 @@
+// app\technology\ariane\page.tsx
 import Link from 'next/link';
 import { Card } from '@/components/Card'; 
 

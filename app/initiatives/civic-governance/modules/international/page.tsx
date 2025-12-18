@@ -1,3 +1,4 @@
+// app\initiatives\civic-governance\modules\international\page.tsx
 import Link from 'next/link';
 import { Globe, ArrowRight, ShieldAlert, Construction } from 'lucide-react';
 

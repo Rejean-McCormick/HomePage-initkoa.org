@@ -1,3 +1,4 @@
+// components\Card.tsx
 import Link from 'next/link';
 import { ReactNode } from 'react';
 

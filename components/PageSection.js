@@ -1,3 +1,4 @@
+// components\PageSection.js
 // components/PageSection.js
 export default function PageSection({ children, className = '' }) {
   return (

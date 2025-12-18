@@ -1,3 +1,4 @@
+// app\platforms\kreature\rituels\cycle-vital\page.tsx
 import Link from 'next/link';
 
 export const metadata = {

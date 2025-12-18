@@ -1,3 +1,4 @@
+// app/sitemap.ts
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -79,8 +80,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    // Corrected Path: PI Theory is located in the 'research' folder
     {
-      url: `${baseUrl}/initiatives/pi-theory`,
+      url: `${baseUrl}/research/pi-theory`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -149,8 +151,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    // Corrected Path: Folder name is 'architect', not 'abstract-wiki'
     {
-      url: `${baseUrl}/technology/abstract-wiki`,
+      url: `${baseUrl}/technology/architect`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,

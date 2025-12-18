@@ -1,3 +1,4 @@
+// app\initiatives\koa-political-initiative\page.js
 // app/initiatives/koa-political-movement/page.js
 import PageSection from '../../../components/PageSection';
 

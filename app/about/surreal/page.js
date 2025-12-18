@@ -1,3 +1,4 @@
+// app\about\surreal\page.js
 import PageSection from '../../../components/PageSection';
 import Link from 'next/link';
 

@@ -1,3 +1,4 @@
+// app\initiatives\civic-governance\constitution\page.tsx
 import Link from 'next/link';
 import { Scroll, Vote, GitPullRequest, Shield, Scale, ArrowRight } from 'lucide-react';
 
@@ -46,9 +47,9 @@ export default function ConstitutionPage() {
           </div>
         </Link>
 
-        {/* Card 2: Orgo */}
+        {/* Card 2: Orgo (Link Updated) */}
         <Link 
-          href="/initiatives/civic-governance/constitution/orgo"
+          href="/platforms/orgo"
           className="group flex flex-col p-6 bg-white border border-slate-200 rounded-xl hover:border-purple-500 hover:shadow-lg transition-all duration-300"
         >
           <div className="mb-4 p-3 bg-purple-50 w-fit rounded-lg group-hover:bg-purple-100 transition-colors">

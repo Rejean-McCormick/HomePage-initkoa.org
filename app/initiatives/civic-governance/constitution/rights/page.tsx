@@ -1,3 +1,4 @@
+// app\initiatives\civic-governance\constitution\rights\page.tsx
 import { Shield, Eye, EyeOff, LogOut, BookOpen, Key } from 'lucide-react';
 
 export const metadata = {

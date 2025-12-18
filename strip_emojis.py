@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# strip_emojis.py
 """
 Strip icons (emoji/pictographs) from MD, MDX, JS, TS, JSX, and TSX files recursively.
 

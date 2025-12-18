@@ -1,3 +1,4 @@
+// app\layout.tsx
 import './globals.css';
 import { Baskervville } from 'next/font/google';
 import Header from '../components/Header';

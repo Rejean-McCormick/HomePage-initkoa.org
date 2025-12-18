@@ -1,5 +1,6 @@
+// app/initiatives/page.tsx
 import Link from 'next/link';
-import { Landmark, Book, Globe, TrendingUp, Scale, GraduationCap, ArrowRight, Scroll } from 'lucide-react';
+import { Landmark, Globe, TrendingUp, Scale, GraduationCap, ArrowRight, Scroll } from 'lucide-react';
 
 export const metadata = {
   title: 'Strategic Initiatives – KOA',
@@ -68,40 +69,21 @@ export default function InitiativesPage() {
         </Link>
       </section>
 
-      {/* SECTION 2: THEORY & STRATEGY */}
+      {/* SECTION 2: INTERNATIONAL STRATEGY */}
       <section>
         <div className="flex items-center mb-8">
           <div className="bg-purple-100 p-3 rounded-full mr-4">
-            <Book className="w-8 h-8 text-purple-700" />
+            <Globe className="w-8 h-8 text-purple-700" />
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Political Theory</h2>
-            <p className="text-slate-500">The frameworks for understanding power and conflict.</p>
+            <h2 className="text-3xl font-bold text-slate-900">International Strategy</h2>
+            <p className="text-slate-500">Geopolitical frameworks for peace and reconstruction.</p>
           </div>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-1">
           
-          {/* PI Theory */}
-          <Link
-            href="/initiatives/pi-theory"
-            className="group block h-full p-8 border border-slate-200 rounded-2xl hover:border-purple-500 hover:shadow-lg transition duration-300 bg-white"
-          >
-            <div className="mb-4 text-purple-600">
-               <Book className="w-10 h-10" />
-            </div>
-            <h3 className="text-2xl font-bold mb-3 group-hover:text-purple-600 transition-colors">
-              PI Theory
-            </h3>
-            <p className="text-slate-600 leading-relaxed mb-6">
-              The framework for "Political Intelligence." Understanding how information flow dictates power structures and how to optimize for collective IQ.
-            </p>
-            <div className="flex items-center text-purple-600 font-bold group-hover:translate-x-1 transition-transform">
-              Read the Theory <ArrowRight className="ml-2 w-4 h-4" />
-            </div>
-          </Link>
-
-          {/* International Strategy */}
+          {/* International Strategy Link */}
           <Link
             href="/initiatives/civic-governance/modules/international"
             className="group block h-full p-8 border border-slate-200 rounded-2xl hover:border-purple-500 hover:shadow-lg transition duration-300 bg-white"
@@ -110,10 +92,10 @@ export default function InitiativesPage() {
                <Globe className="w-10 h-10" />
             </div>
             <h3 className="text-2xl font-bold mb-3 group-hover:text-purple-600 transition-colors">
-              International Strategy
+              The Ukraine Plan
             </h3>
             <p className="text-slate-600 leading-relaxed mb-6">
-              The "Freeze-Vote-Rebuild" framework. Applying technocratic neutrality and the "Construction Olympics" model to geopolitical conflict resolution (e.g., Ukraine).
+              The "Freeze-Vote-Rebuild" framework. Applying technocratic neutrality and the "Construction Olympics" model to geopolitical conflict resolution.
             </p>
             <div className="flex items-center text-purple-600 font-bold group-hover:translate-x-1 transition-transform">
               View Framework <ArrowRight className="ml-2 w-4 h-4" />

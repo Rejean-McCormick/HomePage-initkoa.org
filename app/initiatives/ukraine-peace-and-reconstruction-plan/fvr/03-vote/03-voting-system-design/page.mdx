@@ -1,109 +1,96 @@
 export const metadata = {
-  title: "Integrity & observation"
+  title: "Voting system design"
 };
 
-# Integrity & observation
+# Voting system design
 
-The Vote phase must be credible under adversarial conditions. This chapter defines the integrity safeguards and observation architecture required to make outcomes defensible.
+This chapter defines the technical and procedural architecture of the Vote. The system is designed to guarantee a secret vote that every eligible person can cast once, prove to the public that ballots were captured and counted as intended, and provide clear, local re-run rules if integrity is at risk.
 
 ## Objectives
 
-- Prevent or deter coercion, fraud, and manipulation.
-- Provide independent evidence about process integrity.
-- Detect anomalies early enough to correct them.
-- Create a record that can withstand post-result contestation.
+- **One person, one vote:** Robust identity verification tied to the home district.
+- **Secrecy:** Absolute protection of the voter's choice from coercion.
+- **Auditability:** End-to-end verification that the cast ballot matches the counted ballot.
+- **Resilience:** Ability to operate under cyber threat or power loss.
 
-## Integrity threats (baseline assumptions)
+## Identity and eligibility
 
-Design should assume:
-- intimidation and retaliation threats against voters and officials,
-- administrative manipulation (selective exclusion, “missing” registrants),
-- disinformation and fabricated incident claims,
-- cyber attacks on registration, reporting, or tabulation systems,
-- physical disruption of polling and transport.
+### Two-step verification
+Voters prove **who they are** and **their home district** (see [Electorate definition](../02-electorate-definition)) using two accepted proofs, at least one showing the home-district address on or before the Reference Date.
 
-## Observation mission: requirements
+### Channels
+People may vote at an **Assistance Centre** (in Ukraine or abroad) or remotely. The same identity rules apply to both channels.
 
-An observation mission must have:
+### Single-use credential
+After eligibility is confirmed, the voter receives a one-time voting credential tied to their home district. Once used, it cannot be used again by any channel.
 
-### 1) Independence
-- governance that prevents capture
-- funding and logistics that avoid single-party dependence
+### Lost documents pathway
+Where papers were destroyed, sworn statements with extra community checks may be used (as defined in the Electorate definition).
 
-### 2) Access
-- freedom to visit polling sites, counting sites, and registration centers
-- ability to interview stakeholders without intimidation
-- access to key documents and procedures (within privacy limits)
+## Secrecy and anti-coercion design
 
-### 3) Coverage and sampling plan
-- deployment coverage targets (e.g., % of sites covered)
-- statistically meaningful sampling where full coverage is impossible
-- explicit monitoring of high-risk areas and displaced voting sites
+### No observer at the booth
+No person—including family, employer, landlord, local official, or armed person—may be present at the moment of choice.
 
-### 4) Reporting authority
-- right to publish findings on a defined schedule
-- ability to flag urgent integrity concerns in real time
-- transparent methodology disclosures (what was observed, how, and limitations)
+### Remote voting safeguards
+The system provides a private confirmation channel that does **not** reveal the vote but lets the voter check that a ballot linked to their credential is recorded.
 
-### 5) Coordination with security and monitoring systems
-- channels to report threats and intimidation incidents
-- integration with Freeze monitoring when violence affects voting safety
+### Help without influence
+At Assistance Centres, trained staff help with devices and forms but may not see or suggest choices.
 
-## Anti-coercion package (minimum)
+### Coercion remedy
+Voters who report pressure may cast a protected replacement ballot at an Assistance Centre; the replacement automatically cancels the earlier ballot. Coercion cases are logged and observed.
 
-A credible anti-coercion design includes:
-- secret ballot protections (procedural and physical)
-- safeguards against “supervised voting” by coercers
-- protections for election workers and observers
-- rapid response for intimidation claims (hotline + investigation)
-- safe reporting mechanisms for vulnerable groups
-- rules for invalidating or re-running compromised precincts
+## Verification: what the voter can check
 
-Track coercion with:
-- complaint volume and category breakdown
-- geographic clustering of threats
-- incident severity and recurrence
-- correlation with turnout anomalies (as a flag)
+1.  **Ballot preview:** Voters see a clear preview of their choices before final confirmation.
+2.  **Receipt:** After casting, the voter receives a short receipt (digital or printed) that allows them to confirm their ballot is **present** in the public record without revealing *how* they voted.
+3.  **Public bulletin:** An online bulletin lists anonymous ballot entries for each district so that any voter can check that one entry corresponding to their receipt exists.
 
-## Audit and integrity checks (minimum)
+## Tallying and independent verification
 
-Even with observers, you need auditability:
+### Open counting record
+For each district, the election authority publishes a machine-readable, anonymous record of all accepted ballots and a human-readable table of totals.
 
-- chain-of-custody documentation for ballots/records
-- reconciliation checks (issued vs returned vs counted)
-- risk-limiting audit or defined recount triggers
-- independent review of tabulation software (if used)
-- logs that are tamper-evident and time-stamped (where feasible)
+### Paper cross-check
+Assistance Centres produce sealed, anonymous paper records of ballots cast on site. After polls close, a statistically designed hand count is conducted on a public sample. If the sample shows a risk that the outcome is wrong, the hand count expands until the outcome is confirmed or a full count is triggered.
 
-## Transparency: what should be published
+### Automatic recounts
+An automatic recount is triggered if the margin is below **0.5 percentage points**.
 
-Publish, at minimum:
-- rulebook and procedures (version-locked)
-- observer mission methodology and reports
-- aggregate participation and turnout statistics
-- incident and complaint summaries (privacy-protected)
-- audit results and reconciliation summaries
-- final results with clear aggregation logic
+## Chain of custody
 
-Keep restricted:
-- personally identifiable voter data
-- information that increases physical security risk
-- sensitive cyber defense details
+-   **Separated networks:** Core counting systems run on networks disconnected from the public internet. Public dashboards receive only summarized, signed results.
+-   **Write-once logs:** System actions are recorded in append-only logs with visible file fingerprints and timestamps.
+-   **Split control:** Critical actions (opening, closing, exporting results) require the presence of multiple authorized officials from different sides.
+-   **Sealed media:** Any portable storage is sealed, labelled, witnessed, and logged in and out.
 
-(See [`05-governance-and-verification/04-data-governance-privacy-security.md`](../../05-governance-and-verification/04-data-governance-privacy-security).)
+## Software transparency
 
-## Integration with dispute resolution
+-   **Published specification:** The full voting and counting specification is public.
+-   **Open code:** The code used for ballot capture and counting is published with build instructions.
+-   **Independent testing:** Independent teams test the system for security and reliability; reports are public (redacted for specific vulnerabilities until fixed).
+-   **Version lock:** Once published for the election, versions are **locked**. Any emergency fix follows a public protocol.
 
-Integrity findings must have procedural consequences:
-- observer flags can trigger investigations
-- defined thresholds trigger recounts or reruns
-- timelines are enforced to prevent indefinite contestation
+## Localized re-run triggers
 
-See: [`03-vote/06-dispute-resolution.md`](../06-dispute-resolution).
+A re-run is ordered **only** for the smallest affected unit (polling point, Assistance Centre, or sub-district) when verified triggers occur, such as:
+
+1.  **Coercion or intimidation** at a location that could have altered the outcome.
+2.  **Denial of access** to observers or Assistance Centres.
+3.  **Malware or configuration error** shown by logs.
+4.  **Ballot secrecy breach** that risks voter safety.
+5.  **Chain-of-custody break** for digital or paper records.
+6.  **Unexplained discrepancy** between paper samples and electronic tallies.
+
+## Contingencies
+
+-   **Power/Network loss:** Assistance Centres switch to paper capture with later secure upload.
+-   **Device failure:** Devices replaced from sealed spares; failed units quarantined.
+-   **Disinformation:** Public bulletin provides a "source of truth" for process status.
 
 ## Links to related chapters
 
-- Voting system design: [`03-vote/03-voting-system-design.md`](../03-voting-system-design)
-- Dispute resolution: [`03-vote/06-dispute-resolution.md`](../06-dispute-resolution)
-- Freeze monitoring linkages (safety and access): [`02-freeze/03-verification-monitoring.md`](../../02-freeze/03-verification-monitoring)
-- Governance and escalation: [`05-governance-and-verification/03-coordination-deconfliction-escalation.md`](../../05-governance-and-verification/03-coordination-deconfliction-escalation)
+-   [Electorate definition](../02-electorate-definition)
+-   [Integrity & observation](../04-integrity-observation)
+-   [Dispute resolution](../06-dispute-resolution)

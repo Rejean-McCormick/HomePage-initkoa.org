@@ -1,3 +1,4 @@
+// app\platforms\kreature\page.tsx
 import Link from 'next/link';
 
 export const metadata = {

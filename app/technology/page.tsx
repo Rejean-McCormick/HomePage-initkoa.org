@@ -1,3 +1,4 @@
+// app\technology\page.tsx
 import Link from 'next/link';
 
 export const metadata = { 

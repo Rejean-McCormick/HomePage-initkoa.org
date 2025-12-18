@@ -1,3 +1,4 @@
+// app\initiatives\civic-governance\constitution\ekoh\page.tsx
 import { Vote, Scale, Users, Award, GitMerge, CheckCircle, AlertTriangle } from 'lucide-react';
 
 export const metadata = {

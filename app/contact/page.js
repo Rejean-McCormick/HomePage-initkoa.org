@@ -1,3 +1,4 @@
+// app\contact\page.js
 import Link from 'next/link';
 
 export const metadata = {
@@ -23,7 +24,7 @@ export default function ContactPage() {
       <ul>
         <li><strong>KingKlown.wiki:</strong> The Knowledge Base.</li>
         <li><strong>Okido.wiki:</strong> This Documentation Site.</li>
-        <li><strong>KingKlown.ca:</strong> The Political Movement.</li>
+        <li><strong>KingKlown.ca:</strong> The Political initiative.</li>
       </ul>
     </main>
   );
