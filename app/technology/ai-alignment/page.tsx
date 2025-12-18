@@ -24,7 +24,7 @@ export default function AiAlignmentHub() {
             **The EL Engine** is an AI architecture designed around anthropocentric thinking. It goes beyond simple language models by integrating meta-cognitive control structures, strict ethical management, and psychic modeling.
           </p>
           <p>
-            This hub documents the functional specifications, control modules, and ethical governance systems that define the "Artificial Soul."
+            This hub documents the functional specifications, control modules, and ethical governance systems that define the &quot;Artificial Soul.&quot;
           </p>
         </div>
       </section>
@@ -57,7 +57,7 @@ export default function AiAlignmentHub() {
               title="1. Control & Personalization" 
               href="/technology/ai-alignment/Controle-Et-Personnalisation"
             >
-              <p className="mb-2"><strong>Gérer la &quot;Texture&quot; de l'Âme.</strong></p>
+              <p className="mb-2"><strong>Gérer la &quot;Texture&quot; de l&apos;Âme.</strong></p>
               <p>Granular control over output: Politeness, Humor, Objectivity sliders, and Tense/Perspective switches.</p>
             </Card>
 
