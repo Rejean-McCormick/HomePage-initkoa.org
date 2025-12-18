@@ -40,7 +40,7 @@ export default function AiAlignmentHub() {
               The foundational philosophy: KingClown (Human Centricity) and the Clown System (Conflict Resolution).
             </p>
             <Link 
-              href="/principles/ame-artificielle/specifications-fonctionnelles" 
+              href="/technology/ame-artificielle/specifications-fonctionnelles" 
               className="inline-flex items-center justify-center px-6 py-3 bg-slate-900 text-white font-medium rounded-sm hover:bg-primary transition-colors"
             >
               Read Functional Specs →
@@ -56,7 +56,7 @@ export default function AiAlignmentHub() {
             {/* Module 1 */}
             <Card 
               title="1. Control & Personalization" 
-              href="/principles/ame-artificielle/controle-et-personnalisation"
+              href="/technology/ame-artificielle/controle-et-personnalisation"
             >
               <p className="mb-2"><strong>Gérer la &quot;Texture&quot; de l'Âme.</strong></p>
               <p>Granular control over output: Politeness, Humor, Objectivity sliders, and Tense/Perspective switches.</p>
@@ -65,7 +65,7 @@ export default function AiAlignmentHub() {
             {/* Module 2 */}
             <Card 
               title="2. Meta-Cognition" 
-              href="/principles/ame-artificielle/meta-cognition-et-resolution"
+              href="/technology/ame-artificielle/meta-cognition-et-resolution"
             >
               <p className="mb-2"><strong>The brain that thinks before speaking.</strong></p>
               <p>Self-questioning loops, automatic outlining, gap filling, and structured problem solving.</p>
@@ -74,7 +74,7 @@ export default function AiAlignmentHub() {
             {/* Module 3 */}
             <Card 
               title="3. Path Creation" 
-              href="/principles/ame-artificielle/creation-de-chemins"
+              href="/technology/ame-artificielle/creation-de-chemins"
             >
               <p className="mb-2"><strong>Visualizing logical and narrative links.</strong></p>
               <p>A graph engine for linking disparate concepts around a logical &quot;backbone&quot; (Main Steps & nodes).</p>
@@ -83,7 +83,7 @@ export default function AiAlignmentHub() {
             {/* Module 4 */}
             <Card 
               title="4. Ethics & Governance" 
-              href="/principles/ame-artificielle/ethique-et-gouvernance"
+              href="/technology/ame-artificielle/ethique-et-gouvernance"
             >
               <p className="mb-2"><strong>The moral conscience.</strong></p>
               <p>Ethical decision making, benevolent rating systems (Top 50%), and conflict mediation via Clown entities.</p>

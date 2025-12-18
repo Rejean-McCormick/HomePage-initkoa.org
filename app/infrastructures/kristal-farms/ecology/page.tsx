@@ -1,4 +1,4 @@
-// app/infrastructure/kristal-farms/ecology/page.tsx
+// app/infrastructures/kristal-farms/ecology/page.tsx
 import Link from 'next/link';
 import { 
   Leaf, 
@@ -22,7 +22,7 @@ export default function KFEcology() {
         {/* HEADER */}
         <div className="mb-12">
           <Link 
-            href="/infrastructure/kristal-farms" 
+            href="/infrastructures/kristal-farms" 
             className="text-slate-500 hover:text-green-600 font-medium flex items-center gap-2 mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Kristal Farms Hub

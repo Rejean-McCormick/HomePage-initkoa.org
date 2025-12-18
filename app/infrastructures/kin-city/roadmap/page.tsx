@@ -1,4 +1,4 @@
-// app/infrastructure/kin-city/roadmap/page.tsx
+// app/infrastructures/kin-city/roadmap/page.tsx
 import { 
   Code2, 
   Layers, 
@@ -190,7 +190,7 @@ export default function KinCityRoadmap() {
 
         <div className="mt-16 pt-8 border-t border-gray-200 text-center">
           <p className="text-gray-500 mb-4">Ready to see where we started?</p>
-          <a href="/infrastructure/kin-city" className="text-indigo-600 font-bold hover:underline inline-flex items-center gap-2">
+          <a href="/infrastructures/kin-city" className="text-indigo-600 font-bold hover:underline inline-flex items-center gap-2">
             Return to Kin City Overview <ArrowRight className="w-4 h-4" />
           </a>
         </div>

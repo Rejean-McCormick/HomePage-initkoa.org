@@ -78,7 +78,7 @@ export default function AIAlignmentPrinciplesPage() {
 
       <div className="mt-10 flex flex-wrap gap-4">
         <a
-          href="/principles/ame-artificielle"
+          href="/technology/ame-artificielle"
           className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
         >
           Back to Âme artificielle

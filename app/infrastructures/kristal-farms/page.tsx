@@ -1,4 +1,4 @@
-// app/infrastructure/kristal-farms/page.tsx
+// app/infrastructures/kristal-farms/page.tsx
 import Link from 'next/link';
 import { 
   Snowflake, 
@@ -43,7 +43,7 @@ export default function KristalFarmsHub() {
             
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="/infrastructure/kristal-farms/nain"
+                href="/infrastructures/kristal-farms/nain"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all flex items-center gap-2"
               >
                 View Nain Pilot Plan <ArrowRight className="w-4 h-4" />
@@ -152,7 +152,7 @@ export default function KristalFarmsHub() {
           <div className="grid md:grid-cols-2 gap-8">
             
             {/* Module 1: Infrastructure */}
-            <Link href="/infrastructure/kristal-farms/infrastructure" className="group block bg-white rounded-2xl p-8 border border-slate-200 hover:border-blue-500 transition-all hover:shadow-lg">
+            <Link href="/infrastructures/kristal-farms/infrastructure" className="group block bg-white rounded-2xl p-8 border border-slate-200 hover:border-blue-500 transition-all hover:shadow-lg">
               <div className="flex justify-between items-start mb-4">
                 <div className="bg-slate-100 p-3 rounded-lg group-hover:bg-blue-50 transition-colors">
                   <Server className="w-8 h-8 text-slate-700 group-hover:text-blue-600" />
@@ -167,7 +167,7 @@ export default function KristalFarmsHub() {
             </Link>
 
             {/* Module 2: Ecology */}
-            <Link href="/infrastructure/kristal-farms/ecology" className="group block bg-white rounded-2xl p-8 border border-slate-200 hover:border-green-500 transition-all hover:shadow-lg">
+            <Link href="/infrastructures/kristal-farms/ecology" className="group block bg-white rounded-2xl p-8 border border-slate-200 hover:border-green-500 transition-all hover:shadow-lg">
               <div className="flex justify-between items-start mb-4">
                 <div className="bg-slate-100 p-3 rounded-lg group-hover:bg-green-50 transition-colors">
                   <Leaf className="w-8 h-8 text-slate-700 group-hover:text-green-600" />
@@ -182,7 +182,7 @@ export default function KristalFarmsHub() {
             </Link>
 
             {/* Module 3: Governance */}
-            <Link href="/infrastructure/kristal-farms/governance" className="group block bg-white rounded-2xl p-8 border border-slate-200 hover:border-purple-500 transition-all hover:shadow-lg">
+            <Link href="/infrastructures/kristal-farms/governance" className="group block bg-white rounded-2xl p-8 border border-slate-200 hover:border-purple-500 transition-all hover:shadow-lg">
               <div className="flex justify-between items-start mb-4">
                 <div className="bg-slate-100 p-3 rounded-lg group-hover:bg-purple-50 transition-colors">
                   <ShieldCheck className="w-8 h-8 text-slate-700 group-hover:text-purple-600" />
@@ -197,7 +197,7 @@ export default function KristalFarmsHub() {
             </Link>
 
             {/* Module 4: Nain Pilot */}
-            <Link href="/infrastructure/kristal-farms/nain" className="group block bg-white rounded-2xl p-8 border border-slate-200 hover:border-blue-500 transition-all hover:shadow-lg">
+            <Link href="/infrastructures/kristal-farms/nain" className="group block bg-white rounded-2xl p-8 border border-slate-200 hover:border-blue-500 transition-all hover:shadow-lg">
               <div className="flex justify-between items-start mb-4">
                 <div className="bg-slate-100 p-3 rounded-lg group-hover:bg-blue-50 transition-colors">
                   <Snowflake className="w-8 h-8 text-slate-700 group-hover:text-blue-600" />

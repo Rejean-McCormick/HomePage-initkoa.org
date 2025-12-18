@@ -4,13 +4,12 @@ export const metadata = {
 
 # Korum
 
-
-**Korum (Structured Debates)** — sub‑module under **ethiKos**.  
- Implements five core services with defined code‑names, backed by concrete debate/stance/argument models and fixed parameters.
+**Korum (Structured Debates)** — sub‑module under **Ethikos**.
+Implements five core services with defined code‑names, backed by concrete debate/stance/argument models and fixed parameters.
 
 ---
 
-### **1\) Functional Services (and expected files)**
+### **1) Functional Services (and expected files)**
 
 Each service name is stable and maps to a dedicated Django service module (file paths reflect the cookiecutter layout; exact filenames may vary by repo).
 
@@ -24,7 +23,7 @@ Each service name is stable and maps to a dedicated Django service module (file 
 
 ---
 
-### **2\) Backend functionalities**
+### **2) Backend functionalities**
 
 * **Debate lifecycle:** CRUD for topics with status transitions (open/closed/archived), category assignment, and owner/moderation rules; exposed via DRF.
 
@@ -38,7 +37,7 @@ Each service name is stable and maps to a dedicated Django service module (file 
 
 ---
 
-### **3\) Database models (OLTP)**
+### **3) Database models (OLTP)**
 
 Actual implemented tables for Korum (planned AI/summary/archive tables are intentionally omitted in v14).
 
@@ -53,11 +52,11 @@ Note: AI clones, comparative‑analysis logs, public archives, and debate summar
 
 ---
 
-### **4\) Supporting configuration (frozen)**
+### **4) Supporting configuration (frozen)**
 
-* **Stance scale:** −3 … \+3 (0 \= neutral).
+* **Stance scale:** −3 … +3 (0 = neutral).
 
-* **Expert cohort quorum (display):** 12 distinct experts (Ekoh threshold per domain).
+* **Expert cohort quorum (display):** 12 distinct experts (EkoH threshold per domain).
 
 * **Moderation auto‑hide:** Hide an argument after 3 independent reports.
 
@@ -65,15 +64,15 @@ Note: AI clones, comparative‑analysis logs, public archives, and debate summar
 
 ---
 
-### **5\) Frontend & navigation**
+### **5) Frontend & navigation**
 
-* **Routes:** `/debate` (Debate Hub: Open / Archived / Start New), `/ethikos/insights` (opinion analytics dashboards).
+* **Routes:** `/ethikos/korum` (Debate Hub: Open / Archived / Start New), `/ethikos/insights` (opinion analytics dashboards).
 
 * **Behavior:** Stance slider (−3…+3), live tallies, cohort filters, threaded arguments; analytics readouts live under Insights.
 
 ---
 
-### **6\) Integration points**
+### **6) Integration points**
 
 * **EkoH & Smart Vote:** Stances are aggregated using EkoH reputation to compute weighted results; outcomes can feed analytics (/reports/smart‑vote).
 
@@ -81,9 +80,9 @@ Note: AI clones, comparative‑analysis logs, public archives, and debate summar
 
 ---
 
-### **7\) Realtime & ops**
+### **7) Realtime & ops**
 
-* **Push updates:** Optional WebSocket broadcasts via Django Channels \+ Redis for stance/result changes.
+* **Push updates:** Optional WebSocket broadcasts via Django Channels + Redis for stance/result changes.
 
 * **Caching & rate control:** Use Redis caching for common cohort filters; apply API throttles consistent with platform policy.
 

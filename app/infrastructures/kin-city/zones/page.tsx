@@ -1,4 +1,4 @@
-// app/infrastructure/kin-city/zones/page.tsx
+// app/infrastructures/kin-city/zones/page.tsx
 import { 
   Landmark, 
   BookOpen, 
@@ -23,7 +23,7 @@ export default function KinCityZones() {
         {/* HEADER & BACK LINK */}
         <div className="mb-16">
           <Link 
-            href="/infrastructure/kin-city" 
+            href="/infrastructures/kin-city" 
             className="text-gray-500 hover:text-indigo-600 font-medium flex items-center gap-2 mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Back to City Overview

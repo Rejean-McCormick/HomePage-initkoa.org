@@ -40,18 +40,18 @@ export default function VisualSitemapPage() {
             <MapLink href="/infrastructure" label="Infrastructure Hub" />
             
             <SubSection title="Physical (Kristal Farms)">
-               <MapLink href="/infrastructure/kristal-farms" label="Kristal Farms Overview" />
-               <MapLink href="/infrastructure/kristal-farms/infrastructure" label="Physical Infrastructure" />
-               <MapLink href="/infrastructure/kristal-farms/ecology" label="Ecology & Heat Cycles" />
-               <MapLink href="/infrastructure/kristal-farms/governance" label="Governance & Tenancy" />
-               <MapLink href="/infrastructure/kristal-farms/nain" label="Project Nain (Pilot)" />
+               <MapLink href="/infrastructures/kristal-farms" label="Kristal Farms Overview" />
+               <MapLink href="/infrastructures/kristal-farms/infrastructure" label="Physical Infrastructure" />
+               <MapLink href="/infrastructures/kristal-farms/ecology" label="Ecology & Heat Cycles" />
+               <MapLink href="/infrastructures/kristal-farms/governance" label="Governance & Tenancy" />
+               <MapLink href="/infrastructures/kristal-farms/nain" label="Project Nain (Pilot)" />
             </SubSection>
 
             <SubSection title="Virtual (Kin City)">
-               <MapLink href="/infrastructure/kin-city" label="Kin City Overview" />
-               <MapLink href="/infrastructure/kin-city/zones" label="Zone Guide" />
-               <MapLink href="/infrastructure/kin-city/philosophy" label="Philosophy & Design" />
-               <MapLink href="/infrastructure/kin-city/roadmap" label="Technical Roadmap" />
+               <MapLink href="/infrastructures/kin-city" label="Kin City Overview" />
+               <MapLink href="/infrastructures/kin-city/zones" label="Zone Guide" />
+               <MapLink href="/infrastructures/kin-city/philosophy" label="Philosophy & Design" />
+               <MapLink href="/infrastructures/kin-city/roadmap" label="Technical Roadmap" />
             </SubSection>
           </Section>
 
@@ -94,7 +94,7 @@ export default function VisualSitemapPage() {
           {/* TECHNOLOGY */}
           <Section title="Technology" icon={<Cpu className="w-5 h-5" />}>
             <MapLink href="/technology" label="Tech Overview" />
-            <MapLink href="/principles/ame-artificielle" label="Âme artificielle (Âme)" />
+            <MapLink href="/technology/ame-artificielle" label="Âme artificielle (Âme)" />
             <MapLink href="/technology/architect" label="Abstract Wiki Architect" />
             <MapLink href="/technology/ariane" label="Ariane (UI Graph)" />
             <MapLink href="/technology/sentient" label="SenTient (NLP Engine)" />

@@ -1,4 +1,4 @@
-// app/infrastructure/kin-city/page.tsx
+// app/infrastructures/kin-city/page.tsx
 import Link from 'next/link';
 import { ArrowRight, Map, Box, Users, Shield, Cpu } from 'lucide-react'; // Assuming you have lucide-react or similar icons
 
@@ -68,7 +68,7 @@ export default function KinCityPage() {
             </div>
             <div className="mt-8">
                {/* Link to the deeper Philosophy sub-page */}
-              <Link href="/infrastructure/kin-city/philosophy" className="text-indigo-600 font-bold hover:underline flex items-center gap-2">
+              <Link href="/infrastructures/kin-city/philosophy" className="text-indigo-600 font-bold hover:underline flex items-center gap-2">
                 Read about our Design Philosophy <ArrowRight className="w-4 h-4"/>
               </Link>
             </div>
@@ -160,7 +160,7 @@ export default function KinCityPage() {
           
            <div className="mt-10 text-center">
                {/* Link to the deeper Zones sub-page */}
-              <Link href="/infrastructure/kin-city/zones" className="text-indigo-600 font-bold hover:underline">
+              <Link href="/infrastructures/kin-city/zones" className="text-indigo-600 font-bold hover:underline">
                 View Detailed Map & Zone Guide →
               </Link>
             </div>

@@ -41,7 +41,7 @@ export default function PrinciplesPage() {
 
         <div className="grid gap-6 md:grid-cols-3">
           <a
-            href="/principles/ame-artificielle"
+            href="/technology/ame-artificielle"
             className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
           >
             <h3 className="text-lg font-bold mb-2">Âme artificielle</h3>

@@ -1,4 +1,4 @@
-// app/infrastructure/page.tsx
+// app/infrastructures/page.tsx
 import Card from '@/components/Card';
 import Link from 'next/link';
 
@@ -22,12 +22,12 @@ export default function InfrastructureIndex() {
         <Card
           title="Kristal Farms"
           description="The Hardware. Green AI data centers co-located with hydro power to export intelligence and recycle heat for food security."
-          href="/infrastructure/kristal-farms"
+          href="/infrastructures/kristal-farms"
         />
         <Card
           title="Kin City"
           description="The Interface. A virtual city metaverse that organizes knowledge, governance, and community into navigable districts."
-          href="/infrastructure/kin-city"
+          href="/infrastructures/kin-city"
         />
       </div>
 

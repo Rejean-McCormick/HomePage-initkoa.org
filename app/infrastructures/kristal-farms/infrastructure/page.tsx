@@ -1,4 +1,4 @@
-// app/infrastructure/kristal-farms/infrastructure/page.tsx
+// app/infrastructures/kristal-farms/infrastructures/page.tsx
 import Link from 'next/link';
 import { 
   Zap, 
@@ -22,7 +22,7 @@ export default function KFInfrastructure() {
         {/* HEADER */}
         <div className="mb-12">
           <Link 
-            href="/infrastructure/kristal-farms" 
+            href="/infrastructures/kristal-farms" 
             className="text-slate-500 hover:text-blue-600 font-medium flex items-center gap-2 mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Kristal Farms Hub

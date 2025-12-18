@@ -1,4 +1,4 @@
-// app/infrastructure/kin-city/philosophy/page.tsx
+// app/infrastructures/kin-city/philosophy/page.tsx
 import { 
   Circle, 
   Mountain, 
@@ -22,7 +22,7 @@ export default function KinCityPhilosophy() {
         {/* BACK LINK & HERO */}
         <div className="mb-12">
           <Link 
-            href="/infrastructure/kin-city" 
+            href="/infrastructures/kin-city" 
             className="text-gray-500 hover:text-indigo-600 font-medium flex items-center gap-2 mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Kin City Overview
