@@ -1,6 +1,7 @@
 // app/platforms/konnaxion/kreative/page.tsx
 import Link from 'next/link';
-import { Palette, Image, Users, ArrowRight, Layers } from 'lucide-react';
+// We alias 'Image' to 'ImageIcon' to stop the linter from thinking it needs an alt tag
+import { Palette, Image as ImageIcon, Users, ArrowRight, Layers } from 'lucide-react';
 
 export const metadata = {
   title: "Kreative Hub – Konnaxion",
@@ -38,7 +39,8 @@ export default function KreativePage() {
             className="group block p-8 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary transition-all"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary flex items-center">
-              <Image className="w-5 h-5 mr-2 text-rose-500" />
+              {/* Updated to use the aliased name */}
+              <ImageIcon className="w-5 h-5 mr-2 text-rose-500" />
               Konservation
             </h3>
             <p className="text-slate-600 mb-6 text-sm leading-relaxed">

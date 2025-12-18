@@ -7,6 +7,7 @@ import {
   Database, 
   ArrowLeft,
   Gavel,
+  Zap,
   FileCheck
 } from 'lucide-react';
 
