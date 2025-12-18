@@ -12,6 +12,7 @@ This page collects the **technical details** of Konnaxion: service code‑names,
 
 Use this page as the reference for development and integration work.
 
+
 ---
 
 ## 1. Platform overview
@@ -61,16 +62,16 @@ Code‑names map 1‑to‑1 to service modules (e.g. `services/dynamic_weighted_
 
 ### 2.2 Routing invariants
 
-Top‑level routes are **owned** by specific modules and treated as invariants:
+Top‑level routes are **owned** by specific modules and treated as invariants. Namespacing is enforced for consistency:
 
 * `/learn`, `/course/[slug]` → KonnectED / Knowledge 
 * `/certs` → KonnectED / CertifiKation 
 * `/ethikos/korum`, `/ethikos/insights` → Ethikos / Korum 
-* `/consult` → Ethikos / Konsultations 
+* `/ethikos/consult` → Ethikos / Konsultations 
 * `/projects`, `/projects/[slug]` → keenKonnect / Konstruct + Stockage
 * `/kreative`, `/art/[id]`, `/archive` → Kreative / Konservation 
 * `/connect`, `/profile/[user]` → Kreative / Kontact 
-* `/konsensus`, `/reports/smart-vote` → Kollective Intelligence / Smart Vote 
+* `/kollective/konsensus`, `/reports/smart-vote` → Kollective Intelligence / Smart Vote 
 
 No other module should claim these top‑level paths.
 
@@ -206,11 +207,11 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 * Ballot modalities: `approval | ranking | rating | preferential`
 * Consensus threshold (platform‑wide): ≥ 75% weighted agreement
-* Route namespace: `/consult` owned exclusively by Ethikos
+* Route namespace: `/ethikos/consult` owned exclusively by Ethikos
 
 **Routes**
 
-* `/consult` – Consultation Hub (Live / Results / Suggest)
+* `/ethikos/consult` – Consultation Hub (Live / Results / Suggest)
 * `/ethikos/insights` – shared with Korum analytics 
 
 ---
@@ -373,7 +374,7 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 * Realtime results through Channels+Redis
 * ETL `etl_smart_vote` every 10 minutes → `smart_vote_fact` table, 5‑year retention
-* UI: `/konsensus` (live polls/results), `/reports/smart-vote` (analytics) 
+* UI: `/kollective/konsensus` (live polls/results), `/reports/smart-vote` (analytics) 
 
 ---
 
@@ -420,7 +421,7 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 When extending or integrating with Konnaxion, the following invariants should be respected (all documented above):
 
-1. **Do not change top‑level route ownership** (`/learn`, `/certs`, `/ethikos/korum`, `/consult`, `/projects`, `/kreative`, `/connect`, `/konsensus`, `/reports/smart-vote`) without updating all dependent modules.
+1. **Do not change top‑level route ownership** (`/learn`, `/certs`, `/ethikos/korum`, `/ethikos/consult`, `/projects`, `/kreative`, `/connect`, `/kollective/konsensus`, `/reports/smart-vote`) without updating all dependent modules.
 2. **Preserve service code‑names** (e.g. `dynamic_weighted_vote`, `multidimensional_scoring`); treat them as public, versioned integration points.
 3. **Respect frozen parameter values** when relying on thresholds, caps, or schedule timings, or introduce new configuration entries in a documented way.
 4. **Reuse shared infrastructure** (Channels+Redis, Celery, `/app/media/`, PostgreSQL tsvector) to keep behavior consistent and predictable.

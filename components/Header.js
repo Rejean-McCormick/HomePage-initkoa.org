@@ -60,9 +60,11 @@ export default function Header() {
                 <div className="py-2">
                   <DropdownLink href="/platforms/konnaxion" label="Konnaxion" icon={<Server className="w-4 h-4" />} />
                   <DropdownLink href="/platforms/orgo" label="Orgo" icon={<Server className="w-4 h-4" />} />
-                  <DropdownLink href="/platforms/kristal-farms" label="Kristal Farms" icon={<Server className="w-4 h-4" />} />
+                  {/* Fixed Link: Points to infrastructures */}
+                  <DropdownLink href="/infrastructures/kristal-farms" label="Kristal Farms" icon={<Server className="w-4 h-4" />} />
                   <div className="border-t border-slate-100 my-1"></div>
-                  <DropdownLink href="/platforms/kreature" label="Kréature (Mythos)" icon={<BookOpen className="w-4 h-4" />} />
+                  {/* Fixed Link: Points to konnaxion/kreative */}
+                  <DropdownLink href="/platforms/konnaxion/kreative" label="Kréature (Mythos)" icon={<BookOpen className="w-4 h-4" />} />
                 </div>
               </div>
             </div>
@@ -118,7 +120,10 @@ export default function Header() {
             <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Platforms</p>
             <MobileLink href="/platforms/konnaxion" label="Konnaxion" />
             <MobileLink href="/platforms/orgo" label="Orgo" />
-            <MobileLink href="/platforms/kreature" label="Kréature" />
+            {/* Added missing mobile link & Fixed Path */}
+            <MobileLink href="/infrastructures/kristal-farms" label="Kristal Farms" />
+            {/* Fixed Path */}
+            <MobileLink href="/platforms/konnaxion/kreative" label="Kréature" />
           </div>
           <div className="border-t border-slate-100 pt-2">
             <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Technology</p>

@@ -50,6 +50,8 @@ export default function KFGovernance() {
             <h2 className="text-2xl font-bold text-slate-900">"Black-Box" Tenancy</h2>
           </div>
           
+          
+
           <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
             
             <p className="text-lg text-slate-700 mb-6 mt-6">
@@ -97,6 +99,9 @@ export default function KFGovernance() {
           <p className="text-slate-600 mb-8">
             The project is overseen by four main bodies to ensure transparency and alignment with local needs.
           </p>
+          
+          
+
           <div className="grid md:grid-cols-2 gap-6">
             <div className="border border-slate-200 p-6 rounded-xl hover:shadow-md transition-shadow">
               <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
