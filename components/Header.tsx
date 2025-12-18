@@ -31,12 +31,10 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8 items-center">
             
-            {/* Context */}
             <Link href="/why" className="text-sm font-medium text-slate-600 hover:text-slate-900">
               Context
             </Link>
 
-            {/* Initiatives */}
             <Link href="/initiatives" className="text-sm font-medium text-slate-600 hover:text-slate-900">
               Initiatives
             </Link>
@@ -51,20 +49,23 @@ export default function Header() {
                 Platforms <ChevronDown className="ml-1 w-4 h-4" />
               </button>
               
-              {/* Dropdown Menu */}
               <div 
                 className={`absolute left-0 mt-0 w-56 bg-white border border-slate-100 shadow-lg rounded-lg overflow-hidden transition-all duration-200 ${platOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
                 onMouseEnter={() => setPlatOpen(true)}
                 onMouseLeave={() => setPlatOpen(false)}
               >
                 <div className="py-2">
-                  <DropdownLink href="/platforms/konnaxion" label="Konnaxion" icon={<Server className="w-4 h-4" />} />
-                  <DropdownLink href="/platforms/orgo" label="Orgo" icon={<Server className="w-4 h-4" />} />
-                  {/* Fixed Link: Points to infrastructures */}
-                  <DropdownLink href="/infrastructures/kristal-farms" label="Kristal Farms" icon={<Server className="w-4 h-4" />} />
+                  <DropdownLink href="/platforms/konnaxion" label="Konnaxion Hub" icon={<Server className="w-4 h-4" />} />
+                  
+                  {/* CASED PATHS FIXED BELOW */}
+                  <DropdownLink href="/platforms/konnaxion/Kreative" label="Kréature (Mythos)" icon={<BookOpen className="w-4 h-4" />} />
+                  <DropdownLink href="/platforms/konnaxion/Ethikos" label="Ethikos" icon={<Server className="w-4 h-4" />} />
+                  <DropdownLink href="/platforms/konnaxion/Kollective-Intelligence" label="Kollective Intel." icon={<Server className="w-4 h-4" />} />
+                  
                   <div className="border-t border-slate-100 my-1"></div>
-                  {/* Fixed Link: Points to konnaxion/kreative */}
-                  <DropdownLink href="/platforms/konnaxion/kreative" label="Kréature (Mythos)" icon={<BookOpen className="w-4 h-4" />} />
+                  {/* Infrastructure Links */}
+                  <DropdownLink href="/infrastructures/kristal-farms" label="Kristal Farms" icon={<Server className="w-4 h-4" />} />
+                  <DropdownLink href="/platforms/orgo" label="Orgo" icon={<Server className="w-4 h-4" />} />
                 </div>
               </div>
             </div>
@@ -79,7 +80,6 @@ export default function Header() {
                 Technology <ChevronDown className="ml-1 w-4 h-4" />
               </button>
               
-              {/* Dropdown Menu */}
               <div 
                 className={`absolute left-0 mt-0 w-64 bg-white border border-slate-100 shadow-lg rounded-lg overflow-hidden transition-all duration-200 ${techOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
                 onMouseEnter={() => setTechOpen(true)}
@@ -95,13 +95,11 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Meta */}
             <Link href="/about" className="text-sm font-medium text-slate-600 hover:text-slate-900">
               About
             </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
           <button 
             className="md:hidden text-slate-900"
             onClick={() => setIsOpen(!isOpen)}
@@ -119,11 +117,11 @@ export default function Header() {
           <div className="border-t border-slate-100 pt-2">
             <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Platforms</p>
             <MobileLink href="/platforms/konnaxion" label="Konnaxion" />
-            <MobileLink href="/platforms/orgo" label="Orgo" />
-            {/* Added missing mobile link & Fixed Path */}
             <MobileLink href="/infrastructures/kristal-farms" label="Kristal Farms" />
-            {/* Fixed Path */}
-            <MobileLink href="/platforms/konnaxion/kreative" label="Kréature" />
+            
+            {/* FIXED CASING FOR MOBILE */}
+            <MobileLink href="/platforms/konnaxion/Kreative" label="Kréature" />
+            <MobileLink href="/platforms/konnaxion/Ethikos" label="Ethikos" />
           </div>
           <div className="border-t border-slate-100 pt-2">
             <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Technology</p>
@@ -143,8 +141,8 @@ export default function Header() {
   );
 }
 
-// Helper Components - No Typescript annotations here
-function DropdownLink({ href, label, icon }) {
+// Helper Components
+function DropdownLink({ href, label, icon }: { href: string, label: string, icon: React.ReactNode }) {
   return (
     <Link 
       href={href} 
@@ -156,7 +154,7 @@ function DropdownLink({ href, label, icon }) {
   );
 }
 
-function MobileLink({ href, label, highlight }) {
+function MobileLink({ href, label, highlight }: { href: string, label: string, highlight?: boolean }) {
   return (
     <Link 
       href={href} 
