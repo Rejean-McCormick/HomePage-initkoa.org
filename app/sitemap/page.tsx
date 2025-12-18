@@ -7,7 +7,8 @@ import {
   Share2, 
   Cpu, 
   TrendingUp,
-  Microscope // New icon for Research
+  Microscope, // Research
+  Anchor // Infrastructure
 } from 'lucide-react';
 
 export const metadata = {
@@ -19,7 +20,7 @@ export default function VisualSitemapPage() {
   return (
     <main className="max-w-5xl mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold text-slate-900 mb-10 flex items-center">
-        <Map className="w-10 h-10 text-primary mr-4" />
+        <Map className="w-10 h-10 text-indigo-600 mr-4" />
         Site Map
       </h1>
 
@@ -32,6 +33,26 @@ export default function VisualSitemapPage() {
             <MapLink href="/why" label="The Diagnosis" />
             <MapLink href="/diagnosis" label="9 Systemic Failures" />
             <MapLink href="/principles" label="Principles & Ethics" />
+          </Section>
+
+          {/* INFRASTRUCTURE (New Section) */}
+          <Section title="Infrastructure" icon={<Anchor className="w-5 h-5" />}>
+            <MapLink href="/infrastructure" label="Infrastructure Hub" />
+            
+            <SubSection title="Physical (Kristal Farms)">
+               <MapLink href="/infrastructure/kristal-farms" label="Kristal Farms Overview" />
+               <MapLink href="/infrastructure/kristal-farms/infrastructure" label="Physical Infrastructure" />
+               <MapLink href="/infrastructure/kristal-farms/ecology" label="Ecology & Heat Cycles" />
+               <MapLink href="/infrastructure/kristal-farms/governance" label="Governance & Tenancy" />
+               <MapLink href="/infrastructure/kristal-farms/nain" label="Project Nain (Pilot)" />
+            </SubSection>
+
+            <SubSection title="Virtual (Kin City)">
+               <MapLink href="/infrastructure/kin-city" label="Kin City Overview" />
+               <MapLink href="/infrastructure/kin-city/zones" label="Zone Guide" />
+               <MapLink href="/infrastructure/kin-city/philosophy" label="Philosophy & Design" />
+               <MapLink href="/infrastructure/kin-city/roadmap" label="Technical Roadmap" />
+            </SubSection>
           </Section>
 
           {/* INITIATIVES */}
@@ -64,7 +85,6 @@ export default function VisualSitemapPage() {
             <SubSection title="Core Products">
               <MapLink href="/platforms/konnaxion" label="Konnaxion (Public OS)" />
               <MapLink href="/platforms/orgo" label="Orgo (Private OS)" />
-              <MapLink href="/platforms/kristal-farms" label="Kristal Farms (Infrastructure)" />
             </SubSection>
             <SubSection title="Interface">
               <MapLink href="/platforms/kreature" label="Kréature (Mythopoetic UI)" />
@@ -119,7 +139,7 @@ function MapLink({ href, label, highlight }: { href: string, label: string, high
     <li>
       <Link 
         href={href} 
-        className={`block py-1 hover:text-primary transition-colors ${highlight ? 'text-primary font-bold' : 'text-slate-600'}`}
+        className={`block py-1 hover:text-indigo-600 transition-colors ${highlight ? 'text-indigo-600 font-bold' : 'text-slate-600'}`}
       >
         {label}
       </Link>

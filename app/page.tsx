@@ -1,4 +1,4 @@
-// app\page.tsx
+// app/page.tsx
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
@@ -41,8 +41,9 @@ export default function HomePage() {
       </section>
 
       {/* NAVIGATION HUB */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <div className="grid md:grid-cols-3 gap-12">
+      <section className="max-w-7xl mx-auto px-6 py-24">
+        {/* Adjusted grid to 4 columns to include Infrastructure */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           
           {/* Pillar 1: CONTEXT */}
           <NavCard 
@@ -53,7 +54,7 @@ export default function HomePage() {
             icon={<IconGlobe />}
           />
 
-          {/* Pillar 2: SOLUTION (The Active Core) */}
+          {/* Pillar 2: SOLUTION */}
           <NavCard 
             href="/initiatives/civic-governance"
             title="Civic Governance"
@@ -62,7 +63,16 @@ export default function HomePage() {
             icon={<IconStack />}
           />
 
-          {/* Pillar 3: STRATEGY (The Roadmap) */}
+          {/* Pillar 3: INFRASTRUCTURE (New) */}
+          <NavCard 
+            href="/infrastructure"
+            title="Infrastructure"
+            subtitle="The Foundation"
+            description="The physical and virtual bedrock. Green AI data centers (Kristal Farms) and the civic metaverse (Kin City)."
+            icon={<IconAnchor />}
+          />
+
+          {/* Pillar 4: STRATEGY */}
           <NavCard 
             href="/initiatives"
             title="Strategic Initiatives"
@@ -101,7 +111,6 @@ export default function HomePage() {
 
             <span className="text-slate-300 hidden md:inline">|</span>
 
-            {/* ADDED SITEMAP LINK */}
             <Link 
               href="/sitemap" 
               className="text-sm font-mono text-primary hover:text-slate-900 border-b border-primary/30 hover:border-slate-900 transition-colors pb-0.5"
@@ -169,6 +178,16 @@ function IconEye() {
     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter">
       <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
       <circle cx="12" cy="12" r="3"></circle>
+    </svg>
+  );
+}
+
+function IconAnchor() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter">
+      <circle cx="12" cy="5" r="3"></circle>
+      <line x1="12" y1="22" x2="12" y2="8"></line>
+      <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
     </svg>
   );
 }

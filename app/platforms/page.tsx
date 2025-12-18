@@ -3,7 +3,7 @@ import Card from '@/components/Card'; // Fixed import alias
 
 export const metadata = {
   title: 'Platforms & Products – King Klown & KOA',
-  description: 'The core software suite: Konnaxion, Orgo, Kristal Farms, and Kréature.',
+  description: 'The core software suite: Konnaxion and Orgo.',
 };
 
 export default function PlatformsIndex() {
@@ -12,13 +12,13 @@ export default function PlatformsIndex() {
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4">Our Products</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          We build civic utilities: shared infrastructure for learning, 
+          We build civic utilities: shared systems for learning, 
           coordination, and governance.
         </p>
       </div>
 
-      {/* Adjusted grid to handle 4 items nicely if needed, or keep grid-cols-3 and let it wrap */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Grid adjusted for 2 items: centered with max-width */}
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <Card
           title="Konnaxion"
           description="The Public Engine. A unified operating system for collective intelligence, education, and meritocratic governance."
@@ -28,16 +28,6 @@ export default function PlatformsIndex() {
           title="Orgo"
           description="The Private Engine. An offline-first organizational tool for role-based task routing and secure coordination."
           href="/platforms/orgo"
-        />
-        <Card
-          title="Kristal Farms"
-          description="The Infrastructure. Green AI data centers powering the ecosystem with renewable energy and open knowledge."
-          href="/platforms/kristal-farms"
-        />
-        <Card
-          title="Kréature (FR)"
-          description="The Mythopoetic Interface. Explore the ecosystem as a living organism through King Klown's narrative lens. (French section)."
-          href="/platforms/kreature"
         />
       </div>
 

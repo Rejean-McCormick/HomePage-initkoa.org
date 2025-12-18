@@ -1,129 +1,76 @@
-// app\principles\map\page.js
+// app/principles/page.js
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
-  title: 'Principles Map – kOA / King Klown',
-  description: 'A simple map linking the three axioms to the three domains.',
+  title: 'Principles – King Klown & KOA',
+  description:
+    'Core axioms and the domains: Civic Principles & Ethics, and Cosmic Etherism (optional).',
 };
 
-const AXIOMS = [
-  { title: 'Radical Lucidity', desc: 'Evidence, clarity, honest diagnosis.' },
-  { title: 'Integral Cooperation', desc: 'Coordination, collaboration, shared wins.' },
-  { title: 'Open Technology', desc: 'Verifiability, transparency, open systems.' },
-];
-
-const DOMAINS = [
-  {
-    title: 'Âme artificielle',
-    href: '/principles/ame-artificielle',
-    desc: 'Technical + governance principles for safe AI.',
-  },
-  {
-    title: 'Civic Principles & Ethics',
-    href: '/principles/civic-principles-ethics',
-    desc: 'Institutions, rights/duties, accountability, ethics.',
-  },
-  {
-    title: 'Cosmic Etherism (Optional)',
-    href: '/principles/cosmic-etherism',
-    desc:
-      'Personal Pi symbolism + worldview. Fully separated from other initiatives, except Âme artificielle in King Klown fiction.',
-    accent: true,
-  },
-];
-
-const LINKS = {
-  // Radical Lucidity
-  '0-0': '/principles/ame-artificielle/principles',
-  '0-1': '/principles/civic-principles-ethics/principles',
-  '0-2': '/principles/cosmic-etherism/principles',
-
-  // Integral Cooperation
-  '1-0': '/principles/ame-artificielle/methods',
-  '1-1': '/principles/civic-principles-ethics/institutions',
-  '1-2': '/principles/cosmic-etherism/practices',
-
-  // Open Technology
-  '2-0': '/principles/ame-artificielle/practices',
-  '2-1': '/principles/civic-principles-ethics/transparency-and-accountability',
-  '2-2': '/principles/cosmic-etherism/symbols/pi',
-};
-
-export default function PrinciplesMapPage() {
+export default function PrinciplesPage() {
   return (
     <PageSection>
-      <h1 className="text-4xl font-bold mb-6">Principles Map</h1>
+      <h1 className="text-4xl font-bold mb-6">Principles</h1>
 
-      <div className="grid gap-6 md:grid-cols-3 mb-10">
-        {DOMAINS.map((d) => (
+      <p className="text-xl text-gray-600 mb-10">
+        Three axioms. Two distinct domains. Clear separation where required.
+      </p>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4 text-primary">Core axioms</h2>
+        <div className="space-y-6">
+          <div className="p-5 rounded-lg border border-gray-200 bg-white">
+            <h3 className="text-lg font-bold mb-2">1. Radical Lucidity</h3>
+            <p>Face reality as it is. Prefer evidence, clarity, and honest diagnosis over ideology.</p>
+          </div>
+
+          <div className="p-5 rounded-lg border border-gray-200 bg-white">
+            <h3 className="text-lg font-bold mb-2">2. Integral Cooperation</h3>
+            <p>Design for coordination at scale. Reward collaboration over zero-sum conflict.</p>
+          </div>
+
+          <div className="p-5 rounded-lg border border-gray-200 bg-white">
+            <h3 className="text-lg font-bold mb-2">3. Open Technology</h3>
+            <p>Public infrastructure must be verifiable. Transparency through open systems.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4 text-primary">Domains</h2>
+
+        {/* Adjusted grid to 2 columns since Âme is moved to Technologies */}
+        <div className="grid gap-6 md:grid-cols-2">
+          
           <a
-            key={d.href}
-            href={d.href}
-            className={[
-              'block p-5 rounded-lg border hover:shadow-sm',
-              d.accent ? 'border-amber-300 bg-amber-50' : 'border-gray-200 bg-white',
-            ].join(' ')}
+            href="/principles/civic-principles-ethics"
+            className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
           >
-            <h2 className="text-lg font-bold mb-2">{d.title}</h2>
-            <p className={d.accent ? 'text-gray-800' : 'text-gray-700'}>{d.desc}</p>
+            <h3 className="text-lg font-bold mb-2">Civic Principles & Ethics</h3>
+            <p className="text-gray-700">
+              Public institutions, rights and duties, accountability, transparency, and ethics.
+            </p>
           </a>
-        ))}
-      </div>
 
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse">
-          <thead>
-            <tr>
-              <th className="text-left p-3 border-b border-gray-200">Axiom</th>
-              {DOMAINS.map((d) => (
-                <th key={d.href} className="text-left p-3 border-b border-gray-200">
-                  {d.title}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {AXIOMS.map((a, r) => (
-              <tr key={a.title} className="align-top">
-                <td className="p-3 border-b border-gray-200">
-                  <div className="font-bold">{a.title}</div>
-                  <div className="text-gray-600">{a.desc}</div>
-                </td>
+          <a
+            href="/principles/cosmic-etherism"
+            className="block p-5 rounded-lg border border-amber-300 bg-amber-50 hover:shadow-sm"
+          >
+            <h3 className="text-lg font-bold mb-2">Cosmic Etherism (Optional)</h3>
+            <p className="text-gray-800">
+              Personal Pi symbolism and worldview. 100% separated from all other initiatives,
+              referenced only in King Klown fiction.
+            </p>
+          </a>
+        </div>
+      </section>
 
-                {DOMAINS.map((d, c) => {
-                  const key = `${r}-${c}`;
-                  const href = LINKS[key];
-                  const isCosmic = c === 2;
-                  return (
-                    <td
-                      key={key}
-                      className={[
-                        'p-3 border-b border-gray-200',
-                        isCosmic ? 'bg-amber-50' : '',
-                      ].join(' ')}
-                    >
-                      {href ? (
-                        <a className="underline" href={href}>
-                          Open
-                        </a>
-                      ) : (
-                        <span className="text-gray-500">—</span>
-                      )}
-                    </td>
-                  );
-                })}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <div className="mt-10 flex flex-wrap gap-4">
+      <section className="flex flex-wrap gap-4">
         <a
-          href="/principles"
+          href="/principles/map"
           className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
         >
-          Back to Principles
+          Map
         </a>
         <a
           href="/principles/glossary"
@@ -131,7 +78,7 @@ export default function PrinciplesMapPage() {
         >
           Glossary
         </a>
-      </div>
+      </section>
     </PageSection>
   );
 }

@@ -43,7 +43,71 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
 
-    // --- 2. INITIATIVES ---
+    // --- 2. INFRASTRUCTURE (NEW) ---
+    {
+      url: `${baseUrl}/infrastructure`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    // Kristal Farms
+    {
+      url: `${baseUrl}/infrastructure/kristal-farms`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/infrastructure/kristal-farms/infrastructure`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/infrastructure/kristal-farms/ecology`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/infrastructure/kristal-farms/governance`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/infrastructure/kristal-farms/nain`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    // Kin City
+    {
+      url: `${baseUrl}/infrastructure/kin-city`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/infrastructure/kin-city/zones`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/infrastructure/kin-city/philosophy`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/infrastructure/kin-city/roadmap`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+
+    // --- 3. INITIATIVES ---
     {
       url: `${baseUrl}/initiatives`,
       lastModified: new Date(),
@@ -80,7 +144,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-    // Corrected Path: PI Theory is located in the 'research' folder
     {
       url: `${baseUrl}/research/pi-theory`,
       lastModified: new Date(),
@@ -94,7 +157,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
-    // --- 3. PLATFORMS ---
+    // --- 4. PLATFORMS ---
     {
       url: `${baseUrl}/platforms`,
       lastModified: new Date(),
@@ -120,7 +183,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
-    // --- 4. TECHNOLOGY ---
+    // --- 5. TECHNOLOGY ---
     {
       url: `${baseUrl}/technology`,
       lastModified: new Date(),
@@ -151,7 +214,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
-    // Corrected Path: Folder name is 'architect', not 'abstract-wiki'
     {
       url: `${baseUrl}/technology/architect`,
       lastModified: new Date(),

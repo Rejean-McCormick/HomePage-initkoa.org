@@ -1,4 +1,4 @@
-// app\technology\page.tsx
+// app/technology/page.tsx
 import Link from 'next/link';
 
 export const metadata = { 
@@ -21,6 +21,23 @@ export default function TechIndex() {
 
       <div className="grid gap-6">
         
+        {/* VM-ENGINE (New) */}
+        <div className="group block p-6 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <Link href="/technology/votingmachine" className="block">
+            <div className="flex justify-between items-center mb-2">
+              <strong className="text-xl text-primary group-hover:underline">VM-ENGINE</strong>
+              <span className="text-xs font-mono bg-gray-100 px-2 py-1 rounded">Core / Determinism</span>
+            </div>
+            <p className="text-gray-700 mb-4">
+              A pure-function electoral simulation core. Takes canonical inputs and produces byte-identical results across platforms. No network, pinned RNG, and cryptographic audit trails.
+            </p>
+          </Link>
+          <a href="https://github.com/Rejean-McCormick/vm-engine" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
+            <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.05-.015-2.055-3.33.72-4.035-1.605-4.035-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.087-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            Rejean-McCormick/vm-engine
+          </a>
+        </div>
+
         {/* SwarmCraft */}
         <div className="group block p-6 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
           <Link href="/technology/swarmcraft" className="block">
@@ -45,7 +62,6 @@ export default function TechIndex() {
               <strong className="text-xl text-primary group-hover:underline">SenTient</strong>
               <span className="text-xs font-mono bg-gray-100 px-2 py-1 rounded">Sens / Input</span>
             </div>
-            {/* FIXED: &apos; used for apostrophe */}
             <p className="text-gray-700 mb-4">
               A tool to deconstruct natural language and format it for Wikidata. Inspired by Falcon 2.0, OpenRefine, and OpenTapioca to secure the system&apos;s entry point.
             </p>
@@ -92,7 +108,7 @@ export default function TechIndex() {
 
         {/* Âme artificielle (Ame-Artificielle) */}
         <div className="group block p-6 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-          <Link href="/principles/ame-artificielle" className="block">
+          <Link href="/technology/ame-artificielle" className="block">
             <div className="flex justify-between items-center mb-2">
               <strong className="text-xl text-primary group-hover:underline">Âme artificielle (Ame-Artificielle)</strong>
               <span className="text-xs font-mono bg-gray-100 px-2 py-1 rounded">Âme / Ethics</span>
@@ -119,7 +135,6 @@ export default function TechIndex() {
           href="/platforms/kreature" 
           className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-all"
         >
-          {/* Use &apos; instead of ' to fix the build error */}
           Enter Kréature (King Klown&apos;s Interface) →
         </Link>
       </div>
