@@ -2,13 +2,13 @@
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
-  title: 'AI Alignment – FAQ',
-  description: 'Common questions and scope boundaries for the AI Alignment domain.',
+  title: 'Âme artificielle – FAQ',
+  description: 'Common questions and scope boundaries for the Âme artificielle domain.',
 };
 
 const FAQ = [
   {
-    q: 'What is “AI Alignment” in this context?',
+    q: 'What is “Âme artificielle” in this context?',
     a: 'The practical work of ensuring AI systems behave safely and beneficially under real-world conditions: robust to misuse, honest about uncertainty, privacy-preserving, and governed with accountability.',
   },
   {
@@ -17,7 +17,7 @@ const FAQ = [
   },
   {
     q: 'Does this domain depend on any spiritual or symbolic worldview?',
-    a: 'No. AI Alignment is independent from Cosmic Etherism and Pi symbolism.',
+    a: 'No. Âme artificielle is independent from Cosmic Etherism and Pi symbolism.',
   },
   {
     q: 'What counts as “unsafe” behavior?',
@@ -44,7 +44,7 @@ const FAQ = [
 export default function AIAlignmentFaqPage() {
   return (
     <PageSection>
-      <h1 className="text-4xl font-bold mb-6">AI Alignment FAQ</h1>
+      <h1 className="text-4xl font-bold mb-6">Âme artificielle FAQ</h1>
 
       <div className="space-y-4">
         {FAQ.map((item) => (
@@ -57,13 +57,13 @@ export default function AIAlignmentFaqPage() {
 
       <div className="mt-10 flex flex-wrap gap-4">
         <a
-          href="/principles/ai-alignment"
+          href="/principles/ame-artificielle"
           className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
         >
-          Back to AI Alignment
+          Back to Âme artificielle
         </a>
         <a
-          href="/principles/ai-alignment/principles"
+          href="/principles/ame-artificielle/principles"
           className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
         >
           Principles

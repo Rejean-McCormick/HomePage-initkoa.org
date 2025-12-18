@@ -146,7 +146,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/technology/ai-alignment`,
+      url: `${baseUrl}/technology/ame-artificielle`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,

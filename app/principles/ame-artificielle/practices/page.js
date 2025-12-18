@@ -2,7 +2,7 @@
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
-  title: 'AI Alignment – Practices',
+  title: 'Âme artificielle – Practices',
   description: 'Day-to-day operational practices for shipping and operating AI systems safely.',
 };
 
@@ -98,7 +98,7 @@ const PRACTICES = [
 export default function AIAlignmentPracticesPage() {
   return (
     <PageSection>
-      <h1 className="text-4xl font-bold mb-6">AI Alignment Practices</h1>
+      <h1 className="text-4xl font-bold mb-6">Âme artificielle Practices</h1>
 
       <p className="text-gray-700 mb-8">
         These are operational norms: what teams do day-to-day to maintain safety, reliability, and
@@ -121,13 +121,13 @@ export default function AIAlignmentPracticesPage() {
 
       <div className="mt-10 flex flex-wrap gap-4">
         <a
-          href="/principles/ai-alignment"
+          href="/principles/ame-artificielle"
           className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
         >
-          Back to AI Alignment
+          Back to Âme artificielle
         </a>
         <a
-          href="/principles/ai-alignment/methods"
+          href="/principles/ame-artificielle/methods"
           className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
         >
           Methods

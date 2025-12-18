@@ -2,7 +2,7 @@
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
-  title: 'AI Alignment – Methods',
+  title: 'Âme artificielle – Methods',
   description: 'Methods for evaluating, governing, and operating AI systems safely.',
 };
 
@@ -72,10 +72,10 @@ const METHODS = [
 export default function AIAlignmentMethodsPage() {
   return (
     <PageSection>
-      <h1 className="text-4xl font-bold mb-6">AI Alignment Methods</h1>
+      <h1 className="text-4xl font-bold mb-6">Âme artificielle Methods</h1>
 
       <p className="text-gray-700 mb-8">
-        These methods describe how to operationalize the AI Alignment principles: planning,
+        These methods describe how to operationalize the Âme artificielle principles: planning,
         evaluation, governance, and safe deployment.
       </p>
 
@@ -97,13 +97,13 @@ export default function AIAlignmentMethodsPage() {
 
       <div className="mt-10 flex flex-wrap gap-4">
         <a
-          href="/principles/ai-alignment"
+          href="/principles/ame-artificielle"
           className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
         >
-          Back to AI Alignment
+          Back to Âme artificielle
         </a>
         <a
-          href="/principles/ai-alignment/principles"
+          href="/principles/ame-artificielle/principles"
           className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
         >
           Principles

@@ -66,7 +66,7 @@ export default function CosmicEtherismPracticesPage() {
           and AI-alignment).
         </p>
         <p className="text-gray-800 mt-3">
-          The <strong>only</strong> exception is <strong>Artificial Soul</strong> and its use as a{' '}
+          The <strong>only</strong> exception is <strong>Âme artificielle</strong> and its use as a{' '}
           <strong>fiction framework</strong> for staging <strong>King Klown</strong>.
         </p>
       </div>

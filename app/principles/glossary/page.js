@@ -3,7 +3,7 @@ import PageSection from '@/components/PageSection';
 
 export const metadata = {
   title: 'Glossary – Principles',
-  description: 'Shared vocabulary used across AI Alignment, Civic Principles, and Cosmic Etherism.',
+  description: 'Shared vocabulary used across Âme artificielle, Civic Principles, and Cosmic Etherism.',
 };
 
 const TERMS = [
@@ -25,10 +25,10 @@ const TERMS = [
   },
   {
     term: 'Domain',
-    def: 'A dedicated folder of principles and practices addressing a specific area (AI Alignment, Civic Principles & Ethics, Cosmic Etherism).',
+    def: 'A dedicated folder of principles and practices addressing a specific area (Âme artificielle, Civic Principles & Ethics, Cosmic Etherism).',
   },
   {
-    term: 'AI Alignment',
+    term: 'Âme artificielle',
     def: 'Work focused on making AI systems reliably safe and beneficial through technical design, evaluation, governance, and deployment constraints.',
   },
   {
@@ -37,19 +37,19 @@ const TERMS = [
   },
   {
     term: 'Cosmic Etherism (Optional)',
-    def: 'A personal spiritual-philosophical lens (including Pi symbolism). Participation and belief are fully optional and separated from other initiatives, except Artificial Soul in King Klown fiction.',
+    def: 'A personal spiritual-philosophical lens (including Pi symbolism). Participation and belief are fully optional and separated from other initiatives, except Âme artificielle in King Klown fiction.',
   },
   {
     term: 'Pi (π) Symbolism',
     def: 'A symbolic anchor used within Cosmic Etherism to represent invariant structure and coherence; not a required scientific or policy claim.',
   },
   {
-    term: 'Artificial Soul',
+    term: 'Âme artificielle',
     def: 'A narrative and conceptual construct used as the only integration point between Cosmic Etherism and the broader ecosystem, specifically for fiction staging King Klown.',
   },
   {
     term: 'King Klown (Fiction)',
-    def: 'A fictional framework and mythos in which certain philosophical motifs (including Artificial Soul) may be staged; not a requirement for civic or technical initiatives.',
+    def: 'A fictional framework and mythos in which certain philosophical motifs (including Âme artificielle) may be staged; not a requirement for civic or technical initiatives.',
   },
   {
     term: 'Separation (Non-negotiable)',

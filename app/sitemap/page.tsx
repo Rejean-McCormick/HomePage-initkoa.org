@@ -74,7 +74,7 @@ export default function VisualSitemapPage() {
           {/* TECHNOLOGY */}
           <Section title="Technology" icon={<Cpu className="w-5 h-5" />}>
             <MapLink href="/technology" label="Tech Overview" />
-            <MapLink href="/principles/ai-alignment" label="AI Alignment (Âme)" />
+            <MapLink href="/principles/ame-artificielle" label="Âme artificielle (Âme)" />
             <MapLink href="/technology/architect" label="Abstract Wiki Architect" />
             <MapLink href="/technology/ariane" label="Ariane (UI Graph)" />
             <MapLink href="/technology/sentient" label="SenTient (NLP Engine)" />

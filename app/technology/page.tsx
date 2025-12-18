@@ -90,11 +90,11 @@ export default function TechIndex() {
           </a>
         </div>
 
-        {/* AI Alignment (Ame-Artificielle) */}
+        {/* Âme artificielle (Ame-Artificielle) */}
         <div className="group block p-6 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-          <Link href="/principles/ai-alignment" className="block">
+          <Link href="/principles/ame-artificielle" className="block">
             <div className="flex justify-between items-center mb-2">
-              <strong className="text-xl text-primary group-hover:underline">AI Alignment (Ame-Artificielle)</strong>
+              <strong className="text-xl text-primary group-hover:underline">Âme artificielle (Ame-Artificielle)</strong>
               <span className="text-xs font-mono bg-gray-100 px-2 py-1 rounded">Âme / Ethics</span>
             </div>
             <p className="text-gray-700 mb-4">

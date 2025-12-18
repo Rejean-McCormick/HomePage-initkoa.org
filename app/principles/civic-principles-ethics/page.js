@@ -82,7 +82,7 @@ export default function CivicPrinciplesEthicsPage() {
             required.
           </li>
           <li>
-            It overlaps with AI Alignment where governance is shared (oversight, transparency, harm
+            It overlaps with Âme artificielle where governance is shared (oversight, transparency, harm
             reduction), but it remains a distinct domain.
           </li>
         </ul>

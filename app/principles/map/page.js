@@ -14,8 +14,8 @@ const AXIOMS = [
 
 const DOMAINS = [
   {
-    title: 'AI Alignment',
-    href: '/principles/ai-alignment',
+    title: 'Âme artificielle',
+    href: '/principles/ame-artificielle',
     desc: 'Technical + governance principles for safe AI.',
   },
   {
@@ -27,24 +27,24 @@ const DOMAINS = [
     title: 'Cosmic Etherism (Optional)',
     href: '/principles/cosmic-etherism',
     desc:
-      'Personal Pi symbolism + worldview. Fully separated from other initiatives, except Artificial Soul in King Klown fiction.',
+      'Personal Pi symbolism + worldview. Fully separated from other initiatives, except Âme artificielle in King Klown fiction.',
     accent: true,
   },
 ];
 
 const LINKS = {
   // Radical Lucidity
-  '0-0': '/principles/ai-alignment/principles',
+  '0-0': '/principles/ame-artificielle/principles',
   '0-1': '/principles/civic-principles-ethics/principles',
   '0-2': '/principles/cosmic-etherism/principles',
 
   // Integral Cooperation
-  '1-0': '/principles/ai-alignment/methods',
+  '1-0': '/principles/ame-artificielle/methods',
   '1-1': '/principles/civic-principles-ethics/institutions',
   '1-2': '/principles/cosmic-etherism/practices',
 
   // Open Technology
-  '2-0': '/principles/ai-alignment/practices',
+  '2-0': '/principles/ame-artificielle/practices',
   '2-1': '/principles/civic-principles-ethics/transparency-and-accountability',
   '2-2': '/principles/cosmic-etherism/symbols/pi',
 };

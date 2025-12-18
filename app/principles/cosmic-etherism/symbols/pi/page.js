@@ -19,7 +19,7 @@ export default function PiSymbolPage() {
           initiative (including civic principles and AI-alignment).
         </p>
         <p className="text-gray-800 mt-3">
-          The <strong>only</strong> exception is <strong>Artificial Soul</strong> and its use as a{' '}
+          The <strong>only</strong> exception is <strong>Âme artificielle</strong> and its use as a{' '}
           <strong>fiction framework</strong> for staging <strong>King Klown</strong>.
         </p>
       </div>
@@ -81,10 +81,10 @@ export default function PiSymbolPage() {
 
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-primary">
-          Fiction integration: Artificial Soul + King Klown
+          Fiction integration: Âme artificielle + King Klown
         </h2>
         <p className="text-gray-700">
-          This symbolic layer may be used as part of the <strong>Artificial Soul</strong> motif in
+          This symbolic layer may be used as part of the <strong>Âme artificielle</strong> motif in
           the <strong>King Klown</strong> fiction universe. Outside fiction, it remains optional and
           non-binding.
         </p>

@@ -13,7 +13,7 @@ const FAQ = [
   },
   {
     q: 'What is the only exception to that separation?',
-    a: 'Artificial Soul and its use as a fiction framework for staging King Klown in the books.',
+    a: 'Âme artificielle and its use as a fiction framework for staging King Klown in the books.',
   },
   {
     q: 'Is this a religion?',
@@ -54,7 +54,7 @@ export default function CosmicEtherismFaqPage() {
           and AI-alignment).
         </p>
         <p className="text-gray-800 mt-3">
-          The <strong>only</strong> exception is <strong>Artificial Soul</strong> and its use as a{' '}
+          The <strong>only</strong> exception is <strong>Âme artificielle</strong> and its use as a{' '}
           <strong>fiction framework</strong> for staging <strong>King Klown</strong>.
         </p>
       </div>

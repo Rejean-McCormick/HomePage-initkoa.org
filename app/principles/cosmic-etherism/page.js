@@ -21,7 +21,7 @@ export default function CosmicEtherismPage() {
           and AI-alignment).
         </p>
         <p className="text-gray-800 mt-3">
-          The <strong>only</strong> exception is <strong>Artificial Soul</strong> and its use as a{' '}
+          The <strong>only</strong> exception is <strong>Âme artificielle</strong> and its use as a{' '}
           <strong>fiction framework</strong> for staging <strong>King Klown</strong> in my books.
         </p>
         <p className="text-gray-700 mt-3">
@@ -86,11 +86,11 @@ export default function CosmicEtherismPage() {
 
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-primary">
-          The only integration point: Artificial Soul + King Klown (fiction)
+          The only integration point: Âme artificielle + King Klown (fiction)
         </h2>
         <p className="text-gray-700">
           Cosmic Etherism and Pi symbolism connect to the broader universe only through{' '}
-          <strong>Artificial Soul</strong> as a narrative device and philosophical backdrop for{' '}
+          <strong>Âme artificielle</strong> as a narrative device and philosophical backdrop for{' '}
           <strong>fiction</strong>—specifically the staging and mythos of <strong>King Klown</strong>
           .
         </p>

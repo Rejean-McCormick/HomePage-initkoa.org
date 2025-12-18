@@ -4,7 +4,7 @@ import PageSection from '@/components/PageSection';
 export const metadata = {
   title: 'Principles – kOA / King Klown',
   description:
-    'Core axioms and the three domains: AI Alignment, Civic Principles & Ethics, and Cosmic Etherism (optional).',
+    'Core axioms and the three domains: Âme artificielle, Civic Principles & Ethics, and Cosmic Etherism (optional).',
 };
 
 export default function PrinciplesPage() {
@@ -41,10 +41,10 @@ export default function PrinciplesPage() {
 
         <div className="grid gap-6 md:grid-cols-3">
           <a
-            href="/principles/ai-alignment"
+            href="/principles/ame-artificielle"
             className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
           >
-            <h3 className="text-lg font-bold mb-2">AI Alignment</h3>
+            <h3 className="text-lg font-bold mb-2">Âme artificielle</h3>
             <p className="text-gray-700">
               Technical and governance principles for building and deploying AI safely.
             </p>
@@ -67,7 +67,7 @@ export default function PrinciplesPage() {
             <h3 className="text-lg font-bold mb-2">Cosmic Etherism (Optional)</h3>
             <p className="text-gray-800">
               Personal Pi symbolism and worldview. 100% separated from all other initiatives,
-              except Artificial Soul and its use in King Klown fiction.
+              except Âme artificielle and its use in King Klown fiction.
             </p>
           </a>
         </div>

@@ -2,7 +2,7 @@
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
-  title: 'AI Alignment – Principles',
+  title: 'Âme artificielle – Principles',
   description: 'Core safety and alignment principles for AI systems.',
 };
 
@@ -60,7 +60,7 @@ const PRINCIPLES = [
 export default function AIAlignmentPrinciplesPage() {
   return (
     <PageSection>
-      <h1 className="text-4xl font-bold mb-6">AI Alignment Principles</h1>
+      <h1 className="text-4xl font-bold mb-6">Âme artificielle Principles</h1>
 
       <p className="text-gray-700 mb-8">
         These principles define the safety properties we want from AI systems. They are intended to
@@ -78,10 +78,10 @@ export default function AIAlignmentPrinciplesPage() {
 
       <div className="mt-10 flex flex-wrap gap-4">
         <a
-          href="/principles/ai-alignment"
+          href="/principles/ame-artificielle"
           className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
         >
-          Back to AI Alignment
+          Back to Âme artificielle
         </a>
         <a
           href="/principles/map"

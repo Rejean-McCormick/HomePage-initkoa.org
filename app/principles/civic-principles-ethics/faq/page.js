@@ -32,8 +32,8 @@ const FAQ = [
     a: 'Defense in depth: conflict-of-interest rules, open procurement, audit trails, independent oversight with real power, whistleblower protections, and enforceable consequences.',
   },
   {
-    q: 'What is the relationship to AI Alignment?',
-    a: 'They overlap in governance: oversight, accountability, transparency, and rights protection. AI Alignment adds technical controls and evaluation methods specific to AI systems.',
+    q: 'What is the relationship to Âme artificielle?',
+    a: 'They overlap in governance: oversight, accountability, transparency, and rights protection. Âme artificielle adds technical controls and evaluation methods specific to AI systems.',
   },
   {
     q: 'What is the relationship to the King Klown fiction universe?',
