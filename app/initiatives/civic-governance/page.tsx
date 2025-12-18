@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 
 export const metadata = {
@@ -22,22 +21,22 @@ export default function CivicGovernancePage() {
 
       <h2>Active Modules</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
-        <a href="/initiatives/civic-governance/modules/education" className="block p-4 border rounded hover:bg-slate-50">
+        <Link href="/initiatives/civic-governance/modules/education" className="block p-4 border rounded hover:bg-slate-50">
           <h3 className="font-bold text-lg">Education</h3>
           <p className="text-sm text-slate-600">Kristals model for credentialing.</p>
-        </a>
-        <a href="/initiatives/civic-governance/modules/economy" className="block p-4 border rounded hover:bg-slate-50">
+        </Link>
+        <Link href="/initiatives/civic-governance/modules/economy" className="block p-4 border rounded hover:bg-slate-50">
           <h3 className="font-bold text-lg">Economy</h3>
           <p className="text-sm text-slate-600">Solidarity economy & resource tracking.</p>
-        </a>
-        <a href="/initiatives/civic-governance/modules/justice" className="block p-4 border rounded hover:bg-slate-50">
+        </Link>
+        <Link href="/initiatives/civic-governance/modules/justice" className="block p-4 border rounded hover:bg-slate-50">
           <h3 className="font-bold text-lg">Justice</h3>
           <p className="text-sm text-slate-600">AI-assisted dispute resolution.</p>
-        </a>
-        <a href="/initiatives/civic-governance/modules/international" className="block p-4 border rounded hover:bg-slate-50">
+        </Link>
+        <Link href="/initiatives/civic-governance/modules/international" className="block p-4 border rounded hover:bg-slate-50">
           <h3 className="font-bold text-lg">International</h3>
           <p className="text-sm text-slate-600">Diplomacy and treaty frameworks.</p>
-        </a>
+        </Link>
       </div>
     </main>
   );

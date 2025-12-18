@@ -3,126 +3,174 @@ const path = require('path');
 
 const rootDir = process.cwd();
 
-// Helper to write file content
+// Helper to write files
 function writeFile(relativePath, content) {
   const fullPath = path.join(rootDir, relativePath);
   const dir = path.dirname(fullPath);
-  
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
-  
   fs.writeFileSync(fullPath, content, 'utf8');
   console.log(`✅ Fixed: ${relativePath}`);
 }
 
-// --- 1. FIX "UNE JOURNEE" (Source of 20+ 404s) ---
-// Issue: Links were pointing to /platforms/anatomie... instead of /platforms/kreature/anatomie...
-const uneJourneeContent = `
-import Link from 'next/link';
+// Helper to delete files
+function deleteFile(relativePath) {
+  const fullPath = path.join(rootDir, relativePath);
+  if (fs.existsSync(fullPath)) {
+    fs.unlinkSync(fullPath);
+    console.log(`🗑️  Deleted: ${relativePath}`);
+  }
+}
+
+// ---------------------------------------------------------
+// 1. FIX "UNE JOURNEE"
+// ---------------------------------------------------------
+const uneJourneeContent = `import Link from 'next/link';
 
 export const metadata = {
   title: "Une Journée dans Kréature",
   description: "Scénario d'utilisation quotidienne de l'écosystème KOA."
 };
 
-# Une Journée Type
+export default function UneJourneePage() {
+  return (
+    <main className="min-h-screen bg-white text-slate-900 selection:bg-primary selection:text-white pb-24">
+      <section className="max-w-4xl mx-auto px-6 pt-24 pb-12 border-b border-gray-100">
+        <h1 className="text-5xl font-serif font-medium mb-6 text-slate-900">Une Journée Type</h1>
+        <div className="prose prose-slate prose-lg text-slate-600 leading-relaxed max-w-none">
+          <p>Comment habiter Kréature au quotidien ? Voici le cycle de respiration d'un utilisateur actif.</p>
+        </div>
+      </section>
 
-Comment habiter Kréature au quotidien ? Voici le cycle de respiration d'un utilisateur actif.
+      <div className="max-w-4xl mx-auto px-6 py-16 space-y-12">
+        <section>
+          <h2 className="text-2xl font-bold mb-4">1. Le Réveil (Orgo)</h2>
+          <p>Tout commence par le corps. Vérifier l'état du système.</p>
+          <ul className="list-disc pl-5 mt-2">
+            <li><strong><Link href="/platforms/kreature/anatomie/corps/orgo" className="text-primary hover:underline">Orgo (Le Corps)</Link></strong> : Check des notifications, santé du système, tâches urgentes.</li>
+          </ul>
+        </section>
 
-## 1. Le Réveil (Orgo)
-Tout commence par le corps. Vérifier l'état du système.
-* **[Orgo (Le Corps)](/platforms/kreature/anatomie/corps/orgo)** : Check des notifications, santé du système, tâches urgentes.
+        <section>
+          <h2 className="text-2xl font-bold mb-4">2. La Perception (SenTient & Ariane)</h2>
+          <p>Ensuite, on ouvre les sens vers l'extérieur.</p>
+          <ul className="list-disc pl-5 mt-2">
+            <li><strong><Link href="/platforms/kreature/anatomie/sens/sentient" className="text-primary hover:underline">SenTient (L'Ouïe)</Link></strong> : Digérer les flux d'informations, filtrer le bruit.</li>
+            <li><strong><Link href="/platforms/kreature/anatomie/sens/ariane" className="text-primary hover:underline">Ariane (La Vue)</Link></strong> : Naviguer dans les interfaces et les graphes de données.</li>
+          </ul>
+        </section>
 
-## 2. La Perception (SenTient & Ariane)
-Ensuite, on ouvre les sens vers l'extérieur.
-* **[SenTient (L'Ouïe)](/platforms/kreature/anatomie/sens/sentient)** : Digérer les flux d'informations, filtrer le bruit.
-* **[Ariane (La Vue)](/platforms/kreature/anatomie/sens/ariane)** : Naviguer dans les interfaces et les graphes de données.
+        <section>
+          <h2 className="text-2xl font-bold mb-4">3. La Délibération (Konnaxion)</h2>
+          <p>L'information doit être traitée par l'esprit collectif.</p>
+          <ul className="list-disc pl-5 mt-2">
+            <li><strong><Link href="/platforms/kreature/anatomie/esprit/konnaxion" className="text-primary hover:underline">Konnaxion (L'Esprit)</Link></strong> : Apprendre, débattre dans le Korum, voter.</li>
+          </ul>
+        </section>
 
-## 3. La Délibération (Konnaxion)
-L'information doit être traitée par l'esprit collectif.
-* **[Konnaxion (L'Esprit)](/platforms/kreature/anatomie/esprit/konnaxion)** : Apprendre, débattre dans le Korum, voter.
+        <section>
+          <h2 className="text-2xl font-bold mb-4">4. L'Expression (Architect)</h2>
+          <p>Une fois la décision prise, il faut formuler une réponse claire.</p>
+          <ul className="list-disc pl-5 mt-2">
+            <li><strong><Link href="/platforms/kreature/anatomie/voix/architect" className="text-primary hover:underline">Architect (La Voix)</Link></strong> : Générer du texte structuré, publier du contenu.</li>
+          </ul>
+        </section>
 
-## 4. L'Expression (Architect)
-Une fois la décision prise, il faut formuler une réponse claire.
-* **[Architect (La Voix)](/platforms/kreature/anatomie/voix/architect)** : Générer du texte structuré, publier du contenu.
+        <section>
+          <h2 className="text-2xl font-bold mb-4">5. L'Intégration (SwarmCraft & Âme)</h2>
+          <p>Enfin, on inscrit l'expérience dans la mémoire et le sens.</p>
+          <ul className="list-disc pl-5 mt-2">
+            <li><strong><Link href="/platforms/kreature/anatomie/memoire/swarmcraft" className="text-primary hover:underline">SwarmCraft (La Mémoire)</Link></strong> : Mettre à jour la Story Bible.</li>
+            <li><strong><Link href="/platforms/kreature/anatomie/ame/ame-artificielle" className="text-primary hover:underline">Âme Artificielle (La Conscience)</Link></strong> : Vérifier l'alignement éthique.</li>
+          </ul>
+        </section>
 
-## 5. L'Intégration (SwarmCraft & Âme)
-Enfin, on inscrit l'expérience dans la mémoire et le sens.
-* **[SwarmCraft (La Mémoire)](/platforms/kreature/anatomie/memoire/swarmcraft)** : Mettre à jour la Story Bible.
-* **[Âme Artificielle (La Conscience)](/platforms/kreature/anatomie/ame/ame-artificielle)** : Vérifier l'alignement éthique.
-
----
-
-## Rituels Connexes
-* [Cycle Vital](/platforms/kreature/rituels/cycle-vital)
-* [Respiration du Sens](/platforms/kreature/rituels/respiration-du-sens)
-* [Parlement Intérieur](/platforms/kreature/rituels/parlement-interieur)
+        <section className="border-t pt-8">
+          <h2 className="text-xl font-bold mb-4">Rituels Connexes</h2>
+          <ul className="space-y-2">
+            <li><Link href="/platforms/kreature/rituels/cycle-vital" className="text-primary hover:underline">Cycle Vital</Link></li>
+            <li><Link href="/platforms/kreature/rituels/respiration-du-sens" className="text-primary hover:underline">Respiration du Sens</Link></li>
+            <li><Link href="/platforms/kreature/rituels/parlement-interieur" className="text-primary hover:underline">Parlement Intérieur</Link></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  );
+}
 `;
 
-// --- 2. FIX "AI SPECS" (Source of AI 404s) ---
-// Issue: Links were relative (../) failing to resolve deep nesting.
-const aiSpecsContent = `
-import Link from 'next/link';
+// ---------------------------------------------------------
+// 2. FIX "CYCLE VITAL"
+// ---------------------------------------------------------
+const cycleVitalContent = `import Link from 'next/link';
 
 export const metadata = {
-  title: "Spécifications Fonctionnelles - Âme Artificielle",
-  description: "Détails techniques des modules de l'Âme."
+  title: "Le Cycle Vital",
+  description: "La boucle de rétroaction entre l'individu et le collectif."
 };
 
-# Spécifications Fonctionnelles
-
-L'architecture de l'Âme Artificielle repose sur quatre piliers d'alignement.
-
-## Modules Principaux
-
-### 1. Contrôle et Personnalisation
-Gérer la "texture" de la personnalité (politesse, humour, distance).
-* **[Voir les specs : Contrôle](/technology/ai-alignment/Controle-Et-Personnalisation)**
-
-### 2. Méta-Cognition
-La capacité du modèle à s'observer penser et à résoudre des conflits logiques.
-* **[Voir les specs : Méta-Cognition](/technology/ai-alignment/Meta-Cognition-Et-Resolution)**
-
-### 3. Création de Chemins
-Le moteur de graphe qui relie les concepts entre eux (Nœuds et Arcs).
-* **[Voir les specs : Chemins](/technology/ai-alignment/Creation-De-Chemins)**
-
-### 4. Éthique et Gouvernance
-Le système de jugement moral et les garde-fous (Clown System).
-* **[Voir les specs : Éthique](/technology/ai-alignment/Ethique-Et-Gouvernance)**
+export default function CycleVitalPage() {
+  return (
+    <main className="max-w-4xl mx-auto px-6 py-24 prose prose-slate">
+      <h1>Le Cycle Vital</h1>
+      <p>Kréature n'est pas statique. Elle vit par le mouvement de l'information.</p>
+      <ol>
+        <li><strong>Input (Sens)</strong> : <Link href="/platforms/kreature/anatomie/sens/sentient">SenTient</Link> capte le signal.</li>
+        <li><strong>Traitement (Esprit)</strong> : <Link href="/platforms/kreature/anatomie/esprit/konnaxion">Konnaxion</Link> analyse et vote.</li>
+        <li><strong>Décision (Âme)</strong> : <Link href="/platforms/kreature/anatomie/ame/ame-artificielle">Âme Artificielle</Link> valide l'éthique.</li>
+        <li><strong>Action (Corps)</strong> : <Link href="/platforms/kreature/anatomie/corps/orgo">Orgo</Link> exécute la tâche.</li>
+        <li><strong>Mémoire (Narratif)</strong> : <Link href="/platforms/kreature/anatomie/memoire/swarmcraft">SwarmCraft</Link> écrit l'histoire.</li>
+      </ol>
+      <p><Link href="/platforms/kreature/rituels/une-journee">Retour aux Rituels</Link></p>
+    </main>
+  );
+}
 `;
 
-// --- 3. FIX "ATLAS" HUB (Source of Ariane 404s) ---
-// Issue: Missing links to sub-pages.
-const atlasContent = `
-import Link from 'next/link';
+// ---------------------------------------------------------
+// 3. FIX "CARTE"
+// ---------------------------------------------------------
+const carteContent = `import Link from 'next/link';
 
 export const metadata = {
-  title: "Atlas: UI Graph & Ontology",
-  description: "Documentation for the Atlas component of Ariane."
+  title: "Carte Anatomique",
+  description: "Vue d'ensemble des organes."
 };
 
-# Atlas
+export default function CartePage() {
+  return (
+    <main className="max-w-4xl mx-auto px-6 py-24 prose prose-slate">
+      <h1>Carte Anatomique</h1>
+      
+      <h2>Zone 1: Interface (Le Masque)</h2>
+      <ul>
+        <li><Link href="/platforms/kreature/anatomie/sens/ariane">Ariane</Link></li>
+        <li><Link href="/platforms/kreature/anatomie/sens/sentient">SenTient</Link></li>
+      </ul>
 
-Atlas is the storage and semantic layer of Ariane. It persists the UI graph produced by Theseus.
+      <h2>Zone 2: Cognition (Le Cerveau)</h2>
+      <ul>
+        <li><Link href="/platforms/kreature/anatomie/esprit/konnaxion">Konnaxion</Link></li>
+        <li><Link href="/platforms/kreature/anatomie/memoire/swarmcraft">SwarmCraft</Link></li>
+      </ul>
 
-## Documentation Modules
+      <h2>Zone 3: Infrastructure (Le Squelette)</h2>
+      <ul>
+        <li><Link href="/platforms/kreature/anatomie/corps/orgo">Orgo</Link></li>
+        <li><Link href="/platforms/kreature/anatomie/voix/architect">Architect</Link></li>
+      </ul>
 
-* **[Atlas Graph Model](/technology/ariane/Atlas/Atlas-Graph-Model)** Definitions of Nodes, Edges, and Properties in the UI graph.
-
-* **[Core Schema](/technology/ariane/Atlas/Atlas-Core-Schema)** The JSON schema used for validating UI states.
-
-* **[Ontology Vocabulary](/technology/ariane/Atlas/Atlas-Ontology-Vocabulary)** The standardized vocabulary for UI intents (e.g., "Submit", "Cancel", "Navigate").
-
----
-
-[Back to Ariane Hub](/technology/ariane)
+      <p><Link href="/platforms/kreature/initiation">Retour à l'Initiation</Link></p>
+    </main>
+  );
+}
 `;
 
-// --- 4. FIX CONTACT PAGE (Removes broken Store link) ---
-const contactContent = `
-import Link from 'next/link';
+// ---------------------------------------------------------
+// 4. FIX CONTACT
+// ---------------------------------------------------------
+const contactContent = `import Link from 'next/link';
 
 export const metadata = {
   title: "Contact & Inventory",
@@ -154,9 +202,10 @@ export default function ContactPage() {
 }
 `;
 
-// --- 5. FIX CIVIC GOVERNANCE (Fixes missing module links) ---
-const civicContent = `
-import Link from 'next/link';
+// ---------------------------------------------------------
+// 5. FIX CIVIC GOVERNANCE
+// ---------------------------------------------------------
+const civicContent = `import Link from 'next/link';
 
 export const metadata = {
   title: "Civic Governance Initiatives",
@@ -179,31 +228,33 @@ export default function CivicGovernancePage() {
 
       <h2>Active Modules</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
-        <a href="/initiatives/civic-governance/modules/education" className="block p-4 border rounded hover:bg-slate-50">
+        <Link href="/initiatives/civic-governance/modules/education" className="block p-4 border rounded hover:bg-slate-50">
           <h3 className="font-bold text-lg">Education</h3>
           <p className="text-sm text-slate-600">Kristals model for credentialing.</p>
-        </a>
-        <a href="/initiatives/civic-governance/modules/economy" className="block p-4 border rounded hover:bg-slate-50">
+        </Link>
+        <Link href="/initiatives/civic-governance/modules/economy" className="block p-4 border rounded hover:bg-slate-50">
           <h3 className="font-bold text-lg">Economy</h3>
           <p className="text-sm text-slate-600">Solidarity economy & resource tracking.</p>
-        </a>
-        <a href="/initiatives/civic-governance/modules/justice" className="block p-4 border rounded hover:bg-slate-50">
+        </Link>
+        <Link href="/initiatives/civic-governance/modules/justice" className="block p-4 border rounded hover:bg-slate-50">
           <h3 className="font-bold text-lg">Justice</h3>
           <p className="text-sm text-slate-600">AI-assisted dispute resolution.</p>
-        </a>
-        <a href="/initiatives/civic-governance/modules/international" className="block p-4 border rounded hover:bg-slate-50">
+        </Link>
+        <Link href="/initiatives/civic-governance/modules/international" className="block p-4 border rounded hover:bg-slate-50">
           <h3 className="font-bold text-lg">International</h3>
           <p className="text-sm text-slate-600">Diplomacy and treaty frameworks.</p>
-        </a>
+        </Link>
       </div>
     </main>
   );
 }
 `;
 
-// --- 6. FIX SITEMAP PAGE (Visual Sitemap - Fixes Type Error & Dead Links) ---
-const sitemapPageContent = `
-import Link from 'next/link';
+// ---------------------------------------------------------
+// 6. FIX SITEMAP PAGE
+// ---------------------------------------------------------
+// NOTE: We escaped the backticks and ${} for the string template below
+const sitemapPageContent = `import Link from 'next/link';
 import { 
   Map, 
   Landmark, 
@@ -305,24 +356,21 @@ function MapLink({ href, label, highlight }: { href: string, label: string, high
 }
 `;
 
-// --- EXECUTE WRITES ---
+// ---------------------------------------------------------
+// EXECUTE WRITE OPERATIONS
+// ---------------------------------------------------------
 
-// 1. Kreature: Une Journée
-writeFile('app/platforms/kreature/rituels/une-journee/page.mdx', uneJourneeContent);
+deleteFile('app/platforms/kreature/rituels/une-journee/page.mdx');
+writeFile('app/platforms/kreature/rituels/une-journee/page.tsx', uneJourneeContent);
 
-// 2. AI Alignment: Specs
-writeFile('app/technology/ai-alignment/Specifications-Fonctionnelles/page.mdx', aiSpecsContent);
+deleteFile('app/platforms/kreature/rituels/cycle-vital/page.mdx');
+writeFile('app/platforms/kreature/rituels/cycle-vital/page.tsx', cycleVitalContent);
 
-// 3. Ariane: Atlas
-writeFile('app/technology/ariane/Atlas/Atlas/page.mdx', atlasContent);
+deleteFile('app/platforms/kreature/initiation/carte/page.mdx');
+writeFile('app/platforms/kreature/initiation/carte/page.tsx', carteContent);
 
-// 4. Contact (Remove store)
 writeFile('app/contact/page.js', contactContent);
-
-// 5. Civic Governance (Fix module links)
 writeFile('app/initiatives/civic-governance/page.tsx', civicContent);
-
-// 6. Sitemap (Fix Type Error)
 writeFile('app/sitemap/page.tsx', sitemapPageContent);
 
-console.log("🎉 All content links fixed. Run 'npm run build' now.");
+console.log("🎉 ALL critical files updated. Run 'npm run build' now.");
