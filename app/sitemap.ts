@@ -42,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
 
-    // --- 2. INITIATIVES (The Work) ---
+    // --- 2. INITIATIVES ---
     {
       url: `${baseUrl}/initiatives`,
       lastModified: new Date(),
@@ -55,32 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-    // Constitution
     {
       url: `${baseUrl}/initiatives/civic-governance/constitution`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/initiatives/civic-governance/constitution/ekoh`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/initiatives/civic-governance/constitution/orgo`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/initiatives/civic-governance/constitution/rights`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    // Modules
     {
       url: `${baseUrl}/initiatives/civic-governance/modules/education`,
       lastModified: new Date(),
@@ -100,13 +80,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/initiatives/civic-governance/modules/international`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    // Plans & Theory
-    {
       url: `${baseUrl}/initiatives/pi-theory`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -119,7 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
-    // --- 3. PLATFORMS (The Software) ---
+    // --- 3. PLATFORMS ---
     {
       url: `${baseUrl}/platforms`,
       lastModified: new Date(),
@@ -145,7 +118,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
-    // --- 4. TECHNOLOGY (The Engines) ---
+    // --- 4. TECHNOLOGY ---
     {
       url: `${baseUrl}/technology`,
       lastModified: new Date(),

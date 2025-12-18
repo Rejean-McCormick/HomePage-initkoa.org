@@ -27,7 +27,7 @@ export default function VisualSitemapPage() {
         <div className="space-y-10">
           
           <Section title="Context & Diagnosis" icon={<Landmark className="w-5 h-5" />}>
-            <MapLink href="/" label="Home" highlight />
+            <MapLink href="/" label="Home" highlight={true} />
             <MapLink href="/why" label="The Diagnosis (Why KOA?)" />
             <MapLink href="/diagnosis" label="9 Systemic Failures" />
           </Section>
@@ -80,7 +80,7 @@ export default function VisualSitemapPage() {
 
 // --- Components ---
 
-function Section({ title, icon, children }) {
+function Section({ title, icon, children }: { title: string, icon: any, children: React.ReactNode }) {
   return (
     <div>
       <h2 className="flex items-center text-xl font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">
@@ -93,7 +93,7 @@ function Section({ title, icon, children }) {
   );
 }
 
-function SubSection({ title, children }) {
+function SubSection({ title, children }: { title: string, children: React.ReactNode }) {
   return (
     <div className="mt-4 ml-6 pl-4 border-l-2 border-slate-100">
       <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">{title}</h3>
@@ -104,7 +104,7 @@ function SubSection({ title, children }) {
   );
 }
 
-function MapLink({ href, label, highlight }) {
+function MapLink({ href, label, highlight }: { href: string, label: string, highlight?: boolean }) {
   return (
     <li>
       <Link 
