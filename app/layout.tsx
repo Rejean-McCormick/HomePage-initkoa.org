@@ -1,7 +1,7 @@
-// app\layout.tsx
+// app/layout.tsx
 import './globals.css';
 import { Baskervville } from 'next/font/google';
-import Header from '../components/Header';
+import Header from '@/components/Header'; // Fixed import alias
 import { ReactNode } from 'react';
 
 const baskervville = Baskervville({ 

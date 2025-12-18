@@ -1,5 +1,5 @@
-// app\platforms\page.tsx
-import Card from '../../components/Card';
+// app/platforms/page.tsx
+import Card from '@/components/Card'; // Fixed import alias
 
 export const metadata = {
   title: 'Platforms & Products – King Klown & KOA',
