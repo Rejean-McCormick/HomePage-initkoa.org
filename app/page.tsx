@@ -24,13 +24,13 @@ export default function HomePage() {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link 
-              href="/platforms" 
+              href="/initiatives" 
               className="px-8 py-3 bg-slate-900 text-white rounded-sm font-medium hover:bg-primary transition-colors duration-300 min-w-[200px]"
             >
               Explore Ecosystem
             </Link>
             <Link 
-              href="/diagnosis" 
+              href="/why" 
               className="px-8 py-3 border border-gray-300 text-slate-600 rounded-sm font-medium hover:border-slate-900 hover:text-slate-900 transition-all duration-300 min-w-[200px]"
             >
               The Diagnosis
@@ -45,28 +45,28 @@ export default function HomePage() {
           
           {/* Pillar 1: CONTEXT */}
           <NavCard 
-            href="/diagnosis"
+            href="/why"
             title="The Diagnosis"
             subtitle="Global Context"
-            description="We cannot fix what we refuse to see. A radical assessment of the 9 systemic failures facing modern society."
+            description="We cannot fix what we refuse to see. A radical assessment of the systemic failures facing modern society."
             icon={<IconGlobe />}
           />
 
-          {/* Pillar 2: SOLUTION */}
+          {/* Pillar 2: SOLUTION (The Active Core) */}
           <NavCard 
-            href="/platforms"
-            title="The Platforms"
-            subtitle="The Architecture"
-            description="Tools for the new world: Konnaxion (Public Engine), Orgo (Private Engine), and Kristal Farms (Infrastructure)."
+            href="/initiatives/civic-governance"
+            title="Civic Governance"
+            subtitle="The Operating System"
+            description="The active modules: Education (Competence), Economy (Solidarity), Justice (Fairness), and the Constitution."
             icon={<IconStack />}
           />
 
-          {/* Pillar 3: INTERFACE */}
+          {/* Pillar 3: STRATEGY (The Roadmap) */}
           <NavCard 
-            href="/platforms/kreature"
-            title="Kréature (FR)"
-            subtitle="The Metaphor"
-            description="The organic interface. Exploring the ecosystem through a biological and narrative lens."
+            href="/initiatives"
+            title="Strategic Initiatives"
+            subtitle="The Roadmap"
+            description="Political Theory (PI), International Peace Plans (Ukraine), and the Cooperative Transformation."
             icon={<IconEye />}
           />
         </div>
@@ -77,17 +77,25 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Engineering & Specs</h3>
           
-          {/* FIXED: Quotes escaped with &quot; */}
           <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto font-serif italic">
             &quot;Beyond the myth lies the machine.&quot;
           </p>
           
-          <Link 
-            href="/technology" 
-            className="text-sm font-mono text-primary hover:text-slate-900 border-b border-primary/30 hover:border-slate-900 transition-colors pb-0.5"
-          >
-            View Technology Stack (Réjean McCormick) →
-          </Link>
+          <div className="flex flex-col md:flex-row gap-6 justify-center">
+            <Link 
+              href="/initiatives/civic-governance/constitution" 
+              className="text-sm font-mono text-primary hover:text-slate-900 border-b border-primary/30 hover:border-slate-900 transition-colors pb-0.5"
+            >
+              The Rules (Constitution)
+            </Link>
+            <span className="text-slate-300 hidden md:inline">|</span>
+            <Link 
+              href="/platforms" 
+              className="text-sm font-mono text-primary hover:text-slate-900 border-b border-primary/30 hover:border-slate-900 transition-colors pb-0.5"
+            >
+              The Engine (Tech Specs)
+            </Link>
+          </div>
         </div>
       </section>
     </main>

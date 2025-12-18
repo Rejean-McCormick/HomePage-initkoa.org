@@ -1,0 +1,84 @@
+import { Card } from '@/components/Card';
+import { Scale, Clock, ShieldCheck, Gavel, Eye } from 'lucide-react';
+
+export const metadata = {
+  title: "Justice Module: Augmented Fairness",
+  description: "Replacing systemic bias and delay with algorithmic impartiality and radical efficiency."
+};
+
+# Justice Module: Augmented Fairness
+
+### The Diagnostic: Justice Delayed is Justice Denied
+[cite_start]The current justice system is failing on three fundamental fronts[cite: 660, 663, 669]:
+1.  **Inefficiency:** Cases drag on for years due to administrative friction, effectively denying justice to victims.
+2.  **Bias:** Human judges are susceptible to unconscious prejudice based on race, class, and appearance.
+3.  **Inaccessibility:** Legal defense is a luxury product. The complexity of the law makes it "pay-to-play."
+
+[cite_start]KOA proposes a **Justice Augmented by AI**: a system where the machine handles the analysis to ensure speed and neutrality, while humans retain ethical oversight[cite: 660, 674].
+
+---
+
+### The 3 Pillars of KOA Justice
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+  <Card 
+    title="The Impartial Engine" 
+    icon={<Gavel className="text-primary w-6 h-6" />}
+    description="An AI Decision Support System that evaluates cases based strictly on facts and legal precedents, stripping away variables like race, gender, or social status."
+    href="/initiatives/civic-governance/modules/justice/ai-model"
+  />
+  <Card 
+    title="Radical Efficiency" 
+    icon={<Clock className="text-primary w-6 h-6" />}
+    description="Automating the 'churn' of justice. AI handles evidence sorting, transcription, and scheduling, reducing trial timelines from years to weeks."
+    href="/initiatives/civic-governance/modules/justice/efficiency"
+  />
+  <Card 
+    title="Universal Access" 
+    icon={<Scale className="text-primary w-6 h-6" />}
+    description="Democratizing the law. 24/7 AI Legal Assistants provide instant, free legal counsel to any citizen, breaking the monopoly of expensive firms."
+    href="/initiatives/civic-governance/modules/justice/access"
+  />
+</div>
+
+---
+
+### The Axiom: "White Box" Justice
+
+> "A just decision must be an explainable decision."
+
+We reject "Black Box" algorithms. The KOA Justice System operates on a strict **Explainable AI (XAI)** mandate.
+Every recommendation made by the system must include a generated **Audit Trail** citing the specific laws, precedents, and evidence weights used to reach the conclusion.
+
+<div className="flex flex-col md:flex-row gap-8 items-center bg-slate-50 p-8 rounded-xl border border-slate-200 mt-8">
+  <div className="flex-1">
+    <h4 className="flex items-center text-xl font-bold text-slate-800 mb-4">
+      <Eye className="mr-3 text-blue-600" />
+      Why AI is Less Biased than Humans
+    </h4>
+    <p className="text-slate-600 mb-4">
+      Critics fear "biased algorithms." We argue that **Human Bias** is the harder problem to solve. A human judge might give a harsher sentence because they are hungry, tired, or unconsciously biased against the defendant's accent.
+    </p>
+    <p className="text-slate-600">
+      An AI does not get tired. It does not have "moods." By rigorously sanitizing the training data and removing demographic metadata from the decision logic, we can create a judge that is truly blind to everything except the law.
+    </p>
+  </div>
+  
+  <div className="flex-1 border-l border-slate-200 pl-8">
+    <h4 className="text-xl font-bold text-slate-800 mb-4">The Implementation Strategy</h4>
+    <ul className="space-y-3 text-sm text-slate-700">
+      <li className="flex items-start">
+        <span className="text-blue-500 font-bold mr-2">Phase 1:</span>
+        <span>**Administrative Automation.** Clearing the backlog of paperwork and minor disputes (traffic, contracts).</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-blue-500 font-bold mr-2">Phase 2:</span>
+        <span>**Decision Support.** Providing human judges with "pre-computed" analysis of precedents to ensure consistency.</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-blue-500 font-bold mr-2">Phase 3:</span>
+        <span>**Augmented Adjudication.** AI panels overseeing complex cases, with human juries serving as the ethical "check."</span>
+      </li>
+    </ul>
+  </div>
+</div>

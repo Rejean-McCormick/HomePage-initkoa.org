@@ -1,0 +1,81 @@
+import { Card } from '@/components/Card';
+import { Clock, FileText, Zap, Layers, Server } from 'lucide-react';
+
+export const metadata = {
+  title: "Radical Efficiency: The Zero-Backlog Court",
+  description: "Automating the 'churn' of justice to reduce trial timelines from years to weeks."
+};
+
+# Radical Efficiency: The End of the Backlog
+
+In the current system, "The Process is the Punishment."
+Innocent people plead guilty simply to go home because they cannot afford to wait 18 months for a trial.
+KOA introduces the **Zero-Backlog Standard**. By automating 90% of the non-judicial "churn," we respect the citizen's most non-renewable resource: their time.
+
+---
+
+### 1. The Bottleneck vs. The Solution
+
+<div className="flex flex-col md:flex-row gap-8 my-10">
+  {/* The Old Way */}
+  <div className="flex-1 p-6 bg-red-50 border border-red-100 rounded-xl opacity-80">
+    <h4 className="text-red-900 font-bold mb-4 flex items-center">
+      <Clock className="w-5 h-5 mr-2" />
+      The Legacy Court
+    </h4>
+    <ul className="space-y-3 text-sm text-red-800">
+      <li>• <strong>Scheduling:</strong> Manual phone calls & paper calendars.</li>
+      <li>• <strong>Transcription:</strong> Human stenographers (weeks to process).</li>
+      <li>• <strong>Discovery:</strong> Lawyers reading boxes of paper (billable hours).</li>
+      <li>• <strong>Result:</strong> 2-5 years for a civil resolution.</li>
+    </ul>
+  </div>
+
+  {/* The KOA Way */}
+  <div className="flex-1 p-6 bg-green-50 border border-green-100 rounded-xl shadow-sm">
+    <h4 className="text-green-900 font-bold mb-4 flex items-center">
+      <Zap className="w-5 h-5 mr-2" />
+      The Augmented Court
+    </h4>
+    <ul className="space-y-3 text-sm text-green-800">
+      <li>• <strong>Scheduling:</strong> Algorithmic "Smart Dockets" (Optimized).</li>
+      <li>• <strong>Transcription:</strong> Real-time Speech-to-Text (Instant).</li>
+      <li>• <strong>Discovery:</strong> AI Semantic Search (Seconds).</li>
+      <li>• <strong>Result:</strong> 2-6 weeks for resolution.</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+### 2. The Tech Stack: Automating the Churn
+
+We deploy specific AI utilities to handle the "heavy lifting" of data, freeing humans to focus on judgment.
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+  <Card 
+    title="Smart Dockets" 
+    icon={<Layers className="text-primary" />}
+    description="An airline-grade scheduling engine that manages courtrooms, judges, and defendants dynamically to ensure zero downtime."
+  />
+  <Card 
+    title="Auto-Discovery" 
+    icon={<FileText className="text-primary" />}
+    description="AI scans terabytes of emails, contracts, and evidence to flag relevant contradictions instantly, saving thousands of lawyer-hours."
+  />
+  <Card 
+    title="Digital Evidence Chain" 
+    icon={<Server className="text-primary" />}
+    description="Blockchain-secured custody of evidence. No lost files, no tampered dashcam footage. The truth is immutable."
+  />
+</div>
+
+### 3. The Economic Impact
+
+Efficiency is also an issue of equity.
+* **The Cost of Delay:** Every day a trial is delayed, it costs the state money (detention) and the defendant wages.
+* **The "Wait-Out" Strategy:** Wealthy litigants currently use delay as a weapon to bankrupt poorer opponents.
+
+By making justice **Fast**, we make it **Affordable**. When a trial takes 3 days instead of 3 months, the billable hours evaporate, and the "Wait-Out" strategy becomes impossible.
+
+> **Target Metric:** The KOA Justice Module mandates that 95% of administrative disputes (traffic, zoning, permits) be resolved within **48 hours** of filing.

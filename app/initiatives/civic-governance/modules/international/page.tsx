@@ -1,0 +1,58 @@
+import Link from 'next/link';
+import { Globe, ArrowRight, ShieldAlert, Construction } from 'lucide-react';
+
+export const metadata = {
+  title: "International Strategy – KOA",
+  description: "Technocratic neutrality and the 'Freeze-Vote-Rebuild' framework.",
+};
+
+export default function InternationalPage() {
+  return (
+    <main className="max-w-4xl mx-auto px-6 py-12">
+      <div className="mb-12">
+        <div className="p-3 bg-purple-100 rounded-full w-fit mb-4">
+          <Globe className="w-8 h-8 text-purple-700" />
+        </div>
+        <h1 className="text-4xl font-bold text-slate-900 mb-4">International Strategy</h1>
+        <p className="text-xl text-slate-600">
+          Applying the KOA "Operating System" to geopolitics. We replace moralizing diplomacy with 
+          <strong> Technocratic Neutrality</strong> and <strong>Construction Competitions</strong>.
+        </p>
+      </div>
+
+      <h2 className="text-2xl font-bold text-slate-800 mb-6">Active Frameworks</h2>
+
+      <Link 
+        href="/initiatives/ukraine-peace-and-reconstruction-plan/fvr/00-start-here/00-welcome"
+        className="group block p-8 border border-slate-200 rounded-2xl hover:border-purple-500 hover:shadow-lg transition-all"
+      >
+        <div className="flex justify-between items-start">
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-purple-600">
+              The Ukraine Plan: Freeze-Vote-Rebuild
+            </h3>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-bold">BETA v4.0</span>
+              <span className="text-slate-400 text-sm">GitBook Integrated</span>
+            </div>
+            <p className="text-slate-600 mb-6 max-w-xl">
+              A comprehensive 3-phase framework to exit the war without surrendering sovereignty. 
+              <strong>Freeze</strong> (Monitored Ceasefire), <strong>Vote</strong> (Legitimacy), and <strong>Rebuild</strong> (The Construction Olympics).
+            </p>
+          </div>
+          <ArrowRight className="w-6 h-6 text-slate-300 group-hover:text-purple-600" />
+        </div>
+      </Link>
+
+      <div className="mt-12 p-6 bg-slate-50 rounded-xl border border-slate-200 opacity-75">
+        <h3 className="flex items-center font-bold text-slate-700 mb-2">
+          <Construction className="w-4 h-4 mr-2" />
+          Coming Soon
+        </h3>
+        <p className="text-sm text-slate-500">
+          <strong>The Taiwan Protocol:</strong> Applying the "Silicon Shield" theory to distributed sovereignty.
+        </p>
+      </div>
+    </main>
+  );
+}

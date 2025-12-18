@@ -1,0 +1,83 @@
+import { Card } from '@/components/Card';
+import { MessageSquare, Unlock, FileCheck, DollarSign, Globe } from 'lucide-react';
+
+export const metadata = {
+  title: "Universal Access: The Law in Your Pocket",
+  description: "Democratizing legal power with 24/7 AI assistance and automated document preparation."
+};
+
+# Universal Access: The Law in Your Pocket
+
+In the current system, the law is a **Luxury Product**.
+Wealthy individuals and corporations have armies of lawyers on retainer. The average citizen has Google and a hope that they don't get sued.
+KOA operates on a simple principle: **Rights that you cannot afford to enforce are not rights.**
+
+---
+
+### The Solution: The "Public Defender" AI
+
+We are deploying a specialized instance of **SenTient** trained on the entire corpus of Civil and Criminal Law. It serves as a free, 24/7 Legal Aid for every citizen.
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  {/* Feature 1 */}
+  <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-sm">
+    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+      <MessageSquare className="text-blue-600 w-6 h-6" />
+    </div>
+    <h3 className="text-xl font-bold text-slate-900 mb-2">Instant Triage</h3>
+    <p className="text-slate-600 text-sm">
+      <em>"My landlord is keeping my deposit. What can I do?"</em>
+      <br/>Instead of paying $300/hour for an answer, the AI analyzes your jurisdiction's specific tenancy laws and tells you exactly where you stand in seconds.
+    </p>
+  </div>
+
+  {/* Feature 2 */}
+  <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-sm">
+    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+      <FileCheck className="text-green-600 w-6 h-6" />
+    </div>
+    <h3 className="text-xl font-bold text-slate-900 mb-2">Auto-Filing</h3>
+    <p className="text-slate-600 text-sm">
+      Knowing your rights is half the battle. The AI actually <strong>writes the paperwork</strong>.
+      It generates valid legal forms—from demand letters to small claims filings—customized to your case details.
+    </p>
+  </div>
+</div>
+
+---
+
+### Breaking the Language Barrier
+
+The law is written in a foreign language ("Legalese") designed to require an interpreter (a Lawyer).
+The KOA Access Module acts as a **Real-Time Translator**.
+
+<div className="bg-slate-50 border border-slate-200 rounded-lg p-6 my-8">
+  <h4 className="flex items-center font-bold text-slate-800 mb-4">
+    <Globe className="mr-2 w-5 h-5 text-purple-600" />
+    The "Plain Language" Engine
+  </h4>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="opacity-75">
+      <div className="text-xs font-bold text-red-500 uppercase tracking-wide mb-1">Input (Legalese)</div>
+      <p className="text-xs font-mono bg-white p-3 border border-slate-200 rounded text-slate-500">
+        "Pursuant to subsection 4(b), the party of the first part hereby indemnifies the party of the second part against all vicarious liability..."
+      </p>
+    </div>
+    <div>
+      <div className="text-xs font-bold text-green-500 uppercase tracking-wide mb-1">Output (Human)</div>
+      <p className="text-sm font-medium bg-white p-3 border border-green-200 rounded text-slate-800 shadow-sm">
+        "If you sign this, you agree that if someone gets hurt using the product, you pay for it, not the seller."
+      </p>
+    </div>
+  </div>
+</div>
+
+### The Economic Shift: Killing the "Billable Hour"
+
+The traditional legal industry thrives on friction. The more complex the problem, the more hours they bill.
+Our incentives are reversed.
+
+* **For the Citizen:** Free access to high-quality legal defense tools reduces the "power gap" between individuals and corporations.
+* **For the State:** Empowering citizens to resolve disputes early (via clear contracts and advice) prevents them from clogging up the courts with messy litigation later.
+
+> **The Vision:** A society where a single mother fighting an eviction notice has the same quality of legal analysis as the corporation trying to evict her.
