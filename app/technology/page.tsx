@@ -75,7 +75,7 @@ export default function TechIndex() {
 
         {/* Abstract Wiki Architect */}
         <div className="group block p-6 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-          <Link href="/technology/abstract-wiki" className="block">
+          <Link href="/technology/architect" className="block">
             <div className="flex justify-between items-center mb-2">
               <strong className="text-xl text-primary group-hover:underline">Abstract Wiki Architect</strong>
               <span className="text-xs font-mono bg-gray-100 px-2 py-1 rounded">Voix / Output</span>

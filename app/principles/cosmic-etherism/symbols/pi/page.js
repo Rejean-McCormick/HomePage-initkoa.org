@@ -1,5 +1,5 @@
 // app\principles\cosmic-etherism\symbols\pi\page.js
-import PageSection from '../../../components/PageSection';
+import PageSection from '@/components/PageSection';
 
 export const metadata = {
   title: 'Pi (π) – Symbol (Optional)',

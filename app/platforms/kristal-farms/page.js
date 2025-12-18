@@ -1,5 +1,5 @@
 // app\platforms\kristal-farms\page.js
-import PageSection from '../../../components/PageSection';
+import PageSection from '@/components/PageSection';
 
 export const metadata = {
   title: 'Kristal Farms – Infrastructure IA verte & encyclopédie ouverte',

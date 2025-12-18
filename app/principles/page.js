@@ -1,5 +1,5 @@
 // app\principles\page.js
-import PageSection from '././components/PageSection';
+import PageSection from '@/components/PageSection';
 
 export const metadata = {
   title: 'Principles – kOA / King Klown',

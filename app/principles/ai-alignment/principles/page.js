@@ -1,5 +1,5 @@
 // app\principles\ai-alignment\principles\page.js
-import PageSection from '../../components/PageSection';
+import PageSection from '@/components/PageSection';
 
 export const metadata = {
   title: 'AI Alignment – Principles',

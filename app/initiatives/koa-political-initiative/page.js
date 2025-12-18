@@ -1,6 +1,6 @@
 // app\initiatives\koa-political-initiative\page.js
 // app/initiatives/koa-political-movement/page.js
-import PageSection from '../../../components/PageSection';
+import PageSection from '@/components/PageSection';
 
 export const metadata = { title: 'Mouvement Politique KOA' };
 

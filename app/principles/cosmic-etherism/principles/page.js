@@ -1,5 +1,5 @@
 // app\principles\cosmic-etherism\principles\page.js
-import PageSection from '../../components/PageSection';
+import PageSection from '@/components/PageSection';
 
 export const metadata = {
   title: 'Cosmic Etherism – Principles',

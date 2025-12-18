@@ -1,5 +1,5 @@
 // app\principles\cosmic-etherism\page.js
-import PageSection from '../components/PageSection';
+import PageSection from '@/components/PageSection';
 
 export const metadata = {
   title: 'Cosmic Etherism (Optional) – Pi, Symbolism, and Fiction',

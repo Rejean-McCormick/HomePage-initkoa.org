@@ -1,5 +1,5 @@
 // app\principles\civic-principles-ethics\page.js
-import PageSection from '../components/PageSection';
+import PageSection from '@/components/PageSection';
 
 export const metadata = {
   title: 'Civic Principles & Ethics – Principles',
