@@ -81,19 +81,31 @@ export default function HomePage() {
             &quot;Beyond the myth lies the machine.&quot;
           </p>
           
-          <div className="flex flex-col md:flex-row gap-6 justify-center">
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
             <Link 
               href="/initiatives/civic-governance/constitution" 
               className="text-sm font-mono text-primary hover:text-slate-900 border-b border-primary/30 hover:border-slate-900 transition-colors pb-0.5"
             >
               The Rules (Constitution)
             </Link>
+            
             <span className="text-slate-300 hidden md:inline">|</span>
+            
             <Link 
               href="/platforms" 
               className="text-sm font-mono text-primary hover:text-slate-900 border-b border-primary/30 hover:border-slate-900 transition-colors pb-0.5"
             >
               The Engine (Tech Specs)
+            </Link>
+
+            <span className="text-slate-300 hidden md:inline">|</span>
+
+            {/* ADDED SITEMAP LINK */}
+            <Link 
+              href="/sitemap" 
+              className="text-sm font-mono text-primary hover:text-slate-900 border-b border-primary/30 hover:border-slate-900 transition-colors pb-0.5"
+            >
+              Sitemap
             </Link>
           </div>
         </div>
