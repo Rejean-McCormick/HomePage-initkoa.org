@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://okido.wiki';
 
   return [
-    // --- 1. ROOT & LANDING ---
+    // --- 1. ROOT & CONTEXT ---
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -12,25 +12,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/why`, // The Diagnosis
+      url: `${baseUrl}/why`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/about`, // The Architect
+      url: `${baseUrl}/diagnosis`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/principles`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/principles`, // Radical Lucidity, etc.
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
 
-    // --- 2. STRATEGIC INITIATIVES HUB ---
+    // --- 2. INITIATIVES (The Work) ---
     {
       url: `${baseUrl}/initiatives`,
       lastModified: new Date(),
@@ -38,13 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/initiatives/civic-governance`, // The Dashboard
+      url: `${baseUrl}/initiatives/civic-governance`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-
-    // --- 3. THE KERNEL (CONSTITUTION) ---
+    // Constitution
     {
       url: `${baseUrl}/initiatives/civic-governance/constitution`,
       lastModified: new Date(),
@@ -69,23 +80,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-
-    // --- 4. ACTIVE MODULES ---
-    // Education
+    // Modules
     {
       url: `${baseUrl}/initiatives/civic-governance/modules/education`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-    // Economy
     {
       url: `${baseUrl}/initiatives/civic-governance/modules/economy`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-    // Justice (Hub & Deep Dives)
     {
       url: `${baseUrl}/initiatives/civic-governance/modules/justice`,
       lastModified: new Date(),
@@ -93,42 +100,84 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/initiatives/civic-governance/modules/justice/ai-model`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/initiatives/civic-governance/modules/justice/efficiency`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/initiatives/civic-governance/modules/justice/access`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    // International
-    {
       url: `${baseUrl}/initiatives/civic-governance/modules/international`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
-
-    // --- 5. THEORY & ROADMAP ---
+    // Plans & Theory
     {
       url: `${baseUrl}/initiatives/pi-theory`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-
-    // --- 6. TECHNOLOGY STACK ---
     {
-      url: `${baseUrl}/platforms`, // Konnaxion, Ethikos, etc.
+      url: `${baseUrl}/initiatives/ukraine-peace-and-reconstruction-plan/fvr/00-start-here/00-welcome`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+
+    // --- 3. PLATFORMS (The Software) ---
+    {
+      url: `${baseUrl}/platforms`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/platforms/konnaxion`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/platforms/orgo`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/platforms/kreature`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+
+    // --- 4. TECHNOLOGY (The Engines) ---
+    {
+      url: `${baseUrl}/technology`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/technology/sentient`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/technology/ariane`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/technology/swarmcraft`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/technology/ai-alignment`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/technology/abstract-wiki`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
