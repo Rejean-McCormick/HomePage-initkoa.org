@@ -1,7 +1,7 @@
+
 import Link from 'next/link';
 import { 
   Map, 
-  Home, 
   Landmark, 
   Server, 
   Share2, 
@@ -11,7 +11,7 @@ import {
 
 export const metadata = {
   title: "Site Map – King Klown & KOA",
-  description: "Complete hierarchical index of the King Klown & KOA ecosystem.",
+  description: "Complete hierarchical index.",
 };
 
 export default function VisualSitemapPage() {
@@ -23,62 +23,49 @@ export default function VisualSitemapPage() {
       </h1>
 
       <div className="grid md:grid-cols-2 gap-12">
-        {/* Column 1: Context & Core */}
         <div className="space-y-10">
-          
           <Section title="Context & Diagnosis" icon={<Landmark className="w-5 h-5" />}>
             <MapLink href="/" label="Home" highlight={true} />
-            <MapLink href="/why" label="The Diagnosis (Why KOA?)" />
+            <MapLink href="/why" label="The Diagnosis" />
             <MapLink href="/diagnosis" label="9 Systemic Failures" />
           </Section>
 
-          <Section title="Initiatives (The Work)" icon={<TrendingUp className="w-5 h-5" />}>
-            <MapLink href="/initiatives" label="Initiatives Overview" />
-            
+          <Section title="Initiatives" icon={<TrendingUp className="w-5 h-5" />}>
+            <MapLink href="/initiatives" label="Overview" />
             <SubSection title="Civic Governance">
-              <MapLink href="/initiatives/civic-governance" label="Overview" />
-              <MapLink href="/initiatives/civic-governance/constitution" label="The Constitution (Rules)" />
+              <MapLink href="/initiatives/civic-governance" label="Governance Hub" />
+              <MapLink href="/initiatives/civic-governance/constitution" label="Constitution" />
             </SubSection>
-
             <SubSection title="International">
-              <MapLink href="/initiatives/ukraine-peace-and-reconstruction-plan/fvr/00-start-here/00-welcome" label="Ukraine Plan (Freeze-Vote-Rebuild)" />
+              <MapLink href="/initiatives/ukraine-peace-and-reconstruction-plan/fvr/00-start-here/00-welcome" label="Ukraine Plan" />
             </SubSection>
           </Section>
-
         </div>
 
-        {/* Column 2: Tech & Platform */}
         <div className="space-y-10">
-
-          <Section title="Platforms (The Software)" icon={<Server className="w-5 h-5" />}>
+          <Section title="Platforms" icon={<Server className="w-5 h-5" />}>
             <MapLink href="/platforms" label="Platforms Hub" />
-            <MapLink href="/platforms/konnaxion" label="Konnaxion (Public)" />
-            <MapLink href="/platforms/orgo" label="Orgo (Private)" />
-            <MapLink href="/platforms/kreature" label="Kreature (Interface)" />
+            <MapLink href="/platforms/konnaxion" label="Konnaxion" />
+            <MapLink href="/platforms/orgo" label="Orgo" />
+            <MapLink href="/platforms/kreature" label="Kreature" />
           </Section>
 
-          <Section title="Technology (The Engines)" icon={<Cpu className="w-5 h-5" />}>
+          <Section title="Technology" icon={<Cpu className="w-5 h-5" />}>
             <MapLink href="/technology" label="Tech Overview" />
-            <MapLink href="/technology/sentient" label="SenTient (NLP)" />
-            <MapLink href="/technology/ariane" label="Ariane (UI Graph)" />
-            <MapLink href="/technology/swarmcraft" label="SwarmCraft (Narrative)" />
-            <MapLink href="/technology/ai-alignment" label="Ame-Artificielle (Alignment)" />
-            <MapLink href="/technology/abstract-wiki" label="Abstract Wiki Architect" />
+            <MapLink href="/technology/ai-alignment" label="AI Alignment" />
+            <MapLink href="/technology/ariane" label="Ariane" />
+            <MapLink href="/technology/swarmcraft" label="SwarmCraft" />
           </Section>
 
-          <Section title="Meta & Contact" icon={<Share2 className="w-5 h-5" />}>
-            <MapLink href="/contact" label="Contact & Inventory" />
-            <MapLink href="/about" label="About the Architect" />
+          <Section title="Meta" icon={<Share2 className="w-5 h-5" />}>
+            <MapLink href="/contact" label="Contact" />
+            <MapLink href="/about" label="About" />
           </Section>
-
         </div>
       </div>
-
     </main>
   );
 }
-
-// --- Components ---
 
 function Section({ title, icon, children }: { title: string, icon: any, children: React.ReactNode }) {
   return (
@@ -86,9 +73,7 @@ function Section({ title, icon, children }: { title: string, icon: any, children
       <h2 className="flex items-center text-xl font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">
         <span className="text-slate-400 mr-2">{icon}</span> {title}
       </h2>
-      <ul className="space-y-2">
-        {children}
-      </ul>
+      <ul className="space-y-2">{children}</ul>
     </div>
   );
 }
@@ -97,9 +82,7 @@ function SubSection({ title, children }: { title: string, children: React.ReactN
   return (
     <div className="mt-4 ml-6 pl-4 border-l-2 border-slate-100">
       <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">{title}</h3>
-      <ul className="space-y-2">
-        {children}
-      </ul>
+      <ul className="space-y-2">{children}</ul>
     </div>
   );
 }
