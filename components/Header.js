@@ -2,14 +2,14 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image'; // <--- 1. Import Image component
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Added Kréature to the main navigation for visibility
   const navLinks = [
     { href: '/platforms', label: 'Platforms' },
-    { href: '/platforms/kreature', label: 'Kréature (FR)' }, // New entry
+    { href: '/platforms/kreature', label: 'Kréature (Français)' },
     { href: '/initiatives', label: 'Initiatives' },
     { href: '/principles', label: 'Principles' },
     { href: '/contact', label: 'Contact' },
@@ -20,10 +20,22 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16">
           
-          {/* Logo */}
+          {/* Logo Section */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-primary tracking-tight">
-              King Klown <span className="text-gray-400">&</span> KOA
+            <Link href="/" className="flex items-center gap-3 group"> {/* Added flex container */}
+              
+              {/* 2. Add the Logo Image Here */}
+              <Image 
+                src="/LogoK.svg" 
+                alt="King Klown Logo" 
+                width={40} 
+                height={40} 
+                className="group-hover:scale-110 transition-transform duration-200"
+              />
+
+              <span className="text-2xl font-bold text-primary tracking-tight">
+                King Klown <span className="text-gray-400">&</span> KOA
+              </span>
             </Link>
           </div>
 
@@ -46,7 +58,7 @@ export default function Header() {
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-gray-600 hover:text-primary focus:outline-none"
             >
-              {menuOpen ? '' : ''}
+              {menuOpen ? '✕' : '☰'}
             </button>
           </div>
         </div>

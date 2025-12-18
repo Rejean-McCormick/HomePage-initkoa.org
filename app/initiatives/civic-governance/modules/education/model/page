@@ -1,0 +1,157 @@
+import { Card } from '@/components/Card';
+import { Cpu, ListOrdered, Layers, Zap } from 'lucide-react';
+
+export const metadata = {
+  title: "The Pedagogical Engine",
+  description: "A 7-step generative AI framework for scalable course creation."
+};
+
+# The Pedagogical Engine
+
+The bottleneck of traditional education is **Content Production**. Creating a high-quality course usually takes a professor months.
+KOA solves this with a **Deterministic AI Framework**.
+
+We do not ask AI to "write a course about history." We guide it through a strict **7-Step Protocol** to ensure pedagogical rigor, standardization, and interactivity. This allows any Community Node to generate a standardized "Kristal" module in minutes.
+
+---
+
+### The 7-Step Generation Protocol
+
+<div className="my-10 space-y-4">
+  {/* Step 1 */}
+  <div className="flex group">
+    <div className="flex-shrink-0 mr-4 flex flex-col items-center">
+      <div className="w-8 h-8 rounded-full bg-slate-100 text-slate-600 font-bold flex items-center justify-center border border-slate-300 group-hover:bg-primary group-hover:text-white transition-colors">1</div>
+      <div className="h-full w-px bg-slate-200 my-2"></div>
+    </div>
+    <div className="pb-8">
+      <h4 className="text-lg font-bold text-slate-800">Context & Metadata</h4>
+      <p className="text-slate-600 text-sm">
+        We define the "Container" of the Kristal.
+        <br/><span className="font-mono text-xs bg-slate-100 px-1">INPUT: Title, Duration (e.g., 36h), Prerequisites, Target Age.</span>
+      </p>
+    </div>
+  </div>
+
+  {/* Step 2 */}
+  <div className="flex group">
+    <div className="flex-shrink-0 mr-4 flex flex-col items-center">
+      <div className="w-8 h-8 rounded-full bg-slate-100 text-slate-600 font-bold flex items-center justify-center border border-slate-300 group-hover:bg-primary group-hover:text-white transition-colors">2</div>
+      <div className="h-full w-px bg-slate-200 my-2"></div>
+    </div>
+    <div className="pb-8">
+      <h4 className="text-lg font-bold text-slate-800">Objectives (The Contract)</h4>
+      <p className="text-slate-600 text-sm">
+        We define 4 specific, measurable outcomes. The AI must prove how it will measure them.
+        <br/><span className="font-mono text-xs bg-slate-100 px-1">EXAMPLE: "Student can calculate the area of a non-right triangle."</span>
+      </p>
+    </div>
+  </div>
+
+  {/* Step 3 */}
+  <div className="flex group">
+    <div className="flex-shrink-0 mr-4 flex flex-col items-center">
+      <div className="w-8 h-8 rounded-full bg-slate-100 text-slate-600 font-bold flex items-center justify-center border border-slate-300 group-hover:bg-primary group-hover:text-white transition-colors">3</div>
+      <div className="h-full w-px bg-slate-200 my-2"></div>
+    </div>
+    <div className="pb-8">
+      <h4 className="text-lg font-bold text-slate-800">Structure Mapping</h4>
+      <p className="text-slate-600 text-sm">
+        The course is broken down into **Modules** (Thematic Blocks) and **Lessons** (Atomic Units).
+        <br/><span className="font-mono text-xs bg-slate-100 px-1">OUTPUT: JSON Tree of the entire course path.</span>
+      </p>
+    </div>
+  </div>
+
+  {/* Step 4 */}
+  <div className="flex group">
+    <div className="flex-shrink-0 mr-4 flex flex-col items-center">
+      <div className="w-8 h-8 rounded-full bg-slate-100 text-slate-600 font-bold flex items-center justify-center border border-slate-300 group-hover:bg-primary group-hover:text-white transition-colors">4</div>
+      <div className="h-full w-px bg-slate-200 my-2"></div>
+    </div>
+    <div className="pb-8">
+      <h4 className="text-lg font-bold text-slate-800">Content Generation</h4>
+      <p className="text-slate-600 text-sm">
+        The system generates the actual material: reading texts, video scripts, diagrams, and code snippets.
+        <br/><span className="font-mono text-xs bg-slate-100 px-1">MODE: Clear, concise, active voice.</span>
+      </p>
+    </div>
+  </div>
+
+  {/* Step 5 */}
+  <div className="flex group">
+    <div className="flex-shrink-0 mr-4 flex flex-col items-center">
+      <div className="w-8 h-8 rounded-full bg-slate-100 text-slate-600 font-bold flex items-center justify-center border border-slate-300 group-hover:bg-primary group-hover:text-white transition-colors">5</div>
+      <div className="h-full w-px bg-slate-200 my-2"></div>
+    </div>
+    <div className="pb-8">
+      <h4 className="text-lg font-bold text-slate-800">Methodology Injection</h4>
+      <p className="text-slate-600 text-sm">
+        We inject "Active Learning" loops. The AI inserts pauses for reflection, manipulation tasks, and real-world analogies.
+      </p>
+    </div>
+  </div>
+
+  {/* Step 6 */}
+  <div className="flex group">
+    <div className="flex-shrink-0 mr-4 flex flex-col items-center">
+      <div className="w-8 h-8 rounded-full bg-slate-100 text-slate-600 font-bold flex items-center justify-center border border-slate-300 group-hover:bg-primary group-hover:text-white transition-colors">6</div>
+      <div className="h-full w-px bg-slate-200 my-2"></div>
+    </div>
+    <div className="pb-8">
+      <h4 className="text-lg font-bold text-slate-800">Evaluation Logic</h4>
+      <p className="text-slate-600 text-sm">
+        Generation of the "Proof of Work."
+        <br/><span className="font-mono text-xs bg-slate-100 px-1">OUTPUT: Quizzes (Knowledge), Projects (Application), Rubrics (Mentorship).</span>
+      </p>
+    </div>
+  </div>
+
+  {/* Step 7 */}
+  <div className="flex group">
+    <div className="flex-shrink-0 mr-4 flex flex-col items-center">
+      <div className="w-8 h-8 rounded-full bg-slate-100 text-slate-600 font-bold flex items-center justify-center border border-slate-300 group-hover:bg-primary group-hover:text-white transition-colors">7</div>
+    </div>
+    <div>
+      <h4 className="text-lg font-bold text-slate-800">Social Interactions</h4>
+      <p className="text-slate-600 text-sm">
+        The AI generates discussion prompts for the **KonnectED** forums to ensure students talk to each other, not just the machine.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+### The Interactive Loop
+
+We do not believe in "Passive Consumption" (lectures). The Engine enforces a strict **Interactive Loop** for every Lesson:
+
+<div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
+  <div className="bg-white p-4 rounded-lg border border-slate-200 text-center shadow-sm">
+    <div className="text-blue-500 font-bold mb-2">1. Concept</div>
+    <div className="text-xs text-slate-500">3-min Video / Text</div>
+  </div>
+  <div className="bg-white p-4 rounded-lg border border-slate-200 text-center shadow-sm">
+    <div className="text-indigo-500 font-bold mb-2">2. Check</div>
+    <div className="text-xs text-slate-500">Micro-Quiz (Immediate)</div>
+  </div>
+  <div className="bg-white p-4 rounded-lg border border-slate-200 text-center shadow-sm">
+    <div className="text-purple-500 font-bold mb-2">3. Action</div>
+    <div className="text-xs text-slate-500">Manipulation / Code</div>
+  </div>
+  <div className="bg-white p-4 rounded-lg border border-slate-200 text-center shadow-sm">
+    <div className="text-pink-500 font-bold mb-2">4. Review</div>
+    <div className="text-xs text-slate-500">Peer Feedback</div>
+  </div>
+</div>
+
+<div className="mt-10 p-6 bg-slate-900 text-white rounded-lg">
+  <h4 className="flex items-center font-bold text-lg mb-4">
+    <Cpu className="mr-2" />
+    Why this matters
+  </h4>
+  <p className="text-slate-300 mb-4">
+    This standardization allows for <strong>Permissionless Updates</strong>. If a physicist in Geneva discovers a new particle, they can update the "Physics 101" Kristal source code. The Engine regenerates the lesson, and every student in the network has the updated curriculum instantly.
+  </p>
+</div>

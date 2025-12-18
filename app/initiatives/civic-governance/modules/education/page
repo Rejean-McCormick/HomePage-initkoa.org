@@ -1,0 +1,82 @@
+import { Card } from '@/components/Card';
+import { BookOpen, Brain, Award, Coins } from 'lucide-react';
+
+export const metadata = {
+  title: "Education Module: Verified Competence",
+  description: "Replacing the 'Prestige-Diploma' with the 'Competence-Portfolio'."
+};
+
+# Education Module: Verified Competence
+
+### The Obsolescence of the Diploma
+The traditional academic model is an industrial relic. It sells "Prestige"—a static snapshot of potential—at the cost of massive student debt and years of theoretical confinement.
+
+KOA proposes a radical shift: **Verified Competence**.
+We replace the rigid 4-year degree with **"Kristals"**—modular, verifiable blocks of skill (e.g., *React.js*, *Conflict Resolution*, *Hydraulics*). Your transcript is no longer a piece of paper; it is a live, blockchain-secured portfolio of what you can actually *do*.
+
+---
+
+### The 3 Pillars of the New School
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+  <Card 
+    title="The Knowledge Path" 
+    icon={<BookOpen className="text-primary w-6 h-6" />}
+    description="A standardized, standardized curriculum from age 5 to 17. From literacy to civic governance, ensuring no child is left behind."
+    href="/initiatives/civic-governance/modules/education/curriculum"
+  />
+  <Card 
+    title="The AI Engine" 
+    icon={<Brain className="text-primary w-6 h-6" />}
+    description="Our 7-Step Generative Framework allows any community to generate rigorous, interactive course content in minutes, not months."
+    href="/initiatives/civic-governance/modules/education/model"
+  />
+  <Card 
+    title="Gamified Validation" 
+    icon={<Award className="text-primary w-6 h-6" />}
+    description="We abolished the 0-100 grading scale. You either have the skill (Badge Acquired) or you are still learning. No failure, only progress."
+    href="/initiatives/civic-governance/modules/education/badges"
+  />
+</div>
+
+---
+
+### The Economic Shift: "The Beneficiary Pays"
+
+Perhaps the most revolutionary aspect of KOA Education is its business model. We invert the debt equation.
+
+<div className="flex flex-col md:flex-row gap-8 items-center bg-slate-50 p-8 rounded-xl border border-slate-200">
+  <div className="flex-1">
+    <h4 className="flex items-center text-xl font-bold text-slate-800 mb-4">
+      <Coins className="mr-3 text-amber-600" />
+      Free for the Learner
+    </h4>
+    <p className="text-slate-600 mb-4">
+      Education should not be a mortgage. In the KOA system, acquiring a skill is <strong>free</strong>. The cost of training is borne by the entity that *benefits* from that training.
+    </p>
+    <ul className="space-y-2 text-sm text-slate-700">
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">✔</span>
+        <span>Student learns "Advanced Welding" (Cost: $0).</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">✔</span>
+        <span>Student gets hired by a Construction Firm.</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-green-500 mr-2">✔</span>
+        <span>Firm pays a micro-royalty to the Education Node for the verified competence.</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div className="flex-1 border-l border-slate-200 pl-8">
+    <h4 className="text-xl font-bold text-slate-800 mb-4">Why this changes everything</h4>
+    <p className="text-slate-600">
+      This aligns incentives. Schools are no longer incentivized to prolong degrees to collect tuition. They are incentivized to <strong>train employable skills efficiently</strong>. If the student doesn't succeed, the school doesn't get paid.
+    </p>
+  </div>
+</div>
+
+### The Goal: Civic Autonomy
+Ultimately, the goal of this module is not just to create workers, but to create **Citizens**. A citizen who understands logic, science, and civics—and who owes nothing to the banks—is a citizen who cannot be manipulated.
