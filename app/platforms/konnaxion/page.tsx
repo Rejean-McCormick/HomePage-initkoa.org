@@ -133,58 +133,6 @@ export default function KonnaxionPage() {
           </div>
         </section>
 
-        {/* WORKFLOW */}
-        <section>
-          <h2 className="text-3xl font-serif font-medium mb-8 text-slate-900">Civic Workflow at a Glance</h2>
-          <p className="text-slate-600 mb-8">
-            The civic pipeline “proposal → deliberation → decision → action” maps onto the KOA modules as follows:
-          </p>
-          
-          <div className="space-y-6 relative border-l-2 border-slate-200 pl-8 ml-4">
-            
-            <div className="relative">
-              <span className="absolute -left-[41px] top-0 flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-xs font-bold text-slate-700">1</span>
-              <h4 className="font-bold text-slate-900">Learn & Build Competence (KonnectED)</h4>
-              <p className="text-sm text-slate-600 mt-1">
-                People explore resources in <strong>Knowledge</strong>, then earn certifications through <strong>CertifiKation</strong>.
-              </p>
-            </div>
-
-            <div className="relative">
-              <span className="absolute -left-[41px] top-0 flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-xs font-bold text-slate-700">2</span>
-              <h4 className="font-bold text-slate-900">Deliberate & Consult (Ethikos)</h4>
-              <p className="text-sm text-slate-600 mt-1">
-                Complex issues are debated in <strong>Korum</strong>, while broad participation is organized via <strong>Konsultations</strong>.
-              </p>
-            </div>
-
-            <div className="relative">
-              <span className="absolute -left-[41px] top-0 flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-xs font-bold text-slate-700">3</span>
-              <h4 className="font-bold text-slate-900">Weigh & Decide (Kollective Intelligence)</h4>
-              <p className="text-sm text-slate-600 mt-1">
-                <strong>EkoH</strong> computes reputation scores; <strong>Smart Vote</strong> uses them to weight ballots and expose outcomes.
-              </p>
-            </div>
-
-            <div className="relative">
-              <span className="absolute -left-[41px] top-0 flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-xs font-bold text-slate-700">4</span>
-              <h4 className="font-bold text-slate-900">Execute & Coordinate (keenKonnect)</h4>
-              <p className="text-sm text-slate-600 mt-1">
-                Adopted proposals become projects in <strong>Konstruct</strong>, while <strong>Stockage</strong> manages all blueprints.
-              </p>
-            </div>
-
-            <div className="relative">
-              <span className="absolute -left-[41px] top-0 flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-xs font-bold text-slate-700">5</span>
-              <h4 className="font-bold text-slate-900">Preserve & Connect (Kreative)</h4>
-              <p className="text-sm text-slate-600 mt-1">
-                Outputs are archived via <strong>Konservation</strong>, and future opportunities are surfaced via <strong>Kontact</strong>.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
         {/* TECHNICAL */}
         <section className="bg-slate-900 text-slate-300 p-8 rounded-sm">
           <h2 className="text-xl font-bold text-white mb-4">Technical Architecture</h2>

@@ -3,15 +3,10 @@ import {
   Map, 
   Home, 
   Landmark, 
-  Book, 
   Server, 
   Share2, 
-  FileText, 
-  Shield, 
-  Scale, 
-  GraduationCap, 
-  TrendingUp, 
-  Globe 
+  Cpu, 
+  TrendingUp 
 } from 'lucide-react';
 
 export const metadata = {
@@ -21,77 +16,59 @@ export const metadata = {
 
 export default function VisualSitemapPage() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-12">
-      
-      {/* Header */}
-      <div className="mb-12 border-b border-slate-200 pb-8">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="p-3 bg-slate-100 rounded-full">
-            <Map className="w-8 h-8 text-slate-700" />
-          </div>
-          <h1 className="text-4xl font-bold text-slate-900">Site Map</h1>
-        </div>
-        <p className="text-xl text-slate-600">
-          The complete hierarchical index of the KOA ecosystem.
-        </p>
-      </div>
+    <main className="max-w-5xl mx-auto px-6 py-12">
+      <h1 className="text-4xl font-bold text-slate-900 mb-10 flex items-center">
+        <Map className="w-10 h-10 text-primary mr-4" />
+        Site Map
+      </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-
-        {/* COLUMN 1: CORE & GOVERNANCE */}
-        <div className="space-y-12">
+      <div className="grid md:grid-cols-2 gap-12">
+        {/* Column 1: Context & Core */}
+        <div className="space-y-10">
           
-          {/* Section: Root */}
-          <Section title="Foundation" icon={<Home />}>
-            <MapLink href="/" label="Home" />
-            <MapLink href="/why" label="The Diagnosis (Global Context)" />
-            <MapLink href="/about" label="The Architect (Réjean McCormick)" />
-            <MapLink href="/principles" label="Core Principles" />
+          <Section title="Context & Diagnosis" icon={<Landmark className="w-5 h-5" />}>
+            <MapLink href="/" label="Home" highlight />
+            <MapLink href="/why" label="The Diagnosis (Why KOA?)" />
+            <MapLink href="/diagnosis" label="9 Systemic Failures" />
           </Section>
 
-          {/* Section: Civic Governance */}
-          <Section title="Civic Governance" icon={<Landmark />}>
-            <MapLink href="/initiatives/civic-governance" label="Governance Dashboard" highlight />
+          <Section title="Initiatives (The Work)" icon={<TrendingUp className="w-5 h-5" />}>
+            <MapLink href="/initiatives" label="Initiatives Overview" />
             
-            <SubSection title="The Kernel (Constitution)">
-              <MapLink href="/initiatives/civic-governance/constitution" label="Constitution Hub" />
-              <MapLink href="/initiatives/civic-governance/constitution/ekoh" label="Ekoh (Voting Protocol)" />
-              <MapLink href="/initiatives/civic-governance/constitution/orgo" label="Orgo (Governance Engine)" />
-              <MapLink href="/initiatives/civic-governance/constitution/rights" label="Bill of Rights" />
+            <SubSection title="Civic Governance">
+              <MapLink href="/initiatives/civic-governance" label="Overview" />
+              <MapLink href="/initiatives/civic-governance/constitution" label="The Constitution (Rules)" />
             </SubSection>
 
-            <SubSection title="Active Modules">
-              <MapLink href="/initiatives/civic-governance/modules/education" label="Education (Competence)" />
-              <MapLink href="/initiatives/civic-governance/modules/economy" label="Economy (Solidarity)" />
-              <MapLink href="/initiatives/civic-governance/modules/justice" label="Justice (Fairness)" />
+            <SubSection title="International">
+              <MapLink href="/initiatives/ukraine-peace-and-reconstruction-plan/fvr/00-start-here/00-welcome" label="Ukraine Plan (Freeze-Vote-Rebuild)" />
             </SubSection>
           </Section>
 
         </div>
 
-        {/* COLUMN 2: STRATEGY, TECH & MEDIA */}
-        <div className="space-y-12">
+        {/* Column 2: Tech & Platform */}
+        <div className="space-y-10">
 
-          {/* Section: Strategy */}
-          <Section title="Strategy & Theory" icon={<Book />}>
-            <MapLink href="/initiatives" label="Initiatives Roadmap" highlight />
-            <MapLink href="/initiatives/pi-theory" label="PI Theory (Political Intelligence)" />
-            <MapLink href="/initiatives/civic-governance/modules/international" label="International (Ukraine Plan)" />
+          <Section title="Platforms (The Software)" icon={<Server className="w-5 h-5" />}>
+            <MapLink href="/platforms" label="Platforms Hub" />
+            <MapLink href="/platforms/konnaxion" label="Konnaxion (Public)" />
+            <MapLink href="/platforms/orgo" label="Orgo (Private)" />
+            <MapLink href="/platforms/kreature" label="Kreature (Interface)" />
           </Section>
 
-          {/* Section: Technology */}
-          <Section title="Technology" icon={<Server />}>
-            <MapLink href="/technology" label="Engineering Overview" />
-            <MapLink href="/platforms" label="Platform Specs (Konnaxion, Orgo)" />
-            <MapLink href="/technology/sentient" label="SenTient (NLP Engine)" />
+          <Section title="Technology (The Engines)" icon={<Cpu className="w-5 h-5" />}>
+            <MapLink href="/technology" label="Tech Overview" />
+            <MapLink href="/technology/sentient" label="SenTient (NLP)" />
+            <MapLink href="/technology/ariane" label="Ariane (UI Graph)" />
+            <MapLink href="/technology/swarmcraft" label="SwarmCraft (Narrative)" />
+            <MapLink href="/technology/ai-alignment" label="Ame-Artificielle (Alignment)" />
             <MapLink href="/technology/abstract-wiki" label="Abstract Wiki Architect" />
           </Section>
 
-          {/* Section: Connect */}
-          <Section title="Connect" icon={<Share2 />}>
-            <MapLink href="/media" label="Media (Books & Podcasts)" />
+          <Section title="Meta & Contact" icon={<Share2 className="w-5 h-5" />}>
             <MapLink href="/contact" label="Contact & Inventory" />
-            <MapLink href="/docs" label="Documentation Hub" />
+            <MapLink href="/about" label="About the Architect" />
           </Section>
 
         </div>
@@ -103,7 +80,7 @@ export default function VisualSitemapPage() {
 
 // --- Components ---
 
-function Section({ title, icon, children }: { title: string, icon: any, children: React.ReactNode }) {
+function Section({ title, icon, children }) {
   return (
     <div>
       <h2 className="flex items-center text-xl font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">
@@ -116,7 +93,7 @@ function Section({ title, icon, children }: { title: string, icon: any, children
   );
 }
 
-function SubSection({ title, children }: { title: string, children: React.ReactNode }) {
+function SubSection({ title, children }) {
   return (
     <div className="mt-4 ml-6 pl-4 border-l-2 border-slate-100">
       <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">{title}</h3>
@@ -127,16 +104,12 @@ function SubSection({ title, children }: { title: string, children: React.ReactN
   );
 }
 
-function MapLink({ href, label, highlight }: { href: string, label: string, highlight?: boolean }) {
+function MapLink({ href, label, highlight }) {
   return (
     <li>
       <Link 
         href={href} 
-        className={`block text-sm transition-colors ${
-          highlight 
-            ? 'font-bold text-primary hover:text-slate-900' 
-            : 'text-slate-600 hover:text-primary'
-        }`}
+        className={`block py-1 hover:text-primary transition-colors ${highlight ? 'text-primary font-bold' : 'text-slate-600'}`}
       >
         {label}
       </Link>
