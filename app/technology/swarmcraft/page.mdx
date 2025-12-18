@@ -1,71 +1,149 @@
+import Link from 'next/link';
+import { Card } from '@/components/Card';
+
 export const metadata = {
-  title: "SwarmCraft: Deterministic Story Engine"
+  title: "SwarmCraft: Deterministic Story Engine",
+  description: "A deterministic, data-driven story engine powered by Grok."
 };
 
-# SwarmCraft: Deterministic Story Engine
+export default function SwarmCraftPage() {
+  return (
+    <main className="min-h-screen bg-white text-slate-900 selection:bg-primary selection:text-white pb-24">
+      
+      {/* HERO SECTION */}
+      <section className="max-w-4xl mx-auto px-6 pt-24 pb-12 border-b border-gray-100">
+        <div className="mb-6">
+          <span className="inline-block bg-slate-900 text-white text-xs font-bold px-3 py-1 rounded tracking-wider">
+            POWERED BY GROK
+          </span>
+        </div>
+        
+        <h1 className="text-5xl font-serif font-medium mb-6 text-slate-900">
+          SwarmCraft
+        </h1>
+        <h2 className="text-2xl font-light text-slate-600 mb-8">
+          Deterministic Story Engine
+        </h2>
 
-> **Architectural Lineage:**
-> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **[Mojomast](https://github.com/mojomast)** in `mojomast/swarmussy`. Its deterministic layering is derived from the meta-structure of the **Abstract Wiki Architect**.
+        {/* LINEAGE BLOCK */}
+        <div className="bg-slate-50 border-l-4 border-slate-400 p-6 rounded-r-sm mb-10 text-slate-700 italic leading-relaxed">
+          <strong className="block text-slate-900 not-italic mb-2">Architectural Lineage:</strong>
+          SwarmCraft is an <strong>architectural fork and deep rewrite</strong> of the multi-agent swarm engine created by <a href="https://github.com/mojomast" target="_blank" className="text-primary hover:underline">Mojomast</a> in <code>mojomast/swarmussy</code>. Its deterministic layering is derived from the meta-structure of the <strong>Abstract Wiki Architect</strong>.
+        </div>
+        
+        <div className="prose prose-slate prose-lg text-slate-600 leading-relaxed">
+          <p>
+            SwarmCraft is a deterministic, data-driven story engine designed to transform explicit project state into prose using a strict control loop. Unlike chat-based swarms, it separates <strong>Brain</strong> (LLM personas), <strong>Logic</strong> (orchestration), and <strong>Memory</strong> (explicit state) to ensure long-form narrative coherence.
+          </p>
+        </div>
+      </section>
 
-## **POWERED BY GROK**
+      <div className="max-w-4xl mx-auto px-6 py-16 space-y-20">
 
-**SwarmCraft** is a deterministic, data-driven story engine designed to transform explicit project state into prose using a strict control loop. Unlike chat-based swarms, it separates **Brain** (LLM personas), **Logic** (orchestration), and **Memory** (explicit state) to ensure long-form narrative coherence.
+        {/* 1. CORE ARCHITECTURE */}
+        <section>
+          <h2 className="text-3xl font-serif font-medium mb-8 text-slate-900">1. Core Architecture</h2>
+          
+          <div className="mb-10">
+            <h3 className="text-xl font-bold text-slate-900 mb-4">The "Three-Layer Model"</h3>
+            <p className="text-slate-600 mb-6">Designed to prevent hallucinations and state drift:</p>
+            <ul className="grid gap-4 md:grid-cols-3">
+              <li className="bg-slate-50 p-4 rounded border border-slate-100">
+                <strong className="block text-slate-900 mb-1">Brain (Personas)</strong>
+                <span className="text-sm text-slate-600">Stateless services (Architect, Narrator, Editor) that never own canonical state.</span>
+              </li>
+              <li className="bg-slate-50 p-4 rounded border border-slate-100">
+                <strong className="block text-slate-900 mb-1">Logic (Engine)</strong>
+                <span className="text-sm text-slate-600">The runtime that handles the SCAN → PLAN → EXECUTE loop.</span>
+              </li>
+              <li className="bg-slate-50 p-4 rounded border border-slate-100">
+                <strong className="block text-slate-900 mb-1">Memory (State)</strong>
+                <span className="text-sm text-slate-600">All truth lives in the Matrix, Story Bible, and RAG DB.</span>
+              </li>
+            </ul>
+          </div>
 
----
+          <div>
+            <h3 className="text-xl font-bold text-slate-900 mb-4">The Deterministic Pipeline</h3>
+            <p className="text-slate-600 mb-4">SwarmCraft replaces emergent coordination with a strict cycle:</p>
+            <ol className="list-decimal pl-5 space-y-2 text-slate-700 font-medium">
+              <li><span className="text-slate-900 font-bold">SCAN:</span> Recompute reality from disk.</li>
+              <li><span className="text-slate-900 font-bold">PLAN:</span> Select the next atomic Part to draft or revise.</li>
+              <li><span className="text-slate-900 font-bold">EXECUTE:</span> Run one persona on that Part, then exit.</li>
+            </ol>
+          </div>
+        </section>
 
-## 1. Core Architecture
+        {/* 2. DOCUMENTATION MODULES */}
+        <section>
+          <h2 className="text-3xl font-serif font-medium mb-8 text-slate-900">2. Documentation Modules</h2>
+          <p className="text-slate-500 italic mb-8 border-l-2 border-primary pl-4">
+            Technical documentation is currently being migrated to this new platform.
+          </p>
 
-The system operates on a **"Three-Layer Model"** to prevent hallucinations and state drift:
+          <div className="grid md:grid-cols-3 gap-8 text-sm">
+            
+            {/* Logic */}
+            <div>
+              <h4 className="font-bold text-slate-900 uppercase tracking-widest mb-4 border-b pb-2">Core Logic</h4>
+              <ul className="space-y-3 text-slate-600">
+                <li><strong className="text-slate-800">Architecture Overview:</strong> High-level diagram of separation.</li>
+                <li><strong className="text-slate-800">Deterministic Pipeline:</strong> Breakdown of the control loop.</li>
+                <li><strong className="text-slate-800">Prompt Hydration:</strong> Preventing prompt sprawl via slicing.</li>
+                <li><strong className="text-slate-800">Provider Adapter (Grok):</strong> Model-agnostic normalization.</li>
+              </ul>
+            </div>
 
-* **Brain (Personas):** Stateless services (Architect, Narrator, Editor) that never own canonical state.
-* **Logic (Engine):** The runtime that handles the `SCAN → PLAN → EXECUTE` loop and tool execution.
-* **Memory (State):** All truth lives in the **Matrix** (runtime status), **Story Bible** (creative intent), and **RAG DB** (long-term continuity).
+            {/* State */}
+            <div>
+              <h4 className="font-bold text-slate-900 uppercase tracking-widest mb-4 border-b pb-2">State & Schema</h4>
+              <ul className="space-y-3 text-slate-600">
+                <li><strong className="text-slate-800">Central Matrix:</strong> Runtime state (matrix.json).</li>
+                <li><strong className="text-slate-800">Story Bible:</strong> Creative intent & constraints.</li>
+                <li><strong className="text-slate-800">Story Scaffold:</strong> The grid system.</li>
+                <li><strong className="text-slate-800">Schema Templates:</strong> Thread sets and pacing.</li>
+                <li><strong className="text-slate-800">Schema Outline:</strong> Chapters and beat contracts.</li>
+              </ul>
+            </div>
 
-### The Deterministic Pipeline
+            {/* Ops */}
+            <div>
+              <h4 className="font-bold text-slate-900 uppercase tracking-widest mb-4 border-b pb-2">Operations</h4>
+              <ul className="space-y-3 text-slate-600">
+                <li><strong className="text-slate-800">Dashboard TUI:</strong> "Mission Control" interface.</li>
+                <li><strong className="text-slate-800">Multi-Project Mgmt:</strong> Isolated universes.</li>
+                <li><strong className="text-slate-800">Outline Grid & CSV:</strong> Round-tripping via spreadsheets.</li>
+                <li><strong className="text-slate-800">RAG Memory:</strong> Long-term retrieval.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-SwarmCraft replaces emergent coordination with a strict cycle:
+        {/* 3. KEY CONCEPTS */}
+        <section>
+          <h2 className="text-3xl font-serif font-medium mb-8 text-slate-900">3. Key Concepts</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card title="Parts, Not Chapters">
+              The atomic unit of work is the <strong>Part</strong>. Chapters are simply rollups of 1–6 Parts. This allows for small, stable prompt slices and targeted regeneration.
+            </Card>
+            <Card title="Slice-by-Slice Hydration">
+              The engine never dumps the whole Story Bible into the LLM. It hydrates prompts with <strong>only</strong> the active Part's beats, contract, and relevant RAG evidence.
+            </Card>
+          </div>
+        </section>
 
-1. **SCAN:** Recompute reality from disk.
-2. **PLAN:** Select the next atomic **Part** to draft or revise.
-3. **EXECUTE:** Run one persona on that Part, then exit.
+        {/* FOOTER */}
+        <section className="bg-slate-50 p-6 rounded-sm text-center">
+          <h3 className="text-sm font-bold uppercase text-slate-400 mb-2">Full Credits & Lineage</h3>
+          <p className="text-slate-600 mb-4 text-sm">
+            Based on the foundational work of Mojomast/swarmussy and the Abstract Wiki Architect.
+          </p>
+          <span className="text-slate-400 text-xs font-mono border border-slate-200 px-3 py-1 rounded">
+            Full Credits Page (Coming Soon)
+          </span>
+        </section>
 
----
-
-## 2. Documentation Modules
-
-### Core Logic & Orchestration
-
-* [**Architecture Overview**](../Core/Architecture-Overview) – High-level diagram of the Brain/Logic/Memory separation.
-* [**Deterministic Pipeline**](../Core/Deterministic-Pipeline-Scan-Plan-Execute) – Detailed breakdown of the SCAN-PLAN-EXECUTE control loop.
-* [**Prompt Hydration**](../Runtime/Orchestration-Slice-By-Slice-Prompt-Hydration) – How the engine prevents "prompt sprawl" by injecting only the active Part slice.
-* [**Provider Adapter: Grok**](../Runtime/Provider-Adapter-Grok) – The normalization layer that keeps the engine model-agnostic.
-
-### State & Schema (The Truth)
-
-* [**Central Matrix**](../Core/Central-Matrix-Runtime-State) – The machine-readable runtime state (`matrix.json`).
-* [**Story Bible (Intent)**](../Scaffold/Story-Bible-Creative-Intent) – Where characters, lore, and constraints live.
-* [**Story Scaffold**](../Scaffold/Story-Scaffold-Templates-Outline-Parts) – The grid system combining Templates and Outlines.
-* [**Schema: Templates**](../Scaffold/Schema-Templates) – Defining thread sets and pacing rules.
-* [**Schema: Outline**](../Scaffold/Schema-Outline) – Defining chapters, parts, and beat contracts.
-
-### Operations & Usage
-
-* [**Dashboard TUI**](../Runtime/Dashboard-TUI-Reference) – The "Mission Control" interface for observing the engine.
-* [**Multi-Project Management**](../Runtime/Multi-Project-Management) – Running isolated universes in a single runtime.
-* [**Outline Grid & CSV**](../Scaffold/Outline-Grid-CSV-Round-Trip) – Round-tripping the story structure via spreadsheets.
-* [**RAG Memory System**](../Runtime/RAG-Memory-System) – Long-term retrieval for narrative continuity.
-
----
-
-## 3. Key Concepts
-
-### Parts, Not Chapters
-The atomic unit of work is the **Part**. Chapters are simply rollups of 1–6 Parts. This allows for small, stable prompt slices and targeted regeneration.
-
-### Slice-by-Slice Hydration
-The engine never dumps the whole Story Bible into the LLM. It hydrates prompts with **only** the active Part's beats, contract, and relevant RAG evidence.
-
-### Credits & Lineage
-* **Upstream Foundation:** Mojomast/swarmussy (Multi-agent patterns, TUI concepts).
-* **Meta-Structure:** Abstract Wiki Architect (State separation).
-* **Full Credits:** [**Read the Credits & Lineage Page**](../Meta/Credits-And-Lineage).
+      </div>
+    </main>
+  );
+}
