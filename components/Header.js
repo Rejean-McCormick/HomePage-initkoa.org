@@ -8,8 +8,7 @@ import {
   ChevronDown, 
   Cpu, 
   Server, 
-  BookOpen, 
-  Landmark 
+  BookOpen 
 } from 'lucide-react';
 
 export default function Header() {
@@ -139,9 +138,8 @@ export default function Header() {
   );
 }
 
-// Helper Components
-
-function DropdownLink({ href, label, icon }: { href: string; label: string; icon: any }) {
+// Helper Components - No Typescript annotations here
+function DropdownLink({ href, label, icon }) {
   return (
     <Link 
       href={href} 
@@ -153,7 +151,7 @@ function DropdownLink({ href, label, icon }: { href: string; label: string; icon
   );
 }
 
-function MobileLink({ href, label, highlight }: { href: string; label: string, highlight?: boolean }) {
+function MobileLink({ href, label, highlight }) {
   return (
     <Link 
       href={href} 
