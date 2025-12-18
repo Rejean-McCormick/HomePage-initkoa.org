@@ -157,7 +157,7 @@ export default function KreaturePage() {
 
           <div className="bg-slate-900 text-slate-300 p-6 rounded-sm text-center">
             <p className="italic mb-2 font-serif">
-              "Le code explique le <em>comment</em>. Mais le mythe tient le <em>pourquoi</em>. Et sans pourquoi, tout devient bruit."
+              &quot;Le code explique le <em>comment</em>. Mais le mythe tient le <em>pourquoi</em>. Et sans pourquoi, tout devient bruit.&quot;
             </p>
             <div className="text-xs font-bold uppercase tracking-widest text-primary mt-2">Sceau de King Klown</div>
           </div>
