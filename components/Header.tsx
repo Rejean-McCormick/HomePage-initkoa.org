@@ -68,7 +68,7 @@ export default function Header() {
       ]
     },
     {
-      label: 'Kreature',
+      label: 'Kréature',
       path: '/kreature',
       icon: <Heart className="w-4 h-4 text-pink-500" />,
       highlight: true
