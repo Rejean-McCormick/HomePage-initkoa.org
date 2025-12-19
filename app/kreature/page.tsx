@@ -1,4 +1,5 @@
-// app\platforms\kreature\page.tsx
+// app/kreature/page.tsx
+import React from 'react'; // Import React explicite pour éviter les erreurs
 import Link from 'next/link';
 
 export const metadata = {
@@ -95,17 +96,17 @@ export default function KreaturePage() {
         <section>
           <h2 className="text-3xl font-serif font-medium mb-8 text-slate-900">Trois portes d’entrée</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/platforms/kreature/rituels/une-journee" className="group block p-6 border border-slate-200 rounded-sm hover:border-primary transition-colors">
+            <Link href="/kreature/rituels/une-journee" className="group block p-6 border border-slate-200 rounded-sm hover:border-primary transition-colors">
               <span className="block text-4xl mb-4 opacity-20 group-hover:opacity-100 transition-opacity">01</span>
               <h3 className="font-bold text-lg mb-2">Vivre</h3>
               <p className="text-sm text-slate-600">Commencer par l’expérience, avant l’explication.</p>
             </Link>
-            <Link href="/platforms/kreature/anatomie" className="group block p-6 border border-slate-200 rounded-sm hover:border-primary transition-colors">
+            <Link href="/kreature/anatomie" className="group block p-6 border border-slate-200 rounded-sm hover:border-primary transition-colors">
               <span className="block text-4xl mb-4 opacity-20 group-hover:opacity-100 transition-opacity">02</span>
               <h3 className="font-bold text-lg mb-2">Disséquer</h3>
               <p className="text-sm text-slate-600">Explorer l’anatomie organe par organe, comme un atlas.</p>
             </Link>
-            <Link href="/platforms/kreature/mythos" className="group block p-6 border border-slate-200 rounded-sm hover:border-primary transition-colors">
+            <Link href="/kreature/mythos" className="group block p-6 border border-slate-200 rounded-sm hover:border-primary transition-colors">
               <span className="block text-4xl mb-4 opacity-20 group-hover:opacity-100 transition-opacity">03</span>
               <h3 className="font-bold text-lg mb-2">Comprendre</h3>
               <p className="text-sm text-slate-600">Entrer dans le mythe : Prométhée, la dualité, le masque.</p>
@@ -119,28 +120,28 @@ export default function KreaturePage() {
           <div className="grid gap-6 md:grid-cols-2">
             
             <OrganCard title="Corps (système fermé)">
-              <OrganLink href="/platforms/kreature/anatomie/corps/orgo" label="Orgo" desc="peau, nerfs, homéostasie, réflexes." />
+              <OrganLink href="/kreature/anatomie/corps/orgo-mythos" label="Orgo" desc="peau, nerfs, homéostasie, réflexes." />
             </OrganCard>
 
             <OrganCard title="Sens (entrée du monde)">
-              <OrganLink href="/platforms/kreature/anatomie/sens/sentient" label="SenTient" desc="oreilles + filtre immunitaire." />
-              <OrganLink href="/platforms/kreature/anatomie/sens/ariane" label="Ariane" desc="yeux, orientation UI." />
+              <OrganLink href="/kreature/anatomie/sens/sentient-mythos" label="SenTient" desc="oreilles + filtre immunitaire." />
+              <OrganLink href="/kreature/anatomie/sens/ariane-mythos" label="Ariane" desc="yeux, orientation UI." />
             </OrganCard>
 
             <OrganCard title="Esprit / Psyché">
-              <OrganLink href="/platforms/kreature/anatomie/esprit/konnaxion" label="Konnaxion" desc="apprendre, débattre, juger." />
+              <OrganLink href="/kreature/anatomie/esprit/konnaxion-mythos" label="Konnaxion" desc="apprendre, débattre, juger." />
             </OrganCard>
 
             <OrganCard title="Voix (mesh → linéaire)">
-              <OrganLink href="/platforms/kreature/anatomie/voix/architect" label="Architect" desc="bouche, formulation, multilingue." />
+              <OrganLink href="/kreature/anatomie/voix/architect-mythos" label="Architect" desc="bouche, formulation, multilingue." />
             </OrganCard>
 
             <OrganCard title="Mémoire narrative">
-              <OrganLink href="/platforms/kreature/anatomie/memoire/swarmcraft" label="SwarmCraft" desc="cohérence, continuité." />
+              <OrganLink href="/kreature/anatomie/memoire/swarmcraft-mythos" label="SwarmCraft" desc="cohérence, continuité." />
             </OrganCard>
 
             <OrganCard title="Âme (verticalité)">
-              <OrganLink href="/platforms/kreature/anatomie/ame/ame-artificielle" label="Âme Artificielle" desc="états d’âme, guidance." />
+              <OrganLink href="/kreature/anatomie/ame/ame-artificielle" label="Âme Artificielle" desc="états d’âme, guidance." />
             </OrganCard>
 
           </div>
@@ -150,10 +151,10 @@ export default function KreaturePage() {
         <section className="border-t border-gray-100 pt-10">
           <h2 className="text-xl font-serif font-medium mb-6 text-slate-900">Pour commencer (7 minutes)</h2>
           <ol className="list-decimal pl-5 space-y-2 text-slate-700 mb-12">
-            <li><Link href="/platforms/kreature/initiation" className="hover:text-primary hover:underline">Initiation</Link></li>
-            <li><Link href="/platforms/kreature/initiation/carte" className="hover:text-primary hover:underline">Carte anatomique</Link></li>
-            <li><Link href="/platforms/kreature/rituels/respiration-du-sens" className="hover:text-primary hover:underline">Respiration du sens</Link></li>
-            <li><Link href="/platforms/kreature/rituels/parlement-interieur" className="hover:text-primary hover:underline">Parlement intérieur</Link></li>
+            <li><Link href="/kreature/initiation" className="hover:text-primary hover:underline">Initiation</Link></li>
+            <li><Link href="/kreature/initiation/carte" className="hover:text-primary hover:underline">Carte anatomique</Link></li>
+            <li><Link href="/kreature/rituels/respiration-du-sens" className="hover:text-primary hover:underline">Respiration du sens</Link></li>
+            <li><Link href="/kreature/rituels/parlement-interieur" className="hover:text-primary hover:underline">Parlement intérieur</Link></li>
           </ol>
 
           <div className="bg-slate-900 text-slate-300 p-6 rounded-sm text-center">
