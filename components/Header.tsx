@@ -3,11 +3,12 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { 
   Menu, X, ChevronDown, 
-  Search, Globe, User, 
-  Activity, Cpu, Network, BookOpen, Layers, Heart
+  Search, Globe, 
+  BookOpen, Layers, Cpu, Heart
 } from 'lucide-react';
 
 export default function Header() {
@@ -66,7 +67,7 @@ export default function Header() {
     {
       label: 'Kreature',
       path: '/kreature',
-      icon: <Heart className="w-4 h-4 text-pink-500" />, // Distinct color for the Narrative Layer
+      icon: <Heart className="w-4 h-4 text-pink-500" />,
       highlight: true
     }
   ];
@@ -82,13 +83,26 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         
         {/* LOGO */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-primary transition-colors">
-            K
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-105">
+            {/* Ensure 'LogoK.svg' is inside your 'public' folder. 
+              Example path: public/LogoK.svg 
+            */}
+            <Image 
+              src="/LogoK.svg" 
+              alt="King Klown Logo" 
+              width={40} 
+              height={40}
+              className="object-contain"
+            />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-slate-900 leading-none text-lg tracking-tight">King Klown</span>
-            <span className="text-xs text-slate-500 tracking-widest font-medium uppercase">& KOA</span>
+            <span className="font-bold text-slate-900 leading-none text-lg tracking-tight group-hover:text-primary transition-colors">
+              King Klown
+            </span>
+            <span className="text-xs text-slate-500 tracking-widest font-medium uppercase">
+              & KOA
+            </span>
           </div>
         </Link>
 
@@ -109,7 +123,7 @@ export default function Header() {
               >
                 {item.icon}
                 {item.label}
-                {item.children && <ChevronDown className="w-3 h-3 opacity-50" />}
+                {item.children && <ChevronDown className="w-3 h-3 opacity-50 transition-transform group-hover:rotate-180" />}
               </Link>
 
               {/* DROPDOWN MENU */}
@@ -147,15 +161,16 @@ export default function Header() {
             <Globe className="w-4 h-4" />
             <span>EN</span>
           </button>
-          <Link href="/about" className="ml-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-bold rounded-lg transition-all shadow-sm">
+          <Link href="/about" className="ml-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-bold rounded-lg transition-all shadow-sm hover:shadow-md">
             About
           </Link>
         </div>
 
         {/* MOBILE TOGGLE */}
         <button 
-          className="lg:hidden p-2 text-slate-900"
+          className="lg:hidden p-2 text-slate-900 hover:bg-slate-100 rounded-md transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -163,13 +178,15 @@ export default function Header() {
 
       {/* MOBILE MENU OVERLAY */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[72px] bg-white border-t border-slate-100 p-6 overflow-y-auto pb-20">
+        <div className="lg:hidden fixed inset-0 top-[72px] bg-white border-t border-slate-100 p-6 overflow-y-auto pb-20 animate-in slide-in-from-top-2 duration-200">
           <div className="flex flex-col space-y-6">
             {navStructure.map((item) => (
               <div key={item.label}>
                 <Link 
                   href={item.path} 
-                  className="flex items-center gap-3 text-lg font-bold text-slate-900 mb-2"
+                  className={`flex items-center gap-3 text-lg font-bold mb-2
+                    ${item.highlight ? 'text-pink-600' : 'text-slate-900'}
+                  `}
                 >
                   {item.icon} {item.label}
                 </Link>
@@ -179,7 +196,7 @@ export default function Header() {
                       <Link 
                         key={sub.path} 
                         href={sub.path}
-                        className="block text-slate-600 text-sm font-medium hover:text-primary"
+                        className="block text-slate-600 text-sm font-medium hover:text-primary hover:translate-x-1 transition-all"
                       >
                         {sub.label}
                       </Link>
@@ -188,10 +205,18 @@ export default function Header() {
                 )}
               </div>
             ))}
-            <div className="pt-6 border-t border-slate-100">
-              <Link href="/about" className="block w-full py-3 bg-slate-900 text-white text-center rounded-lg font-bold">
+            <div className="pt-6 border-t border-slate-100 space-y-4">
+              <Link href="/about" className="block w-full py-3 bg-slate-900 text-white text-center rounded-lg font-bold hover:bg-slate-800 transition-colors">
                 About the Architect
               </Link>
+              <div className="flex justify-center gap-6 text-slate-500">
+                <button className="flex items-center gap-2 hover:text-slate-900">
+                    <Globe className="w-5 h-5" /> <span>EN</span>
+                </button>
+                <button className="flex items-center gap-2 hover:text-slate-900">
+                    <Search className="w-5 h-5" /> <span>Search</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
