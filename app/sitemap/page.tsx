@@ -8,7 +8,8 @@ import {
   Cpu, 
   TrendingUp,
   Microscope, 
-  Anchor
+  Anchor,
+  Heart // Added for Kréature
 } from 'lucide-react';
 
 export const metadata = {
@@ -49,7 +50,8 @@ export default function VisualSitemapPage() {
 
           {/* INFRASTRUCTURE */}
           <Section title="Infrastructure" icon={<Anchor className="w-5 h-5" />}>
-            <MapLink href="/infrastructure" label="Infrastructure Hub" />
+            {/* Fixed plural path */}
+            <MapLink href="/infrastructures" label="Infrastructure Hub" />
             
             <SubSection title="Physical (Kristal Farms)">
                <MapLink href="/infrastructures/kristal-farms" label="Kristal Farms Overview" />
@@ -86,26 +88,51 @@ export default function VisualSitemapPage() {
 
         <div className="space-y-10">
           
+          {/* KRÉATURE (NEW DEDICATED SECTION) */}
+          <Section title="Kréature (Interface)" icon={<Heart className="w-5 h-5 text-pink-500" />}>
+            {/* Corrected Root Path */}
+            <MapLink href="/kreature" label="Kréature Accueil" highlight={true} />
+            
+            <SubSection title="Exploration">
+              <MapLink href="/kreature/initiation" label="Initiation (Le Je)" />
+              <MapLink href="/kreature/initiation/carte" label="Carte Anatomique" />
+              <MapLink href="/kreature/mythos" label="Mythos (La Légende)" />
+            </SubSection>
+
+            <SubSection title="Anatomie">
+              <MapLink href="/kreature/anatomie" label="Index Anatomique" />
+              <MapLink href="/kreature/anatomie/sens/ariane-mythos" label="Sens : Ariane" />
+              <MapLink href="/kreature/anatomie/voix/architect-mythos" label="Voix : Architect" />
+              <MapLink href="/kreature/anatomie/sens/sentient-mythos" label="Sens : SenTient" />
+              <MapLink href="/kreature/anatomie/memoire/swarmcraft-mythos" label="Mémoire : SwarmCraft" />
+              <MapLink href="/kreature/anatomie/ame/ame-artificielle" label="Âme : Âme Artificielle" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos" label="Esprit : Konnaxion" />
+            </SubSection>
+
+            <SubSection title="Rituels">
+              <MapLink href="/kreature/rituels/une-journee" label="Une Journée Type" />
+              <MapLink href="/kreature/rituels/parlement-interieur" label="Le Parlement Intérieur" />
+            </SubSection>
+          </Section>
+
           {/* PLATFORMS */}
-          <Section title="Platforms" icon={<Server className="w-5 h-5" />}>
+          <Section title="Platforms (Engines)" icon={<Server className="w-5 h-5" />}>
             <MapLink href="/platforms" label="Platforms Hub" />
             <SubSection title="Core Products">
               <MapLink href="/platforms/konnaxion" label="Konnaxion (Public OS)" />
               <MapLink href="/platforms/orgo" label="Orgo (Private OS)" />
             </SubSection>
-            <SubSection title="Interface">
-              <MapLink href="/platforms/kreature" label="Kréature (Mythopoetic UI)" />
-            </SubSection>
           </Section>
 
-          {/* TECHNOLOGY */}
-          <Section title="Technology" icon={<Cpu className="w-5 h-5" />}>
+          {/* TECHNOLOGY (Reordered) */}
+          <Section title="Technology Stack" icon={<Cpu className="w-5 h-5" />}>
             <MapLink href="/technology" label="Tech Overview" />
-            <MapLink href="/technology/ame-artificielle" label="Âme artificielle (Âme)" />
-            <MapLink href="/technology/architect" label="Abstract Wiki Architect" />
-            <MapLink href="/technology/ariane" label="Ariane (UI Graph)" />
-            <MapLink href="/technology/sentient" label="SenTient (NLP Engine)" />
-            <MapLink href="/technology/swarmcraft" label="SwarmCraft (Narrative Engine)" />
+            <MapLink href="/technology/ariane" label="Ariane (Vision)" />
+            <MapLink href="/technology/architect" label="Architect (Output)" />
+            <MapLink href="/technology/sentient" label="SenTient (Input)" />
+            <MapLink href="/technology/swarmcraft" label="SwarmCraft (Memory)" />
+            <MapLink href="/technology/ame-artificielle" label="Âme artificielle (Ethics)" />
+            <MapLink href="/technology/votingmachine" label="VM-Engine (Core)" />
           </Section>
 
           {/* META */}
