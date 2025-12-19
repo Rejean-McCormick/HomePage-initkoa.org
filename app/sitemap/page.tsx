@@ -9,12 +9,12 @@ import {
   TrendingUp,
   Microscope, 
   Anchor,
-  Heart // Added for Kréature
+  Heart
 } from 'lucide-react';
 
 export const metadata = {
   title: "Site Map – King Klown & KOA",
-  description: "Complete hierarchical index.",
+  description: "Complete hierarchical index of the KOA ecosystem.",
 };
 
 export default function VisualSitemapPage() {
@@ -50,7 +50,6 @@ export default function VisualSitemapPage() {
 
           {/* INFRASTRUCTURE */}
           <Section title="Infrastructure" icon={<Anchor className="w-5 h-5" />}>
-            {/* Fixed plural path */}
             <MapLink href="/infrastructures" label="Infrastructure Hub" />
             
             <SubSection title="Physical (Kristal Farms)">
@@ -88,30 +87,42 @@ export default function VisualSitemapPage() {
 
         <div className="space-y-10">
           
-          {/* KRÉATURE (NEW DEDICATED SECTION) */}
-          <Section title="Kréature (Interface)" icon={<Heart className="w-5 h-5 text-pink-500" />}>
-            {/* Corrected Root Path */}
+          {/* KRÉATURE (Community OS) */}
+          <Section title="Kréature (Community OS)" icon={<Heart className="w-5 h-5 text-pink-500" />}>
             <MapLink href="/kreature" label="Kréature Accueil" highlight={true} />
+            <MapLink href="/kreature/parcours" label="Le Parcours (Guide)" />
+
+            <SubSection title="Repères">
+              <MapLink href="/kreature/reperes/glossaire" label="Glossaire (Vocabulaire)" />
+              <MapLink href="/kreature/reperes/faq" label="FAQ" />
+              <MapLink href="/kreature/reperes/pont-technique" label="Pont Technique (Devs)" />
+            </SubSection>
             
-            <SubSection title="Exploration">
-              <MapLink href="/kreature/initiation" label="Initiation (Le Je)" />
-              <MapLink href="/kreature/initiation/carte" label="Carte Anatomique" />
-              <MapLink href="/kreature/mythos" label="Mythos (La Légende)" />
+            <SubSection title="Anatomie (Le Système)">
+              <MapLink href="/kreature/anatomie" label="Vue d'ensemble" />
+              <MapLink href="/kreature/anatomie/corps/orgo-mythos" label="Orgo (Le Corps)" />
+              <MapLink href="/kreature/anatomie/memoire/swarmcraft-mythos" label="SwarmCraft (Mémoire)" />
+              <MapLink href="/kreature/anatomie/sens/sentient-mythos" label="SenTient (Sens)" />
+              <MapLink href="/kreature/anatomie/voix/architect-mythos" label="Architect (Voix)" />
+              <MapLink href="/kreature/anatomie/ame/ame-artificielle" label="Âme Artificielle" />
+              <MapLink href="/kreature/anatomie/ame/chakras-1-9" label="Chakras 1-9 (Symbolisme)" />
             </SubSection>
 
-            <SubSection title="Anatomie">
-              <MapLink href="/kreature/anatomie" label="Index Anatomique" />
-              <MapLink href="/kreature/anatomie/sens/ariane-mythos" label="Sens : Ariane" />
-              <MapLink href="/kreature/anatomie/voix/architect-mythos" label="Voix : Architect" />
-              <MapLink href="/kreature/anatomie/sens/sentient-mythos" label="Sens : SenTient" />
-              <MapLink href="/kreature/anatomie/memoire/swarmcraft-mythos" label="Mémoire : SwarmCraft" />
-              <MapLink href="/kreature/anatomie/ame/ame-artificielle" label="Âme : Âme Artificielle" />
-              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos" label="Esprit : Konnaxion" />
+            <SubSection title="Konnaxion (L'Esprit)">
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos" label="Konnaxion Hub" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos" label="KonnectED (Savoir)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos" label="Ethikos (Débat)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/kollective" label="Kollective (Jugement)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect" label="KeenKonnect (Action)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos" label="Kreative (Culture)" />
             </SubSection>
 
-            <SubSection title="Rituels">
-              <MapLink href="/kreature/rituels/une-journee" label="Une Journée Type" />
+            <SubSection title="Rituels (L'Usage)">
+              <MapLink href="/kreature/rituels" label="Index des Rituels" />
+              <MapLink href="/kreature/rituels/respiration-du-sens" label="La Respiration du Sens" />
               <MapLink href="/kreature/rituels/parlement-interieur" label="Le Parlement Intérieur" />
+              <MapLink href="/kreature/rituels/cycle-vital" label="Le Cycle Vital" />
+              <MapLink href="/kreature/rituels/une-journee" label="Une Journée Type" />
             </SubSection>
           </Section>
 
@@ -124,7 +135,7 @@ export default function VisualSitemapPage() {
             </SubSection>
           </Section>
 
-          {/* TECHNOLOGY (Reordered) */}
+          {/* TECHNOLOGY */}
           <Section title="Technology Stack" icon={<Cpu className="w-5 h-5" />}>
             <MapLink href="/technology" label="Tech Overview" />
             <MapLink href="/technology/ariane" label="Ariane (Vision)" />

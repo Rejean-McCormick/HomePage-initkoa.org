@@ -43,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
 
-    // --- 2. INFRASTRUCTURE (NEW) ---
+    // --- 2. INFRASTRUCTURE ---
     {
       url: `${baseUrl}/infrastructure`,
       lastModified: new Date(),
@@ -176,12 +176,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/platforms/kreature`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
 
     // --- 5. TECHNOLOGY ---
     {
@@ -216,6 +210,222 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/technology/architect`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+
+    // --- 6. KRÉATURE (COMMUNITY OS) ---
+    // Top Level
+    {
+      url: `${baseUrl}/kreature`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/kreature/parcours`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+
+    // Anatomie: Primary Organs
+    {
+      url: `${baseUrl}/kreature/anatomie/corps/orgo-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/memoire/swarmcraft-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/sens/sentient-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/voix/architect-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    
+    // Anatomie: Soul & Esprit
+    {
+      url: `${baseUrl}/kreature/anatomie/ame/ame-artificielle`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/ame/chakras-1-9`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+
+    // Konnaxion: Deep Links (The Sub-Organs)
+    // 1. KonnectED
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos/knowledge`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos/certifikation`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    // 2. Ethikos
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos/korum-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos/konsultations-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    // 3. Kollective
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kollective`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kollective/ekoh-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kollective/smart-vote`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    // 4. KeenKonnect
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/konstruct-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/stockage-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    // 5. Kreative
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/kontact-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/konservation-mythos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+
+    // Rituels
+    {
+      url: `${baseUrl}/kreature/rituels`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/kreature/rituels/respiration-du-sens`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/kreature/rituels/parlement-interieur`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/kreature/rituels/cycle-vital`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/kreature/rituels/une-journee`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+
+    // Repères & Guides
+    {
+      url: `${baseUrl}/kreature/reperes/glossaire`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/kreature/reperes/faq`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/kreature/reperes/pont-technique`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,

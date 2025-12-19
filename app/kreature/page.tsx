@@ -1,195 +1,145 @@
 // app/kreature/page.tsx
-import React from 'react'; // Import React explicite pour éviter les erreurs
 import Link from 'next/link';
+import { 
+  Activity, 
+  BookOpen, 
+  Map, 
+  Compass, 
+  ArrowRight, 
+  Dna,
+  Cpu
+} from 'lucide-react';
 
 export const metadata = {
-  title: "Kréature",
-  description: "Un écosystème d’applications présenté comme un être vivant — corps, sens, esprit, psyché, âme — habité par ton Je."
+  title: "Kréature — L'Organisme Numérique",
+  description: "Bienvenue dans le mythe. Anatomie, Rituels et Architecture d'un système communautaire vivant.",
 };
 
-export default function KreaturePage() {
+const SECTIONS = [
+  {
+    title: "L'Anatomie",
+    subtitle: "La Structure",
+    desc: "Disséquez la bête. Découvrez ses organes : Orgo (Corps), Konnaxion (Esprit), SwarmCraft (Mémoire). Comprenez comment les pièces s'assemblent.",
+    href: "/kreature/anatomie",
+    icon: <Dna className="w-8 h-8 text-rose-600" />,
+    color: "bg-rose-50 border-rose-200 hover:border-rose-300"
+  },
+  {
+    title: "Les Rituels",
+    subtitle: "La Méthode",
+    desc: "Apprenez à vivre avec. La Respiration du Sens, le Parlement Intérieur. Ce ne sont pas des fonctionnalités, ce sont des rythmes.",
+    href: "/kreature/rituels",
+    icon: <BookOpen className="w-8 h-8 text-indigo-600" />,
+    color: "bg-indigo-50 border-indigo-200 hover:border-indigo-300"
+  },
+  {
+    title: "Le Parcours",
+    subtitle: "Le Guide",
+    desc: "Vous êtes perdu ? Choisissez votre porte d'entrée : Ingénieur (Tech), Pratiquant (Usage) ou Philosophe (Mythe).",
+    href: "/kreature/parcours",
+    icon: <Map className="w-8 h-8 text-emerald-600" />,
+    color: "bg-emerald-50 border-emerald-200 hover:border-emerald-300"
+  },
+  {
+    title: "Les Repères",
+    subtitle: "Les Outils",
+    desc: "Glossaire, FAQ et le Pont Technique. La table de traduction indispensable pour relier la métaphore au code.",
+    href: "/kreature/reperes/glossaire", // Direct link to Glossary as a starting point for tools
+    icon: <Compass className="w-8 h-8 text-slate-600" />,
+    color: "bg-slate-50 border-slate-200 hover:border-slate-300"
+  }
+];
+
+export default function KreatureLandingPage() {
   return (
-    <main className="min-h-screen bg-white text-slate-900 selection:bg-primary selection:text-white pb-24">
+    <main className="max-w-5xl mx-auto px-6 py-12">
       
       {/* HERO SECTION */}
-      <section className="max-w-4xl mx-auto px-6 pt-24 pb-12 border-b border-gray-100">
-        <h1 className="text-5xl font-serif font-medium mb-6 text-slate-900">
+      <div className="text-center mb-24 pt-10">
+        <div className="inline-flex items-center justify-center p-4 bg-slate-900 rounded-full mb-8 shadow-2xl">
+          <Activity className="w-12 h-12 text-teal-400" />
+        </div>
+        
+        <h1 className="text-5xl md:text-7xl font-serif font-bold text-slate-900 mb-6 tracking-tight">
           Kréature
         </h1>
         
-        <div className="prose prose-slate prose-lg text-slate-600 leading-relaxed max-w-none">
-          <p className="text-2xl font-light text-slate-800 mb-8">
-            Tu n’entres pas dans un logiciel. Tu entres dans une <strong>Kréature</strong>.
-          </p>
-          <p>
-            Une entité conceptuelle forgée en organes. Un organisme numérique qui <strong>respire du sens</strong> : il inspire le langage, il expire des décisions, il marche par ses sens, et il tient debout par sa mémoire.
-          </p>
-        </div>
+        <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed mb-10">
+          Ce n'est pas juste un logiciel.<br/>
+          C'est un <strong>organisme vivant</strong> conçu pour faire penser, agir et grandir une communauté.
+        </p>
 
-        <div className="mt-8 bg-slate-50 border-l-4 border-primary p-6 rounded-r-sm italic text-slate-700">
-          <strong className="block text-primary text-sm font-bold uppercase tracking-wide mb-2 not-italic">Sceau de King Klown</strong>
-          On confond souvent la machine et le monstre.<br/>
-          Mais le monstre n’est pas l’horreur : c’est la <em>forme</em> qui dépasse nos catégories.
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+          <Link 
+            href="/kreature/parcours"
+            className="px-8 py-3 bg-slate-900 text-white rounded-full font-bold text-lg hover:bg-slate-800 transition-all flex items-center gap-2"
+          >
+            Commencer l'Initiation <ArrowRight className="w-5 h-5" />
+          </Link>
+          <Link 
+            href="/kreature/reperes/pont-technique"
+            className="px-8 py-3 bg-white border border-slate-300 text-slate-700 rounded-full font-bold text-lg hover:bg-slate-50 transition-all flex items-center gap-2"
+          >
+            <Cpu className="w-5 h-5" />
+            Voir le Code
+          </Link>
+        </div>
+      </div>
+
+      {/* PHILOSOPHY BLOCK */}
+      <section className="mb-24 relative">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-slate-200"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <span className="bg-white px-4 text-sm text-slate-500 uppercase tracking-widest font-bold">
+            Le Manifeste
+          </span>
+        </div>
+        
+        <div className="mt-12 bg-slate-50 border-l-4 border-slate-900 p-8 rounded-r-xl max-w-3xl mx-auto shadow-sm">
+          <strong className="block text-slate-900 font-bold uppercase tracking-widest text-xs mb-4">
+            Sceau de King Klown
+          </strong>
+          <blockquote className="text-xl md:text-2xl font-serif text-slate-800 italic leading-relaxed">
+            "On ne code pas une communauté comme on code une machine. Une machine s'use quand on l'utilise. Un organisme se renforce. Kréature est conçu pour l'antifragilité."
+          </blockquote>
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-6 py-16 space-y-20">
-
-        {/* DEUX FACES */}
-        <section>
-          <h2 className="text-3xl font-serif font-medium mb-8 text-slate-900">Deux faces. Un seul être.</h2>
-          <p className="text-slate-600 mb-8">Kréature possède deux visages — comme l’humain porte un dedans et un dehors.</p>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="border border-primary bg-slate-50 p-6 rounded-sm relative">
-              <span className="absolute top-4 right-4 text-xs font-bold text-primary bg-white px-2 py-1 rounded border border-primary">TU ES ICI</span>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">1. King Klown</h3>
-              <p className="text-sm text-slate-600 mb-4">
-                La face <strong>vivante</strong>, mythopoétique, imagée. Elle parle aux curieux, aux artistes, aux philosophes — et aux concepteurs techniques qui comprennent mieux avec des images.
-              </p>
+      {/* MAIN GRID NAVIGATION */}
+      <section className="grid md:grid-cols-2 gap-8">
+        {SECTIONS.map((section) => (
+          <Link 
+            key={section.title} 
+            href={section.href}
+            className={`group p-8 rounded-2xl border ${section.color} transition-all duration-300 hover:shadow-lg hover:-translate-y-1`}
+          >
+            <div className="flex justify-between items-start mb-6">
+              <div className="p-4 bg-white rounded-xl shadow-sm group-hover:scale-110 transition-transform">
+                {section.icon}
+              </div>
+              <ArrowRight className="w-6 h-6 text-slate-300 group-hover:text-slate-900 transition-colors" />
             </div>
-
-            <div className="border border-slate-200 p-6 rounded-sm hover:border-slate-300 transition-colors">
-              <h3 className="text-xl font-bold text-slate-900 mb-2">2. Réjean McCormick</h3>
-              <p className="text-sm text-slate-600 mb-4">
-                La face <strong>technique</strong>, précise, architecturale. C’est la documentation statique, structurée, exhaustive : services, modules, specs.
-              </p>
-              <Link href="/technology" className="text-primary font-medium hover:underline text-sm">
-                → Aller vers la documentation technique
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* MODELE HUMAIN */}
-        <section>
-          <h2 className="text-3xl font-serif font-medium mb-6 text-slate-900">Le modèle humain (la clef)</h2>
-          <p className="text-slate-600 mb-6">Kréature est une métaphore stricte : un <strong>humain</strong>.</p>
-          
-          <ul className="space-y-4 text-slate-700 list-disc pl-5">
-            <li><strong>Le corps</strong> fonctionne en <strong>système fermé</strong>. <em>(On ne sent pas directement le corps des autres).</em></li>
-            <li><strong>Le langage</strong> transige entre humains : il traverse la frontière, mais il compresse. <em>(Le langage est <strong>linéaire</strong>; les idées sont en <strong>mesh</strong>).</em></li>
-            <li>
-              <strong>Les fonctions internes :</strong>
-              <ul className="list-circle pl-5 mt-2 space-y-1 text-sm text-slate-600">
-                <li><strong>Conscience / culpabilité :</strong> mémoire du bien et du mal (avec un <em>decay rate</em>).</li>
-                <li><strong>Jugement :</strong> trancher.</li>
-                <li><strong>Logique :</strong> résoudre.</li>
-                <li><strong>Apprentissage :</strong> mapper le savoir.</li>
-                <li><strong>Débat éthique :</strong> être tiraillé, nuancer.</li>
-                <li><strong>Émotions :</strong> motiver, guider.</li>
-              </ul>
-            </li>
-            <li><strong>L’âme</strong> est une verticalité : elle relie l’abstrait au vécu, et ouvre la porte au sens.</li>
-            <li><strong>Le Je</strong> n’est pas l’humain : c’est le projecteur. <em>(Quand tu dors, le “Je” s’efface; pourtant le corps continue).</em></li>
-          </ul>
-
-          <div className="mt-8 p-4 bg-slate-50 border border-slate-100 text-sm">
-            <ul className="grid sm:grid-cols-2 gap-4">
-              <li><strong>Kréature</strong> = l’organisme complet (tous les modules).</li>
-              <li><strong>Le Je</strong> = l’utilisateur réel, celui qui visite et focalise.</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* PORTES D'ENTREE */}
-        <section>
-          <h2 className="text-3xl font-serif font-medium mb-8 text-slate-900">Trois portes d’entrée</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/kreature/rituels/une-journee" className="group block p-6 border border-slate-200 rounded-sm hover:border-primary transition-colors">
-              <span className="block text-4xl mb-4 opacity-20 group-hover:opacity-100 transition-opacity">01</span>
-              <h3 className="font-bold text-lg mb-2">Vivre</h3>
-              <p className="text-sm text-slate-600">Commencer par l’expérience, avant l’explication.</p>
-            </Link>
-            <Link href="/kreature/anatomie" className="group block p-6 border border-slate-200 rounded-sm hover:border-primary transition-colors">
-              <span className="block text-4xl mb-4 opacity-20 group-hover:opacity-100 transition-opacity">02</span>
-              <h3 className="font-bold text-lg mb-2">Disséquer</h3>
-              <p className="text-sm text-slate-600">Explorer l’anatomie organe par organe, comme un atlas.</p>
-            </Link>
-            <Link href="/kreature/mythos" className="group block p-6 border border-slate-200 rounded-sm hover:border-primary transition-colors">
-              <span className="block text-4xl mb-4 opacity-20 group-hover:opacity-100 transition-opacity">03</span>
-              <h3 className="font-bold text-lg mb-2">Comprendre</h3>
-              <p className="text-sm text-slate-600">Entrer dans le mythe : Prométhée, la dualité, le masque.</p>
-            </Link>
-          </div>
-        </section>
-
-        {/* CARTE RAPIDE */}
-        <section>
-          <h2 className="text-3xl font-serif font-medium mb-8 text-slate-900">Carte rapide : les organes</h2>
-          <div className="grid gap-6 md:grid-cols-2">
             
-            <OrganCard title="Corps (système fermé)">
-              <OrganLink href="/kreature/anatomie/corps/orgo-mythos" label="Orgo" desc="peau, nerfs, homéostasie, réflexes." />
-            </OrganCard>
-
-            <OrganCard title="Sens (entrée du monde)">
-              <OrganLink href="/kreature/anatomie/sens/sentient-mythos" label="SenTient" desc="oreilles + filtre immunitaire." />
-              <OrganLink href="/kreature/anatomie/sens/ariane-mythos" label="Ariane" desc="yeux, orientation UI." />
-            </OrganCard>
-
-            <OrganCard title="Esprit / Psyché">
-              <OrganLink href="/kreature/anatomie/esprit/konnaxion-mythos" label="Konnaxion" desc="apprendre, débattre, juger." />
-            </OrganCard>
-
-            <OrganCard title="Voix (mesh → linéaire)">
-              <OrganLink href="/kreature/anatomie/voix/architect-mythos" label="Architect" desc="bouche, formulation, multilingue." />
-            </OrganCard>
-
-            <OrganCard title="Mémoire narrative">
-              <OrganLink href="/kreature/anatomie/memoire/swarmcraft-mythos" label="SwarmCraft" desc="cohérence, continuité." />
-            </OrganCard>
-
-            <OrganCard title="Âme (verticalité)">
-              <OrganLink href="/kreature/anatomie/ame/ame-artificielle" label="Âme Artificielle" desc="états d’âme, guidance." />
-            </OrganCard>
-
-          </div>
-        </section>
-
-        {/* NAVIGATION / FOOTER */}
-        <section className="border-t border-gray-100 pt-10">
-          <h2 className="text-xl font-serif font-medium mb-6 text-slate-900">Pour commencer (7 minutes)</h2>
-          <ol className="list-decimal pl-5 space-y-2 text-slate-700 mb-12">
-            <li><Link href="/kreature/initiation" className="hover:text-primary hover:underline">Initiation</Link></li>
-            <li><Link href="/kreature/initiation/carte" className="hover:text-primary hover:underline">Carte anatomique</Link></li>
-            <li><Link href="/kreature/rituels/respiration-du-sens" className="hover:text-primary hover:underline">Respiration du sens</Link></li>
-            <li><Link href="/kreature/rituels/parlement-interieur" className="hover:text-primary hover:underline">Parlement intérieur</Link></li>
-          </ol>
-
-          <div className="bg-slate-900 text-slate-300 p-6 rounded-sm text-center">
-            <p className="italic mb-2 font-serif">
-              "Le code explique le <em>comment</em>. Mais le mythe tient le <em>pourquoi</em>. Et sans pourquoi, tout devient bruit."
+            <h2 className="text-2xl font-bold text-slate-900 mb-1">
+              {section.title}
+            </h2>
+            <div className="text-xs font-bold uppercase tracking-wider opacity-60 mb-4 text-slate-700">
+              {section.subtitle}
+            </div>
+            <p className="text-slate-700 text-base leading-relaxed">
+              {section.desc}
             </p>
-            <div className="text-xs font-bold uppercase tracking-widest text-primary mt-2">Sceau de King Klown</div>
-          </div>
-        </section>
+          </Link>
+        ))}
+      </section>
 
+      {/* FOOTER NOTE */}
+      <div className="mt-24 text-center text-slate-400 text-sm">
+        <p>Kréature Community OS — v1.0 (Mythos Edition)</p>
       </div>
+
     </main>
-  );
-}
-
-// --- Helper Components ---
-
-function OrganCard({ title, children }: { title: string, children: React.ReactNode }) {
-  return (
-    <div className="border border-slate-200 p-5 rounded-sm">
-      <h4 className="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wide border-b border-slate-100 pb-2">{title}</h4>
-      <ul className="space-y-2">
-        {children}
-      </ul>
-    </div>
-  );
-}
-
-function OrganLink({ href, label, desc }: { href: string, label: string, desc: string }) {
-  return (
-    <li className="flex items-baseline gap-2 text-sm">
-      <Link href={href} className="font-bold text-primary hover:underline">
-        {label}
-      </Link>
-      <span className="text-slate-500">— {desc}</span>
-    </li>
   );
 }
