@@ -1,4 +1,5 @@
 // app/infrastructures/kin-city/roadmap/page.tsx
+import Link from 'next/link';
 import { 
   Code2, 
   Layers, 
@@ -16,12 +17,12 @@ export const metadata = {
 
 export default function KinCityRoadmap() {
   return (
-    <main className="min-h-screen bg-neutral-50 py-16 px-6">
+    <main className="min-h-screen bg-neutral-50 py-16 px-6 selection:bg-[#1e6864] selection:text-white">
       <div className="max-w-4xl mx-auto">
         
         {/* HEADER */}
         <div className="mb-16">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900">Technical Roadmap</h1>
+          <h1 className="text-4xl font-bold mb-4 text-gray-900 font-serif">Technical Roadmap</h1>
           <p className="text-xl text-gray-600">
             Building Kin City is a progressive journey. We are evolving from accessible 
             prototypes to a fully immersive, custom-built web and AR ecosystem.
@@ -30,13 +31,13 @@ export default function KinCityRoadmap() {
 
         {/* TECHNOLOGY STACK SUMMARY */}
         <section className="mb-20">
-          <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
-            <Cpu className="w-6 h-6 text-indigo-600" />
+          <h2 className="text-2xl font-bold mb-8 flex items-center gap-2 text-[#1e6864]">
+            <Cpu className="w-6 h-6" />
             Core Technology Stack
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-              <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+            <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:border-[#1e6864]/20 transition-colors">
+              <h3 className="font-bold text-lg mb-2 flex items-center gap-2 text-slate-900">
                 <Code2 className="w-5 h-5 text-blue-500" />
                 Front-End Framework
               </h3>
@@ -46,9 +47,9 @@ export default function KinCityRoadmap() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-              <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-                <Globe className="w-5 h-5 text-green-500" />
+            <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:border-[#1e6864]/20 transition-colors">
+              <h3 className="font-bold text-lg mb-2 flex items-center gap-2 text-slate-900">
+                <Globe className="w-5 h-5 text-[#1e6864]" />
                 Mapping & Visualization
               </h3>
               <p className="text-gray-600 text-sm">
@@ -57,8 +58,8 @@ export default function KinCityRoadmap() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-              <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+            <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:border-[#1e6864]/20 transition-colors">
+              <h3 className="font-bold text-lg mb-2 flex items-center gap-2 text-slate-900">
                 <Box className="w-5 h-5 text-purple-500" />
                 3D Engine
               </h3>
@@ -68,8 +69,8 @@ export default function KinCityRoadmap() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-              <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+            <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:border-[#1e6864]/20 transition-colors">
+              <h3 className="font-bold text-lg mb-2 flex items-center gap-2 text-slate-900">
                 <Smartphone className="w-5 h-5 text-pink-500" />
                 Augmented Reality
               </h3>
@@ -83,20 +84,20 @@ export default function KinCityRoadmap() {
 
         {/* PHASES TIMELINE */}
         <section>
-          <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
-            <Layers className="w-6 h-6 text-indigo-600" />
+          <h2 className="text-2xl font-bold mb-8 flex items-center gap-2 text-[#1e6864]">
+            <Layers className="w-6 h-6" />
             Development Phases
           </h2>
 
-          <div className="space-y-12 border-l-2 border-indigo-100 pl-8 relative">
+          <div className="space-y-12 border-l-2 border-[#1e6864]/20 pl-8 relative">
             
             {/* Phase 0 */}
             <div className="relative">
-              <span className="absolute -left-[41px] top-0 bg-indigo-100 text-indigo-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
+              <span className="absolute -left-[41px] top-0 bg-[#1e6864]/10 text-[#1e6864] w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border border-[#1e6864]">
                 0
               </span>
               <h3 className="text-xl font-bold text-gray-900">Phase 0: The Roblox Prototype</h3>
-              <p className="text-gray-500 mb-2">Immediate Pre-Alpha</p>
+              <p className="text-[#1e6864] text-sm font-bold mb-2 uppercase tracking-wide">Immediate Pre-Alpha</p>
               <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
                 <p className="text-gray-700">
                   A gamified, rapid-prototype version of Kin City hosted on Roblox. This allows early 
@@ -108,11 +109,11 @@ export default function KinCityRoadmap() {
 
             {/* Phase 1 */}
             <div className="relative">
-              <span className="absolute -left-[41px] top-0 bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
+              <span className="absolute -left-[41px] top-0 bg-[#1e6864] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shadow-md">
                 1
               </span>
               <h3 className="text-xl font-bold text-gray-900">Phase 1: 2D Interactive Map</h3>
-              <p className="text-gray-500 mb-2">Foundation</p>
+              <p className="text-slate-500 text-sm font-medium mb-2 uppercase tracking-wide">Foundation</p>
               <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
                 <p className="text-gray-700 mb-3">
                   A functional 2D map built with Next.js and Mapbox. Users can view the city layout, 
@@ -133,7 +134,7 @@ export default function KinCityRoadmap() {
                 2
               </span>
               <h3 className="text-xl font-bold text-gray-900">Phase 2: 2.5D & Basic 3D</h3>
-              <p className="text-gray-500 mb-2">Depth & Perspective</p>
+              <p className="text-slate-400 text-sm font-medium mb-2 uppercase tracking-wide">Depth & Perspective</p>
               <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm opacity-90">
                 <p className="text-gray-700 mb-3">
                   The flat map gains depth. Buildings extrude upward and 2D icons are replaced with 
@@ -154,7 +155,7 @@ export default function KinCityRoadmap() {
                 3
               </span>
               <h3 className="text-xl font-bold text-gray-900">Phase 3: Full Immersive City</h3>
-              <p className="text-gray-500 mb-2">The Web Metaverse</p>
+              <p className="text-slate-400 text-sm font-medium mb-2 uppercase tracking-wide">The Web Metaverse</p>
               <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm opacity-75">
                 <p className="text-gray-700 mb-3">
                   Kin City becomes a continuous 3D world. Users explore via avatars (first or third person). 
@@ -175,7 +176,7 @@ export default function KinCityRoadmap() {
                 4
               </span>
               <h3 className="text-xl font-bold text-gray-900">Phase 4: AR & Mixed Reality</h3>
-              <p className="text-gray-500 mb-2">Bridging Worlds</p>
+              <p className="text-slate-400 text-sm font-medium mb-2 uppercase tracking-wide">Bridging Worlds</p>
               <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm opacity-60">
                 <p className="text-gray-700">
                   Kin City extends into the physical world. Using mobile AR, users can project a 
@@ -190,9 +191,9 @@ export default function KinCityRoadmap() {
 
         <div className="mt-16 pt-8 border-t border-gray-200 text-center">
           <p className="text-gray-500 mb-4">Ready to see where we started?</p>
-          <a href="/infrastructures/kin-city" className="text-indigo-600 font-bold hover:underline inline-flex items-center gap-2">
+          <Link href="/infrastructures/kin-city" className="text-[#1e6864] font-bold hover:underline inline-flex items-center gap-2">
             Return to Kin City Overview <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </main>

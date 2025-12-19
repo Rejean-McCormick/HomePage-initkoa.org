@@ -39,7 +39,7 @@ export default function Header() {
         { label: 'Diagnosis', desc: 'The systemic crisis', path: '/diagnosis' },
         { label: 'Why KOA?', desc: 'Our reason for being', path: '/why' },
         { label: 'Principles', desc: 'Ethics & Civic code', path: '/principles' },
-        { label: 'Logos & Mythos', desc: 'The power of language', path: '/principles/logos-mythos' }, // Added Link
+        { label: 'Logos & Mythos', desc: 'The power of language', path: '/principles/logos-mythos' },
         { label: 'Research', desc: 'Pi Theory & Deep analysis', path: '/research' },
       ]
     },
@@ -59,10 +59,12 @@ export default function Header() {
       icon: <Cpu className="w-4 h-4" />,
       children: [
         { label: 'Overview', desc: 'The Deep Tech Stack', path: '/technology' },
+        { label: 'Ariane', desc: 'UI Graph & Vision', path: '/technology/ariane' },
+        { label: 'Architect', desc: 'Generative Output', path: '/technology/architect' },
         { label: 'SenTient', desc: 'Input Processing', path: '/technology/sentient' },
-        { label: 'Architect', desc: 'Generative Voice', path: '/technology/architect' },
         { label: 'SwarmCraft', desc: 'Narrative Memory', path: '/technology/swarmcraft' },
         { label: 'Âme Artificielle', desc: 'Alignment & Ethics', path: '/technology/ame-artificielle' },
+        { label: 'VM-Engine', desc: 'Deterministic Core', path: '/technology/votingmachine' },
       ]
     },
     {
