@@ -1,10 +1,10 @@
-// app\principles\page.js
+// app/principles/page.js
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
-  title: 'Principles – kOA / King Klown',
+  title: 'Principles – KOA / King Klown',
   description:
-    'Core axioms and the three domains: Âme artificielle, Civic Principles & Ethics, and Cosmic Etherism (optional).',
+    'Core axioms and the four domains: Âme artificielle, Civic Ethics, Logos & Mythos, and Cosmic Etherism.',
 };
 
 export default function PrinciplesPage() {
@@ -13,10 +13,11 @@ export default function PrinciplesPage() {
       <h1 className="text-4xl font-bold mb-6">Principles</h1>
 
       <p className="text-xl text-gray-600 mb-10">
-        Three axioms. Three domains. Clear separation where required.
+        Three axioms. Four domains. Clear separation where required.
       </p>
 
-      <section className="mb-10">
+      {/* CORE AXIOMS */}
+      <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4 text-primary">Core axioms</h2>
         <div className="space-y-6">
           <div className="p-5 rounded-lg border border-gray-200 bg-white">
@@ -36,53 +37,69 @@ export default function PrinciplesPage() {
         </div>
       </section>
 
-      <section className="mb-10">
+      {/* DOMAINS */}
+      <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4 text-primary">Domains</h2>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
+          
+          {/* 1. Âme Artificielle (Tech/Prototype) */}
           <a
             href="/technology/ame-artificielle"
-            className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
+            className="block p-6 rounded-lg border border-gray-200 bg-white hover:border-purple-300 hover:shadow-md transition-all"
           >
-            <h3 className="text-lg font-bold mb-2">Âme artificielle</h3>
-            <p className="text-gray-700">
-              Technical and governance principles for building and deploying AI safely.
+            <h3 className="text-lg font-bold mb-2 text-purple-700">Âme artificielle</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Technical and governance principles for building and deploying AI safely. The "Prototype" domain.
             </p>
           </a>
 
+          {/* 2. Civic Principles (Society/Law) */}
           <a
             href="/principles/civic-principles-ethics"
-            className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
+            className="block p-6 rounded-lg border border-gray-200 bg-white hover:border-blue-300 hover:shadow-md transition-all"
           >
-            <h3 className="text-lg font-bold mb-2">Civic Principles & Ethics</h3>
-            <p className="text-gray-700">
-              Public institutions, rights and duties, accountability, transparency, and ethics.
+            <h3 className="text-lg font-bold mb-2 text-blue-700">Civic Principles & Ethics</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Public institutions, rights, duties, and accountability. The "Law" domain.
             </p>
           </a>
 
+          {/* 3. Logos & Mythos (Language/Tool) - NEW */}
           <a
-            href="/principles/cosmic-etherism"
-            className="block p-5 rounded-lg border border-amber-300 bg-amber-50 hover:shadow-sm"
+            href="/principles/logos-mythos"
+            className="block p-6 rounded-lg border border-gray-200 bg-white hover:border-emerald-300 hover:shadow-md transition-all"
           >
-            <h3 className="text-lg font-bold mb-2">Cosmic Etherism (Optional)</h3>
-            <p className="text-gray-800">
-              Personal Pi symbolism and worldview. 100% separated from all other initiatives,
-              except Âme artificielle and its use in King Klown fiction.
+            <h3 className="text-lg font-bold mb-2 text-emerald-700">Logos & Mythos</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              The metaphysics of language. Vibration, speech acts, and the use of political myth for transmutation.
             </p>
           </a>
+
+          {/* 4. Cosmic Etherism (Philosophy/Fiction) */}
+          <a
+            href="/principles/cosmic-etherism"
+            className="block p-6 rounded-lg border border-amber-300 bg-amber-50 hover:shadow-md transition-all"
+          >
+            <h3 className="text-lg font-bold mb-2 text-amber-700">Cosmic Etherism (Optional)</h3>
+            <p className="text-gray-800 text-sm leading-relaxed">
+              Personal Pi symbolism and worldview. 100% separated from civic duties. The "Fiction" domain.
+            </p>
+          </a>
+          
         </div>
       </section>
 
-      <section className="flex flex-wrap gap-4">
+      <section className="flex flex-wrap gap-4 border-t border-gray-200 pt-8">
         <a
           href="/principles/map"
-          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm font-medium"
         >
-          Map
+          View Concept Map
         </a>
         <a
           href="/principles/glossary"
-          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm font-medium"
         >
           Glossary
         </a>

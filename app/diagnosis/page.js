@@ -1,5 +1,6 @@
-// app\diagnosis\page.js
+// app/diagnosis/page.js
 import React from 'react';
+import Link from 'next/link'; // Standardizing Link usage
 
 export const metadata = {
   title: 'Systemic Diagnosis – King Klown & KOA',
@@ -8,28 +9,36 @@ export const metadata = {
 
 export default function DiagnosisPage() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* HEADER SECTION */}
-      <section className="bg-slate-900 text-white py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="uppercase tracking-widest text-sm text-primary mb-4 font-bold">
+    <main className="min-h-screen bg-white selection:bg-primary selection:text-white">
+      
+      {/* HEADER SECTION - Dark Background */}
+      <section className="bg-slate-900 text-white py-24 px-6 relative overflow-hidden">
+        {/* Decorative background element */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-white to-primary opacity-20"></div>
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="uppercase tracking-widest text-xs md:text-sm text-primary mb-6 font-bold">
             The Manifesto
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
-            Global Context & Systemic Diagnosis
+          <h1 className="text-5xl md:text-6xl font-bold mb-8 font-serif leading-tight">
+            Global Context & <br />
+            Systemic Diagnosis
           </h1>
-          <p className="text-xl opacity-90 leading-relaxed max-w-2xl mx-auto">
-            We cannot fix what we refuse to see. Before proposing solutions, we must 
-            practice <strong>Radical Lucidity</strong>: facing the harsh reality of our 
-            interlocking crises without illusion or optimism bias.
+          <p className="text-xl md:text-2xl opacity-90 leading-relaxed max-w-2xl mx-auto font-light">
+            We cannot fix what we refuse to see. Before proposing solutions, we must practice{' '}
+            {/* Highlighted text matches the Dark BG (slate-900) */}
+            <span className="bg-primary text-slate-900 px-2 py-0.5 font-bold box-decoration-clone">
+              Radical Lucidity
+            </span>
+            : facing the harsh reality of our interlocking crises without illusion or optimism bias.
           </p>
         </div>
       </section>
 
       {/* INTRODUCTION */}
-      <section className="max-w-4xl mx-auto px-6 py-16">
-        <div className="prose prose-lg text-gray-700">
-          <p>
+      <section className="max-w-4xl mx-auto px-6 py-20">
+        <div className="prose prose-lg prose-slate text-gray-700 mx-auto">
+          <p className="text-xl leading-loose">
             The contemporary world faces an unprecedented convergence of crises. 
             Social fragmentation, ecological instability, and rapid technological upheaval 
             have created an environment where traditional reforms—incremental, isolated, 
@@ -43,9 +52,11 @@ export default function DiagnosisPage() {
       </section>
 
       {/* THE 9 SYSTEMIC FAILURES */}
-      <section className="bg-slate-50 py-16 px-6 border-y border-gray-200">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">The 9 Systemic Failures</h2>
+      <section className="bg-slate-50 py-20 px-6 border-y border-gray-200">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-900 font-serif">
+            The 9 Systemic Failures
+          </h2>
           
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Failure 1 */}
@@ -107,26 +118,30 @@ export default function DiagnosisPage() {
       </section>
 
       {/* CONCLUSION / CALL TO ACTION */}
-      <section className="max-w-4xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-3xl font-bold mb-6">The Path Forward</h2>
-        <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+      <section className="max-w-4xl mx-auto px-6 py-20 text-center">
+        <h2 className="text-3xl font-bold mb-6 text-slate-900 font-serif">The Path Forward</h2>
+        <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
           These failures are interconnected; they cannot be solved in isolation. 
-          This diagnosis sets the stage for <strong>King Klown & KOA</strong>: a systemic response 
-          built on radical openness, meritocratic governance, and constructive radicalism.
+          This diagnosis sets the stage for{' '}
+          {/* Highlighted text matches the Light BG (white) */}
+          <span className="bg-slate-900 text-white px-2 py-0.5 font-bold box-decoration-clone">
+            King Klown & KOA
+          </span>
+          : a systemic response built on radical openness, meritocratic governance, and constructive radicalism.
         </p>
-        <div className="flex justify-center gap-4">
-          <a 
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Link 
             href="/principles" 
-            className="px-8 py-3 bg-primary text-white rounded-lg font-bold hover:bg-opacity-90 transition"
+            className="px-8 py-4 bg-primary text-slate-900 rounded-lg font-bold hover:bg-yellow-400 transition-colors shadow-lg shadow-primary/20"
           >
             Explore Our Principles
-          </a>
-          <a 
+          </Link>
+          <Link 
             href="/platforms" 
-            className="px-8 py-3 border border-gray-300 rounded-lg font-bold hover:bg-gray-50 transition"
+            className="px-8 py-4 border-2 border-slate-200 text-slate-700 rounded-lg font-bold hover:border-slate-900 hover:text-slate-900 hover:bg-white transition-all"
           >
             See the Solutions
-          </a>
+          </Link>
         </div>
       </section>
     </main>
@@ -136,10 +151,14 @@ export default function DiagnosisPage() {
 // Helper Component for the Grid
 function FailureCard({ number, title, description }) {
   return (
-    <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-      <div className="text-4xl font-bold text-gray-200 mb-4">{number}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 leading-relaxed text-sm">
+    <div className="group bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <div className="text-5xl font-bold text-slate-100 mb-6 font-serif group-hover:text-primary/20 transition-colors">
+        {number}
+      </div>
+      <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors">
+        {title}
+      </h3>
+      <p className="text-slate-600 leading-relaxed text-sm">
         {description}
       </p>
     </div>

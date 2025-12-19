@@ -7,8 +7,8 @@ import {
   Share2, 
   Cpu, 
   TrendingUp,
-  Microscope, // Research
-  Anchor // Infrastructure
+  Microscope, 
+  Anchor
 } from 'lucide-react';
 
 export const metadata = {
@@ -30,12 +30,24 @@ export default function VisualSitemapPage() {
           {/* CONTEXT & DIAGNOSIS */}
           <Section title="Context & Diagnosis" icon={<Landmark className="w-5 h-5" />}>
             <MapLink href="/" label="Home" highlight={true} />
-            <MapLink href="/why" label="The Diagnosis" />
+            <MapLink href="/why" label="The Diagnosis (Why KOA?)" />
             <MapLink href="/diagnosis" label="9 Systemic Failures" />
-            <MapLink href="/principles" label="Principles & Ethics" />
+            <MapLink href="/principles" label="Principles Hub" />
+            
+            <SubSection title="Domains">
+               <MapLink href="/principles/civic-principles-ethics" label="Civic Principles & Ethics" />
+               <MapLink href="/principles/logos-mythos" label="Logos & Mythos" />
+               <MapLink href="/principles/cosmic-etherism" label="Cosmic Etherism" />
+            </SubSection>
           </Section>
 
-          {/* INFRASTRUCTURE (New Section) */}
+          {/* RESEARCH */}
+          <Section title="Research" icon={<Microscope className="w-5 h-5" />}>
+             <MapLink href="/research" label="Research Hub" highlight={true} />
+             <MapLink href="/research/pi-theory" label="Pi Theory (Metaphysics)" />
+          </Section>
+
+          {/* INFRASTRUCTURE */}
           <Section title="Infrastructure" icon={<Anchor className="w-5 h-5" />}>
             <MapLink href="/infrastructure" label="Infrastructure Hub" />
             
@@ -70,11 +82,6 @@ export default function VisualSitemapPage() {
             </SubSection>
           </Section>
           
-          {/* RESEARCH */}
-          <Section title="Research" icon={<Microscope className="w-5 h-5" />}>
-             <MapLink href="/research/pi-theory" label="Pi Theory (Metaphysics)" />
-          </Section>
-
         </div>
 
         <div className="space-y-10">
