@@ -1,166 +1,201 @@
+// components/Header.tsx
 'use client';
 
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Cpu, 
-  Server, 
-  BookOpen 
+  Menu, X, ChevronDown, 
+  Search, Globe, User, 
+  Activity, Cpu, Network, BookOpen, Layers, Heart
 } from 'lucide-react';
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [techOpen, setTechOpen] = useState(false);
-  const [platOpen, setPlatOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  // Handle scroll effect for sticky transparency
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
+  }, [pathname]);
+
+  const navStructure = [
+    {
+      label: 'Manifesto',
+      path: '/principles',
+      icon: <BookOpen className="w-4 h-4" />,
+      children: [
+        { label: 'Diagnosis', desc: 'The systemic crisis', path: '/diagnosis' },
+        { label: 'Why KOA?', desc: 'Our reason for being', path: '/why' },
+        { label: 'Principles', desc: 'Ethics & Civic code', path: '/principles' },
+        { label: 'Research', desc: 'Pi Theory & Deep analysis', path: '/research' },
+      ]
+    },
+    {
+      label: 'Ecosystem',
+      path: '/platforms',
+      icon: <Layers className="w-4 h-4" />,
+      children: [
+        { label: 'Platforms', desc: 'Konnaxion & Orgo (Software)', path: '/platforms' },
+        { label: 'Infrastructures', desc: 'Kin City & Kristal Farms', path: '/infrastructures' },
+        { label: 'Initiatives', desc: 'Civic Governance & Peace Plans', path: '/initiatives' },
+      ]
+    },
+    {
+      label: 'Technology',
+      path: '/technology',
+      icon: <Cpu className="w-4 h-4" />,
+      children: [
+        { label: 'Overview', desc: 'The Deep Tech Stack', path: '/technology' },
+        { label: 'SenTient', desc: 'Input Processing', path: '/technology/sentient' },
+        { label: 'Architect', desc: 'Generative Voice', path: '/technology/architect' },
+        { label: 'SwarmCraft', desc: 'Narrative Memory', path: '/technology/swarmcraft' },
+        { label: 'Âme Artificielle', desc: 'Alignment & Ethics', path: '/technology/ame-artificielle' },
+      ]
+    },
+    {
+      label: 'Kreature',
+      path: '/kreature',
+      icon: <Heart className="w-4 h-4 text-pink-500" />, // Distinct color for the Narrative Layer
+      highlight: true
+    }
+  ];
 
   return (
-    <header className="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex justify-between items-center h-20">
-          
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <span className="text-2xl font-serif font-bold text-slate-900 group-hover:text-primary transition-colors">
-              King Klown
-            </span>
-          </Link>
+    <header 
+      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${
+        isScrolled 
+          ? 'bg-white/95 backdrop-blur-md border-slate-200 shadow-sm py-3' 
+          : 'bg-white border-transparent py-5'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        
+        {/* LOGO */}
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-primary transition-colors">
+            K
+          </div>
+          <div className="flex flex-col">
+            <span className="font-bold text-slate-900 leading-none text-lg tracking-tight">King Klown</span>
+            <span className="text-xs text-slate-500 tracking-widest font-medium uppercase">& KOA</span>
+          </div>
+        </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-8 items-center">
-            
-            <Link href="/why" className="text-sm font-medium text-slate-600 hover:text-slate-900">
-              Context
-            </Link>
-
-            <Link href="/initiatives" className="text-sm font-medium text-slate-600 hover:text-slate-900">
-              Initiatives
-            </Link>
-
-            {/* Platforms Dropdown */}
-            <div className="relative group">
-              <button 
-                className="flex items-center text-sm font-medium text-slate-600 hover:text-slate-900 focus:outline-none"
-                onMouseEnter={() => setPlatOpen(true)}
-                onMouseLeave={() => setPlatOpen(false)}
+        {/* DESKTOP NAVIGATION */}
+        <nav className="hidden lg:flex items-center gap-8">
+          {navStructure.map((item) => (
+            <div 
+              key={item.label} 
+              className="relative group"
+              onMouseEnter={() => setActiveDropdown(item.label)}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <Link 
+                href={item.path}
+                className={`flex items-center gap-1.5 text-sm font-medium transition-colors py-2
+                  ${item.highlight ? 'text-pink-600 hover:text-pink-700' : 'text-slate-600 hover:text-slate-900'}
+                `}
               >
-                Platforms <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
-              
-              <div 
-                className={`absolute left-0 mt-0 w-56 bg-white border border-slate-100 shadow-lg rounded-lg overflow-hidden transition-all duration-200 ${platOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
-                onMouseEnter={() => setPlatOpen(true)}
-                onMouseLeave={() => setPlatOpen(false)}
-              >
-                <div className="py-2">
-                  <DropdownLink href="/platforms/konnaxion" label="Konnaxion Hub" icon={<Server className="w-4 h-4" />} />
-                  
-                  {/* CASED PATHS FIXED BELOW */}
-                  <DropdownLink href="/platforms/konnaxion/Kreative" label="Kréature (Mythos)" icon={<BookOpen className="w-4 h-4" />} />
-                  <DropdownLink href="/platforms/konnaxion/Ethikos" label="Ethikos" icon={<Server className="w-4 h-4" />} />
-                  <DropdownLink href="/platforms/konnaxion/Kollective-Intelligence" label="Kollective Intel." icon={<Server className="w-4 h-4" />} />
-                  
-                  <div className="border-t border-slate-100 my-1"></div>
-                  {/* Infrastructure Links */}
-                  <DropdownLink href="/infrastructures/kristal-farms" label="Kristal Farms" icon={<Server className="w-4 h-4" />} />
-                  <DropdownLink href="/platforms/orgo" label="Orgo" icon={<Server className="w-4 h-4" />} />
+                {item.icon}
+                {item.label}
+                {item.children && <ChevronDown className="w-3 h-3 opacity-50" />}
+              </Link>
+
+              {/* DROPDOWN MENU */}
+              {item.children && activeDropdown === item.label && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-64">
+                  <div className="bg-white rounded-xl border border-slate-100 shadow-xl p-2 overflow-hidden ring-1 ring-slate-900/5">
+                    {item.children.map((sub) => (
+                      <Link 
+                        key={sub.path} 
+                        href={sub.path}
+                        className="block px-4 py-3 rounded-lg hover:bg-slate-50 transition-colors group/item"
+                      >
+                        <div className="text-sm font-bold text-slate-900 group-hover/item:text-primary">
+                          {sub.label}
+                        </div>
+                        <div className="text-xs text-slate-500 mt-0.5">
+                          {sub.desc}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
+          ))}
+        </nav>
 
-            {/* Technology Dropdown */}
-            <div className="relative group">
-              <button 
-                className="flex items-center text-sm font-medium text-slate-600 hover:text-slate-900 focus:outline-none"
-                onMouseEnter={() => setTechOpen(true)}
-                onMouseLeave={() => setTechOpen(false)}
-              >
-                Technology <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
-              
-              <div 
-                className={`absolute left-0 mt-0 w-64 bg-white border border-slate-100 shadow-lg rounded-lg overflow-hidden transition-all duration-200 ${techOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
-                onMouseEnter={() => setTechOpen(true)}
-                onMouseLeave={() => setTechOpen(false)}
-              >
-                <div className="py-2">
-                  <DropdownLink href="/technology/ame-artificielle" label="Âme artificielle" icon={<Cpu className="w-4 h-4 text-rose-500" />} />
-                  <DropdownLink href="/technology/architect" label="Abstract Wiki Architect" icon={<Cpu className="w-4 h-4" />} />
-                  <DropdownLink href="/technology/ariane" label="Ariane" icon={<Cpu className="w-4 h-4" />} />
-                  <DropdownLink href="/technology/sentient" label="SenTient" icon={<Cpu className="w-4 h-4" />} />
-                  <DropdownLink href="/technology/swarmcraft" label="SwarmCraft" icon={<Cpu className="w-4 h-4" />} />
-                </div>
-              </div>
-            </div>
-
-            <Link href="/about" className="text-sm font-medium text-slate-600 hover:text-slate-900">
-              About
-            </Link>
-          </nav>
-
-          <button 
-            className="md:hidden text-slate-900"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X /> : <Menu />}
+        {/* UTILITIES (Search / Lang / CTA) */}
+        <div className="hidden lg:flex items-center gap-4">
+          <button className="p-2 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all" aria-label="Search">
+            <Search className="w-5 h-5" />
           </button>
+          <div className="h-4 w-px bg-slate-200"></div>
+          <button className="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-slate-900">
+            <Globe className="w-4 h-4" />
+            <span>EN</span>
+          </button>
+          <Link href="/about" className="ml-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-bold rounded-lg transition-all shadow-sm">
+            About
+          </Link>
         </div>
+
+        {/* MOBILE TOGGLE */}
+        <button 
+          className="lg:hidden p-2 text-slate-900"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      {isOpen && (
-        <div className="md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-4 shadow-xl absolute w-full">
-          <MobileLink href="/why" label="Context / Diagnosis" />
-          <MobileLink href="/initiatives" label="Initiatives" />
-          <div className="border-t border-slate-100 pt-2">
-            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Platforms</p>
-            <MobileLink href="/platforms/konnaxion" label="Konnaxion" />
-            <MobileLink href="/infrastructures/kristal-farms" label="Kristal Farms" />
-            
-            {/* FIXED CASING FOR MOBILE */}
-            <MobileLink href="/platforms/konnaxion/Kreative" label="Kréature" />
-            <MobileLink href="/platforms/konnaxion/Ethikos" label="Ethikos" />
-          </div>
-          <div className="border-t border-slate-100 pt-2">
-            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Technology</p>
-            <MobileLink href="/technology/ame-artificielle" label="Âme artificielle" highlight />
-            <MobileLink href="/technology/architect" label="Architect" />
-            <MobileLink href="/technology/ariane" label="Ariane" />
-            <MobileLink href="/technology/sentient" label="SenTient" />
-            <MobileLink href="/technology/swarmcraft" label="SwarmCraft" />
-          </div>
-          <div className="border-t border-slate-100 pt-2">
-             <MobileLink href="/about" label="About" />
-             <MobileLink href="/contact" label="Contact" />
+      {/* MOBILE MENU OVERLAY */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 top-[72px] bg-white border-t border-slate-100 p-6 overflow-y-auto pb-20">
+          <div className="flex flex-col space-y-6">
+            {navStructure.map((item) => (
+              <div key={item.label}>
+                <Link 
+                  href={item.path} 
+                  className="flex items-center gap-3 text-lg font-bold text-slate-900 mb-2"
+                >
+                  {item.icon} {item.label}
+                </Link>
+                {item.children && (
+                  <div className="pl-7 space-y-3 border-l-2 border-slate-100 ml-2">
+                    {item.children.map((sub) => (
+                      <Link 
+                        key={sub.path} 
+                        href={sub.path}
+                        className="block text-slate-600 text-sm font-medium hover:text-primary"
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            <div className="pt-6 border-t border-slate-100">
+              <Link href="/about" className="block w-full py-3 bg-slate-900 text-white text-center rounded-lg font-bold">
+                About the Architect
+              </Link>
+            </div>
           </div>
         </div>
       )}
     </header>
-  );
-}
-
-// Helper Components
-function DropdownLink({ href, label, icon }: { href: string, label: string, icon: React.ReactNode }) {
-  return (
-    <Link 
-      href={href} 
-      className="flex items-center px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary transition-colors"
-    >
-      <span className="mr-3 opacity-70">{icon}</span>
-      {label}
-    </Link>
-  );
-}
-
-function MobileLink({ href, label, highlight }: { href: string, label: string, highlight?: boolean }) {
-  return (
-    <Link 
-      href={href} 
-      className={`block text-base font-medium ${highlight ? 'text-rose-600' : 'text-slate-600'} hover:text-slate-900`}
-    >
-      {label}
-    </Link>
   );
 }
