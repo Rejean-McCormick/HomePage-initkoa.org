@@ -108,15 +108,18 @@ export default function RespirationDuSensPage() {
           <ul className="space-y-3 text-sm font-mono">
             <li className="flex gap-3">
               <span className="text-sky-400">1. Ingest:</span>
-              <span>Webhook recieves -> 200 OK -> Queue.</span>
+              {/* FIX APPLIED BELOW: Replaced '->' with '&rarr;' */}
+              <span>Webhook recieves &rarr; 200 OK &rarr; Queue.</span>
             </li>
             <li className="flex gap-3">
               <span className="text-indigo-400">2. Process:</span>
-              <span>Worker picks up -> Normalize -> Context.</span>
+              {/* FIX APPLIED BELOW: Replaced '->' with '&rarr;' */}
+              <span>Worker picks up &rarr; Normalize &rarr; Context.</span>
             </li>
             <li className="flex gap-3">
               <span className="text-amber-400">3. Dispatch:</span>
-              <span>Trigger Workflow -> Execute Task.</span>
+              {/* FIX APPLIED BELOW: Replaced '->' with '&rarr;' */}
+              <span>Trigger Workflow &rarr; Execute Task.</span>
             </li>
           </ul>
         </div>
