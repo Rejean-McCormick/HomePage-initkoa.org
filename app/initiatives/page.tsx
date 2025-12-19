@@ -13,28 +13,33 @@ export default function InitiativesPage() {
       
       {/* Header */}
       <div className="text-center mb-16">
-        <h1 className="text-5xl font-bold mb-6 text-slate-900">Strategic Initiatives</h1>
-        <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-          The KOA project is divided into three layers of action: <span className="font-semibold text-primary">Theory</span> (The Why), <span className="font-semibold text-primary">Governance</span> (The How), and <span className="font-semibold text-primary">Technology</span> (The Engine).
+        {/* CHANGED: text-slate-900 to text-white */}
+        <h1 className="text-5xl font-bold mb-6 text-white">Strategic Initiatives</h1>
+        
+        {/* CHANGED: text-slate-600 to text-slate-300 for better contrast on dark bg */}
+        <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          The KOA project is divided into three layers of action: <span className="font-semibold text-blue-400">Theory</span> (The Why), <span className="font-semibold text-blue-400">Governance</span> (The How), and <span className="font-semibold text-blue-400">Technology</span> (The Engine).
         </p>
       </div>
 
       {/* SECTION 1: CIVIC GOVERNANCE (The Active Core) */}
       <section className="mb-20">
         <div className="flex items-center mb-8">
-          <div className="bg-blue-100 p-3 rounded-full mr-4">
-            <Landmark className="w-8 h-8 text-blue-700" />
+          <div className="bg-blue-900/30 p-3 rounded-full mr-4 border border-blue-500/30">
+            <Landmark className="w-8 h-8 text-blue-400" />
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Civic Governance</h2>
-            <p className="text-slate-500">The practical blueprints for replacing broken institutions.</p>
+            {/* CHANGED: text-slate-900 to text-white */}
+            <h2 className="text-3xl font-bold text-white">Civic Governance</h2>
+            {/* CHANGED: text-slate-500 to text-slate-400 */}
+            <p className="text-slate-400">The practical blueprints for replacing broken institutions.</p>
           </div>
         </div>
 
         {/* Main Dashboard Link */}
         <Link
           href="/initiatives/civic-governance"
-          className="group relative block p-8 border border-slate-200 rounded-2xl hover:border-blue-500 hover:shadow-2xl transition-all duration-300 bg-slate-900 text-white"
+          className="group relative block p-8 border border-slate-700 rounded-2xl hover:border-blue-500 hover:shadow-2xl transition-all duration-300 bg-slate-900 text-white"
         >
           <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
             <div className="flex-1">
@@ -72,18 +77,21 @@ export default function InitiativesPage() {
       {/* SECTION 2: INTERNATIONAL STRATEGY */}
       <section>
         <div className="flex items-center mb-8">
-          <div className="bg-purple-100 p-3 rounded-full mr-4">
-            <Globe className="w-8 h-8 text-purple-700" />
+          <div className="bg-purple-900/30 p-3 rounded-full mr-4 border border-purple-500/30">
+            <Globe className="w-8 h-8 text-purple-400" />
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">International Strategy</h2>
-            <p className="text-slate-500">Geopolitical frameworks for peace and reconstruction.</p>
+            {/* CHANGED: text-slate-900 to text-white */}
+            <h2 className="text-3xl font-bold text-white">International Strategy</h2>
+            {/* CHANGED: text-slate-500 to text-slate-400 */}
+            <p className="text-slate-400">Geopolitical frameworks for peace and reconstruction.</p>
           </div>
         </div>
 
         <div className="grid gap-8 md:grid-cols-1">
           
           {/* International Strategy Link */}
+          {/* Note: Kept bg-white here so internal text remains dark, but added explicit border styling for dark mode contexts */}
           <Link
             href="/initiatives/civic-governance/modules/international"
             className="group block h-full p-8 border border-slate-200 rounded-2xl hover:border-purple-500 hover:shadow-lg transition duration-300 bg-white"
@@ -91,7 +99,7 @@ export default function InitiativesPage() {
             <div className="mb-4 text-purple-600">
                <Globe className="w-10 h-10" />
             </div>
-            <h3 className="text-2xl font-bold mb-3 group-hover:text-purple-600 transition-colors">
+            <h3 className="text-2xl font-bold mb-3 text-slate-900 group-hover:text-purple-600 transition-colors">
               The Ukraine Plan
             </h3>
             <p className="text-slate-600 leading-relaxed mb-6">
