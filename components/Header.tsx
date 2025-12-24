@@ -8,7 +8,8 @@ import { usePathname } from 'next/navigation';
 import { 
   Menu, X, ChevronDown, 
   Search, Globe, 
-  BookOpen, Layers, Cpu, Heart
+  BookOpen, Layers, Cpu, Heart,
+  TrendingUp
 } from 'lucide-react';
 
 export default function Header() {
@@ -50,7 +51,16 @@ export default function Header() {
       children: [
         { label: 'Platforms', desc: 'Konnaxion & Orgo (Software)', path: '/platforms' },
         { label: 'Infrastructures', desc: 'Kin City & Kristal Farms', path: '/infrastructures' },
-        { label: 'Initiatives', desc: 'Civic Governance & Peace Plans', path: '/initiatives' },
+      ]
+    },
+    {
+      label: 'Initiatives',
+      path: '/initiatives',
+      icon: <TrendingUp className="w-4 h-4" />,
+      children: [
+        { label: 'Overview', desc: 'Strategic Roadmap', path: '/initiatives' },
+        { label: 'Civic Governance', desc: 'The Operating System', path: '/initiatives/civic-governance' },
+        { label: 'Ukraine Peace Plan', desc: 'Freeze-Vote-Rebuild', path: '/initiatives/ukraine-peace-and-reconstruction-plan' },
       ]
     },
     {
@@ -88,9 +98,6 @@ export default function Header() {
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-105">
-            {/* Ensure 'LogoK.svg' is inside your 'public' folder. 
-              Example path: public/LogoK.svg 
-            */}
             <Image 
               src="/LogoK.svg" 
               alt="King Klown Logo" 
