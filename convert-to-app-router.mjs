@@ -1,11 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-// --- CONFIGURATION ---
-// The specific folder we want to fix.
+// Target directory: The root of your Ukraine plan
 const TARGET_DIR = 'app/initiatives/ukraine-peace-plan';
 
-// --- HELPER: Recursively find files ---
 function getAllFiles(dirPath, arrayOfFiles = []) {
   if (!fs.existsSync(dirPath)) return [];
   const files = fs.readdirSync(dirPath);
@@ -15,7 +13,7 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
     if (fs.statSync(fullPath).isDirectory()) {
       arrayOfFiles = getAllFiles(fullPath, arrayOfFiles);
     } else {
-      // Find all MDX files that are NOT named 'page.mdx'
+      // Find MDX files that are NOT named 'page.mdx'
       if (file.endsWith('.mdx') && file !== 'page.mdx') {
         arrayOfFiles.push(fullPath);
       }
@@ -24,52 +22,36 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
   return arrayOfFiles;
 }
 
-// --- MAIN ---
 async function run() {
   const root = process.cwd();
   const fullTargetDir = path.join(root, TARGET_DIR);
+  
+  console.log(`📦 Converting MDX structure in: ${TARGET_DIR}`);
 
-  console.log(`🏗️  Starting App Router Structural Fix...`);
-  console.log(`   Target: ${TARGET_DIR}`);
+  const files = getAllFiles(fullTargetDir);
 
-  if (!fs.existsSync(fullTargetDir)) {
-    console.error(`❌ Directory not found: ${fullTargetDir}`);
-    return;
-  }
-
-  const filesToMove = getAllFiles(fullTargetDir);
-  let moves = 0;
-
-  for (const filePath of filesToMove) {
-    // 1. Get the directory and the filename (without extension)
-    const dir = path.dirname(filePath);
-    const filename = path.basename(filePath, '.mdx'); // e.g. "construction-olympics"
+  for (const file of files) {
+    const dir = path.dirname(file);
+    const filename = path.basename(file, '.mdx'); 
     
-    // 2. Define the new folder and new file path
-    // Old: .../concepts/construction-olympics.mdx
-    // New Dir: .../concepts/construction-olympics/
-    // New File: .../concepts/construction-olympics/page.mdx
-    const newDir = path.join(dir, filename);
-    const newFilePath = path.join(newDir, 'page.mdx');
+    // Skip if we are somehow processing a file that's already correct
+    if (filename === 'page') continue;
 
-    // 3. Create the new folder if it doesn't exist
+    const newDir = path.join(dir, filename);
+    const newPath = path.join(newDir, 'page.mdx');
+
+    // 1. Create the folder (e.g. /concepts/peace-framework)
     if (!fs.existsSync(newDir)) {
       fs.mkdirSync(newDir, { recursive: true });
     }
 
-    // 4. Move the file
-    // Check if destination already exists to prevent overwriting/errors
-    if (!fs.existsSync(newFilePath)) {
-      fs.renameSync(filePath, newFilePath);
-      console.log(`✅ Converted: ${filename}.mdx -> ${filename}/page.mdx`);
-      moves++;
-    } else {
-      console.warn(`⚠️  Skipped: ${newFilePath} already exists.`);
+    // 2. Move file into folder as page.mdx
+    if (!fs.existsSync(newPath)) {
+      fs.renameSync(file, newPath);
+      console.log(`✅ Fixed: ${filename}.mdx -> ${filename}/page.mdx`);
     }
   }
-
-  console.log(`\n🎉 DONE! Converted ${moves} files to Page Routes.`);
-  console.log(`   Your 404 errors should now be resolved.`);
+  console.log(`\n🎉 Structural Fix Complete. Links should now work.`);
 }
 
 run();
