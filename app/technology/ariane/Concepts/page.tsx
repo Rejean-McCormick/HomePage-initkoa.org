@@ -1,3 +1,4 @@
+// app\technology\ariane\concepts\page.tsx
 // app/technology/ariane/concepts/page.tsx
 import Link from 'next/link';
 import { Lightbulb, Book, FileText, ArrowRight } from 'lucide-react';

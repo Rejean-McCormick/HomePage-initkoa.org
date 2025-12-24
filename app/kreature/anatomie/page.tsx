@@ -1,3 +1,4 @@
+// app\kreature\anatomie\page.tsx
 // app/kreature/anatomie/page.tsx
 import Link from 'next/link';
 import { 

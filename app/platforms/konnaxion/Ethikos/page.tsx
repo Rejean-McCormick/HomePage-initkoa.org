@@ -1,3 +1,4 @@
+// app\platforms\konnaxion\ethikos\page.tsx
 // app/platforms/konnaxion/ethikos/page.tsx
 import Link from 'next/link';
 import { Scale, MessageSquare, Users, BarChart3, ArrowRight } from 'lucide-react';

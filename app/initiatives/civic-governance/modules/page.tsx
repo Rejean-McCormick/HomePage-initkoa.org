@@ -1,3 +1,4 @@
+// app\initiatives\civic-governance\modules\page.tsx
 // app/initiatives/civic-governance/modules/page.tsx
 import Link from 'next/link';
 import { 

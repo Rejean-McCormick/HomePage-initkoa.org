@@ -1,3 +1,4 @@
+// app\infrastructures\kin-city\page.tsx
 // app/infrastructures/kin-city/page.tsx
 import Link from 'next/link';
 import { ArrowRight, Map, Box, Users, Shield, Cpu, Construction } from 'lucide-react';

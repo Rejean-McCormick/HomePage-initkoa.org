@@ -1,3 +1,4 @@
+// app\infrastructures\kin-city\zones\page.tsx
 // app/infrastructures/kin-city/zones/page.tsx
 import { 
   Landmark, 

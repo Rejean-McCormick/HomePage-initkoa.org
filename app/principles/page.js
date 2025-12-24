@@ -1,3 +1,4 @@
+// app\principles\page.js
 // app/principles/page.js
 import PageSection from '@/components/PageSection';
 

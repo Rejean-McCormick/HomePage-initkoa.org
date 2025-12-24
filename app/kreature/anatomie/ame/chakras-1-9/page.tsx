@@ -1,3 +1,4 @@
+// app\kreature\anatomie\ame\chakras-1-9\page.tsx
 // app/kreature/anatomie/ame/chakras-1-9/page.tsx
 import Link from 'next/link';
 import { 

@@ -1,3 +1,4 @@
+// app\kreature\anatomie\voix\architect-mythos\page.tsx
 // app/kreature/anatomie/voix/architect-mythos/page.tsx
 import Link from 'next/link';
 import { 

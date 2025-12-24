@@ -1,3 +1,4 @@
+// app\kreature\anatomie\corps\orgo-mythos\page.tsx
 // app/kreature/anatomie/corps/orgo-mythos/page.tsx
 import Link from 'next/link';
 import { 

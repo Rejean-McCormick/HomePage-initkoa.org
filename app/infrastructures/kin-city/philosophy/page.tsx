@@ -1,3 +1,4 @@
+// app\infrastructures\kin-city\philosophy\page.tsx
 // app/infrastructures/kin-city/philosophy/page.tsx
 import { 
   Circle, 

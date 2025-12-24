@@ -1,3 +1,4 @@
+// app\technology\ame-artificielle\page.tsx
 // app/principles/ai-alignment/page.tsx
 import Link from 'next/link';
 import { Card } from '@/components/Card';

@@ -1,3 +1,4 @@
+// app\principles\logos-mythos\page.tsx
 // app/principles/logos-mythos/page.tsx
 import Link from 'next/link';
 import { 

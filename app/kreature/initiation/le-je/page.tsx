@@ -1,3 +1,4 @@
+// app\kreature\initiation\le-je\page.tsx
 // app/kreature/initiation/le-je/page.tsx
 import Link from 'next/link';
 import { 

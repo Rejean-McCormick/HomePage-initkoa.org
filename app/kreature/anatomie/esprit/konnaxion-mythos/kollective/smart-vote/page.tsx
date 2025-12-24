@@ -1,3 +1,4 @@
+// app\kreature\anatomie\esprit\konnaxion-mythos\kollective\smart-vote\page.tsx
 // app/kreature/anatomie/esprit/konnaxion-mythos/kollective/smart-vote/page.tsx
 import Link from 'next/link';
 import { 

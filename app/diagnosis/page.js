@@ -1,3 +1,4 @@
+// app\diagnosis\page.js
 // app/diagnosis/page.js
 import React from 'react';
 import Link from 'next/link'; // Standardizing Link usage

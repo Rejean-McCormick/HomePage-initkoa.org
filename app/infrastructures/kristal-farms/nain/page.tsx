@@ -1,3 +1,4 @@
+// app\infrastructures\kristal-farms\nain\page.tsx
 // app/infrastructures/kristal-farms/nain/page.tsx
 import Link from 'next/link';
 import { 

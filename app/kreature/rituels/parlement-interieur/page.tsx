@@ -1,3 +1,4 @@
+// app\kreature\rituels\parlement-interieur\page.tsx
 // app/kreature/rituels/parlement-interieur/page.tsx
 import Link from 'next/link';
 import { 

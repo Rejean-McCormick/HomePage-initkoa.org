@@ -1,3 +1,4 @@
+// app\technology\swarmcraft\core\page.tsx
 // app/technology/swarmcraft/core/page.tsx
 import Link from 'next/link';
 import { 

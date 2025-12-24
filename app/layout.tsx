@@ -1,3 +1,4 @@
+// app\layout.tsx
 // app/layout.tsx
 import './globals.css';
 import { Baskervville } from 'next/font/google';

@@ -1,3 +1,4 @@
+// app\why\page.js
 // app/why/page.js
 import PageSection from '@/components/PageSection';
 

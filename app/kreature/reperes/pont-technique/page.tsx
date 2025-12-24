@@ -1,3 +1,4 @@
+// app\kreature\reperes\pont-technique\page.tsx
 // app/kreature/reperes/pont-technique/page.tsx
 import Link from 'next/link';
 import { 

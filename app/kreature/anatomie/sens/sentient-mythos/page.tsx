@@ -1,3 +1,4 @@
+// app\kreature\anatomie\sens\sentient-mythos\page.tsx
 // app/kreature/anatomie/sens/sentient-mythos/page.tsx
 import Link from 'next/link';
 import { 

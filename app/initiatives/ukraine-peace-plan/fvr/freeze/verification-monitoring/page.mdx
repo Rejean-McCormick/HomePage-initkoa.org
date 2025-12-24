@@ -1,1 +1,122 @@
-#Verification&monitoringTheFreezephasedependsoncredibleverificationThischapterdefineswhatmustbemonitored,howincidentsareclassified,andhowinformationbecomesactionable##GoalsVerificationandmonitoringshould:-makemajorviolations**hardtodeny**,-reduceescalationdrivenbyambiguityandmisinformation,-supportconditionalincentives(“gates”),-protectciviliansandhumanitarianoperations##Whattomonitor(minimumset)###1)Kineticactivity-shelling/strikeincidents(time,location,type)-drone/UAVactivity(whererestricted)-trooporheavyequipmentmovements(whererestricted)-airactivity(whererestricted)###2)Civilianharmandprotectedinfrastructure-civiliancasualtiesandmass-casualtyevents-strikesonprotectedsites(power,water,hospitals,schools)-damagetocorridorsandrepairsites###3)Accessandobstruction-monitoraccessdenials-interferenceorintimidationincidents-corridorclosuresandaiddelays###4)Disinformationindicators(operational,notrhetorical)-fabricatedincidentreports-manipulatedimageryclaims-systematicdenialofverifiableevents##Datasources(menu)Arobustmonitoringdesignusesmultiplesources:-fieldobserverreports(withsecurecomms)-hotlineandliaisonreports-sensornetworkswherefeasible(acoustic,radar,UAVmonitoring)-satelliteimageryandopen-sourceverification(asappropriate)-humanitarian/medicalreportingchannels(protected,privacy-aware)Thearchitectureshouldassumeadversarialconditionsandrequirecorroborationformajorclaims##IncidentreportingworkflowAminimalworkflow:1**Intake**(hotline,observerreport,sensortrigger)2**Triage**(severity/urgency;immediatedeconflictionifneeded)3**Verification**(sitevisit,sensorconfirmation,cross-sourcechecks)4**Classification**(applyrubric;recordconfidencelevel)5**Adjudication**(contestedcasesgothroughdisputemechanism)6**Publication/notification**(perreportingpolicyandsecurityconstraints)7**Consequence**(triggerescalationladderorgaterollbackifthresholdscrossed)##Incidentclassification(examplerubric)Classificationshouldbestandardized,predictable,andtime-bounded###Severity(S)-**S1Minor:**isolatedsmall-armsorlow-impactincident;nocivilianharm-**S2Serious:**clearviolationwithmaterialeffect;limitedcivilianrisk-**S3Major:**significantattack,repeatedpattern,orhigh-riskaction-**S4Critical:**mass-casualtyevent,strikeonprotectedinfrastructure,ordeliberateescalation###Confidence(C)-**C1Low:**single-sourceorunverifiedclaim-**C2Medium:**partialcorroboration-**C3High:**multi-sourcecorroboration/verifiedobservation###Recurrence(R)-trackingrepeatedviolationsovertimetodetectpatternsandintentThisrubricallows“S3/C3”stylereportingthatislegibletostakeholdersandsupportsgatethresholds##Dashboardsandreporting###Public-facingtransparency(wherefeasible)-aggregateincidentcountsbycategoryandseverity-protectedinfrastructureincidents-accessdenialsandcorridordisruptions-rollingtrendlines(7/14/30days)###Restrictedreporting(wherenecessary)-preciseunitlocations,sensitivesensorplacements-protectedpersonaldata(witnesses,victims)-tacticaldetailsthatcouldenabletargetingThebook’sdefaultpreferenceis:publishasmuchaspossiblewithoutcreatingnewsecurityrisks##VerificationgateslinkageMonitoringoutputsfeedverificationgates:-“Freezestabilitygate”mightrequiresustainedlowS3/S4incidentsandfullmonitoraccess-“Humanitariangate”mightrequirecorridoruptimeandrepairwindowcomplianceGatedefinitionslivein:-[`05-governance-and-verification/02-verification-first-gatesmd`](/initiatives/ukraine-peace-plan/fvr/governance/verification-gates)##Commonfailuremodesandmitigations-**Gamingthemetrics:**mitigatebytrackingmultipleindicatorsandrecurrencepatterns-**Accessdenial:**mitigatewithautomaticconsequencestiedtoobstruction-**Datapoisoning:**mitigatewithmulti-sourcecorroborationandchain-of-custody-**Over-classificationsecrecy:**mitigatewithaclearpublicationpolicyandindependentaudit##Next-Protectedinfrastructureandrepairwindows:[`02-freeze/04-humanitarian-corridors-protected-infrastructuremd`](/initiatives/ukraine-peace-plan/fvr/freeze/humanitarian-corridors)-Escalationladderanddisputehandling:[`05-governance-and-verification/03-coordination-deconfliction-escalationmd`](/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination)
+export const metadata = {
+  title: "Verification & Monitoring",
+  description: "Defining what must be monitored, how incidents are classified, and how information becomes actionable."
+};
+
+# Verification & Monitoring
+
+The Freeze phase depends on credible verification. This chapter defines what must be monitored, how incidents are classified, and how information becomes actionable.
+
+## Goals
+Verification and monitoring should:
+- make major violations **hard to deny**,
+- reduce escalation driven by ambiguity and misinformation,
+- support conditional incentives (“gates”),
+- protect civilians and humanitarian operations.
+
+## What to Monitor (Minimum Set)
+
+### 1. Kinetic Activity
+- Shelling/strike incidents (time, location, type).
+- Drone/UAV activity (where restricted).
+- Troop or heavy equipment movements (where restricted).
+- Air activity (where restricted).
+
+### 2. Civilian Harm and Protected Infrastructure
+- Civilian casualties and mass-casualty events.
+- Strikes on protected sites (power, water, hospitals, schools).
+- Damage to corridors and repair sites.
+
+### 3. Access and Obstruction
+- Monitor access denials.
+- Interference or intimidation incidents.
+- Corridor closures and aid delays.
+
+### 4. Disinformation Indicators (Operational, Not Rhetorical)
+- Fabricated incident reports.
+- Manipulated imagery claims.
+- Systematic denial of verifiable events.
+
+## Data Sources (Menu)
+
+A robust monitoring design uses multiple sources:
+- Field observer reports (with secure comms).
+- Hotline and liaison reports.
+- Sensor networks where feasible (acoustic, radar, UAV monitoring).
+- Satellite imagery and open-source verification (as appropriate).
+- Humanitarian/medical reporting channels (protected, privacy-aware).
+
+The architecture should assume adversarial conditions and require corroboration for major claims.
+
+## Incident Reporting Workflow
+
+A minimal workflow:
+
+1.  **Intake** (hotline, observer report, sensor trigger).
+2.  **Triage** (severity/urgency; immediate deconfliction if needed).
+3.  **Verification** (site visit, sensor confirmation, cross-source checks).
+4.  **Classification** (apply rubric; record confidence level).
+5.  **Adjudication** (contested cases go through dispute mechanism).
+6.  **Publication/Notification** (per reporting policy and security constraints).
+7.  **Consequence** (trigger escalation ladder or gate rollback if thresholds crossed).
+
+
+
+[Image of incident management workflow]
+
+
+## Incident Classification (Example Rubric)
+
+Classification should be standardized, predictable, and time-bounded.
+
+### Severity (S)
+- **S1 Minor:** Isolated small-arms or low-impact incident; no civilian harm.
+- **S2 Serious:** Clear violation with material effect; limited civilian risk.
+- **S3 Major:** Significant attack, repeated pattern, or high-risk action.
+- **S4 Critical:** Mass-casualty event, strike on protected infrastructure, or deliberate escalation.
+
+### Confidence (C)
+- **C1 Low:** Single-source or unverified claim.
+- **C2 Medium:** Partial corroboration.
+- **C3 High:** Multi-source corroboration / verified observation.
+
+### Recurrence (R)
+- Tracking repeated violations over time to detect patterns and intent.
+
+This rubric allows “S3/C3” style reporting that is legible to stakeholders and supports gate thresholds.
+
+## Dashboards and Reporting
+
+### Public-Facing Transparency (Where Feasible)
+- Aggregate incident counts by category and severity.
+- Protected infrastructure incidents.
+- Access denials and corridor disruptions.
+- Rolling trend lines (7/14/30 days).
+
+### Restricted Reporting (Where Necessary)
+- Precise unit locations, sensitive sensor placements.
+- Protected personal data (witnesses, victims).
+- Tactical details that could enable targeting.
+
+The book’s default preference is: **publish as much as possible without creating new security risks.**
+
+## Verification Gates Linkage
+
+Monitoring outputs feed verification gates:
+- **“Freeze Stability Gate”** might require sustained low S3/S4 incidents and full monitor access.
+- **“Humanitarian Gate”** might require corridor uptime and repair window compliance.
+
+Gate definitions live in:
+**[Verification-First Gates](/initiatives/ukraine-peace-plan/fvr/governance/verification-gates)**
+
+## Common Failure Modes and Mitigations
+
+- **Gaming the metrics:** Mitigate by tracking multiple indicators and recurrence patterns.
+- **Access denial:** Mitigate with automatic consequences tied to obstruction.
+- **Data poisoning:** Mitigate with multi-source corroboration and chain-of-custody.
+- **Over-classification secrecy:** Mitigate with a clear publication policy and independent audit.
+
+## Next
+
+- **[Protected Infrastructure & Repair Windows](/initiatives/ukraine-peace-plan/fvr/freeze/humanitarian-corridors)**
+- **[Escalation Ladder & Dispute Handling](/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination)**

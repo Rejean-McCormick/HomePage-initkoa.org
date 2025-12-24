@@ -1,3 +1,4 @@
+// app\kreature\mythos\page.tsx
 // app/kreature/mythos/page.tsx
 import Link from 'next/link';
 import { 

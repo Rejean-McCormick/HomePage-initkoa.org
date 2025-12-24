@@ -1,3 +1,4 @@
+// app\kreature\anatomie\esprit\konnaxion-mythos\kreative-mythos\kontact\page.tsx
 // app/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/kontact-mythos/page.tsx
 import Link from 'next/link';
 import { 

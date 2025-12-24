@@ -1,3 +1,4 @@
+// app\sitemap\page.tsx
 // app/sitemap/page.tsx
 import Link from "next/link";
 import type { ReactNode } from "react";

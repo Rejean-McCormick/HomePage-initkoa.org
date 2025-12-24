@@ -1,1 +1,90 @@
-#FailuremodesThischapterliststhemostimportantwaysFreeze–Vote–Rebuildcanfail,groupedbyphaseandbycross-cuttingsystemEachfailuremodeshouldeventuallybelinkedtomitigations,owners,andgatesintheriskregister##Phase-specificfailuremodes##Freezefailuremodes###FM-F1:“Freezeascoverforregrouping”-Ceasefirereducesfightingbutenablesrepositioningorrearmament**Mitigations:**-explicitmovementandposturerulesinceasefirearchitecture-monitoringfocusedonredeploymentsandprohibitedactivity-gatethresholdsthatincluderecurrenceandpatterndetection###FM-F2:Monitorobstructionandintimidation-Accessdeniedormonitorsthreatened;reportingbecomestoothless**Mitigations:**-obstructiontreatedashigh-severityincident-automaticconsequencestiedtoobstruction-redundanttechnicalverificationwherefeasible###FM-F3:Ambiguity-drivenescalation-Vaguetermsleadtorepeatedincidentsandretaliatorycycles**Mitigations:**-enumeratedprohibited/permittedactions-standardizedincidentclassificationrubricwithconfidencelevels-time-boundedadjudicationandescalationladder###FM-F4:Humanitariancorridorsbecomepoliticalhostages-Corridorsareclosedorusedcoercively**Mitigations:**-corridoruptimemetricsandautomaticreviewtriggers-observationandrapiddisputeresolutionforclosures-explicitprohibitionofcoerciveuse##Votefailuremodes###FM-V1:Coercionandintimidationdistortparticipation-Votersandofficialsfacethreats;outcomebecomesillegitimate**Mitigations:**-anti-coercionpackage(hotlines,protections,observeraccess)-definedtriggersforreruns/invalidations-integrationwithFreezemonitoringforsafetyincidents###FM-V2:Displacedpeopleexcluded(defactoelectoratemanipulation)-Eligibilityrulesorlogisticspreventdisplacedparticipation**Mitigations:**-explicitdisplacedcategorieswithaccessibleregistrationpathways-proofladdersandappeals-participationmetricsbycategorypublishedinaggregate###FM-V3:Digital/cybercompromise(ifdigitalcomponentsexist)-Registrationortabulationsystemsareattackedormistrusted**Mitigations:**-audit-firstdesignwithindependentverifiablerecords-offlinefallbacksandredundancy-independentsecuritytestingandincidentresponse###FM-V4:Post-resultcontestationwithoutclosure-Disputesdragon,undermininglegitimacyandtriggeringescalation**Mitigations:**-stricttimelinesforcomplaintsandappeals-enforceableremedies-fixedcertificationdeadlinewithdefinedexceptions###FM-V5:Vote-to-bordergaming(ifused)-Ruledesigncreatesincentivestomanipulateturnout,units,oreligibility**Mitigations:**-pre-published,version-lockedalgorithm-publicsimulationsandbox-stablemappingunitsandanti-gerrymanderingconstraints##Rebuildfailuremodes###FM-R1:Corruption/capturecollapseslegitimacy-Fundsdiverted;procurementpoliticized;donorconfidencecollapses**Mitigations:**-independentaudits,debarmentauthority,transparencystack-tranchereleasestiedtointegrityKPIs-anomalydetectionandspotchecks###FM-R2:Slowdeliveryunderminesthe“peacedividend”-Reconstructionistooslowtostabilizepoliticsandlives**Mitigations:**-standardizedprojecttemplatesandprocurement-performanceincentives(ReconstructionOlympics)-bottleneckmanagementandKPIs###FM-R3:Unequaldistributionfuelsgrievance-Perceivedfavoritismorneglecttriggerspoliticalbacklash**Mitigations:**-publishedprioritizationcriteria-equitymonitoringindashboards-grievancemechanismsforcommunities##Cross-cuttingfailuremodes###FM-X1:Incentivesnotcredible(domesticlegallimits)-Promisedsanctionsrelieforfundingcannotbedelivered**Mitigations:**-domesticapprovalsgateandactivationclauses-stagedincentiveswithclearlegalprerequisites-publishwhatislegallyfeasible,notaspirational###FM-X2:Governancecaptureorparalysis-Decisionbodiesarecapturedordeadlocked**Mitigations:**-balancedgovernancestructure,rotatingterms-definedquorumanddeadlock-breakingrules-independentauditandpublicationrights###FM-X3:Datagovernancefailures-Privacybreachesorsecurityleaksendangerpeopleanddiscredittheprocess**Mitigations:**-role-basedaccessandminimization-secureauditroomsforrawdataaccess-clearpublication/redactionpolicy###FM-X4:Spoilersescalateviolencetocollapsetheprocess-Actors(internalorexternal)sabotagegatesintentionally**Mitigations:**-resiliencethroughredundancyandrapidincidentresponse-predictableescalationladderandrollbacklogic-publicreportingthatreducesnarrativemanipulation##NextTranslatethesefailuremodesintoastructuredtablewithownersandtriggers:-[`08-risks-critiques-mitigations/02-risk-registermd`](/initiatives/ukraine-peace-plan/fvr/risks/risk-register)
+export const metadata = {
+  title: "Failure Modes",
+  description: "A comprehensive catalog of the technical and political ways the Freeze–Vote–Rebuild framework can break, with primary mitigations."
+};
+
+# Failure Modes
+
+This chapter lists the most important ways **Freeze–Vote–Rebuild** can fail, grouped by phase and by cross-cutting system. Each failure mode is linked to mitigations, owners, and gates in the risk register.
+
+---
+
+## Phase-Specific Failure Modes
+
+### Freeze Failure Modes
+
+
+
+* **FM-F1: “Freeze as cover for regrouping”**
+    * *The Risk:* Ceasefire reduces active fighting but enables repositioning, rearmament, or fortification.
+    * **Mitigations:** Explicit movement and posture rules; monitoring focused on redeployments; gate thresholds that track patterns of behavior rather than just incident counts.
+* **FM-F2: Monitor obstruction and intimidation**
+    * *The Risk:* Access is denied or monitors are threatened, making verification "theater."
+    * **Mitigations:** Obstruction treated as a high-severity incident; automatic gate-failure consequences; redundant technical/satellite verification.
+* **FM-F3: Ambiguity-driven escalation**
+    * *The Risk:* Vague terms lead to accidental clashes and retaliatory cycles.
+    * **Mitigations:** Enumerated list of prohibited/permitted actions; standardized incident rubric with confidence levels; time-bounded adjudication.
+* **FM-F4: Humanitarian corridors become political hostages**
+    * *The Risk:* Corridors are closed or used coercively to extract political concessions.
+    * **Mitigations:** Corridor uptime metrics; automatic review triggers for closures; explicit prohibition of coercive use in the core treaty.
+
+---
+
+### Vote Failure Modes
+
+
+
+* **FM-V1: Coercion and intimidation distort participation**
+    * *The Risk:* Voters or officials face threats, making the outcome illegitimate.
+    * **Mitigations:** Anti-coercion package (hotlines, physical protections, observer access); defined triggers for re-runs/invalidations.
+* **FM-V2: Displaced people excluded (De facto electorate manipulation)**
+    * *The Risk:* Eligibility rules or logistics prevent refugees/IDPs from participating, skewing the result.
+    * **Mitigations:** Explicit displaced categories; proof ladders for missing documents; published aggregate participation metrics.
+* **FM-V3: Digital/cyber compromise**
+    * *The Risk:* Registration or tabulation systems are attacked or lose public trust.
+    * **Mitigations:** Audit-first design with independent paper trails; offline fallbacks; independent security testing.
+* **FM-V4: Post-result contestation without closure**
+    * *The Risk:* Disputes drag on indefinitely, preventing the Rebuild phase and triggering new violence.
+    * **Mitigations:** Strict timelines for appeals; enforceable remedies; fixed certification deadlines.
+* **FM-V5: Vote-to-border gaming (if used)**
+    * *The Risk:* Rule design creates incentives to manipulate turnout or unit boundaries.
+    * **Mitigations:** Pre-published, version-locked algorithms; public "sandbox" simulations; stable mapping units.
+
+---
+
+### Rebuild Failure Modes
+
+
+
+* **FM-R1: Corruption/capture collapses legitimacy**
+    * *The Risk:* Funds diverted; procurement politicized; donor confidence collapses.
+    * **Mitigations:** Independent audits; debarment authority; the "Transparency Stack"; tranche releases tied to integrity KPIs.
+* **FM-R2: Slow delivery undermines the “peace dividend”**
+    * *The Risk:* Reconstruction is too slow to stabilize lives, leading to a return to radicalization.
+    * **Mitigations:** Standardized project templates; performance incentives (**Reconstruction Olympics**); active bottleneck management.
+* **FM-R3: Unequal distribution fuels grievance**
+    * *The Risk:* Perceived regional favoritism or neglect triggers political backlash.
+    * **Mitigations:** Published prioritization criteria; geographic equity monitoring in public dashboards.
+
+---
+
+## Cross-Cutting Failure Modes
+
+* **FM-X1: Incentives not credible (Domestic legal limits)**
+    * *The Risk:* Promised sanctions relief or funding cannot be delivered due to legislative/court blocks.
+    * **Mitigations:** **Domestic Approvals Gate**; staged incentives with clear legal prerequisites; managing expectations via legal feasibility mapping.
+* **FM-X2: Governance capture or paralysis**
+    * *The Risk:* Decision bodies are captured by one party or perpetually deadlocked.
+    * **Mitigations:** Balanced membership; rotating terms; deadlock-breaking rules (fallback arbitration).
+* **FM-X3: Data governance failures**
+    * *The Risk:* Privacy breaches endanger people (e.g., voter lists leaking) and discredit the process.
+    * **Mitigations:** Role-based access; data minimization; secure "audit rooms" for raw data.
+* **FM-X4: Spoilers escalate violence to collapse the process**
+    * *The Risk:* Internal or external actors sabotage gates to prevent peace.
+    * **Mitigations:** Resilience through redundancy; predictable escalation ladders; public reporting to counter narrative manipulation.
+
+---
+
+## Next
+Translate these failure modes into a structured table with owners and triggers:
+- **[Risk Register](/initiatives/ukraine-peace-plan/fvr/risks/risk-register)**

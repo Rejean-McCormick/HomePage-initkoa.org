@@ -1,3 +1,4 @@
+// app\technology\page.tsx
 // app/technology/page.tsx
 import Link from 'next/link';
 

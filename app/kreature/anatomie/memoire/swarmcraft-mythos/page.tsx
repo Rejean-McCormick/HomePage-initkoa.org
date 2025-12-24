@@ -1,3 +1,4 @@
+// app\kreature\anatomie\memoire\swarmcraft-mythos\page.tsx
 // app/kreature/anatomie/memoire/swarmcraft-mythos/page.tsx
 import Link from 'next/link';
 import { 

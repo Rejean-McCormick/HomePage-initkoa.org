@@ -1,3 +1,4 @@
+// app\technology\swarmcraft\meta\page.tsx
 // app/technology/swarmcraft/meta/page.tsx
 import Link from 'next/link';
 import { Info, GitBranch, ArrowRight, BookOpen } from 'lucide-react';

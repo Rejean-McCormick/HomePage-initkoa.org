@@ -1,3 +1,4 @@
+# rename_ame_artificielle.py
 import os
 
 # --- CONFIGURATION ---

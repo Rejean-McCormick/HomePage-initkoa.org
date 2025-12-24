@@ -1,1 +1,119 @@
-#Coordination,deconfliction&escalationFreeze–Vote–RebuildassumesdistrustandrecurringincidentsThischapterdefinesthecoordinationmachinerythatpreventsincidentsfrombecomingescalationspiralsandensuresdisputesareprocessedthroughpredictablechannels##Objectives-Preventaccidentalclashesthroughreliablecommunication-Createfast,time-boundedincidenthandling-Reduce“retaliation-by-default”byprovidingacrediblealternative-Makeresponsespredictablethroughapre-committedescalationladder##Corecomponents###1)Deconflictionchannels(hotlines)Minimumrequirements:-24/7hotlinecoverage-namedliaisonofficersonbothsides(withalternates)-authenticatedcommunications(preventspoofing)-writtenprotocolsforwhatinformationcanbeshared-loggingofcallsandoutcomes(foraudit)###2)Jointincidentroom(coordinationcell)Functions:-intakeandtriageofincidents-dispatchandaccesscoordinationformonitors-trackingofunresolveddisputesanddeadlines-coordinationofhumanitariancorridorsandrepairwindows###3)Escalationladder(pre-committedresponses)Theescalationladderdefineswhathappenswhenincidentsoccur,basedon:-severityclassification(S1–S4)-confidencelevel(C1–C3)-recurrence/patterndetectionThekeyispre-commitment:responsesarenotimprovisedintheheatofevents##Incidenthandlingworkflow(template)1**Reportreceived**-fromhotline,monitors,sensors,orobservers2**Immediatesafetystep**-deconflictioncallifactiveriskexists3**Triageandclassification**-preliminaryseverityandconfidenceassigned4**Verification**-siteaccessrequested,evidencecollected,corroborationobtained5**Adjudication**-contestedcasesgotodisputemechanismwithdeadlines6**Response**-applyladderconsequences(warnings→penalties→pauses/rollbacks)7**Publication**-reportperthedatagovernancepolicy##Escalationladderexample(illustrative)###Level0:RoutinemanagementAppliestoS1/C2+orminorincidents:-logincident-notifyrelevantliaison-correctiveactionrequest-nochangeinphasestatus###Level1:Formalwarning+correctivemeasuresAppliestoS2/C2+orrepeatedS1:-writtenwarning-mandatedcorrectivemeasureswithindeadline-increasedmonitoringinaffectedsector###Level2:Targetedconsequences/benefitpauseAppliestoS3/C2+orrepeatedS2:-temporarypauseofspecificbenefittier-additionalinspectionsoraccessrequirements-mandatedremediationplan###Level3:Phasepause/rollbacktriggerAppliestoS4/C2+orsustainedS3pattern:-pauseprogressiontonextphase-rollbackofconditionalincentivesperpre-committedrules-emergencygovernancecouncilsessionwithinfixedtimeframe###Level4:Termination/majorenforcementpostureAppliestosystematichigh-severityviolationsormonitorexpulsion:-suspendframeworkimplementationpendingrenegotiation-initiatepredefinedexternalenforcementpathways(ifanyexist)Thepreciseladdermustbeagreedandpublishedinadvance(exceptsensitiveoperationaldetails)##DisputehandlingintegrationDisputesmustbetime-bounded:-rapidpreliminarydecisionstopreventescalation-finaldecisionswithpublishedreasoning(privacy-aware)See:-Votedisputes:[`03-vote/06-dispute-resolutionmd`](/initiatives/ukraine-peace-plan/fvr/vote/dispute-resolution)-Governancemodel:[`05-governance-and-verification/01-status-neutral-governance-modelmd`](/initiatives/ukraine-peace-plan/fvr/governance/status-neutral-model)##CoordinationforcorridorsandrepairsThesamecoordinationsystemshouldmanage:-corridoropenings/closures-repairwindowsandworksiteaccess-engineerconvoynotificationsandprotectionsSee:-[`02-freeze/04-humanitarian-corridors-protected-infrastructuremd`](/initiatives/ukraine-peace-plan/fvr/freeze/humanitarian-corridors)##DraftingnoteWhenimplementing,include:-aone-page“incidentSOP”withcontacttreesanddeadlines,-aRACIforwhocandeclareanincident,whoverifies,whoadjudicates,-apublic-facingsummaryofescalationlevelsandconsequences(withoutsensitivedetails)
+export const metadata = {
+  title: "Coordination, Deconfliction & Escalation",
+  description: "The machinery that prevents incidents from becoming escalation spirals and ensures disputes are processed predictably."
+};
+
+# Coordination, Deconfliction & Escalation
+
+Freeze–Vote–Rebuild assumes distrust and recurring incidents. This chapter defines the coordination machinery that prevents incidents from becoming escalation spirals and ensures disputes are processed through predictable channels.
+
+## Objectives
+- Prevent accidental clashes through reliable communication.
+- Create fast, time-bounded incident handling.
+- Reduce “retaliation-by-default” by providing a credible alternative.
+- Make responses predictable through a pre-committed escalation ladder.
+
+## Core Components
+
+### 1. Deconfliction Channels (Hotlines)
+Minimum requirements:
+- 24/7 hotline coverage.
+- Named liaison officers on both sides (with alternates).
+- Authenticated communications (prevents spoofing).
+- Written protocols for what information can be shared.
+- Logging of calls and outcomes (for audit).
+
+### 2. Joint Incident Room (Coordination Cell)
+Functions:
+- Intake and triage of incidents.
+- Dispatch and access coordination for monitors.
+- Tracking of unresolved disputes and deadlines.
+- Coordination of humanitarian corridors and repair windows.
+
+### 3. Escalation Ladder (Pre-Committed Responses)
+The escalation ladder defines what happens when incidents occur, based on:
+- **Severity classification** (S1–S4).
+- **Confidence level** (C1–C3).
+- **Recurrence/pattern detection**.
+
+The key is **pre-commitment**: responses are not improvised in the heat of events.
+
+
+
+---
+
+## Incident Handling Workflow (Template)
+
+1.  **Report Received:** From hotline, monitors, sensors, or observers.
+2.  **Immediate Safety Step:** Deconfliction call if active risk exists.
+3.  **Triage and Classification:** Preliminary severity and confidence assigned.
+4.  **Verification:** Site access requested, evidence collected, corroboration obtained.
+5.  **Adjudication:** Contested cases go to dispute mechanism with deadlines.
+6.  **Response:** Apply ladder consequences (warnings → penalties → pauses/rollbacks).
+7.  **Publication:** Report per the data governance policy.
+
+
+
+---
+
+## Escalation Ladder Example (Illustrative)
+
+### Level 0: Routine Management
+*Applies to S1/C2+ or minor incidents:*
+- Log incident.
+- Notify relevant liaison.
+- Corrective action request.
+- No change in phase status.
+
+### Level 1: Formal Warning + Corrective Measures
+*Applies to S2/C2+ or repeated S1:*
+- Written warning.
+- Mandated corrective measures within deadline.
+- Increased monitoring in affected sector.
+
+### Level 2: Targeted Consequences / Benefit Pause
+*Applies to S3/C2+ or repeated S2:*
+- Temporary pause of specific benefit tier.
+- Additional inspections or access requirements.
+- Mandated remediation plan.
+
+### Level 3: Phase Pause / Rollback Trigger
+*Applies to S4/C2+ or sustained S3 pattern:*
+- Pause progression to next phase.
+- Rollback of conditional incentives per pre-committed rules.
+- Emergency governance council session within fixed timeframe.
+
+### Level 4: Termination / Major Enforcement Posture
+*Applies to systematic high-severity violations or monitor expulsion:*
+- Suspend framework implementation pending renegotiation.
+- Initiate predefined external enforcement pathways (if any exist).
+
+The precise ladder must be agreed and published in advance (except sensitive operational details).
+
+---
+
+## Dispute Handling Integration
+
+Disputes must be time-bounded:
+- Rapid preliminary decisions to prevent escalation.
+- Final decisions with published reasoning (privacy-aware).
+
+See:
+- **[Vote Disputes](/initiatives/ukraine-peace-plan/fvr/vote/dispute-resolution)**
+- **[Governance Model](/initiatives/ukraine-peace-plan/fvr/governance/status-neutral-model)**
+
+## Coordination for Corridors and Repairs
+The same coordination system should manage:
+- Corridor openings/closures.
+- Repair windows and worksite access.
+- Engineer convoy notifications and protections.
+
+(See **[Humanitarian Corridors & Protected Infrastructure](/initiatives/ukraine-peace-plan/fvr/freeze/humanitarian-corridors)**)
+
+---
+
+## Drafting Note
+When implementing, include:
+- A one-page “incident SOP” with contact trees and deadlines.
+- A RACI matrix for who can declare an incident, who verifies, and who adjudicates.
+- A public-facing summary of escalation levels and consequences (without sensitive details).

@@ -1,3 +1,4 @@
+# generate_link_map.py
 import os
 import json
 import re

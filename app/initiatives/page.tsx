@@ -1,3 +1,4 @@
+// app\initiatives\page.tsx
 // app/initiatives/page.tsx
 import Link from 'next/link';
 import { Landmark, Globe, TrendingUp, Scale, GraduationCap, ArrowRight, Scroll } from 'lucide-react';

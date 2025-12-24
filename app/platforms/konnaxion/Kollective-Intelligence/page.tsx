@@ -1,3 +1,4 @@
+// app\platforms\konnaxion\kollective-intelligence\page.tsx
 // app/platforms/konnaxion/kollective-intelligence/page.tsx
 import Link from 'next/link';
 import { BrainCircuit, Star, Vote, ArrowRight, Activity } from 'lucide-react';

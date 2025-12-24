@@ -1,3 +1,4 @@
+// app\technology\ariane\theseus\page.tsx
 // app/technology/ariane/theseus/page.tsx
 import Link from 'next/link';
 import { 

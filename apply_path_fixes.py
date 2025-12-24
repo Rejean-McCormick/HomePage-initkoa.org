@@ -1,3 +1,4 @@
+# apply_path_fixes.py
 import json
 import os
 

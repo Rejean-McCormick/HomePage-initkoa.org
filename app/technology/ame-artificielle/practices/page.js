@@ -1,3 +1,4 @@
+// app\technology\ame-artificielle\practices\page.js
 // app\principles\ai-alignment\practices\page.js
 import PageSection from '@/components/PageSection';
 

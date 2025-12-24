@@ -1,3 +1,4 @@
+// app\kreature\mythos\king-klown\page.tsx
 // app/kreature/mythos/king-klown/page.tsx
 import Link from 'next/link';
 import { 

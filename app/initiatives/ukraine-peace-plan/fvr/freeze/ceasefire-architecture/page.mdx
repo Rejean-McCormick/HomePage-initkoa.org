@@ -1,1 +1,89 @@
-#CeasefirearchitectureThischapteroutlinesaceasefiredesignthatsupports**verification-first**implementationItiswrittenasastructure(whatmustbespecified)ratherthanafinallegaltext##DesigngoalsAceasefirearchitectureshould:-be**unambiguous**(who,where,whatactionsstop),-be**verifiable**(observableindicators,reportingrules),-reduce**accidentalescalation**(deconfliction),-include**enforcementlogic**(whathappensafterviolations),-be**modular**(coretext+annexes/SOPs)##Minimumclausestospecify###1)Scopeandgeography-definedareaofapplication(frontline,bufferzones,airspace)-mappingreference(agreedmapannexandcoordinates)-rulesfordisputedorunclearsectors(temporaryadministrationrules)###2)ProhibitedandpermittedactionsProhibitedactionsshouldbeenumerated,notimpliedTypicalcategories:-offensivegroundadvances-artillery/rocketstrikes(definecalibers/rangeswhererelevant)-dronestrikesandUAVoperations(definetypesandpermitteduses)-airoperations(defineno-flyzonesorflightcorridors)-mining,sabotage,orstrikesoncriticalinfrastructurePermittedactionsshouldalsobeexplicit:-defensiveposturemaintenance-medicalevacuationandcasualtyretrieval-humanitarianoperations-monitoredrepairworkonprotectedinfrastructure###3)Forcepostureandmovementrules-limitsonredeploymentsneartheline-heavyweaponspullbackzones(ifused)-rulesforrotationsandresupply-notificationrequirementsforpermittedmovements###4)Reportingandnotification-requiredreportingintervals(daily/weekly)-incidentreportingformatanddeadlines-advancenotificationrequirementsforspecifiedactivities(repairs,convoys)###5)Compliancemeasurementandbaselines-establishbaselineindicators(eg,averagedailyincidents,civilianharmmetrics)-definemeasurementwindows(rolling7-day,14-day)-specifywhatconstitutesa“majorviolation”vs“minorincident”###6)Incidentresponseandescalationladder-immediatedeconflictionsteps(hotline)-time-boundedinvestigationsteps(monitoraccess,evidencepreservation)-consequencestiedtoseverityandrecurrence-disputeresolutionmechanismforcontestedfindings###7)Accessandprotections-monitorfreedomofmovement(includinginspectionswhereagreed)-humanitarianaccessandcorridorprotections-protectedinfrastructuredefinitionsandrepairwindowrules##Annexesthatshouldbepre-writtenToavoidvaguecommitments,attachoperationalannexes:-**AnnexA:**maps/coordinates,linesandzones-**AnnexB:**prohibited/permittedactionslist(withdefinitions)-**AnnexC:**incidentreportingtemplate+classificationrubric-**AnnexD:**deconflictionSOP(hotlines,liaisonstructure)-**AnnexE:**humanitariancorridormap+rules-**AnnexF:**protectedinfrastructurelist+repairprotocols-**AnnexG:**verificationdatahandlingandpublicationpolicy##Commonfailuremodes(anddesignmitigations)-**Ambiguityloopholes:**mitigatebyenumeratingpermitted/prohibitedactions-**“Weapontype”disputes:**mitigatebydefiningcategorieswithmeasurablecriteria-**Propaganda-drivenescalation:**mitigatewithstandardizedincidentgradingandtransparentreporting-**Monitorobstruction:**mitigatewithexplicitaccessclausesandautomaticconsequences##Linkstorelatedchapters-Monitoringandincidentgradingdetails:[`02-freeze/03-verification-monitoringmd`](/initiatives/ukraine-peace-plan/fvr/freeze/verification-monitoring)-Deconflictionsystemdesign:[`05-governance-and-verification/03-coordination-deconfliction-escalationmd`](/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination)-Conditionalincentives:[`02-freeze/05-sanctions-aid-linkage-during-freezemd`](/initiatives/ukraine-peace-plan/fvr/freeze/sanctions-linkage)
+export const metadata = {
+  title: "Ceasefire Architecture",
+  description: "A structural design for a verifiable, unambiguous cessation of hostilities."
+};
+
+# Ceasefire Architecture
+
+This chapter outlines a ceasefire design that supports **verification-first** implementation. It is written as a structure (what must be specified) rather than a final legal text.
+
+## Design Goals
+A ceasefire architecture should:
+- be **unambiguous** (who, where, what actions stop),
+- be **verifiable** (observable indicators, reporting rules),
+- reduce **accidental escalation** (deconfliction),
+- include **enforcement logic** (what happens after violations),
+- be **modular** (core text + annexes/SOPs).
+
+
+
+## Minimum Clauses to Specify
+
+### 1. Scope and Geography
+- defined area of application (frontline, buffer zones, airspace)
+- mapping reference (agreed map annex and coordinates)
+- rules for disputed or unclear sectors (temporary administration rules)
+
+### 2. Prohibited and Permitted Actions
+**Prohibited actions** should be enumerated, not implied. Typical categories:
+- offensive ground advances
+- artillery/rocket strikes (define calibers/ranges where relevant)
+- drone strikes and UAV operations (define types and permitted uses)
+- air operations (define no-fly zones or flight corridors)
+- mining, sabotage, or strikes on critical infrastructure
+
+**Permitted actions** should also be explicit:
+- defensive posture maintenance
+- medical evacuation and casualty retrieval
+- humanitarian operations
+- monitored repair work on protected infrastructure
+
+### 3. Force Posture and Movement Rules
+- limits on redeployments near the line
+- heavy weapons pullback zones (if used)
+- rules for rotations and resupply
+- notification requirements for permitted movements
+
+### 4. Reporting and Notification
+- required reporting intervals (daily/weekly)
+- incident reporting format and deadlines
+- advance notification requirements for specified activities (repairs, convoys)
+
+### 5. Compliance Measurement and Baselines
+- establish baseline indicators (e.g., average daily incidents, civilian harm metrics)
+- define measurement windows (rolling 7-day, 14-day)
+- specify what constitutes a “major violation” vs “minor incident”
+
+### 6. Incident Response and Escalation Ladder
+- immediate deconfliction steps (hotline)
+- time-bounded investigation steps (monitor access, evidence preservation)
+- consequences tied to severity and recurrence
+- dispute resolution mechanism for contested findings
+
+### 7. Access and Protections
+- monitor freedom of movement (including inspections where agreed)
+- humanitarian access and corridor protections
+- protected infrastructure definitions and repair window rules
+
+## Annexes That Should Be Pre-Written
+To avoid vague commitments, attach operational annexes:
+
+- **Annex A:** Maps/coordinates, lines and zones
+- **Annex B:** Prohibited/permitted actions list (with definitions)
+- **Annex C:** Incident reporting template + classification rubric
+- **Annex D:** Deconfliction SOP (hotlines, liaison structure)
+- **Annex E:** Humanitarian corridor map + rules
+- **Annex F:** Protected infrastructure list + repair protocols
+- **Annex G:** Verification data handling and publication policy
+
+## Common Failure Modes (and Design Mitigations)
+
+- **Ambiguity loopholes:** Mitigate by enumerating permitted/prohibited actions.
+- **“Weapon type” disputes:** Mitigate by defining categories with measurable criteria.
+- **Propaganda-driven escalation:** Mitigate with standardized incident grading and transparent reporting.
+- **Monitor obstruction:** Mitigate with explicit access clauses and automatic consequences.
+
+## Links to Related Chapters
+- **[Verification & Monitoring](/initiatives/ukraine-peace-plan/fvr/freeze/verification-monitoring)** (Monitoring and incident grading details)
+- **[Coordination & Deconfliction](/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination)** (Deconfliction system design)
+- **[Sanctions/Aid Linkage](/initiatives/ukraine-peace-plan/fvr/freeze/sanctions-linkage)** (Conditional incentives)

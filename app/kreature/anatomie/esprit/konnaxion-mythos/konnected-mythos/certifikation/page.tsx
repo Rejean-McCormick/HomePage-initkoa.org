@@ -1,3 +1,4 @@
+// app\kreature\anatomie\esprit\konnaxion-mythos\konnected-mythos\certifikation\page.tsx
 // app/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos/certifikation/page.tsx
 import Link from 'next/link';
 import { 

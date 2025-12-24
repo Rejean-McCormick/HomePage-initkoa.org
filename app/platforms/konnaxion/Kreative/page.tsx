@@ -1,3 +1,4 @@
+// app\platforms\konnaxion\kreative\page.tsx
 // app/platforms/konnaxion/kreative/page.tsx
 import Link from 'next/link';
 // We alias 'Image' to 'ImageIcon' to stop the linter from thinking it needs an alt tag

@@ -1,3 +1,4 @@
+// app\technology\ariane\atlas\page.tsx
 // app/technology/ariane/atlas/page.tsx
 import Link from 'next/link';
 import { 

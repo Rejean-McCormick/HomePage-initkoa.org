@@ -1,3 +1,4 @@
+// app\kreature\rituels\respiration-du-sens\page.tsx
 // app/kreature/rituels/respiration-du-sens/page.tsx
 import Link from 'next/link';
 import { 

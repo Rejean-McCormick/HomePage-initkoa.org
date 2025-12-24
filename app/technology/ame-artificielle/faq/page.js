@@ -1,3 +1,4 @@
+// app\technology\ame-artificielle\faq\page.js
 // app\principles\ai-alignment\faq\page.js
 import PageSection from '@/components/PageSection';
 

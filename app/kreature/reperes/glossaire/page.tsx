@@ -1,3 +1,4 @@
+// app\kreature\reperes\glossaire\page.tsx
 // app/kreature/reperes/glossaire/page.tsx
 import Link from 'next/link';
 import { 

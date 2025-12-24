@@ -1,3 +1,4 @@
+// app\platforms\konnaxion\konnected\page.tsx
 // app/platforms/konnaxion/konnected/page.tsx
 import Link from 'next/link';
 import { BookOpen, GraduationCap, Library, ArrowRight, BrainCircuit } from 'lucide-react';

@@ -1,3 +1,4 @@
+// app\platforms\page.tsx
 // app/platforms/page.tsx
 import Card from '@/components/Card'; // Fixed import alias
 
