@@ -1,4 +1,3 @@
-// components\Header.tsx
 // components/Header.tsx
 'use client';
 
@@ -8,7 +7,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { 
   Menu, X, ChevronDown, 
-  Search, Globe, 
+  Search, 
   BookOpen, Layers, Cpu, Heart,
   TrendingUp
 } from 'lucide-react';
@@ -61,7 +60,6 @@ export default function Header() {
       children: [
         { label: 'Overview', desc: 'Strategic Roadmap', path: '/initiatives' },
         { label: 'Civic Governance', desc: 'The Operating System', path: '/initiatives/civic-governance' },
-        // FIXED: Updated path to new structure
         { label: 'Ukraine Peace Plan', desc: 'Freeze-Vote-Rebuild', path: '/initiatives/ukraine-peace-plan' },
       ]
     },
@@ -83,7 +81,8 @@ export default function Header() {
       label: 'Kréature',
       path: '/kreature',
       icon: <Heart className="w-4 h-4 text-pink-500" />,
-      highlight: true
+      highlight: true,
+      subtitle: '(Français)' // Added subtitle here
     }
   ];
 
@@ -129,13 +128,19 @@ export default function Header() {
             >
               <Link 
                 href={item.path}
-                className={`flex items-center gap-1.5 text-sm font-medium transition-colors py-2
+                className={`flex flex-col items-center text-sm font-medium transition-colors py-2 group
                   ${item.highlight ? 'text-pink-600 hover:text-pink-700' : 'text-slate-600 hover:text-slate-900'}
                 `}
               >
-                {item.icon}
-                {item.label}
-                {item.children && <ChevronDown className="w-3 h-3 opacity-50 transition-transform group-hover:rotate-180" />}
+                  <div className="flex items-center gap-1.5">
+                    {item.icon}
+                    {item.label}
+                    {item.children && <ChevronDown className="w-3 h-3 opacity-50 transition-transform group-hover:rotate-180" />}
+                  </div>
+                  {/* Subtitle (Français) rendering */}
+                  {item.subtitle && (
+                      <span className="text-[10px] font-normal opacity-80 -mt-0.5">{item.subtitle}</span>
+                  )}
               </Link>
 
               {/* DROPDOWN MENU */}
@@ -163,16 +168,13 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* UTILITIES (Search / Lang / CTA) */}
+        {/* UTILITIES (Search / CTA) - Removed Lang Toggle */}
         <div className="hidden lg:flex items-center gap-4">
           <button className="p-2 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all" aria-label="Search">
             <Search className="w-5 h-5" />
           </button>
           <div className="h-4 w-px bg-slate-200"></div>
-          <button className="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-slate-900">
-            <Globe className="w-4 h-4" />
-            <span>EN</span>
-          </button>
+          {/* Removed Language Toggle Button */}
           <Link href="/about" className="ml-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-bold rounded-lg transition-all shadow-sm hover:shadow-md">
             About
           </Link>
@@ -200,7 +202,12 @@ export default function Header() {
                     ${item.highlight ? 'text-pink-600' : 'text-slate-900'}
                   `}
                 >
-                  {item.icon} {item.label}
+                  <div className="flex flex-col">
+                      <div className="flex items-center gap-2">
+                        {item.icon} {item.label}
+                      </div>
+                      {item.subtitle && <span className="text-xs font-normal opacity-70 ml-6">{item.subtitle}</span>}
+                  </div>
                 </Link>
                 {item.children && (
                   <div className="pl-7 space-y-3 border-l-2 border-slate-100 ml-2">
@@ -222,9 +229,7 @@ export default function Header() {
                 About the Architect
               </Link>
               <div className="flex justify-center gap-6 text-slate-500">
-                <button className="flex items-center gap-2 hover:text-slate-900">
-                    <Globe className="w-5 h-5" /> <span>EN</span>
-                </button>
+                {/* Removed Mobile Language Toggle */}
                 <button className="flex items-center gap-2 hover:text-slate-900">
                     <Search className="w-5 h-5" /> <span>Search</span>
                 </button>
