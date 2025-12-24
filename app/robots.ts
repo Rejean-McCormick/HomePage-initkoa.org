@@ -1,20 +1,20 @@
-// app\robots.ts
 // app/robots.ts
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://okido.wiki';
+  // Fixed: Added 'www' to match your actual domain usage in the report
+  const baseUrl = 'https://www.okido.wiki';
 
   return {
     rules: {
       userAgent: '*',
       allow: '/',
       disallow: [
-        '/private/',      // Protect private internal tools
-        '/admin/',        // Protect admin dashboard
-        '/api/',          // Prevent crawling of backend API endpoints
-        '/_next/',        // Ignore Next.js internal build files
-        '/static/',       // Ignore static assets not meant for direct indexing
+        '/private/',      // Keep: Internal tools
+        '/admin/',        // Keep: Admin dashboard
+        '/api/',          // Keep: Backend endpoints
+        // REMOVED: '/_next/' -> Google needs this to render your page content (JS/CSS)
+        // REMOVED: '/static/' -> Google needs this to see your images and assets
       ],
     },
     sitemap: `${baseUrl}/sitemap.xml`,
