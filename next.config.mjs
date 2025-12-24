@@ -1,7 +1,7 @@
 import createMDX from "@next/mdx";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
+// Removed rehypeAutolinkHeadings import
 import rehypeExternalLinks from "rehype-external-links";
 
 /** @type {import('next').NextConfig} */
@@ -46,8 +46,8 @@ const withMDX = createMDX({
   options: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
-      rehypeSlug, // Adds IDs to headings (required for autolink)
-      [rehypeAutolinkHeadings, { behavior: "wrap" }], // Wraps the heading text in a link
+      rehypeSlug, // Adds IDs to headings (useful for anchor links, but won't make the text clickable)
+      // Removed rehypeAutolinkHeadings here
       [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }], // Opens external links in new tab
     ],
   },
