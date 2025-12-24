@@ -1,24 +1,22 @@
-// scripts/convert-ukraine-mdx-pages-to-tsx.mjs
+// scripts/convert-ukraine-mdx-pages-to-tsx_SAFE.mjs
 //
-// PowerShell usage:
-//   node .\scripts\convert-ukraine-mdx-pages-to-tsx.mjs --root "C:\MyCode\OkidoWiki\HomePage" --dry-run --verbose
-//   node .\scripts\convert-ukraine-mdx-pages-to-tsx.mjs --root "C:\MyCode\OkidoWiki\HomePage" --backup
+// Converts Ukraine route entrypoints page.mdx -> page.tsx + content.mdx
+// Preserves metadata using brace counting (handles nested objects).
+//
+// PowerShell:
+//   node .\scripts\convert-ukraine-mdx-pages-to-tsx_SAFE.mjs --root "C:\MyCode\OkidoWiki\HomePage" --dry-run --verbose
+//   node .\scripts\convert-ukraine-mdx-pages-to-tsx_SAFE.mjs --root "C:\MyCode\OkidoWiki\HomePage" --backup --verbose
 //
 // Options:
-//   --dry-run   : no writes
-//   --backup    : keep page.mdx.bak before rename
-//   --verbose   : list converted files
+//   --dry-run
+//   --backup   : writes page.mdx.bak
+//   --verbose
 
 import fs from "node:fs/promises";
 import path from "node:path";
 
 function parseArgs(argv) {
-  const out = {
-    root: process.cwd(),
-    dryRun: false,
-    backup: false,
-    verbose: false,
-  };
+  const out = { root: process.cwd(), dryRun: false, backup: false, verbose: false };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--root") out.root = argv[++i];
@@ -30,12 +28,7 @@ function parseArgs(argv) {
 }
 
 async function exists(p) {
-  try {
-    await fs.access(p);
-    return true;
-  } catch {
-    return false;
-  }
+  try { await fs.access(p); return true; } catch { return false; }
 }
 
 async function walk(dir) {
@@ -50,24 +43,91 @@ async function walk(dir) {
   return out;
 }
 
-function extractMetadataBlock(src) {
-  // Very conservative: only matches a top-level `export const metadata = { ... };`
-  // near the beginning of the file.
-  const re = /^\s*export\s+const\s+metadata\s*=\s*\{[\s\S]*?\}\s*;?\s*/m;
-  const m = src.match(re);
-  if (!m) return { metadataSrc: null, body: src };
-  const metadataSrc = m[0].trimEnd();
-  const body = src.slice(m[0].length);
-  return { metadataSrc, body: body.replace(/^\s+/, "") }; // remove leading blank space
+// Robust extraction of `export const metadata = { ... };` using brace counting
+function extractMetadataExport(src) {
+  const start = src.indexOf("export const metadata");
+  if (start === -1) return null;
+
+  const braceStart = src.indexOf("{", start);
+  if (braceStart === -1) return null;
+
+  let i = braceStart;
+  let depth = 0;
+  let inStr = false;
+  let strCh = "";
+  let escape = false;
+
+  for (; i < src.length; i++) {
+    const ch = src[i];
+
+    if (escape) { escape = false; continue; }
+
+    if (inStr) {
+      if (ch === "\\") escape = true;
+      else if (ch === strCh) { inStr = false; strCh = ""; }
+      continue;
+    } else {
+      if (ch === '"' || ch === "'" || ch === "`") { inStr = true; strCh = ch; continue; }
+      if (ch === "{") depth++;
+      if (ch === "}") {
+        depth--;
+        if (depth === 0) {
+          let end = i + 1;
+          while (end < src.length && /\s/.test(src[end])) end++;
+          if (src[end] === ";") end++;
+          const block = src.slice(start, end).trimEnd();
+          return block.endsWith(";") ? block : block + ";";
+        }
+      }
+    }
+  }
+  return null;
 }
 
-function makePageTsx(metadataSrc) {
-  const meta = metadataSrc
-    ? `${metadataSrc.endsWith(";") ? metadataSrc : metadataSrc + ";"}
+// Remove the metadata export from MDX and return body
+function stripMetadataExport(src) {
+  const start = src.indexOf("export const metadata");
+  if (start === -1) return src;
 
-`
-    : "";
+  const braceStart = src.indexOf("{", start);
+  if (braceStart === -1) return src;
 
+  let i = braceStart;
+  let depth = 0;
+  let inStr = false;
+  let strCh = "";
+  let escape = false;
+
+  for (; i < src.length; i++) {
+    const ch = src[i];
+
+    if (escape) { escape = false; continue; }
+
+    if (inStr) {
+      if (ch === "\\") escape = true;
+      else if (ch === strCh) { inStr = false; strCh = ""; }
+      continue;
+    } else {
+      if (ch === '"' || ch === "'" || ch === "`") { inStr = true; strCh = ch; continue; }
+      if (ch === "{") depth++;
+      if (ch === "}") {
+        depth--;
+        if (depth === 0) {
+          let end = i + 1;
+          while (end < src.length && /\s/.test(src[end])) end++;
+          if (src[end] === ";") end++;
+          const before = src.slice(0, start);
+          const after = src.slice(end);
+          return (before + after).replace(/^\s+/, "");
+        }
+      }
+    }
+  }
+  return src;
+}
+
+function makePageTsx(metadataExport) {
+  const meta = metadataExport ? `${metadataExport}\n\n` : "";
   return `import Content from "./content.mdx";
 
 ${meta}export default function Page() {
@@ -79,24 +139,16 @@ ${meta}export default function Page() {
 async function main() {
   const args = parseArgs(process.argv);
 
-  const ukDir = path.join(
-    args.root,
-    "app",
-    "initiatives",
-    "ukraine-peace-and-reconstruction-plan"
-  );
-
+  const ukDir = path.join(args.root, "app", "initiatives", "ukraine-peace-and-reconstruction-plan");
   if (!(await exists(ukDir))) {
     console.error(`Ukraine dir not found:\n  ${ukDir}`);
     process.exit(1);
   }
 
-  const files = await walk(ukDir);
-  const mdxPages = files.filter((p) => path.basename(p).toLowerCase() === "page.mdx");
+  const all = await walk(ukDir);
+  const mdxPages = all.filter((p) => path.basename(p).toLowerCase() === "page.mdx");
 
-  let visited = 0;
-  let converted = 0;
-  let skipped = 0;
+  let visited = 0, converted = 0, skipped = 0;
 
   for (const pageMdxAbs of mdxPages) {
     visited++;
@@ -105,56 +157,35 @@ async function main() {
     const pageTsxAbs = path.join(dir, "page.tsx");
     const contentMdxAbs = path.join(dir, "content.mdx");
 
-    // If page.tsx already exists, do not touch this folder.
-    if (await exists(pageTsxAbs)) {
-      skipped++;
-      continue;
-    }
-
-    // If content.mdx already exists, also skip (avoid clobbering).
-    if (await exists(contentMdxAbs)) {
-      skipped++;
-      continue;
-    }
+    // Skip if already TSX route or already converted
+    if (await exists(pageTsxAbs)) { skipped++; continue; }
+    if (await exists(contentMdxAbs)) { skipped++; continue; }
 
     const src = await fs.readFile(pageMdxAbs, "utf8");
-    const { metadataSrc, body } = extractMetadataBlock(src);
+    const meta = extractMetadataExport(src);
+    const body = stripMetadataExport(src).replace(/^\s+/, "");
 
-    const tsx = makePageTsx(metadataSrc);
-
-    if (args.verbose) {
-      console.log(`convert: ${path.relative(args.root, pageMdxAbs)}`);
-    }
+    if (args.verbose) console.log(`convert: ${path.relative(args.root, pageMdxAbs)}`);
 
     if (!args.dryRun) {
       if (args.backup) {
         const bak = `${pageMdxAbs}.bak`;
-        if (!(await exists(bak))) {
-          await fs.writeFile(bak, src, "utf8");
-        }
+        if (!(await exists(bak))) await fs.writeFile(bak, src, "utf8");
       }
 
-      // Write content.mdx first (so we don't lose body if rename fails)
       await fs.writeFile(contentMdxAbs, body, "utf8");
-
-      // Remove page.mdx
       await fs.unlink(pageMdxAbs);
-
-      // Create page.tsx
-      await fs.writeFile(pageTsxAbs, tsx, "utf8");
+      await fs.writeFile(pageTsxAbs, makePageTsx(meta), "utf8");
     }
 
     converted++;
   }
 
-  console.log("\n=== Ukraine MDX -> TSX wrapper conversion ===");
+  console.log("\n=== Ukraine MDX -> TSX wrapper conversion (SAFE) ===");
   console.log(`Visited:   ${visited} folders with page.mdx`);
   console.log(`Converted: ${converted}`);
   console.log(`Skipped:   ${skipped} (already had page.tsx or content.mdx)`);
   console.log(`Mode:      ${args.dryRun ? "DRY RUN" : "WRITE"}${args.backup ? " + backups" : ""}`);
 }
 
-main().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+main().catch((e) => { console.error(e); process.exit(1); });
