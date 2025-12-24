@@ -1,41 +1,54 @@
-// app/initiatives/ukraine-peace-plan/fvr/appendices/decision-log/page.mdx
 export const metadata = {
-  title: "Decision Log & Source Mapping",
-  description: "Record of design decisions and mapping of source drafts into the Freeze–Vote–Rebuild framework."
+  title: "Decision Log",
+  description: "A chronological record of design and editorial decisions made during the consolidation of the Freeze-Vote-Rebuild framework."
 };
 
-# Decision Log & Source Mapping
+# Decision Log
 
-This document acts as the **Architectural Decision Record (ADR)** for the peace plan. It tracks *why* specific mechanisms were chosen and *how* original source drafts were mapped into this canonical structure.
-
----
-
-## 1. Source Document Mapping
-This GitBook consolidates four disparate source drafts into one unified structure.
-
-| Source Draft | Description | Mapped To |
-| :--- | :--- | :--- |
-| **Comprehensive Proposal** | Neutral, narrative framing of the full timeline. | **Overview** & **Concepts** |
-| **v4 Operational Framework** | Technical sequencing, legal gating, and specific actions. | **Freeze** & **Legal Pathways** |
-| **McCormick Off-Ramp Essay** | Persuasive "Realist" framing for US/EU audiences. | **Background/Essays** (D-008) |
-| **Projet du Pape François** | Alternative religious/moral framing. | **Background/Essays** (D-008) |
+This log records editorial and design decisions made while consolidating multiple drafts into a single GitBook. The goal is **traceability**: reviewers should be able to see what was chosen, what was deferred, and why.
 
 ---
 
-## 2. Decision Register
+## Decision Tracking Register
 
 | ID | Decision | Rationale | Impact |
 | :--- | :--- | :--- | :--- |
-| **D-001** | **Canonical Structure: Freeze–Vote–Rebuild** | Supports logical sequencing and verification-first gating (unlike "negotiate-then-ceasefire" models). | Core content organized into Chapters 02, 03, 04. |
-| **D-002** | **Status-Neutral Framing** | Improves technical reviewability and prevents rejection based on perceived bias. | Advocacy moved to "Essays"; Core is strictly technical. |
-| **D-003** | **Verification-First Gates** | Reduces reliance on "good faith"; makes progress auditable and reversible. | Added "Governance & Verification" chapter. |
-| **D-004** | **Optional Vote-to-Border** | Preserves flexibility while mitigating gerrymandering risks. | Defined as a distinct, optional module in **Vote**. |
-| **D-005** | **Displaced Persons (IDP) Requirement** | Exclusion encourages ethnic cleansing; inclusion is mandatory for legitimacy. | Built explicit electorate metrics in **Vote**. |
-| **D-006** | **Auditable Reconstruction** | Corruption is a dominant failure mode; donors require traceability. | Added "Transparency Stack" to **Rebuild**. |
-| **D-009** | **Data Governance Mandate** | Voting/monitoring data is sensitive; mishandling endangers lives. | Added privacy constraints to **Governance**. |
+| **D-001** | **Canonical Structure:** Adopt **Freeze–Vote–Rebuild** as the core sequence. | Most drafts share this skeleton; it supports logical sequencing and verification-first gating. | All core content organized into chapters 02, 03, and 04. |
+| **D-002** | **Status-Neutral Framing:** Keep the core mechanism neutral; move advocacy to essays. | Neutrality improves technical reviewability and prevents misinterpretation as a pre-determined settlement. | Created "Background & Essays" section; drafted "What This Is Not." |
+| **D-003** | **Verification-First Gates:** Treat gates as the primary control logic for progression. | Reduces reliance on "good faith" and makes conditionality auditable and reversible. | Dedicated "Governance & Verification" chapter added. |
+| **D-004** | **Optional Vote-to-Border:** Include as an optional module with strict safeguards. | Preserves flexibility while reducing the risk of misuse or gerrymandering. | Created module with simulation and version-locking requirements. |
+| **D-005** | **Displaced Persons Inclusion:** Inclusion of IDPs/refugees is a "Hard Requirement." | Exclusion creates incentives for ethnic/demographic engineering and undermines legitimacy. | Built explicit electorate categories and participation metrics. |
+| **D-006** | **Auditable Reconstruction:** Mandate "Transparency Stack" and tranche gating in Rebuild. | Corruption is a dominant failure mode; auditable design is required for donor durability. | Added accountability chapter, templates, and KPI linkages. |
+| **D-007** | **"Peace-Build Campus":** Preserve symbolic governance concepts as an *optional* model. | High variance in political acceptance; useful for outreach but risky as a hard requirement. | Moved to optional governance variants. |
+| **D-008** | **Advocacy Preservation:** Keep American Realism and Papal-origin framings as separate essays. | Essential for stakeholder persuasion but must not contaminate the neutral technical spec. | Created standalone Background/Essays section. |
+| **D-009** | **Data Governance:** Add explicit privacy and security chapters as first-class constraints. | Voting and monitoring data can endanger lives if mishandled or leaked. | Added role-based access and publication policy requirements. |
 
 ---
 
-## 3. Maintenance Note
-- **Sequential Entry:** Add new decisions (D-0xx) when the core mechanism changes.
-- **Stability:** Do not renumber existing decisions.
+## Individual Decision Details
+
+### D-001 — Canonical structure: Freeze → Vote → Rebuild
+- **Date:** December 2025
+- **Alternatives Considered:** Freeze-only; Freeze + traditional negotiations; Rebuild-first narratives.
+- **Where Reflected:** Entire Table of Contents; **[Proposal at a Glance](/initiatives/ukraine-peace-plan/fvr/overview/proposal-at-a-glance)**.
+- **Source Inputs:** Consolidated from v4 Operational Framework and Comprehensive Proposal.
+
+### D-004 — Vote-to-border is optional, not required
+- **Date:** December 2025
+- **Alternatives Considered:** Require vote-to-border as the only outcome; exclude it entirely.
+- **Where Reflected:** **[Vote-to-Border Mechanics](/initiatives/ukraine-peace-plan/fvr/vote/vote-to-border)**.
+- **Note:** Implementation requires a **[Version-Locked Algorithm](/initiatives/ukraine-peace-plan/fvr/appendices/glossary)**.
+
+### D-005 — Displaced persons inclusion is a hard requirement
+- **Date:** December 2025
+- **Alternatives Considered:** Current-residents-only electorate; symbolic inclusion without enforceable metrics.
+- **Where Reflected:** **[Electorate Definition](/initiatives/ukraine-peace-plan/fvr/vote/electorate-definition)**.
+
+---
+
+## Maintenance Note
+- **Sequential Entry:** Add new decisions whenever the canonical mechanism changes or a major option is added/removed.
+- **Stability:** Keep IDs stable; do not renumber previous decisions.
+- **Reversals:** If a new decision reverses a previous one, reference the earlier ID explicitly and explain the change in the security/political environment that necessitated it.
+
+**Next Step:** I will proceed to **`app/initiatives/ukraine-peace-plan/fvr/appendices/definitions/page.mdx`**. Shall I continue?
