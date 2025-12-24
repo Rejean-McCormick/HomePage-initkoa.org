@@ -66,8 +66,8 @@ export default function HomePage() {
 
           {/* Pillar 3: INFRASTRUCTURE (New) */}
           <NavCard 
-            href="/infrastructure"
-            title="Infrastructure"
+            href="/infrastructures"
+            title="Infrastructures"
             subtitle="The Foundation"
             description="The physical and virtual bedrock. Green AI data centers (Kristal Farms) and the civic metaverse (Kin City)."
             icon={<IconAnchor />}

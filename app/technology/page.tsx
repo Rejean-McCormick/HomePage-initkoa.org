@@ -1,6 +1,6 @@
-// app\technology\page.tsx
 // app/technology/page.tsx
 import Link from 'next/link';
+import { GitPullRequest } from 'lucide-react'; // 
 
 export const metadata = {
   title: 'Technology Stack – Réjean McCormick',
@@ -109,7 +109,8 @@ export default function TechIndex() {
 
         {/* VM-ENGINE (New) */}
         <div className="group block p-6 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-          <Link href="/technology/votingmachine" className="block">
+          {/* FIXED: Link points to /technology/voting-machine */}
+          <Link href="/technology/voting-machine" className="block">
             <div className="flex justify-between items-center mb-2">
               <strong className="text-xl text-primary group-hover:underline">VM-ENGINE</strong>
               <span className="text-xs font-mono bg-gray-100 px-2 py-1 rounded">Core / Determinism</span>
@@ -133,8 +134,9 @@ export default function TechIndex() {
           View this architecture through the lens of a living organism. 
           Explore the anatomy, the rituals, and the meaning behind the code.
         </p>
+        {/* FIXED: Link points to /kreature root */}
         <Link 
-          href="/platforms/kreature" 
+          href="/kreature" 
           className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-all"
         >
           Enter Kréature (King Klown&apos;s Interface) →
