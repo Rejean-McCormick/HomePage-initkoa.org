@@ -1,7 +1,6 @@
-// app\diagnosis\page.js
 // app/diagnosis/page.js
 import React from 'react';
-import Link from 'next/link'; // Standardizing Link usage
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Systemic Diagnosis – King Klown & KOA',
@@ -10,10 +9,10 @@ export const metadata = {
 
 export default function DiagnosisPage() {
   return (
-    <main className="min-h-screen bg-white selection:bg-primary selection:text-white">
+    <main className="min-h-screen bg-slate-900 text-slate-100 selection:bg-primary selection:text-white">
       
-      {/* HEADER SECTION - Dark Background */}
-      <section className="bg-slate-900 text-white py-24 px-6 relative overflow-hidden">
+      {/* HEADER SECTION */}
+      <section className="bg-slate-900 text-white py-24 px-6 relative overflow-hidden border-b border-slate-800">
         {/* Decorative background element */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-white to-primary opacity-20"></div>
         
@@ -21,13 +20,12 @@ export default function DiagnosisPage() {
           <div className="uppercase tracking-widest text-xs md:text-sm text-primary mb-6 font-bold">
             The Manifesto
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-8 font-serif leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold mb-8 font-serif leading-tight text-white">
             Global Context & <br />
             Systemic Diagnosis
           </h1>
-          <p className="text-xl md:text-2xl opacity-90 leading-relaxed max-w-2xl mx-auto font-light">
+          <p className="text-xl md:text-2xl opacity-90 leading-relaxed max-w-2xl mx-auto font-light text-slate-300">
             We cannot fix what we refuse to see. Before proposing solutions, we must practice{' '}
-            {/* Highlighted text matches the Dark BG (slate-900) */}
             <span className="bg-primary text-slate-900 px-2 py-0.5 font-bold box-decoration-clone">
               Radical Lucidity
             </span>
@@ -38,7 +36,7 @@ export default function DiagnosisPage() {
 
       {/* INTRODUCTION */}
       <section className="max-w-4xl mx-auto px-6 py-20">
-        <div className="prose prose-lg prose-slate text-gray-700 mx-auto">
+        <div className="prose prose-lg prose-invert mx-auto text-slate-300">
           <p className="text-xl leading-loose">
             The contemporary world faces an unprecedented convergence of crises. 
             Social fragmentation, ecological instability, and rapid technological upheaval 
@@ -53,9 +51,9 @@ export default function DiagnosisPage() {
       </section>
 
       {/* THE 9 SYSTEMIC FAILURES */}
-      <section className="bg-slate-50 py-20 px-6 border-y border-gray-200">
+      <section className="bg-slate-800/50 py-20 px-6 border-y border-slate-700">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-900 font-serif">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white font-serif">
             The 9 Systemic Failures
           </h2>
           
@@ -120,12 +118,11 @@ export default function DiagnosisPage() {
 
       {/* CONCLUSION / CALL TO ACTION */}
       <section className="max-w-4xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-3xl font-bold mb-6 text-slate-900 font-serif">The Path Forward</h2>
-        <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6 text-white font-serif">The Path Forward</h2>
+        <p className="text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
           These failures are interconnected; they cannot be solved in isolation. 
           This diagnosis sets the stage for{' '}
-          {/* Highlighted text matches the Light BG (white) */}
-          <span className="bg-slate-900 text-white px-2 py-0.5 font-bold box-decoration-clone">
+          <span className="bg-white text-slate-900 px-2 py-0.5 font-bold box-decoration-clone">
             King Klown & KOA
           </span>
           : a systemic response built on radical openness, meritocratic governance, and constructive radicalism.
@@ -139,7 +136,7 @@ export default function DiagnosisPage() {
           </Link>
           <Link 
             href="/platforms" 
-            className="px-8 py-4 border-2 border-slate-200 text-slate-700 rounded-lg font-bold hover:border-slate-900 hover:text-slate-900 hover:bg-white transition-all"
+            className="px-8 py-4 border-2 border-slate-700 text-slate-300 rounded-lg font-bold hover:border-white hover:text-white hover:bg-slate-800 transition-all"
           >
             See the Solutions
           </Link>
@@ -152,14 +149,14 @@ export default function DiagnosisPage() {
 // Helper Component for the Grid
 function FailureCard({ number, title, description }) {
   return (
-    <div className="group bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-      <div className="text-5xl font-bold text-slate-100 mb-6 font-serif group-hover:text-primary/20 transition-colors">
+    <div className="group bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <div className="text-5xl font-bold text-slate-700 mb-6 font-serif group-hover:text-primary/20 transition-colors">
         {number}
       </div>
-      <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors">
+      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors">
         {title}
       </h3>
-      <p className="text-slate-600 leading-relaxed text-sm">
+      <p className="text-slate-400 leading-relaxed text-sm">
         {description}
       </p>
     </div>
