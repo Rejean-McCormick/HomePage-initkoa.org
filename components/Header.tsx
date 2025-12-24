@@ -113,10 +113,9 @@ export default function Header() {
   // Focus input when search opens
   useEffect(() => {
     if (isSearchOpen && searchInputRef.current) {
-      // Small timeout ensures the modal is rendered before focus
       setTimeout(() => searchInputRef.current?.focus(), 50);
     } else {
-      setSearchQuery(''); // Reset query on close
+      setSearchQuery(''); 
     }
   }, [isSearchOpen]);
 
@@ -128,11 +127,9 @@ export default function Header() {
     const results: any[] = [];
 
     NAV_ITEMS.forEach(section => {
-      // Match top-level sections
       if (section.label.toLowerCase().includes(query)) {
         results.push({ ...section, type: 'Section' });
       }
-      // Match children pages
       if (section.children) {
         section.children.forEach(child => {
           if (
@@ -238,11 +235,10 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <button 
               onClick={() => setIsSearchOpen(true)}
-              className="flex items-center gap-2 px-3 py-2 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all group" 
+              className="p-2 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all group" 
               aria-label="Search"
             >
               <Search className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              <span className="text-xs font-mono border border-slate-200 rounded px-1.5 py-0.5 group-hover:border-slate-300">⌘K</span>
             </button>
             <div className="h-4 w-px bg-slate-200"></div>
             <Link href="/about" className="ml-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-bold rounded-lg transition-all shadow-sm hover:shadow-md">
