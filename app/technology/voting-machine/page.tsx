@@ -1,5 +1,5 @@
 // app\technology\voting-machine\page.tsx
-// app/technology/votingmachine/page.tsx
+// app/technology/voting-machine/page.tsx
 import Link from 'next/link';
 import { 
   Cpu, 
@@ -37,13 +37,13 @@ export default function VotingMachineIndex() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link 
-              href="/technology/votingmachine/specifications"
+              href="/technology/voting-machine/specifications"
               className="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-lg font-bold hover:bg-primary transition-colors"
             >
               View Specifications <ArrowRight className="w-4 h-4" />
             </Link>
             <Link 
-              href="/technology/votingmachine/integration"
+              href="/technology/voting-machine/integration"
               className="inline-flex items-center gap-2 border border-slate-300 text-slate-700 px-6 py-3 rounded-lg font-bold hover:border-slate-900 transition-colors"
             >
               Integration Guide <ArrowRight className="w-4 h-4" />
@@ -152,7 +152,7 @@ export default function VotingMachineIndex() {
 
         {/* DEEP DIVE LINKS */}
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/technology/votingmachine/specifications" className="group block bg-slate-900 text-white p-8 rounded-2xl hover:bg-slate-800 transition-all">
+          <Link href="/technology/voting-machine/specifications" className="group block bg-slate-900 text-white p-8 rounded-2xl hover:bg-slate-800 transition-all">
             <h3 className="text-2xl font-bold mb-2 group-hover:underline decoration-white underline-offset-4">Technical Specifications</h3>
             <p className="text-slate-400 mb-6">
               The rigorous engineering documentation. Data models, Algorithm Flow, Gates, and the Pipeline State Machine.
@@ -162,7 +162,7 @@ export default function VotingMachineIndex() {
             </div>
           </Link>
 
-          <Link href="/technology/votingmachine/integration" className="group block bg-slate-50 border border-slate-200 p-8 rounded-2xl hover:border-slate-400 transition-all">
+          <Link href="/technology/voting-machine/integration" className="group block bg-slate-50 border border-slate-200 p-8 rounded-2xl hover:border-slate-400 transition-all">
             <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:underline decoration-slate-900 underline-offset-4">Integration & Reporting</h3>
             <p className="text-slate-600 mb-6">
               How to embed VM-ENGINE in a larger system. CLI contracts, read-only reporting templates, and audit verification.

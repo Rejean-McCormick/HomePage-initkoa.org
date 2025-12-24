@@ -160,7 +160,7 @@ export default function VisualSitemapPage() {
             <MapLink href="/technology/sentient" label="SenTient (Input)" />
             <MapLink href="/technology/swarmcraft" label="SwarmCraft (Memory)" />
             <MapLink href="/technology/ame-artificielle" label="Âme artificielle (Ethics)" />
-            <MapLink href="/technology/votingmachine" label="VM-Engine (Core)" />
+            <MapLink href="/technology/voting-machine" label="VM-Engine (Core)" />
           </Section>
 
           {/* META */}

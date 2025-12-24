@@ -1,5 +1,5 @@
 // app\technology\voting-machine\integration\page.tsx
-// app/technology/votingmachine/integration/page.tsx
+// app/technology/voting-machine/integration/page.tsx
 import Link from 'next/link';
 import { 
   Terminal, 
@@ -23,7 +23,7 @@ export default function VMIntegration() {
         {/* HEADER */}
         <div className="mb-16">
           <Link 
-            href="/technology/votingmachine" 
+            href="/technology/voting-machine" 
             className="text-slate-500 hover:text-blue-600 font-medium flex items-center gap-2 mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Back to VM-ENGINE Overview

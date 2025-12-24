@@ -56,7 +56,7 @@ const NAV_ITEMS = [
       { label: 'SenTient', desc: 'Input Processing', path: '/technology/sentient' },
       { label: 'SwarmCraft', desc: 'Narrative Memory', path: '/technology/swarmcraft' },
       { label: 'Âme Artificielle', desc: 'Alignment & Ethics', path: '/technology/ame-artificielle' },
-      { label: 'VM-Engine', desc: 'Deterministic Core', path: '/technology/votingmachine' },
+      { label: 'VM-Engine', desc: 'Deterministic Core', path: '/technology/voting-machine' },
     ]
   },
   {
