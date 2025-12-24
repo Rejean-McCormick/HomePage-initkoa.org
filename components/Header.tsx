@@ -60,7 +60,8 @@ export default function Header() {
       children: [
         { label: 'Overview', desc: 'Strategic Roadmap', path: '/initiatives' },
         { label: 'Civic Governance', desc: 'The Operating System', path: '/initiatives/civic-governance' },
-        { label: 'Ukraine Peace Plan', desc: 'Freeze-Vote-Rebuild', path: '/initiatives/ukraine-peace-and-reconstruction-plan' },
+        // FIXED: Updated path to new structure
+        { label: 'Ukraine Peace Plan', desc: 'Freeze-Vote-Rebuild', path: '/initiatives/ukraine-peace-plan' },
       ]
     },
     {

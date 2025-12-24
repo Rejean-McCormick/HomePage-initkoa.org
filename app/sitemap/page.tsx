@@ -81,18 +81,22 @@ export default function VisualSitemapPage() {
             </SubSection>
 
             <SubSection title="International">
-              {/* Updated: point to the Ukraine hub route (not a deep MDX path) */}
+              {/* FIXED LINKS BELOW */}
               <MapLink
-                href="/initiatives/ukraine-peace-and-reconstruction-plan"
-                label="Ukraine Peace & Reconstruction Plan"
+                href="/initiatives/ukraine-peace-plan"
+                label="Ukraine Peace & Reconstruction Plan (Hub)"
               />
               <MapLink
-                href="/initiatives/ukraine-peace-and-reconstruction-plan/summary"
-                label="Ukraine Plan — Summary (TOC)"
+                href="/initiatives/ukraine-peace-plan/summary"
+                label="Plan Summary (Table of Contents)"
               />
               <MapLink
-                href="/initiatives/ukraine-peace-and-reconstruction-plan/fvr/00-start-here/00-welcome"
-                label="Ukraine Plan — Start Here (FVR)"
+                href="/initiatives/ukraine-peace-plan/fvr/start-here/welcome"
+                label="Operational Framework (FVR)"
+              />
+              <MapLink
+                href="/initiatives/ukraine-peace-plan/cultural-bridge/start-here"
+                label="Cultural Bridge Track"
               />
             </SubSection>
           </Section>
@@ -122,26 +126,11 @@ export default function VisualSitemapPage() {
 
             <SubSection title="Konnaxion (L'Esprit)">
               <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos" label="Konnaxion Hub" />
-              <MapLink
-                href="/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos"
-                label="KonnectED (Savoir)"
-              />
-              <MapLink
-                href="/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos"
-                label="Ethikos (Débat)"
-              />
-              <MapLink
-                href="/kreature/anatomie/esprit/konnaxion-mythos/kollective"
-                label="Kollective (Jugement)"
-              />
-              <MapLink
-                href="/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect"
-                label="KeenKonnect (Action)"
-              />
-              <MapLink
-                href="/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos"
-                label="Kreative (Culture)"
-              />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos" label="KonnectED (Savoir)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos" label="Ethikos (Débat)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/kollective" label="Kollective (Jugement)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect" label="KeenKonnect (Action)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos" label="Kreative (Culture)" />
             </SubSection>
 
             <SubSection title="Rituels (L'Usage)">

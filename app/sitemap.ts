@@ -150,11 +150,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // FIXED UKRAINE LINKS
     {
-      url: `${baseUrl}/initiatives/ukraine-peace-and-reconstruction-plan/fvr/00-start-here/00-welcome`,
+      url: `${baseUrl}/initiatives/ukraine-peace-plan`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/initiatives/ukraine-peace-plan/summary`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/initiatives/ukraine-peace-plan/fvr/start-here/welcome`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/initiatives/ukraine-peace-plan/cultural-bridge/start-here`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
     },
 
     // --- 4. PLATFORMS ---
