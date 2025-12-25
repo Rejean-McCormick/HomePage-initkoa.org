@@ -1,4 +1,3 @@
-// app\sitemap.ts
 // app/sitemap.ts
 import { MetadataRoute } from 'next';
 
@@ -151,7 +150,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    // FIXED UKRAINE LINKS
+    // UKRAINE LINKS
     {
       url: `${baseUrl}/initiatives/ukraine-peace-plan`,
       lastModified: new Date(),
@@ -256,7 +255,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
-    // Anatomie: Primary Organs
+    // Anatomie: Primary Organs (Cleaned -mythos)
     {
       url: `${baseUrl}/kreature/anatomie/corps/orgo`,
       lastModified: new Date(),
@@ -302,7 +301,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
-    // Konnaxion: Deep Links (The Sub-Organs)
+    // Konnaxion: Deep Links (Cleaned -mythos)
     // 1. KonnectED
     {
       url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/konnected`,
@@ -399,7 +398,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
 
-    // Rituels
+    // Rituels (Ghost Pages removed)
     {
       url: `${baseUrl}/kreature/rituels`,
       lastModified: new Date(),
@@ -414,18 +413,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/kreature/rituels/parlement-interieur`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/kreature/rituels/cycle-vital`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/kreature/rituels/une-journee`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,

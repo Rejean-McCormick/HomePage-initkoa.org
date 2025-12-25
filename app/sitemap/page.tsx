@@ -1,4 +1,3 @@
-// app\sitemap\page.tsx
 // app/sitemap/page.tsx
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -82,7 +81,6 @@ export default function VisualSitemapPage() {
             </SubSection>
 
             <SubSection title="International">
-              {/* FIXED LINKS BELOW */}
               <MapLink
                 href="/initiatives/ukraine-peace-plan"
                 label="Ukraine Peace & Reconstruction Plan (Hub)"
@@ -138,8 +136,6 @@ export default function VisualSitemapPage() {
               <MapLink href="/kreature/rituels" label="Index des Rituels" />
               <MapLink href="/kreature/rituels/respiration-du-sens" label="La Respiration du Sens" />
               <MapLink href="/kreature/rituels/parlement-interieur" label="Le Parlement Intérieur" />
-              <MapLink href="/kreature/rituels/cycle-vital" label="Le Cycle Vital" />
-              <MapLink href="/kreature/rituels/une-journee" label="Une Journée Type" />
             </SubSection>
           </Section>
 

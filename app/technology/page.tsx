@@ -33,7 +33,7 @@ export default function TechIndex() {
               Semantic UI graph and ontology for treating software interfaces as data. Allows AI systems to guide users through complex applications.
             </p>
           </Link>
-          <a href="https://github.com/Rejean-McCormick/Ariane" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
+          <a href="https://github.com/Rejean-McCormick/Ariane" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
             <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.05-.015-2.055-3.33.72-4.035-1.605-4.035-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.087-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             Rejean-McCormick/Ariane
           </a>
@@ -50,7 +50,7 @@ export default function TechIndex() {
               Industrial-scale NLG toolkit for Abstract Wikipedia/Wikifunctions. Includes family engines, lexica, constructions, and QA for multilingual generation.
             </p>
           </Link>
-          <a href="https://github.com/Rejean-McCormick/abstract-wiki-architect" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
+          <a href="https://github.com/Rejean-McCormick/abstract-wiki-architect" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
             <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.05-.015-2.055-3.33.72-4.035-1.605-4.035-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.087-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             Rejean-McCormick/abstract-wiki-architect
           </a>
@@ -67,7 +67,7 @@ export default function TechIndex() {
               A tool to deconstruct natural language and format it for Wikidata. Inspired by Falcon 2.0, OpenRefine, and OpenTapioca to secure the system&apos;s entry point.
             </p>
           </Link>
-          <a href="https://github.com/Rejean-McCormick/SenTient" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
+          <a href="https://github.com/Rejean-McCormick/SenTient" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
             <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.05-.015-2.055-3.33.72-4.035-1.605-4.035-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.087-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             Rejean-McCormick/SenTient
           </a>
@@ -84,7 +84,7 @@ export default function TechIndex() {
               A deterministic story-writing engine powered by Grok. Features multi-project orchestration, template-based scaffolding, and RAG memory for long-form continuity.
             </p>
           </Link>
-          <a href="https://github.com/Rejean-McCormick/SwarmCraft" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
+          <a href="https://github.com/Rejean-McCormick/SwarmCraft" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
             <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.05-.015-2.055-3.33.72-4.035-1.605-4.035-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.087-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             Rejean-McCormick/SwarmCraft
           </a>
@@ -101,7 +101,7 @@ export default function TechIndex() {
               JSON/Python framework mapping decimals of Pi to symbolic concepts (Branes/Numerology) for AI alignment, meta-cognition, and ethical consistency.
             </p>
           </Link>
-          <a href="https://github.com/Rejean-McCormick/Ame-Artificielle" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
+          <a href="https://github.com/Rejean-McCormick/Ame-Artificielle" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
             <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.05-.015-2.055-3.33.72-4.035-1.605-4.035-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.087-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             Rejean-McCormick/Ame-Artificielle
           </a>
@@ -119,7 +119,7 @@ export default function TechIndex() {
               A pure-function electoral simulation core. Takes canonical inputs and produces byte-identical results across platforms. No network, pinned RNG, and cryptographic audit trails.
             </p>
           </Link>
-          <a href="https://github.com/Rejean-McCormick/vm-engine" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
+          <a href="https://github.com/Rejean-McCormick/vm-engine" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-primary font-mono flex items-center">
             <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.05-.015-2.055-3.33.72-4.035-1.605-4.035-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.087-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             Rejean-McCormick/vm-engine
           </a>
