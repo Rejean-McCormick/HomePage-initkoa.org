@@ -38,7 +38,7 @@ export default function VisualSitemapPage() {
 
             <SubSection title="Domains">
               <MapLink href="/principles/civic-principles-ethics" label="Civic Principles & Ethics" />
-              <MapLink href="/principles/logos-mythos" label="Logos & Mythos" />
+              <MapLink href="/principles/logos" label="Logos & Mythos" />
               <MapLink href="/principles/cosmic-etherism" label="Cosmic Etherism" />
             </SubSection>
           </Section>
@@ -117,21 +117,21 @@ export default function VisualSitemapPage() {
 
             <SubSection title="Anatomie (Le Système)">
               <MapLink href="/kreature/anatomie" label="Vue d'ensemble" />
-              <MapLink href="/kreature/anatomie/corps/orgo-mythos" label="Orgo (Le Corps)" />
-              <MapLink href="/kreature/anatomie/memoire/swarmcraft-mythos" label="SwarmCraft (Mémoire)" />
-              <MapLink href="/kreature/anatomie/sens/sentient-mythos" label="SenTient (Sens)" />
-              <MapLink href="/kreature/anatomie/voix/architect-mythos" label="Architect (Voix)" />
+              <MapLink href="/kreature/anatomie/corps/orgo" label="Orgo (Le Corps)" />
+              <MapLink href="/kreature/anatomie/memoire/swarmcraft" label="SwarmCraft (Mémoire)" />
+              <MapLink href="/kreature/anatomie/sens/sentient" label="SenTient (Sens)" />
+              <MapLink href="/kreature/anatomie/voix/architect" label="Architect (Voix)" />
               <MapLink href="/kreature/anatomie/ame/ame-artificielle" label="Âme Artificielle" />
               <MapLink href="/kreature/anatomie/ame/chakras-1-9" label="Chakras 1-9 (Symbolisme)" />
             </SubSection>
 
             <SubSection title="Konnaxion (L'Esprit)">
-              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos" label="Konnaxion Hub" />
-              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos" label="KonnectED (Savoir)" />
-              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos" label="Ethikos (Débat)" />
-              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/kollective" label="Kollective (Jugement)" />
-              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect" label="KeenKonnect (Action)" />
-              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/kreative" label="Kreative (Culture)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion" label="Konnaxion Hub" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion/konnected" label="KonnectED (Savoir)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion/ethikos" label="Ethikos (Débat)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion/kollective" label="Kollective (Jugement)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion/keen-konnect" label="KeenKonnect (Action)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion/kreative" label="Kreative (Culture)" />
             </SubSection>
 
             <SubSection title="Rituels (L'Usage)">

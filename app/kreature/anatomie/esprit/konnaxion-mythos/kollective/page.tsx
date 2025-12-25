@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\kollective\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/kollective/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\kollective\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/kollective/page.tsx
 import Link from 'next/link';
 import { 
   Gavel, 
@@ -21,7 +21,7 @@ const ORGANS = [
     title: "EkoH (La Conscience)",
     subtitle: "Mémoire Morale & Réputation",
     desc: "Qui parle ? EkoH est la trace vivante de la fiabilité. Elle s'érode avec le temps (Decay) pour forcer la vertu active.",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/kollective/ekoh-mythos",
+    href: "/kreature/anatomie/esprit/konnaxion/kollective/ekoh",
     icon: <Fingerprint className="w-6 h-6 text-amber-600" />,
     color: "bg-amber-50 border-amber-200"
   },
@@ -29,7 +29,7 @@ const ORGANS = [
     title: "Smart Vote (Le Jugement)",
     subtitle: "Décision & Consensus Pondéré",
     desc: "Comment décider ? Smart Vote utilise le poids d'EkoH pour trancher. Il cherche le consensus qualifié, pas la tyrannie de la majorité.",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/kollective/smart-vote",
+    href: "/kreature/anatomie/esprit/konnaxion/kollective/smart-vote",
     icon: <Vote className="w-6 h-6 text-indigo-600" />,
     color: "bg-indigo-50 border-indigo-200"
   }
@@ -129,10 +129,10 @@ export default function KollectiveHubPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/ethikos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à Ethikos
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kollective/ekoh-mythos" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/kollective/ekoh" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
           Explorer EkoH (Conscience) →
         </Link>
       </div>

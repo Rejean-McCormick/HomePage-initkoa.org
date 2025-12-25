@@ -1,5 +1,5 @@
-// app\kreature\anatomie\sens\ariane-mythos\page.tsx
-// app/kreature/anatomie/sens/ariane-mythos/page.tsx
+// app\kreature\anatomie\sens\ariane\page.tsx
+// app/kreature/anatomie/sens/ariane/page.tsx
 import Link from 'next/link';
 import { 
   Eye, 
@@ -142,10 +142,10 @@ export default function ArianePage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/sens/sentient-mythos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/sens/sentient" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Écouter (SenTient)
         </Link>
-        <Link href="/kreature/anatomie/voix/architect-mythos" className="text-blue-600 hover:text-blue-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/voix/architect" className="text-blue-600 hover:text-blue-800 font-bold flex items-center gap-2 transition-colors">
           Parler (Architect) →
         </Link>
       </div>

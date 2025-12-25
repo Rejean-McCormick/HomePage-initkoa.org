@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\konnected-mythos\certifikation\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos/certifikation/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\konnected\certifikation\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/konnected/certifikation/page.tsx
 import Link from 'next/link';
 import { 
   GraduationCap, 
@@ -159,10 +159,10 @@ export default function CertifikationPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos/knowledge" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/konnected/knowledge" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Apprendre (Knowledge)
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kollective/ekoh-mythos" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/kollective/ekoh" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
           Bâtir sa Réputation (EkoH) →
         </Link>
       </div>

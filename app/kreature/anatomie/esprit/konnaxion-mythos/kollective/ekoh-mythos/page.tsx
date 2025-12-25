@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\kollective\ekoh-mythos\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/kollective/ekoh-mythos/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\kollective\ekoh\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/kollective/ekoh/page.tsx
 import Link from 'next/link';
 import { 
   Fingerprint, 
@@ -158,10 +158,10 @@ export default function EkohPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kollective" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/kollective" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à Kollective
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kollective/smart-vote" className="text-indigo-600 hover:text-indigo-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/kollective/smart-vote" className="text-indigo-600 hover:text-indigo-800 font-bold flex items-center gap-2 transition-colors">
           Voir Smart Vote (Le Jugement) →
         </Link>
       </div>

@@ -68,7 +68,7 @@ export default function PrinciplesPage() {
 
           {/* 3. Logos & Mythos (Language/Tool) - NEW */}
           <a
-            href="/principles/logos-mythos"
+            href="/principles/logos"
             className="block p-6 rounded-lg border border-gray-200 bg-white hover:border-emerald-300 hover:shadow-md transition-all"
           >
             <h3 className="text-lg font-bold mb-2 text-emerald-700">Logos & Mythos</h3>

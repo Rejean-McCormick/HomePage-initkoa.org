@@ -22,7 +22,7 @@ const NAV_ITEMS = [
       { label: 'Diagnosis', desc: 'The systemic crisis', path: '/diagnosis' },
       { label: 'Why KOA?', desc: 'Our reason for being', path: '/why' },
       { label: 'Principles', desc: 'Ethics & Civic code', path: '/principles' },
-      { label: 'Logos & Mythos', desc: 'The power of language', path: '/principles/logos-mythos' },
+      { label: 'Logos & Mythos', desc: 'The power of language', path: '/principles/logos' },
       { label: 'Research', desc: 'Pi Theory & Deep analysis', path: '/research' },
     ]
   },

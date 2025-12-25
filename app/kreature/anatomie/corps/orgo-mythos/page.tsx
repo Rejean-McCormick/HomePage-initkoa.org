@@ -1,5 +1,5 @@
-// app\kreature\anatomie\corps\orgo-mythos\page.tsx
-// app/kreature/anatomie/corps/orgo-mythos/page.tsx
+// app\kreature\anatomie\corps\orgo\page.tsx
+// app/kreature/anatomie/corps/orgo/page.tsx
 import Link from 'next/link';
 import { 
   Shield, 
@@ -139,7 +139,7 @@ export default function OrgoPage() {
         <Link href="/kreature/anatomie" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à l'Anatomie
         </Link>
-        <Link href="/kreature/anatomie/sens/sentient-mythos" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/sens/sentient" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
           Voir les Sens (SenTient) →
         </Link>
       </div>

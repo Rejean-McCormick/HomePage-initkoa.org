@@ -143,7 +143,7 @@ export default function RespirationDuSensPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/sens/sentient-mythos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/sens/sentient" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Les Sens (SenTient)
         </Link>
         <Link href="/kreature/rituels/cycle-vital" className="text-sky-600 hover:text-sky-800 font-bold flex items-center gap-2 transition-colors">

@@ -258,25 +258,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Anatomie: Primary Organs
     {
-      url: `${baseUrl}/kreature/anatomie/corps/orgo-mythos`,
+      url: `${baseUrl}/kreature/anatomie/corps/orgo`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/memoire/swarmcraft-mythos`,
+      url: `${baseUrl}/kreature/anatomie/memoire/swarmcraft`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/sens/sentient-mythos`,
+      url: `${baseUrl}/kreature/anatomie/sens/sentient`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/voix/architect-mythos`,
+      url: `${baseUrl}/kreature/anatomie/voix/architect`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -296,7 +296,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -305,95 +305,95 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Konnaxion: Deep Links (The Sub-Organs)
     // 1. KonnectED
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/konnected`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos/knowledge`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/konnected/knowledge`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos/certifikation`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/konnected/certifikation`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     // 2. Ethikos
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/ethikos`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos/korum-mythos`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/ethikos/korum`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos/konsultations-mythos`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/ethikos/konsultations`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     // 3. Kollective
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kollective`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/kollective`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kollective/ekoh-mythos`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/kollective/ekoh`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kollective/smart-vote`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/kollective/smart-vote`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     // 4. KeenKonnect
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/keen-konnect`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/konstruct`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/keen-konnect/konstruct`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/stockage`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/keen-konnect/stockage`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     // 5. Kreative
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kreative`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/kreative`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kreative/kontact`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/kreative/kontact`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kreative/konservation`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion/kreative/konservation`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,

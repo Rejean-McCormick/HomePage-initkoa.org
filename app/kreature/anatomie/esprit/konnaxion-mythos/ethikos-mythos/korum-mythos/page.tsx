@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\ethikos-mythos\korum-mythos\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos/korum-mythos/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\ethikos\korum\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/ethikos/korum/page.tsx
 import Link from 'next/link';
 import { 
   MessageSquare, 
@@ -140,10 +140,10 @@ export default function KorumPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/ethikos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à Ethikos
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos/konsultations-mythos" className="text-blue-600 hover:text-blue-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/ethikos/konsultations" className="text-blue-600 hover:text-blue-800 font-bold flex items-center gap-2 transition-colors">
           Voir Konsultations (L'Appel) →
         </Link>
       </div>

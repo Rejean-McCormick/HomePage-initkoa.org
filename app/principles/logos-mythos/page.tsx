@@ -1,4 +1,4 @@
-// app/principles/logos-mythos/page.tsx
+// app/principles/logos/page.tsx
 import Link from 'next/link';
 import { 
   Mic2, 

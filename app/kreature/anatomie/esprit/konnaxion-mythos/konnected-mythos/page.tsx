@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\konnected-mythos\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\konnected\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/konnected/page.tsx
 import Link from 'next/link';
 import { 
   BookOpen, 
@@ -20,7 +20,7 @@ const SUB_MODULES = [
     title: "Knowledge",
     subtitle: "L'Hippocampe Social (Curiosité)",
     desc: "Une bibliothèque vivante qui relie et recommande. Elle transforme le chaos d'infos en maillage de savoir.",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos/knowledge",
+    href: "/kreature/anatomie/esprit/konnaxion/konnected/knowledge",
     icon: <Library className="w-6 h-6 text-blue-600" />,
     color: "bg-blue-50 border-blue-200"
   },
@@ -28,7 +28,7 @@ const SUB_MODULES = [
     title: "CertifiKation",
     subtitle: "La Myéline (Compétence)",
     desc: "Le rite de passage du 'Je sais' au 'Je sais faire'. Des preuves, des seuils, des validations par les pairs.",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos/certifikation",
+    href: "/kreature/anatomie/esprit/konnaxion/konnected/certifikation",
     icon: <GraduationCap className="w-6 h-6 text-emerald-600" />,
     color: "bg-emerald-50 border-emerald-200"
   }
@@ -121,10 +121,10 @@ export default function KonnectedHubPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à Konnaxion
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos" className="text-purple-600 hover:text-purple-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/ethikos" className="text-purple-600 hover:text-purple-800 font-bold flex items-center gap-2 transition-colors">
           Aller vers Ethikos (Débattre) →
         </Link>
       </div>

@@ -1,5 +1,5 @@
-// app\kreature\anatomie\voix\architect-mythos\page.tsx
-// app/kreature/anatomie/voix/architect-mythos/page.tsx
+// app\kreature\anatomie\voix\architect\page.tsx
+// app/kreature/anatomie/voix/architect/page.tsx
 import Link from 'next/link';
 import { 
   Mic2, 
@@ -133,10 +133,10 @@ export default function ArchitectPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/sens/ariane-mythos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/sens/ariane" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Voir (Ariane)
         </Link>
-        <Link href="/kreature/anatomie/memoire/swarmcraft-mythos" className="text-indigo-600 hover:text-indigo-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/memoire/swarmcraft" className="text-indigo-600 hover:text-indigo-800 font-bold flex items-center gap-2 transition-colors">
           Se Souvenir (SwarmCraft) →
         </Link>
       </div>

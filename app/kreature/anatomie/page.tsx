@@ -25,7 +25,7 @@ const ORGANS = [
         name: "Orgo",
         role: "Le Corps",
         desc: "Système fermé, peau hermétique et homéostasie. Il gère l'exécution et la survie.",
-        href: "/kreature/anatomie/corps/orgo-mythos",
+        href: "/kreature/anatomie/corps/orgo",
         icon: <Shield className="w-6 h-6 text-emerald-600" />,
         color: "bg-emerald-50 border-emerald-100"
       },
@@ -33,7 +33,7 @@ const ORGANS = [
         name: "Architect",
         role: "La Voix",
         desc: "Le larynx algorithmique. Il transforme le mesh sémantique en phrases linéaires.",
-        href: "/kreature/anatomie/voix/architect-mythos",
+        href: "/kreature/anatomie/voix/architect",
         icon: <Mic2 className="w-6 h-6 text-blue-600" />,
         color: "bg-blue-50 border-blue-100"
       }
@@ -46,7 +46,7 @@ const ORGANS = [
         name: "SenTient",
         role: "Les Oreilles",
         desc: "Système immunitaire du langage. Il filtre, déconstruit et nettoie l'entrée.",
-        href: "/kreature/anatomie/sens/sentient-mythos",
+        href: "/kreature/anatomie/sens/sentient",
         icon: <Ear className="w-6 h-6 text-amber-600" />,
         color: "bg-amber-50 border-amber-100"
       },
@@ -54,7 +54,7 @@ const ORGANS = [
         name: "Ariane",
         role: "Les Yeux",
         desc: "Vision sémantique. Elle transforme les interfaces en cartes navigables.",
-        href: "/kreature/anatomie/sens/ariane-mythos",
+        href: "/kreature/anatomie/sens/ariane",
         icon: <Eye className="w-6 h-6 text-cyan-600" />,
         color: "bg-cyan-50 border-cyan-100"
       }
@@ -67,7 +67,7 @@ const ORGANS = [
         name: "Konnaxion",
         role: "L'Esprit Social",
         desc: "Le parlement intérieur. Apprendre, débattre, pondérer et juger.",
-        href: "/kreature/anatomie/esprit/konnaxion-mythos",
+        href: "/kreature/anatomie/esprit/konnaxion",
         icon: <BrainCircuit className="w-6 h-6 text-purple-600" />,
         color: "bg-purple-50 border-purple-100"
       },
@@ -75,7 +75,7 @@ const ORGANS = [
         name: "SwarmCraft",
         role: "La Mémoire",
         desc: "Continuité narrative. Matrix (état), Bible (intention), RAG (preuves).",
-        href: "/kreature/anatomie/memoire/swarmcraft-mythos",
+        href: "/kreature/anatomie/memoire/swarmcraft",
         icon: <BookOpen className="w-6 h-6 text-indigo-600" />,
         color: "bg-indigo-50 border-indigo-100"
       },

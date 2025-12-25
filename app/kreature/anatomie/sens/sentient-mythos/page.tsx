@@ -1,5 +1,5 @@
-// app\kreature\anatomie\sens\sentient-mythos\page.tsx
-// app/kreature/anatomie/sens/sentient-mythos/page.tsx
+// app\kreature\anatomie\sens\sentient\page.tsx
+// app/kreature/anatomie/sens/sentient/page.tsx
 import Link from 'next/link';
 import { 
   Ear, 
@@ -199,7 +199,7 @@ export default function SenTientPage() {
         <Link href="/kreature/anatomie" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à l'Anatomie
         </Link>
-        <Link href="/kreature/anatomie/sens/ariane-mythos" className="text-cyan-600 hover:text-cyan-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/sens/ariane" className="text-cyan-600 hover:text-cyan-800 font-bold flex items-center gap-2 transition-colors">
           Ouvrir les Yeux (Ariane) →
         </Link>
       </div>

@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/page.tsx
 import Link from 'next/link';
 import { 
   BrainCircuit, 
@@ -22,7 +22,7 @@ const CHAMBERS = [
     title: "1. KonnectED (Le Savoir)",
     subtitle: "L'Hippocampe Social",
     desc: "Là où l'on apprend. Cartographier le savoir, valider les compétences, créer une mémoire commune.",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos",
+    href: "/kreature/anatomie/esprit/konnaxion/konnected",
     icon: <BookOpen className="w-6 h-6 text-blue-600" />,
     color: "bg-blue-50 border-blue-200"
   },
@@ -30,7 +30,7 @@ const CHAMBERS = [
     title: "2. Ethikos (La Délibération)",
     subtitle: "L'Espace du Tiraillement",
     desc: "Là où l'on hésite. Débats structurés (Korum) et consultations. Rendre le conflit habitable.",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos",
+    href: "/kreature/anatomie/esprit/konnaxion/ethikos",
     icon: <Scale className="w-6 h-6 text-purple-600" />,
     color: "bg-purple-50 border-purple-200"
   },
@@ -38,7 +38,7 @@ const CHAMBERS = [
     title: "3. Kollective Intelligence (Le Verdict)",
     subtitle: "Conscience & Jugement",
     desc: "Là où l'on tranche. EkoH pèse (réputation/éthique) et Smart Vote décide (consensus pondéré).",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/kollective",
+    href: "/kreature/anatomie/esprit/konnaxion/kollective",
     icon: <Gavel className="w-6 h-6 text-amber-600" />,
     color: "bg-amber-50 border-amber-200"
   },
@@ -46,7 +46,7 @@ const CHAMBERS = [
     title: "4. Social (L'Action & La Culture)",
     subtitle: "Le Tissu Relationnel",
     desc: "Là où l'on se lie (Kreative) et où l'on bâtit ensemble (keenKonnect).",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect",
+    href: "/kreature/anatomie/esprit/konnaxion/keen-konnect",
     icon: <Users className="w-6 h-6 text-emerald-600" />,
     color: "bg-emerald-50 border-emerald-200"
   }
@@ -150,7 +150,7 @@ export default function KonnaxionHubPage() {
         <Link href="/kreature/anatomie" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à l'Anatomie
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos" className="text-blue-600 hover:text-blue-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/konnected" className="text-blue-600 hover:text-blue-800 font-bold flex items-center gap-2 transition-colors">
           Entrer dans KonnectED (Apprendre) →
         </Link>
       </div>

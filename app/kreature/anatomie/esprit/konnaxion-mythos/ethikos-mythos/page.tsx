@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\ethikos-mythos\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\ethikos\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/ethikos/page.tsx
 import Link from 'next/link';
 import { 
   Scale, 
@@ -22,7 +22,7 @@ const ORGANS = [
     title: "Korum",
     subtitle: "Débats Structurés",
     desc: "L'arène du désaccord civilisé. On ne vote pas 'oui/non', on se positionne sur une échelle de nuance (-3 à +3).",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos/korum-mythos",
+    href: "/kreature/anatomie/esprit/konnaxion/ethikos/korum",
     icon: <MessageSquare className="w-6 h-6 text-blue-600" />,
     color: "bg-blue-50 border-blue-200"
   },
@@ -30,7 +30,7 @@ const ORGANS = [
     title: "Konsultations",
     subtitle: "La Démocratie Cyclique",
     desc: "L'appel au peuple. Des fenêtres de tir 'time-boxed' pour recueillir la voix, suivies d'un impact traçable.",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos/konsultations-mythos",
+    href: "/kreature/anatomie/esprit/konnaxion/ethikos/konsultations",
     icon: <Users className="w-6 h-6 text-emerald-600" />,
     color: "bg-emerald-50 border-emerald-200"
   }
@@ -144,10 +144,10 @@ export default function EthikosHubPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à Konnaxion
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kollective" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/kollective" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
           Aller vers Kollective (Trancher) →
         </Link>
       </div>

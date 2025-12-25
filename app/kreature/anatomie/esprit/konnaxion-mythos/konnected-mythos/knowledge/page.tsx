@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\konnected-mythos\knowledge\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos/knowledge/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\konnected\knowledge\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/konnected/knowledge/page.tsx
 import Link from 'next/link';
 import { 
   Library, 
@@ -156,10 +156,10 @@ export default function KnowledgePage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/konnected" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à KonnectED
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/konnected-mythos/certifikation" className="text-emerald-600 hover:text-emerald-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/konnected/certifikation" className="text-emerald-600 hover:text-emerald-800 font-bold flex items-center gap-2 transition-colors">
           Valider la Compétence (CertifiKation) →
         </Link>
       </div>

@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\kollective\smart-vote\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/kollective/smart-vote/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\kollective\smart-vote\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/kollective/smart-vote/page.tsx
 import Link from 'next/link';
 import { 
   Vote, 
@@ -145,10 +145,10 @@ export default function SmartVotePage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kollective/ekoh-mythos" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/kollective/ekoh" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
           ← Retour à EkoH
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect" className="text-emerald-600 hover:text-emerald-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/keen-konnect" className="text-emerald-600 hover:text-emerald-800 font-bold flex items-center gap-2 transition-colors">
           Passer à l'Action (KeenKonnect) →
         </Link>
       </div>

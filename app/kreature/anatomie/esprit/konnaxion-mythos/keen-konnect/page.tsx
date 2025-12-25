@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\keen-konnect\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\keen-konnect\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/keen-konnect/page.tsx
 import Link from 'next/link';
 import { 
   Users, 
@@ -21,7 +21,7 @@ const MODULES = [
     title: "Konstruct",
     subtitle: "Le Chantier (Projets)",
     desc: "Transformer l'intention en structure. Équipes, jalons, feuilles de route. C'est le pont entre la stratégie et l'exécution.",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/konstruct",
+    href: "/kreature/anatomie/esprit/konnaxion/keen-konnect/konstruct",
     icon: <HardHat className="w-6 h-6 text-teal-600" />,
     color: "bg-teal-50 border-teal-200"
   },
@@ -29,7 +29,7 @@ const MODULES = [
     title: "Stockage",
     subtitle: "L'Armoire (Ressources)",
     desc: "L'espace commun. Fichiers, assets, outils partagés. Ce n'est pas un disque dur vide, c'est un espace de permissions et de propriété.",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/stockage",
+    href: "/kreature/anatomie/esprit/konnaxion/keen-konnect/stockage",
     icon: <FolderOpen className="w-6 h-6 text-cyan-600" />,
     color: "bg-cyan-50 border-cyan-200"
   }
@@ -130,10 +130,10 @@ export default function KeenKonnectPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kollective/smart-vote" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/kollective/smart-vote" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à Smart Vote
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kreative" className="text-pink-600 hover:text-pink-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/kreative" className="text-pink-600 hover:text-pink-800 font-bold flex items-center gap-2 transition-colors">
           Aller vers Kreative (La Culture) →
         </Link>
       </div>

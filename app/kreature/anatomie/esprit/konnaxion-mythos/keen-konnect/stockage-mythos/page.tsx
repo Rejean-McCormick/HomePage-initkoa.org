@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\keen-konnect\stockage\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/stockage/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\keen-konnect\stockage\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/keen-konnect/stockage/page.tsx
 import Link from 'next/link';
 import { 
   FolderOpen, 
@@ -123,10 +123,10 @@ export default function StockagePage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/keen-konnect" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à KeenKonnect
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kreative" className="text-pink-600 hover:text-pink-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/kreative" className="text-pink-600 hover:text-pink-800 font-bold flex items-center gap-2 transition-colors">
           Aller vers Kreative (La Culture) →
         </Link>
       </div>

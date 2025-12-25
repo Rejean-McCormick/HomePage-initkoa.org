@@ -1,5 +1,5 @@
-// app\kreature\anatomie\memoire\swarmcraft-mythos\page.tsx
-// app/kreature/anatomie/memoire/swarmcraft-mythos/page.tsx
+// app\kreature\anatomie\memoire\swarmcraft\page.tsx
+// app/kreature/anatomie/memoire/swarmcraft/page.tsx
 import Link from 'next/link';
 import { 
   BookOpen, 
@@ -168,7 +168,7 @@ export default function SwarmCraftPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/voix/architect-mythos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/voix/architect" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Parler (Architect)
         </Link>
         <Link href="/kreature/anatomie/ame/ame-artificielle" className="text-rose-600 hover:text-rose-800 font-bold flex items-center gap-2 transition-colors">

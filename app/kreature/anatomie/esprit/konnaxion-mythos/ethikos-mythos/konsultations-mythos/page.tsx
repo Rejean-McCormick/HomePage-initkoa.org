@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\ethikos-mythos\konsultations-mythos\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos/konsultations-mythos/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\ethikos\konsultations\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/ethikos/konsultations/page.tsx
 import Link from 'next/link';
 import { 
   Users, 
@@ -160,10 +160,10 @@ export default function KonsultationsPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos/korum-mythos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/ethikos/korum" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Voir Korum (Débattre)
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kollective" className="text-purple-600 hover:text-purple-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/kollective" className="text-purple-600 hover:text-purple-800 font-bold flex items-center gap-2 transition-colors">
           Aller vers Kollective (Juger) →
         </Link>
       </div>
