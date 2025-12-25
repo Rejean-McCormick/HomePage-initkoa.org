@@ -6,7 +6,9 @@ import {
   FileSearch, 
   Landmark, 
   ArrowRight,
-  TrendingUp
+  TrendingUp,
+  LayoutDashboard,
+  ShieldCheck
 } from 'lucide-react';
 
 export const metadata = {
@@ -18,23 +20,37 @@ const MECHANISMS = [
   {
     title: "1. Reconstruction Architecture",
     link: "/initiatives/ukraine-peace-plan/fvr/rebuild/architecture",
-    desc: "The governance backbone. Independent audit authorities, escrow-based funding models, and strict separation of duties to prevent capture.",
+    desc: "The institutional backbone. Independent audit authorities, escrow-based funding, and strict separation of duties to prevent capture.",
     icon: <Landmark className="w-6 h-6 text-amber-600" />,
     color: "bg-amber-50 border-amber-200"
   },
   {
-    title: "2. Reconstruction Olympics",
+    title: "2. Construction Olympics",
     link: "/initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics",
-    desc: "A performance-based delivery model. Contractors and consortia compete on speed, quality, and integrity to unlock future tranches.",
+    desc: "A performance-based delivery model. Contractors compete on speed, quality, and integrity to unlock future project pipelines.",
     icon: <Trophy className="w-6 h-6 text-orange-600" />,
     color: "bg-orange-50 border-orange-200"
   },
   {
-    title: "3. The Transparency Stack",
+    title: "3. The Accountability Stack",
     link: "/initiatives/ukraine-peace-plan/fvr/rebuild/accountability",
-    desc: "Minimum viable transparency. Public project registries, real-time disbursement ledgers, and audit triggers. No data, no dollars.",
+    desc: "Minimum viable transparency. Public project registries and real-time disbursement ledgers. No data, no dollars.",
     icon: <FileSearch className="w-6 h-6 text-yellow-600" />,
     color: "bg-yellow-50 border-yellow-200"
+  },
+  {
+    title: "4. Economic Restart",
+    link: "/initiatives/ukraine-peace-plan/fvr/rebuild/economic-restart",
+    desc: "Revitalizing industry and agriculture supply chains through conditional investment for verified stable zones.",
+    icon: <TrendingUp className="w-6 h-6 text-emerald-600" />,
+    color: "bg-emerald-50 border-emerald-200"
+  },
+  {
+    title: "5. Campus Governance",
+    link: "/initiatives/ukraine-peace-plan/fvr/rebuild/campus-governance",
+    desc: "Localized management models for reconstruction zones, ensuring services are maintained under status-neutral rules.",
+    icon: <LayoutDashboard className="w-6 h-6 text-blue-600" />,
+    color: "bg-blue-50 border-blue-200"
   }
 ];
 
@@ -55,7 +71,7 @@ export default function RebuildPage() {
         
         <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">
           Reconstruction is not a "reward" for peace; it is the <strong>engine</strong> of stability. 
-          But it cannot be a slush fund. Phase 3 transforms vague promises into an operational program with strict conditionality.
+          Phase 3 transforms vague promises into an operational program with strict conditionality and performance tranches.
         </p>
 
         <div className="mt-8 bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
@@ -63,41 +79,43 @@ export default function RebuildPage() {
             The Golden Rule
           </strong>
           <p className="text-slate-800 italic">
-            "No reform, no concrete. Funds flow only as fast as integrity is verified."
+            "No reform, no concrete. Funds flow only as fast as integrity and delivery are verified."
           </p>
         </div>
       </div>
 
-      {/* CORE OBJECTIVE */}
+      {/* STRATEGIC SEQUENCING */}
       <section className="bg-slate-900 text-slate-300 p-8 rounded-2xl mb-16 border border-slate-700 shadow-xl">
         <div className="flex items-center gap-3 mb-6">
-          <TrendingUp className="w-6 h-6 text-amber-400" />
-          <h2 className="text-2xl font-bold text-white">Objective: The Marshall Speed</h2>
+          <ShieldCheck className="w-6 h-6 text-amber-400" />
+          <h2 className="text-2xl font-bold text-white">The Rebuild Sequencer</h2>
         </div>
         <p className="mb-6 leading-relaxed">
-          The goal is to restart the economy fast enough to make the peace "sticky", without feeding the corruption that undermines legitimacy.
+          Reconstruction is staged to ensure critical needs are met first while maintaining long-term governance:
         </p>
-        <div className="grid md:grid-cols-2 gap-6 text-sm">
-          <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-600">
-            <strong className="block text-amber-400 mb-1">The Sequencer</strong>
-            1. Essential Services (Power/Water) [Days]<br/>
-            2. Logistics & Demining [Weeks]<br/>
-            3. Housing & Schools [Months]<br/>
-            4. Industrial Restart [Years]
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div className="p-4 bg-slate-800 rounded-lg border border-slate-700">
+            <strong className="block text-amber-400 mb-1">1. Emergency Restoration</strong>
+            Power, water, hospitals, and temporary housing.
           </div>
-          <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-600">
-            <strong className="block text-amber-400 mb-1">The Brake</strong>
-            Any attempt to bypass the <strong>Transparency Stack</strong> triggers an automatic freeze of the next tranche.
+          <div className="p-4 bg-slate-800 rounded-lg border border-slate-700">
+            <strong className="block text-amber-400 mb-1">2. Core Infrastructure</strong>
+            Logistics, transport networks, and grid resilience.
+          </div>
+          <div className="p-4 bg-slate-800 rounded-lg border border-slate-700">
+            <strong className="block text-amber-400 mb-1">3. Economic Restart</strong>
+            Revitalizing industry and agriculture supply chains.
+          </div>
+          <div className="p-4 bg-slate-800 rounded-lg border border-slate-700">
+            <strong className="block text-amber-400 mb-1">4. Long-Term Modernization</strong>
+            Climate adaptation and high construction standards.
           </div>
         </div>
       </section>
 
-      {/* MECHANISMS GRID */}
+      {/* MODULES GRID */}
       <section className="mb-20">
-        <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-2">
-          <Hammer className="w-6 h-6 text-slate-700" />
-          The Delivery Engines
-        </h2>
+        <h2 className="text-2xl font-bold text-slate-900 mb-8">Operational Engines</h2>
         <div className="grid md:grid-cols-1 gap-6">
           {MECHANISMS.map((mech) => (
             <Link 
@@ -128,7 +146,7 @@ export default function RebuildPage() {
         <Link href="/initiatives/ukraine-peace-plan/fvr/vote" className="text-purple-600 hover:text-purple-800 font-bold flex items-center gap-2 transition-colors">
           ← Phase 2: Vote (Legitimacy)
         </Link>
-        <Link href="/initiatives/ukraine-peace-plan/fvr/governance/overview" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/initiatives/ukraine-peace-plan/fvr/governance" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           Next: Governance & Gates →
         </Link>
       </div>

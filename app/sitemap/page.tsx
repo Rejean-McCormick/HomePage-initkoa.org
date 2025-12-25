@@ -97,6 +97,10 @@ export default function VisualSitemapPage() {
                 href="/initiatives/ukraine-peace-plan/cultural-bridge/start-here"
                 label="Cultural Bridge Track"
               />
+              <MapLink
+                href="/initiatives/koa-political-initiative"
+                label="KOA Political Initiative"
+              />
             </SubSection>
           </Section>
         </div>
@@ -155,7 +159,7 @@ export default function VisualSitemapPage() {
             <MapLink href="/technology/architect" label="Architect (Output)" />
             <MapLink href="/technology/sentient" label="SenTient (Input)" />
             <MapLink href="/technology/swarmcraft" label="SwarmCraft (Memory)" />
-            <MapLink href="/technology/ame-artificielle" label="Âme artificielle (Ethics)" />
+            <MapLink href="/technology/ame-artificielle" label="Âme Artificielle (Ethics)" />
             <MapLink href="/technology/voting-machine" label="VM-Engine (Core)" />
           </Section>
 
@@ -163,6 +167,7 @@ export default function VisualSitemapPage() {
           <Section title="Meta" icon={<Share2 className="w-5 h-5" />}>
             <MapLink href="/contact" label="Contact" />
             <MapLink href="/about" label="About the Architect" />
+            <MapLink href="/sitemap" label="XML Sitemap" />
           </Section>
         </div>
       </div>
@@ -171,16 +176,7 @@ export default function VisualSitemapPage() {
 }
 
 // --- Helper Components ---
-
-function Section({
-  title,
-  icon,
-  children,
-}: {
-  title: string;
-  icon: ReactNode;
-  children: ReactNode;
-}) {
+function Section({ title, icon, children }: { title: string; icon: ReactNode; children: ReactNode }) {
   return (
     <div>
       <h2 className="flex items-center text-xl font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">

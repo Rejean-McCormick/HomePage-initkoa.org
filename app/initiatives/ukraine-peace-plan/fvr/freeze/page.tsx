@@ -16,23 +16,23 @@ export const metadata = {
 
 const MECHANISMS = [
   {
-    title: "1. The S-Class Violation System",
-    link: "/initiatives/ukraine-peace-plan/fvr/freeze/01-immediate-cessation",
-    desc: "Moving beyond binary 'ceasefire' definitions. A graded scale (S1-S4) classifying incidents from small arms fire to heavy artillery, with automated triggers for escalation.",
+    title: "Ceasefire Architecture",
+    link: "/initiatives/ukraine-peace-plan/fvr/freeze/ceasefire-architecture",
+    desc: "A structural design for a verifiable, unambiguous cessation of hostilities, including prohibited and permitted actions.",
     icon: <Siren className="w-6 h-6 text-rose-500" />,
     color: "bg-rose-50 border-rose-200"
   },
   {
-    title: "2. The 4-Hour Loop",
-    link: "/initiatives/ukraine-peace-plan/fvr/freeze/02-verification-mechanisms",
-    desc: "The Verification-First standard. International monitors must verify any reported incident within 4 hours to prevent propaganda cycles and false flags.",
+    title: "Verification & Monitoring",
+    link: "/initiatives/ukraine-peace-plan/fvr/freeze/verification-monitoring",
+    desc: "Standardized incident classification (S1–S4) and reporting workflows to make major violations hard to deny.",
     icon: <Radio className="w-6 h-6 text-amber-500" />,
     color: "bg-amber-50 border-amber-200"
   },
   {
-    title: "3. Disengagement Zones (ZOD)",
-    link: "/initiatives/ukraine-peace-plan/fvr/freeze/03-disengagement-zones",
-    desc: "Physical separation of forces. A 15km heavy-weapon-free buffer zone managed by third-party peacekeepers, not belligerents.",
+    title: "Stabilization Force Concept",
+    link: "/initiatives/ukraine-peace-plan/fvr/freeze/stabilization-force",
+    desc: "Design requirements for an independent monitoring presence, focusing on freedom of movement and credible observation.",
     icon: <ShieldCheck className="w-6 h-6 text-blue-500" />,
     color: "bg-blue-50 border-blue-200"
   }

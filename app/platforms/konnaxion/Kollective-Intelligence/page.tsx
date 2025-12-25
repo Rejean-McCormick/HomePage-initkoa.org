@@ -52,7 +52,7 @@ export default function KollectivePage() {
 
           {/* Smart Vote */}
           <Link 
-            href="/platforms/konnaxion/kollective-intelligence/smartvote"
+            href="/platforms/konnaxion/kollective-intelligence/smart-vote"
             className="group block p-8 bg-slate-50 border border-slate-200 rounded-xl hover:border-purple-500 hover:shadow-md transition-all"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-700 flex items-center">

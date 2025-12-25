@@ -16,24 +16,24 @@ export const metadata = {
 
 const MECHANISMS = [
   {
-    title: "1. The Diaspora Ballot",
-    link: "/initiatives/ukraine-peace-plan/fvr/vote/01-diaspora-ballot",
-    desc: "Refugees must vote. A secure, blockchain-backed digital identity system allows displaced citizens to vote from Warsaw, Berlin, or Toronto. No legitimacy without their voice.",
+    title: "Electorate Definition",
+    link: "/initiatives/ukraine-peace-plan/fvr/vote/electorate-definition",
+    desc: "Defining who has the right to vote, with a critical focus on the verifiable inclusion of displaced persons and the 2021 census baseline.",
     icon: <Globe className="w-6 h-6 text-blue-600" />,
     color: "bg-blue-50 border-blue-200"
   },
   {
-    title: "2. The Security Vacuum",
-    link: "/initiatives/ukraine-peace-plan/fvr/vote/02-security-vacuum",
-    desc: "Guns out before boxes open. A mandatory 6-month 'cooling off' period where heavy weapons are withdrawn and replaced by UN/OSCE policing before campaigning begins.",
+    title: "Integrity & Observation",
+    link: "/initiatives/ukraine-peace-plan/fvr/vote/integrity-observation",
+    desc: "Moving beyond passive observation to active international management. Security requirements and technical audits for ballot box integrity.",
     icon: <ShieldCheck className="w-6 h-6 text-emerald-600" />,
     color: "bg-emerald-50 border-emerald-200"
   },
   {
-    title: "3. International Super-Vision",
-    link: "/initiatives/ukraine-peace-plan/fvr/vote/03-international-supervision",
-    desc: "Not just 'observers'. The electoral commission is chaired by non-aligned international bodies (UN/OSCE) with full executive power over the count.",
-    icon: <Users className="w-6 h-6 text-purple-600" />,
+    title: "Voting System Design",
+    link: "/initiatives/ukraine-peace-plan/fvr/vote/voting-system",
+    desc: "The technical architecture of the vote: digital identity, secure capture at Assistance Centres, and localized re-run triggers.",
+    icon: <Fingerprint className="w-6 h-6 text-purple-600" />,
     color: "bg-purple-50 border-purple-200"
   }
 ];
