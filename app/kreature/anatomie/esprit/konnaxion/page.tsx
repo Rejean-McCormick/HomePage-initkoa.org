@@ -1,4 +1,3 @@
-// app\kreature\anatomie\esprit\konnaxion\page.tsx
 // app/kreature/anatomie/esprit/konnaxion/page.tsx
 import Link from 'next/link';
 import { 
@@ -9,55 +8,65 @@ import {
   Users, 
   ArrowRight,
   Activity,
-  Network
+  Network,
+  Palette,
+  HardHat
 } from 'lucide-react';
 
 export const metadata = {
   title: "Konnaxion — Le Parlement Intérieur",
-  description: "La psyché de Kréature. Apprendre, débattre, pondérer, juger.",
+  description: "La psyché de Kréature. 5 organes pour Apprendre, Débattre, Juger, Agir et Relier.",
 };
 
 const CHAMBERS = [
   {
-    title: "1. KonnectED (Le Savoir)",
+    title: "1. KonnectED (La Mémoire)",
     subtitle: "L'Hippocampe Social",
-    desc: "Là où l'on apprend. Cartographier le savoir, valider les compétences, créer une mémoire commune.",
+    desc: "Là où l'on apprend. Cartographier le savoir (Knowledge) et valider la compétence (CertifiKation).",
     href: "/kreature/anatomie/esprit/konnaxion/konnected",
     icon: <BookOpen className="w-6 h-6 text-blue-600" />,
     color: "bg-blue-50 border-blue-200"
   },
   {
-    title: "2. Ethikos (La Délibération)",
+    title: "2. Ethikos (Le Doute)",
     subtitle: "L'Espace du Tiraillement",
-    desc: "Là où l'on hésite. Débats structurés (Korum) et consultations. Rendre le conflit habitable.",
+    desc: "Là où l'on hésite. Transformer le conflit en débats structurés (Korum) et consultations publiques.",
     href: "/kreature/anatomie/esprit/konnaxion/ethikos",
     icon: <Scale className="w-6 h-6 text-purple-600" />,
     color: "bg-purple-50 border-purple-200"
   },
   {
-    title: "3. Kollective Intelligence (Le Verdict)",
+    title: "3. Kollective (Le Verdict)",
     subtitle: "Conscience & Jugement",
-    desc: "Là où l'on tranche. EkoH pèse (réputation/éthique) et Smart Vote décide (consensus pondéré).",
+    desc: "Là où l'on tranche. EkoH pèse la réputation et Smart Vote décide via consensus pondéré.",
     href: "/kreature/anatomie/esprit/konnaxion/kollective",
     icon: <Gavel className="w-6 h-6 text-amber-600" />,
     color: "bg-amber-50 border-amber-200"
   },
   {
-    title: "4. Social (L'Action & La Culture)",
-    subtitle: "Le Tissu Relationnel",
-    desc: "Là où l'on se lie (Kreative) et où l'on bâtit ensemble (keenKonnect).",
+    title: "4. KeenKonnect (L'Action)",
+    subtitle: "Les Mains & L'Outil",
+    desc: "Là où l'on bâtit. Gestion de projets (Konstruct) et partage de ressources (Stockage).",
     href: "/kreature/anatomie/esprit/konnaxion/keen-konnect",
-    icon: <Users className="w-6 h-6 text-emerald-600" />,
-    color: "bg-emerald-50 border-emerald-200"
+    icon: <HardHat className="w-6 h-6 text-teal-600" />,
+    color: "bg-teal-50 border-teal-200"
+  },
+  {
+    title: "5. Kreative (La Culture)",
+    subtitle: "Le Cœur & Le Lien",
+    desc: "Là où l'on se lie. Gestion des relations humaines (Kontact) et préservation du sens (Konservation).",
+    href: "/kreature/anatomie/esprit/konnaxion/kreative",
+    icon: <Palette className="w-6 h-6 text-pink-600" />,
+    color: "bg-pink-50 border-pink-200"
   }
 ];
 
 const PSYCHE_FUNCTIONS = [
-  { label: "Apprendre", mapTo: "KonnectED" },
+  { label: "Apprendre / Stocker", mapTo: "KonnectED" },
   { label: "Douter / Débattre", mapTo: "Ethikos" },
-  { label: "Avoir Conscience", mapTo: "EkoH" },
-  { label: "Trancher", mapTo: "Smart Vote" },
-  { label: "Agir avec l'Autre", mapTo: "keenKonnect" }
+  { label: "Juger / Trancher", mapTo: "Kollective" },
+  { label: "Exécuter / Bâtir", mapTo: "KeenKonnect" },
+  { label: "Relier / Aimer", mapTo: "Kreative" }
 ];
 
 export default function KonnaxionHubPage() {
@@ -77,7 +86,7 @@ export default function KonnaxionHubPage() {
         
         <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">
           Si Orgo est le corps, Konnaxion est la <strong>psyché</strong>. 
-          C’est l’endroit où Kréature ne réagit pas seulement par réflexe. Elle hésite, elle apprend, elle pèse le pour et le contre, et elle choisit.
+          C’est l’endroit où Kréature ne réagit pas seulement par réflexe. Elle hésite, elle apprend, elle pèse le pour et le contre, elle agit et elle se souvient.
         </p>
 
         <div className="mt-8 bg-purple-50 border-l-4 border-purple-500 p-6 rounded-r-lg">
@@ -90,19 +99,21 @@ export default function KonnaxionHubPage() {
         </div>
       </div>
 
-      {/* THE 4 CHAMBERS GRID */}
+      {/* THE 5 CHAMBERS GRID */}
       <section className="mb-20">
         <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-2">
           <Network className="w-6 h-6 text-indigo-600" />
-          Les Quatre Chambres du Parlement
+          Les 5 Chambres de l'Esprit
         </h2>
         
         <div className="grid md:grid-cols-2 gap-6">
-          {CHAMBERS.map((chamber) => (
+          {CHAMBERS.map((chamber, index) => (
             <Link 
               key={chamber.title}
               href={chamber.href}
-              className={`group block p-8 rounded-2xl border ${chamber.color} hover:shadow-md transition-all duration-300`}
+              // The last item spans 2 cols if needed, or keeps grid. 
+              // Here we let it flow naturally, but you could add `md:col-span-2` to the last item index if you want a centered bottom block.
+              className={`group block p-8 rounded-2xl border ${chamber.color} hover:shadow-md transition-all duration-300 ${index === 4 ? 'md:col-span-2' : ''}`}
             >
               <div className="flex justify-between items-start mb-4">
                 <div className="p-3 bg-white rounded-xl shadow-sm group-hover:scale-110 transition-transform">
