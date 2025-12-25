@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\kreative-mythos\konservation\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/konservation-mythos/page.tsx
+// app\kreature\anatomie\esprit\konnaxion-mythos\kreative\konservation\page.tsx
+// app/kreature/anatomie/esprit/konnaxion-mythos/kreative/konservation/page.tsx
 import Link from 'next/link';
 import { 
   Landmark, 
@@ -138,7 +138,7 @@ export default function KonservationPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/kontact-mythos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kreative/kontact" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à Kontact
         </Link>
         <Link href="/kreature/anatomie" className="text-indigo-600 hover:text-indigo-800 font-bold flex items-center gap-2 transition-colors">

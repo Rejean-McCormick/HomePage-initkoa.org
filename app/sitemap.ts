@@ -368,32 +368,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/konstruct-mythos`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/konstruct`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/stockage-mythos`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/stockage`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     // 5. Kreative
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kreative`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/kontact-mythos`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kreative/kontact`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/konservation-mythos`,
+      url: `${baseUrl}/kreature/anatomie/esprit/konnaxion-mythos/kreative/konservation`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,

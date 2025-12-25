@@ -1,12 +1,9 @@
-// app\kreature\rituels\page.tsx
 // app/kreature/rituels/page.tsx
 import Link from 'next/link';
 import { 
   BookOpen, 
   Wind, 
   Gavel, 
-  Sun, 
-  Clock, 
   ArrowRight,
   Repeat,
   Heart
@@ -14,7 +11,7 @@ import {
 
 export const metadata = {
   title: "Les Rituels — La Méthode",
-  description: "L'anatomie ne suffit pas. Il faut le mouvement. Découvrez la Respiration du Sens, le Parlement Intérieur et le Cycle Vital.",
+  description: "L'anatomie ne suffit pas. Il faut le mouvement. Découvrez la Respiration du Sens et le Parlement Intérieur.",
 };
 
 const RITUALS = [
@@ -33,22 +30,6 @@ const RITUALS = [
     href: "/kreature/rituels/parlement-interieur",
     icon: <Gavel className="w-6 h-6 text-purple-600" />,
     color: "bg-purple-50 border-purple-200"
-  },
-  {
-    title: "3. Le Cycle Vital",
-    subtitle: "Le Rythme (Time)",
-    desc: "La machine tourne 24/7, mais l'organisme a besoin de saisons. Les boucles Hebdo (Tactique), Mensuel (Opérationnel) et Annuel (Stratégique).",
-    href: "/kreature/rituels/cycle-vital",
-    icon: <Clock className="w-6 h-6 text-emerald-600" />,
-    color: "bg-emerald-50 border-emerald-200"
-  },
-  {
-    title: "4. Une Journée Type",
-    subtitle: "L'Exemple (Praxis)",
-    desc: "À quoi ressemble une vie dans Kréature ? Du réveil avec SenTient au coucher avec SwarmCraft. Une narration concrète.",
-    href: "/kreature/rituels/une-journee",
-    icon: <Sun className="w-6 h-6 text-amber-600" />,
-    color: "bg-amber-50 border-amber-200"
   }
 ];
 
@@ -109,7 +90,7 @@ export default function RituelsHubPage() {
       <section className="mb-20">
         <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-2">
           <Repeat className="w-6 h-6 text-slate-700" />
-          Les 4 Piliers de la Pratique
+          Les 2 Piliers de la Pratique
         </h2>
         
         <div className="grid gap-6">

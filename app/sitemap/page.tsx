@@ -131,7 +131,7 @@ export default function VisualSitemapPage() {
               <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/ethikos-mythos" label="Ethikos (Débat)" />
               <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/kollective" label="Kollective (Jugement)" />
               <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect" label="KeenKonnect (Action)" />
-              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos" label="Kreative (Culture)" />
+              <MapLink href="/kreature/anatomie/esprit/konnaxion-mythos/kreative" label="Kreative (Culture)" />
             </SubSection>
 
             <SubSection title="Rituels (L'Usage)">

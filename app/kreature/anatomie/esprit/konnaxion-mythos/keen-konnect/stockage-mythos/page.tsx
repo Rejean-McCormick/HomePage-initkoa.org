@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\keen-konnect\stockage-mythos\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/stockage-mythos/page.tsx
+// app\kreature\anatomie\esprit\konnaxion-mythos\keen-konnect\stockage\page.tsx
+// app/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect/stockage/page.tsx
 import Link from 'next/link';
 import { 
   FolderOpen, 

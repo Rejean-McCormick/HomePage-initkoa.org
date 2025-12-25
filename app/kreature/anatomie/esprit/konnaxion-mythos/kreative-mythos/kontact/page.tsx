@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\kreative-mythos\kontact\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/kontact-mythos/page.tsx
+// app\kreature\anatomie\esprit\konnaxion-mythos\kreative\kontact\page.tsx
+// app/kreature/anatomie/esprit/konnaxion-mythos/kreative/kontact/page.tsx
 import Link from 'next/link';
 import { 
   Users, 
@@ -134,10 +134,10 @@ export default function KontactPage() {
 
       {/* NAVIGATION FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kreative" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à Kreative
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/konservation-mythos" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kreative/konservation" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
           Visiter le Musée (Konservation) →
         </Link>
       </div>

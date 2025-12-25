@@ -12,9 +12,9 @@ const DRY_RUN = true; // ⚠️ Set to false to apply changes
 
 // DICTIONARY: [French Source] : [English Target]
 const TRANSLATIONS = {
-  'Controle-Et-Personnalisation': 'control-and-customization',
-  'Creation-De-Chemins': 'path-creation',
-  'Ethique-Et-Gouvernance': 'ethics-and-governance',
+  'controle-et-personnalisation': 'control-and-customization',
+  'creation-de-chemins': 'path-creation',
+  'ethique-et-gouvernance': 'ethics-and-governance',
   'Meta-Cognition-Et-Resolution': 'metacognition-and-resolution',
   'Specifications-Fonctionnelles': 'functional-specifications'
 };

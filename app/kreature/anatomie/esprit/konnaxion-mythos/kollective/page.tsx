@@ -29,7 +29,7 @@ const ORGANS = [
     title: "Smart Vote (Le Jugement)",
     subtitle: "Décision & Consensus Pondéré",
     desc: "Comment décider ? Smart Vote utilise le poids d'EkoH pour trancher. Il cherche le consensus qualifié, pas la tyrannie de la majorité.",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/kollective/smart-vote-mythos",
+    href: "/kreature/anatomie/esprit/konnaxion-mythos/kollective/smart-vote",
     icon: <Vote className="w-6 h-6 text-indigo-600" />,
     color: "bg-indigo-50 border-indigo-200"
   }

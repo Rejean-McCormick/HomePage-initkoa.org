@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion-mythos\kreative-mythos\page.tsx
-// app/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/page.tsx
+// app\kreature\anatomie\esprit\konnaxion-mythos\kreative\page.tsx
+// app/kreature/anatomie/esprit/konnaxion-mythos/kreative/page.tsx
 import Link from 'next/link';
 import { 
   Palette, 
@@ -20,7 +20,7 @@ const MODULES = [
     title: "Kontact",
     subtitle: "Le Réseau (CRM Vivant)",
     desc: "La carte des vivants. Ce n'est pas un annuaire froid, c'est le système nerveux social. Qui est qui ? Qui connaît qui ? C'est le tissu humain.",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/kontact-mythos",
+    href: "/kreature/anatomie/esprit/konnaxion-mythos/kreative/kontact",
     icon: <Users className="w-6 h-6 text-pink-600" />,
     color: "bg-pink-50 border-pink-200"
   },
@@ -28,7 +28,7 @@ const MODULES = [
     title: "Konservation",
     subtitle: "Le Musée (Patrimoine)",
     desc: "La curation de l'âme collective. Contrairement au stockage (outils), ici on garde ce qui est beau, historique et sacré. Les totems de la tribu.",
-    href: "/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/konservation-mythos",
+    href: "/kreature/anatomie/esprit/konnaxion-mythos/kreative/konservation",
     icon: <Landmark className="w-6 h-6 text-amber-600" />,
     color: "bg-amber-50 border-amber-200"
   }
@@ -124,7 +124,7 @@ export default function KreativePage() {
         <Link href="/kreature/anatomie/esprit/konnaxion-mythos/keen-konnect" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour à KeenKonnect
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kreative-mythos/kontact-mythos" className="text-pink-600 hover:text-pink-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion-mythos/kreative/kontact" className="text-pink-600 hover:text-pink-800 font-bold flex items-center gap-2 transition-colors">
           Entrer dans Kontact (Le Réseau) →
         </Link>
       </div>
