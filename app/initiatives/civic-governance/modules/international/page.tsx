@@ -27,7 +27,7 @@ export default function InternationalPage() {
       <h2 className="text-2xl font-bold text-slate-800 mb-6">Active Frameworks</h2>
 
       <Link
-        href="/initiatives/ukraine-peace-and-reconstruction-plan"
+        href="/initiatives/ukraine-peace-plan"
         className="group block p-8 border border-slate-200 rounded-2xl hover:border-purple-500 hover:shadow-lg transition-all"
       >
         <div className="flex justify-between items-start">

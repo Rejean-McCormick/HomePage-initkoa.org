@@ -87,7 +87,7 @@ ${content}
     const links = created
       .map((x) => x.rel.replace(/\.md$/i, "")) // "fvr/00-start-here/00-welcome"
       .sort((a, b) => a.localeCompare(b))
-      .map((sub) => `- [${sub}](/initiatives/ukraine-peace-and-reconstruction-plan/${sub})`)
+      .map((sub) => `- [${sub}](/initiatives/ukraine-peace-plan/${sub})`)
       .join("\n");
 
     const landing = `export const metadata = {

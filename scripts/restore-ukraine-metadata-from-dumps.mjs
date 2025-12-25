@@ -8,7 +8,7 @@
 //
 // Options:
 //   --root     : repo root (default: cwd)
-//   --dumpDir  : directory containing the ukraine-peace-and-reconstruction-plan_*_*.json dump files
+//   --dumpDir  : directory containing the ukraine-peace-plan_*_*.json dump files
 //   --backup   : creates page.tsx.bak if missing
 //   --dry-run  : no writes
 //   --verbose  : logs updated files
@@ -245,7 +245,7 @@ async function main() {
     args.root,
     "app",
     "initiatives",
-    "ukraine-peace-and-reconstruction-plan"
+    "ukraine-peace-plan"
   );
 
   if (!(await exists(ukDir))) {

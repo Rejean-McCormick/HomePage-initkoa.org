@@ -4,12 +4,12 @@
 //   node .\scripts\convert-ukraine-links.mjs --root "C:\MyCode\OkidoWiki\HomePage" --backup
 //
 // Optional:
-//   --map  "app\initiatives\ukraine-peace-and-reconstruction-plan\ukraine-link-conversion-map.json"
+//   --map  "app\initiatives\ukraine-peace-plan\ukraine-link-conversion-map.json"
 
 import fs from "node:fs/promises";
 import path from "node:path";
 
-const BASE_ROUTE = "/initiatives/ukraine-peace-and-reconstruction-plan";
+const BASE_ROUTE = "/initiatives/ukraine-peace-plan";
 
 function parseArgs(argv) {
   const out = {
@@ -255,7 +255,7 @@ function rewriteContent(content, relFile, jsonMap, routeTailSet, conceptSlugSet,
 async function main() {
   const args = parseArgs(process.argv);
 
-  const ukDir = path.join(args.root, "app", "initiatives", "ukraine-peace-and-reconstruction-plan");
+  const ukDir = path.join(args.root, "app", "initiatives", "ukraine-peace-plan");
   const defaultMap = path.join(ukDir, "ukraine-link-conversion-map.json");
   const mapPath = args.map
     ? (path.isAbsolute(args.map) ? args.map : path.join(args.root, args.map))

@@ -139,7 +139,7 @@ ${meta}export default function Page() {
 async function main() {
   const args = parseArgs(process.argv);
 
-  const ukDir = path.join(args.root, "app", "initiatives", "ukraine-peace-and-reconstruction-plan");
+  const ukDir = path.join(args.root, "app", "initiatives", "ukraine-peace-plan");
   if (!(await exists(ukDir))) {
     console.error(`Ukraine dir not found:\n  ${ukDir}`);
     process.exit(1);

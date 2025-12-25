@@ -31,14 +31,14 @@ export default function KonnaxionPage() {
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
           <a 
             href="https://konnaxion.com/ekoh/dashboard" 
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             className="px-6 py-3 bg-slate-900 text-white rounded-sm font-medium hover:bg-primary transition-colors text-center"
           >
             Visit the Dashboard
           </a>
           <a 
             href="https://kingklown.wiki/" 
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             className="px-6 py-3 border border-gray-300 text-slate-700 rounded-sm font-medium hover:border-slate-900 hover:text-slate-900 transition-colors text-center"
           >
             Presentation (KingKlown.wiki)
@@ -126,7 +126,7 @@ export default function KonnaxionPage() {
                   <p className="text-sm text-slate-600">Reputation & Expertise: multidimensional scoring, ethical multipliers, audit trails.</p>
                 </div>
                 <div>
-                  <Link href="/platforms/konnaxion/Kollective-Intelligence/Smart-Vote" className="font-bold text-primary hover:underline block mb-1">Smart Vote</Link>
+                  <Link href="/platforms/konnaxion/kollective-intelligence/smart-vote" className="font-bold text-primary hover:underline block mb-1">Smart Vote</Link>
                   <p className="text-sm text-slate-600">Weighted Voting System: EkoH‑weighted voting, emerging‑expert detection.</p>
                 </div>
               </div>
