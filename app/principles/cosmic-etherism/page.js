@@ -1,4 +1,4 @@
-// app\principles\cosmic-etherism\page.js
+// app/principles/cosmic-etherism/page.js
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
@@ -102,7 +102,7 @@ export default function CosmicEtherismPage() {
               <a
                 className="underline"
                 href="https://www.amazon.ca/Konvergence-%C3%89cho%C3%AFsme-R%C3%A9jean-McCormick-ebook/dp/B0F1CBRP1L?ref_=ast_author_dp_rw&th=1&psc=1&dib_tag=AUTHOR"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 Konvergence – Échoïsme
@@ -112,7 +112,7 @@ export default function CosmicEtherismPage() {
               <a
                 className="underline"
                 href="https://www.amazon.ca/King-Klown-Kronicles-hidden-Manifesto-ebook/dp/B0DZ76L1N3?ref_=ast_author_dp_rw&th=1&psc=1&dib_tag=AUTHOR"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 King Klown Kronicles – The hidden Manifesto
