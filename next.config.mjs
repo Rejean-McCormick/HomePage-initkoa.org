@@ -1,42 +1,37 @@
 import createMDX from "@next/mdx";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
+// Removed rehypeAutolinkHeadings import
 import rehypeExternalLinks from "rehype-external-links";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Include MD/MDX as routable pages in the App Router
+  // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 
-  // Fix your case-sensitive route mismatch so clicks + client routing never 404
-  async redirects() {
-    return [
-      {
-        source: "/platforms/konnaxion/kollective-intelligence/:path*",
-        destination: "/platforms/konnaxion/Kollective-Intelligence/:path*",
-        permanent: true,
-      },
-    ];
-  },
-
-  // Security headers
+  // Security Headers to fix CSV report errors and harden security
   async headers() {
     return [
       {
-        source: "/:path*",
+        source: '/:path*',
         headers: [
-          { key: "X-Frame-Options", value: "DENY" },
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           {
-            key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; " +
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com; " +
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
-              "font-src 'self' https://fonts.gstatic.com; " +
-              "img-src 'self' blob: data: https:; " +
-              "connect-src 'self' https://www.google-analytics.com;",
+            key: 'X-Frame-Options',
+            value: 'DENY', // Prevents clickjacking
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff', // Prevents MIME type sniffing
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin', // Privacy control
+          },
+          {
+            key: 'Content-Security-Policy',
+            // Basic CSP: Allows scripts/styles from self and Google Fonts/Analytics. 
+            // Added 'unsafe-inline' for styles which is often needed for CSS-in-JS libraries or Tailwind.
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' blob: data: https:; connect-src 'self' https://www.google-analytics.com;",
           },
         ],
       },
@@ -45,14 +40,18 @@ const nextConfig = {
 };
 
 const withMDX = createMDX({
-  extension: /\.mdx?$/,
+  // By default, only .mdx files are compiled. 
+  // We keep this to ensure explicit handling.
+  extension: /\.mdx?$/, 
   options: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
-      rehypeSlug,
-      [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }],
+      rehypeSlug, // Adds IDs to headings (useful for anchor links, but won't make the text clickable)
+      // Removed rehypeAutolinkHeadings here
+      [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }], // Opens external links in new tab
     ],
   },
 });
 
+// Wrap the Next.js config with the MDX configuration
 export default withMDX(nextConfig);

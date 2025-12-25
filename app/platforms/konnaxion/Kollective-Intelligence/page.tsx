@@ -8,10 +8,14 @@ export const metadata = {
     "The conscience and judgment engine: Reputation (EkoH) and Voting (Smart Vote).",
 };
 
-// Deployed route casing is case-sensitive on Linux.
-// These work in prod:
-// /platforms/konnaxion/Kollective-Intelligence/ekoh
-// /platforms/konnaxion/Kollective-Intelligence/smart-vote
+/**
+ * IMPORTANT:
+ * Git (and Linux deploy) is case-sensitive and your repo tracks:
+ * app/platforms/konnaxion/Kollective-Intelligence/EkoH/page.mdx
+ * app/platforms/konnaxion/Kollective-Intelligence/smart-vote/page.mdx
+ *
+ * So these must be the exact hrefs to avoid 404 on click (client routing).
+ */
 const BASE = "/platforms/konnaxion/Kollective-Intelligence";
 
 export default function KollectivePage() {
@@ -45,7 +49,7 @@ export default function KollectivePage() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* EkoH */}
           <Link
-            href={`${BASE}/ekoh`}
+            href={`${BASE}/EkoH`}
             className="group block p-8 bg-slate-50 border border-slate-200 rounded-xl hover:border-yellow-500 hover:shadow-md transition-all"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-yellow-700 flex items-center">
