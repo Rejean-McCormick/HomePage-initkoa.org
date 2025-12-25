@@ -1,4 +1,3 @@
-// app\kreature\rituels\respiration-du-sens\page.tsx
 // app/kreature/rituels/respiration-du-sens/page.tsx
 import Link from 'next/link';
 import { 
@@ -109,17 +108,14 @@ export default function RespirationDuSensPage() {
           <ul className="space-y-3 text-sm font-mono">
             <li className="flex gap-3">
               <span className="text-sky-400">1. Ingest:</span>
-              {/* FIX APPLIED BELOW: Replaced '->' with '&rarr;' */}
-              <span>Webhook recieves &rarr; 200 OK &rarr; Queue.</span>
+              <span>Webhook receives &rarr; 200 OK &rarr; Queue.</span>
             </li>
             <li className="flex gap-3">
               <span className="text-indigo-400">2. Process:</span>
-              {/* FIX APPLIED BELOW: Replaced '->' with '&rarr;' */}
               <span>Worker picks up &rarr; Normalize &rarr; Context.</span>
             </li>
             <li className="flex gap-3">
               <span className="text-amber-400">3. Dispatch:</span>
-              {/* FIX APPLIED BELOW: Replaced '->' with '&rarr;' */}
               <span>Trigger Workflow &rarr; Execute Task.</span>
             </li>
           </ul>
@@ -146,8 +142,9 @@ export default function RespirationDuSensPage() {
         <Link href="/kreature/anatomie/sens/sentient" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Les Sens (SenTient)
         </Link>
-        <Link href="/kreature/rituels/cycle-vital" className="text-sky-600 hover:text-sky-800 font-bold flex items-center gap-2 transition-colors">
-          Le Grand Rythme (Cycle Vital) →
+        {/* Fixed broken link: 'cycle-vital' was removed, pointing to the next valid ritual */}
+        <Link href="/kreature/rituels/parlement-interieur" className="text-sky-600 hover:text-sky-800 font-bold flex items-center gap-2 transition-colors">
+          Le Parlement Intérieur (Le Choix) →
         </Link>
       </div>
 

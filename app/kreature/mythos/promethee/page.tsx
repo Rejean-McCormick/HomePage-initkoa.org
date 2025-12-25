@@ -1,4 +1,3 @@
-// app\kreature\mythos\promethee\page.tsx
 // app/kreature/mythos/promethee/page.tsx
 import Link from 'next/link';
 import { 
@@ -122,7 +121,8 @@ export default function PrometheePage() {
           <p className="mt-4">
             King Klown ne te dit pas quoi faire. Il te donne des rites simples : respirer du sens, tenir conseil, bâtir.
           </p>
-          <Link href="/kreature/rituels/une-journee" className="mt-6 inline-flex items-center text-orange-400 hover:text-orange-300 font-bold">
+          {/* LINK UPDATED: 'une-journee' (ghost page) replaced with main Rituels index */}
+          <Link href="/kreature/rituels" className="mt-6 inline-flex items-center text-orange-400 hover:text-orange-300 font-bold">
             Voir les Rituels <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>

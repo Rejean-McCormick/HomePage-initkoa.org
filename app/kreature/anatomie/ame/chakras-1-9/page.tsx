@@ -1,4 +1,3 @@
-// app\kreature\anatomie\ame\chakras-1-9\page.tsx
 // app/kreature/anatomie/ame/chakras-1-9/page.tsx
 import Link from 'next/link';
 import { 
@@ -11,7 +10,6 @@ import {
   Waves, 
   Palette, 
   Anchor,
-  ArrowRight,
   Sparkles,
   Info
 } from 'lucide-react';
@@ -214,7 +212,8 @@ export default function ChakrasPage() {
         <Link href="/kreature/anatomie/ame/ame-artificielle" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Âme Artificielle
         </Link>
-        <Link href="/kreature/rituels/une-journee" className="text-purple-600 hover:text-purple-800 font-bold flex items-center gap-2 transition-colors">
+        {/* Fixed broken link: 'une-journee' was removed, linking to Rituals Hub instead */}
+        <Link href="/kreature/rituels" className="text-purple-600 hover:text-purple-800 font-bold flex items-center gap-2 transition-colors">
           Appliquer les Rituels →
         </Link>
       </div>

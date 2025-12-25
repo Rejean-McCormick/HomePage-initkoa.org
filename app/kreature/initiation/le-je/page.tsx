@@ -1,4 +1,3 @@
-// app\kreature\initiation\le-je\page.tsx
 // app/kreature/initiation/le-je/page.tsx
 import Link from 'next/link';
 import { 
@@ -31,7 +30,8 @@ const NAVIGATION_MODES = [
     intent: "Quand tu veux comprendre où tu es (Voir)",
     action: "Ouvrir les Yeux",
     organ: "Ariane",
-    href: "/kreature/anatomie/sens/ariane",
+    // FIXED: Ariane is in /technology, not /kreature/anatomie/sens
+    href: "/technology/ariane", 
     icon: <Eye className="w-5 h-5 text-cyan-600" />,
     color: "bg-cyan-50 border-cyan-100"
   },
@@ -179,8 +179,9 @@ export default function LeJePage() {
         <Link href="/kreature/initiation" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Retour aux Axiomes
         </Link>
-        <Link href="/kreature/rituels/une-journee" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
-          Vivre une Journée Type →
+        {/* FIXED: 'une-journee' page was removed; redirecting to Rituals Index */}
+        <Link href="/kreature/rituels" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
+          Voir les Rituels →
         </Link>
       </div>
 
