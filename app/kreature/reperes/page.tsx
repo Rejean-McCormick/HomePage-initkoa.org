@@ -38,7 +38,7 @@ export default function ReperesHubPage() {
     <main className="max-w-4xl mx-auto px-6 py-12">
       <div className="mb-16 border-b border-gray-200 pb-8">
         <div className="flex items-center gap-4 mb-4">
-          <div className=\"p-3 bg-indigo-100 rounded-2xl\">
+          <div className="p-3 bg-indigo-100 rounded-2xl">
             <Map className="w-10 h-10 text-indigo-700" />
           </div>
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900">Repères</h1>
