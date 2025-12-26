@@ -16,7 +16,7 @@ export const metadata = {
  *
  * So these must be the exact hrefs to avoid 404 on click (client routing).
  */
-const BASE = "/platforms/konnaxion/Kollective-Intelligence";
+const BASE = "/platforms/konnaxion/kollective-intelligence";
 
 export default function KollectivePage() {
   return (
