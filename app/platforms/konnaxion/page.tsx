@@ -57,7 +57,7 @@ export default function KonnaxionPage() {
 
           <div className="grid md:grid-cols-2 gap-12">
             
-            {/* KonnectED - REMIS EN MAJUSCULES POUR CORRESPONDRE AU DOSSIER */}
+            {/* KonnectED */}
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">KonnectED</h3>
               <ul className="space-y-4">
@@ -72,7 +72,7 @@ export default function KonnaxionPage() {
               </ul>
             </div>
 
-            {/* Ethikos - REMIS EN MAJUSCULES POUR CORRESPONDRE AU DOSSIER */}
+            {/* Ethikos */}
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">Ethikos</h3>
               <ul className="space-y-4">
@@ -87,7 +87,7 @@ export default function KonnaxionPage() {
               </ul>
             </div>
 
-            {/* Kreative - REMIS EN MAJUSCULES POUR CORRESPONDRE AU DOSSIER */}
+            {/* Kreative */}
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">Kreative</h3>
               <ul className="space-y-4">
@@ -102,7 +102,7 @@ export default function KonnaxionPage() {
               </ul>
             </div>
 
-            {/* keenKonnect - REMIS EN MAJUSCULES POUR CORRESPONDRE AU DOSSIER */}
+            {/* keenKonnect */}
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">keenKonnect</h3>
               <ul className="space-y-4">
@@ -117,17 +117,15 @@ export default function KonnaxionPage() {
               </ul>
             </div>
 
-            {/* Kollective Intelligence - DOSSIER MINUSCULE (modifié via git mv) MAIS SOUS-DOSSIERS PROBABLEMENT MAJUSCULES */}
+            {/* Kollective Intelligence */}
             <div className="md:col-span-2 bg-slate-50 p-6 rounded-sm border border-slate-100">
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">Kollective Intelligence</h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  {/* ATTENTION: 'kollective-intelligence' en minuscule, mais 'EkoH' en Majuscule car c'est le nom du sous-dossier */}
                   <Link href="/platforms/konnaxion/kollective-intelligence/EkoH" className="font-bold text-primary hover:underline block mb-1">EkoH</Link>
                   <p className="text-sm text-slate-600">Reputation & Expertise: multidimensional scoring, ethical multipliers, audit trails.</p>
                 </div>
                 <div>
-                  {/* 'smart-vote' semble être en minuscule selon vos fichiers */}
                   <Link href="/platforms/konnaxion/kollective-intelligence/smart-vote" className="font-bold text-primary hover:underline block mb-1">Smart Vote</Link>
                   <p className="text-sm text-slate-600">Weighted Voting System: EkoH‑weighted voting, emerging‑expert detection.</p>
                 </div>
@@ -143,7 +141,6 @@ export default function KonnaxionPage() {
             For details about service code‑names, Django models, configuration parameters (thresholds, limits), and real‑time infrastructure (Channels/Redis):
           </p>
           <Link 
-            /* Assurez-vous que ce chemin correspond exactement à votre dossier Technical ou technical */
             href="/platforms/konnaxion/technical/konnaxion-technical-architecture-and-services" 
             className="inline-block px-4 py-2 border border-slate-600 rounded text-white hover:bg-slate-800 text-sm transition-colors"
           >
