@@ -1,4 +1,4 @@
-// app\platforms\konnaxion\page.tsx
+// app/platforms/konnaxion/page.tsx
 import Link from 'next/link';
 
 export const metadata = {
@@ -57,75 +57,77 @@ export default function KonnaxionPage() {
 
           <div className="grid md:grid-cols-2 gap-12">
             
-            {/* KonnectED */}
+            {/* KonnectED - REMIS EN MAJUSCULES POUR CORRESPONDRE AU DOSSIER */}
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">KonnectED</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link href="/platforms/konnaxion/konnected/knowledge" className="font-bold text-primary hover:underline">Knowledge</Link>
+                  <Link href="/platforms/konnaxion/KonnectED/Knowledge" className="font-bold text-primary hover:underline">Knowledge</Link>
                   <p className="text-sm text-slate-600">Collaborative Learning Library: catalog, recommendations, co‑creation, forums.</p>
                 </li>
                 <li>
-                  <Link href="/platforms/konnaxion/konnected/certifikation" className="font-bold text-primary hover:underline">CertifiKation</Link>
+                  <Link href="/platforms/konnaxion/KonnectED/CertifiKation" className="font-bold text-primary hover:underline">CertifiKation</Link>
                   <p className="text-sm text-slate-600">Skills & Certification: paths, evaluations, peer validation, portfolios.</p>
                 </li>
               </ul>
             </div>
 
-            {/* Ethikos */}
+            {/* Ethikos - REMIS EN MAJUSCULES POUR CORRESPONDRE AU DOSSIER */}
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">Ethikos</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link href="/platforms/konnaxion/ethikos/korum" className="font-bold text-primary hover:underline">Korum</Link>
+                  <Link href="/platforms/konnaxion/Ethikos/Korum" className="font-bold text-primary hover:underline">Korum</Link>
                   <p className="text-sm text-slate-600">Structured Debates: topics, −3…+3 stances, threaded arguments, expert cohorts.</p>
                 </li>
                 <li>
-                  <Link href="/platforms/konnaxion/ethikos/konsultations" className="font-bold text-primary hover:underline">Konsultations</Link>
+                  <Link href="/platforms/konnaxion/Ethikos/Konsultations" className="font-bold text-primary hover:underline">Konsultations</Link>
                   <p className="text-sm text-slate-600">Public Consultations: time‑boxed consultations, citizen suggestions, weighted ballots.</p>
                 </li>
               </ul>
             </div>
 
-            {/* Kreative */}
+            {/* Kreative - REMIS EN MAJUSCULES POUR CORRESPONDRE AU DOSSIER */}
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">Kreative</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link href="/platforms/konnaxion/kreative/konservation" className="font-bold text-primary hover:underline">Konservation</Link>
+                  <Link href="/platforms/konnaxion/Kreative/Konservation" className="font-bold text-primary hover:underline">Konservation</Link>
                   <p className="text-sm text-slate-600">Cultural Preservation: digital archives, virtual exhibitions, AI‑enriched catalog.</p>
                 </li>
                 <li>
-                  <Link href="/platforms/konnaxion/kreative/kontact" className="font-bold text-primary hover:underline">Kontact</Link>
+                  <Link href="/platforms/konnaxion/Kreative/Kontact" className="font-bold text-primary hover:underline">Kontact</Link>
                   <p className="text-sm text-slate-600">Collaboration & Networking: profiles, intelligent matching, opportunities.</p>
                 </li>
               </ul>
             </div>
 
-            {/* keenKonnect */}
+            {/* keenKonnect - REMIS EN MAJUSCULES POUR CORRESPONDRE AU DOSSIER */}
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">keenKonnect</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link href="/platforms/konnaxion/keenkonnect/konstruct" className="font-bold text-primary hover:underline">Konstruct</Link>
+                  <Link href="/platforms/konnaxion/keenKonnect/Konstruct" className="font-bold text-primary hover:underline">Konstruct</Link>
                   <p className="text-sm text-slate-600">Project Collaboration: workspaces, tasks, chat, AI insights.</p>
                 </li>
                 <li>
-                  <Link href="/platforms/konnaxion/keenkonnect/stockage" className="font-bold text-primary hover:underline">Stockage</Link>
+                  <Link href="/platforms/konnaxion/keenKonnect/Stockage" className="font-bold text-primary hover:underline">Stockage</Link>
                   <p className="text-sm text-slate-600">Secure Repository: document storage, versioning, indexing, real‑time sync.</p>
                 </li>
               </ul>
             </div>
 
-            {/* Kollective Intelligence */}
+            {/* Kollective Intelligence - DOSSIER MINUSCULE (modifié via git mv) MAIS SOUS-DOSSIERS PROBABLEMENT MAJUSCULES */}
             <div className="md:col-span-2 bg-slate-50 p-6 rounded-sm border border-slate-100">
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">Kollective Intelligence</h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <Link href="/platforms/konnaxion/kollective-intelligence/ekoh" className="font-bold text-primary hover:underline block mb-1">EkoH</Link>
+                  {/* ATTENTION: 'kollective-intelligence' en minuscule, mais 'EkoH' en Majuscule car c'est le nom du sous-dossier */}
+                  <Link href="/platforms/konnaxion/kollective-intelligence/EkoH" className="font-bold text-primary hover:underline block mb-1">EkoH</Link>
                   <p className="text-sm text-slate-600">Reputation & Expertise: multidimensional scoring, ethical multipliers, audit trails.</p>
                 </div>
                 <div>
+                  {/* 'smart-vote' semble être en minuscule selon vos fichiers */}
                   <Link href="/platforms/konnaxion/kollective-intelligence/smart-vote" className="font-bold text-primary hover:underline block mb-1">Smart Vote</Link>
                   <p className="text-sm text-slate-600">Weighted Voting System: EkoH‑weighted voting, emerging‑expert detection.</p>
                 </div>
@@ -141,6 +143,7 @@ export default function KonnaxionPage() {
             For details about service code‑names, Django models, configuration parameters (thresholds, limits), and real‑time infrastructure (Channels/Redis):
           </p>
           <Link 
+            /* Assurez-vous que ce chemin correspond exactement à votre dossier Technical ou technical */
             href="/platforms/konnaxion/technical/konnaxion-technical-architecture-and-services" 
             className="inline-block px-4 py-2 border border-slate-600 rounded text-white hover:bg-slate-800 text-sm transition-colors"
           >
