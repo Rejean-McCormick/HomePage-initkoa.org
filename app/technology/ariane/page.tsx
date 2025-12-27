@@ -22,7 +22,7 @@ export default function ArianePage() {
         
         <div className="prose prose-slate prose-lg text-slate-600 leading-relaxed">
           <p>
-            Ariane defines a universal graph model of software UIsâ€”screens, controls, and the actions that connect themâ€”so that external systems (such as AI agents or automation tools) can query this graph and use it as a reference when guiding users through software.
+            Ariane defines a universal graph model of software UIs—screens, controls, and the actions that connect them—so that external systems (such as AI agents or automation tools) can query this graph and use it as a reference when guiding users through software.
           </p>
         </div>
       </section>
@@ -35,22 +35,22 @@ export default function ArianePage() {
           <div className="grid md:grid-cols-2 gap-8">
             
             {/* Theseus */}
-            <Card title="Theseus (Exploration Engine)" href="/technology/ariane/theseus/theseus">
+            <Card title="Theseus (Exploration Engine)" href="/technology/ariane/theseus">
               <p className="mb-4">
-                The exploratory engine that inspects real software to extracts a graph of <strong>States</strong> (screens) and <strong>Transitions</strong> (actions).
+                The exploratory engine that inspects real software to extract a graph of <strong>States</strong> (screens) and <strong>Transitions</strong> (actions).
               </p>
               <span className="text-xs font-mono text-primary hover:underline">
-                View Documentation â†’
+                View Documentation →
               </span>
             </Card>
 
             {/* Atlas */}
-            <Card title="Atlas (UI Graph & Ontology)" href="/technology/ariane/atlas/atlas">
+            <Card title="Atlas (UI Graph & Ontology)" href="/technology/ariane/atlas">
               <p className="mb-4">
                 The storage and semantic layer that persists the UI graph. It provides the core schema for elements and actions.
               </p>
               <span className="text-xs font-mono text-primary hover:underline">
-                View Documentation â†’
+                View Documentation →
               </span>
             </Card>
           </div>
