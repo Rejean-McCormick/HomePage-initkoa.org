@@ -1,5 +1,3 @@
-// app\technology\ariane\atlas\page.tsx
-// app/technology/ariane/atlas/page.tsx
 import Link from 'next/link';
 import { 
   Database, 
@@ -42,7 +40,7 @@ export default function AtlasPage() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Overview */}
           <Link 
-            href="/technology/ariane/atlas/atlas"
+            href="/technology/ariane/atlas/atlas-ui-graph-and-ontology"
             className="group block p-8 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary transition-all"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary">
