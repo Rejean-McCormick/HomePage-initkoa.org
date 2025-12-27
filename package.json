@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/generate-ai-assets.mjs && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gen:ai": "node scripts/generate-ai-assets.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

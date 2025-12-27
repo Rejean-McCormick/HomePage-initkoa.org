@@ -1,8 +1,6 @@
-// app/robots.ts
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  // Fixed: Added 'www' to match your actual domain usage in the report
   const baseUrl = 'https://www.okido.wiki';
 
   return {
@@ -10,13 +8,16 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
       disallow: [
-        '/private/',      // Keep: Internal tools
-        '/admin/',        // Keep: Admin dashboard
-        '/api/',          // Keep: Backend endpoints
-        // REMOVED: '/_next/' -> Google needs this to render your page content (JS/CSS)
-        // REMOVED: '/static/' -> Google needs this to see your images and assets
+        '/private/',      // Internal tools
+        '/admin/',        // Admin dashboard
+        '/api/',          // Backend endpoints (AI agents read static files instead)
       ],
     },
-    sitemap: `${baseUrl}/sitemap.xml`,
+    // On déclare le sitemap classique ET le sitemap IA
+    sitemap: [
+      `${baseUrl}/sitemap.xml`,
+      `${baseUrl}/ai-sitemap.json`
+    ],
+    host: baseUrl,
   };
 }

@@ -1,4 +1,3 @@
-// app\layout.tsx
 // app/layout.tsx
 import './globals.css';
 import { Baskervville } from 'next/font/google';
@@ -30,6 +29,14 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="fr" className={baskervville.className}>
+      <head>
+        {/* === AI & LLM OPTIMIZATION === */}
+        {/* Indique aux agents IA où trouver la version texte pur du site complet */}
+        <link rel="alternate" type="text/plain" href="/ai-corpus.txt" title="AI Context Corpus" />
+        {/* Indique aux agents IA où trouver les instructions de lecture (llms.txt) */}
+        <link rel="help" href="/llms.txt" title="LLM Instructions" />
+      </head>
+      
       <body className="bg-white text-slate-900 antialiased">
         <Header />
         
