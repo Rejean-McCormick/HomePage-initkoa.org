@@ -1,9 +1,8 @@
-# fix-links.ps1
+# fix-links-v2.ps1
 
-Write-Host "Démarrage de la correction des liens dans le code..." -ForegroundColor Cyan
+Write-Host "Démarrage de la correction des liens (Version Corrigée)..." -ForegroundColor Cyan
 
 # 1. Liste des remplacements (Majuscule -> minuscule)
-# Nous ciblons les segments d'URL spécifiques que vous avez renommés.
 $replacements = @{
     "/KonnectED"      = "/konnected";
     "/Ethikos"        = "/ethikos";
@@ -12,7 +11,7 @@ $replacements = @{
     "/EkoH"           = "/ekoh";
     "/Technical"      = "/technical";
     
-    # Sous-modules Konnaxion
+    # Sous-modules
     "/Knowledge"      = "/knowledge";
     "/CertifiKation"  = "/certifikation";
     "/Korum"          = "/korum";
@@ -22,14 +21,12 @@ $replacements = @{
     "/Konstruct"      = "/konstruct";
     "/Stockage"       = "/stockage";
 
-    # Technology / Ariane
+    # Technology
     "/Ariane"         = "/ariane";
     "/Atlas"          = "/atlas";
     "/Concepts"       = "/concepts";
     "/Consumers"      = "/consumers";
     "/Theseus"        = "/theseus";
-
-    # Technology / Swarmcraft
     "/Swarmcraft"     = "/swarmcraft";
     "/Core"           = "/core";
     "/Meta"           = "/meta";
@@ -37,30 +34,31 @@ $replacements = @{
     "/Scaffold"       = "/scaffold"
 }
 
-# 2. Extensions de fichiers à scanner
-$extensions = @("*.tsx", "*.ts", "*.js", "*.jsx", "*.mdx", "*.json")
+# 2. Extensions (Simplifié)
+$extensions = @(".tsx", ".ts", ".js", ".jsx", ".mdx", ".json")
 
-# 3. Parcourir tous les fichiers dans le dossier 'app'
-$files = Get-ChildItem -Path "app" -Recurse -Include $extensions
+# 3. Récupération des fichiers (Méthode Robuste)
+# On récupère TOUS les fichiers récursivement, puis on filtre sur l'extension.
+# C'est plus sûr que -Include qui a des comportements bizarres sur certains Windows.
+$files = Get-ChildItem -Path "app" -Recurse -File | Where-Object { $extensions -contains $_.Extension }
 
 $count = 0
 
 foreach ($file in $files) {
-    # Lire le contenu
     $content = Get-Content $file.FullName -Raw
     $originalContent = $content
-    
-    # Appliquer tous les remplacements
+    $modified = $false
+
     foreach ($key in $replacements.Keys) {
-        # Remplacement insensible à la casse pour trouver la chaîne, mais on remplace par la version minuscule précise
-        # Note: .Replace() de .NET est sensible à la casse, ce qui est parfait ici car on veut cibler les Majuscules spécifiques.
-        if ($content.Contains($key)) {
+        # Vérification sensible à la casse (Case-Sensitive)
+        if ($content -clike "*$key*") {
+            # Remplacement
             $content = $content.Replace($key, $replacements[$key])
+            $modified = $true
         }
     }
 
-    # Si le fichier a changé, on sauvegarde
-    if ($content -ne $originalContent) {
+    if ($modified) {
         Set-Content -Path $file.FullName -Value $content -NoNewline -Encoding UTF8
         Write-Host "Corrigé : $($file.Name)" -ForegroundColor Green
         $count++
@@ -68,4 +66,3 @@ foreach ($file in $files) {
 }
 
 Write-Host "Terminé ! $count fichiers ont été mis à jour." -ForegroundColor Cyan
-Write-Host "Veuillez vérifier les changements avec 'git diff' avant de commiter." -ForegroundColor Yellow

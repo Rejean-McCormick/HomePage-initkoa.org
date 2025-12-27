@@ -1,14 +1,14 @@
-export const metadata = {
-  title: "Konnaxion – Technical Architecture & Services"
+﻿export const metadata = {
+  title: "Konnaxion â€“ Technical Architecture & Services"
 };
 
-# Konnaxion – Technical Architecture & Services
+# Konnaxion â€“ Technical Architecture & Services
 
-This page collects the **technical details** of Konnaxion: service code‑names, core models, configuration parameters, routing invariants, and cross‑module infrastructure. It complements:
+This page collects the **technical details** of Konnaxion: service codeâ€‘names, core models, configuration parameters, routing invariants, and crossâ€‘module infrastructure. It complements:
 
-* the repository **README**, which focuses on vision, mythology, and high‑level modules 
+* the repository **README**, which focuses on vision, mythology, and highâ€‘level modules 
 * the wiki **hub page**, which explains civic workflows and navigation
-* the individual module pages (Knowledge, CertifiKation, Korum, etc.), which describe each sub‑module functionally
+* the individual module pages (Knowledge, CertifiKation, Korum, etc.), which describe each subâ€‘module functionally
 
 Use this page as the reference for development and integration work.
 
@@ -19,18 +19,18 @@ Use this page as the reference for development and integration work.
 
 ### 1.1 KOA module map
 
-Konnaxion’s architecture is organized into six top‑level modules: 
+Konnaxionâ€™s architecture is organized into six topâ€‘level modules: 
 
-* **KonnectED** – learning, knowledge, and certification
-* **Ethikos** – structured debates and civic consultations
-* **Kreative** – culture, preservation, and professional networks
-* **keenKonnect** – project workspaces and storage
-* **Kollective Intelligence** – reputation and voting (EkoH, Smart Vote)
-* **System / Core** – cross‑cutting auth, storage, search, analytics
+* **KonnectED** â€“ learning, knowledge, and certification
+* **Ethikos** â€“ structured debates and civic consultations
+* **Kreative** â€“ culture, preservation, and professional networks
+* **keenKonnect** â€“ project workspaces and storage
+* **Kollective Intelligence** â€“ reputation and voting (EkoH, Smart Vote)
+* **System / Core** â€“ crossâ€‘cutting auth, storage, search, analytics
 
 Each KOA module is implemented as one or more Django apps with:
 
-* **service code‑names** (e.g. `multidimensional_scoring`, `public_consultation`) mapping 1‑to‑1 to service modules
+* **service codeâ€‘names** (e.g. `multidimensional_scoring`, `public_consultation`) mapping 1â€‘toâ€‘1 to service modules
 * **OLTP models** described in the v14 schema reference
 * **frozen configuration parameters** (thresholds, limits, routes)
 
@@ -40,40 +40,40 @@ Across modules, the technical stack is consistent:
 
 * **Backend**: Django + Django REST Framework
 * **Realtime**: Django Channels with Redis (`channels_redis.core.RedisChannelLayer`)
-* **Data store**: PostgreSQL with tsvector full‑text search
+* **Data store**: PostgreSQL with tsvector fullâ€‘text search
 * **Background tasks**: Celery (ETL, AI enrichment, packaging, recomputation)
 * **Object storage**: `/app/media/` root, typically backed by S3/MinIO
-* **Front‑end**: routes reserved per module (`/learn`, `/certs`, `/ethikos/korum`, etc.)
+* **Frontâ€‘end**: routes reserved per module (`/learn`, `/certs`, `/ethikos/korum`, etc.)
 
 ---
 
-## 2. Cross‑module infrastructure
+## 2. Crossâ€‘module infrastructure
 
-### 2.1 Service code‑name convention
+### 2.1 Service codeâ€‘name convention
 
-Every sub‑module defines **named services** that are stable integration points. Examples:
+Every subâ€‘module defines **named services** that are stable integration points. Examples:
 
 * Korum: `structured_debate`, `ai_clone_management`, `comparative_argument_analysis`, `public_debate_archive`, `automated_debate_summary` 
 * Smart Vote: `dynamic_weighted_vote`, `voting_modalities`, `emerging_expert_detection`, `vote_transparency`, `vote_result_visualization`, `cross_module_vote_integration` 
 * EkoH: `multidimensional_scoring`, `configuration_weights`, `contextual_analysis`, `privacy_settings`, `score_history`, `score_visualization`, `expertise_field_classification` 
 * Knowledge: `library_resource_management`, `personalized_recommendation`, `content_co_creation`, `thematic_forum`, `learning_progress_tracking` 
 
-Code‑names map 1‑to‑1 to service modules (e.g. `services/dynamic_weighted_vote.py`), and are referenced by tasks, API endpoints, and configuration.
+Codeâ€‘names map 1â€‘toâ€‘1 to service modules (e.g. `services/dynamic_weighted_vote.py`), and are referenced by tasks, API endpoints, and configuration.
 
 ### 2.2 Routing invariants
 
-Top‑level routes are **owned** by specific modules and treated as invariants. Namespacing is enforced for consistency:
+Topâ€‘level routes are **owned** by specific modules and treated as invariants. Namespacing is enforced for consistency:
 
-* `/learn`, `/course/[slug]` → KonnectED / Knowledge 
-* `/certs` → KonnectED / CertifiKation 
-* `/ethikos/korum`, `/ethikos/insights` → Ethikos / Korum 
-* `/ethikos/consult` → Ethikos / Konsultations 
-* `/projects`, `/projects/[slug]` → keenKonnect / Konstruct + Stockage
-* `/kreative`, `/art/[id]`, `/archive` → Kreative / Konservation 
-* `/connect`, `/profile/[user]` → Kreative / Kontact 
-* `/kollective/konsensus`, `/reports/smart-vote` → Kollective Intelligence / Smart Vote 
+* `/learn`, `/course/[slug]` â†’ KonnectED / Knowledge 
+* `/certs` â†’ KonnectED / CertifiKation 
+* `/ethikos/korum`, `/ethikos/insights` â†’ Ethikos / Korum 
+* `/ethikos/consult` â†’ Ethikos / Konsultations 
+* `/projects`, `/projects/[slug]` â†’ keenKonnect / Konstruct + Stockage
+* `/kreative`, `/art/[id]`, `/archive` â†’ Kreative / Konservation 
+* `/connect`, `/profile/[user]` â†’ Kreative / Kontact 
+* `/kollective/konsensus`, `/reports/smart-vote` â†’ Kollective Intelligence / Smart Vote 
 
-No other module should claim these top‑level paths.
+No other module should claim these topâ€‘level paths.
 
 ### 2.3 Storage and media
 
@@ -87,7 +87,7 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 ### 2.4 Search
 
-* Knowledge and Stockage explicitly use PostgreSQL full‑text search (`SEARCH_BACKEND = "postgres"`) for library resources and documents.
+* Knowledge and Stockage explicitly use PostgreSQL fullâ€‘text search (`SEARCH_BACKEND = "postgres"`) for library resources and documents.
 * Tags (`Tag`, `ArtworkTag`) provide a shared taxonomy layer across Kreative and keenKonnect.
 
 ### 2.5 Realtime and background jobs
@@ -95,31 +95,31 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 * **Django Channels + Redis** power:
 
   * live stance and result updates in Korum and Konsultations
-  * real‑time tallies in Smart Vote 
+  * realâ€‘time tallies in Smart Vote 
   * project chat, notifications, and document events in Konstruct and Stockage
   * collaboration rooms in Kontact 
 
 * **Celery tasks & schedules** include:
 
-  * `etl_smart_vote` every 10 minutes, with ~5‑year retention for facts 
+  * `etl_smart_vote` every 10 minutes, with ~5â€‘year retention for facts 
   * periodic EkoH score recomputation and leaderboard refresh 
   * weekly offline packaging for Knowledge (`OFFLINE_PACKAGE_CRON = 0 3 * * SUN`) 
   * image rendition, AI enrichment, and partner ingest for Konservation 
 
 ---
 
-## 3. Module–by–module technical summary
+## 3. Moduleâ€“byâ€“module technical summary
 
 ### 3.1 KonnectED
 
-#### 3.1.1 Knowledge – Collaborative Learning Library
+#### 3.1.1 Knowledge â€“ Collaborative Learning Library
 
 **Services**
-* `library_resource_management` – CRUD and classify `KnowledgeResource`; enforce type enum.
-* `personalized_recommendation` – compute `KnowledgeRecommendation` per user.
-* `content_co_creation` – manage `CoCreationProject` and `CoCreationContribution` drafts.
-* `thematic_forum` – forums via `ForumTopic` and `ForumPost`.
-* `learning_progress_tracking` – track `LearningProgress` (per user + resource).
+* `library_resource_management` â€“ CRUD and classify `KnowledgeResource`; enforce type enum.
+* `personalized_recommendation` â€“ compute `KnowledgeRecommendation` per user.
+* `content_co_creation` â€“ manage `CoCreationProject` and `CoCreationContribution` drafts.
+* `thematic_forum` â€“ forums via `ForumTopic` and `ForumPost`.
+* `learning_progress_tracking` â€“ track `LearningProgress` (per user + resource).
 
 **Core models**
 
@@ -138,17 +138,17 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 **Routes**
 
-* `/learn` – catalog, recommendations, offline download
-* `/course/[slug]` – course player (lessons, progression) 
+* `/learn` â€“ catalog, recommendations, offline download
+* `/course/[slug]` â€“ course player (lessons, progression) 
 
-#### 3.1.2 CertifiKation – Skills & Certification
+#### 3.1.2 CertifiKation â€“ Skills & Certification
 
 **Services**
-* `certification_path_management` – manage `CertificationPath`.
-* `automated_evaluation` – create `Evaluation` with `raw_score` and metadata.
-* `peer_validation` – handle `PeerValidation` decisions.
-* `skills_portfolio` – connect to `Portfolio` and core `Certificate` records.
-* `certification_interoperability` – manage `InteropMapping` with external LMS/registries.
+* `certification_path_management` â€“ manage `CertificationPath`.
+* `automated_evaluation` â€“ create `Evaluation` with `raw_score` and metadata.
+* `peer_validation` â€“ handle `PeerValidation` decisions.
+* `skills_portfolio` â€“ connect to `Portfolio` and core `Certificate` records.
+* `certification_interoperability` â€“ manage `InteropMapping` with external LMS/registries.
 
 **Core models**
 
@@ -169,30 +169,30 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 ### 3.2 Ethikos
 
-#### 3.2.1 Korum – Structured Debates
+#### 3.2.1 Korum â€“ Structured Debates
 
 **Services**
 * `structured_debate`, `ai_clone_management`, `comparative_argument_analysis`, `public_debate_archive`, `automated_debate_summary`.
 
 **Core models**
 
-* `EthikosCategory` – thematic categories
-* `EthikosTopic` – debate topic/question
-* `EthikosStance(topic, user, value −3…+3)`
+* `EthikosCategory` â€“ thematic categories
+* `EthikosTopic` â€“ debate topic/question
+* `EthikosStance(topic, user, value âˆ’3â€¦+3)`
 * `EthikosArgument(topic, author, content, parent, side)` 
 
 **Key configuration**
 
-* Stance scale: −3 … +3 (0 = neutral)
+* Stance scale: âˆ’3 â€¦ +3 (0 = neutral)
 * Expert cohort quorum: 12 distinct experts (EkoH threshold)
-* Moderation auto‑hide: 3 independent reports 
+* Moderation autoâ€‘hide: 3 independent reports 
 
 **Routes**
 
-* `/ethikos/korum` – Korum Hub (Open / Archived / Start New)
-* `/ethikos/insights` – opinion analytics dashboards 
+* `/ethikos/korum` â€“ Korum Hub (Open / Archived / Start New)
+* `/ethikos/insights` â€“ opinion analytics dashboards 
 
-#### 3.2.2 Konsultations – Public Consultations & Feedback
+#### 3.2.2 Konsultations â€“ Public Consultations & Feedback
 
 **Services**
 * `public_consultation`, `citizen_suggestion`, `weighted_consultation_vote`, `consultation_result_visualization`, `impact_tracking`.
@@ -208,19 +208,19 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 **Key configuration**
 
 * Ballot modalities: `approval | ranking | rating | preferential`
-* Consensus threshold (platform‑wide): ≥ 75% weighted agreement
+* Consensus threshold (platformâ€‘wide): â‰¥ 75% weighted agreement
 * Route namespace: `/ethikos/consult` owned exclusively by Ethikos
 
 **Routes**
 
-* `/ethikos/consult` – Consultation Hub (Live / Results / Suggest)
-* `/ethikos/insights` – shared with Korum analytics 
+* `/ethikos/consult` â€“ Consultation Hub (Live / Results / Suggest)
+* `/ethikos/insights` â€“ shared with Korum analytics 
 
 ---
 
 ### 3.3 Kreative
 
-#### 3.3.1 Konservation – Creative Content & Cultural Preservation
+#### 3.3.1 Konservation â€“ Creative Content & Cultural Preservation
 
 **Services**
 * `digital_archive_management`, `virtual_exhibition`, `archive_documentation`, `ai_enriched_catalogue`, `cultural_partner_integration`.
@@ -242,11 +242,11 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 **Routes**
 
-* `/kreative` – Creativity Hub
-* `/art/[id]` – Artwork sheet
-* `/archive` – Konservation archive/partners 
+* `/kreative` â€“ Creativity Hub
+* `/art/[id]` â€“ Artwork sheet
+* `/archive` â€“ Konservation archive/partners 
 
-#### 3.3.2 Kontact – Collaboration & Networking
+#### 3.3.2 Kontact â€“ Collaboration & Networking
 
 **Services**
 * `professional_profile`, `intelligent_matching`, `collaboration_workspace`, `opportunity_announcement`, `partner_recommendation`.
@@ -254,7 +254,7 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 **Core models**
 
 * `CollabSession(id, name, host, session_type, started_at, ended_at, final_artwork)`
-* Re‑uses `KreativeArtwork`, `Tag`, `ArtworkTag` for portfolios and tagging.
+* Reâ€‘uses `KreativeArtwork`, `Tag`, `ArtworkTag` for portfolios and tagging.
 
 **Key configuration**
 
@@ -264,14 +264,14 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 **Routes**
 
-* `/connect` – People, Opportunities, Collaboration Workspace
-* `/profile/[user]` – public profile/portfolio 
+* `/connect` â€“ People, Opportunities, Collaboration Workspace
+* `/profile/[user]` â€“ public profile/portfolio 
 
 ---
 
 ### 3.4 keenKonnect
 
-#### 3.4.1 Konstruct – Project Collaboration Spaces
+#### 3.4.1 Konstruct â€“ Project Collaboration Spaces
 
 **Services**
 * `collaboration_space`, `project_task_management`, `real_time_document_editing`, `integrated_communication`, `ai_collaboration_analysis`.
@@ -296,10 +296,10 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 **Routes**
 
-* `/projects` – Project Studio (Browse, Create, My Projects)
-* `/projects/[slug]` – workspace (Overview, Tasks, Blueprints, Chat, AI Insights, Settings) 
+* `/projects` â€“ Project Studio (Browse, Create, My Projects)
+* `/projects/[slug]` â€“ workspace (Overview, Tasks, Blueprints, Chat, AI Insights, Settings) 
 
-#### 3.4.2 Stockage – Secure Repository & Versioned Storage
+#### 3.4.2 Stockage â€“ Secure Repository & Versioned Storage
 
 **Services**
 * `secure_document_storage`, `document_versioning`, `intelligent_indexing`, `real_time_sync`, `granular_permissions`.
@@ -320,13 +320,13 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 **Routes**
 
-* Exposed inside `/projects/[slug]` as the “Blueprints” tab. 
+* Exposed inside `/projects/[slug]` as the â€œBlueprintsâ€ tab. 
 
 ---
 
 ### 3.5 Kollective Intelligence
 
-#### 3.5.1 EkoH – Reputation & Expertise
+#### 3.5.1 EkoH â€“ Reputation & Expertise
 
 **Services**
 * `multidimensional_scoring`, `configuration_weights`, `contextual_analysis`, `privacy_settings`, `score_history`, `score_visualization`, `expertise_field_classification`.
@@ -345,13 +345,13 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 * Axis weights: `quality=1.000`, `expertise=1.500`, `frequency=0.750`
 * Ethical multiplier bounds: floor `0.20`, cap `1.50`
-* `EXPERTISE_DOMAIN_CHOICES`: 26 ISO‑based domains 
+* `EXPERTISE_DOMAIN_CHOICES`: 26 ISOâ€‘based domains 
 
 **Runtime**
 
 * Periodic recomputation via Celery Beat; optional realtime pushes of score/leaderboard deltas over Channels+Redis. 
 
-#### 3.5.2 Smart Vote – Weighted Voting System
+#### 3.5.2 Smart Vote â€“ Weighted Voting System
 
 **Services**
 * `dynamic_weighted_vote`, `voting_modalities`, `emerging_expert_detection`, `vote_transparency`, `vote_result_visualization`, `cross_module_vote_integration`.
@@ -368,23 +368,23 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 * Modalities: `approval | ranking | rating | preferential`
 * Emerging expert threshold: +15% EkoH delta over 30 days
-* Strong consensus threshold: ≥ 75% weighted agreement 
+* Strong consensus threshold: â‰¥ 75% weighted agreement 
 
 **Runtime & analytics**
 
 * Realtime results through Channels+Redis
-* ETL `etl_smart_vote` every 10 minutes → `smart_vote_fact` table, 5‑year retention
+* ETL `etl_smart_vote` every 10 minutes â†’ `smart_vote_fact` table, 5â€‘year retention
 * UI: `/kollective/konsensus` (live polls/results), `/reports/smart-vote` (analytics) 
 
 ---
 
 ## 4. Data flows and integration
 
-### 4.1 Reputation‑weighted voting
+### 4.1 Reputationâ€‘weighted voting
 
-* EkoH computes per‑user, per‑domain expertise and ethics scores with configurable weights and bounds. 
+* EkoH computes perâ€‘user, perâ€‘domain expertise and ethics scores with configurable weights and bounds. 
 * Smart Vote reads those scores to weight `Vote` records via `dynamic_weighted_vote`, adjusting tallies per modality. 
-* Korum and Konsultations integrate with Smart Vote to obtain EkoH‑weighted stances and ballots:
+* Korum and Konsultations integrate with Smart Vote to obtain EkoHâ€‘weighted stances and ballots:
 
   * Korum aggregates `EthikosStance` using EkoH to compute expert cohort views.
   * Konsultations uses `weighted_consultation_vote` to store raw + weighted values per ballot.
@@ -393,26 +393,26 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 * Konstruct manages projects, tasks, chat, and ratings via `Project*` models. 
 * Stockage attaches documents and blueprints as `ProjectResource` records and handles versioning, indexing, and sync. 
-* Real‑time events (file added/updated/removed; chat messages) are emitted via Channels+Redis to subscribed project workspaces.
+* Realâ€‘time events (file added/updated/removed; chat messages) are emitted via Channels+Redis to subscribed project workspaces.
 
 ### 4.3 Culture, archives, and networks
 
-* Konservation’s `KreativeArtwork`, `Gallery`, and `TraditionEntry` store creative and heritage outputs with tag‑based discovery. 
+* Konservationâ€™s `KreativeArtwork`, `Gallery`, and `TraditionEntry` store creative and heritage outputs with tagâ€‘based discovery. 
 * Kontact reuses those artefacts and tags for profiles and matching, and stores collaboration sessions in `CollabSession`.
 * AI enrichment and partner ingest tasks update the archive and related metadata in the background. 
 
 ### 4.4 Learning and certification
 
-* Knowledge hosts resources, forums, and co‑creation spaces and tracks progression per user/resource. 
+* Knowledge hosts resources, forums, and coâ€‘creation spaces and tracks progression per user/resource. 
 * CertifiKation uses `CertificationPath`, `Evaluation`, and `PeerValidation` to issue `Certificate` records and fill user portfolios. 
-* Although not strictly specified, these activities can feed EkoH via `multidimensional_scoring` as part of the platform‑wide reputation engine. 
+* Although not strictly specified, these activities can feed EkoH via `multidimensional_scoring` as part of the platformâ€‘wide reputation engine. 
 
 ---
 
 ## 5. Analytics and insights
 
-* Smart Vote ETL (`etl_smart_vote`) is the central pipeline for decision analytics, aggregating delta changes from OLTP into a fact table with 5‑year retention, powering `/reports/smart-vote`. 
-* Ethikos exposes `/ethikos/insights` to visualize debate stances and consultation outcomes, consuming Smart Vote facts and Korum/Konsultations data.
+* Smart Vote ETL (`etl_smart_vote`) is the central pipeline for decision analytics, aggregating delta changes from OLTP into a fact table with 5â€‘year retention, powering `/reports/smart-vote`. 
+* Ethikos exposes `/ethikos/insights` to visualize debate stances and consultation outcomes, consuming Smart Vote facts and Korum/konsultations data.
 * EkoH retains a full audit trail via `ScoreHistory` and `ContextAnalysisLog`, enabling longitudinal analysis of reputation evolution. 
 
 ---
@@ -421,9 +421,9 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 
 When extending or integrating with Konnaxion, the following invariants should be respected (all documented above):
 
-1. **Do not change top‑level route ownership** (`/learn`, `/certs`, `/ethikos/korum`, `/ethikos/consult`, `/projects`, `/kreative`, `/connect`, `/kollective/konsensus`, `/reports/smart-vote`) without updating all dependent modules.
-2. **Preserve service code‑names** (e.g. `dynamic_weighted_vote`, `multidimensional_scoring`); treat them as public, versioned integration points.
+1. **Do not change topâ€‘level route ownership** (`/learn`, `/certs`, `/ethikos/korum`, `/ethikos/consult`, `/projects`, `/kreative`, `/connect`, `/kollective/konsensus`, `/reports/smart-vote`) without updating all dependent modules.
+2. **Preserve service codeâ€‘names** (e.g. `dynamic_weighted_vote`, `multidimensional_scoring`); treat them as public, versioned integration points.
 3. **Respect frozen parameter values** when relying on thresholds, caps, or schedule timings, or introduce new configuration entries in a documented way.
 4. **Reuse shared infrastructure** (Channels+Redis, Celery, `/app/media/`, PostgreSQL tsvector) to keep behavior consistent and predictable.
 
-This page, together with the module‑specific wiki entries, should provide enough technical context to navigate, extend, and integrate the Konnaxion codebase.
+This page, together with the moduleâ€‘specific wiki entries, should provide enough technical context to navigate, extend, and integrate the Konnaxion codebase.

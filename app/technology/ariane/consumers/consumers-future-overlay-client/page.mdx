@@ -1,4 +1,4 @@
-export const metadata = {
+﻿export const metadata = {
   title: "Consumers / Future Overlay Client (Concept)"
 };
 
@@ -6,7 +6,7 @@ export const metadata = {
 
 This page describes a **possible** overlay-style client as a downstream consumer of Ariane.
 
-It is intentionally non-normative: Ariane’s core scope is limited to exploration (Theseus) and storage/semantics (Atlas). An overlay client is one way to use that data, not a requirement of the project.
+It is intentionally non-normative: Arianeâ€™s core scope is limited to exploration (Theseus) and storage/semantics (Atlas). An overlay client is one way to use that data, not a requirement of the project.
 
 ---
 
@@ -19,7 +19,7 @@ A future overlay client would:
 - Query Atlas for recommended next actions.
 - Render hints directly on top of the application (e.g., highlights, arrows, step counters).
 
-From Ariane’s perspective, this client is simply:
+From Arianeâ€™s perspective, this client is simply:
 
 > A consumer that performs real-time state recognition and uses Atlas for next-step suggestions and path planning.
 
@@ -36,7 +36,7 @@ An overlay-style client (if built) would handle:
    - Compute or approximate fingerprints compatible with Atlas.
 
 2. **State recognition via Atlas**
-   - Query Atlas: “Which state does this UI most closely match?”
+   - Query Atlas: â€œWhich state does this UI most closely match?â€
    - Use returned `state_id`, elements, and semantics.
 
 3. **Guidance retrieval**
@@ -97,7 +97,7 @@ To keep the scope clear:
 - Ariane does **not** require any particular client to exist.
 - Ariane does **not** specify UX rules for guided walkthroughs.
 
-The only requirement is that any consumer—overlay or otherwise—must be able to:
+The only requirement is that any consumerâ€”overlay or otherwiseâ€”must be able to:
 
 - Recognize states.
 - Query transitions and intents.
@@ -107,7 +107,7 @@ The only requirement is that any consumer—overlay or otherwise—must be able 
 
 ## Related Pages
 
-- [Consumers](../Consumers) – overview of consumer types, including overlay as one example.  
-- [Consumers/AI-Agent-Integration](../Consumers-AI-Agent-Integration) – how agents use Atlas for planning and guidance.  
-- [Atlas](../Atlas) – data and semantics that overlay clients would query.  
-- [Theseus](../Theseus) – how the underlying UI graphs are discovered in the first place.
+- [Consumers](../consumers) â€“ overview of consumer types, including overlay as one example.  
+- [Consumers/AI-Agent-Integration](../consumers-AI-Agent-Integration) â€“ how agents use Atlas for planning and guidance.  
+- [Atlas](../atlas) â€“ data and semantics that overlay clients would query.  
+- [Theseus](../theseus) â€“ how the underlying UI graphs are discovered in the first place.

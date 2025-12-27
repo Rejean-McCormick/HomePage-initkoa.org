@@ -1,4 +1,4 @@
-export const metadata = {
+﻿export const metadata = {
   title: "Consumers"
 };
 
@@ -8,7 +8,7 @@ Ariane is designed as a data source.
 
 Theseus explores applications and Atlas stores UI graphs; **consumers** are any external systems that query Atlas to understand how to operate software.
 
-This page describes the main categories of consumers and the typical ways they interact with Ariane’s data.
+This page describes the main categories of consumers and the typical ways they interact with Arianeâ€™s data.
 
 ---
 
@@ -18,11 +18,11 @@ Examples of potential consumers include:
 
 - **AI agents**
   - Use Atlas to plan and execute multi-step actions inside existing software.
-  - Translate user goals (“export this document as PDF”) into concrete UI paths.
+  - Translate user goals (â€œexport this document as PDFâ€) into concrete UI paths.
 
 - **Automation tools**
   - Use Atlas to generate or validate scripts that manipulate applications via their UI.
-  - Prefer declarative workflows (“do ExportToPDF”) over brittle, hard-coded sequences.
+  - Prefer declarative workflows (â€œdo ExportToPDFâ€) over brittle, hard-coded sequences.
 
 - **Analysis and diagnostics tools**
   - Analyze UI graphs to understand complexity, reachability, and safety.
@@ -48,7 +48,7 @@ Most consumers follow a similar high-level pattern:
 
 3. **Plan a path**
    - Given a goal (expressed in terms of intents or state conditions), search for a path:
-     - `current_state` → ... → `goal_state`.
+     - `current_state` â†’ ... â†’ `goal_state`.
 
 4. **Execute or explain**
    - Instruct the user or an automation layer to perform the required steps.
@@ -64,7 +64,7 @@ The exact details depend on the consumer, but the underlying operations are:
 
 ## State Recognition
 
-To interact meaningfully, a consumer first needs to know “where it is” in the UI.
+To interact meaningfully, a consumer first needs to know â€œwhere it isâ€ in the UI.
 
 Typical steps:
 
@@ -74,7 +74,7 @@ Typical steps:
    - Visual/perceptual hashes (if screenshots are available).
    - Semantic hints from labels/text.
 3. Query Atlas:
-   - “Given these fingerprints/hints, which state(s) are most similar?”
+   - â€œGiven these fingerprints/hints, which state(s) are most similar?â€
 
 Atlas responds with:
 
@@ -90,8 +90,8 @@ Consumers can then decide whether they have a strong enough state match to proce
 
 Once a state is identified, consumers can ask:
 
-- “What can be done from here?”  
-- “Which actions correspond to a desired intent?”
+- â€œWhat can be done from here?â€  
+- â€œWhich actions correspond to a desired intent?â€
 
 Typical queries:
 
@@ -167,7 +167,7 @@ One possible consumer type is an overlay or heads-up display that:
 - Draws hints or highlights on top of the running application.
 - Shows step-by-step guidance to the user.
 
-From Ariane’s perspective, such a client:
+From Arianeâ€™s perspective, such a client:
 
 - Is just another consumer of the UI graph.
 - Uses state recognition and transition lookup in the same way as any other tool.
@@ -175,14 +175,14 @@ From Ariane’s perspective, such a client:
 
 This concept is not part of the core specification for Ariane, but documenting it here clarifies how the data model can support such use cases.
 
-See: [Consumers/Future-Overlay-Client](../Consumers-Future-Overlay-Client)
+See: [Consumers/Future-Overlay-Client](../consumers-Future-Overlay-Client)
 
 ---
 
 ## Related Pages
 
-- [Consumers/AI-Agent-Integration](../Consumers-AI-Agent-Integration) – more focused view on AI agents using Ariane.  
-- [Atlas](../Atlas) – storage and semantic layer that consumers query.  
-- [Atlas/Graph-Model](../Atlas-Graph-Model) – structural view of states and transitions.  
-- [Atlas/Core-Schema](../Atlas-Core-Schema) – fields available to consumers.  
-- [Background-UI-as-Data](../Background-UI-as-Data) – motivation for exposing UIs as data.
+- [Consumers/AI-Agent-Integration](../consumers-AI-Agent-Integration) â€“ more focused view on AI agents using Ariane.  
+- [Atlas](../atlas) â€“ storage and semantic layer that consumers query.  
+- [Atlas/Graph-Model](../atlas-Graph-Model) â€“ structural view of states and transitions.  
+- [Atlas/core-Schema](../atlas-Core-Schema) â€“ fields available to consumers.  
+- [Background-UI-as-Data](../Background-UI-as-Data) â€“ motivation for exposing UIs as data.

@@ -1,8 +1,8 @@
-// app/platforms/konnaxion/page.tsx
+﻿// app/platforms/konnaxion/page.tsx
 import Link from 'next/link';
 
 export const metadata = {
-  title: "Konnaxion – Civic Workflows & Module Interactions"
+  title: "Konnaxion â€“ Civic Workflows & Module Interactions"
 };
 
 export default function KonnaxionPage() {
@@ -20,7 +20,7 @@ export default function KonnaxionPage() {
         
         <div className="prose prose-slate prose-lg text-slate-600 leading-relaxed max-w-none">
           <p>
-            Konnaxion is a socio‑technical framework for coordinating people, knowledge, and action through an ethical, modular civic architecture built on the KOA model: <strong>KonnectED, Ethikos, Kreative, keenKonnect, EkoH, Smart Vote</strong>.
+            Konnaxion is a socioâ€‘technical framework for coordinating people, knowledge, and action through an ethical, modular civic architecture built on the KOA model: <strong>KonnectED, Ethikos, Kreative, keenKonnect, EkoH, Smart Vote</strong>.
           </p>
           <p>
             This page is the <strong>hub</strong> for the wiki. It summarizes how modules relate to each other. For implementation details, use the dedicated technical page linked at the end.
@@ -62,11 +62,11 @@ export default function KonnaxionPage() {
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">KonnectED</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link href="/platforms/konnaxion/KonnectED/Knowledge" className="font-bold text-primary hover:underline">Knowledge</Link>
-                  <p className="text-sm text-slate-600">Collaborative Learning Library: catalog, recommendations, co‑creation, forums.</p>
+                  <Link href="/platforms/konnaxion/konnected/knowledge" className="font-bold text-primary hover:underline">Knowledge</Link>
+                  <p className="text-sm text-slate-600">Collaborative Learning Library: catalog, recommendations, coâ€‘creation, forums.</p>
                 </li>
                 <li>
-                  <Link href="/platforms/konnaxion/KonnectED/CertifiKation" className="font-bold text-primary hover:underline">CertifiKation</Link>
+                  <Link href="/platforms/konnaxion/konnected/certifikation" className="font-bold text-primary hover:underline">CertifiKation</Link>
                   <p className="text-sm text-slate-600">Skills & Certification: paths, evaluations, peer validation, portfolios.</p>
                 </li>
               </ul>
@@ -77,12 +77,12 @@ export default function KonnaxionPage() {
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">Ethikos</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link href="/platforms/konnaxion/Ethikos/Korum" className="font-bold text-primary hover:underline">Korum</Link>
-                  <p className="text-sm text-slate-600">Structured Debates: topics, −3…+3 stances, threaded arguments, expert cohorts.</p>
+                  <Link href="/platforms/konnaxion/ethikos/korum" className="font-bold text-primary hover:underline">Korum</Link>
+                  <p className="text-sm text-slate-600">Structured Debates: topics, âˆ’3â€¦+3 stances, threaded arguments, expert cohorts.</p>
                 </li>
                 <li>
-                  <Link href="/platforms/konnaxion/Ethikos/Konsultations" className="font-bold text-primary hover:underline">Konsultations</Link>
-                  <p className="text-sm text-slate-600">Public Consultations: time‑boxed consultations, citizen suggestions, weighted ballots.</p>
+                  <Link href="/platforms/konnaxion/ethikos/konsultations" className="font-bold text-primary hover:underline">Konsultations</Link>
+                  <p className="text-sm text-slate-600">Public Consultations: timeâ€‘boxed consultations, citizen suggestions, weighted ballots.</p>
                 </li>
               </ul>
             </div>
@@ -92,11 +92,11 @@ export default function KonnaxionPage() {
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">Kreative</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link href="/platforms/konnaxion/Kreative/Konservation" className="font-bold text-primary hover:underline">Konservation</Link>
-                  <p className="text-sm text-slate-600">Cultural Preservation: digital archives, virtual exhibitions, AI‑enriched catalog.</p>
+                  <Link href="/platforms/konnaxion/kreative/konservation" className="font-bold text-primary hover:underline">Konservation</Link>
+                  <p className="text-sm text-slate-600">Cultural Preservation: digital archives, virtual exhibitions, AIâ€‘enriched catalog.</p>
                 </li>
                 <li>
-                  <Link href="/platforms/konnaxion/Kreative/Kontact" className="font-bold text-primary hover:underline">Kontact</Link>
+                  <Link href="/platforms/konnaxion/kreative/kontact" className="font-bold text-primary hover:underline">Kontact</Link>
                   <p className="text-sm text-slate-600">Collaboration & Networking: profiles, intelligent matching, opportunities.</p>
                 </li>
               </ul>
@@ -107,12 +107,12 @@ export default function KonnaxionPage() {
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">keenKonnect</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link href="/platforms/konnaxion/keenKonnect/Konstruct" className="font-bold text-primary hover:underline">Konstruct</Link>
+                  <Link href="/platforms/konnaxion/keenkonnect/konstruct" className="font-bold text-primary hover:underline">Konstruct</Link>
                   <p className="text-sm text-slate-600">Project Collaboration: workspaces, tasks, chat, AI insights.</p>
                 </li>
                 <li>
-                  <Link href="/platforms/konnaxion/keenKonnect/Stockage" className="font-bold text-primary hover:underline">Stockage</Link>
-                  <p className="text-sm text-slate-600">Secure Repository: document storage, versioning, indexing, real‑time sync.</p>
+                  <Link href="/platforms/konnaxion/keenkonnect/stockage" className="font-bold text-primary hover:underline">Stockage</Link>
+                  <p className="text-sm text-slate-600">Secure Repository: document storage, versioning, indexing, realâ€‘time sync.</p>
                 </li>
               </ul>
             </div>
@@ -122,12 +122,12 @@ export default function KonnaxionPage() {
               <h3 className="text-xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">Kollective Intelligence</h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <Link href="/platforms/konnaxion/kollective-intelligence/EkoH" className="font-bold text-primary hover:underline block mb-1">EkoH</Link>
+                  <Link href="/platforms/konnaxion/kollective-intelligence/ekoh" className="font-bold text-primary hover:underline block mb-1">EkoH</Link>
                   <p className="text-sm text-slate-600">Reputation & Expertise: multidimensional scoring, ethical multipliers, audit trails.</p>
                 </div>
                 <div>
                   <Link href="/platforms/konnaxion/kollective-intelligence/smart-vote" className="font-bold text-primary hover:underline block mb-1">Smart Vote</Link>
-                  <p className="text-sm text-slate-600">Weighted Voting System: EkoH‑weighted voting, emerging‑expert detection.</p>
+                  <p className="text-sm text-slate-600">Weighted Voting System: EkoHâ€‘weighted voting, emergingâ€‘expert detection.</p>
                 </div>
               </div>
             </div>
@@ -138,13 +138,13 @@ export default function KonnaxionPage() {
         <section className="bg-slate-900 text-slate-300 p-8 rounded-sm">
           <h2 className="text-xl font-bold text-white mb-4">Technical Architecture</h2>
           <p className="mb-6 text-sm leading-relaxed">
-            For details about service code‑names, Django models, configuration parameters (thresholds, limits), and real‑time infrastructure (Channels/Redis):
+            For details about service codeâ€‘names, Django models, configuration parameters (thresholds, limits), and realâ€‘time infrastructure (Channels/Redis):
           </p>
           <Link 
             href="/platforms/konnaxion/technical/konnaxion-technical-architecture-and-services" 
             className="inline-block px-4 py-2 border border-slate-600 rounded text-white hover:bg-slate-800 text-sm transition-colors"
           >
-            Technical Specs →
+            Technical Specs â†’
           </Link>
         </section>
 

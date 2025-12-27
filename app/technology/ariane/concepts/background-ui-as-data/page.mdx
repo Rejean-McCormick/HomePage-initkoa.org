@@ -1,11 +1,11 @@
-export const metadata = {
+﻿export const metadata = {
   title: "Background: UI as Data"
 };
 
 # Background: UI as Data
 
-Most digital knowledge today is captured as either text (“facts”) or structured records (“entities and relationships”).  
-But knowing *how to use* tools – the concrete sequences of clicks and inputs inside software – is still largely undocumented in a form machines can use.
+Most digital knowledge today is captured as either text (â€œfactsâ€) or structured records (â€œentities and relationshipsâ€).  
+But knowing *how to use* tools â€“ the concrete sequences of clicks and inputs inside software â€“ is still largely undocumented in a form machines can use.
 
 Ariane exists to address this gap by treating user interfaces themselves as data.
 
@@ -19,7 +19,7 @@ You can roughly separate knowledge into three domains:
 |---------------|-------------------------------------------|------------------------------|----------------|
 | Declarative   | Facts, concepts, history.                 | Text documents, encyclopedias, wikis. | High           |
 | Structured    | Entities, attributes, and relationships.  | Databases, knowledge graphs. | High           |
-| Procedural    | “How-to”, workflows, tool usage.          | Manuals, tutorials, videos.  | Low            |
+| Procedural    | â€œHow-toâ€, workflows, tool usage.          | Manuals, tutorials, videos.  | Low            |
 
 Declarative and structured knowledge have mature infrastructure: search engines, wikis, databases, and knowledge graphs.
 
@@ -38,15 +38,15 @@ These artifacts are optimized for humans to read or watch, not for machines to r
 Procedural knowledge has a few persistent problems:
 
 - **Opaque to machines**  
-  Manuals, videos, and blog posts rarely encode *exact* UI steps in a standardized way. Machines can’t reliably extract “Click X, then Y, then set Z to 3”.
+  Manuals, videos, and blog posts rarely encode *exact* UI steps in a standardized way. Machines canâ€™t reliably extract â€œClick X, then Y, then set Z to 3â€.
 
 - **Brittle and quickly outdated**  
   A minor UI redesign or new version can silently invalidate an entire tutorial.
 
 - **Fragmented across tools and versions**  
-  The same “intent” (e.g., “export to PDF”) looks very different across apps and releases.
+  The same â€œintentâ€ (e.g., â€œexport to PDFâ€) looks very different across apps and releases.
 
-As long as procedural knowledge remains tied to prose and pixels, AI systems have to infer “how to do things” from context or trial-and-error. That’s expensive, fragile, and often unsafe.
+As long as procedural knowledge remains tied to prose and pixels, AI systems have to infer â€œhow to do thingsâ€ from context or trial-and-error. Thatâ€™s expensive, fragile, and often unsafe.
 
 ---
 
@@ -64,9 +64,9 @@ This yields a simple but powerful structure:
 - Nodes = UI states.
 - Edges = transitions labeled with actions and semantic intents.
 
-Once interfaces are represented this way, “how to do X” is just a pathfinding problem:
+Once interfaces are represented this way, â€œhow to do Xâ€ is just a pathfinding problem:
 
-- “From current state `S`, find a path to a state where intent `ExportToPDF` is satisfied.”
+- â€œFrom current state `S`, find a path to a state where intent `ExportToPDF` is satisfied.â€
 
 ---
 
@@ -81,14 +81,14 @@ Representing UIs as data (rather than just screens and documentation) unlocks se
   Different app versions can have distinct graphs, while preserving history and compatibility.
 
 - **Cross-application reasoning**  
-  Different tools that implement the same concept (“Save”, “New project”, “Publish”) can be aligned via shared semantic intents, even if their UI layouts differ.
+  Different tools that implement the same concept (â€œSaveâ€, â€œNew projectâ€, â€œPublishâ€) can be aligned via shared semantic intents, even if their UI layouts differ.
 
 - **Static analysis of workflows**  
-  It becomes possible to analyze shortest paths, complexity, reachability, and safety properties (“is there a destructive action only one step away from a common state?”).
+  It becomes possible to analyze shortest paths, complexity, reachability, and safety properties (â€œis there a destructive action only one step away from a common state?â€).
 
 ---
 
-## Ariane’s Role
+## Arianeâ€™s Role
 
 Ariane focuses on two things:
 
@@ -114,7 +114,7 @@ Ariane is designed to sit alongside, not replace, existing knowledge systems:
 - Declarative knowledge remains in documentation, wikis, and reference material.
 - Structured knowledge remains in databases and knowledge graphs.
 - **Procedural knowledge** is where Ariane operates:
-  - It answers: “Given this software and this goal, what sequence of actions achieves it?”
+  - It answers: â€œGiven this software and this goal, what sequence of actions achieves it?â€
 
 In practice, an agent might:
 
@@ -125,6 +125,6 @@ In practice, an agent might:
 
 ## Next
 
-- [Theseus](../Theseus) – how Ariane explores and discovers UI states and transitions.  
-- [Atlas](../Atlas) – how those states and transitions are stored and described.  
-- [Consumers](../Consumers) – how external systems use the resulting data.
+- [Theseus](../theseus) â€“ how Ariane explores and discovers UI states and transitions.  
+- [Atlas](../atlas) â€“ how those states and transitions are stored and described.  
+- [Consumers](../consumers) â€“ how external systems use the resulting data.

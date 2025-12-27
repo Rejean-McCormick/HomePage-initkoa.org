@@ -1,4 +1,4 @@
-export const metadata = {
+﻿export const metadata = {
   title: "Theseus / Exploration Engine"
 };
 
@@ -122,7 +122,7 @@ Some actions are potentially destructive (e.g., delete, reset, format, uninstall
 Safety mechanisms include:
 
 - **Keyword-based filters**  
-  - Skip actions whose labels or descriptions match high-risk patterns (e.g., “Delete”, “Erase”, “Format”, “Reset”, “Uninstall”), especially when combined with red styling or warning icons.
+  - Skip actions whose labels or descriptions match high-risk patterns (e.g., â€œDeleteâ€, â€œEraseâ€, â€œFormatâ€, â€œResetâ€, â€œUninstallâ€), especially when combined with red styling or warning icons.
 
 - **Scope constraints**  
   - Do not navigate into obviously hazardous subsystems (e.g., system-level disk tools) unless explicitly allowed.
@@ -132,8 +132,8 @@ Safety mechanisms include:
 
 - **Configurable risk profiles**  
   - Allow running in:
-    - “Safe mode” – conservative, avoids any destructive-looking action.
-    - “Sandbox mode” – more permissive, for controlled environments such as test VMs.
+    - â€œSafe modeâ€ â€“ conservative, avoids any destructive-looking action.
+    - â€œSandbox modeâ€ â€“ more permissive, for controlled environments such as test VMs.
 
 The Exploration Engine should treat safety as a first-class concern.
 
@@ -228,7 +228,7 @@ Atlas then persists this information and makes it available to consumers.
 
 ## Related Pages
 
-- [Theseus](../Theseus) – overview of the exploration engine.  
-- [Theseus/State-Identification](../Theseus-State-Identification) – how states are fingerprinted and recognized.  
-- [Atlas](../Atlas) – how the discovered graph is stored and exposed to external systems.  
-- [Consumers/AI-Agent-Integration](../Consumers-AI-Agent-Integration) – how agents use the resulting graph during guidance.
+- [Theseus](../theseus) â€“ overview of the exploration engine.  
+- [Theseus/State-Identification](../theseus-State-Identification) â€“ how states are fingerprinted and recognized.  
+- [Atlas](../atlas) â€“ how the discovered graph is stored and exposed to external systems.  
+- [Consumers/AI-Agent-Integration](../consumers-AI-Agent-Integration) â€“ how agents use the resulting graph during guidance.

@@ -1,9 +1,9 @@
-// app/platforms/konnaxion/kollective-intelligence/page.tsx
+﻿// app/platforms/konnaxion/kollective-intelligence/page.tsx
 import Link from "next/link";
 import { BrainCircuit, Star, Vote, ArrowRight, Activity } from "lucide-react";
 
 export const metadata = {
-  title: "Kollective Intelligence Hub – Konnaxion",
+  title: "Kollective Intelligence Hub â€“ Konnaxion",
   description:
     "The conscience and judgment engine: Reputation (EkoH) and Voting (Smart Vote).",
 };
@@ -11,7 +11,7 @@ export const metadata = {
 /**
  * IMPORTANT:
  * Git (and Linux deploy) is case-sensitive and your repo tracks:
- * app/platforms/konnaxion/Kollective-Intelligence/EkoH/page.mdx
+ * app/platforms/konnaxion/Kollective-Intelligence/ekoh/page.mdx
  * app/platforms/konnaxion/Kollective-Intelligence/smart-vote/page.mdx
  *
  * So these must be the exact hrefs to avoid 404 on click (client routing).
@@ -49,7 +49,7 @@ export default function KollectivePage() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* EkoH */}
           <Link
-            href={`${BASE}/EkoH`}
+            href={`${BASE}/ekoh`}
             className="group block p-8 bg-slate-50 border border-slate-200 rounded-xl hover:border-yellow-500 hover:shadow-md transition-all"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-yellow-700 flex items-center">
@@ -58,7 +58,7 @@ export default function KollectivePage() {
             </h3>
             <p className="text-slate-600 mb-6 text-sm leading-relaxed">
               **The Conscience.** A multidimensional reputation engine. It tracks
-              expertise, consistency, and ethics over time—with a "decay rate" to
+              expertise, consistency, and ethics over timeâ€”with a "decay rate" to
               ensure influence is rented, never owned.
             </p>
             <div className="inline-flex items-center font-bold text-yellow-700 text-sm">
@@ -92,10 +92,10 @@ export default function KollectivePage() {
       {/* FOOTER NAV */}
       <div className="pt-8 border-t border-slate-100 flex justify-between text-sm">
         <Link href="/platforms/konnaxion" className="text-slate-500 hover:text-primary">
-          ← Back to Konnaxion Hub
+          â† Back to Konnaxion Hub
         </Link>
         <Link href="/platforms/konnaxion/keenkonnect" className="text-slate-500 hover:text-primary">
-          Next: keenKonnect (Coordination) →
+          Next: keenKonnect (Coordination) â†’
         </Link>
       </div>
     </main>
