@@ -31,7 +31,7 @@ export default function AboutPage() {
         <li><Link href="/platforms/orgo">2. Orgo (The Hermetic Bubble)</Link></li>
       </ul>
 
-      <h3>Commercial &amp; Research Modules</h3>
+      <h3>Commercial & Research Modules</h3>
       <ul>
         <li><Link href="/technology/ariane">Ariane (Commercial)</Link></li>
         <li><Link href="/technology/swarmcraft">SwarmCraft</Link></li>
@@ -41,52 +41,40 @@ export default function AboutPage() {
       <hr className="my-8 border-slate-200" />
 
       {/* --- External Inventory --- */}
-      <h2>Full Inventory &amp; Web Presence</h2>
+      <h2>Full Inventory & Web Presence</h2>
 
       <h3>Core Sites</h3>
       <ul>
         <li>
-          <strong>Roadmap</strong>: kingklown.xyz/koa ({' '}
+          <strong>Roadmap</strong>: {' '}
           <a href="https://kingklown.xyz/koa" target="_blank" rel="noopener noreferrer">
-            King Klown
+            kingklown.xyz/koa
           </a>
-          )
         </li>
         <li>
-          <strong>General presentation</strong>: kingklown.com ({' '}
+          <strong>General presentation</strong>: {' '}
           <a href="https://kingklown.com/" target="_blank" rel="noopener noreferrer">
-            King Klown
+            kingklown.com
           </a>
-          )
         </li>
         <li>
-          <strong>Political movement</strong>: kingklown.ca ({' '}
+          <strong>Political movement</strong>: {' '}
           <a href="https://kingklown.ca/" target="_blank" rel="noopener noreferrer">
-            King Klown
+            kingklown.ca
           </a>
-          )
         </li>
         <li>
-          <strong>Knowledge Platform hub</strong>: kingklown.wiki ({' '}
+          <strong>Knowledge Platform hub</strong>: {' '}
           <a href="https://www.kingklown.wiki/" target="_blank" rel="noopener noreferrer">
-            King Klown Wiki
+            kingklown.wiki
           </a>
-          )
         </li>
         <li>
-          <strong>Okido.wiki</strong>: Master list, Platforms, Initiatives ({' '}
-          <a href="https://okido.wiki/" target="_blank" rel="noopener noreferrer">
-            Okido
-          </a>
-          ,{' '}
-          <a href="https://www.okido.wiki/platforms" target="_blank" rel="noopener noreferrer">
-            Okido Platforms
-          </a>
-          )
+          <strong>Okido.wiki</strong>: Master list, Platforms, Initiatives
         </li>
       </ul>
 
-      <h3>Audio, Music &amp; Podcasts</h3>
+      <h3>Audio, Music & Podcasts</h3>
       <ul>
         <li>
           <strong>SoundCloud Sets</strong>:
@@ -104,162 +92,138 @@ export default function AboutPage() {
           </ul>
         </li>
         <li>
-          <strong>Spotify show</strong>: “King Klown” ({' '}
+          <strong>Spotify show</strong>: {' '}
           <a href="https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4?si=b51cc5d57ab242e8" target="_blank" rel="noopener noreferrer">
-            Spotify
+            “King Klown” Podcast
           </a>
-          ,{' '}
-          <a href="https://okido.wiki/" target="_blank" rel="noopener noreferrer">
-            Okido
-          </a>
-          )
         </li>
-        {/* The error was here. Replaced ">" with "&gt;" */}
         <li><strong>&gt;100 AI‑assisted songs (Suno)</strong></li>
       </ul>
 
-      <h3>Books &amp; Research Writings</h3>
+      <h3>Books & Research Writings</h3>
       <ul>
         <li>
-          <strong>Research Article (Medium)</strong>: <br/>
+          <strong>Research Article</strong>: {' '}
           <a href="https://medium.com/@boatbuilder610/pi-theory-from-a-circles-cut-to-a-cosmic-sequence-327e675296d0" target="_blank" rel="noopener noreferrer">
             Pi Theory: From a Circle’s Cut to a Cosmic Sequence
-          </a>
+          </a> (Medium)
         </li>
         <li>
-          <strong>The Book of kOA</strong> ({' '}
+          <strong>The Book of kOA</strong>: {' '}
           <a href="https://www.amazon.ca/Book-kOA-Comprehensive-Collaboration-Merit-Based/dp/B0FHWS687D" target="_blank" rel="noopener noreferrer">
             Amazon Canada
           </a>
-          )
         </li>
         <li>
-          <strong>Konvergence: Échoïsme + version franco</strong> ({' '}
+          <strong>Konvergence: Échoïsme + version franco</strong>: {' '}
           <a href="https://www.amazon.com/Konvergence-%C3%89cho%C3%AFsme-R%C3%A9jean-McCormick/dp/B0F1DGLDJ9" target="_blank" rel="noopener noreferrer">
-            Amazon
-          </a>
-          ,{' '}
+            Amazon US
+          </a>{' / '}
           <a href="https://www.amazon.ca/Konvergence-version-franco-R%C3%A9jean-McCormick-ebook/dp/B0F1DNQSTD" target="_blank" rel="noopener noreferrer">
             Amazon Canada
           </a>
-          )
         </li>
         <li>
-          <strong>King Klown Kronicles: The hidden Manifesto</strong> ({' '}
+          <strong>King Klown Kronicles: The hidden Manifesto</strong>: {' '}
           <a href="https://www.amazon.com/King-Klown-Kronicles-hidden-Manifesto/dp/B0DZCXT7VP" target="_blank" rel="noopener noreferrer">
-            Amazon
-          </a>
-          ,{' '}
+            Amazon US
+          </a>{' / '}
           <a href="https://www.amazon.ca/-/fr/R%C3%A9jean-McCormick-ebook/dp/B0DZ76L1N3" target="_blank" rel="noopener noreferrer">
             Amazon Canada
           </a>
-          )
         </li>
         <li>
-          <strong>Empowering AI for Programmers: The Kristal Framework</strong> ({' '}
+          <strong>Empowering AI for Programmers: The Kristal Framework</strong>: {' '}
           <a href="https://www.amazon.com/-/es/Empowering-Programmers-Framework-Human-Centered-Integration/dp/B0DZCQBZZG" target="_blank" rel="noopener noreferrer">
-            Amazon
+            Amazon US
           </a>
-          )
         </li>
       </ul>
 
-      <h3>Social, Professional &amp; Academic Profiles</h3>
+      <h3>Social, Professional & Academic Profiles</h3>
       <ul>
         <li>
-          <strong>LinkedIn</strong>: ({' '}
+          <strong>LinkedIn</strong>: {' '}
           <a href="https://www.linkedin.com/in/r%C3%A9jean-mccormick-51403a37b/" target="_blank" rel="noopener noreferrer">
             Réjean McCormick
           </a>
-          )
         </li>
         <li>
-          <strong>PhilPeople</strong>: ({' '}
+          <strong>PhilPeople</strong>: {' '}
           <a href="https://philpeople.org/profiles/rejean-mccormick" target="_blank" rel="noopener noreferrer">
-            Profile
+            rejean-mccormick
           </a>
-          )
         </li>
         <li>
-          <strong>Wikimedia Meta-Wiki</strong>: ({' '}
+          <strong>Wikimedia Meta-Wiki</strong>: {' '}
           <a href="https://meta.wikimedia.org/wiki/User:Réjean_McCormick" target="_blank" rel="noopener noreferrer">
             User:Réjean_McCormick
           </a>
-          )
         </li>
         <li>
-          <strong>Wikidata</strong>: ({' '}
+          <strong>Wikidata</strong>: {' '}
           <a href="https://www.wikidata.org/wiki/Q136893064" target="_blank" rel="noopener noreferrer">
             Item Q136893064
           </a>
-          )
         </li>
         <li>
-          <strong>Mastodon</strong>: ({' '}
+          <strong>Mastodon</strong>: {' '}
           <a href="https://mastodon.social/@Rejean_McCormick/" target="_blank" rel="noopener noreferrer">
             @Rejean_McCormick
           </a>
-          )
         </li>
         <li>
-          <strong>YouTube</strong>: @KingKlownXYZ ({' '}
+          <strong>YouTube</strong>: {' '}
           <a href="https://kingklown.life" target="_blank" rel="noopener noreferrer">
             kingklown.life
-          </a>
-          )
+          </a> (@KingKlownXYZ)
         </li>
         <li>
-          <strong>X/Twitter</strong>: @KingKlownXYZ ({' '}
+          <strong>X/Twitter</strong>: {' '}
           <a href="https://x.com/KingKlownXYZ" target="_blank" rel="noopener noreferrer">
-            X
+            @KingKlownXYZ
           </a>
-          )
         </li>
         <li>
-          <strong>Tumblr</strong>: @kingklownxyz ({' '}
+          <strong>Tumblr</strong>: {' '}
           <a href="https://www.tumblr.com/kingklownxyz" target="_blank" rel="noopener noreferrer">
-            Tumblr
+            @kingklownxyz
           </a>
-          )
         </li>
         <li>
-          <strong>TikTok</strong>: @kingklown.xyz ({' '}
+          <strong>TikTok</strong>: {' '}
           <a href="https://www.tiktok.com/@kingklown.xyz" target="_blank" rel="noopener noreferrer">
-            TikTok
+            @kingklown.xyz
           </a>
-          )
         </li>
         <li>
-          <strong>Twitch</strong>: @kingklownxyz ({' '}
+          <strong>Twitch</strong>: {' '}
           <a href="https://www.twitch.tv/kingklownxyz" target="_blank" rel="noopener noreferrer">
-            Twitch
+            @kingklownxyz
           </a>
-          )
         </li>
         <li>
-          <strong>Facebook &amp; Instagram</strong>: Linked via GitHub profile ({' '}
+          <strong>Facebook & Instagram</strong>: Linked via {' '}
           <a href="https://github.com/Rejean-McCormick/" target="_blank" rel="noopener noreferrer">
             GitHub
-          </a>
-          )
+          </a> profile
         </li>
       </ul>
 
       <h3>Development</h3>
       <ul>
         <li>
-          <strong>GitHub</strong>: Rejean‑McCormick ({' '}
+          <strong>GitHub</strong>: {' '}
           <a href="https://github.com/Rejean-McCormick/" target="_blank" rel="noopener noreferrer">
-            GitHub
+            Rejean‑McCormick
           </a>
-          )
         </li>
       </ul>
 
       <h3>KOA Internal Platforms</h3>
       <ul>
         <li>
-          <strong>Konnaxion, Kristal Farms, Orgo</strong>
+          <strong>Konnaxion, Kristal Farms, Orgo</strong> (Accessible via Ecosystem)
         </li>
       </ul>
 
@@ -268,31 +232,23 @@ export default function AboutPage() {
         <li>
           <strong>Gamma deck</strong>: “Global Strategic Overview — Why KOA?” ({' '}
           <a href="https://kingklown.xyz/koa" target="_blank" rel="noopener noreferrer">
-            King Klown
-          </a>
-          ,{' '}
+            Via Roadmap
+          </a>{' / '}
           <a href="https://koa-movement-x84fw57.gamma.site/" target="_blank" rel="noopener noreferrer">
-            KOA Movement
+            Direct Link
           </a>
           )
         </li>
       </ul>
 
-      <h3>Store &amp; Contact</h3>
+      <h3>Store & Contact</h3>
       <ul>
         <li>
-          <strong>Branded clothes</strong>: kingklown.store ({' '}
-          <a href="https://okido.wiki/" target="_blank" rel="noopener noreferrer">
-            Okido
-          </a>
-          )
+          <strong>Branded clothes</strong>: kingklown.store
         </li>
         <li>
-          <strong>Email</strong>: k@kingklown.com ({' '}
-          <a href="https://www.okido.wiki/contact" target="_blank" rel="noopener noreferrer">
-            Okido Contact
-          </a>
-          )
+          <strong>Email</strong>: {' '}
+          <a href="mailto:k@kingklown.com">k@kingklown.com</a>
         </li>
       </ul>
 
@@ -302,7 +258,7 @@ export default function AboutPage() {
         <li>
           <strong>Stage show</strong>: <em>Le Ninja Arc‑en‑ciel</em> (In development) —{' '}
           <a href="https://www.youtube.com/watch?v=Cz7qhJNDzuo" target="_blank" rel="noopener noreferrer">
-            Proof of concept for color shadow technique
+            View proof of concept
           </a>
         </li>
       </ul>
