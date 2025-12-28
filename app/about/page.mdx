@@ -16,7 +16,32 @@ export default function AboutPage() {
 
       <hr className="my-8 border-slate-200" />
 
-      <h2>Full Inventory</h2>
+      {/* --- System Architecture (Internal Next.js Links) --- */}
+      <h2>System Architecture (Technical Wikis)</h2>
+      
+      <h3>The Engines (Core Logic)</h3>
+      <ul>
+        <li><Link href="/technology/sentient">SenTient: The Deconstructor</Link></li>
+        <li><Link href="/technology/architect">Abstract Wiki Architect</Link></li>
+      </ul>
+
+      <h3>The Ecosystem: KOA</h3>
+      <ul>
+        <li><Link href="/platforms/konnaxion">1. Konnaxion (The Open Web)</Link></li>
+        <li><Link href="/platforms/orgo">2. Orgo (The Hermetic Bubble)</Link></li>
+      </ul>
+
+      <h3>Commercial & Research Modules</h3>
+      <ul>
+        <li><Link href="/technology/ariane">Ariane (Commercial)</Link></li>
+        <li><Link href="/technology/swarmcraft">SwarmCraft</Link></li>
+        <li><Link href="/technology/ame-artificielle">Ame-Artificielle (Âme artificielle)</Link></li>
+      </ul>
+
+      <hr className="my-8 border-slate-200" />
+
+      {/* --- External Inventory --- */}
+      <h2>Full Inventory & Web Presence</h2>
 
       <h3>Core Sites</h3>
       <ul>
@@ -49,7 +74,7 @@ export default function AboutPage() {
           )
         </li>
         <li>
-          <strong>Okido.wiki</strong>: Master list, Platforms, Initiatives, Principles ({' '}
+          <strong>Okido.wiki</strong>: Master list, Platforms, Initiatives ({' '}
           <a href="https://okido.wiki/" target="_blank" rel="noopener noreferrer">
             Okido
           </a>
@@ -61,8 +86,23 @@ export default function AboutPage() {
         </li>
       </ul>
 
-      <h3>Podcast / Audiobooks</h3>
+      <h3>Audio, Music & Podcasts</h3>
       <ul>
+        <li>
+          <strong>SoundCloud Sets</strong>:
+          <ul>
+            <li>
+              <a href="https://soundcloud.com/rejean-mccormick/sets/ninja_arc-en-ciel" target="_blank" rel="noopener noreferrer">
+                Ninja Arc-en-ciel
+              </a>
+            </li>
+            <li>
+              <a href="https://soundcloud.com/rejean-mccormick/sets/lumiere_blanche" target="_blank" rel="noopener noreferrer">
+                Lumière Blanche
+              </a>
+            </li>
+          </ul>
+        </li>
         <li>
           <strong>Spotify show</strong>: “King Klown” ({' '}
           <a href="https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4?si=b51cc5d57ab242e8" target="_blank" rel="noopener noreferrer">
@@ -74,10 +114,17 @@ export default function AboutPage() {
           </a>
           )
         </li>
+        <li><strong>&gt;100 AI‑assisted songs (Suno)</strong></li>
       </ul>
 
-      <h3>Books</h3>
+      <h3>Books & Research Writings</h3>
       <ul>
+        <li>
+          <strong>Research Article (Medium)</strong>: <br/>
+          <a href="https://medium.com/@boatbuilder610/pi-theory-from-a-circles-cut-to-a-cosmic-sequence-327e675296d0" target="_blank" rel="noopener noreferrer">
+            Pi Theory: From a Circle’s Cut to a Cosmic Sequence
+          </a>
+        </li>
         <li>
           <strong>The Book of kOA</strong> ({' '}
           <a href="https://www.amazon.ca/Book-kOA-Comprehensive-Collaboration-Merit-Based/dp/B0FHWS687D" target="_blank" rel="noopener noreferrer">
@@ -116,12 +163,40 @@ export default function AboutPage() {
         </li>
       </ul>
 
-      <h3>Social & Media Channels</h3>
+      <h3>Social, Professional & Academic Profiles</h3>
       <ul>
+        <li>
+          <strong>LinkedIn</strong>: ({' '}
+          <a href="https://www.linkedin.com/in/r%C3%A9jean-mccormick-51403a37b/" target="_blank" rel="noopener noreferrer">
+            Réjean McCormick
+          </a>
+          )
+        </li>
+        <li>
+          <strong>PhilPeople</strong>: ({' '}
+          <a href="https://philpeople.org/profiles/rejean-mccormick" target="_blank" rel="noopener noreferrer">
+            Profile
+          </a>
+          )
+        </li>
+        <li>
+          <strong>Mastodon</strong>: ({' '}
+          <a href="https://mastodon.social/@Rejean_McCormick/" target="_blank" rel="noopener noreferrer">
+            @Rejean_McCormick
+          </a>
+          )
+        </li>
         <li>
           <strong>YouTube</strong>: @KingKlownXYZ ({' '}
           <a href="https://www.youtube.com/@KingKlownXYZ" target="_blank" rel="noopener noreferrer">
             YouTube
+          </a>
+          )
+        </li>
+        <li>
+          <strong>X/Twitter</strong>: @KingKlownXYZ ({' '}
+          <a href="https://x.com/KingKlownXYZ" target="_blank" rel="noopener noreferrer">
+            X
           </a>
           )
         </li>
@@ -136,13 +211,6 @@ export default function AboutPage() {
           <strong>TikTok</strong>: @kingklown.xyz ({' '}
           <a href="https://www.tiktok.com/@kingklown.xyz" target="_blank" rel="noopener noreferrer">
             TikTok
-          </a>
-          )
-        </li>
-        <li>
-          <strong>X/Twitter</strong>: @KingKlownXYZ ({' '}
-          <a href="https://x.com/KingKlownXYZ" target="_blank" rel="noopener noreferrer">
-            X
           </a>
           )
         </li>
@@ -176,11 +244,7 @@ export default function AboutPage() {
       <h3>KOA Internal Platforms</h3>
       <ul>
         <li>
-          <strong>Konnaxion, Kristal Farms, Orgo</strong> ({' '}
-          <a href="https://www.okido.wiki/platforms" target="_blank" rel="noopener noreferrer">
-            Okido Platforms
-          </a>
-          )
+          <strong>Konnaxion, Kristal Farms, Orgo</strong>
         </li>
       </ul>
 
@@ -217,9 +281,8 @@ export default function AboutPage() {
         </li>
       </ul>
 
-      <h3>Offline & Other Assets</h3>
+      <h3>Offline Assets</h3>
       <ul>
-        <li><strong>&gt;100 AI‑assisted songs (Suno)</strong></li>
         <li><strong>Printed briefs</strong> (Sent to key contacts)</li>
         <li><strong>Stage show</strong>: <em>Le Ninja Arc‑en‑ciel</em> (In development)</li>
       </ul>
