@@ -93,6 +93,7 @@ export default function AboutPage() {
           <a href="https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4?si=b51cc5d57ab242e8" target="_blank" rel="noopener noreferrer">
             “King Klown” Podcast
           </a>
+        </li>
         <li>
           <strong>YouTube</strong>: {' '}
           <a href="https://www.youtube.com/@KingKlown-XYZ" target="_blank" rel="noopener noreferrer">
@@ -173,11 +174,25 @@ export default function AboutPage() {
             @Rejean_McCormick
           </a>
         </li>
-
         <li>
           <strong>X/Twitter</strong>: {' '}
           <a href="https://x.com/KingKlownXYZ" target="_blank" rel="noopener noreferrer">
             @KingKlownXYZ
+          </a>
+        </li>
+        <li>
+          <strong>Facebook</strong>: {' '}
+          <a href="https://www.facebook.com/profile.php?id=61566663549235" target="_blank" rel="noopener noreferrer">
+            Réjean McCormick (King Klown)
+          </a>{' / '}
+          <a href="https://www.facebook.com/profile.php?id=61567073454490" target="_blank" rel="noopener noreferrer">
+            King Klown XYZ
+          </a>
+        </li>
+        <li>
+          <strong>Instagram</strong>: {' '}
+          <a href="https://www.instagram.com/kingklown.xyz/" target="_blank" rel="noopener noreferrer">
+            @kingklown.xyz
           </a>
         </li>
         <li>
@@ -197,12 +212,6 @@ export default function AboutPage() {
           <a href="https://www.twitch.tv/kingklownxyz" target="_blank" rel="noopener noreferrer">
             @kingklownxyz
           </a>
-        </li>
-        <li>
-          <strong>Facebook & Instagram</strong>: Linked via {' '}
-          <a href="https://github.com/Rejean-McCormick/" target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a> profile
         </li>
       </ul>
 
@@ -248,6 +257,16 @@ export default function AboutPage() {
         </li>
       </ul>
 
+      <h3>Offline Assets</h3>
+      <ul>
+        <li><strong>Printed briefs</strong> (Sent to key contacts)</li>
+        <li>
+          <strong>Stage show</strong>: <em>Le Ninja Arc‑en‑ciel</em> (In development) —{' '}
+          <a href="https://www.youtube.com/watch?v=Cz7qhJNDzuo" target="_blank" rel="noopener noreferrer">
+            View proof of concept
+          </a>
+        </li>
+      </ul>
 
     </main>
   );
