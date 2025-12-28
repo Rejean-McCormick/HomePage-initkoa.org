@@ -1,4 +1,3 @@
-// app\technology\ariane\consumers\page.tsx
 // app/technology/ariane/consumers/page.tsx
 import Link from 'next/link';
 import { 
@@ -99,7 +98,7 @@ export default function ConsumersPage() {
           </Link>
 
           <Link 
-            href="/technology/ariane/consumers/consumers"
+            href="/technology/ariane/consumers/integration-patterns"
             className="group block p-6 bg-white border border-slate-200 rounded-xl hover:border-blue-500 hover:shadow-md transition-all"
           >
             <div className="flex justify-between items-start">

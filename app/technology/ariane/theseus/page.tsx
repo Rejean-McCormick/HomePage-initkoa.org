@@ -40,7 +40,7 @@ export default function TheseusPage() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Overview */}
           <Link 
-            href="/technology/ariane/theseus/theseus-exploration-engine"
+            href="/technology/ariane/theseus/engine-logic"
             className="group block p-8 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary transition-all"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary">
@@ -56,7 +56,7 @@ export default function TheseusPage() {
 
           {/* Exploration Engine */}
           <Link 
-            href="/technology/ariane/theseus/theseus-exploration-engine"
+            href="/technology/ariane/theseus/engine-logic"
             className="group block p-8 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary transition-all"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary">

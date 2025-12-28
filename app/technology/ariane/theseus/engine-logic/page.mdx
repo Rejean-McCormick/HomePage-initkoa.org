@@ -121,17 +121,13 @@ Some actions are potentially destructive (e.g., delete, reset, format, uninstall
 
 Safety mechanisms include:
 
-- **Keyword-based filters**  
-  - Skip actions whose labels or descriptions match high-risk patterns (e.g., “Delete”, “Erase”, “Format”, “Reset”, “Uninstall”), especially when combined with red styling or warning icons.
+- **Keyword-based filters** - Skip actions whose labels or descriptions match high-risk patterns (e.g., “Delete”, “Erase”, “Format”, “Reset”, “Uninstall”), especially when combined with red styling or warning icons.
 
-- **Scope constraints**  
-  - Do not navigate into obviously hazardous subsystems (e.g., system-level disk tools) unless explicitly allowed.
+- **Scope constraints** - Do not navigate into obviously hazardous subsystems (e.g., system-level disk tools) unless explicitly allowed.
 
-- **Confirmation detection**  
-  - If an action opens a destructive confirmation dialog, treat this as a discovered state without proceeding further.
+- **Confirmation detection** - If an action opens a destructive confirmation dialog, treat this as a discovered state without proceeding further.
 
-- **Configurable risk profiles**  
-  - Allow running in:
+- **Configurable risk profiles** - Allow running in:
     - “Safe mode” – conservative, avoids any destructive-looking action.
     - “Sandbox mode” – more permissive, for controlled environments such as test VMs.
 
@@ -166,14 +162,11 @@ Trade-offs:
 
 To keep exploration tractable, the engine uses explicit limits:
 
-- **Depth limit**  
-  - Maximum length of a path from the starting state.
+- **Depth limit** - Maximum length of a path from the starting state.
 
-- **State limit**  
-  - Maximum number of distinct states to discover in a single run.
+- **State limit** - Maximum number of distinct states to discover in a single run.
 
-- **Action limit per state**  
-  - Maximum number of actions to attempt from any given state.
+- **Action limit per state** - Maximum number of actions to attempt from any given state.
 
 When a limit is reached, the engine:
 
@@ -212,14 +205,11 @@ Failures are data too: they indicate unreachable paths or restricted states.
 
 The Exploration Engine provides Atlas with:
 
-- **States**  
-  - IDs, fingerprints, and interactive elements.
+- **States** - IDs, fingerprints, and interactive elements.
 
-- **Transitions**  
-  - Source state, target state, action metadata, and any semantic hints.
+- **Transitions** - Source state, target state, action metadata, and any semantic hints.
 
-- **Coverage metadata**  
-  - Which states were fully explored, partially explored, or unreachable.
+- **Coverage metadata** - Which states were fully explored, partially explored, or unreachable.
   - Any errors or safety-related skips.
 
 Atlas then persists this information and makes it available to consumers.
@@ -228,7 +218,7 @@ Atlas then persists this information and makes it available to consumers.
 
 ## Related Pages
 
-- [Theseus](../theseus) – overview of the exploration engine.  
-- [Theseus/State-Identification](../state-identification) – how states are fingerprinted and recognized.  
-- [Atlas](../atlas) – how the discovered graph is stored and exposed to external systems.  
-- [Consumers/AI-Agent-Integration](../ai-agents) – how agents use the resulting graph during guidance.
+- [Theseus](/technology/ariane/theseus) – overview of the exploration engine.
+- [Theseus/State-Identification](/technology/ariane/theseus/state-identification) – how states are fingerprinted and recognized.
+- [Atlas](/technology/ariane/atlas) – how the discovered graph is stored and exposed to external systems.
+- [Consumers/AI-Agent-Integration](/technology/ariane/consumers/ai-agents) – how agents use the resulting graph during guidance.
