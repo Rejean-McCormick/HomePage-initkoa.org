@@ -30,7 +30,7 @@ export default function ArianeConceptsPage() {
         
         {/* Background */}
         <Link 
-          href="/technology/ariane/concepts/background-ui-as-data" 
+          href="/technology/ariane/concepts/ui-as-data" 
           className="group block p-8 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary transition-all"
         >
           <h3 className="text-xl font-bold mb-3 flex items-center group-hover:text-primary">

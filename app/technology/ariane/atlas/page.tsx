@@ -56,7 +56,7 @@ export default function AtlasPage() {
 
           {/* Graph Model */}
           <Link 
-            href="/technology/ariane/atlas/atlas-graph-model"
+            href="/technology/ariane/atlas/graph-model"
             className="group block p-8 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary transition-all"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary">
@@ -82,7 +82,7 @@ export default function AtlasPage() {
         <div className="grid gap-6 md:grid-cols-2">
           
           <Link 
-            href="/technology/ariane/atlas/atlas-core-schema"
+            href="/technology/ariane/atlas/core-schema"
             className="group block p-6 bg-white border border-slate-200 rounded-xl hover:border-blue-500 hover:shadow-md transition-all"
           >
             <div className="flex justify-between items-start">
@@ -99,7 +99,7 @@ export default function AtlasPage() {
           </Link>
 
           <Link 
-            href="/technology/ariane/atlas/atlas-ontology-vocabulary"
+            href="/technology/ariane/atlas/ontology"
             className="group block p-6 bg-white border border-slate-200 rounded-xl hover:border-blue-500 hover:shadow-md transition-all"
           >
             <div className="flex justify-between items-start">

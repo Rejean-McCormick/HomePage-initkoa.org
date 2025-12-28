@@ -1,4 +1,4 @@
-﻿export const metadata = {
+export const metadata = {
   title: "Glossary"
 };
 
@@ -37,7 +37,7 @@ Any external system that queries Atlas to understand and operate software. Inclu
 ## D
 
 **Destructive Action**  
-An action that irreversibly modifies or deletes data (e.g., â€œDeleteâ€, â€œFormatâ€, â€œEraseâ€). Typically given a specific semantic pattern (e.g., `destructiveAction`) and intent (e.g., `DeleteItem`).
+An action that irreversibly modifies or deletes data (e.g., “Delete”, “Format”, “Erase”). Typically given a specific semantic pattern (e.g., `destructiveAction`) and intent (e.g., `DeleteItem`).
 
 **Driver**  
 A platform-specific adapter used by Theseus to interact with real software. Drivers provide access to the UI tree, identify interactive elements, and execute abstract actions on those elements.
@@ -70,7 +70,7 @@ A set of identifiers computed from an observed UI tree (and optionally a screens
 ## G
 
 **Graph (UI Graph)**  
-The representation of an applicationâ€™s UI as a directed graph, where nodes are states and edges are transitions. Stored in Atlas.
+The representation of an application’s UI as a directed graph, where nodes are states and edges are transitions. Stored in Atlas.
 
 **Graph Model**  
 The abstract definition of how states and transitions form a graph (directed, possibly cyclic, labeled edges, etc.), independent of storage implementation.
@@ -100,7 +100,7 @@ A platform-specific reference that allows a driver or consumer to locate an elem
 The vocabulary of patterns, roles, and intents used by Ariane to describe the meaning of states, elements, and transitions (e.g., `Modal`, `primaryAction`, `Save`, `ExportToPDF`).
 
 **Overlay Client (Future Concept)**  
-A possible, non-core consumer that uses Atlas to draw guidance on top of existing applications (highlights, arrows, step counters). Not part of Arianeâ€™s core specification.
+A possible, non-core consumer that uses Atlas to draw guidance on top of existing applications (highlights, arrows, step counters). Not part of Ariane’s core specification.
 
 ---
 
@@ -108,16 +108,16 @@ A possible, non-core consumer that uses Atlas to draw guidance on top of existin
 
 **Pattern (UI Pattern)**  
 A semantic classification of UI structures or roles, such as:
-- `Modal` â€“ blocking dialog.
-- `primaryAction` â€“ main action in a state.
-- `destructiveAction` â€“ action that deletes data.
+- `Modal` – blocking dialog.
+- `primaryAction` – main action in a state.
+- `destructiveAction` – action that deletes data.
 Patterns are usually attached via semantic fields on states or elements.
 
 **Path**  
 A sequence of transitions through the UI graph, typically representing a workflow (e.g., from home screen to export completion).
 
 **Procedural Knowledge**  
-Knowledge about *how to perform actions* or workflows (e.g., â€œhow to export a document as PDF in App Xâ€), as opposed to facts or static data. Ariane aims to represent procedural knowledge as UI graph data.
+Knowledge about *how to perform actions* or workflows (e.g., “how to export a document as PDF in App X”), as opposed to facts or static data. Ariane aims to represent procedural knowledge as UI graph data.
 
 ---
 
@@ -172,7 +172,7 @@ A fingerprint component derived from a screenshot or rendered view of the UI, in
 
 ## Related Pages
 
-- [Background-UI-as-Data](../background-ui-as-data) â€“ conceptual motivation and knowledge domains.  
-- [Theseus](../theseus) â€“ exploration engine and drivers.  
-- [Atlas](../atlas) â€“ storage and semantic model.  
-- [Consumers](../consumers) â€“ how external systems use Arianeâ€™s data.
+- [Background-UI-as-Data](../ui-as-data) – conceptual motivation and knowledge domains.  
+- [Theseus](../theseus) – exploration engine and drivers.  
+- [Atlas](../atlas) – storage and semantic model.  
+- [Consumers](../consumers) – how external systems use Ariane’s data.

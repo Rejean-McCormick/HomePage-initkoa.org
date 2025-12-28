@@ -41,7 +41,7 @@ export default function ConsumersPage() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* AI Agents */}
           <Link 
-            href="/technology/ariane/consumers/consumers-ai-agent-integration"
+            href="/technology/ariane/consumers/ai-agents"
             className="group block p-8 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary transition-all"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary">
@@ -57,7 +57,7 @@ export default function ConsumersPage() {
 
           {/* Hybrid / Human */}
           <Link 
-            href="/technology/ariane/consumers/hybrid-mapping-and-human-guided-assistants"
+            href="/technology/ariane/consumers/hybrid-mapping"
             className="group block p-8 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary transition-all"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary">
@@ -82,7 +82,7 @@ export default function ConsumersPage() {
         
         <div className="grid gap-6">
           <Link 
-            href="/technology/ariane/consumers/consumers-future-overlay-client"
+            href="/technology/ariane/consumers/overlay-client"
             className="group block p-6 bg-white border border-slate-200 rounded-xl hover:border-blue-500 hover:shadow-md transition-all"
           >
             <div className="flex justify-between items-start">

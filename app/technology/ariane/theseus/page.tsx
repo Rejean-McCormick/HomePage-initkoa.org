@@ -82,7 +82,7 @@ export default function TheseusPage() {
         <div className="grid gap-6 md:grid-cols-2">
           
           <Link 
-            href="/technology/ariane/theseus/theseus-state-identification"
+            href="/technology/ariane/theseus/state-identification"
             className="group block p-6 bg-white border border-slate-200 rounded-xl hover:border-blue-500 hover:shadow-md transition-all"
           >
             <div className="flex justify-between items-start">
@@ -99,7 +99,7 @@ export default function TheseusPage() {
           </Link>
 
           <Link 
-            href="/technology/ariane/theseus/theseus-drivers"
+            href="/technology/ariane/theseus/drivers"
             className="group block p-6 bg-white border border-slate-200 rounded-xl hover:border-blue-500 hover:shadow-md transition-all"
           >
             <div className="flex justify-between items-start">

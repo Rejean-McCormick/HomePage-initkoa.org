@@ -1,4 +1,4 @@
-﻿export const metadata = {
+export const metadata = {
   title: "Consumers / AI Agent Integration"
 };
 
@@ -14,16 +14,16 @@ This page describes how an AI agent can integrate with Ariane conceptually.
 
 ## High-Level Flow
 
-From an agentâ€™s point of view, the interaction with Ariane typically follows this loop:
+From an agent’s point of view, the interaction with Ariane typically follows this loop:
 
-1. **Understand the userâ€™s goal.**
+1. **Understand the user’s goal.**
 2. **Identify the current UI state.**
 3. **Query Atlas for available actions and intents.**
 4. **Plan a sequence of transitions toward the goal.**
 5. **Execute (or instruct) the steps in the live UI.**
 6. **Observe the resulting state and adjust if necessary.**
 
-Ariane supports steps 2â€“4 by providing structured, semantic information about the UI.
+Ariane supports steps 2–4 by providing structured, semantic information about the UI.
 
 ---
 
@@ -31,24 +31,24 @@ Ariane supports steps 2â€“4 by providing structured, semantic information a
 
 An agent starts with a goal, often expressed in natural language:
 
-- â€œExport this document as PDF.â€
-- â€œChange the default font to Arial.â€
-- â€œTurn on dark mode.â€
+- “Export this document as PDF.”
+- “Change the default font to Arial.”
+- “Turn on dark mode.”
 
 Internally, the agent should map this to:
 
 - One or more **intents** known to Ariane (e.g., `ExportToPDF`, `ChangeDefaultFont`, `EnableDarkMode`).
-- Optional constraints or preferences (e.g., â€œuse the simplest pathâ€, â€œavoid destructive stepsâ€).
+- Optional constraints or preferences (e.g., “use the simplest path”, “avoid destructive steps”).
 
 Ariane does not perform this mapping itself; it exposes a vocabulary of intents that the agent can align to.
 
-See: [Atlas/Ontology-Vocabulary](../atlas-ontology-vocabulary)
+See: [Atlas/Ontology-Vocabulary](../ontology)
 
 ---
 
 ## 2. State Recognition Against Atlas
 
-To act correctly, the agent must know which state in Atlas corresponds to the userâ€™s current screen.
+To act correctly, the agent must know which state in Atlas corresponds to the user’s current screen.
 
 A typical process:
 
@@ -62,7 +62,7 @@ A typical process:
    - Semantic hints from labels and titles.
 
 3. **Query Atlas**:
-   - â€œGiven these fingerprint components and context (app, version, platform), what is the closest `state_id`?â€
+   - “Given these fingerprint components and context (app, version, platform), what is the closest `state_id`?”
 
 Atlas returns:
 
@@ -83,7 +83,7 @@ Once the agent has a `state_id`, it can ask:
 
 1. **What actions are available?**
    - Query Atlas for all outgoing transitions from this state.
-   - Retrieve each transitionâ€™s:
+   - Retrieve each transition’s:
      - Action type.
      - Target element.
      - Target state.
