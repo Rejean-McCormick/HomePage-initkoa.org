@@ -58,7 +58,7 @@ export default function AboutPage() {
           </a>
         </li>
         <li>
-          <strong>Political movement</strong>: {' '}
+          <strong>Political Blueprint</strong>: {' '}
           <a href="https://kingklown.ca/" target="_blank" rel="noopener noreferrer">
             kingklown.ca
           </a>
@@ -69,15 +69,12 @@ export default function AboutPage() {
             kingklown.wiki
           </a>
         </li>
-        <li>
-          <strong>Okido.wiki</strong>: Master list, Platforms, Initiatives
-        </li>
       </ul>
 
       <h3>Audio, Music & Podcasts</h3>
       <ul>
         <li>
-          <strong>SoundCloud Sets</strong>:
+          <strong>Soundtrack for the stage production Ninja Arc-en-Ciel</strong>:
           <ul>
             <li>
               <a href="https://soundcloud.com/rejean-mccormick/sets/ninja_arc-en-ciel" target="_blank" rel="noopener noreferrer">
@@ -96,8 +93,12 @@ export default function AboutPage() {
           <a href="https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4?si=b51cc5d57ab242e8" target="_blank" rel="noopener noreferrer">
             “King Klown” Podcast
           </a>
+        <li>
+          <strong>YouTube</strong>: {' '}
+          <a href="https://www.youtube.com/@KingKlown-XYZ" target="_blank" rel="noopener noreferrer">
+            Lyrics video to explore the ecosystem
+          </a> (@KingKlown-XYZ)
         </li>
-        <li><strong>&gt;100 AI‑assisted songs (Suno)</strong></li>
       </ul>
 
       <h3>Books & Research Writings</h3>
@@ -172,12 +173,7 @@ export default function AboutPage() {
             @Rejean_McCormick
           </a>
         </li>
-        <li>
-          <strong>YouTube</strong>: {' '}
-          <a href="https://kingklown.life" target="_blank" rel="noopener noreferrer">
-            kingklown.life
-          </a> (@KingKlownXYZ)
-        </li>
+
         <li>
           <strong>X/Twitter</strong>: {' '}
           <a href="https://x.com/KingKlownXYZ" target="_blank" rel="noopener noreferrer">
@@ -252,16 +248,6 @@ export default function AboutPage() {
         </li>
       </ul>
 
-      <h3>Offline Assets</h3>
-      <ul>
-        <li><strong>Printed briefs</strong> (Sent to key contacts)</li>
-        <li>
-          <strong>Stage show</strong>: <em>Le Ninja Arc‑en‑ciel</em> (In development) —{' '}
-          <a href="https://www.youtube.com/watch?v=Cz7qhJNDzuo" target="_blank" rel="noopener noreferrer">
-            View proof of concept
-          </a>
-        </li>
-      </ul>
 
     </main>
   );
