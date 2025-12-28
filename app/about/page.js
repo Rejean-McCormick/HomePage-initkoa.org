@@ -27,16 +27,24 @@ export default function AboutPage() {
 
       <h3>The Ecosystem: KOA</h3>
       <ul>
-        <li><Link href="/platforms/konnaxion">1. Konnaxion (The Open Web)</Link></li>
-        <li><Link href="/platforms/orgo">2. Orgo (The Hermetic Bubble)</Link></li>
+        <li><Link href="/platforms/konnaxion">Konnaxion (The Open Web)</Link></li>
+        <li><Link href="/platforms/orgo">Orgo (The Hermetic Bubble)</Link></li>
       </ul>
 
-      <h3>Commercial & Research Modules</h3>
-      <ul>
-        <li><Link href="/technology/ariane">Ariane (Commercial)</Link></li>
-        <li><Link href="/technology/swarmcraft">SwarmCraft</Link></li>
-        <li><Link href="/technology/ame-artificielle">Ame-Artificielle (Âme artificielle)</Link></li>
-      </ul>
+<h3>Commercial & Research Modules</h3>
+<ul>
+  <li>
+    <Link href="/technology/ariane">Ariane (Commercial IP — For Sale)</Link>
+  </li>
+  <li>
+    <Link href="/technology/swarmcraft">SwarmCraft (Protected IP)</Link>
+  </li>
+  <li>
+    <Link href="/technology/ame-artificielle">
+      Ame-Artificielle (Artificial Soul — Protected IP)
+    </Link>
+  </li>
+</ul>
 
       <hr className="my-8 border-slate-200" />
 
@@ -145,7 +153,6 @@ export default function AboutPage() {
               </a>
               )
             </li>
-            <li>&gt;100 AI‑assisted songs (Suno)</li>
           </ul>
         </li>
         <li>
