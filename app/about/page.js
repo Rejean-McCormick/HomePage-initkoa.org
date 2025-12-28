@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: "Ecosystem & Profile: The Architect's Public Inventory"
+  title: "About the Architect"
 };
 
 export default function AboutPage() {
@@ -31,7 +31,7 @@ export default function AboutPage() {
         <li><Link href="/platforms/orgo">2. Orgo (The Hermetic Bubble)</Link></li>
       </ul>
 
-      <h3>Commercial & Research Modules</h3>
+      <h3>Commercial &amp; Research Modules</h3>
       <ul>
         <li><Link href="/technology/ariane">Ariane (Commercial)</Link></li>
         <li><Link href="/technology/swarmcraft">SwarmCraft</Link></li>
@@ -41,7 +41,7 @@ export default function AboutPage() {
       <hr className="my-8 border-slate-200" />
 
       {/* --- External Inventory --- */}
-      <h2>Full Inventory & Web Presence</h2>
+      <h2>Full Inventory &amp; Web Presence</h2>
 
       <h3>Core Sites</h3>
       <ul>
@@ -86,7 +86,7 @@ export default function AboutPage() {
         </li>
       </ul>
 
-      <h3>Audio, Music & Podcasts</h3>
+      <h3>Audio, Music &amp; Podcasts</h3>
       <ul>
         <li>
           <strong>SoundCloud Sets</strong>:
@@ -114,10 +114,11 @@ export default function AboutPage() {
           </a>
           )
         </li>
-        <li><strong>>100 AI‑assisted songs (Suno)</strong></li>
+        {/* The error was here. Replaced ">" with "&gt;" */}
+        <li><strong>&gt;100 AI‑assisted songs (Suno)</strong></li>
       </ul>
 
-      <h3>Books & Research Writings</h3>
+      <h3>Books &amp; Research Writings</h3>
       <ul>
         <li>
           <strong>Research Article (Medium)</strong>: <br/>
@@ -163,7 +164,7 @@ export default function AboutPage() {
         </li>
       </ul>
 
-      <h3>Social, Professional & Academic Profiles</h3>
+      <h3>Social, Professional &amp; Academic Profiles</h3>
       <ul>
         <li>
           <strong>LinkedIn</strong>: ({' '}
@@ -236,7 +237,7 @@ export default function AboutPage() {
           )
         </li>
         <li>
-          <strong>Facebook & Instagram</strong>: Linked via GitHub profile ({' '}
+          <strong>Facebook &amp; Instagram</strong>: Linked via GitHub profile ({' '}
           <a href="https://github.com/Rejean-McCormick/" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
@@ -277,7 +278,7 @@ export default function AboutPage() {
         </li>
       </ul>
 
-      <h3>Store & Contact</h3>
+      <h3>Store &amp; Contact</h3>
       <ul>
         <li>
           <strong>Branded clothes</strong>: kingklown.store ({' '}
