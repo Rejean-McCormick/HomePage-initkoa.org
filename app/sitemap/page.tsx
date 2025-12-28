@@ -97,6 +97,11 @@ export default function VisualSitemapPage() {
                 href="/initiatives/ukraine-peace-plan/cultural-bridge/start-here"
                 label="Cultural Bridge Track"
               />
+              {/* ADDED: Cultural Bridge subpage */}
+              <MapLink
+                href="/initiatives/ukraine-peace-plan/cultural-bridge/metrics"
+                label="Cultural Bridge – Metrics & Evaluation"
+              />
               <MapLink
                 href="/initiatives/koa-political-initiative"
                 label="KOA Political Initiative"
