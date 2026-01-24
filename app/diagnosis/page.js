@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Systemic Diagnosis – King Klown & KOA',
+  title: 'Systemic Diagnosis – The kOA initiative',
   description: 'A radical lucidity assessment of the interlocking crises facing modern society: the 9 systemic failures we must solve.',
 };
 
@@ -123,7 +123,7 @@ export default function DiagnosisPage() {
           These failures are interconnected; they cannot be solved in isolation. 
           This diagnosis sets the stage for{' '}
           <span className="bg-white text-slate-900 px-2 py-0.5 font-bold box-decoration-clone">
-            King Klown & KOA
+            The kOA initiative
           </span>
           : a systemic response built on radical openness, meritocratic governance, and constructive radicalism.
         </p>

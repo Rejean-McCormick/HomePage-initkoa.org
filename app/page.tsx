@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'King Klown & KOA – Civic Utilities',
+  title: 'The KOA initiative – Civic Utilities',
   description: 'Shared infrastructure for learning, coordination, and meritocratic governance.',
 };
 

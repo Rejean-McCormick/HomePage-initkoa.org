@@ -19,7 +19,7 @@ export const metadata = {
     canonical: './',
   },
 
-  title: 'King Klown & KOA',
+  title: 'The kOA initiative',
   description: 'Civic utilities for a fragmented world.',
   icons: {
     icon: '/LogoK.svg',
