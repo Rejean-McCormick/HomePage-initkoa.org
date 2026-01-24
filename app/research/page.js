@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Research Hub – KOA',
+  title: 'Research Hub – kOA',
   description:
     'Deep analysis and theoretical frameworks. Open to all perspectives: from sacred geometry to mechanistic materialism.',
 };
@@ -30,7 +30,7 @@ export default function ResearchPage() {
             Research & Theory
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed max-w-3xl">
-            This is the laboratory of the KOA project. Here, we explore the fundamental structures 
+            This is the laboratory of the kOA project. Here, we explore the fundamental structures 
             that govern our reality—from the mathematics of the cosmos to the dynamics of civilization.
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function ResearchPage() {
                   Because these patterns are so precise, some may feel they are <strong>sacred</strong> or evidence of intelligent design.
                 </p>
                 <p>
-                  However, <strong>KOA imposes no dogma.</strong> We welcome all perspectives:
+                  However, <strong>kOA imposes no dogma.</strong> We welcome all perspectives:
                 </p>
                 <ul className="grid md:grid-cols-2 gap-4 list-none pl-0 not-prose my-6">
                   <li className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-100">

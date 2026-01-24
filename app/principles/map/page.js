@@ -3,7 +3,7 @@
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
-  title: 'Principles – King Klown & KOA',
+  title: 'Principles – The kOA initiative',
   description:
     'Core axioms and the domains: Civic Principles & Ethics, and Cosmic Etherism (optional).',
 };

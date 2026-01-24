@@ -142,7 +142,7 @@ export default function LogosMythosPage() {
           <div className="flex items-start gap-4 p-4 bg-slate-800 rounded-lg border border-slate-700">
             <Repeat className="w-6 h-6 text-primary mt-1 shrink-0" />
             <p className="text-sm font-medium text-slate-200">
-              <strong className="text-white">The KOA Directive:</strong> We must master "Naming." To name an object is to define its reality. 
+              <strong className="text-white">The kOA Directive:</strong> We must master "Naming." To name an object is to define its reality. 
               By purifying our speech, studying the "source code" of our myths, and crafting new narratives, we reclaim the power to shape the future.
             </p>
           </div>

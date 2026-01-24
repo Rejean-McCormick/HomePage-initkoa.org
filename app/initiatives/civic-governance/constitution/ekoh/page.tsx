@@ -2,7 +2,7 @@
 import { Vote, Scale, Users, Award, GitMerge, CheckCircle, AlertTriangle } from 'lucide-react';
 
 export const metadata = {
-  title: "Ekoh: Liquid Meritocracy – KOA",
+  title: "Ekoh: Liquid Meritocracy – kOA",
   description: "A consensus mechanism based on proven competence. Balancing democratic mandate with technical expertise.",
 };
 

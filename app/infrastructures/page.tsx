@@ -4,7 +4,7 @@ import Card from '@/components/Card';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Infrastructure – King Klown & KOA',
+  title: 'Infrastructure',
   description: 'The physical and virtual foundations: Kristal Farms and Kin City.',
 };
 

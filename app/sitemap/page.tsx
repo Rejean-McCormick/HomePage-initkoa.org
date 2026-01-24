@@ -14,8 +14,8 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Site Map – King Klown & KOA",
-  description: "Complete hierarchical index of the KOA ecosystem.",
+  title: "Site Map – The kOA initiative",
+  description: "Complete hierarchical index of the kOA ecosystem.",
 };
 
 export default function VisualSitemapPage() {
@@ -31,7 +31,7 @@ export default function VisualSitemapPage() {
           {/* CONTEXT & DIAGNOSIS */}
           <Section title="Context & Diagnosis" icon={<Landmark className="w-5 h-5" />}>
             <MapLink href="/" label="Home" highlight />
-            <MapLink href="/why" label="The Diagnosis (Why KOA?)" />
+            <MapLink href="/why" label="The Diagnosis (Why kOA?)" />
             <MapLink href="/diagnosis" label="9 Systemic Failures" />
             <MapLink href="/principles" label="Principles Hub" />
 
@@ -104,7 +104,7 @@ export default function VisualSitemapPage() {
               />
               <MapLink
                 href="/initiatives/koa-political-initiative"
-                label="KOA Political Initiative"
+                label="kOA Political Initiative"
               />
             </SubSection>
           </Section>

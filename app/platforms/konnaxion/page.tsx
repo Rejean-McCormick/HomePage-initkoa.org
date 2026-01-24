@@ -20,7 +20,7 @@ export default function KonnaxionPage() {
         
         <div className="prose prose-slate prose-lg text-slate-600 leading-relaxed max-w-none">
           <p>
-            Konnaxion is a socioâ€‘technical framework for coordinating people, knowledge, and action through an ethical, modular civic architecture built on the KOA model: <strong>KonnectED, Ethikos, Kreative, keenKonnect, EkoH, Smart Vote</strong>.
+            Konnaxion is a socioâ€‘technical framework for coordinating people, knowledge, and action through an ethical, modular civic architecture built on the kOA model: <strong>KonnectED, Ethikos, Kreative, keenKonnect, EkoH, Smart Vote</strong>.
           </p>
           <p>
             This page is the <strong>hub</strong> for the wiki. It summarizes how modules relate to each other. For implementation details, use the dedicated technical page linked at the end.

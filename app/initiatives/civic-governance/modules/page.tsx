@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: "Civic Modules Hub – KOA",
+  title: "Civic Modules Hub – kOA",
   description: "The active functional modules of the Civic Governance framework.",
 };
 
@@ -21,7 +21,7 @@ export default function ModulesHubPage() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-slate-900 mb-4">Civic Modules</h1>
         <p className="text-xl text-slate-600">
-          These are the active subsystems of the KOA governance model. Each module addresses a specific pillar of civic life with verified, non-extractive logic.
+          These are the active subsystems of the kOA governance model. Each module addresses a specific pillar of civic life with verified, non-extractive logic.
         </p>
       </div>
 

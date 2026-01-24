@@ -3,7 +3,7 @@
 import Card from '@/components/Card'; // Fixed import alias
 
 export const metadata = {
-  title: 'Platforms & Products – King Klown & KOA',
+  title: 'Platforms & Products – The kOA initiative',
   description: 'The core software suite: Konnaxion and Orgo.',
 };
 

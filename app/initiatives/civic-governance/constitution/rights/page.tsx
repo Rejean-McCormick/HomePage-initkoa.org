@@ -2,7 +2,7 @@
 import { Shield, Eye, EyeOff, LogOut, BookOpen, Key, GitPullRequest } from 'lucide-react';
 
 export const metadata = {
-  title: "The Bill of Rights – KOA",
+  title: "The Bill of Rights – kOA",
   description: "Privacy of Person, Transparency of State, and the Right to Exit.",
 };
 
@@ -21,7 +21,7 @@ export default function BillOfRightsPage() {
             <h1 className="text-4xl font-bold text-white">The Civic Bill of Rights</h1>
           </div>
           <p className="text-xl text-slate-300 leading-relaxed">
-            In the KOA system, rights are not just legal promises; they are <strong>hard-coded constraints</strong>. 
+            In the kOA system, rights are not just legal promises; they are <strong>hard-coded constraints</strong>. 
             The State does not "grant" these rights; the Code prevents the State from violating them.
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function BillOfRightsPage() {
             <LogOut className="absolute top-8 right-8 w-24 h-24 text-slate-700 -z-0 opacity-50" />
             <div className="relative z-10">
               <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                The ultimate check on tyranny is the ability to leave. In traditional states, leaving is expensive (moving countries). In KOA, leaving is digital.
+                The ultimate check on tyranny is the ability to leave. In traditional states, leaving is expensive (moving countries). In kOA, leaving is digital.
               </p>
               
               <ul className="space-y-4">

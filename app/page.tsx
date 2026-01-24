@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'The KOA initiative – Civic Utilities',
+  title: 'The kOA initiative – Civic Utilities',
   description: 'Shared infrastructure for learning, coordination, and meritocratic governance.',
 };
 
@@ -16,7 +16,7 @@ export default function HomePage() {
       <section className="pt-32 pb-24 px-6 border-b border-gray-100">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-6xl md:text-8xl font-serif font-medium mb-8 tracking-tight text-slate-900">
-            King Klown <span className="text-primary italic">&</span> KOA
+            King Klown <span className="text-primary italic">&</span> kOA
           </h1>
           
           <p className="text-xl md:text-2xl text-slate-500 max-w-2xl mx-auto mb-12 leading-relaxed font-light">

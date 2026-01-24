@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Landmark, Globe, TrendingUp, Scale, GraduationCap, ArrowRight, Scroll } from 'lucide-react';
 
 export const metadata = {
-  title: 'Strategic Initiatives – KOA',
+  title: 'Strategic Initiatives – kOA',
   description: 'The roadmap for a transition to a post-extractive society: Governance, Theory, and Technology.',
 };
 
@@ -17,7 +17,7 @@ export default function InitiativesPage() {
         <h1 className="text-5xl font-bold mb-6 text-[#1e6864]">Strategic Initiatives</h1>
         
         <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-          The KOA project is divided into three layers of action: <span className="font-bold text-[#1e6864]">Theory</span> (The Why), <span className="font-bold text-[#1e6864]">Governance</span> (The How), and <span className="font-bold text-[#1e6864]">Technology</span> (The Engine).
+          The kOA project is divided into three layers of action: <span className="font-bold text-[#1e6864]">Theory</span> (The Why), <span className="font-bold text-[#1e6864]">Governance</span> (The How), and <span className="font-bold text-[#1e6864]">Technology</span> (The Engine).
         </p>
       </div>
 

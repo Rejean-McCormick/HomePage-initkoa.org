@@ -25,7 +25,7 @@ export default function AboutPage() {
         <li><Link href="/technology/architect">Abstract Wiki Architect</Link></li>
       </ul>
 
-      <h3>The Ecosystem: KOA</h3>
+      <h3>The Ecosystem: kOA</h3>
       <ul>
         <li><Link href="/platforms/konnaxion">Konnaxion (The Open Web)</Link></li>
         <li><Link href="/platforms/orgo">Orgo (The Hermetic Bubble)</Link></li>
@@ -165,7 +165,7 @@ export default function AboutPage() {
               </a> (Medium)
             </li>
             <li>
-              Presentation: “Global Strategic Overview — Why KOA?” ({' '}
+              Presentation: “Global Strategic Overview — Why kOA?” ({' '}
               <a href="https://koa-movement-x84fw57.gamma.site/" target="_blank" rel="noopener noreferrer">
                 Gamma Deck
               </a>

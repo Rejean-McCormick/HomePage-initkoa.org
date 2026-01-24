@@ -11,7 +11,7 @@ export default function CivicGovernancePage() {
     <main className="max-w-4xl mx-auto px-6 py-24 prose prose-slate">
       <h1>Civic Governance</h1>
       <p>
-        The core initiative of KOA is to provide a "Government in a Box" — a complete, deployable stack for managing communities.
+        The core initiative of kOA is to provide a "Government in a Box" — a complete, deployable stack for managing communities.
       </p>
 
       <h2>The Constitution</h2>

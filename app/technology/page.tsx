@@ -4,7 +4,7 @@ import { GitPullRequest } from 'lucide-react'; //
 
 export const metadata = {
   title: 'Technology Stack â€“ RÃ©jean McCormick',
-  description: 'The architectural specifications, invariants, and service definitions of the KOA ecosystem.',
+  description: 'The architectural specifications, invariants, and service definitions of the kOA ecosystem.',
 };
 
 export default function TechIndex() {

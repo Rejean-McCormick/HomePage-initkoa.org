@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Globe, ArrowRight, Construction } from "lucide-react";
 
 export const metadata = {
-  title: "International Strategy – KOA",
+  title: "International Strategy – kOA",
   description: "Technocratic neutrality and the Freeze–Vote–Rebuild framework.",
 };
 
@@ -19,7 +19,7 @@ export default function InternationalPage() {
         <h1 className="text-4xl font-bold text-slate-900 mb-4">International Strategy</h1>
 
         <p className="text-xl text-slate-600">
-          Applying the KOA operating system to geopolitics. We replace moralizing diplomacy with
+          Applying the kOA operating system to geopolitics. We replace moralizing diplomacy with
           <strong> technocratic neutrality</strong> and <strong> construction competitions</strong>.
         </p>
       </div>

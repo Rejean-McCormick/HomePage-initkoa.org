@@ -3,7 +3,7 @@
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
-  title: 'Why KOA?',
+  title: 'Why kOA?',
   description:
     'A systemic approach to solving governance, educational, economic, and social crises through meritocracy and technology.'
 };
@@ -12,10 +12,10 @@ export default function WhyKoaPage() {
   return (
     <PageSection>
       {/* Main Title - Applied #1e6864 */}
-      <h1 className="text-4xl font-bold mb-6 text-[#1e6864]">Why KOA?</h1>
+      <h1 className="text-4xl font-bold mb-6 text-[#1e6864]">Why kOA?</h1>
 
       <p className="text-lg mb-8">
-        KOA was born from a critical realization: our global crises are not isolated incidents but symptoms of <strong>obsolete operating systems</strong>. To solve them, we cannot merely patch the existing framework; we must upgrade the entire architecture of governance, education, and economy.
+        kOA was born from a critical realization: our global crises are not isolated incidents but symptoms of <strong>obsolete operating systems</strong>. To solve them, we cannot merely patch the existing framework; we must upgrade the entire architecture of governance, education, and economy.
       </p>
 
       <hr className="my-8 border-gray-300" />
@@ -76,9 +76,9 @@ export default function WhyKoaPage() {
       <hr className="my-8 border-gray-300" />
 
       {/* Section Title - Applied #1e6864 */}
-      <h2 className="text-2xl font-semibold mb-4 text-[#1e6864]">The Solution: The KOA Ecosystem</h2>
+      <h2 className="text-2xl font-semibold mb-4 text-[#1e6864]">The Solution: The kOA Ecosystem</h2>
       <p className="mb-6">
-        KOA provides the tools to transition from these broken systems to a meritocratic, transparent, and collaborative future.
+        kOA provides the tools to transition from these broken systems to a meritocratic, transparent, and collaborative future.
       </p>
 
       <div className="space-y-6">
@@ -119,7 +119,7 @@ export default function WhyKoaPage() {
         {/* Box Title - Applied #1e6864 */}
         <h2 className="text-xl font-bold mb-2 text-[#1e6864]">Our Political Position</h2>
         <p>
-          KOA is not a satirical project or a think-tank. It is a <strong>governance offering</strong> ready to be ratified by universal suffrage. Our goal is to implement these solutions directly through democratic institutions, transitioning power from elite interest groups back to competent, ethical citizens.
+          kOA is not a satirical project or a think-tank. It is a <strong>governance offering</strong> ready to be ratified by universal suffrage. Our goal is to implement these solutions directly through democratic institutions, transitioning power from elite interest groups back to competent, ethical citizens.
         </p>
       </div>
     </PageSection>

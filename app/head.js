@@ -3,7 +3,7 @@ export default function Head() {
   return (
     <>
       <meta charSet="UTF-8" />
-      <title>King Klown & KOA</title>
+      <title>The kOA initiative</title>
       <meta name="description" content="L'initiative kOA est un mouvement sociotechnique qui mêle surréalisme et innovation concrète pour relever les défis contemporains." />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta property="og:title" content="L'initiative kOA" />

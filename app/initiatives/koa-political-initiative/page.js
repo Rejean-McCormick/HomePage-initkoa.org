@@ -2,15 +2,15 @@
 // app/initiatives/koa-political-movement/page.js
 import PageSection from '@/components/PageSection';
 
-export const metadata = { title: 'Mouvement Politique KOA' };
+export const metadata = { title: 'Mouvement Politique kOA' };
 
-export default function MouvementPolitiqueKOA() {
+export default function MouvementPolitiquekOA() {
   return (
     <PageSection>
-      <h1>Mouvement Politique KOA</h1>
+      <h1>Mouvement Politique kOA</h1>
 
       <p>
-        KOA se présente comme une force politique de transformation systémique
+        kOA se présente comme une force politique de transformation systémique
         répondant aux crises environnementales, sociales et démocratiques. Son
         socle : lucidité radicale, coopération intégrale et technologie ouverte.
       </p>

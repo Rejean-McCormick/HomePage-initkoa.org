@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Scroll, Vote, GitPullRequest, Shield, Scale, ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: "The Civic Constitution – KOA",
+  title: "The Civic Constitution – kOA",
   description: "The Kernel of the Civic Operating System. The rules that govern the rulers.",
 };
 
@@ -20,7 +20,7 @@ export default function ConstitutionPage() {
           The Civic Constitution
         </h1>
         <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-          If KOA is an Operating System, the Constitution is the <strong>Kernel</strong>.
+          If kOA is an Operating System, the Constitution is the <strong>Kernel</strong>.
           It defines the immutable rules of the game. It ensures that the system serves the citizens, and not the other way around.
         </p>
       </div>
@@ -97,7 +97,7 @@ export default function ConstitutionPage() {
             </h2>
             <div className="prose prose-lg text-slate-600 max-w-none">
               <p className="mb-4">
-                Unlike traditional constitutions which are static text on paper—dependent on human interpretation and susceptible to corruption—the KOA Constitution is <strong>Algorithmic Law</strong>. It is enforced by the network itself.
+                Unlike traditional constitutions which are static text on paper—dependent on human interpretation and susceptible to corruption—the kOA Constitution is <strong>Algorithmic Law</strong>. It is enforced by the network itself.
               </p>
               <ul className="space-y-3 mt-4">
                 <li className="flex items-center">
