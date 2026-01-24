@@ -173,10 +173,10 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-slate-900 leading-none text-lg tracking-tight group-hover:text-primary transition-colors">
-                King Klown
+                The kOA
               </span>
               <span className="text-xs text-slate-500 tracking-widest font-medium uppercase">
-                & KOA
+                initiative
               </span>
             </div>
           </Link>
