@@ -10,86 +10,74 @@ export const metadata = {
 
 Kristal Farms does not export electricity. It exports **results**.
 
-That means **fiber connectivity is a first-class utility**: without reliable network links, the pads can’t deliver value, and the project can’t justify colocating compute in the village. :contentReference[oaicite:0]{index=0}
+That means **fiber connectivity is a first-class utility**: without reliable network links, the pads can’t deliver value, and the project can’t justify colocating compute in the village.
 
 ---
 
-## What the network provides
+## Architecture
 
-### 1) A backbone for exporting compute
-A small **Network Operations Center (NOC)** is established at the port site, then a main **trunk line** connects to a regional hub using high-capacity transport. :contentReference[oaicite:1]{index=1}
+### NOC + trunk connectivity
 
-### 2) Local fiber for pads and community institutions
-Short **feeder lines** connect the NOC to:
-- each compute pad, and
-- local facilities (e.g., clinic, school). :contentReference[oaicite:2]{index=2}
+A small **Network Operations Center (NOC)** is established at the port site, then a main **trunk line** connects to a regional hub using high-capacity transport.
 
-This is part of the “shared infrastructure” logic: the same build that exports compute can also improve local connectivity.
+The network is designed to serve:
 
----
-
-## Reliability by design (not wishful thinking)
+- the pad yard (tenant traffic),
+- community services (connectivity benefit),
+- local facilities (e.g., clinic, school).
 
 ### Dual uplinks per pad
-Each pad gets **two independent fiber uplinks (A/B)** so a single failure does not take it offline. :contentReference[oaicite:3]{index=3}
 
-### Path protection on the trunk
-Where feasible, the trunk uses **diverse paths / ring-like protection** so a fiber cut does not isolate the site. :contentReference[oaicite:4]{index=4}
+Each pad gets **two independent fiber uplinks (A/B)** so a single failure does not take it offline.
 
-### NOC resilience + monitored failover
-The NOC includes redundant power feeds for critical equipment, and automated failover is configured:
-- at the pad level (A→B),
-- and on the backbone (reroute on trunk failure). :contentReference[oaicite:5]{index=5}
+### Diverse paths where feasible
 
----
+Where feasible, the trunk uses **diverse paths / ring-like protection** so a fiber cut does not isolate the site.
 
-## Operations: what gets measured (and shown)
+### Failover behavior
 
-The network is operated like critical infrastructure, with continuous monitoring of:
-- **link availability** (uptime),
-- **latency** (including 95th percentile),
-- **jitter**,
-- **error rates**. :contentReference[oaicite:6]{index=6}
+Failover is validated:
 
-These indicators are intended to appear on the **public dashboard** (aggregate, non-sensitive), alongside counts of connected local sites. :contentReference[oaicite:7]{index=7}
+- at the pad edge (A/B),
+- and on the backbone (reroute on trunk failure).
 
 ---
 
-## Traffic separation and privacy (black-box networking)
+## Monitoring
 
-Kristal Farms applies the **black-box rule** to the network as well:
+Key metrics include:
 
-- **No deep packet inspection** of tenant traffic.
-- The host sees infrastructure-level metadata (link up/down, aggregate bandwidth) but not packet content. :contentReference[oaicite:8]{index=8}
+- uptime/availability,
+- latency,
+- throughput,
+- packet loss,
+- and **error rates**.
 
-A key requirement is that **tenant traffic and community traffic are securely segregated** (e.g., VLAN/firewall separation), with explicit acceptance testing to confirm isolation. :contentReference[oaicite:9]{index=9}
-
----
-
-## Quality of Service (QoS): fairness between workloads
-
-Not all traffic has the same needs. The network uses QoS classes such as:
-- default class for batch training workloads,
-- dedicated low-latency queues for interactive services,
-- **reserved bandwidth** for community services (clinic, school). :contentReference[oaicite:10]{index=10}
-
-This keeps the project aligned with its civic purpose: the network is not “best effort for everyone”—it is governed.
+These indicators are intended to appear on the **public dashboard** (aggregate, non-sensitive), alongside counts of connected local sites.
 
 ---
 
-## Go-live requirements (what must be proven)
+## Tenancy boundaries (black-box networking)
 
-Before the project claims operational readiness, the fiber system must pass acceptance tests, including:
+The host operates the network up to the pad boundary:
 
-- **SLA verification** (measured availability/latency over a burn-in period),
-- **dual-uplink failover** demonstration per pad,
-- proven **segregation** between tenant and community networks,
-- public network dashboard online with the key metrics. :contentReference[oaicite:11]{index=11}
+- The host sees infrastructure-level metadata (link up/down, aggregate bandwidth) but not packet content.
+
+A key requirement is that **tenant traffic and community traffic are securely segregated** (e.g., VLAN/firewall separation), with explicit acceptance testing to confirm isolation.
 
 ---
 
-## Continue
+## Community connectivity guarantee
 
-- <Link href="/infrastructures/kristal-farms/tenancy-model">Tenancy model →</Link>  
-- <Link href="/infrastructures/kristal-farms/metrics-and-dashboard">Metrics & dashboard →</Link>  
-- <Link href="/infrastructures/kristal-farms/go-no-go">Go / No-Go gates →</Link>
+Connectivity benefit can include:
+
+- reserved bandwidth for community services (clinic, school).
+- public network dashboard online with the key metrics.
+
+---
+
+## Next pages
+
+- <Link href="/infrastructures/kristal-farms/overview" className="text-[#1e6864] font-mono hover:underline">Overview →</Link>  
+- <Link href="/infrastructures/kristal-farms/environment-and-safety" className="text-[#1e6864] font-mono hover:underline">Environment & safety →</Link>  
+- <Link href="/infrastructures/kristal-farms/go-no-go" className="text-[#1e6864] font-mono hover:underline">Go / No-Go checklist →</Link>

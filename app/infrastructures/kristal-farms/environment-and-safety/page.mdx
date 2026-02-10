@@ -16,72 +16,81 @@ This page describes the **environmental safeguards** and the **safety / complian
 
 ## Environmental safeguards
 
-### 1) ΔT compliance (protecting the bay / aquatic life)
-Any heat rejection to the bay is constrained by a hard environmental rule: **the temperature rise (ΔT) must stay below an agreed limit**, with the system designed for **100% compliance** (no hours above the cap). :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}
+### ΔT compliance (no exceptions)
+
+Any heat rejection to the bay is constrained by a hard environmental rule: **the temperature rise (ΔT) must stay below an agreed limit**, with the system designed for **100% compliance** (no hours above the cap).
 
 This is enforced by:
-- real-time sensors and alarms,
-- automatic throttling / fallback modes when heat can’t be absorbed,
-- oversight by an **Environment Committee**. :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3}
 
-### 2) Near-zero freshwater consumption (WUE ≈ 0)
-Kristal Farms avoids evaporative cooling towers. Cooling is based on **closed loops and heat exchangers**, so **Water Usage Effectiveness is near zero by design** (only minor top-ups). :contentReference[oaicite:4]{index=4} :contentReference[oaicite:5]{index=5}
+- real-time sensing on supply/return,
+- conservative fallback modes if telemetry fails,
+- and oversight by an **Environment Committee**.
 
-### 3) No new dams, low-impact siting
-The model assumes an **existing hydro site** (no new flooding / reservoirs) and places the pad yard on **previously disturbed or low ecological value land** near the port/village edge. :contentReference[oaicite:6]{index=6}
+### Near-zero water consumption (closed-loop cooling)
 
-### 4) Emissions reduction via heat reuse
-By reusing heat (buildings + greenhouse), the project reduces diesel burned for heating and the spill risks that come with fuel transport and storage—this benefit is tracked and reported. :contentReference[oaicite:7]{index=7} :contentReference[oaicite:8]{index=8}
+Kristal Farms avoids evaporative cooling towers. Cooling is based on **closed loops and heat exchangers**, so **Water Usage Effectiveness is near zero by design** (only minor top-ups).
 
-### 5) Noise and light discipline
-A compact port-side footprint and directed lighting are part of the “do no harm” approach, reducing nuisance for residents and wildlife. :contentReference[oaicite:9]{index=9}
+### Minimal new ecological disturbance
 
----
+The model assumes an **existing hydro site** (no new flooding / reservoirs) and places the pad yard on **previously disturbed or low ecological value land** near the port/village edge.
 
-## Safety by gates (what must be proven before scaling)
+### Reduced diesel dependence (tracked benefit)
 
-Kristal Farms treats safety as a **go/no-go requirement**, not an aspiration.
+By reusing heat (buildings + greenhouse), the project reduces diesel burned for heating and the spill risks that come with fuel transport and storage—this benefit is tracked and reported.
 
-Before moving beyond early operation, the project must pass:
-- **electrical safety audits** (grounding, protection, fault clearance),
-- **mechanical safety audits** (pressure testing, leak prevention, emergency shutdown validation),
-- and **fire safety audits** appropriate to the pad yard and utility equipment. :contentReference[oaicite:10]{index=10}
+### Light/noise nuisance minimized
 
-### Cyber & data safety (black-box integrity)
-Even though Kristal Farms is not a data product, it must prove that tenancy separation works:
-
-- the network segregation between **tenant traffic** and **community traffic** is verified,
-- and a cybersecurity audit can be used to validate that isolation is effective. :contentReference[oaicite:11]{index=11} :contentReference[oaicite:12]{index=12}
+A compact port-side footprint and directed lighting are part of the “do no harm” approach, reducing nuisance for residents and wildlife.
 
 ---
 
-## Monitoring and transparency
+## Safety & compliance gates
 
-Environmental performance is not “reported when requested.” It is **observable and continuous**:
+### Commissioning requirements (before any scaling)
 
-- **ΔT compliance** is tracked as a headline indicator,
-- **WUE** is reported to confirm near-zero water consumption,
-- additional public indicators (diesel avoided, heat delivered, HUF) are shown to connect operations to civic outcomes. :contentReference[oaicite:13]{index=13} :contentReference[oaicite:14]{index=14}
+Before the site scales, the project must pass:
 
----
+- electrical commissioning and protection verification,
+- heat system commissioning (including safe reject mode),
+- fiber acceptance tests and isolation verification,
+- and **fire safety audits** appropriate to the pad yard and utility equipment.
 
-## Governance oversight
+### Auditable isolation (black-box tenancy)
 
-Environmental and safety accountability is formalized:
+Tenants are treated as “black boxes”:
 
-- the **Environment Committee** oversees ΔT compliance and incident review, with a target of 100% compliance. :contentReference[oaicite:15]{index=15}
-- go/no-go gates include safety/compliance audits and operational transparency (dashboard live). :contentReference[oaicite:16]{index=16}
-
----
-
-## Exit safety (reversibility)
-
-A key protection is the ability to **remove the installation and restore the site** (pads are modular; decommissioning is planned and financially provisioned). :contentReference[oaicite:17]{index=17}
+- the host monitors infrastructure availability,
+- but does not inspect tenant workloads or packet content,
+- and a cybersecurity audit can be used to validate that isolation is effective.
 
 ---
 
-## Continue
+## Monitoring & transparency
 
-- <Link href="/infrastructures/kristal-farms/cooling-and-water">Cooling & water →</Link>  
-- <Link href="/infrastructures/kristal-farms/go-no-go">Go / No-Go gates →</Link>  
-- <Link href="/infrastructures/kristal-farms/reversibility">Reversibility & site restoration →</Link>
+### Public dashboard indicators
+
+A small set of indicators are published (aggregate, non-sensitive), including:
+
+- ΔT compliance status and incident flags,
+- heat delivered and useful heat fraction (HUF),
+- uptime/availability,
+- and additional public indicators (diesel avoided, heat delivered, HUF) are shown to connect operations to civic outcomes.
+
+### Governance oversight
+
+- the **Environment Committee** oversees ΔT compliance and incident review, with a target of 100% compliance.
+- go/no-go gates include safety/compliance audits and operational transparency (dashboard live).
+
+---
+
+## Decommissioning protection
+
+A key protection is the ability to **remove the installation and restore the site** (pads are modular; decommissioning is planned and financially provisioned).
+
+---
+
+## Next pages
+
+- <Link href="/infrastructures/kristal-farms/overview" className="text-[#1e6864] font-mono hover:underline">Overview →</Link>  
+- <Link href="/infrastructures/kristal-farms/fiber-and-network" className="text-[#1e6864] font-mono hover:underline">Fiber & network →</Link>  
+- <Link href="/infrastructures/kristal-farms/go-no-go" className="text-[#1e6864] font-mono hover:underline">Go / No-Go checklist →</Link>

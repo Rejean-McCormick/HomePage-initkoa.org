@@ -13,71 +13,78 @@ Kristal Farms is a **cold-climate, hydro-powered compute infrastructure** design
 1. **Compute capacity** (hosted in modular “pads”), exported by high-quality fiber.
 2. **Local community benefits**, by turning server waste heat into **building heating** and **greenhouse food production**.
 
-The core move is simple: **put the compute in the village near heat users**, not far away near the power source. Instead of building long transmission lines, the project uses local hydro on site and converts waste heat into something useful. Tenants lease **black-box compute pads** (power, cooling, fiber provided), while the village gains low-cost heat and improved connectivity. :contentReference[oaicite:0]{index=0}
+---
+
+## What makes it different
+
+The core move is simple: **put the compute in the village near heat users**, not far away near the power source. Instead of building long transmission lines, the project uses local hydro on site and converts waste heat into something useful. Tenants lease **black-box compute pads** (power, cooling, fiber provided), while the village gains low-cost heat and improved connectivity.
 
 ---
 
-## What it provides (in plain terms)
+## Outcomes (what the village gets)
 
-### For the community
-- **Lower-cost heat** for public buildings first (and then homes), with a “heat-first” operating rule. :contentReference[oaicite:1]{index=1}  
-- **Greenhouse capability** powered by recycled heat (food resilience and local jobs). :contentReference[oaicite:2]{index=2}  
-- **Better connectivity**: fiber infrastructure that can also serve local institutions. :contentReference[oaicite:3]{index=3}  
-- **Transparent reporting** through a public dashboard of outcomes (energy, heat, reliability, community benefit). :contentReference[oaicite:4]{index=4}  
-
-### For compute tenants
-- A clean, predictable site: **plug-ready pads** with utilities provided up to the boundary.
-- A strict **black-box tenancy model**: the host can monitor infrastructure health, but cannot inspect tenant data or internal operations. :contentReference[oaicite:5]{index=5}  
-- Clear operating constraints: heat-first rules and environmental compliance are part of the deal. :contentReference[oaicite:6]{index=6}  
+- **Lower-cost heat** for public buildings first (and then homes), with a “heat-first” operating rule.
+- **Greenhouse capability** powered by recycled heat (food resilience and local jobs).
+- **Better connectivity**: fiber infrastructure that can also serve local institutions.
+- **Transparent reporting** through a public dashboard of outcomes (energy, heat, reliability, community benefit).
 
 ---
 
-## How it works (conceptual view)
+## Operating model (what tenants get)
 
-1. **Local hydro powers the site** using a short connection to a village substation (avoiding long new transmission corridors). :contentReference[oaicite:7]{index=7}  
-2. **Compute runs in modular pads** (tenants bring hardware/software; the site provides the utilities). :contentReference[oaicite:8]{index=8}  
-3. **Waste heat is captured** and routed to local heat sinks (public buildings first, then homes, plus greenhouse and thermal storage). :contentReference[oaicite:9]{index=9}  
-4. **Work is exported by fiber** with monitoring focused on availability/latency and separation between tenant traffic and community traffic. :contentReference[oaicite:10]{index=10}  
+- A strict **black-box tenancy model**: the host can monitor infrastructure health, but cannot inspect tenant data or internal operations.
+- Clear operating constraints: heat-first rules and environmental compliance are part of the deal.
 
 ---
 
-## The non-negotiables (what makes this “governable infrastructure”)
+## How it works (high level)
 
-### Heat-first operations
-Compute must not quietly cannibalize the civic purpose. The operating hierarchy is:
-**reuse → store → reject**, with community heating prioritized. :contentReference[oaicite:11]{index=11}
-
-### Black-box tenancy
-The host provides utilities and physical security **up to the pad boundary**, and monitors only infrastructure metrics—not tenant content. :contentReference[oaicite:12]{index=12}
-
-### Public accountability
-A small, stable set of metrics is published to make performance legible:
-PUE, WUE (~0 by design), useful heat delivered, HUF, diesel avoided, and uptime/occupancy (plus network and community benefit indicators). :contentReference[oaicite:13]{index=13}
-
-### Inclusive governance
-Four standing bodies are defined:
-- **Project Council** (overall strategy and dispute resolution) :contentReference[oaicite:14]{index=14}  
-- **Heat Committee** (seasonal heat priorities, HUF review) :contentReference[oaicite:15]{index=15}  
-- **Environment Committee** (environmental compliance and incident review) :contentReference[oaicite:16]{index=16}  
-- **Kristals Council** (public-interest knowledge commons program, topic selection, validation) :contentReference[oaicite:17]{index=17}  
-
-> Note: **Kristal Farms** is infrastructure. **Kristals** are verifiable knowledge artifacts (technology). Farms can *host* compute that helps produce public-interest outputs, but the concepts remain separate.
+1. **Local hydro powers the site** using a short connection to a village substation (avoiding long new transmission corridors).
+2. **Compute runs in modular pads** (tenants bring hardware/software; the site provides the utilities).
+3. **Waste heat is captured** and routed to local heat sinks (public buildings first, then homes, plus greenhouse and thermal storage).
+4. **Work is exported by fiber** with monitoring focused on availability/latency and separation between tenant traffic and community traffic.
 
 ---
 
-## Phased rollout (why this is staged)
+## Heat-first rule
 
-Phase 1 proves the basics: compute running, useful heat flowing, data exported by fiber; with thermal storage and greenhouse readiness. :contentReference[oaicite:18]{index=18}  
-Scaling happens only after go/no-go criteria are met (reliable fiber, safe commissioned power, functioning heat reuse, signed agreements, seated governance, and a public dashboard). :contentReference[oaicite:19]{index=19}  
+The operating priority is:
+
+**reuse → store → reject**, with community heating prioritized.
 
 ---
 
-## Continue
+## Tenancy boundary
 
-- <Link href="/infrastructures/kristal-farms/why-this-exists">Why this exists →</Link>  
-- <Link href="/infrastructures/kristal-farms/how-it-works">How it works →</Link>  
-- <Link href="/infrastructures/kristal-farms/heat-first-design">Heat-first design →</Link>  
-- <Link href="/infrastructures/kristal-farms/tenancy-model">Tenancy model →</Link>  
-- <Link href="/infrastructures/kristal-farms/governance">Governance →</Link>  
-- <Link href="/infrastructures/kristal-farms/metrics-and-dashboard">Metrics & dashboard →</Link>  
-- <Link href="/infrastructures/kristal-farms/phasing">Phasing →</Link>
+The host provides utilities and physical security **up to the pad boundary**, and monitors only infrastructure metrics—not tenant content.
+
+---
+
+## What gets measured
+
+PUE, WUE (~0 by design), useful heat delivered, HUF, diesel avoided, and uptime/occupancy (plus network and community benefit indicators).
+
+---
+
+## Governance (so “benefit” is enforceable)
+
+- **Project Council** (overall strategy and dispute resolution)
+- **Heat Committee** (seasonal heat priorities, HUF review)
+- **Environment Committee** (environmental compliance and incident review)
+- **Kristals Council** (public-interest knowledge commons program, topic selection, validation)
+
+---
+
+## Phasing
+
+Phase 1 proves the basics: compute running, useful heat flowing, data exported by fiber; with thermal storage and greenhouse readiness.
+
+Scaling happens only after go/no-go criteria are met (reliable fiber, safe commissioned power, functioning heat reuse, signed agreements, seated governance, and a public dashboard).
+
+---
+
+## Next pages
+
+- <Link href="/infrastructures/kristal-farms/environment-and-safety" className="text-[#1e6864] font-mono hover:underline">Environment & safety →</Link>  
+- <Link href="/infrastructures/kristal-farms/fiber-and-network" className="text-[#1e6864] font-mono hover:underline">Fiber & network →</Link>  
+- <Link href="/infrastructures/kristal-farms/go-no-go" className="text-[#1e6864] font-mono hover:underline">Go / No-Go checklist →</Link>
