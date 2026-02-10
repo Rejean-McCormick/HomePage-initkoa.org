@@ -1,15 +1,13 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
+export const metadata = {
   title: "Orgo — Execution & Accountability",
   description:
     "Orgo turns incoming signals into accountable work: route by function, escalate by time, and close every case with a traceable outcome—even offline.",
-  alternates: { canonical: "/technology/orgo" },
+  alternates: { canonical: "/platforms/orgo" },
   openGraph: {
     title: "Orgo — Execution & Accountability",
     description:
       "Orgo turns incoming signals into accountable work: route by function, escalate by time, and close every case with a traceable outcome—even offline.",
-    url: "/technology/orgo",
+    url: "/platforms/orgo",
   },
 };
 
@@ -42,14 +40,14 @@ Orgo standardizes this reality into a single accountable pipeline: **signal → 
 Signals enter through a gateway (email, forms, APIs, imports). The goal is simple: convert “messages” into **work candidates**.
 
 ### 2) Deconstruct and classify (local processing)
-Orgo can use local processing to extract the basic operational elements:
+Orgo can use local processing to extract the basic operational elements that matter:
 - what is being requested or reported,
 - who/what is affected,
 - where it happened,
 - severity,
 - and the likely responsible function.
 
-Principle: sensitive operational data should not require external cloud services to become usable.
+The principle: sensitive operational data should not require external cloud services to become usable.
 
 ### 3) Structure into Cases and Tasks
 - A **Case** is a situation that must be handled (incident, request, report, follow-up).
@@ -61,9 +59,9 @@ This gives every issue a container, ownership, and a closure path.
 Work is routed to a **responsibility** (function/role), not “who saw it first.”
 This protects continuity through turnover, absences, and reorganizations.
 
-### 5) Track reactivity windows (and escalate)
+### 5) Track reactivity windows (and escalation)
 Orgo tracks **reactivity**: how quickly something must be acknowledged or acted upon.
-If the window is missed, Orgo escalates automatically (policy-driven).
+If the reactivity window is missed, Orgo escalates automatically (policy-driven).
 
 ---
 
@@ -71,9 +69,9 @@ If the window is missed, Orgo escalates automatically (policy-driven).
 
 Orgo is strictly multi-tenant:
 
-- **Organization:** top-level tenant; owns all data, configuration, and policies.
-- **User:** authenticated operator (staff, volunteer, admin).
-- **Person:** subject profile (patient, student, employee, citizen) who may never log in but can be the subject of cases.
+- **Organization:** the top-level tenant; owns all data, configuration, and policies.
+- **User:** an authenticated operator (staff, volunteer, admin).
+- **Person:** a subject profile (patient, student, employee, citizen) who may never log in but can be the subject of cases.
 
 ### Operational objects
 - **Signal:** raw incoming input (email, form submission, phone note, import record).
@@ -92,7 +90,7 @@ Orgo can operate without relying on the public internet:
 
 - **Internet independence:** core logic and storage run within your perimeter.
 - **Resilience:** operations continue during outages and unstable connectivity.
-- **Controlled bridging:** external links exist only when explicitly enabled and governed.
+- **Controlled bridging:** when external links exist, they are optional and governable.
 
 This is not a “feature.” It is a reliability and sovereignty requirement.
 
@@ -140,35 +138,6 @@ Example principle: when repeated issues cross a threshold, Orgo can open a revie
 
 ---
 
-## Typical use cases
-
-- **Service intake:** all requests become cases, auto-routed by function, no “lost email”.
-- **Incident handling:** severity + time windows + escalation → reliable response.
-- **Field operations:** offline capture → later sync → preserved provenance + audit trail.
-- **Compliance workflows:** every decision and outcome recorded with traceable evidence.
-- **Multi-site operations:** consistent policy profiles across locations with local autonomy.
-
----
-
-## Offline-first + bridges (optional)
-
-Orgo can run fully offline. When you enable bridges, they should be explicit and governable:
-- inbound: email gateway, form ingestion, API import
-- outbound: notifications, exports, integrations with existing systems
-
-Bridges must never be required to keep the internal accountability loop functioning.
-
----
-
-## Security & privacy (baseline)
-
-- **Tenant isolation:** organizations do not share data.
-- **Role-based access:** function/role is the routing target; user assignment is optional.
-- **Audit trail:** append-only event history for cases/tasks/outcomes.
-- **Retention controls:** policy-defined timeframes and export capability.
-
----
-
 ## What Orgo is / is not
 
 ### Orgo **is**
@@ -180,8 +149,3 @@ Bridges must never be required to keep the internal accountability loop function
 - An ERP (it does not replace payroll/accounting)
 - A chat app (it replaces informal “hope someone sees it” coordination)
 - A toy kanban board (it enforces routing, escalation, and closure)
-
----
-
-## Status / next
-If you want, add one line here stating the current maturity level (concept / prototype / alpha) and where to go next (spec, repo, demo, contact).
