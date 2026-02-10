@@ -5,7 +5,7 @@ import path from "node:path";
 
 export const runtime = "nodejs";
 
-// Use ONE canonical base URL (match your redirects / canonical tags)
+// Use ONE canonical base URL (match redirects / canonical tags)
 const BASE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ||
   process.env.SITE_URL ||
@@ -23,15 +23,31 @@ function isDynamicSegment(seg: string): boolean {
   return seg.startsWith("[") && seg.endsWith("]");
 }
 
-// Skip hidden/private folders + dynamic segments.
+// Intercepting routes look like "(.)foo", "(..)foo", "(...)foo", "(..)(..)foo"
+function isInterceptingSegment(seg: string): boolean {
+  return (
+    seg.startsWith("(.)") ||
+    seg.startsWith("(..)") ||
+    seg.startsWith("(...") ||
+    seg.startsWith("(..)(..)")
+  );
+}
+
+// Skip hidden/private folders + dynamic segments + parallel routes + intercepting routes.
 // NOTE: Route groups are NOT skipped; we traverse them but do not add them to the URL path.
 function isSkippableSegment(seg: string): boolean {
   if (!seg) return true;
   if (seg.startsWith(".")) return true;
   if (seg.startsWith("_")) return true;
 
+  // Parallel routes (@slot) should not become URL segments
+  if (seg.startsWith("@")) return true;
+
   // Skip dynamic segments (prevents emitting non-concrete URLs)
   if (isDynamicSegment(seg)) return true;
+
+  // Skip intercepting routes (prevents emitting non-canonical URLs)
+  if (isInterceptingSegment(seg)) return true;
 
   return false;
 }
@@ -104,20 +120,68 @@ function changeFrequencyFor(
   return "monthly";
 }
 
+type AiSitemapEntry = {
+  url: string; // absolute or path
+  lastModified?: string | Date;
+  changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
+  priority?: number;
+};
+
+function toAbsoluteUrl(u: string): string {
+  if (u.startsWith("http://") || u.startsWith("https://")) {
+    return u.replace(/\/+$/, "");
+  }
+  const p = u.startsWith("/") ? u : `/${u}`;
+  return p === "/" ? BASE_URL : `${BASE_URL}${p}`;
+}
+
+function readAiSitemapIfPresent(): AiSitemapEntry[] | null {
+  const file = path.join(process.cwd(), "public", "ai-sitemap.json");
+  if (!fs.existsSync(file)) return null;
+
+  const raw = fs.readFileSync(file, "utf8");
+  const data = JSON.parse(raw) as AiSitemapEntry[];
+
+  if (!Array.isArray(data)) return null;
+  return data.filter((e) => e && typeof e.url === "string" && e.url.length > 0);
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  // In Next.js, process.cwd() resolves to the project root (where /app lives)
+  const now = new Date();
+
+  // Prefer the generated ai-sitemap.json (your build already creates it)
+  const ai = readAiSitemapIfPresent();
+  if (ai) {
+    return ai
+      .map((e) => {
+        const url = toAbsoluteUrl(e.url);
+
+        // Avoid listing the human /sitemap page if it exists
+        if (url === `${BASE_URL}/sitemap`) return null;
+
+        return {
+          url,
+          lastModified: e.lastModified ?? now,
+          changeFrequency: e.changeFrequency ?? "monthly",
+          priority: typeof e.priority === "number" ? e.priority : 0.5,
+        } satisfies MetadataRoute.Sitemap[number];
+      })
+      .filter(Boolean) as MetadataRoute.Sitemap;
+  }
+
+  // Fallback: scan /app for page.* routes
   const appDirAbs = path.join(process.cwd(), "app");
   const routePaths = walkForRoutes(appDirAbs);
 
-  const now = new Date();
-
-  return routePaths.map((routePath) => {
-    const url = routePath === "/" ? BASE_URL : `${BASE_URL}${routePath}`;
-    return {
-      url,
-      lastModified: now,
-      changeFrequency: changeFrequencyFor(routePath),
-      priority: priorityFor(routePath),
-    };
-  });
+  return routePaths
+    .filter((p) => p !== "/sitemap") // avoid listing a human sitemap page, if present
+    .map((routePath) => {
+      const url = routePath === "/" ? BASE_URL : `${BASE_URL}${routePath}`;
+      return {
+        url,
+        lastModified: now,
+        changeFrequency: changeFrequencyFor(routePath),
+        priority: priorityFor(routePath),
+      };
+    });
 }

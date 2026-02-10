@@ -1,125 +1,75 @@
-// app/sitemap.ts
-import type { MetadataRoute } from "next";
+// app/sitemap/page.tsx
 import fs from "node:fs";
 import path from "node:path";
 
 export const runtime = "nodejs";
+export const dynamic = "force-static";
 
-// Use ONE canonical base URL (match your redirects / canonical tags)
+type Entry = {
+  url: string;
+  lastModified?: string | Date;
+  changeFrequency?: string;
+  priority?: number;
+};
+
 const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.initkoa.org").replace(
   /\/+$/,
   ""
 );
 
-// Next.js App Router: a folder is a routable page if it contains page.(tsx|ts|js|jsx|mdx)
-const PAGE_FILE_RE = /^page\.(tsx|ts|js|jsx|mdx)$/;
-
-function isRouteGroup(seg: string): boolean {
-  return seg.startsWith("(") && seg.endsWith(")");
+function toDisplayDate(v?: string | Date) {
+  if (!v) return null;
+  const d = typeof v === "string" ? new Date(v) : v;
+  if (Number.isNaN(d.getTime())) return String(v);
+  return d.toISOString().slice(0, 10);
 }
 
-function isDynamicSegment(seg: string): boolean {
-  return seg.startsWith("[") && seg.endsWith("]");
-}
+function safeReadJson(): Entry[] {
+  // Prefer your generated public/ai-sitemap.json
+  const jsonPath = path.join(process.cwd(), "public", "ai-sitemap.json");
+  try {
+    const raw = fs.readFileSync(jsonPath, "utf8");
+    const parsed = JSON.parse(raw) as Entry[];
 
-// If you want to include dynamic routes in the sitemap, remove the dynamic segment check below
-function isSkippableSegment(seg: string): boolean {
-  // Skip hidden/private folders
-  if (!seg) return true;
-  if (seg.startsWith(".")) return true;
-  if (seg.startsWith("_")) return true;
-
-  // Skip dynamic segments (prevents emitting non-concrete URLs)
-  if (isDynamicSegment(seg)) return true;
-
-  // NOTE: we DO NOT skip route groups here; we traverse them but do not add to URL.
-  return false;
-}
-
-function walkForRoutes(appDirAbs: string): string[] {
-  const routes = new Set<string>();
-
-  function walk(currentAbs: string, segments: string[]) {
-    const entries = fs.readdirSync(currentAbs, { withFileTypes: true });
-
-    // If this folder contains a page.* file, it maps to a URL path
-    const hasPage = entries.some((e) => e.isFile() && PAGE_FILE_RE.test(e.name));
-    if (hasPage) {
-      const routePath = "/" + segments.join("/");
-      routes.add(routePath === "/" ? "/" : routePath);
-    }
-
-    // Recurse into subfolders
-    for (const e of entries) {
-      if (!e.isDirectory()) continue;
-
-      const name = e.name;
-
-      // Skip private/dynamic/etc
-      if (isSkippableSegment(name)) continue;
-
-      // Route groups: traverse, but do NOT add the segment to the URL path
-      const nextSegments = isRouteGroup(name) ? segments : [...segments, name];
-
-      walk(path.join(currentAbs, name), nextSegments);
-    }
+    // Normalize URLs (ensure absolute, canonical base)
+    return parsed
+      .map((e) => {
+        const u = e.url?.startsWith("http") ? e.url : `${BASE_URL}${e.url?.startsWith("/") ? "" : "/"}${e.url}`;
+        return { ...e, url: u };
+      })
+      .filter((e) => typeof e.url === "string" && e.url.length > 0)
+      .sort((a, b) => a.url.localeCompare(b.url));
+  } catch {
+    return [];
   }
-
-  walk(appDirAbs, []);
-  return Array.from(routes).sort();
 }
 
-function depthOf(routePath: string): number {
-  return routePath === "/" ? 0 : routePath.split("/").filter(Boolean).length;
-}
+export default function SitemapPage() {
+  const entries = safeReadJson();
 
-function priorityFor(routePath: string): number {
-  if (routePath === "/") return 1.0;
+  return (
+    <main style={{ padding: 24, maxWidth: 980, margin: "0 auto" }}>
+      <h1>Sitemap</h1>
 
-  // Boost key hubs
-  const hubs = new Set([
-    "/platforms",
-    "/infrastructures",
-    "/initiatives",
-    "/principles",
-    "/research",
-    "/technology",
-    "/kreature",
-  ]);
-  if (hubs.has(routePath)) return 0.9;
-
-  // Depth-based fallback
-  const d = depthOf(routePath);
-  if (d === 1) return 0.8;
-  if (d === 2) return 0.7;
-  if (d === 3) return 0.64;
-  if (d === 4) return 0.58;
-  return 0.5;
-}
-
-function changeFrequencyFor(
-  routePath: string
-): MetadataRoute.Sitemap[number]["changeFrequency"] {
-  const d = depthOf(routePath);
-  if (routePath === "/") return "weekly";
-  if (d <= 1) return "weekly";
-  return "monthly";
-}
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  // In Next.js, process.cwd() resolves to the project root (where /app lives)
-  const appDirAbs = path.join(process.cwd(), "app");
-  const routePaths = walkForRoutes(appDirAbs);
-
-  const now = new Date();
-
-  return routePaths.map((routePath) => {
-    const url = routePath === "/" ? BASE_URL : `${BASE_URL}${routePath}`;
-    return {
-      url,
-      lastModified: now,
-      changeFrequency: changeFrequencyFor(routePath),
-      priority: priorityFor(routePath),
-    };
-  });
+      {entries.length === 0 ? (
+        <p>
+          Aucun fichier <code>public/ai-sitemap.json</code> trouvé (ou JSON invalide).
+        </p>
+      ) : (
+        <>
+          <p>{entries.length} URL(s)</p>
+          <ul style={{ lineHeight: 1.65 }}>
+            {entries.map((e) => (
+              <li key={e.url}>
+                <a href={e.url}>{e.url}</a>
+                {e.lastModified ? <span> — {toDisplayDate(e.lastModified)}</span> : null}
+                {typeof e.priority === "number" ? <span> — prio {e.priority.toFixed(2)}</span> : null}
+                {e.changeFrequency ? <span> — {e.changeFrequency}</span> : null}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </main>
+  );
 }

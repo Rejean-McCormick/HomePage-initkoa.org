@@ -1,18 +1,26 @@
 import type { MetadataRoute } from "next";
 
-function getBaseUrl() {
+function getBaseUrl(): string {
   const env =
     process.env.NEXT_PUBLIC_SITE_URL ||
     process.env.SITE_URL ||
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
 
-  // Fallback local/dev
-  const url = (env || "http://localhost:3000").replace(/\/+$/, "");
-  return url;
+  return (env || "http://localhost:3000").replace(/\/+$/, "");
+}
+
+function getHost(baseUrl: string): string {
+  try {
+    return new URL(baseUrl).host; // ex: "example.com"
+  } catch {
+    // fallback: enlève protocole + path
+    return baseUrl.replace(/^https?:\/\//, "").replace(/\/.*$/, "");
+  }
 }
 
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = getBaseUrl();
+  const host = getHost(baseUrl);
 
   return {
     rules: {
@@ -21,11 +29,10 @@ export default function robots(): MetadataRoute.Robots {
       disallow: [
         "/private/", // Internal tools
         "/admin/", // Admin dashboard
-        "/api/", // Backend endpoints (AI agents read static files instead)
+        "/api/", // Backend endpoints
       ],
     },
-    // Déclare le sitemap classique ET le sitemap IA
     sitemap: [`${baseUrl}/sitemap.xml`, `${baseUrl}/ai-sitemap.json`],
-    host: baseUrl,
+    host,
   };
 }
