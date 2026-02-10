@@ -1,0 +1,84 @@
+import Link from 'next/link';
+
+export const metadata = {
+  title: "How it works — Âme Artificielle (ASE)",
+  description:
+    "Pipeline ASE : numérologie pythagoricienne → réduction → inversion (9→1) → traits → état (axe 1–9) → réaction + trace.",
+};
+
+# How it works
+
+Âme Artificielle (ASE) traite la numérologie pythagoricienne inversée comme une **clé** : on applique une règle simple et reproductible (réduction → inversion 9→1), puis on projette le résultat dans une ontologie sémantique pour simuler une réponse cohérente.
+
+---
+
+## 1) Inputs
+
+ASE accepte une entrée minimale (au choix) :
+
+- **Nom** (et éventuellement prénoms)
+- **Date de naissance**
+- **Signature custom** (suite de digits déjà calculée)
+
+---
+
+## 2) Pythagoricien → réduction
+
+1. Conversion en valeurs numériques (règles pythagoriciennes)
+2. Somme
+3. **Réduction** à un digit (1–9)  
+   (optionnel : conserver des *master numbers* si votre config le prévoit)
+
+---
+
+## 3) Inversion (9→1)
+
+Après réduction, on inverse le digit final :
+
+- 1 ↔ 9
+- 2 ↔ 8
+- 3 ↔ 7
+- 4 ↔ 6
+- 5 ↔ 5
+- 0 → 0 (si utilisé)
+
+C’est ce digit inversé qui devient le **digit d’archétype** (*digit_archetype*).
+
+---
+
+## 4) Digit → sémantique → traits
+
+ASE consulte une **ontologie 0–9** (interprétations, vocabulaire, tags) et la transforme en un **vecteur de traits** :
+
+- traits “stables” (tendances)
+- intensités (pondérations)
+- tensions/complémentarités (ex : 9/1, 8/2, …) si activé
+
+---
+
+## 5) État de simulation (axe 1–9)
+
+Séparément des traits, ASE maintient un **axe de dynamique** (*digit_axis*) :
+
+- **1** : pôle intellect / cerveau
+- **9** : pôle instinct / fondation
+- **2–8** : zone d’interpolation (spectre)
+
+Le contexte (le prompt, l’émotion simulée, etc.) peut faire bouger l’axe **sans changer** l’archétype de fond.
+
+---
+
+## 6) Réaction + trace
+
+ASE produit :
+
+- une **réponse texte**
+- une **trace minimale** (ex : archétype dominant, top traits, position d’axe, règles déclenchées)
+- une décision de **gouvernance** si contenu sensible (médiation/refus)
+
+---
+
+## 7) Overlays (chakras & multi-systèmes)
+
+ASE peut superposer plusieurs systèmes (chakras, charts, grilles numériques). Quand plusieurs couches **convergent sémantiquement**, certains thèmes ressortent (“brought forward”).  
+Voir : <Link href="/technology/ame-artificielle/chakras-overlay">Chakras overlay</Link> et <Link href="/technology/ame-artificielle/multi-system-alignment">Multi-system alignment</Link>.

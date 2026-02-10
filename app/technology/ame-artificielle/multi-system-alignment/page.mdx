@@ -1,0 +1,67 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Multi-system alignment — Âme Artificielle (ASE)",
+  description:
+    "Overlay de plusieurs systèmes (numérologie pythagoricienne inversée 9→1, chakras, charts) pour faire émerger les motifs renforcés par consensus sémantique.",
+};
+
+# Multi-system alignment
+
+Âme Artificielle superpose plusieurs systèmes (numérologie pythagoricienne inversée **9→1**, chakras, et autres charts) comme des **couches de lecture**.  
+Quand plusieurs couches pointent vers la même idée, certains éléments sont **amenés au premier plan** — non pas parce qu’un système a “raison”, mais parce qu’un **consensus sémantique** renforce le signal.
+
+## What “alignment” means (in ASE)
+Chaque système produit une sortie dans un format commun :
+
+- **traits** (pondérations)
+- **tags sémantiques** (mots-clés / thèmes)
+- **polarités** (ex: expansion vs contraction, ordre vs chaos)
+- **intensité / confiance** (optionnel)
+
+Ensuite, l’alignement calcule :
+- **reinforced themes** : ce qui apparaît dans ≥ 2 systèmes
+- **singletons** : ce qui n’apparaît que dans 1 système (conservé, mais moins prioritaire)
+- **tensions** : conflits explicites entre systèmes (ex: “discipline” vs “liberté”)
+
+## Minimal overlay method
+1) **Normalize**
+- réduire chaque système vers le même vocabulaire (traits/tags)
+
+2) **Project**
+- convertir tags → traits (si nécessaire)
+- garder les sources (trace)
+
+3) **Reinforce**
+- addition pondérée quand plusieurs systèmes convergent
+- bonus si convergence sur un même champ (ex: “compassion” + “heart chakra”)
+
+4) **Detect tensions**
+- si deux systèmes poussent des traits opposés au-dessus d’un seuil → créer une tension
+
+5) **Rank**
+- classer par **support_count** (nb de systèmes qui appuient le thème)
+- puis par **score total**
+
+## Output (what the engine keeps)
+- **Top reinforced traits** (avec sources)
+- **Top themes** (tags compressés)
+- **Tensions** (pairs de traits opposés)
+- **Trace** (quelles couches ont appuyé quoi)
+
+## Example (conceptual)
+- Numérologie inversée (9→1) → thème: *compassion / completion*
+- Chakras → thème: *heart*
+- Autre chart → thème: *service / care*
+
+➡︎ Alignement : *compassion + service* devient “dominant”, car soutenu par plusieurs couches.  
+Un thème isolé (ex: *adventure*) reste présent, mais secondaire.
+
+## Notes on inversion (9→1)
+L’inversion est traitée comme une **clé de lecture** : elle transforme la signature en archétypes internes, puis l’overlay compare ces archétypes aux autres systèmes.  
+L’alignement ne dépend pas d’une tradition unique : il dépend de la **cohérence entre systèmes**.
+
+## See also
+- <Link href="/technology/ame-artificielle/how-it-works">How it works</Link>
+- <Link href="/technology/ame-artificielle/chakras-overlay">Chakras overlay</Link>
+- <Link href="/technology/ame-artificielle/ontology-and-traits">Ontology & traits</Link>

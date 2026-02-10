@@ -1,0 +1,90 @@
+export const metadata = {
+  title: "Validation",
+  description:
+    "How Âme Artificielle evaluates whether its numerology inversion + multi-system overlays produce measurable, repeatable signals beyond baseline.",
+};
+
+# Validation
+
+Âme Artificielle treats “inversion-as-key” and multi-system overlays (chakras, charts, etc.) as a **hypothesis**:  
+**cross-system semantic alignment should improve prediction/consistency** compared to simple baselines.
+
+This page defines *what counts as success* and *how to test it*.
+
+## What we validate (and what we don’t)
+### We validate
+- **Consistency**: same inputs → same profile/traits (or controlled variance if randomness is enabled).
+- **Discriminability**: different subjects → meaningfully different profiles.
+- **Signal over baseline**: performance better than simple heuristics (random, majority class, generic personality template).
+- **Traceability**: the system can explain *why* it produced a result (dominant digits, reinforced traits, key tensions).
+
+### We don’t validate
+- Metaphysical truth claims.
+- “Feels accurate” impressions without measurement.
+
+## Core evaluation tasks
+Pick 1–2 tasks first (don’t overdo it):
+
+1) **Profile matching (blind)**
+- Given N anonymous profiles (texts / bios) and N anonymous charts/signatures, match pairs.
+
+2) **Trait contrast classification**
+- Given a contrast set (e.g., high-authority vs high-compassion), predict which bucket fits best, using only the encoded inputs.
+
+3) **Stability / regression**
+- Ensure upgrades don’t break reference cases (same inputs keep the same “top traits” and dominant tensions).
+
+## Experimental protocol (minimal)
+### Step 1 — Build a small reference set
+- 30–100 subjects is enough for early signal checks.
+- For each subject, store:
+  - inputs (name/date or chosen signature)
+  - expected labels (only if you have a ground truth task)
+  - notes (optional)
+
+### Step 2 — Define baselines
+Always compare ASE to:
+- **Random** (shuffle assignments)
+- **Generic template** (one-size-fits-all personality output)
+- **Single-system only** (Pythagorean without inversion, or inversion without overlays)
+
+### Step 3 — Run blind evaluation
+- The evaluator should not know which output came from which subject.
+- If matching: shuffle and force 1-to-1 mapping.
+
+### Step 4 — Score
+Use simple metrics:
+- Accuracy (matching / classification)
+- Top-k accuracy (if you return ranked matches)
+- Confusion matrix (where it fails)
+- Stability score (Jaccard overlap of top traits across runs/versions)
+
+## Overlay validation (chakras + multi-system)
+Test three configurations:
+1) Inversion-only (no overlays)
+2) Overlays-only (no inversion)
+3) Inversion + overlays (full ASE)
+
+Hypothesis: (3) should outperform (1) and (2), or at least be more stable and more discriminative.
+
+## Quality gates (release criteria)
+A version is “valid to ship” if:
+- It passes regression on reference set (no major drift unless intended).
+- It beats baselines on at least one core task **with the same dataset**.
+- It preserves explainability: trace contains dominant digits + reinforced traits + tensions.
+
+## Required outputs (for every run)
+Each run should store:
+- version id / config
+- signature digits (pythag + inverted)
+- dominant digits / top traits
+- overlay contributions (what reinforced what)
+- final decision + confidence
+- safety / governance flags (if used)
+
+## Notes on interpretation
+If the system fails to beat baseline:
+- treat it as a signal to simplify: fewer traits, fewer overlays, clearer mapping rules
+- log disagreements as “tensions” rather than smoothing them away
+- iterate only one lever at a time (rules, ontology, overlays, axis dynamics)
+

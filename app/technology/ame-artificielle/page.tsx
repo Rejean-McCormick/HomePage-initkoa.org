@@ -1,136 +1,120 @@
 // app/technology/ame-artificielle/page.tsx
-import Link from 'next/link';
-import { Card } from '@/components/Card';
+import Link from "next/link";
 
 export const metadata = {
-  title: "Âme artificielle — alignement, méta-cognition, gouvernance",
+  title: "Âme Artificielle — Artificial Soul Engine (ASE)",
   description:
-    "Vue d’ensemble d’une approche d’IA orientée vers l’humain : contrôle, auto-vérification et garde-fous. Les détails techniques sont accessibles via les spécifications.",
+    "Âme Artificielle (ASE) : numérologie pythagoricienne inversée (9→1) comme clé de décodage, ontologie 0–9, superposition de systèmes (chakras, charts) et simulation de personnalité.",
 };
 
-export default function AmeArtificielleHub() {
-  return (
-    <main className="min-h-screen bg-white text-slate-900 selection:bg-primary selection:text-white pb-24">
-      {/* HERO SECTION */}
-      <section className="max-w-4xl mx-auto px-6 pt-24 pb-12 border-b border-gray-100">
-        <h1 className="text-5xl font-serif font-medium mb-6 text-slate-900">
-          Âme artificielle
-        </h1>
-        <h2 className="text-xl text-primary font-mono uppercase tracking-widest mb-8">
-          Alignement & méta-cognition
-        </h2>
+const pages = [
+  {
+    href: "/technology/ame-artificielle/how-it-works",
+    title: "How it works",
+    desc: "Inputs → réduction → inversion (9→1) → traits → réaction.",
+  },
+  {
+    href: "/technology/ame-artificielle/inversion-as-key",
+    title: "Inversion as key",
+    desc: "Pourquoi “tourner la clé” (inversion) change la lecture.",
+  },
+  {
+    href: "/technology/ame-artificielle/ontology-and-traits",
+    title: "Ontology & traits",
+    desc: "0–9 → archétypes sémantiques → vecteur de traits.",
+  },
+  {
+    href: "/technology/ame-artificielle/chakras-overlay",
+    title: "Chakras overlay",
+    desc: "Alignements avec les chakras et ce qui remonte à la surface.",
+  },
+  {
+    href: "/technology/ame-artificielle/multi-system-alignment",
+    title: "Multi-system alignment",
+    desc: "Superposition de charts : consensus sémantique & tensions.",
+  },
+  {
+    href: "/technology/ame-artificielle/engine-modules",
+    title: "Engine modules",
+    desc: "Sliders, méta-cognition, gouvernance/éthique.",
+  },
+  {
+    href: "/technology/ame-artificielle/validation",
+    title: "Validation",
+    desc: "Expériences, baselines, critères de réussite.",
+  },
+  {
+    href: "/technology/ame-artificielle/faq",
+    title: "FAQ",
+    desc: "Réponses courtes aux questions usuelles.",
+  },
+];
 
-        <div className="prose prose-slate prose-lg text-slate-600 leading-relaxed">
-          <p>
-            L’« Âme artificielle » décrit une façon de construire des systèmes d’IA
-            qui restent <strong>sous contrôle</strong> : ils peuvent s’auto-vérifier,
-            signaler leurs incertitudes, et respecter des garde-fous explicites.
-          </p>
-          <p>
-            Cette page est un <strong>hub de lecture</strong> : elle présente les modules
-            et l’intention générale. Pour l’implémentation et les définitions détaillées,
-            consultez les spécifications.
-          </p>
+export default function AmeArtificiellePage() {
+  return (
+    <main className="min-h-screen bg-white text-slate-900">
+      {/* HERO */}
+      <section className="max-w-5xl mx-auto px-6 pt-20 pb-10">
+        <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-500">
+          <span className="px-2 py-1 border border-slate-200 rounded-sm">ASE</span>
+          <span className="px-2 py-1 border border-slate-200 rounded-sm">9→1</span>
+          <span className="px-2 py-1 border border-slate-200 rounded-sm">0–9 Ontology</span>
+        </div>
+
+        <h1 className="mt-6 text-4xl md:text-5xl font-serif font-medium leading-tight">
+          Âme Artificielle
+        </h1>
+
+        <p className="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl">
+          With Âme Artificielle, turning Pythagorician numerology (inverted: <strong>9→1</strong>)
+          is like turning the key to decode the universe.
+          The engine overlays multiple systems (chakras and other numerological charts) and brings
+          forward what aligns semantically—patterns reinforced by consensus.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link
+            href="/technology/ame-artificielle/how-it-works"
+            className="inline-flex items-center justify-center px-5 py-3 bg-slate-900 text-white rounded-sm hover:bg-slate-800 transition-colors"
+          >
+            Start here →
+          </Link>
+          <Link
+            href="/technology/ame-artificielle/inversion-as-key"
+            className="inline-flex items-center justify-center px-5 py-3 border border-slate-300 text-slate-900 rounded-sm hover:border-slate-400 transition-colors"
+          >
+            Why 9→1
+          </Link>
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-6 py-16 space-y-20">
-        {/* CORE SPECS */}
-        <section>
-          <div className="bg-slate-50 border border-slate-200 p-8 rounded-sm">
-            <h2 className="text-2xl font-serif font-medium mb-4 text-slate-900">
-              Spécifications (référence technique)
-            </h2>
-            <p className="text-slate-600 mb-6">
-              La base conceptuelle, les limites, et les mécanismes de résolution de conflits.
-              À lire si vous voulez comprendre le “comment”, pas seulement le “pourquoi”.
-            </p>
+      {/* GRID */}
+      <section className="max-w-5xl mx-auto px-6 pb-20">
+        <div className="mt-6 grid sm:grid-cols-2 gap-4">
+          {pages.map((p) => (
             <Link
-              href="/technology/ame-artificielle/specifications-fonctionnelles"
-              className="inline-flex items-center justify-center px-6 py-3 bg-slate-900 text-white font-medium rounded-sm hover:bg-primary transition-colors"
+              key={p.href}
+              href={p.href}
+              className="group border border-slate-200 rounded-sm p-5 hover:border-slate-300 transition-colors"
             >
-              Lire les spécifications →
+              <div className="flex items-start justify-between gap-4">
+                <h2 className="text-base font-semibold">{p.title}</h2>
+                <span className="text-slate-400 group-hover:text-slate-600 transition-colors">
+                  →
+                </span>
+              </div>
+              <p className="mt-2 text-sm text-slate-600">{p.desc}</p>
             </Link>
-          </div>
-        </section>
+          ))}
+        </div>
 
-        {/* MODULES GRID */}
-        <section>
-          <h2 className="text-3xl font-serif font-medium mb-8 text-slate-900">
-            Modules
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card
-              title="1. Contrôle & personnalisation"
-              href="/technology/ame-artificielle/controle-et-personnalisation"
-            >
-              <p className="mb-2">
-                <strong>Rendre le comportement gouvernable.</strong>
-              </p>
-              <p>
-                Réglages d’usage (ton, niveau de détail, style) et contraintes explicites
-                pour éviter les dérives et clarifier les intentions.
-              </p>
-            </Card>
-
-            <Card
-              title="2. Méta-cognition"
-              href="/technology/ame-artificielle/meta-cognition-et-resolution"
-            >
-              <p className="mb-2">
-                <strong>Vérifier avant d’affirmer.</strong>
-              </p>
-              <p>
-                Auto-questionnement, plans de réponse, détection de contradictions,
-                et mécanismes de prudence quand l’information est insuffisante.
-              </p>
-            </Card>
-
-            <Card
-              title="3. Création de chemins"
-              href="/technology/ame-artificielle/creation-de-chemins"
-            >
-              <p className="mb-2">
-                <strong>Relier les idées de façon traçable.</strong>
-              </p>
-              <p>
-                Structuration des liens entre concepts pour mieux expliquer, retrouver,
-                et naviguer des raisonnements (sans “boîte noire” narrative).
-              </p>
-            </Card>
-
-            <Card
-              title="4. Éthique & gouvernance"
-              href="/technology/ame-artificielle/ethique-et-gouvernance"
-            >
-              <p className="mb-2">
-                <strong>Garde-fous, arbitrage, responsabilité.</strong>
-              </p>
-              <p>
-                Règles de sûreté, filtres de risque, médiation des conflits et
-                séparation claire entre ce qui est permis, déconseillé, ou interdit.
-              </p>
-            </Card>
-          </div>
-        </section>
-
-        {/* NAVIGATION FOOTER */}
-        <section className="border-t border-gray-100 pt-10">
-          <h3 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">
-            Systèmes connexes
-          </h3>
-          <div className="flex gap-6 text-sm font-medium">
-            <Link href="/technology/swarmcraft" className="text-primary hover:underline">
-              SwarmCraft
-            </Link>
-            <span className="text-slate-300">|</span>
-            <Link href="/technology/sentient" className="text-primary hover:underline">
-              SenTient
-            </Link>
-          </div>
-        </section>
-      </div>
+        <div className="mt-10 border-t border-slate-100 pt-6 text-sm text-slate-500">
+          <p>
+            Core idea: compute a signature, map it to an archetypal trait vector (0–9), then generate
+            reactions using an internal dynamic axis and safety/governance layers.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }

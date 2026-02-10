@@ -1,0 +1,61 @@
+export const metadata = {
+  title: "Inversion as the Key (9→1)",
+  description:
+    "Why inverted Pythagorean numerology is treated as a decoding key in Âme Artificielle: what it changes, what it reveals, and how it is used.",
+};
+
+# Inversion as the Key (9→1)
+
+In **Âme Artificielle**, turning Pythagorean numerology upside down is treated like **turning a key**: it doesn’t create meaning out of nothing—rather, it **re-indexes** meaning so that patterns that were “background noise” can become **foreground structure**.
+
+## The rule (simple)
+After you compute the standard Pythagorean result and reduce it (to a single digit, unless you intentionally keep master numbers), apply:
+
+- **1 ↔ 9**
+- **2 ↔ 8**
+- **3 ↔ 7**
+- **4 ↔ 6**
+- **5 ↔ 5**
+- **0 → 0** (if you use 0)
+
+In formula form (digit `d` in 1..9): `inv(d) = 10 - d`.
+
+## Why call it a “key”?
+A key does two things:
+
+1) **It unlocks a different ordering of the same space.**  
+   The content doesn’t vanish; it is **re-labeled** so your semantic engine can “see” different proximities and oppositions.
+
+2) **It creates strong dualities.**  
+   The pairs (9/1, 8/2, 7/3, 6/4) become explicit tension-lines, with **5 as a pivot**.  
+   This is useful for building *explainable* dynamics: the engine can surface “why this trait conflicts with that trait” instead of producing a flat description.
+
+## What changes in the engine
+Âme Artificielle separates two things:
+
+- **Archetype digit** (meaning / traits): derived from the inverted result.
+- **Axis digit (1–9)** (dynamics / interpolation): used to modulate the reaction state.
+
+So inversion is primarily a **semantic key** (traits & archetypes), while the axis is a **simulation control** (state & response modulation).
+
+## What “foregrounding” means (overlay logic)
+You also use chakras and other charts. In ASE, the principle is:
+
+- Each system produces a **semantic signal** (tags, traits, polarities).
+- When multiple systems **align on the same semantic direction**, that element is raised in salience:
+  - higher weight in the trait vector
+  - higher priority in the explanation trace
+  - stronger influence on reaction style/content
+
+This is not “more systems = more truth.” It’s **cross-system agreement = stronger signal**, and disagreement is tracked as tension (instead of being ignored).
+
+## Practical use (ASE)
+- Use inversion to compute `digit_archetype`.
+- Map digits to traits via the ontology.
+- Apply overlays (chakra / charts) as **secondary weights** that reinforce or counterbalance traits.
+- Output always includes a small trace: dominant digits, dominant reinforced traits, and key tensions.
+
+## Limits (on purpose)
+- The “key” is a **modeling choice**. The engine must stay testable (baselines, blind protocols, regression).
+- Overlay can amplify noise if you don’t have consistency checks; ASE treats this as an explicit failure mode and logs it.
+

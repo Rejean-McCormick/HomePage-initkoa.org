@@ -1,0 +1,88 @@
+import Link from 'next/link';
+
+export const metadata = {
+  title: "Ontologie & Traits — Âme artificielle (ASE)",
+  description:
+    "Comment ASE transforme une signature (pythagoricienne inversée 9→1) en vecteur de traits via une ontologie 0–9, puis en sorties traçables.",
+};
+
+# Ontologie & Traits
+
+## Idée centrale
+ASE transforme une **signature numérique** en un **profil sémantique** :
+- **Ontologie 0–9** = dictionnaire de sens (archétypes, vocabulaire, interprétations).
+- **Traits** = variables mesurables (poids) dérivées de cette ontologie.
+- **Trace** = explication minimale : digits dominants, traits dominants, règles appliquées.
+
+> Objectif : rendre le symbolique **opérationnel** (donc testable et versionnable).
+
+## 1) Ontologie 0–9 (la base sémantique)
+L’ontologie associe à chaque digit (0..9) un ensemble de “signaux” :
+- mots-clés / champs lexicaux
+- thèmes (valeurs, motivations, peurs, comportements)
+- interprétations multi-systèmes (ex: traditions numérologiques, chakra, etc.)
+- tags et notes de compatibilité (optionnel)
+
+Structure recommandée (conceptuelle) :
+- `digit`
+- `keywords[]`
+- `themes[]`
+- `traditions{...}`
+- `trait_hints{trait: weight}` (optionnel, si vous voulez dériver directement)
+
+## 2) De l’ontologie au vecteur de traits
+Un **trait** est une variable simple (ex: `autonomie`, `empathie`, `structure`, `exploration`, etc.).
+Chaque digit contribue un poids sur certains traits.
+
+### Formule simple (première itération)
+1. Chaque digit de la signature fournit un **vecteur local** (table de pondérations).
+2. On agrège les contributions et on normalise.
+
+Exemple conceptuel :
+- signature inversée : `[1, 5, 7]`
+- trait vector : somme pondérée + normalisation
+
+Ce que ça permet :
+- comparaison de profils (distance)
+- stabilité (tests de régression)
+- modulation (la dynamique change, le profil reste)
+
+## 3) Numérologie inversée (9→1) : ce que ça change ici
+Dans ASE, l’inversion est appliquée **après réduction** (digit final), puis utilisée pour indexer l’archétype.
+
+- **digit_archetype** : sert à sélectionner/pondérer les sens (ontologie → traits)
+- **digit_axis** : sert à moduler la réaction (interpolation / état)
+
+La règle est documentée ici :
+<Link href="/technology/ame-artificielle/inversion-as-key">Inversion as key →</Link>
+
+## 4) Convergence multi-systèmes (overlay sémantique)
+ASE peut superposer plusieurs systèmes (ex: numérologie + chakras + chart additionnels).
+Le principe : **ce qui s’aligne est mis en avant**.
+
+### Mécanisme minimal (sans over-engineering)
+- Chaque système produit un set de **signaux sémantiques** (tags + poids).
+- On calcule un **consensus** (ex: moyenne, vote, ou top-k par recoupement).
+- Les signaux consensuels augmentent :
+  - le poids des traits correspondants
+  - la probabilité d’apparaître dans le vocabulaire / la réponse
+  - la confiance du trace (pas “vérité”, mais “cohérence inter-systèmes”)
+
+Gestion des conflits :
+- si deux systèmes se contredisent fortement, on garde les deux mais on baisse la confiance et on le trace.
+
+Voir :
+<Link href="/technology/ame-artificielle/multi-system-alignment">Multi-system alignment →</Link> •{" "}
+<Link href="/technology/ame-artificielle/chakras-overlay">Chakras overlay →</Link>
+
+## 5) Sortie : trace minimale (expliquable)
+Chaque réaction doit pouvoir retourner :
+- digits dominants (archétype)
+- top traits (pondérations)
+- position d’axe (dynamique)
+- flags (gouvernance/éthique si déclenchée)
+
+## 6) Liens
+- <Link href="/technology/ame-artificielle/how-it-works">How it works →</Link>
+- <Link href="/technology/ame-artificielle/engine-modules">Engine modules →</Link>
+- <Link href="/technology/ame-artificielle/validation">Validation →</Link>

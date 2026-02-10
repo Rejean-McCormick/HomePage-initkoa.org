@@ -1,0 +1,128 @@
+import Link from 'next/link';
+
+export const metadata = {
+  title: "Engine modules — Âme Artificielle (ASE)",
+  description:
+    "Modules ASE : contrôle (sliders), méta-cognition, création de chemins, ontologie/traits, interpolation (axe 1–9), éthique & gouvernance, observabilité.",
+};
+
+# Engine modules
+
+ASE est structuré en modules simples, séparés par responsabilité : **calcul**, **sémantique**, **dynamique**, **génération**, **gouvernance**, **trace**.
+
+---
+
+## 1) Control & Personalization (Sliders)
+
+Objectif : contrôler la **forme** de la réponse (pas l’archétype de fond).
+
+- **Tone** (direct, doux, neutre)
+- **Humor** (0 → 1)
+- **Complexity** (simple → dense)
+- **Distance** / **warmth** (optionnel)
+
+Page : <Link href="/technology/ame-artificielle/controle-et-personnalisation">Contrôle & personnalisation</Link>
+
+---
+
+## 2) Numerology Pipeline (Signature)
+
+Objectif : produire une signature reproductible :
+
+- pythagoricien → réduction → **inversion (9→1)**
+
+Cette sortie alimente l’archétype (`digit_archetype`) et les traits.
+
+Page : <Link href="/technology/ame-artificielle/how-it-works">How it works</Link>
+
+---
+
+## 3) Ontology & Traits (Semantic layer)
+
+Objectif : transformer des digits en **sémantique exploitable**.
+
+- Ontologie 0–9 (interprétations, tags, lexique)
+- Table de mapping → **vecteur de traits**
+- Agrégation des traits sur la signature complète
+- Gestion des convergences / contradictions (multi-systèmes)
+
+Pages :
+- <Link href="/technology/ame-artificielle/ontology-and-traits">Ontology & traits</Link>
+- <Link href="/technology/ame-artificielle/multi-system-alignment">Multi-system alignment</Link>
+
+---
+
+## 4) Interpolation Axis (State dynamics)
+
+Objectif : moduler la réponse via un état courant séparé (`digit_axis`).
+
+- Axe **1–9** (dynamique)
+- Spectre **2–8** (interpolation / intensités)
+- Mise à jour de l’état selon le contexte (prompt, émotion simulée, contraintes)
+
+Page : <Link href="/technology/ame-artificielle/how-it-works">How it works</Link>
+
+---
+
+## 5) Meta-cognition (Self-check)
+
+Objectif : éviter les réponses “qui sonnent juste” mais sont incohérentes.
+
+- Détection d’incertitude
+- Cohérence interne (traits ↔ axe ↔ contexte)
+- Vérification des contradictions
+- Ajustement du niveau d’assurance (langage plus prudent si nécessaire)
+
+Page : <Link href="/technology/ame-artificielle/meta-cognition-et-resolution">Méta-cognition</Link>
+
+---
+
+## 6) Path Creation (Traceability graph)
+
+Objectif : expliquer *pourquoi* une sortie est produite.
+
+- Nœuds (concepts / thèmes)
+- Arcs (relations, causes, analogies)
+- Chemins : “voilà les éléments qui ont été activés”
+- Support au debug (quels overlays ont “brought forward” un thème)
+
+Page : <Link href="/technology/ame-artificielle/creation-de-chemins">Création de chemins</Link>
+
+---
+
+## 7) Ethics & Governance
+
+Objectif : garder le moteur **non-dangereux** et **non-intrusif**.
+
+- Scoring de risque
+- Règles de refus
+- Médiation (réécriture / désescalade) avant sortie
+- Trace de la décision de gouvernance
+
+Page : <Link href="/technology/ame-artificielle/ethique-et-gouvernance">Éthique & gouvernance</Link>
+
+---
+
+## 8) Observability (Trace)
+
+Objectif : rendre chaque run auditable.
+
+Une réponse peut retourner un “trace minimal”, par exemple :
+- archétype dominant
+- top traits (pondérations)
+- position d’axe
+- overlays activés
+- flags de gouvernance
+
+---
+
+## 9) Validation Harness
+
+Objectif : tester “signature → profil → réaction” sur des cas fixes.
+
+- Baselines
+- Aveugle (quand possible)
+- Régression (stabilité des sorties)
+- Mesures simples (cohérence, discriminabilité, robustesse)
+
+Page : <Link href="/technology/ame-artificielle/validation">Validation</Link>
