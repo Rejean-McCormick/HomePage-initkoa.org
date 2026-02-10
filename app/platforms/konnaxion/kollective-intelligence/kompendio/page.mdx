@@ -1,0 +1,154 @@
+import Link from 'next/link';
+import { Card } from '@/components/Card';
+import {
+  Layers,
+  BookOpen,
+  Scale,
+  ShieldCheck,
+  FileText,
+  GitBranch,
+  ArrowRight,
+} from 'lucide-react';
+
+export const metadata = {
+  title: 'Kollective Intelligence (Kompendio) — Reference (TBD)',
+  description:
+    'Planned reference layer for SmartVote + EkoH: definitions, charts, and governance patterns. Not yet published as a complete Kompendio module.',
+};
+
+# Kollective Intelligence — Kompendio (Reference)
+
+<div className="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+  <div className="flex items-start justify-between gap-4">
+    <div>
+      <p className="text-xs font-mono text-slate-500">
+        Konnaxion / Kollective Intelligence / Kompendio
+      </p>
+      <h2 className="mt-1 text-2xl font-bold text-slate-900">
+        Reference layer (TBD)
+        <span className="ml-3 align-middle text-xs font-mono px-2 py-0.5 rounded-full border border-slate-200 text-slate-500">
+          TBD
+        </span>
+      </h2>
+      <p className="mt-2 text-slate-600 max-w-2xl">
+        This module-specific Kompendio page is intentionally incomplete.
+        The Kollective Intelligence reference pack is planned, but not published
+        as a standalone Kompendio module yet.
+      </p>
+    </div>
+    <div className="p-2 rounded-lg bg-slate-100 text-slate-700">
+      <Layers className="w-6 h-6" />
+    </div>
+  </div>
+</div>
+
+---
+
+## What Kompendio will contain for Kollective Intelligence (when published)
+
+Kompendio is the **reference layer**: the charts, definitions, and governance patterns that make a system *inspectable*.
+For Kollective Intelligence, that means making “decision readings” understandable and contestable.
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+  <Card
+    title="Lens Definitions"
+    icon={<Scale className="w-6 h-6 text-primary" />}
+    description="Clear definitions of each reading shown to users (baseline + any explicit quality lenses), with human-readable rules and limits."
+    href="/platforms/konnaxion/kollective-intelligence/kintsugi"
+  />
+  <Card
+    title="Governance & Safeguards"
+    icon={<ShieldCheck className="w-6 h-6 text-primary" />}
+    description="What can change, who can change it, how disputes/appeals work, and what is always immutable (legitimacy surfaces stay visible)."
+    href="/platforms/konnaxion/kollective-intelligence"
+  />
+  <Card
+    title="Decision Brief Templates"
+    icon={<FileText className="w-6 h-6 text-primary" />}
+    description="Standard formats for publishing outcomes: the question, options, reasons, tradeoffs, what was considered, and what happens next."
+    href="/platforms/konnaxion/ethikos"
+  />
+</div>
+
+---
+
+## What to use right now
+
+Until the module Kompendio pack exists, use these pages:
+
+<div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+  <Link
+    href="/platforms/konnaxion/kompendio"
+    className="group block p-6 rounded-xl border border-slate-200 hover:border-slate-900 hover:shadow-sm transition-all bg-white"
+  >
+    <div className="flex items-start justify-between gap-4">
+      <div>
+        <p className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">
+          Global reference layer
+        </p>
+        <h3 className="text-xl font-semibold text-slate-900 group-hover:underline underline-offset-4">
+          Kompendio (Global)
+        </h3>
+        <p className="text-slate-600 mt-2">
+          Standards, integration mapping, and reference charts that apply across Konnaxion.
+        </p>
+      </div>
+      <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-slate-900 transition-colors mt-1" />
+    </div>
+  </Link>
+
+  <Link
+    href="/platforms/konnaxion/kollective-intelligence/kintsugi"
+    className="group block p-6 rounded-xl border border-slate-200 hover:border-slate-900 hover:shadow-sm transition-all bg-white"
+  >
+    <div className="flex items-start justify-between gap-4">
+      <div>
+        <p className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">
+          Operate layer
+        </p>
+        <h3 className="text-xl font-semibold text-slate-900 group-hover:underline underline-offset-4">
+          Kintsugi (Operate)
+        </h3>
+        <p className="text-slate-600 mt-2">
+          What users see: the decision interface, the readings, and how legitimacy stays visible.
+        </p>
+      </div>
+      <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-slate-900 transition-colors mt-1" />
+    </div>
+  </Link>
+</div>
+
+---
+
+## Planned structure (so you can build it later)
+
+When you’re ready to “un-TBD” this page, this is the clean minimal table-of-contents:
+
+- **Glossary**
+  - what is a “reading”, what is a “lens”, what is the baseline
+- **Lens registry**
+  - list of sanctioned lenses + plain-language intent
+- **Change control**
+  - how a lens is introduced, reviewed, paused, or removed
+- **Audit surfaces**
+  - what must always be visible to users
+- **Decision brief format**
+  - the standard publication template for outcomes
+- **Fork / exit guarantees**
+  - how communities can leave with their records intact
+
+<div className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-6">
+  <div className="flex items-start gap-3">
+    <BookOpen className="w-6 h-6 text-slate-700 mt-0.5" />
+    <div>
+      <h3 className="text-lg font-bold text-slate-900">Implementation note</h3>
+      <p className="text-slate-600 mt-1">
+        This page is explicitly marked <span className="font-mono">TBD</span> so we do not invent a Kompendio pack that
+        doesn’t exist yet. When you provide the final reference charts, I’ll fold them into this structure.
+      </p>
+      <p className="text-slate-600 mt-3">
+        If you want to track progress, keep this page in the nav as “Reference (TBD)” and link users to the global Kompendio meanwhile.
+      </p>
+    </div>
+  </div>
+</div>

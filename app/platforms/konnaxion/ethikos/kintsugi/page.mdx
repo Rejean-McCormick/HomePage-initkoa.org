@@ -1,0 +1,164 @@
+import Link from 'next/link';
+import { Card } from '@/components/Card';
+import {
+  Compass,
+  MessagesSquare,
+  FileText,
+  Vote,
+  ClipboardList,
+  Layers,
+  ShieldCheck,
+  ArrowRight,
+  Scale,
+} from 'lucide-react';
+
+export const metadata = {
+  title: 'Kintsugi (ethiKos) — Deliberation under one roof',
+  description:
+    'Kintsugi is how ethiKos delivers a unified civic deliberation pipeline: discovery, deliberation, drafting, decision, and implementation tracking—without tool capture.',
+};
+
+# Kintsugi (ethiKos)
+
+ethiKos is the deliberation and decision-formation module of Konnaxion.  
+**Kintsugi** is how it becomes *usable in the real world*: the best democratic innovations, delivered **as one coherent experience**.
+
+Not a new “platform for everything.” Not another noisy feed.  
+A structured pipeline that turns public input into **legible outcomes**.
+
+---
+
+## What this enables
+
+- **Map the problem space** from thousands of statements without collapsing into chaos.
+- **Deliberate with structure** (arguments, evidence, credibility) instead of comment wars.
+- **Draft text together** (proposals, amendments, versions) with accountability.
+- **Decide with protocols** (clear thresholds, publishable results).
+- **Track implementation** so decisions do not evaporate after the vote.
+
+---
+
+## The unified ethiKos pipeline
+
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10">
+  <Card
+    title="1) Discovery"
+    icon={<Compass className="text-primary w-6 h-6" />}
+    description="Collect statements, cluster positions, and extract bridges—so the landscape becomes visible before people fight."
+    href="/platforms/konnaxion/ethikos"
+  />
+  <Card
+    title="2) Deliberation"
+    icon={<MessagesSquare className="text-primary w-6 h-6" />}
+    description="Structure reasons, objections, and evidence. Make arguments comparable—not just louder."
+    href="/platforms/konnaxion/ethikos"
+  />
+  <Card
+    title="3) Drafting"
+    icon={<FileText className="text-primary w-6 h-6" />}
+    description="Turn the best arguments into draft text: proposals, amendments, and version history."
+    href="/platforms/konnaxion/ethikos"
+  />
+  <Card
+    title="4) Decision"
+    icon={<Vote className="text-primary w-6 h-6" />}
+    description="Run protocol-based votes and publish outcomes with clear thresholds and a stable record."
+    href="/platforms/konnaxion/kollective-intelligence"
+  />
+  <Card
+    title="5) Civic workflow"
+    icon={<ClipboardList className="text-primary w-6 h-6" />}
+    description="From decision to reality: petitions, budgeting, implementation tracking, and public accountability dashboards."
+    href="/platforms/konnaxion/ethikos"
+  />
+</div>
+
+---
+
+## Kintsugi rules (so it stays governable)
+
+Kintsugi is not “connect everything.” It is a disciplined way to integrate what helps citizens **without surrendering sovereignty**.
+
+<div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 md:p-8">
+  <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center">
+    <ShieldCheck className="w-5 h-5 mr-2 text-primary" />
+    Guardrails
+  </h2>
+
+  <ul className="space-y-3 text-slate-700 text-sm">
+    <li className="flex items-start">
+      <span className="mt-1 mr-3 h-2 w-2 rounded-full bg-primary/70" />
+      <span>
+        <strong>One roof experience:</strong> citizens shouldn’t need five separate accounts, five UIs, and five incompatible records to participate.
+      </span>
+    </li>
+    <li className="flex items-start">
+      <span className="mt-1 mr-3 h-2 w-2 rounded-full bg-primary/70" />
+      <span>
+        <strong>Annex vs Mimic:</strong> integrate an external tool as an optional sidecar only when it helps and stays isolable; otherwise, mimic the proven pattern natively to avoid fragmentation and dual truth.
+      </span>
+    </li>
+    <li className="flex items-start">
+      <span className="mt-1 mr-3 h-2 w-2 rounded-full bg-primary/70" />
+      <span>
+        <strong>No platform contamination:</strong> external apps are never merged into the core; they remain bounded and replaceable.
+      </span>
+    </li>
+    <li className="flex items-start">
+      <span className="mt-1 mr-3 h-2 w-2 rounded-full bg-primary/70" />
+      <span>
+        <strong>One voting truth:</strong> decision outcomes are anchored in a single authoritative voting record (SmartVote), so “what passed” is not negotiable after the fact.
+      </span>
+    </li>
+  </ul>
+</div>
+
+---
+
+## Optional “Parliament mode” (institutional users)
+
+Some institutions need formal assembly mechanics (motions, elections, meeting governance).  
+Kintsugi supports this as an **optional mode**, not as a mandatory worldview.
+
+<div className="mt-8 bg-white border border-slate-200 rounded-2xl p-6 md:p-8">
+  <h3 className="text-lg font-bold text-slate-900 mb-2 flex items-center">
+    <Scale className="w-5 h-5 mr-2 text-primary" />
+    Parliament Mode (optional)
+  </h3>
+  <p className="text-slate-600 text-sm leading-relaxed">
+    Enable institutional meeting governance when needed—without turning ethiKos into a rigid assembly-only system.
+  </p>
+</div>
+
+---
+
+## Status note
+
+Kompendio for ethiKos is currently **TBD**. This page covers **Kintsugi (Operate)** only.
+
+---
+
+## Next links
+
+<div className="flex flex-col sm:flex-row gap-3 mt-10">
+  <Link
+    href="/platforms/konnaxion/ethikos"
+    className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors text-sm font-semibold"
+  >
+    Back to ethiKos <ArrowRight className="w-4 h-4 ml-2" />
+  </Link>
+
+  <Link
+    href="/platforms/konnaxion/kollective-intelligence"
+    className="inline-flex items-center justify-center px-5 py-2.5 rounded-md border border-slate-200 bg-white hover:border-slate-300 transition-colors text-sm font-semibold text-slate-800"
+  >
+    Decision layer (Kollective Intelligence) <ArrowRight className="w-4 h-4 ml-2" />
+  </Link>
+
+  <Link
+    href="/platforms/konnaxion/modules"
+    className="inline-flex items-center justify-center px-5 py-2.5 rounded-md border border-slate-200 bg-white hover:border-slate-300 transition-colors text-sm font-semibold text-slate-800"
+  >
+    All modules <Layers className="w-4 h-4 ml-2" />
+  </Link>
+</div>

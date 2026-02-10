@@ -19,6 +19,36 @@ export const metadata = {
     "A practical readiness gate for commissioning: community agreements, safety, compliance, heat-first operations, network reliability, and governance.",
 };
 
+function Gate({ icon, title, pass, evidence }) {
+  return (
+    <div className="bg-white border border-slate-200 rounded-xl p-6">
+      <div className="flex items-start gap-3 mb-3">
+        <div className="w-10 h-10 rounded-lg bg-[#1e6864]/10 flex items-center justify-center">
+          {icon}
+        </div>
+        <div>
+          <div className="font-bold text-slate-900">{title}</div>
+          <div className="text-sm text-slate-600 mt-1">{pass}</div>
+        </div>
+      </div>
+
+      <div className="mt-4">
+        <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
+          Evidence required
+        </div>
+        <ul className="text-sm text-slate-700 space-y-2">
+          {evidence.map((e) => (
+            <li key={e} className="flex gap-2">
+              <CheckCircle2 className="w-4 h-4 text-[#1e6864] mt-0.5" />
+              <span>{e}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 # Go / No-Go checklist
 
 This page is a **commissioning gate**: a simple, auditable way to decide whether a Kristal Farms site is ready to move from “build” to “operate.”
@@ -249,45 +279,3 @@ A **Go** is not optimism. It is evidence that the system can run **safely**, **c
 - <Link href="/infrastructures/kristal-farms/heat-first-design" className="text-[#1e6864] font-mono hover:underline">Heat-first design →</Link>  
 - <Link href="/infrastructures/kristal-farms/cooling-and-water" className="text-[#1e6864] font-mono hover:underline">Cooling & water →</Link>  
 - <Link href="/infrastructures/kristal-farms/metrics-and-dashboard" className="text-[#1e6864] font-mono hover:underline">Metrics & dashboard →</Link>
-
----
-
-export function Gate({
-  icon,
-  title,
-  pass,
-  evidence,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  pass: string;
-  evidence: string[];
-}) {
-  return (
-    <div className="bg-white border border-slate-200 rounded-xl p-6">
-      <div className="flex items-start gap-3 mb-3">
-        <div className="w-10 h-10 rounded-lg bg-[#1e6864]/10 flex items-center justify-center">
-          {icon}
-        </div>
-        <div>
-          <div className="font-bold text-slate-900">{title}</div>
-          <div className="text-sm text-slate-600 mt-1">{pass}</div>
-        </div>
-      </div>
-
-      <div className="mt-4">
-        <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
-          Evidence required
-        </div>
-        <ul className="text-sm text-slate-700 space-y-2">
-          {evidence.map((e) => (
-            <li key={e} className="flex gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#1e6864] mt-0.5" />
-              <span>{e}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-}

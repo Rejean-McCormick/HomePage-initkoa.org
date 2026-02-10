@@ -1,0 +1,170 @@
+import Link from 'next/link';
+import { Card } from '@/components/Card';
+import {
+  GraduationCap,
+  ClipboardCheck,
+  Users,
+  BadgeCheck,
+  Radar,
+  Layers,
+  ArrowRight,
+} from 'lucide-react';
+
+export const metadata = {
+  title: 'KonnectED (Kintsugi) — Operate',
+  description:
+    'A unified learning, evaluation, and credentialing engine: one coherent competence loop, from practice to verifiable proof.',
+};
+
+# KonnectED — Kintsugi (Operate)
+
+**KonnectED** is the competence loop of Konnaxion.  
+**Kintsugi** is how it feels “under one roof”: one coherent journey instead of scattered tools, duplicated records, and unverifiable certificates.
+
+<div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between rounded-xl border border-slate-200 bg-white p-6">
+  <div>
+    <p className="text-xs font-mono text-slate-500">Konnaxion / KonnectED / Kintsugi</p>
+    <h2 className="mt-1 text-2xl font-bold text-slate-900">From learning to proven capability</h2>
+    <p className="mt-2 text-slate-600 max-w-2xl">
+      KonnectED stops treating “completion” as success. It turns learning into
+      measurable competence, with proof you can carry.
+    </p>
+  </div>
+  <div className="flex gap-3">
+    <Link
+      href="/platforms/konnaxion/konnected"
+      className="text-sm font-mono px-4 py-2 rounded-md border border-slate-200 text-slate-700 hover:border-slate-900 transition-colors"
+    >
+      Overview
+    </Link>
+    <Link
+      href="/platforms/konnaxion/konnected/kompendio"
+      className="text-sm font-mono px-4 py-2 rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors"
+    >
+      Kompendio (Reference) <ArrowRight className="inline w-4 h-4 ml-1" />
+    </Link>
+  </div>
+</div>
+
+---
+
+## The competence loop (what the user experiences)
+
+<div className="grid grid-cols-1 md:grid-cols-5 gap-4 my-8">
+  <Card
+    title="1) Learn"
+    icon={<GraduationCap className="w-6 h-6 text-primary" />}
+    description="Content + practice that actually prepares you to perform, not just to watch."
+    href="/platforms/konnaxion/konnected"
+  />
+  <Card
+    title="2) Measure"
+    icon={<ClipboardCheck className="w-6 h-6 text-primary" />}
+    description="Assessments and feedback that produce reliable signals: what you can do, not what you claim."
+    href="/platforms/konnaxion/konnected"
+  />
+  <Card
+    title="3) Validate"
+    icon={<Users className="w-6 h-6 text-primary" />}
+    description="When needed, peer or expert review confirms that evidence is real and meaningful."
+    href="/platforms/konnaxion/konnected"
+  />
+  <Card
+    title="4) Certify"
+    icon={<BadgeCheck className="w-6 h-6 text-primary" />}
+    description="Credentials are issued from evidence, with clear criteria and portable verification."
+    href="/platforms/konnaxion/konnected"
+  />
+  <Card
+    title="5) Follow-up"
+    icon={<Radar className="w-6 h-6 text-primary" />}
+    description="The missing piece: check if learning transfers into real performance after time passes."
+    href="/platforms/konnaxion/konnected"
+  />
+</div>
+
+---
+
+## What Kintsugi changes (in plain terms)
+
+### One journey instead of “a pile of tools”
+Kintsugi is the **integration posture**: you get one coherent experience across learning, evaluation, validation, certification, and follow-up.
+
+### One evidence record instead of fragmented proof
+Every meaningful learning signal becomes a structured **evidence item** (who / what / when / result / artifact / provenance / verification).  
+That’s what makes competence **auditable** and credentials **legitimate**.
+
+### Portability without surrendering control
+KonnectED is designed so records and credentials can move with people and institutions.  
+The system should not trap communities inside a vendor ecosystem.
+
+---
+
+## Who benefits, and how
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <div className="rounded-xl border border-slate-200 bg-white p-6">
+    <h3 className="text-xl font-bold text-slate-900 mb-2">Learners</h3>
+    <ul className="text-slate-700 text-sm space-y-2">
+      <li>• Clear path from practice → proof → credential.</li>
+      <li>• A portfolio that shows what you can do, not just what you studied.</li>
+      <li>• Credentials that remain verifiable outside the platform.</li>
+    </ul>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 bg-white p-6">
+    <h3 className="text-xl font-bold text-slate-900 mb-2">Mentors & Assessors</h3>
+    <ul className="text-slate-700 text-sm space-y-2">
+      <li>• Structured review when automation is not enough.</li>
+      <li>• Transparent criteria: what counts as evidence, and why.</li>
+      <li>• Reduced administrative drag; more time on real evaluation.</li>
+    </ul>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 bg-white p-6">
+    <h3 className="text-xl font-bold text-slate-900 mb-2">Institutions & Programs</h3>
+    <ul className="text-slate-700 text-sm space-y-2">
+      <li>• Outcome visibility: which trainings work, which are performative.</li>
+      <li>• Cohort views without distorting baseline truth.</li>
+      <li>• Credentials linked to evidence, not marketing.</li>
+    </ul>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 bg-white p-6">
+    <h3 className="text-xl font-bold text-slate-900 mb-2">Employers & Communities</h3>
+    <ul className="text-slate-700 text-sm space-y-2">
+      <li>• Faster hiring and assignment based on verified capability.</li>
+      <li>• Less credential fraud; clearer competence signals.</li>
+      <li>• A pathway to merit that does not depend on elite gatekeepers.</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+## The builder stance (without technical detail)
+
+Kintsugi uses a simple rule:
+
+- **Mimic** when copying a pattern is safer than importing a whole platform.
+- **Annex** when a component can be integrated cleanly without capturing the system.
+
+If you want the explicit reference charts and integration mapping, that lives in **Kompendio**:
+
+<div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-6">
+  <div className="flex items-start gap-3">
+    <Layers className="w-6 h-6 text-slate-700 mt-0.5" />
+    <div>
+      <h3 className="text-lg font-bold text-slate-900">Kompendio is the reference layer</h3>
+      <p className="text-slate-600 mt-1">
+        It publishes the standards, maps “Mimic vs Annex,” and keeps the learning loop governable and reproducible.
+      </p>
+      <Link
+        href="/platforms/konnaxion/konnected/kompendio"
+        className="inline-flex items-center text-sm font-mono text-slate-900 border-b border-slate-400/40 hover:border-slate-900 mt-3"
+      >
+        Open KonnectED Kompendio <ArrowRight className="w-4 h-4 ml-1" />
+      </Link>
+    </div>
+  </div>
+</div>

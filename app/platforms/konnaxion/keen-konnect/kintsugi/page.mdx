@@ -1,0 +1,178 @@
+import Link from 'next/link';
+import { Card } from '@/components/Card';
+import {
+  Layers,
+  Package,
+  Fingerprint,
+  ShieldCheck,
+  FileStack,
+  Search,
+  Boxes,
+  Hammer,
+  ArrowRight,
+} from 'lucide-react';
+
+export const metadata = {
+  title: 'keenKonnect Kintsugi — One Builder Stack Under One Roof | Konnaxion',
+  description:
+    'Kintsugi for keenKonnect turns scattered builder tools into one coherent workspace: unified identity, permissions, provenance, and reproducible Release Packs.',
+};
+
+# keenKonnect — Kintsugi (Operate)
+
+**keenKonnect** is the builder execution environment in Konnaxion: a place to run real-world projects with a tight link between **coordination**, **artifacts**, and **reproducibility**.
+
+**Kintsugi** is the “operate” layer: it makes many independent building tools behave like **one coherent product**, without merging everything into a monolith.
+
+---
+
+## The problem it solves
+
+Builders typically operate with:
+
+- documents in one system,
+- BOM / inventory in another,
+- files scattered across drives,
+- no unified permissions,
+- weak provenance (“what is the source of truth?”),
+- and no reliable release bundle that can be recreated later.
+
+Kintsugi solves this by turning scattered tools into **lanes** that share:
+
+- one identity layer,
+- one permission model,
+- one event/audit surface,
+- and one artifact / release packaging model.
+
+---
+
+## What you get (user outcomes)
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <Card
+    title="One workspace for the whole build"
+    icon={<Layers className="text-primary w-6 h-6" />}
+    description="Projects, tasks, decisions, and artifacts stay linked. Work doesn't vanish into disconnected tools."
+    href="/platforms/konnaxion/keen-konnect"
+  />
+  <Card
+    title="Unified permissions and accountability"
+    icon={<ShieldCheck className="text-primary w-6 h-6" />}
+    description="One access model across the workflow: who can publish, approve, edit, and ship."
+    href="/platforms/konnaxion/keen-konnect"
+  />
+  <Card
+    title="Provenance you can trust"
+    icon={<Fingerprint className="text-primary w-6 h-6" />}
+    description="You can answer: what was built, with what sources, by whom, and in what version—without guesswork."
+    href="/platforms/konnaxion/keen-konnect"
+  />
+  <Card
+    title="Reproducible Release Packs"
+    icon={<Package className="text-primary w-6 h-6" />}
+    description="A build isn't 'done' until it can ship as a release pack: artifacts + manifests + pinned references."
+    href="/platforms/konnaxion/keen-konnect"
+  />
+</div>
+
+---
+
+## The Kintsugi promise (in plain language)
+
+Kintsugi is not “connect everything.”
+
+It is a disciplined approach that guarantees four things:
+
+1. **One-roof experience**  
+   You should not feel like you’re jumping between products.
+
+2. **No dual truth**  
+   Anything that matters has a canonical identity and lifecycle inside keenKonnect, even if authored elsewhere.
+
+3. **Releases are real**  
+   The outcome of a project can be packaged and recreated later (audit, replication, handoff, long-term maintenance).
+
+4. **Hybrid by default**  
+   The same experience works for hosted deployments and self-host / on-prem environments.
+
+---
+
+## The lanes (what’s under the roof)
+
+Kintsugi v1 focuses on a small set of lanes (kept intentionally minimal):
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <div className="p-6 border border-slate-200 rounded-xl bg-white">
+    <h3 className="flex items-center text-lg font-bold text-slate-900 mb-2">
+      <FileStack className="w-5 h-5 mr-2 text-primary" />
+      Collaborative build docs
+    </h3>
+    <p className="text-slate-700 text-sm">
+      Specs, build logs, checklists, test notes—kept close to the project and captured as evidence when needed.
+    </p>
+  </div>
+
+  <div className="p-6 border border-slate-200 rounded-xl bg-white">
+    <h3 className="flex items-center text-lg font-bold text-slate-900 mb-2">
+      <Boxes className="w-5 h-5 mr-2 text-primary" />
+      Inventory / BOM backbone
+    </h3>
+    <p className="text-slate-700 text-sm">
+      Parts, BOMs, revisions, substitutions—linked to tasks and releases so the physical build stays reproducible.
+    </p>
+  </div>
+
+  <div className="p-6 border border-slate-200 rounded-xl bg-white">
+    <h3 className="flex items-center text-lg font-bold text-slate-900 mb-2">
+      <Search className="w-5 h-5 mr-2 text-primary" />
+      One search bar across what matters
+    </h3>
+    <p className="text-slate-700 text-sm">
+      Find parts, docs, tasks, artifacts, and references without forcing everything into one storage format.
+    </p>
+  </div>
+
+  <div className="p-6 border border-slate-200 rounded-xl bg-white">
+    <h3 className="flex items-center text-lg font-bold text-slate-900 mb-2">
+      <Hammer className="w-5 h-5 mr-2 text-primary" />
+      Forge for “how we build”
+    </h3>
+    <p className="text-slate-700 text-sm">
+      Templates, scripts, test harnesses, build recipes—versioned knowledge that can be tied to releases.
+    </p>
+  </div>
+</div>
+
+If you want the exact “reference stacks” (which tools, which options), that lives in **Kompendio**:
+
+<div className="mt-6 flex flex-col sm:flex-row gap-3">
+  <Link
+    href="/platforms/konnaxion/keen-konnect/kompendio"
+    className="inline-flex items-center justify-center px-5 py-3 rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors"
+  >
+    View keenKonnect Kompendio <ArrowRight className="w-4 h-4 ml-2" />
+  </Link>
+  <Link
+    href="/platforms/konnaxion/kintsugi"
+    className="inline-flex items-center justify-center px-5 py-3 rounded-md bg-white border border-slate-200 text-slate-900 hover:border-slate-400 hover:shadow-sm transition-all"
+  >
+    What is Kintsugi? <ArrowRight className="w-4 h-4 ml-2" />
+  </Link>
+</div>
+
+---
+
+## Why this changes the world (the point of the module)
+
+When building becomes reproducible:
+
+- communities can replicate working designs without “institutional memory” disappearing,
+- projects can be audited and handed off without trust collapsing,
+- the best outcomes become portable—across teams, cities, and generations.
+
+keenKonnect Kintsugi is the operating layer that makes physical-world collaboration **as repeatable as software release**—without demanding a single proprietary platform.
+
+---
+
+### Note
+Some previously uploaded files in this chat have expired on the tool side; if you want me to reuse specific phrasing from an older source for later pages, re-upload that file.
