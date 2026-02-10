@@ -1,16 +1,16 @@
-// app\page.tsx
 // app/page.tsx
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'The kOA initiative – Civic Utilities',
-  description: 'Shared infrastructure for learning, coordination, and meritocratic governance.',
+  // SEO: Titre explicite + Auteur
+  title: 'InitKoa - Civic Utilities by Réjean McCormick',
+  description: 'The official socio-technical architecture initiative led by Réjean McCormick. Building civic utilities, democratic innovation, and the kOA ecosystem.',
 };
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-white text-slate-900 selection:bg-primary selection:text-white">
+    <main className="min-h-screen bg-white text-slate-900 selection:bg-[#1e6864] selection:text-white">
       
       {/* HERO SECTION */}
       <section className="pt-32 pb-24 px-6 border-b border-gray-100">
@@ -20,14 +20,15 @@ export default function HomePage() {
           </h1>
           
           <p className="text-xl md:text-2xl text-slate-500 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-            Building <strong>civic utilities</strong> for a fragmented world. <br />
+           
+            An initiative by <strong className="text-slate-900 font-semibold">Réjean McCormick</strong> to build <strong>civic utilities</strong> for a fragmented world. <br />
             Shared infrastructure for radical learning, secure coordination, and meaningful governance.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link 
               href="/initiatives" 
-              className="px-8 py-3 bg-slate-900 text-white rounded-sm font-medium hover:bg-primary transition-colors duration-300 min-w-[200px]"
+              className="px-8 py-3 bg-slate-900 text-white rounded-sm font-medium hover:bg-[#1e6864] transition-colors duration-300 min-w-[200px]"
             >
               Explore Ecosystem
             </Link>
@@ -96,7 +97,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
             <Link 
               href="/initiatives/civic-governance/constitution" 
-              className="text-sm font-mono text-primary hover:text-slate-900 border-b border-primary/30 hover:border-slate-900 transition-colors pb-0.5"
+              className="text-sm font-mono text-[#1e6864] hover:text-slate-900 border-b border-[#1e6864]/30 hover:border-slate-900 transition-colors pb-0.5"
             >
               The Rules (Constitution)
             </Link>
@@ -105,7 +106,7 @@ export default function HomePage() {
             
             <Link 
               href="/platforms" 
-              className="text-sm font-mono text-primary hover:text-slate-900 border-b border-primary/30 hover:border-slate-900 transition-colors pb-0.5"
+              className="text-sm font-mono text-[#1e6864] hover:text-slate-900 border-b border-[#1e6864]/30 hover:border-slate-900 transition-colors pb-0.5"
             >
               The Engine (Tech Specs)
             </Link>
@@ -114,7 +115,7 @@ export default function HomePage() {
 
             <Link 
               href="/sitemap" 
-              className="text-sm font-mono text-primary hover:text-slate-900 border-b border-primary/30 hover:border-slate-900 transition-colors pb-0.5"
+              className="text-sm font-mono text-[#1e6864] hover:text-slate-900 border-b border-[#1e6864]/30 hover:border-slate-900 transition-colors pb-0.5"
             >
               Sitemap
             </Link>
@@ -138,7 +139,7 @@ interface NavCardProps {
 function NavCard({ title, subtitle, description, href, icon }: NavCardProps) {
   return (
     <Link href={href} className="group block h-full">
-      <div className="mb-6 text-slate-300 group-hover:text-primary transition-colors duration-300">
+      <div className="mb-6 text-slate-300 group-hover:text-[#1e6864] transition-colors duration-300">
         {icon}
       </div>
       <div className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">

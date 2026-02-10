@@ -11,18 +11,32 @@ const baskervville = Baskervville({
 });
 
 export const metadata = {
-  // 1. Define the base URL for SEO (Fixes 'Missing Canonical' errors globally)
-  metadataBase: new URL('https://www.okido.wiki'),
+  // 1. Define the base URL (Utilisation du domaine "nu" pour le style commande système)
+  metadataBase: new URL('https://initkoa.org'),
   
-  // 2. Auto-generate canonical links for every page relative to the base
+  // 2. Auto-generate canonical links
   alternates: {
     canonical: './',
   },
 
-  title: 'The kOA initiative',
-  description: 'Civic utilities for a fragmented world.',
+  // 3. OPTIMISATION SEO & MARQUE PERSONNELLE
+  title: 'InitKoa - Civic Utilities by Réjean McCormick',
+  description: 'The official socio-technical architecture initiative led by Réjean McCormick. Building civic utilities, democratic innovation, and the kOA ecosystem.',
+  
+  // 4. Signaux d'auteur pour Google et les IA
+  authors: [{ name: 'Réjean McCormick', url: 'https://initkoa.org' }],
+  creator: 'Réjean McCormick',
+
   icons: {
     icon: '/LogoK.svg',
+  },
+  
+  // (Optionnel) OpenGraph pour les partages LinkedIn/Social
+  openGraph: {
+    title: 'InitKoa by Réjean McCormick',
+    description: 'Civic utilities for a fragmented world.',
+    type: 'website',
+    locale: 'fr_CA',
   },
 };
 
@@ -31,21 +45,24 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="fr" className={baskervville.className}>
       <head>
         {/* === AI & LLM OPTIMIZATION === */}
-        {/* Indique aux agents IA où trouver la version texte pur du site complet */}
         <link rel="alternate" type="text/plain" href="/ai-corpus.txt" title="AI Context Corpus" />
-        {/* Indique aux agents IA où trouver les instructions de lecture (llms.txt) */}
         <link rel="help" href="/llms.txt" title="LLM Instructions" />
       </head>
       
-      <body className="bg-white text-slate-900 antialiased">
+      <body className="bg-white text-slate-900 antialiased min-h-screen flex flex-col">
         <Header />
         
-        {/* Global Layout Wrapper 
-            Changed to <div> to avoid nested <main> tags with inner pages.
-            Applies the centralized 'prose' typography and width constraints.
-        */}
-        <div className="max-w-4xl mx-auto px-6 py-12 prose prose-slate dark:prose-invert">
+        {/* Global Layout Wrapper */}
+        <div className="max-w-4xl mx-auto px-6 py-12 prose prose-slate dark:prose-invert flex-grow w-full">
           {children}
+
+          {/* === FOOTER SIGNATURE === */}
+          <footer className="mt-24 pt-8 border-t border-slate-100 text-center text-sm text-slate-400 font-sans not-prose">
+            <p>
+              © {new Date().getFullYear()} InitKoa. 
+              Architected by <a href="/about" className="hover:text-[#1e6864] transition-colors font-medium">Réjean McCormick</a>.
+            </p>
+          </footer>
         </div>
         
       </body>

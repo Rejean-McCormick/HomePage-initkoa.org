@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://www.okido.wiki';
+  const baseUrl = 'https://www.initkoa.org';
 
   return {
     rules: {

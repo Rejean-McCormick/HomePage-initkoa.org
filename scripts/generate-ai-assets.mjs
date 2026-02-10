@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 // CONFIGURATION
-const BASE_URL = 'https://www.okido.wiki'; // Adjust if your domain is different
+const BASE_URL = 'https://www.initkoa.org'; // Adjust if your domain is different
 const APP_DIR = path.join(process.cwd(), 'app');
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 

@@ -6,7 +6,7 @@ import path from "node:path";
 export const runtime = "nodejs";
 
 // Use ONE canonical base URL (match your redirects / canonical tags)
-const BASE_URL = "https://www.okido.wiki";
+const BASE_URL = "https://www.initkoa.org";
 
 // Next.js App Router: a folder is a routable page if it contains page.(tsx|ts|js|jsx|mdx)
 const PAGE_FILE_RE = /^page\.(tsx|ts|js|jsx|mdx)$/;

@@ -23,7 +23,7 @@ export default function ContactPage() {
       <h2>Domains</h2>
       <ul>
         <li><strong>KingKlown.wiki:</strong> The Knowledge Base.</li>
-        <li><strong>Okido.wiki:</strong> This Documentation Site.</li>
+        <li><strong>initkoa.org:</strong> This Documentation Site.</li>
         <li><strong>KingKlown.ca:</strong> The Political initiative.</li>
       </ul>
     </main>

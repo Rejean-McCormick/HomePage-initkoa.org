@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 // Configuration
 const APP_DIR = path.join(process.cwd(), 'app');
 const OUTPUT_FILE = path.join(process.cwd(), 'public', 'ai-corpus.txt');
-const BASE_URL = 'https://www.okido.wiki'; // Votre domaine
+const BASE_URL = 'https://www.initkoa.org'; // Votre domaine
 
 // Fichiers à inclure
 const VALID_EXTENSIONS = ['.mdx', '.tsx', '.js', '.ts'];
