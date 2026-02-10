@@ -1,11 +1,10 @@
-// app\principles\map\page.js
 // app/principles/page.js
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
-  title: 'Principles – The kOA initiative',
+  title: 'Principles — The kOA initiative',
   description:
-    'Core axioms and the domains: Civic Principles & Ethics, and Cosmic Etherism (optional).',
+    'Three core axioms and two separated domains: Civic Principles & Ethics, and Cosmic Etherism (optional, quarantined).',
 };
 
 export default function PrinciplesPage() {
@@ -14,9 +13,10 @@ export default function PrinciplesPage() {
       <h1 className="text-4xl font-bold mb-6">Principles</h1>
 
       <p className="text-xl text-gray-600 mb-10">
-        Three axioms. Two distinct domains. Clear separation where required.
+        A small set of design commitments that guide the kOA ecosystem. Two domains are intentionally separated.
       </p>
 
+      {/* CORE AXIOMS */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4 text-primary">Core axioms</h2>
         <div className="space-y-6">
@@ -32,24 +32,23 @@ export default function PrinciplesPage() {
 
           <div className="p-5 rounded-lg border border-gray-200 bg-white">
             <h3 className="text-lg font-bold mb-2">3. Open Technology</h3>
-            <p>Public infrastructure must be verifiable. Transparency through open systems.</p>
+            <p>Public infrastructure must be verifiable. Transparency through open systems and auditable rules.</p>
           </div>
         </div>
       </section>
 
+      {/* DOMAINS */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4 text-primary">Domains</h2>
 
-        {/* Adjusted grid to 2 columns since Âme is moved to Technologies */}
         <div className="grid gap-6 md:grid-cols-2">
-          
           <a
             href="/principles/civic-principles-ethics"
             className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
           >
             <h3 className="text-lg font-bold mb-2">Civic Principles & Ethics</h3>
             <p className="text-gray-700">
-              Public institutions, rights and duties, accountability, transparency, and ethics.
+              Public institutions, rights and duties, accountability, transparency, and operational ethics.
             </p>
           </a>
 
@@ -59,13 +58,23 @@ export default function PrinciplesPage() {
           >
             <h3 className="text-lg font-bold mb-2">Cosmic Etherism (Optional)</h3>
             <p className="text-gray-800">
-              Personal Pi symbolism and worldview. 100% separated from all other initiatives,
-              referenced only in King Klown fiction.
+              A personal worldview track. Explicitly quarantined from civic design and referenced only in fiction.
             </p>
+          </a>
+        </div>
+
+        <div className="mt-6 p-5 rounded-lg border border-gray-200 bg-white">
+          <h3 className="text-lg font-bold mb-2">Related (Technology)</h3>
+          <p className="text-gray-700 mb-3">
+            AI alignment, meta-cognition, and governance mechanisms are documented under Technology.
+          </p>
+          <a href="/technology/ame-artificielle" className="text-primary hover:underline font-medium">
+            Âme artificielle (Alignement & méta-cognition) →
           </a>
         </div>
       </section>
 
+      {/* UTILITY LINKS */}
       <section className="flex flex-wrap gap-4">
         <a
           href="/principles/map"

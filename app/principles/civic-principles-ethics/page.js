@@ -1,10 +1,10 @@
-// app\principles\civic-principles-ethics\page.js
+// app/principles/civic-principles-ethics/page.js
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
   title: 'Civic Principles & Ethics – Principles',
   description:
-    'Public institutions, rights and duties, accountability, transparency, and ethics for civic life.',
+    'A practical civic ethics domain: legitimacy, rights and duties, institutional integrity, transparency, and accountability.',
 };
 
 export default function CivicPrinciplesEthicsPage() {
@@ -13,8 +13,8 @@ export default function CivicPrinciplesEthicsPage() {
       <h1 className="text-4xl font-bold mb-6">Civic Principles & Ethics</h1>
 
       <p className="text-xl text-gray-600 mb-10">
-        Public institutions, rights and duties, accountability, transparency, and ethics for civic
-        life.
+        A practical domain for civic life: how power is made legitimate, how rights are protected,
+        how duties are defined, and how institutions stay accountable.
       </p>
 
       <div className="grid gap-6 md:grid-cols-2 mb-10">
@@ -24,7 +24,7 @@ export default function CivicPrinciplesEthicsPage() {
         >
           <h2 className="text-lg font-bold mb-2">Principles</h2>
           <p className="text-gray-700">
-            Core civic values: legitimacy, rights, duties, fairness, and harm reduction.
+            The core civic values: legitimacy, fairness, harm reduction, and constraints on power.
           </p>
         </a>
 
@@ -34,8 +34,8 @@ export default function CivicPrinciplesEthicsPage() {
         >
           <h2 className="text-lg font-bold mb-2">Institutions</h2>
           <p className="text-gray-700">
-            How civic systems should be structured: checks and balances, service orientation, and
-            integrity.
+            How systems should be structured: checks and balances, service orientation, integrity,
+            and resilience against capture.
           </p>
         </a>
 
@@ -45,7 +45,7 @@ export default function CivicPrinciplesEthicsPage() {
         >
           <h2 className="text-lg font-bold mb-2">Rights & Duties</h2>
           <p className="text-gray-700">
-            Rights, responsibilities, and the boundaries that protect dignity and freedom.
+            Rights, responsibilities, and the boundaries that protect dignity, freedom, and safety.
           </p>
         </a>
 
@@ -55,7 +55,8 @@ export default function CivicPrinciplesEthicsPage() {
         >
           <h2 className="text-lg font-bold mb-2">Transparency & Accountability</h2>
           <p className="text-gray-700">
-            Verifiability, open records, oversight, anti-corruption, and enforceable consequences.
+            Verifiability, open records, independent oversight, anti-corruption, and enforceable
+            consequences.
           </p>
         </a>
 
@@ -74,16 +75,17 @@ export default function CivicPrinciplesEthicsPage() {
         <h2 className="text-2xl font-bold mb-3 text-primary">Scope and boundaries</h2>
         <ul className="list-disc pl-6 space-y-2 text-gray-700">
           <li>
-            This domain is about <strong>civic ethics</strong> and <strong>institutional design</strong>:
-            how societies coordinate power, rights, responsibilities, and accountability.
+            This domain covers <strong>civic ethics</strong> and <strong>institutional design</strong>:
+            how societies allocate authority, protect rights, define duties, and prevent abuse.
           </li>
           <li>
-            It is compatible with multiple belief systems. No spiritual or symbolic worldview is
-            required.
+            It is designed to be usable across political traditions and belief systems. No spiritual
+            or symbolic worldview is required.
           </li>
           <li>
-            It overlaps with Âme artificielle where governance is shared (oversight, transparency, harm
-            reduction), but it remains a distinct domain.
+            It intersects with <strong>Âme artificielle</strong> where governance concerns overlap
+            (oversight, transparency, harm reduction), while remaining a distinct domain focused on
+            civic institutions and public legitimacy.
           </li>
         </ul>
       </div>

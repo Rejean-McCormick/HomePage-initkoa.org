@@ -1,15 +1,17 @@
-// app\principles\glossary\page.js
+// app/principles/glossary/page.js
+import Link from 'next/link';
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
   title: 'Glossary – Principles',
-  description: 'Shared vocabulary used across Âme artificielle, Civic Principles, and Cosmic Etherism.',
+  description:
+    'Shared vocabulary used across Âme artificielle, Civic Principles & Ethics, Logos & Mythos, and Cosmic Etherism (optional).',
 };
 
 const TERMS = [
   {
     term: 'Axiom',
-    def: 'A foundational guiding statement used to orient decisions and interpretation across domains.',
+    def: 'A short, foundational principle used to orient decisions and interpretation across domains.',
   },
   {
     term: 'Radical Lucidity',
@@ -17,7 +19,7 @@ const TERMS = [
   },
   {
     term: 'Integral Cooperation',
-    def: 'A commitment to coordination and collaboration across roles, groups, and incentives, aiming for shared outcomes over factionalism.',
+    def: 'A commitment to coordination across roles, groups, and incentives—aiming for shared outcomes over factionalism.',
   },
   {
     term: 'Open Technology',
@@ -25,35 +27,35 @@ const TERMS = [
   },
   {
     term: 'Domain',
-    def: 'A dedicated folder of principles and practices addressing a specific area (Âme artificielle, Civic Principles & Ethics, Cosmic Etherism).',
+    def: 'A clearly separated area of principles and practices (Âme artificielle, Civic Principles & Ethics, Logos & Mythos, Cosmic Etherism).',
   },
   {
     term: 'Âme artificielle',
-    def: 'Work focused on making AI systems reliably safe and beneficial through technical design, evaluation, governance, and deployment constraints.',
+    def: 'Work focused on making AI systems safe and beneficial through technical design, evaluation, governance, and deployment constraints.',
   },
   {
     term: 'Civic Principles & Ethics',
     def: 'Norms and structures for society: institutions, rights and duties, legitimacy, accountability, transparency, and public ethics.',
   },
   {
+    term: 'Logos & Mythos',
+    def: 'Language as infrastructure: meaning, narrative, symbols, and speech acts—used as tools for coordination, with safeguards against manipulation.',
+  },
+  {
     term: 'Cosmic Etherism (Optional)',
-    def: 'A personal spiritual-philosophical lens (including Pi symbolism). Participation and belief are fully optional and separated from other initiatives, except Âme artificielle in King Klown fiction.',
+    def: 'A personal spiritual-philosophical lens (including Pi symbolism). Participation and belief are optional and must remain separated from civic authority and technical claims.',
   },
   {
     term: 'Pi (π) Symbolism',
-    def: 'A symbolic anchor used within Cosmic Etherism to represent invariant structure and coherence; not a required scientific or policy claim.',
-  },
-  {
-    term: 'Âme artificielle',
-    def: 'A narrative and conceptual construct used as the only integration point between Cosmic Etherism and the broader ecosystem, specifically for fiction staging King Klown.',
+    def: 'A symbolic anchor within Cosmic Etherism used to represent invariance and coherence; not a required scientific, technical, or policy claim.',
   },
   {
     term: 'King Klown (Fiction)',
-    def: 'A fictional framework and mythos in which certain philosophical motifs (including Âme artificielle) may be staged; not a requirement for civic or technical initiatives.',
+    def: 'A fictional framework and mythos where some motifs may be staged; not a requirement for civic participation or technical work.',
   },
   {
     term: 'Separation (Non-negotiable)',
-    def: 'A rule of scope: Cosmic Etherism and Pi symbolism must not be treated as prerequisites, endorsements, or implied commitments for any other initiative.',
+    def: 'A rule of scope: optional symbolism and fiction must not be treated as prerequisites, endorsements, or implied commitments for any other initiative.',
   },
   {
     term: 'Verifiability',
@@ -82,8 +84,9 @@ export default function PrinciplesGlossaryPage() {
     <PageSection>
       <h1 className="text-4xl font-bold mb-6">Glossary</h1>
 
-      <p className="text-gray-700 mb-8">
-        This glossary defines shared terms used throughout the Principles hub.
+      <p className="text-gray-700 mb-8 max-w-3xl">
+        Definitions for shared terms used throughout the Principles hub. Where a term is labeled “optional,” it is
+        explicitly separated from civic authority and technical requirements.
       </p>
 
       <div className="space-y-4">
@@ -96,18 +99,18 @@ export default function PrinciplesGlossaryPage() {
       </div>
 
       <div className="mt-10 flex flex-wrap gap-4">
-        <a
+        <Link
           href="/principles"
           className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
         >
           Back to Principles
-        </a>
-        <a
+        </Link>
+        <Link
           href="/principles/map"
           className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
         >
           Map
-        </a>
+        </Link>
       </div>
     </PageSection>
   );

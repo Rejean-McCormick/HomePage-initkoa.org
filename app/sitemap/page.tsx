@@ -10,7 +10,6 @@ import {
   TrendingUp,
   Microscope,
   Anchor,
-  Heart,
 } from "lucide-react";
 
 export const metadata = {
@@ -33,24 +32,26 @@ export default function VisualSitemapPage() {
             <MapLink href="/" label="Home" highlight />
             <MapLink href="/why" label="The Diagnosis (Why kOA?)" />
             <MapLink href="/diagnosis" label="9 Systemic Failures" />
-            <MapLink href="/principles" label="Principles Hub" />
+            <MapLink href="/principles" label="Principles Hub" highlight />
 
-            <SubSection title="Domains">
+            <SubSection title="Principles domains">
               <MapLink href="/principles/civic-principles-ethics" label="Civic Principles & Ethics" />
               <MapLink href="/principles/logos" label="Logos & Mythos" />
-              <MapLink href="/principles/cosmic-etherism" label="Cosmic Etherism" />
+              <MapLink href="/principles/cosmic-etherism" label="Cosmic Etherism (Optional)" />
+              <MapLink href="/principles/map" label="Principles Map" />
+              <MapLink href="/principles/glossary" label="Principles Glossary" />
             </SubSection>
           </Section>
 
           {/* RESEARCH */}
           <Section title="Research" icon={<Microscope className="w-5 h-5" />}>
             <MapLink href="/research" label="Research Hub" highlight />
-            <MapLink href="/research/pi-theory" label="Pi Theory (Metaphysics)" />
+            <MapLink href="/research/pi-theory" label="Pi Theory (Optional Metaphysics)" />
           </Section>
 
           {/* INFRASTRUCTURE */}
           <Section title="Infrastructure" icon={<Anchor className="w-5 h-5" />}>
-            <MapLink href="/infrastructures" label="Infrastructure Hub" />
+            <MapLink href="/infrastructures" label="Infrastructure Hub" highlight />
 
             <SubSection title="Physical (Kristal Farms)">
               <MapLink href="/infrastructures/kristal-farms" label="Kristal Farms Overview" />
@@ -64,93 +65,33 @@ export default function VisualSitemapPage() {
               <MapLink href="/infrastructures/kin-city" label="Kin City Overview" />
               <MapLink href="/infrastructures/kin-city/zones" label="Zone Guide" />
               <MapLink href="/infrastructures/kin-city/philosophy" label="Philosophy & Design" />
-              <MapLink href="/infrastructures/kin-city/roadmap" label="Technical Roadmap" />
+              <MapLink href="/infrastructures/kin-city/roadmap" label="Roadmap" />
             </SubSection>
           </Section>
 
           {/* INITIATIVES */}
           <Section title="Initiatives" icon={<TrendingUp className="w-5 h-5" />}>
-            <MapLink href="/initiatives" label="Overview" />
+            <MapLink href="/initiatives" label="Overview" highlight />
 
             <SubSection title="Civic Governance">
               <MapLink href="/initiatives/civic-governance" label="Governance Hub" />
               <MapLink href="/initiatives/civic-governance/constitution" label="Constitution" />
+              <MapLink href="/initiatives/civic-governance/constitution/ekoh" label="EkoH (Liquid Meritocracy)" />
               <MapLink href="/initiatives/civic-governance/modules/education" label="Education Module" />
               <MapLink href="/initiatives/civic-governance/modules/economy" label="Economy Module" />
               <MapLink href="/initiatives/civic-governance/modules/justice" label="Justice Module" />
             </SubSection>
 
-            <SubSection title="International">
-              <MapLink
-                href="/initiatives/ukraine-peace-plan"
-                label="Ukraine Peace & Reconstruction Plan (Hub)"
-              />
-              <MapLink
-                href="/initiatives/ukraine-peace-plan/summary"
-                label="Plan Summary (Table of Contents)"
-              />
-              <MapLink
-                href="/initiatives/ukraine-peace-plan/fvr/start-here/welcome"
-                label="Operational Framework (FVR)"
-              />
-              <MapLink
-                href="/initiatives/ukraine-peace-plan/cultural-bridge/start-here"
-                label="Cultural Bridge Track"
-              />
-              {/* ADDED: Cultural Bridge subpage */}
-              <MapLink
-                href="/initiatives/ukraine-peace-plan/cultural-bridge/metrics"
-                label="Cultural Bridge – Metrics & Evaluation"
-              />
-              <MapLink
-                href="/initiatives/koa-political-initiative"
-                label="kOA Political Initiative"
-              />
+            <SubSection title="Political">
+              <MapLink href="/initiatives/koa-political-initiative" label="kOA Political Initiative" />
             </SubSection>
           </Section>
         </div>
 
         <div className="space-y-10">
-          {/* KRÉATURE (Community OS) */}
-          <Section title="Kréature (Community OS)" icon={<Heart className="w-5 h-5 text-pink-500" />}>
-            <MapLink href="/kreature" label="Kréature Accueil" highlight />
-            <MapLink href="/kreature/parcours" label="Le Parcours (Guide)" />
-
-            <SubSection title="Repères">
-              <MapLink href="/kreature/reperes/glossaire" label="Glossaire (Vocabulaire)" />
-              <MapLink href="/kreature/reperes/faq" label="FAQ" />
-              <MapLink href="/kreature/reperes/pont-technique" label="Pont Technique (Devs)" />
-            </SubSection>
-
-            <SubSection title="Anatomie (Le Système)">
-              <MapLink href="/kreature/anatomie" label="Vue d'ensemble" />
-              <MapLink href="/kreature/anatomie/corps/orgo" label="Orgo (Le Corps)" />
-              <MapLink href="/kreature/anatomie/memoire/swarmcraft" label="SwarmCraft (Mémoire)" />
-              <MapLink href="/kreature/anatomie/sens/sentient" label="SenTient (Sens)" />
-              <MapLink href="/kreature/anatomie/voix/architect" label="Architect (Voix)" />
-              <MapLink href="/kreature/anatomie/ame/ame-artificielle" label="Âme Artificielle" />
-              <MapLink href="/kreature/anatomie/ame/chakras-1-9" label="Chakras 1-9 (Symbolisme)" />
-            </SubSection>
-
-            <SubSection title="Konnaxion (L'Esprit)">
-              <MapLink href="/kreature/anatomie/esprit/konnaxion" label="Konnaxion Hub" />
-              <MapLink href="/kreature/anatomie/esprit/konnaxion/konnected" label="KonnectED (Savoir)" />
-              <MapLink href="/kreature/anatomie/esprit/konnaxion/ethikos" label="Ethikos (Débat)" />
-              <MapLink href="/kreature/anatomie/esprit/konnaxion/kollective" label="Kollective (Jugement)" />
-              <MapLink href="/kreature/anatomie/esprit/konnaxion/keen-konnect" label="KeenKonnect (Action)" />
-              <MapLink href="/kreature/anatomie/esprit/konnaxion/kreative" label="Kreative (Culture)" />
-            </SubSection>
-
-            <SubSection title="Rituels (L'Usage)">
-              <MapLink href="/kreature/rituels" label="Index des Rituels" />
-              <MapLink href="/kreature/rituels/respiration-du-sens" label="La Respiration du Sens" />
-              <MapLink href="/kreature/rituels/parlement-interieur" label="Le Parlement Intérieur" />
-            </SubSection>
-          </Section>
-
           {/* PLATFORMS */}
           <Section title="Platforms (Engines)" icon={<Server className="w-5 h-5" />}>
-            <MapLink href="/platforms" label="Platforms Hub" />
+            <MapLink href="/platforms" label="Platforms Hub" highlight />
             <SubSection title="Core Products">
               <MapLink href="/platforms/konnaxion" label="Konnaxion (Public OS)" />
               <MapLink href="/platforms/orgo" label="Orgo (Private OS)" />
@@ -159,20 +100,20 @@ export default function VisualSitemapPage() {
 
           {/* TECHNOLOGY */}
           <Section title="Technology Stack" icon={<Cpu className="w-5 h-5" />}>
-            <MapLink href="/technology" label="Tech Overview" />
+            <MapLink href="/technology" label="Tech Overview" highlight />
             <MapLink href="/technology/ariane" label="Ariane (Vision)" />
             <MapLink href="/technology/architect" label="Architect (Output)" />
             <MapLink href="/technology/sentient" label="SenTient (Input)" />
             <MapLink href="/technology/swarmcraft" label="SwarmCraft (Memory)" />
-            <MapLink href="/technology/ame-artificielle" label="Âme Artificielle (Ethics)" />
-            <MapLink href="/technology/voting-machine" label="VM-Engine (Core)" />
+            <MapLink href="/technology/ame-artificielle" label="Âme artificielle (Alignment & Meta-cognition)" />
+            <MapLink href="/technology/voting-machine" label="Voting Machine (Core)" />
           </Section>
 
           {/* META */}
           <Section title="Meta" icon={<Share2 className="w-5 h-5" />}>
             <MapLink href="/contact" label="Contact" />
-            <MapLink href="/about" label="About the Architect" />
-            <MapLink href="/sitemap" label="XML Sitemap" />
+            <MapLink href="/about" label="About" />
+            <MapLink href="/sitemap" label="Site Map (This page)" highlight />
           </Section>
         </div>
       </div>
@@ -181,7 +122,15 @@ export default function VisualSitemapPage() {
 }
 
 // --- Helper Components ---
-function Section({ title, icon, children }: { title: string; icon: ReactNode; children: ReactNode }) {
+function Section({
+  title,
+  icon,
+  children,
+}: {
+  title: string;
+  icon: ReactNode;
+  children: ReactNode;
+}) {
   return (
     <div>
       <h2 className="flex items-center text-xl font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">
@@ -195,13 +144,23 @@ function Section({ title, icon, children }: { title: string; icon: ReactNode; ch
 function SubSection({ title, children }: { title: string; children: ReactNode }) {
   return (
     <div className="mt-4 ml-6 pl-4 border-l-2 border-slate-100">
-      <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">{title}</h3>
+      <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
+        {title}
+      </h3>
       <ul className="space-y-2">{children}</ul>
     </div>
   );
 }
 
-function MapLink({ href, label, highlight }: { href: string; label: string; highlight?: boolean }) {
+function MapLink({
+  href,
+  label,
+  highlight,
+}: {
+  href: string;
+  label: string;
+  highlight?: boolean;
+}) {
   return (
     <li>
       <Link
@@ -214,4 +173,4 @@ function MapLink({ href, label, highlight }: { href: string; label: string; high
       </Link>
     </li>
   );
-} 
+}
