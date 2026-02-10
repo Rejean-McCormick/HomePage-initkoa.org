@@ -6,21 +6,32 @@ import path from "node:path";
 export const runtime = "nodejs";
 
 // Use ONE canonical base URL (match your redirects / canonical tags)
-const BASE_URL = "https://www.initkoa.org";
+const BASE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  process.env.SITE_URL ||
+  "https://www.initkoa.org"
+).replace(/\/+$/, "");
 
 // Next.js App Router: a folder is a routable page if it contains page.(tsx|ts|js|jsx|mdx)
 const PAGE_FILE_RE = /^page\.(tsx|ts|js|jsx|mdx)$/;
 
-// If you want to include dynamic routes in the sitemap, remove the [] check below
+function isRouteGroup(seg: string): boolean {
+  return seg.startsWith("(") && seg.endsWith(")");
+}
+
+function isDynamicSegment(seg: string): boolean {
+  return seg.startsWith("[") && seg.endsWith("]");
+}
+
+// Skip hidden/private folders + dynamic segments.
+// NOTE: Route groups are NOT skipped; we traverse them but do not add them to the URL path.
 function isSkippableSegment(seg: string): boolean {
-  // Skip hidden/private folders
   if (!seg) return true;
   if (seg.startsWith(".")) return true;
   if (seg.startsWith("_")) return true;
 
-  // Skip route groups and dynamic segments (prevents emitting non-concrete URLs)
-  if ((seg.startsWith("(") && seg.endsWith(")")) || (seg.startsWith("[") && seg.endsWith("]")))
-    return true;
+  // Skip dynamic segments (prevents emitting non-concrete URLs)
+  if (isDynamicSegment(seg)) return true;
 
   return false;
 }
@@ -28,22 +39,27 @@ function isSkippableSegment(seg: string): boolean {
 function walkForRoutes(appDirAbs: string): string[] {
   const routes = new Set<string>();
 
-  function walk(currentAbs: string, segments: string[]) {
+  function walk(currentAbs: string, urlSegments: string[]) {
     const entries = fs.readdirSync(currentAbs, { withFileTypes: true });
 
     // If this folder contains a page.* file, it maps to a URL path
     const hasPage = entries.some((e) => e.isFile() && PAGE_FILE_RE.test(e.name));
     if (hasPage) {
-      const routePath = "/" + segments.join("/");
+      const routePath = "/" + urlSegments.join("/");
       routes.add(routePath === "/" ? "/" : routePath);
     }
 
     // Recurse into subfolders
     for (const e of entries) {
       if (!e.isDirectory()) continue;
-      if (isSkippableSegment(e.name)) continue;
 
-      walk(path.join(currentAbs, e.name), [...segments, e.name]);
+      const name = e.name;
+      if (isSkippableSegment(name)) continue;
+
+      // Route groups: traverse, but do NOT add to URL path
+      const nextUrlSegments = isRouteGroup(name) ? urlSegments : [...urlSegments, name];
+
+      walk(path.join(currentAbs, name), nextUrlSegments);
     }
   }
 

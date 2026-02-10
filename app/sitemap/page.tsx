@@ -1,176 +1,125 @@
-// app/sitemap/page.tsx
-import Link from "next/link";
-import type { ReactNode } from "react";
-import {
-  Map,
-  Landmark,
-  Server,
-  Share2,
-  Cpu,
-  TrendingUp,
-  Microscope,
-  Anchor,
-} from "lucide-react";
+// app/sitemap.ts
+import type { MetadataRoute } from "next";
+import fs from "node:fs";
+import path from "node:path";
 
-export const metadata = {
-  title: "Site Map – The kOA initiative",
-  description: "Complete hierarchical index of the kOA ecosystem.",
-};
+export const runtime = "nodejs";
 
-export default function VisualSitemapPage() {
-  return (
-    <main className="max-w-5xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold text-slate-900 mb-10 flex items-center">
-        <Map className="w-10 h-10 text-indigo-600 mr-4" />
-        Site Map
-      </h1>
+// Use ONE canonical base URL (match your redirects / canonical tags)
+const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.initkoa.org").replace(
+  /\/+$/,
+  ""
+);
 
-      <div className="grid md:grid-cols-2 gap-12">
-        <div className="space-y-10">
-          {/* CONTEXT & DIAGNOSIS */}
-          <Section title="Context & Diagnosis" icon={<Landmark className="w-5 h-5" />}>
-            <MapLink href="/" label="Home" highlight />
-            <MapLink href="/why" label="The Diagnosis (Why kOA?)" />
-            <MapLink href="/diagnosis" label="9 Systemic Failures" />
-            <MapLink href="/principles" label="Principles Hub" highlight />
+// Next.js App Router: a folder is a routable page if it contains page.(tsx|ts|js|jsx|mdx)
+const PAGE_FILE_RE = /^page\.(tsx|ts|js|jsx|mdx)$/;
 
-            <SubSection title="Principles domains">
-              <MapLink href="/principles/civic-principles-ethics" label="Civic Principles & Ethics" />
-              <MapLink href="/principles/logos" label="Logos & Mythos" />
-              <MapLink href="/principles/cosmic-etherism" label="Cosmic Etherism (Optional)" />
-              <MapLink href="/principles/map" label="Principles Map" />
-              <MapLink href="/principles/glossary" label="Principles Glossary" />
-            </SubSection>
-          </Section>
-
-          {/* RESEARCH */}
-          <Section title="Research" icon={<Microscope className="w-5 h-5" />}>
-            <MapLink href="/research" label="Research Hub" highlight />
-            <MapLink href="/research/pi-theory" label="Pi Theory (Optional Metaphysics)" />
-          </Section>
-
-          {/* INFRASTRUCTURE */}
-          <Section title="Infrastructure" icon={<Anchor className="w-5 h-5" />}>
-            <MapLink href="/infrastructures" label="Infrastructure Hub" highlight />
-
-            <SubSection title="Physical (Kristal Farms)">
-              <MapLink href="/infrastructures/kristal-farms" label="Kristal Farms Overview" />
-              <MapLink href="/infrastructures/kristal-farms/infrastructure" label="Physical Infrastructure" />
-              <MapLink href="/infrastructures/kristal-farms/ecology" label="Ecology & Heat Cycles" />
-              <MapLink href="/infrastructures/kristal-farms/governance" label="Governance & Tenancy" />
-              <MapLink href="/infrastructures/kristal-farms/nain" label="Project Nain (Pilot)" />
-            </SubSection>
-
-            <SubSection title="Virtual (Kin City)">
-              <MapLink href="/infrastructures/kin-city" label="Kin City Overview" />
-              <MapLink href="/infrastructures/kin-city/zones" label="Zone Guide" />
-              <MapLink href="/infrastructures/kin-city/philosophy" label="Philosophy & Design" />
-              <MapLink href="/infrastructures/kin-city/roadmap" label="Roadmap" />
-            </SubSection>
-          </Section>
-
-          {/* INITIATIVES */}
-          <Section title="Initiatives" icon={<TrendingUp className="w-5 h-5" />}>
-            <MapLink href="/initiatives" label="Overview" highlight />
-
-            <SubSection title="Civic Governance">
-              <MapLink href="/initiatives/civic-governance" label="Governance Hub" />
-              <MapLink href="/initiatives/civic-governance/constitution" label="Constitution" />
-              <MapLink href="/initiatives/civic-governance/constitution/ekoh" label="EkoH (Liquid Meritocracy)" />
-              <MapLink href="/initiatives/civic-governance/modules/education" label="Education Module" />
-              <MapLink href="/initiatives/civic-governance/modules/economy" label="Economy Module" />
-              <MapLink href="/initiatives/civic-governance/modules/justice" label="Justice Module" />
-            </SubSection>
-
-            <SubSection title="Political">
-              <MapLink href="/initiatives/koa-political-initiative" label="kOA Political Initiative" />
-            </SubSection>
-          </Section>
-        </div>
-
-        <div className="space-y-10">
-          {/* PLATFORMS */}
-          <Section title="Platforms (Engines)" icon={<Server className="w-5 h-5" />}>
-            <MapLink href="/platforms" label="Platforms Hub" highlight />
-            <SubSection title="Core Products">
-              <MapLink href="/platforms/konnaxion" label="Konnaxion (Public OS)" />
-              <MapLink href="/platforms/orgo" label="Orgo (Private OS)" />
-            </SubSection>
-          </Section>
-
-          {/* TECHNOLOGY */}
-          <Section title="Technology Stack" icon={<Cpu className="w-5 h-5" />}>
-            <MapLink href="/technology" label="Tech Overview" highlight />
-            <MapLink href="/technology/ariane" label="Ariane (Vision)" />
-            <MapLink href="/technology/architect" label="Architect (Output)" />
-            <MapLink href="/technology/sentient" label="SenTient (Input)" />
-            <MapLink href="/technology/swarmcraft" label="SwarmCraft (Memory)" />
-            <MapLink href="/technology/ame-artificielle" label="Âme artificielle (Alignment & Meta-cognition)" />
-            <MapLink href="/technology/voting-machine" label="Voting Machine (Core)" />
-          </Section>
-
-          {/* META */}
-          <Section title="Meta" icon={<Share2 className="w-5 h-5" />}>
-            <MapLink href="/contact" label="Contact" />
-            <MapLink href="/about" label="About" />
-            <MapLink href="/sitemap" label="Site Map (This page)" highlight />
-          </Section>
-        </div>
-      </div>
-    </main>
-  );
+function isRouteGroup(seg: string): boolean {
+  return seg.startsWith("(") && seg.endsWith(")");
 }
 
-// --- Helper Components ---
-function Section({
-  title,
-  icon,
-  children,
-}: {
-  title: string;
-  icon: ReactNode;
-  children: ReactNode;
-}) {
-  return (
-    <div>
-      <h2 className="flex items-center text-xl font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">
-        <span className="text-slate-400 mr-2">{icon}</span> {title}
-      </h2>
-      <ul className="space-y-2">{children}</ul>
-    </div>
-  );
+function isDynamicSegment(seg: string): boolean {
+  return seg.startsWith("[") && seg.endsWith("]");
 }
 
-function SubSection({ title, children }: { title: string; children: ReactNode }) {
-  return (
-    <div className="mt-4 ml-6 pl-4 border-l-2 border-slate-100">
-      <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
-        {title}
-      </h3>
-      <ul className="space-y-2">{children}</ul>
-    </div>
-  );
+// If you want to include dynamic routes in the sitemap, remove the dynamic segment check below
+function isSkippableSegment(seg: string): boolean {
+  // Skip hidden/private folders
+  if (!seg) return true;
+  if (seg.startsWith(".")) return true;
+  if (seg.startsWith("_")) return true;
+
+  // Skip dynamic segments (prevents emitting non-concrete URLs)
+  if (isDynamicSegment(seg)) return true;
+
+  // NOTE: we DO NOT skip route groups here; we traverse them but do not add to URL.
+  return false;
 }
 
-function MapLink({
-  href,
-  label,
-  highlight,
-}: {
-  href: string;
-  label: string;
-  highlight?: boolean;
-}) {
-  return (
-    <li>
-      <Link
-        href={href}
-        className={`block py-1 hover:text-indigo-600 transition-colors ${
-          highlight ? "text-indigo-600 font-bold" : "text-slate-600"
-        }`}
-      >
-        {label}
-      </Link>
-    </li>
-  );
+function walkForRoutes(appDirAbs: string): string[] {
+  const routes = new Set<string>();
+
+  function walk(currentAbs: string, segments: string[]) {
+    const entries = fs.readdirSync(currentAbs, { withFileTypes: true });
+
+    // If this folder contains a page.* file, it maps to a URL path
+    const hasPage = entries.some((e) => e.isFile() && PAGE_FILE_RE.test(e.name));
+    if (hasPage) {
+      const routePath = "/" + segments.join("/");
+      routes.add(routePath === "/" ? "/" : routePath);
+    }
+
+    // Recurse into subfolders
+    for (const e of entries) {
+      if (!e.isDirectory()) continue;
+
+      const name = e.name;
+
+      // Skip private/dynamic/etc
+      if (isSkippableSegment(name)) continue;
+
+      // Route groups: traverse, but do NOT add the segment to the URL path
+      const nextSegments = isRouteGroup(name) ? segments : [...segments, name];
+
+      walk(path.join(currentAbs, name), nextSegments);
+    }
+  }
+
+  walk(appDirAbs, []);
+  return Array.from(routes).sort();
+}
+
+function depthOf(routePath: string): number {
+  return routePath === "/" ? 0 : routePath.split("/").filter(Boolean).length;
+}
+
+function priorityFor(routePath: string): number {
+  if (routePath === "/") return 1.0;
+
+  // Boost key hubs
+  const hubs = new Set([
+    "/platforms",
+    "/infrastructures",
+    "/initiatives",
+    "/principles",
+    "/research",
+    "/technology",
+    "/kreature",
+  ]);
+  if (hubs.has(routePath)) return 0.9;
+
+  // Depth-based fallback
+  const d = depthOf(routePath);
+  if (d === 1) return 0.8;
+  if (d === 2) return 0.7;
+  if (d === 3) return 0.64;
+  if (d === 4) return 0.58;
+  return 0.5;
+}
+
+function changeFrequencyFor(
+  routePath: string
+): MetadataRoute.Sitemap[number]["changeFrequency"] {
+  const d = depthOf(routePath);
+  if (routePath === "/") return "weekly";
+  if (d <= 1) return "weekly";
+  return "monthly";
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  // In Next.js, process.cwd() resolves to the project root (where /app lives)
+  const appDirAbs = path.join(process.cwd(), "app");
+  const routePaths = walkForRoutes(appDirAbs);
+
+  const now = new Date();
+
+  return routePaths.map((routePath) => {
+    const url = routePath === "/" ? BASE_URL : `${BASE_URL}${routePath}`;
+    return {
+      url,
+      lastModified: now,
+      changeFrequency: changeFrequencyFor(routePath),
+      priority: priorityFor(routePath),
+    };
+  });
 }
