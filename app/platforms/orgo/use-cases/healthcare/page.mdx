@@ -1,0 +1,117 @@
+import { Card } from '@/components/Card';
+import { Siren, Stethoscope, ClipboardCheck, WifiOff, ShieldCheck, ArrowRight } from 'lucide-react';
+
+export const metadata = {
+  title: "Orgo for Healthcare",
+  description:
+    "Hospitals and clinics use Orgo to route urgent signals to the right team, enforce response time, preserve auditability, and keep operating during outages."
+};
+
+# Healthcare & hospitals
+
+Healthcare operations fail when **signals don’t reach the right team fast enough**, when **handoffs are ambiguous**, or when **work leaves no trace**.
+
+Orgo is built to make hospital coordination reliable:
+route by function, escalate by time, close every case with an explicit outcome, and keep operating during downtime.
+
+---
+
+## What Orgo enables in a hospital
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <Card
+    title="Emergency routing"
+    icon={<Siren className="text-primary w-6 h-6" />}
+    description="Critical messages (codes, incidents, urgent updates) are routed immediately to the appropriate team—not lost in inboxes."
+    href="/platforms/orgo/routing-escalation"
+  />
+  <Card
+    title="Interdepartment coordination"
+    icon={<Stethoscope className="text-primary w-6 h-6" />}
+    description="Radiology, labs, pharmacy, surgery, nursing, and administration share one accountable workflow for requests and handoffs."
+    href="/platforms/orgo/workflow"
+  />
+  <Card
+    title="Incident reporting with closure"
+    icon={<ClipboardCheck className="text-primary w-6 h-6" />}
+    description="Incidents become cases with explicit outcomes: what happened, what changed, what follow-up remains."
+    href="/platforms/orgo/security-audit"
+  />
+  <Card
+    title="Continuity during outages"
+    icon={<WifiOff className="text-primary w-6 h-6" />}
+    description="Orgo can keep workflows running when connectivity is unreliable—critical for remote hospitals and high-pressure events."
+    href="/platforms/orgo/offline-sovereignty"
+  />
+</div>
+
+---
+
+## Typical hospital use cases
+
+### 1) Critical results & urgent escalation
+When a critical lab or imaging result lands, it becomes a tracked case:
+- routed to the responsible function,
+- escalated if not acknowledged within the response window,
+- closed with an explicit recorded disposition.
+
+### 2) Patient flow & resource pressure
+Hospitals need fast coordination around:
+- bed availability and capacity constraints,
+- resource allocation (staffing, supplies),
+- cross-department dependencies.
+
+Orgo makes these situations visible as accountable work—not informal “FYI” messages.
+
+### 3) Safety, quality, and compliance workflows
+Near-misses, safety events, and process failures require:
+- a durable record,
+- review cycles that produce actions,
+- traceable remediation and follow-up.
+
+Orgo supports that with audit-ready closure and review-driven work creation.
+
+---
+
+## Why Orgo fits healthcare constraints
+
+<div className="bg-slate-50 p-6 rounded-xl border border-slate-200 mt-8">
+  <h3 className="flex items-center text-lg font-bold text-slate-800 mb-3">
+    <ShieldCheck className="mr-3 text-emerald-600" />
+    Designed for sensitive environments
+  </h3>
+  <ul className="space-y-2 text-slate-700 text-sm">
+    <li><strong>Secure sharing:</strong> structured routing reduces accidental disclosure by keeping messages in the right lane.</li>
+    <li><strong>Auditability:</strong> traceable case lifecycles help internal review and external compliance.</li>
+    <li><strong>Offline resilience:</strong> operational continuity during downtime and low-connectivity conditions.</li>
+    <li><strong>Regulatory alignment:</strong> supports environments that must meet healthcare privacy and data-handling requirements.</li>
+  </ul>
+</div>
+
+---
+
+## If you want deeper examples
+
+- How Orgo handles urgent workflows → `/platforms/orgo/routing-escalation`  
+- How Orgo stays auditable without becoming surveillance → `/platforms/orgo/security-audit`  
+- How Orgo operates during downtime / local deployments → `/platforms/orgo/offline-sovereignty`
+
+---
+
+## Next
+
+<div className="flex flex-col sm:flex-row gap-4 mt-8">
+  <a
+    href="/platforms/orgo/use-cases"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    All use cases <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+
+  <a
+    href="/platforms/orgo/trust"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
+  >
+    Trust model <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+</div>

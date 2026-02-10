@@ -1,0 +1,129 @@
+import { Card } from '@/components/Card';
+import { Route, Clock, ScanEye, WifiOff, Repeat, ArrowRight } from 'lucide-react';
+
+export const metadata = {
+  title: "Orgo — What it does",
+  description:
+    "Orgo turns signals into accountable work: route by function, escalate by time, and close every case with a traceable outcome—even offline."
+};
+
+# What Orgo does
+
+Orgo is an **execution and accountability layer** for organizations.
+
+It ensures that important signals (requests, incidents, decisions, reports) become **work that cannot vanish**:
+assigned to the right responsibility, tracked end-to-end, escalated if ignored, and closed with a verifiable outcome.
+
+---
+
+## In one sentence
+
+**Orgo makes coordination reliable.**
+
+---
+
+## The problems Orgo solves
+
+Most organizations fail in the same predictable ways:
+
+- Requests get lost in inboxes and chat threads.
+- Ownership is unclear (“someone should handle this”).
+- Work is performed, but not recorded (no durable memory).
+- Backlogs accumulate silently until they become crises.
+- Operations collapse under low connectivity or high pressure.
+
+Orgo is built to eliminate those failure modes.
+
+---
+
+## The five outcomes Orgo guarantees
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <Card
+    title="Routing by function"
+    icon={<Route className="text-primary w-6 h-6" />}
+    description="Work goes to responsibilities (functions/roles), not to individuals—so continuity survives turnover and re-orgs."
+    href="/platforms/orgo/routing-escalation"
+  />
+  <Card
+    title="Time-bound escalation"
+    icon={<Clock className="text-primary w-6 h-6" />}
+    description="If a case isn’t resolved within its response window, it escalates automatically—so urgent work can’t be quietly ignored."
+    href="/platforms/orgo/routing-escalation"
+  />
+  <Card
+    title="Traceable closure"
+    icon={<ScanEye className="text-primary w-6 h-6" />}
+    description="Every case ends with an explicit outcome: what happened, who acted, what changed, and what remains open."
+    href="/platforms/orgo/security-audit"
+  />
+  <Card
+    title="Offline-first resilience"
+    icon={<WifiOff className="text-primary w-6 h-6" />}
+    description="Orgo keeps operating when connectivity is unreliable—critical for crisis response, remote work, and high-security contexts."
+    href="/platforms/orgo/offline-sovereignty"
+  />
+  <Card
+    title="Patterns become work"
+    icon={<Repeat className="text-primary w-6 h-6" />}
+    description="Recurring issues trigger audits and reviews as real cases—not just dashboards—so systemic problems re-enter the operational loop."
+    href="/platforms/orgo/reviews"
+  />
+</div>
+
+---
+
+## What Orgo replaces
+
+Orgo is not “another dashboard.” It replaces fragility with a system:
+
+- instead of “please see this message” → **case ownership**
+- instead of “we should follow up” → **escalation**
+- instead of “we think we handled it” → **closed outcomes**
+- instead of “lessons learned (somewhere)” → **review cycles**
+- instead of “we need internet for everything” → **offline continuity**
+
+---
+
+## What Orgo is (and is not)
+
+**Orgo is:**
+- an accountability engine for operational coordination,
+- a way to route responsibilities safely,
+- a memory of what was decided and executed.
+
+**Orgo is not:**
+- a social network,
+- a surveillance tool,
+- a replacement for governance.
+
+It supports governance by making execution observable and correctable.
+
+---
+
+## Where this fits in the kOA ecosystem
+
+- **Konnaxion**: public coordination, deliberation, knowledge, legitimacy workflows  
+- **Orgo**: execution, routing, closure, durable operational memory
+
+Orgo is the layer that turns decisions into completed work.
+
+---
+
+## Next
+
+<div className="flex flex-col sm:flex-row gap-4 mt-8">
+  <a
+    href="/platforms/orgo/workflow"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
+  >
+    See the workflow <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+
+  <a
+    href="/platforms/orgo/use-cases"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    Explore use cases <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+</div>

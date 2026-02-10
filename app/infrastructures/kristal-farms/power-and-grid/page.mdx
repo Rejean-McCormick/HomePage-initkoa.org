@@ -1,0 +1,110 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Kristal Farms — Power & Grid",
+  description:
+    "How Kristal Farms turns local hydro power into dependable compute and community heat: short-distance distribution, metered interfaces, grid-safe operations, and emergency resilience.",
+};
+
+# Power & Grid
+
+Kristal Farms is built around a simple idea: **use local hydro power on-site**, distribute it over **short distances**, and convert it into two useful outputs:
+
+- **Compute capacity** (exported by fiber)
+- **Heat** (used locally for buildings and food production)
+
+The power system is designed to be **low-loss, auditable, and grid-safe**—with clear operational rules that keep community needs first.
+
+---
+
+## The basic power flow
+
+**Hydro plant → short MV feeder → village substation → feeders to pads + heat equipment**
+
+Instead of building long transmission corridors, Kristal Farms concentrates interconnection and distribution in the village:
+
+- A **short medium-voltage (MV) feeder** links the hydro source to a **new village substation**
+- The substation distributes power to:
+  - each **compute pad** (tenant containers)
+  - the **heat system** equipment (pumps, exchanger station, controls)
+
+This “village-sited” layout keeps losses low and keeps the system legible: you can see where energy goes.
+
+---
+
+## Metering and auditability (by design)
+
+Every major interface is metered so the project can publish an honest accounting:
+
+- hydro output
+- substation in/out
+- per-pad power handoff
+
+This supports:
+- transparent billing and loss accounting
+- seasonal reporting (including **diesel avoided**)
+- operational governance (how much power is serving heat vs compute)
+
+(See also: <Link href="/infrastructures/kristal-farms/metrics-and-dashboard">Metrics & dashboard</Link>.)
+
+---
+
+## Grid-safe operations (no surprises for the village)
+
+Compute loads can be “spiky” if you energize large systems all at once. Kristal Farms avoids this through:
+
+- **power quality monitoring** (voltage stability, harmonics, events)
+- **coordinated start/stop sequencing** (pads are energized in a staged way to prevent inrush and flicker)
+- feeder protection with **selective coordination** (a fault on one pad should isolate that pad—not the whole site)
+- proper grounding and protective devices per feeder
+
+This is a key principle: the farm must behave like a **well-mannered industrial neighbor**, not a disruptive load.
+
+---
+
+## Heat-first load management
+
+Kristal Farms does not treat compute as the “master load.”
+
+The operating rule is: **community heating needs take priority**.
+
+That shows up in how power is managed:
+
+- pads are added in phases, matching IT power to available heat sinks
+- workloads can be shaped to follow heat demand (more batch work in cold periods; throttling when heat loops are saturated)
+- contracts and procedures encode curtailment rules: lower-priority compute yields before public heating is shorted
+
+(See also: <Link href="/infrastructures/kristal-farms/heat-first-design">Heat-first design</Link>.)
+
+---
+
+## Resilience (without normalizing diesel)
+
+The village may already have diesel generators. Kristal Farms keeps them as **emergency backup for critical loads only**—for rare outage events.
+
+In practice:
+- the normal operating state is hydro + on-site operations
+- diesel is reserved for essential services (e.g., clinic / NOC) during exceptional failures
+- compute can be safely curtailed under defined procedures
+
+This is “resilience without dependency”: backup exists, but the system is not designed to burn fuel to function.
+
+---
+
+## Safety and seasonal readiness
+
+The power system is treated as civic infrastructure, not a private lab:
+
+- strict lockout/tagout procedures at the substation and pad connections
+- routine pre-season testing (e.g., before winter ramp-up) to validate the full heating + electrical chain under load
+
+(See also: <Link href="/infrastructures/kristal-farms/environment-and-safety">Environment & safety</Link>.)
+
+---
+
+## Related pages
+
+- <Link href="/infrastructures/kristal-farms/how-it-works">How it works</Link>
+- <Link href="/infrastructures/kristal-farms/tenancy-model">Tenancy model</Link>
+- <Link href="/infrastructures/kristal-farms/cooling-and-water">Cooling & water</Link>
+- <Link href="/infrastructures/kristal-farms/go-no-go">Go / No-Go checklist</Link>

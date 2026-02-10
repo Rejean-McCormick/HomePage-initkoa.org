@@ -1,0 +1,167 @@
+export const metadata = {
+  title: "Kristal — Distribution & Versioning",
+  description:
+    "How Kristals are published, updated, and distributed safely (including offline) without silent downgrades.",
+};
+
+# Distribution & versioning
+
+A Kristal is meant to travel: between devices, communities, institutions, and time.
+
+This page explains **how Kristals are released and updated** in a way that preserves the core promise:
+**portable knowledge, verifiable integrity, and offline-correct use**.
+
+---
+
+## The rule that makes everything safe
+
+### Updates never overwrite
+A Kristal release is **immutable**. If you need a change, you publish a **new** release.
+
+- You never “fix a pack in place”.
+- You never mutate a sealed artifact.
+- Every change creates a new identity and a new release record.
+
+This gives users and institutions a stable foundation:
+**you can always know exactly what was used, when, and where.**
+
+---
+
+## What gets distributed
+
+Kristal is typically distributed as two complementary artifacts:
+
+### 1) Exchange (canonical)
+The **Exchange** is the reference artifact: what you cite, verify, and federate.
+
+### 2) Runtime Pack (offline bundle)
+The **Runtime Pack** is what you deploy for everyday use:
+a portable, offline-friendly bundle optimized for lookup and constrained querying.
+
+> Exchange = canonical truth object  
+> Runtime Pack = deployable offline package
+
+---
+
+## Distribution happens through channels
+
+A **channel** is a named distribution target: a tenant, a community, a region, a device cohort, or an environment (production / field / classroom).
+
+Examples:
+- `university-public`
+- `heritage-official`
+- `school-lab-offline`
+- `personal-notes`
+
+Channels are not just “folders”. They are **policy scopes**:
+each channel can define what signatures are accepted, what gets pinned, and what is revoked.
+
+---
+
+## Versioning model (human-friendly + machine-safe)
+
+Kristal uses two ideas at once:
+
+### A) Strong identity (machine-safe)
+Every artifact has an identity tied to its content (so “same content” stays comparable).
+
+### B) Release versions (human-friendly)
+On top of strong identity, you can use **semantic / calendar** version labels for usability.
+
+Recommended practical rule:
+- versions must be **monotonic** within a channel
+- versions must never be reused for different content
+
+---
+
+## Safe activation
+
+A Runtime Pack is not “active” just because it exists on disk.
+
+Activation is a controlled switch that should be:
+
+- **Fail-closed**: if verification fails, the pack does not activate.
+- **Atomic**: either fully activated, or not activated at all.
+- **Deterministic**: given the same inputs and policy, the same outcome occurs.
+
+This prevents “partial installs” and “quiet corruption”.
+
+---
+
+## Downgrade prevention and rollback
+
+Two things must be true simultaneously:
+
+### 1) You can roll back fast
+If a new release behaves badly, you need a deterministic rollback mechanism:
+- “pinned rollback” (return to a specific known-good)
+- or “last-known-good rollback”
+
+### 2) You cannot be tricked into old vulnerable releases
+Rollbacks must not become a downgrade vulnerability.
+
+Practical controls:
+- **minimum allowed version** per channel
+- **revocation** (explicitly block a release)
+- monotonic version rules (no older version can replace a newer one unless policy allows)
+
+---
+
+## Release strategies (how you distribute safely)
+
+When devices update asynchronously (especially offline), “ship it and pray” doesn’t work.
+
+Two rollout patterns fit Kristal well:
+
+### Blue / Green (recommended default)
+Keep two slots:
+- **Blue** = current active release
+- **Green** = new candidate release
+
+Green is verified and warmed up first, then the channel pointer flips to Green.
+Blue remains available for rollback during a defined window.
+
+### Canary (optional)
+Roll out to a small cohort first (e.g., 1% of devices),
+then expand only if stability checks pass.
+
+The key is not the pattern itself; it’s the invariant:
+**every activation must be traceable to an explicit release record.**
+
+---
+
+## Domain shards and federation (versioning without fragmentation)
+
+If you use domain sharding, you get a clean update story:
+
+- each domain shard evolves on its own cadence
+- updating one shard produces a new shard identity
+- other shards remain intact and verifiable
+- a federation root can reference a new shard while keeping the rest unchanged
+
+This supports real-world distribution:
+weekly updates for fast-moving domains, yearly updates for slow ones,
+without forcing everything to move together.
+
+---
+
+## Offline distribution (field reality)
+
+Kristal distribution should support:
+- USB / local transfer
+- local mirrors
+- community caches
+- intermittent connectivity
+
+The principle stays the same:
+**verification must be possible offline before activation.**
+
+If the environment cannot verify, it should not activate.
+
+---
+
+## Recommended page flow
+
+- **Trust & provenance:** `/technology/kristal/trust-and-provenance`
+- **Portability & offline:** `/technology/kristal/portability-and-offline`
+- **Integrations:** `/technology/kristal/integrations`

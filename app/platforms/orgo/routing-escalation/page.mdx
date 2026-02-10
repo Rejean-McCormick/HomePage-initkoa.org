@@ -1,0 +1,163 @@
+import { Card } from '@/components/Card';
+import { Route, Clock, AlertTriangle, ShieldCheck, ArrowRight } from 'lucide-react';
+
+export const metadata = {
+  title: 'Routing & Escalation — Orgo',
+  description:
+    'How Orgo prevents lost requests: route work to the right function, enforce response windows, and escalate safely when needed.',
+};
+
+# Routing & Escalation
+
+Orgo’s core promise is simple:
+
+**Important work must reach the right function, on time, and with a traceable outcome.**
+
+Routing and escalation are the reliability mechanisms that make that promise true.
+
+---
+
+## What routing means in Orgo
+
+Routing is how Orgo decides **where a request goes**.
+
+Not “who happens to read the email,” but **which function is responsible** (e.g., Intake, Incident Response, Procurement, Legal Review, Case Management).
+
+### Routing is built around four principles
+
+1) **Function-first ownership**  
+Work is assigned to responsibilities (functions/roles), so continuity survives turnover and re-orgs.
+
+2) **Triage before discussion**  
+The first job is to classify and route. Conversation comes after ownership is clear.
+
+3) **Minimal friction**  
+A request should become a case with as few steps as possible. If the process is heavy, people will bypass it.
+
+4) **Visible responsibility**  
+Everyone can see which function owns the case and what the next expected action is.
+
+---
+
+## What escalation means in Orgo
+
+Escalation is what happens when a case is **not** handled within its response window.
+
+Escalation is not punishment. It’s a safety system that prevents silence from becoming policy.
+
+### Escalation is built around three ideas
+
+- **Response windows**  
+Each case has a time expectation (minutes / hours / days), depending on severity.
+
+- **Escalation ladder**  
+If the case is not handled, it moves to the next responsible scope (backup function, duty lead, supervisor function, etc.).
+
+- **Closure required**  
+Escalation continues until the case is explicitly closed (resolved, rejected with reason, deferred with a date, etc.).
+
+---
+
+## Two guarantees (in one view)
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <Card
+    title="Routing"
+    icon={<Route className="text-primary w-6 h-6" />}
+    description="Requests become cases and are assigned to the correct function, with clear ownership and next action."
+    href="/platforms/orgo/workflow"
+  />
+  <Card
+    title="Escalation"
+    icon={<Clock className="text-primary w-6 h-6" />}
+    description="If a case isn’t handled within its response window, it escalates automatically—so urgent work can’t be silently ignored."
+    href="/platforms/orgo/guarantees"
+  />
+</div>
+
+---
+
+## What people experience (practically)
+
+### For the requester
+- You don’t need to know internal structure.
+- You send one request.
+- You receive status updates because the case has an owner and a timeline.
+
+### For the organization
+- No “I thought someone else handled it.”
+- No backlog that only exists in private inboxes.
+- No invisible failures: if something is overdue, it becomes visible and moves.
+
+---
+
+## Safe escalation (anti-noise safeguards)
+
+Escalation only works if it doesn’t become spam. Orgo should enforce:
+
+- **Explicit thresholds** (severity → response window → escalation ladder)
+- **Bounded notifications** (no infinite loops; escalation changes ownership, not just alerts)
+- **Auditability** (what escalated, when, and why)
+- **Human override** (authorized roles can defer, merge, split, or reclassify cases—with reasons)
+
+<div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-10">
+  <h3 className="flex items-center text-lg font-bold text-slate-800 mb-2">
+    <ShieldCheck className="mr-2 text-blue-600" /> Escalation is governance
+  </h3>
+  <p className="text-slate-600">
+    Escalation rules are policy. They encode what your organization treats as urgent, who is accountable, and how
+    silence is handled. In Orgo, those rules should be explicit, reviewable, and adjustable.
+  </p>
+</div>
+
+---
+
+## Three example patterns
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+  <div className="border border-slate-200 rounded-xl p-6">
+    <h4 className="font-bold text-slate-900 mb-2">Incident report</h4>
+    <p className="text-slate-600 text-sm">
+      Route to Incident Response. Response window: 30 minutes. Escalate to Duty Lead if no action is logged.
+    </p>
+  </div>
+  <div className="border border-slate-200 rounded-xl p-6">
+    <h4 className="font-bold text-slate-900 mb-2">Procurement request</h4>
+    <p className="text-slate-600 text-sm">
+      Route to Procurement Intake. Response window: 2 business days. Escalate to Operations if the request blocks delivery.
+    </p>
+  </div>
+  <div className="border border-slate-200 rounded-xl p-6">
+    <h4 className="font-bold text-slate-900 mb-2">Citizen / client request</h4>
+    <p className="text-slate-600 text-sm">
+      Route to Case Management. Response window: 5 days. Escalate to Service Lead if no update is sent.
+    </p>
+  </div>
+</div>
+
+---
+
+## Next
+
+<div className="flex flex-col sm:flex-row gap-4 mt-8">
+  <a
+    href="/platforms/orgo/workflow"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
+  >
+    See the workflow <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+
+  <a
+    href="/platforms/orgo/security-audit"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    Audit & accountability <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+
+  <a
+    href="/platforms/orgo/offline-sovereignty"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    Offline & sovereignty <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+</div>

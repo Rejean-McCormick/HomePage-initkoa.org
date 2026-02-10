@@ -1,0 +1,95 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Kristal Farms — Fiber & Network",
+  description:
+    "How Kristal Farms exports computation by fiber: resilient connectivity, traffic separation (tenant vs community), monitored performance, and a black-box networking posture.",
+};
+
+# Fiber & Network
+
+Kristal Farms does not export electricity. It exports **results**.
+
+That means **fiber connectivity is a first-class utility**: without reliable network links, the pads can’t deliver value, and the project can’t justify colocating compute in the village. :contentReference[oaicite:0]{index=0}
+
+---
+
+## What the network provides
+
+### 1) A backbone for exporting compute
+A small **Network Operations Center (NOC)** is established at the port site, then a main **trunk line** connects to a regional hub using high-capacity transport. :contentReference[oaicite:1]{index=1}
+
+### 2) Local fiber for pads and community institutions
+Short **feeder lines** connect the NOC to:
+- each compute pad, and
+- local facilities (e.g., clinic, school). :contentReference[oaicite:2]{index=2}
+
+This is part of the “shared infrastructure” logic: the same build that exports compute can also improve local connectivity.
+
+---
+
+## Reliability by design (not wishful thinking)
+
+### Dual uplinks per pad
+Each pad gets **two independent fiber uplinks (A/B)** so a single failure does not take it offline. :contentReference[oaicite:3]{index=3}
+
+### Path protection on the trunk
+Where feasible, the trunk uses **diverse paths / ring-like protection** so a fiber cut does not isolate the site. :contentReference[oaicite:4]{index=4}
+
+### NOC resilience + monitored failover
+The NOC includes redundant power feeds for critical equipment, and automated failover is configured:
+- at the pad level (A→B),
+- and on the backbone (reroute on trunk failure). :contentReference[oaicite:5]{index=5}
+
+---
+
+## Operations: what gets measured (and shown)
+
+The network is operated like critical infrastructure, with continuous monitoring of:
+- **link availability** (uptime),
+- **latency** (including 95th percentile),
+- **jitter**,
+- **error rates**. :contentReference[oaicite:6]{index=6}
+
+These indicators are intended to appear on the **public dashboard** (aggregate, non-sensitive), alongside counts of connected local sites. :contentReference[oaicite:7]{index=7}
+
+---
+
+## Traffic separation and privacy (black-box networking)
+
+Kristal Farms applies the **black-box rule** to the network as well:
+
+- **No deep packet inspection** of tenant traffic.
+- The host sees infrastructure-level metadata (link up/down, aggregate bandwidth) but not packet content. :contentReference[oaicite:8]{index=8}
+
+A key requirement is that **tenant traffic and community traffic are securely segregated** (e.g., VLAN/firewall separation), with explicit acceptance testing to confirm isolation. :contentReference[oaicite:9]{index=9}
+
+---
+
+## Quality of Service (QoS): fairness between workloads
+
+Not all traffic has the same needs. The network uses QoS classes such as:
+- default class for batch training workloads,
+- dedicated low-latency queues for interactive services,
+- **reserved bandwidth** for community services (clinic, school). :contentReference[oaicite:10]{index=10}
+
+This keeps the project aligned with its civic purpose: the network is not “best effort for everyone”—it is governed.
+
+---
+
+## Go-live requirements (what must be proven)
+
+Before the project claims operational readiness, the fiber system must pass acceptance tests, including:
+
+- **SLA verification** (measured availability/latency over a burn-in period),
+- **dual-uplink failover** demonstration per pad,
+- proven **segregation** between tenant and community networks,
+- public network dashboard online with the key metrics. :contentReference[oaicite:11]{index=11}
+
+---
+
+## Continue
+
+- <Link href="/infrastructures/kristal-farms/tenancy-model">Tenancy model →</Link>  
+- <Link href="/infrastructures/kristal-farms/metrics-and-dashboard">Metrics & dashboard →</Link>  
+- <Link href="/infrastructures/kristal-farms/go-no-go">Go / No-Go gates →</Link>

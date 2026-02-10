@@ -1,0 +1,123 @@
+import { Card } from '@/components/Card';
+import {
+  Gavel,
+  Scale,
+  Bell,
+  Lock,
+  FileText,
+  ClipboardCheck,
+  ArrowRight
+} from 'lucide-react';
+
+export const metadata = {
+  title: "Orgo Use Case – Justice System",
+  description:
+    "Orgo strengthens justice administration with secure case routing, timely notifications, explicit ownership, and audit trails—so cases move and nothing disappears."
+};
+
+# Use case: Justice system
+
+Courts and justice institutions fail when work is **lost**, **late**, or **untraceable**.
+Orgo is an execution layer designed to make justice operations **reliable**: the right case material reaches the right function, on time, with accountable closure.
+
+---
+
+## What Orgo enables (in practice)
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <Card
+    title="Secure case circulation"
+    icon={<FileText className="text-primary w-6 h-6" />}
+    description="Route case files and documentation between judges, clerks, lawyers, and authorized staff without “email chaos.”"
+    href="/platforms/orgo/workflow"
+  />
+  <Card
+    title="Confidential channels"
+    icon={<Lock className="text-primary w-6 h-6" />}
+    description="Support confidential legal communications with strong controls and clear accountability."
+    href="/platforms/orgo/trust"
+  />
+  <Card
+    title="Court notifications that don’t fail"
+    icon={<Bell className="text-primary w-6 h-6" />}
+    description="Timely hearing notices, schedule changes, and required actions—so deadlines are respected and no one is surprised."
+    href="/platforms/orgo/routing-escalation"
+  />
+  <Card
+    title="Audit trails by default"
+    icon={<ClipboardCheck className="text-primary w-6 h-6" />}
+    description="Every case-related action becomes traceable: who received it, what changed, what was decided, and how it closed."
+    href="/platforms/orgo/security-audit"
+  />
+</div>
+
+---
+
+## The operational problem Orgo solves
+
+### “A file moved, but responsibility didn’t”
+Traditional systems move documents, but they often don’t enforce ownership.
+Orgo treats every meaningful input as accountable work:
+- a **Case** (the situation),
+- with **Tasks** (the actions),
+- owned by functions (clerks, chambers, scheduling, legal aid, enforcement).
+
+### “Deadlines slip silently”
+When a deadline is missed, the system should escalate automatically.
+Orgo’s workflow can enforce response windows so that overdue work **cannot remain invisible**.
+
+---
+
+## Typical workflows (plain language)
+
+### Workflow A: Hearing scheduling
+A scheduling request arrives → it becomes a Case → tasks route to scheduling and clerks → time windows enforce acknowledgement → notifications go out → closure is explicit (scheduled / rescheduled / cancelled).
+
+### Workflow B: Evidence and document handling
+Evidence is received → routed to the correct function → chain of responsibility is recorded → access is controlled → all actions are logged → the case closes with a clear resolution status.
+
+### Workflow C: Legal aid / defense coordination
+A citizen request arrives → it becomes a Case → routes to legal aid intake → escalates if not acknowledged → the outcome is recorded (accepted / redirected / resolved).
+
+---
+
+## Why this matters for justice
+
+<div className="bg-slate-50 border border-slate-200 rounded-xl p-8 my-10">
+  <h3 className="text-xl font-bold text-slate-900 mb-3 flex items-center">
+    <Gavel className="w-5 h-5 mr-2 text-primary" />
+    Justice depends on operational integrity
+  </h3>
+  <p className="text-slate-700">
+    Orgo does not “replace” judges or legal reasoning. It replaces fragile coordination:
+    lost requests, unclear ownership, and untraceable administrative handling. It makes the system
+    dependable under load, staff turnover, and disruption.
+  </p>
+</div>
+
+---
+
+## Next
+
+<div className="flex flex-col sm:flex-row gap-4 mt-6">
+  <a
+    href="/platforms/orgo/guarantees"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
+  >
+    Orgo guarantees <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+
+  <a
+    href="/platforms/orgo/use-cases"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    All use cases <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+
+  <a
+    href="/platforms/orgo/trust"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    Trust & sovereignty <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+</div>

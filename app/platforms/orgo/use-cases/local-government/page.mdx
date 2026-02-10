@@ -1,0 +1,143 @@
+import Link from 'next/link';
+import { Card } from '@/components/Card';
+import { Building2, AlertTriangle, ClipboardCheck, FileText, Users, ArrowRight } from 'lucide-react';
+
+export const metadata = {
+  title: "Orgo Use Case — Local Government",
+  description:
+    "Route citizen requests to the right function, enforce response windows with escalation, and close cases with traceable outcomes—even during outages.",
+};
+
+# Use case: Local Government
+
+Local governments run on **requests, handoffs, deadlines, and accountability**—often across departments that do not share a single operational picture.
+
+Orgo helps municipalities turn incoming signals (citizen reports, internal alerts, inspections, service requests) into **cases that cannot disappear**, routed to the **right function**, tracked through completion, and improved through recurring reviews.
+
+---
+
+## What Orgo fixes in municipalities
+
+- **Lost requests** (emails, calls, forms) that never become owned work
+- **Unclear responsibility** (“it’s not my department” loops)
+- **Slow response** due to backlogs and weak escalation
+- **No closure record** (citizens re-open the same problem repeatedly)
+- **Continuity failure** during outages, staffing gaps, or emergency conditions
+
+---
+
+## The Orgo approach (in municipal terms)
+
+1. **Capture** a request as a Case (not “a message”).
+2. **Route** it to a *function* (Public Works, Housing, Permits, By-law, etc.).
+3. **Enforce a response window** (reactivity), with escalation if it’s ignored.
+4. **Close with an outcome** (resolved / rejected / duplicate / deferred), with a trace.
+5. **Review patterns** weekly/monthly so recurring issues trigger audits or systemic fixes.
+
+---
+
+## Where it helps most
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+  <Card
+    title="311 / Citizen Requests"
+    icon={<Users className="text-primary w-6 h-6" />}
+    description="Convert reports into routed cases with clear ownership, response windows, and closure—so requests don’t vanish into queues."
+    href="/platforms/orgo/workflow"
+  />
+  <Card
+    title="Inspections & Compliance"
+    icon={<ClipboardCheck className="text-primary w-6 h-6" />}
+    description="Track inspections, follow-ups, and deadlines as accountable work—especially when multiple departments are involved."
+    href="/platforms/orgo/routing-escalation"
+  />
+  <Card
+    title="Emergency Operations"
+    icon={<AlertTriangle className="text-primary w-6 h-6" />}
+    description="Operate under degraded connectivity. Route incidents, escalate missed response windows, and preserve an audit trail during crises."
+    href="/platforms/orgo/offline-sovereignty"
+  />
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <Card
+    title="Permits & Licensing"
+    icon={<FileText className="text-primary w-6 h-6" />}
+    description="Reduce delays by making handoffs explicit: intake → review → site visit → decision → follow-up, with traceable outcomes."
+    href="/platforms/orgo/guarantees"
+  />
+  <Card
+    title="Inter-department Coordination"
+    icon={<Building2 className="text-primary w-6 h-6" />}
+    description="One case can span departments while preserving single ownership per task—so coordination is structured, not improvisational."
+    href="/platforms/orgo/flows"
+  />
+</div>
+
+---
+
+## Example scenario: Water leak reported by a citizen
+
+**Signal:** A resident reports water leaking near an intersection.
+
+**In Orgo:**
+- A **Case** is created: “Water leak — intersection X”
+- Orgo routes it to **Public Works / Water**
+- A response window is set (e.g., 2 hours for potential infrastructure failure)
+- If not acknowledged, the case **escalates** to the next level of responsibility
+- A task is generated: “Dispatch field crew”
+- Closure is recorded with evidence: “Leak confirmed; valve shut; repair scheduled”
+- If repeats happen in the same zone, Orgo triggers a **review case** (pattern → audit)
+
+Outcome: faster response, clear accountability, and a durable record that improves future operations.
+
+---
+
+## Governance knobs municipalities care about
+
+You can tune Orgo by policy—without rewriting your organization:
+
+- **Response windows by category** (pothole vs gas leak vs harassment complaint)
+- **Escalation ladder** (who gets notified when time windows are missed)
+- **Visibility defaults** (open internal transparency vs need-to-know)
+- **Retention policy** (how long operational history stays accessible)
+- **Review cadence** (weekly triage, monthly trends, quarterly systemic audits)
+
+---
+
+## Metrics that make improvement measurable
+
+Orgo makes operational reliability visible with metrics like:
+- time to first response
+- time to closure
+- backlog age distribution
+- escalation rate (and where escalations occur)
+- reopen/duplicate rate
+- “audit triggers” (how often patterns generate review cases)
+
+---
+
+## Deployment note: resilience during outages
+
+Local government is often required to function during storms, blackouts, or disruptions.
+Orgo can run in **offline / hermetic** conditions and synchronize when connectivity returns.
+
+---
+
+## Next
+
+<div className="flex flex-col sm:flex-row gap-4 mt-10">
+  <Link
+    href="/platforms/orgo/offline-sovereignty"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
+  >
+    Offline & sovereignty <ArrowRight className="w-4 h-4 ml-2" />
+  </Link>
+
+  <Link
+    href="/platforms/orgo/guarantees"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    Orgo guarantees <ArrowRight className="w-4 h-4 ml-2" />
+  </Link>
+</div>

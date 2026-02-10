@@ -1,0 +1,111 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Kristal — Trust & Provenance",
+  description:
+    "How Kristals stay verifiable: provenance chains, signatures, authority channels, and contestability without central gatekeepers.",
+};
+
+# Trust & Provenance
+
+A Kristal is designed to be **trusted without asking you to trust a platform**.
+
+It is not “true because a website says so.” It is **verifiable because it carries its origin, its evidence trail, and its publication authority in a form that can be checked**—including offline.
+
+---
+
+## What “provenance” means here
+
+Provenance answers:
+
+- **Where did this claim come from?**
+- **Who published it?**
+- **What evidence was used?**
+- **What rules were applied to compile it?**
+- **What changed since the previous version?**
+
+A Kristal is useful only if it makes those questions cheap to answer.
+
+---
+
+## What you can verify (without trusting the host)
+
+When you receive a Kristal, you should be able to verify:
+
+- **Identity:** which artifact it is (stable identifier)
+- **Publisher:** which authority signed it (person, institution, collective)
+- **Integrity:** that the content has not been altered
+- **Lineage:** what prior version(s) it descends from
+- **Evidence trail:** references or source anchors used to compile it
+- **Policy / scope:** what domain it covers and what it does *not* claim
+
+This is the baseline: **auditability by default**, not optional transparency.
+
+---
+
+## Trust is not one global score
+
+kOA does not assume one universal “truth authority.”
+
+Instead, trust is **domain-bounded** and **policy-driven**:
+
+- A health Kristal and a municipal budget Kristal do not need the same validators.
+- Different communities can adopt different trust policies.
+- The system’s job is to make trust choices **explicit and inspectable**.
+
+---
+
+## Authority channels (how communities decide what to trust)
+
+Think of an authority channel as a curated “trust list” + rules:
+
+- which publishers are recognized for a domain,
+- what standards they must meet,
+- how conflicts are handled,
+- and what recourse exists when something is wrong.
+
+This prevents invisible gatekeeping: the criteria are written down, and the channel itself can be governed.
+
+---
+
+## Federation (how multiple sources coexist)
+
+Kristals can be **composed across domains and publishers** without pretending disagreements don’t exist.
+
+Federation means:
+
+- a system can present a unified experience (search, navigation, summaries),
+- while still preserving **who said what**, under which rules,
+- and allowing multiple competing Kristals to coexist when reality is contested.
+
+The point is to avoid “silent merging” that hides value choices.
+
+---
+
+## Contestability & correction
+
+A trustable system must support:
+
+- **challenge:** flagging a claim, a source, or a compilation rule
+- **correction:** publishing a revised version with explicit diffs
+- **recourse:** a clear path for dispute resolution (institutional or community-based)
+- **exit:** the ability to leave a channel/publisher and adopt another policy without losing your data
+
+Kristals are built to make disagreement legible—not to erase it.
+
+---
+
+## Practical mental model
+
+- **Provenance tells you:** “This is what this artifact asserts, and here is why.”
+- **Authority tells you:** “These are the publishers I’m choosing to rely on for this domain.”
+- **Federation tells you:** “Here are multiple views, kept separate, with clear attribution.”
+
+---
+
+## Next pages
+
+- <Link href="/technology/kristal/what-it-does">What Kristals do →</Link>  
+- <Link href="/technology/kristal/portability-and-offline">Portability & offline use →</Link>  
+- <Link href="/technology/kristal/distribution-and-versioning">Distribution & versioning →</Link>  
+- <Link href="/technology/kristal/integrations">Integrations →</Link>

@@ -1,0 +1,172 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Kristal Farms — Metrics & Dashboard",
+  description:
+    "How Kristal Farms stays accountable: the public dashboard, the core metrics (heat, energy, environment, reliability), and the governance loops that act on them.",
+};
+
+# Metrics & Dashboard
+
+Kristal Farms is infrastructure with a civic claim. That claim must be **measurable**.
+
+The dashboard exists for one reason: **to replace trust with verification**. It shows whether the project is delivering what it promised—heat reuse, environmental compliance, reliability, and tangible community benefit.
+
+---
+
+## What the dashboard does
+
+- Makes performance **visible** (not anecdotal)
+- Enables **governance** (committees act on data, not vibes)
+- Creates a shared language for trade-offs (compute vs heat, uptime vs safety)
+- Records incidents and corrective actions (institutional memory)
+
+The point is not perfect numbers. The point is **honest feedback loops**.
+
+---
+
+## The metric map (what we measure)
+
+### 1) Heat outcomes (the civic core)
+
+**Useful heat delivered**  
+How much heat is actually delivered to real uses: public buildings, homes, greenhouse.
+
+**Heat Utilization Factor (HUF)**  
+A simple ratio: *how much of the available server heat becomes useful heat*, rather than being rejected.
+
+**Heat-first compliance**  
+Evidence that operations respect the hierarchy: reuse → store → reject.
+
+See: <Link href="/infrastructures/kristal-farms/heat-first-design">Heat-first design →</Link>
+
+---
+
+### 2) Energy performance
+
+**PUE (Power Usage Effectiveness)**  
+How much overhead exists around IT load.
+
+**Diesel avoided / resilience outcomes**  
+If backup generation is used, it’s logged. If diesel dependency drops over time, that’s reported.
+
+**Capacity + utilization**  
+Pad occupancy, power draw per pad, and how it evolves by phase.
+
+---
+
+### 3) Water & environmental compliance
+
+**WUE (Water Usage Effectiveness)**  
+Kristal Farms aims for minimal/near-zero water consumption where cooling design allows.
+
+**Discharge compliance (ΔT caps)**  
+Any heat rejection must stay within environmental constraints. Compliance is measured continuously.
+
+**Incident log**  
+Any threshold breach is recorded with:
+- timestamp
+- cause
+- immediate response
+- corrective action
+- prevention measures
+
+See: <Link href="/infrastructures/kristal-farms/cooling-and-water">Cooling & water →</Link>
+
+---
+
+### 4) Reliability & safety
+
+**Uptime by subsystem**
+- power (substation + distribution)
+- cooling/heat loop
+- fiber/network backbone
+- pad availability
+
+**Mean time to repair (MTTR)**  
+How quickly faults are resolved.
+
+**Safety events**
+- near-miss reporting
+- incidents and remediation
+
+The goal is not “no failures.” It’s **fast detection, safe degradation, and transparent recovery**.
+
+---
+
+### 5) Network & connectivity
+
+Kristal Farms is also a connectivity project.
+
+**Backbone availability**  
+**Latency and packet loss (service-level)**  
+**Redundancy status** (when applicable)
+
+See: <Link href="/infrastructures/kristal-farms/fiber-and-network">Fiber & network →</Link>
+
+---
+
+### 6) Community benefit
+
+These metrics are intentionally concrete:
+
+- local jobs and training (counts + hours)
+- public buildings connected/heated
+- households served (by phase)
+- greenhouse output (when applicable)
+- local institutions connected (school/clinic/municipality)
+
+If the project claims civic value, it must report civic results.
+
+---
+
+## How the dashboard is published
+
+### Public vs internal views
+- **Public dashboard:** the outcomes and compliance metrics that matter for legitimacy
+- **Operational dashboard:** deeper instrumentation for maintenance and incident response
+
+Public reporting is not a marketing page. It is **a civic report**.
+
+### Update cadence
+- **Live/near-live:** core environmental and uptime indicators
+- **Weekly:** heat delivery + energy summary
+- **Monthly:** community benefit summary, maintenance and incidents
+- **Quarterly:** governance review + improvements plan
+
+---
+
+## Governance loop (who acts on the data)
+
+Data only matters if someone is responsible for acting on it:
+
+- **Heat Committee:** prioritizes heat allocation rules and seasonal policy
+- **Environment Committee:** monitors compliance, reviews incidents, enforces safeguards
+- **Project Council:** resolves trade-offs, approves expansions, validates phase gates
+
+See: <Link href="/infrastructures/kristal-farms/governance">Governance →</Link>
+
+---
+
+## Phase-aware targets (no fake precision)
+
+Targets differ by phase:
+
+- Early phases optimize for **stability and proof** (measured heat delivery, compliance, reliable operations).
+- Later phases optimize for **scale** (more pads, more district heat coverage, larger greenhouse sink).
+
+The dashboard should always show:
+- the current phase,
+- what targets apply,
+- and why a number is moving (good or bad).
+
+See: <Link href="/infrastructures/kristal-farms/phasing">Phasing →</Link>
+
+---
+
+## Related pages
+
+- <Link href="/infrastructures/kristal-farms/overview">Overview →</Link>  
+- <Link href="/infrastructures/kristal-farms/go-no-go">Go / No-Go gates →</Link>  
+- <Link href="/infrastructures/kristal-farms/environment-and-safety">Environment & safety →</Link>  
+- <Link href="/infrastructures/kristal-farms/reversibility">Reversibility →</Link>

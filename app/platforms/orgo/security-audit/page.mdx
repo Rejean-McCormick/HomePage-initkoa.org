@@ -1,0 +1,167 @@
+import { Card } from '@/components/Card';
+import { ShieldCheck, ScanEye, Lock, Fingerprint, FileText, AlertTriangle, ArrowRight } from 'lucide-react';
+
+export const metadata = {
+  title: "Orgo — Security & Auditability",
+  description:
+    "Orgo makes execution verifiable: traceable actions, explicit outcomes, review-ready records, and privacy boundaries—without turning the system into surveillance."
+};
+
+# Security & auditability
+
+Orgo is designed for **reliable execution** under pressure.
+That requires more than “security features” — it requires **auditability**:
+
+- every important action leaves a trace,
+- every case ends with an explicit outcome,
+- every escalation is explainable,
+- and every record has clear visibility boundaries.
+
+This is how organizations prevent silent failure and recover from mistakes.
+
+---
+
+## The promise: white-box execution
+
+> If you cannot explain *what happened*, you cannot govern *what happens next*.
+
+Orgo treats coordination as something that must remain:
+- **inspectable** (what changed, when, by whom),
+- **contestable** (why this routing/escalation happened),
+- and **reviewable** (what policies need adjustment).
+
+---
+
+## What Orgo records (and why)
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <Card
+    title="Event trail"
+    icon={<ScanEye className="text-primary w-6 h-6" />}
+    description="A chronological record of meaningful actions: created, routed, escalated, resolved, reopened—so decisions don’t become rumors."
+    href="/platforms/orgo/workflow"
+  />
+  <Card
+    title="Accountable authorship"
+    icon={<Fingerprint className="text-primary w-6 h-6" />}
+    description="Every action is attributable to an accountable role (and optionally a person) so responsibility is explicit—not implied."
+    href="/platforms/orgo/routing-escalation"
+  />
+  <Card
+    title="Outcome clarity"
+    icon={<FileText className="text-primary w-6 h-6" />}
+    description="Cases close with an explicit outcome: what was done, what changed, what remains open, and what follow-up is required."
+    href="/platforms/orgo/what-it-does"
+  />
+  <Card
+    title="Policy visibility"
+    icon={<ShieldCheck className="text-primary w-6 h-6" />}
+    description="Routing and escalation policies are visible and adjustable, so the organization can correct the system—not just punish individuals."
+    href="/platforms/orgo/profiles"
+  />
+</div>
+
+---
+
+## Auditability ≠ surveillance
+
+Orgo is not built to watch people.
+It is built to make **organizational execution** governable.
+
+### Orgo audits:
+- the lifecycle of a **case** (who owned it, what happened, when it was closed),
+- the correctness of **routing and escalation** (did the right function receive it in time),
+- and whether **reviews/audits** were triggered when patterns demand it.
+
+### Orgo does *not* need:
+- keystroke monitoring,
+- employee spying,
+- or “always-on observation” to achieve accountability.
+
+---
+
+## Privacy boundaries
+
+Orgo supports strong privacy by design through clear boundaries:
+
+- **Case visibility** can be restricted by function, sensitivity, and need-to-know.
+- **Access is purposeful**: to resolve a case, to audit a decision, or to run a review cycle.
+- **Data minimization**: store what’s needed to resolve and audit; avoid collecting what can’t be governed.
+
+If you cannot justify why a datum is collected, you cannot justify keeping it.
+
+---
+
+## Integrity under pressure
+
+Security is not only “prevent intrusion.”
+It is also “prevent silent failure.”
+
+Orgo supports integrity by making failure states explicit:
+
+- If something is stuck, it becomes visible.
+- If a case is overdue, it escalates.
+- If patterns indicate systemic failure, the system creates review work.
+
+<div className="bg-slate-50 p-6 rounded-xl border border-slate-200 mt-8">
+  <h3 className="flex items-center text-lg font-bold text-slate-800 mb-3">
+    <AlertTriangle className="mr-3 text-amber-600" />
+    The anti-silent-failure rule
+  </h3>
+  <p className="text-slate-600">
+    Silent failure is the most dangerous failure mode in governance and operations.
+    Orgo’s audit trail and escalation mechanics exist to ensure issues become visible while they are still fixable.
+  </p>
+</div>
+
+---
+
+## Compliance-ready by construction
+
+Many organizations must prove:
+- who received a request,
+- what actions were taken,
+- what approvals occurred,
+- and why an outcome was chosen.
+
+Orgo makes those proofs **routine**, not a special investigation.
+
+Examples where this matters:
+- public administration case handling,
+- healthcare incident reporting,
+- internal investigations,
+- regulated finance processes,
+- safety and crisis response.
+
+---
+
+## How to use this page
+
+- If you want the **mechanics of routing and escalation** → see:  
+  `/platforms/orgo/routing-escalation`
+
+- If you want the **offline and sovereignty posture** → see:  
+  `/platforms/orgo/offline-sovereignty`
+
+- If you want **reviews and systemic correction loops** → see:  
+  `/platforms/orgo/reviews`
+
+---
+
+## Next
+
+<div className="flex flex-col sm:flex-row gap-4 mt-8">
+  <a
+    href="/platforms/orgo/routing-escalation"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
+  >
+    Routing & escalation <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+
+  <a
+    href="/platforms/orgo/offline-sovereignty"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    Offline & sovereignty <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+</div>

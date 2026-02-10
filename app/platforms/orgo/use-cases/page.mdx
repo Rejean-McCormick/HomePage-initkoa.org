@@ -1,0 +1,110 @@
+import { Card } from '@/components/Card';
+import {
+  Hospital,
+  Landmark,
+  Scale,
+  GraduationCap,
+  Siren,
+  ArrowRight,
+  ShieldCheck
+} from 'lucide-react';
+
+export const metadata = {
+  title: "Orgo Use Cases",
+  description:
+    "Where Orgo delivers the most value: time-critical coordination, sensitive data, cross-department handoffs, and offline resilience."
+};
+
+# Use cases
+
+Orgo is most valuable where coordination must be **reliable**, **accountable**, and sometimes **offline**.
+
+These case studies are written the same way:
+- **What happens today** (the failure mode),
+- **What Orgo changes** (routing, escalation, closure),
+- **What becomes possible** (speed, auditability, continuity).
+
+---
+
+## Primary use cases
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <Card
+    title="Healthcare & hospitals"
+    icon={<Hospital className="text-primary w-6 h-6" />}
+    description="Emergency routing, interdepartmental coordination, continuity during outages, and compliant handling of sensitive information."
+    href="/platforms/orgo/use-cases/healthcare"
+  />
+
+  <Card
+    title="Government & public administration"
+    icon={<Landmark className="text-primary w-6 h-6" />}
+    description="Cross-department service delivery, emergency response coordination, and traceable decisions for public accountability."
+    href="/platforms/orgo/use-cases/public-administration"
+  />
+
+  <Card
+    title="Justice & legal administration"
+    icon={<Scale className="text-primary w-6 h-6" />}
+    description="Case routing, secure communications, time-sensitive notifications, and auditable trails for court operations."
+    href="/platforms/orgo/use-cases/justice"
+  />
+
+  <Card
+    title="Education systems"
+    icon={<GraduationCap className="text-primary w-6 h-6" />}
+    description="School operations, parent–teacher communications, student notifications, and continuity for institutions with limited connectivity."
+    href="/platforms/orgo/use-cases/education"
+  />
+
+  <Card
+    title="Crisis response"
+    icon={<Siren className="text-primary w-6 h-6" />}
+    description="Real-time coordination, priority alerts, and continuity when communication networks are degraded or down."
+    href="/platforms/orgo/use-cases/crisis-response"
+  />
+</div>
+
+---
+
+## When Orgo is the right tool
+
+Orgo fits best when at least one of these is true:
+
+- **Time pressure:** someone must respond within a defined window.
+- **Sensitive work:** messages and decisions must remain controlled and auditable.
+- **Cross-team handoffs:** the work moves between functions and must not get lost.
+- **Connectivity risk:** operations must continue during outages or low bandwidth.
+
+---
+
+## Other domains (no dedicated pages yet)
+
+If you want, these can become full case studies later:
+
+- NGOs & humanitarian coordination
+- Manufacturing & maintenance routing
+- Logistics & transport operations
+- Financial institutions (fraud prevention + internal controls)
+- Events & large operations
+- Research & multidisciplinary projects
+
+---
+
+## Next
+
+<div className="flex flex-col sm:flex-row gap-4 mt-8">
+  <a
+    href="/platforms/orgo/guarantees"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
+  >
+    Orgo guarantees <ShieldCheck className="w-4 h-4 ml-2" />
+  </a>
+
+  <a
+    href="/platforms/orgo/offline-sovereignty"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    Offline & sovereignty <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+</div>

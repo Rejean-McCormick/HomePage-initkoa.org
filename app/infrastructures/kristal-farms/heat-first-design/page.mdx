@@ -1,0 +1,130 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Kristal Farms — Heat-First Design",
+  description:
+    "The operating principle of Kristal Farms: waste heat is a civic resource. Reuse → store → reject, with community heating prioritized over compute.",
+};
+
+# Heat-First Design
+
+Kristal Farms is built around a simple rule:
+
+> **Waste heat is not a side effect. It is a civic resource.**
+
+A conventional data center treats heat as a disposal problem. Kristal Farms treats heat as **a product** that can power public services: heating, hot water, and greenhouse food production—especially in cold climates.
+
+---
+
+## The hierarchy: reuse → store → reject
+
+Every hour, the system follows the same priority order:
+
+1. **Reuse**  
+   Deliver heat to the village (public buildings first, then homes, then greenhouse).
+
+2. **Store**  
+   Charge thermal storage so heat produced now can cover demand later.
+
+3. **Reject (last resort)**  
+   If reuse and storage are saturated, safely reject heat under strict environmental limits.
+
+This hierarchy is not “best effort.” It is the operating constraint that the project is designed around.
+
+---
+
+## Why “heat-first” matters
+
+Heat-first design creates three things that a village can actually feel:
+
+- **Reliability:** heating is stable and predictable, because the system is designed to serve it first.
+- **Local value:** the community benefits directly (heat + food + connectivity), not only the tenant.
+- **Legitimacy:** the infrastructure has a clear civic purpose that can be audited with metrics.
+
+---
+
+## How it works (in plain language)
+
+Servers are cooled with a closed liquid loop. That heat is transferred—without mixing fluids—into a village heating loop, which delivers heat to buildings through small substations.
+
+The key idea is **separation**:
+
+- the liquid inside server racks stays inside the IT loop,
+- the water sent to buildings stays inside the building loop,
+- the two loops exchange heat through sealed interfaces.
+
+This is a safety boundary, not a convenience.
+
+---
+
+## Seasonal strategy (how heat gets used year-round)
+
+Heat demand changes by season, so the plan adapts:
+
+- **Winter:** public buildings are the priority heat sinks (clinic, school, town hall), then homes.
+- **Shoulder seasons:** balance building heat + greenhouse heat and use storage to smooth daily swings.
+- **Summer:** the greenhouse becomes the primary heat sink; only then storage; rejection is last.
+
+This allows the system to stay useful even when space-heating demand drops.
+
+---
+
+## Heat storage: matching supply to demand
+
+Server heat is continuous. Human heat demand is not.
+
+Thermal storage exists to absorb that mismatch:
+
+- charge tanks when demand is low,
+- discharge during morning peaks and cold snaps,
+- reduce the need to “waste” heat when the village is already warm.
+
+Storage also enables a critical operational behavior: **schedule compute when heat is needed** (e.g., ramp in early morning).
+
+---
+
+## Operational rules (what happens when heat demand is high)
+
+Heat-first only works if it becomes a real operational policy:
+
+- **Community heating takes priority** over maximizing compute output.
+- Compute workloads can be shaped to follow heat demand.
+- Lower-priority compute can be throttled or curtailed if the heat loop is saturated.
+
+This is an explicit design choice: the infrastructure is built to serve the public first.
+
+---
+
+## Environmental safeguards
+
+Heat rejection (when necessary) must remain safe and predictable:
+
+- strict limits on discharge temperature rise (ΔT caps),
+- monitoring and alarms,
+- enforcement through governance and operational procedures.
+
+This makes environmental compliance measurable rather than trust-based.
+
+---
+
+## How we prove it (metrics)
+
+Heat-first design is measurable.
+
+The core metrics for this section are:
+
+- **Heat Utilization Factor (HUF):** how much available server heat is used for real purposes.
+- **ΔT compliance:** percentage of time environmental discharge remains within limits.
+- **Diesel avoided:** reduced generator runtime and related emissions.
+- **Water impact:** cooling design avoids evaporative towers; water use is minimized by design.
+
+See: <Link href="/infrastructures/kristal-farms/metrics-and-dashboard">Metrics & dashboard →</Link>
+
+---
+
+## Related pages
+
+- <Link href="/infrastructures/kristal-farms/how-it-works">How it works (system overview) →</Link>  
+- <Link href="/infrastructures/kristal-farms/cooling-and-water">Cooling & water (public explanation) →</Link>  
+- <Link href="/infrastructures/kristal-farms/governance">Governance (Heat Committee & Environment Committee) →</Link>  
+- <Link href="/infrastructures/kristal-farms/phasing">Phasing (how capacity follows heat sinks) →</Link>

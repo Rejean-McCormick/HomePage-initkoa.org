@@ -1,0 +1,293 @@
+import Link from "next/link";
+import {
+  ClipboardCheck,
+  CheckCircle2,
+  AlertTriangle,
+  Users,
+  ShieldCheck,
+  Flame,
+  Wifi,
+  Leaf,
+  Server,
+  Anchor,
+  Activity,
+} from "lucide-react";
+
+export const metadata = {
+  title: "Kristal Farms — Go / No-Go checklist",
+  description:
+    "A practical readiness gate for commissioning: community agreements, safety, compliance, heat-first operations, network reliability, and governance.",
+};
+
+# Go / No-Go checklist
+
+This page is a **commissioning gate**: a simple, auditable way to decide whether a Kristal Farms site is ready to move from “build” to “operate.”
+
+A **Go** is not optimism. It is evidence that the system can run **safely**, **compliantly**, and **legitimately**, including when conditions degrade.
+
+---
+
+## How to use this checklist
+
+- Each item is **pass/fail** with required evidence.
+- If any **No-Go** item fails, you either:
+  - delay launch, or
+  - operate in a reduced mode that stays inside constraints (never “ship now, fix later” on safety/compliance).
+- The goal is a site that can be trusted by:
+  - the community,
+  - the operator,
+  - tenants,
+  - and regulators.
+
+---
+
+## Minimum Go (Phase 1 readiness)
+
+<div className="bg-white border border-slate-200 rounded-2xl p-8 my-10">
+  <div className="flex items-start gap-3">
+    <ClipboardCheck className="w-6 h-6 text-[#1e6864] mt-0.5" />
+    <div>
+      <h2 className="text-xl font-bold text-slate-900 mb-2">The minimum standard</h2>
+      <p className="text-slate-600">
+        You can launch Phase 1 when the site can reliably deliver <strong>compute</strong>, <strong>heat recovery</strong>, and <strong>connectivity</strong>
+        while proving <strong>environmental compliance</strong> and <strong>governance legitimacy</strong>.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Go / No-Go gates
+
+### 1) Community legitimacy (non-negotiable)
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <Gate
+    icon={<Users className="w-5 h-5 text-[#1e6864]" />}
+    title="Consent + benefit agreement executed"
+    pass="Signed agreements are in place (community benefit, local priorities, dispute mechanisms)."
+    evidence={[
+      "Signed agreements and governance charter",
+      "Defined community services (heat endpoints, connectivity commitments where applicable)",
+      "Named liaisons and escalation path",
+    ]}
+  />
+  <Gate
+    icon={<ShieldCheck className="w-5 h-5 text-[#1e6864]" />}
+    title="Operating boundaries agreed"
+    pass="Clear limits on what the operator can and cannot do/see (tenancy boundaries, privacy, monitoring scope)."
+    evidence={[
+      "Tenancy model + monitoring policy (black-box boundary)",
+      "Site access policy (roles, approvals, logs)",
+      "Incident response commitments (who is contacted, when, and how)",
+    ]}
+  />
+</div>
+
+### 2) Site, safety, and compliance
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <Gate
+    icon={<ShieldCheck className="w-5 h-5 text-[#1e6864]" />}
+    title="Safety systems commissioned"
+    pass="Fire safety, emergency procedures, and physical security are tested and documented."
+    evidence={[
+      "Commissioning reports (fire suppression, alarms, egress, power cutover)",
+      "Emergency response plan + drill record",
+      "Physical security plan (perimeter, cameras, access control, visitor process)",
+    ]}
+  />
+  <Gate
+    icon={<Leaf className="w-5 h-5 text-[#1e6864]" />}
+    title="Environmental controls proven"
+    pass="Monitoring is live, thresholds are enforced, and compliance-first behavior is demonstrated."
+    evidence={[
+      "Monitoring plan (temperatures, discharge limits, flow, alarms)",
+      "Proof of compliance operating modes (load shedding / mode switching)",
+      "Incident runbooks and escalation path for environmental events",
+    ]}
+  />
+</div>
+
+### 3) Power & grid readiness
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <Gate
+    icon={<Anchor className="w-5 h-5 text-[#1e6864]" />}
+    title="Power handoff commissioned"
+    pass="The site has stable power with metering, protection, and documented start/stop sequencing."
+    evidence={[
+      "Commissioning report (substation / feeder / protection / metering)",
+      "Power-quality baseline (voltage/frequency tolerance, harmonics where relevant)",
+      "Pad sequencing procedure (safe ramp-up, safe shutdown)",
+    ]}
+  />
+  <Gate
+    icon={<Activity className="w-5 h-5 text-[#1e6864]" />}
+    title="Fail-safe behavior validated"
+    pass="If constraints are breached (overheat, telemetry loss), the site degrades safely."
+    evidence={[
+      "Test record: sensor failure → conservative mode",
+      "Test record: heat-demand mismatch → storage/reject compliant mode",
+      "Test record: utility outage → controlled shutdown / restart procedure",
+    ]}
+  />
+</div>
+
+### 4) Heat-first operations (the central promise)
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <Gate
+    icon={<Flame className="w-5 h-5 text-[#1e6864]" />}
+    title="Heat recovery loop operational"
+    pass="Heat is captured and routed to real endpoints (buildings/storage/greenhouse), not just “planned.”"
+    evidence={[
+      "Commissioning report: heat exchangers + district loop",
+      "Confirmed live endpoints (at least one building loop or equivalent)",
+      "Thermal storage behavior verified (charge/discharge tests)",
+    ]}
+  />
+  <Gate
+    icon={<Server className="w-5 h-5 text-[#1e6864]" />}
+    title="Curtailment policy defined"
+    pass="If heat cannot be recovered compliantly, compute load is curtailed or shifted by policy."
+    evidence={[
+      "Heat-first operating policy (reuse → store → reject)",
+      "Curtailment decision authority (who decides, thresholds, logs)",
+      "Tenant communication protocol for curtailment events",
+    ]}
+  />
+</div>
+
+### 5) Fiber & network readiness (export compute)
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <Gate
+    icon={<Wifi className="w-5 h-5 text-[#1e6864]" />}
+    title="Fiber trunk live + tested"
+    pass="Export capacity is active, performance is measured, and failover is validated where promised."
+    evidence={[
+      "Fiber acceptance test (latency, throughput, packet loss baselines)",
+      "Failover test record (if dual path is claimed)",
+      "NOC monitoring live with alerting thresholds",
+    ]}
+  />
+  <Gate
+    icon={<ShieldCheck className="w-5 h-5 text-[#1e6864]" />}
+    title="Isolation & tenancy boundaries enforced"
+    pass="Tenant traffic is isolated; operator tooling does not create backdoor visibility."
+    evidence={[
+      "Network segmentation plan + verification",
+      "Access logs and privileged account controls",
+      "Policy: what telemetry is collected (infrastructure only) and retention rules",
+    ]}
+  />
+</div>
+
+### 6) Governance is seated (so “benefit” is not optional)
+
+<div className="bg-white border border-slate-200 rounded-2xl p-8 my-8">
+  <h3 className="text-lg font-bold text-slate-900 mb-3">Governance required for Go</h3>
+  <p className="text-slate-600 mb-4">
+    Kristal Farms is not only a technical asset. It is a community-coupled infrastructure project. Governance must exist
+    on day one.
+  </p>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
+      <div className="font-bold text-slate-900 mb-2">Must exist</div>
+      <ul className="text-sm text-slate-700 space-y-2">
+        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#1e6864] mt-0.5" />Named decision bodies (project steering + heat/environment review)</li>
+        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#1e6864] mt-0.5" />Published decision boundaries (who controls heat priorities, curtailment, incident response)</li>
+        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#1e6864] mt-0.5" />Dispute/recourse pathway (how the community raises issues, how they’re resolved)</li>
+      </ul>
+    </div>
+
+    <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
+      <div className="font-bold text-slate-900 mb-2">Must be evidenced by</div>
+      <ul className="text-sm text-slate-700 space-y-2">
+        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#1e6864] mt-0.5" />A governance charter and meeting cadence</li>
+        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#1e6864] mt-0.5" />Public dashboard plan (what gets published, how often, by whom)</li>
+        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#1e6864] mt-0.5" />Incident review procedure + first drill</li>
+      </ul>
+    </div>
+  </div>
+
+  <div className="mt-6">
+    <Link href="/infrastructures/kristal-farms/governance" className="text-[#1e6864] font-mono hover:underline">
+      Governance & accountability →
+    </Link>
+  </div>
+</div>
+
+---
+
+## “No-Go” triggers (stop conditions)
+
+<div className="bg-amber-50 border border-amber-200 rounded-2xl p-8 my-10">
+  <div className="flex items-start gap-3">
+    <AlertTriangle className="w-6 h-6 text-amber-700 mt-0.5" />
+    <div>
+      <h2 className="text-xl font-bold text-slate-900 mb-2">Automatic No-Go</h2>
+      <ul className="text-sm text-slate-800 space-y-2">
+        <li><strong>Environmental compliance cannot be proven</strong> (monitoring missing, thresholds undefined, or unsafe discharge behavior).</li>
+        <li><strong>Heat-first promise is not operational</strong> (no working recovery path; no curtailment policy).</li>
+        <li><strong>Safety systems are uncommissioned</strong> (fire, emergency response, access control).</li>
+        <li><strong>Tenancy boundaries are unclear</strong> (operator has excessive visibility; privacy claims are not enforceable).</li>
+        <li><strong>Governance does not exist</strong> (no decision bodies, no recourse, no accountable owners).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+## Next pages
+
+- <Link href="/infrastructures/kristal-farms/overview" className="text-[#1e6864] font-mono hover:underline">Overview →</Link>  
+- <Link href="/infrastructures/kristal-farms/heat-first-design" className="text-[#1e6864] font-mono hover:underline">Heat-first design →</Link>  
+- <Link href="/infrastructures/kristal-farms/cooling-and-water" className="text-[#1e6864] font-mono hover:underline">Cooling & water →</Link>  
+- <Link href="/infrastructures/kristal-farms/metrics-and-dashboard" className="text-[#1e6864] font-mono hover:underline">Metrics & dashboard →</Link>
+
+---
+
+export function Gate({
+  icon,
+  title,
+  pass,
+  evidence,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  pass: string;
+  evidence: string[];
+}) {
+  return (
+    <div className="bg-white border border-slate-200 rounded-xl p-6">
+      <div className="flex items-start gap-3 mb-3">
+        <div className="w-10 h-10 rounded-lg bg-[#1e6864]/10 flex items-center justify-center">
+          {icon}
+        </div>
+        <div>
+          <div className="font-bold text-slate-900">{title}</div>
+          <div className="text-sm text-slate-600 mt-1">{pass}</div>
+        </div>
+      </div>
+
+      <div className="mt-4">
+        <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
+          Evidence required
+        </div>
+        <ul className="text-sm text-slate-700 space-y-2">
+          {evidence.map((e) => (
+            <li key={e} className="flex gap-2">
+              <CheckCircle2 className="w-4 h-4 text-[#1e6864] mt-0.5" />
+              <span>{e}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}

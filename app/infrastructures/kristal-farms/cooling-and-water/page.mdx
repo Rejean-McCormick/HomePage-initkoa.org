@@ -1,0 +1,178 @@
+import Link from "next/link";
+import { Droplets, Snowflake, ShieldCheck, Activity, AlertTriangle } from "lucide-react";
+
+export const metadata = {
+  title: "Kristal Farms — Cooling & Water",
+  description:
+    "A heat-first cooling approach for cold climates: closed loops, non-contact heat exchange, near-zero water use, and strict environmental compliance.",
+};
+
+# Cooling & Water
+
+Kristal Farms is designed around a simple principle: **cooling should not waste water, and heat should not be rejected by default**.
+
+This page explains what the cooling and water system *delivers*—efficiency, safety, and predictable compliance—without turning into a mechanical engineering manual.
+
+---
+
+## What this subsystem delivers
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+  <div className="bg-white p-6 rounded-xl border border-slate-200">
+    <div className="flex items-center gap-3 mb-3">
+      <Snowflake className="w-5 h-5 text-[#1e6864]" />
+      <h3 className="font-bold text-slate-900">Reliable cooling</h3>
+    </div>
+    <p className="text-slate-600 text-sm">
+      Use cold climate conditions and simple heat-exchange building blocks so the system stays stable, efficient, and maintainable.
+    </p>
+  </div>
+
+  <div className="bg-white p-6 rounded-xl border border-slate-200">
+    <div className="flex items-center gap-3 mb-3">
+      <Droplets className="w-5 h-5 text-[#1e6864]" />
+      <h3 className="font-bold text-slate-900">Low water footprint</h3>
+    </div>
+    <p className="text-slate-600 text-sm">
+      Avoid evaporative cooling towers. The intent is near-zero ongoing water consumption for cooling, with closed-loop operation.
+    </p>
+  </div>
+
+  <div className="bg-white p-6 rounded-xl border border-slate-200">
+    <div className="flex items-center gap-3 mb-3">
+      <ShieldCheck className="w-5 h-5 text-[#1e6864]" />
+      <h3 className="font-bold text-slate-900">Environmental compliance</h3>
+    </div>
+    <p className="text-slate-600 text-sm">
+      Strict discharge temperature limits, continuous monitoring, and designed operating modes that prioritize compliance over compute throughput.
+    </p>
+  </div>
+</div>
+
+---
+
+## Design principles (non-negotiables)
+
+1. **Heat-first hierarchy:** reuse → store → reject.  
+   Cooling exists, but **heat recovery is the default** (district heat + greenhouse support).  
+   <Link href="/infrastructures/kristal-farms/heat-first-design" className="text-[#1e6864] font-mono hover:underline">
+     Heat-first design →
+   </Link>
+
+2. **Closed loops, separated by heat exchangers:**  
+   The compute cooling loop and the community heating loop remain **physically separated**. Heat is transferred through **non-contact plate heat exchangers**.
+
+3. **No “mystery mixing”:**  
+   Bay/seawater (when used as a heat sink) is kept on its own loop, separated by appropriate materials and interfaces.
+
+4. **Fail-safe behavior beats maximum utilization:**  
+   If the system cannot prove compliant operation, it should **degrade safely**—not silently run hotter, dump heat, or improvise.
+
+---
+
+## How it works (conceptual)
+
+<div className="bg-white border border-slate-200 rounded-2xl p-8 my-8">
+  <ol className="space-y-4 text-slate-700">
+    <li className="flex gap-3">
+      <span className="font-mono text-slate-400">1</span>
+      <span><strong>Compute loop collects heat</strong> from the pad/container (liquid cooling loop).</span>
+    </li>
+    <li className="flex gap-3">
+      <span className="font-mono text-slate-400">2</span>
+      <span><strong>Non-contact heat exchanger transfers heat</strong> into the district heat loop (no mixing).</span>
+    </li>
+    <li className="flex gap-3">
+      <span className="font-mono text-slate-400">3</span>
+      <span><strong>Useful heat is delivered</strong> to buildings and/or greenhouses as a priority load.</span>
+    </li>
+    <li className="flex gap-3">
+      <span className="font-mono text-slate-400">4</span>
+      <span><strong>Thermal storage absorbs variation</strong> (smoothing supply/demand differences).</span>
+    </li>
+    <li className="flex gap-3">
+      <span className="font-mono text-slate-400">5</span>
+      <span>
+        <strong>Only after reuse + storage</strong>, remaining heat is rejected through compliant modes
+        (e.g., via a bay/seawater loop through a non-contact exchanger, or dry coolers as backup).
+      </span>
+    </li>
+  </ol>
+</div>
+
+---
+
+## Water use: designed to avoid “cooling towers economics”
+
+The objective is to avoid evaporative cooling towers (which consume water continuously). Instead:
+
+- cooling is built around **closed loops** and **heat exchangers**
+- the primary “cold source” is the **environment** (cold climate + water body where applicable)
+- the backup is **air-side heat rejection** (dry coolers) rather than water evaporation
+
+In practice, this keeps water use low and makes compliance easier to verify.
+
+---
+
+## Environmental protection & discharge rules
+
+A responsible cooling system is one you can audit.
+
+We treat environmental constraints as operating rules:
+
+- **ΔT limits:** temperature rise at discharge must remain within permitted thresholds
+- **continuous monitoring:** temperature, flow, and heat rejection modes are tracked
+- **compliance-first control:** if compliance margins narrow, the system sheds load or shifts modes
+
+<div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-8">
+  <div className="flex items-start gap-3">
+    <Activity className="w-5 h-5 text-slate-700 mt-0.5" />
+    <div>
+      <div className="font-bold text-slate-900 mb-1">What gets measured</div>
+      <ul className="text-sm text-slate-700 space-y-1">
+        <li>Supply/return temperatures (compute loop and district loop)</li>
+        <li>Flow rates and pressure differentials</li>
+        <li>Heat recovered vs heat rejected</li>
+        <li>Thermal storage state</li>
+        <li>Discharge temperatures and compliance margins (when rejecting heat)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+## Failure modes & safeguards (what we plan for)
+
+<div className="bg-white border border-slate-200 rounded-2xl p-8 my-8">
+  <div className="flex items-start gap-3">
+    <AlertTriangle className="w-5 h-5 text-amber-600 mt-0.5" />
+    <div>
+      <h3 className="text-lg font-bold text-slate-900 mb-2">Typical risks</h3>
+      <ul className="text-slate-700 text-sm space-y-2">
+        <li><strong>Leak / loss of pressure:</strong> isolate loop sections, alert operator, fail safe.</li>
+        <li><strong>Heat demand mismatch:</strong> route to storage, then reject via compliant mode if necessary.</li>
+        <li><strong>Sensor/telemetry failure:</strong> degrade to conservative mode (compliance-first behavior).</li>
+        <li><strong>Extreme weather / marine conditions:</strong> operate on backup rejection paths without violating discharge rules.</li>
+      </ul>
+
+      <div className="mt-4 text-sm text-slate-600">
+        Detailed safety and environmental controls live on the dedicated page:
+        {" "}
+        <Link href="/infrastructures/kristal-farms/environment-and-safety" className="text-[#1e6864] font-mono hover:underline">
+          Environment & safety →
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Related pages
+
+- <Link href="/infrastructures/kristal-farms/heat-first-design" className="text-[#1e6864] font-mono hover:underline">Heat-first design →</Link>  
+- <Link href="/infrastructures/kristal-farms/power-and-grid" className="text-[#1e6864] font-mono hover:underline">Power & grid →</Link>  
+- <Link href="/infrastructures/kristal-farms/fiber-and-network" className="text-[#1e6864] font-mono hover:underline">Fiber & network →</Link>  
+- <Link href="/infrastructures/kristal-farms/metrics-and-dashboard" className="text-[#1e6864] font-mono hover:underline">Metrics & dashboard →</Link>  
+- <Link href="/infrastructures/kristal-farms/overview" className="text-[#1e6864] font-mono hover:underline">Overview →</Link>

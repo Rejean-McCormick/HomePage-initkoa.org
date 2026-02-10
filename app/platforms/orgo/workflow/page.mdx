@@ -1,0 +1,120 @@
+import { Card } from '@/components/Card';
+import {
+  Inbox,
+  Filter,
+  Route,
+  Timer,
+  CheckCircle2,
+  RefreshCcw,
+  Users,
+  ArrowRight
+} from 'lucide-react';
+
+export const metadata = {
+  title: "Orgo Workflow – From Signal to Closure",
+  description:
+    "A plain-language view of Orgo’s execution loop: convert signals into Cases and Tasks, route by function, enforce time, close with outcomes, and learn through review cycles."
+};
+
+# Workflow: from signal to closure
+
+Orgo’s workflow is a reliability loop. It makes sure that important signals become **owned work**, that work is handled **on time**, and that outcomes are **traceable**.
+
+---
+
+## The loop in 7 steps
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <Card
+    title="1) Capture the signal"
+    icon={<Inbox className="text-primary w-6 h-6" />}
+    description="A message, report, request, or event enters the organization. Orgo treats it as something that must be handled—not something that can be ignored."
+    href="/platforms/orgo"
+  />
+  <Card
+    title="2) Create accountable work"
+    icon={<Filter className="text-primary w-6 h-6" />}
+    description="The signal becomes a Case (the situation) and Tasks (the actions). Ownership is explicit. Nothing is “just an email thread.”"
+    href="/platforms/orgo/what-it-does"
+  />
+  <Card
+    title="3) Route by function, not by person"
+    icon={<Route className="text-primary w-6 h-6" />}
+    description="Work is routed to the right responsibility (function/role). Continuity survives vacations, turnover, and re-orgs."
+    href="/platforms/orgo/routing-escalation"
+  />
+  <Card
+    title="4) Collaborate where needed"
+    icon={<Users className="text-primary w-6 h-6" />}
+    description="Some cases need multiple functions. Orgo supports collaboration without losing a single thread of accountability."
+    href="/platforms/orgo/flows"
+  />
+  <Card
+    title="5) Enforce time (reactivity)"
+    icon={<Timer className="text-primary w-6 h-6" />}
+    description="Every case/task has a response window. If it isn’t handled in time, Orgo escalates it. Urgency is enforced by the system—not by stress."
+    href="/platforms/orgo/routing-escalation"
+  />
+  <Card
+    title="6) Close with an outcome"
+    icon={<CheckCircle2 className="text-primary w-6 h-6" />}
+    description="Work ends with an explicit resolution: done, failed, cancelled, escalated, or paused. Orgo makes closure visible and auditable."
+    href="/platforms/orgo/security-audit"
+  />
+  <Card
+    title="7) Learn through review cycles"
+    icon={<RefreshCcw className="text-primary w-6 h-6" />}
+    description="Weekly/monthly/yearly review loops convert repeated patterns into audit/review work. The organization improves by design."
+    href="/platforms/orgo/reviews"
+  />
+</div>
+
+---
+
+## Two building blocks (non-technical)
+
+### Case
+A **Case** is the long-lived container: the situation, incident, request, or theme that matters over time.
+
+### Task
+A **Task** is an actionable step: what someone must do to move a Case toward resolution.
+
+This simple split prevents the two classic failures:
+- “We discussed it, but nothing happened.”
+- “We did things, but no one can reconstruct why.”
+
+---
+
+## Three flows (how work moves in real organizations)
+
+Orgo supports three practical flows—without making the interface feel complicated:
+
+- **Vertical flow:** escalation and visibility across levels when something is urgent or blocked.
+- **Horizontal flow:** cooperation across functions (e.g., operations + finance + legal) when work spans departments.
+- **Cyclic flow:** periodic reviews that surface systemic patterns and trigger audits or improvement work.
+
+---
+
+## Example (in one paragraph)
+
+A safety incident is reported. Orgo creates a Case and routes tasks to the right function. If unresolved past its response window, it escalates. If similar incidents repeat over weeks, Orgo creates a review/audit Case so the organization doesn’t “normalize” the problem—it fixes the system.
+
+---
+
+## Where to go next
+
+<div className="flex flex-col sm:flex-row gap-4 mt-8">
+  <a
+    href="/platforms/orgo/routing-escalation"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
+  >
+    Routing & escalation <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+
+  <a
+    href="/platforms/orgo/reviews"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    Review loops (weekly/monthly/yearly) <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+</div>

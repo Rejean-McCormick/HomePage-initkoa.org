@@ -1,0 +1,125 @@
+import { Card } from '@/components/Card';
+import {
+  Blocks,
+  Building2,
+  Hospital,
+  GraduationCap,
+  Landmark,
+  Wrench,
+  Users,
+  Shield,
+  ArrowRight
+} from 'lucide-react';
+
+export const metadata = {
+  title: "Orgo Modules – Domain Packages on a Shared Core",
+  description:
+    "Orgo modules adapt Orgo to a domain (HR, maintenance, healthcare, education, public services) without changing the core guarantees: routing, escalation, auditability, and offline resilience."
+};
+
+# Modules: domain power without losing the core
+
+Orgo has a **universal core** that stays the same everywhere.
+
+**Modules** are the layer that adapts Orgo to a specific domain:
+vocabulary, forms, default handling patterns, and sector-specific workflows—without changing Orgo’s core guarantees.
+
+---
+
+## The idea in one sentence
+
+**Same engine, different “skins” for real-world work.**
+
+A hospital, a school, and a municipality don’t speak the same operational language—modules let each domain work naturally, while keeping accountability consistent.
+
+---
+
+## What modules change (and what they never change)
+
+### Modules can change
+- the **domain vocabulary** (what people call things)
+- the **intake shape** (what information is required to open a case)
+- the **default handling patterns** (typical routing, typical response windows)
+- the **domain views** (how teams browse and filter their work)
+
+### Modules never change
+- the Case/Task accountability model
+- function-based routing and collaboration
+- escalation logic (time-bound work stays time-bound)
+- auditability and traceability
+- offline-first operation
+
+---
+
+## Choose a module (common starting points)
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <Card
+    title="Maintenance & Facilities"
+    icon={<Wrench className="text-primary w-6 h-6" />}
+    description="Incidents, work orders, safety follow-ups, and recurring infrastructure issues—captured, assigned, escalated, and closed with outcomes."
+    href="/platforms/orgo/use-cases"
+  />
+  <Card
+    title="HR & People Operations"
+    icon={<Users className="text-primary w-6 h-6" />}
+    description="Onboarding/offboarding, role changes, grievances, approvals, and compliance—handled as accountable work, not inbox chaos."
+    href="/platforms/orgo/use-cases"
+  />
+  <Card
+    title="IT Support & Security"
+    icon={<Shield className="text-primary w-6 h-6" />}
+    description="Access requests, incident response, device lifecycle, and security follow-ups—clear ownership, strict response windows, traceable actions."
+    href="/platforms/orgo/use-cases"
+  />
+  <Card
+    title="Education Operations"
+    icon={<GraduationCap className="text-primary w-6 h-6" />}
+    description="Student support, administrative coordination, scheduling, and institutional follow-ups—so learning isn’t blocked by bureaucracy."
+    href="/platforms/orgo/use-cases"
+  />
+  <Card
+    title="Healthcare Operations"
+    icon={<Hospital className="text-primary w-6 h-6" />}
+    description="Care coordination workflows, service handoffs, inventory requests, and operational follow-ups—reliable execution under pressure."
+    href="/platforms/orgo/use-cases"
+  />
+  <Card
+    title="Public Administration"
+    icon={<Landmark className="text-primary w-6 h-6" />}
+    description="Citizen requests, permits, inspections, and inter-department coordination—transparent closure, no lost files, no silent backlog."
+    href="/platforms/orgo/use-cases"
+  />
+</div>
+
+---
+
+## Pre-built packages vs custom modules
+
+### Pre-built packages
+Start with a module that matches your context, then adjust vocabulary and defaults.
+This is the fastest path for small organizations and teams.
+
+### Custom modules (when you need them)
+Large institutions can extend Orgo with domain modules that reflect their internal processes.
+The goal is not complexity—it’s **fit**, while keeping the core guarantees intact.
+
+---
+
+## Next
+
+<div className="flex flex-col sm:flex-row gap-4 mt-8">
+  <a
+    href="/platforms/orgo/adoption"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
+  >
+    Adoption & rollout <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+
+  <a
+    href="/platforms/orgo/guarantees"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    Core guarantees <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+</div>
