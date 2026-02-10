@@ -1,7 +1,16 @@
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Orgo — Execution & Accountability",
   description:
-    "Orgo turns incoming signals into accountable work: route by function, escalate by time, and close every case with a traceable outcome—even offline."
+    "Orgo turns incoming signals into accountable work: route by function, escalate by time, and close every case with a traceable outcome—even offline.",
+  alternates: { canonical: "/technology/orgo" },
+  openGraph: {
+    title: "Orgo — Execution & Accountability",
+    description:
+      "Orgo turns incoming signals into accountable work: route by function, escalate by time, and close every case with a traceable outcome—even offline.",
+    url: "/technology/orgo",
+  },
 };
 
 # Orgo — Execution & Accountability
@@ -10,7 +19,7 @@ Orgo is an **offline-first execution layer** for organizations: a reliability sy
 
 Unlike chat-first coordination, generic ticketing tools, or CRMs, Orgo is designed for **sovereignty**. It can run as a **hermetic operating bubble**—independent of the public internet—while still supporting optional bridges to other systems when you choose.
 
-**Reference:** Orgo Overview Presentation (external) — https://administrative-efficienc-0u6vhrh.gamma.site/
+**Reference:** [Orgo Overview Presentation (external)](https://administrative-efficienc-0u6vhrh.gamma.site/)
 
 ---
 
@@ -23,7 +32,7 @@ Organizations receive inputs from dozens of channels (emails, chats, forms, phon
 - resolved without a recorded outcome,
 - or never reviewed as a pattern.
 
-Orgo standardizes this reality into a single accountable pipeline.
+Orgo standardizes this reality into a single accountable pipeline: **signal → case → tasks → closure**, with escalation when time guarantees are missed.
 
 ---
 
@@ -33,14 +42,14 @@ Orgo standardizes this reality into a single accountable pipeline.
 Signals enter through a gateway (email, forms, APIs, imports). The goal is simple: convert “messages” into **work candidates**.
 
 ### 2) Deconstruct and classify (local processing)
-Orgo can use local processing to extract the basic elements that matter operationally:
+Orgo can use local processing to extract the basic operational elements:
 - what is being requested or reported,
 - who/what is affected,
 - where it happened,
 - severity,
 - and the likely responsible function.
 
-The principle: sensitive operational data should not require external cloud services to become usable.
+Principle: sensitive operational data should not require external cloud services to become usable.
 
 ### 3) Structure into Cases and Tasks
 - A **Case** is a situation that must be handled (incident, request, report, follow-up).
@@ -52,9 +61,9 @@ This gives every issue a container, ownership, and a closure path.
 Work is routed to a **responsibility** (function/role), not “who saw it first.”
 This protects continuity through turnover, absences, and reorganizations.
 
-### 5) Track with reactivity windows (and escalation)
+### 5) Track reactivity windows (and escalate)
 Orgo tracks **reactivity**: how quickly something must be acknowledged or acted upon.
-If the reactivity window is missed, Orgo escalates automatically.
+If the window is missed, Orgo escalates automatically (policy-driven).
 
 ---
 
@@ -62,9 +71,18 @@ If the reactivity window is missed, Orgo escalates automatically.
 
 Orgo is strictly multi-tenant:
 
-- **Organization:** the top-level tenant; owns all data, configuration, and policies.
-- **User:** an authenticated operator (staff, volunteer, admin).
-- **Person:** a subject profile (patient, student, employee, citizen) who may never log in but can be the subject of cases.
+- **Organization:** top-level tenant; owns all data, configuration, and policies.
+- **User:** authenticated operator (staff, volunteer, admin).
+- **Person:** subject profile (patient, student, employee, citizen) who may never log in but can be the subject of cases.
+
+### Operational objects
+- **Signal:** raw incoming input (email, form submission, phone note, import record).
+- **Case:** accountable container for a situation that must be handled.
+- **Task:** concrete unit of work owned by a function (and optionally assigned to a user).
+- **Function (Role):** responsibility target used for routing (e.g., Intake, HR, Safety, Infrastructure).
+- **Window:** time constraint (acknowledge/act/resolve) with explicit SLA semantics.
+- **Escalation:** policy action when a window is missed (notify, re-route, elevate).
+- **Outcome:** closure record (what happened, why, and supporting artifacts).
 
 ---
 
@@ -74,7 +92,7 @@ Orgo can operate without relying on the public internet:
 
 - **Internet independence:** core logic and storage run within your perimeter.
 - **Resilience:** operations continue during outages and unstable connectivity.
-- **Controlled bridging:** when external links exist, they are optional and governable.
+- **Controlled bridging:** external links exist only when explicitly enabled and governed.
 
 This is not a “feature.” It is a reliability and sovereignty requirement.
 
@@ -92,7 +110,7 @@ This is not a “feature.” It is a reliability and sovereignty requirement.
    Every meaningful step is traceable: what happened, who did it, when, and why.
 
 4. **Cyclic review (patterns become work)**  
-   Orgo is not only for doing tasks; it improves operations. Recurring patterns trigger review/audit cases instead of staying as passive dashboards.
+   Recurring patterns trigger review/audit cases instead of staying as passive dashboards.
 
 ---
 
@@ -112,13 +130,42 @@ These are governance decisions. They determine how authority and accountability 
 
 ## Cyclic review system (weekly → monthly → yearly)
 
-Orgo’s reviews are designed to turn operations into learning:
+Orgo’s reviews turn operations into learning:
 
 - **Weekly:** resolve critical and unresolved items; unblock urgent work.
 - **Monthly:** detect trends by department/location; identify load imbalance.
 - **Yearly:** strategic review; revise profiles and priorities.
 
 Example principle: when repeated issues cross a threshold, Orgo can open a review case such as “Infrastructure Audit — Building A” so systemic problems return to the operational loop.
+
+---
+
+## Typical use cases
+
+- **Service intake:** all requests become cases, auto-routed by function, no “lost email”.
+- **Incident handling:** severity + time windows + escalation → reliable response.
+- **Field operations:** offline capture → later sync → preserved provenance + audit trail.
+- **Compliance workflows:** every decision and outcome recorded with traceable evidence.
+- **Multi-site operations:** consistent policy profiles across locations with local autonomy.
+
+---
+
+## Offline-first + bridges (optional)
+
+Orgo can run fully offline. When you enable bridges, they should be explicit and governable:
+- inbound: email gateway, form ingestion, API import
+- outbound: notifications, exports, integrations with existing systems
+
+Bridges must never be required to keep the internal accountability loop functioning.
+
+---
+
+## Security & privacy (baseline)
+
+- **Tenant isolation:** organizations do not share data.
+- **Role-based access:** function/role is the routing target; user assignment is optional.
+- **Audit trail:** append-only event history for cases/tasks/outcomes.
+- **Retention controls:** policy-defined timeframes and export capability.
 
 ---
 
@@ -136,7 +183,5 @@ Example principle: when repeated issues cross a threshold, Orgo can open a revie
 
 ---
 
-## Keep the technical details out of the main narrative
-If you want to preserve label formats, schemas, and internal module breakdowns, place them in:
-
-- `/platforms/orgo/reference/page.mdx`
+## Status / next
+If you want, add one line here stating the current maturity level (concept / prototype / alpha) and where to go next (spec, repo, demo, contact).
