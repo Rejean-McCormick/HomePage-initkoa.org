@@ -1,5 +1,6 @@
 // app/platforms/konnaxion/journeys/page.tsx
-import Link from 'next/link';
+import Link from "next/link";
+import type { ReactElement } from "react";
 import {
   GraduationCap,
   MessagesSquare,
@@ -8,12 +9,12 @@ import {
   Archive,
   ArrowRight,
   Layers,
-} from 'lucide-react';
+} from "lucide-react";
 
 export const metadata = {
-  title: 'Journeys — Konnaxion',
+  title: "Journeys — Konnaxion",
   description:
-    'What you can do with Konnaxion: learn, deliberate, decide, build, and preserve—end-to-end civic workflows.',
+    "What you can do with Konnaxion: learn, deliberate, decide, build, and preserve—end-to-end civic workflows.",
 };
 
 type Journey = {
@@ -24,89 +25,89 @@ type Journey = {
   outputs: string[];
   primaryLink: { href: string; label: string };
   secondaryLinks?: { href: string; label: string }[];
-  icon: JSX.Element;
-  status?: 'Active' | 'TBD';
+  icon: ReactElement;
+  status?: "Active" | "TBD";
 };
 
 const journeys: Journey[] = [
   {
-    title: 'Learn → Validate → Certify',
-    subtitle: 'Competence you can prove',
+    title: "Learn → Validate → Certify",
+    subtitle: "Competence you can prove",
     description:
-      'Build real capability, validate it, and make it portable. The goal is not “content consumption” but measurable competence with durable credentials.',
-    steps: ['Learn', 'Practice', 'Validate', 'Certify', 'Follow-up'],
-    outputs: ['Verified credentials', 'Competence profile', 'Reusable learning paths'],
-    primaryLink: { href: '/platforms/konnaxion/konnected', label: 'Open KonnectED' },
+      "Build real capability, validate it, and make it portable. The goal is not “content consumption” but measurable competence with durable credentials.",
+    steps: ["Learn", "Practice", "Validate", "Certify", "Follow-up"],
+    outputs: ["Verified credentials", "Competence profile", "Reusable learning paths"],
+    primaryLink: { href: "/platforms/konnaxion/konnected", label: "Open KonnectED" },
     secondaryLinks: [
-      { href: '/platforms/konnaxion/konnected/kintsugi', label: 'Operate (Kintsugi)' },
-      { href: '/platforms/konnaxion/konnected/kompendio', label: 'Reference (Kompendio)' },
+      { href: "/platforms/konnaxion/konnected/kintsugi", label: "Operate (Kintsugi)" },
+      { href: "/platforms/konnaxion/konnected/kompendio", label: "Reference (Kompendio)" },
     ],
     icon: <GraduationCap className="w-7 h-7" />,
-    status: 'Active',
+    status: "Active",
   },
   {
-    title: 'Discover → Deliberate → Draft',
-    subtitle: 'From messy input to legible decisions',
+    title: "Discover → Deliberate → Draft",
+    subtitle: "From messy input to legible decisions",
     description:
-      'Run a structured process that turns submissions, evidence, and arguments into decision-ready drafts and accountable records.',
-    steps: ['Discovery', 'Deliberation', 'Drafting', 'Decision', 'Accountability'],
-    outputs: ['Decision draft', 'Rationale trail', 'Public record of outcomes'],
-    primaryLink: { href: '/platforms/konnaxion/ethikos', label: 'Open ethiKos' },
-    secondaryLinks: [{ href: '/platforms/konnaxion/ethikos/kintsugi', label: 'Operate (Kintsugi)' }],
+      "Run a structured process that turns submissions, evidence, and arguments into decision-ready drafts and accountable records.",
+    steps: ["Discovery", "Deliberation", "Drafting", "Decision", "Accountability"],
+    outputs: ["Decision draft", "Rationale trail", "Public record of outcomes"],
+    primaryLink: { href: "/platforms/konnaxion/ethikos", label: "Open ethiKos" },
+    secondaryLinks: [{ href: "/platforms/konnaxion/ethikos/kintsugi", label: "Operate (Kintsugi)" }],
     icon: <MessagesSquare className="w-7 h-7" />,
-    status: 'Active',
+    status: "Active",
   },
   {
-    title: 'Vote → Compare Readings → Publish Outcome',
-    subtitle: 'Decision quality without hidden power',
+    title: "Vote → Compare Readings → Publish Outcome",
+    subtitle: "Decision quality without hidden power",
     description:
-      'See outcomes in multiple readings (e.g., baseline and quality-weighted) side-by-side. The point is transparency: improve decisions without obscuring legitimacy.',
-    steps: ['Ballot', 'Baseline tally', 'Alternative reading(s)', 'Explain', 'Publish'],
-    outputs: ['Baseline result', 'Alternative lens result', 'Explainable comparison'],
-    primaryLink: { href: '/platforms/konnaxion/kollective-intelligence', label: 'Open Kollective Intelligence' },
+      "See outcomes in multiple readings (e.g., baseline and quality-weighted) side-by-side. The point is transparency: improve decisions without obscuring legitimacy.",
+    steps: ["Ballot", "Baseline tally", "Alternative reading(s)", "Explain", "Publish"],
+    outputs: ["Baseline result", "Alternative lens result", "Explainable comparison"],
+    primaryLink: { href: "/platforms/konnaxion/kollective-intelligence", label: "Open Kollective Intelligence" },
     secondaryLinks: [
-      { href: '/platforms/konnaxion/kollective-intelligence/kintsugi', label: 'Operate (Kintsugi)' },
-      { href: '/initiatives/civic-governance/constitution/ekoh', label: 'EkoH concept' },
+      { href: "/platforms/konnaxion/kollective-intelligence/kintsugi", label: "Operate (Kintsugi)" },
+      { href: "/initiatives/civic-governance/constitution/ekoh", label: "EkoH concept" },
     ],
     icon: <Vote className="w-7 h-7" />,
-    status: 'Active',
+    status: "Active",
   },
   {
-    title: 'Plan → Execute → Preserve',
-    subtitle: 'Turn decisions into real work',
+    title: "Plan → Execute → Preserve",
+    subtitle: "Turn decisions into real work",
     description:
-      'Coordinate projects with clear responsibilities, track progress to completion, and preserve outputs so they remain usable beyond the original team.',
-    steps: ['Define work', 'Route responsibility', 'Execute', 'Review', 'Preserve'],
-    outputs: ['Project workspace', 'Accountable execution trail', 'Versioned artifacts'],
-    primaryLink: { href: '/platforms/konnaxion/keen-konnect', label: 'Open keenKonnect' },
+      "Coordinate projects with clear responsibilities, track progress to completion, and preserve outputs so they remain usable beyond the original team.",
+    steps: ["Define work", "Route responsibility", "Execute", "Review", "Preserve"],
+    outputs: ["Project workspace", "Accountable execution trail", "Versioned artifacts"],
+    primaryLink: { href: "/platforms/konnaxion/keen-konnect", label: "Open keenKonnect" },
     secondaryLinks: [
-      { href: '/platforms/konnaxion/keen-konnect/kintsugi', label: 'Operate (Kintsugi)' },
-      { href: '/platforms/konnaxion/keen-konnect/kompendio', label: 'Reference (Kompendio)' },
+      { href: "/platforms/konnaxion/keen-konnect/kintsugi", label: "Operate (Kintsugi)" },
+      { href: "/platforms/konnaxion/keen-konnect/kompendio", label: "Reference (Kompendio)" },
     ],
     icon: <Hammer className="w-7 h-7" />,
-    status: 'Active',
+    status: "Active",
   },
   {
-    title: 'Curate → Publish → Preserve Commons',
-    subtitle: 'A limited library, not a noise feed',
+    title: "Curate → Publish → Preserve Commons",
+    subtitle: "A limited library, not a noise feed",
     description:
-      'A curated commons for validated artifacts: decisions, methods, curricula, and project outputs. This module is not yet fully developed.',
-    steps: ['Select', 'Validate', 'Publish', 'Version', 'Preserve'],
-    outputs: ['Curated artifacts', 'Public catalogue', 'Long-term preservation'],
-    primaryLink: { href: '/platforms/konnaxion/modules', label: 'Back to modules' },
+      "A curated commons for validated artifacts: decisions, methods, curricula, and project outputs. This module is not yet fully developed.",
+    steps: ["Select", "Validate", "Publish", "Version", "Preserve"],
+    outputs: ["Curated artifacts", "Public catalogue", "Long-term preservation"],
+    primaryLink: { href: "/platforms/konnaxion/modules", label: "Back to modules" },
     icon: <Archive className="w-7 h-7" />,
-    status: 'TBD',
+    status: "TBD",
   },
 ];
 
-function Badge({ status }: { status: 'Active' | 'TBD' }) {
+function Badge({ status }: { status: "Active" | "TBD" }) {
   const cls =
-    status === 'Active'
-      ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-      : 'bg-amber-50 text-amber-800 border-amber-200';
+    status === "Active"
+      ? "bg-emerald-50 text-emerald-700 border-emerald-200"
+      : "bg-amber-50 text-amber-800 border-amber-200";
   return (
     <span className={`text-xs font-mono px-2 py-1 rounded border ${cls}`}>
-      {status === 'Active' ? 'Active' : 'TBD'}
+      {status === "Active" ? "Active" : "TBD"}
     </span>
   );
 }
