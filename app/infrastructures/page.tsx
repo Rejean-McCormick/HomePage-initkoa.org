@@ -1,33 +1,37 @@
-// app\infrastructures\page.tsx
 // app/infrastructures/page.tsx
 import Card from '@/components/Card';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Infrastructure',
-  description: 'The physical and virtual foundations: Kristal Farms and Kin City.',
+  title: 'Infrastructures – The kOA initiative',
+  description:
+    'The physical and virtual foundations of the ecosystem: green compute (Kristal Farms) and a civic interface for collaboration (Kin City).',
 };
 
 export default function InfrastructureIndex() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold mb-4">Infrastructure</h1>
+        <h1 className="text-4xl font-bold mb-4">Infrastructures</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          The bedrock of our ecosystem. We build the physical engines for green compute 
-          and the virtual cities for community collaboration.
+          The foundation layer of the ecosystem: resilient systems that make learning, coordination,
+          and governance feasible in the real world.
+        </p>
+        <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+          One part is physical (where intelligence can run efficiently). One part is experiential
+          (where communities can navigate knowledge and decisions together).
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <Card
           title="Kristal Farms"
-          description="The Hardware. Green AI data centers co-located with hydro power to export intelligence and recycle heat for food security."
+          description="Green compute infrastructure: modular data centers co-located with renewable hydro in cold climates—export intelligence and reuse heat for local resilience."
           href="/infrastructures/kristal-farms"
         />
         <Card
           title="Kin City"
-          description="The Interface. A virtual city metaverse that organizes knowledge, governance, and community into navigable districts."
+          description="A civic interface: a navigable virtual city where knowledge, coordination, and governance are organized into understandable districts and workflows."
           href="/infrastructures/kin-city"
         />
       </div>

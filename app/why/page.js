@@ -1,127 +1,222 @@
-// app\why\page.js
-// app/why/page.js
-import PageSection from '@/components/PageSection';
+// app/page.tsx
+import Link from 'next/link';
+import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Why kOA?',
+  title: 'The kOA initiative – Civic Utilities by Réjean McCormick',
   description:
-    'A systemic approach to solving governance, educational, economic, and social crises through meritocracy and technology.'
+    'Building governable, auditable civic utilities for learning, coordination, and legitimate collective decision-making — a knowledge-to-action ecosystem designed for resilience and non-domination.',
 };
 
-export default function WhyKoaPage() {
+export default function HomePage() {
   return (
-    <PageSection>
-      {/* Main Title - Applied #1e6864 */}
-      <h1 className="text-4xl font-bold mb-6 text-[#1e6864]">Why kOA?</h1>
+    <main className="min-h-screen bg-white text-slate-900 selection:bg-[#1e6864] selection:text-white">
+      {/* HERO SECTION */}
+      <section className="pt-32 pb-24 px-6 border-b border-gray-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-6xl md:text-8xl font-serif font-medium mb-8 tracking-tight text-slate-900">
+            The kOA initiative
+          </h1>
 
-      <p className="text-lg mb-8">
-        kOA was born from a critical realization: our global crises are not isolated incidents but symptoms of <strong>obsolete operating systems</strong>. To solve them, we cannot merely patch the existing framework; we must upgrade the entire architecture of governance, education, and economy.
-      </p>
-
-      <hr className="my-8 border-gray-300" />
-
-      {/* Section Title - Applied #1e6864 */}
-      <h2 className="text-2xl font-semibold mb-4 text-[#1e6864]">The Diagnosis: Systemic Failure</h2>
-      <p className="mb-6">
-        We have identified fundamental flaws across five key pillars of society that prevent progress and perpetuate inequality.
-      </p>
-
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
-        {/* Governance */}
-        <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-          {/* Card Title - Applied #1e6864 */}
-          <h3 className="text-xl font-bold mb-3 text-[#1e6864]">Governance & Leadership</h3>
-          <ul className="list-disc pl-5 space-y-2 text-sm">
-            <li><strong>Popularity over Competence:</strong> Systems favor charisma and wealth over qualifications and ethics.</li>
-            <li><strong>Short-termism:</strong> Decisions are driven by election cycles rather than long-term societal health.</li>
-            <li><strong>Polarization:</strong> Discourse is designed to divide, leaving citizens feeling powerless and apathetic.</li>
-            <li><strong>Corruption:</strong> Lack of transparency allows elites to act against the public interest.</li>
-          </ul>
-        </div>
-
-        {/* Education */}
-        <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-          {/* Card Title - Applied #1e6864 */}
-          <h3 className="text-xl font-bold mb-3 text-[#1e6864]">Education & Human Potential</h3>
-          <ul className="list-disc pl-5 space-y-2 text-sm">
-            <li><strong>Factory Model:</strong> Pacing is tailored to the average, stifling both gifted students and those needing support.</li>
-            <li><strong>Wasted Talent:</strong> Rigid testing ignores diverse intelligences; merit is often overshadowed by networking.</li>
-            <li><strong>Outdated Curricula:</strong> Schools fail to prepare students for modern automation and global challenges.</li>
-          </ul>
-        </div>
-
-        {/* Economy */}
-        <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-          {/* Card Title - Applied #1e6864 */}
-          <h3 className="text-xl font-bold mb-3 text-[#1e6864]">Economy & Innovation</h3>
-          <ul className="list-disc pl-5 space-y-2 text-sm">
-            <li><strong>Wealth Concentration:</strong> Monopolies stifle small businesses; predatory loans trap individuals in debt.</li>
-            <li><strong>Barrier to Entry:</strong> Fragmented systems prevent smaller players from competing in innovation.</li>
-            <li><strong>Inefficiency:</strong> Workplace nepotism and bureaucracy kill productivity and employee morale.</li>
-          </ul>
-        </div>
-
-        {/* Justice & Social */}
-        <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-          {/* Card Title - Applied #1e6864 */}
-          <h3 className="text-xl font-bold mb-3 text-[#1e6864]">Justice & Society</h3>
-          <ul className="list-disc pl-5 space-y-2 text-sm">
-            <li><strong>Bureaucratic Nightmare:</strong> Justice is slow, expensive, and inaccessible to the marginalized.</li>
-            <li><strong>Social Isolation:</strong> Rigid social clustering limits cross-generational and cross-cultural collaboration.</li>
-            <li><strong>Misinformation:</strong> A lack of reliable data filters leads to confusion and poor decision-making.</li>
-          </ul>
-        </div>
-      </div>
-
-      <hr className="my-8 border-gray-300" />
-
-      {/* Section Title - Applied #1e6864 */}
-      <h2 className="text-2xl font-semibold mb-4 text-[#1e6864]">The Solution: The kOA Ecosystem</h2>
-      <p className="mb-6">
-        kOA provides the tools to transition from these broken systems to a meritocratic, transparent, and collaborative future.
-      </p>
-
-      <div className="space-y-6">
-        <div>
-          {/* Item Title - Applied #1e6864 */}
-          <h3 className="text-lg font-bold text-[#1e6864]">1. Governance via Orgo & Ekoh</h3>
-          <p>
-            Replacing popularity contests with <strong>weighted voting based on proven competence</strong>. We ensure long-term planning, reduce polarization through data-driven debate, and enforce transparency to eliminate corruption.
+          <p className="text-xl md:text-2xl text-slate-500 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+            An initiative by <strong className="text-slate-900 font-semibold">Réjean McCormick</strong> to build{' '}
+            <strong>civic utilities</strong> for a fragmented world. <br />
+            Shared infrastructure for radical learning, secure coordination, and legitimate collective decisions.
           </p>
-        </div>
 
-        <div>
-          {/* Item Title - Applied #1e6864 */}
-          <h3 className="text-lg font-bold text-[#1e6864]">2. Education via The Knowledge Platform</h3>
-          <p>
-            A dynamic, personalized learning environment that rewards <strong>actual merit</strong> and skill acquisition. We unlock human potential by making high-quality resources accessible to all, regardless of geography or status.
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Link
+              href="/initiatives"
+              className="px-8 py-3 bg-slate-900 text-white rounded-sm font-medium hover:bg-[#1e6864] transition-colors duration-300 min-w-[200px]"
+            >
+              Explore Ecosystem
+            </Link>
+            <Link
+              href="/why"
+              className="px-8 py-3 border border-gray-300 text-slate-600 rounded-sm font-medium hover:border-slate-900 hover:text-slate-900 transition-all duration-300 min-w-[200px]"
+            >
+              The Diagnosis
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* NAVIGATION HUB */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Pillar 1: CONTEXT */}
+          <NavCard
+            href="/why"
+            title="The Diagnosis"
+            subtitle="Global Context"
+            description="We cannot fix what we refuse to see. A clear account of fragmentation, incentive drift, and institutional failure modes."
+            icon={<IconGlobe />}
+          />
+
+          {/* Pillar 2: GOVERNANCE */}
+          <NavCard
+            href="/initiatives/civic-governance"
+            title="Civic Governance"
+            subtitle="The Operating System"
+            description="Modular governance for real societies: education (competence), economy (solidarity), justice (fairness), and a legible constitution."
+            icon={<IconStack />}
+          />
+
+          {/* Pillar 3: INFRASTRUCTURE */}
+          <NavCard
+            href="/infrastructures"
+            title="Infrastructures"
+            subtitle="The Foundation"
+            description="The physical and virtual bedrock: green compute (Kristal Farms) and a civic interface for collaboration (Kin City)."
+            icon={<IconAnchor />}
+          />
+
+          {/* Pillar 4: STRATEGY */}
+          <NavCard
+            href="/initiatives"
+            title="Strategic Initiatives"
+            subtitle="Research & Deployment"
+            description="Research programs, pilots, and roadmaps that move from theory to deployable civic utilities and measurable outcomes."
+            icon={<IconEye />}
+          />
+        </div>
+      </section>
+
+      {/* DOCUMENTATION FOOTER */}
+      <section className="bg-slate-50 border-t border-gray-100 py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Documentation</h3>
+
+          <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto font-serif italic">
+            &quot;Beyond the myth lies the machine.&quot;
           </p>
-        </div>
 
-        <div>
-          {/* Item Title - Applied #1e6864 */}
-          <h3 className="text-lg font-bold text-[#1e6864]">3. Connection via Konnaxion</h3>
-          <p>
-            Breaking down silos. We connect individuals, disciplines, and nations to solve global problems (climate, pandemics, inequality) through <strong>collective intelligence</strong> rather than competition.
-          </p>
-        </div>
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <Link
+              href="/initiatives/civic-governance/constitution"
+              className="text-sm font-mono text-[#1e6864] hover:text-slate-900 border-b border-[#1e6864]/30 hover:border-slate-900 transition-colors pb-0.5"
+            >
+              The Rules (Constitution)
+            </Link>
 
-        <div>
-          {/* Item Title - Applied #1e6864 */}
-          <h3 className="text-lg font-bold text-[#1e6864]">4. Sustainability via Kristal Farms</h3>
-          <p>
-            Ensuring that technological progress does not come at the cost of the environment. We utilize sustainable computing power to drive innovation without ecological debt.
-          </p>
-        </div>
-      </div>
+            <span className="text-slate-300 hidden md:inline">|</span>
 
-      <div className="mt-12 p-6 bg-slate-100 rounded-lg">
-        {/* Box Title - Applied #1e6864 */}
-        <h2 className="text-xl font-bold mb-2 text-[#1e6864]">Our Political Position</h2>
-        <p>
-          kOA is not a satirical project or a think-tank. It is a <strong>governance offering</strong> ready to be ratified by universal suffrage. Our goal is to implement these solutions directly through democratic institutions, transitioning power from elite interest groups back to competent, ethical citizens.
-        </p>
-      </div>
-    </PageSection>
+            <Link
+              href="/technology"
+              className="text-sm font-mono text-[#1e6864] hover:text-slate-900 border-b border-[#1e6864]/30 hover:border-slate-900 transition-colors pb-0.5"
+            >
+              Technology (Specs)
+            </Link>
+
+            <span className="text-slate-300 hidden md:inline">|</span>
+
+            <Link
+              href="/sitemap"
+              className="text-sm font-mono text-[#1e6864] hover:text-slate-900 border-b border-[#1e6864]/30 hover:border-slate-900 transition-colors pb-0.5"
+            >
+              Sitemap
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+// --- TYPES & COMPONENTS ---
+
+interface NavCardProps {
+  title: string;
+  subtitle: string;
+  description: string;
+  href: string;
+  icon: ReactNode;
+}
+
+function NavCard({ title, subtitle, description, href, icon }: NavCardProps) {
+  return (
+    <Link href={href} className="group block h-full">
+      <div className="mb-6 text-slate-300 group-hover:text-[#1e6864] transition-colors duration-300">{icon}</div>
+      <div className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">{subtitle}</div>
+      <h2 className="text-3xl font-serif font-medium text-slate-900 mb-4 group-hover:underline decoration-1 underline-offset-4 decoration-slate-300">
+        {title}
+      </h2>
+      <p className="text-slate-600 leading-relaxed text-sm">{description}</p>
+    </Link>
+  );
+}
+
+// --- ICONS ---
+
+function IconGlobe() {
+  return (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
+    >
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="2" y1="12" x2="22" y2="12"></line>
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+    </svg>
+  );
+}
+
+function IconStack() {
+  return (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
+    >
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+    </svg>
+  );
+}
+
+function IconEye() {
+  return (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
+    >
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </svg>
+  );
+}
+
+function IconAnchor() {
+  return (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
+    >
+      <circle cx="12" cy="5" r="3"></circle>
+      <line x1="12" y1="22" x2="12" y2="8"></line>
+      <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+    </svg>
   );
 }
