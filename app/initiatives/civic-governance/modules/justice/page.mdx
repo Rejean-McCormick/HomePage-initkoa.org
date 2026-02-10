@@ -2,82 +2,113 @@ import { Card } from '@/components/Card';
 import { Scale, Clock, ShieldCheck, Gavel, Eye } from 'lucide-react';
 
 export const metadata = {
-  title: "Justice Module: Augmented Fairness",
-  description: "Replacing systemic bias and delay with algorithmic impartiality and radical efficiency."
+  title: 'Justice Module: Procedural Fairness',
+  description:
+    'A justice workflow designed for speed, transparency, and recourse—using tools for assistance without unaccountable authority.',
 };
 
-# Justice Module: Augmented Fairness
+# Justice Module: Procedural Fairness
 
-### The Diagnostic: Justice Delayed is Justice Denied
-[cite_start]The current justice system is failing on three fundamental fronts[cite: 660, 663, 669]:
-1.  **Inefficiency:** Cases drag on for years due to administrative friction, effectively denying justice to victims.
-2.  **Bias:** Human judges are susceptible to unconscious prejudice based on race, class, and appearance.
-3.  **Inaccessibility:** Legal defense is a luxury product. The complexity of the law makes it "pay-to-play."
+### The diagnostic: delay, opacity, and unequal access
+Most justice systems fail in predictable ways:
 
-[cite_start]kOA proposes a **Justice Augmented by AI**: a system where the machine handles the analysis to ensure speed and neutrality, while humans retain ethical oversight[cite: 660, 674].
+1. **Delay:** backlogs and procedural friction turn rights into paperwork.
+2. **Opacity:** decisions can be difficult to explain, contest, or reproduce.
+3. **Unequal access:** effective defense and navigation often depend on money, time, and specialized literacy.
+
+kOA’s Justice module treats justice as a **governable pipeline**: a staged process that keeps authority accountable, makes reasoning inspectable, and preserves recourse.
 
 ---
 
-### The 3 Pillars of kOA Justice
+## The kOA justice pipeline (ethiKos)
+
+Justice is not a single “AI verdict.” It is a sequence:
+
+- **Discovery:** collect claims, evidence, and context in a structured format.
+- **Deliberation:** compare interpretations, surface disputes, and test counter-arguments.
+- **Drafting:** produce a decision draft with reasons, citations, and unresolved questions.
+- **Decision:** an accountable authority (court/jury/mandated role) decides—explicitly.
+- **Accountability:** publish the reasoning trace, enable appeal, and record outcomes for institutional learning.
+
+This is the core idea: **make justice replayable**.
+
+---
+
+## Three pillars
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
-  <Card 
-    title="The Impartial Engine" 
+  <Card
+    title="Casework & Evidence Handling"
     icon={<Gavel className="text-primary w-6 h-6" />}
-    description="An AI Decision Support System that evaluates cases based strictly on facts and legal precedents, stripping away variables like race, gender, or social status."
+    description="Structured intake, evidence organization, transcription, scheduling, and chain-of-custody support—reducing administrative friction without touching decision authority."
     href="/initiatives/civic-governance/modules/justice/ai-model"
   />
-  <Card 
-    title="Radical Efficiency" 
+  <Card
+    title="Consistency & Decision Support"
     icon={<Clock className="text-primary w-6 h-6" />}
-    description="Automating the 'churn' of justice. AI handles evidence sorting, transcription, and scheduling, reducing trial timelines from years to weeks."
+    description="Tools that surface relevant statutes, precedents, and comparable cases—so similar cases are treated similarly, with reasoning that can be inspected and challenged."
     href="/initiatives/civic-governance/modules/justice/efficiency"
   />
-  <Card 
-    title="Universal Access" 
+  <Card
+    title="Access & Recourse"
     icon={<Scale className="text-primary w-6 h-6" />}
-    description="Democratizing the law. 24/7 AI Legal Assistants provide instant, free legal counsel to any citizen, breaking the monopoly of expensive firms."
+    description="Plain-language guidance, forms, and procedural navigation for everyone—plus clear appeal/recourse pathways that don’t require insider knowledge."
     href="/initiatives/civic-governance/modules/justice/access"
   />
 </div>
 
 ---
 
-### The Axiom: "White Box" Justice
+## The axiom: “white-box” justice
 
-> "A just decision must be an explainable decision."
+> A just decision must be a contestable decision.
 
-We reject "Black Box" algorithms. The kOA Justice System operates on a strict **Explainable AI (XAI)** mandate.
-Every recommendation made by the system must include a generated **Audit Trail** citing the specific laws, precedents, and evidence weights used to reach the conclusion.
+kOA rejects “black box justice.” Any recommendation or draft must ship with an **audit trail**:
+
+- what inputs were used (claims, evidence, submissions),
+- what rules/precedents were referenced,
+- what reasoning steps were applied,
+- what uncertainties remain,
+- and how the conclusion could change if contested facts change.
 
 <div className="flex flex-col md:flex-row gap-8 items-center bg-slate-50 p-8 rounded-xl border border-slate-200 mt-8">
   <div className="flex-1">
     <h4 className="flex items-center text-xl font-bold text-slate-800 mb-4">
       <Eye className="mr-3 text-blue-600" />
-      Why AI is Less Biased than Humans
+      Tools are not authority
     </h4>
     <p className="text-slate-600 mb-4">
-      Critics fear "biased algorithms." We argue that **Human Bias** is the harder problem to solve. A human judge might give a harsher sentence because they are hungry, tired, or unconsciously biased against the defendant's accent.
+      The system can help with structure, search, comparison, and drafting. But legitimacy requires that
+      the final decision is made by an accountable human institution (judge, jury, mandated role) with
+      explicit responsibility.
     </p>
     <p className="text-slate-600">
-      An AI does not get tired. It does not have "moods." By rigorously sanitizing the training data and removing demographic metadata from the decision logic, we can create a judge that is truly blind to everything except the law.
+      kOA’s objective is not “replace judges.” It is: reduce delay, reduce arbitrary variance, and
+      strengthen the public’s ability to understand and contest outcomes.
     </p>
   </div>
-  
+
   <div className="flex-1 border-l border-slate-200 pl-8">
-    <h4 className="text-xl font-bold text-slate-800 mb-4">The Implementation Strategy</h4>
+    <h4 className="flex items-center text-xl font-bold text-slate-800 mb-4">
+      <ShieldCheck className="mr-3 text-blue-600" />
+      Safeguards
+    </h4>
     <ul className="space-y-3 text-sm text-slate-700">
       <li className="flex items-start">
-        <span className="text-blue-500 font-bold mr-2">Phase 1:</span>
-        <span>**Administrative Automation.** Clearing the backlog of paperwork and minor disputes (traffic, contracts).</span>
+        <span className="text-blue-500 font-bold mr-2">1.</span>
+        <span><strong>Contestability:</strong> parties can challenge inputs, reasoning steps, and rule selection.</span>
       </li>
       <li className="flex items-start">
-        <span className="text-blue-500 font-bold mr-2">Phase 2:</span>
-        <span>**Decision Support.** Providing human judges with "pre-computed" analysis of precedents to ensure consistency.</span>
+        <span className="text-blue-500 font-bold mr-2">2.</span>
+        <span><strong>Traceability:</strong> every recommendation is linked to sources, not vibes.</span>
       </li>
       <li className="flex items-start">
-        <span className="text-blue-500 font-bold mr-2">Phase 3:</span>
-        <span>**Augmented Adjudication.** AI panels overseeing complex cases, with human juries serving as the ethical "check."</span>
+        <span className="text-blue-500 font-bold mr-2">3.</span>
+        <span><strong>Bias visibility:</strong> when sensitive attributes are legally relevant, their use is explicit; when not, they are excluded and audited.</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-blue-500 font-bold mr-2">4.</span>
+        <span><strong>Appeal-ready:</strong> outputs are structured to support review, reversal, and correction.</span>
       </li>
     </ul>
   </div>

@@ -2,81 +2,115 @@ import { Card } from '@/components/Card';
 import { BookOpen, Brain, Award, Coins } from 'lucide-react';
 
 export const metadata = {
-  title: "Education Module: Verified Competence",
-  description: "Replacing the 'Prestige-Diploma' with the 'Competence-Portfolio'."
+  title: 'Education Module — Verified Competence',
+  description:
+    'Replace prestige credentials with a portable competence portfolio: modular learning, mastery validation, and auditable proof of skills.',
 };
 
-# Education Module: Verified Competence
+# Education Module — Verified Competence
 
-### The Obsolescence of the Diploma
-The traditional academic model is an industrial relic. It sells "Prestige"—a static snapshot of potential—at the cost of massive student debt and years of theoretical confinement.
+## Why the diploma is failing
+The traditional academic model is optimized for **prestige signals** and long cycles, not for reliable proof of capability. It often creates:
 
-kOA proposes a radical shift: **Verified Competence**.
-We replace the rigid 4-year degree with **"Kristals"**—modular, verifiable blocks of skill (e.g., *React.js*, *Conflict Resolution*, *Hydraulics*). Your transcript is no longer a piece of paper; it is a live, blockchain-secured portfolio of what you can actually *do*.
+- **debt before competence**,
+- credential inflation (degrees as gatekeeping),
+- weak alignment between what is taught and what communities actually need.
+
+kOA proposes a shift: **Verified Competence**.  
+Instead of one high-stakes credential, people build a **portable competence portfolio**—proof of what they can do, with evidence and validation.
 
 ---
 
-### The 3 Pillars of the New School
+## What replaces it: Kristals (modular competence units)
+A **Kristal** is a small, verifiable unit of skill (examples: *React.js fundamentals*, *conflict resolution*, *hydraulics basics*). Each Kristal is:
+
+- **modular** (stackable into larger paths),
+- **evidence-based** (projects, demonstrations, artifacts),
+- **validated** (mastery checks, peer/proctor review where needed),
+- **portable** (works across institutions and employers),
+- **auditable** (clear rules: what was required, who validated, and why).
+
+Your “transcript” becomes a live record of demonstrated competence, not a one-time institutional stamp.
+
+---
+
+## The three pillars
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
-  <Card 
-    title="The Knowledge Path" 
+  <Card
+    title="The Knowledge Path"
     icon={<BookOpen className="text-primary w-6 h-6" />}
-    description="A standardized, standardized curriculum from age 5 to 17. From literacy to civic governance, ensuring no child is left behind."
+    description="A structured learning path from fundamentals to civic literacy and applied skills—adaptable locally, consistent in standards."
     href="/initiatives/civic-governance/modules/education/curriculum"
   />
-  <Card 
-    title="The AI Engine" 
+  <Card
+    title="The Learning Engine"
     icon={<Brain className="text-primary w-6 h-6" />}
-    description="Our 7-Step Generative Framework allows any community to generate rigorous, interactive course content in minutes, not months."
+    description="A community-driven course authoring and iteration pipeline: interactive lessons, practice sets, and updates with human review."
     href="/initiatives/civic-governance/modules/education/model"
   />
-  <Card 
-    title="Gamified Validation" 
+  <Card
+    title="Mastery Validation"
     icon={<Award className="text-primary w-6 h-6" />}
-    description="We abolished the 0-100 grading scale. You either have the skill (Badge Acquired) or you are still learning. No failure, only progress."
+    description="Clear mastery gates with proof. Retakes are normal. Progress is tracked by demonstrated outcomes, not ranking students against each other."
     href="/initiatives/civic-governance/modules/education/badges"
   />
 </div>
 
 ---
 
-### The Economic Shift: "The Beneficiary Pays"
+## Funding model: “The beneficiary pays”
+Education should not function as a personal mortgage. kOA Education can be funded as a **civic utility**:
 
-Perhaps the most revolutionary aspect of kOA Education is its business model. We invert the debt equation.
+- **Free (or near-free) for the learner**
+- Costs covered by the entities that benefit from competence:
+  - employers and industry partners,
+  - public institutions and local cooperatives,
+  - scholarship pools for critical skills and underserved communities.
 
 <div className="flex flex-col md:flex-row gap-8 items-center bg-slate-50 p-8 rounded-xl border border-slate-200">
   <div className="flex-1">
     <h4 className="flex items-center text-xl font-bold text-slate-800 mb-4">
       <Coins className="mr-3 text-amber-600" />
-      Free for the Learner
+      Learner-first economics
     </h4>
     <p className="text-slate-600 mb-4">
-      Education should not be a mortgage. In the kOA system, acquiring a skill is <strong>free</strong>. The cost of training is borne by the entity that *benefits* from that training.
+      The learner pays with effort and proof—not with debt. When verified competence creates value for an employer or institution,
+      they contribute back into the education commons.
     </p>
     <ul className="space-y-2 text-sm text-slate-700">
       <li className="flex items-start">
         <span className="text-green-500 mr-2">✔</span>
-        <span>Student learns "Advanced Welding" (Cost: $0).</span>
+        <span>Student earns “Advanced Welding” with verified evidence (Cost to learner: $0).</span>
       </li>
       <li className="flex items-start">
         <span className="text-green-500 mr-2">✔</span>
-        <span>Student gets hired by a Construction Firm.</span>
+        <span>Student is hired by a construction firm.</span>
       </li>
       <li className="flex items-start">
         <span className="text-green-500 mr-2">✔</span>
-        <span>Firm pays a micro-royalty to the Education Node for the verified competence.</span>
+        <span>Firm contributes a small, transparent fee into the training node / skill commons that produced the competence.</span>
       </li>
     </ul>
   </div>
-  
+
   <div className="flex-1 border-l border-slate-200 pl-8">
-    <h4 className="text-xl font-bold text-slate-800 mb-4">Why this changes everything</h4>
+    <h4 className="text-xl font-bold text-slate-800 mb-4">Why this changes incentives</h4>
     <p className="text-slate-600">
-      This aligns incentives. Schools are no longer incentivized to prolong degrees to collect tuition. They are incentivized to <strong>train employable skills efficiently</strong>. If the student doesn't succeed, the school doesn't get paid.
+      Schools are rewarded for <strong>real outcomes</strong>, not longer programs. Training providers compete on quality,
+      completion, and verified capability—while communities retain oversight of standards and fairness.
     </p>
   </div>
 </div>
 
-### The Goal: Civic Autonomy
-Ultimately, the goal of this module is not just to create workers, but to create **Citizens**. A citizen who understands logic, science, and civics—and who owes nothing to the banks—is a citizen who cannot be manipulated.
+---
+
+## The goal: civic autonomy (not just employability)
+This module is designed to produce **capable citizens**:
+
+- literate in logic, science, and civic processes,
+- able to verify claims and resist manipulation,
+- equipped to participate meaningfully in deliberation, decision-making, and cooperative action.
+
+Verified competence is the foundation for legitimate self-governance.
+
