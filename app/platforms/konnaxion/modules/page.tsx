@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Konnaxion Modules — The kOA initiative',
+  title: 'Konnaxion Modules — The kOA INITIATIVE',
   description:
     'The four civic modules of Konnaxion: competence, deliberation, collective decision, and execution—plus the cross-cutting Kintsugi and Kompendio layers.',
 };

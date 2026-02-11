@@ -2,17 +2,22 @@
 import fs from "node:fs";
 import path from "node:path";
 
+// --- Identity / branding (no more OkidoWiki) ---
+const SITE_BRAND = process.env.AI_CORPUS_BRAND || "initkoa.org";
+const PROJECT_NAME = process.env.AI_CORPUS_PROJECT || "kOA INITIATIVE";
+
 // Configuration
 const APP_DIR = path.join(process.cwd(), "app");
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 const OUTPUT_FILE = path.join(PUBLIC_DIR, "ai-corpus.txt");
 
 // Behavior toggles (safe defaults)
-const INCLUDE_DYNAMIC_SEGMENTS = (process.env.AI_CORPUS_INCLUDE_DYNAMIC || "false")
-  .toLowerCase() === "true";
+const INCLUDE_DYNAMIC_SEGMENTS =
+  (process.env.AI_CORPUS_INCLUDE_DYNAMIC || "false").toLowerCase() === "true";
 
 // If set, trims each page to max chars (token guardrail)
-const MAX_CHARS_PER_PAGE = Number(process.env.AI_CORPUS_MAX_CHARS_PER_PAGE || 0) || 0;
+const MAX_CHARS_PER_PAGE =
+  Number(process.env.AI_CORPUS_MAX_CHARS_PER_PAGE || 0) || 0;
 
 // Prefer env-based canonical domain (works on Vercel previews too)
 function getBaseUrl() {
@@ -28,14 +33,7 @@ const BASE_URL = getBaseUrl();
 const PAGE_FILE_RE = /^page\.(mdx|tsx|ts|js|jsx)$/;
 
 // Dirs / route segments to ignore (NOTE: we do NOT ignore route groups like (marketing))
-const IGNORE_DIRS = new Set([
-  "api",
-  "components",
-  "styles",
-  "fonts",
-  "public",
-  "node_modules",
-]);
+const IGNORE_DIRS = new Set(["api", "components", "styles", "fonts", "public", "node_modules"]);
 
 function isRouteGroupSegment(name) {
   return name.startsWith("(") && name.endsWith(")");
@@ -160,6 +158,8 @@ function cleanContent(content) {
 
 function generateCorpus() {
   console.log("🤖 Generating AI corpus...");
+  console.log(`   🏷️  BRAND: ${SITE_BRAND}`);
+  console.log(`   🧭 PROJECT: ${PROJECT_NAME}`);
   console.log(`   🌐 BASE_URL: ${BASE_URL}`);
   console.log(`   🧩 INCLUDE_DYNAMIC_SEGMENTS: ${INCLUDE_DYNAMIC_SEGMENTS}`);
   if (MAX_CHARS_PER_PAGE) console.log(`   ✂️  MAX_CHARS_PER_PAGE: ${MAX_CHARS_PER_PAGE}`);
@@ -168,7 +168,8 @@ function generateCorpus() {
 
   const files = getAllPageFiles(APP_DIR);
   let corpus =
-    `# OKIDOWIKI AI CORPUS\n` +
+    `# ${SITE_BRAND.toUpperCase()} — AI CORPUS\n` +
+    `# Project: ${PROJECT_NAME}\n` +
     `# Generated: ${new Date().toISOString()}\n` +
     `# Base URL: ${BASE_URL}\n` +
     `# Include dynamic segments: ${INCLUDE_DYNAMIC_SEGMENTS}\n` +

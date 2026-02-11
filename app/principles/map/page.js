@@ -2,7 +2,7 @@
 import PageSection from '@/components/PageSection';
 
 export const metadata = {
-  title: 'Principles — The kOA initiative',
+  title: 'Principles — The kOA INITIATIVE',
   description:
     'Three core axioms and two separated domains: Civic Principles & Ethics, and Cosmic Etherism (optional, quarantined).',
 };
