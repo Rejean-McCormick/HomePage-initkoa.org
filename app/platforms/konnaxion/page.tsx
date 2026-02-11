@@ -239,19 +239,21 @@ export default function KonnaxionPage() {
           </div>
         </section>
 
-        {/* REFERENCE */}
+{/* REFERENCE */}
         <section className="bg-slate-900 text-slate-300 p-8 rounded-sm">
           <h2 className="text-xl font-bold text-white mb-4">Reference (builders)</h2>
           <p className="mb-6 text-sm leading-relaxed">
             If you are integrating or implementing Konnaxion, use the reference section for maps, standards, and the integration vocabulary.
             This is intentionally separated from the public-facing module pages.
           </p>
-          <Link
-            href="/platforms/konnaxion/reference"
+          <a
+            href="https://github.com/Rejean-McCormick/Konnaxion/wiki"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-4 py-2 border border-slate-600 rounded text-white hover:bg-slate-800 text-sm transition-colors"
           >
             Open reference →
-          </Link>
+          </a>
         </section>
       </div>
     </main>

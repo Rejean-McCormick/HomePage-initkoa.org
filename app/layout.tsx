@@ -20,7 +20,7 @@ export const metadata = {
   },
 
   // 3. OPTIMISATION SEO & MARQUE PERSONNELLE
-  title: 'InitKoa - Civic Utilities by Réjean McCormick',
+  title: 'kOA INITIATIVE - Civic Utilities by Réjean McCormick',
   description: 'The official socio-technical architecture initiative led by Réjean McCormick. Building civic utilities, democratic innovation, and the kOA ecosystem.',
   
   // 4. Signaux d'auteur pour Google et les IA
@@ -33,7 +33,7 @@ export const metadata = {
   
   // (Optionnel) OpenGraph pour les partages LinkedIn/Social
   openGraph: {
-    title: 'InitKoa by Réjean McCormick',
+    title: 'kOA INITIATIVE by Réjean McCormick',
     description: 'Civic utilities for a fragmented world.',
     type: 'website',
     locale: 'fr_CA',
