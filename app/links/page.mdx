@@ -1,16 +1,19 @@
-// app/links/page.js
+// app/links/page.tsx
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata = {
+const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.initkoa.org").replace(/\/+$/, "");
+
+export const metadata: Metadata = {
   title: "Links — Full inventory & web presence",
   description:
     "Complete public index of Réjean McCormick’s web presence: core sites, repositories, books, music, research, socials, and contact.",
-  alternates: { canonical: "/links" },
+  alternates: { canonical: `${BASE_URL}/links` },
   openGraph: {
     title: "Links — Full inventory & web presence",
     description:
       "Complete public index of Réjean McCormick’s web presence: core sites, repositories, books, music, research, socials, and contact.",
-    url: "/links",
+    url: `${BASE_URL}/links`,
   },
 };
 
@@ -20,25 +23,19 @@ export default function LinksPage() {
       <h1>Links / Inventory</h1>
 
       <p className="text-lg text-slate-600">
-        A single, maintained index of public materials and presence—kept here so the rest of the site can stay focused
-        on the content itself.
+        Single maintained index of public materials and presence—kept here so the rest of the site can stay focused on
+        the content itself.
       </p>
 
       <div className="not-prose my-8 grid gap-3 sm:grid-cols-2">
-        <Link
-          href="/about"
-          className="border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors"
-        >
+        <Link href="/about" className="border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors">
           <strong>About</strong>
-          <div className="text-sm text-slate-600">Personal overview and the “why”.</div>
+          <div className="text-sm text-slate-600">Personal overview.</div>
         </Link>
 
-        <Link
-          href="/why"
-          className="border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors"
-        >
-          <strong>Start here: The Diagnosis</strong>
-          <div className="text-sm text-slate-600">Why these utilities are needed.</div>
+        <Link href="/why" className="border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors">
+          <strong>Start here: Why</strong>
+          <div className="text-sm text-slate-600">The short diagnosis and reading order.</div>
         </Link>
 
         <Link
@@ -63,6 +60,20 @@ export default function LinksPage() {
       <h2>Core sites</h2>
       <ul>
         <li>
+          <strong>initkoa hub</strong>:{" "}
+          <a href="https://www.initkoa.org/" target="_blank" rel="noopener noreferrer">
+            initkoa.org
+          </a>{" "}
+          —{" "}
+          <a href="https://www.initkoa.org/platforms" target="_blank" rel="noopener noreferrer">
+            platforms
+          </a>{" "}
+          /{" "}
+          <a href="https://www.initkoa.org/contact" target="_blank" rel="noopener noreferrer">
+            contact
+          </a>
+        </li>
+        <li>
           <strong>Roadmap</strong>:{" "}
           <a href="https://kingklown.xyz/koa" target="_blank" rel="noopener noreferrer">
             kingklown.xyz/koa
@@ -81,37 +92,35 @@ export default function LinksPage() {
           </a>
         </li>
         <li>
-          <strong>Knowledge platform hub</strong>:{" "}
+          <strong>Knowledge hub</strong>:{" "}
           <a href="https://www.kingklown.wiki/" target="_blank" rel="noopener noreferrer">
             kingklown.wiki
           </a>
         </li>
+      </ul>
+
+      <h2>kOA platforms (public)</h2>
+      <ul>
         <li>
-          <strong>initkoa hub</strong>:{" "}
-          <a href="https://www.initkoa.org/" target="_blank" rel="noopener noreferrer">
-            initkoa.org
-          </a>{" "}
-          —{" "}
           <a href="https://www.initkoa.org/platforms" target="_blank" rel="noopener noreferrer">
-            platforms
+            initkoa.org/platforms
           </a>{" "}
-          /{" "}
-          <a href="https://www.initkoa.org/contact" target="_blank" rel="noopener noreferrer">
-            contact
-          </a>
+          (Konnaxion / Kristal Farms / Orgo)
         </li>
       </ul>
 
-      <h2>Podcast / audiobooks</h2>
+      <h2>Dev / repositories</h2>
       <ul>
         <li>
-          <strong>Spotify show</strong>:{" "}
-          <a
-            href="https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4?si=b51cc5d57ab242e8"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            “King Klown”
+          <strong>GitHub</strong>:{" "}
+          <a href="https://github.com/Rejean-McCormick/" target="_blank" rel="noopener noreferrer">
+            Rejean-McCormick
+          </a>
+        </li>
+        <li>
+          <strong>Ariane (licensing / acquisition)</strong>:{" "}
+          <a href="https://github.com/Rejean-McCormick/Ariane" target="_blank" rel="noopener noreferrer">
+            GitHub repo
           </a>
         </li>
       </ul>
@@ -156,11 +165,7 @@ export default function LinksPage() {
             Amazon US
           </a>{" "}
           /{" "}
-          <a
-            href="https://www.amazon.ca/-/fr/R%C3%A9jean-McCormick-ebook/dp/B0DZ76L1N3"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.amazon.ca/-/fr/R%C3%A9jean-McCormick-ebook/dp/B0DZ76L1N3" target="_blank" rel="noopener noreferrer">
             Amazon Canada
           </a>
         </li>
@@ -176,23 +181,61 @@ export default function LinksPage() {
         </li>
       </ul>
 
+      <h2>Podcast / audio</h2>
+      <ul>
+        <li>
+          <strong>Spotify show</strong>:{" "}
+          <a
+            href="https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4?si=b51cc5d57ab242e8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            “King Klown”
+          </a>
+        </li>
+        <li>
+          <strong>SoundCloud</strong>:{" "}
+          <a href="https://soundcloud.com/rejean-mccormick" target="_blank" rel="noopener noreferrer">
+            rejean-mccormick
+          </a>
+        </li>
+      </ul>
+
+      <h2>Research / decks</h2>
+      <ul>
+        <li>
+          Gamma deck:{" "}
+          <a href="https://koa-movement-x84fw57.gamma.site/" target="_blank" rel="noopener noreferrer">
+            “Global Strategic Overview — Why kOA?”
+          </a>
+        </li>
+        <li>
+          Medium:{" "}
+          <a
+            href="https://medium.com/@boatbuilder610/pi-theory-from-a-circles-cut-to-a-cosmic-sequence-327e675296d0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pi Theory: From a Circle’s Cut to a Cosmic Sequence
+          </a>
+        </li>
+      </ul>
+
       <h2>Social & media</h2>
       <ul>
         <li>
-          <strong>YouTube</strong>:{" "}
-          <a href="https://www.youtube.com/%40KingKlownXYZ" target="_blank" rel="noopener noreferrer">
-            @KingKlownXYZ
+          <strong>Facebook</strong>:{" "}
+          <a href="https://www.facebook.com/profile.php?id=61566663549235" target="_blank" rel="noopener noreferrer">
+            Réjean McCormick (King Klown)
+          </a>{" "}
+          /{" "}
+          <a href="https://www.facebook.com/profile.php?id=61567073454490" target="_blank" rel="noopener noreferrer">
+            King Klown XYZ
           </a>
         </li>
         <li>
-          <strong>Tumblr</strong>:{" "}
-          <a href="https://www.tumblr.com/kingklownxyz" target="_blank" rel="noopener noreferrer">
-            @kingklownxyz
-          </a>
-        </li>
-        <li>
-          <strong>TikTok</strong>:{" "}
-          <a href="https://www.tiktok.com/%40kingklown.xyz" target="_blank" rel="noopener noreferrer">
+          <strong>Instagram</strong>:{" "}
+          <a href="https://www.instagram.com/kingklown.xyz/" target="_blank" rel="noopener noreferrer">
             @kingklown.xyz
           </a>
         </li>
@@ -203,6 +246,30 @@ export default function LinksPage() {
           </a>
         </li>
         <li>
+          <strong>Mastodon</strong>:{" "}
+          <a href="https://mastodon.social/@Rejean_McCormick/" target="_blank" rel="noopener noreferrer">
+            @Rejean_McCormick
+          </a>
+        </li>
+        <li>
+          <strong>YouTube</strong>:{" "}
+          <a href="https://www.youtube.com/@KingKlown-XYZ" target="_blank" rel="noopener noreferrer">
+            @KingKlown-XYZ
+          </a>
+        </li>
+        <li>
+          <strong>TikTok</strong>:{" "}
+          <a href="https://www.tiktok.com/@kingklown.xyz" target="_blank" rel="noopener noreferrer">
+            @kingklown.xyz
+          </a>
+        </li>
+        <li>
+          <strong>Tumblr</strong>:{" "}
+          <a href="https://www.tumblr.com/kingklownxyz" target="_blank" rel="noopener noreferrer">
+            @kingklownxyz
+          </a>
+        </li>
+        <li>
           <strong>Twitch</strong>:{" "}
           <a href="https://www.twitch.tv/kingklownxyz" target="_blank" rel="noopener noreferrer">
             @kingklownxyz
@@ -210,32 +277,24 @@ export default function LinksPage() {
         </li>
       </ul>
 
-      <h2>Dev</h2>
+      <h2>Professional</h2>
       <ul>
         <li>
-          <strong>GitHub</strong>:{" "}
-          <a href="https://github.com/Rejean-McCormick/" target="_blank" rel="noopener noreferrer">
-            Rejean-McCormick
+          <strong>LinkedIn</strong>:{" "}
+          <a href="https://www.linkedin.com/in/r%C3%A9jean-mccormick-51403a37b/" target="_blank" rel="noopener noreferrer">
+            Réjean McCormick
           </a>
         </li>
-      </ul>
-
-      <h2>KOA platforms (as listed)</h2>
-      <ul>
         <li>
-          Konnaxion / Kristal Farms / Orgo —{" "}
-          <a href="https://www.initkoa.org/platforms" target="_blank" rel="noopener noreferrer">
-            initkoa.org/platforms
+          <strong>PhilPeople</strong>:{" "}
+          <a href="https://philpeople.org/profiles/rejean-mccormick" target="_blank" rel="noopener noreferrer">
+            rejean-mccormick
           </a>
         </li>
-      </ul>
-
-      <h2>Presentations</h2>
-      <ul>
         <li>
-          Gamma deck:{" "}
-          <a href="https://koa-movement-x84fw57.gamma.site/" target="_blank" rel="noopener noreferrer">
-            “Global Strategic Overview — Why KOA?”
+          <strong>Wikimedia Meta-Wiki</strong>:{" "}
+          <a href="https://meta.wikimedia.org/wiki/User:Réjean_McCormick" target="_blank" rel="noopener noreferrer">
+            User:Réjean_McCormick
           </a>
         </li>
       </ul>
@@ -245,11 +304,10 @@ export default function LinksPage() {
         <li>
           <strong>Merchandise</strong>: <span>kingklown.store</span>
         </li>
-<li>
-  <strong>Email</strong>:{" "}
-  <a href="mailto:rejean.mccormick@initkoa.org">rejean.mccormick@initkoa.org</a>
-</li>
-
+        <li>
+          <strong>Email</strong>:{" "}
+          <a href="mailto:rejean.mccormick@initkoa.org">rejean.mccormick@initkoa.org</a>
+        </li>
       </ul>
 
       <h2>Offline / other assets</h2>
