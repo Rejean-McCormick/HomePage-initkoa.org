@@ -1,4 +1,3 @@
-// app\technology\voting-machine\page.tsx
 // app/technology/voting-machine/page.tsx
 import Link from 'next/link';
 import { 

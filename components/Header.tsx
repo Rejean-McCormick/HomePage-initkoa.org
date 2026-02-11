@@ -62,13 +62,13 @@ const NAV_ITEMS = [
     icon: <Cpu className="w-4 h-4" />,
     children: [
       { label: 'Overview', desc: 'The Deep Tech Stack', path: '/technology' },
-      { label: 'Kristal', desc: '...', path: '/technology/kristal' },	  
+      { label: 'Kristal', desc: 'Verifiable semantic file format', path: '/technology/kristal' },	  
       { label: 'Architect', desc: 'Generative Output', path: '/technology/architect' },
       { label: 'SenTient', desc: 'Input Processing', path: '/technology/sentient' },
       { label: 'SwarmCraft', desc: 'Narrative Memory', path: '/technology/swarmcraft' },
       { label: 'Ariane', desc: 'UI Graph & Vision', path: '/technology/ariane' },
       { label: 'Âme Artificielle', desc: 'Simulated human personality. An artificial soul', path: '/technology/ame-artificielle' },
-      { label: 'VM-Engine', desc: 'Deterministic Core', path: '/technology/voting-machine' },
+      { label: 'VM-Engine', desc: 'Multi-method vote compiler & simulator', path: '/technology/voting-machine' },
 
     ],
   },
