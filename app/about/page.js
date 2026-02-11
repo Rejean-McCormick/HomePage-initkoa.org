@@ -4,16 +4,18 @@ import Link from "next/link";
 export const metadata = {
   title: "About — Réjean McCormick",
   description:
-    "Réjean McCormick — socio-technical architect building civic utilities for learning, coordination, and governable decision-making (offline-first, auditable).",
+    "Réjean McCormick — socio-technical architect building offline-capable civic utilities for learning, coordination, and governable decision-making.",
 };
 
 export default function AboutPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-24 prose prose-slate">
       <h1>Réjean McCormick</h1>
+
       <p className="text-lg text-slate-600">
-        <strong>Socio-technical architect</strong> building <strong>civic utilities</strong>: shared infrastructure that helps people
-        learn, coordinate, and govern together—without depending on fragile platforms or opaque systems.
+        <strong>Socio-technical architect</strong> building <strong>civic utilities</strong>: shared
+        infrastructure that helps people learn, coordinate, and govern together—without depending on fragile platforms
+        or opaque systems.
       </p>
 
       <div className="not-prose my-8 grid gap-3 sm:grid-cols-2">
@@ -26,19 +28,11 @@ export default function AboutPage() {
         </Link>
 
         <Link
-          href="/initiatives"
-          className="border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors"
-        >
-          <strong>Explore initiatives</strong>
-          <div className="text-sm text-slate-600">Governance modules and civic use cases.</div>
-        </Link>
-
-        <Link
           href="/platforms"
           className="border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors"
         >
           <strong>Platforms</strong>
-          <div className="text-sm text-slate-600">Tools built for real-world operation.</div>
+          <div className="text-sm text-slate-600">Konnaxion, Orgo, and operational building blocks.</div>
         </Link>
 
         <Link
@@ -46,349 +40,56 @@ export default function AboutPage() {
           className="border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors"
         >
           <strong>Technology</strong>
-          <div className="text-sm text-slate-600">Architecture & documentation (optional deep dive).</div>
+          <div className="text-sm text-slate-600">Architecture & documentation.</div>
+        </Link>
+
+        <Link
+          href="/links"
+          className="border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors"
+        >
+          <strong>Full inventory / web presence</strong>
+          <div className="text-sm text-slate-600">All hubs, books, music, socials, code.</div>
         </Link>
       </div>
 
       <hr className="my-8 border-slate-200" />
 
-      <h2>What I’m building</h2>
+      <h2>What I’m building (kOA)</h2>
       <p>
-        The work spans <strong>public governance tools</strong>, <strong>private coordination tools</strong>, and <strong>offline-capable infrastructure</strong>.
-        The emphasis is on systems that are <strong>auditable</strong>, <strong>governable</strong>, and deployable outside the public internet.
+        kOA is built around a closed operational loop: <strong>learn → deliberate → decide → execute → preserve</strong>.
+        The goal is not “more content” or “more AI”, but <strong>legitimate decisions</strong> that can be audited,
+        and <strong>reliable execution</strong> that still works under real constraints (outages, low connectivity, offline).
       </p>
 
-      <h3>Platforms (built for use)</h3>
+      <h3>Two-layer public architecture</h3>
       <ul>
         <li>
-          <Link href="/platforms/konnaxion">Konnaxion</Link> — a public-facing civic stack for collective intelligence,
-          learning, and governable coordination.
+          <strong>Operational spine</strong>: platforms and governance mechanics that can be inspected, deployed, and used.
         </li>
         <li>
-          <Link href="/platforms/orgo">Orgo</Link> — an offline-first organizational system for secure, role-based routing
-          of tasks and cases.
+          <strong>Cultural diffusion</strong>: narrative formats (e.g., “King Klown”) used as pedagogy and onboarding—
+          designed to return to operational clarity (not to replace it).
         </li>
       </ul>
 
-      <h3>Governance & verification primitives</h3>
-      <ul>
-        <li>
-          <Link href="/initiatives/civic-governance/constitution/ekoh">EkoH</Link> — domain-bounded competence signals for decision support.
-        </li>
-        <li>
-          <Link href="/technology/voting-machine">Voting Machine (VM-Engine)</Link> — deterministic computation for verifiable workflows.
-        </li>
-      </ul>
-
-      <h3>R&amp;D modules (advanced)</h3>
-      <ul>
-        <li>
-          <Link href="/technology/ariane">Ariane</Link> — semantic interface mapping and guidance (availability: licensing / acquisition discussions).
-        </li>
-        <li>
-          <Link href="/technology/swarmcraft">SwarmCraft</Link> — orchestration and multi-agent runtime research (private R&amp;D).
-        </li>
-        <li>
-          <Link href="/technology/ame-artificielle">Âme artificielle</Link> — alignment and governance primitives for human-facing AI behavior (private R&amp;D).
-        </li>
-      </ul>
-
-      <h3>Builder documentation (optional)</h3>
-      <p>If you want implementation detail, the technical wikis live under Technology:</p>
-      <ul>
-        <li>
-          <Link href="/technology/sentient">SenTient</Link> — local signal deconstruction into structured meaning.
-        </li>
-        <li>
-          <Link href="/technology/architect">Abstract Wiki Architect</Link> — patterns for building auditable,
-          documentation-driven systems.
-        </li>
-      </ul>
+      <h3>Method: “Surréalité”</h3>
+      <p>
+        A bridging loop: identify a real problem → transpose into a symbolic/fictional scenario → demonstrate solutions
+        in fiction → return to reality for engagement and implementation.
+      </p>
 
       <hr className="my-8 border-slate-200" />
 
-      <h2>Full inventory &amp; web presence</h2>
-
-      <h3>Core sites</h3>
+      <h2>Contact</h2>
       <ul>
         <li>
-          <strong>Roadmap</strong>:{" "}
-          <a href="https://kingklown.xyz/koa" target="_blank" rel="noopener noreferrer">
-            kingklown.xyz/koa
-          </a>
+          <strong>Email</strong>:{" "}
+          <a href="mailto:rejean.mccormick@initkoa.org">rejean.mccormick@initkoa.org</a>
         </li>
         <li>
-          <strong>General presentation</strong>:{" "}
-          <a href="https://kingklown.com/" target="_blank" rel="noopener noreferrer">
-            kingklown.com
-          </a>
-        </li>
-        <li>
-          <strong>Political blueprint</strong>:{" "}
-          <a href="https://kingklown.ca/" target="_blank" rel="noopener noreferrer">
-            kingklown.ca
-          </a>
-        </li>
-        <li>
-          <strong>Knowledge platform hub</strong>:{" "}
-          <a href="https://www.kingklown.wiki/" target="_blank" rel="noopener noreferrer">
-            kingklown.wiki
-          </a>
-        </li>
-      </ul>
-
-      <h3>Commercial assets &amp; store</h3>
-      <ul>
-        <li>
-          <strong>Software (licensing / acquisition)</strong>:{" "}
-          <a href="https://github.com/Rejean-McCormick/Ariane" target="_blank" rel="noopener noreferrer">
-            Ariane (GitHub)
-          </a>
-        </li>
-        <li>
-          <strong>Merchandise</strong>: <span>kingklown.store</span> (branded clothes &amp; accessories)
-        </li>
-      </ul>
-
-      <h3>Intellectual capital: books, music &amp; research</h3>
-      <ul>
-        <li>
-          <strong>Books</strong>:
-          <ul>
-            <li>
-              <em>The Book of kOA</em>:{" "}
-              <a
-                href="https://www.amazon.ca/Book-kOA-Comprehensive-Collaboration-Merit-Based/dp/B0FHWS687D"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Amazon Canada
-              </a>
-            </li>
-            <li>
-              <em>Konvergence: Échoïsme</em>:{" "}
-              <a
-                href="https://www.amazon.com/Konvergence-%C3%89cho%C3%AFsme-R%C3%A9jean-McCormick/dp/B0F1DGLDJ9"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Amazon US
-              </a>
-              {" / "}
-              <a
-                href="https://www.amazon.ca/Konvergence-version-franco-R%C3%A9jean-McCormick-ebook/dp/B0F1DNQSTD"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Amazon Canada
-              </a>
-            </li>
-            <li>
-              <em>King Klown Kronicles</em>:{" "}
-              <a
-                href="https://www.amazon.com/King-Klown-Kronicles-hidden-Manifesto/dp/B0DZCXT7VP"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Amazon US
-              </a>
-            </li>
-            <li>
-              <em>Empowering AI for Programmers</em>:{" "}
-              <a
-                href="https://www.amazon.com/-/es/Empowering-Programmers-Framework-Human-Centered-Integration/dp/B0DZCQBZZG"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Amazon US
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>Music &amp; audio</strong>:
-          <ul>
-            <li>
-              Soundtrack for the stage production <em>Ninja Arc-en-Ciel</em> (
-              <a
-                href="https://soundcloud.com/rejean-mccormick/sets/ninja_arc-en-ciel"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                SoundCloud
-              </a>
-              )
-            </li>
-            <li>
-              Lumière Blanche (
-              <a
-                href="https://soundcloud.com/rejean-mccormick/sets/lumiere_blanche"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                SoundCloud
-              </a>
-              )
-            </li>
-            <li>
-              “King Klown” Podcast (
-              <a
-                href="https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4?si=b51cc5d57ab242e8"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Spotify
-              </a>
-              )
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>Research</strong>:
-          <ul>
-            <li>
-              Article:{" "}
-              <a
-                href="https://medium.com/@boatbuilder610/pi-theory-from-a-circles-cut-to-a-cosmic-sequence-327e675296d0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Pi Theory: From a Circle’s Cut to a Cosmic Sequence
-              </a>{" "}
-              (Medium)
-            </li>
-            <li>
-              Presentation: “Global Strategic Overview — Why kOA?” (
-              <a href="https://koa-movement-x84fw57.gamma.site/" target="_blank" rel="noopener noreferrer">
-                Gamma Deck
-              </a>
-              )
-            </li>
-          </ul>
-        </li>
-      </ul>
-
-      <h3>Connect, chat &amp; socials</h3>
-      <ul>
-        <li>
-          <strong>Direct contact</strong>: <a href="mailto:k@kingklown.com">k@kingklown.com</a>
-        </li>
-
-        <li>
-          <strong>Social &amp; chat</strong>:
-          <ul>
-            <li>
-              <strong>Facebook</strong>:{" "}
-              <a href="https://www.facebook.com/profile.php?id=61566663549235" target="_blank" rel="noopener noreferrer">
-                Réjean McCormick (King Klown)
-              </a>
-              {" / "}
-              <a href="https://www.facebook.com/profile.php?id=61567073454490" target="_blank" rel="noopener noreferrer">
-                King Klown XYZ
-              </a>
-            </li>
-            <li>
-              <strong>Instagram</strong>:{" "}
-              <a href="https://www.instagram.com/kingklown.xyz/" target="_blank" rel="noopener noreferrer">
-                @kingklown.xyz
-              </a>
-            </li>
-            <li>
-              <strong>X/Twitter</strong>:{" "}
-              <a href="https://x.com/KingKlownXYZ" target="_blank" rel="noopener noreferrer">
-                @KingKlownXYZ
-              </a>
-            </li>
-            <li>
-              <strong>Mastodon</strong>:{" "}
-              <a href="https://mastodon.social/@Rejean_McCormick/" target="_blank" rel="noopener noreferrer">
-                @Rejean_McCormick
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>Professional &amp; code</strong>:
-          <ul>
-            <li>
-              <strong>LinkedIn</strong>:{" "}
-              <a
-                href="https://www.linkedin.com/in/r%C3%A9jean-mccormick-51403a37b/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Réjean McCormick
-              </a>
-            </li>
-            <li>
-              <strong>GitHub</strong>:{" "}
-              <a href="https://github.com/Rejean-McCormick/" target="_blank" rel="noopener noreferrer">
-                Rejean-McCormick
-              </a>
-            </li>
-            <li>
-              <strong>PhilPeople</strong>:{" "}
-              <a href="https://philpeople.org/profiles/rejean-mccormick" target="_blank" rel="noopener noreferrer">
-                rejean-mccormick
-              </a>
-            </li>
-            <li>
-              <strong>Wikimedia Meta-Wiki</strong>:{" "}
-              <a
-                href="https://meta.wikimedia.org/wiki/User:Réjean_McCormick"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                User:Réjean_McCormick
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>Content channels</strong>:
-          <ul>
-            <li>
-              <strong>YouTube</strong>:{" "}
-              <a href="https://www.youtube.com/@KingKlown-XYZ" target="_blank" rel="noopener noreferrer">
-                kingklown.life
-              </a>{" "}
-              (@KingKlown-XYZ)
-            </li>
-            <li>
-              <strong>TikTok</strong>:{" "}
-              <a href="https://www.tiktok.com/@kingklown.xyz" target="_blank" rel="noopener noreferrer">
-                @kingklown.xyz
-              </a>
-            </li>
-            <li>
-              <strong>Tumblr</strong>:{" "}
-              <a href="https://www.tumblr.com/kingklownxyz" target="_blank" rel="noopener noreferrer">
-                @kingklownxyz
-              </a>
-            </li>
-            <li>
-              <strong>Twitch</strong>:{" "}
-              <a href="https://www.twitch.tv/kingklownxyz" target="_blank" rel="noopener noreferrer">
-                @kingklownxyz
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-
-      <h3>Offline &amp; development assets</h3>
-      <ul>
-        <li>
-          <strong>Printed briefs</strong> (sent to key contacts)
-        </li>
-        <li>
-          <strong>Stage show</strong>: <em>Le Ninja Arc-en-ciel</em> (in development) —{" "}
-          <a href="https://www.youtube.com/watch?v=Cz7qhJNDzuo" target="_blank" rel="noopener noreferrer">
-            View proof of concept
+          <strong>Code</strong>:{" "}
+          <a href="https://github.com/Rejean-McCormick/" target="_blank" rel="noopener noreferrer">
+            github.com/Rejean-McCormick
           </a>
         </li>
       </ul>

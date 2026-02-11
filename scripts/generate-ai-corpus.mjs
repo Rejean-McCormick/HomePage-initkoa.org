@@ -7,10 +7,12 @@ const APP_DIR = path.join(process.cwd(), "app");
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 const OUTPUT_FILE = path.join(PUBLIC_DIR, "ai-corpus.txt");
 
-// Optional tuning
-const MAX_CHARS_PER_PAGE = Number(process.env.AI_CORPUS_MAX_CHARS || 12000);
-// By default we *exclude* parallel routes folders (e.g. @modal) from route computation & traversal
-const INCLUDE_PARALLEL_ROUTES = process.env.AI_CORPUS_INCLUDE_PARALLEL === "1";
+// Behavior toggles (safe defaults)
+const INCLUDE_DYNAMIC_SEGMENTS = (process.env.AI_CORPUS_INCLUDE_DYNAMIC || "false")
+  .toLowerCase() === "true";
+
+// If set, trims each page to max chars (token guardrail)
+const MAX_CHARS_PER_PAGE = Number(process.env.AI_CORPUS_MAX_CHARS_PER_PAGE || 0) || 0;
 
 // Prefer env-based canonical domain (works on Vercel previews too)
 function getBaseUrl() {
@@ -25,7 +27,7 @@ const BASE_URL = getBaseUrl();
 // Files to include
 const PAGE_FILE_RE = /^page\.(mdx|tsx|ts|js|jsx)$/;
 
-// Dirs to ignore during traversal
+// Dirs / route segments to ignore (NOTE: we do NOT ignore route groups like (marketing))
 const IGNORE_DIRS = new Set([
   "api",
   "components",
@@ -35,21 +37,26 @@ const IGNORE_DIRS = new Set([
   "node_modules",
 ]);
 
-const isRouteGroup = (name) => name.startsWith("(") && name.endsWith(")");
-const isDynamicSegment = (name) => name.startsWith("[") && name.endsWith("]");
-const isParallelRoute = (name) => name.startsWith("@");
+function isRouteGroupSegment(name) {
+  return name.startsWith("(") && name.endsWith(")");
+}
 
-function shouldSkipDir(name) {
+function isDynamicSegment(name) {
+  return name.startsWith("[") && name.endsWith("]");
+}
+
+function isSkippableSegment(name) {
   if (!name) return true;
   if (IGNORE_DIRS.has(name)) return true;
   if (name.startsWith(".")) return true;
   if (name.startsWith("_")) return true;
 
-  // IMPORTANT CHANGE:
-  // - we DO traverse route groups (e.g. (marketing)) because they don't affect the URL
-  // - we DO traverse dynamic segments (e.g. [slug]) because they may contain real pages
-  // - we optionally skip parallel routes (e.g. @modal) to avoid noisy/duplicated content
-  if (isParallelRoute(name) && !INCLUDE_PARALLEL_ROUTES) return true;
+  // IMPORTANT: route groups must be traversed (they don't appear in URL)
+  // so we do NOT skip them here.
+  if (isRouteGroupSegment(name)) return false;
+
+  // Dynamic segments are optional
+  if (isDynamicSegment(name)) return !INCLUDE_DYNAMIC_SEGMENTS;
 
   return false;
 }
@@ -77,7 +84,7 @@ function getAllPageFiles(dirAbs) {
       const abs = path.join(current, e.name);
 
       if (e.isDirectory()) {
-        if (!shouldSkipDir(e.name)) stack.push(abs);
+        if (!isSkippableSegment(e.name)) stack.push(abs);
         continue;
       }
 
@@ -90,164 +97,119 @@ function getAllPageFiles(dirAbs) {
   return out.sort((a, b) => a.localeCompare(b));
 }
 
+function stripRouteGroups(route) {
+  // Remove segments like /(marketing)/ anywhere in the route
+  return route.replace(/\/\([^/]+\)/g, "");
+}
+
+function normalizeDynamicSegments(route) {
+  // /blog/[slug]/x -> /blog/:slug/x
+  return route.replace(/\/\[([^\]/]+)\]/g, "/:$1");
+}
+
 function routeFromFilePath(filePathAbs) {
-  // Relative to app/, normalize separators
-  const rel = path.relative(APP_DIR, filePathAbs).split(path.sep).join("/");
-  const parts = rel.split("/").filter(Boolean);
+  // Normalize path separators for Windows
+  let rel = filePathAbs.replace(APP_DIR, "");
+  rel = rel.split(path.sep).join("/");
 
-  // remove trailing page.xxx
-  parts.pop();
+  // /about/page.tsx -> /about
+  let route = rel.replace(/\/page\.(mdx|tsx|ts|js|jsx)$/, "");
+  if (route === "") route = "/";
 
-  // Remove route groups from the URL path, and optionally parallel routes
-  const urlParts = parts.filter((seg) => {
-    if (isRouteGroup(seg)) return false;
-    if (isParallelRoute(seg) && !INCLUDE_PARALLEL_ROUTES) return false;
-    return true; // keep dynamic segments ([slug]) in ROUTE
-  });
+  route = stripRouteGroups(route);
+  if (INCLUDE_DYNAMIC_SEGMENTS) route = normalizeDynamicSegments(route);
 
-  const route = "/" + urlParts.join("/");
-  return route === "/" ? "/" : route.replace(/\/+/g, "/");
+  // normalize double slashes (just in case)
+  route = route.replace(/\/{2,}/g, "/");
+  return route;
 }
 
-function urlFromRoute(route) {
-  // Make the URL a bit more readable for dynamic segments
-  // [slug] -> :slug
-  // [...slug] -> :slug*
-  // [[...slug]] -> :slug*?
-  let p = route;
-
-  p = p.replace(/\[\[\.\.\.([^\]]+)\]\]/g, ":$1*?"); // optional catch-all
-  p = p.replace(/\[\.\.\.([^\]]+)\]/g, ":$1*"); // catch-all
-  p = p.replace(/\[([^\]]+)\]/g, ":$1"); // single segment
-
-  return `${BASE_URL}${p}`;
-}
-
-function extractMeta(content) {
-  // Very lightweight heuristics: frontmatter and/or exported metadata
-  let title = "";
-  let description = "";
-
-  // Frontmatter (MDX)
-  const fm = content.match(/^\s*---\s*\n([\s\S]*?)\n---\s*\n?/);
-  if (fm?.[1]) {
-    const fmBody = fm[1];
-    const t = fmBody.match(/^\s*title\s*:\s*(.+)\s*$/m);
-    const d = fmBody.match(/^\s*(description|summary)\s*:\s*(.+)\s*$/m);
-    if (t?.[1]) title = t[1].trim().replace(/^["']|["']$/g, "");
-    if (d?.[2]) description = d[2].trim().replace(/^["']|["']$/g, "");
-  }
-
-  // Next.js metadata export (TS/JS)
-  const md = content.match(/export\s+const\s+metadata\s*=\s*\{[\s\S]*?\};/);
-  if (md?.[0]) {
-    const block = md[0];
-    const t = block.match(/\btitle\s*:\s*["'`](.+?)["'`]\s*,?/);
-    const d = block.match(/\bdescription\s*:\s*["'`](.+?)["'`]\s*,?/);
-    if (!title && t?.[1]) title = t[1].trim();
-    if (!description && d?.[1]) description = d[1].trim();
-  }
-
-  return { title, description };
+function truncate(text, maxChars) {
+  if (!maxChars || maxChars <= 0) return text;
+  if (text.length <= maxChars) return text;
+  return text.slice(0, maxChars).trim() + " …";
 }
 
 function cleanContent(content) {
-  let s = content;
-
-  // Remove MDX frontmatter
-  s = s.replace(/^\s*---\s*\n[\s\S]*?\n---\s*\n?/g, "");
-
-  // Remove imports + export metadata blocks
-  s = s.replace(/^\s*import\s+[^;]+;\s*$/gm, "");
-  s = s.replace(/export\s+const\s+metadata\s*=\s*\{[\s\S]*?\};/g, "");
-
-  // Remove "use client"
-  s = s.replace(/^\s*["']use client["'];\s*$/gm, "");
-
-  // Remove JS/TS comments + JSX comments
-  s = s.replace(/\{\/\*[\s\S]*?\*\/\}/g, " "); // JSX comments
-  s = s.replace(/\/\*[\s\S]*?\*\//g, " "); // block comments
-  s = s.replace(/(^|\s)\/\/.*$/gm, " "); // line comments (best-effort)
-
-  // Remove common noisy JSX attributes
-  s = s.replace(/\sclassName="[^"]*"/g, "");
-  s = s.replace(/\sclassName=\{[^}]*\}/g, "");
-
-  // Remove JSX expressions {...} (best-effort)
-  s = s.replace(/\{[\s\S]*?\}/g, " ");
-
-  // Markdown: images and links
-  s = s.replace(/!\[([^\]]*)\]\([^)]+\)/g, "$1"); // keep alt text
-  s = s.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"); // keep link label
-
-  // Remove fenced code blocks, keep nothing (token saving)
-  s = s.replace(/```[\s\S]*?```/g, " ");
-
-  // Inline code: keep the inside
-  s = s.replace(/`([^`]+)`/g, "$1");
-
-  // Remove JSX/HTML tags
-  s = s.replace(/<[^>]*>/g, " ");
-
-  // Remove leftover markdown syntax (light touch)
-  s = s.replace(/[#>*_~]+/g, " ");
-
-  // Collapse whitespace
-  s = s.replace(/\s+/g, " ").trim();
-
-  // Truncate (optional)
-  if (MAX_CHARS_PER_PAGE > 0 && s.length > MAX_CHARS_PER_PAGE) {
-    s = s.slice(0, MAX_CHARS_PER_PAGE).trim() + " … [TRUNCATED]";
-  }
-
-  return s;
+  return (
+    content
+      // remove frontmatter (MD/MDX)
+      .replace(/^\s*---[\s\S]*?---\s*/m, "")
+      // remove imports (best-effort, per-line)
+      .replace(/^\s*import\s+[^;]+;\s*$/gm, "")
+      // remove export metadata blocks (common in Next/MDX)
+      .replace(/export\s+const\s+metadata\s*=\s*\{[\s\S]*?\};/g, "")
+      // remove "use client"
+      .replace(/^\s*["']use client["'];\s*$/gm, "")
+      // remove JS/TS comments
+      .replace(/\/\*[\s\S]*?\*\//g, " ")
+      .replace(/^\s*\/\/.*$/gm, " ")
+      // remove fenced code blocks (very token-heavy)
+      .replace(/```[\s\S]*?```/g, " ")
+      // remove inline code ticks but keep text
+      .replace(/`([^`]+)`/g, "$1")
+      // remove className="..."
+      .replace(/\sclassName="[^"]*"/g, "")
+      // remove JSX/HTML tags
+      .replace(/<[^>]*>/g, " ")
+      // collapse whitespace
+      .replace(/\s+/g, " ")
+      .trim()
+  );
 }
 
 function generateCorpus() {
   console.log("🤖 Generating AI corpus...");
   console.log(`   🌐 BASE_URL: ${BASE_URL}`);
-  console.log(`   ✂️  MAX_CHARS_PER_PAGE: ${MAX_CHARS_PER_PAGE}`);
-  console.log(`   🧩 INCLUDE_PARALLEL_ROUTES: ${INCLUDE_PARALLEL_ROUTES}`);
+  console.log(`   🧩 INCLUDE_DYNAMIC_SEGMENTS: ${INCLUDE_DYNAMIC_SEGMENTS}`);
+  if (MAX_CHARS_PER_PAGE) console.log(`   ✂️  MAX_CHARS_PER_PAGE: ${MAX_CHARS_PER_PAGE}`);
 
   ensurePublicDir();
 
   const files = getAllPageFiles(APP_DIR);
-
   let corpus =
     `# OKIDOWIKI AI CORPUS\n` +
     `# Generated: ${new Date().toISOString()}\n` +
     `# Base URL: ${BASE_URL}\n` +
-    `# Pages: ${files.length}\n\n`;
+    `# Include dynamic segments: ${INCLUDE_DYNAMIC_SEGMENTS}\n` +
+    (MAX_CHARS_PER_PAGE ? `# Max chars per page: ${MAX_CHARS_PER_PAGE}\n` : "") +
+    `\n`;
+
+  let totalChars = 0;
+  let included = 0;
 
   for (const filePath of files) {
     const route = routeFromFilePath(filePath);
-    const url = urlFromRoute(route);
+    const url = `${BASE_URL}${route}`;
 
-    let raw = "";
+    let content = "";
     try {
-      raw = fs.readFileSync(filePath, "utf8");
+      content = fs.readFileSync(filePath, "utf8");
     } catch {
       continue;
     }
 
-    const meta = extractMeta(raw);
-    const cleaned = cleanContent(raw);
+    const cleaned = truncate(cleanContent(content), MAX_CHARS_PER_PAGE);
+    if (!cleaned) continue;
+
+    included += 1;
+    totalChars += cleaned.length;
 
     corpus += `\n==================================================\n`;
     corpus += `ROUTE: ${route}\n`;
     corpus += `URL: ${url}\n`;
-    corpus += `SOURCE: ${filePath
-      .replace(process.cwd(), "")
-      .split(path.sep)
-      .join("/")}\n`;
-    if (meta.title) corpus += `TITLE: ${meta.title}\n`;
-    if (meta.description) corpus += `DESCRIPTION: ${meta.description}\n`;
+    corpus += `SOURCE: ${filePath.replace(process.cwd(), "").split(path.sep).join("/")}\n`;
     corpus += `==================================================\n`;
     corpus += `${cleaned}\n\n`;
   }
 
+  corpus += `\n# SUMMARY\n`;
+  corpus += `# Files scanned: ${files.length}\n`;
+  corpus += `# Pages included: ${included}\n`;
+  corpus += `# Total chars: ${totalChars}\n`;
+
   fs.writeFileSync(OUTPUT_FILE, corpus, "utf8");
-  console.log(`✅ Wrote: ${OUTPUT_FILE} (${files.length} pages)`);
+  console.log(`✅ Wrote: ${OUTPUT_FILE} (${included}/${files.length} pages, ${totalChars} chars)`);
 }
 
 generateCorpus();
