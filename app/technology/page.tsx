@@ -20,6 +20,7 @@ type TechItem = {
 };
 
 const ITEMS: TechItem[] = [
+  // 1. Kristal
   {
     href: "/technology/kristal",
     title: "Kristal",
@@ -32,30 +33,7 @@ const ITEMS: TechItem[] = [
       { href: "/technology/kristal/portability-and-offline", label: "Portability & offline →" },
     ],
   },
-  {
-    href: "/technology/ariane",
-    title: "Ariane",
-    tag: "Guided Navigation",
-    description:
-      "Guided navigation for complex systems. Ariane turns interfaces into structured maps so assistants can reliably walk users through real workflows—step by step, explainably.",
-    repo: { href: "https://github.com/Rejean-McCormick/ariane", label: "Rejean-McCormick/ariane" },
-  },
-  {
-    href: "/technology/voting-machine",
-    title: "Voting Machine (VM-Engine)",
-    tag: "Determinism",
-    description:
-      "Deterministic computation for governance. The same inputs yield the same outputs, enabling verification and reproducibility where legitimacy matters (e.g., ballots, tallies, allocations, simulations).",
-    repo: { href: "https://github.com/Rejean-McCormick/vm-engine", label: "Rejean-McCormick/vm-engine" },
-  },
-  {
-    href: "/technology/sentient",
-    title: "SenTient",
-    tag: "Structured Input",
-    description:
-      "Structured intake from messy text. SenTient helps convert natural language into checkable statements that can be reviewed, corrected, and reused—turning “claims” into accountable knowledge.",
-    repo: { href: "https://github.com/Rejean-McCormick/SenTient", label: "Rejean-McCormick/SenTient" },
-  },
+  // 2. Architect
   {
     href: "/technology/architect",
     title: "Abstract Wiki Architect",
@@ -67,6 +45,16 @@ const ITEMS: TechItem[] = [
       label: "Rejean-McCormick/abstract-wiki-architect",
     },
   },
+  // 3. SenTient
+  {
+    href: "/technology/sentient",
+    title: "SenTient",
+    tag: "Structured Input",
+    description:
+      "Structured intake from messy text. SenTient helps convert natural language into checkable statements that can be reviewed, corrected, and reused—turning “claims” into accountable knowledge.",
+    repo: { href: "https://github.com/Rejean-McCormick/SenTient", label: "Rejean-McCormick/SenTient" },
+  },
+  // 4. SwarmCraft
   {
     href: "/technology/swarmcraft",
     title: "SwarmCraft",
@@ -75,16 +63,34 @@ const ITEMS: TechItem[] = [
       "Continuity for long-running work. Helps keep multi-step projects coherent over time, with repeatable scaffolds and durable memory (including offline-friendly workflows when required).",
     repo: { href: "https://github.com/Rejean-McCormick/SwarmCraft", label: "Rejean-McCormick/SwarmCraft" },
   },
+  // 5. Ariane
+  {
+    href: "/technology/ariane",
+    title: "Ariane",
+    tag: "Guided Navigation",
+    description:
+      "Guided navigation for complex systems. Ariane turns interfaces into structured maps so assistants can reliably walk users through real workflows—step by step, explainably.",
+    repo: { href: "https://github.com/Rejean-McCormick/ariane", label: "Rejean-McCormick/ariane" },
+  },
+  // 6. Âme Artificielle
   {
     href: "/technology/ame-artificielle",
     title: "Âme artificielle",
     tag: "Guardrails",
-    description:
-      "Governable behavior and guardrails. A design space for controllable outputs, self-checks, and explicit constraints—focused on responsibility rather than mystique.",
+    description: "Simulated human personality. An artificial soul.",
     repo: {
       href: "https://github.com/Rejean-McCormick/Ame-Artificielle",
       label: "Rejean-McCormick/Ame-Artificielle",
     },
+  },
+  // 7. VM-Engine
+  {
+    href: "/technology/voting-machine",
+    title: "Voting Machine (VM-Engine)",
+    tag: "Determinism",
+    description:
+      "Deterministic computation for governance. The same inputs yield the same outputs, enabling verification and reproducibility where legitimacy matters (e.g., ballots, tallies, allocations, simulations).",
+    repo: { href: "https://github.com/Rejean-McCormick/vm-engine", label: "Rejean-McCormick/vm-engine" },
   },
 ];
 
