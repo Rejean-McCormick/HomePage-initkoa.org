@@ -32,13 +32,15 @@ type Catalog = {
 function downloadJson(filename: string, data: unknown) {
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
+
   const a = document.createElement('a');
   a.href = url;
   a.download = filename;
   document.body.appendChild(a);
   a.click();
   a.remove();
-  URL.revokeObjectURL(url);
+
+  setTimeout(() => URL.revokeObjectURL(url), 0);
 }
 
 function cloneCatalog<T>(x: T): T {
@@ -107,15 +109,29 @@ export default function CatalogEditorPage() {
   const [newTopicEn, setNewTopicEn] = useState('');
   const [newTopicFr, setNewTopicFr] = useState('');
 
-  useEffect(() => {
-    const ctrl = new AbortController();
-    (async () => {
+useEffect(() => {
+  const ctrl = new AbortController();
+  let alive = true; // prevents late async from updating state after cleanup
+
+  (async () => {
+    try {
       const r = await fetch('/inventory.catalog.json', { signal: ctrl.signal });
+
+      if (!r.ok) {
+        throw new Error(`Failed to load /inventory.catalog.json (HTTP ${r.status})`);
+      }
+
       const raw = await r.json();
+      if (!alive) return;
+
       const normalized = normalizeCatalog(raw);
       setOriginal(cloneCatalog(normalized));
       setDraft(normalized);
-    })().catch(() => {
+    } catch (err: unknown) {
+      // IMPORTANT: ignore aborts (common in React 18 dev Strict Mode)
+      const e = err as { name?: string };
+      if (!alive || e?.name === 'AbortError') return;
+
       const empty: Catalog = {
         generatedAt: '',
         items: [],
@@ -123,10 +139,15 @@ export default function CatalogEditorPage() {
       };
       setOriginal(cloneCatalog(empty));
       setDraft(empty);
-    });
+    }
+  })();
 
-    return () => ctrl.abort();
-  }, []);
+  return () => {
+    alive = false;
+    ctrl.abort();
+  };
+}, []);
+
 
   const topicLabels = draft?.taxonomies?.topic_labels ?? {};
   const topicLabel = useCallback(
