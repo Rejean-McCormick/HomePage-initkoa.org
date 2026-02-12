@@ -3,14 +3,12 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 type UiLang = 'en' | 'fr';
-
 type TopicLabel = { en?: string; fr?: string };
 
 type Taxonomies = {
   topics?: string[];
   topic_labels?: Record<string, TopicLabel>;
   languages?: Array<'en' | 'fr'>;
-  // keep other taxonomy keys if present (types/levels/sections/platforms etc.)
   [k: string]: unknown;
 };
 
@@ -43,53 +41,54 @@ function downloadJson(filename: string, data: unknown) {
   URL.revokeObjectURL(url);
 }
 
-function deepClone<T>(x: T): T {
-  // structuredClone is supported in modern browsers; fallback keeps it robust
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const sc = (globalThis as any).structuredClone as undefined | ((v: any) => any);
-  if (typeof sc === 'function') return sc(x);
+function cloneCatalog<T>(x: T): T {
   return JSON.parse(JSON.stringify(x)) as T;
 }
 
-function normalizeCatalog(raw: any): Catalog {
+function normalizeCatalog(raw: unknown): Catalog {
+  const r = (raw ?? {}) as Record<string, unknown>;
+
+  const taxonomiesRaw = r.taxonomies;
   const taxonomies: Taxonomies | undefined =
-    raw?.taxonomies && typeof raw.taxonomies === 'object' ? raw.taxonomies : undefined;
+    taxonomiesRaw && typeof taxonomiesRaw === 'object' ? (taxonomiesRaw as Taxonomies) : undefined;
 
-  const itemsRaw = Array.isArray(raw?.items) ? raw.items : [];
-  const items: Item[] = itemsRaw.map((x: any) => ({
-    id: String(x?.id ?? ''),
-    title: String(x?.title ?? ''),
-    url: String(x?.url ?? ''),
-    description: typeof x?.description === 'string' ? x.description : null,
-    type: String(x?.type ?? ''),
-    language: x?.language === 'en' || x?.language === 'fr' ? x.language : null,
-    topics: Array.isArray(x?.topics) ? x.topics.filter((t: any) => typeof t === 'string') : [],
-  }));
+  const itemsRaw = Array.isArray(r.items) ? (r.items as unknown[]) : [];
+  const items: Item[] = itemsRaw.map((x) => {
+    const o = (x ?? {}) as Record<string, unknown>;
+    const language = o.language === 'en' || o.language === 'fr' ? (o.language as 'en' | 'fr') : null;
+    const topics = Array.isArray(o.topics) ? (o.topics as unknown[]).filter((t): t is string => typeof t === 'string') : [];
 
-  // If taxonomies.topics missing, we can derive a fallback so editor still works
-  let topicsFallback: string[] | undefined;
-  if (!Array.isArray(taxonomies?.topics)) {
+    return {
+      id: String(o.id ?? ''),
+      title: String(o.title ?? ''),
+      url: String(o.url ?? ''),
+      description: typeof o.description === 'string' ? o.description : null,
+      type: String(o.type ?? ''),
+      language,
+      topics,
+    };
+  });
+
+  // fallback topics if taxonomies.topics absent
+  const fallbackTopics = (() => {
     const set = new Set<string>();
     for (const it of items) for (const t of it.topics ?? []) if (t) set.add(t);
-    topicsFallback = Array.from(set).sort((a, b) => a.localeCompare(b));
-  }
+    return Array.from(set).sort((a, b) => a.localeCompare(b));
+  })();
 
-  const safeTaxonomies: Taxonomies | undefined = taxonomies
-    ? {
-        ...taxonomies,
-        topics: Array.isArray(taxonomies.topics) ? taxonomies.topics : topicsFallback,
-        topic_labels:
-          taxonomies.topic_labels && typeof taxonomies.topic_labels === 'object'
-            ? (taxonomies.topic_labels as Record<string, TopicLabel>)
-            : {},
-      }
-    : topicsFallback
-      ? { topics: topicsFallback, topic_labels: {}, languages: ['en', 'fr'] }
-      : { topic_labels: {}, languages: ['en', 'fr'] };
+  const safeTaxonomies: Taxonomies = {
+    ...(taxonomies ?? {}),
+    topics: Array.isArray(taxonomies?.topics) ? taxonomies!.topics! : fallbackTopics,
+    topic_labels:
+      taxonomies?.topic_labels && typeof taxonomies.topic_labels === 'object'
+        ? (taxonomies.topic_labels as Record<string, TopicLabel>)
+        : {},
+    languages: Array.isArray(taxonomies?.languages) ? taxonomies!.languages! : ['en', 'fr'],
+  };
 
   return {
-    schemaVersion: typeof raw?.schemaVersion === 'string' ? raw.schemaVersion : undefined,
-    generatedAt: typeof raw?.generatedAt === 'string' ? raw.generatedAt : '',
+    schemaVersion: typeof r.schemaVersion === 'string' ? (r.schemaVersion as string) : undefined,
+    generatedAt: typeof r.generatedAt === 'string' ? (r.generatedAt as string) : '',
     taxonomies: safeTaxonomies,
     items,
   };
@@ -110,34 +109,34 @@ export default function CatalogEditorPage() {
 
   useEffect(() => {
     const ctrl = new AbortController();
-
     (async () => {
       const r = await fetch('/inventory.catalog.json', { signal: ctrl.signal });
       const raw = await r.json();
       const normalized = normalizeCatalog(raw);
-      setOriginal(deepClone(normalized));
+      setOriginal(cloneCatalog(normalized));
       setDraft(normalized);
     })().catch(() => {
-      const empty: Catalog = { generatedAt: '', items: [], taxonomies: { topics: [], topic_labels: {}, languages: ['en', 'fr'] } };
-      setOriginal(deepClone(empty));
+      const empty: Catalog = {
+        generatedAt: '',
+        items: [],
+        taxonomies: { topics: [], topic_labels: {}, languages: ['en', 'fr'] },
+      };
+      setOriginal(cloneCatalog(empty));
       setDraft(empty);
     });
 
     return () => ctrl.abort();
   }, []);
 
+  const topicLabels = draft?.taxonomies?.topic_labels ?? {};
   const topicLabel = useCallback(
-    (topic: string) => {
-      const labels = draft?.taxonomies?.topic_labels ?? {};
-      return labels?.[topic]?.[uiLang] ?? topic;
-    },
-    [draft?.taxonomies?.topic_labels, uiLang]
+    (topic: string) => topicLabels?.[topic]?.[uiLang] ?? topic,
+    [topicLabels, uiLang]
   );
 
-  // Topics MUST come from taxonomies.topics (dynamic from catalog); fallback is handled in normalize
+  // ✅ topics come from taxonomies.topics (fallback already injected in normalize)
   const allTopics = useMemo(() => {
     const topics = draft?.taxonomies?.topics ?? [];
-    // sort by label in current UI language
     return [...topics].filter(Boolean).sort((a, b) => topicLabel(a).localeCompare(topicLabel(b)));
   }, [draft?.taxonomies?.topics, topicLabel]);
 
@@ -160,7 +159,7 @@ export default function CatalogEditorPage() {
     });
   }, [draft?.items, q]);
 
-  // Speed up checkbox "checked" lookup
+  // faster checkbox lookup
   const topicSetById = useMemo(() => {
     const m = new Map<string, Set<string>>();
     for (const it of draft?.items ?? []) m.set(it.id, new Set(it.topics ?? []));
@@ -170,7 +169,6 @@ export default function CatalogEditorPage() {
   function setTopic(itemId: string, topic: string, checked: boolean) {
     setDraft((prev) => {
       if (!prev) return prev;
-
       const items = prev.items.map((it) => {
         if (it.id !== itemId) return it;
         const topics = new Set(it.topics ?? []);
@@ -178,7 +176,6 @@ export default function CatalogEditorPage() {
         else topics.delete(topic);
         return { ...it, topics: Array.from(topics).sort((a, b) => a.localeCompare(b)) };
       });
-
       return { ...prev, items };
     });
   }
@@ -192,7 +189,6 @@ export default function CatalogEditorPage() {
 
       const tax = prev.taxonomies ?? {};
       const topics = Array.isArray(tax.topics) ? [...tax.topics] : [];
-
       if (!topics.includes(key)) topics.push(key);
 
       const topic_labels: Record<string, TopicLabel> =
@@ -207,14 +203,15 @@ export default function CatalogEditorPage() {
         ...(newTopicFr.trim() ? { fr: newTopicFr.trim() } : {}),
       };
 
-      const updatedTax: Taxonomies = {
-        ...tax,
-        topics: topics.sort((a, b) => a.localeCompare(b)),
-        topic_labels,
-        languages: Array.isArray(tax.languages) ? tax.languages : ['en', 'fr'],
+      return {
+        ...prev,
+        taxonomies: {
+          ...tax,
+          topics: topics.sort((a, b) => a.localeCompare(b)),
+          topic_labels,
+          languages: Array.isArray(tax.languages) ? tax.languages : ['en', 'fr'],
+        },
       };
-
-      return { ...prev, taxonomies: updatedTax };
     });
 
     setNewTopicKey('');
@@ -237,14 +234,22 @@ export default function CatalogEditorPage() {
         <div className="flex flex-wrap gap-2 items-center">
           <div className="flex gap-2">
             <button
-              className={`px-3 py-2 rounded-lg border ${uiLang === 'en' ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 hover:bg-slate-50'}`}
+              className={`px-3 py-2 rounded-lg border ${
+                uiLang === 'en'
+                  ? 'bg-slate-900 text-white border-slate-900'
+                  : 'border-slate-200 hover:bg-slate-50'
+              }`}
               type="button"
               onClick={() => setUiLang('en')}
             >
               Labels EN
             </button>
             <button
-              className={`px-3 py-2 rounded-lg border ${uiLang === 'fr' ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 hover:bg-slate-50'}`}
+              className={`px-3 py-2 rounded-lg border ${
+                uiLang === 'fr'
+                  ? 'bg-slate-900 text-white border-slate-900'
+                  : 'border-slate-200 hover:bg-slate-50'
+              }`}
               type="button"
               onClick={() => setUiLang('fr')}
             >
@@ -255,7 +260,7 @@ export default function CatalogEditorPage() {
           <button
             className="px-3 py-2 rounded-lg border border-slate-200 hover:bg-slate-50"
             type="button"
-            onClick={() => original && setDraft(deepClone(original))}
+            onClick={() => original && setDraft(cloneCatalog(original))}
             disabled={!original}
           >
             Reset
@@ -266,8 +271,7 @@ export default function CatalogEditorPage() {
             type="button"
             onClick={() => {
               if (!draft) return;
-              const out: Catalog = { ...draft, generatedAt: new Date().toISOString() };
-              downloadJson('inventory.catalog.json', out);
+              downloadJson('inventory.catalog.json', { ...draft, generatedAt: new Date().toISOString() });
             }}
             disabled={!canExport}
           >
@@ -277,7 +281,7 @@ export default function CatalogEditorPage() {
       </div>
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-[360px_1fr] gap-6">
-        {/* LEFT: topic palette driven by taxonomies.topics */}
+        {/* LEFT: topic palette (from taxonomies.topics) */}
         <aside className="rounded-xl border border-slate-200 p-4">
           <div className="flex items-center justify-between gap-2">
             <h2 className="font-semibold text-slate-900">Topics</h2>
@@ -291,7 +295,7 @@ export default function CatalogEditorPage() {
             className="mt-3 w-full px-3 py-2 rounded-lg border border-slate-200"
           />
 
-          {/* Add topic to taxonomies */}
+          {/* Add topic to taxonomy */}
           <div className="mt-4 space-y-2">
             <input
               value={newTopicKey}
@@ -333,7 +337,7 @@ export default function CatalogEditorPage() {
           </div>
         </aside>
 
-        {/* RIGHT: items list with checkboxes (topics from taxonomy) */}
+        {/* RIGHT: items list with checkboxes */}
         <section className="rounded-xl border border-slate-200 p-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <h2 className="font-semibold text-slate-900">Links</h2>
@@ -348,35 +352,29 @@ export default function CatalogEditorPage() {
           <div className="mt-4 space-y-4">
             {filteredItems.map((it) => {
               const tset = topicSetById.get(it.id) ?? new Set<string>();
-
               return (
                 <div key={it.id} className="rounded-xl border border-slate-200 p-4">
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <div className="font-semibold text-slate-900">{it.title}</div>
-                      <a className="text-sm text-slate-600 underline" href={it.url} target="_blank" rel="noreferrer">
-                        {it.url}
-                      </a>
-                      <div className="text-xs text-slate-500 mt-1">
-                        {it.language ? it.language.toUpperCase() : '—'} · {it.type}
-                      </div>
+                  <div>
+                    <div className="font-semibold text-slate-900">{it.title}</div>
+                    <a className="text-sm text-slate-600 underline" href={it.url} target="_blank" rel="noreferrer">
+                      {it.url}
+                    </a>
+                    <div className="text-xs text-slate-500 mt-1">
+                      {it.language ? it.language.toUpperCase() : '—'} · {it.type}
                     </div>
                   </div>
 
                   <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-                    {visibleTopics.map((topicKey) => {
-                      const checked = tset.has(topicKey);
-                      return (
-                        <label key={topicKey} className="flex items-center gap-2 text-sm text-slate-700">
-                          <input
-                            type="checkbox"
-                            checked={checked}
-                            onChange={(e) => setTopic(it.id, topicKey, e.target.checked)}
-                          />
-                          <span className="truncate">{topicLabel(topicKey)}</span>
-                        </label>
-                      );
-                    })}
+                    {visibleTopics.map((topicKey) => (
+                      <label key={topicKey} className="flex items-center gap-2 text-sm text-slate-700">
+                        <input
+                          type="checkbox"
+                          checked={tset.has(topicKey)}
+                          onChange={(e) => setTopic(it.id, topicKey, e.target.checked)}
+                        />
+                        <span className="truncate">{topicLabel(topicKey)}</span>
+                      </label>
+                    ))}
                   </div>
                 </div>
               );

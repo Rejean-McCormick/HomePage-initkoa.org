@@ -55,24 +55,35 @@ const KINGKLOWN_OPTIONS: Option<KingKlownMode>[] = [
   { key: 'exclude', label: 'Exclude' },
 ];
 
-function normalizeCatalog(raw: any): Catalog {
-  const taxonomies: Taxonomies | undefined =
-    raw?.taxonomies && typeof raw.taxonomies === 'object' ? raw.taxonomies : undefined;
+function normalizeCatalog(raw: unknown): Catalog {
+  const r = (raw ?? {}) as Record<string, unknown>;
 
-  const itemsRaw = Array.isArray(raw?.items) ? raw.items : [];
-  const items: Item[] = itemsRaw.map((x: any) => ({
-    id: String(x?.id ?? ''),
-    title: String(x?.title ?? ''),
-    url: String(x?.url ?? '#'),
-    description: typeof x?.description === 'string' ? x.description : null,
-    type: String(x?.type ?? ''),
-    language: x?.language === 'en' || x?.language === 'fr' ? x.language : null,
-    topics: Array.isArray(x?.topics) ? x.topics.filter((t: any) => typeof t === 'string') : [],
-  }));
+  const taxonomiesRaw = r.taxonomies;
+  const taxonomies: Taxonomies | undefined =
+    taxonomiesRaw && typeof taxonomiesRaw === 'object' ? (taxonomiesRaw as Taxonomies) : undefined;
+
+  const itemsRaw = Array.isArray(r.items) ? (r.items as unknown[]) : [];
+  const items: Item[] = itemsRaw.map((x) => {
+    const o = (x ?? {}) as Record<string, unknown>;
+    const language = o.language === 'en' || o.language === 'fr' ? (o.language as 'en' | 'fr') : null;
+
+    const topics =
+      Array.isArray(o.topics) ? (o.topics as unknown[]).filter((t): t is string => typeof t === 'string') : [];
+
+    return {
+      id: String(o.id ?? ''),
+      title: String(o.title ?? ''),
+      url: String(o.url ?? '#'),
+      description: typeof o.description === 'string' ? o.description : null,
+      type: String(o.type ?? ''),
+      language,
+      topics,
+    };
+  });
 
   return {
-    schemaVersion: typeof raw?.schemaVersion === 'string' ? raw.schemaVersion : undefined,
-    generatedAt: typeof raw?.generatedAt === 'string' ? raw.generatedAt : '',
+    schemaVersion: typeof r.schemaVersion === 'string' ? (r.schemaVersion as string) : undefined,
+    generatedAt: typeof r.generatedAt === 'string' ? (r.generatedAt as string) : '',
     taxonomies,
     items,
   };
@@ -137,8 +148,9 @@ export default function PlayPage() {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         const raw = await r.json();
         setCatalog(normalizeCatalog(raw));
-      } catch (e: any) {
-        if (e?.name !== 'AbortError') setCatalog({ generatedAt: '', items: [] });
+      } catch (e: unknown) {
+        const err = e as { name?: string };
+        if (err?.name !== 'AbortError') setCatalog({ generatedAt: '', items: [] });
       }
     })();
     return () => ctrl.abort();
@@ -150,9 +162,14 @@ export default function PlayPage() {
     return Number.isNaN(d.getTime()) ? '' : ` · updated ${d.toLocaleString()}`;
   }, [catalog.generatedAt]);
 
+  // ✅ Extract to avoid exhaustive-deps warning
+  const taxonomies = catalog.taxonomies;
+  const taxonomyTopics = taxonomies?.topics;
+  const topicLabels = taxonomies?.topic_labels;
+
   // Cache topic labels for current uiLang
   const topicLabel = useMemo(() => {
-    const labels = catalog.taxonomies?.topic_labels ?? {};
+    const labels = topicLabels ?? {};
     const cache = new Map<string, string>();
     return (topic: string) => {
       const hit = cache.get(topic);
@@ -161,11 +178,11 @@ export default function PlayPage() {
       cache.set(topic, lbl);
       return lbl;
     };
-  }, [catalog.taxonomies?.topic_labels, uiLang]);
+  }, [topicLabels, uiLang]);
 
   // Topic universe: prefer taxonomies.topics, fallback to union from items
   const allTopics = useMemo(() => {
-    const fromTaxonomy = Array.isArray(catalog.taxonomies?.topics) ? catalog.taxonomies!.topics! : null;
+    const fromTaxonomy = Array.isArray(taxonomyTopics) ? taxonomyTopics : null;
 
     const set = new Set<string>();
     if (fromTaxonomy) {
@@ -182,7 +199,7 @@ export default function PlayPage() {
 
     // Sort by label in current uiLang
     return Array.from(set).sort((a, b) => topicLabel(a).localeCompare(topicLabel(b)));
-  }, [catalog.items, catalog.taxonomies?.topics, topicLabel]);
+  }, [catalog.items, taxonomyTopics, topicLabel]);
 
   const visibleTopics = useMemo(() => {
     const q = topicSearch.trim().toLowerCase();
@@ -271,9 +288,7 @@ export default function PlayPage() {
       <section className="space-y-6">
         {/* Main: content language */}
         <div className="flex flex-wrap gap-2 items-center">
-          <span className="text-sm font-bold uppercase tracking-widest text-slate-600 mr-2">
-            Language
-          </span>
+          <span className="text-sm font-bold uppercase tracking-widest text-slate-600 mr-2">Language</span>
           {LANG_OPTIONS.map((opt) => (
             <Pill key={opt.key} active={lang === opt.key} onClick={() => setLang(opt.key)}>
               {opt.icon ?? null}
@@ -284,9 +299,7 @@ export default function PlayPage() {
 
         {/* Main: King Klown */}
         <div className="flex flex-wrap gap-2 items-center">
-          <span className="text-sm font-bold uppercase tracking-widest text-slate-600 mr-2">
-            King Klown mythos
-          </span>
+          <span className="text-sm font-bold uppercase tracking-widest text-slate-600 mr-2">King Klown mythos</span>
           {KINGKLOWN_OPTIONS.map((opt) => (
             <Pill key={opt.key} active={kingKlown === opt.key} onClick={() => setKingKlown(opt.key)}>
               {opt.label}
@@ -349,14 +362,10 @@ export default function PlayPage() {
               </div>
             </div>
 
-            {it.description ? (
-              <p className="text-sm text-slate-600 mt-2 leading-relaxed">{it.description}</p>
-            ) : null}
+            {it.description ? <p className="text-sm text-slate-600 mt-2 leading-relaxed">{it.description}</p> : null}
 
             {it.topics?.length ? (
-              <div className="mt-3 text-xs text-slate-500">
-                Topics: {it.topics.join(', ')}
-              </div>
+              <div className="mt-3 text-xs text-slate-500">Topics: {it.topics.join(', ')}</div>
             ) : null}
           </a>
         ))}
