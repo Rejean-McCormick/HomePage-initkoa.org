@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-02-12T21:55:09.657Z",
+  "generatedAt": "2026-02-12T23:12:11.235Z",
   "taxonomies": {
     "types": [
       "amazon_book",
@@ -40,7 +40,7 @@
       "audio_book",
       "cultural_diffusion",
       "data_sovereignty",
-      "ekoh(merit_weighted_voting)",
+      "ekoh_smartvote(merit_weighted_voting)",
       "governance",
       "kristal_farms(green_ai)",
       "infrastructure",
@@ -52,7 +52,6 @@
       "orgo",
       "peace_and_efficiency",
       "philanthropy",
-      "smartvote",
       "sociotechnical_os(koa_digital_ecosystem)",
       "metaphysics"
     ],
@@ -121,10 +120,6 @@
         "en": "Philanthropy",
         "fr": "Philanthropie"
       },
-      "smartvote": {
-        "en": "SmartVote",
-        "fr": "SmartVote"
-      },
       "sociotechnical_os(koa_digital_ecosystem)": {
         "en": "Sociotechnical OS (kOA digital ecosystem)",
         "fr": "OS sociotechnique (écosystème numérique kOA)"
@@ -148,9 +143,14 @@
       "type": "medium_article",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "cultural_diffusion",
+        "konnaxion",
         "kristal",
+        "metaphysics",
+        "orgo",
         "pi_theory",
-        "konnaxion"
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -161,9 +161,14 @@
       "type": "medium_article",
       "language": "en",
       "topics": [
-        "konnaxion",
+        "academic_paper_and_article",
+        "ai_integration",
+        "data_sovereignty",
         "governance",
-        "ai_integration"
+        "konnaxion",
+        "natural_language_generation",
+        "orgo",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -173,7 +178,17 @@
       "description": "Argues that the problem is no longer connecting people but turning connection into collective capability without crushing individuality. Reframes “King” as a center of gravity rather than a throne and emphasizes unity + diversity as a practical cooperation posture.",
       "type": "medium_article",
       "language": "en",
-      "topics": []
+      "topics": [
+        "academic_paper_and_article",
+        "ekoh(merit_weighted_voting)",
+        "governance",
+        "konnaxion",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ]
     },
     {
       "id": "medium_article-smartvote-a-governance-grade-like-that-surfaces-the-best-work-in-konnaxion-ba0f3815",
@@ -183,9 +198,14 @@
       "type": "medium_article",
       "language": "en",
       "topics": [
-        "konnaxion",
+        "academic_paper_and_article",
+        "ekoh(merit_weighted_voting)",
         "governance",
-        "smartvote"
+        "infrastructure",
+        "konnaxion",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -196,8 +216,19 @@
       "type": "medium_article",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "ai_integration",
+        "data_sovereignty",
+        "ekoh(merit_weighted_voting)",
         "governance",
-        "ai_integration"
+        "infrastructure",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -208,7 +239,17 @@
       "type": "medium_article",
       "language": "en",
       "topics": [
-        "semantic_web"
+        "academic_paper_and_article",
+        "cultural_diffusion",
+        "governance",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "metaphysics",
+        "peace_and_efficiency",
+        "philanthropy",
+        "semantic_web",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -219,8 +260,19 @@
       "type": "medium_article",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "ai_integration",
+        "data_sovereignty",
+        "ekoh(merit_weighted_voting)",
         "governance",
-        "ai_integration"
+        "infrastructure",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -231,6 +283,11 @@
       "type": "medium_article",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "cultural_diffusion",
+        "data_sovereignty",
+        "kristal(semantic_data)",
+        "metaphysics",
         "semantic_web"
       ]
     },
@@ -242,7 +299,12 @@
       "type": "medium_article",
       "language": "en",
       "topics": [
-        "governance"
+        "cultural_diffusion",
+        "governance",
+        "metaphysics",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
       ]
     },
     {
@@ -253,6 +315,9 @@
       "type": "medium_article",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "cultural_diffusion",
+        "metaphysics",
         "pi_theory"
       ]
     },
@@ -264,6 +329,9 @@
       "type": "philpaper_article",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "cultural_diffusion",
+        "metaphysics",
         "pi_theory"
       ]
     },
@@ -275,8 +343,13 @@
       "type": "philpaper_article",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "data_sovereignty",
+        "governance",
+        "hydropower",
         "infrastructure",
-        "hydropower"
+        "kristal_farms(green_ai)",
+        "peace_and_efficiency"
       ]
     },
     {
@@ -287,8 +360,16 @@
       "type": "philpaper_article",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "data_sovereignty",
         "governance",
-        "infrastructure"
+        "infrastructure",
+        "konnaxion",
+        "kristal_farms(green_ai)",
+        "kristal(semantic_data)",
+        "orgo",
+        "peace_and_efficiency",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -299,8 +380,15 @@
       "type": "philpaper_article",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "ekoh(merit_weighted_voting)",
+        "ethics",
         "governance",
-        "ethics"
+        "infrastructure",
+        "konnaxion",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
