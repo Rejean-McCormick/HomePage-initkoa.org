@@ -2,23 +2,15 @@
 
 // app/play/page.tsx
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import {
-  PlayCircle,
-  Globe,
-  Drama,
-  Network,
-  Leaf,
-  Cpu,
-  Scale,
-} from 'lucide-react';
+import { PlayCircle, Globe, Drama, Network, Leaf, Cpu, Scale } from 'lucide-react';
 
 type Item = {
   id: string;
   title: string;
   url: string;
-  description?: string;
+  description?: string | null;
   type: string;
-  language: 'en' | 'fr';
+  language: 'en' | 'fr' | null; // ✅ matches your catalog reality
   topics: string[];
   level?: string;
   sections?: string[];
@@ -51,7 +43,7 @@ type ToggleDef<K extends keyof Toggles = keyof Toggles> = {
   key: K;
   label: string;
   icon: React.ReactNode;
-  color: string; // tailwind block style similar to your “CHAMBERS”
+  color: string;
   match: (it: Item) => boolean;
 };
 
@@ -71,7 +63,6 @@ const KINGKLOWN_OPTIONS: Option<KingKlownMode>[] = [
   { key: 'exclude', label: 'Exclude' },
 ];
 
-// Topic-group mappings (adjust here, not in the filtering body)
 const TOPIC_GROUPS = {
   sociotechnicalOS: new Set(['koa', 'governance', 'smartvote']),
   civicEquity: new Set(['ethics', 'philanthropy', 'peace']),
@@ -128,7 +119,38 @@ const TOGGLE_FILTERS: ToggleDef[] = [
 ];
 
 /* =========================
-   UI COMPONENTS
+   HELPERS (TOP)
+   ========================= */
+
+function langBadge(language: Item['language']) {
+  if (language === 'en') return 'EN';
+  if (language === 'fr') return 'FR';
+  return '—'; // ✅ avoids crash for null
+}
+
+function normalizeCatalog(raw: any): Catalog {
+  const itemsRaw = Array.isArray(raw?.items) ? raw.items : [];
+  const items: Item[] = itemsRaw.map((x: any) => ({
+    id: String(x?.id ?? ''),
+    title: String(x?.title ?? ''),
+    url: String(x?.url ?? '#'),
+    description: typeof x?.description === 'string' ? x.description : null,
+    type: String(x?.type ?? ''),
+    language: x?.language === 'en' || x?.language === 'fr' ? x.language : null,
+    topics: Array.isArray(x?.topics) ? x.topics.filter((t: any) => typeof t === 'string') : [],
+    level: typeof x?.level === 'string' ? x.level : undefined,
+    sections: Array.isArray(x?.sections) ? x.sections.filter((s: any) => typeof s === 'string') : undefined,
+    primarySection: typeof x?.primarySection === 'string' ? x.primarySection : undefined,
+  }));
+
+  return {
+    generatedAt: typeof raw?.generatedAt === 'string' ? raw.generatedAt : '',
+    items,
+  };
+}
+
+/* =========================
+   UI
    ========================= */
 
 function Pill({
@@ -185,10 +207,10 @@ export default function PlayPage() {
       try {
         const r = await fetch('/inventory.catalog.json', { signal: ctrl.signal });
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        const data = (await r.json()) as Catalog;
-        setCatalog(data);
-      } catch (e) {
-        if (!(e instanceof DOMException && e.name === 'AbortError')) {
+        const raw = await r.json();
+        setCatalog(normalizeCatalog(raw));
+      } catch (e: any) {
+        if (e?.name !== 'AbortError') {
           setCatalog({ generatedAt: '', items: [] });
         }
       }
@@ -203,7 +225,6 @@ export default function PlayPage() {
     return Number.isNaN(d.getTime()) ? '' : ` · updated ${d.toLocaleString()}`;
   }, [catalog.generatedAt]);
 
-  // Compile active toggle matchers from TOGGLE_FILTERS (no hardcoding in the loop)
   const activeMatchers = useMemo(() => {
     const list: Array<(it: Item) => boolean> = [];
     for (let i = 0; i < TOGGLE_FILTERS.length; i++) {
@@ -223,8 +244,12 @@ export default function PlayPage() {
     for (let i = 0; i < items.length; i++) {
       const it = items[i];
 
-      if (needLang && it.language !== lang) continue;
+      // language
+      if (needLang) {
+        if (it.language !== lang) continue; // null safely excluded when en/fr selected
+      }
 
+      // king_klown tri-state
       if (needKingKlown) {
         const topics = it.topics ?? [];
         const hasKK = topics.includes('king_klown');
@@ -232,7 +257,7 @@ export default function PlayPage() {
         if (kingKlown === 'exclude' && hasKK) continue;
       }
 
-      // Apply compiled matchers (single pass)
+      // compiled toggle matchers
       let ok = true;
       for (let j = 0; j < activeMatchers.length; j++) {
         if (!activeMatchers[j](it)) {
@@ -250,7 +275,7 @@ export default function PlayPage() {
 
   return (
     <main className="max-w-5xl mx-auto px-6 py-12">
-      {/* HEADER (matching your site’s pattern) */}
+      {/* HEADER (matching your site pattern) */}
       <div className="mb-12 border-b border-gray-200 pb-8">
         <div className="flex items-center gap-4 mb-4">
           <div className="p-3 bg-amber-100 rounded-2xl">
@@ -268,7 +293,6 @@ export default function PlayPage() {
 
       {/* FILTERS */}
       <section className="space-y-6">
-        {/* Language */}
         <div className="flex flex-wrap gap-2 items-center">
           <span className="text-sm font-bold uppercase tracking-widest text-slate-600 mr-2">
             Language
@@ -281,7 +305,6 @@ export default function PlayPage() {
           ))}
         </div>
 
-        {/* King Klown tri-state */}
         <div className="flex flex-wrap gap-2 items-center">
           <span className="text-sm font-bold uppercase tracking-widest text-slate-600 mr-2">
             King Klown mythos
@@ -293,7 +316,6 @@ export default function PlayPage() {
           ))}
         </div>
 
-        {/* Toggle filters (from TOGGLE_FILTERS) */}
         <div className="flex flex-wrap gap-2 items-center">
           <span className="text-sm font-bold uppercase tracking-widest text-slate-600 mr-2">
             Filters
@@ -330,7 +352,7 @@ export default function PlayPage() {
             <div className="flex items-start justify-between gap-4">
               <div className="font-semibold text-slate-900">{it.title}</div>
               <div className="text-xs text-slate-500 shrink-0">
-                {it.language.toUpperCase()} · {it.type}
+                {langBadge(it.language)} · {it.type}
               </div>
             </div>
 
