@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-02-12T23:22:59.776Z",
+  "generatedAt": "2026-02-12T23:33:30.694Z",
   "taxonomies": {
     "types": [
       "amazon_book",
@@ -37,7 +37,7 @@
     ],
     "topics": [
       "academic_paper_and_article",
-	  "king_klown",
+      "king_klown",
       "audio_book",
       "cultural_diffusion",
       "data_sovereignty",
@@ -54,7 +54,7 @@
       "peace_and_efficiency",
       "philanthropy",
       "sociotechnical_os(koa_digital_ecosystem)",
-	  "rejean_mccormick",
+      "rejean_mccormick",
       "metaphysics"
     ],
     "topic_labels": {
@@ -65,7 +65,7 @@
       "king_klown": {
         "en": "King Klown",
         "fr": "Roi Klown"
-      },		  
+      },
       "audio_book": {
         "en": "Audiobook",
         "fr": "Livre audio"
@@ -78,9 +78,9 @@
         "en": "Data sovereignty",
         "fr": "Souveraineté des données"
       },
-      "ekoh(merit_weighted_voting)": {
-        "en": "EkoH (merit-weighted voting)",
-        "fr": "EkoH (vote pondéré au mérite)"
+      "ekoh_smartvote(merit_weighted_voting)": {
+        "en": "EkoH & SmartVote (merit-weighted voting)",
+        "fr": "EkoH & SmartVote (vote pondéré au mérite)"
       },
       "governance": {
         "en": "Governance",
@@ -130,15 +130,10 @@
         "en": "Sociotechnical OS (kOA digital ecosystem)",
         "fr": "OS sociotechnique (écosystème numérique kOA)"
       },
-	  
-	  
       "rejean_mccormick": {
         "en": "Réjean McCormick",
         "fr": "Réjean McCormick"
-      },	  
-	  
-	  
-	  
+      },
       "metaphysics": {
         "en": "Metaphysics",
         "fr": "Métaphysique"
@@ -195,12 +190,15 @@
       "language": "en",
       "topics": [
         "academic_paper_and_article",
+        "cultural_diffusion",
         "ekoh(merit_weighted_voting)",
         "governance",
+        "king_klown",
         "konnaxion",
         "orgo",
         "peace_and_efficiency",
         "philanthropy",
+        "rejean_mccormick",
         "social_cohesion",
         "sociotechnical_os(koa_digital_ecosystem)"
       ]
@@ -214,6 +212,7 @@
       "language": "en",
       "topics": [
         "academic_paper_and_article",
+        "cultural_diffusion",
         "ekoh(merit_weighted_voting)",
         "governance",
         "infrastructure",
@@ -319,6 +318,7 @@
         "metaphysics",
         "peace_and_efficiency",
         "philanthropy",
+        "rejean_mccormick",
         "social_cohesion"
       ]
     },
@@ -364,7 +364,10 @@
         "hydropower",
         "infrastructure",
         "kristal_farms(green_ai)",
-        "peace_and_efficiency"
+        "natural_language_generation",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
       ]
     },
     {
@@ -377,6 +380,7 @@
       "topics": [
         "academic_paper_and_article",
         "data_sovereignty",
+        "ekoh_smartvote(merit_weighted_voting)",
         "governance",
         "infrastructure",
         "konnaxion",
@@ -384,6 +388,8 @@
         "kristal(semantic_data)",
         "orgo",
         "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
         "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
@@ -396,11 +402,13 @@
       "language": "en",
       "topics": [
         "academic_paper_and_article",
+        "ekoh_smartvote(merit_weighted_voting)",
         "ekoh(merit_weighted_voting)",
         "ethics",
         "governance",
         "infrastructure",
         "konnaxion",
+        "orgo",
         "peace_and_efficiency",
         "social_cohesion",
         "sociotechnical_os(koa_digital_ecosystem)"
