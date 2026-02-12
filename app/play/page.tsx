@@ -1,15 +1,15 @@
 'use client';
 
+// app/play/page.tsx
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { PlayCircle, Globe, Languages, Youtube, Music2, Link as LinkIcon } from 'lucide-react';
 
-type UiLang = 'en' | 'fr';
 type TopicLabel = { en?: string; fr?: string };
 
 type Taxonomies = {
   topics?: string[];
   topic_labels?: Record<string, TopicLabel>;
   languages?: Array<'en' | 'fr'>;
-  [k: string]: unknown;
 };
 
 type Item = {
@@ -29,21 +29,31 @@ type Catalog = {
   items: Item[];
 };
 
-function downloadJson(filename: string, data: unknown) {
-  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
-}
+type LangFilter = 'all' | 'en' | 'fr';
+type UiLang = 'en' | 'fr';
+type KingKlownMode = 'all' | 'only' | 'exclude';
 
-function cloneCatalog<T>(x: T): T {
-  return JSON.parse(JSON.stringify(x)) as T;
-}
+type Option<T extends string> = { key: T; label: string; icon?: React.ReactNode };
+
+// Keep King Klown handled by its dedicated filter (hide from topic pills if present)
+const TOPICS_HIDDEN_FROM_UI = new Set(['king_klown']);
+
+const LANG_OPTIONS: Option<LangFilter>[] = [
+  { key: 'all', label: 'All', icon: <Globe className="w-4 h-4 text-slate-500" /> },
+  { key: 'en', label: 'English only' },
+  { key: 'fr', label: 'Français seulement' },
+];
+
+const UI_LANG_OPTIONS: Option<UiLang>[] = [
+  { key: 'en', label: 'Labels EN', icon: <Languages className="w-4 h-4 text-slate-500" /> },
+  { key: 'fr', label: 'Étiquettes FR', icon: <Languages className="w-4 h-4 text-slate-500" /> },
+];
+
+const KINGKLOWN_OPTIONS: Option<KingKlownMode>[] = [
+  { key: 'all', label: 'All' },
+  { key: 'only', label: 'Only' },
+  { key: 'exclude', label: 'Exclude' },
+];
 
 function normalizeCatalog(raw: unknown): Catalog {
   const r = (raw ?? {}) as Record<string, unknown>;
@@ -56,14 +66,14 @@ function normalizeCatalog(raw: unknown): Catalog {
   const items: Item[] = itemsRaw.map((x) => {
     const o = (x ?? {}) as Record<string, unknown>;
     const language = o.language === 'en' || o.language === 'fr' ? (o.language as 'en' | 'fr') : null;
-    const topics = Array.isArray(o.topics)
-      ? (o.topics as unknown[]).filter((t): t is string => typeof t === 'string')
-      : [];
+
+    const topics =
+      Array.isArray(o.topics) ? (o.topics as unknown[]).filter((t): t is string => typeof t === 'string') : [];
 
     return {
       id: String(o.id ?? ''),
       title: String(o.title ?? ''),
-      url: String(o.url ?? ''),
+      url: String(o.url ?? '#'),
       description: typeof o.description === 'string' ? o.description : null,
       type: String(o.type ?? ''),
       language,
@@ -71,406 +81,370 @@ function normalizeCatalog(raw: unknown): Catalog {
     };
   });
 
-  const fallbackTopics = (() => {
-    const set = new Set<string>();
-    for (const it of items) for (const t of it.topics ?? []) if (t) set.add(t);
-    return Array.from(set).sort((a, b) => a.localeCompare(b));
-  })();
-
-  const safeTaxonomies: Taxonomies = {
-    ...(taxonomies ?? {}),
-    topics: Array.isArray(taxonomies?.topics) ? taxonomies!.topics! : fallbackTopics,
-    topic_labels:
-      taxonomies?.topic_labels && typeof taxonomies.topic_labels === 'object'
-        ? (taxonomies.topic_labels as Record<string, TopicLabel>)
-        : {},
-    languages: Array.isArray(taxonomies?.languages) ? taxonomies!.languages! : ['en', 'fr'],
-  };
-
   return {
     schemaVersion: typeof r.schemaVersion === 'string' ? (r.schemaVersion as string) : undefined,
     generatedAt: typeof r.generatedAt === 'string' ? (r.generatedAt as string) : '',
-    taxonomies: safeTaxonomies,
+    taxonomies,
     items,
   };
 }
 
-type Service = 'youtube' | 'spotify' | 'web';
-
-function getService(url: string, type: string): Service {
-  const t = (type || '').toLowerCase();
-  if (t.includes('youtube')) return 'youtube';
-  if (t.includes('spotify')) return 'spotify';
-
+function parseYouTubeId(rawUrl: string): string | null {
   try {
-    const u = new URL(url);
-    const h = u.hostname.toLowerCase();
-    if (h.includes('youtube.com') || h.includes('youtu.be')) return 'youtube';
-    if (h.includes('spotify.com')) return 'spotify';
+    const u = new URL(rawUrl);
+
+    if (u.hostname.includes('youtu.be')) {
+      const id = u.pathname.split('/').filter(Boolean)[0];
+      return id || null;
+    }
+
+    if (u.hostname.includes('youtube.com')) {
+      if (u.pathname === '/watch') return u.searchParams.get('v');
+      const m = u.pathname.match(/^\/(embed|shorts)\/([^/]+)/);
+      return m?.[2] ?? null;
+    }
+
+    return null;
   } catch {
-    // ignore
+    return null;
   }
-  return 'web';
 }
 
-function ServiceIcon({ service }: { service: Service }) {
-  // small, simple icons (no preview images)
-  if (service === 'youtube') {
-    return (
-      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" className="text-red-600">
-        <path
-          fill="currentColor"
-          d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5A3 3 0 0 0 2.4 7.2 31.6 31.6 0 0 0 2 12s.1 3.6.4 4.8a3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1c.3-1.2.4-4.8.4-4.8s-.1-3.6-.4-4.8ZM10 15.3V8.7L16 12l-6 3.3Z"
-        />
-      </svg>
-    );
+function isSpotifyUrl(rawUrl: string): boolean {
+  try {
+    const u = new URL(rawUrl);
+    return u.hostname.includes('open.spotify.com');
+  } catch {
+    return false;
   }
-
-  if (service === 'spotify') {
-    return (
-      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" className="text-green-600">
-        <path
-          fill="currentColor"
-          d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.6 14.4a.9.9 0 0 1-1.2.3c-3.3-2-7.4-2.4-12.1-1.3a.9.9 0 1 1-.4-1.8c5.1-1.2 9.7-.7 13.4 1.5.4.2.6.7.3 1.2Zm1.2-2.7a1 1 0 0 1-1.4.4c-3.8-2.3-9.7-3-14.4-1.6a1 1 0 0 1-.6-1.9c5.2-1.6 11.7-.8 16 1.8.5.3.6 1 .4 1.3Zm.1-2.9c-4.6-2.7-12.3-3-16.7-1.7a1.1 1.1 0 0 1-.7-2.1c5-1.5 13.4-1.2 18.6 1.9a1.1 1.1 0 0 1-1.2 1.9Z"
-        />
-      </svg>
-    );
-  }
-
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" className="text-slate-500">
-      <path
-        fill="currentColor"
-        d="M10.6 13.4a1 1 0 0 1 0-1.4l2.8-2.8a3 3 0 0 1 4.2 4.2l-2 2a3 3 0 0 1-4.2 0 .999.999 0 1 1 1.4-1.4 1 1 0 0 0 1.4 0l2-2a1 1 0 1 0-1.4-1.4l-2.8 2.8a1 1 0 0 1-1.4 0ZM6.4 17.6a3 3 0 0 1 0-4.2l2-2a3 3 0 0 1 4.2 0 1 1 0 0 1-1.4 1.4 1 1 0 0 0-1.4 0l-2 2a1 1 0 1 0 1.4 1.4 1 1 0 0 1 1.4 1.4 3 3 0 0 1-4.2 0Z"
-      />
-    </svg>
-  );
 }
 
-function LangPill({ lang }: { lang: Item['language'] }) {
-  if (lang === 'en') {
+function LangPastille({ language }: { language: Item['language'] }) {
+  if (language === 'en') {
     return (
-      <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-red-50 text-red-700 border-red-200">
+      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-red-600 text-white">
         EN
       </span>
     );
   }
-  if (lang === 'fr') {
+  if (language === 'fr') {
     return (
-      <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-blue-50 text-blue-700 border-blue-200">
+      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-blue-600 text-white">
         FR
       </span>
     );
   }
   return (
-    <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-slate-50 text-slate-600 border-slate-200">
+    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-slate-200 text-slate-700">
       —
     </span>
   );
 }
 
-export default function CatalogEditorPage() {
-  const [original, setOriginal] = useState<Catalog | null>(null);
-  const [draft, setDraft] = useState<Catalog | null>(null);
+function Pill({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      type="button"
+      className={[
+        'px-3 py-1.5 rounded-full border text-sm font-medium transition inline-flex items-center gap-2',
+        active
+          ? 'bg-slate-900 text-white border-slate-900'
+          : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50',
+      ].join(' ')}
+    >
+      {children}
+    </button>
+  );
+}
 
+function platformMeta(url: string) {
+  const ytId = parseYouTubeId(url);
+  if (ytId) {
+    return { key: 'youtube' as const, icon: <Youtube className="w-4 h-4 text-slate-500" aria-hidden /> };
+  }
+  if (isSpotifyUrl(url)) {
+    return { key: 'spotify' as const, icon: <Music2 className="w-4 h-4 text-slate-500" aria-hidden /> };
+  }
+  return { key: 'link' as const, icon: <LinkIcon className="w-4 h-4 text-slate-500" aria-hidden /> };
+}
+
+function ResultCard({ it }: { it: Item }) {
+  const meta = useMemo(() => platformMeta(it.url), [it.url]);
+
+  return (
+    <a
+      href={it.url}
+      target="_blank"
+      rel="noreferrer"
+      style={{ textDecoration: 'none' }}
+      className={[
+        'block p-5 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition',
+        'no-underline hover:no-underline decoration-transparent',
+      ].join(' ')}
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <div className="flex items-center gap-2 min-w-0">
+            {meta.icon}
+            <div className="font-semibold text-slate-900 truncate">{it.title}</div>
+          </div>
+
+          {it.description ? <p className="text-sm text-slate-600 mt-2 leading-relaxed">{it.description}</p> : null}
+
+          {it.topics?.length ? (
+            <div className="mt-3 text-xs text-slate-500">Topics: {it.topics.join(', ')}</div>
+          ) : null}
+        </div>
+
+        <div className="shrink-0 flex items-center gap-2">
+          <LangPastille language={it.language} />
+          <span className="text-xs text-slate-500">{it.type}</span>
+        </div>
+      </div>
+    </a>
+  );
+}
+
+export default function PlayPage() {
+  const [catalog, setCatalog] = useState<Catalog>({ generatedAt: '', items: [] });
+
+  // Main filters
+  const [lang, setLang] = useState<LangFilter>('all');
+  const [kingKlown, setKingKlown] = useState<KingKlownMode>('all');
+
+  // UI label language toggle
   const [uiLang, setUiLang] = useState<UiLang>('en');
 
-  const [q, setQ] = useState('');
-  const [topicQ, setTopicQ] = useState('');
+  // Dynamic topic filters
+  const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
+  const [topicSearch, setTopicSearch] = useState('');
 
-  const [newTopicKey, setNewTopicKey] = useState('');
-  const [newTopicEn, setNewTopicEn] = useState('');
-  const [newTopicFr, setNewTopicFr] = useState('');
+  const toggleTopic = useCallback((topic: string) => {
+    setSelectedTopics((prev) => (prev.includes(topic) ? prev.filter((t) => t !== topic) : [...prev, topic]));
+  }, []);
+
+  const clearTopics = useCallback(() => setSelectedTopics([]), []);
 
   useEffect(() => {
     const ctrl = new AbortController();
     (async () => {
-      const r = await fetch('/inventory.catalog.json', { signal: ctrl.signal });
-      const raw = await r.json();
-      const normalized = normalizeCatalog(raw);
-      setOriginal(cloneCatalog(normalized));
-      setDraft(normalized);
-    })().catch(() => {
-      const empty: Catalog = {
-        generatedAt: '',
-        items: [],
-        taxonomies: { topics: [], topic_labels: {}, languages: ['en', 'fr'] },
-      };
-      setOriginal(cloneCatalog(empty));
-      setDraft(empty);
-    });
-
+      try {
+        const r = await fetch('/inventory.catalog.json', { signal: ctrl.signal });
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const raw = await r.json();
+        setCatalog(normalizeCatalog(raw));
+      } catch (e: unknown) {
+        const err = e as { name?: string };
+        if (err?.name !== 'AbortError') setCatalog({ generatedAt: '', items: [] });
+      }
+    })();
     return () => ctrl.abort();
   }, []);
 
-  const topicLabels = draft?.taxonomies?.topic_labels ?? {};
-  const topicLabel = useCallback(
-    (topic: string) => topicLabels?.[topic]?.[uiLang] ?? topic,
-    [topicLabels, uiLang]
-  );
+  const updatedAtLabel = useMemo(() => {
+    if (!catalog.generatedAt) return '';
+    const d = new Date(catalog.generatedAt);
+    return Number.isNaN(d.getTime()) ? '' : ` · updated ${d.toLocaleString()}`;
+  }, [catalog.generatedAt]);
 
+  // ✅ Extract to avoid exhaustive-deps warning
+  const taxonomies = catalog.taxonomies;
+  const taxonomyTopics = taxonomies?.topics;
+  const topicLabels = taxonomies?.topic_labels;
+
+  // Cache topic labels for current uiLang
+  const topicLabel = useMemo(() => {
+    const labels = topicLabels ?? {};
+    const cache = new Map<string, string>();
+    return (topic: string) => {
+      const hit = cache.get(topic);
+      if (hit) return hit;
+      const lbl = labels?.[topic]?.[uiLang] ?? topic;
+      cache.set(topic, lbl);
+      return lbl;
+    };
+  }, [topicLabels, uiLang]);
+
+  // Topic universe: prefer taxonomies.topics, fallback to union from items
   const allTopics = useMemo(() => {
-    const topics = draft?.taxonomies?.topics ?? [];
-    return [...topics].filter(Boolean).sort((a, b) => topicLabel(a).localeCompare(topicLabel(b)));
-  }, [draft?.taxonomies?.topics, topicLabel]);
+    const fromTaxonomy = Array.isArray(taxonomyTopics) ? taxonomyTopics : null;
+
+    const set = new Set<string>();
+    if (fromTaxonomy) {
+      for (const t of fromTaxonomy) {
+        if (typeof t === 'string' && t && !TOPICS_HIDDEN_FROM_UI.has(t)) set.add(t);
+      }
+    } else {
+      for (const it of catalog.items) {
+        for (const t of it.topics ?? []) {
+          if (t && !TOPICS_HIDDEN_FROM_UI.has(t)) set.add(t);
+        }
+      }
+    }
+
+    // Sort by label in current uiLang
+    return Array.from(set).sort((a, b) => topicLabel(a).localeCompare(topicLabel(b)));
+  }, [catalog.items, taxonomyTopics, topicLabel]);
 
   const visibleTopics = useMemo(() => {
-    const s = topicQ.trim().toLowerCase();
-    if (!s) return allTopics;
+    const q = topicSearch.trim().toLowerCase();
+    if (!q) return allTopics;
     return allTopics.filter((t) => {
       const raw = t.toLowerCase();
       const lbl = topicLabel(t).toLowerCase();
-      return raw.includes(s) || lbl.includes(s);
+      return raw.includes(q) || lbl.includes(q);
     });
-  }, [allTopics, topicQ, topicLabel]);
+  }, [allTopics, topicSearch, topicLabel]);
 
-  const filteredItems = useMemo(() => {
-    const s = q.trim().toLowerCase();
-    if (!s) return draft?.items ?? [];
-    return (draft?.items ?? []).filter((it) => {
-      const hay = `${it.title} ${it.url} ${(it.topics ?? []).join(' ')}`.toLowerCase();
-      return hay.includes(s);
-    });
-  }, [draft?.items, q]);
-
+  // Build topic sets once (faster than repeated array.includes for large catalogs)
   const topicSetById = useMemo(() => {
     const m = new Map<string, Set<string>>();
-    for (const it of draft?.items ?? []) m.set(it.id, new Set(it.topics ?? []));
+    for (const it of catalog.items) m.set(it.id, new Set(it.topics ?? []));
     return m;
-  }, [draft?.items]);
+  }, [catalog.items]);
 
-  function setTopic(itemId: string, topic: string, checked: boolean) {
-    setDraft((prev) => {
-      if (!prev) return prev;
-      const items = prev.items.map((it) => {
-        if (it.id !== itemId) return it;
-        const topics = new Set(it.topics ?? []);
-        if (checked) topics.add(topic);
-        else topics.delete(topic);
-        return { ...it, topics: Array.from(topics).sort((a, b) => a.localeCompare(b)) };
-      });
-      return { ...prev, items };
-    });
-  }
+  const filtered = useMemo(() => {
+    const items = catalog.items ?? [];
+    const out: Item[] = [];
 
-  function addTopicToTaxonomy() {
-    const key = newTopicKey.trim();
-    if (!key) return;
+    const needLang = lang !== 'all';
+    const needKingKlown = kingKlown !== 'all';
+    const needTopics = selectedTopics.length > 0;
+    const requiredTopics = selectedTopics; // AND semantics
 
-    setDraft((prev) => {
-      if (!prev) return prev;
+    for (let i = 0; i < items.length; i++) {
+      const it = items[i];
 
-      const tax = prev.taxonomies ?? {};
-      const topics = Array.isArray(tax.topics) ? [...tax.topics] : [];
-      if (!topics.includes(key)) topics.push(key);
+      if (needLang && it.language !== lang) continue;
 
-      const topic_labels: Record<string, TopicLabel> =
-        tax.topic_labels && typeof tax.topic_labels === 'object'
-          ? { ...(tax.topic_labels as Record<string, TopicLabel>) }
-          : {};
+      const tset = topicSetById.get(it.id) ?? new Set<string>();
 
-      const existing = topic_labels[key] ?? {};
-      topic_labels[key] = {
-        ...existing,
-        ...(newTopicEn.trim() ? { en: newTopicEn.trim() } : {}),
-        ...(newTopicFr.trim() ? { fr: newTopicFr.trim() } : {}),
-      };
+      if (needKingKlown) {
+        const hasKK = tset.has('king_klown');
+        if (kingKlown === 'only' && !hasKK) continue;
+        if (kingKlown === 'exclude' && hasKK) continue;
+      }
 
-      return {
-        ...prev,
-        taxonomies: {
-          ...tax,
-          topics: topics.sort((a, b) => a.localeCompare(b)),
-          topic_labels,
-          languages: Array.isArray(tax.languages) ? tax.languages : ['en', 'fr'],
-        },
-      };
-    });
+      if (needTopics) {
+        let ok = true;
+        for (let j = 0; j < requiredTopics.length; j++) {
+          if (!tset.has(requiredTopics[j])) {
+            ok = false;
+            break;
+          }
+        }
+        if (!ok) continue;
+      }
 
-    setNewTopicKey('');
-    setNewTopicEn('');
-    setNewTopicFr('');
-  }
+      out.push(it);
+    }
 
-  const canExport = !!draft;
+    return out;
+  }, [catalog.items, lang, kingKlown, selectedTopics, topicSetById]);
 
   return (
-    <main className="max-w-6xl mx-auto px-6 py-10 not-prose">
-      <div className="flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <h1 className="text-3xl font-bold text-slate-900">Catalog Editor</h1>
-          <p className="text-slate-500 mt-2">
-            Edit topics per link. Export JSON and replace <code>public/inventory.catalog.json</code>.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap gap-2 items-center">
-          <div className="flex gap-2">
-            <button
-              className={`px-3 py-2 rounded-lg border ${
-                uiLang === 'en'
-                  ? 'bg-slate-900 text-white border-slate-900'
-                  : 'border-slate-200 hover:bg-slate-50'
-              }`}
-              type="button"
-              onClick={() => setUiLang('en')}
-            >
-              Labels EN
-            </button>
-            <button
-              className={`px-3 py-2 rounded-lg border ${
-                uiLang === 'fr'
-                  ? 'bg-slate-900 text-white border-slate-900'
-                  : 'border-slate-200 hover:bg-slate-50'
-              }`}
-              type="button"
-              onClick={() => setUiLang('fr')}
-            >
-              Étiquettes FR
-            </button>
-          </div>
-
-          <button
-            className="px-3 py-2 rounded-lg border border-slate-200 hover:bg-slate-50"
-            type="button"
-            onClick={() => original && setDraft(cloneCatalog(original))}
-            disabled={!original}
-          >
-            Reset
-          </button>
-
-          <button
-            className="px-3 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800"
-            type="button"
-            onClick={() => {
-              if (!draft) return;
-              downloadJson('inventory.catalog.json', { ...draft, generatedAt: new Date().toISOString() });
-            }}
-            disabled={!canExport}
-          >
-            Download JSON
-          </button>
-        </div>
-      </div>
-
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-[360px_1fr] gap-6">
-        {/* LEFT: topic palette */}
-        <aside className="rounded-xl border border-slate-200 p-4">
-          <div className="flex items-center justify-between gap-2">
-            <h2 className="font-semibold text-slate-900">Topics</h2>
-            <span className="text-xs text-slate-500">{allTopics.length}</span>
-          </div>
-
-          <input
-            value={topicQ}
-            onChange={(e) => setTopicQ(e.target.value)}
-            placeholder={uiLang === 'fr' ? 'Filtrer…' : 'Filter…'}
-            className="mt-3 w-full px-3 py-2 rounded-lg border border-slate-200"
-          />
-
-          {/* Add topic to taxonomy */}
-          <div className="mt-4 space-y-2">
-            <input
-              value={newTopicKey}
-              onChange={(e) => setNewTopicKey(e.target.value)}
-              placeholder="topic_key (e.g. social_cohesion)"
-              className="w-full px-3 py-2 rounded-lg border border-slate-200"
-            />
-            <div className="grid grid-cols-2 gap-2">
-              <input
-                value={newTopicEn}
-                onChange={(e) => setNewTopicEn(e.target.value)}
-                placeholder="Label EN"
-                className="px-3 py-2 rounded-lg border border-slate-200"
-              />
-              <input
-                value={newTopicFr}
-                onChange={(e) => setNewTopicFr(e.target.value)}
-                placeholder="Label FR"
-                className="px-3 py-2 rounded-lg border border-slate-200"
-              />
+    <main className="max-w-5xl mx-auto px-6 py-12">
+      <div className="mb-12 border-b border-gray-200 pb-8">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <div className="p-3 bg-amber-100 rounded-2xl">
+              <PlayCircle className="w-10 h-10 text-amber-600" />
             </div>
-            <button
-              type="button"
-              onClick={addTopicToTaxonomy}
-              className="w-full px-3 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800"
-              disabled={!newTopicKey.trim()}
-            >
-              Add topic to taxonomy
-            </button>
+            <div>
+              <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900">Play</h1>
+              <p className="text-slate-500 mt-1">
+                Filters ({filtered.length} results){updatedAtLabel}
+              </p>
+            </div>
           </div>
 
-          <div className="mt-4 max-h-[55vh] overflow-auto space-y-1">
-            {visibleTopics.map((t) => (
-              <div key={t} className="text-sm text-slate-700 px-2 py-1 rounded hover:bg-slate-50">
-                <div className="font-medium">{topicLabel(t)}</div>
-                <div className="text-xs text-slate-400">{t}</div>
-              </div>
+          {/* UI language toggle (labels) */}
+          <div className="flex flex-wrap gap-2 items-center">
+            {UI_LANG_OPTIONS.map((opt) => (
+              <Pill key={opt.key} active={uiLang === opt.key} onClick={() => setUiLang(opt.key)}>
+                {opt.icon ?? null}
+                {opt.label}
+              </Pill>
             ))}
           </div>
-        </aside>
-
-        {/* RIGHT: items list */}
-        <section className="rounded-xl border border-slate-200 p-4">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <h2 className="font-semibold text-slate-900">Links</h2>
-            <input
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="Search title / url / topics…"
-              className="w-full md:w-[360px] px-3 py-2 rounded-lg border border-slate-200"
-            />
-          </div>
-
-          <div className="mt-4 space-y-4">
-            {filteredItems.map((it) => {
-              const tset = topicSetById.get(it.id) ?? new Set<string>();
-              const service = getService(it.url, it.type);
-
-              return (
-                <div key={it.id} className="rounded-xl border border-slate-200 p-4">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="min-w-0">
-                      <div className="flex items-center gap-2 min-w-0">
-                        <ServiceIcon service={service} />
-                        <div className="font-semibold text-slate-900 truncate">{it.title}</div>
-                        <LangPill lang={it.language} />
-                      </div>
-
-                      {/* ✅ no “underline everywhere”: default is no-underline, only underline on hover */}
-                      <a
-                        className="mt-1 inline-block text-sm text-slate-600 no-underline hover:underline underline-offset-2 break-all"
-                        href={it.url}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {it.url}
-                      </a>
-
-                      <div className="text-xs text-slate-500 mt-1">{it.type}</div>
-                    </div>
-                  </div>
-
-                  <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-                    {visibleTopics.map((topicKey) => (
-                      <label key={topicKey} className="flex items-center gap-2 text-sm text-slate-700">
-                        <input
-                          type="checkbox"
-                          checked={tset.has(topicKey)}
-                          onChange={(e) => setTopic(it.id, topicKey, e.target.checked)}
-                        />
-                        <span className="truncate">{topicLabel(topicKey)}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-
-            {!filteredItems.length ? <div className="text-sm text-slate-500">No results.</div> : null}
-          </div>
-        </section>
+        </div>
       </div>
+
+      <section className="space-y-6">
+        {/* Main: content language */}
+        <div className="flex flex-wrap gap-2 items-center">
+          <span className="text-sm font-bold uppercase tracking-widest text-slate-600 mr-2">Language</span>
+          {LANG_OPTIONS.map((opt) => (
+            <Pill key={opt.key} active={lang === opt.key} onClick={() => setLang(opt.key)}>
+              {opt.icon ?? null}
+              {opt.label}
+            </Pill>
+          ))}
+        </div>
+
+        {/* Main: King Klown */}
+        <div className="flex flex-wrap gap-2 items-center">
+          <span className="text-sm font-bold uppercase tracking-widest text-slate-600 mr-2">King Klown mythos</span>
+          {KINGKLOWN_OPTIONS.map((opt) => (
+            <Pill key={opt.key} active={kingKlown === opt.key} onClick={() => setKingKlown(opt.key)}>
+              {opt.label}
+            </Pill>
+          ))}
+        </div>
+
+        {/* Dynamic topics */}
+        <div className="rounded-xl border border-slate-200 p-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="text-sm font-bold uppercase tracking-widest text-slate-600">
+              Topics
+              <span className="ml-2 text-xs font-normal text-slate-400">
+                ({selectedTopics.length} selected / {allTopics.length} total)
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <input
+                value={topicSearch}
+                onChange={(e) => setTopicSearch(e.target.value)}
+                placeholder={uiLang === 'fr' ? 'Rechercher…' : 'Search…'}
+                className="px-3 py-2 rounded-lg border border-slate-200 text-sm"
+              />
+              <button
+                type="button"
+                onClick={clearTopics}
+                className="px-3 py-2 rounded-lg border border-slate-200 text-sm hover:bg-slate-50"
+                disabled={selectedTopics.length === 0}
+              >
+                {uiLang === 'fr' ? 'Effacer' : 'Clear'}
+              </button>
+            </div>
+          </div>
+
+          <div className="mt-3 flex flex-wrap gap-2">
+            {visibleTopics.map((t) => (
+              <Pill key={t} active={selectedTopics.includes(t)} onClick={() => toggleTopic(t)}>
+                {topicLabel(t)}
+              </Pill>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Results */}
+      <section className="mt-10 grid gap-4">
+        {filtered.map((it) => (
+          <ResultCard key={it.id} it={it} />
+        ))}
+      </section>
     </main>
   );
 }
