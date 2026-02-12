@@ -14,6 +14,7 @@ import {
   Layers,
   Cpu,
   Heart,
+  PlayCircle,
   TrendingUp,
   ArrowRight,
   CornerDownLeft,
@@ -53,7 +54,7 @@ const NAV_ITEMS = [
     children: [
       { label: 'Overview', desc: 'Strategic Roadmap', path: '/initiatives' },
       { label: 'Civic Governance', desc: 'The Operating System', path: '/initiatives/civic-governance' },
- //     { label: 'Ukraine Peace Plan', desc: 'Freeze-Vote-Rebuild', path: '/initiatives/ukraine-peace-plan' },
+      // { label: 'Ukraine Peace Plan', desc: 'Freeze-Vote-Rebuild', path: '/initiatives/ukraine-peace-plan' },
     ],
   },
   {
@@ -62,37 +63,45 @@ const NAV_ITEMS = [
     icon: <Cpu className="w-4 h-4" />,
     children: [
       { label: 'Overview', desc: 'The Deep Tech Stack', path: '/technology' },
-      { label: 'Kristal', desc: 'Verifiable semantic file format', path: '/technology/kristal' },	  
+      { label: 'Kristal', desc: 'Verifiable semantic file format', path: '/technology/kristal' },
       { label: 'Architect', desc: 'Generative Output', path: '/technology/architect' },
       { label: 'SenTient', desc: 'Input Processing', path: '/technology/sentient' },
       { label: 'SwarmCraft', desc: 'Narrative Memory', path: '/technology/swarmcraft' },
       { label: 'Ariane', desc: 'UI Graph & Vision', path: '/technology/ariane' },
       { label: 'Âme Artificielle', desc: 'Simulated human personality. An artificial soul', path: '/technology/ame-artificielle' },
       { label: 'VM-Engine', desc: 'Multi-method vote compiler & simulator', path: '/technology/voting-machine' },
-
     ],
   },
 
-// ✅ Kréature with dropdown (keeps the heart icon)
-  {
-    label: 'Kréature',
-    path: '/kreature',
-    icon: <Heart className="w-4 h-4 text-pink-500" />,
-    highlight: true,
-    subtitle: '(Français)',
-    children: [
-      { label: 'Accueil', desc: "Entrée principale", path: '/kreature' },
-      { label: 'Mythos', desc: 'Le récit fondateur', path: '/kreature/mythos' },
-      { label: 'Anatomie', desc: 'La structure', path: '/kreature/anatomie' },
-      { label: 'Rituels', desc: 'La méthode', path: '/kreature/rituels' },
-      { label: 'Parcours', desc: "Portes d'entrée", path: '/kreature/parcours' },
+  // ✅ Kréature with dropdown (keeps the heart icon)
+  {
+    label: 'Kréature',
+    path: '/kreature',
+    icon: <Heart className="w-4 h-4 text-pink-500" />,
+    highlight: true,
+    subtitle: '(Français)',
+    children: [
+      { label: 'Accueil', desc: "Entrée principale", path: '/kreature' },
+      { label: 'Mythos', desc: 'Le récit fondateur', path: '/kreature/mythos' },
+      { label: 'Anatomie', desc: 'La structure', path: '/kreature/anatomie' },
+      { label: 'Rituels', desc: 'La méthode', path: '/kreature/rituels' },
+      { label: 'Parcours', desc: "Portes d'entrée", path: '/kreature/parcours' },
 
-      // Repères
-      { label: 'Glossaire', desc: 'Définitions', path: '/kreature/reperes/glossaire' },
-      { label: 'Pont Technique', desc: 'Métaphore ↔ code', path: '/kreature/reperes/pont-technique' },
+      // Repères
+      { label: 'Glossaire', desc: 'Définitions', path: '/kreature/reperes/glossaire' },
+      { label: 'Pont Technique', desc: 'Métaphore ↔ code', path: '/kreature/reperes/pont-technique' },
       { label: 'FAQ', desc: 'Questions fréquentes', path: '/kreature/reperes/faq' },
-    ],
-  },
+    ],
+  },
+
+  // ✅ Play section beside Kréature (no dropdown, orange/gold play-circle)
+  {
+    label: 'Play',
+    path: '/play',
+    icon: <PlayCircle className="w-4 h-4 text-amber-500" />,
+    accent: 'gold',
+    subtitle: '(EN/FR)',
+  },
 ];
 
 export default function Header() {
@@ -145,12 +154,12 @@ export default function Header() {
     const query = searchQuery.toLowerCase();
     const results: any[] = [];
 
-    NAV_ITEMS.forEach((section) => {
+    NAV_ITEMS.forEach((section: any) => {
       if (section.label.toLowerCase().includes(query)) {
         results.push({ ...section, type: 'Section' });
       }
       if (section.children) {
-        section.children.forEach((child) => {
+        section.children.forEach((child: any) => {
           if (child.label.toLowerCase().includes(query) || child.desc.toLowerCase().includes(query)) {
             results.push({ ...child, parent: section.label, type: 'Page' });
           }
@@ -189,7 +198,7 @@ export default function Header() {
 
           {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-8">
-            {NAV_ITEMS.map((item) => (
+            {NAV_ITEMS.map((item: any) => (
               <div
                 key={item.label}
                 className="relative group"
@@ -199,7 +208,11 @@ export default function Header() {
                 <Link
                   href={item.path}
                   className={`flex flex-col items-center text-sm font-medium transition-colors py-2 group ${
-                    item.highlight ? 'text-pink-600 hover:text-pink-700' : 'text-slate-600 hover:text-slate-900'
+                    item.accent === 'gold'
+                      ? 'text-amber-600 hover:text-amber-700'
+                      : item.highlight
+                        ? 'text-pink-600 hover:text-pink-700'
+                        : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
                   <div className="flex items-center gap-1.5">
@@ -214,7 +227,7 @@ export default function Header() {
                 {item.children && activeDropdown === item.label && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-64">
                     <div className="bg-white rounded-xl border border-slate-100 shadow-xl p-2 overflow-hidden ring-1 ring-slate-900/5">
-                      {item.children.map((sub) => (
+                      {item.children.map((sub: any) => (
                         <Link
                           key={sub.path}
                           href={sub.path}
@@ -263,12 +276,16 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 top-[72px] bg-white border-t border-slate-100 p-6 overflow-y-auto pb-20 animate-in slide-in-from-top-2 duration-200 z-40">
             <div className="flex flex-col space-y-6">
-              {NAV_ITEMS.map((item) => (
+              {NAV_ITEMS.map((item: any) => (
                 <div key={item.label}>
                   <Link
                     href={item.path}
                     className={`flex items-center gap-3 text-lg font-bold mb-2 ${
-                      item.highlight ? 'text-pink-600' : 'text-slate-900'
+                      item.accent === 'gold'
+                        ? 'text-amber-600'
+                        : item.highlight
+                          ? 'text-pink-600'
+                          : 'text-slate-900'
                     }`}
                   >
                     <div className="flex flex-col">
@@ -281,7 +298,7 @@ export default function Header() {
 
                   {item.children && (
                     <div className="pl-7 space-y-3 border-l-2 border-slate-100 ml-2">
-                      {item.children.map((sub) => (
+                      {item.children.map((sub: any) => (
                         <Link
                           key={sub.path}
                           href={sub.path}
