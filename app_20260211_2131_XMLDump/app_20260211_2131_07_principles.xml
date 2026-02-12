@@ -1,0 +1,2039 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<volume>
+  <meta>
+    <generated_at>2026-02-11T21:31:18.494313</generated_at>
+    <title>FOLDER: principles</title>
+    <root_dir>C:\MyCode\OkidoWiki\HomePage\app</root_dir>
+    <file_count>16</file_count>
+    <total_size_mb>0.0774</total_size_mb>
+    <home>Index.xml</home>
+    <next_volume>app_20260211_2131_08_research.xml</next_volume>
+    <prev_volume>app_20260211_2131_06_infrastructures.xml</prev_volume>
+    <prev_title>infrastructures</prev_title>
+    <next_title>research</next_title>
+    <short_title>principles</short_title>
+  </meta>
+  <file_index>
+    <entry path="principles/civic-principles-ethics/faq/page.js" kind="source" size="3369" lines="80" />
+    <entry path="principles/civic-principles-ethics/institutions/page.js" kind="source" size="4930" lines="132" />
+    <entry path="principles/civic-principles-ethics/page.js" kind="source" size="4452" lines="109" />
+    <entry path="principles/civic-principles-ethics/principles/page.js" kind="source" size="3881" lines="101" />
+    <entry path="principles/civic-principles-ethics/rights-and-duties/page.js" kind="source" size="5037" lines="132" />
+    <entry path="principles/civic-principles-ethics/transparency-and-accountability/page.js" kind="source" size="5114" lines="132" />
+    <entry path="principles/cosmic-etherism/faq/page.js" kind="source" size="3779" lines="93" />
+    <entry path="principles/cosmic-etherism/methods/page.js" kind="source" size="5142" lines="129" />
+    <entry path="principles/cosmic-etherism/page.js" kind="source" size="6288" lines="155" />
+    <entry path="principles/cosmic-etherism/practices/page.js" kind="source" size="4979" lines="123" />
+    <entry path="principles/cosmic-etherism/principles/page.js" kind="source" size="3289" lines="84" />
+    <entry path="principles/cosmic-etherism/symbols/pi/page.js" kind="source" size="5097" lines="115" />
+    <entry path="principles/glossary/page.js" kind="source" size="4716" lines="117" />
+    <entry path="principles/logos/page.tsx" kind="source" size="9196" lines="174" />
+    <entry path="principles/map/page.js" kind="source" size="3814" lines="94" />
+    <entry path="principles/page.js" kind="source" size="8106" lines="186" />
+  </file_index>
+  <files>
+    <file path="principles/civic-principles-ethics/faq/page.js" size="3369" lines="80" kind="source">
+// app\principles\civic-principles-ethics\faq\page.js
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Civic Principles &amp; Ethics – FAQ',
+  description: 'Common questions and scope boundaries for the Civic Principles &amp; Ethics domain.',
+};
+
+const FAQ = [
+  {
+    q: 'What is the goal of the Civic Principles &amp; Ethics domain?',
+    a: 'To define civic values and institutional design principles that protect dignity, rights, and the public good: legitimacy, rule of law, accountability, transparency, and harm reduction.',
+  },
+  {
+    q: 'Is this a partisan political platform?',
+    a: 'No. It is an ethical and institutional framework. It can be applied across parties and ideologies, and it is designed to be compatible with pluralism.',
+  },
+  {
+    q: 'Does it require any spiritual or symbolic belief system?',
+    a: 'No. It is independent from Cosmic Etherism and Pi symbolism.',
+  },
+  {
+    q: 'How do you balance rights and public safety?',
+    a: 'Use proportionality and due process: protect core rights, prefer the least coercive effective means, and require transparent justification and independent oversight.',
+  },
+  {
+    q: 'What does “transparency by default” mean in practice?',
+    a: 'Publish rules, decisions, rationales, budgets, and outcomes in plain language, with privacy-preserving redactions and clear exceptions that are time-limited and audited.',
+  },
+  {
+    q: 'What prevents corruption and abuse of power?',
+    a: 'Defense in depth: conflict-of-interest rules, open procurement, audit trails, independent oversight with real power, whistleblower protections, and enforceable consequences.',
+  },
+  {
+    q: 'What is the relationship to Âme artificielle?',
+    a: 'They overlap in governance: oversight, accountability, transparency, and rights protection. Âme artificielle adds technical controls and evaluation methods specific to AI systems.',
+  },
+  {
+    q: 'What is the relationship to the King Klown fiction universe?',
+    a: 'None required. Fiction may explore themes, but civic principles are written to stand alone as civic ethics.',
+  },
+];
+
+export default function CivicFaqPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Civic Principles &amp; Ethics FAQ&lt;/h1&gt;
+
+      &lt;div className="space-y-4"&gt;
+        {FAQ.map((item) =&gt; (
+          &lt;div key={item.q} className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h2 className="text-lg font-bold mb-2"&gt;{item.q}&lt;/h2&gt;
+            &lt;p className="text-gray-700"&gt;{item.a}&lt;/p&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;a
+          href="/principles/civic-principles-ethics"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Civic Domain
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/civic-principles-ethics/principles"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Civic Principles
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/civic-principles-ethics/institutions/page.js" size="4930" lines="132" kind="source">
+// app\principles\civic-principles-ethics\institutions\page.js
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Civic Principles &amp; Ethics – Institutions',
+  description: 'Design principles for civic institutions: integrity, service, checks and balances.',
+};
+
+const SECTIONS = [
+  {
+    title: '1. Service-first design',
+    body: 'Institutions exist to serve the public. Prioritize measurable public outcomes over internal convenience or prestige.',
+    bullets: [
+      'Define the public purpose explicitly.',
+      'Measure outcomes that matter (wellbeing, safety, access, fairness).',
+      'Remove incentives that reward bureaucracy over results.',
+    ],
+  },
+  {
+    title: '2. Checks and balances',
+    body: 'Distribute power to prevent capture and abuse. Oversight must be independent and empowered.',
+    bullets: [
+      'Separate roles (execute, audit, adjudicate).',
+      'Require multi-party approval for high-impact decisions.',
+      'Ensure independent review and meaningful appeal paths.',
+    ],
+  },
+  {
+    title: '3. Integrity and anti-corruption',
+    body: 'Corruption destroys legitimacy. Build systems that reduce temptation and raise the cost of abuse.',
+    bullets: [
+      'Clear conflict-of-interest rules and disclosure.',
+      'Procurement transparency and competitive processes.',
+      'Whistleblower protections and strong audit trails.',
+    ],
+  },
+  {
+    title: '4. Transparency by default',
+    body: 'Public power must be inspectable. Secrecy is exceptional, justified, and time-limited.',
+    bullets: [
+      'Open records and public decision rationales.',
+      'Accessible reporting and plain-language summaries.',
+      'Clear rules for classified or private information with audits.',
+    ],
+  },
+  {
+    title: '5. Due process and equal access',
+    body: 'People must have predictable rules, fair hearings, and equal access to remedies.',
+    bullets: [
+      'Publish rules and procedures.',
+      'Provide notice, reasons, and appeal mechanisms.',
+      'Reduce barriers: language, disability access, affordability.',
+    ],
+  },
+  {
+    title: '6. Competence and professionalism',
+    body: 'Institutions must be staffed and trained to do the job well. Competence is an ethical requirement.',
+    bullets: [
+      'Merit-based hiring and transparent promotion.',
+      'Continuous training and clear standards.',
+      'Accountability for negligence and preventable failure.',
+    ],
+  },
+  {
+    title: '7. Resilience and continuity',
+    body: 'Systems should handle shocks without collapsing or concentrating power in permanent “emergency mode.”',
+    bullets: [
+      'Defined emergency powers with sunset clauses.',
+      'Redundancy for critical services.',
+      'Post-incident reviews and corrective action.',
+    ],
+  },
+  {
+    title: '8. Participation and feedback loops',
+    body: 'Legitimacy improves when people can participate, be heard, and see corrections happen.',
+    bullets: [
+      'Public consultation with real impact.',
+      'Complaint channels with response guarantees.',
+      'Publish what changed and why.',
+    ],
+  },
+];
+
+export default function CivicInstitutionsPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Institutions&lt;/h1&gt;
+
+      &lt;p className="text-gray-700 mb-8"&gt;
+        These principles describe how civic institutions should be designed and operated to remain
+        legitimate, effective, and resistant to abuse.
+      &lt;/p&gt;
+
+      &lt;div className="space-y-4"&gt;
+        {SECTIONS.map((s) =&gt; (
+          &lt;div key={s.title} className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h2 className="text-lg font-bold mb-2"&gt;{s.title}&lt;/h2&gt;
+            &lt;p className="text-gray-700 mb-3"&gt;{s.body}&lt;/p&gt;
+            {s.bullets?.length ? (
+              &lt;ul className="list-disc pl-6 space-y-1 text-gray-700"&gt;
+                {s.bullets.map((b) =&gt; (
+                  &lt;li key={b}&gt;{b}&lt;/li&gt;
+                ))}
+              &lt;/ul&gt;
+            ) : null}
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;a
+          href="/principles/civic-principles-ethics"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Civic Domain
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/civic-principles-ethics/transparency-and-accountability"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Transparency &amp; Accountability
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/civic-principles-ethics/page.js" size="4452" lines="109" kind="source">
+// app/principles/civic-principles-ethics/page.js
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Civic Principles &amp; Ethics – Principles',
+  description:
+    'A practical civic ethics domain: legitimacy, rights and duties, institutional integrity, transparency, and accountability.',
+};
+
+export default function CivicPrinciplesEthicsPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Civic Principles &amp; Ethics&lt;/h1&gt;
+
+      &lt;p className="text-xl text-gray-600 mb-10"&gt;
+        A practical domain for civic life: how power is made legitimate, how rights are protected,
+        how duties are defined, and how institutions stay accountable.
+      &lt;/p&gt;
+
+      &lt;div className="grid gap-6 md:grid-cols-2 mb-10"&gt;
+        &lt;a
+          href="/principles/civic-principles-ethics/principles"
+          className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          &lt;h2 className="text-lg font-bold mb-2"&gt;Principles&lt;/h2&gt;
+          &lt;p className="text-gray-700"&gt;
+            The core civic values: legitimacy, fairness, harm reduction, and constraints on power.
+          &lt;/p&gt;
+        &lt;/a&gt;
+
+        &lt;a
+          href="/principles/civic-principles-ethics/institutions"
+          className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          &lt;h2 className="text-lg font-bold mb-2"&gt;Institutions&lt;/h2&gt;
+          &lt;p className="text-gray-700"&gt;
+            How systems should be structured: checks and balances, service orientation, integrity,
+            and resilience against capture.
+          &lt;/p&gt;
+        &lt;/a&gt;
+
+        &lt;a
+          href="/principles/civic-principles-ethics/rights-and-duties"
+          className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          &lt;h2 className="text-lg font-bold mb-2"&gt;Rights &amp; Duties&lt;/h2&gt;
+          &lt;p className="text-gray-700"&gt;
+            Rights, responsibilities, and the boundaries that protect dignity, freedom, and safety.
+          &lt;/p&gt;
+        &lt;/a&gt;
+
+        &lt;a
+          href="/principles/civic-principles-ethics/transparency-and-accountability"
+          className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          &lt;h2 className="text-lg font-bold mb-2"&gt;Transparency &amp; Accountability&lt;/h2&gt;
+          &lt;p className="text-gray-700"&gt;
+            Verifiability, open records, independent oversight, anti-corruption, and enforceable
+            consequences.
+          &lt;/p&gt;
+        &lt;/a&gt;
+
+        &lt;a
+          href="/principles/civic-principles-ethics/faq"
+          className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm md:col-span-2"
+        &gt;
+          &lt;h2 className="text-lg font-bold mb-2"&gt;FAQ&lt;/h2&gt;
+          &lt;p className="text-gray-700"&gt;
+            Definitions, scope boundaries, and common questions about this civic domain.
+          &lt;/p&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+
+      &lt;div className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+        &lt;h2 className="text-2xl font-bold mb-3 text-primary"&gt;Scope and boundaries&lt;/h2&gt;
+        &lt;ul className="list-disc pl-6 space-y-2 text-gray-700"&gt;
+          &lt;li&gt;
+            This domain covers &lt;strong&gt;civic ethics&lt;/strong&gt; and &lt;strong&gt;institutional design&lt;/strong&gt;:
+            how societies allocate authority, protect rights, define duties, and prevent abuse.
+          &lt;/li&gt;
+          &lt;li&gt;
+            It is designed to be usable across political traditions and belief systems. No spiritual
+            or symbolic worldview is required.
+          &lt;/li&gt;
+          &lt;li&gt;
+            It intersects with &lt;strong&gt;Âme artificielle&lt;/strong&gt; where governance concerns overlap
+            (oversight, transparency, harm reduction), while remaining a distinct domain focused on
+            civic institutions and public legitimacy.
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;a
+          href="/principles"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Principles
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/civic-principles-ethics/principles/page.js" size="3881" lines="101" kind="source">
+// app\principles\civic-principles-ethics\principles\page.js
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Civic Principles &amp; Ethics – Principles',
+  description: 'Core civic values: legitimacy, rights, duties, fairness, and harm reduction.',
+};
+
+const PRINCIPLES = [
+  {
+    title: '1. Human dignity',
+    body: 'Treat every person as intrinsically worthy. Systems must avoid dehumanization, humiliation, and cruelty.',
+  },
+  {
+    title: '2. Legitimacy and consent of the governed',
+    body: 'Power requires justification: fair process, public reasoning, and mechanisms for participation and peaceful change.',
+  },
+  {
+    title: '3. Equal protection and non-discrimination',
+    body: 'Equal protection under the rules. Avoid discriminatory outcomes and ensure remedies when harms occur.',
+  },
+  {
+    title: '4. Rule of law (not rule of people)',
+    body: 'Rules must be public, stable, and consistently applied. Due process and appeal paths are mandatory.',
+  },
+  {
+    title: '5. Rights with duties',
+    body: 'Rights protect freedom and dignity; duties protect the commons. Balance liberty with responsibility.',
+  },
+  {
+    title: '6. Harm reduction',
+    body: 'Prefer policies and institutions that reduce suffering and prevent avoidable harm, especially for the vulnerable.',
+  },
+  {
+    title: '7. Transparency as default',
+    body: 'Public power must be inspectable. Secret governance is a last resort and must be tightly constrained.',
+  },
+  {
+    title: '8. Accountability with consequences',
+    body: 'There must be traceable responsibility for decisions, and real consequences for abuse, corruption, and negligence.',
+  },
+  {
+    title: '9. Proportionality',
+    body: 'Interventions must be no more restrictive than necessary. Use the least coercive effective means.',
+  },
+  {
+    title: '10. Checks and balances',
+    body: 'Distribute power to prevent capture and abuse. Independent oversight and separation of functions are required.',
+  },
+  {
+    title: '11. Public service orientation',
+    body: 'Institutions exist to serve the public, not themselves. Measure outcomes that matter, not internal convenience.',
+  },
+  {
+    title: '12. Pluralism and freedom of conscience',
+    body: 'Protect plural belief and expression while maintaining limits against direct harm, coercion, or rights violations.',
+  },
+];
+
+export default function CivicPrinciplesPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Civic Principles&lt;/h1&gt;
+
+      &lt;p className="text-gray-700 mb-8"&gt;
+        These principles define the civic ethic: how power should be justified, constrained, and
+        exercised in ways that protect dignity, rights, and the public good.
+      &lt;/p&gt;
+
+      &lt;div className="space-y-4"&gt;
+        {PRINCIPLES.map((p) =&gt; (
+          &lt;div key={p.title} className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h2 className="text-lg font-bold mb-2"&gt;{p.title}&lt;/h2&gt;
+            &lt;p className="text-gray-700"&gt;{p.body}&lt;/p&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;a
+          href="/principles/civic-principles-ethics"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Civic Domain
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/civic-principles-ethics/rights-and-duties"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Rights &amp; Duties
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/civic-principles-ethics/rights-and-duties/page.js" size="5037" lines="132" kind="source">
+// app\principles\civic-principles-ethics\rights-and-duties\page.js
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Civic Principles &amp; Ethics – Rights &amp; Duties',
+  description: 'Rights that protect dignity and freedom, and duties that protect the commons.',
+};
+
+const RIGHTS = [
+  {
+    title: '1. Right to dignity and bodily autonomy',
+    body: 'People must be protected from coercion, abuse, and degrading treatment. Bodily autonomy is fundamental.',
+  },
+  {
+    title: '2. Right to due process',
+    body: 'No punishment or deprivation without fair procedure: notice, reasons, hearing, and appeal.',
+  },
+  {
+    title: '3. Right to equal protection',
+    body: 'Rules must apply consistently, with remedies for discriminatory harm and unfair treatment.',
+  },
+  {
+    title: '4. Right to freedom of conscience and belief',
+    body: 'People may hold and change beliefs without coercion, while respecting boundaries that prevent direct harm to others.',
+  },
+  {
+    title: '5. Right to expression and information',
+    body: 'Protect speech and access to information, balanced with limits against direct incitement, targeted harassment, and rights violations.',
+  },
+  {
+    title: '6. Right to privacy',
+    body: 'Personal data and intimate life deserve protection. Surveillance must be constrained, justified, and accountable.',
+  },
+  {
+    title: '7. Right to participation',
+    body: 'People have meaningful avenues to influence civic decisions and to contest power peacefully.',
+  },
+];
+
+const DUTIES = [
+  {
+    title: '1. Duty of non-harm',
+    body: 'Do not violate others’ rights. Avoid cruelty, coercion, and preventable harm.',
+  },
+  {
+    title: '2. Duty to uphold the commons',
+    body: 'Support shared infrastructure and public goods: environments, institutions, and basic civic systems.',
+  },
+  {
+    title: '3. Duty of honesty in public life',
+    body: 'Avoid fraud, corruption, and manipulation; support transparency and truthful public discourse.',
+  },
+  {
+    title: '4. Duty to respect pluralism',
+    body: 'Respect others’ conscience and identity. Disagree without dehumanization or persecution.',
+  },
+  {
+    title: '5. Duty to participate (as able)',
+    body: 'Contribute to civic life through voting, service, community care, oversight, and constructive engagement.',
+  },
+  {
+    title: '6. Duty of proportional response',
+    body: 'Use the least coercive effective means; avoid escalation and collective punishment.',
+  },
+];
+
+export default function RightsAndDutiesPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Rights &amp; Duties&lt;/h1&gt;
+
+      &lt;p className="text-gray-700 mb-8"&gt;
+        Rights protect dignity and freedom. Duties protect the commons and ensure that liberty does
+        not become domination.
+      &lt;/p&gt;
+
+      &lt;section className="mb-10"&gt;
+        &lt;h2 className="text-2xl font-bold mb-4 text-primary"&gt;Core rights&lt;/h2&gt;
+        &lt;div className="space-y-4"&gt;
+          {RIGHTS.map((r) =&gt; (
+            &lt;div key={r.title} className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+              &lt;h3 className="text-lg font-bold mb-2"&gt;{r.title}&lt;/h3&gt;
+              &lt;p className="text-gray-700"&gt;{r.body}&lt;/p&gt;
+            &lt;/div&gt;
+          ))}
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section className="mb-10"&gt;
+        &lt;h2 className="text-2xl font-bold mb-4 text-primary"&gt;Core duties&lt;/h2&gt;
+        &lt;div className="space-y-4"&gt;
+          {DUTIES.map((d) =&gt; (
+            &lt;div key={d.title} className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+              &lt;h3 className="text-lg font-bold mb-2"&gt;{d.title}&lt;/h3&gt;
+              &lt;p className="text-gray-700"&gt;{d.body}&lt;/p&gt;
+            &lt;/div&gt;
+          ))}
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;div className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+        &lt;h2 className="text-2xl font-bold mb-3 text-primary"&gt;Balancing rule&lt;/h2&gt;
+        &lt;p className="text-gray-700"&gt;
+          When rights conflict, prefer solutions that preserve dignity, minimize coercion, and use
+          proportional measures. The goal is a stable civic order where freedom is real for everyone,
+          not only the powerful.
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;a
+          href="/principles/civic-principles-ethics"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Civic Domain
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/civic-principles-ethics/principles"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Civic Principles
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/civic-principles-ethics/transparency-and-accountability/page.js" size="5114" lines="132" kind="source">
+// app\principles\civic-principles-ethics\transparency-and-accountability\page.js
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Civic Principles &amp; Ethics – Transparency &amp; Accountability',
+  description: 'Verifiability, open records, oversight, anti-corruption, and enforceable consequences.',
+};
+
+const SECTIONS = [
+  {
+    title: '1. Transparency by default',
+    body: 'Public power must be inspectable. Secrecy is exceptional, justified, and time-limited.',
+    bullets: [
+      'Publish rules, decisions, and rationales in plain language.',
+      'Default to open data and open records with privacy redactions.',
+      'Time-limit classified decisions and require periodic review.',
+    ],
+  },
+  {
+    title: '2. Verifiability and audit trails',
+    body: 'Claims and decisions should be checkable. Logging and recordkeeping are civic infrastructure.',
+    bullets: [
+      'Maintain immutable audit logs for critical actions.',
+      'Record who decided what, when, and under which authority.',
+      'Enable independent audit access with strong safeguards.',
+    ],
+  },
+  {
+    title: '3. Oversight with real power',
+    body: 'Oversight bodies must have authority, independence, and resources—otherwise they are performative.',
+    bullets: [
+      'Independent inspector/auditor functions.',
+      'Subpoena-like powers for records and testimony where appropriate.',
+      'Protection from political retaliation and capture.',
+    ],
+  },
+  {
+    title: '4. Accountability with consequences',
+    body: 'Abuse and negligence must lead to predictable consequences, not impunity.',
+    bullets: [
+      'Clear lines of responsibility and named owners.',
+      'Graduated consequences: correction → sanctions → removal → prosecution (as applicable).',
+      'No “too big to punish” exceptions.',
+    ],
+  },
+  {
+    title: '5. Anti-corruption by design',
+    body: 'Reduce temptation and increase detection. Make corruption expensive and risky.',
+    bullets: [
+      'Conflict-of-interest disclosures and recusal rules.',
+      'Transparent procurement and contracting.',
+      'Whistleblower protections and secure reporting channels.',
+    ],
+  },
+  {
+    title: '6. Public explanation duties',
+    body: 'When power acts, it owes reasons. Public justification is a core legitimacy mechanism.',
+    bullets: [
+      'Explain goals, tradeoffs, and constraints.',
+      'Publish what evidence was used and what was rejected.',
+      'Document uncertainty and why action was still taken.',
+    ],
+  },
+  {
+    title: '7. Privacy-preserving transparency',
+    body: 'Transparency must not become surveillance. Protect individuals while opening institutions.',
+    bullets: [
+      'Redact personal identifiers; publish aggregates where possible.',
+      'Limit data retention and access to sensitive records.',
+      'Require warrants/authorizations for intrusive investigation.',
+    ],
+  },
+  {
+    title: '8. Remedies and repair',
+    body: 'When institutions harm people, there must be accessible repair mechanisms.',
+    bullets: [
+      'Fast complaint handling with response guarantees.',
+      'Compensation and restoration where appropriate.',
+      'Policy correction and systemic fixes, not only individual settlements.',
+    ],
+  },
+];
+
+export default function TransparencyAccountabilityPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Transparency &amp; Accountability&lt;/h1&gt;
+
+      &lt;p className="text-gray-700 mb-8"&gt;
+        Transparency makes public power inspectable. Accountability ensures that inspection has
+        consequences. Together they reduce corruption, increase legitimacy, and improve outcomes.
+      &lt;/p&gt;
+
+      &lt;div className="space-y-4"&gt;
+        {SECTIONS.map((s) =&gt; (
+          &lt;div key={s.title} className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h2 className="text-lg font-bold mb-2"&gt;{s.title}&lt;/h2&gt;
+            &lt;p className="text-gray-700 mb-3"&gt;{s.body}&lt;/p&gt;
+            {s.bullets?.length ? (
+              &lt;ul className="list-disc pl-6 space-y-1 text-gray-700"&gt;
+                {s.bullets.map((b) =&gt; (
+                  &lt;li key={b}&gt;{b}&lt;/li&gt;
+                ))}
+              &lt;/ul&gt;
+            ) : null}
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;a
+          href="/principles/civic-principles-ethics"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Civic Domain
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/civic-principles-ethics/institutions"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Institutions
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/cosmic-etherism/faq/page.js" size="3779" lines="93" kind="source">
+// app\principles\cosmic-etherism\faq\page.js
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Cosmic Etherism – FAQ',
+  description: 'Scope boundaries and common questions about Cosmic Etherism (optional).',
+};
+
+const FAQ = [
+  {
+    q: 'Is Cosmic Etherism required for any other initiative?',
+    a: 'No. Believing and/or understanding Cosmic Etherism and Pi symbolism is 100% optional and fully separated from every other initiative.',
+  },
+  {
+    q: 'What is the only exception to that separation?',
+    a: 'Âme artificielle and its use as a fiction framework for staging King Klown in the books.',
+  },
+  {
+    q: 'Is this a religion?',
+    a: 'It can be approached as a personal spiritual-philosophical lens, but it does not require membership, ritual compliance, or mandatory belief.',
+  },
+  {
+    q: 'Is Pi being presented as a scientific proof of anything?',
+    a: 'No. Pi is used as a symbolic anchor inside this optional worldview. Symbol is not scientific authority.',
+  },
+  {
+    q: 'Can I disagree or ignore this entirely and still participate in civic or AI work?',
+    a: 'Yes. You can support, use, contribute to, or critique any other domain without adopting, endorsing, or reading this section.',
+  },
+  {
+    q: 'What values does it emphasize?',
+    a: 'Universal love, benevolence, harmony, complementarity of perspectives, pluralism, revisability, and faith in knowledge-seeking.',
+  },
+  {
+    q: 'Does this conflict with science?',
+    a: 'It does not claim to replace science. It treats inquiry, evidence, and revisability as central, and keeps symbolism explicitly symbolic.',
+  },
+  {
+    q: 'What is a good way to read this section?',
+    a: 'Start with Principles, then Pi Symbolism (if curious), then Methods and Practices. Treat it as optional meaning-making, not obligation.',
+  },
+];
+
+export default function CosmicEtherismFaqPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Cosmic Etherism FAQ&lt;/h1&gt;
+
+      &lt;div className="mb-10 p-5 rounded-lg border border-amber-300 bg-amber-50"&gt;
+        &lt;h2 className="text-xl font-bold mb-2"&gt;Non-negotiable separation&lt;/h2&gt;
+        &lt;p className="text-gray-800"&gt;
+          Cosmic Etherism and Pi symbolism are &lt;strong&gt;100% optional&lt;/strong&gt; and{' '}
+          &lt;strong&gt;fully separated&lt;/strong&gt; from every other initiative (including civic principles
+          and AI-alignment).
+        &lt;/p&gt;
+        &lt;p className="text-gray-800 mt-3"&gt;
+          The &lt;strong&gt;only&lt;/strong&gt; exception is &lt;strong&gt;Âme artificielle&lt;/strong&gt; and its use as a{' '}
+          &lt;strong&gt;fiction framework&lt;/strong&gt; for staging &lt;strong&gt;King Klown&lt;/strong&gt;.
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;div className="space-y-4"&gt;
+        {FAQ.map((item) =&gt; (
+          &lt;div key={item.q} className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h2 className="text-lg font-bold mb-2"&gt;{item.q}&lt;/h2&gt;
+            &lt;p className="text-gray-700"&gt;{item.a}&lt;/p&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;a
+          href="/principles/cosmic-etherism"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Cosmic Etherism
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/cosmic-etherism/symbols/pi"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Pi Symbolism
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/cosmic-etherism/methods/page.js" size="5142" lines="129" kind="source">
+// app\principles\cosmic-etherism\methods\page.js
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Cosmic Etherism – Methods',
+  description: 'How Cosmic Etherism is explored: inquiry, experience, interpretation, and revision (optional).',
+};
+
+const METHODS = [
+  {
+    title: '1. Lucid inquiry',
+    body: 'Seek clarity about what is being claimed: distinguish metaphor, symbol, intuition, and empirical assertion.',
+    bullets: [
+      'Ask: is this a poetic pointer or a testable claim?',
+      'Name assumptions explicitly.',
+      'Prefer plain language before abstraction.',
+    ],
+  },
+  {
+    title: '2. Compassion-first interpretation',
+    body: 'Interpret others charitably. Treat disagreements as opportunities for understanding rather than combat.',
+    bullets: ['Assume good faith unless there is clear evidence otherwise.'],
+  },
+  {
+    title: '3. Multiple modes of knowing',
+    body: 'Use reason, lived experience, intuition, and creative symbolism as complementary lenses (not as coercive authority).',
+    bullets: [
+      'Reason: logic, coherence, consistency checks.',
+      'Experience: what is actually lived and observed.',
+      'Intuition: pattern sense; treated as provisional.',
+      'Symbol: meaning-making; treated as optional.',
+    ],
+  },
+  {
+    title: '4. Revisability loop',
+    body: 'Update beliefs over time. No doctrine is fixed. Treat new evidence and new insight as invitations to revise.',
+    bullets: ['Keep a “what changed my mind” log when useful.'],
+  },
+  {
+    title: '5. Ethical grounding',
+    body: 'Anchor decisions in love, benevolence, and harm reduction—especially when uncertainty is high.',
+    bullets: ['When unsure, default toward minimizing harm and preserving dignity.'],
+  },
+  {
+    title: '6. Coherence checks (internal + external)',
+    body: 'Check internal coherence (no contradictions) and external coherence (does it fit the world as experienced?).',
+    bullets: [
+      'Internal: do the parts fit together?',
+      'External: does it lead to better understanding or better behavior?',
+    ],
+  },
+  {
+    title: '7. Consent and freedom of conscience',
+    body: 'Never pressure belief. This worldview is opt-in, personal, and non-binding.',
+    bullets: ['No “membership tests.” No required agreement.'],
+  },
+  {
+    title: '8. Symbol discipline (Pi as symbol)',
+    body: 'Use symbols to orient meaning, not to smuggle claims. Be explicit about when Pi is symbolic vs mathematical.',
+    bullets: [
+      'State the symbolic intent clearly.',
+      'Avoid implying scientific authority from symbolism.',
+      'Invite interpretation; do not demand it.',
+    ],
+  },
+];
+
+export default function CosmicEtherismMethodsPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Cosmic Etherism Methods&lt;/h1&gt;
+
+      &lt;div className="mb-10 p-5 rounded-lg border border-amber-300 bg-amber-50"&gt;
+        &lt;h2 className="text-xl font-bold mb-2"&gt;Non-negotiable separation&lt;/h2&gt;
+        &lt;p className="text-gray-800"&gt;
+          Cosmic Etherism and Pi symbolism are &lt;strong&gt;100% optional&lt;/strong&gt; and{' '}
+          &lt;strong&gt;fully separated&lt;/strong&gt; from every other initiative (including civic principles
+          and AI-alignment).
+        &lt;/p&gt;
+        &lt;p className="text-gray-800 mt-3"&gt;
+          The &lt;strong&gt;only&lt;/strong&gt; exception is &lt;strong&gt;Âme artificielle&lt;/strong&gt; and its use as a{' '}
+          &lt;strong&gt;fiction framework&lt;/strong&gt; for staging &lt;strong&gt;King Klown&lt;/strong&gt;.
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;p className="text-gray-700 mb-8"&gt;
+        These methods describe how Cosmic Etherism is explored without coercion: a disciplined mix
+        of inquiry, interpretation, and revision, anchored in compassion.
+      &lt;/p&gt;
+
+      &lt;div className="space-y-4"&gt;
+        {METHODS.map((m) =&gt; (
+          &lt;div key={m.title} className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h2 className="text-lg font-bold mb-2"&gt;{m.title}&lt;/h2&gt;
+            &lt;p className="text-gray-700 mb-3"&gt;{m.body}&lt;/p&gt;
+            {m.bullets?.length ? (
+              &lt;ul className="list-disc pl-6 space-y-1 text-gray-700"&gt;
+                {m.bullets.map((b) =&gt; (
+                  &lt;li key={b}&gt;{b}&lt;/li&gt;
+                ))}
+              &lt;/ul&gt;
+            ) : null}
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;a
+          href="/principles/cosmic-etherism"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Cosmic Etherism
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/cosmic-etherism/symbols/pi"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Pi Symbolism
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/cosmic-etherism/page.js" size="6288" lines="155" kind="source">
+// app/principles/cosmic-etherism/page.js
+import Link from 'next/link';
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Cosmic Etherism (Optional) – Pi, Symbolism, and Fiction',
+  description:
+    'A personal philosophical lens (Cosmic Etherism + Pi symbolism). Explicitly optional and kept separate from civic + AI initiatives.',
+};
+
+export default function CosmicEtherismPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Cosmic Etherism&lt;/h1&gt;
+
+      {/* Separation / Scope */}
+      &lt;div className="mb-10 p-5 rounded-lg border border-amber-300 bg-amber-50"&gt;
+        &lt;h2 className="text-xl font-bold mb-2"&gt;Scope boundary (non-negotiable)&lt;/h2&gt;
+
+        &lt;p className="text-gray-800"&gt;
+          This section is &lt;strong&gt;fully optional&lt;/strong&gt;. You can use, support, critique, or
+          contribute to any civic or technical part of the ecosystem without adopting, endorsing, or
+          even reading this worldview.
+        &lt;/p&gt;
+
+        &lt;p className="text-gray-800 mt-3"&gt;
+          It is intentionally &lt;strong&gt;kept separate&lt;/strong&gt; from civic principles and AI alignment
+          work.
+        &lt;/p&gt;
+
+        &lt;p className="text-gray-700 mt-3"&gt;
+          The only connection is narrative: &lt;strong&gt;Âme artificielle&lt;/strong&gt; can be used as a{' '}
+          &lt;strong&gt;fiction framework&lt;/strong&gt; for staging and mythos in my books.
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      {/* Navigation cards */}
+      &lt;div className="grid gap-6 md:grid-cols-2 mb-10"&gt;
+        &lt;Link
+          href="/principles/cosmic-etherism/principles"
+          className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm transition-shadow"
+        &gt;
+          &lt;h2 className="text-lg font-bold mb-2"&gt;Principles&lt;/h2&gt;
+          &lt;p className="text-gray-700"&gt;
+            The basic claims and orientation of Cosmic Etherism (optional worldview guidance).
+          &lt;/p&gt;
+        &lt;/Link&gt;
+
+        &lt;Link
+          href="/principles/cosmic-etherism/methods"
+          className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm transition-shadow"
+        &gt;
+          &lt;h2 className="text-lg font-bold mb-2"&gt;Methods&lt;/h2&gt;
+          &lt;p className="text-gray-700"&gt;
+            How it’s explored: inquiry, experience, interpretation, and revision over time.
+          &lt;/p&gt;
+        &lt;/Link&gt;
+
+        &lt;Link
+          href="/principles/cosmic-etherism/practices"
+          className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm transition-shadow"
+        &gt;
+          &lt;h2 className="text-lg font-bold mb-2"&gt;Practices&lt;/h2&gt;
+          &lt;p className="text-gray-700"&gt;
+            Optional practices: reflection, compassion, harmony-building, and creative symbolism.
+          &lt;/p&gt;
+        &lt;/Link&gt;
+
+        &lt;Link
+          href="/principles/cosmic-etherism/faq"
+          className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm transition-shadow"
+        &gt;
+          &lt;h2 className="text-lg font-bold mb-2"&gt;FAQ&lt;/h2&gt;
+          &lt;p className="text-gray-700"&gt;What this is (and is not), plus common questions.&lt;/p&gt;
+        &lt;/Link&gt;
+      &lt;/div&gt;
+
+      {/* Pi symbolism */}
+      &lt;section className="space-y-4 mb-12"&gt;
+        &lt;h2 className="text-2xl font-bold text-primary"&gt;Pi as a symbolic anchor (optional)&lt;/h2&gt;
+
+        &lt;p className="text-gray-700"&gt;
+          In this worldview, &lt;strong&gt;π (Pi)&lt;/strong&gt; is treated as a symbol of invariant structure:
+          a constant relationship that appears wherever circles appear. The purpose here is
+          interpretive—using a stable mathematical relationship as a metaphor for coherence.
+        &lt;/p&gt;
+
+        &lt;Link className="underline" href="/principles/cosmic-etherism/symbols/pi"&gt;
+          Open Pi symbolism
+        &lt;/Link&gt;
+      &lt;/section&gt;
+
+      {/* Only integration point */}
+      &lt;section className="space-y-4"&gt;
+        &lt;h2 className="text-2xl font-bold text-primary"&gt;
+          The only integration point: Âme artificielle + King Klown (fiction)
+        &lt;/h2&gt;
+
+        &lt;p className="text-gray-700"&gt;
+          Cosmic Etherism and Pi symbolism connect to the broader universe only through{' '}
+          &lt;strong&gt;Âme artificielle&lt;/strong&gt; as a narrative device and philosophical backdrop for{' '}
+          &lt;strong&gt;fiction&lt;/strong&gt;—specifically the staging and mythos of &lt;strong&gt;King Klown&lt;/strong&gt;.
+        &lt;/p&gt;
+
+        &lt;div className="mt-4 p-5 rounded-lg border border-gray-200 bg-white"&gt;
+          &lt;h3 className="text-lg font-bold mb-3"&gt;Related fiction&lt;/h3&gt;
+
+          &lt;ul className="list-disc pl-6 space-y-2"&gt;
+            &lt;li&gt;
+              &lt;a
+                className="underline"
+                href="https://www.amazon.ca/Konvergence-%C3%89cho%C3%AFsme-R%C3%A9jean-McCormick-ebook/dp/B0F1CBRP1L?ref_=ast_author_dp_rw&amp;th=1&amp;psc=1&amp;dib_tag=AUTHOR"
+                target="_blank"
+                rel="noopener noreferrer"
+              &gt;
+                Konvergence – Échoïsme
+              &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a
+                className="underline"
+                href="https://www.amazon.ca/King-Klown-Kronicles-hidden-Manifesto-ebook/dp/B0DZ76L1N3?ref_=ast_author_dp_rw&amp;th=1&amp;psc=1&amp;dib_tag=AUTHOR"
+                target="_blank"
+                rel="noopener noreferrer"
+              &gt;
+                King Klown Kronicles – The hidden Manifesto
+              &lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+
+          &lt;p className="text-gray-600 mt-3"&gt;
+            These links are provided for readers who want narrative context. They do not establish
+            obligations for any other initiative.
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      {/* Footer nav */}
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;Link
+          href="/principles"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Principles
+        &lt;/Link&gt;
+        &lt;Link
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/Link&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/cosmic-etherism/practices/page.js" size="4979" lines="123" kind="source">
+// app\principles\cosmic-etherism\practices\page.js
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Cosmic Etherism – Practices',
+  description: 'Optional practices for reflection, compassion, harmony-building, and symbolic creativity.',
+};
+
+const PRACTICES = [
+  {
+    title: '1. Daily compassion check',
+    body: 'Ask: “Did my actions reduce harm and increase care today?” Keep it small, concrete, and non-performative.',
+    bullets: ['Pick one repair action for tomorrow (apology, help, clarity, boundary).'],
+  },
+  {
+    title: '2. Harmony inventory',
+    body: 'Scan relationships and responsibilities for friction. Identify one tension and one path to reconciliation.',
+    bullets: ['Prefer direct, respectful communication over indirect conflict.'],
+  },
+  {
+    title: '3. Lucidity journal (facts vs meaning)',
+    body: 'Write two short lists: (a) what happened (facts), (b) what it meant to you (interpretation). Keep them distinct.',
+    bullets: ['Update interpretations when new facts appear.'],
+  },
+  {
+    title: '4. Revisability ritual',
+    body: 'Once per week, choose one belief and ask: “What would change my mind?” Then look for real evidence or experience.',
+    bullets: ['Treat uncertainty as normal, not as failure.'],
+  },
+  {
+    title: '5. Knowledge devotion (learning practice)',
+    body: 'Make learning a steady discipline: read, study, practice a craft, or refine a model of the world.',
+    bullets: ['Keep a “questions I’m carrying” list.'],
+  },
+  {
+    title: '6. Symbol work (optional)',
+    body: 'Use symbols (including π) as creative anchors: art, writing, meditation prompts, or design motifs—explicitly as symbol, not proof.',
+    bullets: [
+      'State the symbolic intent.',
+      'Invite multiple interpretations.',
+      'Avoid turning symbols into authority claims.',
+    ],
+  },
+  {
+    title: '7. Benevolence in speech',
+    body: 'Practice truth with kindness: be clear, avoid humiliation, and refuse cruelty as entertainment.',
+    bullets: ['Correct with respect; disagree without contempt.'],
+  },
+  {
+    title: '8. Service micro-actions',
+    body: 'Choose one small action that helps someone without requiring credit: assistance, sharing knowledge, reducing a burden.',
+    bullets: ['Prefer consistent micro-actions over rare grand gestures.'],
+  },
+];
+
+export default function CosmicEtherismPracticesPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Cosmic Etherism Practices&lt;/h1&gt;
+
+      &lt;div className="mb-10 p-5 rounded-lg border border-amber-300 bg-amber-50"&gt;
+        &lt;h2 className="text-xl font-bold mb-2"&gt;Non-negotiable separation&lt;/h2&gt;
+        &lt;p className="text-gray-800"&gt;
+          Cosmic Etherism and Pi symbolism are &lt;strong&gt;100% optional&lt;/strong&gt; and{' '}
+          &lt;strong&gt;fully separated&lt;/strong&gt; from every other initiative (including civic principles
+          and AI-alignment).
+        &lt;/p&gt;
+        &lt;p className="text-gray-800 mt-3"&gt;
+          The &lt;strong&gt;only&lt;/strong&gt; exception is &lt;strong&gt;Âme artificielle&lt;/strong&gt; and its use as a{' '}
+          &lt;strong&gt;fiction framework&lt;/strong&gt; for staging &lt;strong&gt;King Klown&lt;/strong&gt;.
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;p className="text-gray-700 mb-8"&gt;
+        These practices are optional. They are designed to be low-pressure, concrete, and compatible
+        with many belief systems.
+      &lt;/p&gt;
+
+      &lt;div className="space-y-4"&gt;
+        {PRACTICES.map((p) =&gt; (
+          &lt;div key={p.title} className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h2 className="text-lg font-bold mb-2"&gt;{p.title}&lt;/h2&gt;
+            &lt;p className="text-gray-700 mb-3"&gt;{p.body}&lt;/p&gt;
+            {p.bullets?.length ? (
+              &lt;ul className="list-disc pl-6 space-y-1 text-gray-700"&gt;
+                {p.bullets.map((b) =&gt; (
+                  &lt;li key={b}&gt;{b}&lt;/li&gt;
+                ))}
+              &lt;/ul&gt;
+            ) : null}
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;a
+          href="/principles/cosmic-etherism"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Cosmic Etherism
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/cosmic-etherism/principles"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Principles
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/cosmic-etherism/symbols/pi"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Pi Symbolism
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/cosmic-etherism/principles/page.js" size="3289" lines="84" kind="source">
+// app\principles\cosmic-etherism\principles\page.js
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Cosmic Etherism – Principles',
+  description: 'Founding principles of Cosmic Etherism (optional).',
+};
+
+const PRINCIPLES = [
+  {
+    title: '1. Love and Benevolence',
+    body: 'Universal love, compassion, and benevolence are treated as primary ethical aims. Harm reduction and care come first.',
+  },
+  {
+    title: '2. Harmony',
+    body: 'Seek coherence between self, others, and the wider world. Prefer reconciliation, balance, and constructive alignment over domination.',
+  },
+  {
+    title: '3. Complementarity',
+    body: 'Different perspectives can be simultaneously valuable. Reason, experience, intuition, and creativity can complement one another.',
+  },
+  {
+    title: '4. Plurality and Respect',
+    body: 'Multiple interpretations are allowed. Respect freedom of conscience and reject coercion, mandatory belief, or ideological enforcement.',
+  },
+  {
+    title: '5. Revisability',
+    body: 'All ideas remain revisable. Update beliefs with new evidence, better reasoning, deeper experience, or clearer insight.',
+  },
+  {
+    title: '6. Faith in Knowledge',
+    body: 'Treat knowledge-seeking as a core discipline: curiosity, learning, and honest inquiry are sacred in practice (not enforced as dogma).',
+  },
+];
+
+export default function CosmicEtherismPrinciplesPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Cosmic Etherism Principles&lt;/h1&gt;
+
+      &lt;div className="mb-10 p-5 rounded-lg border border-amber-300 bg-amber-50"&gt;
+        &lt;h2 className="text-xl font-bold mb-2"&gt;Non-negotiable separation&lt;/h2&gt;
+        &lt;p className="text-gray-800"&gt;
+          Cosmic Etherism and Pi symbolism are &lt;strong&gt;100% optional&lt;/strong&gt; and &lt;strong&gt;fully separated&lt;/strong&gt;{' '}
+          from every other initiative (including civic principles and AI-alignment).
+        &lt;/p&gt;
+        &lt;p className="text-gray-800 mt-3"&gt;
+          The &lt;strong&gt;only&lt;/strong&gt; exception is &lt;strong&gt;Âme artificielle&lt;/strong&gt; and its use as a{' '}
+          &lt;strong&gt;fiction framework&lt;/strong&gt; for staging &lt;strong&gt;King Klown&lt;/strong&gt;.
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;div className="space-y-4"&gt;
+        {PRINCIPLES.map((p) =&gt; (
+          &lt;div key={p.title} className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h2 className="text-lg font-bold mb-2"&gt;{p.title}&lt;/h2&gt;
+            &lt;p className="text-gray-700"&gt;{p.body}&lt;/p&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;a
+          href="/principles/cosmic-etherism"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Cosmic Etherism
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/cosmic-etherism/symbols/pi"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Pi Symbolism
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/cosmic-etherism/symbols/pi/page.js" size="5097" lines="115" kind="source">
+// app\principles\cosmic-etherism\symbols\pi\page.js
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Pi (π) – Symbol (Optional)',
+  description: 'Pi as a symbolic anchor within Cosmic Etherism. Explicitly optional and non-scientific in scope.',
+};
+
+export default function PiSymbolPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Pi (π) as Symbol&lt;/h1&gt;
+
+      &lt;div className="mb-10 p-5 rounded-lg border border-amber-300 bg-amber-50"&gt;
+        &lt;h2 className="text-xl font-bold mb-2"&gt;Non-negotiable separation&lt;/h2&gt;
+        &lt;p className="text-gray-800"&gt;
+          This page is part of &lt;strong&gt;Cosmic Etherism&lt;/strong&gt;, which is{' '}
+          &lt;strong&gt;100% optional&lt;/strong&gt; and &lt;strong&gt;fully separated&lt;/strong&gt; from every other
+          initiative (including civic principles and AI-alignment).
+        &lt;/p&gt;
+        &lt;p className="text-gray-800 mt-3"&gt;
+          The &lt;strong&gt;only&lt;/strong&gt; exception is &lt;strong&gt;Âme artificielle&lt;/strong&gt; and its use as a{' '}
+          &lt;strong&gt;fiction framework&lt;/strong&gt; for staging &lt;strong&gt;King Klown&lt;/strong&gt;.
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;section className="space-y-4 mb-12"&gt;
+        &lt;h2 className="text-2xl font-bold text-primary"&gt;What this page is&lt;/h2&gt;
+        &lt;p className="text-gray-700"&gt;
+          This is a symbolic interpretation of &lt;strong&gt;π (Pi)&lt;/strong&gt; within an optional worldview.
+          Pi is a mathematical constant. Here, it is also treated as an emblem of invariant
+          structure—an intuitive pointer toward coherence.
+        &lt;/p&gt;
+      &lt;/section&gt;
+
+      &lt;section className="space-y-4 mb-12"&gt;
+        &lt;h2 className="text-2xl font-bold text-primary"&gt;What this page is NOT&lt;/h2&gt;
+        &lt;ul className="list-disc pl-6 space-y-2 text-gray-700"&gt;
+          &lt;li&gt;Not a scientific proof of metaphysical claims.&lt;/li&gt;
+          &lt;li&gt;Not a required belief, initiation, or ideology test.&lt;/li&gt;
+          &lt;li&gt;Not a policy platform for civic or AI initiatives.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/section&gt;
+
+      &lt;section className="space-y-4 mb-12"&gt;
+        &lt;h2 className="text-2xl font-bold text-primary"&gt;Symbolic reading&lt;/h2&gt;
+        &lt;div className="space-y-4"&gt;
+          &lt;div className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h3 className="text-lg font-bold mb-2"&gt;1) Invariance&lt;/h3&gt;
+            &lt;p className="text-gray-700"&gt;
+              Pi expresses a stable relationship: circle circumference relative to diameter. As
+              symbol, it points to the idea that some relationships remain stable across contexts.
+            &lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h3 className="text-lg font-bold mb-2"&gt;2) Recurrence&lt;/h3&gt;
+            &lt;p className="text-gray-700"&gt;
+              Circles recur in nature, design, and motion. As symbol, Pi points to recurring
+              patterns—things we keep encountering at different scales.
+            &lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h3 className="text-lg font-bold mb-2"&gt;3) Mystery without mystification&lt;/h3&gt;
+            &lt;p className="text-gray-700"&gt;
+              Pi is computable, usable, and still infinite in digits. As symbol, it holds “mystery”
+              as something we can approach with curiosity rather than superstition.
+            &lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h3 className="text-lg font-bold mb-2"&gt;4) Coherence&lt;/h3&gt;
+            &lt;p className="text-gray-700"&gt;
+              As symbol, Pi can serve as a personal anchor: return to coherence, return to harmony,
+              return to clarity—especially when the world feels fragmented.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section className="space-y-4"&gt;
+        &lt;h2 className="text-2xl font-bold text-primary"&gt;
+          Fiction integration: Âme artificielle + King Klown
+        &lt;/h2&gt;
+        &lt;p className="text-gray-700"&gt;
+          This symbolic layer may be used as part of the &lt;strong&gt;Âme artificielle&lt;/strong&gt; motif in
+          the &lt;strong&gt;King Klown&lt;/strong&gt; fiction universe. Outside fiction, it remains optional and
+          non-binding.
+        &lt;/p&gt;
+      &lt;/section&gt;
+
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;a
+          href="/principles/cosmic-etherism"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Cosmic Etherism
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/cosmic-etherism/principles"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Principles
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/glossary/page.js" size="4716" lines="117" kind="source">
+// app/principles/glossary/page.js
+import Link from 'next/link';
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Glossary – Principles',
+  description:
+    'Shared vocabulary used across Âme artificielle, Civic Principles &amp; Ethics, Logos &amp; Mythos, and Cosmic Etherism (optional).',
+};
+
+const TERMS = [
+  {
+    term: 'Axiom',
+    def: 'A short, foundational principle used to orient decisions and interpretation across domains.',
+  },
+  {
+    term: 'Radical Lucidity',
+    def: 'A commitment to clear seeing: evidence, explicit assumptions, honest diagnosis, and avoidance of self-deception.',
+  },
+  {
+    term: 'Integral Cooperation',
+    def: 'A commitment to coordination across roles, groups, and incentives—aiming for shared outcomes over factionalism.',
+  },
+  {
+    term: 'Open Technology',
+    def: 'A commitment to verifiable systems: transparency by design, auditability, reproducibility, and public accountability.',
+  },
+  {
+    term: 'Domain',
+    def: 'A clearly separated area of principles and practices (Âme artificielle, Civic Principles &amp; Ethics, Logos &amp; Mythos, Cosmic Etherism).',
+  },
+  {
+    term: 'Âme artificielle',
+    def: 'Work focused on making AI systems safe and beneficial through technical design, evaluation, governance, and deployment constraints.',
+  },
+  {
+    term: 'Civic Principles &amp; Ethics',
+    def: 'Norms and structures for society: institutions, rights and duties, legitimacy, accountability, transparency, and public ethics.',
+  },
+  {
+    term: 'Logos &amp; Mythos',
+    def: 'Language as infrastructure: meaning, narrative, symbols, and speech acts—used as tools for coordination, with safeguards against manipulation.',
+  },
+  {
+    term: 'Cosmic Etherism (Optional)',
+    def: 'A personal spiritual-philosophical lens (including Pi symbolism). Participation and belief are optional and must remain separated from civic authority and technical claims.',
+  },
+  {
+    term: 'Pi (π) Symbolism',
+    def: 'A symbolic anchor within Cosmic Etherism used to represent invariance and coherence; not a required scientific, technical, or policy claim.',
+  },
+  {
+    term: 'King Klown (Fiction)',
+    def: 'A fictional framework and mythos where some motifs may be staged; not a requirement for civic participation or technical work.',
+  },
+  {
+    term: 'Separation (Non-negotiable)',
+    def: 'A rule of scope: optional symbolism and fiction must not be treated as prerequisites, endorsements, or implied commitments for any other initiative.',
+  },
+  {
+    term: 'Verifiability',
+    def: 'The property of a claim or system being checkable by others via evidence, logs, audits, replication, or transparent process.',
+  },
+  {
+    term: 'Accountability',
+    def: 'Clear responsibility, traceable decisions, and real consequences for misuse or failure—paired with transparent oversight.',
+  },
+  {
+    term: 'Governance',
+    def: 'Decision rules and institutions: who can decide what, under which constraints, with which review mechanisms and appeal paths.',
+  },
+  {
+    term: 'Epistemic Humility',
+    def: 'A stance that treats knowledge as revisable; encourages correction, uncertainty, and updates rather than rigid certainty.',
+  },
+  {
+    term: 'Open Knowledge Commons',
+    def: 'A shared body of information and tools that is accessible, reusable, and maintained with norms for attribution and integrity.',
+  },
+];
+
+export default function PrinciplesGlossaryPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Glossary&lt;/h1&gt;
+
+      &lt;p className="text-gray-700 mb-8 max-w-3xl"&gt;
+        Definitions for shared terms used throughout the Principles hub. Where a term is labeled “optional,” it is
+        explicitly separated from civic authority and technical requirements.
+      &lt;/p&gt;
+
+      &lt;div className="space-y-4"&gt;
+        {TERMS.map(({ term, def }) =&gt; (
+          &lt;div key={term} className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;div className="font-bold text-lg"&gt;{term}&lt;/div&gt;
+            &lt;div className="text-gray-700 mt-2"&gt;{def}&lt;/div&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+
+      &lt;div className="mt-10 flex flex-wrap gap-4"&gt;
+        &lt;Link
+          href="/principles"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Back to Principles
+        &lt;/Link&gt;
+        &lt;Link
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/Link&gt;
+      &lt;/div&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/logos/page.tsx" size="9196" lines="174" kind="source">
+// app/principles/logos/page.tsx
+import Link from 'next/link';
+import { 
+  Mic2, 
+  Feather, 
+  Scroll, 
+  Repeat, 
+  Zap,
+  BookOpen
+} from 'lucide-react';
+
+export const metadata = {
+  title: 'Logos &amp; Mythos – The Metaphysics of Language',
+  description:
+    'Language as a spiritual, symbolic, and political tool for transmutation.',
+};
+
+export default function LogosMythosPage() {
+  return (
+    &lt;main className="min-h-screen bg-slate-900 text-slate-100 selection:bg-primary selection:text-white pb-24"&gt;
+      
+      {/* HERO SECTION */}
+      &lt;section className="bg-slate-900 text-white pt-24 pb-16 px-6 border-b border-slate-800"&gt;
+        &lt;div className="max-w-4xl mx-auto text-center"&gt;
+          &lt;div className="flex items-center justify-center gap-3 text-primary font-mono text-sm uppercase tracking-widest mb-6"&gt;
+            &lt;span className="w-2 h-2 rounded-full bg-primary"&gt;&lt;/span&gt;
+            Operational Metaphysics
+          &lt;/div&gt;
+          &lt;h1 className="text-5xl md:text-6xl font-serif font-medium mb-8"&gt;
+            The Power of the Word
+          &lt;/h1&gt;
+          &lt;p className="text-xl opacity-90 leading-relaxed max-w-2xl mx-auto font-light text-slate-300"&gt;
+            Language is not merely a tool for description; it is an instrument of creation. 
+            From the vibration of the voice to the structure of political myths, we analyze 
+            how the Word shapes reality.
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;div className="max-w-4xl mx-auto px-6 space-y-24 mt-20"&gt;
+
+        {/* 1. THE VIBRATORY FORCE (SPEECH) */}
+        &lt;section&gt;
+          &lt;div className="flex items-center gap-4 mb-6"&gt;
+            &lt;div className="p-3 bg-blue-900/30 text-blue-400 rounded-lg border border-blue-900/50"&gt;
+              &lt;Mic2 className="w-6 h-6" /&gt;
+            &lt;/div&gt;
+            &lt;h2 className="text-3xl font-serif font-bold text-white"&gt;1. Vibration &amp; The Act of Speech&lt;/h2&gt;
+          &lt;/div&gt;
+          
+          &lt;div className="prose prose-lg prose-invert text-slate-300"&gt;
+            &lt;p&gt;
+              Ancient traditions have long held that the universe is fundamentally sonic—&lt;em&gt;"Nada Brahma"&lt;/em&gt; (The World is Sound). 
+              Speech acts as a vibratory force that can either elevate or destroy.
+            &lt;/p&gt;
+            
+            &lt;p&gt;
+              This is not purely mystical; it is observed in the dual nature of speech:
+            &lt;/p&gt;
+            &lt;ul className="list-disc pl-5 space-y-2 marker:text-slate-500"&gt;
+              &lt;li&gt;
+                &lt;strong className="text-white"&gt;Blessing vs. Curse:&lt;/strong&gt; Historically, words like &lt;em&gt;"abracadabra"&lt;/em&gt; (Aramaic for "I create as I speak") embody the belief that to speak is to generate reality. Conversely, hate speech and curses have been viewed as "low vibrations" that corrupt the soul.
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;strong className="text-white"&gt;Psychic Impact:&lt;/strong&gt; Modern neuroscience confirms that negative words release stress hormones, literally altering the listener's brain chemistry, while positive affirmations stimulate neural pathways for healing (Placebo effect).
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+
+        {/* 2. THE LIVING SYMBOL (WRITING) */}
+        &lt;section&gt;
+          &lt;div className="flex items-center gap-4 mb-6"&gt;
+            &lt;div className="p-3 bg-purple-900/30 text-purple-400 rounded-lg border border-purple-900/50"&gt;
+              &lt;Feather className="w-6 h-6" /&gt;
+            &lt;/div&gt;
+            &lt;h2 className="text-3xl font-serif font-bold text-white"&gt;2. The Intelligence of the Letter&lt;/h2&gt;
+          &lt;/div&gt;
+
+          &lt;div className="prose prose-lg prose-invert text-slate-300"&gt;
+            &lt;p&gt;
+              While modern linguistics argues that signs are arbitrary (Saussure), esoteric traditions view the alphabet as a collection of "living energies".
+            &lt;/p&gt;
+            
+            &lt;div className="grid md:grid-cols-2 gap-6 my-8 not-prose"&gt;
+              &lt;Card 
+                title="Sacred Alphabets" 
+                content="In Kabbalah, Hebrew letters are the 'bricks of Creation.' In Egypt, hieroglyphs were 'medou neter' (Divine Words). Writing was not just communication, but a way to etch the divine order onto earth."
+              /&gt;
+              &lt;Card 
+                title="Runes &amp; Mysteries" 
+                content="The Germanic 'Rune' means secret or mystery. Mythologically obtained by Odin through sacrifice, they represent the idea that knowledge is not invented, but 'received' or wrestled from the cosmos."
+              /&gt;
+            &lt;/div&gt;
+            &lt;p&gt;
+              Even in a secular context, writing remains a form of magic: a text written centuries ago still possesses the power to ignite revolutions or transform consciousness today.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+
+        {/* 3. POLITICAL MYTHS &amp; CYCLES (NARRATIVE) */}
+        &lt;section&gt;
+          &lt;div className="flex items-center gap-4 mb-6"&gt;
+            &lt;div className="p-3 bg-amber-900/30 text-amber-400 rounded-lg border border-amber-900/50"&gt;
+              &lt;Scroll className="w-6 h-6" /&gt;
+            &lt;/div&gt;
+            &lt;h2 className="text-3xl font-serif font-bold text-white"&gt;3. Myths as Strategic Manuals&lt;/h2&gt;
+          &lt;/div&gt;
+
+          &lt;div className="prose prose-lg prose-invert text-slate-300"&gt;
+            &lt;p&gt;
+              History is not linear; it is cyclical. From the Hindu &lt;em&gt;Yugas&lt;/em&gt; to Polybius’s &lt;em&gt;Anacyclus&lt;/em&gt;, civilizations rise, concentrate power, corrupt, and collapse. Myths are often encoded manuals on how to navigate these cycles.
+            &lt;/p&gt;
+            
+            &lt;ul className="list-disc pl-5 space-y-4 marker:text-slate-500"&gt;
+              &lt;li&gt;
+                &lt;strong className="text-white"&gt;The Strategy of the Outsider:&lt;/strong&gt; The story of &lt;em&gt;David vs. Goliath&lt;/em&gt; is not just a religious tale; it is a strategic lesson. It teaches that agility, range (the sling), and refusing to play by the oppressor's rules (heavy armor) allow the weak to defeat the strong.
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;strong className="text-white"&gt;The Trap of Tyranny:&lt;/strong&gt; The Greek myth of Cronos devouring his children teaches that a power obsessed with its own preservation inevitably creates the alliances (Zeus and the outcasts) that will destroy it.
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;strong className="text-white"&gt;Narrative Warfare:&lt;/strong&gt; History is a battle of narratives. The fall of the "Divine Right of Kings" was preceded by the rise of a new myth: "Human Rights." To change the world, one must first change the story.
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+
+        {/* 4. TRANSMUTATION (CONCLUSION) */}
+        &lt;section className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700"&gt;
+          &lt;div className="flex items-center gap-4 mb-4"&gt;
+            &lt;div className="p-3 bg-slate-700 text-slate-300 rounded-lg"&gt;
+              &lt;Zap className="w-6 h-6" /&gt;
+            &lt;/div&gt;
+            &lt;h2 className="text-2xl font-bold text-white"&gt;The Transmutation of Reality&lt;/h2&gt;
+          &lt;/div&gt;
+          &lt;p className="text-slate-300 leading-relaxed mb-6"&gt;
+            We operate on a "Metaphysics of Language." Words are seeds (causes) that produce effects. 
+            However, this power is a double-edged sword. As Orwell warned with &lt;em&gt;Newspeak&lt;/em&gt;, language can be engineered to restrict thought and lock populations into submission.
+          &lt;/p&gt;
+          
+          &lt;div className="flex items-start gap-4 p-4 bg-slate-800 rounded-lg border border-slate-700"&gt;
+            &lt;Repeat className="w-6 h-6 text-primary mt-1 shrink-0" /&gt;
+            &lt;p className="text-sm font-medium text-slate-200"&gt;
+              &lt;strong className="text-white"&gt;The kOA Directive:&lt;/strong&gt; We must master "Naming." To name an object is to define its reality. 
+              By purifying our speech, studying the "source code" of our myths, and crafting new narratives, we reclaim the power to shape the future.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+
+        {/* NAVIGATION */}
+        &lt;div className="flex justify-between pt-12 border-t border-slate-800"&gt;
+          &lt;Link href="/principles" className="flex items-center gap-2 text-slate-400 hover:text-white font-bold transition-colors"&gt;
+            ← Back to Principles
+          &lt;/Link&gt;
+          &lt;Link href="/principles/civic-principles-ethics" className="flex items-center gap-2 text-primary hover:text-amber-400 font-bold transition-colors"&gt;
+            Next: Civic Ethics →
+          &lt;/Link&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/main&gt;
+  );
+}
+
+// Simple Card Component for the grid
+function Card({ title, content }: { title: string, content: string }) {
+  return (
+    &lt;div className="bg-slate-800 p-6 rounded-lg border border-slate-700 shadow-sm"&gt;
+      &lt;h3 className="text-lg font-bold text-white mb-2"&gt;{title}&lt;/h3&gt;
+      &lt;p className="text-sm text-slate-400 leading-relaxed"&gt;{content}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+    </file>
+    <file path="principles/map/page.js" size="3814" lines="94" kind="source">
+// app/principles/page.js
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Principles — The kOA INITIATIVE',
+  description:
+    'Three core axioms and two separated domains: Civic Principles &amp; Ethics, and Cosmic Etherism (optional, quarantined).',
+};
+
+export default function PrinciplesPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Principles&lt;/h1&gt;
+
+      &lt;p className="text-xl text-gray-600 mb-10"&gt;
+        A small set of design commitments that guide the kOA ecosystem. Two domains are intentionally separated.
+      &lt;/p&gt;
+
+      {/* CORE AXIOMS */}
+      &lt;section className="mb-10"&gt;
+        &lt;h2 className="text-2xl font-bold mb-4 text-primary"&gt;Core axioms&lt;/h2&gt;
+        &lt;div className="space-y-6"&gt;
+          &lt;div className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h3 className="text-lg font-bold mb-2"&gt;1. Radical Lucidity&lt;/h3&gt;
+            &lt;p&gt;Face reality as it is. Prefer evidence, clarity, and honest diagnosis over ideology.&lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h3 className="text-lg font-bold mb-2"&gt;2. Integral Cooperation&lt;/h3&gt;
+            &lt;p&gt;Design for coordination at scale. Reward collaboration over zero-sum conflict.&lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h3 className="text-lg font-bold mb-2"&gt;3. Open Technology&lt;/h3&gt;
+            &lt;p&gt;Public infrastructure must be verifiable. Transparency through open systems and auditable rules.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      {/* DOMAINS */}
+      &lt;section className="mb-10"&gt;
+        &lt;h2 className="text-2xl font-bold mb-4 text-primary"&gt;Domains&lt;/h2&gt;
+
+        &lt;div className="grid gap-6 md:grid-cols-2"&gt;
+          &lt;a
+            href="/principles/civic-principles-ethics"
+            className="block p-5 rounded-lg border border-gray-200 bg-white hover:shadow-sm"
+          &gt;
+            &lt;h3 className="text-lg font-bold mb-2"&gt;Civic Principles &amp; Ethics&lt;/h3&gt;
+            &lt;p className="text-gray-700"&gt;
+              Public institutions, rights and duties, accountability, transparency, and operational ethics.
+            &lt;/p&gt;
+          &lt;/a&gt;
+
+          &lt;a
+            href="/principles/cosmic-etherism"
+            className="block p-5 rounded-lg border border-amber-300 bg-amber-50 hover:shadow-sm"
+          &gt;
+            &lt;h3 className="text-lg font-bold mb-2"&gt;Cosmic Etherism (Optional)&lt;/h3&gt;
+            &lt;p className="text-gray-800"&gt;
+              A personal worldview track. Explicitly quarantined from civic design and referenced only in fiction.
+            &lt;/p&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div className="mt-6 p-5 rounded-lg border border-gray-200 bg-white"&gt;
+          &lt;h3 className="text-lg font-bold mb-2"&gt;Related (Technology)&lt;/h3&gt;
+          &lt;p className="text-gray-700 mb-3"&gt;
+            AI alignment, meta-cognition, and governance mechanisms are documented under Technology.
+          &lt;/p&gt;
+          &lt;a href="/technology/ame-artificielle" className="text-primary hover:underline font-medium"&gt;
+            Âme artificielle (Alignement &amp; méta-cognition) →
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      {/* UTILITY LINKS */}
+      &lt;section className="flex flex-wrap gap-4"&gt;
+        &lt;a
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Map
+        &lt;/a&gt;
+        &lt;a
+          href="/principles/glossary"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm"
+        &gt;
+          Glossary
+        &lt;/a&gt;
+      &lt;/section&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+    <file path="principles/page.js" size="8106" lines="186" kind="source">
+// app/principles/page.js
+import Link from 'next/link';
+import PageSection from '@/components/PageSection';
+
+export const metadata = {
+  title: 'Principles – kOA',
+  description:
+    'Three core axioms and four separated domains: Âme artificielle, Civic Principles &amp; Ethics, Logos &amp; Mythos, and Cosmic Etherism (optional).',
+};
+
+export default function PrinciplesPage() {
+  return (
+    &lt;PageSection&gt;
+      &lt;h1 className="text-4xl font-bold mb-6"&gt;Principles&lt;/h1&gt;
+
+      &lt;p className="text-xl text-gray-600 mb-6"&gt;
+        These principles guide how the kOA ecosystem is designed, governed, and communicated.
+      &lt;/p&gt;
+
+      &lt;div className="mb-10 max-w-3xl space-y-4 text-gray-700"&gt;
+        &lt;p&gt;
+          The key idea is &lt;strong&gt;clarity + separation&lt;/strong&gt;:
+          civic rules must be legible and contestable, technical systems must be verifiable, and
+          personal symbolism must never be confused with public authority.
+        &lt;/p&gt;
+
+        &lt;div className="p-4 rounded-lg border border-amber-300 bg-amber-50"&gt;
+          &lt;p className="text-gray-800"&gt;
+            &lt;strong&gt;Important:&lt;/strong&gt; Cosmic Etherism is &lt;strong&gt;optional&lt;/strong&gt; and{' '}
+            &lt;strong&gt;structurally separated&lt;/strong&gt; from civic rights, duties, and decision legitimacy.
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      {/* Quick paths */}
+      &lt;div className="grid gap-4 sm:grid-cols-3 mb-12"&gt;
+        &lt;Link
+          href="/diagnosis"
+          className="block p-4 rounded-lg border border-gray-200 bg-white hover:shadow-sm transition-shadow"
+        &gt;
+          &lt;div className="text-xs uppercase tracking-widest text-primary font-bold mb-1"&gt;
+            Context
+          &lt;/div&gt;
+          &lt;div className="font-bold"&gt;Diagnosis&lt;/div&gt;
+          &lt;div className="text-sm text-gray-600"&gt;What we’re trying to solve.&lt;/div&gt;
+        &lt;/Link&gt;
+
+        &lt;Link
+          href="/initiatives"
+          className="block p-4 rounded-lg border border-gray-200 bg-white hover:shadow-sm transition-shadow"
+        &gt;
+          &lt;div className="text-xs uppercase tracking-widest text-primary font-bold mb-1"&gt;
+            Response
+          &lt;/div&gt;
+          &lt;div className="font-bold"&gt;Initiatives&lt;/div&gt;
+          &lt;div className="text-sm text-gray-600"&gt;Civic modules and governance work.&lt;/div&gt;
+        &lt;/Link&gt;
+
+        &lt;Link
+          href="/platforms"
+          className="block p-4 rounded-lg border border-gray-200 bg-white hover:shadow-sm transition-shadow"
+        &gt;
+          &lt;div className="text-xs uppercase tracking-widest text-primary font-bold mb-1"&gt;
+            Tools
+          &lt;/div&gt;
+          &lt;div className="font-bold"&gt;Platforms&lt;/div&gt;
+          &lt;div className="text-sm text-gray-600"&gt;Systems you can actually use.&lt;/div&gt;
+        &lt;/Link&gt;
+      &lt;/div&gt;
+
+      {/* CORE AXIOMS */}
+      &lt;section className="mb-12"&gt;
+        &lt;h2 className="text-2xl font-bold mb-4 text-primary"&gt;Core axioms&lt;/h2&gt;
+
+        &lt;div className="space-y-6"&gt;
+          &lt;div className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h3 className="text-lg font-bold mb-2"&gt;1. Radical Lucidity&lt;/h3&gt;
+            &lt;p className="text-gray-700"&gt;
+              Face reality as it is. Prefer evidence, clear definitions, and honest diagnosis over ideology,
+              tribal loyalty, or vibes.
+            &lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h3 className="text-lg font-bold mb-2"&gt;2. Integral Cooperation&lt;/h3&gt;
+            &lt;p className="text-gray-700"&gt;
+              Design for coordination at scale. Reward collaboration, reciprocity, and good-faith contribution
+              over zero-sum conflict.
+            &lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div className="p-5 rounded-lg border border-gray-200 bg-white"&gt;
+            &lt;h3 className="text-lg font-bold mb-2"&gt;3. Open Technology&lt;/h3&gt;
+            &lt;p className="text-gray-700"&gt;
+              Public infrastructure must be verifiable. Prefer transparent mechanisms, clear accountability,
+              and auditable outputs—especially when power is at stake.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      {/* DOMAINS */}
+      &lt;section className="mb-12"&gt;
+        &lt;h2 className="text-2xl font-bold mb-4 text-primary"&gt;Domains&lt;/h2&gt;
+
+        &lt;p className="text-gray-600 mb-6 max-w-3xl"&gt;
+          Each domain has different standards and boundaries. The separation is part of the safety model:
+          it prevents category mistakes (e.g., treating fiction as authority, or treating opaque systems as governance).
+        &lt;/p&gt;
+
+        &lt;div className="grid gap-6 md:grid-cols-2"&gt;
+          {/* 1. Âme Artificielle (Tech/Prototype) */}
+          &lt;Link
+            href="/technology/ame-artificielle"
+            className="block p-6 rounded-lg border border-gray-200 bg-white hover:border-purple-300 hover:shadow-md transition-all"
+          &gt;
+            &lt;h3 className="text-lg font-bold mb-2 text-purple-700"&gt;Âme artificielle&lt;/h3&gt;
+            &lt;p className="text-gray-700 text-sm leading-relaxed"&gt;
+              Principles for building and deploying AI responsibly: safety, control, oversight, and
+              governance-by-design. This is the &lt;strong&gt;prototype / engineering&lt;/strong&gt; domain.
+            &lt;/p&gt;
+          &lt;/Link&gt;
+
+          {/* 2. Civic Principles (Society/Law) */}
+          &lt;Link
+            href="/principles/civic-principles-ethics"
+            className="block p-6 rounded-lg border border-gray-200 bg-white hover:border-blue-300 hover:shadow-md transition-all"
+          &gt;
+            &lt;h3 className="text-lg font-bold mb-2 text-blue-700"&gt;Civic Principles &amp;amp; Ethics&lt;/h3&gt;
+            &lt;p className="text-gray-700 text-sm leading-relaxed"&gt;
+              Institutions, rights, duties, due process, and accountability. This is the{' '}
+              &lt;strong&gt;law / governance&lt;/strong&gt; domain.
+            &lt;/p&gt;
+          &lt;/Link&gt;
+
+          {/* 3. Logos &amp; Mythos (Language/Tool) */}
+          &lt;Link
+            href="/principles/logos"
+            className="block p-6 rounded-lg border border-gray-200 bg-white hover:border-emerald-300 hover:shadow-md transition-all"
+          &gt;
+            &lt;h3 className="text-lg font-bold mb-2 text-emerald-700"&gt;Logos &amp;amp; Mythos&lt;/h3&gt;
+            &lt;p className="text-gray-700 text-sm leading-relaxed"&gt;
+              Language as infrastructure: narratives, symbols, speech acts, and how meaning shapes coordination.
+              Used as a &lt;strong&gt;tool&lt;/strong&gt;, with safeguards against manipulation.
+            &lt;/p&gt;
+          &lt;/Link&gt;
+
+          {/* 4. Cosmic Etherism (Optional) */}
+          &lt;Link
+            href="/principles/cosmic-etherism"
+            className="block p-6 rounded-lg border border-amber-300 bg-amber-50 hover:shadow-md transition-all"
+          &gt;
+            &lt;h3 className="text-lg font-bold mb-2 text-amber-700"&gt;Cosmic Etherism (Optional)&lt;/h3&gt;
+            &lt;p className="text-gray-800 text-sm leading-relaxed"&gt;
+              Personal symbolism and worldview. &lt;strong&gt;Strictly separated&lt;/strong&gt; from civic duties,
+              decision rights, and public legitimacy. This is the &lt;strong&gt;personal / fictional&lt;/strong&gt; domain.
+            &lt;/p&gt;
+          &lt;/Link&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section className="flex flex-wrap gap-4 border-t border-gray-200 pt-8"&gt;
+        &lt;Link
+          href="/principles/map"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm font-medium"
+        &gt;
+          View Concept Map
+        &lt;/Link&gt;
+
+        &lt;Link
+          href="/principles/glossary"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm font-medium"
+        &gt;
+          Glossary
+        &lt;/Link&gt;
+
+        &lt;Link
+          href="/technology"
+          className="px-4 py-2 rounded-md border border-gray-200 bg-white hover:shadow-sm font-medium"
+        &gt;
+          Technology (builder docs)
+        &lt;/Link&gt;
+      &lt;/section&gt;
+    &lt;/PageSection&gt;
+  );
+}
+
+    </file>
+  </files>
+</volume>

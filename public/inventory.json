@@ -1,2818 +1,763 @@
 {
-  "schemaVersion": "1.0",
-  "generatedAt": "2026-02-11T22:17:26Z",
-  "site": {
-    "name": "kOA / initkoa",
-    "baseUrl": "https://initkoa.org"
-  },
+  "schemaVersion": "1.0-simple",
+  "generatedAt": "YYYY-MM-DDTHH:MM:SSZ",
   "taxonomies": {
-    "corridors": [
-      "about",
-      "culture",
-      "ecosystem",
-      "governance",
-      "initiatives",
-      "manifesto",
-      "platforms",
-      "research",
-      "technology"
-    ],
     "types": [
-      "youtube_video",
       "medium_article",
+      "philpaper_article",
+      "github_wiki"
       "amazon_book",
       "spotify_podcast",
-      "philpaper_article",
-      "github_wiki",
-      "github_repo"
-    ],
-    "statuses": [
-      "active",
-      "legacy",
-      "planned"
+      "youtube_video",
     ]
   },
   "items": [
     {
-      "id": "amazon_book:B0FHWS687D",
-      "type": "amazon_book",
+      "title": "A Rosetta Stone of Three Grammars: Sephiroth, π Theory, and the kOA Digital Ecosystem",
+      "url": "https://medium.com/@boatbuilder610/a-rosetta-stone-of-three-grammars-sephiroth-%CF%80-theory-and-the-koa-digital-ecosystem-3def048d53e9",
+      "description": "Uses the Rosetta Stone metaphor to triangulate meaning across three parallel “grammars” (Sephiroth, π theory, and the kOA architecture). Argues that semantics must be deterministic (not rented from AI) and frames Kristal as a substrate that supports graded truth with provenance, validation, and upgrade paths.",
+      "type": "medium_article",
+      "language": "en"
+    },
+    {
+      "title": "Building with AI without building AI",
+      "url": "https://medium.com/@boatbuilder610/building-with-ai-without-building-ai-49348a92c10b",
+      "description": "Contrasts deterministic systems (verifiable, stable) with generative AI (approximate, variable), then frames two “engines” for idea circulation. Positions the kOA/Konnaxion approach as a stability layer where meaning and governance stay inspectable while AI accelerates transformation and exploration.",
+      "type": "medium_article",
+      "language": "en"
+    },
+    {
+      "title": "Gather to Liberate",
+      "url": "https://medium.com/@boatbuilder610/gather-to-liberate-318d52448f11",
+      "description": "Argues that the problem is no longer connecting people but turning connection into collective capability without crushing individuality. Reframes “King” as a center of gravity rather than a throne and emphasizes unity + diversity as a practical cooperation posture.",
+      "type": "medium_article",
+      "language": "en"
+    },
+    {
+      "title": "SmartVote: a governance-grade “like” that surfaces the best work in Konnaxion",
+      "url": "https://medium.com/@boatbuilder610/smartvote-a-governance-grade-like-that-surfaces-the-best-work-in-konnaxion-9110973383e4",
+      "description": "Critiques default “likes” as a weak quality signal at scale and introduces SmartVote as a universal endorsement/decision layer. Emphasizes explainable outcomes and multiple readings (e.g., baseline vs expertise/ethics-weighted) so discovery becomes a form of governance by merit, not virality.",
+      "type": "medium_article",
+      "language": "en"
+    },
+    {
+      "title": "What is the kOA Digital Ecosystem?",
+      "url": "https://medium.com/@boatbuilder610/what-is-the-koa-digital-ecosystem-7e5055f0b33b",
+      "description": "A long-form overview framing kOA as a Sociotechnical Operating System: an auditable, offline-capable pipeline from knowledge to deliberation, decisions, execution, and durable public memory. Positions the architecture as a system-of-systems designed to resist capture and preserve traceability.",
+      "type": "medium_article",
+      "language": "en"
+    },
+    {
+      "title": "From the First Spoken Words to the Semantic Web: How Humanity Built Knowledge Networks That Can Cross Languages",
+      "url": "https://medium.com/@boatbuilder610/from-the-first-spoken-words-to-the-semantic-web-how-humanity-built-knowledge-networks-that-can-a36577c88f68",
+      "description": "Traces the evolution of human knowledge networks (speech → writing → institutions → print → web) and frames the semantic web as linking meaning, not just pages. Argues that shared identifiers and explicit relations enable cross-language interoperability without forcing a single universal language.",
+      "type": "medium_article",
+      "language": "en"
+    },
+    {
+      "title": "Sociotechnical Operating Systems: when collective intelligence becomes executable",
+      "url": "https://medium.com/@boatbuilder610/sociotechnical-operating-systems-when-collective-intelligence-becomes-executable-d5d116a177e3",
+      "description": "Defines a Sociotechnical OS as the runtime layer for collective governance (roles, protocols, integrity guarantees, accountability, auditability). Presents kOA as a concrete implementation: offline-capable, fail-closed, and designed to run a full knowledge→decision→execution loop.",
+      "type": "medium_article",
+      "language": "en"
+    },
+    {
+      "title": "Logos and Semantic Data: The Same Skeleton of Meaning",
+      "url": "https://medium.com/@boatbuilder610/logos-and-semantic-data-the-same-skeleton-of-meaning-39f4a31404ac",
+      "description": "Connects philosophical “logos” (intelligibility via structured relations) with modern semantic data (explicit concepts + relations). Argues meaning is carried by relations and rule constraints, and suggests modern semantic formats increasingly embed epistemic discipline (provenance, ambiguity handling, integrity) rather than representation alone.",
+      "type": "medium_article",
+      "language": "en"
+    },
+    {
+      "title": "The Resonance Architect",
+      "url": "https://medium.com/@boatbuilder610/the-resonance-architect-a5fdac93c1f1",
+      "description": "A personal orientation text describing a practiced sensitivity to the “tone/atmosphere” layer of situations alongside concrete facts. Frames this as trained perception and pattern recognition (not belief) used to navigate decisions and agency without surrendering to impulse.",
+      "type": "medium_article",
+      "language": "en"
+    },
+    {
+      "title": "Pi Theory: From a Circle’s Cut to a Cosmic Sequence",
+      "url": "https://medium.com/@boatbuilder610/pi-theory-from-a-circles-cut-to-a-cosmic-sequence-327e675296d0",
+      "description": "Explores π as a cascade triggered by dividing a circle and treats the constant as more than a numeric curiosity: a possible structural signal echoed in nature and physics. Presents an interpretive bridge between geometry, mathematics, and cosmological patterning.",
+      "type": "medium_article",
+      "language": "en"
+    },
+    {
+      "title": "Pi Theory: From a Circle’s Cut to a Cosmic Sequence",
+      "url": "https://philpapers.org/rec/MCCPTF",
+      "description": "Proposes a fixed decoding procedure applied to the earliest digits of π (reversal, segmentation, A1Z26 with 0→O) yielding a six-block symbolic sequence interpreted as a compact cosmogony: love → good → divide → reunite → create → expand.",
+      "type": "philpaper_article",
+      "language": "en"
+    },
+    {
+      "title": "Hydropower-sited modular compute for AI: A Canada-first economic–ecological pathway",
+      "url": "https://philpapers.org/rec/MCCHMC",
+      "description": "Outlines a model for colocating modular AI compute containers at cold-climate hydropower sites via standardized pads and strict SLAs, emphasizing clean power access, data privacy, and heat-reuse opportunities to reduce cooling overhead and grid stress.",
+      "type": "philpaper_article",
+      "language": "en"
+    },
+    {
+      "title": "Semantic Sovereignty and Non-Domination: Toward an Offline, Governable Knowledge Infrastructure",
+      "url": "https://philpapers.org/rec/MCCSSA-8",
+      "description": "Argues that freedom as non-domination should guide knowledge architectures; introduces “semantic sovereignty” as community control over creation/interpretation of shared knowledge; critiques opaque platform/AI dependencies and proposes offline-capable, auditable, governable infrastructure.",
+      "type": "philpaper_article",
+      "language": "en"
+    },
+    {
+      "title": "Democracy with Informed Advice: A Merit-Based, Ethics-Governed Parallel Channel",
+      "url": "https://philpapers.org/rec/MCCDWI",
+      "description": "Proposes a transparent, auditable, non-binding advisory layer that preserves one-person-one-vote for decisions while weighting advisory influence by domain-specific merit and moderating it with an ethics multiplier.",
+      "type": "philpaper_article",
+      "language": "en"
+    },
+    {
+      "title": "Zero-Skim Philanthropy Blueprint",
+      "url": "https://philpapers.org/rec/MCCZPB",
+      "description": "Policy brief proposing a cooperative banking “donation rail” with a 0% platform take-rate, pooled thematic funds, member allocation (approval voting), and a governance/compliance design framed for the Canadian context (CRA-qualified donees, shared services, dashboards, safeguards).",
+      "type": "philpaper_article",
+      "language": "en"
+    },
+    {
+      "title": "Rejean-McCormick — Repositories",
+      "url": "https://github.com/Rejean-McCormick?tab=repositories",
+      "description": "GitHub profile and repositories list. Bio highlights modular socio-technical systems focused on civic tech, open collaboration, and merit-based governance.",
+      "type": "github_wiki",
+      "language": "en"
+    },
+    {
+      "title": "π Cosmology: The Blueprint Engine",
+      "url": "https://github.com/Rejean-McCormick/Ame-Artificielle/wiki",
+      "description": "Preuve de concept explorant l’hypothèse d’une structure mathématique et géométrique fondamentale encodée dans π; utilise la séquence de π comme carte topologique (« sillon ») pour permettre à une IA de naviguer entre discret (nombres) et continu (réalité émergente). Inclut des spécifications du moteur EL (contrôle de personnalité, méta-cognition, éthique/gouvernance).",
+      "type": "github_wiki",
+      "language": "fr"
+    },
+    {
+      "title": "Koa Digital Ecosystem",
+      "url": "https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem/wiki",
+      "description": "A contract-driven knowledge system that converts raw inputs into immutable, canonical truth artifacts (Kristal Exchange) and portable runtime packs, with deterministic rendering, governed execution, and strict auditability.",
+      "type": "github_wiki",
+      "language": "en"
+    },
+    {
+      "title": "Kristal Framework",
+      "url": "https://github.com/Rejean-McCormick/kristal-framework/wiki",
+      "description": "Modular framework for defining, compiling, validating, and versioning Kristals (knowledge artifacts used by AI systems like Sentient), based on an enhanced Wikibase format with offline usage, entity linking, and provenance traceability.",
+      "type": "github_wiki",
+      "language": "en"
+    },
+    {
+      "title": "Konnaxion — Civic Workflows & Module Interactions",
+      "url": "https://github.com/Rejean-McCormick/Konnaxion/wiki",
+      "description": "Socio-technical framework for coordinating people, knowledge, and action through an ethical, modular civic architecture built on the KOA model (KonnectED, Ethikos, Kreative, keenKonnect, EkoH, Smart Vote).",
+      "type": "github_wiki",
+      "language": "en"
+    },
+    {
+      "title": "Abstract Wiki Architect",
+      "url": "https://github.com/Rejean-McCormick/abstract-wiki-architect/wiki",
+      "description": "Family-based, data-driven NLG toolkit for Abstract Wikipedia and Wikifunctions that organizes generation via shared language-family engines, per-language configuration cards, cross-linguistic constructions, lexicon bridges, semantic frames, and QA test suites.",
+      "type": "github_wiki",
+      "language": "en"
+    },
+    {
+      "title": "VM-ENGINE v0 — Voting Machine",
+      "url": "https://github.com/Rejean-McCormick/VotingMachine/wiki",
+      "description": "Offline-by-default voting/tabulation engine implementing deterministic allocation with explicit gates and frontier handling; produces canonical artifacts and is verified by a normative test pack, aiming for byte-identical outputs given the same inputs.",
+      "type": "github_wiki",
+      "language": "en"
+    },
+    {
+      "title": "Orgo System Overview",
+      "url": "https://github.com/Rejean-McCormick/Orgo/wiki",
+      "description": "Conceptual and technical map of the Orgo platform, positioned as a multi-tenant “nervous system” for organizations, distinct from standard ticketing systems or CRMs.",
+      "type": "github_wiki",
+      "language": "en"
+    },
+    {
+      "title": "SenTient",
+      "url": "https://github.com/Rejean-McCormick/SenTient/wiki",
+      "description": "Tool to deconstruct language and format it for Wikidata, inspired by Falcon 2.0, OpenRefine, and OpenTapioca.",
+      "type": "github_wiki",
+      "language": "en"
+    },
+    {
+      "title": "Freeze → Vote → Rebuild (Operational Peace Framework)",
+      "url": "https://github.com/Rejean-McCormick/Freeze-Vote-Rebuild_Operational-Peace-Framework",
+      "description": "Verification-first, status-neutral peace framework for Ukraine: Freeze → Vote → Rebuild, with gates, legal pathways, risks, and an implementation toolkit; includes an optional Cultural Bridge Track (Ukrainian language worldwide + curated Russian literature).",
+      "type": "github_wiki",
+      "language": "en"
+    },
+    {
       "title": "The Book of kOA: A Comprehensive Blueprint for Inclusive Collaboration and Merit-Based Civic Governance",
       "url": "https://www.amazon.ca/dp/B0FHWS687D",
       "description": "A manifesto and practical guide proposing kOA as a modular civic platform: turning knowledge into a public utility and translating agreement into coordinated, ethical action through auditable collaboration and governance.",
-      "corridors": [
-        "governance",
-        "technology"
-      ],
-      "tags": [
-        "koa",
-        "konnaxion",
-        "manifesto",
-        "civic-platform",
-        "governance",
-        "collective-intelligence"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": "en",
-      "createdAt": "2025-07-16T00:00:00Z",
-      "updatedAt": "2025-07-16T00:00:00Z",
-      "platform": {
-        "provider": "amazon",
-        "asin": "B0FHWS687D",
-        "tld": "ca",
-        "authors": [
-          "Réjean McCormick"
-        ],
-        "publisher": "Independently published",
-        "isbn10": null,
-        "isbn13": "979-8292807391"
-      },
-      "media": {
-        "kind": "book",
-        "format": "paperback",
-        "coverImageUrl": null
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/about",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "amazon_book:B0C9MPZFC5",
       "type": "amazon_book",
-      "title": "Metasystems: Measuring and Modulating Complex Behavior with a Pi-based Epistemology",
-      "url": "https://www.amazon.com/dp/B0C9MPZFC5",
-      "description": "Defines a “metasystem” as an alignment between behavior, context, and interpretation. Proposes a “clearness score” based on a constraint (tending to \u03c0) that ensures meaning remains usable. Framed as a knowledge theory bridging symbolic AI and pragmatic idealism.",
-      "corridors": [
-        "research",
-        "technology"
-      ],
-      "tags": [
-        "epistemology",
-        "metasystem",
-        "pi-theory",
-        "knowledge-theory",
-        "symbolic-ai"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": "en",
-      "createdAt": "2025-07-27T00:00:00Z",
-      "updatedAt": "2025-07-27T00:00:00Z",
-      "platform": {
-        "provider": "amazon",
-        "asin": "B0C9MPZFC5",
-        "tld": "com",
-        "authors": [
-          "Réjean McCormick"
-        ],
-        "publisher": "Independently published",
-        "isbn10": null,
-        "isbn13": "979-8853338646"
-      },
-      "media": {
-        "kind": "book",
-        "format": "paperback",
-        "coverImageUrl": null
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
+      "language": "en"
     },
     {
-      "id": "amazon_book:1733458509",
+      "title": "Konvergence: Échoïsme",
+      "url": "https://www.amazon.ca/dp/B0F1DGLDJ9",
+      "description": "A genre-blending narrative weaving personal tragedy, philosophical inquiry, and radical social transformation—positioned as a symbolic/fiction corridor that can onboard readers into deeper themes without requiring prior context.",
       "type": "amazon_book",
-      "title": "The Revival of the Left in Latin America: Implications for the International System",
-      "url": "https://www.amazon.com/dp/1733458509",
-      "description": "Analyzes Latin America\u2019s \u201cPink Tide\u201d in the early 21st century, exploring factors behind the electoral success of left-wing movements. Draws links with historical US influence and economic patterns, interpreting the phenomenon as a pushback against neoliberal hegemony with nuanced outcomes.",
-      "corridors": [
-        "culture",
-        "research"
-      ],
-      "tags": [
-        "latin-america",
-        "politics",
-        "pink-tide",
-        "left-wing-movements",
-        "neoliberalism"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": "en",
-      "createdAt": "2023-01-01T00:00:00Z",
-      "updatedAt": "2023-01-01T00:00:00Z",
-      "platform": {
-        "provider": "amazon",
-        "asin": "1733458509",
-        "tld": "com",
-        "authors": [
-          "Matthew L\u00f3pez"
-        ],
-        "publisher": "FMS Press",
-        "isbn10": "1733458509",
-        "isbn13": "978-1733458506"
-      },
-      "media": {
-        "kind": "book",
-        "format": "paperback",
-        "coverImageUrl": null
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
+      "language": "en"
     },
     {
-      "id": "amazon_book:0228000240",
+      "title": "King Klown Kronicles: The hidden Manifesto",
+      "url": "https://www.amazon.ca/dp/B0DZCXT7VP",
+      "description": "A story-driven “hidden manifesto” set in a city shaped by long neglect, where a personal loss becomes the spark for a wider transformation—used as a narrative diffusion layer for the King Klown mobilisation persona.",
       "type": "amazon_book",
-      "title": "The Eye of War: Military Perception from the Telescope to the Drone",
-      "url": "https://www.amazon.com/dp/0228000240",
-      "description": "Examines the evolving role of perception in warfare, from early optical instruments to modern drones. Argues that shifts in \u201cscopic regime\u201d \u2013 how battle is seen and depicted \u2013 have transformed military strategy, ethics, and the experience of conflict, merging warfighting with observation.",
-      "corridors": [
-        "research",
-        "technology"
-      ],
-      "tags": [
-        "military",
-        "perception",
-        "technology",
-        "warfare",
-        "drones"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": "en",
-      "createdAt": "2023-12-15T00:00:00Z",
-      "updatedAt": "2023-12-15T00:00:00Z",
-      "platform": {
-        "provider": "amazon",
-        "asin": "0228000240",
-        "tld": "com",
-        "authors": [
-          "Antoine Bousquet"
-        ],
-        "publisher": "McGill-Queen\u2019s University Press",
-        "isbn10": "0228000240",
-        "isbn13": "978-0228000246"
-      },
-      "media": {
-        "kind": "book",
-        "format": "hardcover",
-        "coverImageUrl": null
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
+      "language": "en"
     },
     {
-      "id": "amazon_book:0262045588",
+      "title": "Empowering AI for Programmers: The Kristal Framework and Human-Centered Integration",
+      "url": "https://www.amazon.ca/dp/B0DZCQBZZG",
+      "description": "A programmer-oriented guide introducing the Kristal Framework with a human-centered integration emphasis—covering practical ways to align AI outputs with human intent, workflows, and verification habits.",
       "type": "amazon_book",
-      "title": "Good Enough: The Tolerance for Mediocrity in Nature and Society",
-      "url": "https://www.amazon.com/dp/0262045588",
-      "description": "Proposes that nature and human institutions often operate on a \u201cgood enough\u201d principle rather than optimizing for perfection. From biological systems to economics and politics, the book suggests that tolerating imperfection is a feature of resilience and practicality, challenging obsession with maximal efficiency or purity.",
-      "corridors": [
-        "research",
-        "culture"
-      ],
-      "tags": [
-        "mediocrity",
-        "optimization",
-        "resilience",
-        "systems-theory",
-        "good-enough"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": "en",
-      "createdAt": "2021-01-19T00:00:00Z",
-      "updatedAt": "2021-01-19T00:00:00Z",
-      "platform": {
-        "provider": "amazon",
-        "asin": "0262045588",
-        "tld": "com",
-        "authors": [
-          "Daniel S. Milo"
-        ],
-        "publisher": "The MIT Press",
-        "isbn10": "0262045588",
-        "isbn13": "978-0262045589"
-      },
-      "media": {
-        "kind": "book",
-        "format": "hardcover",
-        "coverImageUrl": null
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
+      "language": "en"
     },
     {
-      "id": "medium_article:3def048d53e9",
-      "type": "medium_article",
-      "title": "A Rosetta Stone of Three Grammars: Sephiroth, \u03c0 Theory, and the kOA Digital Ecosystem",
-      "url": "https://medium.com/@boatbuilder610/a-rosetta-stone-of-three-grammars-sephiroth-%CF%80-theory-and-the-koa-digital-ecosystem-3def048d53e9",
-      "description": "Uses the Rosetta Stone metaphor to triangulate meaning across three parallel \u201cgrammars\u201d (Sephiroth, \u03c0 theory, and the kOA architecture). Argues that semantics must be deterministic (not rented from AI) and frames Kristal as a substrate that supports graded truth with provenance, validation, and upgrade paths.",
-      "corridors": [
-        "ecosystem",
-        "technology"
-      ],
-      "tags": [
-        "kOA",
-        "semantics",
-        "kristal",
-        "pi-theory",
-        "sephiroth"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": "en",
-      "createdAt": "2026-02-10T00:00:00Z",
-      "updatedAt": "2026-02-10T00:00:00Z",
-      "platform": {
-        "provider": "medium",
-        "publication": null,
-        "author": "R\u00e9jean McCormick (@boatbuilder610)",
-        "slug": "a-rosetta-stone-of-three-grammars-sephiroth-%CF%80-theory-and-the-koa-digital-ecosystem-3def048d53e9",
-        "canonicalUrl": null
-      },
-      "relationships": {
-        "related": [
-          "medium_article:7e5055f0b33b",
-          "medium_article:327e675296d0",
-          "medium_article:d5d116a177e3"
-        ],
-        "appearsOnPages": [
-          "/ecosystem",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
+      "title": "Hacker la Réalité: Guide opérationnel pour le prochain Christ",
+      "url": "https://www.amazon.ca/dp/B0FS1R11H1",
+      "description": "Proposes an “anthropologie messianique” and an ethics of action under the motif of an orchestrator of reality: disciplined discernment (tested against love/justice) plus operational strategy (subverting invisible norms, forming fluid alliances, using symbolic narrative, and modulating presence at the right moment/kairos).",
+      "type": "amazon_book",
+      "language": "fr"
     },
+  {
+    "title": "King Klown 4 the Krown",
+    "url": "https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4",
+    "description": "Podcast (FR/EN) porté par King Klown, « clown couronné » mêlant fiction, symboles et projets concrets : une méthode d’innovation par le détour narratif (du réel → fiction → réel élargi) pour réveiller les consciences et transformer la société.",
+    "type": "spotify_podcast",
+    "language": null
+  },
+  {
+    "title": "Le pouvoir du langage comme outil spirituel, symbolique et politique",
+    "url": "https://open.spotify.com/episode/5OXg6jswwsStuewfAkkJ6Y",
+    "description": "Essai sur une « métaphysique du langage » : la parole comme force de bénédiction/malédiction, les lettres comme symboles vivants, les mythes comme savoir encodé, et les récits comme leviers de transformation spirituelle et politique, avec lecture à la fois spirituelle et critique.",
+    "type": "spotify_podcast",
+    "language": "fr"
+  },
+  {
+    "title": "Le Surreal : Innover par la Fiction pour Transformer le Réel",
+    "url": "https://open.spotify.com/episode/5SdgCbo2GsiN9XTVwnF3vL",
+    "description": "Présentation du « Surreal » : une approche où l’on part d’un problème réel, on le met en scène par la fiction (décalage, humour, poésie), puis on revient au réel avec des possibilités élargies et des pistes d’action. King Klown y incarne le fou du roi qui dit vrai pour mieux réparer le monde.",
+    "type": "spotify_podcast",
+    "language": "fr"
+  },
+  {
+    "title": "Open letter from King Klown to Pope Francis",
+    "url": "https://open.spotify.com/episode/7bQGtwpOao1PRNy8INL6Oa",
+    "description": "Open letter in which King Klown introduces himself as a benevolent trickster serving Love, and proposes an alliance with the Catholic Church: a vision of renewal supported by an “infinite trellis” of tools—Konnaxion (knowledge/collaboration) and Orgo (accountable communication).",
+    "type": "spotify_podcast",
+    "language": "en"
+  },
+  {
+    "title": "Konvergence",
+    "url": "https://open.spotify.com/episode/6fW61SLWYHekbIehl5n73z",
+    "description": "Récit de réforme systémique et de mobilisation collective : naissance d’un mouvement (« Parti de la Convergence ») et diffusion de manuels concrets pour transformer institutions et société via Konnaxion et ses modules (gouvernance éthique, décision pondérée par l’expertise, éducation mondiale, transparence).",
+    "type": "spotify_podcast",
+    "language": null
+  },
+  {
+    "title": "King Klown Kronicles V1",
+    "url": "https://open.spotify.com/episode/1WlslWu5iqn9H2lB0SOqsy",
+    "description": "Chronique fictionnelle de la métamorphose : Réjean découvre Pi comme « blague cosmique », franchit le seuil du théâtre de la transformation et devient King Klown. L’univers se révèle performance, tandis que Konnaxion et Orgo basculent vers la résonance, la synchronicité et l’éveil symbolique.",
+    "type": "spotify_podcast",
+    "language": null
+  },
+  {
+    "title": "Les Mystères de Pi",
+    "url": "https://open.spotify.com/episode/4k1HuQerI8SZPrpQYEZ50R",
+    "description": "Voyage à travers l’histoire et les mythes de π : des premières civilisations aux lectures métaphysiques, Pi devient pont entre l’infini et le concret. King Klown apparaît comme trickster cosmique, gardien des synchronicités et des résonances qui relient les mondes possibles.",
+    "type": "spotify_podcast",
+    "language": "fr"
+  },
+  {
+    "title": "Livre La Plateforme de la Connaissance",
+    "url": "https://open.spotify.com/episode/52YomgJloKFLMMFtEyj2wr",
+    "description": "Vision d’une plateforme globale de savoir, collaborative et ouverte, conçue pour former et outiller face aux défis futurs (climat, inégalités, crises). La connaissance y sert l’action : éthique, inclusion, durabilité et co-création à l’échelle mondiale.",
+    "type": "spotify_podcast",
+    "language": "fr"
+  },
     {
-      "id": "medium_article:7e5055f0b33b",
-      "type": "medium_article",
-      "title": "Gather to Liberate: A Songline for the kOA Movement",
-      "url": "https://medium.com/@boatbuilder610/gather-to-liberate-a-songline-for-the-koa-movement-7e5055f0b33b",
-      "description": "A mytho-poetic narrative following a circle of animals that convenes to free the \u201cSwarm\u201d from a giant spider\u2019s web. The allegory encodes a political blueprint: collective liberation via shared knowledge and deliberate coordination. Serves as an origin story and conceptual manifesto for the kOA movement.",
-      "corridors": [
-        "culture",
-        "manifesto"
-      ],
-      "tags": [
-        "storytelling",
-        "mythos",
-        "kOA",
-        "collective-action"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": "en",
-      "createdAt": "2026-02-08T00:00:00Z",
-      "updatedAt": "2026-02-08T00:00:00Z",
-      "platform": {
-        "provider": "medium",
-        "publication": null,
-        "author": "R\u00e9jean McCormick (@boatbuilder610)",
-        "slug": "gather-to-liberate-a-songline-for-the-koa-movement-7e5055f0b33b",
-        "canonicalUrl": null
-      },
-      "relationships": {
-        "related": [
-          "medium_article:3def048d53e9",
-          "medium_article:d5d116a177e3"
-        ],
-        "appearsOnPages": [
-          "/culture",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "medium_article:327e675296d0",
-      "type": "medium_article",
-      "title": "Building with AI Without Building AI",
-      "url": "https://medium.com/@boatbuilder610/building-with-ai-without-building-ai-327e675296d0",
-      "description": "Explains how to harness AI as a tool for co-creation without ceding decision-making authority to it. Outlines kOA\u2019s approach to \u201cbuilding with AI\u201d: using models for generative assistance while ensuring humans set goals, verify outputs, and retain moral and creative leadership.",
-      "corridors": [
-        "technology",
-        "initiatives"
-      ],
-      "tags": [
-        "AI",
-        "co-creation",
-        "ethics",
-        "human-in-the-loop",
-        "kOA"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": "en",
-      "createdAt": "2026-02-07T00:00:00Z",
-      "updatedAt": "2026-02-07T00:00:00Z",
-      "platform": {
-        "provider": "medium",
-        "publication": null,
-        "author": "R\u00e9jean McCormick (@boatbuilder610)",
-        "slug": "building-with-ai-without-building-ai-327e675296d0",
-        "canonicalUrl": null
-      },
-      "relationships": {
-        "related": [
-          "medium_article:3def048d53e9"
-        ],
-        "appearsOnPages": [
-          "/platforms",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "medium_article:d5d116a177e3",
-      "type": "medium_article",
-      "title": "kOA \u2014 Why We Need a Knowledge \u201cOperating System\u201d for Society",
-      "url": "https://medium.com/@boatbuilder610/koa-why-we-need-a-knowledge-operating-system-for-society-d5d116a177e3",
-      "description": "Argues that society lacks a shared \u201coperating system\u201d for knowledge and decision-making. Introduces kOA as an answer: a civic infrastructure that standardizes how we share, validate, and act on knowledge. Emphasizes the urgency of an open platform to coordinate complex problem-solving beyond siloed institutions.",
-      "corridors": [
-        "about",
-        "ecosystem"
-      ],
-      "tags": [
-        "knowledge",
-        "civic-tech",
-        "operating-system",
-        "collaboration",
-        "kOA"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": "en",
-      "createdAt": "2026-02-05T00:00:00Z",
-      "updatedAt": "2026-02-05T00:00:00Z",
-      "platform": {
-        "provider": "medium",
-        "publication": null,
-        "author": "R\u00e9jean McCormick (@boatbuilder610)",
-        "slug": "koa-why-we-need-a-knowledge-operating-system-for-society-d5d116a177e3",
-        "canonicalUrl": null
-      },
-      "relationships": {
-        "related": [
-          "medium_article:327e675296d0",
-          "medium_article:7e5055f0b33b"
-        ],
-        "appearsOnPages": [
-          "/about",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "medium_article:1a4e54a559ec",
-      "type": "medium_article",
-      "title": "What is the kOA Digital Ecosystem?",
-      "url": "https://medium.com/@boatbuilder610/what-is-the-koa-digital-ecosystem-1a4e54a559ec",
-      "description": "Introduces the concept of a \u201cdigital ecosystem\u201d designed for civic collaboration. Describes kOA\u2019s architecture as a system-of-systems linking platforms (Konnaxion, Orgo) with a narrative layer (King Klown mythos). Emphasizes modularity, open participation, and a deterministic semantic core as key to its resilience.",
-      "corridors": [
-        "ecosystem",
-        "platforms"
-      ],
-      "tags": [
-        "digital-ecosystem",
-        "architecture",
-        "modularity",
-        "mythos",
-        "kOA"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": "en",
-      "createdAt": "2025-12-30T00:00:00Z",
-      "updatedAt": "2025-12-30T00:00:00Z",
-      "platform": {
-        "provider": "medium",
-        "publication": null,
-        "author": "R\u00e9jean McCormick (@boatbuilder610)",
-        "slug": "what-is-the-koa-digital-ecosystem-1a4e54a559ec",
-        "canonicalUrl": null
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/ecosystem",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "medium_article:0f087f307541",
-      "type": "medium_article",
-      "title": "The World Frozen: Diagnosing Our True Enemy",
-      "url": "https://medium.com/@boatbuilder610/the-world-frozen-diagnosing-our-true-enemy-0f087f307541",
-      "description": "A reflective piece identifying \u201cstagnation\u201d (not chaos) as the chief threat to societies. Argues that fear of change leads to decay, and that embracing dynamic, collective evolution is the antidote. Serves as a thematic cornerstone for the King Klown narrative, framing the stakes of inaction versus transformation.",
-      "corridors": [
-        "culture",
-        "manifesto"
-      ],
-      "tags": [
-        "stagnation",
-        "change",
-        "narrative",
-        "mythos",
-        "king-klown"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": "en",
-      "createdAt": "2025-12-20T00:00:00Z",
-      "updatedAt": "2025-12-20T00:00:00Z",
-      "platform": {
-        "provider": "medium",
-        "publication": null,
-        "author": "R\u00e9jean McCormick (@boatbuilder610)",
-        "slug": "the-world-frozen-diagnosing-our-true-enemy-0f087f307541",
-        "canonicalUrl": null
-      },
-      "relationships": {
-        "related": [
-          "medium_article:7e5055f0b33b",
-          "medium_article:647e1de58195"
-        ],
-        "appearsOnPages": [
-          "/culture",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "medium_article:647e1de58195",
-      "type": "medium_article",
-      "title": "Under the Mask: Vulnerability as Strength",
-      "url": "https://medium.com/@boatbuilder610/under-the-mask-vulnerability-as-strength-647e1de58195",
-      "description": "Explores the role of vulnerability in leadership and narrative. Using the King Klown character, it illustrates how revealing fears and flaws can galvanize trust and collective courage. Challenges the notion that leaders must appear infallible; instead, authenticity and openness become sources of strength.",
-      "corridors": [
-        "culture"
-      ],
-      "tags": [
-        "vulnerability",
-        "leadership",
-        "mythos",
-        "authenticity"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": "en",
-      "createdAt": "2025-12-15T00:00:00Z",
-      "updatedAt": "2025-12-15T00:00:00Z",
-      "platform": {
-        "provider": "medium",
-        "publication": null,
-        "author": "R\u00e9jean McCormick (@boatbuilder610)",
-        "slug": "under-the-mask-vulnerability-as-strength-647e1de58195",
-        "canonicalUrl": null
-      },
-      "relationships": {
-        "related": [
-          "medium_article:0f087f307541"
-        ],
-        "appearsOnPages": [
-          "/culture",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "philpaper_article:MCCPTF",
-      "type": "philpaper_article",
-      "title": "Pi Theory: From a Circle\u2019s Cut to a Cosmic Sequence",
-      "url": "https://philpapers.org/rec/MCCPTF",
-      "description": "Proposes a fixed decoding procedure applied to the earliest digits of \u03c0 (reversal, segmentation, A1Z26 with 0\u2192O) yielding a six-block symbolic sequence interpreted as a compact cosmogony: love \u2192 good \u2192 divide \u2192 reunite \u2192 create \u2192 expand.",
-      "corridors": [
-        "research",
-        "manifesto"
-      ],
-      "tags": [
-        "numerical meaning",
-        "cosmic order",
-        "mathematical ontology",
-        "symbolic interpretation",
-        "creation sequence",
-        "immanence",
-        "pi"
-      ],
-      "status": "active",
-      "canonical": true,
-      "language": "en",
-      "createdAt": "2025-11-06T00:00:00Z",
-      "updatedAt": "2025-11-06T00:00:00Z",
-      "platform": {
-        "provider": "philpapers",
-        "recordId": "MCCPTF",
-        "authors": [
-          "R\u00e9jean McCormick"
-        ],
-        "year": null,
-        "venue": null,
-        "doi": null
-      },
-      "links": {
-        "pdf": "https://philpapers.org/go.pl?id=MCCPTF&u=https%3A%2F%2Fphilpapers.org%2Farchive%2FMCCPTF.pdf",
-        "publisher": null
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory#philpapers",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "philpaper_article:MCCLAP-2",
-      "type": "philpaper_article",
-      "title": "Divine \u201cLogos\u201d as First Program: Language, Code, and the Cosmic Author",
-      "url": "https://philpapers.org/rec/MCCLAP-2",
-      "description": "Interprets \u201cIn the beginning was the Word\u201d as describing a primordial computational act. Draws parallels between theological \u201cLogos\u201d and programming code, suggesting that the creation narrative can be read as launching a cosmic algorithm. Explores how this analogy frames new perspectives on meaning and creation.",
-      "corridors": [
-        "research",
-        "ecosystem"
-      ],
-      "tags": [
-        "logos",
-        "language",
-        "code",
-        "creation",
-        "computational theology"
-      ],
-      "status": "active",
-      "canonical": true,
-      "language": "en",
-      "createdAt": "2025-11-06T00:00:00Z",
-      "updatedAt": "2025-11-06T00:00:00Z",
-      "platform": {
-        "provider": "philpapers",
-        "recordId": "MCCLAP-2",
-        "authors": [
-          "R\u00e9jean McCormick"
-        ],
-        "year": null,
-        "venue": null,
-        "doi": null
-      },
-      "links": {
-        "pdf": "https://philpapers.org/go.pl?id=MCCLAP-2&u=https%3A%2F%2Fphilpapers.org%2Farchive%2FMCCLAP-2.pdf",
-        "publisher": null
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory#philpapers",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "philpaper_article:MCCZSP",
-      "type": "philpaper_article",
-      "title": "Zero-Skim Philanthropy: A Blueprint for Directly Allocative Giving",
-      "url": "https://philpapers.org/rec/MCCZSP",
-      "description": "Diagnoses inefficiencies in conventional charitable giving: funds skimmed by intermediaries and overhead. Proposes an alternative \u201czero-skim\u201d model leveraging a digital platform for direct allocation, maximizing the fraction of donations reaching target beneficiaries. Connects conceptually to kOA\u2019s ethos of transparency and efficiency.",
-      "corridors": [
-        "research",
-        "initiatives"
-      ],
-      "tags": [
-        "philanthropy",
-        "charitable giving",
-        "platform",
-        "efficiency",
-        "transparency"
-      ],
-      "status": "active",
-      "canonical": true,
-      "language": "en",
-      "createdAt": "2025-10-06T00:00:00Z",
-      "updatedAt": "2025-10-06T00:00:00Z",
-      "platform": {
-        "provider": "philpapers",
-        "recordId": "MCCZSP",
-        "authors": [
-          "R\u00e9jean McCormick"
-        ],
-        "year": null,
-        "venue": null,
-        "doi": null
-      },
-      "links": {
-        "pdf": "https://philpapers.org/go.pl?id=MCCZSP&u=https%3A%2F%2Fphilpapers.org%2Farchive%2FMCCZSP.pdf",
-        "publisher": null
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory#philpapers",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "philpaper_article:MCCKCB",
-      "type": "philpaper_article",
-      "title": "Knowledge Commons Blueprint: From Scarcity to Synthesis",
-      "url": "https://philpapers.org/rec/MCCKCB",
-      "description": "Advocates for treating knowledge as a public commons. Critiques artificial scarcity in academic and commercial information systems, proposing a blueprint for an open knowledge ecosystem (like kOA). Emphasizes synthesis over competition, with structures to support collaborative verification, reuse, and cumulative innovation.",
-      "corridors": [
-        "research",
-        "initiatives"
-      ],
-      "tags": [
-        "knowledge commons",
-        "open access",
-        "collaboration",
-        "innovation",
-        "kOA"
-      ],
-      "status": "active",
-      "canonical": true,
-      "language": "en",
-      "createdAt": "2025-10-06T00:00:00Z",
-      "updatedAt": "2025-10-06T00:00:00Z",
-      "platform": {
-        "provider": "philpapers",
-        "recordId": "MCCKCB",
-        "authors": [
-          "R\u00e9jean McCormick"
-        ],
-        "year": null,
-        "venue": null,
-        "doi": null
-      },
-      "links": {
-        "pdf": "https://philpapers.org/go.pl?id=MCCKCB&u=https%3A%2F%2Fphilpapers.org%2Farchive%2FMCCKCB.pdf",
-        "publisher": null
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory#philpapers",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "philpaper_article:MCCGCT-2",
-      "type": "philpaper_article",
-      "title": "Geometric Pooling: Weighted Consensus Beyond Majoritarianism",
-      "url": "https://philpapers.org/rec/MCCGCT-2",
-      "description": "Presents a decision-making model where individual inputs are combined via geometric (multiplicative) pooling instead of arithmetic averaging or plurality voting. Argues this yields a form of consensus that respects intensity of preferences and expertise, aligning with kOA\u2019s concept of weighted deliberation (\u201cSmart Vote\u201d).",
-      "corridors": [
-        "research"
-      ],
-      "tags": [
-        "consensus",
-        "decision theory",
-        "geometric pooling",
-        "weighted voting",
-        "Smart Vote"
-      ],
-      "status": "active",
-      "canonical": true,
-      "language": "en",
-      "createdAt": "2025-09-01T00:00:00Z",
-      "updatedAt": "2025-09-01T00:00:00Z",
-      "platform": {
-        "provider": "philpapers",
-        "recordId": "MCCGCT-2",
-        "authors": [
-          "R\u00e9jean McCormick"
-        ],
-        "year": null,
-        "venue": null,
-        "doi": null
-      },
-      "links": {
-        "pdf": "https://philpapers.org/go.pl?id=MCCGCT-2&u=https%3A%2F%2Fphilpapers.org%2Farchive%2FMCCGCT-2.pdf",
-        "publisher": null
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory#philpapers",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "spotify_podcast:2hMamhJENVfWsULSuUVEG4:show",
-      "type": "spotify_podcast",
-      "title": "King Klown 4 the Krown",
-      "url": "https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4",
-      "description": null,
-      "corridors": [
-        "culture"
-      ],
-      "tags": [
-        "podcast",
-        "kingklown",
-        "mythos_king_klown"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2026-02-11T20:55:49Z",
-      "updatedAt": "2026-02-11T20:55:49Z",
-      "platform": {
-        "provider": "spotify",
-        "kind": "show",
-        "showId": "2hMamhJENVfWsULSuUVEG4",
-        "episodeId": null,
-        "publisher": null
-      },
-      "media": {
-        "kind": "audio",
-        "durationMs": null,
-        "explicit": null,
-        "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1f1a16653f9630103001098a81"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/links",
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "spotify_podcast:2hMamhJENVfWsULSuUVEG4:5OXg6jswwsStuewfAkkJ6Y",
-      "type": "spotify_podcast",
-      "title": "Le pouvoir du langage comme outil spirituel, symbolique et politique",
-      "url": "https://open.spotify.com/episode/5OXg6jswwsStuewfAkkJ6Y",
-      "description": null,
-      "corridors": [
-        "culture"
-      ],
-      "tags": [
-        "podcast",
-        "kingklown",
-        "language"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2026-02-11T20:55:49Z",
-      "updatedAt": "2026-02-11T20:55:49Z",
-      "platform": {
-        "provider": "spotify",
-        "kind": "episode",
-        "showId": "2hMamhJENVfWsULSuUVEG4",
-        "episodeId": "5OXg6jswwsStuewfAkkJ6Y",
-        "publisher": null
-      },
-      "media": {
-        "kind": "audio",
-        "durationMs": null,
-        "explicit": null,
-        "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1f1a16653f9630103001098a81"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "spotify_podcast:2hMamhJENVfWsULSuUVEG4:5SdgCbo2GsiN9XTVwnF3vL",
-      "type": "spotify_podcast",
-      "title": "Le Surreal : Innover par la Fiction pour Transformer le R\u00e9el",
-      "url": "https://open.spotify.com/episode/5SdgCbo2GsiN9XTVwnF3vL",
-      "description": null,
-      "corridors": [
-        "culture"
-      ],
-      "tags": [
-        "podcast",
-        "kingklown",
-        "fiction"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2026-02-11T20:55:49Z",
-      "updatedAt": "2026-02-11T20:55:49Z",
-      "platform": {
-        "provider": "spotify",
-        "kind": "episode",
-        "showId": "2hMamhJENVfWsULSuUVEG4",
-        "episodeId": "5SdgCbo2GsiN9XTVwnF3vL",
-        "publisher": null
-      },
-      "media": {
-        "kind": "audio",
-        "durationMs": null,
-        "explicit": null,
-        "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1f1a16653f9630103001098a81"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "spotify_podcast:2hMamhJENVfWsULSuUVEG4:7bQGtwpOao1PRNy8INL6Oa",
-      "type": "spotify_podcast",
-      "title": "Open letter from King Klown to Pope Francis",
-      "url": "https://open.spotify.com/episode/7bQGtwpOao1PRNy8INL6Oa",
-      "description": null,
-      "corridors": [
-        "culture"
-      ],
-      "tags": [
-        "podcast",
-        "kingklown",
-        "open-letter"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2026-02-11T20:55:49Z",
-      "updatedAt": "2026-02-11T20:55:49Z",
-      "platform": {
-        "provider": "spotify",
-        "kind": "episode",
-        "showId": "2hMamhJENVfWsULSuUVEG4",
-        "episodeId": "7bQGtwpOao1PRNy8INL6Oa",
-        "publisher": null
-      },
-      "media": {
-        "kind": "audio",
-        "durationMs": null,
-        "explicit": null,
-        "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1f1a16653f9630103001098a81"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "spotify_podcast:2hMamhJENVfWsULSuUVEG4:6fW61SLWYHekbIehl5n73z",
-      "type": "spotify_podcast",
-      "title": "Konvergence",
-      "url": "https://open.spotify.com/episode/6fW61SLWYHekbIehl5n73z",
-      "description": null,
-      "corridors": [
-        "culture"
-      ],
-      "tags": [
-        "podcast",
-        "kingklown"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2026-02-11T20:55:49Z",
-      "updatedAt": "2026-02-11T20:55:49Z",
-      "platform": {
-        "provider": "spotify",
-        "kind": "episode",
-        "showId": "2hMamhJENVfWsULSuUVEG4",
-        "episodeId": "6fW61SLWYHekbIehl5n73z",
-        "publisher": null
-      },
-      "media": {
-        "kind": "audio",
-        "durationMs": null,
-        "explicit": null,
-        "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1f1a16653f9630103001098a81"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "spotify_podcast:2hMamhJENVfWsULSuUVEG4:1WlslWu5iqn9H2lB0SOqsy",
-      "type": "spotify_podcast",
-      "title": "King Klown Kronicles V1",
-      "url": "https://open.spotify.com/episode/1WlslWu5iqn9H2lB0SOqsy",
-      "description": null,
-      "corridors": [
-        "culture"
-      ],
-      "tags": [
-        "podcast",
-        "kingklown",
-        "kronicles"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2026-02-11T20:55:49Z",
-      "updatedAt": "2026-02-11T20:55:49Z",
-      "platform": {
-        "provider": "spotify",
-        "kind": "episode",
-        "showId": "2hMamhJENVfWsULSuUVEG4",
-        "episodeId": "1WlslWu5iqn9H2lB0SOqsy",
-        "publisher": null
-      },
-      "media": {
-        "kind": "audio",
-        "durationMs": null,
-        "explicit": null,
-        "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1f1a16653f9630103001098a81"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "spotify_podcast:2hMamhJENVfWsULSuUVEG4:4k1HuQerI8SZPrpQYEZ50R",
-      "type": "spotify_podcast",
-      "title": "Les Myst\u00e8res de Pi",
-      "url": "https://open.spotify.com/episode/4k1HuQerI8SZPrpQYEZ50R",
-      "description": null,
-      "corridors": [
-        "culture"
-      ],
-      "tags": [
-        "podcast",
-        "kingklown",
-        "pi-theory"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2026-02-11T20:55:49Z",
-      "updatedAt": "2026-02-11T20:55:49Z",
-      "platform": {
-        "provider": "spotify",
-        "kind": "episode",
-        "showId": "2hMamhJENVfWsULSuUVEG4",
-        "episodeId": "4k1HuQerI8SZPrpQYEZ50R",
-        "publisher": null
-      },
-      "media": {
-        "kind": "audio",
-        "durationMs": null,
-        "explicit": null,
-        "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1f1a16653f9630103001098a81"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "spotify_podcast:2hMamhJENVfWsULSuUVEG4:52YomgJloKFLMMFtEyj2wr",
-      "type": "spotify_podcast",
-      "title": "Livre La Plateforme de la Connaissance",
-      "url": "https://open.spotify.com/episode/52YomgJloKFLMMFtEyj2wr",
-      "description": null,
-      "corridors": [
-        "culture"
-      ],
-      "tags": [
-        "podcast",
-        "kingklown",
-        "knowledge-platform"
-      ],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2026-02-11T20:55:49Z",
-      "updatedAt": "2026-02-11T20:55:49Z",
-      "platform": {
-        "provider": "spotify",
-        "kind": "episode",
-        "showId": "2hMamhJENVfWsULSuUVEG4",
-        "episodeId": "52YomgJloKFLMMFtEyj2wr",
-        "publisher": null
-      },
-      "media": {
-        "kind": "audio",
-        "durationMs": null,
-        "explicit": null,
-        "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1f1a16653f9630103001098a81"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:JEJubWAOXGI",
-      "type": "youtube_video",
       "title": "Nataq",
       "url": "https://www.youtube.com/watch?v=JEJubWAOXGI",
-      "description": "Nataq\nR\u00ed\u010dard De\u017earden \u2027 1990\n\nTi tse sontse, shcho slipyt\u2019 z\u00eirky\nKoly rozmovlyayesh iz vmurayuchym, yoho bil\u2019 takyy solodkyy\nShchob znajty rozrukhu i vybyty tvarynu\nShchob znajty prytulok, ty krashche za vsikh nas\nTy znayesh, shcho ya ne mozhu mriyaty pro zhyttya bez tebe;\nYa pam\u2019yataju vody, de ya kupavsya\nTeper, koly ya zhyvu, ya mriyu vodnochas\nUse moye \u00e2stvo khochhe, shchob ty buv ostannim\nYa ne khochu vmyraty na tsiy krutiy skeli\nNa ochakh u inshykh, naruhanyy bohamy\nNemaye kvitiv, shchob kynuty na moye t\u00edlo\nA khto bude byty v baraban proshchannya?\nShche raz kazhu tobi: ya pidu za toboju v yamu\nAle ya khochu zemli, o Natak, ty mene chuyesh?\nYakshcho vam tse pidkhodyt\u2019, yakshcho zhyttya vykonuye nashi bazhannya\nMy budemo razom do kintsya chasiv\nAle ya tak khvylyuyusya; sv\u00etlovi zatyazhky\nTrokhy bil\u2019she z kozhnym dnem \u200b\u200btvoy\u00e2 movchannya mene hnityt\u2019\nVidkryyte ochi i povach\u2019te, shcho vovky dyvlyatsya na nas;\nVony vzhe vybraly; moment, zhertva\nI os\u2019 vono vtikaye v tse temne nebo\nPodikh shamana zakhlynuvsya vid dokoriv suml\u0456nnya\nBach, vin tremtyt\u2019 vid strakhu \u0456 pal\u2019tsi v n\u0456go pochorn\u0456ly\n\u0456 poky ya liubliyu tebe, vin klichhe smert\u2019\nYakshcho smert\u2019 navazhytsya zanesty\u2019s\u2019 tak daleko\nU tsikh ostannikh tumanakh, de zak\u0432rbf\u0456a\u0456t\u0432svit\nBud\u2019te vpevnen\u0456, shcho vona pryide ne til\u2019ky zarady n\u2019oho;\nDobre zakhovaymo rany, yde za chyslom\nO liubyy Natak, moye sertse d\u0456yshlo vysnovku:\nYa vmyrayu vid bazhannya pomer\u2019 v tsomu zhubnomu tabor\u0456\nTak, my propaly, yak nikhto \u0456nsih\u201d\nTak, my zablukaly, ale shche zhiv\u0456!\nVidkryyte ochi i podyv\u0456mosya na tsu zghrayu ptakh\u0456v\nShturm nevidomogo morya. Kudy vony idut\u2019?\nYa kazhu, shcho tam ocheret.\nKhod\u0456mo podyvymos\u2019! Khod\u0456mo podyvymos\u2019! Ya dumayu, ostrovy\nAbo den vstaye, mene hodu\u2019 i zakhodyt\u2019\nNa bozhevynnykh perakh \u0456 bezpechnykh pecherakh\nBude voda, tepla, yak tviy rot\nShchob divchynka narodilasya, zakryyte \u0456 ranuy\u2019\nNa tviy znak, na tviy holos, z\u0456bran\u0456 p\u0456d tvoyi spysy\nStada bizon\u0456v vymagayut\u2019 zhertv\n\u0456 koly spalakhuye myasyats\u2019 dostatku\nBuri plod\u0456v, shchob zhiv tviy syn\nTvoya dolya moya; my bil\u2019she ne budemo \u0456sty\nMy pidemo nerestytysya u vnutr\u0456shn\u0456 savany\n\u0456 ty rozpalish mo\u0454 hole \u0456 kists\u2019ke bazhannya\nDozvol\u2019 meni krychaty tvoyu radist\u2019, dozvol\u2019 tobi vypl\u2019unuty moye sertse!\n\u0456 yakshcho yakymos\u2019 dyvom nashi molytvy dosyagnut\u2019\nShchob zaspolyty tskh bojevil\u2019nykh boh\u0456v, zacharovanykh bolem\nYa ne pohodyusya, shchob khto\u2019s \u0456z nykh zabraf mene nazad\nAbo plakala pisok \u0456 yila korinnya\nYa ne povernayusya na mis\u2019sya stari\nZa zakonamy voyiny vykhodyat\u2019 na polyany\nPam\u2019yat\u2019 gorut\u2019, fackel u rukakh\nYakshcho meni dovedytsya povernutysya, ya povernusya do morya\nYa molodyy Natak, yak olenyatko na zor\u2019\nA zhyttya khochhe mene i khochhe, shchob ty pryiyshov\nRozbudymo ord\u2019, chuiu blahannya!\nDavayte pryvyazhemo ulamky do sechovykh mikhur\u0456v kytiv\nMy pershymy skushchuyemo myhdal\nPerekhrestymosya, perekhrestymosya! Prynesemo, khto khochhe\nLiuby mene, dopomozhy meni! Bo miy zh\u0456v\u0456t khochhe rozkolotysya\nYa sytyy, Natak: meni znadobytsya vohon\u2019",
-      "corridors": [
-        "culture"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-03-18T16:56:58Z",
-      "updatedAt": "2025-03-18T16:56:58Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "JEJubWAOXGI",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT7M12S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
+      "description": "Nataq",
+      "type": "youtube_video",
+      "language": "uk"
     },
     {
-      "id": "youtube_video:7JIgVgnDTfI",
-      "type": "youtube_video",
-      "title": "1.1 Fondements doctrinaux (sections th\u00e9oriques)",
-      "url": "https://www.youtube.com/watch?v=7JIgVgnDTfI",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:35:58Z",
-      "updatedAt": "2025-04-09T21:35:58Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "7JIgVgnDTfI",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT17M48S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:F9p8Iuu_Vt0",
-      "type": "youtube_video",
-      "title": "2.1 Manuel m\u00e9thodologique",
-      "url": "https://www.youtube.com/watch?v=F9p8Iuu_Vt0",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:36:36Z",
-      "updatedAt": "2025-04-09T21:36:36Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "F9p8Iuu_Vt0",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT9M38S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:S9jYH66vioc",
-      "type": "youtube_video",
-      "title": "1.5 Histoire & th\u00e9ologie",
-      "url": "https://www.youtube.com/watch?v=S9jYH66vioc",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:37:08Z",
-      "updatedAt": "2025-04-09T21:37:08Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "S9jYH66vioc",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT4M4S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:3099mFbM5QU",
-      "type": "youtube_video",
-      "title": "0.1 Introduction g\u00e9n\u00e9rale",
-      "url": "https://www.youtube.com/watch?v=3099mFbM5QU",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:37:44Z",
-      "updatedAt": "2025-04-09T21:37:44Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "3099mFbM5QU",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT9M12S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:q_0O1TNOwTs",
-      "type": "youtube_video",
-      "title": "2.2 Exercices pratiques",
-      "url": "https://www.youtube.com/watch?v=q_0O1TNOwTs",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:38:20Z",
-      "updatedAt": "2025-04-09T21:38:20Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "q_0O1TNOwTs",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT4M52S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:ifG__SX_MxM",
-      "type": "youtube_video",
-      "title": "3.1 Planification pastorale",
-      "url": "https://www.youtube.com/watch?v=ifG__SX_MxM",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:39:16Z",
-      "updatedAt": "2025-04-09T21:39:16Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "ifG__SX_MxM",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT8M56S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:wnS6n4RTta0",
-      "type": "youtube_video",
-      "title": "3.2 Indicateurs & suivi",
-      "url": "https://www.youtube.com/watch?v=wnS6n4RTta0",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:39:45Z",
-      "updatedAt": "2025-04-09T21:39:45Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "wnS6n4RTta0",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT10M27S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:7bLZfrJbuBI",
-      "type": "youtube_video",
-      "title": "3.3 Fiche liturgique d\u2019envoi",
-      "url": "https://www.youtube.com/watch?v=7bLZfrJbuBI",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:40:22Z",
-      "updatedAt": "2025-04-09T21:40:22Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "7bLZfrJbuBI",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT8M3S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:QpDDfKK9KqA",
-      "type": "youtube_video",
-      "title": "5.1 (intro) Retraite \u2013 consignes initiales",
-      "url": "https://www.youtube.com/watch?v=QpDDfKK9KqA",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:40:59Z",
-      "updatedAt": "2025-04-09T21:40:59Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "QpDDfKK9KqA",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT9M20S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:5UrZFJhUvyI",
-      "type": "youtube_video",
-      "title": "5.2 Panel d\u2019animation (1/2)",
-      "url": "https://www.youtube.com/watch?v=5UrZFJhUvyI",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:41:38Z",
-      "updatedAt": "2025-04-09T21:41:38Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "5UrZFJhUvyI",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT8M54S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:oM1svKPgh3A",
-      "type": "youtube_video",
-      "title": "5.3 Conclusion de la retraite",
-      "url": "https://www.youtube.com/watch?v=oM1svKPgh3A",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:42:18Z",
-      "updatedAt": "2025-04-09T21:42:18Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "oM1svKPgh3A",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT6M14S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:-o7AJTNWpbg",
-      "type": "youtube_video",
-      "title": "5.4 Panel d\u2019animation (2/2)",
-      "url": "https://www.youtube.com/watch?v=-o7AJTNWpbg",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:42:53Z",
-      "updatedAt": "2025-04-09T21:42:53Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "-o7AJTNWpbg",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT6M8S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:dqyJEUjZu28",
-      "type": "youtube_video",
-      "title": "5.5 Retraite – t\u00e9moignages (1/3)",
-      "url": "https://www.youtube.com/watch?v=dqyJEUjZu28",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:43:38Z",
-      "updatedAt": "2025-04-09T21:43:38Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "dqyJEUjZu28",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT6M27S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:7A-H1AbgiDo",
-      "type": "youtube_video",
-      "title": "5.6 Retraite – t\u00e9moignages (2/3)",
-      "url": "https://www.youtube.com/watch?v=7A-H1AbgiDo",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:44:12Z",
-      "updatedAt": "2025-04-09T21:44:12Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "7A-H1AbgiDo",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT5M38S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:ANu6F0duYj0",
-      "type": "youtube_video",
-      "title": "5.7 Retraite – t\u00e9moignages (3/3)",
-      "url": "https://www.youtube.com/watch?v=ANu6F0duYj0",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:44:41Z",
-      "updatedAt": "2025-04-09T21:44:41Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "ANu6F0duYj0",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT4M10S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:MllMQLphUxc",
-      "type": "youtube_video",
-      "title": "6.1 Conclusion du parcours",
-      "url": "https://www.youtube.com/watch?v=MllMQLphUxc",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:45:21Z",
-      "updatedAt": "2025-04-09T21:45:21Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "MllMQLphUxc",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT1M42S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:BgtqbQ65wic",
-      "type": "youtube_video",
-      "title": "7. Bonus – chants th\u00e9matiques",
-      "url": "https://www.youtube.com/watch?v=BgtqbQ65wic",
-      "description": "Chant th\u00e9matique d\u2019introduction (exemple \u201cNataq\u201d\u2014voir paroles dans \u201cDescription\u201d sur la vid\u00e9o Nataq).\nChant th\u00e9matique de conclusion (\u201cSiccitu00e0\u201d \u2013 reprise de Noemi, adapt\u00e9e).",
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:45:56Z",
-      "updatedAt": "2025-04-09T21:45:56Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "BgtqbQ65wic",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT4M23S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:ZkF3UfvUU_8",
-      "type": "youtube_video",
-      "title": "7.2 Conclusion du pipeline",
-      "url": "https://www.youtube.com/watch?v=ZkF3UfvUU_8",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:46:31Z",
-      "updatedAt": "2025-04-09T21:46:31Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "ZkF3UfvUU_8",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT1M15S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:a76TBZbSHuU",
-      "type": "youtube_video",
-      "title": "7.3 Conclusion du pipeline",
-      "url": "https://www.youtube.com/watch?v=a76TBZbSHuU",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:47:04Z",
-      "updatedAt": "2025-04-09T21:47:04Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "a76TBZbSHuU",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT2M1S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:XWWvI6bZEgE",
-      "type": "youtube_video",
-      "title": "7.4 Conclusion du pipeline",
-      "url": "https://www.youtube.com/watch?v=XWWvI6bZEgE",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:47:35Z",
-      "updatedAt": "2025-04-09T21:47:35Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "XWWvI6bZEgE",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT1M28S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:fNUQmAIQFDw",
-      "type": "youtube_video",
-      "title": "7.5 Conclusion du pipeline",
-      "url": "https://www.youtube.com/watch?v=fNUQmAIQFDw",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:48:12Z",
-      "updatedAt": "2025-04-09T21:48:12Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "fNUQmAIQFDw",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT3M18S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:hNQZx0FoNB8",
-      "type": "youtube_video",
-      "title": "7.6 Conclusion du pipeline",
-      "url": "https://www.youtube.com/watch?v=hNQZx0FoNB8",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:48:48Z",
-      "updatedAt": "2025-04-09T21:48:48Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "hNQZx0FoNB8",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT4M53S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:b78LhZMssFU",
-      "type": "youtube_video",
-      "title": "7.7 Conclusion du pipeline",
-      "url": "https://www.youtube.com/watch?v=b78LhZMssFU",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:49:28Z",
-      "updatedAt": "2025-04-09T21:49:28Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "b78LhZMssFU",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT4M55S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:qMSofJgcc4s",
-      "type": "youtube_video",
-      "title": "7.8 Conclusion du pipeline",
-      "url": "https://www.youtube.com/watch?v=qMSofJgcc4s",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:50:05Z",
-      "updatedAt": "2025-04-09T21:50:05Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "qMSofJgcc4s",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT4M48S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:pOutMFD5dgs",
-      "type": "youtube_video",
-      "title": "8. Conclusion du pipeline",
-      "url": "https://www.youtube.com/watch?v=pOutMFD5dgs",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:50:38Z",
-      "updatedAt": "2025-04-09T21:50:38Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "pOutMFD5dgs",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT0M55S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:7qo1HsaGdDI",
-      "type": "youtube_video",
-      "title": "8.1 Conclusion g\u00e9n\u00e9rale",
-      "url": "https://www.youtube.com/watch?v=7qo1HsaGdDI",
-      "description": "Conclusion g\u00e9n\u00e9rale du programme (synchro des volets A, B, C).",
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:51:14Z",
-      "updatedAt": "2025-04-09T21:51:14Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "7qo1HsaGdDI",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT1M42S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:LzUpv0Hj8a4",
-      "type": "youtube_video",
-      "title": "9. Impl\u00e9mentation – volet A",
-      "url": "https://www.youtube.com/watch?v=LzUpv0Hj8a4",
-      "description": "Volet A: \u00e9ducation – formation – validation de bonnes pratiques – microcertification interinstitutionnelle. (KonnectED: \u00e9changes de \u201cbriques\u201d p\u00e9dagogiques – carri\u00e8res modulaires).",
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:51:49Z",
-      "updatedAt": "2025-04-09T21:51:49Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "LzUpv0Hj8a4",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT0M48S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:lkkQfd69-FQ",
-      "type": "youtube_video",
-      "title": "9.2 Impl\u00e9mentation – volet B",
-      "url": "https://www.youtube.com/watch?v=lkkQfd69-FQ",
-      "description": "Volet B: R&D ouverte – \u00e9changes de modules \u2013 maturit\u00e9 collaborative. (KeenKonnect: documentation \u2013 nitrification des journ\u00e9es code, mutualisation de modules).",
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:52:26Z",
-      "updatedAt": "2025-04-09T21:52:26Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "lkkQfd69-FQ",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT1M4S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:_F4j9LXJk_Y",
-      "type": "youtube_video",
-      "title": "9.3 Impl\u00e9mentation – volet C",
-      "url": "https://www.youtube.com/watch?v=_F4j9LXJk_Y",
-      "description": "Volet C: gouvernance – co-construction de la Loi – \u00e9galisation de l\u2019acc\u00e8s aux r\u00e9sultats. (SmartVote / Ethikos: consultation structur\u00e9e – \u00e9galisation du \u201cpourquoi\u201d (m\u00e9rite / \u00e9thique) dans chaque question).",
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:53:01Z",
-      "updatedAt": "2025-04-09T21:53:01Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "_F4j9LXJk_Y",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT0M56S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:3HuCFxmYVUY",
-      "type": "youtube_video",
-      "title": "10. Conclusion – programme global (1/2)",
-      "url": "https://www.youtube.com/watch?v=3HuCFxmYVUY",
-      "description": "C\u2019est la convergence (synchronisation) des espaces A, B, C qui forme l\u2019\u00e9pine dorsale commune du programme, et qui permet de cr\u00e9er des boucles logiques destin\u00e9es \u00e0 la fois \u00e0 la prise de d\u00e9cision collective, \u00e0 l\u2019ex\u00e9cution et \u00e0 la cr\u00e9ation (mobilisation).",
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:53:41Z",
-      "updatedAt": "2025-04-09T21:53:41Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "3HuCFxmYVUY",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT1M14S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:fxBQRKl7Z_A",
-      "type": "youtube_video",
-      "title": "10.2 Conclusion – programme global (2/2)",
-      "url": "https://www.youtube.com/watch?v=fxBQRKl7Z_A",
-      "description": "Boucles d\u2019orchestration: \u00e9quivalence morale – diffusion narrative – calibration en retour sur syst\u00e8me r\u00e9el.",
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:54:20Z",
-      "updatedAt": "2025-04-09T21:54:20Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "fxBQRKl7Z_A",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT0M40S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:wu1Ij-mvFgk",
-      "type": "youtube_video",
-      "title": "11. Conclusion narrative (1/2)",
-      "url": "https://www.youtube.com/watch?v=wu1Ij-mvFgk",
-      "description": "Conclusion narrative: pointer vers la Kronique \u201cLes balles de bien commun\u201d pour boucler sur la strat\u00e9gie d\u2019impl\u00e9mentation (transposition fable \u2192 politique).",
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:54:56Z",
-      "updatedAt": "2025-04-09T21:54:56Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "wu1Ij-mvFgk",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT1M33S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:TWIXJoOmY6g",
-      "type": "youtube_video",
-      "title": "11.2 Conclusion narrative (2/2)",
-      "url": "https://www.youtube.com/watch?v=TWIXJoOmY6g",
-      "description": "Conclusion narrative: pointer vers la Kronique \u201cKonvergence\u201d pour boucler sur l\u2019objectif \u00e9thique (transposition fable \u2192 r\u00e9forme concr\u00e8te).",
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:55:31Z",
-      "updatedAt": "2025-04-09T21:55:31Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "TWIXJoOmY6g",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT1M28S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:EFkAbjOH0qs",
-      "type": "youtube_video",
-      "title": "11.3 Conclusion narrative",
-      "url": "https://www.youtube.com/watch?v=EFkAbjOH0qs",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:56:07Z",
-      "updatedAt": "2025-04-09T21:56:07Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "EFkAbjOH0qs",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT0M28S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:jouxrdK8Idk",
-      "type": "youtube_video",
-      "title": "12. Conclusion finale",
-      "url": "https://www.youtube.com/watch?v=jouxrdK8Idk",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:56:42Z",
-      "updatedAt": "2025-04-09T21:56:42Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "jouxrdK8Idk",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT1M17S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:gQ1i9DfNARg",
-      "type": "youtube_video",
-      "title": "13. Conclusion finale",
-      "url": "https://www.youtube.com/watch?v=gQ1i9DfNARg",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:57:18Z",
-      "updatedAt": "2025-04-09T21:57:18Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "gQ1i9DfNARg",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT2M10S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:CyH2WjQdJ0A",
-      "type": "youtube_video",
-      "title": "14. Conclusion finale",
-      "url": "https://www.youtube.com/watch?v=CyH2WjQdJ0A",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:57:56Z",
-      "updatedAt": "2025-04-09T21:57:56Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "CyH2WjQdJ0A",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT2M16S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:FyO955J1Ji8",
-      "type": "youtube_video",
-      "title": "Conclusion finale (multi-surface)",
-      "url": "https://www.youtube.com/watch?v=FyO955J1Ji8",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:58:33Z",
-      "updatedAt": "2025-04-09T21:58:33Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "FyO955J1Ji8",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT0M46S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:4yCLT9KyBK8",
-      "type": "youtube_video",
-      "title": "Conclusion finale (dissolution) – La M\u00e9tamorphose de Narcisse",
-      "url": "https://www.youtube.com/watch?v=4yCLT9KyBK8",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:59:12Z",
-      "updatedAt": "2025-04-09T21:59:12Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "4yCLT9KyBK8",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT5M37S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:wQHis8AW3_c",
-      "type": "youtube_video",
-      "title": "Conclusion finale (renaissance) – Back To Life",
-      "url": "https://www.youtube.com/watch?v=wQHis8AW3_c",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T21:59:47Z",
-      "updatedAt": "2025-04-09T21:59:47Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "wQHis8AW3_c",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT4M56S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:B9E_nFP_ny0",
-      "type": "youtube_video",
-      "title": "Conclusion finale (coda) – \u201cVous entendez? On en meurt!\u201d",
-      "url": "https://www.youtube.com/watch?v=B9E_nFP_ny0",
-      "description": null,
-      "corridors": [
-        "initiatives"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-04-09T22:00:27Z",
-      "updatedAt": "2025-04-09T22:00:27Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "B9E_nFP_ny0",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT0M58S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:M-LBxvhKosg",
-      "type": "youtube_video",
       "title": "King Klown   Fiction transformative",
-      "url": "https://www.youtube.com/watch?v=M-LBxvhKosg",
-      "description": null,
-      "corridors": [
-        "culture"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-03-22T16:42:49Z",
-      "updatedAt": "2025-03-22T16:42:49Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "M-LBxvhKosg",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT43M29S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
+      "url": "https://www.youtube.com/watch?v=MllMQLphUxc",
+      "description": "",
+      "type": "youtube_video",
+      "language": null
     },
     {
-      "id": "youtube_video:_q1F2P64G_E",
-      "type": "youtube_video",
       "title": "Livre Plateforme Connaissances",
+      "url": "https://www.youtube.com/watch?v=BgtqbQ65wic",
+      "description": "Plongez dans une épopée mythologique et philosophique où dieux anciens, esprits gardiens et intelligences artificielles se rencontrent pour imaginer une Plateforme Globale de Connaissances. Dans cette vidéo, la bibliothèque infinie devient le théâtre d’un questionnement profond : comment sortir du labyrinthe des savoirs fragmentés pour tisser une toile vivante, ouverte, éthique et inclusive ? \n\nÀ travers le dialogue d’Hermès, Legba, Ogun, Spider Grandmother, Thoth, Quetzalcoatl, Sarasvati et bien d’autres, cette histoire explore :\n\nLa fin des savoirs isolés et la naissance d’une toile de connaissances interconnectées\n\nLa sagesse des civilisations anciennes et la façon de la réintégrer dans le monde moderne\n\nL’aube du numérique, ses promesses, ses dangers et la fracture numérique\n\nLes piliers d’une plateforme mondiale : ouverture, accessibilité, collaboration et innovation ouverte\n\nUne architecture modulaire, résiliente et éco-responsable, soutenue par l’IA, le cloud et des technologies sécurisées\n\nL’harmonie entre l’humain et la machine : personnalisation, créativité augmentée, expérience intuitive\n\nUne gouvernance éthique, transparente et participative, où les communautés gardent un réel pouvoir de décision\n\nLa protection de la vie privée, la justice sociale, l’inclusion culturelle et l’accessibilité globale\n\nCette vidéo est à la fois un conte, un manifeste et une vision d’avenir : et si nous construisions ensemble une plateforme où chaque savoir, chaque culture et chaque voix trouveraient leur place ?",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "01- Je marche dans la ville, béton sous mes pieds",
+      "url": "https://www.youtube.com/watch?v=ZkF3UfvUU_8",
+      "description": "Un rap conscient qui dépeint l’atmosphère urbaine et les espoirs cachés derrière les façades de béton. Entre sirènes lointaines et pulsations de basse, la chanson invite à regarder au-delà du gris quotidien pour y trouver une lueur d’espoir.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "02- King Klown, Fiction Transformative",
+      "url": "https://www.youtube.com/watch?v=a76TBZbSHuU",
+      "description": "Un morceau mêlant street-art et surréalisme concret, où King Klown incarne le bouffon-roi révélateur. La fiction devient levier d’action et de prise de conscience, stimulant l’imagination pour transformer le réel.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "03- Intelligence Collective Organisée",
+      "url": "https://www.youtube.com/watch?v=XWWvI6bZEgE",
+      "description": "Hymne à Konnaxion et Orgo, cette chanson célèbre la puissance d’une communauté connectée et la diffusion libre du savoir. Le flow énergique souligne l’importance d’une gouvernance participative et d’une plateforme éthique.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "1. Le Monde Figé",
+      "url": "https://www.youtube.com/watch?v=fNUQmAIQFDw",
+      "description": "Une peinture de la stagnation sociale et politique : une cité asphyxiée par l’inaction, des infrastructures en ruine et une humanité assoupie. Le texte dénonce la lente agonie d’un monde où l’immobilisme est devenu la règle.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "2. Tempête & Révolte",
+      "url": "https://www.youtube.com/watch?v=hNQZx0FoNB8",
+      "description": "L’embrasement populaire est décrit comme un orage furieux : la colère s’élève d’abord en murmure puis en hurlement, bousculant les forces du pouvoir. Un pont musical installe un suspense avant d’introduire un rire inattendu, prélude à l’intervention du Bouffon.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "3. Le Bouffon Mystique",
+      "url": "https://www.youtube.com/watch?v=b78LhZMssFU",
+      "description": "Portrait énigmatique d’un trickster céleste : ce clown-visionnaire suspend l’orage par un rire cristallin et révèle, sous ses atours bariolés, la sagesse cachée derrière la facétie. Hymne aux paradoxes où sagesse et folie s’embrassent.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "5. La Cour Spirale",
+      "url": "https://www.youtube.com/watch?v=qMSofJgcc4s",
+      "description": "Invitation au rassemblement cosmique : King Klown, sur son trône fractal, appelle à lui des entités mythiques par un « Rire Cosmique ». C’est une cérémonie d’unité où chaos et ordre fusionnent pour fonder un nouveau conseil céleste.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "4. La Naissance de King Klown",
+      "url": "https://www.youtube.com/watch?v=pOutMFD5dgs",
+      "description": "Récit d’origine mélancolique : Réjean, père brisé par la perte de son fils, se transforme en King Klown dans un vieux théâtre abandonné. Métaphore de la renaissance par la douleur : la souffrance forge le masque sacré.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+
+    {
+      "title": "1. Crépuscule des Masques",
+      "url": "https://www.youtube.com/watch?v=7qo1HsaGdDI",
+      "description": "Un jeune héros s’éveille au chant mystérieux du monde. Dans une forêt baignée de lumière violette, il découvre un médaillon ancien qui appelle son cœur. Le cycle commence, entre rêve et réalité.\nThèmes : mystère, éveil, prophétie, appel de l’aventure.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "2- Vision de Pohénécoco",
+      "url": "https://www.youtube.com/watch?v=LzUpv0Hj8a4",
+      "description": "Lors d’un rêve étrange, le médaillon révèle une vision magique : un village oublié, une source sacrée, et un chemin tracé par les étoiles. Tout commence dans la douceur d’une forêt éveillée.\nThèmes : initiation, spiritualité, rencontre du destin.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "3- Les Secrets du Sanctuaire",
+      "url": "https://www.youtube.com/watch?v=lkkQfd69-FQ",
+      "description": "À l’intérieur d’un sanctuaire ancien, le héros fait face aux énigmes des éléments. Le feu, l’eau, la terre et l’air dansent autour de lui. Chaque symbole résolu rapproche un peu plus de l’harmonie.\nThèmes : connaissance, épreuve, équilibre des forces.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "4. L’Alliance des Factions",
+      "url": "https://www.youtube.com/watch?v=_F4j9LXJk_Y",
+      "description": "Les peuples autrefois divisés se réunissent sous une même bannière. Dans le grand hall, des voix s’élèvent, et des cœurs s’unissent. Ensemble, ils se préparent à affronter l’ombre.\nThèmes : fraternité, dialogue, pacte, espoir collectif.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "5. Bataille de l’Ombre",
+      "url": "https://www.youtube.com/watch?v=3HuCFxmYVUY",
+      "description": "L’heure du combat a sonné. Dans un orage de feu et de ténèbres, chacun affronte ses peurs et se bat pour l’avenir. Mais même au plus fort de la nuit, une étincelle de lumière résiste.\nThèmes : courage, ténèbres, lutte intérieure et extérieure.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "6. Cœur des Âges",
+      "url": "https://www.youtube.com/watch?v=fxBQRKl7Z_A",
+      "description": "Après le tumulte, le héros plonge dans un moment de silence sacré. Il découvre que le monde repose sur un équilibre subtil – une harmonie écrite dans les nombres, la nature et le temps.\nThèmes : paix intérieure, sagesse, beauté de l’univers.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "7. Résurgence des Ombres",
+      "url": "https://www.youtube.com/watch?v=wu1Ij-mvFgk",
+      "description": "La menace semblait vaincue… mais elle revient, plus discrète, plus insidieuse. Le héros devra affronter l’ombre une dernière fois, non par la force, mais par sa propre lumière intérieure.\nThèmes : vigilance, résilience, ténèbres persistantes.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "8. Cycle Éternel",
+      "url": "https://www.youtube.com/watch?v=TWIXJoOmY6g",
+      "description": "L’équilibre est restauré. Le monde reprend son souffle. Le médaillon s’endort, et la lumière circule à nouveau librement entre les êtres. Mais ce n’est pas la fin. Le cycle continue.\nThèmes : conclusion, renaissance, héritage, éternité.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+
+    {
+      "title": "1. Ni pauvreté, ni richesse",
+      "url": "https://www.youtube.com/watch?v=EFkAbjOH0qs",
+      "description": "Un dialogue tendre entre Colin et Raoul, centré sur l’idée biblique de Proverbes 30:8-9. Les paroles s’appuient sur les réflexions sur la modestie et la sobriété développées dans Apparence et personnalité de King Klown, où l’équilibre entre suffisance et privation est présenté comme gage d’authenticité.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "3. Le jongleur aux tomates",
+      "url": "https://www.youtube.com/watch?v=jouxrdK8Idk",
+      "description": "Colin lance trois tomates pour dénoncer la vanité des puissants – un clin d’œil direct à la mise en scène subversive présentée dans le « Projet King Klown – Présentation au Saint-Père ». L’humour et la satire se mêlent à l’idée, extraite du livre  Konvergence, que la fiction performative peut ébranler les certitudes.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "4. La Folie de David (1 Samuel 21)",
+      "url": "https://www.youtube.com/watch?v=gQ1i9DfNARg",
+      "description": "La chanson décrit la ruse de David feignant la démence pour échapper au roi Achish. Les paroles évoquent aussi les stratégies de dissimulation et de survie analysées dans le livre Colin Row.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "5. Audit",
+      "url": "https://www.youtube.com/watch?v=CyH2WjQdJ0A",
+      "description": "Colin brandit son badge « AUDIT » pour éclairer les combines des élites, thématique reprise de la Stratégie Médiatique de King Klown, où l’exigence de transparence est définie comme une tactique de contre-pouvoir. Le texte transforme cette idée en un face-à-face dansant, symbolisé par la boule disco.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "6. Sentinelle (Habacuc 2)",
+      "url": "https://www.youtube.com/watch?v=FyO955J1Ji8",
+      "description": "S’appuie sur le verset « Écris la vision… » du prophète Habacuc, comme détaillé dans le Global Strategic Overview – Why KOA. Colin se fait gardien de l’avenir, invitant Raoul à inscrire la stratégie dans la pierre (ou le parchemin) pour qu’elle survive au silence.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "7. Bergers carnivores (Ézéchiel 34 / Michée 3)",
+      "url": "https://www.youtube.com/watch?v=4yCLT9KyBK8",
+      "description": "Dénonce l’exploitation du peuple par ses « bergers », sans recours au gore littéral. Le propos s’inspire des axes éthiques de l’Approche systémique de l’innovation sociale et technologique, où l’on montre que l’abus de pouvoir se traduit d’abord par la prédation des plus fragiles.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "8. Tissage global (Zacharie 8:23)",
+      "url": "https://www.youtube.com/watch?v=wQHis8AW3_c",
+      "description": "Réinterprète la promesse d’alliance universelle de Zacharie, telle qu’exposée dans le livre onvergence. Dix voix, dix fils, un seul élan : la chanson traduit en paroles l’idée d’un réseau mondial co-construit, porté par la figure du clown-prophète.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "9. Ozias le lépreux (2 Chroniques 26)",
+      "url": "https://www.youtube.com/watch?v=B9E_nFP_ny0",
+      "description": "Retrace la chute d’Ozias, roi entaché par son orgueil, à partir de la chronique biblique et des notes stratégiques de Colin Row. L’accent est mis sur la leçon d’humilité : même les plus puissants ne sont pas à l’abri de la justice immanente.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "11. Veilleuse étoilée",
+      "url": "https://www.youtube.com/watch?v=M-LBxvhKosg",
+      "description": "Berceuse prophétique inspirée par la dimension spirituelle et collaborative décrite dans Initiative “King Klown” – Proposition stratégique de collaboration avec l’Église catholique. Les paroles invitent à la confiance et à la transmission, sous la lumière rassurante d’une veilleuse céleste.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "10. Hacktion VII – Carottes & Cryptogrammes",
       "url": "https://www.youtube.com/watch?v=_q1F2P64G_E",
-      "description": null,
-      "corridors": [
-        "about"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-03-15T00:43:03Z",
-      "updatedAt": "2025-03-15T00:43:03Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "_q1F2P64G_E",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT1H25M16S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:gD_h8UFTJ7g",
+      "description": "Colin et Raoul « hackage » la cuisine, semant carottes et QR codes codés : un écho aux propositions de l’Ashoka Fellowship Application, où l’intelligence collective se révèle dans de petits gestes du quotidien.",
       "type": "youtube_video",
-      "title": "Klown \u00c9volutionnaire",
+      "language": "fr"
+    },
+
+    {
+      "title": "7. La Tisseuse de Rêves",
       "url": "https://www.youtube.com/watch?v=gD_h8UFTJ7g",
-      "description": null,
-      "corridors": [
-        "culture"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-03-11T01:06:21Z",
-      "updatedAt": "2025-03-11T01:06:21Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "gD_h8UFTJ7g",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT1H38M49S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
-    },
-    {
-      "id": "youtube_video:LbCH-C680sg",
+      "description": "Célébration de l’intelligence émotionnelle : la Tisseuse mêle fil d’empathie et données froides, brodant une tapisserie où chaque concept est empreint de chaleur humaine. Ode à la fusion de la raison et du cœur.",
       "type": "youtube_video",
-      "title": "Ninja Arc-en-Ciel - 04 Limites claires",
+      "language": "fr"
+    },
+    {
+      "title": "9. Résilience",
       "url": "https://www.youtube.com/watch?v=LbCH-C680sg",
-      "description": null,
-      "corridors": [
-        "culture"
-      ],
-      "tags": [],
-      "status": "active",
-      "canonical": false,
-      "language": null,
-      "createdAt": "2025-03-05T16:38:41Z",
-      "updatedAt": "2025-03-05T16:38:41Z",
-      "platform": {
-        "provider": "youtube",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown",
-        "channelId": null,
-        "videoId": "LbCH-C680sg",
-        "privacyStatus": "public"
-      },
-      "media": {
-        "kind": "video",
-        "duration": "PT5M14S"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
+      "description": "Chant de guérison collective : face aux attaques des « Ombres », la communauté se relève par la solidarité et la force intérieure. King Klown, d’un rire apaisant, transforme la peur en énergie constructive.",
+      "type": "youtube_video",
+      "language": "fr"
     },
     {
-      "id": "github_wiki:Rejean-McCormick:Konnaxion",
-      "type": "github_wiki",
-      "title": "Konnaxion",
-      "url": "https://kingklown.wiki",
-      "description": "Modular civic-tech platform that connects people, knowledge, and projects across learning, R&D, governance, and culture, with domain- and ethics-aware weighting (Ekoh + Smart Vote).",
-      "corridors": [
-        "platforms"
-      ],
-      "tags": [
-        "konnaxion",
-        "civic-tech",
-        "knowledge-platform",
-        "smart-vote",
-        "ekoh"
-      ],
-      "status": "active",
-      "canonical": true,
-      "language": null,
-      "createdAt": null,
-      "updatedAt": null,
-      "platform": {
-        "provider": "github",
-        "owner": "Rejean-McCormick",
-        "repo": "Konnaxion"
-      },
-      "links": {
-        "repo": "https://github.com/Rejean-McCormick/Konnaxion",
-        "issues": "https://github.com/Rejean-McCormick/Konnaxion/issues",
-        "releases": "https://github.com/Rejean-McCormick/Konnaxion/releases"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
+      "title": "11. L’Éveil Collectif",
+      "url": "https://www.youtube.com/watch?v=F-xr4AAj_Ps",
+      "description": "Hymne progressif à l’émancipation : les foules se lèvent main dans la main, libérant les savoirs jadis cloisonnés. Cet élan soudé donne naissance à une conscience partagée, fondée sur l’éthique et la transparence.",
+      "type": "youtube_video",
+      "language": "fr"
     },
     {
-      "id": "github_repo:Rejean-McCormick:Orgo",
-      "type": "github_repo",
-      "title": "Orgo",
-      "url": "https://github.com/Rejean-McCormick/Orgo",
-      "description": "Multi-tenant nervous system for organisations: turns signals into Cases and Tasks, routes them via labels and roles, tracks execution, and surfaces Insights.",
-      "corridors": [
-        "platforms"
-      ],
-      "tags": [
-        "orgo",
-        "civic-tech",
-        "case-management",
-        "workflow"
-      ],
-      "status": "active",
-      "canonical": true,
-      "language": null,
-      "createdAt": null,
-      "updatedAt": null,
-      "platform": {
-        "provider": "github",
-        "owner": "Rejean-McCormick",
-        "repo": "Orgo"
-      },
-      "links": {
-        "wiki": "https://github.com/Rejean-McCormick/Orgo/wiki",
-        "issues": "https://github.com/Rejean-McCormick/Orgo/issues",
-        "releases": "https://github.com/Rejean-McCormick/Orgo/releases"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
+      "title": "12. Le Jeu Cosmique",
+      "url": "https://www.youtube.com/watch?v=aJfonQeRy9s",
+      "description": "Finale philosophique : la vie est un échiquier infini où rois, fous et pions affrontent le destin. King Klown rappelle que l’audace et la créativité sont nos armes pour réinventer sans cesse la pièce : un cycle éternel de renouveau.",
+      "type": "youtube_video",
+      "language": "fr"
     },
     {
-      "id": "github_repo:Rejean-McCormick:VotingMachine",
-      "type": "github_repo",
-      "title": "VotingMachine",
-      "url": "https://github.com/Rejean-McCormick/VotingMachine",
-      "description": "Experiments on consultations and weighted readings.",
-      "corridors": [
-        "technology"
-      ],
-      "tags": [
-        "voting",
-        "consultation",
-        "prototype"
-      ],
-      "status": "active",
-      "canonical": true,
-      "language": null,
-      "createdAt": null,
-      "updatedAt": null,
-      "platform": {
-        "provider": "github",
-        "owner": "Rejean-McCormick",
-        "repo": "VotingMachine"
-      },
-      "links": {
-        "issues": "https://github.com/Rejean-McCormick/VotingMachine/issues",
-        "releases": "https://github.com/Rejean-McCormick/VotingMachine/releases"
-      },
-      "relationships": {
-        "related": [],
-        "appearsOnPages": [
-          "/inventory"
-        ],
-        "backToMap": "https://initkoa.org/inventory"
-      }
+      "title": "8. Les Ombres du Pouvoir",
+      "url": "https://www.youtube.com/watch?v=QeJQZybw-6M",
+      "description": "Théâtre des conspirations : dans l’ombre, les anciens tyrans et leurs sbires tentent de saboter l’aube nouvelle par la désinformation et le sabotage numérique. Le refrain affirme la résistance d’un peuple éveillé.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "10. Au Bord de la Réalité",
+      "url": "https://www.youtube.com/watch?v=fCyPmzsEHVk",
+      "description": "Séquence onirique et fractale : King Klown fracture le miroir du réel pour faire éclore un univers remodelé. Chaque pas sur la frontière du tangible ouvre une faille vers l’imaginaire et redéfinit les lois du monde.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "12- Puissance Collective",
+      "url": "https://www.youtube.com/watch?v=MLILjuHhKV0",
+      "description": "Un manifeste rap pour fédérer les forces dispersées autour de KOA. Poings levés, cercles fracturés et appels à l’action soulignent que l’union citoyenne est la clé d’un avenir harmonieux.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "05- Kristal Farms, IA Verte, Futur Ouvert",
+      "url": "https://www.youtube.com/watch?v=MSwepLrC6I0",
+      "description": "Ode à l’infrastructure écologique de Kristal Farms, conçue autour des énergies hydroélectriques et de la modularité. Le texte décrit des fermes de calcul vertes comme socle d’une encyclopédie ouverte et d’une nouvelle ère technologique.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "14- Ekoh: Smart Vote, Voix Pondérées",
+      "url": "https://www.youtube.com/watch?v=JgSh8syza0g",
+      "description": "Hymne à Ekoh et au Smart Vote dans la plateforme web Konnaxion, où le mérite et l’expertise pèsent plus que la simple popularité. La chanson décrit le mécanisme de pondération des voix et la lutte contre la manipulation du débat public.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "04- Révolution Coopérative",
+      "url": "https://www.youtube.com/watch?v=qkCv4SYJgZ0",
+      "description": "Un appel militant à reprendre la main sur Desjardins et à instaurer une démocratie coopérative. Entre poings levés et logos hexagonaux, la rime puissante réclame justice sociale et redistribution équitable.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "13- Justice Réformée par l’IA",
+      "url": "https://www.youtube.com/watch?v=P29MjFcz7QA",
+      "description": "Vision d’un système judiciaire réinventé grâce à l’intelligence artificielle : impartialité, rapidité et transparence. Chatbots juridiques, analyses de données et verdicts justifiés promettent une équité réelle pour tous.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "15- Abus de Pouvoir: Konnaxion en Réponse",
+      "url": "https://www.youtube.com/watch?v=-g6EOGPfbOY",
+      "description": "Un rap dénonciateur des dynamiques de suprémacisme et d’oppression, suivi de l’alternative Konnaxion. Des chaînes brisées à la balance équitable, le texte trace un pont entre la conscientisation historique et l’action citoyenne.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "11- Réactions en reflet",
+      "url": "https://www.youtube.com/watch?v=8nKUNhuqOR8",
+      "description": "Analyse poétique des différentes attitudes face à King Klown, miroir des ombres et des lumières de chacun. Du rejet à l’adoration, la chanson décrit comment le bouffon-roi révèle nos véritables réactions intérieures.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "10- Parole Créatrice",
+      "url": "https://www.youtube.com/watch?v=iQguvEuFLMY",
+      "description": "Exploration du langage comme outil spirituel et politique, du mantra primitif aux récits fondateurs. La voix se fait instrument de guérison ou de libération, rappelant que chaque mot possède le pouvoir de façonner le monde.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "09- Sanctuaire  Rebondir pour Avancer",
+      "url": "https://www.youtube.com/watch?v=dNdPZlm0yuY",
+      "description": "Portrait d’un lieu protégé où les personnes en difficulté retrouvent force et dignité. Couvents transformés, accompagnement personnalisé et mandats clairs : un chant de résilience et de renaissance communautaire.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "16- Or Estampillé King Klown: Richesse Équitable",
+      "url": "https://www.youtube.com/watch?v=YxdwwGbCIIA",
+      "description": "Proposition poétique d’une “monnaie” symbolique signée King Klown, destinée à rétablir l’équilibre économique. Les lingots estampillés et leur distribution volontaire incarnent une richesse créée au service du bien commun.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+
+    {
+      "title": "1  Porte des Possibles",
+      "url": "https://www.youtube.com/watch?v=LieuAD406SA",
+      "description": "Introduction à la fascination de l’humanité pour Pi : l’histoire, le symbolisme du cercle, la croyance que la séquence décimale cache un message universel. Présente le projet de décodage et la quête du sens au cœur de l’album.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "2  Les Clés du Neuf",
+      "url": "https://www.youtube.com/watch?v=8PsA560ayTQ",
+      "description": "Plongée dans les méthodes de décodage : passage de la conversion décimale simple à la base 9 et à la numérologie pythagoricienne. Explore la nécessité de méthodes complexes pour révéler des structures et des motifs dans la suite de Pi.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "3  Gihecef – Le Chant du Chaos",
+      "url": "https://www.youtube.com/watch?v=Wifg34ZL4nE",
+      "description": "Représentation du chaos et de l’entropie comme moments inévitables du cycle cosmique. « Gihecef » devient le symbole du désordre, de la division, et de la déconstruction nécessaires à toute création.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "6  keenKonnect Hands Build the Bridge",
+      "url": "https://www.youtube.com/watch?v=qz-NLwb1J1s",
+      "description": "A motivational anthem for cooperative action—depicting hands from diverse backgrounds stitching together solutions, and urging listeners to join in forging real-world change.",
+      "type": "youtube_video",
+      "language": "en"
+    },
+    {
+      "title": "1  Pact of the Golden Threads",
+      "url": "https://www.youtube.com/watch?v=Hh6R8k7Xny4",
+      "description": "A stirring call to unity—portraying two visionary leaders binding their destinies with radiant filaments, symbolizing the power of shared purpose and collective resolve.",
+      "type": "youtube_video",
+      "language": "en"
+    },
+    {
+      "title": "4  Kin City Blueprints for Tomorrow",
+      "url": "https://www.youtube.com/watch?v=g2X1TjpOcYY",
+      "description": "A visionary manifesto for a better world—inviting audiences to embrace an idyllic, circular metropolis as the blueprint for global renewal and shared prosperity.",
+      "type": "youtube_video",
+      "language": "en"
+    },
+    {
+      "title": "2  Konnaxion We Are the Web",
+      "url": "https://www.youtube.com/watch?v=CQ_1dfeLWuA",
+      "description": "A rallying hymn for mass collaboration—casting knowledge as a living network that empowers every voice, turning isolated efforts into a synchronized movement.",
+      "type": "youtube_video",
+      "language": "en"
+    },
+    {
+      "title": "4  Jnon – Renaissance Cosmique",
+      "url": "https://www.youtube.com/watch?v=mTijRrJFNBw",
+      "description": "Après le chaos, vient le renouveau. Cette chanson met en avant le motif cyclique : le chaos prépare la reconstruction, Jnon incarne la renaissance, la réorganisation et l’émergence du neuf.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "3  Ekoh Weight of Truth",
+      "url": "https://www.youtube.com/watch?v=_79sNucYNiw",
+      "description": "A persuasive testament to meritocratic justice—framing integrity and expertise as the true currencies of influence, and calling listeners to uphold transparent, fact-based decisions.",
+      "type": "youtube_video",
+      "language": "en"
+    },
+    {
+      "title": "7  Doute – L’Épreuve du Feu",
+      "url": "https://www.youtube.com/watch?v=lRKJOAHhHFw",
+      "description": "Aborde le scepticisme scientifique face aux interprétations : la nécessité de l’esprit critique, la distinction entre motif réel et illusion statistique, et l’importance du doute comme moteur de la rigueur intellectuelle.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "7  Ethikos Debate in the Light",
+      "url": "https://www.youtube.com/watch?v=crFkTbjstts",
+      "description": "A rallying cry for open governance—portraying public discourse as a sacred, illuminated forum where justice, truth, and solidarity unite to guide societal decisions.",
+      "type": "youtube_video",
+      "language": "en"
+    },
+    {
+      "title": "5  Kristal Farms Light Beneath the Water",
+      "url": "https://www.youtube.com/watch?v=eXx0YDZLHG8",
+      "description": "An inspirational ode to green innovation—celebrating modular AI hubs powered by hydroelectric might, and casting sustainable technology as the key to collective empowerment.",
+      "type": "youtube_video",
+      "language": "en"
+    },
+    {
+      "title": "6  Symétrie – L’Ordre Secret",
+      "url": "https://www.youtube.com/watch?v=qIq5pt5RkTE",
+      "description": "Examine les motifs cycliques, l’alternance entre M et N, et la symétrie interne dans la séquence de Pi. Met en avant la récurrence des thèmes d’attraction, d’équilibre, et la dualité dans la structure du code.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "8  Le Pont – Science et Mystique",
+      "url": "https://www.youtube.com/watch?v=X09w4LSLbLA",
+      "description": "Chanson sur la rencontre entre traditions mystiques et science moderne : fusion de la gematria, des mathématiques, des mythes antiques et des lois de la physique contemporaine. Montre Pi comme langage universel.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "5  B0UM – Genèse de l’Univers",
+      "url": "https://www.youtube.com/watch?v=teRs1o6eV2w",
+      "description": "Centrée sur l’image du Big Bang : l’explosion originelle (« B0UM ») qui fait surgir l’univers du vide, la matière et l’énergie. Fait le lien entre le cycle décodé dans Pi et la cosmologie contemporaine.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+
+    {
+      "title": "2. O mystère du verbe",
+      "url": "https://www.youtube.com/watch?v=I4vv-bHZi28",
+      "description": "Une cantate baroque célébrant le pouvoir du langage comme outil spirituel, politique et symbolique. Sous forme d’airs et de chœurs, le chant transforme chaque mot en cristal pur, évoquant Nada Brahma, les mantras et les runes anciennes. Parfait pour mettre en avant des ateliers de communication consciente, des formations à l’éthique du verbe ou des projets d’éducation au discours critique.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "3. Consolationis Fons – Source de Consolation",
+      "url": "https://www.youtube.com/watch?v=DJxkzRdS9Pk",
+      "description": "Un chœur apaisant et trois vignettes musicales (berger, larmes, étreinte) illustrent la consolation et la solidarité dans l’épreuve. Pensé pour inspirer les associations d’aide aux victimes, les groupes de parole ou la justice réparatrice, ce motet proclame que de la douleur naît le courage et que la fraternité redonne force et espérance.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "1. Sanctuarium : Lieu d’Espérance",
+      "url": "https://www.youtube.com/watch?v=ZRKluunj3SE",
+      "description": "Un oratorio solennel qui décrit le projet Sanctuaire, ces anciens couvents transformés en maisons-communautés protégées où l’on « rebondit » plutôt que l’on s’effondre. Portail gothique, mains levées et lumière dorée symbolisent l’accueil, la résilience et l’accompagnement des personnes en situation de précarité. Idéal pour promouvoir une initiative d’habitat social, d’insertion et de soutien psychologique.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "6. La Révolution Konnaxion",
+      "url": "https://www.youtube.com/watch?v=mdCia7BV7cs",
+      "description": "Une cantate baroque-rap qui célèbre la révolution des savoirs : cristaux lumineux symbolisent l’ouverture des données, poings levés incarnent l’action citoyenne nourrie par Konnaxion. Un hymne à la coopération globale, parfait pour promouvoir la plateforme de collaboration technologique et humaniste du Mouvement KOA.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "4. Pactum Paradoxale – L’Alliance du Pape et du Clown",
+      "url": "https://www.youtube.com/watch?v=_If0J0UDenQ",
+      "description": "Oratorio moderne tiré du Projet King Klown – Présentation au Saint-Père, où la folie calculée du clown royal entrelace humour surréaliste et message évangélique. Scènes de reconstruction de l’Ukraine, démonstrations d’Orgo et dialogues impensés avec le Pape illustrent comment l’art dramatique peut servir la paix, la charité et la pédagogie pastorale.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "5. L’Aube des Alliances – Oratorio de Konnaxion",
+      "url": "https://www.youtube.com/watch?v=CgNGIw4JrBA",
+      "description": "Grande fresque musicale unissant les visions de Konnaxion, Orgo, Kristal Farms et Ekoh (Smart Vote). Chœur, récitatifs et airs mettent en lumière l’IA verte, l’intelligence collective et la gouvernance méritocratique. Idéal pour faire connaître la plateforme KOA et valoriser les projets d’innovation sociale, de data centers durables et de démocratie augmentée.",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "Klown Évolutionnaire",
+      "url": "https://www.youtube.com/watch?v=jSr1nN2TG50",
+      "description": "Hyperpop",
+      "type": "youtube_video",
+      "language": "fr"
+    },
+    {
+      "title": "Ninja Arc-en-Ciel - 04 Limites claires",
+      "url": "https://www.youtube.com/watch?v=Cz7qhJNDzuo",
+      "description": "Démo pour spectacle en deux parties du Ninja Arc-en-ciel et de Lumière Blanche, utilisant technique d'éclairage Color Shadow,",
+      "type": "youtube_video",
+      "language": "fr"
     }
   ]
 }
