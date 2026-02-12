@@ -187,27 +187,35 @@ function ResultCard({ it }: { it: Item }) {
       rel="noreferrer"
       style={{ textDecoration: 'none' }}
       className={[
-        'block p-5 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition',
+        'block w-full max-w-full overflow-hidden',
+        'p-5 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition',
         'no-underline hover:no-underline decoration-transparent',
       ].join(' ')}
     >
-      <div className="flex items-start justify-between gap-4">
-        <div className="min-w-0">
+      {/* Stack on mobile to avoid horizontal overflow */}
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+        {/* Left: main content */}
+        <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2 min-w-0">
             {meta.icon}
             <div className="font-semibold text-slate-900 truncate">{it.title}</div>
           </div>
 
-          {it.description ? <p className="text-sm text-slate-600 mt-2 leading-relaxed">{it.description}</p> : null}
+          {it.description ? (
+            <p className="text-sm text-slate-600 mt-2 leading-relaxed break-words">{it.description}</p>
+          ) : null}
 
           {it.topics?.length ? (
-            <div className="mt-3 text-xs text-slate-500">Topics: {it.topics.join(', ')}</div>
+            <div className="mt-3 text-xs text-slate-500 break-words">
+              Topics: {it.topics.join(', ')}
+            </div>
           ) : null}
         </div>
 
-        <div className="shrink-0 flex items-center gap-2">
+        {/* Right: badges */}
+        <div className="flex items-center gap-2 sm:shrink-0">
           <LangPastille language={it.language} />
-          <span className="text-xs text-slate-500">{it.type}</span>
+          <span className="text-xs text-slate-500 max-w-[12rem] truncate">{it.type}</span>
         </div>
       </div>
     </a>
