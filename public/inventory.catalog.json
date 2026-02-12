@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-02-12T23:12:11.235Z",
+  "generatedAt": "2026-02-12T23:22:59.776Z",
   "taxonomies": {
     "types": [
       "amazon_book",
@@ -37,6 +37,7 @@
     ],
     "topics": [
       "academic_paper_and_article",
+	  "king_klown",
       "audio_book",
       "cultural_diffusion",
       "data_sovereignty",
@@ -53,6 +54,7 @@
       "peace_and_efficiency",
       "philanthropy",
       "sociotechnical_os(koa_digital_ecosystem)",
+	  "rejean_mccormick",
       "metaphysics"
     ],
     "topic_labels": {
@@ -60,6 +62,10 @@
         "en": "Academic paper",
         "fr": "Article académique"
       },
+      "king_klown": {
+        "en": "King Klown",
+        "fr": "Roi Klown"
+      },		  
       "audio_book": {
         "en": "Audiobook",
         "fr": "Livre audio"
@@ -124,6 +130,15 @@
         "en": "Sociotechnical OS (kOA digital ecosystem)",
         "fr": "OS sociotechnique (écosystème numérique kOA)"
       },
+	  
+	  
+      "rejean_mccormick": {
+        "en": "Réjean McCormick",
+        "fr": "Réjean McCormick"
+      },	  
+	  
+	  
+	  
       "metaphysics": {
         "en": "Metaphysics",
         "fr": "Métaphysique"
@@ -399,8 +414,16 @@
       "type": "philpaper_article",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "ekoh_smartvote(merit_weighted_voting)",
         "governance",
-        "philanthropy"
+        "infrastructure",
+        "konnaxion",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -410,9 +433,7 @@
       "description": "GitHub profile and repositories list. Bio highlights modular socio-technical systems focused on civic tech, open collaboration, and merit-based governance.",
       "type": "github_wiki",
       "language": "en",
-      "topics": [
-        "governance"
-      ]
+      "topics": []
     },
     {
       "id": "github_wiki-pi-cosmology-the-blueprint-engine-4c116c67",
@@ -422,6 +443,8 @@
       "type": "github_wiki",
       "language": "fr",
       "topics": [
+        "cultural_diffusion",
+        "metaphysics",
         "pi_theory"
       ]
     },
@@ -433,9 +456,19 @@
       "type": "github_wiki",
       "language": "en",
       "topics": [
-        "kristal",
+        "academic_paper_and_article",
+        "data_sovereignty",
+        "ekoh_smartvote(merit_weighted_voting)",
         "governance",
-        "infrastructure"
+        "infrastructure",
+        "konnaxion",
+        "kristal",
+        "kristal(semantic_data)",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
