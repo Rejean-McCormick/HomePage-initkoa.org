@@ -2,7 +2,15 @@
 
 // app/play/page.tsx
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { PlayCircle, Globe, Drama, Network, Leaf, Cpu, Scale } from 'lucide-react';
+import { PlayCircle, Globe, Languages } from 'lucide-react';
+
+type TopicLabel = { en?: string; fr?: string };
+
+type Taxonomies = {
+  topics?: string[];
+  topic_labels?: Record<string, TopicLabel>;
+  languages?: Array<'en' | 'fr'>;
+};
 
 type Item = {
   id: string;
@@ -10,51 +18,35 @@ type Item = {
   url: string;
   description?: string | null;
   type: string;
-  language: 'en' | 'fr' | null; // ✅ matches your catalog reality
+  language: 'en' | 'fr' | null;
   topics: string[];
-  level?: string;
-  sections?: string[];
-  primarySection?: string;
 };
 
 type Catalog = {
+  schemaVersion?: string;
   generatedAt: string;
+  taxonomies?: Taxonomies;
   items: Item[];
 };
 
 type LangFilter = 'all' | 'en' | 'fr';
+type UiLang = 'en' | 'fr';
 type KingKlownMode = 'all' | 'only' | 'exclude';
 
-type Toggles = {
-  kristalFarms: boolean;
-  konnaxion: boolean;
-  orgo: boolean;
-  sociotechnicalOS: boolean;
-  civicEquity: boolean;
-};
+type Option<T extends string> = { key: T; label: string; icon?: React.ReactNode };
 
-type Option<T extends string> = {
-  key: T;
-  label: string;
-  icon?: React.ReactNode;
-};
-
-type ToggleDef<K extends keyof Toggles = keyof Toggles> = {
-  key: K;
-  label: string;
-  icon: React.ReactNode;
-  color: string;
-  match: (it: Item) => boolean;
-};
-
-/* =========================
-   FILTER DEFINITIONS (TOP)
-   ========================= */
+// Keep King Klown handled by its dedicated filter (hide from topic pills if present)
+const TOPICS_HIDDEN_FROM_UI = new Set(['king_klown']);
 
 const LANG_OPTIONS: Option<LangFilter>[] = [
   { key: 'all', label: 'All', icon: <Globe className="w-4 h-4 text-slate-500" /> },
   { key: 'en', label: 'English only' },
   { key: 'fr', label: 'Français seulement' },
+];
+
+const UI_LANG_OPTIONS: Option<UiLang>[] = [
+  { key: 'en', label: 'Labels EN', icon: <Languages className="w-4 h-4 text-slate-500" /> },
+  { key: 'fr', label: 'Étiquettes FR', icon: <Languages className="w-4 h-4 text-slate-500" /> },
 ];
 
 const KINGKLOWN_OPTIONS: Option<KingKlownMode>[] = [
@@ -63,72 +55,10 @@ const KINGKLOWN_OPTIONS: Option<KingKlownMode>[] = [
   { key: 'exclude', label: 'Exclude' },
 ];
 
-const TOPIC_GROUPS = {
-  sociotechnicalOS: new Set(['koa', 'governance', 'smartvote']),
-  civicEquity: new Set(['ethics', 'philanthropy', 'peace']),
-} as const;
-
-const TOGGLE_FILTERS: ToggleDef[] = [
-  {
-    key: 'kristalFarms',
-    label: 'Kristal Farms',
-    icon: <Leaf className="w-4 h-4 text-emerald-600" />,
-    color: 'bg-emerald-50 border-emerald-200',
-    match: (it) => (it.title ?? '').toLowerCase().includes('kristal farms'),
-  },
-  {
-    key: 'konnaxion',
-    label: 'Konnaxion',
-    icon: <Network className="w-4 h-4 text-indigo-600" />,
-    color: 'bg-indigo-50 border-indigo-200',
-    match: (it) => (it.topics ?? []).includes('konnaxion'),
-  },
-  {
-    key: 'orgo',
-    label: 'Orgo',
-    icon: <Cpu className="w-4 h-4 text-slate-700" />,
-    color: 'bg-slate-50 border-slate-200',
-    match: (it) => (it.topics ?? []).includes('orgo'),
-  },
-  {
-    key: 'sociotechnicalOS',
-    label: 'Sociotechnical OS',
-    icon: <Scale className="w-4 h-4 text-amber-600" />,
-    color: 'bg-amber-50 border-amber-200',
-    match: (it) => {
-      const topics = it.topics ?? [];
-      for (let i = 0; i < topics.length; i++) {
-        if (TOPIC_GROUPS.sociotechnicalOS.has(topics[i])) return true;
-      }
-      return false;
-    },
-  },
-  {
-    key: 'civicEquity',
-    label: 'Civic equity',
-    icon: <Drama className="w-4 h-4 text-rose-600" />,
-    color: 'bg-rose-50 border-rose-200',
-    match: (it) => {
-      const topics = it.topics ?? [];
-      for (let i = 0; i < topics.length; i++) {
-        if (TOPIC_GROUPS.civicEquity.has(topics[i])) return true;
-      }
-      return false;
-    },
-  },
-];
-
-/* =========================
-   HELPERS (TOP)
-   ========================= */
-
-function langBadge(language: Item['language']) {
-  if (language === 'en') return 'EN';
-  if (language === 'fr') return 'FR';
-  return '—'; // ✅ avoids crash for null
-}
-
 function normalizeCatalog(raw: any): Catalog {
+  const taxonomies: Taxonomies | undefined =
+    raw?.taxonomies && typeof raw.taxonomies === 'object' ? raw.taxonomies : undefined;
+
   const itemsRaw = Array.isArray(raw?.items) ? raw.items : [];
   const items: Item[] = itemsRaw.map((x: any) => ({
     id: String(x?.id ?? ''),
@@ -138,20 +68,21 @@ function normalizeCatalog(raw: any): Catalog {
     type: String(x?.type ?? ''),
     language: x?.language === 'en' || x?.language === 'fr' ? x.language : null,
     topics: Array.isArray(x?.topics) ? x.topics.filter((t: any) => typeof t === 'string') : [],
-    level: typeof x?.level === 'string' ? x.level : undefined,
-    sections: Array.isArray(x?.sections) ? x.sections.filter((s: any) => typeof s === 'string') : undefined,
-    primarySection: typeof x?.primarySection === 'string' ? x.primarySection : undefined,
   }));
 
   return {
+    schemaVersion: typeof raw?.schemaVersion === 'string' ? raw.schemaVersion : undefined,
     generatedAt: typeof raw?.generatedAt === 'string' ? raw.generatedAt : '',
+    taxonomies,
     items,
   };
 }
 
-/* =========================
-   UI
-   ========================= */
+function langBadge(language: Item['language']) {
+  if (language === 'en') return 'EN';
+  if (language === 'fr') return 'FR';
+  return '—';
+}
 
 function Pill({
   active,
@@ -178,31 +109,28 @@ function Pill({
   );
 }
 
-/* =========================
-   PAGE
-   ========================= */
-
 export default function PlayPage() {
   const [catalog, setCatalog] = useState<Catalog>({ generatedAt: '', items: [] });
 
+  // Main filters
   const [lang, setLang] = useState<LangFilter>('all');
   const [kingKlown, setKingKlown] = useState<KingKlownMode>('all');
 
-  const [toggles, setToggles] = useState<Toggles>({
-    kristalFarms: false,
-    konnaxion: false,
-    orgo: false,
-    sociotechnicalOS: false,
-    civicEquity: false,
-  });
+  // UI label language toggle
+  const [uiLang, setUiLang] = useState<UiLang>('en');
 
-  const toggle = useCallback((key: keyof Toggles) => {
-    setToggles((t) => ({ ...t, [key]: !t[key] }));
+  // Dynamic topic filters
+  const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
+  const [topicSearch, setTopicSearch] = useState('');
+
+  const toggleTopic = useCallback((topic: string) => {
+    setSelectedTopics((prev) => (prev.includes(topic) ? prev.filter((t) => t !== topic) : [...prev, topic]));
   }, []);
+
+  const clearTopics = useCallback(() => setSelectedTopics([]), []);
 
   useEffect(() => {
     const ctrl = new AbortController();
-
     (async () => {
       try {
         const r = await fetch('/inventory.catalog.json', { signal: ctrl.signal });
@@ -210,12 +138,9 @@ export default function PlayPage() {
         const raw = await r.json();
         setCatalog(normalizeCatalog(raw));
       } catch (e: any) {
-        if (e?.name !== 'AbortError') {
-          setCatalog({ generatedAt: '', items: [] });
-        }
+        if (e?.name !== 'AbortError') setCatalog({ generatedAt: '', items: [] });
       }
     })();
-
     return () => ctrl.abort();
   }, []);
 
@@ -225,14 +150,56 @@ export default function PlayPage() {
     return Number.isNaN(d.getTime()) ? '' : ` · updated ${d.toLocaleString()}`;
   }, [catalog.generatedAt]);
 
-  const activeMatchers = useMemo(() => {
-    const list: Array<(it: Item) => boolean> = [];
-    for (let i = 0; i < TOGGLE_FILTERS.length; i++) {
-      const def = TOGGLE_FILTERS[i];
-      if (toggles[def.key]) list.push(def.match);
+  // Cache topic labels for current uiLang
+  const topicLabel = useMemo(() => {
+    const labels = catalog.taxonomies?.topic_labels ?? {};
+    const cache = new Map<string, string>();
+    return (topic: string) => {
+      const hit = cache.get(topic);
+      if (hit) return hit;
+      const lbl = labels?.[topic]?.[uiLang] ?? topic;
+      cache.set(topic, lbl);
+      return lbl;
+    };
+  }, [catalog.taxonomies?.topic_labels, uiLang]);
+
+  // Topic universe: prefer taxonomies.topics, fallback to union from items
+  const allTopics = useMemo(() => {
+    const fromTaxonomy = Array.isArray(catalog.taxonomies?.topics) ? catalog.taxonomies!.topics! : null;
+
+    const set = new Set<string>();
+    if (fromTaxonomy) {
+      for (const t of fromTaxonomy) {
+        if (typeof t === 'string' && t && !TOPICS_HIDDEN_FROM_UI.has(t)) set.add(t);
+      }
+    } else {
+      for (const it of catalog.items) {
+        for (const t of it.topics ?? []) {
+          if (t && !TOPICS_HIDDEN_FROM_UI.has(t)) set.add(t);
+        }
+      }
     }
-    return list;
-  }, [toggles]);
+
+    // Sort by label in current uiLang
+    return Array.from(set).sort((a, b) => topicLabel(a).localeCompare(topicLabel(b)));
+  }, [catalog.items, catalog.taxonomies?.topics, topicLabel]);
+
+  const visibleTopics = useMemo(() => {
+    const q = topicSearch.trim().toLowerCase();
+    if (!q) return allTopics;
+    return allTopics.filter((t) => {
+      const raw = t.toLowerCase();
+      const lbl = topicLabel(t).toLowerCase();
+      return raw.includes(q) || lbl.includes(q);
+    });
+  }, [allTopics, topicSearch, topicLabel]);
+
+  // Build topic sets once (faster than repeated array.includes for large catalogs)
+  const topicSetById = useMemo(() => {
+    const m = new Map<string, Set<string>>();
+    for (const it of catalog.items) m.set(it.id, new Set(it.topics ?? []));
+    return m;
+  }, [catalog.items]);
 
   const filtered = useMemo(() => {
     const items = catalog.items ?? [];
@@ -240,71 +207,82 @@ export default function PlayPage() {
 
     const needLang = lang !== 'all';
     const needKingKlown = kingKlown !== 'all';
+    const needTopics = selectedTopics.length > 0;
+    const requiredTopics = selectedTopics; // AND semantics
 
     for (let i = 0; i < items.length; i++) {
       const it = items[i];
 
-      // language
-      if (needLang) {
-        if (it.language !== lang) continue; // null safely excluded when en/fr selected
-      }
+      if (needLang && it.language !== lang) continue;
 
-      // king_klown tri-state
+      const tset = topicSetById.get(it.id) ?? new Set<string>();
+
       if (needKingKlown) {
-        const topics = it.topics ?? [];
-        const hasKK = topics.includes('king_klown');
+        const hasKK = tset.has('king_klown');
         if (kingKlown === 'only' && !hasKK) continue;
         if (kingKlown === 'exclude' && hasKK) continue;
       }
 
-      // compiled toggle matchers
-      let ok = true;
-      for (let j = 0; j < activeMatchers.length; j++) {
-        if (!activeMatchers[j](it)) {
-          ok = false;
-          break;
+      if (needTopics) {
+        let ok = true;
+        for (let j = 0; j < requiredTopics.length; j++) {
+          if (!tset.has(requiredTopics[j])) {
+            ok = false;
+            break;
+          }
         }
+        if (!ok) continue;
       }
-      if (!ok) continue;
 
       out.push(it);
     }
 
     return out;
-  }, [catalog.items, lang, kingKlown, activeMatchers]);
+  }, [catalog.items, lang, kingKlown, selectedTopics, topicSetById]);
 
   return (
     <main className="max-w-5xl mx-auto px-6 py-12">
-      {/* HEADER (matching your site pattern) */}
       <div className="mb-12 border-b border-gray-200 pb-8">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="p-3 bg-amber-100 rounded-2xl">
-            <PlayCircle className="w-10 h-10 text-amber-600" />
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <div className="p-3 bg-amber-100 rounded-2xl">
+              <PlayCircle className="w-10 h-10 text-amber-600" />
+            </div>
+            <div>
+              <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900">Play</h1>
+              <p className="text-slate-500 mt-1">
+                Filters ({filtered.length} results){updatedAtLabel}
+              </p>
+            </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900">
-            Play
-          </h1>
-        </div>
 
-        <p className="text-slate-500">
-          Filters ({filtered.length} results){updatedAtLabel}
-        </p>
+          {/* UI language toggle (labels) */}
+          <div className="flex flex-wrap gap-2 items-center">
+            {UI_LANG_OPTIONS.map((opt) => (
+              <Pill key={opt.key} active={uiLang === opt.key} onClick={() => setUiLang(opt.key)}>
+                {opt.icon ?? null}
+                {opt.label}
+              </Pill>
+            ))}
+          </div>
+        </div>
       </div>
 
-      {/* FILTERS */}
       <section className="space-y-6">
+        {/* Main: content language */}
         <div className="flex flex-wrap gap-2 items-center">
           <span className="text-sm font-bold uppercase tracking-widest text-slate-600 mr-2">
             Language
           </span>
           {LANG_OPTIONS.map((opt) => (
             <Pill key={opt.key} active={lang === opt.key} onClick={() => setLang(opt.key)}>
-              {opt.icon ? opt.icon : null}
+              {opt.icon ?? null}
               {opt.label}
             </Pill>
           ))}
         </div>
 
+        {/* Main: King Klown */}
         <div className="flex flex-wrap gap-2 items-center">
           <span className="text-sm font-bold uppercase tracking-widest text-slate-600 mr-2">
             King Klown mythos
@@ -316,30 +294,45 @@ export default function PlayPage() {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-2 items-center">
-          <span className="text-sm font-bold uppercase tracking-widest text-slate-600 mr-2">
-            Filters
-          </span>
-          {TOGGLE_FILTERS.map((f) => (
-            <button
-              key={f.key}
-              onClick={() => toggle(f.key)}
-              type="button"
-              className={[
-                'px-3 py-1.5 rounded-full border text-sm font-medium transition inline-flex items-center gap-2',
-                toggles[f.key]
-                  ? `text-slate-900 ${f.color}`
-                  : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50',
-              ].join(' ')}
-            >
-              {f.icon}
-              {f.label}
-            </button>
-          ))}
+        {/* Dynamic topics */}
+        <div className="rounded-xl border border-slate-200 p-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="text-sm font-bold uppercase tracking-widest text-slate-600">
+              Topics
+              <span className="ml-2 text-xs font-normal text-slate-400">
+                ({selectedTopics.length} selected / {allTopics.length} total)
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <input
+                value={topicSearch}
+                onChange={(e) => setTopicSearch(e.target.value)}
+                placeholder={uiLang === 'fr' ? 'Rechercher…' : 'Search…'}
+                className="px-3 py-2 rounded-lg border border-slate-200 text-sm"
+              />
+              <button
+                type="button"
+                onClick={clearTopics}
+                className="px-3 py-2 rounded-lg border border-slate-200 text-sm hover:bg-slate-50"
+                disabled={selectedTopics.length === 0}
+              >
+                {uiLang === 'fr' ? 'Effacer' : 'Clear'}
+              </button>
+            </div>
+          </div>
+
+          <div className="mt-3 flex flex-wrap gap-2">
+            {visibleTopics.map((t) => (
+              <Pill key={t} active={selectedTopics.includes(t)} onClick={() => toggleTopic(t)}>
+                {topicLabel(t)}
+              </Pill>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* RESULTS */}
+      {/* Results */}
       <section className="mt-10 grid gap-4">
         {filtered.map((it) => (
           <a
@@ -357,9 +350,7 @@ export default function PlayPage() {
             </div>
 
             {it.description ? (
-              <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-                {it.description}
-              </p>
+              <p className="text-sm text-slate-600 mt-2 leading-relaxed">{it.description}</p>
             ) : null}
 
             {it.topics?.length ? (
