@@ -1,7 +1,7 @@
 'use client';
 
 // app/play/page.tsx
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { PlayCircle, Globe, Languages } from 'lucide-react';
 
 type TopicLabel = { en?: string; fr?: string };
@@ -55,6 +55,18 @@ const KINGKLOWN_OPTIONS: Option<KingKlownMode>[] = [
   { key: 'exclude', label: 'Exclude' },
 ];
 
+type LinkPreview = {
+  url: string;
+  title: string | null;
+  description: string | null;
+  image: string | null;
+  siteName: string | null;
+};
+
+type SpotifyEmbed =
+  | { kind: 'track' | 'album' | 'playlist' | 'episode' | 'show'; id: string }
+  | null;
+
 function normalizeCatalog(raw: unknown): Catalog {
   const r = (raw ?? {}) as Record<string, unknown>;
 
@@ -95,6 +107,115 @@ function langBadge(language: Item['language']) {
   return '—';
 }
 
+function parseYouTubeId(rawUrl: string): string | null {
+  try {
+    const u = new URL(rawUrl);
+
+    if (u.hostname.includes('youtu.be')) {
+      const id = u.pathname.split('/').filter(Boolean)[0];
+      return id || null;
+    }
+
+    if (u.hostname.includes('youtube.com')) {
+      if (u.pathname === '/watch') return u.searchParams.get('v');
+      const m = u.pathname.match(/^\/(embed|shorts)\/([^/]+)/);
+      return m?.[2] ?? null;
+    }
+
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+function parseSpotify(rawUrl: string): SpotifyEmbed {
+  try {
+    const u = new URL(rawUrl);
+    if (!u.hostname.includes('open.spotify.com')) return null;
+    const parts = u.pathname.split('/').filter(Boolean);
+    const kind = parts[0] as SpotifyEmbed extends infer X ? (X extends { kind: infer K } ? K : never) : never;
+    const id = parts[1];
+    const allowed = new Set(['track', 'album', 'playlist', 'episode', 'show']);
+    if (!allowed.has(String(kind)) || !id) return null;
+    return { kind: kind as SpotifyEmbed extends { kind: infer K } ? (K extends string ? any : never) : any, id };
+  } catch {
+    return null;
+  }
+}
+
+const previewCache = new Map<string, LinkPreview | null>();
+const previewInflight = new Map<string, Promise<LinkPreview | null>>();
+
+async function fetchPreview(url: string): Promise<LinkPreview | null> {
+  const cached = previewCache.get(url);
+  if (cached !== undefined) return cached;
+
+  const inflight = previewInflight.get(url);
+  if (inflight) return inflight;
+
+  const p = (async () => {
+    try {
+      const r = await fetch(`/api/unfurl?url=${encodeURIComponent(url)}`);
+      if (!r.ok) {
+        previewCache.set(url, null);
+        return null;
+      }
+      const j = (await r.json()) as LinkPreview;
+      previewCache.set(url, j ?? null);
+      return j ?? null;
+    } catch {
+      previewCache.set(url, null);
+      return null;
+    } finally {
+      previewInflight.delete(url);
+    }
+  })();
+
+  previewInflight.set(url, p);
+  return p;
+}
+
+function useInView(rootMargin = '300px') {
+  const ref = useRef<HTMLElement | null>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const e = entries[0];
+        if (e?.isIntersecting) setInView(true);
+      },
+      { root: null, rootMargin, threshold: 0.01 }
+    );
+
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [rootMargin]);
+
+  return { ref, inView };
+}
+
+function useLinkPreview(url: string, enabled: boolean) {
+  const [data, setData] = useState<LinkPreview | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    if (!enabled) return;
+    (async () => {
+      const pv = await fetchPreview(url);
+      if (!cancelled) setData(pv);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [url, enabled]);
+
+  return data;
+}
+
 function Pill({
   active,
   onClick,
@@ -117,6 +238,82 @@ function Pill({
     >
       {children}
     </button>
+  );
+}
+
+function ResultCard({ it, lang }: { it: Item; lang: LangFilter }) {
+  const ytId = useMemo(() => parseYouTubeId(it.url), [it.url]);
+  const sp = useMemo(() => parseSpotify(it.url), [it.url]);
+
+  const { ref, inView } = useInView('400px');
+
+  // Unfurl only for non-YouTube and non-Spotify (Spotify uses iframe player)
+  const preview = useLinkPreview(it.url, inView && !ytId && !sp);
+
+  const image = ytId ? `https://i.ytimg.com/vi/${ytId}/hqdefault.jpg` : preview?.image ?? null;
+  const showPlayOverlay = Boolean(ytId);
+
+  return (
+    <a
+      ref={ref as unknown as React.Ref<HTMLAnchorElement>}
+      href={it.url}
+      target="_blank"
+      rel="noreferrer"
+      className="block p-5 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition"
+    >
+      <div className="flex gap-4">
+        {image ? (
+          <div className="relative w-44 aspect-video shrink-0 overflow-hidden rounded-lg bg-slate-100">
+            <img src={image} alt="" className="h-full w-full object-cover" loading="lazy" />
+            {showPlayOverlay ? (
+              <PlayCircle className="absolute inset-0 m-auto w-12 h-12 text-white/90 drop-shadow" />
+            ) : null}
+          </div>
+        ) : null}
+
+        <div className="min-w-0 flex-1">
+          <div className="flex items-start justify-between gap-4">
+            <div className="font-semibold text-slate-900 truncate">{it.title}</div>
+            <div className="text-xs text-slate-500 shrink-0">
+              {langBadge(it.language)} · {it.type}
+            </div>
+          </div>
+
+          {it.description ? <p className="text-sm text-slate-600 mt-2 leading-relaxed">{it.description}</p> : null}
+
+          {/* Generic link preview text (optional) */}
+          {!ytId && !sp && (preview?.siteName || preview?.title) ? (
+            <div className="mt-2 text-xs text-slate-500">
+              {preview?.siteName ? <span className="font-medium">{preview.siteName}</span> : null}
+              {preview?.siteName && preview?.title ? <span> · </span> : null}
+              {preview?.title ? <span className="truncate">{preview.title}</span> : null}
+            </div>
+          ) : null}
+
+          {/* Spotify player */}
+          {sp ? (
+            <div className="mt-3">
+              {inView ? (
+                <iframe
+                  src={`https://open.spotify.com/embed/${sp.kind}/${sp.id}`}
+                  width="100%"
+                  height={sp.kind === 'track' ? 80 : 152}
+                  frameBorder={0}
+                  loading="lazy"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  className="rounded-lg"
+                  title="Spotify player"
+                />
+              ) : (
+                <div className="h-[80px] rounded-lg bg-slate-100" />
+              )}
+            </div>
+          ) : null}
+
+          {it.topics?.length ? <div className="mt-3 text-xs text-slate-500">Topics: {it.topics.join(', ')}</div> : null}
+        </div>
+      </div>
+    </a>
   );
 }
 
@@ -348,26 +545,7 @@ export default function PlayPage() {
       {/* Results */}
       <section className="mt-10 grid gap-4">
         {filtered.map((it) => (
-          <a
-            key={it.id}
-            href={it.url}
-            target="_blank"
-            rel="noreferrer"
-            className="block p-5 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition"
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div className="font-semibold text-slate-900">{it.title}</div>
-              <div className="text-xs text-slate-500 shrink-0">
-                {langBadge(it.language)} · {it.type}
-              </div>
-            </div>
-
-            {it.description ? <p className="text-sm text-slate-600 mt-2 leading-relaxed">{it.description}</p> : null}
-
-            {it.topics?.length ? (
-              <div className="mt-3 text-xs text-slate-500">Topics: {it.topics.join(', ')}</div>
-            ) : null}
-          </a>
+          <ResultCard key={it.id} it={it} lang={lang} />
         ))}
       </section>
     </main>
