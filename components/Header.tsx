@@ -39,15 +39,6 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: 'Ecosystem',
-    path: '/platforms',
-    icon: <Layers className="w-4 h-4" />,
-    children: [
-      { label: 'Platforms', desc: 'Konnaxion & Orgo (Software)', path: '/platforms' },
-      { label: 'Infrastructures', desc: 'Kin City & Kristal Farms', path: '/infrastructures' },
-    ],
-  },
-  {
     label: 'Initiatives',
     path: '/initiatives',
     icon: <TrendingUp className="w-4 h-4" />,
@@ -55,6 +46,15 @@ const NAV_ITEMS = [
       { label: 'Overview', desc: 'Strategic Roadmap', path: '/initiatives' },
       { label: 'Civic Governance', desc: 'The Operating System', path: '/initiatives/civic-governance' },
       // { label: 'Ukraine Peace Plan', desc: 'Freeze-Vote-Rebuild', path: '/initiatives/ukraine-peace-plan' },
+    ],
+  },
+  {
+    label: 'Ecosystem',
+    path: '/platforms',
+    icon: <Layers className="w-4 h-4" />,
+    children: [
+      { label: 'Platforms', desc: 'Konnaxion & Orgo (Software)', path: '/platforms' },
+      { label: 'Infrastructures', desc: 'Kin City & Kristal Farms', path: '/infrastructures' },
     ],
   },
   {
