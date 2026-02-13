@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-02-12T23:33:30.694Z",
+  "generatedAt": "2026-02-13T00:21:07.045Z",
   "taxonomies": {
     "types": [
       "amazon_book",
@@ -191,6 +191,7 @@
       "topics": [
         "academic_paper_and_article",
         "cultural_diffusion",
+        "ekoh_smartvote(merit_weighted_voting)",
         "ekoh(merit_weighted_voting)",
         "governance",
         "king_klown",
@@ -213,6 +214,7 @@
       "topics": [
         "academic_paper_and_article",
         "cultural_diffusion",
+        "ekoh_smartvote(merit_weighted_voting)",
         "ekoh(merit_weighted_voting)",
         "governance",
         "infrastructure",
@@ -233,6 +235,7 @@
         "academic_paper_and_article",
         "ai_integration",
         "data_sovereignty",
+        "ekoh_smartvote(merit_weighted_voting)",
         "ekoh(merit_weighted_voting)",
         "governance",
         "infrastructure",
@@ -277,6 +280,7 @@
         "academic_paper_and_article",
         "ai_integration",
         "data_sovereignty",
+        "ekoh_smartvote(merit_weighted_voting)",
         "ekoh(merit_weighted_voting)",
         "governance",
         "infrastructure",
@@ -441,7 +445,9 @@
       "description": "GitHub profile and repositories list. Bio highlights modular socio-technical systems focused on civic tech, open collaboration, and merit-based governance.",
       "type": "github_wiki",
       "language": "en",
-      "topics": []
+      "topics": [
+        "rejean_mccormick"
+      ]
     },
     {
       "id": "github_wiki-pi-cosmology-the-blueprint-engine-4c116c67",
@@ -487,8 +493,14 @@
       "type": "github_wiki",
       "language": "en",
       "topics": [
+        "ai_integration",
+        "data_sovereignty",
+        "infrastructure",
         "kristal",
-        "ai_integration"
+        "kristal(semantic_data)",
+        "orgo",
+        "peace_and_efficiency",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -499,9 +511,14 @@
       "type": "github_wiki",
       "language": "en",
       "topics": [
-        "konnaxion",
+        "data_sovereignty",
         "governance",
-        "smartvote"
+        "infrastructure",
+        "konnaxion",
+        "peace_and_efficiency",
+        "smartvote",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -512,6 +529,12 @@
       "type": "github_wiki",
       "language": "en",
       "topics": [
+        "data_sovereignty",
+        "infrastructure",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "natural_language_generation",
+        "orgo",
         "semantic_web"
       ]
     },
@@ -523,8 +546,11 @@
       "type": "github_wiki",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "ai_integration",
         "governance",
-        "ai_integration"
+        "infrastructure",
+        "peace_and_efficiency"
       ]
     },
     {
@@ -535,7 +561,13 @@
       "type": "github_wiki",
       "language": "en",
       "topics": [
-        "orgo"
+        "data_sovereignty",
+        "governance",
+        "infrastructure",
+        "orgo",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -546,6 +578,12 @@
       "type": "github_wiki",
       "language": "en",
       "topics": [
+        "data_sovereignty",
+        "infrastructure",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "natural_language_generation",
+        "orgo",
         "semantic_web"
       ]
     },
@@ -558,7 +596,12 @@
       "language": "en",
       "topics": [
         "governance",
-        "peace"
+        "orgo",
+        "peace",
+        "peace_and_efficiency",
+        "philanthropy",
+        "rejean_mccormick",
+        "social_cohesion"
       ]
     },
     {
@@ -569,8 +612,16 @@
       "type": "amazon_book",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "ekoh_smartvote(merit_weighted_voting)",
         "governance",
-        "infrastructure"
+        "infrastructure",
+        "konnaxion",
+        "kristal_farms(green_ai)",
+        "orgo",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -581,7 +632,16 @@
       "type": "amazon_book",
       "language": "en",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "governance",
+        "king_klown",
+        "konnaxion",
+        "metaphysics",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "rejean_mccormick",
+        "social_cohesion"
       ]
     },
     {
@@ -592,7 +652,14 @@
       "type": "amazon_book",
       "language": "en",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "governance",
+        "king_klown",
+        "metaphysics",
+        "peace_and_efficiency",
+        "philanthropy",
+        "rejean_mccormick",
+        "social_cohesion"
       ]
     },
     {
@@ -603,8 +670,11 @@
       "type": "amazon_book",
       "language": "en",
       "topics": [
+        "academic_paper_and_article",
+        "ai_integration",
         "kristal",
-        "ai_integration"
+        "kristal(semantic_data)",
+        "rejean_mccormick"
       ]
     },
     {
@@ -615,7 +685,14 @@
       "type": "amazon_book",
       "language": "fr",
       "topics": [
-        "ethics"
+        "cultural_diffusion",
+        "ethics",
+        "governance",
+        "king_klown",
+        "metaphysics",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
       ]
     },
     {
@@ -637,7 +714,13 @@
       "type": "spotify_podcast",
       "language": "fr",
       "topics": [
-        "ai_integration"
+        "ai_integration",
+        "audio_book",
+        "cultural_diffusion",
+        "governance",
+        "metaphysics",
+        "peace_and_efficiency",
+        "social_cohesion"
       ]
     },
     {
@@ -648,7 +731,14 @@
       "type": "spotify_podcast",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "audio_book",
+        "cultural_diffusion",
+        "governance",
+        "king_klown",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -659,9 +749,15 @@
       "type": "spotify_podcast",
       "language": "en",
       "topics": [
-        "konnaxion",
+        "audio_book",
+        "governance",
         "king_klown",
-        "orgo"
+        "konnaxion",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -672,8 +768,16 @@
       "type": "spotify_podcast",
       "language": null,
       "topics": [
+        "audio_book",
+        "cultural_diffusion",
+        "governance",
+        "king_klown",
         "konnaxion",
-        "king_klown"
+        "metaphysics",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
       ]
     },
     {
@@ -684,9 +788,17 @@
       "type": "spotify_podcast",
       "language": null,
       "topics": [
-        "konnaxion",
+        "audio_book",
+        "cultural_diffusion",
+        "governance",
+        "infrastructure",
         "king_klown",
-        "orgo"
+        "konnaxion",
+        "metaphysics",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
       ]
     },
     {
@@ -697,8 +809,10 @@
       "type": "spotify_podcast",
       "language": "fr",
       "topics": [
-        "pi_theory",
-        "king_klown"
+        "audio_book",
+        "king_klown",
+        "metaphysics",
+        "pi_theory"
       ]
     },
     {
@@ -708,7 +822,18 @@
       "description": "Vision d’une plateforme globale de savoir, collaborative et ouverte, conçue pour former et outiller face aux défis futurs (climat, inégalités, crises). La connaissance y sert l’action : éthique, inclusion, durabilité et co-création à l’échelle mondiale.",
       "type": "spotify_podcast",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "audio_book",
+        "governance",
+        "infrastructure",
+        "king_klown",
+        "konnaxion",
+        "metaphysics",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ]
     },
     {
       "id": "youtube_video-nataq-5a42cda4",
@@ -717,7 +842,12 @@
       "description": "Nataq",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "king_klown",
+        "metaphysics",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-king-klown-fiction-transformative-cffef45d",
@@ -727,7 +857,10 @@
       "type": "youtube_video",
       "language": null,
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "metaphysics",
+        "music_and_videos"
       ]
     },
     {
@@ -738,7 +871,16 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "ethics"
+        "audio_book",
+        "cultural_diffusion",
+        "ethics",
+        "governance",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -748,7 +890,13 @@
       "description": "Un rap conscient qui dépeint l’atmosphère urbaine et les espoirs cachés derrière les façades de béton. Entre sirènes lointaines et pulsations de basse, la chanson invite à regarder au-delà du gris quotidien pour y trouver une lueur d’espoir.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "social_cohesion"
+      ]
     },
     {
       "id": "youtube_video-02-king-klown-fiction-transformative-6f50882d",
@@ -758,7 +906,12 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "governance",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "social_cohesion"
       ]
     },
     {
@@ -769,8 +922,15 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
+        "cultural_diffusion",
+        "ekoh_smartvote(merit_weighted_voting)",
+        "governance",
         "konnaxion",
-        "orgo"
+        "music_and_videos",
+        "orgo",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -781,7 +941,11 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "infrastructure"
+        "cultural_diffusion",
+        "governance",
+        "infrastructure",
+        "king_klown",
+        "music_and_videos"
       ]
     },
     {
@@ -792,7 +956,13 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "governance",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
       ]
     },
     {
@@ -803,7 +973,12 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
       ]
     },
     {
@@ -814,7 +989,9 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos"
       ]
     },
     {
@@ -825,7 +1002,9 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos"
       ]
     },
     {
@@ -835,7 +1014,10 @@
       "description": "Un jeune héros s’éveille au chant mystérieux du monde. Dans une forêt baignée de lumière violette, il découvre un médaillon ancien qui appelle son cœur. Le cycle commence, entre rêve et réalité.\nThèmes : mystère, éveil, prophétie, appel de l’aventure.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-2-vision-de-poh-n-coco-327438d3",
@@ -844,7 +1026,10 @@
       "description": "Lors d’un rêve étrange, le médaillon révèle une vision magique : un village oublié, une source sacrée, et un chemin tracé par les étoiles. Tout commence dans la douceur d’une forêt éveillée.\nThèmes : initiation, spiritualité, rencontre du destin.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-3-les-secrets-du-sanctuaire-1fc472a1",
@@ -853,7 +1038,10 @@
       "description": "À l’intérieur d’un sanctuaire ancien, le héros fait face aux énigmes des éléments. Le feu, l’eau, la terre et l’air dansent autour de lui. Chaque symbole résolu rapproche un peu plus de l’harmonie.\nThèmes : connaissance, épreuve, équilibre des forces.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-4-l-alliance-des-factions-42dadb8c",
@@ -862,7 +1050,10 @@
       "description": "Les peuples autrefois divisés se réunissent sous une même bannière. Dans le grand hall, des voix s’élèvent, et des cœurs s’unissent. Ensemble, ils se préparent à affronter l’ombre.\nThèmes : fraternité, dialogue, pacte, espoir collectif.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-5-bataille-de-l-ombre-82c8bb1b",
@@ -871,7 +1062,10 @@
       "description": "L’heure du combat a sonné. Dans un orage de feu et de ténèbres, chacun affronte ses peurs et se bat pour l’avenir. Mais même au plus fort de la nuit, une étincelle de lumière résiste.\nThèmes : courage, ténèbres, lutte intérieure et extérieure.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-6-c-ur-des-ges-504d3340",
@@ -880,7 +1074,10 @@
       "description": "Après le tumulte, le héros plonge dans un moment de silence sacré. Il découvre que le monde repose sur un équilibre subtil – une harmonie écrite dans les nombres, la nature et le temps.\nThèmes : paix intérieure, sagesse, beauté de l’univers.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-7-r-surgence-des-ombres-52a018dd",
@@ -889,7 +1086,10 @@
       "description": "La menace semblait vaincue… mais elle revient, plus discrète, plus insidieuse. Le héros devra affronter l’ombre une dernière fois, non par la force, mais par sa propre lumière intérieure.\nThèmes : vigilance, résilience, ténèbres persistantes.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-8-cycle-ternel-845efcfb",
@@ -898,7 +1098,10 @@
       "description": "L’équilibre est restauré. Le monde reprend son souffle. Le médaillon s’endort, et la lumière circule à nouveau librement entre les êtres. Mais ce n’est pas la fin. Le cycle continue.\nThèmes : conclusion, renaissance, héritage, éternité.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-1-ni-pauvret-ni-richesse-9c8e078d",
@@ -908,7 +1111,9 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos"
       ]
     },
     {
@@ -919,7 +1124,9 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos"
       ]
     },
     {
@@ -929,7 +1136,11 @@
       "description": "La chanson décrit la ruse de David feignant la démence pour échapper au roi Achish. Les paroles évoquent aussi les stratégies de dissimulation et de survie analysées dans le livre Colin Row.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-5-audit-c104e35c",
@@ -940,7 +1151,8 @@
       "language": "fr",
       "topics": [
         "governance",
-        "king_klown"
+        "king_klown",
+        "music_and_videos"
       ]
     },
     {
@@ -951,7 +1163,10 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "koa"
+        "cultural_diffusion",
+        "king_klown",
+        "koa",
+        "music_and_videos"
       ]
     },
     {
@@ -961,7 +1176,11 @@
       "description": "Dénonce l’exploitation du peuple par ses « bergers », sans recours au gore littéral. Le propos s’inspire des axes éthiques de l’Approche systémique de l’innovation sociale et technologique, où l’on montre que l’abus de pouvoir se traduit d’abord par la prédation des plus fragiles.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-8-tissage-global-zacharie-8-23-e83c4cd1",
@@ -971,7 +1190,9 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos"
       ]
     },
     {
@@ -982,7 +1203,10 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "ethics"
+        "cultural_diffusion",
+        "ethics",
+        "king_klown",
+        "music_and_videos"
       ]
     },
     {
@@ -993,7 +1217,9 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos"
       ]
     },
     {
@@ -1003,7 +1229,11 @@
       "description": "Colin et Raoul « hackage » la cuisine, semant carottes et QR codes codés : un écho aux propositions de l’Ashoka Fellowship Application, où l’intelligence collective se révèle dans de petits gestes du quotidien.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-7-la-tisseuse-de-r-ves-90c2b066",
@@ -1012,7 +1242,16 @@
       "description": "Célébration de l’intelligence émotionnelle : la Tisseuse mêle fil d’empathie et données froides, brodant une tapisserie où chaque concept est empreint de chaleur humaine. Ode à la fusion de la raison et du cœur.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "king_klown",
+        "metaphysics",
+        "music_and_videos",
+        "natural_language_generation",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ]
     },
     {
       "id": "youtube_video-9-r-silience-d9a764fd",
@@ -1022,7 +1261,11 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "social_cohesion"
       ]
     },
     {
@@ -1032,7 +1275,14 @@
       "description": "Hymne progressif à l’émancipation : les foules se lèvent main dans la main, libérant les savoirs jadis cloisonnés. Cet élan soudé donne naissance à une conscience partagée, fondée sur l’éthique et la transparence.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "king_klown",
+        "metaphysics",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "social_cohesion"
+      ]
     },
     {
       "id": "youtube_video-12-le-jeu-cosmique-502adc26",
@@ -1042,7 +1292,12 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "metaphysics",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "social_cohesion"
       ]
     },
     {
@@ -1052,7 +1307,13 @@
       "description": "Théâtre des conspirations : dans l’ombre, les anciens tyrans et leurs sbires tentent de saboter l’aube nouvelle par la désinformation et le sabotage numérique. Le refrain affirme la résistance d’un peuple éveillé.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "governance",
+        "king_klown",
+        "music_and_videos",
+        "social_cohesion"
+      ]
     },
     {
       "id": "youtube_video-10-au-bord-de-la-r-alit-135009a4",
@@ -1062,7 +1323,10 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "metaphysics",
+        "music_and_videos"
       ]
     },
     {
@@ -1073,7 +1337,15 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "koa"
+        "cultural_diffusion",
+        "governance",
+        "king_klown",
+        "koa",
+        "konnaxion",
+        "music_and_videos",
+        "orgo",
+        "peace_and_efficiency",
+        "social_cohesion"
       ]
     },
     {
@@ -1084,9 +1356,13 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "kristal",
+        "cultural_diffusion",
+        "data_sovereignty",
+        "hydropower",
         "infrastructure",
-        "hydropower"
+        "kristal",
+        "kristal_farms(green_ai)",
+        "music_and_videos"
       ]
     },
     {
@@ -1097,8 +1373,11 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "konnaxion",
+        "cultural_diffusion",
+        "ekoh_smartvote(merit_weighted_voting)",
         "governance",
+        "konnaxion",
+        "music_and_videos",
         "smartvote"
       ]
     },
@@ -1110,7 +1389,14 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "ethics"
+        "cultural_diffusion",
+        "data_sovereignty",
+        "ethics",
+        "governance",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
       ]
     },
     {
@@ -1121,7 +1407,8 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "ethics"
+        "ethics",
+        "music_and_videos"
       ]
     },
     {
@@ -1132,7 +1419,9 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "konnaxion"
+        "cultural_diffusion",
+        "konnaxion",
+        "music_and_videos"
       ]
     },
     {
@@ -1143,7 +1432,11 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "social_cohesion"
       ]
     },
     {
@@ -1153,7 +1446,12 @@
       "description": "Exploration du langage comme outil spirituel et politique, du mantra primitif aux récits fondateurs. La voix se fait instrument de guérison ou de libération, rappelant que chaque mot possède le pouvoir de façonner le monde.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "metaphysics",
+        "music_and_videos",
+        "social_cohesion"
+      ]
     },
     {
       "id": "youtube_video-09-sanctuaire-rebondir-pour-avancer-55f6190c",
@@ -1162,7 +1460,13 @@
       "description": "Portrait d’un lieu protégé où les personnes en difficulté retrouvent force et dignité. Couvents transformés, accompagnement personnalisé et mandats clairs : un chant de résilience et de renaissance communautaire.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ]
     },
     {
       "id": "youtube_video-16-or-estampill-king-klown-richesse-quitable-8083c891",
@@ -1172,7 +1476,14 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "governance",
+        "infrastructure",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
       ]
     },
     {
@@ -1182,7 +1493,10 @@
       "description": "Introduction à la fascination de l’humanité pour Pi : l’histoire, le symbolisme du cercle, la croyance que la séquence décimale cache un message universel. Présente le projet de décodage et la quête du sens au cœur de l’album.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "metaphysics",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-2-les-cl-s-du-neuf-76004652",
@@ -1191,7 +1505,10 @@
       "description": "Plongée dans les méthodes de décodage : passage de la conversion décimale simple à la base 9 et à la numérologie pythagoricienne. Explore la nécessité de méthodes complexes pour révéler des structures et des motifs dans la suite de Pi.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "metaphysics",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-3-gihecef-le-chant-du-chaos-3a3f4195",
@@ -1200,7 +1517,10 @@
       "description": "Représentation du chaos et de l’entropie comme moments inévitables du cycle cosmique. « Gihecef » devient le symbole du désordre, de la division, et de la déconstruction nécessaires à toute création.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "metaphysics",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-6-keenkonnect-hands-build-the-bridge-515437a3",
@@ -1210,7 +1530,13 @@
       "type": "youtube_video",
       "language": "en",
       "topics": [
-        "konnaxion"
+        "cultural_diffusion",
+        "ekoh_smartvote(merit_weighted_voting)",
+        "konnaxion",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -1220,7 +1546,12 @@
       "description": "A stirring call to unity—portraying two visionary leaders binding their destinies with radiant filaments, symbolizing the power of shared purpose and collective resolve.",
       "type": "youtube_video",
       "language": "en",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "governance",
+        "king_klown",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-4-kin-city-blueprints-for-tomorrow-a791c053",
@@ -1229,7 +1560,14 @@
       "description": "A visionary manifesto for a better world—inviting audiences to embrace an idyllic, circular metropolis as the blueprint for global renewal and shared prosperity.",
       "type": "youtube_video",
       "language": "en",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "infrastructure",
+        "konnaxion",
+        "music_and_videos",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ]
     },
     {
       "id": "youtube_video-2-konnaxion-we-are-the-web-01384b69",
@@ -1239,7 +1577,14 @@
       "type": "youtube_video",
       "language": "en",
       "topics": [
-        "konnaxion"
+        "cultural_diffusion",
+        "ekoh_smartvote(merit_weighted_voting)",
+        "governance",
+        "infrastructure",
+        "konnaxion",
+        "music_and_videos",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -1249,7 +1594,11 @@
       "description": "Après le chaos, vient le renouveau. Cette chanson met en avant le motif cyclique : le chaos prépare la reconstruction, Jnon incarne la renaissance, la réorganisation et l’émergence du neuf.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "metaphysics",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-3-ekoh-weight-of-truth-9c1c1012",
@@ -1259,9 +1608,15 @@
       "type": "youtube_video",
       "language": "en",
       "topics": [
-        "konnaxion",
+        "cultural_diffusion",
+        "ekoh_smartvote(merit_weighted_voting)",
         "governance",
-        "smartvote"
+        "konnaxion",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "smartvote",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -1271,7 +1626,11 @@
       "description": "Aborde le scepticisme scientifique face aux interprétations : la nécessité de l’esprit critique, la distinction entre motif réel et illusion statistique, et l’importance du doute comme moteur de la rigueur intellectuelle.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "metaphysics",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-7-ethikos-debate-in-the-light-238fdbf3",
@@ -1281,9 +1640,14 @@
       "type": "youtube_video",
       "language": "en",
       "topics": [
-        "konnaxion",
+        "cultural_diffusion",
+        "ethics",
         "governance",
-        "ethics"
+        "konnaxion",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -1294,8 +1658,14 @@
       "type": "youtube_video",
       "language": "en",
       "topics": [
+        "cultural_diffusion",
+        "hydropower",
+        "infrastructure",
         "kristal",
-        "hydropower"
+        "kristal_farms(green_ai)",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "social_cohesion"
       ]
     },
     {
@@ -1305,7 +1675,11 @@
       "description": "Examine les motifs cycliques, l’alternance entre M et N, et la symétrie interne dans la séquence de Pi. Met en avant la récurrence des thèmes d’attraction, d’équilibre, et la dualité dans la structure du code.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "metaphysics",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-8-le-pont-science-et-mystique-26583077",
@@ -1314,7 +1688,11 @@
       "description": "Chanson sur la rencontre entre traditions mystiques et science moderne : fusion de la gematria, des mathématiques, des mythes antiques et des lois de la physique contemporaine. Montre Pi comme langage universel.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "metaphysics",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-5-b0um-gen-se-de-l-univers-b497834e",
@@ -1323,7 +1701,11 @@
       "description": "Centrée sur l’image du Big Bang : l’explosion originelle (« B0UM ») qui fait surgir l’univers du vide, la matière et l’énergie. Fait le lien entre le cycle décodé dans Pi et la cosmologie contemporaine.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "metaphysics",
+        "music_and_videos"
+      ]
     },
     {
       "id": "youtube_video-2-o-myst-re-du-verbe-b19718e6",
@@ -1332,7 +1714,12 @@
       "description": "Une cantate baroque célébrant le pouvoir du langage comme outil spirituel, politique et symbolique. Sous forme d’airs et de chœurs, le chant transforme chaque mot en cristal pur, évoquant Nada Brahma, les mantras et les runes anciennes. Parfait pour mettre en avant des ateliers de communication consciente, des formations à l’éthique du verbe ou des projets d’éducation au discours critique.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "metaphysics",
+        "music_and_videos",
+        "natural_language_generation"
+      ]
     },
     {
       "id": "youtube_video-3-consolationis-fons-source-de-consolation-317675dc",
@@ -1342,7 +1729,9 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "ethics"
+        "cultural_diffusion",
+        "ethics",
+        "music_and_videos"
       ]
     },
     {
@@ -1352,7 +1741,11 @@
       "description": "Un oratorio solennel qui décrit le projet Sanctuaire, ces anciens couvents transformés en maisons-communautés protégées où l’on « rebondit » plutôt que l’on s’effondre. Portail gothique, mains levées et lumière dorée symbolisent l’accueil, la résilience et l’accompagnement des personnes en situation de précarité. Idéal pour promouvoir une initiative d’habitat social, d’insertion et de soutien psychologique.",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "music_and_videos",
+        "social_cohesion"
+      ]
     },
     {
       "id": "youtube_video-6-la-r-volution-konnaxion-c85e8d88",
@@ -1362,7 +1755,9 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "konnaxion"
+        "konnaxion",
+        "music_and_videos",
+        "peace_and_efficiency"
       ]
     },
     {
@@ -1373,8 +1768,13 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
+        "cultural_diffusion",
+        "governance",
         "king_klown",
-        "orgo"
+        "music_and_videos",
+        "orgo",
+        "peace_and_efficiency",
+        "social_cohesion"
       ]
     },
     {
@@ -1385,12 +1785,17 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "kristal",
-        "konnaxion",
+        "cultural_diffusion",
+        "ekoh_smartvote(merit_weighted_voting)",
         "governance",
         "infrastructure",
+        "konnaxion",
+        "kristal",
+        "music_and_videos",
         "orgo",
-        "smartvote"
+        "smartvote",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
       ]
     },
     {
@@ -1401,7 +1806,9 @@
       "type": "youtube_video",
       "language": "fr",
       "topics": [
-        "king_klown"
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos"
       ]
     },
     {
@@ -1411,7 +1818,14 @@
       "description": "Démo pour spectacle en deux parties du Ninja Arc-en-ciel et de Lumière Blanche, utilisant technique d'éclairage Color Shadow,",
       "type": "youtube_video",
       "language": "fr",
-      "topics": []
+      "topics": [
+        "cultural_diffusion",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ]
     }
   ]
 }
