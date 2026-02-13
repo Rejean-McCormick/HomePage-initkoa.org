@@ -95,7 +95,8 @@ function mergeTaxonomiesKeepEarlier(...taxes: Array<Record<string, unknown> | un
       // Objects/maps: shallow merge, earlier wins on collisions
       if (v && typeof v === 'object' && !Array.isArray(v)) {
         const prev = out[k];
-        const prevObj = prev && typeof prev === 'object' && !Array.isArray(prev) ? (prev as Record<string, unknown>) : {};
+        const prevObj =
+          prev && typeof prev === 'object' && !Array.isArray(prev) ? (prev as Record<string, unknown>) : {};
         const incoming = v as Record<string, unknown>;
         out[k] = { ...incoming, ...prevObj }; // earlier (prev) wins
         continue;
@@ -237,7 +238,7 @@ export default function CatalogEditorPage() {
 
   useEffect(() => {
     const ctrl = new AbortController();
-    let alive = true; // prevents late async from updating state after cleanup
+    let alive = true;
 
     (async () => {
       try {
@@ -246,8 +247,7 @@ export default function CatalogEditorPage() {
           ...INVENTORY_CATALOG_PATHS.map((p) => fetchJson(p, ctrl.signal)),
         ]);
 
-        const rootRaw =
-          results[0].status === 'fulfilled' ? (results[0].value as Record<string, unknown>) : null;
+        const rootRaw = results[0].status === 'fulfilled' ? (results[0].value as Record<string, unknown>) : null;
 
         const partRaws = results
           .slice(1)
@@ -262,7 +262,6 @@ export default function CatalogEditorPage() {
         setOriginal(cloneCatalog(normalized));
         setDraft(normalized);
       } catch (err: unknown) {
-        // ignore aborts (common in React 18 dev Strict Mode)
         const e = err as { name?: string };
         if (!alive || e?.name === 'AbortError') return;
 
@@ -283,12 +282,8 @@ export default function CatalogEditorPage() {
   }, []);
 
   const topicLabels = draft?.taxonomies?.topic_labels ?? {};
-  const topicLabel = useCallback(
-    (topic: string) => topicLabels?.[topic]?.[uiLang] ?? topic,
-    [topicLabels, uiLang],
-  );
+  const topicLabel = useCallback((topic: string) => topicLabels?.[topic]?.[uiLang] ?? topic, [topicLabels, uiLang]);
 
-  // topics come from taxonomies.topics (fallback already injected in normalize)
   const allTopics = useMemo(() => {
     const topics = draft?.taxonomies?.topics ?? [];
     return [...topics].filter(Boolean).sort((a, b) => topicLabel(a).localeCompare(topicLabel(b)));
@@ -313,7 +308,6 @@ export default function CatalogEditorPage() {
     });
   }, [draft?.items, q]);
 
-  // faster checkbox lookup
   const topicSetById = useMemo(() => {
     const m = new Map<string, Set<string>>();
     for (const it of draft?.items ?? []) m.set(it.id, new Set(it.topics ?? []));
@@ -376,22 +370,18 @@ export default function CatalogEditorPage() {
   const canExport = !!draft;
 
   return (
-    <main className="max-w-6xl mx-auto px-6 py-10 not-prose">
+    <main className="max-w-6xl mx-auto px-6 py-10 not-prose overflow-x-hidden">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-slate-900">Catalog Editor</h1>
-          <p className="text-slate-500 mt-2">
-            Edit topics per link. Downloads a merged JSON snapshot.
-          </p>
+          <p className="text-slate-500 mt-2">Edit topics per link. Downloads a merged JSON snapshot.</p>
         </div>
 
         <div className="flex flex-wrap gap-2 items-center">
           <div className="flex gap-2">
             <button
               className={`px-3 py-2 rounded-lg border ${
-                uiLang === 'en'
-                  ? 'bg-slate-900 text-white border-slate-900'
-                  : 'border-slate-200 hover:bg-slate-50'
+                uiLang === 'en' ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 hover:bg-slate-50'
               }`}
               type="button"
               onClick={() => setUiLang('en')}
@@ -400,9 +390,7 @@ export default function CatalogEditorPage() {
             </button>
             <button
               className={`px-3 py-2 rounded-lg border ${
-                uiLang === 'fr'
-                  ? 'bg-slate-900 text-white border-slate-900'
-                  : 'border-slate-200 hover:bg-slate-50'
+                uiLang === 'fr' ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 hover:bg-slate-50'
               }`}
               type="button"
               onClick={() => setUiLang('fr')}
@@ -434,8 +422,8 @@ export default function CatalogEditorPage() {
         </div>
       </div>
 
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-[360px_1fr] gap-6">
-        {/* LEFT: topic palette (from taxonomies.topics) */}
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-[360px_minmax(0,1fr)] gap-6 min-w-0">
+        {/* LEFT */}
         <aside className="rounded-xl border border-slate-200 p-4">
           <div className="flex items-center justify-between gap-2">
             <h2 className="font-semibold text-slate-900">Topics</h2>
@@ -449,7 +437,7 @@ export default function CatalogEditorPage() {
             className="mt-3 w-full px-3 py-2 rounded-lg border border-slate-200"
           />
 
-          {/* Add topic to taxonomy */}
+          {/* Add topic */}
           <div className="mt-4 space-y-2">
             <input
               value={newTopicKey}
@@ -491,9 +479,9 @@ export default function CatalogEditorPage() {
           </div>
         </aside>
 
-        {/* RIGHT: items list with checkboxes */}
-        <section className="rounded-xl border border-slate-200 p-4">
-          <div className="flex flex-wrap items-center justify-between gap-3">
+        {/* RIGHT */}
+        <section className="rounded-xl border border-slate-200 p-4 min-w-0">
+          <div className="flex flex-wrap items-center justify-between gap-3 min-w-0">
             <h2 className="font-semibold text-slate-900">Links</h2>
             <input
               value={q}
@@ -503,30 +491,39 @@ export default function CatalogEditorPage() {
             />
           </div>
 
-          <div className="mt-4 space-y-4">
+          <div className="mt-4 space-y-4 min-w-0">
             {filteredItems.map((it) => {
               const tset = topicSetById.get(it.id) ?? new Set<string>();
               return (
-                <div key={it.id} className="rounded-xl border border-slate-200 p-4">
-                  <div>
-                    <div className="font-semibold text-slate-900">{it.title}</div>
-                    <a className="text-sm text-slate-600 underline" href={it.url} target="_blank" rel="noreferrer">
+                <div key={it.id} className="rounded-xl border border-slate-200 p-4 min-w-0">
+                  <div className="min-w-0">
+                    <div className="font-semibold text-slate-900 break-words">{it.title}</div>
+
+                    <a
+                      className="mt-1 block text-sm text-slate-600 underline truncate"
+                      href={it.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      title={it.url}
+                    >
                       {it.url}
                     </a>
+
                     <div className="text-xs text-slate-500 mt-1">
                       {it.language ? it.language.toUpperCase() : '—'} · {it.type}
                     </div>
                   </div>
 
-                  <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                  <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 min-w-0">
                     {visibleTopics.map((topicKey) => (
-                      <label key={topicKey} className="flex items-center gap-2 text-sm text-slate-700">
+                      <label key={topicKey} className="flex items-center gap-2 text-sm text-slate-700 min-w-0">
                         <input
+                          className="shrink-0"
                           type="checkbox"
                           checked={tset.has(topicKey)}
                           onChange={(e) => setTopic(it.id, topicKey, e.target.checked)}
                         />
-                        <span className="truncate">{topicLabel(topicKey)}</span>
+                        <span className="min-w-0 flex-1 truncate">{topicLabel(topicKey)}</span>
                       </label>
                     ))}
                   </div>
