@@ -1,58 +1,7 @@
 {
   "schemaVersion": "1.1",
   "generatedAt": "2026-02-13T13:38:13.235169Z",
-  "taxonomies": {
-    "types": [
-      "github_wiki"
-    ],
-    "levels": [
-      "large_public",
-      "intermediate",
-      "expert"
-    ],
-    "sections": [
-      "infrastructures",
-      "initiatives",
-      "platforms",
-      "principles",
-      "research"
-    ],
-    "platforms": [
-      "github"
-    ],
-    "topics": [
-      "academic_paper_and_article",
-      "king_klown",
-      "audio_book",
-      "cultural_diffusion",
-      "data_sovereignty",
-      "ekoh_smartvote(merit_weighted_voting)",
-      "governance",
-      "kristal_farms(green_ai)",
-      "infrastructure",
-      "social_cohesion",
-      "konnaxion",
-      "kristal(semantic_data)",
-      "music_and_videos",
-      "natural_language_generation",
-      "orgo",
-      "peace_and_efficiency",
-      "philanthropy",
-      "sociotechnical_os(koa_digital_ecosystem)",
-      "rejean_mccormick",
-      "metaphysics"
-    ],
-    "languages": [
-      "en",
-      "fr"
-    ],
-    "type_labels": {
-      "github_wiki": {
-        "en": "GitHub wiki",
-        "fr": "Wiki GitHub"
-      }
-    }
-  },
+  "taxonomyRef": "inventory.root.json",
   "items": [
     {
       "title": "Rejean-McCormick — Repositories",

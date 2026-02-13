@@ -1,72 +1,9 @@
 {
   "schemaVersion": "1.1",
   "generatedAt": "2026-02-13T13:38:13.235169Z",
-  "taxonomies": {
-    "types": [
-      "amazon_book",
-      "medium_article",
-      "philpaper_article"
-    ],
-    "levels": [
-      "large_public",
-      "intermediate",
-      "expert"
-    ],
-    "sections": [
-      "infrastructures",
-      "initiatives",
-      "platforms",
-      "principles",
-      "research",
-      "technology"
-    ],
-    "platforms": [
-      "amazon",
-      "medium",
-      "philpapers"
-    ],
-    "topics": [
-      "academic_paper_and_article",
-      "king_klown",
-      "audio_book",
-      "cultural_diffusion",
-      "data_sovereignty",
-      "ekoh_smartvote(merit_weighted_voting)",
-      "governance",
-      "kristal_farms(green_ai)",
-      "infrastructure",
-      "social_cohesion",
-      "konnaxion",
-      "kristal(semantic_data)",
-      "music_and_videos",
-      "natural_language_generation",
-      "orgo",
-      "peace_and_efficiency",
-      "philanthropy",
-      "sociotechnical_os(koa_digital_ecosystem)",
-      "rejean_mccormick",
-      "metaphysics"
-    ],
-    "languages": [
-      "en",
-      "fr"
-    ],
-    "type_labels": {
-      "amazon_book": {
-        "en": "Amazon book",
-        "fr": "Livre (Amazon)"
-      },
-      "medium_article": {
-        "en": "Medium article",
-        "fr": "Article Medium"
-      },
-      "philpaper_article": {
-        "en": "PhilPapers article",
-        "fr": "Article PhilPapers"
-      }
-    }
-  },
+  "taxonomyRef": "inventory.root.json",
   "items": [
+
     {
       "title": "The Book of kOA: A Comprehensive Blueprint for Inclusive Collaboration and Merit-Based Governance",
       "url": "https://www.amazon.ca/Book-kOA-Comprehensive-Collaboration-Merit-Based/dp/B0FHWS687D?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.xeylU_QLfOw__F1NLEUzQzXVamQFRyg2Vod9J32EEmfLD54aAOE8IEcqIGgBYJjxYHmu6AMO2wACGYzpnETgUMSjYh00AVF739J7fHGTMFY.67br9Ux5s2ZZ2wGepQMDotiGb3ONPK0AHgmEzG_Pzwc&dib_tag=AUTHOR",

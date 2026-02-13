@@ -18,10 +18,6 @@ import {
   TrendingUp,
   ArrowRight,
   CornerDownLeft,
-  ScrollText,
-  Dna,
-  Map,
-  Compass,
 } from 'lucide-react';
 
 // Define navigation structure outside to ensure stability for the search index
@@ -104,6 +100,9 @@ const NAV_ITEMS = [
   },
 ];
 
+// Included in search results (and used for CTA) without adding a full nav item.
+const LINKS_CTA = { label: 'Links', path: '/links' };
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -153,6 +152,11 @@ export default function Header() {
     if (!searchQuery.trim()) return [];
     const query = searchQuery.toLowerCase();
     const results: any[] = [];
+
+    // Add Links CTA to search index
+    if (LINKS_CTA.label.toLowerCase().includes(query)) {
+      results.push({ ...LINKS_CTA, type: 'Page', desc: 'Full inventory / web presence' });
+    }
 
     NAV_ITEMS.forEach((section: any) => {
       if (section.label.toLowerCase().includes(query)) {
@@ -255,10 +259,10 @@ export default function Header() {
             </button>
             <div className="h-4 w-px bg-slate-200" />
             <Link
-              href="/about"
+              href={LINKS_CTA.path}
               className="ml-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-bold rounded-lg transition-all shadow-sm hover:shadow-md"
             >
-              About
+              Links
             </Link>
           </div>
 
@@ -314,10 +318,10 @@ export default function Header() {
 
               <div className="pt-6 border-t border-slate-100 space-y-4">
                 <Link
-                  href="/about"
+                  href={LINKS_CTA.path}
                   className="block w-full py-3 bg-slate-900 text-white text-center rounded-lg font-bold hover:bg-slate-800 transition-colors"
                 >
-                  About the Architect
+                  Links (Full inventory)
                 </Link>
 
                 <div className="flex justify-center gap-6 text-slate-500">

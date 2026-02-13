@@ -1,56 +1,63 @@
 {
-  "schemaVersion": "1.1",
-  "generatedAt": "2026-02-13T13:38:13.235169Z",
+  "schemaVersion": "1.2",
+  "generatedAt": "2026-02-13T16:06:30Z",
   "taxonomies": {
-    "types": [
-      "youtube_video"
+    "albums": [
+      "barok",
+      "knowledge_pact",
+      "pi_etherisme_cosmique",
+      "raoul_et_colin",
+      "le_rire_cosmique",
+      "pohenecoco_crepuscule_des_masques",
+      "rap_konscient"
     ],
-    "levels": [
-      "large_public",
-      "intermediate",
-      "expert"
-    ],
-    "sections": [
-      "infrastructures",
-      "initiatives",
-      "kreature",
-      "platforms",
-      "principles"
-    ],
-    "platforms": [
-      "youtube"
-    ],
-    "topics": [
-      "academic_paper_and_article",
-      "king_klown",
-      "audio_book",
-      "cultural_diffusion",
-      "data_sovereignty",
-      "ekoh_smartvote(merit_weighted_voting)",
-      "governance",
-      "kristal_farms(green_ai)",
-      "infrastructure",
-      "social_cohesion",
-      "konnaxion",
-      "kristal(semantic_data)",
-      "music_and_videos",
-      "natural_language_generation",
-      "orgo",
-      "peace_and_efficiency",
-      "philanthropy",
-      "sociotechnical_os(koa_digital_ecosystem)",
-      "rejean_mccormick",
-      "metaphysics"
-    ],
-    "languages": [
-      "en",
-      "fr"
-    ],
-    "type_labels": {
-      "youtube_video": {
-        "en": "YouTube video",
-        "fr": "Vidéo YouTube"
+    "album_labels": {
+      "barok": {
+        "en": "Barok",
+        "fr": "Barok"
+      },
+      "knowledge_pact": {
+        "en": "The Knowledge Pact",
+        "fr": "The Knowledge Pact"
+      },
+      "pi_etherisme_cosmique": {
+        "en": "Pi, foundation of Cosmic Etherism",
+        "fr": "Pi, fondement de l’Éthérisme Cosmique"
+      },
+      "raoul_et_colin": {
+        "en": "Raoul and Colin",
+        "fr": "Raoul et Colin"
+      },
+      "le_rire_cosmique": {
+        "en": "The Cosmic Laugh",
+        "fr": "Le Rire Cosmique"
+      },
+      "pohenecoco_crepuscule_des_masques": {
+        "en": "Pohénécoco and the Twilight of Masks",
+        "fr": "Pohénécoco et le Crépuscule des Masques"
+      },
+      "rap_konscient": {
+        "en": "Rap Konscient",
+        "fr": "Rap Konscient"
       }
+    },
+    "album_playlist_ids": {
+      "barok": "PLLBzJ-PjZQP50-11EWP3XovVtiKbAMCKH",
+      "knowledge_pact": "PLLBzJ-PjZQP5ByokC3BYBsLIIzn21Ltaw",
+      "pi_etherisme_cosmique": "PLLBzJ-PjZQP5lXDSA1hynNsolC-jBrwuc",
+      "raoul_et_colin": "PLLBzJ-PjZQP5CUAl3pysrTjPhi5FJFU77",
+      "le_rire_cosmique": "PLLBzJ-PjZQP4q3ZE8Nt3qttQqlAvnHTfT",
+      "pohenecoco_crepuscule_des_masques": "PLLBzJ-PjZQP5dzwoekUIEIbDJnMaCiFcb",
+      "rap_konscient": "PLLBzJ-PjZQP6YMA4wDzL_wmTZfiXdofrt"
+    },
+    "album_playlist_urls": {
+      "barok": "https://www.youtube.com/playlist?list=PLLBzJ-PjZQP50-11EWP3XovVtiKbAMCKH",
+      "knowledge_pact": "https://www.youtube.com/playlist?list=PLLBzJ-PjZQP5ByokC3BYBsLIIzn21Ltaw",
+      "pi_etherisme_cosmique": "https://www.youtube.com/playlist?list=PLLBzJ-PjZQP5lXDSA1hynNsolC-jBrwuc",
+      "raoul_et_colin": "https://www.youtube.com/playlist?list=PLLBzJ-PjZQP5CUAl3pysrTjPhi5FJFU77",
+      "le_rire_cosmique": "https://www.youtube.com/playlist?list=PLLBzJ-PjZQP4q3ZE8Nt3qttQqlAvnHTfT",
+      "pohenecoco_crepuscule_des_masques": "https://www.youtube.com/playlist?list=PLLBzJ-PjZQP5dzwoekUIEIbDJnMaCiFcb",
+      "rap_konscient": "https://www.youtube.com/playlist?list=PLLBzJ-PjZQP6YMA4wDzL_wmTZfiXdofrt"
     }
   },
   "items": [
@@ -76,25 +83,18 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "JEJubWAOXGI",
         "publishedAt": "2025-03-18T16:56:58Z",
-        "duration": "PT7M12S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT7M12S"
+      },
+      "albums": []
     },
     {
       "title": "King Klown   Fiction transformative",
       "url": "https://www.youtube.com/watch?v=MllMQLphUxc",
       "description": "",
       "type": "youtube_video",
-      "language": null,
+      "language": "fr",
       "id": "youtube_video-king-klown-fiction-transformative-cffef45d",
       "platform": "youtube",
       "embed": {
@@ -111,18 +111,11 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "MllMQLphUxc",
         "publishedAt": "2025-06-16T15:39:50Z",
-        "duration": "PT2M21S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M21S"
+      },
+      "albums": []
     },
     {
       "title": "Livre Plateforme Connaissances",
@@ -146,19 +139,11 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "principles",
-        "kreature"
-      ],
-      "primarySection": "principles",
       "youtube": {
-        "videoId": "BgtqbQ65wic",
         "publishedAt": "2025-06-18T13:55:23Z",
-        "duration": "PT1H52M48S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT1H52M48S"
+      },
+      "albums": []
     },
     {
       "title": "01- Je marche dans la ville, béton sous mes pieds",
@@ -182,18 +167,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "ZkF3UfvUU_8",
         "publishedAt": "2025-07-03T18:37:06Z",
-        "duration": "PT2M48S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M48S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 1
     },
     {
       "title": "02- King Klown, Fiction Transformative",
@@ -217,18 +198,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "a76TBZbSHuU",
         "publishedAt": "2025-07-03T18:38:32Z",
-        "duration": "PT2M22S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M22S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 2
     },
     {
       "title": "03- Intelligence Collective Organisée",
@@ -252,19 +229,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "platforms",
-        "kreature"
-      ],
-      "primarySection": "platforms",
       "youtube": {
-        "videoId": "XWWvI6bZEgE",
         "publishedAt": "2025-07-03T18:39:43Z",
-        "duration": "PT2M55S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M55S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 3
     },
     {
       "title": "1. Le Monde Figé",
@@ -288,19 +260,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "infrastructures",
-        "kreature"
-      ],
-      "primarySection": "infrastructures",
       "youtube": {
-        "videoId": "fNUQmAIQFDw",
         "publishedAt": "2025-07-03T19:07:18Z",
-        "duration": "PT2M55S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M55S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 1
     },
     {
       "title": "2. Tempête & Révolte",
@@ -324,18 +291,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "hNQZx0FoNB8",
         "publishedAt": "2025-07-03T19:08:41Z",
-        "duration": "PT2M13S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M13S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 2
     },
     {
       "title": "3. Le Bouffon Mystique",
@@ -359,18 +322,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "b78LhZMssFU",
         "publishedAt": "2025-07-03T19:09:25Z",
-        "duration": "PT2M25S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M25S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 3
     },
     {
       "title": "5. La Cour Spirale",
@@ -394,18 +353,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "qMSofJgcc4s",
         "publishedAt": "2025-07-03T19:10:14Z",
-        "duration": "PT2M58S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M58S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 5
     },
     {
       "title": "4. La Naissance de King Klown",
@@ -429,18 +384,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "pOutMFD5dgs",
         "publishedAt": "2025-07-03T19:13:40Z",
-        "duration": "PT3M12S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M12S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 4
     },
     {
       "title": "1. Crépuscule des Masques",
@@ -464,18 +415,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "7qo1HsaGdDI",
         "publishedAt": "2025-07-03T19:19:36Z",
-        "duration": "PT3M54S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M54S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 1
     },
     {
       "title": "2- Vision de Pohénécoco",
@@ -499,18 +446,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "LzUpv0Hj8a4",
         "publishedAt": "2025-07-03T19:20:37Z",
-        "duration": "PT3M23S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M23S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 2
     },
     {
       "title": "3- Les Secrets du Sanctuaire",
@@ -534,18 +477,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "lkkQfd69-FQ",
         "publishedAt": "2025-07-03T19:21:40Z",
-        "duration": "PT3M30S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M30S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 3
     },
     {
       "title": "4. L’Alliance des Factions",
@@ -569,18 +508,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "_F4j9LXJk_Y",
         "publishedAt": "2025-07-03T19:22:30Z",
-        "duration": "PT4M41S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT4M41S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 4
     },
     {
       "title": "5. Bataille de l’Ombre",
@@ -604,18 +539,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "3HuCFxmYVUY",
         "publishedAt": "2025-07-03T19:23:27Z",
-        "duration": "PT3M45S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M45S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 5
     },
     {
       "title": "6. Cœur des Âges",
@@ -639,18 +570,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "fxBQRKl7Z_A",
         "publishedAt": "2025-07-03T19:24:19Z",
-        "duration": "PT3M36S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M36S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 6
     },
     {
       "title": "7. Résurgence des Ombres",
@@ -674,18 +601,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "wu1Ij-mvFgk",
         "publishedAt": "2025-07-03T19:25:12Z",
-        "duration": "PT3M30S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M30S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 7
     },
     {
       "title": "8. Cycle Éternel",
@@ -709,18 +632,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "TWIXJoOmY6g",
         "publishedAt": "2025-07-03T19:26:43Z",
-        "duration": "PT6M35S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT6M35S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 8
     },
     {
       "title": "1. Ni pauvreté, ni richesse",
@@ -744,18 +663,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "EFkAbjOH0qs",
         "publishedAt": "2025-07-04T12:40:38Z",
-        "duration": "PT4M34S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT4M34S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 1
     },
     {
       "title": "3. Le jongleur aux tomates",
@@ -779,18 +694,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "jouxrdK8Idk",
         "publishedAt": "2025-07-04T12:43:02Z",
-        "duration": "PT3M37S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M37S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 3
     },
     {
       "title": "4. La Folie de David (1 Samuel 21)",
@@ -814,18 +725,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "gQ1i9DfNARg",
         "publishedAt": "2025-07-04T12:44:33Z",
-        "duration": "PT4M25S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT4M25S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 4
     },
     {
       "title": "5. Audit",
@@ -849,19 +756,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "principles",
-        "kreature"
-      ],
-      "primarySection": "principles",
       "youtube": {
-        "videoId": "CyH2WjQdJ0A",
         "publishedAt": "2025-07-04T12:45:29Z",
-        "duration": "PT3M39S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M39S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 5
     },
     {
       "title": "6. Sentinelle (Habacuc 2)",
@@ -885,18 +787,14 @@
       ],
       "level": "large_public",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "FyO955J1Ji8",
         "publishedAt": "2025-07-04T12:46:23Z",
-        "duration": "PT4M21S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT4M21S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 6
     },
     {
       "title": "7. Bergers carnivores (Ézéchiel 34 / Michée 3)",
@@ -920,18 +818,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "4yCLT9KyBK8",
         "publishedAt": "2025-07-04T12:47:08Z",
-        "duration": "PT4M27S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT4M27S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 7
     },
     {
       "title": "8. Tissage global (Zacharie 8:23)",
@@ -955,18 +849,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "wQHis8AW3_c",
         "publishedAt": "2025-07-04T12:49:23Z",
-        "duration": "PT3M20S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M20S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 8
     },
     {
       "title": "9. Ozias le lépreux (2 Chroniques 26)",
@@ -990,19 +880,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "principles",
-        "kreature"
-      ],
-      "primarySection": "principles",
       "youtube": {
-        "videoId": "B9E_nFP_ny0",
         "publishedAt": "2025-07-04T12:50:20Z",
-        "duration": "PT3M41S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M41S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 9
     },
     {
       "title": "11. Veilleuse étoilée",
@@ -1026,18 +911,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "M-LBxvhKosg",
         "publishedAt": "2025-07-04T12:51:05Z",
-        "duration": "PT3M17S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M17S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 11
     },
     {
       "title": "10. Hacktion VII – Carottes & Cryptogrammes",
@@ -1061,18 +942,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "_q1F2P64G_E",
         "publishedAt": "2025-07-04T12:52:08Z",
-        "duration": "PT2M37S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M37S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 10
     },
     {
       "title": "7. La Tisseuse de Rêves",
@@ -1096,18 +973,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "gD_h8UFTJ7g",
         "publishedAt": "2025-07-04T13:26:25Z",
-        "duration": "PT3M",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 7
     },
     {
       "title": "9. Résilience",
@@ -1131,18 +1004,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "LbCH-C680sg",
         "publishedAt": "2025-07-04T13:27:35Z",
-        "duration": "PT2M19S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M19S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 9
     },
     {
       "title": "11. L’Éveil Collectif",
@@ -1166,18 +1035,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "F-xr4AAj_Ps",
         "publishedAt": "2025-07-04T13:28:47Z",
-        "duration": "PT2M20S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M20S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 11
     },
     {
       "title": "12. Le Jeu Cosmique",
@@ -1201,18 +1066,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "aJfonQeRy9s",
         "publishedAt": "2025-07-04T13:29:44Z",
-        "duration": "PT2M16S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M16S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 12
     },
     {
       "title": "8. Les Ombres du Pouvoir",
@@ -1236,18 +1097,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "QeJQZybw-6M",
         "publishedAt": "2025-07-04T13:29:56Z",
-        "duration": "PT2M45S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M45S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 8
     },
     {
       "title": "10. Au Bord de la Réalité",
@@ -1271,18 +1128,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "fCyPmzsEHVk",
         "publishedAt": "2025-07-04T13:30:13Z",
-        "duration": "PT2M38S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M38S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 10
     },
     {
       "title": "12- Puissance Collective",
@@ -1306,18 +1159,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "MLILjuHhKV0",
         "publishedAt": "2025-07-04T14:07:43Z",
-        "duration": "PT2M29S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M29S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 12
     },
     {
       "title": "05- Kristal Farms, IA Verte, Futur Ouvert",
@@ -1341,19 +1190,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "infrastructures",
-        "kreature"
-      ],
-      "primarySection": "infrastructures",
       "youtube": {
-        "videoId": "MSwepLrC6I0",
         "publishedAt": "2025-07-04T14:22:35Z",
-        "duration": "PT2M49S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M49S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 5
     },
     {
       "title": "14- Ekoh: Smart Vote, Voix Pondérées",
@@ -1377,20 +1221,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "platforms",
-        "principles",
-        "kreature"
-      ],
-      "primarySection": "platforms",
       "youtube": {
-        "videoId": "JgSh8syza0g",
         "publishedAt": "2025-07-04T14:23:42Z",
-        "duration": "PT2M25S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M25S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 14
     },
     {
       "title": "04- Révolution Coopérative",
@@ -1414,19 +1252,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "principles",
-        "kreature"
-      ],
-      "primarySection": "principles",
       "youtube": {
-        "videoId": "qkCv4SYJgZ0",
         "publishedAt": "2025-07-04T14:26:38Z",
-        "duration": "PT2M10S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M10S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 4
     },
     {
       "title": "13- Justice Réformée par l’IA",
@@ -1450,19 +1283,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "principles",
-        "kreature"
-      ],
-      "primarySection": "principles",
       "youtube": {
-        "videoId": "P29MjFcz7QA",
         "publishedAt": "2025-07-04T14:28:38Z",
-        "duration": "PT2M45S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M45S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 13
     },
     {
       "title": "15- Abus de Pouvoir: Konnaxion en Réponse",
@@ -1486,19 +1314,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "platforms",
-        "kreature"
-      ],
-      "primarySection": "platforms",
       "youtube": {
-        "videoId": "-g6EOGPfbOY",
         "publishedAt": "2025-07-04T14:30:25Z",
-        "duration": "PT2M30S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M30S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 15
     },
     {
       "title": "11- Réactions en reflet",
@@ -1522,18 +1345,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "8nKUNhuqOR8",
         "publishedAt": "2025-07-04T14:32:30Z",
-        "duration": "PT2M18S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M18S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 11
     },
     {
       "title": "10- Parole Créatrice",
@@ -1557,18 +1376,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "iQguvEuFLMY",
         "publishedAt": "2025-07-04T14:34:50Z",
-        "duration": "PT2M48S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M48S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 10
     },
     {
       "title": "09- Sanctuaire  Rebondir pour Avancer",
@@ -1592,18 +1407,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "dNdPZlm0yuY",
         "publishedAt": "2025-07-04T14:35:06Z",
-        "duration": "PT2M44S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M44S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 9
     },
     {
       "title": "16- Or Estampillé King Klown: Richesse Équitable",
@@ -1627,18 +1438,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "YxdwwGbCIIA",
         "publishedAt": "2025-07-04T14:35:08Z",
-        "duration": "PT3M8S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M8S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 16
     },
     {
       "title": "1  Porte des Possibles",
@@ -1662,18 +1469,14 @@
       ],
       "level": "large_public",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "LieuAD406SA",
         "publishedAt": "2025-07-04T15:02:35Z",
-        "duration": "PT3M28S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M28S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 1
     },
     {
       "title": "2  Les Clés du Neuf",
@@ -1697,18 +1500,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "8PsA560ayTQ",
         "publishedAt": "2025-07-04T15:20:25Z",
-        "duration": "PT3M26S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M26S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 2
     },
     {
       "title": "3  Gihecef – Le Chant du Chaos",
@@ -1732,18 +1531,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "Wifg34ZL4nE",
         "publishedAt": "2025-07-04T15:48:47Z",
-        "duration": "PT3M",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 3
     },
     {
       "title": "6  keenKonnect Hands Build the Bridge",
@@ -1767,19 +1562,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "platforms",
-        "kreature"
-      ],
-      "primarySection": "platforms",
       "youtube": {
-        "videoId": "qz-NLwb1J1s",
         "publishedAt": "2025-07-04T16:01:47Z",
-        "duration": "PT3M35S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M35S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 6
     },
     {
       "title": "1  Pact of the Golden Threads",
@@ -1803,18 +1593,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "Hh6R8k7Xny4",
         "publishedAt": "2025-07-04T16:07:08Z",
-        "duration": "PT4M18S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT4M18S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 1
     },
     {
       "title": "4  Kin City Blueprints for Tomorrow",
@@ -1838,18 +1624,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "g2X1TjpOcYY",
         "publishedAt": "2025-07-04T16:07:27Z",
-        "duration": "PT4M43S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT4M43S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 4
     },
     {
       "title": "2  Konnaxion We Are the Web",
@@ -1873,19 +1655,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "platforms",
-        "kreature"
-      ],
-      "primarySection": "platforms",
       "youtube": {
-        "videoId": "CQ_1dfeLWuA",
         "publishedAt": "2025-07-04T16:08:15Z",
-        "duration": "PT3M30S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M30S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 2
     },
     {
       "title": "4  Jnon – Renaissance Cosmique",
@@ -1909,18 +1686,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "mTijRrJFNBw",
         "publishedAt": "2025-07-04T16:09:03Z",
-        "duration": "PT2M43S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M43S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 4
     },
     {
       "title": "3  Ekoh Weight of Truth",
@@ -1944,20 +1717,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "platforms",
-        "principles",
-        "kreature"
-      ],
-      "primarySection": "platforms",
       "youtube": {
-        "videoId": "_79sNucYNiw",
         "publishedAt": "2025-07-04T16:11:08Z",
-        "duration": "PT4M51S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT4M51S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 3
     },
     {
       "title": "7  Doute – L’Épreuve du Feu",
@@ -1981,18 +1748,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "lRKJOAHhHFw",
         "publishedAt": "2025-07-04T16:13:28Z",
-        "duration": "PT3M14S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M14S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 7
     },
     {
       "title": "7  Ethikos Debate in the Light",
@@ -2016,20 +1779,14 @@
       ],
       "level": "large_public",
       "featured": false,
-      "sections": [
-        "platforms",
-        "principles",
-        "kreature"
-      ],
-      "primarySection": "platforms",
       "youtube": {
-        "videoId": "crFkTbjstts",
         "publishedAt": "2025-07-04T16:14:14Z",
-        "duration": "PT4M5S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT4M5S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 7
     },
     {
       "title": "5  Kristal Farms Light Beneath the Water",
@@ -2053,19 +1810,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "infrastructures",
-        "kreature"
-      ],
-      "primarySection": "infrastructures",
       "youtube": {
-        "videoId": "eXx0YDZLHG8",
         "publishedAt": "2025-07-04T16:14:37Z",
-        "duration": "PT3M55S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M55S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 5
     },
     {
       "title": "6  Symétrie – L’Ordre Secret",
@@ -2089,18 +1841,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "qIq5pt5RkTE",
         "publishedAt": "2025-07-04T16:17:52Z",
-        "duration": "PT3M1S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M1S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 6
     },
     {
       "title": "8  Le Pont – Science et Mystique",
@@ -2124,18 +1872,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "X09w4LSLbLA",
         "publishedAt": "2025-07-04T16:19:24Z",
-        "duration": "PT3M30S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M30S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 8
     },
     {
       "title": "5  B0UM – Genèse de l’Univers",
@@ -2159,18 +1903,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "teRs1o6eV2w",
         "publishedAt": "2025-07-04T16:19:49Z",
-        "duration": "PT3M46S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M46S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 5
     },
     {
       "title": "2. O mystère du verbe",
@@ -2194,18 +1934,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "I4vv-bHZi28",
         "publishedAt": "2025-07-05T13:13:51Z",
-        "duration": "PT2M32S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M32S"
+      },
+      "albums": [
+        "barok"
+      ],
+      "albumTrack": 2
     },
     {
       "title": "3. Consolationis Fons – Source de Consolation",
@@ -2229,19 +1965,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "principles",
-        "kreature"
-      ],
-      "primarySection": "principles",
       "youtube": {
-        "videoId": "DJxkzRdS9Pk",
         "publishedAt": "2025-07-05T13:18:04Z",
-        "duration": "PT2M57S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M57S"
+      },
+      "albums": [
+        "barok"
+      ],
+      "albumTrack": 3
     },
     {
       "title": "1. Sanctuarium : Lieu d’Espérance",
@@ -2265,18 +1996,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "ZRKluunj3SE",
         "publishedAt": "2025-07-05T13:23:08Z",
-        "duration": "PT4M23S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT4M23S"
+      },
+      "albums": [
+        "barok"
+      ],
+      "albumTrack": 1
     },
     {
       "title": "6. La Révolution Konnaxion",
@@ -2300,19 +2027,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "platforms",
-        "kreature"
-      ],
-      "primarySection": "platforms",
       "youtube": {
-        "videoId": "mdCia7BV7cs",
         "publishedAt": "2025-07-05T13:23:09Z",
-        "duration": "PT2M58S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT2M58S"
+      },
+      "albums": [
+        "barok"
+      ],
+      "albumTrack": 6
     },
     {
       "title": "4. Pactum Paradoxale – L’Alliance du Pape et du Clown",
@@ -2336,19 +2058,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "initiatives",
-        "kreature"
-      ],
-      "primarySection": "initiatives",
       "youtube": {
-        "videoId": "_If0J0UDenQ",
         "publishedAt": "2025-07-05T13:26:47Z",
-        "duration": "PT3M39S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT3M39S"
+      },
+      "albums": [
+        "barok"
+      ],
+      "albumTrack": 4
     },
     {
       "title": "5. L’Aube des Alliances – Oratorio de Konnaxion",
@@ -2372,21 +2089,14 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "platforms",
-        "principles",
-        "infrastructures",
-        "kreature"
-      ],
-      "primarySection": "platforms",
       "youtube": {
-        "videoId": "CgNGIw4JrBA",
         "publishedAt": "2025-07-05T13:30:11Z",
-        "duration": "PT4M25S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT4M25S"
+      },
+      "albums": [
+        "barok"
+      ],
+      "albumTrack": 5
     },
     {
       "title": "Klown Évolutionnaire",
@@ -2410,18 +2120,11 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "jSr1nN2TG50",
         "publishedAt": "2025-07-14T19:57:13Z",
-        "duration": "PT1M7S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT1M7S"
+      },
+      "albums": []
     },
     {
       "title": "Ninja Arc-en-Ciel - 04 Limites claires",
@@ -2445,18 +2148,16 @@
       ],
       "level": "intermediate",
       "featured": false,
-      "sections": [
-        "kreature"
-      ],
-      "primarySection": "kreature",
       "youtube": {
-        "videoId": "Cz7qhJNDzuo",
         "publishedAt": "2025-08-06T02:22:33Z",
-        "duration": "PT4M42S",
-        "privacyStatus": "public",
-        "channelHandle": "@KingKlown-XYZ",
-        "channelTitle": "King Klown"
-      }
+        "duration": "PT4M42S"
+      },
+      "albums": []
     }
-  ]
+  ],
+  "taxonomyRef": "inventory.root.json",
+  "youtubeChannel": {
+    "channelHandle": "@KingKlown-XYZ",
+    "channelTitle": "King Klown"
+  }
 }

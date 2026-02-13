@@ -2,33 +2,29 @@
 
 // app/play/page.tsx
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import {
-  PlayCircle,
-  Globe,
-  Languages,
-  Youtube,
-  Music2,
-  Link as LinkIcon,
-  Github,
-  Book,
-  FileText,
-} from 'lucide-react';
+import { PlayCircle, Globe, Languages, Youtube, Music2, Link as LinkIcon, Github, Book, FileText } from 'lucide-react';
 
 type TopicLabel = { en?: string; fr?: string };
 type TypeLabel = { en?: string; fr?: string };
 
-type Taxonomies = {
+type RootTaxonomies = {
   topics?: string[];
   topic_labels?: Record<string, TopicLabel>;
 
-  // Types list + optional labels (preferred: type_labels map)
-  // Also supports: types as array of objects via normalizeCatalog (see below)
+  // types can be string[] or object[]; we normalize to string[] + type_labels
   types?: Array<string | { key?: string; en?: string; fr?: string; label?: { en?: string; fr?: string } }>;
   type_labels?: Record<string, TypeLabel>;
 
   languages?: Array<'en' | 'fr'>;
 
-  // Allow extra taxonomy keys (levels, platforms, sections, etc.)
+  // allow other centralized taxonomies (levels, platforms, albums, etc.)
+  [k: string]: unknown;
+};
+
+type RootInventory = {
+  schemaVersion?: string;
+  generatedAt?: string;
+  taxonomies?: RootTaxonomies;
   [k: string]: unknown;
 };
 
@@ -37,15 +33,23 @@ type Item = {
   title: string;
   url: string;
   description?: string | null;
-  type: string; // e.g. "github_wiki", "amazon_book", "youtube_video", ...
+  type: string;
   language: 'en' | 'fr' | null;
   topics: string[];
+};
+
+type CatalogPart = {
+  schemaVersion?: string;
+  generatedAt?: string;
+  taxonomyRef?: string;
+  items: Array<Record<string, unknown>>;
+  [k: string]: unknown;
 };
 
 type Catalog = {
   schemaVersion?: string;
   generatedAt: string;
-  taxonomies?: Taxonomies;
+  taxonomies?: RootTaxonomies;
   items: Item[];
 };
 
@@ -102,45 +106,6 @@ async function fetchJson(path: string, signal: AbortSignal) {
   return r.json();
 }
 
-function mergeTaxonomiesKeepEarlier(...taxes: Array<Record<string, unknown> | undefined>) {
-  const out: Record<string, unknown> = {};
-
-  for (const t of taxes) {
-    if (!t || typeof t !== 'object') continue;
-
-    for (const [k, v] of Object.entries(t)) {
-      // Arrays: union, keep order (dedupe strings)
-      if (Array.isArray(v)) {
-        const prev = Array.isArray(out[k]) ? (out[k] as unknown[]) : [];
-        const merged = [...prev, ...v];
-
-        // If all strings, dedupe nicely
-        if (merged.every((x) => typeof x === 'string')) {
-          out[k] = uniqKeepOrder(merged as string[]);
-        } else {
-          out[k] = merged;
-        }
-        continue;
-      }
-
-      // Objects/maps: merge shallow, but keep earlier values for overlapping keys
-      if (v && typeof v === 'object' && !Array.isArray(v)) {
-        const prev = out[k];
-        const prevObj =
-          prev && typeof prev === 'object' && !Array.isArray(prev) ? (prev as Record<string, unknown>) : {};
-        const incoming = v as Record<string, unknown>;
-        out[k] = { ...incoming, ...prevObj }; // earlier (prev) wins on collisions
-        continue;
-      }
-
-      // Scalars: keep earlier if already set
-      if (out[k] === undefined && v !== undefined) out[k] = v;
-    }
-  }
-
-  return out;
-}
-
 function pickLatestGeneratedAt(values: Array<unknown>) {
   let bestIso = '';
   let bestTime = -1;
@@ -158,153 +123,153 @@ function pickLatestGeneratedAt(values: Array<unknown>) {
   return bestIso;
 }
 
-function mergeInventory(rootRaw: Record<string, unknown> | null, partRaws: Array<Record<string, unknown>>) {
-  const rootTax =
-    rootRaw && typeof rootRaw.taxonomies === 'object' && rootRaw.taxonomies && !Array.isArray(rootRaw.taxonomies)
-      ? (rootRaw.taxonomies as Record<string, unknown>)
-      : undefined;
-
-  const partTaxes = partRaws
-    .map((p) =>
-      p && typeof p.taxonomies === 'object' && p.taxonomies && !Array.isArray(p.taxonomies)
-        ? (p.taxonomies as Record<string, unknown>)
-        : undefined,
-    )
-    .filter(Boolean) as Array<Record<string, unknown>>;
-
-  // Collect + dedupe items by id
-  const itemsById = new Map<string, unknown>();
-  for (const p of partRaws) {
-    const arr = Array.isArray(p.items) ? (p.items as unknown[]) : [];
-    for (const it of arr) {
-      const o = (it ?? {}) as Record<string, unknown>;
-      const id = typeof o.id === 'string' ? o.id : String(o.id ?? '');
-      if (!id) continue;
-      if (!itemsById.has(id)) itemsById.set(id, it);
-    }
-  }
-
-  const generatedAt = pickLatestGeneratedAt([
-    typeof rootRaw?.generatedAt === 'string' ? rootRaw.generatedAt : '',
-    ...partRaws.map((p) => (typeof p.generatedAt === 'string' ? p.generatedAt : '')),
-  ]);
-
-  const schemaVersion =
-    (typeof rootRaw?.schemaVersion === 'string' && rootRaw.schemaVersion) ||
-    (typeof partRaws[0]?.schemaVersion === 'string' && (partRaws[0] as any).schemaVersion) ||
-    undefined;
-
-  // Keep root authoritative by merging it first (earlier wins)
-  const mergedTaxonomies = mergeTaxonomiesKeepEarlier(rootTax, ...partTaxes);
-
-  return {
-    ...(schemaVersion ? { schemaVersion } : {}),
-    generatedAt,
-    taxonomies: mergedTaxonomies,
-    items: Array.from(itemsById.values()),
-  };
-}
-
-function normalizeCatalog(raw: unknown): Catalog {
-  const r = (raw ?? {}) as Record<string, unknown>;
-
+function normalizeRootTaxonomies(raw: unknown): RootTaxonomies {
   const taxIn =
-    r.taxonomies && typeof r.taxonomies === 'object' && !Array.isArray(r.taxonomies)
-      ? (r.taxonomies as Record<string, unknown>)
-      : undefined;
+    raw && typeof raw === 'object' && !Array.isArray(raw) ? (raw as Record<string, unknown>) : undefined;
 
-  let taxonomies: Taxonomies | undefined = taxIn ? ({ ...(taxIn as any) } as Taxonomies) : undefined;
+  const taxonomies: RootTaxonomies = taxIn ? ({ ...(taxIn as any) } as RootTaxonomies) : {};
 
-  if (taxIn && taxonomies) {
-    const collectedTypes: string[] = [];
-    const collectedLabels: Record<string, TypeLabel> = {};
+  // Normalize types + type_labels (support types as objects)
+  const collectedTypes: string[] = [];
+  const collectedLabels: Record<string, TypeLabel> = {};
 
-    const typesRaw = taxIn.types;
-    if (Array.isArray(typesRaw)) {
-      for (const entry of typesRaw) {
-        if (typeof entry === 'string') {
-          collectedTypes.push(entry);
-          continue;
-        }
-        if (entry && typeof entry === 'object') {
-          const o = entry as Record<string, unknown>;
-          const key =
-            (typeof o.key === 'string' && o.key) ||
-            (typeof (o as any).id === 'string' && (o as any).id) ||
-            (typeof (o as any).type === 'string' && (o as any).type) ||
-            '';
-
-          if (!key) continue;
-          collectedTypes.push(key);
-
-          const labelSrc =
-            o.label && typeof o.label === 'object' && !Array.isArray(o.label) ? (o.label as Record<string, unknown>) : o;
-
-          const en = typeof (labelSrc as any).en === 'string' ? (labelSrc as any).en : undefined;
-          const fr = typeof (labelSrc as any).fr === 'string' ? (labelSrc as any).fr : undefined;
-          if (en || fr) {
-            collectedLabels[key] = {
-              ...(collectedLabels[key] ?? {}),
-              ...(en ? { en } : {}),
-              ...(fr ? { fr } : {}),
-            };
-          }
-        }
+  const typesRaw = (taxonomies as any).types;
+  if (Array.isArray(typesRaw)) {
+    for (const entry of typesRaw) {
+      if (typeof entry === 'string') {
+        if (entry) collectedTypes.push(entry);
+        continue;
       }
-    }
+      if (entry && typeof entry === 'object') {
+        const o = entry as Record<string, unknown>;
+        const key =
+          (typeof o.key === 'string' && o.key) ||
+          (typeof (o as any).id === 'string' && (o as any).id) ||
+          (typeof (o as any).type === 'string' && (o as any).type) ||
+          '';
+        if (!key) continue;
 
-    const mapRaw = taxIn.type_labels;
-    if (mapRaw && typeof mapRaw === 'object' && !Array.isArray(mapRaw)) {
-      for (const [k, v] of Object.entries(mapRaw as Record<string, unknown>)) {
-        if (!v || typeof v !== 'object' || Array.isArray(v)) continue;
-        const vo = v as Record<string, unknown>;
-        const en = typeof vo.en === 'string' ? vo.en : undefined;
-        const fr = typeof vo.fr === 'string' ? vo.fr : undefined;
+        collectedTypes.push(key);
+
+        const labelSrc =
+          o.label && typeof o.label === 'object' && !Array.isArray(o.label) ? (o.label as Record<string, unknown>) : o;
+
+        const en = typeof (labelSrc as any).en === 'string' ? (labelSrc as any).en : undefined;
+        const fr = typeof (labelSrc as any).fr === 'string' ? (labelSrc as any).fr : undefined;
+
         if (en || fr) {
-          collectedLabels[k] = {
-            ...(collectedLabels[k] ?? {}),
+          collectedLabels[key] = {
+            ...(collectedLabels[key] ?? {}),
             ...(en ? { en } : {}),
             ...(fr ? { fr } : {}),
           };
         }
       }
     }
+  }
 
-    if (collectedTypes.length) taxonomies.types = uniqKeepOrder(collectedTypes);
-
-    if (Object.keys(collectedLabels).length) {
-      const existing = (taxonomies.type_labels && typeof taxonomies.type_labels === 'object'
-        ? taxonomies.type_labels
-        : {}) as Record<string, TypeLabel>;
-
-      taxonomies.type_labels = { ...collectedLabels, ...existing };
+  const mapRaw = (taxonomies as any).type_labels;
+  if (mapRaw && typeof mapRaw === 'object' && !Array.isArray(mapRaw)) {
+    for (const [k, v] of Object.entries(mapRaw as Record<string, unknown>)) {
+      if (!v || typeof v !== 'object' || Array.isArray(v)) continue;
+      const vo = v as Record<string, unknown>;
+      const en = typeof vo.en === 'string' ? vo.en : undefined;
+      const fr = typeof vo.fr === 'string' ? vo.fr : undefined;
+      if (en || fr) {
+        collectedLabels[k] = {
+          ...(collectedLabels[k] ?? {}),
+          ...(en ? { en } : {}),
+          ...(fr ? { fr } : {}),
+        };
+      }
     }
   }
 
+  if (collectedTypes.length) taxonomies.types = uniqKeepOrder(collectedTypes);
+  if (Object.keys(collectedLabels).length) {
+    const existing =
+      taxonomies.type_labels && typeof taxonomies.type_labels === 'object' ? taxonomies.type_labels : {};
+    taxonomies.type_labels = { ...collectedLabels, ...(existing as Record<string, TypeLabel>) };
+  }
+
+  // Ensure topics is a clean string[]
+  if (Array.isArray(taxonomies.topics)) {
+    taxonomies.topics = (taxonomies.topics as unknown[]).filter((t): t is string => typeof t === 'string' && !!t);
+  }
+
+  // Ensure languages default
+  if (!Array.isArray(taxonomies.languages)) taxonomies.languages = ['en', 'fr'];
+
+  // Ensure maps default
+  if (!taxonomies.topic_labels || typeof taxonomies.topic_labels !== 'object') taxonomies.topic_labels = {};
+  if (!taxonomies.type_labels || typeof taxonomies.type_labels !== 'object') taxonomies.type_labels = {};
+
+  return taxonomies;
+}
+
+function normalizePart(raw: unknown): CatalogPart {
+  const r = (raw ?? {}) as Record<string, unknown>;
   const itemsRaw = Array.isArray(r.items) ? (r.items as unknown[]) : [];
-  const items: Item[] = itemsRaw.map((x) => {
-    const o = (x ?? {}) as Record<string, unknown>;
-    const language = o.language === 'en' || o.language === 'fr' ? (o.language as 'en' | 'fr') : null;
+  const items = itemsRaw.map((x) => ((x ?? {}) as Record<string, unknown>));
+  return {
+    ...(r as any),
+    schemaVersion: typeof r.schemaVersion === 'string' ? (r.schemaVersion as string) : undefined,
+    generatedAt: typeof r.generatedAt === 'string' ? (r.generatedAt as string) : undefined,
+    taxonomyRef: typeof r.taxonomyRef === 'string' ? (r.taxonomyRef as string) : undefined,
+    items,
+  };
+}
 
-    const topics =
-      Array.isArray(o.topics) ? (o.topics as unknown[]).filter((t): t is string => typeof t === 'string') : [];
+function normalizeItem(x: unknown): Item {
+  const o = (x ?? {}) as Record<string, unknown>;
+  const language = o.language === 'en' || o.language === 'fr' ? (o.language as 'en' | 'fr') : null;
 
-    return {
-      id: String(o.id ?? ''),
-      title: String(o.title ?? ''),
-      url: String(o.url ?? '#'),
-      description: typeof o.description === 'string' ? o.description : null,
-      type: String(o.type ?? ''),
-      language,
-      topics,
-    };
-  });
+  const topics =
+    Array.isArray(o.topics) ? (o.topics as unknown[]).filter((t): t is string => typeof t === 'string' && !!t) : [];
 
   return {
-    schemaVersion: typeof r.schemaVersion === 'string' ? (r.schemaVersion as string) : undefined,
-    generatedAt: typeof r.generatedAt === 'string' ? (r.generatedAt as string) : '',
-    taxonomies,
-    items,
+    id: String(o.id ?? ''),
+    title: String(o.title ?? ''),
+    url: String(o.url ?? '#'),
+    description: typeof o.description === 'string' ? (o.description as string) : null,
+    type: String(o.type ?? ''),
+    language,
+    topics,
+  };
+}
+
+function buildCatalogFromRootAndParts(rootRaw: unknown, partRaws: unknown[]): Catalog {
+  const root = (rootRaw ?? {}) as Record<string, unknown>;
+  const rootTax = normalizeRootTaxonomies(root.taxonomies);
+
+  const parts = partRaws.map(normalizePart);
+
+  // Items: dedupe by id (first wins)
+  const itemsById = new Map<string, Item>();
+  for (const p of parts) {
+    const arr = Array.isArray(p.items) ? p.items : [];
+    for (const it of arr) {
+      const item = normalizeItem(it);
+      if (!item.id) continue;
+      if (!itemsById.has(item.id)) itemsById.set(item.id, item);
+    }
+  }
+
+  const generatedAt = pickLatestGeneratedAt([
+    typeof root.generatedAt === 'string' ? root.generatedAt : '',
+    ...parts.map((p) => (typeof p.generatedAt === 'string' ? p.generatedAt : '')),
+  ]);
+
+  const schemaVersion =
+    (typeof root.schemaVersion === 'string' && root.schemaVersion) ||
+    (typeof parts[0]?.schemaVersion === 'string' && parts[0].schemaVersion) ||
+    undefined;
+
+  return {
+    ...(schemaVersion ? { schemaVersion } : {}),
+    generatedAt,
+    taxonomies: rootTax, // CENTRALIZED: only root taxonomies
+    items: Array.from(itemsById.values()),
   };
 }
 
@@ -368,19 +333,28 @@ function platformMetaFromType(typeKey: string, url: string) {
     icon,
   });
 
-  if (t.includes('youtube')) return mk('youtube', 'youtube.com', 'YouTube', <Youtube className="w-4 h-4 text-slate-500" aria-hidden />);
-  if (t.includes('spotify')) return mk('spotify', 'open.spotify.com', 'Spotify', <Music2 className="w-4 h-4 text-slate-500" aria-hidden />);
-  if (t.includes('github')) return mk('github', 'github.com', 'GitHub', <Github className="w-4 h-4 text-slate-500" aria-hidden />);
-  if (t.includes('amazon') && t.includes('book')) return mk('amazon', 'amazon.ca', 'Amazon', <Book className="w-4 h-4 text-slate-500" aria-hidden />);
-  if (t.includes('medium')) return mk('medium', 'medium.com', 'Medium', <FileText className="w-4 h-4 text-slate-500" aria-hidden />);
-  if (t.includes('philpaper') || t.includes('philpapers')) return mk('philpapers', 'philpapers.org', 'PhilPapers', <FileText className="w-4 h-4 text-slate-500" aria-hidden />);
+  if (t.includes('youtube'))
+    return mk('youtube', 'youtube.com', 'YouTube', <Youtube className="w-4 h-4 text-slate-500" aria-hidden />);
+  if (t.includes('spotify'))
+    return mk('spotify', 'open.spotify.com', 'Spotify', <Music2 className="w-4 h-4 text-slate-500" aria-hidden />);
+  if (t.includes('github'))
+    return mk('github', 'github.com', 'GitHub', <Github className="w-4 h-4 text-slate-500" aria-hidden />);
+  if (t.includes('amazon') && t.includes('book'))
+    return mk('amazon', 'amazon.ca', 'Amazon', <Book className="w-4 h-4 text-slate-500" aria-hidden />);
+  if (t.includes('medium'))
+    return mk('medium', 'medium.com', 'Medium', <FileText className="w-4 h-4 text-slate-500" aria-hidden />);
+  if (t.includes('philpaper') || t.includes('philpapers'))
+    return mk('philpapers', 'philpapers.org', 'PhilPapers', <FileText className="w-4 h-4 text-slate-500" aria-hidden />);
 
-  // fallback by URL host (if type missing)
+  // fallback by URL host
   try {
     const h = new URL(url).hostname.replace(/^www\./, '');
-    if (h.includes('youtu.be') || h.includes('youtube.com')) return mk('youtube', 'youtube.com', 'YouTube', <Youtube className="w-4 h-4 text-slate-500" aria-hidden />);
-    if (h.includes('spotify.com')) return mk('spotify', 'open.spotify.com', 'Spotify', <Music2 className="w-4 h-4 text-slate-500" aria-hidden />);
-    if (h.includes('github.com')) return mk('github', 'github.com', 'GitHub', <Github className="w-4 h-4 text-slate-500" aria-hidden />);
+    if (h.includes('youtu.be') || h.includes('youtube.com'))
+      return mk('youtube', 'youtube.com', 'YouTube', <Youtube className="w-4 h-4 text-slate-500" aria-hidden />);
+    if (h.includes('spotify.com'))
+      return mk('spotify', 'open.spotify.com', 'Spotify', <Music2 className="w-4 h-4 text-slate-500" aria-hidden />);
+    if (h.includes('github.com'))
+      return mk('github', 'github.com', 'GitHub', <Github className="w-4 h-4 text-slate-500" aria-hidden />);
     if (h) return mk('site', h, h, <LinkIcon className="w-4 h-4 text-slate-500" aria-hidden />);
   } catch {
     // ignore
@@ -404,9 +378,7 @@ function Pill({
       type="button"
       className={[
         'px-3 py-1.5 rounded-full border text-sm font-medium transition inline-flex items-center gap-2',
-        active
-          ? 'bg-slate-900 text-white border-slate-900'
-          : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50',
+        active ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50',
       ].join(' ')}
     >
       {children}
@@ -449,7 +421,6 @@ function ResultCard({
         '!no-underline hover:!no-underline focus:!no-underline decoration-transparent',
       ].join(' ')}
     >
-      {/* Stack on small screens to avoid any overflow */}
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2 min-w-0">
@@ -466,7 +437,6 @@ function ResultCard({
               meta.icon
             )}
 
-            {/* IMPORTANT: flex-1 + min-w-0 makes truncate actually work (prevents horizontal overflow) */}
             <div className="font-semibold text-slate-900 truncate min-w-0 flex-1">{it.title}</div>
           </div>
 
@@ -498,6 +468,7 @@ function ResultCard({
 }
 
 export default function PlayPage() {
+  // CENTRALIZED: taxonomies come from inventory.root.json only; catalog files provide items only.
   const [catalog, setCatalog] = useState<Catalog>({ generatedAt: '', items: [] });
 
   // Main filters
@@ -527,15 +498,14 @@ export default function PlayPage() {
           ...INVENTORY_CATALOG_PATHS.map((p) => fetchJson(p, ctrl.signal)),
         ]);
 
-        const rootRaw = results[0].status === 'fulfilled' ? (results[0].value as Record<string, unknown>) : null;
-
+        const rootRaw = results[0].status === 'fulfilled' ? results[0].value : {};
         const partRaws = results
           .slice(1)
           .filter((r): r is PromiseFulfilledResult<unknown> => r.status === 'fulfilled')
-          .map((r) => r.value as Record<string, unknown>);
+          .map((r) => r.value);
 
-        const mergedRaw = mergeInventory(rootRaw, partRaws);
-        setCatalog(normalizeCatalog(mergedRaw));
+        const merged = buildCatalogFromRootAndParts(rootRaw, partRaws);
+        setCatalog(merged);
       } catch (e: unknown) {
         const err = e as { name?: string };
         if (err?.name !== 'AbortError') setCatalog({ generatedAt: '', items: [] });
@@ -569,7 +539,7 @@ export default function PlayPage() {
     };
   }, [topicLabels, uiLang]);
 
-  // Cache type labels for current uiLang (prefers JSON labels, falls back to nice formatting)
+  // Cache type labels for current uiLang
   const typeLabel = useMemo(() => {
     const labels = typeLabels ?? {};
     const cache = new Map<string, string>();
@@ -586,7 +556,7 @@ export default function PlayPage() {
     };
   }, [typeLabels, uiLang]);
 
-  // Topic universe: prefer taxonomies.topics, fallback to union from items
+  // Topic universe: prefer root taxonomies.topics, fallback to union from items
   const allTopics = useMemo(() => {
     const fromTaxonomy = Array.isArray(taxonomyTopics) ? taxonomyTopics : null;
 
@@ -616,7 +586,7 @@ export default function PlayPage() {
     });
   }, [allTopics, topicSearch, topicLabel]);
 
-  // Build topic sets once (faster than repeated array.includes for large catalogs)
+  // Build topic sets once
   const topicSetById = useMemo(() => {
     const m = new Map<string, Set<string>>();
     for (const it of catalog.items) m.set(it.id, new Set(it.topics ?? []));

@@ -5,31 +5,43 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 type UiLang = 'en' | 'fr';
 type TopicLabel = { en?: string; fr?: string };
 
-type Taxonomies = {
+type RootTaxonomies = {
   topics?: string[];
   topic_labels?: Record<string, TopicLabel>;
   languages?: Array<'en' | 'fr'>;
   [k: string]: unknown;
 };
 
-type Item = {
+type RootInventory = {
+  schemaVersion?: string;
+  generatedAt?: string;
+  taxonomies?: RootTaxonomies;
+  [k: string]: unknown;
+};
+
+type CatalogPart = {
+  schemaVersion?: string;
+  generatedAt?: string;
+  taxonomyRef?: string;
+  items: Array<Record<string, unknown>>;
+  // keep any other top-level fields if you have them
+  [k: string]: unknown;
+};
+
+type ItemView = {
+  __key: string; // unique per catalog+id
+  __catalogPath: string;
+
+  // convenience fields for UI (derived from raw item)
   id: string;
   title: string;
   url: string;
-  description?: string | null;
+  description: string | null;
   type: string;
   language: 'en' | 'fr' | null;
   topics: string[];
 };
 
-type Catalog = {
-  schemaVersion?: string;
-  generatedAt: string;
-  taxonomies?: Taxonomies;
-  items: Item[];
-};
-
-// Inventory files (in /public)
 const INVENTORY_ROOT_PATH = '/inventory.root.json';
 const INVENTORY_CATALOG_PATHS = [
   '/inventory.articles.catalog.json',
@@ -52,7 +64,7 @@ function downloadJson(filename: string, data: unknown) {
   setTimeout(() => URL.revokeObjectURL(url), 0);
 }
 
-function cloneCatalog<T>(x: T): T {
+function cloneDeep<T>(x: T): T {
   return JSON.parse(JSON.stringify(x)) as T;
 }
 
@@ -74,161 +86,88 @@ async function fetchJson(path: string, signal: AbortSignal) {
   return r.json();
 }
 
-function mergeTaxonomiesKeepEarlier(...taxes: Array<Record<string, unknown> | undefined>) {
-  const out: Record<string, unknown> = {};
-
-  for (const t of taxes) {
-    if (!t || typeof t !== 'object') continue;
-
-    for (const [k, v] of Object.entries(t)) {
-      // Arrays: union, keep order
-      if (Array.isArray(v)) {
-        const prev = Array.isArray(out[k]) ? (out[k] as unknown[]) : [];
-        const merged = [...prev, ...v];
-
-        if (merged.every((x) => typeof x === 'string')) out[k] = uniqKeepOrder(merged as string[]);
-        else out[k] = merged;
-
-        continue;
-      }
-
-      // Objects/maps: shallow merge, earlier wins on collisions
-      if (v && typeof v === 'object' && !Array.isArray(v)) {
-        const prev = out[k];
-        const prevObj =
-          prev && typeof prev === 'object' && !Array.isArray(prev) ? (prev as Record<string, unknown>) : {};
-        const incoming = v as Record<string, unknown>;
-        out[k] = { ...incoming, ...prevObj }; // earlier (prev) wins
-        continue;
-      }
-
-      // Scalars: keep earlier if already set
-      if (out[k] === undefined && v !== undefined) out[k] = v;
-    }
-  }
-
-  return out;
+function getStr(o: Record<string, unknown>, k: string, fallback = '') {
+  const v = o[k];
+  return typeof v === 'string' ? v : fallback;
 }
 
-function pickLatestGeneratedAt(values: Array<unknown>) {
-  let bestIso = '';
-  let bestTime = -1;
-
-  for (const v of values) {
-    if (typeof v !== 'string' || !v) continue;
-    const t = new Date(v).getTime();
-    if (!Number.isFinite(t)) continue;
-    if (t > bestTime) {
-      bestTime = t;
-      bestIso = v;
-    }
-  }
-
-  return bestIso;
+function getTopicsFromItem(o: Record<string, unknown>): string[] {
+  const v = o.topics;
+  if (!Array.isArray(v)) return [];
+  const out = v.filter((t): t is string => typeof t === 'string' && !!t.trim());
+  // keep stable sort for nicer diffs
+  return Array.from(new Set(out)).sort((a, b) => a.localeCompare(b));
 }
 
-function mergeInventory(rootRaw: Record<string, unknown> | null, partRaws: Array<Record<string, unknown>>) {
-  const rootTax =
-    rootRaw && typeof rootRaw.taxonomies === 'object' && rootRaw.taxonomies && !Array.isArray(rootRaw.taxonomies)
-      ? (rootRaw.taxonomies as Record<string, unknown>)
-      : undefined;
-
-  const partTaxes = partRaws
-    .map((p) =>
-      p && typeof p.taxonomies === 'object' && p.taxonomies && !Array.isArray(p.taxonomies)
-        ? (p.taxonomies as Record<string, unknown>)
-        : undefined,
-    )
-    .filter(Boolean) as Array<Record<string, unknown>>;
-
-  // Items: dedupe by id
-  const itemsById = new Map<string, unknown>();
-  for (const p of partRaws) {
-    const arr = Array.isArray(p.items) ? (p.items as unknown[]) : [];
-    for (const it of arr) {
-      const o = (it ?? {}) as Record<string, unknown>;
-      const id = typeof o.id === 'string' ? o.id : String(o.id ?? '');
-      if (!id) continue;
-      if (!itemsById.has(id)) itemsById.set(id, it);
-    }
-  }
-
-  const generatedAt = pickLatestGeneratedAt([
-    typeof rootRaw?.generatedAt === 'string' ? rootRaw.generatedAt : '',
-    ...partRaws.map((p) => (typeof p.generatedAt === 'string' ? p.generatedAt : '')),
-  ]);
-
-  const schemaVersion =
-    (typeof rootRaw?.schemaVersion === 'string' && rootRaw.schemaVersion) ||
-    (typeof partRaws[0]?.schemaVersion === 'string' && (partRaws[0] as any).schemaVersion) ||
-    undefined;
-
-  // Root authoritative: merge it first (earlier wins)
-  const mergedTaxonomies = mergeTaxonomiesKeepEarlier(rootTax, ...partTaxes);
-
-  return {
-    ...(schemaVersion ? { schemaVersion } : {}),
-    generatedAt,
-    taxonomies: mergedTaxonomies,
-    items: Array.from(itemsById.values()),
-  };
+function setTopicsOnItem(o: Record<string, unknown>, topics: string[]) {
+  o.topics = topics;
 }
 
-function normalizeCatalog(raw: unknown): Catalog {
+function toFilenameFromPath(p: string) {
+  const s = p.startsWith('/') ? p.slice(1) : p;
+  return s || 'download.json';
+}
+
+function normalizePart(raw: unknown): CatalogPart {
   const r = (raw ?? {}) as Record<string, unknown>;
-
-  const taxonomiesRaw = r.taxonomies;
-  const taxonomies: Taxonomies | undefined =
-    taxonomiesRaw && typeof taxonomiesRaw === 'object' ? (taxonomiesRaw as Taxonomies) : undefined;
-
   const itemsRaw = Array.isArray(r.items) ? (r.items as unknown[]) : [];
-  const items: Item[] = itemsRaw.map((x) => {
-    const o = (x ?? {}) as Record<string, unknown>;
-    const language = o.language === 'en' || o.language === 'fr' ? (o.language as 'en' | 'fr') : null;
-    const topics = Array.isArray(o.topics) ? (o.topics as unknown[]).filter((t): t is string => typeof t === 'string') : [];
-
-    return {
-      id: String(o.id ?? ''),
-      title: String(o.title ?? ''),
-      url: String(o.url ?? ''),
-      description: typeof o.description === 'string' ? o.description : null,
-      type: String(o.type ?? ''),
-      language,
-      topics,
-    };
-  });
-
-  // fallback topics if taxonomies.topics absent
-  const fallbackTopics = (() => {
-    const set = new Set<string>();
-    for (const it of items) for (const t of it.topics ?? []) if (t) set.add(t);
-    return Array.from(set).sort((a, b) => a.localeCompare(b));
-  })();
-
-  const safeTaxonomies: Taxonomies = {
-    ...(taxonomies ?? {}),
-    topics: Array.isArray(taxonomies?.topics) ? taxonomies!.topics! : fallbackTopics,
-    topic_labels:
-      taxonomies?.topic_labels && typeof taxonomies.topic_labels === 'object'
-        ? (taxonomies.topic_labels as Record<string, TopicLabel>)
-        : {},
-    languages: Array.isArray(taxonomies?.languages) ? taxonomies!.languages! : ['en', 'fr'],
-  };
+  const items = itemsRaw.map((x) => ((x ?? {}) as Record<string, unknown>));
 
   return {
     schemaVersion: typeof r.schemaVersion === 'string' ? (r.schemaVersion as string) : undefined,
-    generatedAt: typeof r.generatedAt === 'string' ? (r.generatedAt as string) : '',
-    taxonomies: safeTaxonomies,
+    generatedAt: typeof r.generatedAt === 'string' ? (r.generatedAt as string) : undefined,
+    taxonomyRef: typeof r.taxonomyRef === 'string' ? (r.taxonomyRef as string) : undefined,
+    // IMPORTANT: keep ALL top-level fields, but ensure items is normalized to objects
+    ...(r as any),
     items,
   };
 }
 
-export default function CatalogEditorPage() {
-  const [original, setOriginal] = useState<Catalog | null>(null);
-  const [draft, setDraft] = useState<Catalog | null>(null);
+function normalizeRoot(raw: unknown): RootInventory {
+  const r = (raw ?? {}) as Record<string, unknown>;
+  const taxRaw = r.taxonomies;
+  const taxonomies: RootTaxonomies | undefined =
+    taxRaw && typeof taxRaw === 'object' && !Array.isArray(taxRaw) ? (taxRaw as RootTaxonomies) : undefined;
 
+  return {
+    schemaVersion: typeof r.schemaVersion === 'string' ? (r.schemaVersion as string) : undefined,
+    generatedAt: typeof r.generatedAt === 'string' ? (r.generatedAt as string) : undefined,
+    ...(r as any),
+    taxonomies: taxonomies ?? {},
+  };
+}
+
+function buildItemView(item: Record<string, unknown>, catalogPath: string): ItemView {
+  const id = getStr(item, 'id', '');
+  const key = `${catalogPath}::${id || getStr(item, 'url', '') || Math.random().toString(36).slice(2)}`;
+
+  const lang = item.language === 'en' || item.language === 'fr' ? (item.language as 'en' | 'fr') : null;
+
+  return {
+    __key: key,
+    __catalogPath: catalogPath,
+    id: id || key,
+    title: getStr(item, 'title', ''),
+    url: getStr(item, 'url', ''),
+    description: typeof item.description === 'string' ? (item.description as string) : null,
+    type: getStr(item, 'type', ''),
+    language: lang,
+    topics: getTopicsFromItem(item),
+  };
+}
+
+export default function CatalogEditorPage() {
   const [uiLang, setUiLang] = useState<UiLang>('en');
 
+  // Root (authoritative taxonomies)
+  const [rootOriginal, setRootOriginal] = useState<RootInventory | null>(null);
+  const [rootDraft, setRootDraft] = useState<RootInventory | null>(null);
+
+  // Per-catalog (authoritative items storage)
+  const [partsOriginal, setPartsOriginal] = useState<Record<string, CatalogPart> | null>(null);
+  const [partsDraft, setPartsDraft] = useState<Record<string, CatalogPart> | null>(null);
+
+  // UI
   const [q, setQ] = useState('');
   const [topicQ, setTopicQ] = useState('');
 
@@ -247,31 +186,38 @@ export default function CatalogEditorPage() {
           ...INVENTORY_CATALOG_PATHS.map((p) => fetchJson(p, ctrl.signal)),
         ]);
 
-        const rootRaw = results[0].status === 'fulfilled' ? (results[0].value as Record<string, unknown>) : null;
+        const rootRaw = results[0].status === 'fulfilled' ? results[0].value : null;
+        const root = normalizeRoot(rootRaw);
 
-        const partRaws = results
-          .slice(1)
-          .filter((r): r is PromiseFulfilledResult<unknown> => r.status === 'fulfilled')
-          .map((r) => r.value as Record<string, unknown>);
+        const parts: Record<string, CatalogPart> = {};
+        for (let i = 0; i < INVENTORY_CATALOG_PATHS.length; i++) {
+          const path = INVENTORY_CATALOG_PATHS[i];
+          const r = results[i + 1];
+          if (r.status === 'fulfilled') parts[path] = normalizePart(r.value);
+          else parts[path] = normalizePart({ schemaVersion: root.schemaVersion, generatedAt: root.generatedAt, items: [] });
+        }
 
         if (!alive) return;
 
-        const mergedRaw = mergeInventory(rootRaw, partRaws);
-        const normalized = normalizeCatalog(mergedRaw);
+        setRootOriginal(cloneDeep(root));
+        setRootDraft(root);
 
-        setOriginal(cloneCatalog(normalized));
-        setDraft(normalized);
+        setPartsOriginal(cloneDeep(parts));
+        setPartsDraft(parts);
       } catch (err: unknown) {
         const e = err as { name?: string };
         if (!alive || e?.name === 'AbortError') return;
 
-        const empty: Catalog = {
-          generatedAt: '',
-          items: [],
-          taxonomies: { topics: [], topic_labels: {}, languages: ['en', 'fr'] },
-        };
-        setOriginal(cloneCatalog(empty));
-        setDraft(empty);
+        const emptyRoot: RootInventory = { generatedAt: '', taxonomies: { topics: [], topic_labels: {}, languages: ['en', 'fr'] } };
+        const emptyParts: Record<string, CatalogPart> = Object.fromEntries(
+          INVENTORY_CATALOG_PATHS.map((p) => [p, { generatedAt: '', items: [] }]),
+        );
+
+        setRootOriginal(cloneDeep(emptyRoot));
+        setRootDraft(emptyRoot);
+
+        setPartsOriginal(cloneDeep(emptyParts));
+        setPartsDraft(emptyParts);
       }
     })();
 
@@ -281,13 +227,33 @@ export default function CatalogEditorPage() {
     };
   }, []);
 
-  const topicLabels = draft?.taxonomies?.topic_labels ?? {};
+  const tax = rootDraft?.taxonomies ?? {};
+  const topicLabels = (tax.topic_labels ?? {}) as Record<string, TopicLabel>;
   const topicLabel = useCallback((topic: string) => topicLabels?.[topic]?.[uiLang] ?? topic, [topicLabels, uiLang]);
 
+  // Flatten items for UI, but edits must go back to the right catalog file.
+  const allItems: ItemView[] = useMemo(() => {
+    const parts = partsDraft ?? {};
+    const out: ItemView[] = [];
+    for (const [path, part] of Object.entries(parts)) {
+      const items = Array.isArray(part.items) ? part.items : [];
+      for (const it of items) out.push(buildItemView(it, path));
+    }
+    return out;
+  }, [partsDraft]);
+
+  // Root topics (centralised). If missing, compute fallback from items.
   const allTopics = useMemo(() => {
-    const topics = draft?.taxonomies?.topics ?? [];
+    const topicsFromRoot = Array.isArray(tax.topics) ? (tax.topics as string[]).filter(Boolean) : [];
+    const fallback = (() => {
+      const set = new Set<string>();
+      for (const it of allItems) for (const t of it.topics) set.add(t);
+      return Array.from(set).sort((a, b) => a.localeCompare(b));
+    })();
+
+    const topics = topicsFromRoot.length ? topicsFromRoot : fallback;
     return [...topics].filter(Boolean).sort((a, b) => topicLabel(a).localeCompare(topicLabel(b)));
-  }, [draft?.taxonomies?.topics, topicLabel]);
+  }, [tax.topics, allItems, topicLabel]);
 
   const visibleTopics = useMemo(() => {
     const s = topicQ.trim().toLowerCase();
@@ -301,30 +267,49 @@ export default function CatalogEditorPage() {
 
   const filteredItems = useMemo(() => {
     const s = q.trim().toLowerCase();
-    if (!s) return draft?.items ?? [];
-    return (draft?.items ?? []).filter((it) => {
+    if (!s) return allItems;
+
+    return allItems.filter((it) => {
       const hay = `${it.title} ${it.url} ${(it.topics ?? []).join(' ')}`.toLowerCase();
       return hay.includes(s);
     });
-  }, [draft?.items, q]);
+  }, [allItems, q]);
 
-  const topicSetById = useMemo(() => {
-    const m = new Map<string, Set<string>>();
-    for (const it of draft?.items ?? []) m.set(it.id, new Set(it.topics ?? []));
-    return m;
-  }, [draft?.items]);
+  // Quick lookup: __key -> (catalogPath, indexInCatalogItems)
+  const itemIndex = useMemo(() => {
+    const idx = new Map<string, { catalogPath: string; i: number }>();
+    const parts = partsDraft ?? {};
+    for (const [path, part] of Object.entries(parts)) {
+      const items = Array.isArray(part.items) ? part.items : [];
+      for (let i = 0; i < items.length; i++) {
+        const it = items[i] ?? {};
+        const obj = it as Record<string, unknown>;
+        const id = getStr(obj, 'id', '');
+        const key = `${path}::${id || getStr(obj, 'url', '') || ''}`;
+        if (key && !idx.has(key)) idx.set(key, { catalogPath: path, i });
+      }
+    }
+    return idx;
+  }, [partsDraft]);
 
-  function setTopic(itemId: string, topic: string, checked: boolean) {
-    setDraft((prev) => {
+  function setTopic(itemKey: string, topic: string, checked: boolean) {
+    setPartsDraft((prev) => {
       if (!prev) return prev;
-      const items = prev.items.map((it) => {
-        if (it.id !== itemId) return it;
-        const topics = new Set(it.topics ?? []);
-        if (checked) topics.add(topic);
-        else topics.delete(topic);
-        return { ...it, topics: Array.from(topics).sort((a, b) => a.localeCompare(b)) };
-      });
-      return { ...prev, items };
+      const ref = itemIndex.get(itemKey);
+      if (!ref) return prev;
+
+      const next = cloneDeep(prev);
+      const part = next[ref.catalogPath];
+      if (!part || !Array.isArray(part.items) || !part.items[ref.i]) return prev;
+
+      const item = part.items[ref.i] as Record<string, unknown>;
+      const topics = new Set(getTopicsFromItem(item));
+
+      if (checked) topics.add(topic);
+      else topics.delete(topic);
+
+      setTopicsOnItem(item, Array.from(topics).sort((a, b) => a.localeCompare(b)));
+      return next;
     });
   }
 
@@ -332,34 +317,32 @@ export default function CatalogEditorPage() {
     const key = newTopicKey.trim();
     if (!key) return;
 
-    setDraft((prev) => {
+    setRootDraft((prev) => {
       if (!prev) return prev;
+      const next = cloneDeep(prev);
 
-      const tax = prev.taxonomies ?? {};
-      const topics = Array.isArray(tax.topics) ? [...tax.topics] : [];
+      const t = (next.taxonomies ?? {}) as RootTaxonomies;
+      const topics = Array.isArray(t.topics) ? [...(t.topics as string[])] : [];
       if (!topics.includes(key)) topics.push(key);
 
-      const topic_labels: Record<string, TopicLabel> =
-        tax.topic_labels && typeof tax.topic_labels === 'object'
-          ? { ...(tax.topic_labels as Record<string, TopicLabel>) }
-          : {};
+      const labels: Record<string, TopicLabel> =
+        t.topic_labels && typeof t.topic_labels === 'object' ? { ...(t.topic_labels as Record<string, TopicLabel>) } : {};
 
-      const existing = topic_labels[key] ?? {};
-      topic_labels[key] = {
+      const existing = labels[key] ?? {};
+      labels[key] = {
         ...existing,
         ...(newTopicEn.trim() ? { en: newTopicEn.trim() } : {}),
         ...(newTopicFr.trim() ? { fr: newTopicFr.trim() } : {}),
       };
 
-      return {
-        ...prev,
-        taxonomies: {
-          ...tax,
-          topics: topics.sort((a, b) => a.localeCompare(b)),
-          topic_labels,
-          languages: Array.isArray(tax.languages) ? tax.languages : ['en', 'fr'],
-        },
+      next.taxonomies = {
+        ...t,
+        topics: topics.sort((a, b) => a.localeCompare(b)),
+        topic_labels: labels,
+        languages: Array.isArray(t.languages) ? t.languages : ['en', 'fr'],
       };
+
+      return next;
     });
 
     setNewTopicKey('');
@@ -367,14 +350,49 @@ export default function CatalogEditorPage() {
     setNewTopicFr('');
   }
 
-  const canExport = !!draft;
+  const canExport = !!rootDraft && !!partsDraft;
+
+  function resetAll() {
+    if (rootOriginal) setRootDraft(cloneDeep(rootOriginal));
+    if (partsOriginal) setPartsDraft(cloneDeep(partsOriginal));
+  }
+
+  function exportAllFiles() {
+    if (!rootDraft || !partsDraft) return;
+
+    const now = new Date().toISOString();
+
+    // Export root (centralised taxonomies)
+    const rootOut = cloneDeep(rootDraft);
+    rootOut.generatedAt = now;
+    downloadJson(toFilenameFromPath(INVENTORY_ROOT_PATH), rootOut);
+
+    // Export each catalog (items only; we keep whatever other top-level fields you already have,
+    // but we DO NOT try to inject/merge taxonomies here.)
+    for (const [path, part] of Object.entries(partsDraft)) {
+      const out = cloneDeep(part);
+
+      // Strip any accidental internal fields (we didn't add any to raw items, but safe anyway)
+      out.items = (out.items ?? []).map((it) => {
+        const obj = { ...(it ?? {}) } as Record<string, unknown>;
+        delete (obj as any).__key;
+        delete (obj as any).__catalogPath;
+        return obj;
+      });
+
+      out.generatedAt = now;
+      downloadJson(toFilenameFromPath(path), out);
+    }
+  }
 
   return (
     <main className="max-w-6xl mx-auto px-6 py-10 not-prose overflow-x-hidden">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-slate-900">Catalog Editor</h1>
-          <p className="text-slate-500 mt-2">Edit topics per link. Downloads a merged JSON snapshot.</p>
+          <p className="text-slate-500 mt-2">
+            Edits topics per item. Taxonomy comes from <code>inventory.root.json</code>. Exports updated root + catalog files.
+          </p>
         </div>
 
         <div className="flex flex-wrap gap-2 items-center">
@@ -402,8 +420,8 @@ export default function CatalogEditorPage() {
           <button
             className="px-3 py-2 rounded-lg border border-slate-200 hover:bg-slate-50"
             type="button"
-            onClick={() => original && setDraft(cloneCatalog(original))}
-            disabled={!original}
+            onClick={resetAll}
+            disabled={!rootOriginal || !partsOriginal}
           >
             Reset
           </button>
@@ -411,22 +429,20 @@ export default function CatalogEditorPage() {
           <button
             className="px-3 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800"
             type="button"
-            onClick={() => {
-              if (!draft) return;
-              downloadJson('inventory.merged.catalog.json', { ...draft, generatedAt: new Date().toISOString() });
-            }}
+            onClick={exportAllFiles}
             disabled={!canExport}
+            title="Downloads inventory.root.json and each inventory.*.catalog.json"
           >
-            Download JSON
+            Download files
           </button>
         </div>
       </div>
 
-		<div className="mt-8 grid grid-cols-1 md:grid-cols-[minmax(260px,35%)_minmax(0,65%)] gap-6 min-w-0">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-[minmax(260px,35%)_minmax(0,65%)] gap-6 min-w-0">
         {/* LEFT */}
         <aside className="rounded-xl border border-slate-200 p-4">
           <div className="flex items-center justify-between gap-2">
-            <h2 className="font-semibold text-slate-900">Topics</h2>
+            <h2 className="font-semibold text-slate-900">Topics (root)</h2>
             <span className="text-xs text-slate-500">{allTopics.length}</span>
           </div>
 
@@ -465,7 +481,7 @@ export default function CatalogEditorPage() {
               className="w-full px-3 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800"
               disabled={!newTopicKey.trim()}
             >
-              Add topic to taxonomy
+              Add topic to root taxonomy
             </button>
           </div>
 
@@ -482,7 +498,7 @@ export default function CatalogEditorPage() {
         {/* RIGHT */}
         <section className="rounded-xl border border-slate-200 p-4 min-w-0">
           <div className="flex flex-wrap items-center justify-between gap-3 min-w-0">
-            <h2 className="font-semibold text-slate-900">Links</h2>
+            <h2 className="font-semibold text-slate-900">Items</h2>
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
@@ -493,9 +509,8 @@ export default function CatalogEditorPage() {
 
           <div className="mt-4 space-y-4 min-w-0">
             {filteredItems.map((it) => {
-              const tset = topicSetById.get(it.id) ?? new Set<string>();
               return (
-                <div key={it.id} className="rounded-xl border border-slate-200 p-4 min-w-0">
+                <div key={it.__key} className="rounded-xl border border-slate-200 p-4 min-w-0">
                   <div className="min-w-0">
                     <div className="font-semibold text-slate-900 break-words">{it.title}</div>
 
@@ -512,20 +527,27 @@ export default function CatalogEditorPage() {
                     <div className="text-xs text-slate-500 mt-1">
                       {it.language ? it.language.toUpperCase() : '—'} · {it.type}
                     </div>
+
+                    <div className="text-xs text-slate-400 mt-1">
+                      Catalog file: <code>{toFilenameFromPath(it.__catalogPath)}</code>
+                    </div>
                   </div>
 
                   <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 min-w-0">
-                    {visibleTopics.map((topicKey) => (
-                      <label key={topicKey} className="flex items-center gap-2 text-sm text-slate-700 min-w-0">
-                        <input
-                          className="shrink-0"
-                          type="checkbox"
-                          checked={tset.has(topicKey)}
-                          onChange={(e) => setTopic(it.id, topicKey, e.target.checked)}
-                        />
-                        <span className="min-w-0 flex-1 truncate">{topicLabel(topicKey)}</span>
-                      </label>
-                    ))}
+                    {visibleTopics.map((topicKey) => {
+                      const checked = it.topics.includes(topicKey);
+                      return (
+                        <label key={topicKey} className="flex items-center gap-2 text-sm text-slate-700 min-w-0">
+                          <input
+                            className="shrink-0"
+                            type="checkbox"
+                            checked={checked}
+                            onChange={(e) => setTopic(it.__key, topicKey, e.target.checked)}
+                          />
+                          <span className="min-w-0 flex-1 truncate">{topicLabel(topicKey)}</span>
+                        </label>
+                      );
+                    })}
                   </div>
                 </div>
               );
