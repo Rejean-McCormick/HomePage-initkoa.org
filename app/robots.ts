@@ -1,19 +1,24 @@
+// app/robots.ts
 import type { MetadataRoute } from "next";
 
-function getBaseUrl(): string {
-  const env =
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    process.env.SITE_URL ||
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
+export const runtime = "nodejs";
 
-  return (env || "http://localhost:3000").replace(/\/+$/, "");
+// Use ONE canonical base URL (match sitemap.ts / canonical tags)
+function getBaseUrl(): string {
+  const explicit =
+    process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL;
+
+  const inferred = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "";
+
+  return (explicit || inferred || "http://localhost:3000").replace(/\/+$/, "");
 }
 
 function getHost(baseUrl: string): string {
   try {
-    return new URL(baseUrl).host; // ex: "example.com"
+    return new URL(baseUrl).host;
   } catch {
-    // fallback: enlève protocole + path
     return baseUrl.replace(/^https?:\/\//, "").replace(/\/.*$/, "");
   }
 }
@@ -23,16 +28,15 @@ export default function robots(): MetadataRoute.Robots {
   const host = getHost(baseUrl);
 
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: [
-        "/private/", // Internal tools
-        "/admin/", // Admin dashboard
-        "/api/", // Backend endpoints
-      ],
-    },
-    sitemap: [`${baseUrl}/sitemap.xml`, `${baseUrl}/ai-sitemap.json`],
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/private", "/admin", "/api"],
+      },
+    ],
+    // Only list the real XML sitemap(s) here
+    sitemap: [`${baseUrl}/sitemap.xml`],
     host,
   };
 }
