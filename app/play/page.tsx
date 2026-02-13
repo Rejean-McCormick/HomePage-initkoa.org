@@ -515,11 +515,6 @@ export default function PlayPage() {
     return () => ctrl.abort();
   }, []);
 
-  const updatedAtLabel = useMemo(() => {
-    if (!catalog.generatedAt) return '';
-    const d = new Date(catalog.generatedAt);
-    return Number.isNaN(d.getTime()) ? '' : ` · updated ${d.toLocaleString()}`;
-  }, [catalog.generatedAt]);
 
   const taxonomies = catalog.taxonomies;
   const taxonomyTopics = taxonomies?.topics;
@@ -644,7 +639,6 @@ export default function PlayPage() {
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900">Play</h1>
               <p className="text-slate-500 mt-1">
                 Filters ({filtered.length} results)
-                {updatedAtLabel}
               </p>
             </div>
           </div>
