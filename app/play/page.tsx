@@ -6,6 +6,7 @@ import { PlayCircle, Globe, Languages, Youtube, Music2, Link as LinkIcon, Github
 
 type TopicLabel = { en?: string; fr?: string };
 type TypeLabel = { en?: string; fr?: string };
+type AlbumLabel = { en?: string; fr?: string };
 
 type RootTaxonomies = {
   topics?: string[];
@@ -16,6 +17,10 @@ type RootTaxonomies = {
   type_labels?: Record<string, TypeLabel>;
 
   languages?: Array<'en' | 'fr'>;
+
+  // NEW (optional): albums ordering + labels (nice display)
+  albums?: string[];
+  album_labels?: Record<string, AlbumLabel>;
 
   // allow other centralized taxonomies (levels, platforms, albums, etc.)
   [k: string]: unknown;
@@ -37,9 +42,9 @@ type Item = {
   language: 'en' | 'fr' | null;
   topics: string[];
 
-  // NEW: playlist/album grouping
-  album?: string | null;        // playlist/album title
-  albumIndex?: number | null;   // optional position inside playlist
+  // playlist/album grouping (YouTube)
+  albums: string[]; // can be []
+  albumTrack?: number | null; // optional, not used for alpha sort
 };
 
 type CatalogPart = {
@@ -65,6 +70,17 @@ type Option<T extends string> = { key: T; label: string; icon?: React.ReactNode 
 
 // Keep King Klown handled by its dedicated filter (hide from topic pills if present)
 const TOPICS_HIDDEN_FROM_UI = new Set(['king_klown']);
+
+// Desired fixed album order (fallback if inventory.root.json doesn’t define taxonomies.albums yet)
+const DEFAULT_ALBUM_ORDER = [
+  'barok',
+  'knowledge_pact',
+  'pi_etherisme_cosmique',
+  'raoul_et_colin',
+  'le_rire_cosmique',
+  'pohenecoco_crepuscule_des_masques',
+  'rap_konscient',
+];
 
 const LANG_OPTIONS: Option<LangFilter>[] = [
   { key: 'all', label: 'All', icon: <Globe className="w-4 h-4 text-slate-500" /> },
@@ -123,7 +139,6 @@ function pickLatestGeneratedAt(values: Array<unknown>) {
       bestIso = v;
     }
   }
-
   return bestIso;
 }
 
@@ -201,12 +216,20 @@ function normalizeRootTaxonomies(raw: unknown): RootTaxonomies {
     taxonomies.topics = (taxonomies.topics as unknown[]).filter((t): t is string => typeof t === 'string' && !!t);
   }
 
-  // Ensure languages default
-  if (!Array.isArray(taxonomies.languages)) taxonomies.languages = ['en', 'fr'];
+  // Ensure albums is a clean string[] (optional)
+  if (Array.isArray((taxonomies as any).albums)) {
+    taxonomies.albums = ((taxonomies as any).albums as unknown[]).filter(
+      (a): a is string => typeof a === 'string' && !!a,
+    );
+  }
 
-  // Ensure maps default
+  // Ensure labels maps default
   if (!taxonomies.topic_labels || typeof taxonomies.topic_labels !== 'object') taxonomies.topic_labels = {};
   if (!taxonomies.type_labels || typeof taxonomies.type_labels !== 'object') taxonomies.type_labels = {};
+  if (!taxonomies.album_labels || typeof taxonomies.album_labels !== 'object') taxonomies.album_labels = {};
+
+  // Ensure languages default
+  if (!Array.isArray(taxonomies.languages)) taxonomies.languages = ['en', 'fr'];
 
   return taxonomies;
 }
@@ -231,22 +254,29 @@ function normalizeItem(x: unknown): Item {
   const topics =
     Array.isArray(o.topics) ? (o.topics as unknown[]).filter((t): t is string => typeof t === 'string' && !!t) : [];
 
-  // NEW: accept multiple possible field names (so you don't have to rename JSON immediately)
-  const album =
-    (typeof (o as any).album === 'string' && (o as any).album) ||
-    (typeof (o as any).albumTitle === 'string' && (o as any).albumTitle) ||
-    (typeof (o as any).playlist === 'string' && (o as any).playlist) ||
-    (typeof (o as any).playlistTitle === 'string' && (o as any).playlistTitle) ||
-    null;
+  // albums: accept "albums" array OR legacy "album"/playlist strings
+  const albums: string[] = [];
+  const albumsRaw = (o as any).albums;
+  if (Array.isArray(albumsRaw)) {
+    for (const a of albumsRaw) if (typeof a === 'string' && a) albums.push(a);
+  } else {
+    const a1 =
+      (typeof (o as any).album === 'string' && (o as any).album) ||
+      (typeof (o as any).playlist === 'string' && (o as any).playlist) ||
+      (typeof (o as any).playlistTitle === 'string' && (o as any).playlistTitle) ||
+      '';
+    if (a1) albums.push(a1);
+  }
 
-  const albumIndexRaw = (o as any).albumIndex ?? (o as any).track ?? (o as any).playlistIndex ?? (o as any).position;
-  const albumIndexNum =
-    typeof albumIndexRaw === 'number'
-      ? albumIndexRaw
-      : typeof albumIndexRaw === 'string' && albumIndexRaw.trim() !== ''
-        ? Number(albumIndexRaw)
+  // Optional: track number inside album (not used for alpha sort)
+  const albumTrackRaw = (o as any).albumTrack ?? (o as any).track ?? (o as any).position;
+  const albumTrackNum =
+    typeof albumTrackRaw === 'number'
+      ? albumTrackRaw
+      : typeof albumTrackRaw === 'string' && albumTrackRaw.trim() !== ''
+        ? Number(albumTrackRaw)
         : NaN;
-  const albumIndex = Number.isFinite(albumIndexNum) ? albumIndexNum : null;
+  const albumTrack = Number.isFinite(albumTrackNum) ? albumTrackNum : null;
 
   return {
     id: String(o.id ?? ''),
@@ -256,8 +286,8 @@ function normalizeItem(x: unknown): Item {
     type: String(o.type ?? ''),
     language,
     topics,
-    album,
-    albumIndex,
+    albums: uniqKeepOrder(albums),
+    albumTrack,
   };
 }
 
@@ -424,19 +454,26 @@ function isYouTubeType(typeKey: string) {
   return (typeKey || '').toLowerCase().includes('youtube');
 }
 
+function primaryAlbumKey(it: Item) {
+  return (it.albums?.[0] ?? '').trim();
+}
+
 function ResultCard({
   it,
   topicLabel,
   typeLabel,
+  albumLabel,
 }: {
   it: Item;
   topicLabel: (t: string) => string;
   typeLabel: (t: string) => string;
+  albumLabel: (a: string) => string;
 }) {
   const meta = useMemo(() => platformMetaFromType(it.type, it.url), [it.type, it.url]);
   const [logoOk, setLogoOk] = useState(true);
 
-  const showAlbum = isYouTubeType(it.type) && !!it.album;
+  const albumKey = primaryAlbumKey(it);
+  const showAlbum = isYouTubeType(it.type) && !!albumKey;
 
   return (
     <a
@@ -469,10 +506,11 @@ function ResultCard({
             <div className="font-semibold text-slate-900 truncate min-w-0 flex-1">{it.title}</div>
           </div>
 
-          {/* NEW: album/playlist title line for YouTube cards */}
+          {/* Album title directly under the song title (YouTube only) */}
           {showAlbum ? (
-            <div className="text-xs text-slate-500 mt-1 break-words">
-              Playlist: <span className="font-medium text-slate-700">{it.album}</span>
+            <div className="text-xs text-slate-600 mt-1 break-words">
+              <span className="text-slate-500">Album:</span>{' '}
+              <span className="font-medium text-slate-800">{albumLabel(albumKey)}</span>
             </div>
           ) : null}
 
@@ -555,6 +593,7 @@ export default function PlayPage() {
   const taxonomyTopics = taxonomies?.topics;
   const topicLabels = taxonomies?.topic_labels;
   const typeLabels = taxonomies?.type_labels;
+  const albumLabels = taxonomies?.album_labels;
 
   // Cache topic labels for current uiLang
   const topicLabel = useMemo(() => {
@@ -585,6 +624,36 @@ export default function PlayPage() {
       return lbl;
     };
   }, [typeLabels, uiLang]);
+
+  // Cache album labels for current uiLang (fallback to humanizeKey)
+  const albumLabel = useMemo(() => {
+    const labels = albumLabels ?? {};
+    const cache = new Map<string, string>();
+    return (albumKey: string) => {
+      const k = (albumKey ?? '').trim();
+      if (!k) return '';
+      const hit = cache.get(k);
+      if (hit) return hit;
+
+      const fromJson = labels?.[k]?.[uiLang];
+      const lbl = fromJson ?? humanizeKey(k);
+      cache.set(k, lbl);
+      return lbl;
+    };
+  }, [albumLabels, uiLang]);
+
+  // Album ordering (prefer taxonomy.albums, else fallback constant)
+  const albumOrder = useMemo(() => {
+    const fromTax = Array.isArray(taxonomies?.albums) ? (taxonomies?.albums as string[]) : null;
+    const list = fromTax && fromTax.length ? fromTax : DEFAULT_ALBUM_ORDER;
+    return list.filter((x) => typeof x === 'string' && !!x);
+  }, [taxonomies?.albums]);
+
+  const albumRank = useMemo(() => {
+    const m = new Map<string, number>();
+    for (let i = 0; i < albumOrder.length; i++) m.set(albumOrder[i], i);
+    return m;
+  }, [albumOrder]);
 
   // Topic universe: prefer root taxonomies.topics, fallback to union from items
   const allTopics = useMemo(() => {
@@ -623,7 +692,7 @@ export default function PlayPage() {
     return m;
   }, [catalog.items]);
 
-  // NEW: stable original order map (used for “don’t reshuffle everything” sorting)
+  // Stable original order map (fallback tie-breaker)
   const origIndexById = useMemo(() => {
     const m = new Map<string, number>();
     for (let i = 0; i < (catalog.items ?? []).length; i++) m.set(catalog.items[i].id, i);
@@ -666,7 +735,7 @@ export default function PlayPage() {
       out.push(it);
     }
 
-    // NEW: group YouTube items by playlist/album (contiguous), while keeping stable order elsewhere
+    // Group YouTube by album order, and alpha-sort inside each album.
     out.sort((a, b) => {
       const ia = origIndexById.get(a.id) ?? 0;
       const ib = origIndexById.get(b.id) ?? 0;
@@ -674,32 +743,38 @@ export default function PlayPage() {
       const ya = isYouTubeType(a.type);
       const yb = isYouTubeType(b.type);
 
-      // only apply grouping rules inside YouTube<->YouTube comparisons
+      // Keep non-YouTube stable vs others
+      if (ya !== yb) return ia - ib;
+
+      // Only YouTube<->YouTube: apply album grouping + sorting
       if (ya && yb) {
-        const ga = (a.album ?? '').trim();
-        const gb = (b.album ?? '').trim();
+        const aa = primaryAlbumKey(a);
+        const ab = primaryAlbumKey(b);
 
-        // Group: playlist/album title
-        if (ga && gb && ga !== gb) return ga.localeCompare(gb);
+        // Put album-tagged items before untagged
+        if (!!aa !== !!ab) return aa ? -1 : 1;
 
-        // If one has album and the other doesn't, prefer album’ed items first
-        if (!!ga !== !!gb) return ga ? -1 : 1;
+        // Album order (your fixed order)
+        const ra = aa ? (albumRank.get(aa) ?? Number.MAX_SAFE_INTEGER) : Number.MAX_SAFE_INTEGER;
+        const rb = ab ? (albumRank.get(ab) ?? Number.MAX_SAFE_INTEGER) : Number.MAX_SAFE_INTEGER;
+        if (ra !== rb) return ra - rb;
 
-        // Within same album: use albumIndex if present
-        const pa = a.albumIndex;
-        const pb = b.albumIndex;
-        if (pa != null && pb != null && pa !== pb) return pa - pb;
+        // Same album (or both unknown): alphabetical by title
+        const ta = (a.title ?? '').trim();
+        const tb = (b.title ?? '').trim();
+        const cmpTitle = ta.localeCompare(tb, undefined, { sensitivity: 'base' });
+        if (cmpTitle !== 0) return cmpTitle;
 
-        // fallback: stable original order
+        // tie-breaker: stable
         return ia - ib;
       }
 
-      // default: stable original order
+      // default stable
       return ia - ib;
     });
 
     return out;
-  }, [catalog.items, lang, kingKlown, selectedTopics, topicSetById, origIndexById]);
+  }, [catalog.items, lang, kingKlown, selectedTopics, topicSetById, origIndexById, albumRank]);
 
   return (
     <main className="max-w-5xl mx-auto px-6 py-12 overflow-x-hidden">
@@ -790,7 +865,7 @@ export default function PlayPage() {
       {/* Results */}
       <section className="mt-10 grid grid-cols-1 gap-4 min-w-0">
         {filtered.map((it) => (
-          <ResultCard key={it.id} it={it} topicLabel={topicLabel} typeLabel={typeLabel} />
+          <ResultCard key={it.id} it={it} topicLabel={topicLabel} typeLabel={typeLabel} albumLabel={albumLabel} />
         ))}
       </section>
     </main>
