@@ -18,6 +18,7 @@ import {
   TrendingUp,
   ArrowRight,
   CornerDownLeft,
+  Link2, // ✅ added
 } from 'lucide-react';
 
 // Define navigation structure outside to ensure stability for the search index
@@ -258,11 +259,18 @@ export default function Header() {
               <Search className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </button>
             <div className="h-4 w-px bg-slate-200" />
+
+            {/* ✅ Updated Links CTA (Play-like pill, different icon/color) */}
             <Link
               href={LINKS_CTA.path}
-              className="ml-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-bold rounded-lg transition-all shadow-sm hover:shadow-md"
+              className="ml-2 inline-flex flex-col items-center justify-center rounded-full border px-4 py-2 transition-all shadow-sm hover:shadow-md
+                         border-violet-200 bg-violet-50 text-violet-700 hover:bg-violet-100"
             >
-              Links
+              <div className="flex items-center gap-2 text-sm font-bold">
+                <Link2 className="w-4 h-4 text-violet-600" />
+                Links
+              </div>
+              <span className="text-[10px] font-normal opacity-80 -mt-0.5">(Inventory)</span>
             </Link>
           </div>
 
@@ -317,11 +325,14 @@ export default function Header() {
               ))}
 
               <div className="pt-6 border-t border-slate-100 space-y-4">
+                {/* ✅ Updated mobile Links CTA */}
                 <Link
                   href={LINKS_CTA.path}
-                  className="block w-full py-3 bg-slate-900 text-white text-center rounded-lg font-bold hover:bg-slate-800 transition-colors"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full font-bold transition-colors
+                             border border-violet-200 bg-violet-50 text-violet-700 hover:bg-violet-100"
                 >
-                  Links (Full inventory)
+                  <Link2 className="w-5 h-5 text-violet-600" />
+                  Links <span className="text-xs font-normal opacity-80">(Inventory)</span>
                 </Link>
 
                 <div className="flex justify-center gap-6 text-slate-500">
