@@ -20,7 +20,7 @@ export const metadata = {
   },
 
   // 3. OPTIMISATION SEO & MARQUE PERSONNELLE
-  title: 'kOA INITIATIVE - Civic Utilities by Réjean McCormick',
+  title: 'The kOA Initiative - Civic Utilities by Réjean McCormick',
   description: 'The official socio-technical architecture initiative led by Réjean McCormick. Building civic utilities, democratic innovation, and the kOA ecosystem.',
   
   // 4. Signaux d'auteur pour Google et les IA
@@ -33,7 +33,7 @@ export const metadata = {
   
   // (Optionnel) OpenGraph pour les partages LinkedIn/Social
   openGraph: {
-    title: 'kOA INITIATIVE by Réjean McCormick',
+    title: 'The kOA Initiative by Réjean McCormick',
     description: 'Civic utilities for a fragmented world.',
     type: 'website',
     locale: 'fr_CA',
@@ -59,7 +59,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {/* === FOOTER SIGNATURE === */}
           <footer className="mt-24 pt-8 border-t border-slate-100 text-center text-sm text-slate-400 font-sans not-prose">
             <p>
-              © {new Date().getFullYear()} kOA INITIATIVE. 
+              © {new Date().getFullYear()}kOA Initiative. 
               Architected by <a href="/about" className="hover:text-[#1e6864] transition-colors font-medium">Réjean McCormick</a>.
             </p>
           </footer>

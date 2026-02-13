@@ -26,7 +26,7 @@ export default function InitiativesPage() {
         <h1 className="text-5xl font-bold mb-6 text-[#1e6864]">Initiatives</h1>
 
         <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-          The kOA INITIATIVE is organized as three layers of action:{' '}
+          The kOA Initiative is organized as three layers of action:{' '}
           <span className="font-bold text-[#1e6864]">Theory</span> (the diagnosis and guiding principles),{' '}
           <span className="font-bold text-[#1e6864]">Governance</span> (rules and institutions), and{' '}
           <span className="font-bold text-[#1e6864]">Technology</span> (tools that make coordination concrete, verifiable, and scalable).

@@ -3,7 +3,7 @@ import Card from '@/components/Card';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Infrastructures – The kOA INITIATIVE',
+  title: 'Infrastructures – The kOA Initiative',
   description:
     'The physical and virtual foundations of the ecosystem: green compute (Kristal Farms) and a civic interface for collaboration (Kin City).',
 };

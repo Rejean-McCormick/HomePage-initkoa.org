@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Systemic Diagnosis – The kOA INITIATIVE',
+  title: 'Systemic Diagnosis – The kOA Initiative',
   description:
     'Radical lucidity: a map of the interlocking failures driving fragmentation, captured institutions, and brittle governance—and the design requirements for rebuilding.',
 };
