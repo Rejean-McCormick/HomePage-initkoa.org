@@ -422,7 +422,7 @@ export default function CatalogEditorPage() {
         </div>
       </div>
 
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-[360px_minmax(0,1fr)] gap-6 min-w-0">
+		<div className="mt-8 grid grid-cols-1 md:grid-cols-[minmax(260px,35%)_minmax(0,65%)] gap-6 min-w-0">
         {/* LEFT */}
         <aside className="rounded-xl border border-slate-200 p-4">
           <div className="flex items-center justify-between gap-2">

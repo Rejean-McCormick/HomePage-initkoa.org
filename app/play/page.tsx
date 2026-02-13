@@ -126,7 +126,8 @@ function mergeTaxonomiesKeepEarlier(...taxes: Array<Record<string, unknown> | un
       // Objects/maps: merge shallow, but keep earlier values for overlapping keys
       if (v && typeof v === 'object' && !Array.isArray(v)) {
         const prev = out[k];
-        const prevObj = prev && typeof prev === 'object' && !Array.isArray(prev) ? (prev as Record<string, unknown>) : {};
+        const prevObj =
+          prev && typeof prev === 'object' && !Array.isArray(prev) ? (prev as Record<string, unknown>) : {};
         const incoming = v as Record<string, unknown>;
         out[k] = { ...incoming, ...prevObj }; // earlier (prev) wins on collisions
         continue;
@@ -207,9 +208,6 @@ function mergeInventory(rootRaw: Record<string, unknown> | null, partRaws: Array
 function normalizeCatalog(raw: unknown): Catalog {
   const r = (raw ?? {}) as Record<string, unknown>;
 
-  // --- Normalize taxonomies, including type labels coming from either:
-  // 1) taxonomies.type_labels: { [typeKey]: { en, fr } }
-  // 2) taxonomies.types: [{ key, en, fr }] or [{ key, label: { en, fr } }]
   const taxIn =
     r.taxonomies && typeof r.taxonomies === 'object' && !Array.isArray(r.taxonomies)
       ? (r.taxonomies as Record<string, unknown>)
@@ -242,8 +240,8 @@ function normalizeCatalog(raw: unknown): Catalog {
           const labelSrc =
             o.label && typeof o.label === 'object' && !Array.isArray(o.label) ? (o.label as Record<string, unknown>) : o;
 
-          const en = typeof labelSrc.en === 'string' ? labelSrc.en : undefined;
-          const fr = typeof labelSrc.fr === 'string' ? labelSrc.fr : undefined;
+          const en = typeof (labelSrc as any).en === 'string' ? (labelSrc as any).en : undefined;
+          const fr = typeof (labelSrc as any).fr === 'string' ? (labelSrc as any).fr : undefined;
           if (en || fr) {
             collectedLabels[key] = {
               ...(collectedLabels[key] ?? {}),
@@ -272,10 +270,8 @@ function normalizeCatalog(raw: unknown): Catalog {
       }
     }
 
-    // Keep types as string[] for UI usage
     if (collectedTypes.length) taxonomies.types = uniqKeepOrder(collectedTypes);
 
-    // Merge type_labels (JSON map wins over object-in-types, but both can coexist)
     if (Object.keys(collectedLabels).length) {
       const existing = (taxonomies.type_labels && typeof taxonomies.type_labels === 'object'
         ? taxonomies.type_labels
@@ -356,34 +352,41 @@ function humanizeKey(x: string) {
   return titled.replace(/\bGithub\b/g, 'GitHub').replace(/\bYoutube\b/g, 'YouTube');
 }
 
+// favicon-style logo (browser tab icon)
+function faviconUrl(domainOrUrl: string, size = 64) {
+  const u = domainOrUrl.includes('://') ? domainOrUrl : `https://${domainOrUrl}`;
+  return `https://www.google.com/s2/favicons?sz=${size}&domain_url=${encodeURIComponent(u)}`;
+}
+
 function platformMetaFromType(typeKey: string, url: string) {
   const t = (typeKey || '').toLowerCase();
 
-  if (t.includes('youtube'))
-    return { key: 'youtube' as const, icon: <Youtube className="w-4 h-4 text-slate-500" aria-hidden /> };
-  if (t.includes('spotify'))
-    return { key: 'spotify' as const, icon: <Music2 className="w-4 h-4 text-slate-500" aria-hidden /> };
-  if (t.includes('github'))
-    return { key: 'github' as const, icon: <Github className="w-4 h-4 text-slate-500" aria-hidden /> };
-  if (t.includes('amazon') && t.includes('book'))
-    return { key: 'amazon' as const, icon: <Book className="w-4 h-4 text-slate-500" aria-hidden /> };
-  if (t.includes('medium') || t.includes('philpaper'))
-    return { key: 'article' as const, icon: <FileText className="w-4 h-4 text-slate-500" aria-hidden /> };
+  const mk = (key: string, domainOrUrl: string, alt: string, icon: React.ReactNode) => ({
+    key,
+    logoSrc: faviconUrl(domainOrUrl, 64),
+    alt,
+    icon,
+  });
+
+  if (t.includes('youtube')) return mk('youtube', 'youtube.com', 'YouTube', <Youtube className="w-4 h-4 text-slate-500" aria-hidden />);
+  if (t.includes('spotify')) return mk('spotify', 'open.spotify.com', 'Spotify', <Music2 className="w-4 h-4 text-slate-500" aria-hidden />);
+  if (t.includes('github')) return mk('github', 'github.com', 'GitHub', <Github className="w-4 h-4 text-slate-500" aria-hidden />);
+  if (t.includes('amazon') && t.includes('book')) return mk('amazon', 'amazon.ca', 'Amazon', <Book className="w-4 h-4 text-slate-500" aria-hidden />);
+  if (t.includes('medium')) return mk('medium', 'medium.com', 'Medium', <FileText className="w-4 h-4 text-slate-500" aria-hidden />);
+  if (t.includes('philpaper') || t.includes('philpapers')) return mk('philpapers', 'philpapers.org', 'PhilPapers', <FileText className="w-4 h-4 text-slate-500" aria-hidden />);
 
   // fallback by URL host (if type missing)
   try {
-    const h = new URL(url).hostname;
-    if (h.includes('youtu.be') || h.includes('youtube.com'))
-      return { key: 'youtube' as const, icon: <Youtube className="w-4 h-4 text-slate-500" aria-hidden /> };
-    if (h.includes('spotify.com'))
-      return { key: 'spotify' as const, icon: <Music2 className="w-4 h-4 text-slate-500" aria-hidden /> };
-    if (h.includes('github.com'))
-      return { key: 'github' as const, icon: <Github className="w-4 h-4 text-slate-500" aria-hidden /> };
+    const h = new URL(url).hostname.replace(/^www\./, '');
+    if (h.includes('youtu.be') || h.includes('youtube.com')) return mk('youtube', 'youtube.com', 'YouTube', <Youtube className="w-4 h-4 text-slate-500" aria-hidden />);
+    if (h.includes('spotify.com')) return mk('spotify', 'open.spotify.com', 'Spotify', <Music2 className="w-4 h-4 text-slate-500" aria-hidden />);
+    if (h.includes('github.com')) return mk('github', 'github.com', 'GitHub', <Github className="w-4 h-4 text-slate-500" aria-hidden />);
+    if (h) return mk('site', h, h, <LinkIcon className="w-4 h-4 text-slate-500" aria-hidden />);
   } catch {
     // ignore
   }
 
-  return { key: 'link' as const, icon: <LinkIcon className="w-4 h-4 text-slate-500" aria-hidden /> };
+  return mk('link', 'example.com', 'Link', <LinkIcon className="w-4 h-4 text-slate-500" aria-hidden />);
 }
 
 function Pill({
@@ -432,6 +435,7 @@ function ResultCard({
   typeLabel: (t: string) => string;
 }) {
   const meta = useMemo(() => platformMetaFromType(it.type, it.url), [it.type, it.url]);
+  const [logoOk, setLogoOk] = useState(true);
 
   return (
     <a
@@ -449,7 +453,19 @@ function ResultCard({
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2 min-w-0">
-            {meta.icon}
+            {logoOk ? (
+              <img
+                src={meta.logoSrc}
+                alt={meta.alt}
+                className="w-4 h-4 shrink-0"
+                loading="lazy"
+                decoding="async"
+                onError={() => setLogoOk(false)}
+              />
+            ) : (
+              meta.icon
+            )}
+
             {/* IMPORTANT: flex-1 + min-w-0 makes truncate actually work (prevents horizontal overflow) */}
             <div className="font-semibold text-slate-900 truncate min-w-0 flex-1">{it.title}</div>
           </div>
@@ -511,8 +527,7 @@ export default function PlayPage() {
           ...INVENTORY_CATALOG_PATHS.map((p) => fetchJson(p, ctrl.signal)),
         ]);
 
-        const rootRaw =
-          results[0].status === 'fulfilled' ? (results[0].value as Record<string, unknown>) : null;
+        const rootRaw = results[0].status === 'fulfilled' ? (results[0].value as Record<string, unknown>) : null;
 
         const partRaws = results
           .slice(1)
