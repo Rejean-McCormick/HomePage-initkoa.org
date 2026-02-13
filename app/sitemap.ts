@@ -12,6 +12,9 @@ const BASE_URL = (
   "https://www.initkoa.org"
 ).replace(/\/+$/, "");
 
+// Never index these areas (even if they contain pages)
+const EXCLUDED_PREFIXES = ["/admin", "/api", "/private"];
+
 // Next.js App Router: a folder is a routable page if it contains page.(tsx|ts|js|jsx|mdx)
 const PAGE_FILE_RE = /^page\.(tsx|ts|js|jsx|mdx)$/;
 
@@ -33,7 +36,13 @@ function isInterceptingSegment(seg: string): boolean {
   );
 }
 
-// Skip hidden/private folders + dynamic segments + parallel routes + intercepting routes.
+function isExcludedPathname(pathname: string): boolean {
+  return EXCLUDED_PREFIXES.some(
+    (p) => pathname === p || pathname.startsWith(`${p}/`)
+  );
+}
+
+// Skip hidden/private folders + dynamic segments + parallel routes + intercepting routes + excluded roots.
 // NOTE: Route groups are NOT skipped; we traverse them but do not add them to the URL path.
 function isSkippableSegment(seg: string): boolean {
   if (!seg) return true;
@@ -48,6 +57,9 @@ function isSkippableSegment(seg: string): boolean {
 
   // Skip intercepting routes (prevents emitting non-canonical URLs)
   if (isInterceptingSegment(seg)) return true;
+
+  // Skip excluded top-level areas
+  if (seg === "admin" || seg === "api" || seg === "private") return true;
 
   return false;
 }
@@ -73,7 +85,9 @@ function walkForRoutes(appDirAbs: string): string[] {
       if (isSkippableSegment(name)) continue;
 
       // Route groups: traverse, but do NOT add to URL path
-      const nextUrlSegments = isRouteGroup(name) ? urlSegments : [...urlSegments, name];
+      const nextUrlSegments = isRouteGroup(name)
+        ? urlSegments
+        : [...urlSegments, name];
 
       walk(path.join(currentAbs, name), nextUrlSegments);
     }
@@ -127,12 +141,25 @@ type AiSitemapEntry = {
   priority?: number;
 };
 
+function normalizePathname(p: string): string {
+  const pathname = p.replace(/\/+$/, "") || "/";
+  return pathname === "" ? "/" : pathname;
+}
+
 function toAbsoluteUrl(u: string): string {
+  // If absolute, force canonical origin but keep pathname
   if (u.startsWith("http://") || u.startsWith("https://")) {
-    return u.replace(/\/+$/, "");
+    try {
+      const parsed = new URL(u);
+      const pathname = normalizePathname(parsed.pathname);
+      return pathname === "/" ? BASE_URL : `${BASE_URL}${pathname}`;
+    } catch {
+      return u.replace(/\/+$/, "");
+    }
   }
-  const p = u.startsWith("/") ? u : `/${u}`;
-  return p === "/" ? BASE_URL : `${BASE_URL}${p}`;
+
+  const pathname = normalizePathname(u.startsWith("/") ? u : `/${u}`);
+  return pathname === "/" ? BASE_URL : `${BASE_URL}${pathname}`;
 }
 
 function readAiSitemapIfPresent(): AiSitemapEntry[] | null {
@@ -152,18 +179,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Prefer the generated ai-sitemap.json (your build already creates it)
   const ai = readAiSitemapIfPresent();
   if (ai) {
+    const seen = new Set<string>();
+
     return ai
       .map((e) => {
         const url = toAbsoluteUrl(e.url);
 
+        let pathname = "/";
+        try {
+          pathname = normalizePathname(new URL(url).pathname);
+        } catch {
+          pathname = "/";
+        }
+
         // Avoid listing the human /sitemap page if it exists
-        if (url === `${BASE_URL}/sitemap`) return null;
+        if (pathname === "/sitemap") return null;
+
+        // Never include excluded areas
+        if (isExcludedPathname(pathname)) return null;
+
+        // De-dupe
+        if (seen.has(url)) return null;
+        seen.add(url);
 
         return {
           url,
           lastModified: e.lastModified ?? now,
-          changeFrequency: e.changeFrequency ?? "monthly",
-          priority: typeof e.priority === "number" ? e.priority : 0.5,
+          changeFrequency:
+            e.changeFrequency ?? changeFrequencyFor(pathname === "" ? "/" : pathname),
+          priority: typeof e.priority === "number" ? e.priority : priorityFor(pathname),
         } satisfies MetadataRoute.Sitemap[number];
       })
       .filter(Boolean) as MetadataRoute.Sitemap;
@@ -174,7 +218,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routePaths = walkForRoutes(appDirAbs);
 
   return routePaths
+    .map((p) => normalizePathname(p))
     .filter((p) => p !== "/sitemap") // avoid listing a human sitemap page, if present
+    .filter((p) => !isExcludedPathname(p))
     .map((routePath) => {
       const url = routePath === "/" ? BASE_URL : `${BASE_URL}${routePath}`;
       return {
