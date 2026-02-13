@@ -225,7 +225,7 @@ export default function SocialLinksPage() {
         <h1>Social Links</h1>
         <p className="text-lg text-slate-600">
           Official presence inventory. Start with the map, then choose a corridor (platforms, governance, technology,
-          research, or culture). :contentReference[oaicite:2]{index=2}
+          research, or culture).
         </p>
       </header>
 
