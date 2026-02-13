@@ -1,4 +1,4 @@
-// app/infrastructures/page.tsx
+//  app/infrastructures/page.tsx
 import Card from '@/components/Card';
 import Link from 'next/link';
 
