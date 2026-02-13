@@ -18,7 +18,7 @@ import {
   TrendingUp,
   ArrowRight,
   CornerDownLeft,
-  Link2, // ✅ added
+  Link2,
 } from 'lucide-react';
 
 // Define navigation structure outside to ensure stability for the search index
@@ -99,10 +99,16 @@ const NAV_ITEMS = [
     accent: 'gold',
     subtitle: '(EN/FR)',
   },
-];
 
-// Included in search results (and used for CTA) without adding a full nav item.
-const LINKS_CTA = { label: 'Links', path: '/links' };
+  // ✅ Links beside Play (no dropdown, no button styling)
+  {
+    label: 'Links',
+    path: '/links',
+    icon: <Link2 className="w-4 h-4 text-violet-500" />,
+    accent: 'violet',
+    subtitle: '(Social and Hubs)',
+  },
+];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -154,14 +160,9 @@ export default function Header() {
     const query = searchQuery.toLowerCase();
     const results: any[] = [];
 
-    // Add Links CTA to search index
-    if (LINKS_CTA.label.toLowerCase().includes(query)) {
-      results.push({ ...LINKS_CTA, type: 'Page', desc: 'Full inventory / web presence' });
-    }
-
     NAV_ITEMS.forEach((section: any) => {
       if (section.label.toLowerCase().includes(query)) {
-        results.push({ ...section, type: 'Section' });
+        results.push({ ...section, type: section.children ? 'Section' : 'Page' });
       }
       if (section.children) {
         section.children.forEach((child: any) => {
@@ -178,6 +179,20 @@ export default function Header() {
   const handleSearchNavigate = (path: string) => {
     router.push(path);
     setIsSearchOpen(false);
+  };
+
+  const getNavColorClass = (item: any) => {
+    if (item.accent === 'gold') return 'text-amber-600 hover:text-amber-700';
+    if (item.accent === 'violet') return 'text-violet-600 hover:text-violet-700';
+    if (item.highlight) return 'text-pink-600 hover:text-pink-700';
+    return 'text-slate-600 hover:text-slate-900';
+  };
+
+  const getMobileColorClass = (item: any) => {
+    if (item.accent === 'gold') return 'text-amber-600';
+    if (item.accent === 'violet') return 'text-violet-600';
+    if (item.highlight) return 'text-pink-600';
+    return 'text-slate-900';
   };
 
   return (
@@ -212,13 +227,7 @@ export default function Header() {
               >
                 <Link
                   href={item.path}
-                  className={`flex flex-col items-center text-sm font-medium transition-colors py-2 group ${
-                    item.accent === 'gold'
-                      ? 'text-amber-600 hover:text-amber-700'
-                      : item.highlight
-                        ? 'text-pink-600 hover:text-pink-700'
-                        : 'text-slate-600 hover:text-slate-900'
-                  }`}
+                  className={`flex flex-col items-center text-sm font-medium transition-colors py-2 group ${getNavColorClass(item)}`}
                 >
                   <div className="flex items-center gap-1.5">
                     {item.icon}
@@ -249,24 +258,8 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* UTILITIES */}
-          <div className="hidden lg:flex items-center gap-4">
-            <div className="h-4 w-px bg-slate-200" />
-
-            {/* ✅ Links CTA */}
-            <Link
-              href={LINKS_CTA.path}
-              className="ml-2 inline-flex flex-col items-center justify-center rounded-full border px-4 py-2 transition-all shadow-sm hover:shadow-md
-                         border-violet-200 bg-violet-50 text-violet-700 hover:bg-violet-100"
-            >
-              <div className="flex items-center gap-2 text-sm font-bold">
-                <Link2 className="w-4 h-4 text-violet-600" />
-                Links
-              </div>
-              <span className="text-[10px] font-normal opacity-80 -mt-0.5">(Social and Hubs)</span>
-            </Link>
-
-            {/* ✅ Search icon LAST (far right) */}
+          {/* UTILITIES (Search last on the right) */}
+          <div className="hidden lg:flex items-center">
             <button
               onClick={() => setIsSearchOpen(true)}
               className="p-2 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all group"
@@ -294,13 +287,7 @@ export default function Header() {
                 <div key={item.label}>
                   <Link
                     href={item.path}
-                    className={`flex items-center gap-3 text-lg font-bold mb-2 ${
-                      item.accent === 'gold'
-                        ? 'text-amber-600'
-                        : item.highlight
-                          ? 'text-pink-600'
-                          : 'text-slate-900'
-                    }`}
+                    className={`flex items-center gap-3 text-lg font-bold mb-2 ${getMobileColorClass(item)}`}
                   >
                     <div className="flex flex-col">
                       <div className="flex items-center gap-2">
@@ -326,17 +313,7 @@ export default function Header() {
                 </div>
               ))}
 
-              <div className="pt-6 border-t border-slate-100 space-y-4">
-                {/* ✅ Updated mobile Links CTA */}
-                <Link
-                  href={LINKS_CTA.path}
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full font-bold transition-colors
-                             border border-violet-200 bg-violet-50 text-violet-700 hover:bg-violet-100"
-                >
-                  <Link2 className="w-5 h-5 text-violet-600" />
-                  Links <span className="text-xs font-normal opacity-80">(Social and Hubs)</span>
-                </Link>
-
+              <div className="pt-6 border-t border-slate-100">
                 <div className="flex justify-center gap-6 text-slate-500">
                   <button
                     onClick={() => {
