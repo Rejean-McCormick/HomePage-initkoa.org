@@ -29,6 +29,15 @@ type Catalog = {
   items: Item[];
 };
 
+// Inventory files (in /public)
+const INVENTORY_ROOT_PATH = '/inventory.root.json';
+const INVENTORY_CATALOG_PATHS = [
+  '/inventory.articles.catalog.json',
+  '/inventory.audio.catalog.json',
+  '/inventory.code-tech.catalog.json',
+  '/inventory.youtube.catalog.json',
+];
+
 function downloadJson(filename: string, data: unknown) {
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
@@ -45,6 +54,123 @@ function downloadJson(filename: string, data: unknown) {
 
 function cloneCatalog<T>(x: T): T {
   return JSON.parse(JSON.stringify(x)) as T;
+}
+
+function uniqKeepOrder(arr: string[]) {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const x of arr) {
+    if (!x) continue;
+    if (seen.has(x)) continue;
+    seen.add(x);
+    out.push(x);
+  }
+  return out;
+}
+
+async function fetchJson(path: string, signal: AbortSignal) {
+  const r = await fetch(path, { signal });
+  if (!r.ok) throw new Error(`HTTP ${r.status} for ${path}`);
+  return r.json();
+}
+
+function mergeTaxonomiesKeepEarlier(...taxes: Array<Record<string, unknown> | undefined>) {
+  const out: Record<string, unknown> = {};
+
+  for (const t of taxes) {
+    if (!t || typeof t !== 'object') continue;
+
+    for (const [k, v] of Object.entries(t)) {
+      // Arrays: union, keep order
+      if (Array.isArray(v)) {
+        const prev = Array.isArray(out[k]) ? (out[k] as unknown[]) : [];
+        const merged = [...prev, ...v];
+
+        if (merged.every((x) => typeof x === 'string')) out[k] = uniqKeepOrder(merged as string[]);
+        else out[k] = merged;
+
+        continue;
+      }
+
+      // Objects/maps: shallow merge, earlier wins on collisions
+      if (v && typeof v === 'object' && !Array.isArray(v)) {
+        const prev = out[k];
+        const prevObj = prev && typeof prev === 'object' && !Array.isArray(prev) ? (prev as Record<string, unknown>) : {};
+        const incoming = v as Record<string, unknown>;
+        out[k] = { ...incoming, ...prevObj }; // earlier (prev) wins
+        continue;
+      }
+
+      // Scalars: keep earlier if already set
+      if (out[k] === undefined && v !== undefined) out[k] = v;
+    }
+  }
+
+  return out;
+}
+
+function pickLatestGeneratedAt(values: Array<unknown>) {
+  let bestIso = '';
+  let bestTime = -1;
+
+  for (const v of values) {
+    if (typeof v !== 'string' || !v) continue;
+    const t = new Date(v).getTime();
+    if (!Number.isFinite(t)) continue;
+    if (t > bestTime) {
+      bestTime = t;
+      bestIso = v;
+    }
+  }
+
+  return bestIso;
+}
+
+function mergeInventory(rootRaw: Record<string, unknown> | null, partRaws: Array<Record<string, unknown>>) {
+  const rootTax =
+    rootRaw && typeof rootRaw.taxonomies === 'object' && rootRaw.taxonomies && !Array.isArray(rootRaw.taxonomies)
+      ? (rootRaw.taxonomies as Record<string, unknown>)
+      : undefined;
+
+  const partTaxes = partRaws
+    .map((p) =>
+      p && typeof p.taxonomies === 'object' && p.taxonomies && !Array.isArray(p.taxonomies)
+        ? (p.taxonomies as Record<string, unknown>)
+        : undefined,
+    )
+    .filter(Boolean) as Array<Record<string, unknown>>;
+
+  // Items: dedupe by id
+  const itemsById = new Map<string, unknown>();
+  for (const p of partRaws) {
+    const arr = Array.isArray(p.items) ? (p.items as unknown[]) : [];
+    for (const it of arr) {
+      const o = (it ?? {}) as Record<string, unknown>;
+      const id = typeof o.id === 'string' ? o.id : String(o.id ?? '');
+      if (!id) continue;
+      if (!itemsById.has(id)) itemsById.set(id, it);
+    }
+  }
+
+  const generatedAt = pickLatestGeneratedAt([
+    typeof rootRaw?.generatedAt === 'string' ? rootRaw.generatedAt : '',
+    ...partRaws.map((p) => (typeof p.generatedAt === 'string' ? p.generatedAt : '')),
+  ]);
+
+  const schemaVersion =
+    (typeof rootRaw?.schemaVersion === 'string' && rootRaw.schemaVersion) ||
+    (typeof partRaws[0]?.schemaVersion === 'string' && (partRaws[0] as any).schemaVersion) ||
+    undefined;
+
+  // Root authoritative: merge it first (earlier wins)
+  const mergedTaxonomies = mergeTaxonomiesKeepEarlier(rootTax, ...partTaxes);
+
+  return {
+    ...(schemaVersion ? { schemaVersion } : {}),
+    generatedAt,
+    taxonomies: mergedTaxonomies,
+    items: Array.from(itemsById.values()),
+  };
 }
 
 function normalizeCatalog(raw: unknown): Catalog {
@@ -109,53 +235,60 @@ export default function CatalogEditorPage() {
   const [newTopicEn, setNewTopicEn] = useState('');
   const [newTopicFr, setNewTopicFr] = useState('');
 
-useEffect(() => {
-  const ctrl = new AbortController();
-  let alive = true; // prevents late async from updating state after cleanup
+  useEffect(() => {
+    const ctrl = new AbortController();
+    let alive = true; // prevents late async from updating state after cleanup
 
-  (async () => {
-    try {
-      const r = await fetch('/inventory.catalog.json', { signal: ctrl.signal });
+    (async () => {
+      try {
+        const results = await Promise.allSettled([
+          fetchJson(INVENTORY_ROOT_PATH, ctrl.signal),
+          ...INVENTORY_CATALOG_PATHS.map((p) => fetchJson(p, ctrl.signal)),
+        ]);
 
-      if (!r.ok) {
-        throw new Error(`Failed to load /inventory.catalog.json (HTTP ${r.status})`);
+        const rootRaw =
+          results[0].status === 'fulfilled' ? (results[0].value as Record<string, unknown>) : null;
+
+        const partRaws = results
+          .slice(1)
+          .filter((r): r is PromiseFulfilledResult<unknown> => r.status === 'fulfilled')
+          .map((r) => r.value as Record<string, unknown>);
+
+        if (!alive) return;
+
+        const mergedRaw = mergeInventory(rootRaw, partRaws);
+        const normalized = normalizeCatalog(mergedRaw);
+
+        setOriginal(cloneCatalog(normalized));
+        setDraft(normalized);
+      } catch (err: unknown) {
+        // ignore aborts (common in React 18 dev Strict Mode)
+        const e = err as { name?: string };
+        if (!alive || e?.name === 'AbortError') return;
+
+        const empty: Catalog = {
+          generatedAt: '',
+          items: [],
+          taxonomies: { topics: [], topic_labels: {}, languages: ['en', 'fr'] },
+        };
+        setOriginal(cloneCatalog(empty));
+        setDraft(empty);
       }
+    })();
 
-      const raw = await r.json();
-      if (!alive) return;
-
-      const normalized = normalizeCatalog(raw);
-      setOriginal(cloneCatalog(normalized));
-      setDraft(normalized);
-    } catch (err: unknown) {
-      // IMPORTANT: ignore aborts (common in React 18 dev Strict Mode)
-      const e = err as { name?: string };
-      if (!alive || e?.name === 'AbortError') return;
-
-      const empty: Catalog = {
-        generatedAt: '',
-        items: [],
-        taxonomies: { topics: [], topic_labels: {}, languages: ['en', 'fr'] },
-      };
-      setOriginal(cloneCatalog(empty));
-      setDraft(empty);
-    }
-  })();
-
-  return () => {
-    alive = false;
-    ctrl.abort();
-  };
-}, []);
-
+    return () => {
+      alive = false;
+      ctrl.abort();
+    };
+  }, []);
 
   const topicLabels = draft?.taxonomies?.topic_labels ?? {};
   const topicLabel = useCallback(
     (topic: string) => topicLabels?.[topic]?.[uiLang] ?? topic,
-    [topicLabels, uiLang]
+    [topicLabels, uiLang],
   );
 
-  // ✅ topics come from taxonomies.topics (fallback already injected in normalize)
+  // topics come from taxonomies.topics (fallback already injected in normalize)
   const allTopics = useMemo(() => {
     const topics = draft?.taxonomies?.topics ?? [];
     return [...topics].filter(Boolean).sort((a, b) => topicLabel(a).localeCompare(topicLabel(b)));
@@ -248,7 +381,7 @@ useEffect(() => {
         <div>
           <h1 className="text-3xl font-bold text-slate-900">Catalog Editor</h1>
           <p className="text-slate-500 mt-2">
-            Edit topics per link. Export JSON and replace <code>public/inventory.catalog.json</code>.
+            Edit topics per link. Downloads a merged JSON snapshot.
           </p>
         </div>
 
@@ -292,7 +425,7 @@ useEffect(() => {
             type="button"
             onClick={() => {
               if (!draft) return;
-              downloadJson('inventory.catalog.json', { ...draft, generatedAt: new Date().toISOString() });
+              downloadJson('inventory.merged.catalog.json', { ...draft, generatedAt: new Date().toISOString() });
             }}
             disabled={!canExport}
           >

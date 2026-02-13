@@ -27,6 +27,9 @@ type Taxonomies = {
   type_labels?: Record<string, TypeLabel>;
 
   languages?: Array<'en' | 'fr'>;
+
+  // Allow extra taxonomy keys (levels, platforms, sections, etc.)
+  [k: string]: unknown;
 };
 
 type Item = {
@@ -72,6 +75,15 @@ const KINGKLOWN_OPTIONS: Option<KingKlownMode>[] = [
   { key: 'exclude', label: 'Exclude' },
 ];
 
+// Inventory files (in /public)
+const INVENTORY_ROOT_PATH = '/inventory.root.json';
+const INVENTORY_CATALOG_PATHS = [
+  '/inventory.articles.catalog.json',
+  '/inventory.audio.catalog.json',
+  '/inventory.code-tech.catalog.json',
+  '/inventory.youtube.catalog.json',
+];
+
 function uniqKeepOrder(arr: string[]) {
   const seen = new Set<string>();
   const out: string[] = [];
@@ -82,6 +94,114 @@ function uniqKeepOrder(arr: string[]) {
     out.push(x);
   }
   return out;
+}
+
+async function fetchJson(path: string, signal: AbortSignal) {
+  const r = await fetch(path, { signal });
+  if (!r.ok) throw new Error(`HTTP ${r.status} for ${path}`);
+  return r.json();
+}
+
+function mergeTaxonomiesKeepEarlier(...taxes: Array<Record<string, unknown> | undefined>) {
+  const out: Record<string, unknown> = {};
+
+  for (const t of taxes) {
+    if (!t || typeof t !== 'object') continue;
+
+    for (const [k, v] of Object.entries(t)) {
+      // Arrays: union, keep order (dedupe strings)
+      if (Array.isArray(v)) {
+        const prev = Array.isArray(out[k]) ? (out[k] as unknown[]) : [];
+        const merged = [...prev, ...v];
+
+        // If all strings, dedupe nicely
+        if (merged.every((x) => typeof x === 'string')) {
+          out[k] = uniqKeepOrder(merged as string[]);
+        } else {
+          out[k] = merged;
+        }
+        continue;
+      }
+
+      // Objects/maps: merge shallow, but keep earlier values for overlapping keys
+      if (v && typeof v === 'object' && !Array.isArray(v)) {
+        const prev = out[k];
+        const prevObj = prev && typeof prev === 'object' && !Array.isArray(prev) ? (prev as Record<string, unknown>) : {};
+        const incoming = v as Record<string, unknown>;
+        out[k] = { ...incoming, ...prevObj }; // earlier (prev) wins on collisions
+        continue;
+      }
+
+      // Scalars: keep earlier if already set
+      if (out[k] === undefined && v !== undefined) out[k] = v;
+    }
+  }
+
+  return out;
+}
+
+function pickLatestGeneratedAt(values: Array<unknown>) {
+  let bestIso = '';
+  let bestTime = -1;
+
+  for (const v of values) {
+    if (typeof v !== 'string' || !v) continue;
+    const t = new Date(v).getTime();
+    if (!Number.isFinite(t)) continue;
+    if (t > bestTime) {
+      bestTime = t;
+      bestIso = v;
+    }
+  }
+
+  return bestIso;
+}
+
+function mergeInventory(rootRaw: Record<string, unknown> | null, partRaws: Array<Record<string, unknown>>) {
+  const rootTax =
+    rootRaw && typeof rootRaw.taxonomies === 'object' && rootRaw.taxonomies && !Array.isArray(rootRaw.taxonomies)
+      ? (rootRaw.taxonomies as Record<string, unknown>)
+      : undefined;
+
+  const partTaxes = partRaws
+    .map((p) =>
+      p && typeof p.taxonomies === 'object' && p.taxonomies && !Array.isArray(p.taxonomies)
+        ? (p.taxonomies as Record<string, unknown>)
+        : undefined,
+    )
+    .filter(Boolean) as Array<Record<string, unknown>>;
+
+  // Collect + dedupe items by id
+  const itemsById = new Map<string, unknown>();
+  for (const p of partRaws) {
+    const arr = Array.isArray(p.items) ? (p.items as unknown[]) : [];
+    for (const it of arr) {
+      const o = (it ?? {}) as Record<string, unknown>;
+      const id = typeof o.id === 'string' ? o.id : String(o.id ?? '');
+      if (!id) continue;
+      if (!itemsById.has(id)) itemsById.set(id, it);
+    }
+  }
+
+  const generatedAt = pickLatestGeneratedAt([
+    typeof rootRaw?.generatedAt === 'string' ? rootRaw.generatedAt : '',
+    ...partRaws.map((p) => (typeof p.generatedAt === 'string' ? p.generatedAt : '')),
+  ]);
+
+  const schemaVersion =
+    (typeof rootRaw?.schemaVersion === 'string' && rootRaw.schemaVersion) ||
+    (typeof partRaws[0]?.schemaVersion === 'string' && (partRaws[0] as any).schemaVersion) ||
+    undefined;
+
+  // Keep root authoritative by merging it first (earlier wins)
+  const mergedTaxonomies = mergeTaxonomiesKeepEarlier(rootTax, ...partTaxes);
+
+  return {
+    ...(schemaVersion ? { schemaVersion } : {}),
+    generatedAt,
+    taxonomies: mergedTaxonomies,
+    items: Array.from(itemsById.values()),
+  };
 }
 
 function normalizeCatalog(raw: unknown): Catalog {
@@ -335,9 +455,7 @@ function ResultCard({
           </div>
 
           {it.description ? (
-            <p className="text-sm text-slate-600 mt-2 leading-relaxed break-words overflow-hidden">
-              {it.description}
-            </p>
+            <p className="text-sm text-slate-600 mt-2 leading-relaxed break-words overflow-hidden">{it.description}</p>
           ) : null}
 
           {it.topics?.length ? (
@@ -356,9 +474,7 @@ function ResultCard({
 
         <div className="shrink-0 flex items-center gap-2">
           <LangPastille language={it.language} />
-          <span className="text-[11px] text-slate-500 font-medium max-w-[180px] truncate">
-            {typeLabel(it.type)}
-          </span>
+          <span className="text-[11px] text-slate-500 font-medium max-w-[180px] truncate">{typeLabel(it.type)}</span>
         </div>
       </div>
     </a>
@@ -387,17 +503,30 @@ export default function PlayPage() {
 
   useEffect(() => {
     const ctrl = new AbortController();
+
     (async () => {
       try {
-        const r = await fetch('/inventory.catalog.json', { signal: ctrl.signal });
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        const raw = await r.json();
-        setCatalog(normalizeCatalog(raw));
+        const results = await Promise.allSettled([
+          fetchJson(INVENTORY_ROOT_PATH, ctrl.signal),
+          ...INVENTORY_CATALOG_PATHS.map((p) => fetchJson(p, ctrl.signal)),
+        ]);
+
+        const rootRaw =
+          results[0].status === 'fulfilled' ? (results[0].value as Record<string, unknown>) : null;
+
+        const partRaws = results
+          .slice(1)
+          .filter((r): r is PromiseFulfilledResult<unknown> => r.status === 'fulfilled')
+          .map((r) => r.value as Record<string, unknown>);
+
+        const mergedRaw = mergeInventory(rootRaw, partRaws);
+        setCatalog(normalizeCatalog(mergedRaw));
       } catch (e: unknown) {
         const err = e as { name?: string };
         if (err?.name !== 'AbortError') setCatalog({ generatedAt: '', items: [] });
       }
     })();
+
     return () => ctrl.abort();
   }, []);
 
@@ -529,7 +658,8 @@ export default function PlayPage() {
             <div>
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900">Play</h1>
               <p className="text-slate-500 mt-1">
-                Filters ({filtered.length} results){updatedAtLabel}
+                Filters ({filtered.length} results)
+                {updatedAtLabel}
               </p>
             </div>
           </div>
