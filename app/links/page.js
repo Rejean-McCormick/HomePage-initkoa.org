@@ -1,21 +1,5 @@
 // app/links/page.js
 import Link from "next/link";
-import {
-  Linkedin,
-  Instagram,
-  Facebook,
-  X,
-  Video,
-  Network,
-  Globe,
-  GraduationCap,
-  FileText,
-  Book,
-  Music2,
-  Cloud,
-  Bot,
-  IdCard,
-} from "lucide-react";
 
 export const metadata = {
   title: "Social Links — Réjean McCormick",
@@ -23,20 +7,47 @@ export const metadata = {
     "Official link inventory for Réjean McCormick and King Klown: identity profiles, social channels, publishing, audio, and reference anchors.",
 };
 
-function LinkCard({ title, href, note, Icon }) {
+// favicon-style logo (browser tab icon) — same approach as /play
+function faviconUrl(domainOrUrl, size = 64) {
+  const u = typeof domainOrUrl === "string" && domainOrUrl.includes("://") ? domainOrUrl : `https://${domainOrUrl}`;
+  return `https://www.google.com/s2/favicons?sz=${size}&domain_url=${encodeURIComponent(u)}`;
+}
+
+function safeHost(href) {
+  try {
+    return new URL(href).hostname.replace(/^www\./, "");
+  } catch {
+    return "";
+  }
+}
+
+function LinkCard({ title, href, note }) {
   const isInternal = typeof href === "string" && href.startsWith("/");
+  const host = !isInternal ? safeHost(href) : "";
+  const logoSrc = !isInternal ? faviconUrl(href, 64) : null;
 
   const className =
-    "border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors";
+    "border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors overflow-hidden";
 
   const CardInner = (
     <div className="flex items-start gap-3">
       <div className="shrink-0 mt-0.5">
-        {Icon ? <Icon className="w-5 h-5 text-slate-600" aria-hidden /> : null}
+        {logoSrc ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={logoSrc}
+            alt={host ? `${host} icon` : "site icon"}
+            className="w-6 h-6 rounded-sm"
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <div className="w-6 h-6 rounded-sm bg-slate-200" aria-hidden />
+        )}
       </div>
 
-      <div className="min-w-0">
-        <strong className="block">{title}</strong>
+      <div className="min-w-0 flex-1">
+        <strong className="block text-slate-900">{title}</strong>
         {note ? <div className="text-sm text-slate-600 mt-1">{note}</div> : null}
         <div className="text-xs text-slate-500 mt-2 break-all">{href}</div>
       </div>
@@ -61,50 +72,43 @@ function LinkCard({ title, href, note, Icon }) {
 export default function SocialLinksPage() {
   const sections = [
     {
-      title: "Réjean McCormick — identity & research",
+      title: "Réjean McCormick — official profiles & research",
       subtitle: "Primary identity anchors and long-lived public references.",
       items: [
         {
           title: "LinkedIn",
-          href: "https://www.linkedin.com/in/r%C3%A9jean-mccormick-51403a37b/",
+          href: "https://www.linkedin.com/in/réjean-mccormick-51403a37b/",
           note: "Professional profile.",
-          Icon: Linkedin,
         },
         {
           title: "ORCID",
           href: "https://orcid.org/0009-0001-2086-854X",
-          note: "Research identifier.",
-          Icon: IdCard,
+          note: "Research identity anchor.",
         },
         {
           title: "Google Scholar",
           href: "https://scholar.google.com/citations?user=oVZ3n9kAAAAJ&hl=en",
-          note: "Citations and publications.",
-          Icon: GraduationCap,
-        },
-        {
-          title: "PhilPeople — Réjean McCormick",
-          href: "https://philpeople.org/profiles/rejean-mccormick",
-          note: "Academic index listing.",
-          Icon: GraduationCap,
-        },
-        {
-          title: "Meta-Wiki — User: Réjean McCormick",
-          href: "https://meta.wikimedia.org/wiki/User:Réjean_McCormick",
-          note: "Wikimedia identity anchor.",
-          Icon: Globe,
+          note: "Academic citations profile.",
         },
         {
           title: "Mastodon — @Rejean_McCormick",
           href: "https://mastodon.social/@Rejean_McCormick",
-          note: "Federated presence.",
-          Icon: Network,
+          note: "Federated updates / presence.",
         },
         {
           title: "Facebook — Réjean McCormick",
           href: "https://www.facebook.com/profile.php?id=61566663549235",
           note: "Public profile.",
-          Icon: Facebook,
+        },
+        {
+          title: "Meta-Wiki — User: Réjean McCormick",
+          href: "https://meta.wikimedia.org/wiki/User:Réjean_McCormick",
+          note: "Wikimedia identity anchor.",
+        },
+        {
+          title: "PhilPeople — Réjean McCormick",
+          href: "https://philpeople.org/profiles/rejean-mccormick",
+          note: "Academic index listing.",
         },
       ],
     },
@@ -116,31 +120,26 @@ export default function SocialLinksPage() {
           title: "Instagram — @kingklown.xyz",
           href: "https://www.instagram.com/kingklown.xyz/",
           note: "Primary visual channel.",
-          Icon: Instagram,
         },
         {
           title: "Facebook — King Klown",
           href: "https://www.facebook.com/profile.php?id=61567073454490",
           note: "Public profile.",
-          Icon: Facebook,
         },
         {
           title: "X — @KingKlownXYZ",
           href: "https://x.com/KingKlownXYZ",
           note: "Updates / posting corridor.",
-          Icon: X,
         },
         {
           title: "TikTok — @kingklown.xyz",
           href: "https://www.tiktok.com/@kingklown.xyz",
           note: "Short-form channel.",
-          Icon: Video,
         },
         {
           title: "Hugging Face — KingKlown",
           href: "https://huggingface.co/KingKlown",
-          note: "Models / public AI artifacts.",
-          Icon: Bot,
+          note: "Models / datasets / experiments.",
         },
       ],
     },
@@ -152,13 +151,11 @@ export default function SocialLinksPage() {
           title: "Medium — @boatbuilder610",
           href: "https://medium.com/@boatbuilder610",
           note: "Articles and longform posts.",
-          Icon: FileText,
         },
         {
           title: "Amazon author page",
           href: "https://www.amazon.ca/stores/author/B0G3B7DQWG?ingress=0&visitId=2c136ee2-ccf3-47b2-a4c9-c04125871944",
           note: "Books hub (no individual book links here).",
-          Icon: Book,
         },
       ],
     },
@@ -170,13 +167,22 @@ export default function SocialLinksPage() {
           title: "Spotify show — King Klown",
           href: "https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4",
           note: "Official show page.",
-          Icon: Music2,
         },
         {
           title: "SoundCloud — Réjean McCormick",
           href: "https://soundcloud.com/rejean-mccormick",
-          note: "Audio uploads.",
-          Icon: Cloud,
+          note: "Audio uploads / experiments.",
+        },
+      ],
+    },
+    {
+      title: "Code",
+      subtitle: "Engineering footprint.",
+      items: [
+        {
+          title: "GitHub — Rejean-McCormick",
+          href: "https://github.com/Rejean-McCormick/",
+          note: "Repositories and projects.",
         },
       ],
     },
@@ -215,13 +221,7 @@ export default function SocialLinksPage() {
 
             <div className="not-prose mt-4 grid gap-3 sm:grid-cols-2">
               {s.items.map((it) => (
-                <LinkCard
-                  key={it.href}
-                  title={it.title}
-                  href={it.href}
-                  note={it.note}
-                  Icon={it.Icon}
-                />
+                <LinkCard key={it.href} title={it.title} href={it.href} note={it.note} />
               ))}
             </div>
           </section>
