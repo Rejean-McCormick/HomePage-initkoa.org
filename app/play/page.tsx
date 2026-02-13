@@ -2,13 +2,27 @@
 
 // app/play/page.tsx
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { PlayCircle, Globe, Languages, Youtube, Music2, Link as LinkIcon } from 'lucide-react';
+import {
+  PlayCircle,
+  Globe,
+  Languages,
+  Youtube,
+  Music2,
+  Link as LinkIcon,
+  Github,
+  Book,
+  FileText,
+} from 'lucide-react';
 
 type TopicLabel = { en?: string; fr?: string };
+type TypeLabel = { en?: string; fr?: string };
 
 type Taxonomies = {
   topics?: string[];
   topic_labels?: Record<string, TopicLabel>;
+  // NEW (optional, from your JSON): list of known types + optional labels
+  types?: string[];
+  type_labels?: Record<string, TypeLabel>;
   languages?: Array<'en' | 'fr'>;
 };
 
@@ -17,7 +31,7 @@ type Item = {
   title: string;
   url: string;
   description?: string | null;
-  type: string;
+  type: string; // e.g. "github_wiki", "amazon_book", "youtube_video", ...
   language: 'en' | 'fr' | null;
   topics: string[];
 };
@@ -89,36 +103,6 @@ function normalizeCatalog(raw: unknown): Catalog {
   };
 }
 
-function parseYouTubeId(rawUrl: string): string | null {
-  try {
-    const u = new URL(rawUrl);
-
-    if (u.hostname.includes('youtu.be')) {
-      const id = u.pathname.split('/').filter(Boolean)[0];
-      return id || null;
-    }
-
-    if (u.hostname.includes('youtube.com')) {
-      if (u.pathname === '/watch') return u.searchParams.get('v');
-      const m = u.pathname.match(/^\/(embed|shorts)\/([^/]+)/);
-      return m?.[2] ?? null;
-    }
-
-    return null;
-  } catch {
-    return null;
-  }
-}
-
-function isSpotifyUrl(rawUrl: string): boolean {
-  try {
-    const u = new URL(rawUrl);
-    return u.hostname.includes('open.spotify.com');
-  } catch {
-    return false;
-  }
-}
-
 function LangPastille({ language }: { language: Item['language'] }) {
   if (language === 'en') {
     return (
@@ -139,6 +123,51 @@ function LangPastille({ language }: { language: Item['language'] }) {
       —
     </span>
   );
+}
+
+// Pretty labels for known types (fallback will humanize)
+const TYPE_LABELS_FALLBACK: Record<string, { en: string; fr: string }> = {
+  amazon_book: { en: 'Amazon book', fr: 'Livre (Amazon)' },
+  github_wiki: { en: 'GitHub wiki', fr: 'Wiki GitHub' },
+  medium_article: { en: 'Medium article', fr: 'Article Medium' },
+  philpaper_article: { en: 'PhilPapers article', fr: 'Article PhilPapers' },
+  spotify_podcast: { en: 'Spotify podcast', fr: 'Podcast Spotify' },
+  youtube_video: { en: 'YouTube video', fr: 'Vidéo YouTube' },
+};
+
+function humanizeKey(x: string) {
+  const s = (x ?? '').trim();
+  if (!s) return '';
+  // github_wiki -> Github Wiki (then we special-case a couple)
+  const titled = s
+    .replace(/_/g, ' ')
+    .replace(/\s+/g, ' ')
+    .split(' ')
+    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
+    .join(' ');
+  return titled.replace(/\bGithub\b/g, 'GitHub').replace(/\bYoutube\b/g, 'YouTube');
+}
+
+function platformMetaFromType(typeKey: string, url: string) {
+  const t = (typeKey || '').toLowerCase();
+
+  if (t.includes('youtube')) return { key: 'youtube' as const, icon: <Youtube className="w-4 h-4 text-slate-500" aria-hidden /> };
+  if (t.includes('spotify')) return { key: 'spotify' as const, icon: <Music2 className="w-4 h-4 text-slate-500" aria-hidden /> };
+  if (t.includes('github')) return { key: 'github' as const, icon: <Github className="w-4 h-4 text-slate-500" aria-hidden /> };
+  if (t.includes('amazon') && t.includes('book')) return { key: 'amazon' as const, icon: <Book className="w-4 h-4 text-slate-500" aria-hidden /> };
+  if (t.includes('medium') || t.includes('philpaper')) return { key: 'article' as const, icon: <FileText className="w-4 h-4 text-slate-500" aria-hidden /> };
+
+  // small fallback by URL host (in case type missing)
+  try {
+    const h = new URL(url).hostname;
+    if (h.includes('youtu.be') || h.includes('youtube.com')) return { key: 'youtube' as const, icon: <Youtube className="w-4 h-4 text-slate-500" aria-hidden /> };
+    if (h.includes('spotify.com')) return { key: 'spotify' as const, icon: <Music2 className="w-4 h-4 text-slate-500" aria-hidden /> };
+    if (h.includes('github.com')) return { key: 'github' as const, icon: <Github className="w-4 h-4 text-slate-500" aria-hidden /> };
+  } catch {
+    // ignore
+  }
+
+  return { key: 'link' as const, icon: <LinkIcon className="w-4 h-4 text-slate-500" aria-hidden /> };
 }
 
 function Pill({
@@ -166,35 +195,42 @@ function Pill({
   );
 }
 
-function platformMeta(url: string) {
-  const ytId = parseYouTubeId(url);
-  if (ytId) {
-    return { key: 'youtube' as const, icon: <Youtube className="w-4 h-4 text-slate-500" aria-hidden /> };
-  }
-  if (isSpotifyUrl(url)) {
-    return { key: 'spotify' as const, icon: <Music2 className="w-4 h-4 text-slate-500" aria-hidden /> };
-  }
-  return { key: 'link' as const, icon: <LinkIcon className="w-4 h-4 text-slate-500" aria-hidden /> };
+function TopicChip({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] bg-slate-100 text-slate-700 border border-slate-200">
+      {children}
+    </span>
+  );
 }
 
-function ResultCard({ it }: { it: Item }) {
-  const meta = useMemo(() => platformMeta(it.url), [it.url]);
+function ResultCard({
+  it,
+  uiLang,
+  topicLabel,
+  typeLabel,
+}: {
+  it: Item;
+  uiLang: UiLang;
+  topicLabel: (t: string) => string;
+  typeLabel: (t: string) => string;
+}) {
+  const meta = useMemo(() => platformMetaFromType(it.type, it.url), [it.type, it.url]);
 
   return (
     <a
       href={it.url}
       target="_blank"
       rel="noreferrer"
+      // This guarantees NO underline even if global styles try to underline <a>
       style={{ textDecoration: 'none' }}
       className={[
         'block w-full max-w-full overflow-hidden',
         'p-5 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition',
-        'no-underline hover:no-underline decoration-transparent',
+        '!no-underline hover:!no-underline focus:!no-underline decoration-transparent',
       ].join(' ')}
     >
-      {/* Stack on mobile to avoid horizontal overflow */}
+      {/* Make it stack on small screens so it NEVER overflows right */}
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-        {/* Left: main content */}
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2 min-w-0">
             {meta.icon}
@@ -206,16 +242,19 @@ function ResultCard({ it }: { it: Item }) {
           ) : null}
 
           {it.topics?.length ? (
-            <div className="mt-3 text-xs text-slate-500 break-words">
-              Topics: {it.topics.join(', ')}
+            <div className="mt-3 flex flex-wrap gap-1.5">
+              {it.topics.map((t) => (
+                <TopicChip key={t}>{topicLabel(t)}</TopicChip>
+              ))}
             </div>
           ) : null}
         </div>
 
-        {/* Right: badges */}
-        <div className="flex items-center gap-2 sm:shrink-0">
+        <div className="shrink-0 flex items-center gap-2">
           <LangPastille language={it.language} />
-          <span className="text-xs text-slate-500 max-w-[12rem] truncate">{it.type}</span>
+          <span className="text-[11px] text-slate-500 font-medium max-w-[180px] truncate">
+            {typeLabel(it.type)}
+          </span>
         </div>
       </div>
     </a>
@@ -264,10 +303,10 @@ export default function PlayPage() {
     return Number.isNaN(d.getTime()) ? '' : ` · updated ${d.toLocaleString()}`;
   }, [catalog.generatedAt]);
 
-  // ✅ Extract to avoid exhaustive-deps warning
   const taxonomies = catalog.taxonomies;
   const taxonomyTopics = taxonomies?.topics;
   const topicLabels = taxonomies?.topic_labels;
+  const typeLabels = taxonomies?.type_labels;
 
   // Cache topic labels for current uiLang
   const topicLabel = useMemo(() => {
@@ -281,6 +320,23 @@ export default function PlayPage() {
       return lbl;
     };
   }, [topicLabels, uiLang]);
+
+  // Cache type labels for current uiLang (prefers JSON labels, falls back to nice formatting)
+  const typeLabel = useMemo(() => {
+    const labels = typeLabels ?? {};
+    const cache = new Map<string, string>();
+    return (typeKey: string) => {
+      const hit = cache.get(typeKey);
+      if (hit) return hit;
+
+      const fromJson = labels?.[typeKey]?.[uiLang];
+      const fromFallback = TYPE_LABELS_FALLBACK[typeKey]?.[uiLang];
+      const lbl = fromJson ?? fromFallback ?? humanizeKey(typeKey) ?? typeKey;
+
+      cache.set(typeKey, lbl);
+      return lbl;
+    };
+  }, [typeLabels, uiLang]);
 
   // Topic universe: prefer taxonomies.topics, fallback to union from items
   const allTopics = useMemo(() => {
@@ -299,7 +355,6 @@ export default function PlayPage() {
       }
     }
 
-    // Sort by label in current uiLang
     return Array.from(set).sort((a, b) => topicLabel(a).localeCompare(topicLabel(b)));
   }, [catalog.items, taxonomyTopics, topicLabel]);
 
@@ -360,7 +415,7 @@ export default function PlayPage() {
   }, [catalog.items, lang, kingKlown, selectedTopics, topicSetById]);
 
   return (
-    <main className="max-w-5xl mx-auto px-6 py-12">
+    <main className="max-w-5xl mx-auto px-6 py-12 overflow-x-hidden">
       <div className="mb-12 border-b border-gray-200 pb-8">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-4">
@@ -450,7 +505,7 @@ export default function PlayPage() {
       {/* Results */}
       <section className="mt-10 grid gap-4">
         {filtered.map((it) => (
-          <ResultCard key={it.id} it={it} />
+          <ResultCard key={it.id} it={it} uiLang={uiLang} topicLabel={topicLabel} typeLabel={typeLabel} />
         ))}
       </section>
     </main>
