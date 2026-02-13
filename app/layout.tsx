@@ -59,7 +59,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {/* === FOOTER SIGNATURE === */}
           <footer className="mt-24 pt-8 border-t border-slate-100 text-center text-sm text-slate-400 font-sans not-prose">
             <p>
-              © {new Date().getFullYear()}kOA Initiative. 
+              © {new Date().getFullYear()} The kOA Initiative. 
               Architected by <a href="/about" className="hover:text-[#1e6864] transition-colors font-medium">Réjean McCormick</a>.
             </p>
           </footer>

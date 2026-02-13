@@ -121,7 +121,7 @@ function uniqKeepOrder(arr: string[]) {
 }
 
 async function fetchJson(path: string, signal: AbortSignal) {
-  const r = await fetch(path, { signal });
+  const r = await fetch(path, { signal, cache: 'no-store' });
   if (!r.ok) throw new Error(`HTTP ${r.status} for ${path}`);
   return r.json();
 }

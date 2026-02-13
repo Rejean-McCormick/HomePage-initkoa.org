@@ -49,10 +49,6 @@ export default function HomePage() {
             <Pill>Multilingual dignity</Pill>
             <Pill>Non-domination</Pill>
           </div>
-
-          <p className="text-xs text-slate-400 mt-4">
-            An initiative by <span className="text-slate-600">Réjean McCormick</span>
-          </p>
         </div>
       </section>
 
