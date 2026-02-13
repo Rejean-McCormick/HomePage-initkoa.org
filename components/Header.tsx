@@ -251,16 +251,9 @@ export default function Header() {
 
           {/* UTILITIES */}
           <div className="hidden lg:flex items-center gap-4">
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className="p-2 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all group"
-              aria-label="Search"
-            >
-              <Search className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            </button>
             <div className="h-4 w-px bg-slate-200" />
 
-            {/* ✅ Updated Links CTA (Play-like pill, different icon/color) */}
+            {/* ✅ Links CTA */}
             <Link
               href={LINKS_CTA.path}
               className="ml-2 inline-flex flex-col items-center justify-center rounded-full border px-4 py-2 transition-all shadow-sm hover:shadow-md
@@ -270,8 +263,17 @@ export default function Header() {
                 <Link2 className="w-4 h-4 text-violet-600" />
                 Links
               </div>
-              <span className="text-[10px] font-normal opacity-80 -mt-0.5">(Inventory)</span>
+              <span className="text-[10px] font-normal opacity-80 -mt-0.5">(Social and Hubs)</span>
             </Link>
+
+            {/* ✅ Search icon LAST (far right) */}
+            <button
+              onClick={() => setIsSearchOpen(true)}
+              className="p-2 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all group"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            </button>
           </div>
 
           {/* MOBILE TOGGLE */}
@@ -332,7 +334,7 @@ export default function Header() {
                              border border-violet-200 bg-violet-50 text-violet-700 hover:bg-violet-100"
                 >
                   <Link2 className="w-5 h-5 text-violet-600" />
-                  Links <span className="text-xs font-normal opacity-80">(Inventory)</span>
+                  Links <span className="text-xs font-normal opacity-80">(Social and Hubs)</span>
                 </Link>
 
                 <div className="flex justify-center gap-6 text-slate-500">
