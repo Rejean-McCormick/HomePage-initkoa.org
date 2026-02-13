@@ -20,9 +20,12 @@ type TypeLabel = { en?: string; fr?: string };
 type Taxonomies = {
   topics?: string[];
   topic_labels?: Record<string, TopicLabel>;
-  // NEW (optional, from your JSON): list of known types + optional labels
-  types?: string[];
+
+  // Types list + optional labels (preferred: type_labels map)
+  // Also supports: types as array of objects via normalizeCatalog (see below)
+  types?: Array<string | { key?: string; en?: string; fr?: string; label?: { en?: string; fr?: string } }>;
   type_labels?: Record<string, TypeLabel>;
+
   languages?: Array<'en' | 'fr'>;
 };
 
@@ -69,12 +72,98 @@ const KINGKLOWN_OPTIONS: Option<KingKlownMode>[] = [
   { key: 'exclude', label: 'Exclude' },
 ];
 
+function uniqKeepOrder(arr: string[]) {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const x of arr) {
+    if (!x) continue;
+    if (seen.has(x)) continue;
+    seen.add(x);
+    out.push(x);
+  }
+  return out;
+}
+
 function normalizeCatalog(raw: unknown): Catalog {
   const r = (raw ?? {}) as Record<string, unknown>;
 
-  const taxonomiesRaw = r.taxonomies;
-  const taxonomies: Taxonomies | undefined =
-    taxonomiesRaw && typeof taxonomiesRaw === 'object' ? (taxonomiesRaw as Taxonomies) : undefined;
+  // --- Normalize taxonomies, including type labels coming from either:
+  // 1) taxonomies.type_labels: { [typeKey]: { en, fr } }
+  // 2) taxonomies.types: [{ key, en, fr }] or [{ key, label: { en, fr } }]
+  const taxIn =
+    r.taxonomies && typeof r.taxonomies === 'object' && !Array.isArray(r.taxonomies)
+      ? (r.taxonomies as Record<string, unknown>)
+      : undefined;
+
+  let taxonomies: Taxonomies | undefined = taxIn ? ({ ...(taxIn as any) } as Taxonomies) : undefined;
+
+  if (taxIn && taxonomies) {
+    const collectedTypes: string[] = [];
+    const collectedLabels: Record<string, TypeLabel> = {};
+
+    const typesRaw = taxIn.types;
+    if (Array.isArray(typesRaw)) {
+      for (const entry of typesRaw) {
+        if (typeof entry === 'string') {
+          collectedTypes.push(entry);
+          continue;
+        }
+        if (entry && typeof entry === 'object') {
+          const o = entry as Record<string, unknown>;
+          const key =
+            (typeof o.key === 'string' && o.key) ||
+            (typeof (o as any).id === 'string' && (o as any).id) ||
+            (typeof (o as any).type === 'string' && (o as any).type) ||
+            '';
+
+          if (!key) continue;
+          collectedTypes.push(key);
+
+          const labelSrc =
+            o.label && typeof o.label === 'object' && !Array.isArray(o.label) ? (o.label as Record<string, unknown>) : o;
+
+          const en = typeof labelSrc.en === 'string' ? labelSrc.en : undefined;
+          const fr = typeof labelSrc.fr === 'string' ? labelSrc.fr : undefined;
+          if (en || fr) {
+            collectedLabels[key] = {
+              ...(collectedLabels[key] ?? {}),
+              ...(en ? { en } : {}),
+              ...(fr ? { fr } : {}),
+            };
+          }
+        }
+      }
+    }
+
+    const mapRaw = taxIn.type_labels;
+    if (mapRaw && typeof mapRaw === 'object' && !Array.isArray(mapRaw)) {
+      for (const [k, v] of Object.entries(mapRaw as Record<string, unknown>)) {
+        if (!v || typeof v !== 'object' || Array.isArray(v)) continue;
+        const vo = v as Record<string, unknown>;
+        const en = typeof vo.en === 'string' ? vo.en : undefined;
+        const fr = typeof vo.fr === 'string' ? vo.fr : undefined;
+        if (en || fr) {
+          collectedLabels[k] = {
+            ...(collectedLabels[k] ?? {}),
+            ...(en ? { en } : {}),
+            ...(fr ? { fr } : {}),
+          };
+        }
+      }
+    }
+
+    // Keep types as string[] for UI usage
+    if (collectedTypes.length) taxonomies.types = uniqKeepOrder(collectedTypes);
+
+    // Merge type_labels (JSON map wins over object-in-types, but both can coexist)
+    if (Object.keys(collectedLabels).length) {
+      const existing = (taxonomies.type_labels && typeof taxonomies.type_labels === 'object'
+        ? taxonomies.type_labels
+        : {}) as Record<string, TypeLabel>;
+
+      taxonomies.type_labels = { ...collectedLabels, ...existing };
+    }
+  }
 
   const itemsRaw = Array.isArray(r.items) ? (r.items as unknown[]) : [];
   const items: Item[] = itemsRaw.map((x) => {
@@ -125,7 +214,7 @@ function LangPastille({ language }: { language: Item['language'] }) {
   );
 }
 
-// Pretty labels for known types (fallback will humanize)
+// Optional fallback labels if JSON missing
 const TYPE_LABELS_FALLBACK: Record<string, { en: string; fr: string }> = {
   amazon_book: { en: 'Amazon book', fr: 'Livre (Amazon)' },
   github_wiki: { en: 'GitHub wiki', fr: 'Wiki GitHub' },
@@ -138,7 +227,6 @@ const TYPE_LABELS_FALLBACK: Record<string, { en: string; fr: string }> = {
 function humanizeKey(x: string) {
   const s = (x ?? '').trim();
   if (!s) return '';
-  // github_wiki -> Github Wiki (then we special-case a couple)
   const titled = s
     .replace(/_/g, ' ')
     .replace(/\s+/g, ' ')
@@ -151,18 +239,26 @@ function humanizeKey(x: string) {
 function platformMetaFromType(typeKey: string, url: string) {
   const t = (typeKey || '').toLowerCase();
 
-  if (t.includes('youtube')) return { key: 'youtube' as const, icon: <Youtube className="w-4 h-4 text-slate-500" aria-hidden /> };
-  if (t.includes('spotify')) return { key: 'spotify' as const, icon: <Music2 className="w-4 h-4 text-slate-500" aria-hidden /> };
-  if (t.includes('github')) return { key: 'github' as const, icon: <Github className="w-4 h-4 text-slate-500" aria-hidden /> };
-  if (t.includes('amazon') && t.includes('book')) return { key: 'amazon' as const, icon: <Book className="w-4 h-4 text-slate-500" aria-hidden /> };
-  if (t.includes('medium') || t.includes('philpaper')) return { key: 'article' as const, icon: <FileText className="w-4 h-4 text-slate-500" aria-hidden /> };
+  if (t.includes('youtube'))
+    return { key: 'youtube' as const, icon: <Youtube className="w-4 h-4 text-slate-500" aria-hidden /> };
+  if (t.includes('spotify'))
+    return { key: 'spotify' as const, icon: <Music2 className="w-4 h-4 text-slate-500" aria-hidden /> };
+  if (t.includes('github'))
+    return { key: 'github' as const, icon: <Github className="w-4 h-4 text-slate-500" aria-hidden /> };
+  if (t.includes('amazon') && t.includes('book'))
+    return { key: 'amazon' as const, icon: <Book className="w-4 h-4 text-slate-500" aria-hidden /> };
+  if (t.includes('medium') || t.includes('philpaper'))
+    return { key: 'article' as const, icon: <FileText className="w-4 h-4 text-slate-500" aria-hidden /> };
 
-  // small fallback by URL host (in case type missing)
+  // fallback by URL host (if type missing)
   try {
     const h = new URL(url).hostname;
-    if (h.includes('youtu.be') || h.includes('youtube.com')) return { key: 'youtube' as const, icon: <Youtube className="w-4 h-4 text-slate-500" aria-hidden /> };
-    if (h.includes('spotify.com')) return { key: 'spotify' as const, icon: <Music2 className="w-4 h-4 text-slate-500" aria-hidden /> };
-    if (h.includes('github.com')) return { key: 'github' as const, icon: <Github className="w-4 h-4 text-slate-500" aria-hidden /> };
+    if (h.includes('youtu.be') || h.includes('youtube.com'))
+      return { key: 'youtube' as const, icon: <Youtube className="w-4 h-4 text-slate-500" aria-hidden /> };
+    if (h.includes('spotify.com'))
+      return { key: 'spotify' as const, icon: <Music2 className="w-4 h-4 text-slate-500" aria-hidden /> };
+    if (h.includes('github.com'))
+      return { key: 'github' as const, icon: <Github className="w-4 h-4 text-slate-500" aria-hidden /> };
   } catch {
     // ignore
   }
@@ -195,9 +291,12 @@ function Pill({
   );
 }
 
-function TopicChip({ children }: { children: React.ReactNode }) {
+function TopicChip({ children, title }: { children: React.ReactNode; title?: string }) {
   return (
-    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] bg-slate-100 text-slate-700 border border-slate-200">
+    <span
+      title={title}
+      className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] bg-slate-100 text-slate-700 border border-slate-200 max-w-full break-words"
+    >
       {children}
     </span>
   );
@@ -205,12 +304,10 @@ function TopicChip({ children }: { children: React.ReactNode }) {
 
 function ResultCard({
   it,
-  uiLang,
   topicLabel,
   typeLabel,
 }: {
   it: Item;
-  uiLang: UiLang;
   topicLabel: (t: string) => string;
   typeLabel: (t: string) => string;
 }) {
@@ -221,7 +318,6 @@ function ResultCard({
       href={it.url}
       target="_blank"
       rel="noreferrer"
-      // This guarantees NO underline even if global styles try to underline <a>
       style={{ textDecoration: 'none' }}
       className={[
         'block w-full max-w-full overflow-hidden',
@@ -229,23 +325,31 @@ function ResultCard({
         '!no-underline hover:!no-underline focus:!no-underline decoration-transparent',
       ].join(' ')}
     >
-      {/* Make it stack on small screens so it NEVER overflows right */}
+      {/* Stack on small screens to avoid any overflow */}
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2 min-w-0">
             {meta.icon}
-            <div className="font-semibold text-slate-900 truncate">{it.title}</div>
+            {/* IMPORTANT: flex-1 + min-w-0 makes truncate actually work (prevents horizontal overflow) */}
+            <div className="font-semibold text-slate-900 truncate min-w-0 flex-1">{it.title}</div>
           </div>
 
           {it.description ? (
-            <p className="text-sm text-slate-600 mt-2 leading-relaxed break-words">{it.description}</p>
+            <p className="text-sm text-slate-600 mt-2 leading-relaxed break-words overflow-hidden">
+              {it.description}
+            </p>
           ) : null}
 
           {it.topics?.length ? (
-            <div className="mt-3 flex flex-wrap gap-1.5">
-              {it.topics.map((t) => (
-                <TopicChip key={t}>{topicLabel(t)}</TopicChip>
-              ))}
+            <div className="mt-3 flex flex-wrap gap-1.5 min-w-0">
+              {it.topics.map((t) => {
+                const lbl = topicLabel(t);
+                return (
+                  <TopicChip key={t} title={lbl}>
+                    {lbl}
+                  </TopicChip>
+                );
+              })}
             </div>
           ) : null}
         </div>
@@ -503,9 +607,9 @@ export default function PlayPage() {
       </section>
 
       {/* Results */}
-      <section className="mt-10 grid gap-4">
+      <section className="mt-10 grid grid-cols-1 gap-4 min-w-0">
         {filtered.map((it) => (
-          <ResultCard key={it.id} it={it} uiLang={uiLang} topicLabel={topicLabel} typeLabel={typeLabel} />
+          <ResultCard key={it.id} it={it} topicLabel={topicLabel} typeLabel={typeLabel} />
         ))}
       </section>
     </main>

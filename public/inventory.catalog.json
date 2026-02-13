@@ -10,11 +10,16 @@
       "spotify_podcast",
       "youtube_video"
     ],
-    "levels": [
-      "intro",
-      "intermediate",
-      "technical"
-    ],
+    "type_labels": {
+      "amazon_book": { "en": "Amazon book", "fr": "Livre Amazon" },
+      "github_wiki": { "en": "GitHub wiki", "fr": "Wiki GitHub" },
+      "medium_article": { "en": "Medium article", "fr": "Article Medium" },
+      "philpaper_article": { "en": "PhilPapers article", "fr": "Article PhilPapers" },
+      "spotify_podcast": { "en": "Spotify podcast", "fr": "Podcast Spotify" },
+      "youtube_video": { "en": "YouTube video", "fr": "Vidéo YouTube" }
+    },
+
+    "levels": ["intro", "intermediate", "technical"],
     "sections": [
       "root",
       "initiatives",
@@ -27,14 +32,7 @@
       "others",
       "links"
     ],
-    "platforms": [
-      "amazon",
-      "github",
-      "medium",
-      "philpapers",
-      "spotify",
-      "youtube"
-    ],
+    "platforms": ["amazon", "github", "medium", "philpapers", "spotify", "youtube"],
     "topics": [
       "academic_paper_and_article",
       "king_klown",
@@ -57,94 +55,11 @@
       "rejean_mccormick",
       "metaphysics"
     ],
-    "topic_labels": {
-      "academic_paper_and_article": {
-        "en": "Academic paper",
-        "fr": "Article académique"
-      },
-      "king_klown": {
-        "en": "King Klown",
-        "fr": "Roi Klown"
-      },
-      "audio_book": {
-        "en": "Audiobook",
-        "fr": "Livre audio"
-      },
-      "cultural_diffusion": {
-        "en": "Cultural diffusion",
-        "fr": "Diffusion culturelle"
-      },
-      "data_sovereignty": {
-        "en": "Data sovereignty",
-        "fr": "Souveraineté des données"
-      },
-      "ekoh_smartvote(merit_weighted_voting)": {
-        "en": "EkoH & SmartVote (merit-weighted voting)",
-        "fr": "EkoH & SmartVote (vote pondéré au mérite)"
-      },
-      "governance": {
-        "en": "Governance",
-        "fr": "Gouvernance"
-      },
-      "kristal_farms(green_ai)": {
-        "en": "Kristal Farms (Green AI)",
-        "fr": "Kristal Farms (IA verte)"
-      },
-      "infrastructure": {
-        "en": "Infrastructure",
-        "fr": "Infrastructures"
-      },
-      "social_cohesion": {
-        "en": "Social cohesion",
-        "fr": "Cohésion sociale"
-      },
-      "konnaxion": {
-        "en": "Konnaxion",
-        "fr": "Konnaxion"
-      },
-      "kristal(semantic_data)": {
-        "en": "Kristal (semantic data)",
-        "fr": "Kristal (données sémantiques)"
-      },
-      "music_and_videos": {
-        "en": "Music & videos",
-        "fr": "Musique & vidéos"
-      },
-      "natural_language_generation": {
-        "en": "Natural language generation",
-        "fr": "Génération de langage naturel"
-      },
-      "orgo": {
-        "en": "Orgo",
-        "fr": "Orgo"
-      },
-      "peace_and_efficiency": {
-        "en": "Peace & efficiency",
-        "fr": "Paix & efficacité"
-      },
-      "philanthropy": {
-        "en": "Philanthropy",
-        "fr": "Philanthropie"
-      },
-      "sociotechnical_os(koa_digital_ecosystem)": {
-        "en": "Sociotechnical OS (kOA digital ecosystem)",
-        "fr": "OS sociotechnique (écosystème numérique kOA)"
-      },
-      "rejean_mccormick": {
-        "en": "Réjean McCormick",
-        "fr": "Réjean McCormick"
-      },
-      "metaphysics": {
-        "en": "Metaphysics",
-        "fr": "Métaphysique"
-      }
-    },
-    "languages": [
-      "en",
-      "fr"
-    ]
+    "topic_labels": { "...": "unchanged" },
+    "languages": ["en", "fr"]
   },
-  "items": [
+  "items": []
+}
     {
       "id": "medium_article-a-rosetta-stone-of-three-grammars-sephiroth-pi-theory-and-the-koa-digital-ecosys-d208dbb1",
       "title": "A Rosetta Stone of Three Grammars: Sephiroth, π Theory, and the kOA Digital Ecosystem",
