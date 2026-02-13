@@ -36,6 +36,10 @@ type Item = {
   type: string;
   language: 'en' | 'fr' | null;
   topics: string[];
+
+  // NEW: playlist/album grouping
+  album?: string | null;        // playlist/album title
+  albumIndex?: number | null;   // optional position inside playlist
 };
 
 type CatalogPart = {
@@ -227,6 +231,23 @@ function normalizeItem(x: unknown): Item {
   const topics =
     Array.isArray(o.topics) ? (o.topics as unknown[]).filter((t): t is string => typeof t === 'string' && !!t) : [];
 
+  // NEW: accept multiple possible field names (so you don't have to rename JSON immediately)
+  const album =
+    (typeof (o as any).album === 'string' && (o as any).album) ||
+    (typeof (o as any).albumTitle === 'string' && (o as any).albumTitle) ||
+    (typeof (o as any).playlist === 'string' && (o as any).playlist) ||
+    (typeof (o as any).playlistTitle === 'string' && (o as any).playlistTitle) ||
+    null;
+
+  const albumIndexRaw = (o as any).albumIndex ?? (o as any).track ?? (o as any).playlistIndex ?? (o as any).position;
+  const albumIndexNum =
+    typeof albumIndexRaw === 'number'
+      ? albumIndexRaw
+      : typeof albumIndexRaw === 'string' && albumIndexRaw.trim() !== ''
+        ? Number(albumIndexRaw)
+        : NaN;
+  const albumIndex = Number.isFinite(albumIndexNum) ? albumIndexNum : null;
+
   return {
     id: String(o.id ?? ''),
     title: String(o.title ?? ''),
@@ -235,6 +256,8 @@ function normalizeItem(x: unknown): Item {
     type: String(o.type ?? ''),
     language,
     topics,
+    album,
+    albumIndex,
   };
 }
 
@@ -397,6 +420,10 @@ function TopicChip({ children, title }: { children: React.ReactNode; title?: str
   );
 }
 
+function isYouTubeType(typeKey: string) {
+  return (typeKey || '').toLowerCase().includes('youtube');
+}
+
 function ResultCard({
   it,
   topicLabel,
@@ -408,6 +435,8 @@ function ResultCard({
 }) {
   const meta = useMemo(() => platformMetaFromType(it.type, it.url), [it.type, it.url]);
   const [logoOk, setLogoOk] = useState(true);
+
+  const showAlbum = isYouTubeType(it.type) && !!it.album;
 
   return (
     <a
@@ -439,6 +468,13 @@ function ResultCard({
 
             <div className="font-semibold text-slate-900 truncate min-w-0 flex-1">{it.title}</div>
           </div>
+
+          {/* NEW: album/playlist title line for YouTube cards */}
+          {showAlbum ? (
+            <div className="text-xs text-slate-500 mt-1 break-words">
+              Playlist: <span className="font-medium text-slate-700">{it.album}</span>
+            </div>
+          ) : null}
 
           {it.description ? (
             <p className="text-sm text-slate-600 mt-2 leading-relaxed break-words overflow-hidden">{it.description}</p>
@@ -515,7 +551,6 @@ export default function PlayPage() {
     return () => ctrl.abort();
   }, []);
 
-
   const taxonomies = catalog.taxonomies;
   const taxonomyTopics = taxonomies?.topics;
   const topicLabels = taxonomies?.topic_labels;
@@ -588,6 +623,13 @@ export default function PlayPage() {
     return m;
   }, [catalog.items]);
 
+  // NEW: stable original order map (used for “don’t reshuffle everything” sorting)
+  const origIndexById = useMemo(() => {
+    const m = new Map<string, number>();
+    for (let i = 0; i < (catalog.items ?? []).length; i++) m.set(catalog.items[i].id, i);
+    return m;
+  }, [catalog.items]);
+
   const filtered = useMemo(() => {
     const items = catalog.items ?? [];
     const out: Item[] = [];
@@ -624,8 +666,40 @@ export default function PlayPage() {
       out.push(it);
     }
 
+    // NEW: group YouTube items by playlist/album (contiguous), while keeping stable order elsewhere
+    out.sort((a, b) => {
+      const ia = origIndexById.get(a.id) ?? 0;
+      const ib = origIndexById.get(b.id) ?? 0;
+
+      const ya = isYouTubeType(a.type);
+      const yb = isYouTubeType(b.type);
+
+      // only apply grouping rules inside YouTube<->YouTube comparisons
+      if (ya && yb) {
+        const ga = (a.album ?? '').trim();
+        const gb = (b.album ?? '').trim();
+
+        // Group: playlist/album title
+        if (ga && gb && ga !== gb) return ga.localeCompare(gb);
+
+        // If one has album and the other doesn't, prefer album’ed items first
+        if (!!ga !== !!gb) return ga ? -1 : 1;
+
+        // Within same album: use albumIndex if present
+        const pa = a.albumIndex;
+        const pb = b.albumIndex;
+        if (pa != null && pb != null && pa !== pb) return pa - pb;
+
+        // fallback: stable original order
+        return ia - ib;
+      }
+
+      // default: stable original order
+      return ia - ib;
+    });
+
     return out;
-  }, [catalog.items, lang, kingKlown, selectedTopics, topicSetById]);
+  }, [catalog.items, lang, kingKlown, selectedTopics, topicSetById, origIndexById]);
 
   return (
     <main className="max-w-5xl mx-auto px-6 py-12 overflow-x-hidden">
@@ -637,9 +711,7 @@ export default function PlayPage() {
             </div>
             <div>
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900">Play</h1>
-              <p className="text-slate-500 mt-1">
-                Filters ({filtered.length} results)
-              </p>
+              <p className="text-slate-500 mt-1">Filters ({filtered.length} results)</p>
             </div>
           </div>
 
