@@ -7,7 +7,7 @@ export const metadata = {
 > **Architectural Lineage (Credits):**  
 > SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **[Mojomast](https://github.com/mojomast)** in **[mojomast/swarmussy](https://github.com/mojomast/swarmussy)**.  
 > SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.  
-> Full details: **[Credits & Lineage](/technology/swarmcraft/meta/credits-and-lineage)**
+> Full details: **[Credits & Lineage](../credits-and-lineage)**
 
 ## **POWERED BY GROK** 
 
@@ -94,7 +94,7 @@ A scanner SHOULD classify a Part as:
 - `REVISION_NEEDED`: flagged by Editor or override
 - `LOCKED`: protected from further automated edits
 
-Matrix semantics: **[Central Matrix](/technology/swarmcraft/core/central-matrix-runtime-state)**
+Matrix semantics: **[Central Matrix](../central-matrix-runtime-state)**
 
 ---
 
@@ -143,7 +143,7 @@ Before invoking a persona, the orchestrator MUST hydrate a **Part slice**:
   - relevant character/lore snippets (only what’s needed)
 - project-level style constraints
 
-Details: **[Orchestration Slice-by-Slice Prompt Hydration](/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+Details: **[Orchestration Slice-by-Slice Prompt Hydration](../orchestration-slice-by-slice-prompt-hydration)**
 
 ### 4.2 Narrator execution (DRAFT / REVISE)
 If action is `DRAFT` or `REVISE`:
@@ -191,14 +191,14 @@ On restart:
 - Dashboard observes `matrix.json`, logs, and metrics without blocking the engine.
 - Control signals/overrides may affect PLAN (target selection) without breaking the deterministic loop.
 
-Dashboard: **[Dashboard TUI Reference](/technology/swarmcraft/runtime/dashboard-tui-reference)**
+Dashboard: **[Dashboard TUI Reference](../dashboard-tui-reference)**
 
 ---
 
 ## 7) Related Pages
 
-- **[Architecture Overview](/technology/swarmcraft/core/architecture-overview)**
-- **[Central Matrix](/technology/swarmcraft/core/central-matrix-runtime-state)**
-- **[Story Bible](/technology/swarmcraft/scaffold/story-bible-creative-intent)**
-- **[Story Scaffold](/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
-- **[Orchestration Slice-by-Slice Prompt Hydration](/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+- **[Architecture Overview](../architecture-overview)**
+- **[Central Matrix](../central-matrix-runtime-state)**
+- **[Story Bible](../story-bible-creative-intent)**
+- **[Story Scaffold](../story-scaffold-templates-outline-parts)**
+- **[Orchestration Slice-by-Slice Prompt Hydration](../orchestration-slice-by-slice-prompt-hydration)**

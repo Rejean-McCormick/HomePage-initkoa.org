@@ -7,7 +7,7 @@ export const metadata = {
 > **Architectural Lineage (Credits):**  
 > SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **[Mojomast](https://github.com/mojomast)** in **[mojomast/swarmussy](https://github.com/mojomast/swarmussy)**.  
 > SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.  
-> Full details: **[Credits & Lineage](/technology/swarmcraft/meta/credits-and-lineage)**
+> Full details: **[Credits & Lineage](../credits-and-lineage)**
 
 ## **POWERED BY GROK** 
 
@@ -22,7 +22,7 @@ The Scaffold lives inside the Story Bible:
 - `data/story_bible/templates/<template_id>.json`
 - `data/story_bible/outline.json`
 
-See: **[Story Bible](/technology/swarmcraft/scaffold/story-bible-creative-intent)**
+See: **[Story Bible](../story-bible-creative-intent)**
 
 ---
 
@@ -39,8 +39,8 @@ A Part is the atomic unit because it enables:
 Chapters are **rollups** over Parts.
 
 Related:
-- **[Central Matrix](/technology/swarmcraft/core/central-matrix-runtime-state)**
-- **[Deterministic Pipeline](/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+- **[Central Matrix](../central-matrix-runtime-state)**
+- **[Deterministic Pipeline](../deterministic-pipeline-scan-plan-execute)**
 
 ---
 
@@ -71,7 +71,7 @@ A **template** defines:
 - default and allowed ranges for parts/chapter
 - optional genre voice constraints
 
-Schema: **[Schema Templates](/technology/swarmcraft/scaffold/schema-templates)**
+Schema: **[Schema Templates](../schema-templates)**
 
 ---
 
@@ -86,7 +86,7 @@ It defines:
   - a “part contract” (goal / obstacle / turn / outcome)
   - optional locks (protect manual edits)
 
-Schema: **[Schema Outline](/technology/swarmcraft/scaffold/schema-outline)**
+Schema: **[Schema Outline](../schema-outline)**
 
 ---
 
@@ -103,7 +103,7 @@ This is designed to be:
 - easy to edit manually
 - compatible with CSV round-trip when needed
 
-Round-trip spec: **[Outline Grid CSV Round-Trip](/technology/swarmcraft/scaffold/outline-grid-csv-round-trip)**
+Round-trip spec: **[Outline Grid CSV Round-Trip](../outline-grid-csv-round-trip)**
 
 ---
 
@@ -118,7 +118,7 @@ During execution, SwarmCraft hydrates prompts with **only the active Part slice*
 
 This prevents the system from “re-summarizing the whole story” every time.
 
-Details: **[Orchestration Slice-by-Slice Prompt Hydration](/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+Details: **[Orchestration Slice-by-Slice Prompt Hydration](../orchestration-slice-by-slice-prompt-hydration)**
 
 ---
 
@@ -155,15 +155,15 @@ Matrix stores:
 - manuscript paths and metrics
 - active_task target
 
-Matrix page: **[Central Matrix](/technology/swarmcraft/core/central-matrix-runtime-state)**
+Matrix page: **[Central Matrix](../central-matrix-runtime-state)**
 
 ---
 
 ## 10) Related Pages
 
-- **[Story Bible](/technology/swarmcraft/scaffold/story-bible-creative-intent)**
-- **[Schema Templates](/technology/swarmcraft/scaffold/schema-templates)**
-- **[Schema Outline](/technology/swarmcraft/scaffold/schema-outline)**
-- **[Outline Grid CSV Round-Trip](/technology/swarmcraft/scaffold/outline-grid-csv-round-trip)**
-- **[Orchestration Slice-by-Slice Prompt Hydration](/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
-- **[Central Matrix](/technology/swarmcraft/core/central-matrix-runtime-state)**
+- **[Story Bible](../story-bible-creative-intent)**
+- **[Schema Templates](../schema-templates)**
+- **[Schema Outline](../schema-outline)**
+- **[Outline Grid CSV Round-Trip](../outline-grid-csv-round-trip)**
+- **[Orchestration Slice-by-Slice Prompt Hydration](../orchestration-slice-by-slice-prompt-hydration)**
+- **[Central Matrix](../central-matrix-runtime-state)**

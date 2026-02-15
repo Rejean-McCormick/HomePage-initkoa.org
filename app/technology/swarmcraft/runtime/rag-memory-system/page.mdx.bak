@@ -7,7 +7,7 @@ export const metadata = {
 > **Architectural Lineage (Credits):**  
 > SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **[Mojomast](https://github.com/mojomast)** in **[mojomast/swarmussy](https://github.com/mojomast/swarmussy)**.  
 > SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.  
-> Full details: **[Credits & Lineage](/technology/swarmcraft/meta/credits-and-lineage)**
+> Full details: **[Credits & Lineage](../credits-and-lineage)**
 
 ## **POWERED BY GROK** 
 
@@ -51,7 +51,7 @@ RAG SHOULD store per-chunk metadata:
 
 RAG MUST NOT be treated as canonical intent. If RAG conflicts with Story Bible, Story Bible wins.
 
-See: **[Story Bible](/technology/swarmcraft/scaffold/story-bible-creative-intent)**
+See: **[Story Bible](../story-bible-creative-intent)**
 
 ---
 
@@ -62,7 +62,7 @@ Recommended location:
 
 This ensures multi-project isolation and avoids cross-story contamination.
 
-See: **[Multi-Project Management](/technology/swarmcraft/runtime/multi-project-management)**
+See: **[Multi-Project Management](../multi-project-management)**
 
 ---
 
@@ -76,7 +76,7 @@ Flow:
 3. Each chunk is embedded (vectorized).
 4. Vectors + metadata are stored in the project’s vector database.
 
-Deterministic pipeline: **[Deterministic Pipeline](/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+Deterministic pipeline: **[Deterministic Pipeline](../deterministic-pipeline-scan-plan-execute)**
 
 ### 4.1 Chunking recommendations
 - chunk by paragraph boundaries when possible
@@ -101,7 +101,7 @@ Flow:
 2. Vector search returns top-k relevant chunks.
 3. Orchestrator formats them as “evidence” and injects them into the prompt.
 
-Prompt hydration: **[Orchestration Slice-by-Slice Prompt Hydration](/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+Prompt hydration: **[Orchestration Slice-by-Slice Prompt Hydration](../orchestration-slice-by-slice-prompt-hydration)**
 
 ### 5.1 Bounded retrieval (required)
 To prevent prompt bloat:
@@ -170,8 +170,8 @@ Recommended role rules:
 
 ## 9) Related Pages
 
-* **[Architecture Overview](/technology/swarmcraft/core/architecture-overview)**
-* **[Deterministic Pipeline](/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
-* **[Orchestration Slice-by-Slice Prompt Hydration](/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
-* **[Story Bible](/technology/swarmcraft/scaffold/story-bible-creative-intent)**
-* **[Central Matrix](/technology/swarmcraft/core/central-matrix-runtime-state)**
+* **[Architecture Overview](../architecture-overview)**
+* **[Deterministic Pipeline](../deterministic-pipeline-scan-plan-execute)**
+* **[Orchestration Slice-by-Slice Prompt Hydration](../orchestration-slice-by-slice-prompt-hydration)**
+* **[Story Bible](../story-bible-creative-intent)**
+* **[Central Matrix](../central-matrix-runtime-state)**

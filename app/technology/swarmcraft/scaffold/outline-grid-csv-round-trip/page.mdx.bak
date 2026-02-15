@@ -7,7 +7,7 @@ export const metadata = {
 > **Architectural Lineage (Credits):**  
 > SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **[Mojomast](https://github.com/mojomast)** in **[mojomast/swarmussy](https://github.com/mojomast/swarmussy)**.  
 > SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.  
-> Full details: **[Credits & Lineage](/technology/swarmcraft/meta/credits-and-lineage)**
+> Full details: **[Credits & Lineage](../credits-and-lineage)**
 
 ## **POWERED BY GROK** 
 
@@ -31,9 +31,9 @@ This page specifies how `outline.json` maps to a grid and how CSV import/export 
 
 Source of truth:
 - Threads come from `templates/<template_id>.json`  
-  See: **[Schema Templates](/technology/swarmcraft/scaffold/schema-templates)**
+  See: **[Schema Templates](../schema-templates)**
 - Beats come from `outline.json`  
-  See: **[Schema Outline](/technology/swarmcraft/scaffold/schema-outline)**
+  See: **[Schema Outline](../schema-outline)**
 
 ### 1.2 What is NOT in the grid (by default)
 - Part contract fields (goal/obstacle/turn/outcome)  
@@ -186,14 +186,14 @@ The grid is a scaffold. The engine uses it slice-by-slice:
 
 See:
 
-* **[Orchestration Slice-by-Slice Prompt Hydration](/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
-* **[Deterministic Pipeline](/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+* **[Orchestration Slice-by-Slice Prompt Hydration](../orchestration-slice-by-slice-prompt-hydration)**
+* **[Deterministic Pipeline](../deterministic-pipeline-scan-plan-execute)**
 
 ---
 
 ## 9) Related Pages
 
-* **[Story Scaffold](/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
-* **[Schema Templates](/technology/swarmcraft/scaffold/schema-templates)**
-* **[Schema Outline](/technology/swarmcraft/scaffold/schema-outline)**
-* **[Central Matrix](/technology/swarmcraft/core/central-matrix-runtime-state)**
+* **[Story Scaffold](../story-scaffold-templates-outline-parts)**
+* **[Schema Templates](../schema-templates)**
+* **[Schema Outline](../schema-outline)**
+* **[Central Matrix](../central-matrix-runtime-state)**

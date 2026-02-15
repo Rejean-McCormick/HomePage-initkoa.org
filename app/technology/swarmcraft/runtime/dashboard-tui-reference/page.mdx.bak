@@ -9,7 +9,7 @@ export const metadata = {
 > SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **[Mojomast](https://github.com/mojomast)** in **[mojomast/swarmussy](https://github.com/mojomast/swarmussy)**.  
 > The dashboard pattern is also downstream of Mojomast’s original “mission control” approach for observing swarm activity.  
 > SwarmCraft’s deterministic layering is derived from the meta-structure of **Abstract Wiki Architect (AWA)**.  
-> Full details: **[Credits & Lineage](/technology/swarmcraft/meta/credits-and-lineage)**
+> Full details: **[Credits & Lineage](../credits-and-lineage)**
 
 ## **POWERED BY GROK** 
 
@@ -33,7 +33,7 @@ The dashboard should primarily read:
 
 The dashboard must never be the source of truth; it is a view/controller.
 
-Matrix reference: **[Central Matrix](/technology/swarmcraft/core/central-matrix-runtime-state)**
+Matrix reference: **[Central Matrix](../central-matrix-runtime-state)**
 
 ---
 
@@ -135,7 +135,7 @@ The deterministic loop remains intact:
 
 * overrides influence selection, not execution ordering
 
-Pipeline: **[Deterministic Pipeline](/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+Pipeline: **[Deterministic Pipeline](../deterministic-pipeline-scan-plan-execute)**
 
 ---
 
@@ -147,7 +147,7 @@ If multiple projects exist, dashboard SHOULD display:
 * quick switch mechanism (implementation dependent)
 * project health summary
 
-Multi-project: **[Multi-Project Management](/technology/swarmcraft/runtime/multi-project-management)**
+Multi-project: **[Multi-Project Management](../multi-project-management)**
 
 ---
 
@@ -165,7 +165,7 @@ Recommended indicators:
 * last SCAN time
 * last EXECUTE time
 
-Matrix includes timestamps: **[Central Matrix](/technology/swarmcraft/core/central-matrix-runtime-state)**
+Matrix includes timestamps: **[Central Matrix](../central-matrix-runtime-state)**
 
 ---
 
@@ -181,7 +181,7 @@ All modifications should go through the engine tools layer.
 
 ## 8) Related Pages
 
-* **[Central Matrix](/technology/swarmcraft/core/central-matrix-runtime-state)**
-* **[Deterministic Pipeline](/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
-* **[Story Bible](/technology/swarmcraft/scaffold/story-bible-creative-intent)**
-* **[Multi-Project Management](/technology/swarmcraft/runtime/multi-project-management)**
+* **[Central Matrix](../central-matrix-runtime-state)**
+* **[Deterministic Pipeline](../deterministic-pipeline-scan-plan-execute)**
+* **[Story Bible](../story-bible-creative-intent)**
+* **[Multi-Project Management](../multi-project-management)**

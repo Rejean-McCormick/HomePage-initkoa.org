@@ -7,7 +7,7 @@ export const metadata = {
 > **Architectural Lineage (Credits):**  
 > SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **[Mojomast](https://github.com/mojomast)** in **[mojomast/swarmussy](https://github.com/mojomast/swarmussy)**.  
 > SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.  
-> Full details: **[Credits & Lineage](/technology/swarmcraft/meta/credits-and-lineage)**
+> Full details: **[Credits & Lineage](../credits-and-lineage)**
 
 ## **POWERED BY GROK** 
 
@@ -182,7 +182,7 @@ If usage is not provided, SwarmCraft MAY estimate tokens separately, but should 
 
 Token tracking integrates with dashboard/cost panels:
 
-* **[Dashboard TUI Reference](/technology/swarmcraft/runtime/dashboard-tui-reference)**
+* **[Dashboard TUI Reference](../dashboard-tui-reference)**
 
 ---
 
@@ -196,13 +196,13 @@ The pipeline remains:
 * PLAN: deterministic selection (optionally assisted)
 * EXECUTE: provider call(s) for one Part, one action
 
-Pipeline: **[Deterministic Pipeline](/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+Pipeline: **[Deterministic Pipeline](../deterministic-pipeline-scan-plan-execute)**
 
 ---
 
 ## 8) Related Pages
 
-* **[Architecture Overview](/technology/swarmcraft/core/architecture-overview)**
-* **[Deterministic Pipeline](/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
-* **[Orchestration Slice-by-Slice Prompt Hydration](/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
-* **[Dashboard TUI Reference](/technology/swarmcraft/runtime/dashboard-tui-reference)**
+* **[Architecture Overview](../architecture-overview)**
+* **[Deterministic Pipeline](../deterministic-pipeline-scan-plan-execute)**
+* **[Orchestration Slice-by-Slice Prompt Hydration](../orchestration-slice-by-slice-prompt-hydration)**
+* **[Dashboard TUI Reference](../dashboard-tui-reference)**

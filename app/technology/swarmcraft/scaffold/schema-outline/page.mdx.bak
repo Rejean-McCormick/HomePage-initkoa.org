@@ -7,7 +7,7 @@ export const metadata = {
 > **Architectural Lineage (Credits):**  
 > SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **[Mojomast](https://github.com/mojomast)** in **[mojomast/swarmussy](https://github.com/mojomast/swarmussy)**.  
 > SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.  
-> Full details: **[Credits & Lineage](/technology/swarmcraft/meta/credits-and-lineage)**
+> Full details: **[Credits & Lineage](../credits-and-lineage)**
 
 ## **POWERED BY GROK** 
 
@@ -22,7 +22,7 @@ export const metadata = {
 File location:
 - `data/story_bible/outline.json`
 
-Story scaffold overview: **[Story Scaffold](/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
+Story scaffold overview: **[Story Scaffold](../story-scaffold-templates-outline-parts)**
 
 ---
 
@@ -118,7 +118,7 @@ Must match an existing template file in:
 
 * `templates/<template_id>.json`
 
-Template schema: **[Schema Templates](/technology/swarmcraft/scaffold/schema-templates)**
+Template schema: **[Schema Templates](../schema-templates)**
 
 ### 3.3 `settings.parts_per_chapter` (recommended)
 
@@ -169,7 +169,7 @@ The orchestrator uses the contract to:
 
 Related:
 
-* **[Orchestration Slice-by-Slice Prompt Hydration](/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+* **[Orchestration Slice-by-Slice Prompt Hydration](../orchestration-slice-by-slice-prompt-hydration)**
 
 ---
 
@@ -203,7 +203,7 @@ Matrix mapping:
 
 * locked parts should appear as `LOCKED` (or `locked=true`) in Matrix.
 
-Matrix: **[Central Matrix](/technology/swarmcraft/core/central-matrix-runtime-state)**
+Matrix: **[Central Matrix](../central-matrix-runtime-state)**
 
 ---
 
@@ -229,7 +229,7 @@ Round-trip rules:
 * CSV export is a projection of `beats`
 * CSV import updates `beats` while respecting locks
 
-See: **[Outline Grid CSV Round-Trip](/technology/swarmcraft/scaffold/outline-grid-csv-round-trip)**
+See: **[Outline Grid CSV Round-Trip](../outline-grid-csv-round-trip)**
 
 ---
 
@@ -241,6 +241,6 @@ See: **[Outline Grid CSV Round-Trip](/technology/swarmcraft/scaffold/outline-gri
 
 See:
 
-* **[Story Bible](/technology/swarmcraft/scaffold/story-bible-creative-intent)**
-* **[Central Matrix](/technology/swarmcraft/core/central-matrix-runtime-state)**
-* **[Deterministic Pipeline](/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+* **[Story Bible](../story-bible-creative-intent)**
+* **[Central Matrix](../central-matrix-runtime-state)**
+* **[Deterministic Pipeline](../deterministic-pipeline-scan-plan-execute)**
