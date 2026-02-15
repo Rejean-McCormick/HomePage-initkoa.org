@@ -9,7 +9,7 @@ function getBaseUrl() {
     process.env.SITE_URL ||
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
 
-  // If nothing is set (CI misconfig / local), prefer the canonical public domain
+  // Prefer canonical public domain if nothing is set
   return (env || "https://www.initkoa.org").replace(/\/+$/, "");
 }
 
@@ -20,16 +20,33 @@ const PUBLIC_DIR = path.join(process.cwd(), "public");
 const SITE_LABEL = "initkoa.org";
 const PROJECT_TITLE = "kOA INITIATIVE";
 
-// Next.js App Router: a folder is routable when it contains page.(tsx|ts|js|jsx|mdx)
+// App Router: a folder is routable when it contains page.(tsx|ts|js|jsx|mdx)
 const PAGE_FILES_PRIORITY = ["page.tsx", "page.ts", "page.js", "page.jsx", "page.mdx"];
 const PAGE_FILE_RE = /^page\.(tsx|ts|js|jsx|mdx)$/;
 
+// Files that are NOT pages (but may live in route folders)
+const SPECIAL_FILE_RE =
+  /^(layout|template|loading|error|global-error|not-found|default)\.(tsx|ts|js|jsx|mdx)$/;
+
+// -------------------- SEGMENT RULES --------------------
 function isRouteGroup(seg) {
+  // route groups: (group)
   return seg.startsWith("(") && seg.endsWith(")");
 }
 
 function isDynamicSegment(seg) {
   return seg.startsWith("[") && seg.endsWith("]");
+}
+
+function isParallelRoute(seg) {
+  // parallel routes: @slot
+  return seg.startsWith("@");
+}
+
+function isInterceptingRoute(seg) {
+  // intercepting routes are also in parentheses, like (.) (..) (..)(..)
+  // our isRouteGroup() already covers these, but keep this helper for readability
+  return isRouteGroup(seg);
 }
 
 function isPrivateSegment(seg) {
@@ -41,14 +58,37 @@ function isPrivateSegment(seg) {
 
 function isSkippableDir(seg) {
   if (isPrivateSegment(seg)) return true;
-  if (isDynamicSegment(seg)) return true; // skip non-concrete URLs
-  // note: route groups are NOT skipped; we traverse them but do not add to URL
-  return ["api", "components", "styles", "fonts"].includes(seg);
+
+  // Skip non-concrete URLs
+  if (isDynamicSegment(seg)) return true;
+
+  // Skip parallel routes entirely (they are not URL segments)
+  if (isParallelRoute(seg)) return true;
+
+  // Common non-route folders people keep under app/
+  return ["api", "components", "styles", "fonts", "lib", "utils"].includes(seg);
+}
+
+function normalizeRoute(routePath) {
+  if (!routePath || routePath === "/") return "/";
+  // collapse multiple slashes + trim trailing slash (except root)
+  return ("/" + routePath.replace(/^\/+/, "")).replace(/\/{2,}/g, "/").replace(/\/+$/, "");
+}
+
+function routeToUrl(route) {
+  return route === "/" ? BASE_URL : `${BASE_URL}${route}`;
 }
 
 // -------------------- STATE --------------------
 const pathsFound = new Map(); // route -> url
-let fullCorpus = `# ${SITE_LABEL} — AI KNOWLEDGE BASE\n# Date: ${new Date().toISOString()}\n\n`;
+const sourceFilesForRoute = new Map(); // route -> fileAbsPath (for debugging)
+const warnings = [];
+
+const nowIso = new Date().toISOString();
+let fullCorpus =
+  `# ${SITE_LABEL} — AI KNOWLEDGE BASE\n` +
+  `# Date: ${nowIso}\n` +
+  `# Base: ${BASE_URL}\n\n`;
 
 // -------------------- HELPERS --------------------
 function pickPageFile(fileNames) {
@@ -59,42 +99,80 @@ function pickPageFile(fileNames) {
 }
 
 function cleanForCorpus(content) {
-  // Keep this intentionally simple; this is a token-optimization heuristic.
-  return content
-    // remove import lines (JS/TS + MDX)
-    .replace(/^\s*import\s+[\s\S]*?;?\s*$/gm, "")
-    // remove "export const metadata ..." blocks (js/ts/tsx/mdx)
-    .replace(/export\s+const\s+metadata[\s\S]*?\n\};?\s*/m, "")
-    // remove obvious JSX tags
-    .replace(/<[^>]*>/g, " ")
-    // collapse whitespace
-    .replace(/\s+/g, " ")
-    .trim();
+  // Token-optimization heuristic. Keep readable text; remove boilerplate/noise.
+  return (
+    content
+      // remove import lines (JS/TS + MDX)
+      .replace(/^\s*import\s+[\s\S]*?;?\s*$/gm, "")
+      // remove export blocks commonly found in app pages
+      .replace(/export\s+const\s+metadata[\s\S]*?\n\};?\s*/m, "")
+      .replace(/export\s+const\s+runtime[\s\S]*?;?\s*$/gm, "")
+      .replace(/export\s+const\s+revalidate[\s\S]*?;?\s*$/gm, "")
+      // strip obvious JSX tags but keep inner text where possible
+      .replace(/<\/?([A-Za-z][A-Za-z0-9:-]*)(\s+[^>]*)?>/g, " ")
+      // strip JS/TS comments (best-effort; avoid nuking URLs by being conservative)
+      .replace(/\/\*[\s\S]*?\*\//g, " ")
+      .replace(/(^|\s)\/\/(?!\/).*$/gm, " ")
+      // collapse whitespace
+      .replace(/\s+/g, " ")
+      .trim()
+  );
 }
 
 function writeFileSafe(filePath, text) {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
   fs.writeFileSync(filePath, text);
+}
+
+function addPageToCorpus({ route, fileAbsPath }) {
+  const fullUrl = routeToUrl(route);
+  const content = fs.readFileSync(fileAbsPath, "utf8");
+  const cleanText = cleanForCorpus(content);
+
+  fullCorpus += `\n==================================================\n`;
+  fullCorpus += `PAGE: ${route}\n`;
+  fullCorpus += `URL: ${fullUrl}\n`;
+  fullCorpus += `SOURCE: ${path.relative(process.cwd(), fileAbsPath)}\n`;
+  fullCorpus += `==================================================\n`;
+  fullCorpus += `${cleanText}\n\n`;
+
+  // Dedupe route collisions (can happen with groups/intercepts/parallel slots)
+  if (pathsFound.has(route)) {
+    warnings.push(
+      `⚠ Duplicate route "${route}" found.\n   - Kept: ${sourceFilesForRoute.get(route)}\n   - Ignored: ${fileAbsPath}\n`
+    );
+    return;
+  }
+
+  pathsFound.set(route, fullUrl);
+  sourceFilesForRoute.set(route, fileAbsPath);
 }
 
 // -------------------- ROUTE WALK --------------------
 function walkForRoutes(appDirAbs) {
-  const warnings = [];
-
   function walk(currentAbs, segments) {
     if (!fs.existsSync(currentAbs)) return;
 
     const entries = fs.readdirSync(currentAbs, { withFileTypes: true });
 
-    // If this folder contains page.* file(s), it maps to a URL path
+    // Collect page.* file(s) at this level
     const pageFiles = entries
       .filter((e) => e.isFile() && PAGE_FILE_RE.test(e.name))
       .map((e) => e.name);
 
+    // Ignore special files (layout, not-found, etc.)
+    const specialFiles = entries
+      .filter((e) => e.isFile() && SPECIAL_FILE_RE.test(e.name))
+      .map((e) => e.name);
+    if (specialFiles.length) {
+      // Not an error; just useful when debugging why something appears missing
+      // (we intentionally do nothing)
+    }
+
     if (pageFiles.length > 0) {
       const routePath = "/" + segments.join("/");
-      const normalizedRoute = routePath === "/" ? "/" : routePath.replace(/\/+$/, "");
+      const normalizedRoute = normalizeRoute(routePath);
 
-      // Warn if multiple page.* exist in same folder (zombi risk)
       if (pageFiles.length > 1) {
         const picked = pickPageFile(pageFiles);
         warnings.push(
@@ -104,7 +182,7 @@ function walkForRoutes(appDirAbs) {
 
       const picked = pickPageFile(pageFiles);
       const fileAbs = path.join(currentAbs, picked);
-      processFile(fileAbs, normalizedRoute);
+      addPageToCorpus({ route: normalizedRoute, fileAbsPath: fileAbs });
     }
 
     // Recurse into subfolders
@@ -114,40 +192,33 @@ function walkForRoutes(appDirAbs) {
 
       if (isSkippableDir(name)) continue;
 
-      // Route groups: traverse, but do NOT add segment to URL path
-      const nextSegments = isRouteGroup(name) ? segments : [...segments, name];
+      // Route groups + intercepting segments: traverse, but do NOT add to URL path
+      const nextSegments = isRouteGroup(name) || isInterceptingRoute(name) ? segments : [...segments, name];
       walk(path.join(currentAbs, name), nextSegments);
     }
   }
 
   walk(appDirAbs, []);
-
-  return warnings;
-}
-
-function processFile(fileAbsPath, route) {
-  const fullUrl = route === "/" ? BASE_URL : `${BASE_URL}${route}`;
-
-  const content = fs.readFileSync(fileAbsPath, "utf8");
-  const cleanText = cleanForCorpus(content);
-
-  fullCorpus += `\n==================================================\n`;
-  fullCorpus += `PAGE: ${route}\n`;
-  fullCorpus += `URL: ${fullUrl}\n`;
-  fullCorpus += `==================================================\n`;
-  fullCorpus += `${cleanText}\n\n`;
-
-  pathsFound.set(route, fullUrl);
 }
 
 // -------------------- EXECUTION --------------------
 console.log("🤖 Starting AI Assets Generation...");
 console.log(`   🌐 BASE_URL: ${BASE_URL}`);
 
-if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR);
+if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true });
 
-const warnings = walkForRoutes(APP_DIR);
+if (!fs.existsSync(APP_DIR)) {
+  console.error(`❌ Missing app directory: ${APP_DIR}`);
+  process.exit(1);
+}
+
+walkForRoutes(APP_DIR);
+
+// Emit warnings (route collisions / multiple page.*)
 for (const w of warnings) console.warn(w);
+
+// Sort routes
+const sortedRoutes = Array.from(pathsFound.keys()).sort((a, b) => a.localeCompare(b));
 
 // A) Full corpus
 const corpusPath = path.join(PUBLIC_DIR, "ai-corpus.txt");
@@ -155,24 +226,24 @@ writeFileSafe(corpusPath, fullCorpus);
 console.log(`   📄 Generated: public/ai-corpus.txt (${(fullCorpus.length / 1024).toFixed(2)} KB)`);
 
 // B) llms.txt
-const sortedRoutes = Array.from(pathsFound.keys()).sort((a, b) => a.localeCompare(b));
-
-const llmsContent = `# ${SITE_LABEL} — AI Guide
-Title: ${PROJECT_TITLE} documentation
-Description: Public documentation for the kOA INITIATIVE by Réjean McCormick: civic utilities for learning, coordination, and governable decision-making (offline-first, auditable).
-
-# Full Context (RAG optimized)
-${BASE_URL}/ai-corpus.txt
-
-# Pages Index
-${sortedRoutes.map((r) => `- [${r}](${pathsFound.get(r)})`).join("\n")}
-`;
+const llmsContent =
+  `# ${SITE_LABEL} — AI Guide\n` +
+  `Title: ${PROJECT_TITLE} documentation\n` +
+  `Description: Public documentation for the kOA INITIATIVE by Réjean McCormick: civic utilities for learning, coordination, and governable decision-making (offline-first, auditable).\n\n` +
+  `# Full Context (RAG optimized)\n` +
+  `${BASE_URL}/ai-corpus.txt\n\n` +
+  `# Pages Index\n` +
+  `${sortedRoutes.map((r) => `- [${r}](${pathsFound.get(r)})`).join("\n")}\n`;
 
 writeFileSafe(path.join(PUBLIC_DIR, "llms.txt"), llmsContent);
 console.log("   📄 Generated: public/llms.txt");
 
 // C) ai-sitemap.json
-const json = sortedRoutes.map((r) => ({ route: r, url: pathsFound.get(r) }));
+const json = sortedRoutes.map((r) => ({
+  route: r,
+  url: pathsFound.get(r),
+  source: path.relative(process.cwd(), sourceFilesForRoute.get(r) || ""),
+}));
 writeFileSafe(path.join(PUBLIC_DIR, "ai-sitemap.json"), JSON.stringify(json, null, 2));
 console.log("   📄 Generated: public/ai-sitemap.json");
 
