@@ -1,3 +1,6 @@
+{/* FILE: page.mdx
+    Path: app/platforms/konnaxion/ethikos/korum/page.mdx */}
+
 export const metadata = {
   title: "Korum"
 };
@@ -5,7 +8,16 @@ export const metadata = {
 # Korum
 
 **Korum (Structured Debates)** — sub-module under **ethiKos**.  
-Provides structured topics, nuanced stance capture, and threaded argumentation, with **Smart Vote** as the aggregation/decision engine and **EkoH** as the expertise+ethics ledger that supplies domain weights, cohort eligibility, and audit context.
+Owns debate artifacts and **stance facts** (−3…+3). **Smart Vote** publishes outcomes as baseline + declared readings; **EkoH** may be referenced by lenses via snapshot ids.
+
+---
+
+## Contract (ethiKos v2)
+
+- **Korum owns:** topics, arguments, moderation artifacts, and stance events (−3…+3).
+- **Smart Vote owns:** aggregation/publication as baseline + declared readings (derived outputs only).
+- **EkoH owns:** expertise/ethics context and snapshot/audit references used by some readings.
+- **Foreign tools (Annex):** may feed Korum via adapters (artifacts + projections), never by merging or writing core tables.
 
 ---
 
@@ -29,9 +41,9 @@ Each service name is stable and maps to a dedicated Django service module (file 
 
 * **Threaded arguments:** Nested replies under each topic with optional “pro/con” flag and moderation hooks.
 
-* **Nuanced stance capture:** Integer stance scale −3…+3 per user/topic; integrates with **Smart Vote** for aggregation and publishable readings.
+* **Nuanced stance capture:** Integer stance scale −3…+3 per user/topic; stance events are the canonical upstream facts for deliberation.
 
-* **Weighted results & cohorts:** Aggregations computed by **Smart Vote** using an **EkoH snapshot** (domain weights + ethics multipliers + eligibility thresholds) and other explicitly governed filters (cohorts, roles, locality, time windows). Realtime push optional via Channels/Redis.
+* **Readings & cohorts (derived):** Outcomes are computed/published by **Smart Vote** using optional declared lenses (cohorts, roles, locality, time windows). If a lens uses EkoH, it MUST bind to an **EkoH snapshot id** (domain weights + ethics multipliers + eligibility thresholds).
 
 * **Quality & moderation:** Report/auto-hide thresholds; flagged content routed to shared moderation queue.
 
@@ -56,7 +68,7 @@ Note: AI clones, comparative-analysis logs, public archives, and debate summarie
 
 * **Stance scale:** −3 … +3 (0 = neutral).
 
-* **Expert cohort quorum (display):** 12 distinct experts (eligibility derived from **EkoH** domain thresholds for the relevant topic tags).
+* **Expert cohort quorum (display):** 12 distinct experts (eligibility derived from EkoH domain thresholds for the relevant topic tags).
 
 * **Moderation auto-hide:** Hide an argument after 3 independent reports.
 
@@ -75,7 +87,7 @@ Note: AI clones, comparative-analysis logs, public archives, and debate summarie
 ## **6) Integration points**
 
 * **EkoH + Smart Vote:**  
-  - **EkoH** supplies the auditable weight context (domain vectors, ethics multipliers, cohort eligibility, snapshot id).  
+  - **EkoH** supplies auditable context when a lens references it (`ekoh_snapshot_id`).  
   - **Smart Vote** computes and publishes the readings (baseline + declared lenses) for stances/outcomes.
 
 * **Insights module:** ETL ingests stance and vote facts; dashboards render trends with export limits and privacy safeguards (k-anonymity, hashed IDs).
@@ -92,4 +104,5 @@ Note: AI clones, comparative-analysis logs, public archives, and debate summarie
 
 ## **Summary**
 
-Korum provides structured topic management, nuanced stance capture, and threaded argumentation. Aggregation and publication are done through **Smart Vote**, while **EkoH** provides the expertise+ethics ledger context (weights/cohorts/snapshots). Its five named services are stable integration points; the production schema covers categories, topics, stances, and arguments, while advanced AI/archive features run as services without additional OLTP tables in v14. Routes and parameters are version-locked to ensure predictable behavior across UI, API, and analytics.
+Korum provides structured topic management, nuanced stance capture, and threaded argumentation. Korum owns the upstream facts; **Smart Vote** publishes baseline + declared readings (derived outputs), optionally bound to **EkoH snapshot ids** for auditability.
+::contentReference[oaicite:0]{index=0}

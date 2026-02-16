@@ -1,3 +1,6 @@
+{/* FILE: page.mdx
+    Path: app/platforms/konnaxion/ethikos/kintsugi/page.mdx */}
+
 import Link from 'next/link';
 import { Card } from '@/components/Card';
 import {
@@ -13,12 +16,12 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Kintsugi (ethiKos) — Deliberation under one roof',
+  title: 'Kintsugi (ethiKos v2) — Deliberation under one roof',
   description:
-    'Kintsugi is how ethiKos delivers a unified civic deliberation pipeline: intake, discovery, deliberation, drafting, decision (Smart Vote), and implementation tracking—without tool capture.',
+    'Kintsugi is how ethiKos v2 delivers a unified civic deliberation pipeline: intake, discovery, deliberation, drafting, decision (Smart Vote), and accountability—without tool capture.',
 };
 
-# Kintsugi (ethiKos)
+# Kintsugi (ethiKos v2)
 
 ethiKos is the deliberation and decision-formation module of Konnaxion.  
 **Kintsugi** is how it becomes *usable in the real world*: the best democratic innovations, delivered **as one coherent experience**.
@@ -45,24 +48,24 @@ A structured pipeline that turns public input into **legible outcomes**.
     title="0) Intake"
     icon={<ClipboardList className="text-primary w-6 h-6" />}
     description="Collect submissions, deduplicate, and triage—so the community knows what is actually on the table."
-    href="/platforms/konnaxion/ethikos"
+    href="/platforms/konnaxion/ethikos/konsultations"
   />
   <Card
     title="1) Discovery"
     icon={<Compass className="text-primary w-6 h-6" />}
-    description="Collect statements, cluster positions, and extract bridges—so the landscape becomes visible before people fight."
-    href="/platforms/konnaxion/ethikos"
+    description="Collect consultation statements, cluster positions, and extract bridges—so convergence becomes visible before escalation."
+    href="/platforms/konnaxion/ethikos/konsultations"
   />
   <Card
     title="2) Deliberation"
     icon={<MessagesSquare className="text-primary w-6 h-6" />}
     description="Structure reasons, objections, and evidence. Make arguments comparable—not just louder."
-    href="/platforms/konnaxion/ethikos"
+    href="/platforms/konnaxion/ethikos/korum"
   />
   <Card
     title="3) Drafting"
     icon={<FileText className="text-primary w-6 h-6" />}
-    description="Turn the best arguments into draft text: proposals, amendments, and version history."
+    description="Turn the best arguments into draft text: options, amendments, and version history."
     href="/platforms/konnaxion/ethikos"
   />
   <Card
@@ -72,12 +75,68 @@ A structured pipeline that turns public input into **legible outcomes**.
     href="/platforms/konnaxion/kollective-intelligence"
   />
   <Card
-    title="5) Civic workflow"
+    title="5) Accountability"
     icon={<Layers className="text-primary w-6 h-6" />}
-    description="From decision to reality: petitions, budgeting, implementation tracking, and public accountability dashboards."
-    href="/platforms/konnaxion/ethikos"
+    description="From decision to reality: impact tracking, implementation progress, and public accountability snapshots."
+    href="/platforms/konnaxion/ethikos/konsultations"
   />
 </div>
+
+---
+
+<div id="boundaries" />
+
+## Boundaries & contracts (v2)
+
+ethiKos v2 stays governable by enforcing **clean limits** between components.  
+This section is the authoritative contract used by the module pages.
+
+### 1) Ownership (single source of truth)
+
+| Component | Owns (canonical truth) | May write | Must not do |
+| --- | --- | --- | --- |
+| **Konsultations** (ethiKos) | Intake, consultations, suggestions, **baseline ballots**, impact tracking | Its own OLTP facts + audit indexes | Compute “final” outcomes by stealth or overwrite baseline |
+| **Korum** (ethiKos) | Debate topics, arguments, moderation, **stance events** (−3…+3) | Its own OLTP facts + audit logs | Become a voting engine |
+| **Smart Vote** (Kollective Intelligence) | **Readings** (baseline + declared lenses), modality rules, publishable outcomes | **Derived results only** (readings/snapshots/breakdowns) | Mutate Korum/Konsultations fact tables |
+| **EkoH** (Kollective Intelligence) | Expertise/ethics context + audit backbone (**snapshot id**) | EkoH ledger + history | Act as the voting engine |
+
+### 2) The “read-only” rule (Smart Vote)
+Smart Vote **reads** upstream facts (ballots/stances) and **writes only derived outputs**:
+- baseline result snapshots
+- lens/readings snapshots (e.g., cohort-filtered, competence-weighted)
+- audit metadata (lens hash, snapshot reference)
+
+It MUST NOT mutate:
+- `EthikosStance`, `EthikosArgument`, `ConsultationVote`, `CitizenSuggestion`, etc.
+
+### 3) Canonical objects (shared contracts)
+These are the stable “civic objects” ethiKos v2 normalizes to:
+
+- `Topic` (question + domain tags)
+- `Option` (proposal/choice)
+- `Constraint` (hard limits / non-negotiables)
+- `Argument` (threaded reasons / objections; provenance)
+- `StanceEvent` (−3…+3)
+- `BallotEvent` (modality-specific)
+- `Draft`, `Amendment`, `Version`
+- `LensDeclaration` (explicitly declared lens config)
+- `Reading` (Smart Vote output)
+- `SnapshotRef` (e.g., `ekoh_snapshot_id` when used)
+
+### 4) Foreign tools: Annex vs Mimic (no merges)
+Foreign elements integrated via Kintsugi MUST remain isolable.
+
+- **Mimic:** copy the proven pattern natively (preferred when sovereignty and coherence matter).
+- **Annex:** connect an external tool as a **sidecar adapter** only.
+
+Annex adapters MUST:
+1) store raw outputs as immutable **External Artifacts** (with provenance), and  
+2) project into canonical objects via explicit mappings (no direct writes to core tables).
+
+### 5) Weighted outcomes are always “readings”
+If competence/ethics signals are used:
+- the outcome is a **Smart Vote reading**, not a replacement for baseline.
+- the reading MUST bind to an explicit `LensDeclaration` and (when applicable) an **EkoH snapshot id**.
 
 ---
 
@@ -108,6 +167,12 @@ Kintsugi is not “connect everything.” It is a disciplined way to integrate w
       <span className="mt-1 mr-3 h-2 w-2 rounded-full bg-primary/70" />
       <span>
         <strong>No platform contamination:</strong> external apps are never merged into the core; they remain bounded and replaceable.
+      </span>
+    </li>
+    <li className="flex items-start">
+      <span className="mt-1 mr-3 h-2 w-2 rounded-full bg-primary/70" />
+      <span>
+        <strong>Smart Vote is read-only on upstream facts:</strong> it publishes derived readings but never mutates debate/consultation records.
       </span>
     </li>
     <li className="flex items-start">
