@@ -15,7 +15,7 @@ import {
 export const metadata = {
   title: 'Kintsugi (ethiKos) — Deliberation under one roof',
   description:
-    'Kintsugi is how ethiKos delivers a unified civic deliberation pipeline: discovery, deliberation, drafting, decision, and implementation tracking—without tool capture.',
+    'Kintsugi is how ethiKos delivers a unified civic deliberation pipeline: intake, discovery, deliberation, drafting, decision (Smart Vote), and implementation tracking—without tool capture.',
 };
 
 # Kintsugi (ethiKos)
@@ -42,6 +42,12 @@ A structured pipeline that turns public input into **legible outcomes**.
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10">
   <Card
+    title="0) Intake"
+    icon={<ClipboardList className="text-primary w-6 h-6" />}
+    description="Collect submissions, deduplicate, and triage—so the community knows what is actually on the table."
+    href="/platforms/konnaxion/ethikos"
+  />
+  <Card
     title="1) Discovery"
     icon={<Compass className="text-primary w-6 h-6" />}
     description="Collect statements, cluster positions, and extract bridges—so the landscape becomes visible before people fight."
@@ -62,12 +68,12 @@ A structured pipeline that turns public input into **legible outcomes**.
   <Card
     title="4) Decision"
     icon={<Vote className="text-primary w-6 h-6" />}
-    description="Run protocol-based votes and publish outcomes with clear thresholds and a stable record."
+    description="Run protocol-based votes via Smart Vote and publish outcomes with clear thresholds, a stable record, and declared readings (baseline stays visible)."
     href="/platforms/konnaxion/kollective-intelligence"
   />
   <Card
     title="5) Civic workflow"
-    icon={<ClipboardList className="text-primary w-6 h-6" />}
+    icon={<Layers className="text-primary w-6 h-6" />}
     description="From decision to reality: petitions, budgeting, implementation tracking, and public accountability dashboards."
     href="/platforms/konnaxion/ethikos"
   />
@@ -107,7 +113,7 @@ Kintsugi is not “connect everything.” It is a disciplined way to integrate w
     <li className="flex items-start">
       <span className="mt-1 mr-3 h-2 w-2 rounded-full bg-primary/70" />
       <span>
-        <strong>One voting truth:</strong> decision outcomes are anchored in a single authoritative voting record (SmartVote), so “what passed” is not negotiable after the fact.
+        <strong>One voting truth:</strong> decision outcomes are anchored in a single authoritative voting record (Smart Vote), so “what passed” is not negotiable after the fact.
       </span>
     </li>
   </ul>

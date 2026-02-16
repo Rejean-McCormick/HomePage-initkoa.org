@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Layers, Scale, Eye, ArrowRight, CheckCircle2, Wrench } from 'lucide-react';
 
 export const metadata = {
-  title: 'Kollective Intelligence — SmartVote + EkoH | Konnaxion',
+  title: 'Kollective Intelligence — Smart Vote + EkoH | Konnaxion',
   description:
-    'Kollective Intelligence is Konnaxion’s decision-reading layer: it keeps the baseline visible while offering transparent quality lenses to improve decision reliability without breaking legitimacy.',
+    'Kollective Intelligence is Konnaxion’s decision interface layer: it keeps the baseline visible while publishing transparent Smart Vote readings to improve decision reliability without breaking legitimacy.',
 };
 
 function Badge({ children }: { children: React.ReactNode }) {
@@ -42,16 +42,17 @@ export default function KollectiveIntelligencePage() {
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-5">Kollective Intelligence</h1>
 
         <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">
-          Kollective Intelligence is Konnaxion’s <strong>decision-reading layer</strong>.
+          Kollective Intelligence is Konnaxion’s <strong>decision interface layer</strong>.
           <br />
           It protects legitimacy by keeping the <strong>baseline</strong> visible, while also enabling
-          <strong> transparent quality lenses</strong> that help communities make better decisions under complexity.
+          <strong> transparent Smart Vote readings</strong> that help communities make better decisions under
+          complexity.
         </p>
 
         <div className="mt-6 flex flex-wrap gap-2">
-          <Badge>SmartVote</Badge>
+          <Badge>Smart Vote</Badge>
           <Badge>EkoH</Badge>
-          <Badge>Multiple readings</Badge>
+          <Badge>Readings (lenses)</Badge>
           <Badge>Explainable legitimacy</Badge>
         </div>
       </div>
@@ -68,8 +69,8 @@ export default function KollectiveIntelligencePage() {
               <strong>Baseline outcome stays visible:</strong> the default collective result is never hidden.
             </li>
             <li>
-              <strong>Optional “quality readings”:</strong> show additional lenses that account for verified competence
-              (or other explicitly-governed signals) without replacing the baseline.
+              <strong>Optional quality readings:</strong> publish additional readings that account for verified
+              competence (or other explicitly governed signals) without replacing the baseline.
             </li>
             <li>
               <strong>Decision clarity:</strong> rankings and outcomes become easier to explain, compare, and contest.
@@ -83,9 +84,9 @@ export default function KollectiveIntelligencePage() {
             The core idea: multiple readings
           </h2>
           <p className="text-slate-700 leading-relaxed">
-            When decisions are high-stakes or technically complex, “pure popularity” can be fragile.
-            Kollective Intelligence addresses this by presenting results in <strong>side-by-side readings</strong>:
-            a baseline (raw) and one or more quality lenses (advisory).
+            When decisions are high-stakes or technically complex, “pure popularity” can be fragile. Kollective
+            Intelligence addresses this by presenting results in <strong>side-by-side readings</strong>: a baseline
+            (raw) and one or more quality readings (explicitly declared).
           </p>
           <p className="text-slate-700 leading-relaxed mt-3">
             The goal is not to remove voice — it is to make decision quality and accountability visible.
@@ -104,8 +105,8 @@ export default function KollectiveIntelligencePage() {
               <Status status="available" />
             </div>
             <p className="text-slate-700">
-              The operational experience: how SmartVote and EkoH appear to users in Konnaxion.
-              Focused on outcomes, legitimacy, and clarity — not implementation details.
+              The operational experience: how <strong>Smart Vote</strong> and <strong>EkoH</strong> appear to users in
+              Konnaxion. Focused on outcomes, legitimacy, and clarity — not implementation details.
             </p>
             <div className="mt-4">
               <Link
@@ -123,8 +124,8 @@ export default function KollectiveIntelligencePage() {
               <Status status="tbd" />
             </div>
             <p className="text-slate-700">
-              TBD. This will be the publishable reference layer: standard definitions of lenses, reporting formats,
-              and the “how to read results” charts that can be pinned to civic processes.
+              TBD. This will be the publishable reference layer: standard definitions of readings (lenses), reporting
+              formats, and the “how to read results” charts that can be pinned to civic processes.
             </p>
             <div className="mt-4">
               <Link
@@ -148,7 +149,7 @@ export default function KollectiveIntelligencePage() {
           <ul className="mt-4 space-y-2 text-slate-700">
             <li>
               <strong>Upstream:</strong> competence signals from learning/credentialing (when applicable) can support
-              advisory lenses — explicitly governed.
+              advisory readings — explicitly governed.
             </li>
             <li>
               <strong>Process:</strong> deliberation workflows turn messy input into structured options before voting.
@@ -180,9 +181,9 @@ export default function KollectiveIntelligencePage() {
       <section className="bg-slate-50 border border-slate-200 rounded-2xl p-8">
         <h2 className="text-2xl font-bold text-slate-900 mb-3">Why this changes the world</h2>
         <p className="text-slate-700 max-w-3xl">
-          Modern governance breaks when decisions become too complex for trust to scale.
-          Kollective Intelligence adds a missing capability: a legitimate baseline plus transparent quality readings.
-          It upgrades decision reliability without replacing citizen voice.
+          Modern governance breaks when decisions become too complex for trust to scale. Kollective Intelligence adds a
+          missing capability: a legitimate baseline plus transparent Smart Vote readings. It upgrades decision
+          reliability without replacing citizen voice.
         </p>
       </section>
     </main>

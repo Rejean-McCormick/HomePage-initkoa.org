@@ -23,11 +23,17 @@ export default function KonnaxionPage() {
         <div className="prose prose-slate prose-lg text-slate-600 leading-relaxed max-w-none">
           <p>
             Konnaxion is the <strong>public coordination spine</strong> of the kOA ecosystem. It brings learning,
-            deliberation, collective decision interfaces, and builder coordination into one coherent civic platform.
+            structured deliberation, collective decision interfaces, and builder coordination into one coherent civic
+            platform.
           </p>
           <p>
-            The goal is simple: help communities move from <strong>knowledge</strong> to <strong>legitimate decisions</strong>{' '}
-            to <strong>executed work</strong> and <strong>durable public memory</strong>—without turning governance into a black box.
+            The goal is simple: help communities move from <strong>knowledge</strong> to{' '}
+            <strong>legitimate decisions</strong> to <strong>executed work</strong> and{' '}
+            <strong>durable public memory</strong>—without turning governance into a black box.
+          </p>
+          <p className="text-sm">
+            In this stack, <strong>EkoH</strong> is the expertise + ethics ledger (weights + audit context), and{' '}
+            <strong>Smart Vote</strong> is the decision engine (modalities + readings + publication).
           </p>
         </div>
 
@@ -43,7 +49,7 @@ export default function KonnaxionPage() {
           </a>
 
           <Link
-            href="/platforms/konnaxion/modules"
+            href="#modules"
             className="px-6 py-3 border border-gray-300 text-slate-700 rounded-sm font-medium hover:border-slate-900 hover:text-slate-900 transition-colors text-center"
           >
             Explore modules
@@ -65,26 +71,21 @@ export default function KonnaxionPage() {
 
       <div className="max-w-4xl mx-auto px-6 py-16 space-y-20">
         {/* MODULES */}
-        <section>
+        <section id="modules">
           <div className="flex items-end justify-between gap-6 mb-8">
             <div>
               <h2 className="text-3xl font-serif font-medium text-slate-900">Modules</h2>
               <p className="text-slate-500 mt-2">
                 Each module is a civic utility with clear boundaries. Most modules are expressed through two layers:
-                <strong> Kintsugi</strong> (operate “under one roof”) and <strong>Kompendio</strong> (reference/integration layer).
+                <strong> Kintsugi</strong> (operate “under one roof”) and <strong>Kompendio</strong> (reference /
+                integration vocabulary).
               </p>
             </div>
             <div className="hidden sm:flex gap-3">
-              <Link
-                href="/platforms/konnaxion/kintsugi"
-                className="text-sm font-mono text-primary hover:underline"
-              >
+              <Link href="/platforms/konnaxion/technical#kintsugi" className="text-sm font-mono text-primary hover:underline">
                 What is Kintsugi →
               </Link>
-              <Link
-                href="/platforms/konnaxion/kompendio"
-                className="text-sm font-mono text-primary hover:underline"
-              >
+              <Link href="/platforms/konnaxion/technical#kompendio" className="text-sm font-mono text-primary hover:underline">
                 What is Kompendio →
               </Link>
             </div>
@@ -93,18 +94,14 @@ export default function KonnaxionPage() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* KonnectED */}
             <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 border-b border-gray-100 pb-2">
-                KonnectED
-              </h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3 border-b border-gray-100 pb-2">KonnectED</h3>
               <p className="text-sm text-slate-600 mb-6">
-                The competence loop: learn, practice, validate, and certify—so participation can be informed and competence can be portable.
+                The competence loop: learn, practice, validate, and certify—so participation can be informed and
+                competence can be portable.
               </p>
               <ul className="space-y-3">
                 <li>
-                  <Link
-                    href="/platforms/konnaxion/konnected/kintsugi"
-                    className="font-bold text-primary hover:underline"
-                  >
+                  <Link href="/platforms/konnaxion/konnected#kintsugi" className="font-bold text-primary hover:underline">
                     Kintsugi (Operate)
                   </Link>
                   <p className="text-sm text-slate-600">
@@ -112,14 +109,11 @@ export default function KonnaxionPage() {
                   </p>
                 </li>
                 <li>
-                  <Link
-                    href="/platforms/konnaxion/konnected/kompendio"
-                    className="font-bold text-primary hover:underline"
-                  >
+                  <Link href="/platforms/konnaxion/konnected#kompendio" className="font-bold text-primary hover:underline">
                     Kompendio (Reference)
                   </Link>
                   <p className="text-sm text-slate-600">
-                    The reference/integration layer: standards, mappings, and charts that keep competence legible and reusable.
+                    Standards, mappings, and charts that keep competence legible, auditable, and reusable across modules.
                   </p>
                 </li>
               </ul>
@@ -127,18 +121,14 @@ export default function KonnaxionPage() {
 
             {/* ethiKos */}
             <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 border-b border-gray-100 pb-2">
-                ethiKos
-              </h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3 border-b border-gray-100 pb-2">ethiKos</h3>
               <p className="text-sm text-slate-600 mb-6">
-                Structured deliberation and decision formation: turn messy inputs into legible, reviewable outputs and accountability trails.
+                Structured deliberation and decision formation: turn messy inputs into legible, reviewable outputs and
+                accountability trails.
               </p>
               <ul className="space-y-3">
                 <li>
-                  <Link
-                    href="/platforms/konnaxion/ethikos/kintsugi"
-                    className="font-bold text-primary hover:underline"
-                  >
+                  <Link href="/platforms/konnaxion/ethikos#kintsugi" className="font-bold text-primary hover:underline">
                     Kintsugi (Operate)
                   </Link>
                   <p className="text-sm text-slate-600">
@@ -146,14 +136,11 @@ export default function KonnaxionPage() {
                   </p>
                 </li>
                 <li>
-                  <Link
-                    href="/platforms/konnaxion/ethikos/kompendio"
-                    className="font-bold text-primary hover:underline"
-                  >
-                    Kompendio (TBD)
+                  <Link href="/platforms/konnaxion/ethikos#kompendio" className="font-bold text-primary hover:underline">
+                    Kompendio (Reference)
                   </Link>
                   <p className="text-sm text-slate-600">
-                    Planned reference layer for deliberation patterns, governance charts, and integration standards.
+                    Patterns, governance charts, and integration vocabulary for deliberation and institutional memory.
                   </p>
                 </li>
               </ul>
@@ -161,18 +148,14 @@ export default function KonnaxionPage() {
 
             {/* keenKonnect */}
             <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 border-b border-gray-100 pb-2">
-                keenKonnect
-              </h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3 border-b border-gray-100 pb-2">keenKonnect</h3>
               <p className="text-sm text-slate-600 mb-6">
-                The builder workspace: turn approved decisions into projects, coordinate execution, and preserve outputs so they survive turnover.
+                The builder workspace: turn approved decisions into projects, coordinate execution, and preserve outputs
+                so they survive turnover.
               </p>
               <ul className="space-y-3">
                 <li>
-                  <Link
-                    href="/platforms/konnaxion/keen-konnect/kintsugi"
-                    className="font-bold text-primary hover:underline"
-                  >
+                  <Link href="/platforms/konnaxion/keenkonnect#kintsugi" className="font-bold text-primary hover:underline">
                     Kintsugi (Operate)
                   </Link>
                   <p className="text-sm text-slate-600">
@@ -180,10 +163,7 @@ export default function KonnaxionPage() {
                   </p>
                 </li>
                 <li>
-                  <Link
-                    href="/platforms/konnaxion/keen-konnect/kompendio"
-                    className="font-bold text-primary hover:underline"
-                  >
+                  <Link href="/platforms/konnaxion/keenkonnect#kompendio" className="font-bold text-primary hover:underline">
                     Kompendio (Reference)
                   </Link>
                   <p className="text-sm text-slate-600">
@@ -199,31 +179,34 @@ export default function KonnaxionPage() {
                 Kollective Intelligence
               </h3>
               <p className="text-sm text-slate-600 mb-6">
-                The decision interface: keep outcomes legible under complexity by showing results through transparent, comparable “readings.”
+                The decision interface: keep outcomes legible under complexity by publishing transparent, comparable{' '}
+                <strong>Smart Vote readings</strong> (baseline always visible; alternative readings explicitly declared).
               </p>
 
               <div className="grid gap-6">
                 <div>
                   <Link
-                    href="/platforms/konnaxion/kollective-intelligence/smartvote"
+                    href="/platforms/konnaxion/kollective-intelligence#smart-vote"
                     className="font-bold text-primary hover:underline block mb-1"
                   >
-                    SmartVote
+                    Smart Vote
                   </Link>
                   <p className="text-sm text-slate-600">
-                    The voting surface: readable outcomes and clear comparisons across governance modes (e.g., baseline vs quality-weighted).
+                    The decision engine: vote modalities + weighting + published readings (e.g., baseline vs merit-weighted),
+                    with audit artifacts and contestability.
                   </p>
                 </div>
 
                 <div>
                   <Link
-                    href="/platforms/konnaxion/kollective-intelligence/ekoh"
+                    href="/platforms/konnaxion/kollective-intelligence#ekoh"
                     className="font-bold text-primary hover:underline block mb-1"
                   >
                     EkoH
                   </Link>
                   <p className="text-sm text-slate-600">
-                    The registry of competence signals and audit context: makes “why this reading” visible and contestable.
+                    The expertise + ethics ledger: domain score vectors, ethics multipliers, privacy levels, and audit context
+                    that Smart Vote (and other modules) consume.
                   </p>
                 </div>
               </div>
@@ -233,18 +216,19 @@ export default function KonnaxionPage() {
             <div className="md:col-span-2 border border-dashed border-slate-200 rounded-sm p-6 bg-white">
               <h3 className="text-xl font-bold text-slate-900 mb-2">Kreative (TBD)</h3>
               <p className="text-sm text-slate-600">
-                Not published yet. Intended as the curated commons: preservation and discovery of validated outputs (a limited library, not a feed).
+                Not published yet. Intended as the curated commons: preservation and discovery of validated outputs (a
+                limited library, not a feed).
               </p>
             </div>
           </div>
         </section>
 
-{/* REFERENCE */}
+        {/* REFERENCE */}
         <section className="bg-slate-900 text-slate-300 p-8 rounded-sm">
           <h2 className="text-xl font-bold text-white mb-4">Reference (builders)</h2>
           <p className="mb-6 text-sm leading-relaxed">
-            If you are integrating or implementing Konnaxion, use the reference section for maps, standards, and the integration vocabulary.
-            This is intentionally separated from the public-facing module pages.
+            If you are integrating or implementing Konnaxion, use the reference section for maps, standards, and the
+            integration vocabulary. This is intentionally separated from the public-facing module pages.
           </p>
           <a
             href="https://github.com/Rejean-McCormick/Konnaxion/wiki"

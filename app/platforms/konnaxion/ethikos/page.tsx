@@ -14,7 +14,7 @@ import {
 export const metadata = {
   title: 'ethiKos — Deliberation & Legitimacy (Konnaxion)',
   description:
-    'A structured civic deliberation module that turns messy input into decision-ready outcomes: discovery, consultation, drafting, decision, and accountability.',
+    'A structured civic deliberation module that turns messy input into decision-ready outcomes: intake, consultation, deliberation, drafting, decision, and accountability.',
 };
 
 type Step = {
@@ -25,34 +25,40 @@ type Step = {
 
 const steps: Step[] = [
   {
-    title: '1) Discovery',
+    title: '0) Intake',
     icon: <Compass className="w-6 h-6" />,
     description:
-      'Turn a problem into a shared object: scope, constraints, stakeholders, and what “success” means.',
+      'Capture issues early: scope, constraints, stakeholders, and initial prioritization—before debate becomes noise.',
   },
   {
-    title: '2) Consultation',
+    title: '1) Consultation',
     icon: <MessageSquareText className="w-6 h-6" />,
     description:
-      'Collect proposals and lived constraints in a way that surfaces convergence instead of producing noise.',
+      'Collect proposals and constraints in a structured format that surfaces convergence (not volume).',
+  },
+  {
+    title: '2) Deliberation',
+    icon: <UsersRound className="w-6 h-6" />,
+    description:
+      'Move from reactions to reasons: arguments, objections, and tradeoffs are organized into legible threads.',
   },
   {
     title: '3) Drafting',
     icon: <FileText className="w-6 h-6" />,
     description:
-      'Produce decision-ready options with reasons, tradeoffs, and explicit open questions.',
+      'Produce decision-ready options with clear wording, rationale, and explicit open questions.',
   },
   {
     title: '4) Decision',
     icon: <Scale className="w-6 h-6" />,
     description:
-      'Run a legitimate choice process where baseline outcomes remain visible and “quality lenses” are explicit.',
+      'Run a legitimate choice process where the baseline remains visible and Smart Vote readings are explicitly declared.',
   },
   {
     title: '5) Accountability',
     icon: <ShieldCheck className="w-6 h-6" />,
     description:
-      'Publish what was decided, why, and what happens next—so outcomes are contestable and reviewable.',
+      'Publish what was decided, why, and what happens next—so outcomes remain reviewable, contestable, and actionable.',
   },
 ];
 
@@ -65,16 +71,13 @@ export default function EthiKosOverviewPage() {
           <div className="p-2 rounded-lg bg-slate-100 text-slate-700">
             <UsersRound className="w-6 h-6" />
           </div>
-          <p className="text-xs font-mono text-slate-500">
-            Konnaxion / ethiKos
-          </p>
+          <p className="text-xs font-mono text-slate-500">Konnaxion / ethiKos</p>
         </div>
 
         <h1 className="text-4xl font-bold text-slate-900 mb-4">ethiKos</h1>
         <p className="text-lg text-slate-600 max-w-3xl">
-          ethiKos is the deliberation module of Konnaxion. It exists to convert
-          fragmented, emotional, and noisy input into decision-ready outcomes
-          that can be reviewed, contested, and implemented.
+          ethiKos is the deliberation module of Konnaxion. It converts fragmented, emotional, and noisy input into
+          decision-ready outputs that can be reviewed, contested, and implemented—without losing legitimacy.
         </p>
       </div>
 
@@ -93,8 +96,8 @@ export default function EthiKosOverviewPage() {
                 Kintsugi (Operate)
               </h2>
               <p className="text-slate-600 mt-2">
-                The “under one roof” experience: structured intake, deliberation
-                workflows, and publishable outcomes.
+                The “under one roof” experience: structured intake, deliberation workflows, drafting, and publishable
+                outcomes.
               </p>
             </div>
             <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-slate-900 transition-colors mt-1" />
@@ -116,8 +119,8 @@ export default function EthiKosOverviewPage() {
                 </span>
               </div>
               <p className="text-slate-600 mt-2">
-                Module-specific reference charts for ethiKos are planned but not
-                published yet. Use the global Kompendio layer in the meantime.
+                Module-specific reference charts for ethiKos are planned but not published yet. Use the global
+                Kompendio layer in the meantime.
               </p>
               <Link
                 href="/platforms/konnaxion/kompendio"
@@ -135,16 +138,13 @@ export default function EthiKosOverviewPage() {
 
       {/* Pipeline */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold text-slate-900 mb-3">
-          The deliberation pipeline
-        </h2>
+        <h2 className="text-2xl font-bold text-slate-900 mb-3">The deliberation pipeline</h2>
         <p className="text-slate-600 max-w-3xl">
-          ethiKos treats legitimacy as a workflow. Each step produces an output
-          that the next step can reuse—so the process is legible, replayable, and
-          improvable over time.
+          ethiKos treats legitimacy as a workflow. Each stage produces an output the next stage can reuse—so the process
+          is legible, replayable, and improvable over time.
         </p>
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
           {steps.map((s) => (
             <div
               key={s.title}
@@ -164,50 +164,37 @@ export default function EthiKosOverviewPage() {
 
       {/* Guarantees (user-facing) */}
       <section className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
-        <h2 className="text-2xl font-bold text-slate-900 mb-3">
-          What users get (not buzzwords)
-        </h2>
+        <h2 className="text-2xl font-bold text-slate-900 mb-3">What users get (not buzzwords)</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
           <div className="rounded-xl border border-slate-200 bg-white p-6">
-            <h3 className="text-lg font-semibold text-slate-900 mb-2">
-              Legible outcomes
-            </h3>
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">Legible outcomes</h3>
             <p className="text-sm text-slate-600">
-              Decisions come with reasons, tradeoffs, and a record of what was
-              considered—so people can understand and contest them.
+              Decisions come with reasons, tradeoffs, and a record of what was considered—so people can understand and
+              contest them.
             </p>
           </div>
 
           <div className="rounded-xl border border-slate-200 bg-white p-6">
-            <h3 className="text-lg font-semibold text-slate-900 mb-2">
-              Participation without chaos
-            </h3>
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">Participation without chaos</h3>
             <p className="text-sm text-slate-600">
-              Consultation is structured to surface convergence and constraints,
-              instead of rewarding volume and outrage.
+              Intake and consultation are structured to surface convergence and constraints, instead of rewarding volume
+              and outrage.
             </p>
           </div>
 
           <div className="rounded-xl border border-slate-200 bg-white p-6">
-            <h3 className="text-lg font-semibold text-slate-900 mb-2">
-              Accountability by default
-            </h3>
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">Accountability by default</h3>
             <p className="text-sm text-slate-600">
-              Every outcome can be reviewed later, compared to promised goals,
-              and connected to implementation work.
+              Every outcome can be reviewed later, compared to promised goals, and connected to implementation work.
             </p>
           </div>
         </div>
 
         <div className="mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <p className="text-sm text-slate-600 max-w-3xl">
-            If you want the decision interface that shows baseline results and
-            explicit “quality lenses,” that lives in{' '}
-            <span className="font-semibold text-slate-900">
-              Kollective Intelligence
-            </span>
-            .
+            The decision interface that publishes baseline results alongside explicit <strong>Smart Vote readings</strong>{' '}
+            lives in <span className="font-semibold text-slate-900">Kollective Intelligence</span>.
           </p>
           <Link
             href="/platforms/konnaxion/kollective-intelligence"

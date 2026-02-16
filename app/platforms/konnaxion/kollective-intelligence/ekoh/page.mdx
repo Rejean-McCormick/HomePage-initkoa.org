@@ -1,81 +1,121 @@
 export const metadata = {
-  title: "EkoH"
+  title: "EkoH — Expertise & Ethics Ledger"
 };
 
 # EkoH
 
+**EkoH (Expertise + Ethics Ledger)** — the merit ledger used by **Kollective Intelligence** and consumed by **Smart Vote** and other ranking/visibility surfaces.
 
-**EkoH (Reputation & Expertise)** — first sub‑module under **Kollective Intelligence**.  
- Implements seven core services with clear code‑names, supported by dedicated models and fixed parameters.
+EkoH does **not** produce “decision readings.” Readings (lenses) are a **Smart Vote** concern.  
+EkoH produces **auditable weight inputs**: domain expertise vectors, ethics multipliers, privacy constraints, and immutable snapshots.
 
 ---
 
-### **1\) Functional Services (and expected files)**
+## 1) What EkoH is responsible for
 
-Code‑name list per the v14 inventory; each code‑name maps to a Django service module (e.g., `services/scoring.py` contains `multidimensional_scoring`).
+### Core outputs
+- **Domain expertise vectors** per user, aligned to a formal taxonomy (recommended: **UNESCO ISCED-F**).
+- **Ethics multiplier** per user (governance score applied by Smart Vote per lens policy).
+- **Confidentiality level** (public / pseudonym / anonymous) controlling disclosure.
+- **Audit artifacts**: score history, context adjustment logs, integrity events.
+- **Immutable snapshots** bound to consultations (Smart Vote consumes snapshots, not “live” scores).
 
-| Display name | Code name / service | Purpose / behavior | Likely file or module |
-| ----- | ----- | ----- | ----- |
-| Multidimensional Scoring | `multidimensional_scoring` | Compute per‑user/content scores across axes (quality, frequency, relevance, expertise). | `services/scoring.py` |
-| Criteria Customization | `configuration_weights` | Adjust scoring weights per axis/domain; read from stored configuration. | `services/configuration.py` (reads `ScoreConfiguration`) |
-| Automatic Contextual Analysis | `contextual_analysis` | AI tweaks sub‑scores in real time by topic/history/complexity signals. | `services/contextual_analysis.py` |
-| Dynamic Privacy | `privacy_settings` | Enforce anonymity/pseudonym modes while still exposing merit outputs. | `services/privacy.py` |
-| History & Traceability | `score_history` | Persist every recalculation/config change for auditability. | `services/history.py` (+ model hooks) |
-| Interactive Visualizations | `score_visualization` | Serve aggregated data for dashboards/skill maps/matrices. | `services/visualization.py` |
-| Expertise Classification by Field | `expertise_field_classification` | Bind scores to formal knowledge domains (taxonomy). | `services/expertise.py` |
+### What EkoH is *not*
+- Not the voting engine.
+- Not the reading/lens engine.
+- Not the consultation orchestration layer.
+Those live under **Smart Vote** / **ethiKos**.
 
-—
+---
 
-### **2\) Backend Functionalities**
+## 2) Ledger primitives (conceptual model)
 
-* **Reputation engine & triggers.** A Django service updates users’ domain‑specific Ekoh scores from platform activity; scheduled Celery jobs perform periodic recalculation, and event hooks apply immediate updates on impactful actions.
+EkoH stores merit as two orthogonal components:
 
-* **Ethical multiplier.** An ethics score multiplies domain expertise to produce final influence weights (raises for constructive behavior, lowers for flagged behavior).
+1) **Expertise score per domain**  
+A user can be strong in one domain and neutral in another; influence is domain-matched.
 
-* **Smart‑Vote integration.** Voting across modules (e.g., Ethikos) is weighted by the voter’s relevant Ekoh score; live results may be pushed via Channels.
+2) **Ethics multiplier (global)**  
+A governance score that modulates influence according to integrity signals and platform rules.  
+How ethics is applied to voting weights is **lens-defined** in Smart Vote.
 
-* **Cross‑module APIs.** Provides shared search/notifications/feed/recommendation surfaces that consume Ekoh signals (e.g., leaderboards, relevance).
+---
 
-* **Quality controls.** Thresholds and moderation safeguards prevent brigading/spam from distorting reputation and consensus.
+## 3) Canonical storage model (schema: `ekoh_smartvote`)
 
-—
+Core tables used to store expertise, ethics, privacy, and audit context:
 
-### **3\) Database Models (OLTP)**
+| Table / Model | Purpose | Key fields (illustrative) |
+| --- | --- | --- |
+| `expertise_category` | Domain taxonomy (e.g., UNESCO ISCED-F). | `code`, `name`, `parent_id`, `depth`, `path` |
+| `user_expertise_score` | Per-user, per-domain expertise score. | `user_id`, `category_id`, `raw_score`, `weighted_score` |
+| `user_ethics_score` | Per-user ethics multiplier. | `user_id`, `ethical_score` |
+| `confidentiality_setting` | Privacy level for disclosure. | `user_id`, `level` (`public/pseudonym/anonymous`) |
+| `score_configuration` | Versioned coefficients/knobs. | `weight_name`, `weight_value`, `field` (nullable) |
+| `context_analysis_log` | Explainable adjustments / context traces. | `entity_type`, `entity_id`, `input_metadata` (json), `adjustments_applied` (json) |
+| `score_history` | Immutable audit trail for score changes. | `merit_score_id`, `old_value`, `new_value`, `change_reason`, `created_at` |
+| `integrity_event` | Integrity anomalies & handling state. | `event_type`, `score` (json), `handled`, `created_at` |
 
-Canonical tables powering EkoH scoring, ethics, audit, and privacy.
+Optional (only if you need stakeholder/cohort analytics):
+- `demographic_attribute`, `demographic_choice`, `user_demographic`
 
-| Table / Model | Purpose | Key fields |
-| ----- | ----- | ----- |
-| `ExpertiseCategory` | Domain taxonomy for expertise classification. | `id`, `name` |
-| `UserExpertiseScore` | Per‑user per‑domain raw/weighted score. | `id`, `user`, `category`, `raw_score`, `weighted_score` |
-| `UserEthicsScore` | Per‑user ethical multiplier (applied to expertise). | `user` (PK), `ethical_score` |
-| `ScoreConfiguration` | Named weights/coefficients (global or per field). | `id`, `weight_name`, `weight_value`, `field` |
-| `ContextAnalysisLog` | AI context adjustments applied to scores. | `id`, `entity_type`, `entity_id`, `field`, `input_metadata` (JSON), `adjustments_applied` (JSON) |
-| `ConfidentialitySetting` | User privacy level for identity display near scores. | `user` (PK), `level` (enum: public/pseudonym/anonymous) |
-| `ScoreHistory` | Full audit trail of score changes. | `id`, `merit_score` (FK), `old_value`, `new_value`, `change_reason` |
+---
 
-—
+## 4) Scoring rules (high-level)
 
-### **4\) Supporting Configuration (frozen)**
+EkoH expertise scoring commonly uses three axes (coefficients are configuration-driven):
+- **Quality** (accuracy, evidence, peer signals)
+- **Expertise** (verified credentials / demonstrated competence)
+- **Frequency / Recency** (continued engagement, decay)
 
-Finalized parameters for EkoH engine and domain taxonomy.
+Illustrative aggregation:
+- `weighted_score = Q*RAW_WEIGHT_QUALITY + X*RAW_WEIGHT_EXPERTISE + F*RAW_WEIGHT_FREQUENCY`
 
-* **Initial axis weights:** `quality=1.000`, `expertise=1.500`, `frequency=0.750` → used by `multidimensional_scoring`.
+All coefficient values must live in `score_configuration` and be **versioned**.
 
-* **Ethical multiplier bounds:** floor `0.20`, cap `1.50`.
+---
 
-* **Expertise domains:** `EXPERTISE_DOMAIN_CHOICES` (26 ISO‑based domains; seeded fixtures).
+## 5) Ethics multiplier (governance score)
 
-—
+- Ethics is treated as a **governance signal** tied to platform rules and evidence.
+- Any negative adjustment must be:
+  - logged (reason codes + evidence pointers),
+  - auditable,
+  - appealable (process is policy-defined).
 
-### **5\) Schedules & runtime**
+Typical policy bounds are configuration-driven (examples only):
+- floor (e.g., `0.20`)
+- cap (e.g., `1.50`)
 
-* **Periodic recomputation:** Celery Beat tasks (nightly/interval) to refresh Ekoh scores and any precomputed leaderboards; monitored in CI/ops.
+---
 
-* **Realtime delivery:** Optionally push score/leaderboard deltas or weighted results via Django Channels \+ Redis.
+## 6) Snapshotting (critical for Smart Vote)
 
-—
+Smart Vote consumes **immutable EkoH snapshots** bound to a consultation:
+- snapshot references the **exact** expertise vectors + ethics multipliers used
+- snapshot references the **score_configuration version hash**
+- snapshot is the reproducibility anchor for audits and result replays
 
-### **Summary**
+---
 
-EkoH exposes seven concrete services (`multidimensional_scoring`, `configuration_weights`, `contextual_analysis`, `privacy_settings`, `score_history`, `score_visualization`, `expertise_field_classification`) mapped to Django service modules; it persists expertise/ethics/traceability/privacy via dedicated tables and operates under fixed, reviewable parameters. It is the weighting backbone for Smart‑Vote and cross‑module relevance, with periodic recomputation and optional realtime updates.
+## 7) Smart Vote integration (what Smart Vote reads from EkoH)
+
+Smart Vote takes:
+- `S(u,d)` = user expertise score in domain `d` (from `user_expertise_score`)
+- `E(u)` = ethics multiplier (from `user_ethics_score`)
+- confidentiality constraints (from `confidentiality_setting`)
+- snapshot manifest (bound to consultation)
+
+Then applies a **lens-defined weight formula**, for example:
+- `W(u,c) = E(u) × ( 1 + Σ_d ( S(u,d) × R(c,d) ) )`  
+or an alternative lens preserving an unscaled baseline vote.
+
+EkoH’s role is to make those inputs **legible, auditable, and contestable**.
+
+---
+
+## Summary
+
+EkoH is a **merit ledger**: domain expertise vectors + ethics multipliers + privacy + audit context, with **immutable snapshots** for governance-grade reproducibility.  
+**Smart Vote** is the decision engine that applies those inputs to modalities and publishes readings.
+
