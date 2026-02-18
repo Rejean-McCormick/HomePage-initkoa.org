@@ -27,9 +27,12 @@ export const metadata = {
   authors: [{ name: 'Réjean McCormick', url: 'https://initkoa.org' }],
   creator: 'Réjean McCormick',
 
+  // === PERFECTLY CONFIGURED FAVICONS ===
   icons: {
     icon: '/LogoK.svg',
+    apple: '/apple-touch-icon.png',
   },
+  manifest: '/site.webmanifest',
   
   // (Optionnel) OpenGraph pour les partages LinkedIn/Social
   openGraph: {

@@ -15,7 +15,6 @@ export default function Head() {
       <meta name="twitter:title" content="L'initiative kOA" />
       <meta name="twitter:description" content="L'initiative kOA est un mouvement sociotechnique qui mêle surréalisme et innovation concrète pour relever les défis contemporains." />
       <meta name="twitter:image" content="/og-image.jpg" />
-      <link rel="icon" href="/favicon.ico" />
     </>
   );
 }
