@@ -6,7 +6,6 @@ import {
   BookOpenText,
   Boxes,
   Download,
-  FileStack,
   Package,
   ShieldCheck,
   Sparkles,
@@ -19,6 +18,11 @@ export const metadata: Metadata = {
   alternates: { canonical: '/technology/context-packs' },
 };
 
+type ContextPackLink = {
+  href: string;
+  label: string;
+};
+
 type ContextPack = {
   slug: string;
   title: string;
@@ -26,8 +30,7 @@ type ContextPack = {
   scope: string;
   description: string;
   file: string;
-  relatedHref?: string;
-  relatedLabel?: string;
+  links?: ContextPackLink[];
 };
 
 const PACKS: ContextPack[] = [
@@ -38,9 +41,7 @@ const PACKS: ContextPack[] = [
     scope: 'Contracts, schemas, query semantics',
     description:
       'Normative contracts, schemas, query semantics, and runtime-pack logic for portable, verifiable knowledge artifacts.',
-    file: 'kristal-context-pack--contracts-schemas-query--v4.0.txt',
-    relatedHref: '/technology/kristal',
-    relatedLabel: 'Technology / Kristal',
+  file: 'kristal-context-pack--contracts-schemas-query--v4.0.txt',
   },
   {
     slug: 'konnaxion',
@@ -50,6 +51,7 @@ const PACKS: ContextPack[] = [
     description:
       'Full-stack platform specification covering parameters, navigation, modules, and structural references for Konnaxion.',
     file: 'konnaxion-context-pack--platform-specification--v14.0.txt',
+    links: [{ href: '/platforms/konnaxion', label: 'Konnaxion' }],
   },
   {
     slug: 'orgo',
@@ -59,6 +61,7 @@ const PACKS: ContextPack[] = [
     description:
       'Unified workflow reference for case handling, task orchestration, schemas, services, and operational flows.',
     file: 'orgo-context-pack--case-task-workflow-platform--v3.0.txt',
+    links: [{ href: '/platforms/orgo', label: 'Orgo' }],
   },
   {
     slug: 'sentient',
@@ -68,8 +71,7 @@ const PACKS: ContextPack[] = [
     description:
       'Entity reconciliation, ingestion, semantic processing, and the upgrade path for structured resolution over messy inputs.',
     file: 'sentient-context-pack--reconciliation-architecture--v1.0.txt',
-    relatedHref: '/technology/sentient',
-    relatedLabel: 'Technology / SenTient',
+    links: [{ href: '/technology/sentient', label: 'SenTient' }],
   },
   {
     slug: 'architect',
@@ -79,8 +81,7 @@ const PACKS: ContextPack[] = [
     description:
       'Engine architecture, GF integration, deployment model, and the technical shape of deterministic multilingual rendering.',
     file: 'abstract-wiki-architect-context-pack--engine-and-gf-integration--v2.5.txt',
-    relatedHref: '/technology/architect',
-    relatedLabel: 'Technology / Architect',
+    links: [{ href: '/technology/architect', label: 'Architect' }],
   },
   {
     slug: 'gf',
@@ -111,13 +112,6 @@ const PACKS: ContextPack[] = [
   },
 ];
 
-const PRINCIPLES = [
-  'Explicit scope over vague branding.',
-  'Versioned files that an AI system can pin and retrieve reliably.',
-  'Public download links with stable filenames.',
-  'Short human summaries before machine-facing detail.',
-];
-
 export default function ContextPacksPage() {
   return (
     <main className="max-w-5xl mx-auto px-6 py-12">
@@ -136,9 +130,8 @@ export default function ContextPacksPage() {
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
-          <Pill icon={<FileStack className="w-4 h-4" />}>AI-ready reference bundles</Pill>
           <Pill icon={<ShieldCheck className="w-4 h-4" />}>Versioned & stable</Pill>
-          <Pill icon={<Boxes className="w-4 h-4" />}>Retrieval-friendly naming</Pill>
+          <Pill icon={<Boxes className="w-4 h-4" />}>Modular by domain</Pill>
           <Pill icon={<Sparkles className="w-4 h-4" />}>Explicit scope</Pill>
         </div>
 
@@ -163,7 +156,7 @@ export default function ContextPacksPage() {
           <InfoCard
             icon={<ShieldCheck className="w-6 h-6 text-[#1e6864]" />}
             title="Stable retrieval surface"
-            body="Version numbers and standardized filenames make the packs easier to store, pin, compare, and update over time."
+            body="Version numbers make the packs easier to store, pin, compare, and update over time."
           />
           <InfoCard
             icon={<Boxes className="w-6 h-6 text-[#1e6864]" />}
@@ -178,33 +171,11 @@ export default function ContextPacksPage() {
         </div>
       </section>
 
-      <section className="mb-14">
-        <h2 className="text-2xl font-bold text-slate-900 mb-4">Naming rules</h2>
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 md:p-8">
-          <p className="text-slate-700 leading-relaxed">
-            Standard pattern:{' '}
-            <code className="text-sm bg-white border border-slate-200 rounded px-2 py-1">
-              domain-context-pack--scope--vX.Y.txt
-            </code>
-          </p>
-          <ul className="mt-5 space-y-3 text-slate-700">
-            {PRINCIPLES.map((item) => (
-              <li key={item} className="flex gap-3">
-                <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white border border-slate-200 text-[11px] font-bold">
-                  •
-                </span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       <section className="mb-6">
         <h2 className="text-2xl font-bold text-slate-900 mb-4">Available packs</h2>
         <p className="text-slate-600 mb-8 max-w-3xl leading-relaxed">
-          Each bundle has a public filename, a stable version label, and a short statement of scope.
-          Keep the summary human-readable; keep the filename machine-friendly.
+          Each pack has a clear title, a short statement of scope, and a stable version. The page
+          stays human-readable; the download stays machine-usable.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -232,11 +203,6 @@ function PackCard({ pack }: { pack: ContextPack }) {
 
       <p className="mt-4 text-slate-600 leading-relaxed">{pack.description}</p>
 
-      <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-3">
-        <p className="text-xs uppercase tracking-wide text-slate-500 mb-1">Filename</p>
-        <code className="text-sm text-slate-800 break-all">{pack.file}</code>
-      </div>
-
       <div className="mt-5 flex flex-wrap gap-3">
         <a
           href={`/context-packs/${pack.file}`}
@@ -245,14 +211,15 @@ function PackCard({ pack }: { pack: ContextPack }) {
           Download <Download className="w-4 h-4 ml-2" />
         </a>
 
-        {pack.relatedHref && pack.relatedLabel ? (
+        {pack.links?.map((link) => (
           <Link
-            href={pack.relatedHref}
+            key={link.href}
+            href={link.href}
             className="inline-flex items-center px-4 py-2 rounded-md border border-slate-200 text-slate-900 hover:border-slate-400 transition-colors"
           >
-            {pack.relatedLabel} <ArrowRight className="w-4 h-4 ml-2" />
+            {link.label} <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
-        ) : null}
+        ))}
       </div>
     </article>
   );
