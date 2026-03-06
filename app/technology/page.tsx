@@ -5,11 +5,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Technology — kOA capabilities (public overview)",
   description:
-    "What the kOA technology stack enables: verifiable knowledge artifacts (Kristals), guided navigation (Ariane), multilingual output, structured input, deterministic governance computation, and offline-first execution.",
+    "What the kOA technology stack enables: verifiable knowledge artifacts (Kristals), guided navigation (Ariane), multilingual output, structured input, deterministic governance computation, offline-first execution, and downloadable AI-ready Context Packs.",
   alternates: { canonical: "/technology" },
 };
 
 type SubLink = { href: string; label: string };
+
 type TechItem = {
   href: string;
   title: string;
@@ -18,6 +19,27 @@ type TechItem = {
   repo?: { href: string; label: string };
   sublinks?: SubLink[];
 };
+
+type ResourceItem = {
+  href: string;
+  title: string;
+  tag: string;
+  description: string;
+  sublinks?: SubLink[];
+};
+
+const RESOURCES: ResourceItem[] = [
+  {
+    href: "/technology/context-packs",
+    title: "Context Packs",
+    tag: "AI Context",
+    description:
+      "Downloadable AI-ready reference bundles: structured context for retrieval, orchestration, and constrained generation. Each pack groups a domain corpus into a bounded artifact with stable naming, explicit scope, and versioned files.",
+    sublinks: [
+      { href: "/technology/context-packs", label: "Browse packs →" },
+    ],
+  },
+];
 
 const ITEMS: TechItem[] = [
   // 1. Kristal
@@ -52,7 +74,10 @@ const ITEMS: TechItem[] = [
     tag: "Structured Input",
     description:
       "Structured intake from messy text. SenTient helps convert natural language into checkable statements that can be reviewed, corrected, and reused—turning “claims” into accountable knowledge.",
-    repo: { href: "https://github.com/Rejean-McCormick/SenTient", label: "Rejean-McCormick/SenTient" },
+    repo: {
+      href: "https://github.com/Rejean-McCormick/SenTient",
+      label: "Rejean-McCormick/SenTient",
+    },
   },
   // 4. SwarmCraft
   {
@@ -61,7 +86,10 @@ const ITEMS: TechItem[] = [
     tag: "Continuity",
     description:
       "Continuity for long-running work. Helps keep multi-step projects coherent over time, with repeatable scaffolds and durable memory (including offline-friendly workflows when required).",
-    repo: { href: "https://github.com/Rejean-McCormick/SwarmCraft", label: "Rejean-McCormick/SwarmCraft" },
+    repo: {
+      href: "https://github.com/Rejean-McCormick/SwarmCraft",
+      label: "Rejean-McCormick/SwarmCraft",
+    },
   },
   // 5. Ariane
   {
@@ -70,7 +98,10 @@ const ITEMS: TechItem[] = [
     tag: "Guided Navigation",
     description:
       "Guided navigation for complex systems. Ariane turns interfaces into structured maps so assistants can reliably walk users through real workflows—step by step, explainably.",
-    repo: { href: "https://github.com/Rejean-McCormick/ariane", label: "Rejean-McCormick/ariane" },
+    repo: {
+      href: "https://github.com/Rejean-McCormick/ariane",
+      label: "Rejean-McCormick/ariane",
+    },
   },
   // 6. Âme Artificielle
   {
@@ -90,7 +121,10 @@ const ITEMS: TechItem[] = [
     tag: "Determinism",
     description:
       "Deterministic computation for governance. The same inputs yield the same outputs, enabling verification and reproducibility where legitimacy matters (e.g., ballots, tallies, allocations, simulations).",
-    repo: { href: "https://github.com/Rejean-McCormick/vm-engine", label: "Rejean-McCormick/vm-engine" },
+    repo: {
+      href: "https://github.com/Rejean-McCormick/vm-engine",
+      label: "Rejean-McCormick/vm-engine",
+    },
   },
 ];
 
@@ -105,16 +139,17 @@ export default function TechIndex() {
         <h1 className="text-4xl font-bold mb-4 text-gray-900">Technology</h1>
 
         <p className="text-xl text-gray-600">
-          This stack is organized around <strong>capabilities</strong>—what the system lets communities and
-          organizations do—rather than internal technical mechanisms. The focus is:{" "}
-          <strong>portable knowledge</strong>, <strong>legitimate decisions</strong>, and{" "}
-          <strong>reliable execution</strong>, under real-world constraints (offline, auditable, governable).
+          This stack is organized around <strong>capabilities</strong>—what the system lets
+          communities and organizations do—rather than internal technical mechanisms. The focus
+          is: <strong>portable knowledge</strong>, <strong>legitimate decisions</strong>, and{" "}
+          <strong>reliable execution</strong>, under real-world constraints (offline, auditable,
+          governable).
         </p>
 
         <div className="mt-5 p-4 rounded-md border border-gray-200 bg-white">
           <p className="text-sm text-gray-700">
-            <strong>Reading guide:</strong> from <em>verifiable knowledge</em> → <em>navigation</em> →{" "}
-            <em>decision & verification</em> → <em>execution & continuity</em>.
+            <strong>Reading guide:</strong> from <em>verifiable knowledge</em> →{" "}
+            <em>navigation</em> → <em>decision & verification</em> → <em>execution & continuity</em>.
           </p>
         </div>
 
@@ -150,6 +185,44 @@ export default function TechIndex() {
         </nav>
       </header>
 
+      <section className="mb-12" aria-label="AI-ready documentation resources">
+        <div className="mb-5">
+          <h2 className="text-2xl font-bold text-gray-900">AI-ready documentation</h2>
+          <p className="text-gray-600 mt-2">
+            Structured reference bundles intended for AI use: retrieval, orchestration, constrained
+            generation, and durable machine-readable context.
+          </p>
+        </div>
+
+        <div className="grid gap-6">
+          {RESOURCES.map((item) => (
+            <div key={item.href} className={CARD}>
+              <Link href={item.href} className="block">
+                <div className="flex justify-between items-center mb-2 gap-3">
+                  <strong className="text-xl text-primary group-hover:underline">{item.title}</strong>
+                  <span className={PILL}>{item.tag}</span>
+                </div>
+                <p className="text-gray-700 mb-4">{item.description}</p>
+              </Link>
+
+              {item.sublinks?.length ? (
+                <div className="mt-3 flex flex-wrap gap-3">
+                  {item.sublinks.map((s) => (
+                    <Link
+                      key={s.href}
+                      href={s.href}
+                      className="text-sm text-gray-500 hover:text-primary font-mono"
+                    >
+                      {s.label}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="grid gap-6" aria-label="Technology capabilities">
         {ITEMS.map((item) => (
           <div key={item.href} className={CARD}>
@@ -164,7 +237,11 @@ export default function TechIndex() {
             {item.sublinks?.length ? (
               <div className="mt-3 flex flex-wrap gap-3">
                 {item.sublinks.map((s) => (
-                  <Link key={s.href} href={s.href} className="text-sm text-gray-500 hover:text-primary font-mono">
+                  <Link
+                    key={s.href}
+                    href={s.href}
+                    className="text-sm text-gray-500 hover:text-primary font-mono"
+                  >
                     {s.label}
                   </Link>
                 ))}

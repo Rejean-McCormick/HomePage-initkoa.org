@@ -60,6 +60,7 @@ const NAV_ITEMS = [
     icon: <Cpu className="w-4 h-4" />,
     children: [
       { label: 'Overview', desc: 'The Deep Tech Stack', path: '/technology' },
+      { label: 'Context Packs', desc: 'AI-ready reference bundles', path: '/technology/context-packs' },
       { label: 'Kristal', desc: 'Verifiable semantic file format', path: '/technology/kristal' },
       { label: 'Architect', desc: 'Generative Output', path: '/technology/architect' },
       { label: 'SenTient', desc: 'Input Processing', path: '/technology/sentient' },
@@ -70,7 +71,6 @@ const NAV_ITEMS = [
     ],
   },
 
-  // ✅ Kréature with dropdown (keeps the heart icon)
   {
     label: 'Kréature',
     path: '/kreature',
@@ -84,14 +84,12 @@ const NAV_ITEMS = [
       { label: 'Rituels', desc: 'La méthode', path: '/kreature/rituels' },
       { label: 'Parcours', desc: "Portes d'entrée", path: '/kreature/parcours' },
 
-      // Repères
       { label: 'Glossaire', desc: 'Définitions', path: '/kreature/reperes/glossaire' },
       { label: 'Pont Technique', desc: 'Métaphore ↔ code', path: '/kreature/reperes/pont-technique' },
       { label: 'FAQ', desc: 'Questions fréquentes', path: '/kreature/reperes/faq' },
     ],
   },
 
-  // ✅ Play section beside Kréature (no dropdown, orange/gold play-circle)
   {
     label: 'Play',
     path: '/play',
@@ -100,7 +98,6 @@ const NAV_ITEMS = [
     subtitle: '(EN/FR)',
   },
 
-  // ✅ Links beside Play (no dropdown, no button styling)
   {
     label: 'Links',
     path: '/links',
@@ -110,12 +107,35 @@ const NAV_ITEMS = [
   },
 ];
 
+type NavChild = {
+  label: string;
+  desc?: string;
+  path: string;
+};
+
+type NavItem = {
+  label: string;
+  path: string;
+  icon: React.ReactNode;
+  children?: NavChild[];
+  highlight?: boolean;
+  subtitle?: string;
+  accent?: 'gold' | 'violet';
+};
+
+type SearchResult = {
+  label: string;
+  path: string;
+  desc?: string;
+  parent?: string;
+  type: 'Section' | 'Page';
+};
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  // --- SEARCH STATE ---
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -143,6 +163,7 @@ export default function Header() {
       }
       if (e.key === 'Escape') setIsSearchOpen(false);
     };
+
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
@@ -155,19 +176,32 @@ export default function Header() {
     }
   }, [isSearchOpen]);
 
-  const searchResults = useMemo(() => {
+  const searchResults = useMemo<SearchResult[]>(() => {
     if (!searchQuery.trim()) return [];
-    const query = searchQuery.toLowerCase();
-    const results: any[] = [];
 
-    NAV_ITEMS.forEach((section: any) => {
+    const query = searchQuery.toLowerCase();
+    const results: SearchResult[] = [];
+
+    NAV_ITEMS.forEach((section: NavItem) => {
       if (section.label.toLowerCase().includes(query)) {
-        results.push({ ...section, type: section.children ? 'Section' : 'Page' });
+        results.push({
+          label: section.label,
+          path: section.path,
+          type: section.children ? 'Section' : 'Page',
+        });
       }
+
       if (section.children) {
-        section.children.forEach((child: any) => {
-          if (child.label.toLowerCase().includes(query) || child.desc.toLowerCase().includes(query)) {
-            results.push({ ...child, parent: section.label, type: 'Page' });
+        section.children.forEach((child: NavChild) => {
+          const desc = child.desc ?? '';
+          if (child.label.toLowerCase().includes(query) || desc.toLowerCase().includes(query)) {
+            results.push({
+              label: child.label,
+              path: child.path,
+              desc: child.desc,
+              parent: section.label,
+              type: 'Page',
+            });
           }
         });
       }
@@ -181,14 +215,14 @@ export default function Header() {
     setIsSearchOpen(false);
   };
 
-  const getNavColorClass = (item: any) => {
+  const getNavColorClass = (item: NavItem) => {
     if (item.accent === 'gold') return 'text-amber-600 hover:text-amber-700';
     if (item.accent === 'violet') return 'text-violet-600 hover:text-violet-700';
     if (item.highlight) return 'text-pink-600 hover:text-pink-700';
     return 'text-slate-600 hover:text-slate-900';
   };
 
-  const getMobileColorClass = (item: any) => {
+  const getMobileColorClass = (item: NavItem) => {
     if (item.accent === 'gold') return 'text-amber-600';
     if (item.accent === 'violet') return 'text-violet-600';
     if (item.highlight) return 'text-pink-600';
@@ -203,7 +237,6 @@ export default function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          {/* LOGO */}
           <Link href="/" className="flex items-center gap-3 group z-50">
             <div className="relative w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-105">
               <Image src="/LogoK.svg" alt="King Klown Logo" width={40} height={40} className="object-contain" />
@@ -216,9 +249,8 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-8">
-            {NAV_ITEMS.map((item: any) => (
+            {NAV_ITEMS.map((item: NavItem) => (
               <div
                 key={item.label}
                 className="relative group"
@@ -237,11 +269,10 @@ export default function Header() {
                   {item.subtitle && <span className="text-[10px] font-normal opacity-80 -mt-0.5">{item.subtitle}</span>}
                 </Link>
 
-                {/* DROPDOWN */}
                 {item.children && activeDropdown === item.label && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-64">
                     <div className="bg-white rounded-xl border border-slate-100 shadow-xl p-2 overflow-hidden ring-1 ring-slate-900/5">
-                      {item.children.map((sub: any) => (
+                      {item.children.map((sub: NavChild) => (
                         <Link
                           key={sub.path}
                           href={sub.path}
@@ -258,7 +289,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* UTILITIES (Search last on the right) */}
           <div className="hidden lg:flex items-center">
             <button
               onClick={() => setIsSearchOpen(true)}
@@ -269,7 +299,6 @@ export default function Header() {
             </button>
           </div>
 
-          {/* MOBILE TOGGLE */}
           <button
             className="lg:hidden p-2 text-slate-900 hover:bg-slate-100 rounded-md transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -279,11 +308,10 @@ export default function Header() {
           </button>
         </div>
 
-        {/* MOBILE MENU */}
         {mobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 top-[72px] bg-white border-t border-slate-100 p-6 overflow-y-auto pb-20 animate-in slide-in-from-top-2 duration-200 z-40">
             <div className="flex flex-col space-y-6">
-              {NAV_ITEMS.map((item: any) => (
+              {NAV_ITEMS.map((item: NavItem) => (
                 <div key={item.label}>
                   <Link
                     href={item.path}
@@ -299,7 +327,7 @@ export default function Header() {
 
                   {item.children && (
                     <div className="pl-7 space-y-3 border-l-2 border-slate-100 ml-2">
-                      {item.children.map((sub: any) => (
+                      {item.children.map((sub: NavChild) => (
                         <Link
                           key={sub.path}
                           href={sub.path}
@@ -331,7 +359,6 @@ export default function Header() {
         )}
       </header>
 
-      {/* SEARCH MODAL */}
       {isSearchOpen && (
         <div
           className="fixed inset-0 z-[100] bg-slate-900/40 backdrop-blur-sm flex items-start justify-center pt-[15vh] px-4 animate-in fade-in duration-200"
@@ -346,7 +373,7 @@ export default function Header() {
               <input
                 ref={searchInputRef}
                 type="text"
-                placeholder="Search documentation, initiatives, concepts..."
+                placeholder="Search documentation, context packs, initiatives, concepts..."
                 className="flex-1 text-lg outline-none text-slate-900 placeholder:text-slate-400"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -361,8 +388,8 @@ export default function Header() {
                 <div className="py-12 text-center text-slate-400">
                   <p className="text-sm">Type to search...</p>
                   <div className="flex justify-center gap-2 mt-4 text-xs">
-                    <span className="bg-slate-50 px-2 py-1 rounded border border-slate-100">Manifesto</span>
-                    <span className="bg-slate-50 px-2 py-1 rounded border border-slate-100">Peace Plan</span>
+                    <span className="bg-slate-50 px-2 py-1 rounded border border-slate-100">Context Packs</span>
+                    <span className="bg-slate-50 px-2 py-1 rounded border border-slate-100">Kristal</span>
                     <span className="bg-slate-50 px-2 py-1 rounded border border-slate-100">Pi Theory</span>
                   </div>
                 </div>
@@ -370,7 +397,7 @@ export default function Header() {
                 <div className="space-y-1">
                   {searchResults.map((result, idx) => (
                     <button
-                      key={idx}
+                      key={`${result.path}-${idx}`}
                       onClick={() => handleSearchNavigate(result.path)}
                       className="w-full text-left flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 group transition-colors"
                     >

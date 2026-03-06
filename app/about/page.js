@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata = {
   title: "About — Réjean McCormick",
   description:
-    "Réjean McCormick — socio-technical architect building offline-capable civic utilities for learning, coordination, and governable decision-making.",
+    "Réjean McCormick — socio-technical architect building offline-capable civic utilities, technical systems, and AI-ready context packs for learning, coordination, and governable decision-making.",
 };
 
 export default function AboutPage() {
@@ -40,12 +40,22 @@ export default function AboutPage() {
           className="border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors"
         >
           <strong>Technology</strong>
-          <div className="text-sm text-slate-600">Architecture & documentation.</div>
+          <div className="text-sm text-slate-600">Architecture, documentation, and system design.</div>
+        </Link>
+
+        <Link
+          href="/technology/context-packs"
+          className="border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors"
+        >
+          <strong>Context Packs</strong>
+          <div className="text-sm text-slate-600">
+            AI-ready reference bundles for retrieval, generation, and controlled context injection.
+          </div>
         </Link>
 
         <Link
           href="/links"
-          className="border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors"
+          className="border border-slate-200 rounded-lg px-4 py-3 hover:bg-slate-50 transition-colors sm:col-span-2"
         >
           <strong>Full inventory / web presence</strong>
           <div className="text-sm text-slate-600">All hubs, books, music, socials, code.</div>
@@ -64,18 +74,23 @@ export default function AboutPage() {
       <h3>Two-layer public architecture</h3>
       <ul>
         <li>
-          <strong>Operational spine</strong>: platforms and governance mechanics that can be inspected, deployed, and used.
+          <strong>Operational spine</strong>: platforms, infrastructure, and governance mechanics that can be inspected,
+          deployed, and used.
+        </li>
+        <li>
+          <strong>Context layer</strong>: documentation and AI-ready context packs that make system knowledge portable,
+          retrievable, and reusable across tools and environments.
         </li>
         <li>
           <strong>Cultural diffusion</strong>: narrative formats (e.g., “King Klown”) used as pedagogy and onboarding—
-          designed to return to operational clarity (not to replace it).
+          designed to return to operational clarity, not replace it.
         </li>
       </ul>
 
       <h3>Method: “Surréalité”</h3>
       <p>
-        A bridging loop: identify a real problem → transpose into a symbolic/fictional scenario → demonstrate solutions
-        in fiction → return to reality for engagement and implementation.
+        A bridging loop: identify a real problem → transpose into a symbolic or fictional scenario → demonstrate
+        solutions in fiction → return to reality for engagement and implementation.
       </p>
 
       <hr className="my-8 border-slate-200" />
