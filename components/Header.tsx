@@ -86,7 +86,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: 'Overview', desc: 'The Deep Tech Stack', path: '/technology' },
       { label: 'Context Packs', desc: 'AI-ready reference bundles', path: '/technology/context-packs' },
       { label: 'Kristal', desc: 'Verifiable semantic file format', path: '/technology/kristal' },
-      { label: 'Architect', desc: 'Generative Output', path: '/technology/architect' },
+      { label: 'Semantik Architect', desc: 'Generative Output', path: '/technology/architect' },
       { label: 'SenTient', desc: 'Input Processing', path: '/technology/sentient' },
       { label: 'SwarmCraft', desc: 'Narrative Memory', path: '/technology/swarmcraft' },
       { label: 'Ariane', desc: 'UI Graph & Vision', path: '/technology/ariane' },
