@@ -134,10 +134,10 @@ export default function ContextPacksPage() {
         </p>
 
         <p className="mt-4 text-lg text-slate-600 max-w-3xl leading-relaxed">
-          One use is explanatory and verificatory: <em>What is Orgo? How does Konnaxion work?
-          What does Kristal require?</em> Another use is operational: ask the AI to apply a
-          relevant context pack, align with one of the systems, or reason through a conversation
-          using the right principles and constraints.
+          One use is explanatory and verificatory: <em>What is Orgo? How does Konnaxion work? What
+          does Kristal require?</em> Another use is operational: ask the AI to apply a relevant
+          context pack, align with one of the systems, or reason through a conversation using the
+          right principles and constraints.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
@@ -163,7 +163,7 @@ export default function ContextPacksPage() {
           <InfoCard
             icon={<BookOpenText className="w-6 h-6 text-[#1e6864]" />}
             title="Understand a system"
-            body='Load a pack, then ask the AI to explain the system in plain language: what it is, what it does, how it is structured, and where its boundaries are.'
+            body="Load a pack, then ask the AI to explain the system in plain language: what it is, what it does, how it is structured, and where its boundaries are."
           />
           <InfoCard
             icon={<ShieldCheck className="w-6 h-6 text-[#1e6864]" />}
@@ -233,6 +233,7 @@ function PackCard({ pack }: { pack: ContextPack }) {
       <div className="mt-5 flex flex-wrap gap-3">
         <a
           href={`/context-packs/${pack.file}`}
+          download={pack.file}
           className="inline-flex items-center px-4 py-2 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
         >
           Download <Download className="w-4 h-4 ml-2" />
