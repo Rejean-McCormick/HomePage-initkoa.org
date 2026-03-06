@@ -12,9 +12,9 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Context Packs — AI-ready reference bundles | kOA',
+  title: 'Context Packs — AI-first reference bundles | kOA',
   description:
-    'Downloadable AI-ready reference bundles: explicit, versioned context packs for retrieval, prompting, and offline use.',
+    'Versioned context packs meant to be loaded into AI systems first: for understanding, validating, and steering conversations around kOA systems and general design principles.',
   alternates: { canonical: '/technology/context-packs' },
 };
 
@@ -33,7 +33,7 @@ type ContextPack = {
   links?: ContextPackLink[];
 };
 
-const PACKS: ContextPack[] = [
+const SYSTEM_PACKS: ContextPack[] = [
   {
     slug: 'kristal',
     title: 'Kristal Context Pack',
@@ -41,7 +41,8 @@ const PACKS: ContextPack[] = [
     scope: 'Contracts, schemas, query semantics',
     description:
       'Normative contracts, schemas, query semantics, and runtime-pack logic for portable, verifiable knowledge artifacts.',
-  file: 'kristal-context-pack--contracts-schemas-query--v4.0.txt',
+    file: 'kristal-context-pack--contracts-schemas-query--v4.0.txt',
+    links: [{ href: '/technology/kristal', label: 'Kristal' }],
   },
   {
     slug: 'konnaxion',
@@ -74,23 +75,14 @@ const PACKS: ContextPack[] = [
     links: [{ href: '/technology/sentient', label: 'SenTient' }],
   },
   {
-    slug: 'architect',
-    title: 'Abstract Wiki Architect Context Pack',
+    slug: 'semantik-architect',
+    title: 'Semantik Architect Context Pack',
     version: 'v2.5',
     scope: 'Engine and GF integration',
     description:
       'Engine architecture, GF integration, deployment model, and the technical shape of deterministic multilingual rendering.',
     file: 'abstract-wiki-architect-context-pack--engine-and-gf-integration--v2.5.txt',
-    links: [{ href: '/technology/architect', label: 'Architect' }],
-  },
-  {
-    slug: 'gf',
-    title: 'Grammatical Framework Context Pack',
-    version: 'v1.0',
-    scope: 'RGL router and reference',
-    description:
-      'Deterministic constructor routing and reference material for Grammatical Framework and RGL-based generation workflows.',
-    file: 'grammatical-framework-context-pack--rgl-router-and-reference--v1.0.txt',
+    links: [{ href: '/technology/architect', label: 'Semantik Architect' }],
   },
   {
     slug: 'koa-ecosystem',
@@ -100,6 +92,18 @@ const PACKS: ContextPack[] = [
     description:
       'System-level architecture, artifact contracts, workflow boundaries, and Kristal integration across the ecosystem.',
     file: 'koa-digital-ecosystem-context-pack--architecture-and-contracts--v1.0.txt',
+  },
+];
+
+const GENERAL_PACKS: ContextPack[] = [
+  {
+    slug: 'gf',
+    title: 'Grammatical Framework Context Pack',
+    version: 'v1.0',
+    scope: 'RGL router and reference',
+    description:
+      'Deterministic constructor routing and reference material for Grammatical Framework and RGL-based generation workflows.',
+    file: 'grammatical-framework-context-pack--rgl-router-and-reference--v1.0.txt',
   },
   {
     slug: 'senior-architect',
@@ -124,15 +128,23 @@ export default function ContextPacksPage() {
         <h1 className="mt-6 text-4xl md:text-5xl font-bold text-slate-900">Context Packs</h1>
 
         <p className="mt-4 text-xl text-slate-600 max-w-3xl leading-relaxed">
-          Downloadable, versioned reference bundles for AI systems. Each pack is shaped to be
-          <strong> retrievable</strong>, <strong>explicit</strong>, and <strong>stable enough to pin</strong>
-          across prompts, RAG pipelines, and offline workflows.
+          These packs are meant to be given to an <strong>AI system first</strong>. The normal
+          workflow is simple: load a pack into an assistant, then question the assistant from that
+          context.
+        </p>
+
+        <p className="mt-4 text-lg text-slate-600 max-w-3xl leading-relaxed">
+          One use is explanatory and verificatory: <em>What is Orgo? How does Konnaxion work?
+          What does Kristal require?</em> Another use is operational: ask the AI to apply a
+          relevant context pack, align with one of the systems, or reason through a conversation
+          using the right principles and constraints.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
+          <Pill icon={<Sparkles className="w-4 h-4" />}>AI-first</Pill>
           <Pill icon={<ShieldCheck className="w-4 h-4" />}>Versioned & stable</Pill>
           <Pill icon={<Boxes className="w-4 h-4" />}>Modular by domain</Pill>
-          <Pill icon={<Sparkles className="w-4 h-4" />}>Explicit scope</Pill>
+          <Pill icon={<BookOpenText className="w-4 h-4" />}>Human-readable, machine-usable</Pill>
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
@@ -146,40 +158,55 @@ export default function ContextPacksPage() {
       </header>
 
       <section className="mb-14">
-        <h2 className="text-2xl font-bold text-slate-900 mb-4">What these packs are for</h2>
+        <h2 className="text-2xl font-bold text-slate-900 mb-4">How people use them</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <InfoCard
             icon={<BookOpenText className="w-6 h-6 text-[#1e6864]" />}
-            title="Shared operating context"
-            body="A context pack gives an AI system a bounded, named body of reference material instead of a vague pile of notes."
+            title="Understand a system"
+            body='Load a pack, then ask the AI to explain the system in plain language: what it is, what it does, how it is structured, and where its boundaries are.'
           />
           <InfoCard
             icon={<ShieldCheck className="w-6 h-6 text-[#1e6864]" />}
-            title="Stable retrieval surface"
-            body="Version numbers make the packs easier to store, pin, compare, and update over time."
+            title="Validate an interpretation"
+            body="Use the pack to check whether an explanation, plan, or output actually fits the system instead of drifting into invention."
           />
           <InfoCard
             icon={<Boxes className="w-6 h-6 text-[#1e6864]" />}
-            title="Modular by domain"
-            body="A pack can describe a platform, a system component, a method, or a specialized domain without forcing everything into one monolith."
+            title="Supercharge a conversation"
+            body="Give the AI a specific pack and tell it to apply that context during the exchange: principles, constraints, architecture patterns, or domain rules."
           />
           <InfoCard
             icon={<Package className="w-6 h-6 text-[#1e6864]" />}
-            title="Usable online or offline"
-            body="The format is simple enough for public download while remaining practical for local AI workflows and home-made RAG setups."
+            title="Align the assistant"
+            body="Ask the AI to reason as if it were operating inside a specific system: Konnaxion, Orgo, Kristal, or a more general design frame like Senior Architect."
           />
         </div>
       </section>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-bold text-slate-900 mb-4">Available packs</h2>
+      <section className="mb-14">
+        <h2 className="text-2xl font-bold text-slate-900 mb-4">kOA system packs</h2>
         <p className="text-slate-600 mb-8 max-w-3xl leading-relaxed">
-          Each pack has a clear title, a short statement of scope, and a stable version. The page
-          stays human-readable; the download stays machine-usable.
+          These packs are tied directly to the kOA ecosystem and its internal systems. They are
+          useful when you want an AI assistant to understand, validate, or operate in alignment
+          with your stack.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {PACKS.map((pack) => (
+          {SYSTEM_PACKS.map((pack) => (
+            <PackCard key={pack.slug} pack={pack} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-2xl font-bold text-slate-900 mb-4">General packs</h2>
+        <p className="text-slate-600 mb-8 max-w-3xl leading-relaxed">
+          These are not specific to kOA. They are broader operating frames you can load into an AI
+          to shape how it reasons, designs, structures, or generates.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {GENERAL_PACKS.map((pack) => (
             <PackCard key={pack.slug} pack={pack} />
           ))}
         </div>
