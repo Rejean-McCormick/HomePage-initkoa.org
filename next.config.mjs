@@ -17,16 +17,12 @@ const SECURITY_HEADERS = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
-
   async headers() {
     return [
-      // IMPORTANT: règle plus spécifique AVANT la règle globale
       {
-        // couvre /inventory.root.json + /inventory.youtube.catalog.json etc.
         source: "/inventory:rest*",
         headers: [
           ...SECURITY_HEADERS,
-          // Empêche la mise en cache (navigateur + CDN) des inventaires
           { key: "Cache-Control", value: "no-store, max-age=0, must-revalidate" },
         ],
       },
