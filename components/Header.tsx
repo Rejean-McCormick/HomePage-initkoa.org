@@ -21,8 +21,32 @@ import {
   Link2,
 } from 'lucide-react';
 
+type NavChild = {
+  label: string;
+  desc?: string;
+  path: string;
+};
+
+type NavItem = {
+  label: string;
+  path: string;
+  icon: React.ReactNode;
+  children?: NavChild[];
+  highlight?: boolean;
+  subtitle?: string;
+  accent?: 'gold' | 'violet';
+};
+
+type SearchResult = {
+  label: string;
+  path: string;
+  desc?: string;
+  parent?: string;
+  type: 'Section' | 'Page';
+};
+
 // Define navigation structure outside to ensure stability for the search index
-const NAV_ITEMS = [
+const NAV_ITEMS: NavItem[] = [
   {
     label: 'Manifesto',
     path: '/principles',
@@ -70,7 +94,6 @@ const NAV_ITEMS = [
       { label: 'VM-Engine', desc: 'Multi-method vote compiler & simulator', path: '/technology/voting-machine' },
     ],
   },
-
   {
     label: 'Kréature',
     path: '/kreature',
@@ -83,13 +106,11 @@ const NAV_ITEMS = [
       { label: 'Anatomie', desc: 'La structure', path: '/kreature/anatomie' },
       { label: 'Rituels', desc: 'La méthode', path: '/kreature/rituels' },
       { label: 'Parcours', desc: "Portes d'entrée", path: '/kreature/parcours' },
-
       { label: 'Glossaire', desc: 'Définitions', path: '/kreature/reperes/glossaire' },
       { label: 'Pont Technique', desc: 'Métaphore ↔ code', path: '/kreature/reperes/pont-technique' },
       { label: 'FAQ', desc: 'Questions fréquentes', path: '/kreature/reperes/faq' },
     ],
   },
-
   {
     label: 'Play',
     path: '/play',
@@ -97,7 +118,6 @@ const NAV_ITEMS = [
     accent: 'gold',
     subtitle: '(EN/FR)',
   },
-
   {
     label: 'Links',
     path: '/links',
@@ -106,30 +126,6 @@ const NAV_ITEMS = [
     subtitle: '(Social and Hubs)',
   },
 ];
-
-type NavChild = {
-  label: string;
-  desc?: string;
-  path: string;
-};
-
-type NavItem = {
-  label: string;
-  path: string;
-  icon: React.ReactNode;
-  children?: NavChild[];
-  highlight?: boolean;
-  subtitle?: string;
-  accent?: 'gold' | 'violet';
-};
-
-type SearchResult = {
-  label: string;
-  path: string;
-  desc?: string;
-  parent?: string;
-  type: 'Section' | 'Page';
-};
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -182,7 +178,7 @@ export default function Header() {
     const query = searchQuery.toLowerCase();
     const results: SearchResult[] = [];
 
-    NAV_ITEMS.forEach((section: NavItem) => {
+    NAV_ITEMS.forEach((section) => {
       if (section.label.toLowerCase().includes(query)) {
         results.push({
           label: section.label,
@@ -192,7 +188,7 @@ export default function Header() {
       }
 
       if (section.children) {
-        section.children.forEach((child: NavChild) => {
+        section.children.forEach((child) => {
           const desc = child.desc ?? '';
           if (child.label.toLowerCase().includes(query) || desc.toLowerCase().includes(query)) {
             results.push({
@@ -250,7 +246,7 @@ export default function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
-            {NAV_ITEMS.map((item: NavItem) => (
+            {NAV_ITEMS.map((item) => (
               <div
                 key={item.label}
                 className="relative group"
@@ -272,7 +268,7 @@ export default function Header() {
                 {item.children && activeDropdown === item.label && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-64">
                     <div className="bg-white rounded-xl border border-slate-100 shadow-xl p-2 overflow-hidden ring-1 ring-slate-900/5">
-                      {item.children.map((sub: NavChild) => (
+                      {item.children.map((sub) => (
                         <Link
                           key={sub.path}
                           href={sub.path}
@@ -311,12 +307,9 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 top-[72px] bg-white border-t border-slate-100 p-6 overflow-y-auto pb-20 animate-in slide-in-from-top-2 duration-200 z-40">
             <div className="flex flex-col space-y-6">
-              {NAV_ITEMS.map((item: NavItem) => (
+              {NAV_ITEMS.map((item) => (
                 <div key={item.label}>
-                  <Link
-                    href={item.path}
-                    className={`flex items-center gap-3 text-lg font-bold mb-2 ${getMobileColorClass(item)}`}
-                  >
+                  <Link href={item.path} className={`flex items-center gap-3 text-lg font-bold mb-2 ${getMobileColorClass(item)}`}>
                     <div className="flex flex-col">
                       <div className="flex items-center gap-2">
                         {item.icon} {item.label}
@@ -327,7 +320,7 @@ export default function Header() {
 
                   {item.children && (
                     <div className="pl-7 space-y-3 border-l-2 border-slate-100 ml-2">
-                      {item.children.map((sub: NavChild) => (
+                      {item.children.map((sub) => (
                         <Link
                           key={sub.path}
                           href={sub.path}
