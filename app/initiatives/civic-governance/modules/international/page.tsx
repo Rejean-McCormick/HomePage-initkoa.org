@@ -1,7 +1,6 @@
-// app\initiatives\civic-governance\modules\international\page.tsx
 // app/initiatives/civic-governance/modules/international/page.tsx
 import Link from "next/link";
-import { Globe, ArrowRight, Construction } from "lucide-react";
+import { Globe, ArrowRight } from "lucide-react";
 
 export const metadata = {
   title: "International Strategy – kOA",
@@ -40,7 +39,6 @@ export default function InternationalPage() {
               <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-bold">
                 BETA v4.0
               </span>
-              <span className="text-slate-400 text-sm">OkidoWiki</span>
             </div>
 
             <p className="text-slate-600 mb-6 max-w-xl">
@@ -49,25 +47,12 @@ export default function InternationalPage() {
               <strong> Rebuild</strong> (the Construction Olympics).
             </p>
 
-            <div className="text-sm text-purple-700 font-semibold">
-              Open the plan hub →
-            </div>
+            <div className="text-sm text-purple-700 font-semibold">Open the plan hub →</div>
           </div>
 
           <ArrowRight className="w-6 h-6 text-slate-300 group-hover:text-purple-600" />
         </div>
       </Link>
-
-      <div className="mt-12 p-6 bg-slate-50 rounded-xl border border-slate-200 opacity-75">
-        <h3 className="flex items-center font-bold text-slate-700 mb-2">
-          <Construction className="w-4 h-4 mr-2" />
-          Coming Soon
-        </h3>
-        <p className="text-sm text-slate-500">
-          <strong>The Taiwan Protocol:</strong> Applying the “Silicon Shield” theory to distributed
-          sovereignty.
-        </p>
-      </div>
     </main>
   );
 }
