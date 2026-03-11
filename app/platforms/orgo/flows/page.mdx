@@ -1,0 +1,269 @@
+import Link from 'next/link';
+import { Card } from '@/components/Card';
+import {
+  ArrowRight,
+  GitBranch,
+  TimerReset,
+  CheckCircle2,
+  ShieldCheck,
+  Search,
+  Boxes,
+  Scale,
+} from 'lucide-react';
+
+export const metadata = {
+  title: "Orgo Flows — How accountable work moves",
+  description:
+    "The flow layer in Orgo turns incoming signals into accountable cases, routes them to the right function, escalates when time windows are missed, and closes work with evidence and auditability.",
+};
+
+# Flows — how work moves in Orgo
+
+Orgo is not just a queue.
+
+It is a **governed operational flow system**: signals become **cases**, cases generate **tasks**, work is routed to the right function, escalations happen when time windows are missed, and outcomes are recorded with enough evidence to be reviewed later.
+
+This page is the **map of that movement**.
+
+---
+
+## The core flow
+
+In Orgo, the operational path is simple:
+
+1. **A signal arrives**  
+   Email, form, API event, field note, call log, or imported record.
+
+2. **A case is created**  
+   The issue gets a durable identity, ownership context, and an audit surface.
+
+3. **The case is routed**  
+   It goes to the right function, team, or role based on policy.
+
+4. **Tasks are generated or attached**  
+   Work becomes executable and traceable instead of remaining a vague request.
+
+5. **Time windows are enforced**  
+   If the case is not acknowledged or completed on time, Orgo escalates.
+
+6. **Closure is recorded**  
+   The result is explicit: what happened, who acted, and what evidence exists.
+
+7. **Patterns feed reviews**  
+   Repeated failures, delays, or anomalies become review material instead of disappearing.
+
+---
+
+## What this changes in practice
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <Card
+    title="No signal disappears"
+    icon={<Search className="text-primary w-6 h-6" />}
+    description="Messages and requests stop living as scattered fragments. They become accountable work with durable IDs and ownership."
+    href="/platforms/orgo/workflow"
+  />
+
+  <Card
+    title="Routing becomes explicit"
+    icon={<GitBranch className="text-primary w-6 h-6" />}
+    description="Cases move by policy and function, not by whoever happened to see the message first."
+    href="/platforms/orgo/routing-escalation"
+  />
+
+  <Card
+    title="Escalation is built in"
+    icon={<TimerReset className="text-primary w-6 h-6" />}
+    description="Deadlines are not just reminders. Missed windows trigger the next responsible layer."
+    href="/platforms/orgo/routing-escalation"
+  />
+
+  <Card
+    title="Closure becomes provable"
+    icon={<CheckCircle2 className="text-primary w-6 h-6" />}
+    description="Work ends with a recorded outcome, linked evidence, and a traceable operational history."
+    href="/platforms/orgo/security-audit"
+  />
+</div>
+
+---
+
+## The flow stack
+
+Think of Orgo flows as four stacked layers:
+
+### 1) Intake
+How signals enter the system.
+
+This can be:
+- email,
+- forms,
+- APIs,
+- imports,
+- field submissions,
+- or internal reports.
+
+The key principle is simple: **incoming messages are normalized into work candidates**.
+
+### 2) Routing
+How the case finds the right owner.
+
+Routing can use:
+- function,
+- category,
+- location,
+- urgency,
+- confidentiality,
+- and policy rules.
+
+The point is to remove ambiguity from “whose job is this?”
+
+### 3) Execution
+How the case becomes real work.
+
+Execution in Orgo means:
+- assign ownership,
+- create tasks,
+- enforce response windows,
+- track state transitions,
+- and record handoffs.
+
+This is where operations stop being “conversation” and become **governed movement**.
+
+### 4) Review
+How the organization learns.
+
+Orgo does not stop at closure. Repeated failures, slowdowns, duplicates, and policy friction can trigger:
+- reviews,
+- audits,
+- pattern analysis,
+- and structural fixes.
+
+That is how flows become an **improvement system**, not just a ticket trail.
+
+---
+
+## The main flow pages
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <Card
+    title="Workflow"
+    icon={<Boxes className="text-primary w-6 h-6" />}
+    description="The basic signal → case → task → closure model."
+    href="/platforms/orgo/workflow"
+  />
+
+  <Card
+    title="Routing & Escalation"
+    icon={<GitBranch className="text-primary w-6 h-6" />}
+    description="Ownership, queues, response windows, and what happens when deadlines slip."
+    href="/platforms/orgo/routing-escalation"
+  />
+
+  <Card
+    title="Security & Audit"
+    icon={<ShieldCheck className="text-primary w-6 h-6" />}
+    description="How operational proof, permissions, and traceability are kept intact."
+    href="/platforms/orgo/security-audit"
+  />
+
+  <Card
+    title="Reviews"
+    icon={<Scale className="text-primary w-6 h-6" />}
+    description="How repeated failures and patterns become correction loops instead of recurring chaos."
+    href="/platforms/orgo/reviews"
+  />
+</div>
+
+---
+
+## What “good flow design” means in Orgo
+
+A good flow is not just fast.
+
+A good flow is:
+
+- **clear** — ownership is explicit
+- **bounded** — time windows are defined
+- **auditable** — decisions leave a trace
+- **contestable** — errors can be reviewed and corrected
+- **resilient** — the system still functions during degraded conditions
+- **improvable** — recurring friction becomes visible
+
+This is why Orgo flows matter more than ordinary task boards: they are designed for **public accountability and operational continuity**, not just team convenience.
+
+---
+
+## How flows relate to modules
+
+Flows are not domain-specific by themselves.
+
+The same underlying flow can support:
+- a municipality,
+- a hospital,
+- a justice system,
+- a field NGO,
+- or internal organizational operations.
+
+**Modules** adapt the same flow logic to a specific domain vocabulary and operational context.
+
+<div className="mt-8">
+  <Link
+    href="/platforms/orgo/modules"
+    className="inline-flex items-center justify-center px-5 py-3 rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors"
+  >
+    See Orgo Modules <ArrowRight className="w-4 h-4 ml-2" />
+  </Link>
+</div>
+
+---
+
+## Example: one flow in plain language
+
+A resident reports a dangerous water leak.
+
+- the signal arrives,
+- a case is created,
+- it is routed to the correct municipal function,
+- a response timer starts,
+- if nobody acknowledges it, Orgo escalates,
+- a field task is created,
+- closure is recorded with evidence,
+- repeated failures in the same zone can trigger a review.
+
+That is a **flow**:
+not a message,
+not a vague promise,
+but an accountable movement from signal to outcome.
+
+---
+
+## Why this page exists
+
+This page is the navigation layer for Orgo’s operational movement.
+
+Use it when you want to understand:
+- how work moves,
+- where responsibility is enforced,
+- how closures become provable,
+- and how operational patterns become reviewable.
+
+---
+
+## Next
+
+<div className="flex flex-col sm:flex-row gap-4 mt-10">
+  <Link
+    href="/platforms/orgo/workflow"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
+  >
+    Start with workflow <ArrowRight className="w-4 h-4 ml-2" />
+  </Link>
+
+  <Link
+    href="/platforms/orgo/use-cases"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    Explore use cases <ArrowRight className="w-4 h-4 ml-2" />
+  </Link>
+</div>

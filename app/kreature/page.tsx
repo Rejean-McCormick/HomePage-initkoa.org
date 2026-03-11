@@ -55,7 +55,7 @@ const SECTIONS = [
     title: "Les Repères",
     subtitle: "Les Outils",
     desc: "Glossaire, FAQ et le Pont Technique. La table de traduction indispensable pour relier la métaphore au code.",
-    href: "/kreature/reperes/glossaire",
+    href: "/kreature/reperes",
     icon: <Compass className="w-8 h-8 text-slate-700" />,
     color: "bg-slate-50 border-slate-200 hover:border-slate-300",
   },
@@ -97,11 +97,11 @@ export default function KreatureLandingPage() {
           </Link>
 
           <Link
-            href="/kreature/reperes/pont-technique"
+            href="/kreature/reperes"
             className="px-8 py-3 bg-white border border-slate-300 text-slate-700 rounded-full font-bold text-lg hover:bg-slate-50 transition-all flex items-center gap-2"
           >
             <Cpu className="w-5 h-5" />
-            Voir le Code
+            Explorer les Repères
           </Link>
         </div>
       </div>
@@ -142,7 +142,7 @@ export default function KreatureLandingPage() {
               L&apos;Anatomie
             </Link>
             <Link
-              href="/kreature/reperes/glossaire"
+              href="/kreature/reperes"
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-white border border-slate-200 text-slate-700 font-bold hover:bg-slate-50 transition-colors"
             >
               <Compass className="w-4 h-4" />

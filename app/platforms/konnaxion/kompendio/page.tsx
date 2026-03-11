@@ -125,19 +125,19 @@ export default function KonnaxionKompendioPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-6 rounded-xl border border-slate-200 bg-white">
             <div className="flex items-center justify-between gap-4 mb-2">
-              <h3 className="text-lg font-bold text-slate-900">KonnectED — Kompendio</h3>
-              <Status status="available" />
+              <h3 className="text-lg font-bold text-slate-900">KonnectED</h3>
+              <Status status="tbd" />
             </div>
             <p className="text-slate-700">
-              Reference layer for learning standards, credentials, and the “what connects to what” maps that keep the
-              competence system portable.
+              Competence, credentials, and the public learning layer. The module is public, but its dedicated
+              Kompendio reference pack is not yet shipped as a standalone page.
             </p>
             <div className="mt-4">
               <Link
-                href="/platforms/konnaxion/modules/konnected/kompendio"
+                href="/platforms/konnaxion/konnected"
                 className="text-indigo-700 font-semibold hover:underline"
               >
-                Open KonnectED Kompendio →
+                Explore KonnectED →
               </Link>
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function KonnaxionKompendioPage() {
             </p>
             <div className="mt-4">
               <Link
-                href="/platforms/konnaxion/modules/keen-konnect/kompendio"
+                href="/platforms/konnaxion/keenkonnect/kompendio"
                 className="text-indigo-700 font-semibold hover:underline"
               >
                 Open keenKonnect Kompendio →
@@ -171,7 +171,7 @@ export default function KonnaxionKompendioPage() {
             </p>
             <div className="mt-4">
               <Link
-                href="/platforms/konnaxion/modules/ethikos/kompendio"
+                href="/platforms/konnaxion/ethikos/kompendio"
                 className="text-indigo-700 font-semibold hover:underline"
               >
                 View placeholder page →
@@ -181,7 +181,7 @@ export default function KonnaxionKompendioPage() {
 
           <div className="p-6 rounded-xl border border-slate-200 bg-white">
             <div className="flex items-center justify-between gap-4 mb-2">
-              <h3 className="text-lg font-bold text-slate-900">Kollective Intelligence — Kompendio</h3>
+              <h3 className="text-lg font-bold text-slate-900">Kollective Intelligence</h3>
               <Status status="tbd" />
             </div>
             <p className="text-slate-700">
@@ -190,10 +190,10 @@ export default function KonnaxionKompendioPage() {
             </p>
             <div className="mt-4">
               <Link
-                href="/platforms/konnaxion/modules/kollective-intelligence/kompendio"
+                href="/platforms/konnaxion/kollective-intelligence"
                 className="text-indigo-700 font-semibold hover:underline"
               >
-                View placeholder page →
+                Explore module →
               </Link>
             </div>
           </div>

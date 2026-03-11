@@ -66,6 +66,9 @@ export default function KonnaxionPage() {
           <span className="text-xs px-3 py-1 rounded-full border border-slate-200 text-slate-500 bg-white">
             Durable institutional memory
           </span>
+          <span className="text-xs px-3 py-1 rounded-full border border-slate-200 text-slate-500 bg-white">
+            Public coordination + builder continuity
+          </span>
         </div>
       </section>
 
@@ -82,10 +85,16 @@ export default function KonnaxionPage() {
               </p>
             </div>
             <div className="hidden sm:flex gap-3">
-              <Link href="/platforms/konnaxion/technical#kintsugi" className="text-sm font-mono text-primary hover:underline">
+              <Link
+                href="/platforms/konnaxion/technical#kintsugi"
+                className="text-sm font-mono text-primary hover:underline"
+              >
                 What is Kintsugi →
               </Link>
-              <Link href="/platforms/konnaxion/technical#kompendio" className="text-sm font-mono text-primary hover:underline">
+              <Link
+                href="/platforms/konnaxion/technical#kompendio"
+                className="text-sm font-mono text-primary hover:underline"
+              >
                 What is Kompendio →
               </Link>
             </div>
@@ -155,7 +164,10 @@ export default function KonnaxionPage() {
               </p>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/platforms/konnaxion/keenkonnect#kintsugi" className="font-bold text-primary hover:underline">
+                  <Link
+                    href="/platforms/konnaxion/keenkonnect#kintsugi"
+                    className="font-bold text-primary hover:underline"
+                  >
                     Kintsugi (Operate)
                   </Link>
                   <p className="text-sm text-slate-600">
@@ -163,7 +175,10 @@ export default function KonnaxionPage() {
                   </p>
                 </li>
                 <li>
-                  <Link href="/platforms/konnaxion/keenkonnect#kompendio" className="font-bold text-primary hover:underline">
+                  <Link
+                    href="/platforms/konnaxion/keenkonnect#kompendio"
+                    className="font-bold text-primary hover:underline"
+                  >
                     Kompendio (Reference)
                   </Link>
                   <p className="text-sm text-slate-600">
@@ -192,8 +207,8 @@ export default function KonnaxionPage() {
                     Smart Vote
                   </Link>
                   <p className="text-sm text-slate-600">
-                    The decision engine: vote modalities + weighting + published readings (e.g., baseline vs merit-weighted),
-                    with audit artifacts and contestability.
+                    The decision engine: vote modalities + weighting + published readings (e.g., baseline vs
+                    merit-weighted), with audit artifacts and contestability.
                   </p>
                 </div>
 
@@ -205,21 +220,61 @@ export default function KonnaxionPage() {
                     EkoH
                   </Link>
                   <p className="text-sm text-slate-600">
-                    The expertise + ethics ledger: domain score vectors, ethics multipliers, privacy levels, and audit context
-                    that Smart Vote (and other modules) consume.
+                    The expertise + ethics ledger: domain score vectors, ethics multipliers, privacy levels, and audit
+                    context that Smart Vote (and other modules) consume.
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Kreative (TBD) */}
-            <div className="md:col-span-2 border border-dashed border-slate-200 rounded-sm p-6 bg-white">
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Kreative (TBD)</h3>
+        {/* CROSS-CUTTING HUBS */}
+        <section>
+          <div className="mb-8">
+            <h2 className="text-3xl font-serif font-medium text-slate-900">Cross-cutting hubs</h2>
+            <p className="text-slate-500 mt-2">
+              These pages explain how the modules connect over time: onboarding, preservation, and builder-facing
+              architecture.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link
+              href="/platforms/konnaxion/journeys"
+              className="block border border-slate-200 rounded-sm p-6 hover:border-slate-400 transition-colors no-underline"
+            >
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Journeys</h3>
               <p className="text-sm text-slate-600">
-                Not published yet. Intended as the curated commons: preservation and discovery of validated outputs (a
-                limited library, not a feed).
+                Role-based pathways through Konnaxion: how a citizen, builder, learner, or coordinator moves through the
+                ecosystem without losing context.
               </p>
-            </div>
+              <span className="inline-block mt-4 text-sm font-mono text-primary">Open journeys →</span>
+            </Link>
+
+            <Link
+              href="/platforms/konnaxion/kreative"
+              className="block border border-slate-200 rounded-sm p-6 hover:border-slate-400 transition-colors no-underline"
+            >
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Kreative</h3>
+              <p className="text-sm text-slate-600">
+                The curated commons: preservation, discovery, and reuse of validated outputs, references, and civic
+                artifacts.
+              </p>
+              <span className="inline-block mt-4 text-sm font-mono text-primary">Open Kreative →</span>
+            </Link>
+
+            <Link
+              href="/platforms/konnaxion/technical"
+              className="block border border-slate-200 rounded-sm p-6 hover:border-slate-400 transition-colors no-underline"
+            >
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Technical architecture</h3>
+              <p className="text-sm text-slate-600">
+                Builder-facing reference for service boundaries, Kintsugi vs Kompendio, and the operational shape of the
+                platform.
+              </p>
+              <span className="inline-block mt-4 text-sm font-mono text-primary">Open technical guide →</span>
+            </Link>
           </div>
         </section>
 

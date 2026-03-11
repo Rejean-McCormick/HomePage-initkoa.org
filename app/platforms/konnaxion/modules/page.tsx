@@ -1,5 +1,5 @@
 // app/platforms/konnaxion/modules/page.tsx
-import Link from 'next/link';
+import Link from "next/link";
 import {
   GraduationCap,
   UsersRound,
@@ -7,12 +7,15 @@ import {
   Hammer,
   Layers,
   ArrowRight,
-} from 'lucide-react';
+} from "lucide-react";
 
 export const metadata = {
-  title: 'Konnaxion Modules — The kOA Initiative',
+  title: "Konnaxion Modules — The kOA Initiative",
   description:
-    'The four civic modules of Konnaxion: competence, deliberation, collective decision, and execution—plus the cross-cutting Kintsugi and Kompendio layers.',
+    "The four civic modules of Konnaxion: competence, deliberation, collective decision, and execution—plus the cross-cutting Kintsugi and Kompendio layers.",
+  alternates: {
+    canonical: "/platforms/konnaxion/modules",
+  },
 };
 
 type ModuleCard = {
@@ -23,60 +26,57 @@ type ModuleCard = {
   icon: React.ReactNode;
   kintsugiHref?: string;
   kompendioHref?: string;
-  kompendioStatus?: 'Available' | 'TBD';
+  kompendioStatus?: "Available" | "TBD";
 };
 
 const modules: ModuleCard[] = [
   {
-    title: 'KonnectED',
-    subtitle: 'Competence',
+    title: "KonnectED",
+    subtitle: "Competence",
     description:
-      'A learning and credential loop that turns training into verified capability: learn, validate, certify, and improve—without vendor lock-in.',
-    href: '/platforms/konnaxion/konnected',
+      "A learning and credential loop that turns training into verified capability: learn, validate, certify, and improve—without vendor lock-in.",
+    href: "/platforms/konnaxion/konnected",
     icon: <GraduationCap className="w-7 h-7" />,
-    kintsugiHref: '/platforms/konnaxion/konnected/kintsugi',
-    kompendioHref: '/platforms/konnaxion/konnected/kompendio',
-    kompendioStatus: 'Available',
+    kintsugiHref: "/platforms/konnaxion/konnected/kintsugi",
+    kompendioHref: "/platforms/konnaxion/konnected/kompendio",
+    kompendioStatus: "Available",
   },
   {
-    title: 'ethiKos',
-    subtitle: 'Deliberation',
+    title: "ethiKos",
+    subtitle: "Deliberation",
     description:
-      'A structured civic process that converts messy input into decision-ready outcomes: discovery, deliberation, drafting, decision, and accountability.',
-    href: '/platforms/konnaxion/ethikos',
+      "A structured civic process that converts messy input into decision-ready outcomes: discovery, deliberation, drafting, decision, and accountability.",
+    href: "/platforms/konnaxion/ethikos",
     icon: <UsersRound className="w-7 h-7" />,
-    kintsugiHref: '/platforms/konnaxion/ethikos/kintsugi',
-    // kompendio is explicitly TBD in your current planning
-    kompendioStatus: 'TBD',
+    kintsugiHref: "/platforms/konnaxion/ethikos/kintsugi",
+    kompendioStatus: "TBD",
   },
   {
-    title: 'Kollective Intelligence',
-    subtitle: 'Decision Readings',
+    title: "Kollective Intelligence",
+    subtitle: "Decision Readings",
     description:
-      'Collective decision interfaces (SmartVote + EkoH) that keep baseline legitimacy visible while enabling transparent “quality lenses” for complex choices.',
-    href: '/platforms/konnaxion/kollective-intelligence',
+      "Collective decision interfaces (SmartVote + EkoH) that keep baseline legitimacy visible while enabling transparent “quality lenses” for complex choices.",
+    href: "/platforms/konnaxion/kollective-intelligence",
     icon: <Vote className="w-7 h-7" />,
-    kintsugiHref: '/platforms/konnaxion/kollective-intelligence/kintsugi',
-    // no Kompendio file exists for this module in the current set
-    kompendioStatus: 'TBD',
+    kintsugiHref: "/platforms/konnaxion/kollective-intelligence/kintsugi",
+    kompendioStatus: "TBD",
   },
   {
-    title: 'keenKonnect',
-    subtitle: 'Build & Execute',
+    title: "keenKonnect",
+    subtitle: "Build & Execute",
     description:
-      'A builder workspace for real delivery: coordination, artifacts, and preservation—so decisions become implemented work with durable outputs.',
-    href: '/platforms/konnaxion/keen-konnect',
+      "A builder workspace for real delivery: coordination, artifacts, and preservation—so decisions become implemented work with durable outputs.",
+    href: "/platforms/konnaxion/keenkonnect",
     icon: <Hammer className="w-7 h-7" />,
-    kintsugiHref: '/platforms/konnaxion/keen-konnect/kintsugi',
-    kompendioHref: '/platforms/konnaxion/keen-konnect/kompendio',
-    kompendioStatus: 'Available',
+    kintsugiHref: "/platforms/konnaxion/keenkonnect/kintsugi",
+    kompendioHref: "/platforms/konnaxion/keenkonnect/kompendio",
+    kompendioStatus: "Available",
   },
 ];
 
 export default function KonnaxionModulesPage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
-      {/* Header */}
       <div className="mb-12">
         <div className="flex items-center gap-3 mb-4">
           <div className="p-2 rounded-lg bg-slate-100 text-slate-700">
@@ -97,7 +97,6 @@ export default function KonnaxionModulesPage() {
         </p>
       </div>
 
-      {/* Cross-cutting layers */}
       <div className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6">
         <Link
           href="/platforms/konnaxion/kintsugi"
@@ -143,7 +142,6 @@ export default function KonnaxionModulesPage() {
         </Link>
       </div>
 
-      {/* Modules grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {modules.map((m) => (
           <div
@@ -159,14 +157,14 @@ export default function KonnaxionModulesPage() {
                   <p className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">
                     {m.subtitle}
                   </p>
-                  <h3 className="text-2xl font-semibold text-slate-900">
+                  <h2 className="text-2xl font-semibold text-slate-900">
                     <Link
                       href={m.href}
                       className="hover:underline underline-offset-4"
                     >
                       {m.title}
                     </Link>
-                  </h3>
+                  </h2>
                 </div>
               </div>
 
@@ -182,6 +180,13 @@ export default function KonnaxionModulesPage() {
             <p className="text-slate-600 mt-4">{m.description}</p>
 
             <div className="mt-6 flex flex-wrap gap-2">
+              <Link
+                href={m.href}
+                className="text-xs font-mono px-3 py-1 rounded-full border border-slate-200 text-slate-700 hover:border-slate-900 transition-colors"
+              >
+                Module
+              </Link>
+
               {m.kintsugiHref ? (
                 <Link
                   href={m.kintsugiHref}
@@ -200,7 +205,7 @@ export default function KonnaxionModulesPage() {
                 </Link>
               ) : (
                 <span className="text-xs font-mono px-3 py-1 rounded-full border border-slate-200 text-slate-500">
-                  Kompendio: {m.kompendioStatus ?? 'TBD'}
+                  Kompendio: {m.kompendioStatus ?? "TBD"}
                 </span>
               )}
             </div>
@@ -208,12 +213,14 @@ export default function KonnaxionModulesPage() {
         ))}
       </div>
 
-      {/* Coming soon */}
       <div className="mt-12 p-6 rounded-xl bg-slate-50 border border-slate-200">
         <p className="text-sm text-slate-600">
-          <span className="font-semibold text-slate-900">Commons (Kreative)</span>{' '}
-          is not developed yet. When it ships, it will hold the curated commons:
-          a limited library of validated outputs, preserved for reuse.
+          <span className="font-semibold text-slate-900">
+            Commons (Kreative)
+          </span>{" "}
+          is not part of this modules grid yet. When it is expanded, it will
+          hold the curated commons: a limited library of validated outputs,
+          preserved for reuse.
         </p>
       </div>
     </main>

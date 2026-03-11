@@ -127,8 +127,37 @@ export default function SwarmCraftPage() {
               The atomic unit of work is the <strong>Part</strong>. Chapters are simply rollups of 1–6 Parts. This allows for small, stable prompt slices and targeted regeneration.
             </Card>
             <Card title="Slice-by-Slice Hydration">
-              The engine never dumps the whole Story Bible into the LLM. It hydrates prompts with <strong>only</strong> the active Part's beats, contract, and relevant RAG evidence.
+              The engine never dumps the whole Story Bible into the LLM. It hydrates prompts with <strong>only</strong> the active Part&apos;s beats, contract, and relevant RAG evidence.
             </Card>
+          </div>
+        </section>
+
+        {/* 4. META & LINEAGE */}
+        <section>
+          <h2 className="text-3xl font-serif font-medium mb-8 text-slate-900">4. Meta & Lineage</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card
+              title="Meta & Lineage"
+              href="/technology/swarmcraft/meta"
+            >
+              SwarmCraft&apos;s upstream lineage, architectural credits, and the design decisions that separate it from chat-based swarm systems.
+            </Card>
+
+            <Card
+              title="Credits & Sources"
+              href="/technology/swarmcraft/meta/credits-and-lineage"
+            >
+              Full attribution, project ancestry, and the reference trail behind the current engine.
+            </Card>
+          </div>
+
+          <div className="mt-8">
+            <Link
+              href="/technology/swarmcraft/meta"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+            >
+              Read the full SwarmCraft lineage documentation →
+            </Link>
           </div>
         </section>
 
@@ -138,9 +167,12 @@ export default function SwarmCraftPage() {
           <p className="text-slate-600 mb-4 text-sm">
             Based on the foundational work of Mojomast/swarmussy and the Abstract Wiki Architect.
           </p>
-          <span className="text-slate-400 text-xs font-mono border border-slate-200 px-3 py-1 rounded">
-            Full Credits Page (Coming Soon)
-          </span>
+          <Link
+            href="/technology/swarmcraft/meta"
+            className="inline-flex items-center justify-center text-slate-700 text-xs font-mono border border-slate-200 px-3 py-2 rounded hover:border-slate-300 hover:text-slate-900 transition-colors"
+          >
+            Open Meta & Lineage
+          </Link>
         </section>
 
       </div>

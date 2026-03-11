@@ -239,7 +239,7 @@ export default function KonnaxionKintsugiPage() {
           <Card
             title="keenKonnect"
             tag="Build"
-            href="/platforms/konnaxion/keen-konnect/kintsugi"
+            href="/platforms/konnaxion/keenkonnect/kintsugi"
             icon={<Link2 className="w-5 h-5 text-[#1e6864]" />}
             description="Connects decisions to execution workspaces and preserves outputs as durable, reusable artifacts."
           />

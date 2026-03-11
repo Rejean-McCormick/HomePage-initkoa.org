@@ -66,7 +66,7 @@ const NAV_ITEMS: NavItem[] = [
     children: [
       { label: 'Overview', desc: 'Strategic Roadmap', path: '/initiatives' },
       { label: 'Civic Governance', desc: 'The Operating System', path: '/initiatives/civic-governance' },
-      // { label: 'Ukraine Peace Plan', desc: 'Freeze-Vote-Rebuild', path: '/initiatives/ukraine-peace-plan' },
+      { label: 'Ukraine Peace Plan', desc: 'Freeze-Vote-Rebuild', path: '/initiatives/ukraine-peace-plan' },
     ],
   },
   {
@@ -106,6 +106,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: 'Anatomie', desc: 'La structure', path: '/kreature/anatomie' },
       { label: 'Rituels', desc: 'La méthode', path: '/kreature/rituels' },
       { label: 'Parcours', desc: "Portes d'entrée", path: '/kreature/parcours' },
+      { label: 'Repères', desc: 'Hub de repérage', path: '/kreature/reperes' },
       { label: 'Glossaire', desc: 'Définitions', path: '/kreature/reperes/glossaire' },
       { label: 'Pont Technique', desc: 'Métaphore ↔ code', path: '/kreature/reperes/pont-technique' },
       { label: 'FAQ', desc: 'Questions fréquentes', path: '/kreature/reperes/faq' },

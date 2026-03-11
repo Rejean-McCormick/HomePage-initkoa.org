@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import { Card } from '@/components/Card';
+
 export const metadata = {
   title: "Orgo — Execution & Accountability",
   description:
@@ -18,6 +21,49 @@ Orgo is an **offline-first execution layer** for organizations: a reliability sy
 Unlike chat-first coordination, generic ticketing tools, or CRMs, Orgo is designed for **sovereignty**. It can run as a **hermetic operating bubble**—independent of the public internet—while still supporting optional bridges to other systems when you choose.
 
 **Reference:** [Orgo Overview Presentation (external)](https://administrative-efficienc-0u6vhrh.gamma.site/)
+
+---
+
+## Explore Orgo
+
+<div className="grid md:grid-cols-2 gap-6 not-prose">
+  <Card
+    title="Modules"
+    href="/platforms/orgo/modules"
+  >
+    Domain packages on a shared operational core: adapt Orgo to municipalities, schools, clinics, maintenance teams, and more without rewriting the engine.
+  </Card>
+
+  <Card
+    title="Guarantees"
+    href="/platforms/orgo/guarantees"
+  >
+    The reliability promises Orgo enforces by design: accountable routing, escalation, auditability, and continuity under stress.
+  </Card>
+
+  <Card
+    title="Flows"
+    href="/platforms/orgo/flows"
+  >
+    The operational pipeline from signal intake to closure: how inputs become cases, tasks, escalations, and outcomes.
+  </Card>
+
+  <Card
+    title="Use Cases"
+    href="/platforms/orgo/use-cases"
+  >
+    See how the same execution model applies to local government, justice, healthcare, and other real institutional settings.
+  </Card>
+</div>
+
+<div className="mt-6">
+  <Link
+    href="/platforms/orgo/use-cases/local-government"
+    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+  >
+    Start with the Local Government use case →
+  </Link>
+</div>
 
 ---
 
@@ -62,6 +108,8 @@ This protects continuity through turnover, absences, and reorganizations.
 ### 5) Track reactivity windows (and escalation)
 Orgo tracks **reactivity**: how quickly something must be acknowledged or acted upon.
 If the reactivity window is missed, Orgo escalates automatically (policy-driven).
+
+For a deeper breakdown of the operational path, see [Flows](/platforms/orgo/flows).
 
 ---
 
@@ -110,6 +158,8 @@ This is not a “feature.” It is a reliability and sovereignty requirement.
 4. **Cyclic review (patterns become work)**  
    Recurring patterns trigger review/audit cases instead of staying as passive dashboards.
 
+Read the dedicated [Guarantees](/platforms/orgo/guarantees) page for the full reliability model.
+
 ---
 
 ## Profiles (governance knobs, not custom code)
@@ -149,3 +199,30 @@ Example principle: when repeated issues cross a threshold, Orgo can open a revie
 - An ERP (it does not replace payroll/accounting)
 - A chat app (it replaces informal “hope someone sees it” coordination)
 - A toy kanban board (it enforces routing, escalation, and closure)
+
+---
+
+## Where to go next
+
+<div className="grid md:grid-cols-3 gap-6 not-prose">
+  <Card
+    title="Modules"
+    href="/platforms/orgo/modules"
+  >
+    See how Orgo adapts to different domains without losing its operational core.
+  </Card>
+
+  <Card
+    title="Flows"
+    href="/platforms/orgo/flows"
+  >
+    Follow the execution chain from intake to escalation to closure.
+  </Card>
+
+  <Card
+    title="Local Government"
+    href="/platforms/orgo/use-cases/local-government"
+  >
+    A concrete public-sector example of Orgo in practice.
+  </Card>
+</div>

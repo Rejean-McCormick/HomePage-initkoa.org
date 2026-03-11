@@ -17,6 +17,27 @@ const SECURITY_HEADERS = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+
+  async redirects() {
+    return [
+      {
+        source: "/technology/ariane/concepts/Glossary",
+        destination: "/technology/ariane/concepts/glossary",
+        permanent: true,
+      },
+      {
+        source: "/technology/ariane/concepts/Glossary/:path*",
+        destination: "/technology/ariane/concepts/glossary/:path*",
+        permanent: true,
+      },
+      {
+        source: "/platforms/konnaxion/keen-konnect/:path*",
+        destination: "/platforms/konnaxion/keenkonnect/:path*",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

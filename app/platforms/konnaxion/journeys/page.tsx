@@ -79,10 +79,10 @@ const journeys: Journey[] = [
       "Coordinate projects with clear responsibilities, track progress to completion, and preserve outputs so they remain usable beyond the original team.",
     steps: ["Define work", "Route responsibility", "Execute", "Review", "Preserve"],
     outputs: ["Project workspace", "Accountable execution trail", "Versioned artifacts"],
-    primaryLink: { href: "/platforms/konnaxion/keen-konnect", label: "Open keenKonnect" },
+    primaryLink: { href: "/platforms/konnaxion/keenkonnect", label: "Open keenKonnect" },
     secondaryLinks: [
-      { href: "/platforms/konnaxion/keen-konnect/kintsugi", label: "Operate (Kintsugi)" },
-      { href: "/platforms/konnaxion/keen-konnect/kompendio", label: "Reference (Kompendio)" },
+      { href: "/platforms/konnaxion/keenkonnect/kintsugi", label: "Operate (Kintsugi)" },
+      { href: "/platforms/konnaxion/keenkonnect/kompendio", label: "Reference (Kompendio)" },
     ],
     icon: <Hammer className="w-7 h-7" />,
     status: "Active",

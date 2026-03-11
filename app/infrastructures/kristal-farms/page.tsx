@@ -37,9 +37,10 @@ export default function KristalFarmsHub() {
             </p>
 
             <p className="text-lg text-teal-50/90 mb-10 max-w-2xl leading-relaxed">
-              Kristal Farms is an infrastructure pattern: place modular compute next to renewable hydro in cold climates,
-              export results by fiber, and treat waste heat as a local public resource—heating buildings and supporting
-              greenhouse food production.
+              Kristal Farms is an infrastructure pattern: place modular compute
+              next to renewable hydro in cold climates, export results by
+              fiber, and treat waste heat as a local public resource—heating
+              buildings and supporting greenhouse food production.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -69,25 +70,29 @@ export default function KristalFarmsHub() {
               <div className="flex items-start gap-3">
                 <Flame className="w-5 h-5 mt-0.5 text-teal-100" />
                 <span>
-                  <strong>Heat-first operations:</strong> reuse → store → reject. Community heat needs come first.
+                  <strong>Heat-first operations:</strong> reuse → store → reject.
+                  Community heat needs come first.
                 </span>
               </div>
               <div className="flex items-start gap-3">
                 <ShieldCheck className="w-5 h-5 mt-0.5 text-teal-100" />
                 <span>
-                  <strong>Black-box tenancy:</strong> tenants keep data private; operators manage only infrastructure.
+                  <strong>Black-box tenancy:</strong> tenants keep data private;
+                  operators manage only infrastructure.
                 </span>
               </div>
               <div className="flex items-start gap-3">
                 <Wifi className="w-5 h-5 mt-0.5 text-teal-100" />
                 <span>
-                  <strong>Export by fiber:</strong> ship computation as data, not electricity as transmission lines.
+                  <strong>Export by fiber:</strong> ship computation as data,
+                  not electricity as transmission lines.
                 </span>
               </div>
               <div className="flex items-start gap-3">
                 <Anchor className="w-5 h-5 mt-0.5 text-teal-100" />
                 <span>
-                  <strong>Reversible footprint:</strong> modular pads designed to be removed and the site restored.
+                  <strong>Reversible footprint:</strong> modular pads designed
+                  to be removed and the site restored.
                 </span>
               </div>
             </div>
@@ -98,10 +103,13 @@ export default function KristalFarmsHub() {
       {/* WHAT IT DELIVERS */}
       <section className="py-20 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">What Kristal Farms delivers</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+            What Kristal Farms delivers
+          </h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            This isn’t a “data center theme.” It’s a package of outcomes: reliable compute capacity, local heat security,
-            improved connectivity, and a governance model designed for legitimacy.
+            This isn’t a “data center theme.” It’s a package of outcomes:
+            reliable compute capacity, local heat security, improved
+            connectivity, and a governance model designed for legitimacy.
           </p>
         </div>
 
@@ -139,32 +147,59 @@ export default function KristalFarmsHub() {
         </div>
 
         <div className="mt-12 rounded-2xl border border-slate-200 bg-white p-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-3">A simple mental model</h3>
+          <h3 className="text-xl font-bold text-slate-900 mb-3">
+            A simple mental model
+          </h3>
           <div className="grid md:grid-cols-4 gap-6 text-sm text-slate-700">
-            <Step n="1" title="Hydro → village" desc="Use a short local feed instead of building long transmission." />
-            <Step n="2" title="Pads run compute" desc="Tenants operate inside the pad; host stays outside the box." />
-            <Step n="3" title="Heat becomes service" desc="Capture heat for buildings and storage, then reject only if needed." />
-            <Step n="4" title="Fiber exports results" desc="Move computation as data; reserve capacity for local services." />
+            <Step
+              n="1"
+              title="Hydro → village"
+              desc="Use a short local feed instead of building long transmission."
+            />
+            <Step
+              n="2"
+              title="Pads run compute"
+              desc="Tenants operate inside the pad; host stays outside the box."
+            />
+            <Step
+              n="3"
+              title="Heat becomes service"
+              desc="Capture heat for buildings and storage, then reject only if needed."
+            />
+            <Step
+              n="4"
+              title="Fiber exports results"
+              desc="Move computation as data; reserve capacity for local services."
+            />
           </div>
         </div>
 
         <div className="mt-8 text-center text-sm text-slate-600">
-          Kristal Farms can also host community knowledge programs (e.g., a Kristal publishing workflow).{" "}
-          <Link href="/technology/kristal" className="text-[#1e6864] font-mono hover:underline">
+          Kristal Farms can also host community knowledge programs (e.g., a
+          Kristal publishing workflow).{" "}
+          <Link
+            href="/technology/kristal"
+            className="text-[#1e6864] font-mono hover:underline"
+          >
             See Kristal →
           </Link>
         </div>
       </section>
 
       {/* EXPLORE */}
-      <section id="explore" className="bg-slate-50 py-20 border-t border-slate-200">
+      <section
+        id="explore"
+        className="bg-slate-50 py-20 border-t border-slate-200"
+      >
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900">Explore the system</h2>
+              <h2 className="text-3xl font-bold text-slate-900">
+                Explore the system
+              </h2>
               <p className="text-slate-600 mt-2 max-w-2xl">
-                Each page is written as “what it does and why it matters,” with implementation details only where they
-                clarify guarantees.
+                Each page is written as “what it does and why it matters,” with
+                implementation details only where they clarify guarantees.
               </p>
             </div>
 
@@ -228,9 +263,51 @@ export default function KristalFarmsHub() {
           </div>
 
           <div className="mt-10 grid md:grid-cols-3 gap-6">
-            <MiniLink href="/infrastructures/kristal-farms/metrics-and-dashboard" label="Metrics & dashboard" />
-            <MiniLink href="/infrastructures/kristal-farms/phasing" label="Phasing" />
-            <MiniLink href="/infrastructures/kristal-farms/reversibility" label="Reversibility" />
+            <MiniLink
+              href="/infrastructures/kristal-farms/metrics-and-dashboard"
+              label="Metrics & dashboard"
+            />
+            <MiniLink
+              href="/infrastructures/kristal-farms/phasing"
+              label="Phasing"
+            />
+            <MiniLink
+              href="/infrastructures/kristal-farms/reversibility"
+              label="Reversibility"
+            />
+          </div>
+
+          <div className="mt-16">
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-slate-900">
+                Strategic extensions
+              </h3>
+              <p className="text-slate-600 mt-2 max-w-2xl">
+                These pages cover adjacent questions that deserve direct entry
+                points from the main Kristal Farms hub.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <ExploreCard
+                href="/infrastructures/kristal-farms/ecology"
+                icon={<Leaf className="w-8 h-8" />}
+                title="Ecology"
+                desc="Wetlands, habitat stewardship, thermal impacts, and how the site stays legible to environmental review."
+              />
+              <ExploreCard
+                href="/infrastructures/kristal-farms/infrastructure"
+                icon={<Server className="w-8 h-8" />}
+                title="Infrastructure"
+                desc="Pads, utilities, service boundaries, and the physical architecture that makes the model deployable."
+              />
+              <ExploreCard
+                href="/infrastructures/kristal-farms/nain"
+                icon={<Anchor className="w-8 h-8" />}
+                title="Project Nain"
+                desc="A Labrador pilot framing: why this model fits the geography, energy context, and local public-interest case."
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -238,17 +315,35 @@ export default function KristalFarmsHub() {
   );
 }
 
-function Card({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
+function Card({
+  icon,
+  title,
+  desc,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  desc: string;
+}) {
   return (
     <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-      <div className="w-10 h-10 bg-[#1e6864]/10 rounded-lg flex items-center justify-center mb-4">{icon}</div>
+      <div className="w-10 h-10 bg-[#1e6864]/10 rounded-lg flex items-center justify-center mb-4">
+        {icon}
+      </div>
       <h3 className="text-lg font-bold mb-2 text-slate-900">{title}</h3>
       <p className="text-slate-600 text-sm">{desc}</p>
     </div>
   );
 }
 
-function Step({ n, title, desc }: { n: string; title: string; desc: string }) {
+function Step({
+  n,
+  title,
+  desc,
+}: {
+  n: string;
+  title: string;
+  desc: string;
+}) {
   return (
     <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
       <div className="text-xs font-mono text-slate-500 mb-2">Step {n}</div>

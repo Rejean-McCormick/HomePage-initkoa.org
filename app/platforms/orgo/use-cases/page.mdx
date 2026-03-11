@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Card } from '@/components/Card';
 import {
   Hospital,
@@ -37,10 +38,10 @@ These case studies are written the same way:
   />
 
   <Card
-    title="Government & public administration"
+    title="Local government"
     icon={<Landmark className="text-primary w-6 h-6" />}
-    description="Cross-department service delivery, emergency response coordination, and traceable decisions for public accountability."
-    href="/platforms/orgo/use-cases/public-administration"
+    description="Citizen requests, inspections, internal handoffs, escalation windows, and traceable closures for municipal operations."
+    href="/platforms/orgo/use-cases/local-government"
   />
 
   <Card
@@ -48,20 +49,6 @@ These case studies are written the same way:
     icon={<Scale className="text-primary w-6 h-6" />}
     description="Case routing, secure communications, time-sensitive notifications, and auditable trails for court operations."
     href="/platforms/orgo/use-cases/justice"
-  />
-
-  <Card
-    title="Education systems"
-    icon={<GraduationCap className="text-primary w-6 h-6" />}
-    description="School operations, parent–teacher communications, student notifications, and continuity for institutions with limited connectivity."
-    href="/platforms/orgo/use-cases/education"
-  />
-
-  <Card
-    title="Crisis response"
-    icon={<Siren className="text-primary w-6 h-6" />}
-    description="Real-time coordination, priority alerts, and continuity when communication networks are degraded or down."
-    href="/platforms/orgo/use-cases/crisis-response"
   />
 </div>
 
@@ -78,9 +65,35 @@ Orgo fits best when at least one of these is true:
 
 ---
 
-## Other domains (no dedicated pages yet)
+## Additional domains to expand next
 
-If you want, these can become full case studies later:
+These deserve dedicated case studies, but are not published yet:
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <div className="rounded-xl border border-slate-200 bg-white p-6">
+    <div className="flex items-center gap-3 mb-3">
+      <GraduationCap className="text-primary w-6 h-6" />
+      <h3 className="text-lg font-semibold text-slate-900">Education systems</h3>
+    </div>
+    <p className="text-slate-600">
+      School operations, parent–teacher communications, student notifications,
+      and continuity for institutions with limited connectivity.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 bg-white p-6">
+    <div className="flex items-center gap-3 mb-3">
+      <Siren className="text-primary w-6 h-6" />
+      <h3 className="text-lg font-semibold text-slate-900">Crisis response</h3>
+    </div>
+    <p className="text-slate-600">
+      Real-time coordination, priority alerts, and continuity when communication
+      networks are degraded or down.
+    </p>
+  </div>
+</div>
+
+Other domains that can become full case studies later:
 
 - NGOs & humanitarian coordination
 - Manufacturing & maintenance routing
@@ -94,17 +107,24 @@ If you want, these can become full case studies later:
 ## Next
 
 <div className="flex flex-col sm:flex-row gap-4 mt-8">
-  <a
+  <Link
     href="/platforms/orgo/guarantees"
     className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
   >
     Orgo guarantees <ShieldCheck className="w-4 h-4 ml-2" />
-  </a>
+  </Link>
 
-  <a
+  <Link
+    href="/platforms/orgo/flows"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    Orgo flows <ArrowRight className="w-4 h-4 ml-2" />
+  </Link>
+
+  <Link
     href="/platforms/orgo/offline-sovereignty"
     className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
   >
     Offline & sovereignty <ArrowRight className="w-4 h-4 ml-2" />
-  </a>
+  </Link>
 </div>

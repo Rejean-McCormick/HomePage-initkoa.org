@@ -1,4 +1,4 @@
-// app/platforms/konnaxion/keen-konnect/page.tsx
+// app/platforms/konnaxion/keenkonnect/page.tsx
 import Link from 'next/link';
 import {
   Hammer,
@@ -59,7 +59,6 @@ function FeatureCard({ title, description, href, icon, tag }: FeatureCardProps) 
 export default function KeenKonnectPage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
-      {/* Header */}
       <header className="mb-14">
         <div className="inline-flex items-center gap-2 text-xs font-mono px-3 py-1 rounded-full border border-slate-200 text-slate-600 bg-white">
           <Hammer className="w-4 h-4" />
@@ -84,7 +83,7 @@ export default function KeenKonnectPage() {
           </Link>
 
           <Link
-            href="/platforms/konnaxion/kintsugi"
+            href="/platforms/konnaxion/keenkonnect/kintsugi"
             className="inline-flex items-center justify-center px-5 py-3 rounded-md border border-slate-200 text-slate-800 hover:border-slate-900 hover:text-slate-900 transition-colors"
           >
             See Kintsugi (One Roof Layer)
@@ -92,7 +91,6 @@ export default function KeenKonnectPage() {
         </div>
       </header>
 
-      {/* What it enables */}
       <section className="mb-14">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="p-7 rounded-2xl border border-slate-200 bg-slate-50">
@@ -165,7 +163,6 @@ export default function KeenKonnectPage() {
         </div>
       </section>
 
-      {/* Submodules */}
       <section className="mb-14">
         <h2 className="text-2xl font-bold text-slate-900 mb-3">Submodules</h2>
         <p className="text-slate-600 max-w-3xl mb-8">
@@ -176,28 +173,27 @@ export default function KeenKonnectPage() {
           <FeatureCard
             title="Konstruct"
             tag="Execute"
-            href="/platforms/konnaxion/keen-konnect/kintsugi"
+            href="/platforms/konnaxion/keenkonnect/kintsugi"
             icon={<Hammer className="w-5 h-5 text-[#1e6864]" />}
             description="The build workspace: projects, roles, routing, and closure. Convert intent into coordinated action."
           />
           <FeatureCard
             title="Stockage"
             tag="Preserve"
-            href="/platforms/konnaxion/keen-konnect/kintsugi"
+            href="/platforms/konnaxion/keenkonnect/kintsugi"
             icon={<Boxes className="w-5 h-5 text-[#1e6864]" />}
             description="The artifact vault: versioned outputs, packaging, releases, and durable records of what was produced."
           />
           <FeatureCard
             title="Kompendio"
             tag="Reference"
-            href="/platforms/konnaxion/keen-konnect/kompendio"
+            href="/platforms/konnaxion/keenkonnect/kompendio"
             icon={<BookOpen className="w-5 h-5 text-[#1e6864]" />}
             description="The guide layer: pinned charts, dependency maps, and integration references that keep projects reusable and governable."
           />
         </div>
       </section>
 
-      {/* How it connects */}
       <section className="mb-14">
         <div className="p-8 rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50">
           <h2 className="text-2xl font-bold text-slate-900 mb-2 flex items-center gap-2">
@@ -257,7 +253,6 @@ export default function KeenKonnectPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="border-t border-slate-200 pt-10">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
@@ -268,7 +263,7 @@ export default function KeenKonnectPage() {
             </p>
           </div>
           <Link
-            href="/platforms/konnaxion/keen-konnect/kompendio"
+            href="/platforms/konnaxion/keenkonnect/kompendio"
             className="inline-flex items-center justify-center px-5 py-3 rounded-md bg-white border border-slate-200 text-slate-900 hover:border-slate-900 hover:shadow-sm transition-all"
           >
             Go to keenKonnect Kompendio <ArrowRight className="w-4 h-4 ml-2" />
