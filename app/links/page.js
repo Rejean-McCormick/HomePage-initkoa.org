@@ -9,7 +9,10 @@ export const metadata = {
 
 // favicon-style logo (browser tab icon) — same approach as /play
 function faviconUrl(domainOrUrl, size = 64) {
-  const u = typeof domainOrUrl === "string" && domainOrUrl.includes("://") ? domainOrUrl : `https://${domainOrUrl}`;
+  const u =
+    typeof domainOrUrl === "string" && domainOrUrl.includes("://")
+      ? domainOrUrl
+      : `https://${domainOrUrl}`;
   return `https://www.google.com/s2/favicons?sz=${size}&domain_url=${encodeURIComponent(u)}`;
 }
 
@@ -124,17 +127,17 @@ export default function SocialLinksPage() {
         {
           title: "X — @KingKlownXYZ",
           href: "https://x.com/KingKlownXYZ",
-          note: "Updates / posting corridor.",
+          note: "Poetic fragments and bold calls.",
         },
         {
           title: "TikTok — @kingklown.xyz",
           href: "https://www.tiktok.com/@kingklown.xyz",
-          note: "Short-form channel.",
+          note: "AI generated videos.",
         },
         {
-          title: "Hugging Face — KingKlown",
-          href: "https://huggingface.co/KingKlown",
-          note: "Models / datasets / experiments.",
+          title: "YouTube — @KingKlown-XYZ",
+          href: "https://www.youtube.com/@KingKlown-XYZ/playlists",
+          note: "Lyrics video playlists.",
         },
       ],
     },
@@ -145,28 +148,28 @@ export default function SocialLinksPage() {
         {
           title: "Medium — @boatbuilder610",
           href: "https://medium.com/@boatbuilder610",
-          note: "Articles and longform posts.",
+          note: "Long-form essays on governance, civic technology, human-centered AI, and collective intelligence.",
         },
         {
           title: "Amazon author page",
-          href: "https://www.amazon.ca/stores/author/B0G3B7DQWG?ingress=0&visitId=2c136ee2-ccf3-47b2-a4c9-c04125871944",
-          note: "Books hub (no individual book links here).",
+          href: "https://www.amazon.ca/stores/author/B0G3B7DQWG",
+          note: "Books hub.",
         },
       ],
     },
     {
       title: "Audio",
-      subtitle: "Podcast + audio presence.",
+      subtitle: "Audiobooks, spoken audio, and audio presence.",
       items: [
         {
-          title: "Spotify show — King Klown",
+          title: "Spotify — King Klown",
           href: "https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4",
-          note: "Official show page.",
+          note: "Audiobook-style / non-live spoken audio.",
         },
         {
           title: "SoundCloud — Réjean McCormick",
           href: "https://soundcloud.com/rejean-mccormick",
-          note: "Audio uploads / experiments.",
+          note: "Two music albums for the two-part theater show: Ninja Arc-en-ciel and Lumière blanche.",
         },
       ],
     },
