@@ -7,9 +7,47 @@ export const metadata = {
     "Réjean McCormick — socio-technical architect building offline-capable civic utilities, technical systems, and AI-ready context packs for learning, coordination, and governable decision-making.",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://initkoa.org/about#profile",
+  url: "https://initkoa.org/about",
+  name: "About — Réjean McCormick",
+  mainEntity: {
+    "@type": "Person",
+    "@id": "https://initkoa.org/about#rejean-mccormick",
+    name: "Réjean McCormick",
+    url: "https://initkoa.org/about",
+    email: "mailto:rejean.mccormick@initkoa.org",
+    jobTitle: "Socio-technical architect",
+    description:
+      "Socio-technical architect building civic utilities, offline-capable systems, and AI-ready context packs for learning, coordination, and governable decision-making.",
+    sameAs: [
+      "https://www.linkedin.com/in/r%C3%A9jean-mccormick-51403a37b/",
+      "https://orcid.org/0009-0001-2086-854X",
+      "https://scholar.google.com/citations?user=oVZ3n9kAAAAJ&hl=en",
+      "https://mastodon.social/@Rejean_McCormick",
+      "https://www.facebook.com/profile.php?id=61566663549235",
+      "https://meta.wikimedia.org/wiki/User:R%C3%A9jean_McCormick",
+      "https://philpeople.org/profiles/rejean-mccormick",
+      "https://medium.com/@boatbuilder610",
+      "https://www.amazon.ca/stores/author/B0G3B7DQWG?ingress=0&visitId=2c136ee2-ccf3-47b2-a4c9-c04125871944",
+      "https://soundcloud.com/rejean-mccormick",
+      "https://github.com/Rejean-McCormick/"
+    ]
+  }
+};
+
 export default function AboutPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-24 prose prose-slate">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+
       <h1>Réjean McCormick</h1>
 
       <p className="text-lg text-slate-600">
@@ -82,18 +120,12 @@ export default function AboutPage() {
           retrievable, and reusable across tools and environments.
         </li>
         <li>
-          <strong>Cultural diffusion</strong>: narrative formats (e.g., “King Klown”) used as pedagogy and onboarding—
-          designed to return to operational clarity, not replace it.
+          <strong>Cultural diffusion</strong>: narrative formats used as pedagogy and onboarding—designed to return to
+          operational clarity, not replace it.
         </li>
       </ul>
 
-      <h3>Method: “Surréalité”</h3>
-      <p>
-        A bridging loop: identify a real problem → transpose into a symbolic or fictional scenario → demonstrate
-        solutions in fiction → return to reality for engagement and implementation.
-      </p>
-
-      <hr className="my-8 border-slate-200" />
+        <hr className="my-8 border-slate-200" />
 
       <h2>Contact</h2>
       <ul>
