@@ -101,11 +101,6 @@ export default function SocialLinksPage() {
           note: "Public profile.",
         },
         {
-          title: "Meta-Wiki — User: Réjean McCormick",
-          href: "https://meta.wikimedia.org/wiki/User:Réjean_McCormick",
-          note: "Wikimedia identity anchor.",
-        },
-        {
           title: "PhilPeople — Réjean McCormick",
           href: "https://philpeople.org/profiles/rejean-mccormick",
           note: "Academic index listing.",
