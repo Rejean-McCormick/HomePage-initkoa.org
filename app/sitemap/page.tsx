@@ -1,9 +1,18 @@
 // app/sitemap/page.tsx
 import fs from "node:fs";
 import path from "node:path";
+import type { Metadata } from "next";
+import { getSiteUrl } from "@/lib/site-url";
 
 export const runtime = "nodejs";
 export const dynamic = "force-static";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 type Entry = {
   url: string;
@@ -12,10 +21,7 @@ type Entry = {
   priority?: number;
 };
 
-const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.initkoa.org").replace(
-  /\/+$/,
-  ""
-);
+const BASE_URL = getSiteUrl();
 
 function toDisplayDate(v?: string | Date) {
   if (!v) return null;
@@ -25,16 +31,18 @@ function toDisplayDate(v?: string | Date) {
 }
 
 function safeReadJson(): Entry[] {
-  // Prefer your generated public/ai-sitemap.json
   const jsonPath = path.join(process.cwd(), "public", "ai-sitemap.json");
+
   try {
     const raw = fs.readFileSync(jsonPath, "utf8");
     const parsed = JSON.parse(raw) as Entry[];
 
-    // Normalize URLs (ensure absolute, canonical base)
     return parsed
       .map((e) => {
-        const u = e.url?.startsWith("http") ? e.url : `${BASE_URL}${e.url?.startsWith("/") ? "" : "/"}${e.url}`;
+        const u = e.url?.startsWith("http")
+          ? e.url
+          : `${BASE_URL}${e.url?.startsWith("/") ? "" : "/"}${e.url}`;
+
         return { ...e, url: u };
       })
       .filter((e) => typeof e.url === "string" && e.url.length > 0)
@@ -53,7 +61,8 @@ export default function SitemapPage() {
 
       {entries.length === 0 ? (
         <p>
-          Aucun fichier <code>public/ai-sitemap.json</code> trouvé (ou JSON invalide).
+          Aucun fichier <code>public/ai-sitemap.json</code> trouvé (ou JSON
+          invalide).
         </p>
       ) : (
         <>
@@ -62,8 +71,12 @@ export default function SitemapPage() {
             {entries.map((e) => (
               <li key={e.url}>
                 <a href={e.url}>{e.url}</a>
-                {e.lastModified ? <span> — {toDisplayDate(e.lastModified)}</span> : null}
-                {typeof e.priority === "number" ? <span> — prio {e.priority.toFixed(2)}</span> : null}
+                {e.lastModified ? (
+                  <span> — {toDisplayDate(e.lastModified)}</span>
+                ) : null}
+                {typeof e.priority === "number" ? (
+                  <span> — prio {e.priority.toFixed(2)}</span>
+                ) : null}
                 {e.changeFrequency ? <span> — {e.changeFrequency}</span> : null}
               </li>
             ))}

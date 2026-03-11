@@ -2,20 +2,11 @@
 import type { MetadataRoute } from "next";
 import fs from "node:fs";
 import path from "node:path";
+import { getSiteUrl } from "@/lib/site-url";
 
 export const runtime = "nodejs";
 
-function getBaseUrl(): string {
-  const env =
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    process.env.SITE_URL ||
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
-
-  return (env || "http://localhost:3000").replace(/\/+$/, "");
-}
-
-// Use ONE canonical base URL (match redirects / canonical tags)
-const BASE_URL = getBaseUrl();
+const BASE_URL = getSiteUrl();
 
 // Never index these areas (even if they contain pages)
 const EXCLUDED_PREFIXES = ["/admin", "/api", "/private"];
@@ -223,7 +214,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // Never include excluded areas
         if (isExcludedPathname(pathname)) return null;
 
-        // De-dupe by pathname (canonical host is fixed)
+        // De-dupe by pathname
         if (seenPathnames.has(pathname)) return null;
         seenPathnames.add(pathname);
 
@@ -238,7 +229,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })
       .filter(Boolean) as MetadataRoute.Sitemap;
 
-    // Optional: stable ordering
     return out.sort((a, b) => a.url.localeCompare(b.url));
   }
 
@@ -248,7 +238,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routePaths
     .map((p) => normalizePathname(p))
-    .filter((p) => p !== "/sitemap") // avoid listing a human sitemap page, if present
+    .filter((p) => p !== "/sitemap")
     .filter((p) => !isExcludedPathname(p))
     .map((routePath) => {
       const url = toCanonicalUrlFromPathname(routePath);

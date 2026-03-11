@@ -3,23 +3,48 @@ import type { MetadataRoute } from "next";
 
 export const runtime = "nodejs";
 
-// Use ONE canonical base URL (match sitemap.ts / canonical tags)
+const DEFAULT_SITE_URL = "https://initkoa.org";
+
+function canonicalizeBaseUrl(raw?: string | null): string {
+  let s = String(raw || "").trim();
+
+  if (!s) return DEFAULT_SITE_URL;
+
+  if (!/^https?:\/\//i.test(s)) {
+    s = `https://${s}`;
+  }
+
+  s = s.replace(/\/+$/, "");
+
+  try {
+    const u = new URL(s);
+
+    if (u.hostname === "www.initkoa.org") {
+      u.hostname = "initkoa.org";
+    }
+
+    u.protocol = "https:";
+
+    return u.toString().replace(/\/+$/, "");
+  } catch {
+    return DEFAULT_SITE_URL;
+  }
+}
+
 function getBaseUrl(): string {
-  const explicit =
-    process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL;
-
-  const inferred = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "";
-
-  return (explicit || inferred || "http://localhost:3000").replace(/\/+$/, "");
+  return canonicalizeBaseUrl(
+    process.env.NEXT_PUBLIC_SITE_URL ||
+      process.env.SITE_URL ||
+      process.env.VERCEL_URL ||
+      DEFAULT_SITE_URL
+  );
 }
 
 function getHost(baseUrl: string): string {
   try {
     return new URL(baseUrl).host;
   } catch {
-    return baseUrl.replace(/^https?:\/\//, "").replace(/\/.*$/, "");
+    return "initkoa.org";
   }
 }
 
@@ -35,8 +60,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/private", "/admin", "/api"],
       },
     ],
-    // Only list the real XML sitemap(s) here
-    sitemap: [`${baseUrl}/sitemap.xml`],
+    sitemap: `${baseUrl}/sitemap.xml`,
     host,
   };
 }
