@@ -4,10 +4,8 @@ import { getSiteUrl } from "@/lib/site-url";
 
 export const runtime = "nodejs";
 
-const DISALLOW_PATHS = ["/private", "/admin", "/api"] as const;
+const DISALLOW_PATHS = ["/private", "/admin", "/api"];
 
-// Bots explicitement autorisés pour maximiser la découvrabilité IA + search.
-// Le groupe "*" reste ouvert pour tous les autres crawlers respectueux.
 const EXPLICIT_ALLOW_BOTS = [
   "Googlebot",
   "Google-Extended",
@@ -17,7 +15,14 @@ const EXPLICIT_ALLOW_BOTS = [
   "ClaudeBot",
   "Claude-User",
   "Claude-SearchBot",
-] as const;
+];
+
+type RobotsRule = {
+  userAgent: string | string[];
+  allow?: string | string[];
+  disallow?: string | string[];
+  crawlDelay?: number;
+};
 
 function getHost(baseUrl: string): string {
   try {
@@ -27,11 +32,11 @@ function getHost(baseUrl: string): string {
   }
 }
 
-function allowRule(userAgent: string): MetadataRoute.Robots["rules"][number] {
+function allowRule(userAgent: string): RobotsRule {
   return {
     userAgent,
     allow: "/",
-    disallow: [...DISALLOW_PATHS],
+    disallow: DISALLOW_PATHS,
   };
 }
 
@@ -41,11 +46,11 @@ export default function robots(): MetadataRoute.Robots {
 
   return {
     rules: [
-      ...EXPLICIT_ALLOW_BOTS.map((bot) => allowRule(bot)),
+      ...EXPLICIT_ALLOW_BOTS.map(allowRule),
       {
         userAgent: "*",
         allow: "/",
-        disallow: [...DISALLOW_PATHS],
+        disallow: DISALLOW_PATHS,
       },
     ],
     sitemap: [`${baseUrl}/sitemap.xml`, `${baseUrl}/md-sitemap.xml`],
