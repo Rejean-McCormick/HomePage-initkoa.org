@@ -4,6 +4,20 @@ import type { MetadataRoute } from "next";
 export const runtime = "nodejs";
 
 const DEFAULT_SITE_URL = "https://initkoa.org";
+const DISALLOW_PATHS = ["/private", "/admin", "/api"] as const;
+
+// Bots explicitement autorisés pour maximiser la découvrabilité IA + search.
+// Le groupe "*" reste ouvert pour tous les autres crawlers respectueux.
+const EXPLICIT_ALLOW_BOTS = [
+  "Googlebot",
+  "Google-Extended",
+  "OAI-SearchBot",
+  "GPTBot",
+  "ChatGPT-User",
+  "ClaudeBot",
+  "Claude-User",
+  "Claude-SearchBot",
+] as const;
 
 function canonicalizeBaseUrl(raw?: string | null): string {
   let s = String(raw || "").trim();
@@ -52,15 +66,22 @@ export default function robots(): MetadataRoute.Robots {
   const baseUrl = getBaseUrl();
   const host = getHost(baseUrl);
 
+  const allowRule = (userAgent: string) => ({
+    userAgent,
+    allow: "/",
+    disallow: DISALLOW_PATHS,
+  });
+
   return {
     rules: [
+      ...EXPLICIT_ALLOW_BOTS.map(allowRule),
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/private", "/admin", "/api"],
+        disallow: DISALLOW_PATHS,
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: [`${baseUrl}/sitemap.xml`],
     host,
   };
 }

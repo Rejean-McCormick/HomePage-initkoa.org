@@ -7,12 +7,23 @@ import { getSiteUrl } from "@/lib/site-url";
 export const runtime = "nodejs";
 
 const BASE_URL = getSiteUrl();
+const PUBLIC_DIR = path.join(process.cwd(), "public");
 
 // Never index these areas (even if they contain pages)
 const EXCLUDED_PREFIXES = ["/admin", "/api", "/private"];
 
 // Next.js App Router: a folder is a routable page if it contains page.(tsx|ts|js|jsx|mdx)
 const PAGE_FILE_RE = /^page\.(tsx|ts|js|jsx|mdx)$/;
+
+// Public AI artifacts we want in sitemap.xml when present
+const AI_ARTIFACT_PATHS = [
+  "/llms.txt",
+  "/llms-full.txt",
+  "/ai-corpus.txt",
+  "/ai-sitemap.json",
+  "/md-manifest.json",
+  "/md-sitemap.xml",
+] as const;
 
 function isRouteGroup(seg: string): boolean {
   return seg.startsWith("(") && seg.endsWith(")");
@@ -112,6 +123,24 @@ function priorityFor(routePath: string): number {
   ]);
   if (hubs.has(routePath)) return 0.9;
 
+  // Markdown mirrors: slightly below the corresponding HTML routes
+  if (isMarkdownMirrorPathname(routePath)) {
+    return routePath === "/index.html.md" ? 0.85 : 0.45;
+  }
+
+  // AI artifacts: useful but secondary
+  if (isAiArtifactPathname(routePath)) {
+    switch (routePath) {
+      case "/llms.txt":
+      case "/llms-full.txt":
+        return 0.6;
+      case "/ai-corpus.txt":
+        return 0.5;
+      default:
+        return 0.35;
+    }
+  }
+
   // Depth-based fallback
   const d = depthOf(routePath);
   if (d === 1) return 0.8;
@@ -124,6 +153,10 @@ function priorityFor(routePath: string): number {
 function changeFrequencyFor(
   routePath: string
 ): MetadataRoute.Sitemap[number]["changeFrequency"] {
+  if (isAiArtifactPathname(routePath) || isMarkdownMirrorPathname(routePath)) {
+    return "weekly";
+  }
+
   const d = depthOf(routePath);
   if (routePath === "/") return "weekly";
   if (d <= 1) return "weekly";
@@ -171,7 +204,10 @@ function entryToPathname(e: AiSitemapEntry): string | null {
   return null;
 }
 
-function parseLastModified(x: AiSitemapEntry["lastModified"], fallback: Date): Date {
+function parseLastModified(
+  x: AiSitemapEntry["lastModified"],
+  fallback: Date
+): Date {
   if (!x) return fallback;
   if (x instanceof Date) return x;
   const d = new Date(x);
@@ -179,7 +215,7 @@ function parseLastModified(x: AiSitemapEntry["lastModified"], fallback: Date): D
 }
 
 function readAiSitemapIfPresent(): AiSitemapEntry[] | null {
-  const file = path.join(process.cwd(), "public", "ai-sitemap.json");
+  const file = path.join(PUBLIC_DIR, "ai-sitemap.json");
   if (!fs.existsSync(file)) return null;
 
   const raw = fs.readFileSync(file, "utf8");
@@ -195,58 +231,170 @@ function readAiSitemapIfPresent(): AiSitemapEntry[] | null {
   );
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+function isMarkdownMirrorPathname(pathname: string): boolean {
+  return pathname === "/index.html.md" || pathname.endsWith(".md");
+}
 
-  // Prefer the generated ai-sitemap.json
+function isAiArtifactPathname(pathname: string): boolean {
+  return AI_ARTIFACT_PATHS.includes(
+    pathname as (typeof AI_ARTIFACT_PATHS)[number]
+  );
+}
+
+function publicPathnameToFsPath(pathname: string): string {
+  const clean = pathname.replace(/^\/+/, "");
+  return path.join(PUBLIC_DIR, clean);
+}
+
+function publicFileExists(pathname: string): boolean {
+  return fs.existsSync(publicPathnameToFsPath(pathname));
+}
+
+function publicFileLastModified(pathname: string, fallback: Date): Date {
+  try {
+    const stat = fs.statSync(publicPathnameToFsPath(pathname));
+    return stat.mtime ?? fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+// Mirrors follow the llms.txt proposal:
+// - "/about" -> "/about.md"
+// - "/" -> "/index.html.md"
+function routeToMarkdownMirrorPathname(routePath: string): string {
+  const p = normalizePathname(routePath);
+  return p === "/" ? "/index.html.md" : `${p}.md`;
+}
+
+function buildRouteMetaMap(
+  ai: AiSitemapEntry[] | null,
+  now: Date
+): Map<
+  string,
+  {
+    lastModified: Date;
+    changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
+    priority?: number;
+  }
+> {
+  const map = new Map<
+    string,
+    {
+      lastModified: Date;
+      changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
+      priority?: number;
+    }
+  >();
+
+  if (!ai) return map;
+
+  for (const e of ai) {
+    const pathname = entryToPathname(e);
+    if (!pathname) continue;
+    if (isExcludedPathname(pathname)) continue;
+
+    map.set(pathname, {
+      lastModified: parseLastModified(e.lastModified, now),
+      changeFrequency: e.changeFrequency,
+      priority: typeof e.priority === "number" ? e.priority : undefined,
+    });
+  }
+
+  return map;
+}
+
+function collectConcreteRoutes(now: Date): {
+  routes: string[];
+  metaByPathname: Map<
+    string,
+    {
+      lastModified: Date;
+      changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
+      priority?: number;
+    }
+  >;
+} {
   const ai = readAiSitemapIfPresent();
+  const metaByPathname = buildRouteMetaMap(ai, now);
+
   if (ai && ai.length > 0) {
-    const seenPathnames = new Set<string>();
+    const routes = Array.from(
+      new Set(
+        ai
+          .map((e) => entryToPathname(e))
+          .filter((p): p is string => Boolean(p))
+          .filter((p) => p !== "/sitemap")
+          .filter((p) => !isExcludedPathname(p))
+      )
+    ).sort();
 
-    const out = ai
-      .map((e) => {
-        const pathname = entryToPathname(e);
-        if (!pathname) return null;
-
-        // Avoid listing the human /sitemap page if it exists
-        if (pathname === "/sitemap") return null;
-
-        // Never include excluded areas
-        if (isExcludedPathname(pathname)) return null;
-
-        // De-dupe by pathname
-        if (seenPathnames.has(pathname)) return null;
-        seenPathnames.add(pathname);
-
-        const url = toCanonicalUrlFromPathname(pathname);
-
-        return {
-          url,
-          lastModified: parseLastModified(e.lastModified, now),
-          changeFrequency: e.changeFrequency ?? changeFrequencyFor(pathname),
-          priority: typeof e.priority === "number" ? e.priority : priorityFor(pathname),
-        } satisfies MetadataRoute.Sitemap[number];
-      })
-      .filter(Boolean) as MetadataRoute.Sitemap;
-
-    return out.sort((a, b) => a.url.localeCompare(b.url));
+    return { routes, metaByPathname };
   }
 
   // Fallback: scan /app for page.* routes
   const appDirAbs = path.join(process.cwd(), "app");
-  const routePaths = walkForRoutes(appDirAbs);
-
-  return routePaths
+  const routes = walkForRoutes(appDirAbs)
     .map((p) => normalizePathname(p))
     .filter((p) => p !== "/sitemap")
-    .filter((p) => !isExcludedPathname(p))
-    .map((routePath) => {
-      const url = toCanonicalUrlFromPathname(routePath);
-      return {
-        url,
-        lastModified: now,
-        changeFrequency: changeFrequencyFor(routePath),
-        priority: priorityFor(routePath),
-      };
+    .filter((p) => !isExcludedPathname(p));
+
+  return { routes, metaByPathname };
+}
+
+function pushEntry(
+  out: MetadataRoute.Sitemap,
+  seenUrls: Set<string>,
+  entry: MetadataRoute.Sitemap[number]
+) {
+  if (seenUrls.has(entry.url)) return;
+  seenUrls.add(entry.url);
+  out.push(entry);
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+  const { routes, metaByPathname } = collectConcreteRoutes(now);
+
+  const out: MetadataRoute.Sitemap = [];
+  const seenUrls = new Set<string>();
+
+  // 1) Canonical human routes
+  for (const routePath of routes) {
+    const meta = metaByPathname.get(routePath);
+
+    pushEntry(out, seenUrls, {
+      url: toCanonicalUrlFromPathname(routePath),
+      lastModified: meta?.lastModified ?? now,
+      changeFrequency: meta?.changeFrequency ?? changeFrequencyFor(routePath),
+      priority: meta?.priority ?? priorityFor(routePath),
     });
+  }
+
+  // 2) Markdown mirror routes (only if the file exists in /public)
+  for (const routePath of routes) {
+    const mdPathname = routeToMarkdownMirrorPathname(routePath);
+    if (!publicFileExists(mdPathname)) continue;
+
+    pushEntry(out, seenUrls, {
+      url: toCanonicalUrlFromPathname(mdPathname),
+      lastModified: publicFileLastModified(mdPathname, now),
+      changeFrequency: changeFrequencyFor(mdPathname),
+      priority: priorityFor(mdPathname),
+    });
+  }
+
+  // 3) Public AI artifacts (only if present)
+  for (const pathname of AI_ARTIFACT_PATHS) {
+    if (!publicFileExists(pathname)) continue;
+
+    pushEntry(out, seenUrls, {
+      url: toCanonicalUrlFromPathname(pathname),
+      lastModified: publicFileLastModified(pathname, now),
+      changeFrequency: changeFrequencyFor(pathname),
+      priority: priorityFor(pathname),
+    });
+  }
+
+  return out.sort((a, b) => a.url.localeCompare(b.url));
 }
