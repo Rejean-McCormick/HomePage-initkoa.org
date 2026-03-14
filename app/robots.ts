@@ -62,7 +62,7 @@ function getHost(baseUrl: string): string {
   }
 }
 
-function allowRule(userAgent: string): NonNullable<MetadataRoute.Robots["rules"]>[number] {
+function allowRule(userAgent: string) {
   return {
     userAgent,
     allow: "/",
@@ -76,7 +76,7 @@ export default function robots(): MetadataRoute.Robots {
 
   return {
     rules: [
-      ...EXPLICIT_ALLOW_BOTS.map(allowRule),
+      ...EXPLICIT_ALLOW_BOTS.map((bot) => allowRule(bot)),
       {
         userAgent: "*",
         allow: "/",
