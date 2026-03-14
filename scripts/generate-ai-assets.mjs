@@ -111,7 +111,7 @@ const TITLE_WORD_OVERRIDES = new Map([
   ["fvr", "FVR"],
   ["go", "Go"],
   ["html", "HTML"],
-  ["it", "It"],
+  ["it", "IT"],
   ["json", "JSON"],
   ["kpi", "KPI"],
   ["kpis", "KPIs"],
@@ -296,17 +296,179 @@ function cleanupOldGeneratedMirrors() {
   }
 }
 
+function stripBom(s) {
+  return String(s || "").replace(/^\uFEFF/, "");
+}
+
+function stripUnsafeControlChars(s) {
+  return String(s || "")
+    .replace(/\uFFFD/g, "")
+    .replace(/[^\S\n\t]+/g, (m) => m.replace(/[^\x20\n\t]/g, " "))
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F]/g, "");
+}
+
+function findMatchingDelimiter(source, openIndex, openChar, closeChar) {
+  let depth = 0;
+  let quote = null;
+  let escaped = false;
+  let inLineComment = false;
+  let inBlockComment = false;
+
+  for (let i = openIndex; i < source.length; i++) {
+    const ch = source[i];
+    const next = source[i + 1];
+
+    if (inLineComment) {
+      if (ch === "\n") inLineComment = false;
+      continue;
+    }
+
+    if (inBlockComment) {
+      if (ch === "*" && next === "/") {
+        inBlockComment = false;
+        i++;
+      }
+      continue;
+    }
+
+    if (quote) {
+      if (escaped) {
+        escaped = false;
+        continue;
+      }
+      if (ch === "\\") {
+        escaped = true;
+        continue;
+      }
+      if (ch === quote) {
+        quote = null;
+      }
+      continue;
+    }
+
+    if (ch === "/" && next === "/") {
+      inLineComment = true;
+      i++;
+      continue;
+    }
+
+    if (ch === "/" && next === "*") {
+      inBlockComment = true;
+      i++;
+      continue;
+    }
+
+    if (ch === "'" || ch === '"' || ch === "`") {
+      quote = ch;
+      continue;
+    }
+
+    if (ch === openChar) {
+      depth++;
+      continue;
+    }
+
+    if (ch === closeChar) {
+      depth--;
+      if (depth === 0) return i;
+    }
+  }
+
+  return -1;
+}
+
+function stripBalancedExportObject(source, exportName) {
+  const re = new RegExp(`export\\s+const\\s+${exportName}\\s*=\\s*\\{`, "g");
+  let s = source;
+  let match;
+
+  while ((match = re.exec(s))) {
+    const start = match.index;
+    const openBrace = s.indexOf("{", start);
+    if (openBrace === -1) break;
+
+    const closeBrace = findMatchingDelimiter(s, openBrace, "{", "}");
+    if (closeBrace === -1) break;
+
+    let end = closeBrace + 1;
+    while (/\s/.test(s[end] || "")) end++;
+    if (s[end] === ";") end++;
+
+    s = s.slice(0, start) + s.slice(end);
+    re.lastIndex = start;
+  }
+
+  return s;
+}
+
+function stripExportedFunctionBlock(source, fnName) {
+  const re = new RegExp(
+    `export\\s+(?:default\\s+)?(?:async\\s+)?function\\s+${fnName}\\b`,
+    "g"
+  );
+
+  let s = source;
+  let match;
+
+  while ((match = re.exec(s))) {
+    const start = match.index;
+    const openBrace = s.indexOf("{", start);
+    if (openBrace === -1) break;
+
+    const closeBrace = findMatchingDelimiter(s, openBrace, "{", "}");
+    if (closeBrace === -1) break;
+
+    let end = closeBrace + 1;
+    while (/\s/.test(s[end] || "")) end++;
+    if (s[end] === ";") end++;
+
+    s = s.slice(0, start) + s.slice(end);
+    re.lastIndex = start;
+  }
+
+  return s;
+}
+
+function extractDefaultExportBlock(source) {
+  const patterns = [
+    /export\s+default\s+async\s+function\b/g,
+    /export\s+default\s+function\b/g,
+  ];
+
+  for (const pattern of patterns) {
+    const match = pattern.exec(source);
+    if (!match) continue;
+
+    const openBrace = source.indexOf("{", match.index);
+    if (openBrace === -1) continue;
+
+    const closeBrace = findMatchingDelimiter(source, openBrace, "{", "}");
+    if (closeBrace === -1) continue;
+
+    return source.slice(match.index, closeBrace + 1);
+  }
+
+  return source;
+}
+
+function extractReturnExpression(block) {
+  const returnMatch = /\breturn\b/.exec(block);
+  if (!returnMatch) return block;
+
+  let i = returnMatch.index + returnMatch[0].length;
+  while (/\s/.test(block[i] || "")) i++;
+
+  if (block[i] === "(") {
+    const close = findMatchingDelimiter(block, i, "(", ")");
+    if (close !== -1) return block.slice(i + 1, close);
+  }
+
+  return block.slice(i);
+}
+
 function extractLikelyRenderable(source) {
-  const returnIdx = source.search(/\breturn\b/);
-  if (returnIdx === -1) return source;
-
-  const start = source.indexOf("<", returnIdx);
-  if (start === -1) return source;
-
-  const end = source.lastIndexOf(">");
-  if (end === -1 || end <= start) return source;
-
-  return source.slice(start, end + 1);
+  const block = extractDefaultExportBlock(source);
+  return extractReturnExpression(block);
 }
 
 function maybeFixMojibake(input) {
@@ -316,16 +478,16 @@ function maybeFixMojibake(input) {
   const suspicious =
     /(Ã.|Â |Â$|â€“|â€”|â€˜|â€™|â€œ|â€|â€¦|â€¢|â€‘|â€"|â€)/;
 
-  if (!suspicious.test(s)) return s;
-
-  try {
-    const repaired = Buffer.from(s, "latin1").toString("utf8");
-    const score = (t) =>
-      (t.match(/(Ã.|Â |Â$|â€“|â€”|â€˜|â€™|â€œ|â€|â€¦|â€¢|â€‘|â€"|â€)/g) || [])
-        .length;
-    if (score(repaired) < score(s)) s = repaired;
-  } catch {
-    // fall through
+  if (suspicious.test(s)) {
+    try {
+      const repaired = Buffer.from(s, "latin1").toString("utf8");
+      const score = (t) =>
+        (t.match(/(Ã.|Â |Â$|â€“|â€”|â€˜|â€™|â€œ|â€|â€¦|â€¢|â€‘|â€"|â€)/g) || [])
+          .length;
+      if (score(repaired) < score(s)) s = repaired;
+    } catch {
+      // ignore repair failure
+    }
   }
 
   return s
@@ -376,18 +538,44 @@ function stripCommonBoilerplate(source) {
   s = s.replace(/^\s*import\s+["'][^"']+["'];?\s*$/gm, "");
   s = s.replace(/^\s*import[\s\S]*?from\s+["'][^"']+["'];?\s*$/gm, "");
 
-  // common Next exports / metadata
-  s = s
-    .replace(/export\s+const\s+metadata\s*=\s*{[\s\S]*?}\s*;?/g, "")
-    .replace(/export\s+const\s+viewport\s*=\s*{[\s\S]*?}\s*;?/g, "")
-    .replace(
-      /export\s+const\s+(revalidate|dynamic|runtime|preferredRegion)\s*=\s*[^;]+;?/g,
-      ""
-    )
-    .replace(/export\s+async\s+function\s+generateMetadata[\s\S]*?\n\}/gm, "")
-    .replace(/export\s+function\s+generateMetadata[\s\S]*?\n\}/gm, "");
+  // Common Next exports / metadata
+  s = stripBalancedExportObject(s, "metadata");
+  s = stripBalancedExportObject(s, "viewport");
+
+  s = s.replace(
+    /export\s+const\s+(revalidate|dynamic|runtime|preferredRegion)\s*=\s*[^;]+;?/g,
+    ""
+  );
+
+  s = stripExportedFunctionBlock(s, "generateMetadata");
+  s = stripExportedFunctionBlock(s, "generateStaticParams");
 
   return s;
+}
+
+function preserveUsefulJsxProps(s) {
+  // Promote high-signal string props into plain text before tag stripping
+  return String(s)
+    .replace(
+      /\b(title|description|subtitle|heading|eyebrow|label|caption|kicker|summary)\s*=\s*"([^"]+)"/gi,
+      "\n$2\n"
+    )
+    .replace(
+      /\b(title|description|subtitle|heading|eyebrow|label|caption|kicker|summary)\s*=\s*'([^']+)'/gi,
+      "\n$2\n"
+    )
+    .replace(
+      /\b(title|description|subtitle|heading|eyebrow|label|caption|kicker|summary)\s*=\s*\{\s*`([^`]+)`\s*\}/gi,
+      "\n$2\n"
+    )
+    .replace(
+      /\b(title|description|subtitle|heading|eyebrow|label|caption|kicker|summary)\s*=\s*\{\s*"([^"]+)"\s*\}/gi,
+      "\n$2\n"
+    )
+    .replace(
+      /\b(title|description|subtitle|heading|eyebrow|label|caption|kicker|summary)\s*=\s*\{\s*'([^']+)'\s*\}/gi,
+      "\n$2\n"
+    );
 }
 
 function stripResidualCodeNoise(text) {
@@ -395,23 +583,24 @@ function stripResidualCodeNoise(text) {
   const out = [];
 
   for (const rawLine of lines) {
-    let line = rawLine.trim();
+    const line = rawLine.trim();
 
     if (!line) {
       out.push("");
       continue;
     }
 
-    // Drop obvious code / JSX noise
+    // Obvious code / metadata noise
     if (
       /^\s*(import|export)\b/.test(line) ||
       /^\s*(const|let|var)\s+\w+\s*=/.test(line) ||
       /^\s*function\s+\w+\s*\(/.test(line) ||
       /^\s*return\s*[({<]?\s*$/.test(line) ||
+      /^\s*[A-Za-z_$][\w$.-]*\s*:\s*$/.test(line) ||
+      /^\s*[A-Za-z_$][\w$.-]*\s*:\s*(?:new\s+\w+\(|\{|\[|true|false|null|\d+|["']).*$/i.test(line) ||
       /\bfrom\s+["'][^"']+["']/.test(line) ||
       /\bclassName\s*=/.test(line) ||
       /\b(onClick|onSubmit|onChange|onMouseEnter|onMouseLeave)\s*=/.test(line) ||
-      /\b(href|src|alt|title|id|key|style)\s*=/.test(line) ||
       /\buse(State|Effect|Memo|Callback|Ref)\s*\(/.test(line) ||
       /\blucide-react\b/.test(line) ||
       /\bexport default function\b/.test(line) ||
@@ -420,7 +609,7 @@ function stripResidualCodeNoise(text) {
       continue;
     }
 
-    // Icon/import residue lists like "ClipboardCheck, CheckCircle2, ..."
+    // Imported symbol lists like "ClipboardCheck, CheckCircle2, ..."
     if (/^[A-Z][A-Za-z0-9]*(,\s*[A-Z][A-Za-z0-9]*){2,},?$/.test(line)) {
       continue;
     }
@@ -430,14 +619,14 @@ function stripResidualCodeNoise(text) {
       continue;
     }
 
-    // Heavily code-like line
+    // Lines dominated by code markers
     const letters = (line.match(/[A-Za-zÀ-ÿ]/g) || []).length;
     const symbols = (line.match(/[{}()[\];<>]/g) || []).length;
     const quotes = (line.match(/[`"'=]/g) || []).length;
     const codeWords =
       (
         line.match(
-          /\b(function|return|const|let|var|import|export|className|props|children|default)\b/g
+          /\b(function|return|const|let|var|import|export|className|props|children|default|metadata|openGraph|viewport)\b/g
         ) || []
       ).length;
 
@@ -457,7 +646,7 @@ function stripResidualCodeNoise(text) {
 function residualCodeMarkerCount(text) {
   return (
     text.match(
-      /\b(import|export|function|return|const|let|var|className|props|children|default|useState|useEffect)\b|=>|from\s+["'][^"']+["']|[{}()[\];<>]/g
+      /\b(import|export|function|return|const|let|var|className|props|children|default|metadata|openGraph|useState|useEffect)\b|=>|from\s+["'][^"']+["']|[{}()[\];<>]/g
     ) || []
   ).length;
 }
@@ -468,7 +657,7 @@ function codeLikenessScore(text) {
   const kw =
     (
       text.match(
-        /\b(const|let|var|function|return|export|import|type|interface|useState|useEffect|className|props|children)\b/g
+        /\b(const|let|var|function|return|export|import|type|interface|useState|useEffect|className|props|children|metadata|openGraph)\b/g
       ) || []
     ).length;
   const residue = residualCodeMarkerCount(text);
@@ -477,14 +666,51 @@ function codeLikenessScore(text) {
   return (punct + kw * 8 + residue * 6) / denom;
 }
 
-function cleanContent(raw, ext) {
-  let s = String(raw || "").replace(/\r\n?/g, "\n");
-  s = maybeFixMojibake(s);
-  s = stripCommonBoilerplate(s);
+function cleanMarkdownLikeContent(raw) {
+  let s = String(raw || "");
 
-  if (ext && [".tsx", ".jsx", ".ts", ".js"].includes(ext)) {
-    s = extractLikelyRenderable(s);
-  }
+  // Remove fenced code blocks
+  s = s.replace(/```[\s\S]*?```/g, "\n\n");
+
+  // Drop MDX JSX-ish lines that are almost certainly components or expressions
+  s = s
+    .split("\n")
+    .filter((line) => {
+      const trimmed = line.trim();
+
+      if (!trimmed) return true;
+      if (/^\s*import\b/.test(trimmed)) return false;
+      if (/^\s*export\b/.test(trimmed)) return false;
+      if (/^\s*<[/A-Z][^>]*>\s*$/.test(trimmed)) return false;
+      if (/^\s*{.*}\s*$/.test(trimmed)) return false;
+
+      return true;
+    })
+    .join("\n");
+
+  // Simplify markdown links/images
+  s = s
+    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, "$1 ($2)")
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1 ($2)");
+
+  s = decodeHtmlEntities(s);
+  s = maybeFixMojibake(s);
+  s = stripUnsafeControlChars(s);
+
+  s = s
+    .split("\n")
+    .map((line) => line.replace(/[ \t]+/g, " ").trimEnd())
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+
+  return stripResidualCodeNoise(s);
+}
+
+function cleanJsxLikeContent(raw, ext) {
+  let s = String(raw || "");
+  s = stripCommonBoilerplate(s);
+  s = extractLikelyRenderable(s);
 
   // Remove fenced code blocks
   s = s.replace(/```[\s\S]*?```/g, "\n\n");
@@ -492,7 +718,10 @@ function cleanContent(raw, ext) {
   // Remove block + line comments
   s = s.replace(/\/\*[\s\S]*?\*\//g, " ").replace(/(^|\s)\/\/(?!\/).*$/gm, " ");
 
-  // MD images/links -> keep visible text + URL
+  // Preserve useful string props before stripping tags
+  s = preserveUsefulJsxProps(s);
+
+  // MD-style links/images if any
   s = s
     .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, "$1 ($2)")
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1 ($2)");
@@ -505,16 +734,16 @@ function cleanContent(raw, ext) {
       "\n\n"
     );
 
-  // Strip some common JSX props before tag removal
+  // Keep simple literal expressions: {"Hello"} -> Hello
+  s = s.replace(/\{\s*["'`](.*?)["'`]\s*\}/gs, "$1");
+
+  // Remove generic JSX props
   s = s.replace(
-    /\b(className|href|src|alt|title|id|key|style|role|target|rel|aria-[a-z-]+)\s*=\s*(\{[\s\S]*?\}|"[^"]*"|'[^']*')/g,
+    /\b[\w:-]+\s*=\s*(\{[\s\S]*?\}|"[^"]*"|'[^']*')/g,
     " "
   );
 
-  // Keep simple string literal expressions: {"Hello"} -> Hello
-  s = s.replace(/\{\s*["'`](.*?)["'`]\s*\}/gs, "$1");
-
-  // Remove remaining { ... } blocks (often code / props / expressions)
+  // Remove remaining { ... } blocks (props / expressions / closures)
   s = s.replace(/\{[\s\S]*?\}/g, " ");
 
   // Remove JSX/HTML tags
@@ -522,8 +751,8 @@ function cleanContent(raw, ext) {
 
   s = decodeHtmlEntities(s);
   s = maybeFixMojibake(s);
+  s = stripUnsafeControlChars(s);
 
-  // Normalize line-by-line to preserve paragraph structure
   s = s
     .split("\n")
     .map((line) => line.replace(/[ \t]+/g, " ").trim())
@@ -533,12 +762,24 @@ function cleanContent(raw, ext) {
 
   s = stripResidualCodeNoise(s);
 
-  // If it still looks like one huge line, gently reflow punctuation
   if (!s.includes("\n")) {
     s = s.replace(/([.!?])\s+(?=[A-ZÀ-Ÿ])/g, "$1\n\n");
   }
 
   return s.trim();
+}
+
+function cleanContent(raw, ext) {
+  let s = stripBom(String(raw || "").replace(/\r\n?/g, "\n"));
+  s = maybeFixMojibake(s);
+  s = stripUnsafeControlChars(s);
+
+  const lowerExt = String(ext || "").toLowerCase();
+  if (lowerExt === ".md" || lowerExt === ".mdx") {
+    return cleanMarkdownLikeContent(s);
+  }
+
+  return cleanJsxLikeContent(s, lowerExt);
 }
 
 function humanizeSlugPart(part, index, total) {
@@ -567,8 +808,39 @@ function routeToTitle(route) {
     .join(" ");
 }
 
+function extractTitleFromContent(text, fallbackRoute) {
+  const lines = String(text || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  for (const line of lines.slice(0, 12)) {
+    const h = line.match(/^#{1,6}\s+(.+)$/);
+    if (!h) continue;
+
+    const title = h[1].trim().replace(/\s+/g, " ");
+    if (
+      title &&
+      title.length <= 100 &&
+      !/[{}()[\]=<>]/.test(title)
+    ) {
+      return title;
+    }
+  }
+
+  return routeToTitle(fallbackRoute);
+}
+
 function summarizeText(text, maxChars = 220) {
-  const oneLine = String(text || "").replace(/\s+/g, " ").trim();
+  const oneLine = String(text || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .filter((line) => !/^#{1,6}\s+/.test(line))
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+
   if (oneLine.length <= maxChars) return oneLine;
   return oneLine.slice(0, maxChars).trim() + "…";
 }
@@ -648,7 +920,7 @@ function addPage({ route, fileAbsPath }) {
 
   if (pathsFound.has(route)) {
     warnings.push(
-      `⚠ Duplicate route "${route}"\n   - Kept: ${sourceFilesForRoute.get(route)}\n   - Ignored: ${fileAbsPath}\n`
+      `⚠ Duplicate route "${route}"\n   - Kept: ${path.relative(process.cwd(), sourceFilesForRoute.get(route))}\n   - Ignored: ${path.relative(process.cwd(), fileAbsPath)}\n`
     );
     return;
   }
@@ -662,12 +934,14 @@ function addPage({ route, fileAbsPath }) {
   if (!cleaned || cleaned.length < MIN_CHARS_PER_PAGE) return;
 
   if (SKIP_CODELIKE_PAGES && codeLikenessScore(cleaned) > 0.12) {
-    warnings.push(`⚠ Skipped code-like page: ${route} (${path.relative(process.cwd(), fileAbsPath)})`);
+    warnings.push(
+      `⚠ Skipped code-like page: ${route} (${path.relative(process.cwd(), fileAbsPath)})`
+    );
     return;
   }
 
   const sourceRel = path.relative(process.cwd(), fileAbsPath);
-  const title = routeToTitle(route);
+  const title = extractTitleFromContent(cleaned, route);
   const mirrorMarkdown = buildMarkdownMirror({
     route,
     url,

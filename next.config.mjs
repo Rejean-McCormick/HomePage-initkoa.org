@@ -25,35 +25,64 @@ const SECURITY_HEADERS = [
   },
 ];
 
-const AI_DISCOVERY_HEADERS = [
+const STATIC_DISCOVERY_CACHE_HEADERS = [
   {
     key: "Cache-Control",
     value: "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
   },
+  { key: "Access-Control-Allow-Origin", value: "*" },
+];
+
+/**
+ * HTML canonicals stay indexable by default.
+ * We split non-HTML discovery surfaces into:
+ * - indexable machine-readable entrypoints (.md mirrors, llms.txt)
+ * - noindex auxiliary artifacts (full corpus, manifests, sitemaps, json/xml)
+ */
+const INDEXABLE_DISCOVERY_ROBOTS_HEADERS = [
   {
     key: "X-Robots-Tag",
     value: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
   },
-  { key: "Access-Control-Allow-Origin", value: "*" },
 ];
 
-const PLAIN_TEXT_HEADERS = [
-  ...AI_DISCOVERY_HEADERS,
+const NOINDEX_DISCOVERY_ROBOTS_HEADERS = [
+  { key: "X-Robots-Tag", value: "noindex, follow, noarchive" },
+];
+
+const ROBOTS_TXT_HEADERS = [
+  ...STATIC_DISCOVERY_CACHE_HEADERS,
+  ...NOINDEX_DISCOVERY_ROBOTS_HEADERS,
+  { key: "Content-Type", value: "text/plain; charset=utf-8" },
+];
+
+const INDEXABLE_PLAIN_TEXT_HEADERS = [
+  ...STATIC_DISCOVERY_CACHE_HEADERS,
+  ...INDEXABLE_DISCOVERY_ROBOTS_HEADERS,
+  { key: "Content-Type", value: "text/plain; charset=utf-8" },
+];
+
+const NOINDEX_PLAIN_TEXT_HEADERS = [
+  ...STATIC_DISCOVERY_CACHE_HEADERS,
+  ...NOINDEX_DISCOVERY_ROBOTS_HEADERS,
   { key: "Content-Type", value: "text/plain; charset=utf-8" },
 ];
 
 const JSON_HEADERS = [
-  ...AI_DISCOVERY_HEADERS,
+  ...STATIC_DISCOVERY_CACHE_HEADERS,
+  ...NOINDEX_DISCOVERY_ROBOTS_HEADERS,
   { key: "Content-Type", value: "application/json; charset=utf-8" },
 ];
 
 const XML_HEADERS = [
-  ...AI_DISCOVERY_HEADERS,
+  ...STATIC_DISCOVERY_CACHE_HEADERS,
+  ...NOINDEX_DISCOVERY_ROBOTS_HEADERS,
   { key: "Content-Type", value: "application/xml; charset=utf-8" },
 ];
 
 const MARKDOWN_HEADERS = [
-  ...AI_DISCOVERY_HEADERS,
+  ...STATIC_DISCOVERY_CACHE_HEADERS,
+  ...INDEXABLE_DISCOVERY_ROBOTS_HEADERS,
   { key: "Content-Type", value: "text/markdown; charset=utf-8" },
 ];
 
@@ -85,27 +114,52 @@ const nextConfig = {
 
   async headers() {
     return [
-      // Inventory: always fresh
+      // Inventory: always fresh, never cached
       {
-        source: "/inventory:rest*",
+        source: "/inventory/:rest*",
         headers: [
           ...SECURITY_HEADERS,
           { key: "Cache-Control", value: "no-store, max-age=0, must-revalidate" },
+          { key: "X-Robots-Tag", value: "noindex, follow, noarchive" },
+        ],
+      },
+      {
+        source: "/inventory",
+        headers: [
+          ...SECURITY_HEADERS,
+          { key: "Cache-Control", value: "no-store, max-age=0, must-revalidate" },
+          { key: "X-Robots-Tag", value: "noindex, follow, noarchive" },
         ],
       },
 
-      // Core AI discovery files
+      // Core discovery endpoints
       {
-        source: "/llms.txt",
-        headers: [...SECURITY_HEADERS, ...PLAIN_TEXT_HEADERS],
+        source: "/robots.txt",
+        headers: [...SECURITY_HEADERS, ...ROBOTS_TXT_HEADERS],
       },
       {
+        source: "/sitemap.xml",
+        headers: [...SECURITY_HEADERS, ...XML_HEADERS],
+      },
+      {
+        source: "/md-sitemap.xml",
+        headers: [...SECURITY_HEADERS, ...XML_HEADERS],
+      },
+
+      // Curated AI entrypoint: indexable
+      {
+        source: "/llms.txt",
+        headers: [...SECURITY_HEADERS, ...INDEXABLE_PLAIN_TEXT_HEADERS],
+      },
+
+      // Auxiliary AI artifacts: crawlable/fetchable but not canonical in search
+      {
         source: "/llms-full.txt",
-        headers: [...SECURITY_HEADERS, ...PLAIN_TEXT_HEADERS],
+        headers: [...SECURITY_HEADERS, ...NOINDEX_PLAIN_TEXT_HEADERS],
       },
       {
         source: "/ai-corpus.txt",
-        headers: [...SECURITY_HEADERS, ...PLAIN_TEXT_HEADERS],
+        headers: [...SECURITY_HEADERS, ...NOINDEX_PLAIN_TEXT_HEADERS],
       },
       {
         source: "/ai-sitemap.json",
@@ -115,22 +169,14 @@ const nextConfig = {
         source: "/md-manifest.json",
         headers: [...SECURITY_HEADERS, ...JSON_HEADERS],
       },
-      {
-        source: "/md-sitemap.xml",
-        headers: [...SECURITY_HEADERS, ...XML_HEADERS],
-      },
 
-      // Markdown mirrors generated into /public
+      // Generated markdown mirrors in /public: indexable machine-readable pages
       {
         source: "/:path*.md",
         headers: [...SECURITY_HEADERS, ...MARKDOWN_HEADERS],
       },
-      {
-        source: "/index.html.md",
-        headers: [...SECURITY_HEADERS, ...MARKDOWN_HEADERS],
-      },
 
-      // Default site-wide headers
+      // Default site-wide headers for HTML/app routes
       {
         source: "/:path*",
         headers: SECURITY_HEADERS,

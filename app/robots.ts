@@ -1,14 +1,14 @@
 // app/robots.ts
 import type { MetadataRoute } from "next";
+import { getSiteUrl } from "@/lib/site-url";
 
 export const runtime = "nodejs";
 
-const DEFAULT_SITE_URL = "https://initkoa.org";
-const DISALLOW_PATHS: string[] = ["/private", "/admin", "/api"];
+const DISALLOW_PATHS = ["/private", "/admin", "/api"] as const;
 
 // Bots explicitement autorisés pour maximiser la découvrabilité IA + search.
 // Le groupe "*" reste ouvert pour tous les autres crawlers respectueux.
-const EXPLICIT_ALLOW_BOTS: string[] = [
+const EXPLICIT_ALLOW_BOTS = [
   "Googlebot",
   "Google-Extended",
   "OAI-SearchBot",
@@ -17,42 +17,7 @@ const EXPLICIT_ALLOW_BOTS: string[] = [
   "ClaudeBot",
   "Claude-User",
   "Claude-SearchBot",
-];
-
-function canonicalizeBaseUrl(raw?: string | null): string {
-  let s = String(raw || "").trim();
-
-  if (!s) return DEFAULT_SITE_URL;
-
-  if (!/^https?:\/\//i.test(s)) {
-    s = `https://${s}`;
-  }
-
-  s = s.replace(/\/+$/, "");
-
-  try {
-    const u = new URL(s);
-
-    if (u.hostname === "www.initkoa.org") {
-      u.hostname = "initkoa.org";
-    }
-
-    u.protocol = "https:";
-
-    return u.toString().replace(/\/+$/, "");
-  } catch {
-    return DEFAULT_SITE_URL;
-  }
-}
-
-function getBaseUrl(): string {
-  return canonicalizeBaseUrl(
-    process.env.NEXT_PUBLIC_SITE_URL ||
-      process.env.SITE_URL ||
-      process.env.VERCEL_URL ||
-      DEFAULT_SITE_URL
-  );
-}
+] as const;
 
 function getHost(baseUrl: string): string {
   try {
@@ -62,7 +27,7 @@ function getHost(baseUrl: string): string {
   }
 }
 
-function allowRule(userAgent: string) {
+function allowRule(userAgent: string): MetadataRoute.Robots["rules"][number] {
   return {
     userAgent,
     allow: "/",
@@ -71,7 +36,7 @@ function allowRule(userAgent: string) {
 }
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = getBaseUrl();
+  const baseUrl = getSiteUrl();
   const host = getHost(baseUrl);
 
   return {

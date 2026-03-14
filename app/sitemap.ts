@@ -12,8 +12,17 @@ const PUBLIC_DIR = path.join(process.cwd(), "public");
 // Never index these areas (even if they contain pages)
 const EXCLUDED_PREFIXES = ["/admin", "/api", "/private"];
 
-// Next.js App Router: a folder is a routable page if it contains page.(tsx|ts|js|jsx|mdx)
-const PAGE_FILE_RE = /^page\.(tsx|ts|js|jsx|mdx)$/;
+// App Router: a folder is routable when it contains page.(tsx|ts|js|jsx|mdx|md)
+const PAGE_FILES_PRIORITY = [
+  "page.tsx",
+  "page.ts",
+  "page.js",
+  "page.jsx",
+  "page.mdx",
+  "page.md",
+] as const;
+
+const PAGE_FILE_RE = /^page\.(tsx|ts|js|jsx|mdx|md)$/;
 
 // Public machine-readable assets that should NOT live in the canonical human sitemap
 const NON_CANONICAL_PUBLIC_PATHS = new Set([
@@ -24,6 +33,31 @@ const NON_CANONICAL_PUBLIC_PATHS = new Set([
   "/md-manifest.json",
   "/md-sitemap.xml",
 ]);
+
+// Common non-route / internal folders people keep under app/
+const SKIP_DIR_NAMES = new Set([
+  "components",
+  "lib",
+  "utils",
+  "styles",
+  "fonts",
+  "node_modules",
+]);
+
+type SitemapEntry = MetadataRoute.Sitemap[number];
+
+type AiSitemapEntry = {
+  route?: string;
+  url?: string;
+  lastModified?: string | Date;
+  changeFrequency?: SitemapEntry["changeFrequency"];
+  priority?: number;
+};
+
+type RouteScan = {
+  routes: string[];
+  lastModifiedByPathname: Map<string, Date>;
+};
 
 function isRouteGroup(seg: string): boolean {
   return seg.startsWith("(") && seg.endsWith(")");
@@ -41,6 +75,13 @@ function isInterceptingSegment(seg: string): boolean {
     seg.startsWith("(...") ||
     seg.startsWith("(..)(..)")
   );
+}
+
+function normalizePathname(p: string): string {
+  if (!p || p === "/") return "/";
+  return ("/" + p.replace(/^\/+/, ""))
+    .replace(/\/{2,}/g, "/")
+    .replace(/\/+$/, "");
 }
 
 function isExcludedPathname(pathname: string): boolean {
@@ -68,20 +109,60 @@ function isSkippableSegment(seg: string): boolean {
   // Skip excluded top-level areas
   if (seg === "admin" || seg === "api" || seg === "private") return true;
 
+  // Skip common internal folders
+  if (SKIP_DIR_NAMES.has(seg)) return true;
+
   return false;
 }
 
-function walkForRoutes(appDirAbs: string): string[] {
+function pickPageFile(fileNames: string[]): string | null {
+  for (const name of PAGE_FILES_PRIORITY) {
+    if (fileNames.includes(name)) return name;
+  }
+  return fileNames[0] ?? null;
+}
+
+function safeReadDir(absPath: string): fs.Dirent[] {
+  try {
+    return fs.readdirSync(absPath, { withFileTypes: true });
+  } catch {
+    return [];
+  }
+}
+
+function safeStatMtime(absPath: string): Date | null {
+  try {
+    return fs.statSync(absPath).mtime;
+  } catch {
+    return null;
+  }
+}
+
+function walkForRoutes(appDirAbs: string): RouteScan {
   const routes = new Set<string>();
+  const lastModifiedByPathname = new Map<string, Date>();
 
   function walk(currentAbs: string, urlSegments: string[]) {
-    const entries = fs.readdirSync(currentAbs, { withFileTypes: true });
+    const entries = safeReadDir(currentAbs);
+    if (entries.length === 0) return;
+
+    const pageFiles = entries
+      .filter((e) => e.isFile() && PAGE_FILE_RE.test(e.name))
+      .map((e) => e.name);
 
     // If this folder contains a page.* file, it maps to a URL path
-    const hasPage = entries.some((e) => e.isFile() && PAGE_FILE_RE.test(e.name));
-    if (hasPage) {
-      const routePath = "/" + urlSegments.join("/");
-      routes.add(routePath === "/" ? "/" : routePath);
+    if (pageFiles.length > 0) {
+      const routePath = normalizePathname("/" + urlSegments.join("/"));
+      const pickedPageFile = pickPageFile(pageFiles);
+
+      routes.add(routePath);
+
+      if (pickedPageFile) {
+        const mtime = safeStatMtime(path.join(currentAbs, pickedPageFile));
+        if (mtime) {
+          lastModifiedByPathname.set(routePath, mtime);
+        }
+      }
     }
 
     // Recurse into subfolders
@@ -101,7 +182,11 @@ function walkForRoutes(appDirAbs: string): string[] {
   }
 
   walk(appDirAbs, []);
-  return Array.from(routes).sort();
+
+  return {
+    routes: Array.from(routes).sort(),
+    lastModifiedByPathname,
+  };
 }
 
 function depthOf(routePath: string): number {
@@ -121,6 +206,7 @@ function priorityFor(routePath: string): number {
     "/technology",
     "/kreature",
   ]);
+
   if (hubs.has(routePath)) return 0.9;
 
   // Depth-based fallback
@@ -132,29 +218,11 @@ function priorityFor(routePath: string): number {
   return 0.5;
 }
 
-function changeFrequencyFor(
-  routePath: string
-): MetadataRoute.Sitemap[number]["changeFrequency"] {
+function changeFrequencyFor(routePath: string): SitemapEntry["changeFrequency"] {
   const d = depthOf(routePath);
   if (routePath === "/") return "weekly";
   if (d <= 1) return "weekly";
   return "monthly";
-}
-
-// Supports BOTH shapes:
-// 1) { url: "/about" } or { url: "https://..." }
-// 2) { route: "/about", url?: "https://..." }
-type AiSitemapEntry = {
-  route?: string;
-  url?: string;
-  lastModified?: string | Date;
-  changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
-  priority?: number;
-};
-
-function normalizePathname(p: string): string {
-  const pathname = p.replace(/\/+$/, "") || "/";
-  return pathname === "" ? "/" : pathname;
 }
 
 function toCanonicalUrlFromPathname(pathname: string): string {
@@ -176,6 +244,7 @@ function entryToPathname(e: AiSitemapEntry): string | null {
         return null;
       }
     }
+
     return normalizePathname(e.url.startsWith("/") ? e.url : `/${e.url}`);
   }
 
@@ -188,6 +257,7 @@ function parseLastModified(
 ): Date {
   if (!x) return fallback;
   if (x instanceof Date) return x;
+
   const d = new Date(x);
   return Number.isNaN(d.getTime()) ? fallback : d;
 }
@@ -196,17 +266,21 @@ function readAiSitemapIfPresent(): AiSitemapEntry[] | null {
   const file = path.join(PUBLIC_DIR, "ai-sitemap.json");
   if (!fs.existsSync(file)) return null;
 
-  const raw = fs.readFileSync(file, "utf8");
-  const data = JSON.parse(raw) as unknown;
+  try {
+    const raw = fs.readFileSync(file, "utf8");
+    const data = JSON.parse(raw) as unknown;
 
-  if (!Array.isArray(data)) return null;
+    if (!Array.isArray(data)) return null;
 
-  return (data as AiSitemapEntry[]).filter(
-    (e) =>
-      e &&
-      (typeof (e as AiSitemapEntry).route === "string" ||
-        typeof (e as AiSitemapEntry).url === "string")
-  );
+    return (data as AiSitemapEntry[]).filter(
+      (e) =>
+        e &&
+        (typeof (e as AiSitemapEntry).route === "string" ||
+          typeof (e as AiSitemapEntry).url === "string")
+    );
+  } catch {
+    return null;
+  }
 }
 
 function isMarkdownMirrorPathname(pathname: string): boolean {
@@ -233,12 +307,13 @@ function isCanonicalHumanPathname(pathname: string): boolean {
 
 function buildRouteMetaMap(
   ai: AiSitemapEntry[] | null,
+  fallbackLastModified: Map<string, Date>,
   now: Date
 ): Map<
   string,
   {
     lastModified: Date;
-    changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
+    changeFrequency?: SitemapEntry["changeFrequency"];
     priority?: number;
   }
 > {
@@ -246,7 +321,7 @@ function buildRouteMetaMap(
     string,
     {
       lastModified: Date;
-      changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
+      changeFrequency?: SitemapEntry["changeFrequency"];
       priority?: number;
     }
   >();
@@ -258,8 +333,10 @@ function buildRouteMetaMap(
     if (!pathname) continue;
     if (!isCanonicalHumanPathname(pathname)) continue;
 
+    const fallback = fallbackLastModified.get(pathname) ?? now;
+
     map.set(pathname, {
-      lastModified: parseLastModified(e.lastModified, now),
+      lastModified: parseLastModified(e.lastModified, fallback),
       changeFrequency: e.changeFrequency,
       priority: typeof e.priority === "number" ? e.priority : undefined,
     });
@@ -274,40 +351,61 @@ function collectCanonicalRoutes(now: Date): {
     string,
     {
       lastModified: Date;
-      changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
+      changeFrequency?: SitemapEntry["changeFrequency"];
       priority?: number;
     }
   >;
+  fallbackLastModifiedByPathname: Map<string, Date>;
 } {
+  const appDirAbs = path.join(process.cwd(), "app");
+  const scanned = walkForRoutes(appDirAbs);
   const ai = readAiSitemapIfPresent();
-  const metaByPathname = buildRouteMetaMap(ai, now);
 
-  if (ai && ai.length > 0) {
-    const routes = Array.from(
-      new Set(
-        ai
-          .map((e) => entryToPathname(e))
-          .filter((p): p is string => Boolean(p))
-          .filter((p) => isCanonicalHumanPathname(p))
-      )
-    ).sort();
+  const fallbackLastModifiedByPathname = new Map<string, Date>();
 
-    return { routes, metaByPathname };
+  for (const [pathname, mtime] of scanned.lastModifiedByPathname.entries()) {
+    if (isCanonicalHumanPathname(pathname)) {
+      fallbackLastModifiedByPathname.set(pathname, mtime);
+    }
   }
 
-  // Fallback: scan /app for page.* routes
-  const appDirAbs = path.join(process.cwd(), "app");
-  const routes = walkForRoutes(appDirAbs)
-    .map((p) => normalizePathname(p))
-    .filter((p) => isCanonicalHumanPathname(p));
+  const metaByPathname = buildRouteMetaMap(
+    ai,
+    fallbackLastModifiedByPathname,
+    now
+  );
 
-  return { routes, metaByPathname };
+  // Source of truth = union of real app routes + ai-sitemap entries.
+  // This prevents ai-sitemap omissions from dropping valid pages out of the XML sitemap.
+  const routes = new Set<string>();
+
+  for (const route of scanned.routes) {
+    const pathname = normalizePathname(route);
+    if (isCanonicalHumanPathname(pathname)) {
+      routes.add(pathname);
+    }
+  }
+
+  if (ai) {
+    for (const e of ai) {
+      const pathname = entryToPathname(e);
+      if (!pathname) continue;
+      if (!isCanonicalHumanPathname(pathname)) continue;
+      routes.add(pathname);
+    }
+  }
+
+  return {
+    routes: Array.from(routes).sort(),
+    metaByPathname,
+    fallbackLastModifiedByPathname,
+  };
 }
 
 function pushEntry(
   out: MetadataRoute.Sitemap,
   seenUrls: Set<string>,
-  entry: MetadataRoute.Sitemap[number]
+  entry: SitemapEntry
 ) {
   if (seenUrls.has(entry.url)) return;
   seenUrls.add(entry.url);
@@ -316,7 +414,9 @@ function pushEntry(
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const { routes, metaByPathname } = collectCanonicalRoutes(now);
+
+  const { routes, metaByPathname, fallbackLastModifiedByPathname } =
+    collectCanonicalRoutes(now);
 
   const out: MetadataRoute.Sitemap = [];
   const seenUrls = new Set<string>();
@@ -324,10 +424,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Canonical human routes only
   for (const routePath of routes) {
     const meta = metaByPathname.get(routePath);
+    const fallbackLastModified =
+      fallbackLastModifiedByPathname.get(routePath) ?? now;
 
     pushEntry(out, seenUrls, {
       url: toCanonicalUrlFromPathname(routePath),
-      lastModified: meta?.lastModified ?? now,
+      lastModified: meta?.lastModified ?? fallbackLastModified,
       changeFrequency: meta?.changeFrequency ?? changeFrequencyFor(routePath),
       priority: meta?.priority ?? priorityFor(routePath),
     });
