@@ -4,6 +4,7 @@ import { Baskervville } from 'next/font/google';
 import Header from '@/components/Header';
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import { getSiteUrl, toAbsoluteUrl } from '@/lib/site-url';
 
 const baskervville = Baskervville({
@@ -117,10 +118,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               aria-label="AI and machine-readable resources"
               className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs"
             >
-              <a
-                href="/ai"
-                className="hover:text-[#1e6864] transition-colors"
-              >
+              <a href="/ai" className="hover:text-[#1e6864] transition-colors">
                 AI Index
               </a>
               <a
@@ -162,6 +160,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </nav>
           </footer>
         </div>
+
+        <Analytics />
       </body>
     </html>
   );
