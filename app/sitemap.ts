@@ -363,11 +363,11 @@ function collectCanonicalRoutes(now: Date): {
 
   const fallbackLastModifiedByPathname = new Map<string, Date>();
 
-  for (const [pathname, mtime] of scanned.lastModifiedByPathname.entries()) {
+  scanned.lastModifiedByPathname.forEach((mtime, pathname) => {
     if (isCanonicalHumanPathname(pathname)) {
       fallbackLastModifiedByPathname.set(pathname, mtime);
     }
-  }
+  });
 
   const metaByPathname = buildRouteMetaMap(
     ai,
