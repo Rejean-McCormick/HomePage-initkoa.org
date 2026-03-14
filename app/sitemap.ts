@@ -15,15 +15,15 @@ const EXCLUDED_PREFIXES = ["/admin", "/api", "/private"];
 // Next.js App Router: a folder is a routable page if it contains page.(tsx|ts|js|jsx|mdx)
 const PAGE_FILE_RE = /^page\.(tsx|ts|js|jsx|mdx)$/;
 
-// Public AI artifacts we want in sitemap.xml when present
-const AI_ARTIFACT_PATHS = [
+// Public machine-readable assets that should NOT live in the canonical human sitemap
+const NON_CANONICAL_PUBLIC_PATHS = new Set([
   "/llms.txt",
   "/llms-full.txt",
   "/ai-corpus.txt",
   "/ai-sitemap.json",
   "/md-manifest.json",
   "/md-sitemap.xml",
-] as const;
+]);
 
 function isRouteGroup(seg: string): boolean {
   return seg.startsWith("(") && seg.endsWith(")");
@@ -123,24 +123,6 @@ function priorityFor(routePath: string): number {
   ]);
   if (hubs.has(routePath)) return 0.9;
 
-  // Markdown mirrors: slightly below the corresponding HTML routes
-  if (isMarkdownMirrorPathname(routePath)) {
-    return routePath === "/index.html.md" ? 0.85 : 0.45;
-  }
-
-  // AI artifacts: useful but secondary
-  if (isAiArtifactPathname(routePath)) {
-    switch (routePath) {
-      case "/llms.txt":
-      case "/llms-full.txt":
-        return 0.6;
-      case "/ai-corpus.txt":
-        return 0.5;
-      default:
-        return 0.35;
-    }
-  }
-
   // Depth-based fallback
   const d = depthOf(routePath);
   if (d === 1) return 0.8;
@@ -153,10 +135,6 @@ function priorityFor(routePath: string): number {
 function changeFrequencyFor(
   routePath: string
 ): MetadataRoute.Sitemap[number]["changeFrequency"] {
-  if (isAiArtifactPathname(routePath) || isMarkdownMirrorPathname(routePath)) {
-    return "weekly";
-  }
-
   const d = depthOf(routePath);
   if (routePath === "/") return "weekly";
   if (d <= 1) return "weekly";
@@ -235,36 +213,22 @@ function isMarkdownMirrorPathname(pathname: string): boolean {
   return pathname === "/index.html.md" || pathname.endsWith(".md");
 }
 
-function isAiArtifactPathname(pathname: string): boolean {
-  return AI_ARTIFACT_PATHS.includes(
-    pathname as (typeof AI_ARTIFACT_PATHS)[number]
-  );
+function isMachineAssetPathname(pathname: string): boolean {
+  return NON_CANONICAL_PUBLIC_PATHS.has(pathname);
 }
 
-function publicPathnameToFsPath(pathname: string): string {
-  const clean = pathname.replace(/^\/+/, "");
-  return path.join(PUBLIC_DIR, clean);
-}
+function isCanonicalHumanPathname(pathname: string): boolean {
+  if (!pathname) return false;
+  if (pathname === "/sitemap") return false;
+  if (isExcludedPathname(pathname)) return false;
+  if (isMarkdownMirrorPathname(pathname)) return false;
+  if (isMachineAssetPathname(pathname)) return false;
 
-function publicFileExists(pathname: string): boolean {
-  return fs.existsSync(publicPathnameToFsPath(pathname));
-}
+  // Keep the canonical sitemap focused on human HTML routes only.
+  // Exclude other static file-like paths if they appear in ai-sitemap.json.
+  if (pathname !== "/" && /\.(txt|xml|json)$/i.test(pathname)) return false;
 
-function publicFileLastModified(pathname: string, fallback: Date): Date {
-  try {
-    const stat = fs.statSync(publicPathnameToFsPath(pathname));
-    return stat.mtime ?? fallback;
-  } catch {
-    return fallback;
-  }
-}
-
-// Mirrors follow the llms.txt proposal:
-// - "/about" -> "/about.md"
-// - "/" -> "/index.html.md"
-function routeToMarkdownMirrorPathname(routePath: string): string {
-  const p = normalizePathname(routePath);
-  return p === "/" ? "/index.html.md" : `${p}.md`;
+  return true;
 }
 
 function buildRouteMetaMap(
@@ -292,7 +256,7 @@ function buildRouteMetaMap(
   for (const e of ai) {
     const pathname = entryToPathname(e);
     if (!pathname) continue;
-    if (isExcludedPathname(pathname)) continue;
+    if (!isCanonicalHumanPathname(pathname)) continue;
 
     map.set(pathname, {
       lastModified: parseLastModified(e.lastModified, now),
@@ -304,7 +268,7 @@ function buildRouteMetaMap(
   return map;
 }
 
-function collectConcreteRoutes(now: Date): {
+function collectCanonicalRoutes(now: Date): {
   routes: string[];
   metaByPathname: Map<
     string,
@@ -324,8 +288,7 @@ function collectConcreteRoutes(now: Date): {
         ai
           .map((e) => entryToPathname(e))
           .filter((p): p is string => Boolean(p))
-          .filter((p) => p !== "/sitemap")
-          .filter((p) => !isExcludedPathname(p))
+          .filter((p) => isCanonicalHumanPathname(p))
       )
     ).sort();
 
@@ -336,8 +299,7 @@ function collectConcreteRoutes(now: Date): {
   const appDirAbs = path.join(process.cwd(), "app");
   const routes = walkForRoutes(appDirAbs)
     .map((p) => normalizePathname(p))
-    .filter((p) => p !== "/sitemap")
-    .filter((p) => !isExcludedPathname(p));
+    .filter((p) => isCanonicalHumanPathname(p));
 
   return { routes, metaByPathname };
 }
@@ -354,12 +316,12 @@ function pushEntry(
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const { routes, metaByPathname } = collectConcreteRoutes(now);
+  const { routes, metaByPathname } = collectCanonicalRoutes(now);
 
   const out: MetadataRoute.Sitemap = [];
   const seenUrls = new Set<string>();
 
-  // 1) Canonical human routes
+  // Canonical human routes only
   for (const routePath of routes) {
     const meta = metaByPathname.get(routePath);
 
@@ -368,31 +330,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: meta?.lastModified ?? now,
       changeFrequency: meta?.changeFrequency ?? changeFrequencyFor(routePath),
       priority: meta?.priority ?? priorityFor(routePath),
-    });
-  }
-
-  // 2) Markdown mirror routes (only if the file exists in /public)
-  for (const routePath of routes) {
-    const mdPathname = routeToMarkdownMirrorPathname(routePath);
-    if (!publicFileExists(mdPathname)) continue;
-
-    pushEntry(out, seenUrls, {
-      url: toCanonicalUrlFromPathname(mdPathname),
-      lastModified: publicFileLastModified(mdPathname, now),
-      changeFrequency: changeFrequencyFor(mdPathname),
-      priority: priorityFor(mdPathname),
-    });
-  }
-
-  // 3) Public AI artifacts (only if present)
-  for (const pathname of AI_ARTIFACT_PATHS) {
-    if (!publicFileExists(pathname)) continue;
-
-    pushEntry(out, seenUrls, {
-      url: toCanonicalUrlFromPathname(pathname),
-      lastModified: publicFileLastModified(pathname, now),
-      changeFrequency: changeFrequencyFor(pathname),
-      priority: priorityFor(pathname),
     });
   }
 

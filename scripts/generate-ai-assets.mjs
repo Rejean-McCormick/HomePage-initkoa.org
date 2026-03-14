@@ -38,11 +38,18 @@ const GENERATE_MD_MIRRORS =
 const GENERATE_LLMS_FULL =
   (process.env.AI_GENERATE_LLMS_FULL || "true").toLowerCase() === "true";
 
+// default true: try to repair common mojibake / bad UTF-8 sequences
+const FIX_MOJIBAKE =
+  (process.env.AI_FIX_MOJIBAKE || "true").toLowerCase() === "true";
+
 // default 60: ignore tiny/noise pages
 const MIN_CHARS_PER_PAGE = Number(process.env.AI_MIN_CHARS_PER_PAGE || 60) || 60;
 
 // default 0: unlimited
 const MAX_CHARS_PER_PAGE = Number(process.env.AI_MAX_CHARS_PER_PAGE || 0) || 0;
+
+// default 28: keep llms.txt concise; exhaustive index goes in llms-full.txt
+const MAX_LLMS_PAGE_LINKS = Number(process.env.AI_MAX_LLMS_PAGE_LINKS || 28) || 28;
 
 // -------------------- PATHS --------------------
 const APP_DIR = path.join(process.cwd(), "app");
@@ -75,6 +82,71 @@ const SKIP_DIRS = new Set([
   "public",
   "node_modules",
 ]);
+
+const MINOR_TITLE_WORDS = new Set([
+  "a",
+  "an",
+  "and",
+  "as",
+  "at",
+  "by",
+  "for",
+  "from",
+  "in",
+  "into",
+  "of",
+  "on",
+  "or",
+  "the",
+  "to",
+  "vs",
+  "via",
+  "with",
+]);
+
+const TITLE_WORD_OVERRIDES = new Map([
+  ["ai", "AI"],
+  ["api", "API"],
+  ["faq", "FAQ"],
+  ["fvr", "FVR"],
+  ["go", "Go"],
+  ["html", "HTML"],
+  ["it", "It"],
+  ["json", "JSON"],
+  ["kpi", "KPI"],
+  ["kpis", "KPIs"],
+  ["llm", "LLM"],
+  ["llms", "LLMs"],
+  ["md", "Markdown"],
+  ["no", "No"],
+  ["rag", "RAG"],
+  ["tbd", "TBD"],
+  ["ui", "UI"],
+  ["url", "URL"],
+  ["urls", "URLs"],
+  ["ux", "UX"],
+  ["xml", "XML"],
+]);
+
+const PRIORITY_LLMS_ROUTES = [
+  "/",
+  "/about",
+  "/contact",
+  "/why",
+  "/diagnosis",
+  "/principles",
+  "/research",
+  "/technology",
+  "/technology/context-packs",
+  "/platforms",
+  "/platforms/orgo",
+  "/platforms/konnaxion",
+  "/technology/ariane",
+  "/technology/swarmcraft",
+  "/technology/kristal",
+  "/infrastructures",
+  "/initiatives",
+];
 
 // -------------------- URL / ROUTE HELPERS --------------------
 function canonicalizeBaseUrl(raw) {
@@ -192,10 +264,6 @@ function escapeXml(s) {
     .replace(/'/g, "&apos;");
 }
 
-function escapeMarkdownText(s) {
-  return String(s).replace(/([\\`*_{}\[\]()#+\-.!|>])/g, "\\$1");
-}
-
 function safeJsonRead(filePath, fallback) {
   try {
     if (!fs.existsSync(filePath)) return fallback;
@@ -241,16 +309,58 @@ function extractLikelyRenderable(source) {
   return source.slice(start, end + 1);
 }
 
-function codeLikenessScore(text) {
-  const letters = (text.match(/[A-Za-zÀ-ÿ]/g) || []).length;
-  const punct = (text.match(/[{}()[\];<>]/g) || []).length;
-  const kw =
-    (text.match(
-      /\b(const|let|var|function|return|export|import|type|interface|useState|useEffect|className)\b/g
-    ) || []).length;
+function maybeFixMojibake(input) {
+  let s = String(input || "");
+  if (!FIX_MOJIBAKE) return s;
 
-  const denom = Math.max(letters, 1);
-  return (punct + kw * 8) / denom;
+  const suspicious =
+    /(Ã.|Â |Â$|â€“|â€”|â€˜|â€™|â€œ|â€|â€¦|â€¢|â€‘|â€"|â€)/;
+
+  if (!suspicious.test(s)) return s;
+
+  try {
+    const repaired = Buffer.from(s, "latin1").toString("utf8");
+    const score = (t) =>
+      (t.match(/(Ã.|Â |Â$|â€“|â€”|â€˜|â€™|â€œ|â€|â€¦|â€¢|â€‘|â€"|â€)/g) || [])
+        .length;
+    if (score(repaired) < score(s)) s = repaired;
+  } catch {
+    // fall through
+  }
+
+  return s
+    .replace(/â€”/g, "—")
+    .replace(/â€“/g, "–")
+    .replace(/â€˜/g, "‘")
+    .replace(/â€™/g, "’")
+    .replace(/â€œ/g, "“")
+    .replace(/â€/g, "”")
+    .replace(/â€"/g, "”")
+    .replace(/â€¦/g, "…")
+    .replace(/â€¢/g, "•")
+    .replace(/â€‘/g, "-")
+    .replace(/Â /g, " ")
+    .replace(/Â$/g, "")
+    .replace(/Â/g, "");
+}
+
+function decodeHtmlEntities(s) {
+  return String(s)
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .replace(/&apos;/gi, "'")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&#(\d+);/g, (_, dec) => {
+      const code = Number(dec);
+      return Number.isFinite(code) ? String.fromCodePoint(code) : _;
+    })
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => {
+      const code = Number.parseInt(hex, 16);
+      return Number.isFinite(code) ? String.fromCodePoint(code) : _;
+    });
 }
 
 function stripCommonBoilerplate(source) {
@@ -260,33 +370,116 @@ function stripCommonBoilerplate(source) {
   s = s.replace(/^\s*---[\s\S]*?---\s*/m, "");
 
   // "use client"
-  s = s.replace(/^\s*["']use client["'];\s*$/gm, "");
+  s = s.replace(/^\s*["']use client["'];?\s*$/gm, "");
 
   // imports
-  s = s.replace(/^\s*import\s+[\s\S]*?;?\s*$/gm, "");
+  s = s.replace(/^\s*import\s+["'][^"']+["'];?\s*$/gm, "");
+  s = s.replace(/^\s*import[\s\S]*?from\s+["'][^"']+["'];?\s*$/gm, "");
 
   // common Next exports / metadata
   s = s
-    .replace(/export\s+const\s+metadata[\s\S]*?\n\};?\s*/gm, "")
-    .replace(/export\s+const\s+viewport[\s\S]*?\n\};?\s*/gm, "")
-    .replace(/export\s+const\s+(revalidate|dynamic|runtime|preferredRegion)\s*=\s*[^;]+;?/g, "")
-    .replace(/export\s+async\s+function\s+generateMetadata[\s\S]*?\n\}/gm, "");
+    .replace(/export\s+const\s+metadata\s*=\s*{[\s\S]*?}\s*;?/g, "")
+    .replace(/export\s+const\s+viewport\s*=\s*{[\s\S]*?}\s*;?/g, "")
+    .replace(
+      /export\s+const\s+(revalidate|dynamic|runtime|preferredRegion)\s*=\s*[^;]+;?/g,
+      ""
+    )
+    .replace(/export\s+async\s+function\s+generateMetadata[\s\S]*?\n\}/gm, "")
+    .replace(/export\s+function\s+generateMetadata[\s\S]*?\n\}/gm, "");
 
   return s;
 }
 
-function decodeHtmlEntities(s) {
-  return s
-    .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">");
+function stripResidualCodeNoise(text) {
+  const lines = String(text || "").split("\n");
+  const out = [];
+
+  for (const rawLine of lines) {
+    let line = rawLine.trim();
+
+    if (!line) {
+      out.push("");
+      continue;
+    }
+
+    // Drop obvious code / JSX noise
+    if (
+      /^\s*(import|export)\b/.test(line) ||
+      /^\s*(const|let|var)\s+\w+\s*=/.test(line) ||
+      /^\s*function\s+\w+\s*\(/.test(line) ||
+      /^\s*return\s*[({<]?\s*$/.test(line) ||
+      /\bfrom\s+["'][^"']+["']/.test(line) ||
+      /\bclassName\s*=/.test(line) ||
+      /\b(onClick|onSubmit|onChange|onMouseEnter|onMouseLeave)\s*=/.test(line) ||
+      /\b(href|src|alt|title|id|key|style)\s*=/.test(line) ||
+      /\buse(State|Effect|Memo|Callback|Ref)\s*\(/.test(line) ||
+      /\blucide-react\b/.test(line) ||
+      /\bexport default function\b/.test(line) ||
+      /=>/.test(line)
+    ) {
+      continue;
+    }
+
+    // Icon/import residue lists like "ClipboardCheck, CheckCircle2, ..."
+    if (/^[A-Z][A-Za-z0-9]*(,\s*[A-Z][A-Za-z0-9]*){2,},?$/.test(line)) {
+      continue;
+    }
+
+    // Bare punctuation / bracket noise
+    if (/^[\s()[\]{};,.:+\-/*|\\]+$/.test(line)) {
+      continue;
+    }
+
+    // Heavily code-like line
+    const letters = (line.match(/[A-Za-zÀ-ÿ]/g) || []).length;
+    const symbols = (line.match(/[{}()[\];<>]/g) || []).length;
+    const quotes = (line.match(/[`"'=]/g) || []).length;
+    const codeWords =
+      (
+        line.match(
+          /\b(function|return|const|let|var|import|export|className|props|children|default)\b/g
+        ) || []
+      ).length;
+
+    const denom = Math.max(letters, 1);
+    const lineScore = (symbols + quotes + codeWords * 8) / denom;
+    if (lineScore > 0.16) continue;
+
+    out.push(line);
+  }
+
+  return out
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function residualCodeMarkerCount(text) {
+  return (
+    text.match(
+      /\b(import|export|function|return|const|let|var|className|props|children|default|useState|useEffect)\b|=>|from\s+["'][^"']+["']|[{}()[\];<>]/g
+    ) || []
+  ).length;
+}
+
+function codeLikenessScore(text) {
+  const letters = (text.match(/[A-Za-zÀ-ÿ]/g) || []).length;
+  const punct = (text.match(/[{}()[\];<>]/g) || []).length;
+  const kw =
+    (
+      text.match(
+        /\b(const|let|var|function|return|export|import|type|interface|useState|useEffect|className|props|children)\b/g
+      ) || []
+    ).length;
+  const residue = residualCodeMarkerCount(text);
+
+  const denom = Math.max(letters, 1);
+  return (punct + kw * 8 + residue * 6) / denom;
 }
 
 function cleanContent(raw, ext) {
   let s = String(raw || "").replace(/\r\n?/g, "\n");
+  s = maybeFixMojibake(s);
   s = stripCommonBoilerplate(s);
 
   if (ext && [".tsx", ".jsx", ".ts", ".js"].includes(ext)) {
@@ -307,7 +500,16 @@ function cleanContent(raw, ext) {
   // Convert some block boundaries before removing tags
   s = s
     .replace(/<br\s*\/?>/gi, "\n")
-    .replace(/<\/(p|div|section|article|main|header|footer|aside|nav|ul|ol|li|h1|h2|h3|h4|h5|h6|blockquote|pre)>/gi, "\n\n");
+    .replace(
+      /<\/(p|div|section|article|main|header|footer|aside|nav|ul|ol|li|h1|h2|h3|h4|h5|h6|blockquote|pre)>/gi,
+      "\n\n"
+    );
+
+  // Strip some common JSX props before tag removal
+  s = s.replace(
+    /\b(className|href|src|alt|title|id|key|style|role|target|rel|aria-[a-z-]+)\s*=\s*(\{[\s\S]*?\}|"[^"]*"|'[^']*')/g,
+    " "
+  );
 
   // Keep simple string literal expressions: {"Hello"} -> Hello
   s = s.replace(/\{\s*["'`](.*?)["'`]\s*\}/gs, "$1");
@@ -319,6 +521,7 @@ function cleanContent(raw, ext) {
   s = s.replace(/<[^>]*>/g, " ");
 
   s = decodeHtmlEntities(s);
+  s = maybeFixMojibake(s);
 
   // Normalize line-by-line to preserve paragraph structure
   s = s
@@ -328,6 +531,8 @@ function cleanContent(raw, ext) {
     .replace(/\n{3,}/g, "\n\n")
     .trim();
 
+  s = stripResidualCodeNoise(s);
+
   // If it still looks like one huge line, gently reflow punctuation
   if (!s.includes("\n")) {
     s = s.replace(/([.!?])\s+(?=[A-ZÀ-Ÿ])/g, "$1\n\n");
@@ -336,17 +541,29 @@ function cleanContent(raw, ext) {
   return s.trim();
 }
 
+function humanizeSlugPart(part, index, total) {
+  const lower = String(part || "").toLowerCase();
+  const override = TITLE_WORD_OVERRIDES.get(lower);
+  if (override) return override;
+
+  if (index > 0 && index < total - 1 && MINOR_TITLE_WORDS.has(lower)) {
+    return lower;
+  }
+
+  return lower.charAt(0).toUpperCase() + lower.slice(1);
+}
+
 function routeToTitle(route) {
   if (route === "/") return "Home";
 
   const last = route.split("/").filter(Boolean).at(-1) || "Page";
-  return last
-    .split("-")
-    .filter(Boolean)
-    .map((part) => {
-      if (part.length <= 3) return part.toUpperCase();
-      return part.charAt(0).toUpperCase() + part.slice(1);
-    })
+  const parts = last
+    .split(/[-_]+/g)
+    .map((p) => p.trim())
+    .filter(Boolean);
+
+  return parts
+    .map((part, i) => humanizeSlugPart(part, i, parts.length))
     .join(" ");
 }
 
@@ -372,6 +589,27 @@ function buildMarkdownMirror({ route, url, markdownUrl, sourceRel, title, body, 
     cleanBody,
     "",
   ].join("\n");
+}
+
+function selectLlmsRoutes(sortedRoutes) {
+  const chosen = [];
+  const seen = new Set();
+
+  function add(route) {
+    if (!route || seen.has(route) || !sortedRoutes.includes(route)) return;
+    seen.add(route);
+    chosen.push(route);
+  }
+
+  for (const route of PRIORITY_LLMS_ROUTES) add(route);
+
+  for (const route of sortedRoutes) {
+    const depth = route === "/" ? 0 : route.split("/").filter(Boolean).length;
+    if (depth <= 1) add(route);
+    if (chosen.length >= MAX_LLMS_PAGE_LINKS) break;
+  }
+
+  return chosen.slice(0, MAX_LLMS_PAGE_LINKS);
 }
 
 // -------------------- STATE --------------------
@@ -423,7 +661,10 @@ function addPage({ route, fileAbsPath }) {
 
   if (!cleaned || cleaned.length < MIN_CHARS_PER_PAGE) return;
 
-  if (SKIP_CODELIKE_PAGES && codeLikenessScore(cleaned) > 0.12) return;
+  if (SKIP_CODELIKE_PAGES && codeLikenessScore(cleaned) > 0.12) {
+    warnings.push(`⚠ Skipped code-like page: ${route} (${path.relative(process.cwd(), fileAbsPath)})`);
+    return;
+  }
 
   const sourceRel = path.relative(process.cwd(), fileAbsPath);
   const title = routeToTitle(route);
@@ -528,6 +769,9 @@ function writeMarkdownMirrors(sortedRoutes) {
 
 function writeLlmsTxt(sortedRoutes) {
   const lines = [];
+  const llmsRoutes = selectLlmsRoutes(sortedRoutes);
+  const omittedCount = Math.max(sortedRoutes.length - llmsRoutes.length, 0);
+
   lines.push(`# ${SITE_LABEL}`);
   lines.push("");
   lines.push(`> ${PROJECT_DESCRIPTION}`);
@@ -540,15 +784,22 @@ function writeLlmsTxt(sortedRoutes) {
   lines.push(`- [md-sitemap.xml](${BASE_URL}/md-sitemap.xml): Sitemap dedicated to Markdown mirror URLs.`);
   lines.push(`- [ai-sitemap.json](${BASE_URL}/ai-sitemap.json): Route inventory with source paths and mirror URLs.`);
   lines.push("");
-  lines.push("## Pages");
+  lines.push("## Important pages");
   lines.push("");
 
-  for (const route of sortedRoutes) {
+  for (const route of llmsRoutes) {
     const title = titlesForRoute.get(route) || routeToTitle(route);
     const htmlUrl = pathsFound.get(route);
     const mdUrl = markdownUrlsFound.get(route);
     const summary = summarizeText(cleanedContentForRoute.get(route), 180);
     lines.push(`- [${title}](${mdUrl}): Mirror for ${route} (${htmlUrl}). ${summary}`);
+  }
+
+  if (omittedCount > 0) {
+    lines.push("");
+    lines.push(
+      `Additional pages omitted here for brevity: ${omittedCount}. Use llms-full.txt or md-manifest.json for the exhaustive index.`
+    );
   }
 
   lines.push("");
@@ -588,6 +839,7 @@ function writeMdManifest(sortedRoutes) {
     url: pathsFound.get(route),
     markdown_url: markdownUrlsFound.get(route),
     markdown_path: `/${routeToMarkdownRelativePath(route)}`,
+    summary: summarizeText(cleanedContentForRoute.get(route), 180),
     source: path.relative(process.cwd(), sourceFilesForRoute.get(route) || ""),
     chars: (cleanedContentForRoute.get(route) || "").length,
     generated_at: nowIso,
@@ -626,6 +878,8 @@ console.log(`   🧩 INCLUDE_DYNAMIC_SEGMENTS: ${INCLUDE_DYNAMIC_SEGMENTS}`);
 console.log(`   🧽 SKIP_CODELIKE_PAGES: ${SKIP_CODELIKE_PAGES}`);
 console.log(`   🪞 GENERATE_MD_MIRRORS: ${GENERATE_MD_MIRRORS}`);
 console.log(`   📚 GENERATE_LLMS_FULL: ${GENERATE_LLMS_FULL}`);
+console.log(`   🧬 FIX_MOJIBAKE: ${FIX_MOJIBAKE}`);
+console.log(`   📎 MAX_LLMS_PAGE_LINKS: ${MAX_LLMS_PAGE_LINKS}`);
 
 if (!fs.existsSync(APP_DIR)) {
   console.error(`❌ Missing app directory: ${APP_DIR}`);
@@ -670,6 +924,7 @@ const aiSitemap = sortedRoutes.map((route) => ({
   url: pathsFound.get(route),
   markdown_url: markdownUrlsFound.get(route),
   markdown_path: `/${routeToMarkdownRelativePath(route)}`,
+  summary: summarizeText(cleanedContentForRoute.get(route), 180),
   source: path.relative(process.cwd(), sourceFilesForRoute.get(route) || ""),
 }));
 
