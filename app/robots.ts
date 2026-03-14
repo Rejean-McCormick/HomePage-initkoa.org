@@ -4,11 +4,11 @@ import type { MetadataRoute } from "next";
 export const runtime = "nodejs";
 
 const DEFAULT_SITE_URL = "https://initkoa.org";
-const DISALLOW_PATHS = ["/private", "/admin", "/api"] as const;
+const DISALLOW_PATHS: string[] = ["/private", "/admin", "/api"];
 
 // Bots explicitement autorisés pour maximiser la découvrabilité IA + search.
 // Le groupe "*" reste ouvert pour tous les autres crawlers respectueux.
-const EXPLICIT_ALLOW_BOTS = [
+const EXPLICIT_ALLOW_BOTS: string[] = [
   "Googlebot",
   "Google-Extended",
   "OAI-SearchBot",
@@ -17,7 +17,7 @@ const EXPLICIT_ALLOW_BOTS = [
   "ClaudeBot",
   "Claude-User",
   "Claude-SearchBot",
-] as const;
+];
 
 function canonicalizeBaseUrl(raw?: string | null): string {
   let s = String(raw || "").trim();
@@ -62,15 +62,17 @@ function getHost(baseUrl: string): string {
   }
 }
 
+function allowRule(userAgent: string): NonNullable<MetadataRoute.Robots["rules"]>[number] {
+  return {
+    userAgent,
+    allow: "/",
+    disallow: [...DISALLOW_PATHS],
+  };
+}
+
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = getBaseUrl();
   const host = getHost(baseUrl);
-
-  const allowRule = (userAgent: string) => ({
-    userAgent,
-    allow: "/",
-    disallow: DISALLOW_PATHS,
-  });
 
   return {
     rules: [
@@ -78,10 +80,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: DISALLOW_PATHS,
+        disallow: [...DISALLOW_PATHS],
       },
     ],
-    sitemap: [`${baseUrl}/sitemap.xml`],
+    sitemap: `${baseUrl}/sitemap.xml`,
     host,
   };
 }
