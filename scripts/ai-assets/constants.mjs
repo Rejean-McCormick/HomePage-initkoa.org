@@ -39,7 +39,7 @@ export const ARTIFACT_NAMES = Object.freeze({
   mdSitemap: "md-sitemap.xml",
 });
 
-// Backward-compatible named export expected by config.mjs
+// Backward-compatible named export expected by some callers
 export const GENERATED_MD_STATE_FILE_NAME = ARTIFACT_NAMES.generatedMdState;
 
 export const PAGE_FILES_PRIORITY = Object.freeze([
@@ -75,7 +75,7 @@ export const SKIP_DIR_NAMES = Object.freeze([
   "node_modules",
 ]);
 
-// Backward-compatible export expected by config.mjs and route-walker.mjs
+// Backward-compatible export for callers that import SKIP_DIRS directly
 export const SKIP_DIRS = new Set(SKIP_DIR_NAMES);
 
 export const MINOR_TITLE_WORDS = new Set([
