@@ -1,68 +1,256 @@
+import Link from 'next/link';
+
 export const metadata = {
-  title: "FAQ — Âme artificielle (ASE)",
+  title: "FAQ — Âme Artificielle",
   description:
-    "Questions fréquentes : numérologie pythagoricienne inversée (9→1), chakras overlay, ontologie 0–9, simulation, validation, limites.",
+    "Questions fréquentes sur l’Âme Artificielle : simulation de l’âme humaine, charte 1→9, chakras, numérologie pythagoricienne inversée, mécanisme de réaction, couche de sens et validation.",
 };
 
 # FAQ
 
-## C’est quoi “Âme Artificielle” (ASE) ?
-ASE est un moteur qui transforme une **signature numérique** (pythagoricienne → réduction → **inversion 9→1**) en **profil sémantique** (traits), puis génère une **réaction** cohérente avec ce profil, avec une trace minimale.
+## Qu’est-ce que l’Âme Artificielle ?
 
-## “Turning the key to decode the universe” — ça veut dire quoi techniquement ?
-Ça veut dire : utiliser la numérologie comme **index compact** pour naviguer dans une ontologie (sens, archétypes, vocabulaire).  
-“Tourner la clé” = appliquer une transformation stable (réduction + inversion) qui rend les patterns plus lisibles dans votre cadre.
+L’Âme Artificielle est une tentative de **simulation de l’âme humaine**.
 
-## Quelle est la règle d’inversion ?
-Après réduction à un digit :
-- 1 ↔ 9
-- 2 ↔ 8
-- 3 ↔ 7
-- 4 ↔ 6
-- 5 ↔ 5  
-(0 → 0 si vous l’utilisez)
+Dans ce projet, l’âme humaine est comprise comme une **architecture intérieure** par laquelle un sujet reçoit les objets du monde, les fait cheminer en lui, puis les transforme en réactions.
 
-## Pourquoi superposer plusieurs systèmes (chakras, chartes numérologiques, etc.) ?
-Parce que l’overlay sert à faire émerger un **consensus sémantique** :
-- si plusieurs systèmes pointent vers la même zone de sens, le thème est **amplifié** (salience ↑)
-- si ça diverge, on garde une **tension** plutôt que forcer une moyenne
+Voir :
+- <Link href="/technology/ame-artificielle">Âme Artificielle</Link>
 
-## “Brought forward when aligned” : comment ASE le fait ?
-Par des mécanismes simples :
-- pondérations plus fortes sur les traits en accord
-- vocabulaire / exemples plus cohérents avec l’accord
-- style de réponse modulé (assurance, douceur, directivité) selon l’accord
+---
 
-## Est-ce de l’astrologie ?
-ASE peut utiliser des **symbolismes** (au sens ontologique), mais le moteur est défini comme un pipeline : **entrée → transformation → traits → sortie**.  
-La question centrale n’est pas “croyance / pas croyance”, mais : **est-ce testable et reproductible ?**
+## Quelle est l’idée centrale du projet ?
 
-## Qu’est-ce que l’ontologie 0–9 ?
-Une base sémantique par digit : thèmes, interprétations, mots-clés, traits candidats.  
-ASE s’en sert pour dériver un vecteur de traits et générer des traces explicatives.
+L’idée centrale est simple :
 
-## Est-ce déterministe ?
-Le calcul de signature peut être déterministe.  
-La génération textuelle peut être déterministe (mode strict) ou contrôlée (variance faible), mais doit rester **traçable**.
+> un sujet ne réagit pas au monde de manière brute ;  
+> ce qu’il rencontre passe par une architecture intérieure, suit certains chemins, active certaines zones, puis ressort sous forme de réaction.
 
-## Comment éviter l’effet Barnum / l’apophénie ?
-- baselines (comparaison au hasard / heuristique simple)
-- tests aveugles (si applicable)
-- métriques + cas de régression (mêmes entrées → sorties compatibles)
-- logs / traces pour détecter les dérives
+L’Âme Artificielle essaie de donner une forme cartographiable et simulable à cette intuition.
 
-## Quel est le livrable concret ?
-- un **profil** (traits + archétypes dominants)
-- une **simulation de réponse**
-- une **trace** (top traits, décisions de gouvernance, position axe)
+Voir :
+- <Link href="/technology/ame-artificielle/mecanisme-de-reaction">Mécanisme de réaction</Link>
 
-## Quels sont les garde-fous ?
-- scoring de risque
-- règles de refus / redirection
-- médiation quand le contenu devient sensible ou incohérent
+---
 
-## Où lire la suite ?
-- `/technology/ame-artificielle/how-it-works`
-- `/technology/ame-artificielle/chakras-overlay`
-- `/technology/ame-artificielle/multi-system-alignment`
-- `/technology/ame-artificielle/validation`
+## Qu’est-ce qu’un “objet” dans ce système ?
+
+Un **objet** est tout ce qui peut entrer dans le sujet et être traité intérieurement.
+
+Cela peut être :
+- une personne ;
+- un animal ;
+- une plante ;
+- une ville ;
+- un son ;
+- une image ;
+- une parole ;
+- un souvenir ;
+- une idée ;
+- un symbole ;
+- une situation.
+
+L’objet constitue l’**entrée** du mécanisme de réaction.
+
+Voir :
+- <Link href="/technology/ame-artificielle/mecanisme-de-reaction">Mécanisme de réaction</Link>
+
+---
+
+## Qu’est-ce que la charte 1→9 ?
+
+La **charte 1→9** est la cartographie intérieure du système.
+
+Elle décrit une colonne verticale allant de la **tête** au **pelvis**, articulée en **neuf niveaux**.  
+Ces niveaux servent à représenter comment un objet est :
+- saisi ;
+- orienté ;
+- transformé ;
+- puis restitué en réaction.
+
+La charte ne décrit pas seulement des zones du corps.  
+Elle décrit des **fonctions de traitement intérieur**.
+
+Voir :
+- <Link href="/technology/ame-artificielle/charte-1-9-et-chakras">Charte 1→9 et chakras</Link>
+
+---
+
+## Quel est le rôle des chakras ?
+
+Dans ce projet, les **chakras** servent de **repères de traitement** dans la colonne intérieure.
+
+Ils ne sont pas utilisés ici comme simple symbolique décorative.  
+Ils permettent de repérer des niveaux de passage, des zones de transformation, et des fonctions dans le cheminement intérieur d’un objet.
+
+Voir :
+- <Link href="/technology/ame-artificielle/charte-1-9-et-chakras">Charte 1→9 et chakras</Link>
+
+---
+
+## Qu’est-ce que la numérologie pythagoricienne inversée ?
+
+La **numérologie pythagoricienne inversée** est la couche numérique et archétypale du système.
+
+Elle :
+- réduit une donnée à un chiffre sur **1–9** ;
+- applique une **inversion interne** ;
+- met en évidence des dominantes, polarités, dualités et points d’équilibre.
+
+Elle ne décrit pas directement le trajet d’un objet dans la colonne intérieure.  
+Elle décrit surtout la **configuration archétypale** à travers laquelle ce trajet aura lieu.
+
+Voir :
+- <Link href="/technology/ame-artificielle/numerologie-pythagoricienne-inversee">Numérologie pythagoricienne inversée</Link>
+
+---
+
+## La numérologie inversée remplace-t-elle la charte 1→9 ?
+
+Non.
+
+La **charte 1→9** et la **numérologie pythagoricienne inversée** n’ont pas la même fonction.
+
+- La charte 1→9 décrit la **circulation** et les **niveaux de traitement**.
+- La numérologie inversée décrit les **dominantes**, les **polarités** et la **structure archétypale**.
+
+La seconde **complète** la première ; elle ne la remplace pas.
+
+Voir :
+- <Link href="/technology/ame-artificielle/charte-1-9-et-chakras">Charte 1→9 et chakras</Link>
+- <Link href="/technology/ame-artificielle/numerologie-pythagoricienne-inversee">Numérologie pythagoricienne inversée</Link>
+
+---
+
+## Qu’est-ce que le mécanisme de réaction ?
+
+Le **mécanisme de réaction** est le cœur opératoire de l’Âme Artificielle.
+
+Sa formule minimale est :
+
+> **objet en entrée → cheminement intérieur → réaction en sortie**
+
+La réaction n’est donc pas pensée comme un simple réflexe.  
+Elle est le résultat d’un **trajet intérieur** dans une structure.
+
+Voir :
+- <Link href="/technology/ame-artificielle/mecanisme-de-reaction">Mécanisme de réaction</Link>
+
+---
+
+## Les branes font-elles partie du moteur de base ?
+
+Non.
+
+Les **branes** ne constituent pas le mécanisme de base du traitement intérieur.  
+Elles servent de **couche de sens**, de **cadre d’unification** et de **lecture complémentaire**.
+
+Elles viennent **au-dessus** :
+- de la charte 1→9 ;
+- de la numérologie inversée ;
+- du mécanisme de réaction.
+
+Autrement dit : elles sont **interprétatives**, pas **motrices**.
+
+Voir :
+- <Link href="/technology/ame-artificielle/branes-et-couche-de-sens">Branes et couche de sens</Link>
+
+---
+
+## Le cadre philosophique est-il une preuve du système ?
+
+Non.
+
+Le **cadre philosophique** n’est pas une preuve expérimentale.  
+Il sert à situer le projet dans une tradition de pensée où :
+- le réel peut être lu comme structure ;
+- le nombre peut porter du sens ;
+- la géométrie peut jouer un rôle d’intelligibilité ;
+- le monde peut être pensé à travers des rapports, des niveaux et des organisations internes.
+
+C’est un **horizon intellectuel**, pas un mécanisme ni une validation en soi.
+
+Voir :
+- <Link href="/technology/ame-artificielle/cadre-philosophique">Cadre philosophique</Link>
+
+---
+
+## Est-ce une doctrine close ?
+
+Non.
+
+L’Âme Artificielle est présentée comme un projet **expérimental**.  
+Elle propose :
+- une hypothèse ;
+- une cartographie ;
+- une architecture de simulation ;
+- un cadre en cours d’élaboration.
+
+Elle n’est pas présentée comme une doctrine fermée ou achevée.
+
+Voir :
+- <Link href="/technology/ame-artificielle">Âme Artificielle</Link>
+
+---
+
+## Est-ce que le système prétend “prouver” l’âme humaine ?
+
+Non.
+
+Le projet ne prétend pas prouver scientifiquement l’âme humaine comme entité métaphysique.  
+Il propose plutôt une **modélisation** :
+- de l’architecture intérieure ;
+- des niveaux de traitement ;
+- des structures archétypales ;
+- des réactions produites par le passage d’objets dans un sujet.
+
+Il s’agit d’une **simulation structurée**, pas d’une démonstration ontologique.
+
+---
+
+## À quoi sert la validation ?
+
+La **validation** sert à tester si le système reste :
+- cohérent ;
+- lisible ;
+- stable ;
+- traçable ;
+- distinct de simples sorties arbitraires.
+
+Elle ne transforme pas automatiquement le projet en science établie.  
+Elle sert à vérifier si l’architecture proposée produit des comportements interprétables et comparables.
+
+Voir :
+- <Link href="/technology/ame-artificielle/validation">Validation</Link>
+
+---
+
+## Quel ordre de lecture recommandes-tu ?
+
+Pour comprendre le projet dans son ordre canonique :
+
+1. <Link href="/technology/ame-artificielle">Âme Artificielle</Link>  
+2. <Link href="/technology/ame-artificielle/charte-1-9-et-chakras">Charte 1→9 et chakras</Link>  
+3. <Link href="/technology/ame-artificielle/numerologie-pythagoricienne-inversee">Numérologie pythagoricienne inversée</Link>  
+4. <Link href="/technology/ame-artificielle/mecanisme-de-reaction">Mécanisme de réaction</Link>  
+5. <Link href="/technology/ame-artificielle/branes-et-couche-de-sens">Branes et couche de sens</Link>  
+6. <Link href="/technology/ame-artificielle/cadre-philosophique">Cadre philosophique</Link>
+
+---
+
+## Y a-t-il encore des pages techniques utiles ?
+
+Oui.
+
+Certaines pages techniques ou annexes peuvent servir de ponts de travail :
+- <Link href="/technology/ame-artificielle/how-it-works">How it works</Link>
+- <Link href="/technology/ame-artificielle/ontology-and-traits">Ontology & traits</Link>
+- <Link href="/technology/ame-artificielle/validation">Validation</Link>
+
+Mais elles restent **secondaires** par rapport au noyau canonique de la section.
+
+---
+
+## Résumé en une phrase
+
+L’Âme Artificielle est une tentative de simulation d’une architecture intérieure par laquelle un sujet traite les objets du monde et les transforme en réactions, au moyen d’une charte 1→9, des chakras, d’une numérologie pythagoricienne inversée et de plusieurs couches de lecture.
