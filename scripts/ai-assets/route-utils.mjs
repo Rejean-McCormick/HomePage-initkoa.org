@@ -1,132 +1,79 @@
-// scripts/ai-assets/constants.mjs
+// scripts/ai-assets/route-utils.mjs
+import path from "node:path";
 
-export const DEFAULT_BASE_URL = "https://initkoa.org";
+function getBaseUrl(config) {
+  const raw = String(config?.baseUrl || "").trim();
+  if (!raw) return "";
+  return raw.replace(/\/+$/, "");
+}
 
-export const DEFAULT_SITE_LABEL = "initkoa.org";
-export const DEFAULT_PROJECT_TITLE = "kOA INITIATIVE";
-export const DEFAULT_PROJECT_DESCRIPTION =
-  "Public documentation for the kOA INITIATIVE by Réjean McCormick: civic utilities for learning, coordination, and governable decision-making (offline-first, auditable).";
+export function normalizeRoute(route = "/") {
+  let value = String(route ?? "").trim();
 
-export const DEFAULT_EXCLUDE_PREFIXES = Object.freeze(["/admin", "/api"]);
+  if (!value) return "/";
 
-export const DEFAULT_INCLUDE_DYNAMIC_SEGMENTS = false;
-export const DEFAULT_SKIP_CODELIKE_PAGES = true;
-export const DEFAULT_GENERATE_MD_MIRRORS = true;
-export const DEFAULT_GENERATE_LLMS_FULL = true;
-export const DEFAULT_FIX_MOJIBAKE = true;
+  // Normalize slashes
+  value = value.replace(/\\/g, "/");
+  value = value.replace(/\/{2,}/g, "/");
 
-export const DEFAULT_MIN_CHARS_PER_PAGE = 60;
-export const DEFAULT_MAX_CHARS_PER_PAGE = 0;
-export const DEFAULT_MAX_LLMS_PAGE_LINKS = 28;
+  // Ensure leading slash
+  if (!value.startsWith("/")) {
+    value = `/${value}`;
+  }
 
-export const CODELIKE_PAGE_THRESHOLD = 0.12;
-export const DEFAULT_SUMMARY_MAX_CHARS = 220;
-export const COMPACT_SUMMARY_MAX_CHARS = 180;
-export const TITLE_SCAN_LINE_LIMIT = 12;
-export const TITLE_MAX_CHARS = 100;
+  // Remove query/hash if ever passed in by mistake
+  value = value.split("#")[0].split("?")[0];
 
-export const ARTIFACT_NAMES = Object.freeze({
-  generatedMdState: ".generated-md-mirrors.json",
-  aiCorpus: "ai-corpus.txt",
-  llms: "llms.txt",
-  llmsFull: "llms-full.txt",
-  aiSitemap: "ai-sitemap.json",
-  mdManifest: "md-manifest.json",
-  mdSitemap: "md-sitemap.xml",
-});
+  // Remove trailing slash except root
+  if (value.length > 1) {
+    value = value.replace(/\/+$/, "");
+  }
 
-export const PAGE_FILES_PRIORITY = Object.freeze([
-  "page.tsx",
-  "page.ts",
-  "page.js",
-  "page.jsx",
-  "page.mdx",
-  "page.md",
-]);
+  return value || "/";
+}
 
-export const PAGE_FILE_RE = /^page\.(tsx|ts|js|jsx|mdx|md)$/;
+export function routeToUrl(route, config = {}) {
+  const normalizedRoute = normalizeRoute(route);
+  const baseUrl = getBaseUrl(config);
 
-export const SPECIAL_FILE_RE =
-  /^(layout|template|loading|error|global-error|not-found|default)\.(tsx|ts|js|jsx|mdx|md)$/;
+  if (!baseUrl) return normalizedRoute;
+  if (normalizedRoute === "/") return baseUrl;
 
-export const MARKDOWN_LIKE_EXTENSIONS = Object.freeze([".md", ".mdx"]);
-export const JSX_LIKE_EXTENSIONS = Object.freeze([".tsx", ".ts", ".jsx", ".js"]);
+  return `${baseUrl}${normalizedRoute}`;
+}
 
-export const SKIP_DIR_NAMES = Object.freeze([
-  "api",
-  "components",
-  "styles",
-  "fonts",
-  "lib",
-  "utils",
-  "public",
-  "node_modules",
-]);
+export function routeToMarkdownRelativePath(route) {
+  const normalizedRoute = normalizeRoute(route);
 
-export const MINOR_TITLE_WORDS = new Set([
-  "a",
-  "an",
-  "and",
-  "as",
-  "at",
-  "by",
-  "for",
-  "from",
-  "in",
-  "into",
-  "of",
-  "on",
-  "or",
-  "the",
-  "to",
-  "vs",
-  "via",
-  "with",
-]);
+  if (normalizedRoute === "/") {
+    return "index.html.md";
+  }
 
-export const TITLE_WORD_OVERRIDES = new Map([
-  ["ai", "AI"],
-  ["api", "API"],
-  ["faq", "FAQ"],
-  ["fvr", "FVR"],
-  ["go", "Go"],
-  ["html", "HTML"],
-  ["it", "IT"],
-  ["json", "JSON"],
-  ["kpi", "KPI"],
-  ["kpis", "KPIs"],
-  ["llm", "LLM"],
-  ["llms", "LLMs"],
-  ["md", "Markdown"],
-  ["no", "No"],
-  ["rag", "RAG"],
-  ["tbd", "TBD"],
-  ["ui", "UI"],
-  ["url", "URL"],
-  ["urls", "URLs"],
-  ["ux", "UX"],
-  ["xml", "XML"],
-]);
+  const clean = normalizedRoute.replace(/^\/+/, "");
+  return `${clean}/index.html.md`;
+}
 
-export const PRIORITY_LLMS_ROUTES = Object.freeze([
-  "/",
-  "/about",
-  "/contact",
-  "/why",
-  "/diagnosis",
-  "/principles",
-  "/research",
-  "/technology",
-  "/technology/context-packs",
-  "/platforms",
-  "/platforms/orgo",
-  "/platforms/konnaxion",
-  "/technology/ariane",
-  "/technology/swarmcraft",
-  "/technology/kristal",
-  "/infrastructures",
-  "/initiatives",
-]);
+export function routeToMarkdownUrl(route, config = {}) {
+  const relPath = routeToMarkdownRelativePath(route);
+  const baseUrl = getBaseUrl(config);
 
-export const CORPUS_HEADER_LABEL = "AI KNOWLEDGE BASE";
-export const LLMS_FULL_HEADER_LABEL = "Full AI Context";
+  if (!baseUrl) return `/${relPath}`;
+  return `${baseUrl}/${relPath}`;
+}
+
+export function routeToMarkdownFilePath(route, publicDir) {
+  if (!publicDir || typeof publicDir !== "string") {
+    throw new TypeError("publicDir must be a string.");
+  }
+
+  const relPath = routeToMarkdownRelativePath(route);
+  return path.join(publicDir, ...relPath.split("/"));
+}
+
+export default {
+  normalizeRoute,
+  routeToUrl,
+  routeToMarkdownRelativePath,
+  routeToMarkdownUrl,
+  routeToMarkdownFilePath,
+};
