@@ -83,8 +83,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           title="Markdown Mirror Sitemap"
         />
 
-        {/* Human-readable discovery page */}
-        <link rel="alternate" type="text/html" href="/ai" title="AI Index" />
+
 
         {/* Optional machine hints */}
         <meta name="ai:llms" content={toAbsoluteUrl('/llms.txt')} />
