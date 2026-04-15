@@ -10,8 +10,13 @@ const BASE_URL = getSiteUrl();
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 
 // Never index these areas (even if they contain pages)
-const EXCLUDED_PREFIXES = ["/admin", "/api", "/private"];
-
+const EXCLUDED_PREFIXES = [
+  "/admin",
+  "/api",
+  "/private",
+  "/initiatives/ukraine-peace-plan",
+  "/kreature",
+];
 // App Router: a folder is routable when it contains page.(tsx|ts|js|jsx|mdx|md)
 const PAGE_FILES_PRIORITY = [
   "page.tsx",
