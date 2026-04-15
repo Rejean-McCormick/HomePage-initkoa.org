@@ -1,5 +1,13 @@
 import { Card } from '@/components/Card';
-import { ShieldCheck, ScanEye, Lock, Fingerprint, FileText, AlertTriangle, ArrowRight } from 'lucide-react';
+import {
+  ShieldCheck,
+  ScanEye,
+  Lock,
+  Fingerprint,
+  FileText,
+  AlertTriangle,
+  ArrowRight
+} from 'lucide-react';
 
 export const metadata = {
   title: "Orgo — Security & Auditability",
@@ -10,6 +18,7 @@ export const metadata = {
 # Security & auditability
 
 Orgo is designed for **reliable execution** under pressure.
+
 That requires more than “security features” — it requires **auditability**:
 
 - every important action leaves a trace,
@@ -56,7 +65,7 @@ Orgo treats coordination as something that must remain:
   <Card
     title="Policy visibility"
     icon={<ShieldCheck className="text-primary w-6 h-6" />}
-    description="Routing and escalation policies are visible and adjustable, so the organization can correct the system—not just punish individuals."
+    description="Routing, transparency, retention, and escalation posture should be visible and adjustable, so the organization can correct the system—not just punish individuals."
     href="/platforms/orgo/profiles"
   />
 </div>
@@ -78,6 +87,8 @@ It is built to make **organizational execution** governable.
 - employee spying,
 - or “always-on observation” to achieve accountability.
 
+Auditability is about **legible responsibility**, not ambient surveillance.
+
 ---
 
 ## Privacy boundaries
@@ -87,8 +98,24 @@ Orgo supports strong privacy by design through clear boundaries:
 - **Case visibility** can be restricted by function, sensitivity, and need-to-know.
 - **Access is purposeful**: to resolve a case, to audit a decision, or to run a review cycle.
 - **Data minimization**: store what’s needed to resolve and audit; avoid collecting what can’t be governed.
+- **Visibility levels** can be tuned to organizational reality, including public, internal, restricted, or anonymised handling where appropriate.
 
 If you cannot justify why a datum is collected, you cannot justify keeping it.
+
+---
+
+## Security is operational, not only perimeter-based
+
+Security is not only “keep intruders out.”
+It is also “make important failures visible before they become normal.”
+
+In Orgo, security supports execution by ensuring that:
+- access rules match the sensitivity of the case,
+- action history remains attributable,
+- exports and reviews respect visibility boundaries,
+- and policy changes remain governable rather than hidden.
+
+That is why security and auditability belong together in the same operational layer.
 
 ---
 
@@ -110,9 +137,30 @@ Orgo supports integrity by making failure states explicit:
   </h3>
   <p className="text-slate-600">
     Silent failure is the most dangerous failure mode in governance and operations.
-    Orgo’s audit trail and escalation mechanics exist to ensure issues become visible while they are still fixable.
+    Orgo’s audit trail, visibility controls, and escalation mechanics exist to ensure issues become visible while they are still fixable.
   </p>
 </div>
+
+---
+
+## Profiles shape the security posture
+
+Not every organization needs the same audit intensity, transparency level, or retention depth.
+
+A hospital, municipality, justice environment, or internal operations team may require different defaults for:
+- reactivity,
+- transparency,
+- pattern sensitivity,
+- logging depth,
+- and retention.
+
+In Orgo, those choices belong to **operating profiles**—not ad hoc personal habits or hidden vendor defaults.
+
+That means the security posture can be tuned without breaking the core guarantees:
+- accountable ownership,
+- traceable routing,
+- explicit closure,
+- and durable reviewability.
 
 ---
 
@@ -133,6 +181,9 @@ Examples where this matters:
 - regulated finance processes,
 - safety and crisis response.
 
+The point is not to create paperwork.
+It is to ensure that important operational decisions remain explainable.
+
 ---
 
 ## How to use this page
@@ -145,6 +196,9 @@ Examples where this matters:
 
 - If you want **reviews and systemic correction loops** → see:  
   `/platforms/orgo/reviews`
+
+- If you want the **organizational tuning layer for transparency, retention, and behavioral defaults** → see:  
+  `/platforms/orgo/profiles`
 
 ---
 
@@ -159,9 +213,16 @@ Examples where this matters:
   </a>
 
   <a
-    href="/platforms/orgo/offline-sovereignty"
+    href="/platforms/orgo/reviews"
     className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
   >
-    Offline & sovereignty <ArrowRight className="w-4 h-4 ml-2" />
+    Reviews & audits <ArrowRight className="w-4 h-4 ml-2" />
+  </a>
+
+  <a
+    href="/platforms/orgo/profiles"
+    className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
+  >
+    Operating profiles <ArrowRight className="w-4 h-4 ml-2" />
   </a>
 </div>

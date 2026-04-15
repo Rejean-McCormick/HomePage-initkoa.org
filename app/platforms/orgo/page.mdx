@@ -54,6 +54,20 @@ Unlike chat-first coordination, generic ticketing tools, or CRMs, Orgo is design
   >
     See how the same execution model applies to local government, justice, healthcare, and other real institutional settings.
   </Card>
+
+  <Card
+    title="Trust & Sovereignty"
+    href="/platforms/orgo/trust"
+  >
+    How Orgo earns trust: explicit routing, visible policy, privacy boundaries, auditable history, and continuity even under degraded conditions.
+  </Card>
+
+  <Card
+    title="Operating Profiles"
+    href="/platforms/orgo/profiles"
+  >
+    Governance-level behavior tuning: reactivity, privacy defaults, escalation strictness, retention, and review cadence without custom workflow code.
+  </Card>
 </div>
 
 <div className="mt-6">
@@ -70,6 +84,7 @@ Unlike chat-first coordination, generic ticketing tools, or CRMs, Orgo is design
 ## The problem Orgo solves: “messy signals”
 
 Organizations receive inputs from dozens of channels (emails, chats, forms, phone calls, field notes, sensors). Important information is often:
+
 - lost or duplicated,
 - routed to the wrong place,
 - handled too late,
@@ -87,6 +102,7 @@ Signals enter through a gateway (email, forms, APIs, imports). The goal is simpl
 
 ### 2) Deconstruct and classify (local processing)
 Orgo can use local processing to extract the basic operational elements that matter:
+
 - what is being requested or reported,
 - who/what is affected,
 - where it happened,
@@ -122,29 +138,30 @@ Orgo is strictly multi-tenant:
 - **Person:** a subject profile (patient, student, employee, citizen) who may never log in but can be the subject of cases.
 
 ### Operational objects
-- **Signal:** raw incoming input (email, form submission, phone note, import record).
-- **Case:** accountable container for a situation that must be handled.
-- **Task:** concrete unit of work owned by a function (and optionally assigned to a user).
-- **Function (Role):** responsibility target used for routing (e.g., Intake, HR, Safety, Infrastructure).
-- **Window:** time constraint (acknowledge/act/resolve) with explicit SLA semantics.
-- **Escalation:** policy action when a window is missed (notify, re-route, elevate).
-- **Outcome:** closure record (what happened, why, and supporting artifacts).
+- **Signal:** raw incoming information
+- **Case:** the durable operational container
+- **Task:** a concrete unit of execution
+- **Review case:** a case created because patterns crossed a threshold
+- **Audit trail:** the record of actions, status changes, and closure evidence
+
+This structure keeps execution explainable and governable across very different institutions. The underlying Orgo model is explicitly multi-tenant and profile-driven in the technical reference as well. :contentReference[oaicite:2]{index=2}
 
 ---
 
-## The autonomy standard (the “bubble”)
+## Reliability posture: offline, hermetic, governable
 
-Orgo can operate without relying on the public internet:
+Orgo is built for environments where dependency is a risk.
 
-- **Internet independence:** core logic and storage run within your perimeter.
-- **Resilience:** operations continue during outages and unstable connectivity.
-- **Controlled bridging:** when external links exist, they are optional and governable.
+- **Offline-first:** core operations can continue during outages or unstable connectivity
+- **Hermetic-capable:** the system can run as a closed loop without public internet dependency
+- **Policy-driven:** routing, escalation, visibility, and review are explicit and adjustable
+- **Controlled bridging:** when external links exist, they are optional and governable
 
-This is not a “feature.” It is a reliability and sovereignty requirement.
+This is not a “feature.” It is a reliability and sovereignty requirement. The existing offline-sovereignty page already frames these operating modes explicitly. :contentReference[oaicite:3]{index=3}
 
 ---
 
-## The four guarantees
+## The four headline guarantees
 
 1. **Function-based routing**  
    Work reaches the correct responsibility, not a random individual.
@@ -158,7 +175,7 @@ This is not a “feature.” It is a reliability and sovereignty requirement.
 4. **Cyclic review (patterns become work)**  
    Recurring patterns trigger review/audit cases instead of staying as passive dashboards.
 
-Read the dedicated [Guarantees](/platforms/orgo/guarantees) page for the full reliability model.
+Read the dedicated [Guarantees](/platforms/orgo/guarantees) page for the fuller seven-guarantee model. This keeps the root page concise while staying aligned with the dedicated guarantees page. :contentReference[oaicite:4]{index=4}
 
 ---
 
@@ -174,6 +191,8 @@ Orgo avoids “custom workflow code per client” by using **profiles**: a set o
 
 These are governance decisions. They determine how authority and accountability behave.
 
+This is also how the technical model describes organization profiles: behavioral tuning for reactivity, transparency, pattern sensitivity, and retention. :contentReference[oaicite:5]{index=5}
+
 ---
 
 ## Cyclic review system (weekly → monthly → yearly)
@@ -185,6 +204,8 @@ Orgo’s reviews turn operations into learning:
 - **Yearly:** strategic review; revise profiles and priorities.
 
 Example principle: when repeated issues cross a threshold, Orgo can open a review case such as “Infrastructure Audit — Building A” so systemic problems return to the operational loop.
+
+The existing reviews page already frames review intensity as configurable by organizational reality. :contentReference[oaicite:6]{index=6}
 
 ---
 

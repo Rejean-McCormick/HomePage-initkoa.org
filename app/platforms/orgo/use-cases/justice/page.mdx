@@ -1,24 +1,25 @@
 import { Card } from '@/components/Card';
 import {
   Gavel,
-  Scale,
   Bell,
   Lock,
   FileText,
   ClipboardCheck,
-  ArrowRight
+  ArrowRight,
 } from 'lucide-react';
 
 export const metadata = {
-  title: "Orgo Use Case – Justice System",
+  title: 'Orgo Use Case – Justice System',
   description:
-    "Orgo strengthens justice administration with secure case routing, timely notifications, explicit ownership, and audit trails—so cases move and nothing disappears."
+    'Orgo strengthens justice administration with secure case routing, timely notifications, explicit ownership, bounded confidentiality, and audit trails—so cases move and nothing disappears.',
 };
 
 # Use case: Justice system
 
 Courts and justice institutions fail when work is **lost**, **late**, or **untraceable**.
-Orgo is an execution layer designed to make justice operations **reliable**: the right case material reaches the right function, on time, with accountable closure.
+
+Orgo is an execution layer designed to make justice operations **reliable**:
+the right case material reaches the right function, on time, with accountable closure and bounded visibility.
 
 ---
 
@@ -28,14 +29,14 @@ Orgo is an execution layer designed to make justice operations **reliable**: the
   <Card
     title="Secure case circulation"
     icon={<FileText className="text-primary w-6 h-6" />}
-    description="Route case files and documentation between judges, clerks, lawyers, and authorized staff without “email chaos.”"
+    description="Route case files and documentation between judges, clerks, lawyers, and authorized staff without email chaos or ambiguous handoffs."
     href="/platforms/orgo/workflow"
   />
   <Card
-    title="Confidential channels"
+    title="Confidential handling"
     icon={<Lock className="text-primary w-6 h-6" />}
-    description="Support confidential legal communications with strong controls and clear accountability."
-    href="/platforms/orgo/trust"
+    description="Support confidential legal communications with explicit access boundaries, purpose-based visibility, and accountable handling."
+    href="/platforms/orgo/security-audit"
   />
   <Card
     title="Court notifications that don’t fail"
@@ -56,28 +57,44 @@ Orgo is an execution layer designed to make justice operations **reliable**: the
 ## The operational problem Orgo solves
 
 ### “A file moved, but responsibility didn’t”
-Traditional systems move documents, but they often don’t enforce ownership.
+
+Traditional systems move documents, but they often do not enforce ownership.
+
 Orgo treats every meaningful input as accountable work:
 - a **Case** (the situation),
 - with **Tasks** (the actions),
 - owned by functions (clerks, chambers, scheduling, legal aid, enforcement).
 
 ### “Deadlines slip silently”
+
 When a deadline is missed, the system should escalate automatically.
+
 Orgo’s workflow can enforce response windows so that overdue work **cannot remain invisible**.
+
+### “Confidentiality is assumed, but not governed”
+
+Justice work often depends on access boundaries that are understood informally but enforced inconsistently.
+
+Orgo makes confidentiality operational:
+- visibility can be restricted by role and function,
+- handling remains traceable,
+- and auditability does not require indiscriminate exposure.
 
 ---
 
 ## Typical workflows (plain language)
 
 ### Workflow A: Hearing scheduling
-A scheduling request arrives → it becomes a Case → tasks route to scheduling and clerks → time windows enforce acknowledgement → notifications go out → closure is explicit (scheduled / rescheduled / cancelled).
+
+A scheduling request arrives → it becomes a Case → tasks route to scheduling and clerks → time windows enforce acknowledgement → notifications go out → closure is explicit (`scheduled` / `rescheduled` / `cancelled`).
 
 ### Workflow B: Evidence and document handling
+
 Evidence is received → routed to the correct function → chain of responsibility is recorded → access is controlled → all actions are logged → the case closes with a clear resolution status.
 
 ### Workflow C: Legal aid / defense coordination
-A citizen request arrives → it becomes a Case → routes to legal aid intake → escalates if not acknowledged → the outcome is recorded (accepted / redirected / resolved).
+
+A citizen request arrives → it becomes a Case → routes to legal aid intake → escalates if not acknowledged → the outcome is recorded (`accepted` / `redirected` / `resolved`).
 
 ---
 
@@ -89,11 +106,28 @@ A citizen request arrives → it becomes a Case → routes to legal aid intake �
     Justice depends on operational integrity
   </h3>
   <p className="text-slate-700">
-    Orgo does not “replace” judges or legal reasoning. It replaces fragile coordination:
-    lost requests, unclear ownership, and untraceable administrative handling. It makes the system
-    dependable under load, staff turnover, and disruption.
+    Orgo does not replace judges, legal reasoning, or due process.
+    It replaces fragile coordination: lost requests, unclear ownership, silent delay,
+    and untraceable administrative handling. It makes the system more dependable under
+    load, staff turnover, and disruption.
   </p>
 </div>
+
+---
+
+## Why Orgo fits justice environments
+
+Justice institutions need more than a message queue or document repository.
+
+They need a coordination layer that can support:
+
+- **function-based routing** across administrative roles,
+- **bounded response windows** for time-sensitive actions,
+- **confidential handling** without operational opacity,
+- **explicit closure** instead of ambiguous completion,
+- and **reviewable history** when procedures fail or patterns repeat.
+
+This is where Orgo fits: not as legal reasoning, but as **governable execution**.
 
 ---
 

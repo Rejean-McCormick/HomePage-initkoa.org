@@ -1,17 +1,28 @@
 import { Card } from '@/components/Card';
-import { CheckCircle2, Users, Route, Clock, ShieldCheck, Gauge, ArrowRight } from 'lucide-react';
+import {
+  CheckCircle2,
+  Users,
+  Route,
+  Clock,
+  ShieldCheck,
+  Gauge,
+  ArrowRight
+} from 'lucide-react';
 
 export const metadata = {
   title: 'Adoption — Orgo',
   description:
-    'A practical rollout playbook: pilot Orgo, define functions, set routing + escalation, install review loops, and measure reliability gains.',
+    'A practical rollout playbook: pilot Orgo, define functions, set routing + escalation, install review loops, and expand safely with trust, auditability, and sovereignty intact.',
 };
 
 # Adoption
 
 Orgo adoption is not “install software, hope for culture change.”
 
-It is a **reliability rollout**: you replace fragile coordination (inboxes, chats, implicit ownership) with a system where work is routed, tracked, escalated, and closed.
+It is a **reliability rollout**: you replace fragile coordination (inboxes, chats, implicit ownership) with a system where work is routed, tracked, escalated, reviewed, and closed.
+
+The goal is not just to digitize requests.
+The goal is to make important work **harder to lose, harder to defer invisibly, and easier to govern**.
 
 ---
 
@@ -49,6 +60,7 @@ It is a **reliability rollout**: you replace fragile coordination (inboxes, chat
 ## Phase 1 — Pilot
 
 ### Choose a pilot that forces clarity
+
 Pick one of these:
 - incident intake (service desk / emergency / operational issues)
 - procurement or approvals
@@ -57,164 +69,219 @@ Pick one of these:
 - internal HR / staffing requests
 
 ### Pilot rule: keep it boring
+
 A pilot succeeds when it is:
 - **small enough** to run without a steering committee
 - **painful enough** that improvements are obvious
 - **measurable** in closure time and missed work
 
 ### Pilot deliverables (minimal)
-- 5–10 functions (responsibilities)
-- 10–20 routing rules (simple)
-- 3 severity levels with response windows
-- 1 escalation ladder per severity level
-- 1 weekly review ritual
+
+By the end of the pilot, you should have:
+- one clear intake channel
+- one agreed list of responsible functions
+- one routing path for normal work
+- one escalation path for overdue work
+- one visible closure format
+- one short review cadence
+
+That is enough to prove whether Orgo improves operational reliability.
 
 ---
 
-## Phase 2 — Define functions, then route to them
+## Phase 2 — Routing & escalation
 
-### Step 1: define “functions” (responsibilities)
-A function is not a title. It is a duty the organization must perform reliably.
+Once the pilot proves value, the next step is not “more users.”
+It is **clearer policy**.
+
+### Define functions, not just people
+
+Orgo works best when ownership is attached to **functions/roles**:
+- Intake
+- Triage
+- Incident Response
+- Case Management
+- Procurement
+- Legal Review
+- HR Operations
+
+This avoids a common failure mode: work being owned by whoever happens to be available rather than by a durable responsibility.
+
+### Define response windows
+
+Different work needs different reactivity.
 
 Examples:
-- Intake / triage
-- Incident response
-- Case management
-- Legal review
-- Procurement
-- Communications
-- Duty lead
+- critical incidents: minutes
+- operational issues: same day
+- routine requests: days
+- strategic reviews: weeks
 
-### Step 2: define routing triggers
-Routing triggers can be:
-- topic/category (e.g., “procurement”, “incident”, “legal”)
-- location/team
-- severity
-- requester type (internal/external)
-- workflow stage
+The point is not speed for its own sake.
+The point is to make lateness **visible and governable**.
 
-### Step 3: define response windows + escalation
-Set response windows that reflect reality:
-- urgent: minutes/hours
-- important: same day / next day
-- normal: a few days
+### Define the escalation ladder
 
-Escalation should change ownership/scope, not just spam reminders.
+Every important class of work should answer:
+- who owns it first
+- when it becomes overdue
+- who is notified next
+- when leadership or audit review is triggered
+
+This is where Orgo stops being a shared inbox and becomes an execution layer.
 
 ---
 
-## Phase 3 — Install the review loops
+## Phase 3 — Review loops
 
-Orgo becomes powerful when recurring problems stop being “background noise.”
+A reliable organization does not only process work.
+It also learns from recurring failure.
 
-### Weekly review (operational)
-- overdue cases
-- repeated escalations
-- bottlenecks (functions overloaded)
-- quick wins (rules that reduce friction)
+### Install cyclic reviews
 
-### Monthly review (systemic)
-- patterns that require policy changes
-- recurring failure modes
-- “known issues” that need an audit case
+At minimum:
+- **weekly**: unresolved / overdue / critical situations
+- **monthly**: recurring bottlenecks, duplicates, reopens, audit triggers
+- **yearly or strategic**: systemic risks, chronic failure zones, governance issues
 
-### Annual review (governance)
-- what escalation policy taught you
-- which functions need restructuring
-- what should be made public vs private (boundaries)
+### Review output must become work
 
----
+A review is useful only if it can generate:
+- a new case
+- a follow-up task
+- a policy change
+- a routing adjustment
+- an audit action
 
-## Phase 4 — Scale without breaking trust
-
-Scaling Orgo isn’t about adding features. It’s about protecting these properties as you expand:
-
-- **Auditability:** outcomes remain traceable.
-- **Boundaries:** private org work stays private; public interfaces remain deliberate.
-- **Governability:** routing/escalation rules remain explicit and reviewable.
-- **Resilience:** critical workflows keep operating in degraded conditions.
+Otherwise the organization gets reporting without correction.
 
 ---
 
-## Adoption checklist
+## Phase 4 — Scale safely
 
-<div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-10">
-  <h3 className="flex items-center text-lg font-bold text-slate-800 mb-3">
-    <CheckCircle2 className="mr-2 text-blue-600" /> Ready to go live when…
-  </h3>
-  <ul className="space-y-2 text-slate-700">
-    <li>✓ You have a defined set of functions (owners by responsibility).</li>
-    <li>✓ You have response windows for at least 3 severity levels.</li>
-    <li>✓ You have an escalation ladder that changes scope/ownership.</li>
-    <li>✓ You have a weekly review ritual on the calendar.</li>
-    <li>✓ You have a simple “closure vocabulary” (resolved / rejected with reason / deferred with date).</li>
-    <li>✓ You know what metrics you will track (below).</li>
-  </ul>
+Expansion should not mean dilution.
+
+As Orgo spreads to more teams, more domains, or more sensitive workflows, you need to preserve the conditions that made the pilot trustworthy.
+
+### What must remain stable as you scale
+
+- **auditability**: important actions still leave a trace
+- **privacy boundaries**: sensitive work remains visible only to the right functions
+- **policy visibility**: routing and escalation stay inspectable and adjustable
+- **operational sovereignty**: the system can still function under degraded or offline conditions
+- **profile fit**: different organizations or domains can tune behavior without changing the core model
+
+Scaling safely means keeping the same execution spine while adjusting posture by context.
+
+---
+
+## Metrics that prove adoption is working
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+  <Card
+    title="Closure reliability"
+    icon={<CheckCircle2 className="text-primary w-6 h-6" />}
+    description="Track time to first response, time to closure, reopen rate, and percentage of work that ends with explicit outcomes."
+    href="/platforms/orgo/flows"
+  />
+  <Card
+    title="Operational load"
+    icon={<Gauge className="text-primary w-6 h-6" />}
+    description="Track backlog age, escalation rate, duplicate work, and where handoffs fail or stall."
+    href="/platforms/orgo/reviews"
+  />
 </div>
 
----
-
-## What to measure (so adoption isn’t subjective)
-
-<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
-  <div className="border border-slate-200 rounded-xl p-6">
-    <h4 className="flex items-center font-bold text-slate-900 mb-2">
-      <Gauge className="mr-2 text-blue-600" /> Closure time
-    </h4>
-    <p className="text-slate-600 text-sm">
-      Median time from intake → closure, by severity.
-    </p>
-  </div>
-  <div className="border border-slate-200 rounded-xl p-6">
-    <h4 className="flex items-center font-bold text-slate-900 mb-2">
-      <Route className="mr-2 text-blue-600" /> Misrouting rate
-    </h4>
-    <p className="text-slate-600 text-sm">
-      How often cases are re-routed (signal that rules need refinement).
-    </p>
-  </div>
-  <div className="border border-slate-200 rounded-xl p-6">
-    <h4 className="flex items-center font-bold text-slate-900 mb-2">
-      <Clock className="mr-2 text-blue-600" /> Escalation rate
-    </h4>
-    <p className="text-slate-600 text-sm">
-      Overdue cases and escalations by function (signal of capacity bottlenecks).
-    </p>
-  </div>
-</div>
+Useful adoption signals include:
+- time to first response
+- time to closure
+- overdue rate
+- escalation rate
+- duplicate / reopen rate
+- number of cases with explicit closure
+- number of review-generated audit cases
+- number of workflows still happening outside the system
 
 ---
 
-## Common failure modes (and fixes)
+## Common rollout mistakes
 
-- **Too many categories early** → Start with 10–20 routing rules; refine after real traffic.
-- **Escalation feels punitive** → Make escalation a safety system with clear thresholds and transparent ladders.
-- **People keep using chat** → Treat chat as discussion; require cases for anything that needs ownership/closure.
-- **Review meetings become status theater** → Reviews must output new cases, rule changes, or capacity decisions.
+### 1) Starting too wide
+If you begin with five departments and ten workflows, the organization debates taxonomy instead of proving value.
+
+### 2) Treating Orgo as a messaging layer
+If people use it like a chat wrapper, ownership remains fuzzy and reliability does not improve.
+
+### 3) Forgetting closure discipline
+Without explicit closure, the system accumulates motion but not accountable outcomes.
+
+### 4) Measuring activity instead of reliability
+More tickets, more comments, and more notifications do not prove adoption.
+Better response, better closure, and fewer invisible failures do.
+
+### 5) Scaling before governance is explicit
+If routing, escalation, and visibility rules are still informal, expansion will amplify confusion.
+
+---
+
+## Who should lead adoption
+
+The best rollout owner is usually not “IT alone.”
+
+Strong candidates:
+- operations lead
+- service manager
+- transformation lead
+- administrative leadership
+- domain lead with real pain around lost work
+
+The sponsor should care about:
+- missed requests
+- slow closure
+- hidden backlog
+- escalations that arrive too late
+- inability to explain what happened
+
+That is where Orgo creates immediate value.
+
+---
+
+## What successful adoption looks like
+
+After adoption, the organization should be able to say:
+
+- we know what entered the system
+- we know who owns it
+- we know what is overdue
+- we know what closed and how
+- we know what patterns are recurring
+- we can review and adjust policy without rewriting the whole workflow
+
+That is the difference between “software installed” and **execution improved**.
 
 ---
 
 ## Next
 
-<div className="flex flex-col sm:flex-row gap-4 mt-8">
+<div className="flex flex-col sm:flex-row gap-4 mt-10">
   <a
     href="/platforms/orgo/routing-escalation"
     className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
   >
-    Set routing & escalation <ArrowRight className="w-4 h-4 ml-2" />
+    Routing & escalation <ArrowRight className="w-4 h-4 ml-2" />
   </a>
 
   <a
     href="/platforms/orgo/reviews"
     className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
   >
-    Install review loops <ArrowRight className="w-4 h-4 ml-2" />
+    Review loops <ArrowRight className="w-4 h-4 ml-2" />
   </a>
 
   <a
-    href="/platforms/orgo/use-cases"
+    href="/platforms/orgo/trust"
     className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-colors"
   >
-    Browse use cases <ArrowRight className="w-4 h-4 ml-2" />
+    Trust & sovereignty <ArrowRight className="w-4 h-4 ml-2" />
   </a>
 </div>
