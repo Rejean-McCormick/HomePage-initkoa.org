@@ -117,9 +117,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               aria-label="AI and machine-readable resources"
               className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs"
             >
-              <a href="/ai" className="hover:text-[#1e6864] transition-colors">
-                AI Index
-              </a>
               <a
                 href="/llms.txt"
                 className="hover:text-[#1e6864] transition-colors"
