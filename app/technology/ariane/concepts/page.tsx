@@ -50,11 +50,8 @@ export default function ArianeConceptsPage() {
           </div>
         </Link>
 
-        <Link
-          href="/technology/ariane/concepts/glossary"
-          className="group block p-8 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary transition-all"
-        >
-          <h2 className="text-xl font-bold mb-3 flex items-center group-hover:text-primary">
+        <div className="block p-8 bg-slate-50 border border-slate-200 rounded-xl">
+          <h2 className="text-xl font-bold mb-3 flex items-center text-slate-900">
             <FileText className="w-5 h-5 mr-2 text-emerald-600" />
             Glossary
           </h2>
@@ -64,11 +61,10 @@ export default function ArianeConceptsPage() {
             vocabulary of the Ariane ontology.
           </p>
 
-          <div className="inline-flex items-center font-bold text-slate-700 text-sm">
-            View Definitions
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          <div className="inline-flex items-center font-bold text-slate-400 text-sm cursor-default">
+            Coming soon
           </div>
-        </Link>
+        </div>
       </div>
 
       <div className="pt-8 border-t border-slate-100 mt-12">

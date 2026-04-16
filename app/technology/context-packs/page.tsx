@@ -29,8 +29,9 @@ type ContextPack = {
   version: string;
   scope: string;
   description: string;
-  file: string;
+  file?: string;
   links?: ContextPackLink[];
+  downloadAvailable?: boolean;
 };
 
 const SYSTEM_PACKS: ContextPack[] = [
@@ -42,6 +43,7 @@ const SYSTEM_PACKS: ContextPack[] = [
     description:
       'Normative contracts, schemas, query semantics, and runtime-pack logic for portable, verifiable knowledge artifacts.',
     file: 'kristal-context-pack--contracts-schemas-query--v4.0.txt',
+    downloadAvailable: true,
     links: [{ href: '/technology/kristal', label: 'Kristal' }],
   },
   {
@@ -52,6 +54,7 @@ const SYSTEM_PACKS: ContextPack[] = [
     description:
       'Full-stack platform specification covering parameters, navigation, modules, and structural references for Konnaxion.',
     file: 'konnaxion-context-pack--platform-specification--v14.0.txt',
+    downloadAvailable: true,
     links: [{ href: '/platforms/konnaxion', label: 'Konnaxion' }],
   },
   {
@@ -62,6 +65,7 @@ const SYSTEM_PACKS: ContextPack[] = [
     description:
       'Unified workflow reference for case handling, task orchestration, schemas, services, and operational flows.',
     file: 'orgo-context-pack--case-task-workflow-platform--v3.0.txt',
+    downloadAvailable: true,
     links: [{ href: '/platforms/orgo', label: 'Orgo' }],
   },
   {
@@ -72,6 +76,7 @@ const SYSTEM_PACKS: ContextPack[] = [
     description:
       'Entity reconciliation, ingestion, semantic processing, and the upgrade path for structured resolution over messy inputs.',
     file: 'sentient-context-pack--reconciliation-architecture--v1.0.txt',
+    downloadAvailable: true,
     links: [{ href: '/technology/sentient', label: 'SenTient' }],
   },
   {
@@ -81,7 +86,7 @@ const SYSTEM_PACKS: ContextPack[] = [
     scope: 'Engine and GF integration',
     description:
       'Engine architecture, GF integration, deployment model, and the technical shape of deterministic multilingual rendering.',
-    file: 'abstract-wiki-architect-context-pack--engine-and-gf-integration--v2.5.txt',
+    downloadAvailable: false,
     links: [{ href: '/technology/architect', label: 'Semantik Architect' }],
   },
   {
@@ -92,6 +97,7 @@ const SYSTEM_PACKS: ContextPack[] = [
     description:
       'System-level architecture, artifact contracts, workflow boundaries, and Kristal integration across the ecosystem.',
     file: 'koa-digital-ecosystem-context-pack--architecture-and-contracts--v1.0.txt',
+    downloadAvailable: true,
   },
 ];
 
@@ -104,6 +110,7 @@ const GENERAL_PACKS: ContextPack[] = [
     description:
       'Deterministic constructor routing and reference material for Grammatical Framework and RGL-based generation workflows.',
     file: 'grammatical-framework-context-pack--rgl-router-and-reference--v1.0.txt',
+    downloadAvailable: true,
   },
   {
     slug: 'senior-architect',
@@ -113,6 +120,7 @@ const GENERAL_PACKS: ContextPack[] = [
     description:
       'Production patterns for reliability, resilience, structural decoupling, observability, and large-system design.',
     file: 'senior-architect-context-pack--systems-patterns-and-resilience--v1.0.txt',
+    downloadAvailable: true,
   },
 ];
 
@@ -231,13 +239,19 @@ function PackCard({ pack }: { pack: ContextPack }) {
       <p className="mt-4 text-slate-600 leading-relaxed">{pack.description}</p>
 
       <div className="mt-5 flex flex-wrap gap-3">
-        <a
-          href={`/context-packs/${pack.file}`}
-          download={pack.file}
-          className="inline-flex items-center px-4 py-2 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
-        >
-          Download <Download className="w-4 h-4 ml-2" />
-        </a>
+        {pack.downloadAvailable && pack.file ? (
+          <a
+            href={`/context-packs/${pack.file}`}
+            download={pack.file}
+            className="inline-flex items-center px-4 py-2 rounded-md bg-slate-900 text-white hover:bg-[#1e6864] transition-colors"
+          >
+            Download <Download className="w-4 h-4 ml-2" />
+          </a>
+        ) : (
+          <span className="inline-flex items-center px-4 py-2 rounded-md bg-slate-100 text-slate-500 cursor-default">
+            Download coming soon
+          </span>
+        )}
 
         {pack.links?.map((link) => (
           <Link
