@@ -35,9 +35,9 @@ const STATIC_DISCOVERY_CACHE_HEADERS = [
 
 /**
  * HTML canonicals stay indexable by default.
- * We split non-HTML discovery surfaces into:
- * - indexable machine-readable entrypoints (.md mirrors, llms.txt)
- * - noindex auxiliary artifacts (full corpus, manifests, sitemaps, json/xml)
+ * Non-HTML discovery surfaces are split into:
+ * - indexable AI entrypoint: llms.txt
+ * - noindex auxiliary artifacts and mirrors
  */
 const INDEXABLE_DISCOVERY_ROBOTS_HEADERS = [
   {
@@ -82,7 +82,7 @@ const XML_HEADERS = [
 
 const MARKDOWN_HEADERS = [
   ...STATIC_DISCOVERY_CACHE_HEADERS,
-  ...INDEXABLE_DISCOVERY_ROBOTS_HEADERS,
+  ...NOINDEX_DISCOVERY_ROBOTS_HEADERS,
   { key: "Content-Type", value: "text/markdown; charset=utf-8" },
 ];
 
@@ -97,11 +97,6 @@ const nextConfig = {
       {
         source: "/technology/ariane/concepts/Glossary",
         destination: "/technology/ariane/concepts/glossary",
-        permanent: true,
-      },
-      {
-        source: "/technology/ariane/concepts/Glossary/:path*",
-        destination: "/technology/ariane/concepts/glossary/:path*",
         permanent: true,
       },
       {
@@ -170,7 +165,7 @@ const nextConfig = {
         headers: [...SECURITY_HEADERS, ...JSON_HEADERS],
       },
 
-      // Generated markdown mirrors in /public: indexable machine-readable pages
+      // Generated markdown mirrors in /public: fetchable but non-canonical
       {
         source: "/:path*.md",
         headers: [...SECURITY_HEADERS, ...MARKDOWN_HEADERS],

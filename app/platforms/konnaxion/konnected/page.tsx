@@ -34,8 +34,8 @@ export default function KonnectEDPage() {
             coordination, hiring, delegation, and governance without relying on unverifiable titles.
           </p>
           <p>
-            The focus is not “content consumption.” The focus is a closed loop: learn → practice → evaluate → validate →
-            certify → improve.
+            The focus is not “content consumption.” The focus is a closed loop: learn → practice → evaluate → validate
+            → certify → improve.
           </p>
         </div>
 
@@ -68,7 +68,8 @@ export default function KonnectEDPage() {
             <div className="p-6 border border-slate-200 rounded-lg bg-white">
               <h3 className="font-bold text-slate-900 mb-2">Evaluation and validation</h3>
               <p className="text-sm text-slate-600">
-                Assessments, peer review, and evidence-based validation—so claims of skill can be inspected and trusted.
+                Assessments, peer review, and evidence-based validation—so claims of skill can be inspected and
+                trusted.
               </p>
             </div>
 
@@ -87,6 +88,46 @@ export default function KonnectEDPage() {
                 governance into opaque technocracy.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* KEY PAGES */}
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Key pages</h2>
+          <p className="text-slate-600 mb-8">
+            Core concepts and operational surfaces of KonnectED.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Link
+              href="/platforms/konnaxion/konnected/certifikation"
+              className="group block p-8 border border-slate-200 rounded-xl hover:border-primary hover:shadow-lg transition-all"
+            >
+              <div className="text-xs font-mono text-slate-500 mb-2">Credentialing</div>
+              <h3 className="text-2xl font-bold text-slate-900 group-hover:underline">
+                CertifiKation
+              </h3>
+              <p className="text-slate-600 mt-3">
+                The certification layer: how validated competence becomes portable, inspectable, and reusable across
+                institutions and roles.
+              </p>
+              <div className="mt-6 text-sm font-bold text-primary">Open CertifiKation →</div>
+            </Link>
+
+            <Link
+              href="/platforms/konnaxion/konnected/knowledge"
+              className="group block p-8 border border-slate-200 rounded-xl hover:border-primary hover:shadow-lg transition-all"
+            >
+              <div className="text-xs font-mono text-slate-500 mb-2">Knowledge</div>
+              <h3 className="text-2xl font-bold text-slate-900 group-hover:underline">
+                Knowledge
+              </h3>
+              <p className="text-slate-600 mt-3">
+                The knowledge layer: reusable reference material, conceptual structure, and shared understanding that
+                support learning and validation.
+              </p>
+              <div className="mt-6 text-sm font-bold text-primary">Open Knowledge →</div>
+            </Link>
           </div>
         </section>
 
