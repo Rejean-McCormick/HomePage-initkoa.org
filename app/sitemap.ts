@@ -17,6 +17,7 @@ const EXCLUDED_PREFIXES = [
   "/initiatives/ukraine-peace-plan",
   "/kreature",
 ];
+
 // App Router: a folder is routable when it contains page.(tsx|ts|js|jsx|mdx|md)
 const PAGE_FILES_PRIORITY = [
   "page.tsx",
@@ -310,9 +311,26 @@ function isCanonicalHumanPathname(pathname: string): boolean {
   return true;
 }
 
+function buildScannedRouteLookup(scannedRoutes: string[]): Map<string, string> {
+  return new Map(
+    scannedRoutes.map((route) => {
+      const normalized = normalizePathname(route);
+      return [normalized.toLowerCase(), normalized];
+    })
+  );
+}
+
+function canonicalizeAgainstScannedRoutes(
+  pathname: string,
+  scannedRouteLookup: Map<string, string>
+): string {
+  return scannedRouteLookup.get(pathname.toLowerCase()) ?? pathname;
+}
+
 function buildRouteMetaMap(
   ai: AiSitemapEntry[] | null,
   fallbackLastModified: Map<string, Date>,
+  scannedRouteLookup: Map<string, string>,
   now: Date
 ): Map<
   string,
@@ -338,9 +356,14 @@ function buildRouteMetaMap(
     if (!pathname) continue;
     if (!isCanonicalHumanPathname(pathname)) continue;
 
-    const fallback = fallbackLastModified.get(pathname) ?? now;
+    const canonicalPathname = canonicalizeAgainstScannedRoutes(
+      pathname,
+      scannedRouteLookup
+    );
 
-    map.set(pathname, {
+    const fallback = fallbackLastModified.get(canonicalPathname) ?? now;
+
+    map.set(canonicalPathname, {
       lastModified: parseLastModified(e.lastModified, fallback),
       changeFrequency: e.changeFrequency,
       priority: typeof e.priority === "number" ? e.priority : undefined,
@@ -366,6 +389,7 @@ function collectCanonicalRoutes(now: Date): {
   const scanned = walkForRoutes(appDirAbs);
   const ai = readAiSitemapIfPresent();
 
+  const scannedRouteLookup = buildScannedRouteLookup(scanned.routes);
   const fallbackLastModifiedByPathname = new Map<string, Date>();
 
   scanned.lastModifiedByPathname.forEach((mtime, pathname) => {
@@ -377,6 +401,7 @@ function collectCanonicalRoutes(now: Date): {
   const metaByPathname = buildRouteMetaMap(
     ai,
     fallbackLastModifiedByPathname,
+    scannedRouteLookup,
     now
   );
 
@@ -396,7 +421,13 @@ function collectCanonicalRoutes(now: Date): {
       const pathname = entryToPathname(e);
       if (!pathname) continue;
       if (!isCanonicalHumanPathname(pathname)) continue;
-      routes.add(pathname);
+
+      const canonicalPathname = canonicalizeAgainstScannedRoutes(
+        pathname,
+        scannedRouteLookup
+      );
+
+      routes.add(canonicalPathname);
     }
   }
 

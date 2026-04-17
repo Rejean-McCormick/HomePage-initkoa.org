@@ -52,6 +52,19 @@ function ensureArray(value, label) {
   return value;
 }
 
+function normalizeRouteCase(route) {
+  const value = String(route || "").trim();
+  if (!value) return "/";
+
+  const normalized = value.startsWith("/") ? value : `/${value}`;
+
+  if (normalized.toLowerCase() === "/technology/ariane/concepts/glossary") {
+    return "/technology/ariane/concepts/glossary";
+  }
+
+  return normalized;
+}
+
 function getRequiredConfig(state) {
   const config = state?.config;
   if (!config) {
@@ -90,8 +103,8 @@ function getSortedPages(state) {
   const pages = ensureArray(state?.pages ?? [], "state.pages");
 
   return [...pages].sort((a, b) => {
-    const routeA = String(a?.route ?? "");
-    const routeB = String(b?.route ?? "");
+    const routeA = normalizeRouteCase(String(a?.route ?? ""));
+    const routeB = normalizeRouteCase(String(b?.route ?? ""));
     return routeA.localeCompare(routeB);
   });
 }
@@ -111,7 +124,7 @@ function getPageRoute(page) {
   if (!route || typeof route !== "string") {
     throw new Error("Each page must include a string route.");
   }
-  return route;
+  return normalizeRouteCase(route);
 }
 
 function getPageMarkdownMirror(page) {
@@ -146,9 +159,13 @@ function writeMarkdownMirrors(state, publicDir, generatedMdStateFile) {
 
   const pages = getSortedPages(state);
   const generatedRelativePaths = [];
+  const seenRoutes = new Set();
 
   for (const page of pages) {
     const route = getPageRoute(page);
+    if (seenRoutes.has(route)) continue;
+    seenRoutes.add(route);
+
     const mdText = getPageMarkdownMirror(page);
     const mdRel = routeToMarkdownRelativePath(route);
     const mdAbs = routeToMarkdownFilePath(route, publicDir);

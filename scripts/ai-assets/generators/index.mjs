@@ -25,8 +25,22 @@ function getPageTitle(page) {
   return page?.title || "Untitled";
 }
 
+function normalizeRouteCase(route) {
+  const value = String(route || "").trim();
+  if (!value) return "/";
+
+  const normalized = value.startsWith("/") ? value : `/${value}`;
+
+  // Canonicalize known case-sensitive public routes here.
+  if (normalized.toLowerCase() === "/technology/ariane/concepts/glossary") {
+    return "/technology/ariane/concepts/glossary";
+  }
+
+  return normalized;
+}
+
 function getPageRoute(page) {
-  return page?.route || "/";
+  return normalizeRouteCase(page?.route || "/");
 }
 
 function getPageUrl(page) {
@@ -109,7 +123,7 @@ export function selectLlmsPages(state) {
 
   const maxLinks = Number(config.maxLlmsPageLinks || 28) || 28;
   const priorityRoutes = Array.isArray(config.priorityLlmsRoutes)
-    ? config.priorityLlmsRoutes
+    ? config.priorityLlmsRoutes.map(normalizeRouteCase)
     : [];
 
   const pageByRoute = new Map(
@@ -120,9 +134,10 @@ export function selectLlmsPages(state) {
   const seen = new Set();
 
   function add(route) {
-    const page = pageByRoute.get(route);
-    if (!page || seen.has(route) || chosen.length >= maxLinks) return;
-    seen.add(route);
+    const canonicalRoute = normalizeRouteCase(route);
+    const page = pageByRoute.get(canonicalRoute);
+    if (!page || seen.has(canonicalRoute) || chosen.length >= maxLinks) return;
+    seen.add(canonicalRoute);
     chosen.push(page);
   }
 
@@ -298,33 +313,49 @@ export function buildLlmsFull(state) {
 
 export function buildAiSitemapPayload(state) {
   const pages = getPages(state);
+  const seenRoutes = new Set();
 
-  return pages.map((page) => ({
-    route: getPageRoute(page),
-    title: getPageTitle(page),
-    url: getPageUrl(page),
-    markdown_url: getPageMarkdownUrl(page),
-    markdown_path: getPageMarkdownPath(page),
-    summary: getPageSummary(page, 180),
-    source: getPageSource(page),
-  }));
+  return pages
+    .map((page) => ({
+      route: getPageRoute(page),
+      title: getPageTitle(page),
+      url: getPageUrl(page),
+      markdown_url: getPageMarkdownUrl(page),
+      markdown_path: getPageMarkdownPath(page),
+      summary: getPageSummary(page, 180),
+      source: getPageSource(page),
+    }))
+    .filter((page) => {
+      if (seenRoutes.has(page.route)) return false;
+      seenRoutes.add(page.route);
+      return true;
+    })
+    .sort((a, b) => a.route.localeCompare(b.route));
 }
 
 export function buildMdManifestPayload(state) {
   const pages = getPages(state);
   const generatedAt = getNowIso(state);
+  const seenRoutes = new Set();
 
-  return pages.map((page) => ({
-    route: getPageRoute(page),
-    title: getPageTitle(page),
-    url: getPageUrl(page),
-    markdown_url: getPageMarkdownUrl(page),
-    markdown_path: getPageMarkdownPath(page),
-    summary: getPageSummary(page, 180),
-    source: getPageSource(page),
-    chars: getPageBody(page).length,
-    generated_at: generatedAt,
-  }));
+  return pages
+    .map((page) => ({
+      route: getPageRoute(page),
+      title: getPageTitle(page),
+      url: getPageUrl(page),
+      markdown_url: getPageMarkdownUrl(page),
+      markdown_path: getPageMarkdownPath(page),
+      summary: getPageSummary(page, 180),
+      source: getPageSource(page),
+      chars: getPageBody(page).length,
+      generated_at: generatedAt,
+    }))
+    .filter((page) => {
+      if (seenRoutes.has(page.route)) return false;
+      seenRoutes.add(page.route);
+      return true;
+    })
+    .sort((a, b) => a.route.localeCompare(b.route));
 }
 
 export function buildAiSitemapJson(state) {

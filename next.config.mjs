@@ -92,21 +92,6 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
 
-  async redirects() {
-    return [
-      {
-        source: "/technology/ariane/concepts/Glossary",
-        destination: "/technology/ariane/concepts/glossary",
-        permanent: true,
-      },
-      {
-        source: "/platforms/konnaxion/keen-konnect/:path*",
-        destination: "/platforms/konnaxion/keenkonnect/:path*",
-        permanent: true,
-      },
-    ];
-  },
-
   async headers() {
     return [
       // Inventory: always fresh, never cached

@@ -148,7 +148,7 @@ export default function SmartVotePage() {
         <Link href="/kreature/anatomie/esprit/konnaxion/kollective/ekoh" className="text-amber-600 hover:text-amber-800 font-bold flex items-center gap-2 transition-colors">
           ← Retour à EkoH
         </Link>
-        <Link href="/kreature/anatomie/esprit/konnaxion/keen-konnect" className="text-emerald-600 hover:text-emerald-800 font-bold flex items-center gap-2 transition-colors">
+        <Link href="/kreature/anatomie/esprit/konnaxion/keenkonnect" className="text-emerald-600 hover:text-emerald-800 font-bold flex items-center gap-2 transition-colors">
           Passer à l'Action (KeenKonnect) →
         </Link>
       </div>

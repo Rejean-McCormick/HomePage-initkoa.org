@@ -47,7 +47,7 @@ const CHAMBERS = [
     title: "4. KeenKonnect (L'Action)",
     subtitle: "Les Mains & L'Outil",
     desc: "Là où l'on bâtit. Gestion de projets (Konstruct) et partage de ressources (Stockage).",
-    href: "/kreature/anatomie/esprit/konnaxion/keen-konnect",
+    href: "/kreature/anatomie/esprit/konnaxion/keenkonnect",
     icon: <HardHat className="w-6 h-6 text-teal-600" />,
     color: "bg-teal-50 border-teal-200"
   },

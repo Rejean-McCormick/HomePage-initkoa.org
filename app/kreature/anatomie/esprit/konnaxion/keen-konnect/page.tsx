@@ -1,5 +1,5 @@
-// app\kreature\anatomie\esprit\konnaxion\keen-konnect\page.tsx
-// app/kreature/anatomie/esprit/konnaxion/keen-konnect/page.tsx
+// app\kreature\anatomie\esprit\konnaxion\keenkonnect\page.tsx
+// app/kreature/anatomie/esprit/konnaxion/keenkonnect/page.tsx
 import Link from 'next/link';
 import { 
   Users, 
@@ -21,7 +21,7 @@ const MODULES = [
     title: "Konstruct",
     subtitle: "Le Chantier (Projets)",
     desc: "Transformer l'intention en structure. Équipes, jalons, feuilles de route. C'est le pont entre la stratégie et l'exécution.",
-    href: "/kreature/anatomie/esprit/konnaxion/keen-konnect/konstruct",
+    href: "/kreature/anatomie/esprit/konnaxion/keenkonnect/konstruct",
     icon: <HardHat className="w-6 h-6 text-teal-600" />,
     color: "bg-teal-50 border-teal-200"
   },
@@ -29,7 +29,7 @@ const MODULES = [
     title: "Stockage",
     subtitle: "L'Armoire (Ressources)",
     desc: "L'espace commun. Fichiers, assets, outils partagés. Ce n'est pas un disque dur vide, c'est un espace de permissions et de propriété.",
-    href: "/kreature/anatomie/esprit/konnaxion/keen-konnect/stockage",
+    href: "/kreature/anatomie/esprit/konnaxion/keenkonnect/stockage",
     icon: <FolderOpen className="w-6 h-6 text-cyan-600" />,
     color: "bg-cyan-50 border-cyan-200"
   }
