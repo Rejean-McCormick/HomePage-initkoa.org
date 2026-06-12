@@ -1,0 +1,72 @@
+# Vote Overview
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/vote/overview
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/vote/overview/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/vote/overview
+> Source: app\initiatives\ukraine-peace-plan\fvr\vote\overview\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/vote/overview)
+
+# Vote Overview
+
+The **Vote** phase is the legitimacy engine of **Freeze–Vote–Rebuild**.
+
+Its purpose is to convert a stabilized, monitored Freeze into a politically credible outcome through a supervised decision process that is designed to resist coercion and manipulation.
+
+## Table of Contents
+
+**Foundations of Legitimacy**
+- **Objective & Legitimacy Criteria (/initiatives/ukraine-peace-plan/fvr/vote/legitimacy-criteria)**
+*Defining what makes a result valid and internationally recognizable.*
+- **Electorate Definition (/initiatives/ukraine-peace-plan/fvr/vote/electorate-definition)**
+*Ensuring displaced persons and refugees are explicitly included.*
+
+**Operational Mechanics**
+- **Voting System Design (/initiatives/ukraine-peace-plan/fvr/vote/voting-system)**
+*The technical architecture for hybrid, secure, and secret voting.*
+- **Integrity & Observation (/initiatives/ukraine-peace-plan/fvr/vote/integrity-observation)**
+*Anti-coercion safeguards, independent monitoring, and audit trails.*
+
+**Process & Outcomes**
+- **Dispute Resolution (/initiatives/ukraine-peace-plan/fvr/vote/dispute-resolution)**
+*Timelines and remedies for complaints, preventing indefinite contestation.*
+- **Vote-to-Border Mechanics (Optional) (/initiatives/ukraine-peace-plan/fvr/vote/vote-to-border)**
+*A pre-published algorithm for mapping results to lines (if applicable).*
+
+## Objectives
+- **Produce a Legitimate Outcome:** Results must meet agreed international standards of fairness.
+- **Ensure Meaningful Participation:** Explicit inclusion of **displaced persons and refugees** is a core requirement.
+- **Make the Process Auditable:** Rules, observation, and dispute resolution must be transparent.
+- **Reduce Incentives for Violence:** Create a credible non-military route to political outcomes.
+
+## What “Vote” Means Here
+“Vote” is shorthand for a legitimacy event that can take multiple forms (referendum, supervised elections, multi-option plebiscite), provided it meets the framework’s integrity requirements:
+* Clear electorate definition.
+* Safe participation and anti-coercion protections.
+* Transparent procedures and audit trails.
+* Independent observation.
+* A dispute mechanism with binding timelines.
+
+## Minimum Viable Vote Package
+A Vote phase is not credible without:
+* An agreed **Rulebook** (eligibility, modalities, auditing, disputes).
+* An identity/eligibility approach that includes displaced persons.
+* An observation mission with freedom of movement and reporting ability.
+* **Version-Locked Procedures:** No rule changes allowed midstream.
+* A credible adjudication path for disputes and recounts.
+
+## Entry & Exit Logic
+
+### Entry (Readiness)
+*Preconditions to start the Vote phase:*
+- Freeze stability gate passed (hostilities reduced and monitored).
+- Voter safety and observer deployment feasible.
+- Rulebook published and locked.
+- Dispute mechanism staffed and operational.
+
+### Exit Gate (Transition to Rebuild)
+*What must be verified to proceed to Phase 3:*
+- Observers certify process integrity to agreed standards.
+- Disputes are adjudicated and final results published.
+- Acceptance criteria met (e.g., turnout thresholds, audit checks).

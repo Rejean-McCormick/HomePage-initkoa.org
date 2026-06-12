@@ -1,0 +1,69 @@
+# Changelog & Versioning
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/start-here/changelog
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/start-here/changelog/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/start-here/changelog
+> Source: app\initiatives\ukraine-peace-plan\fvr\start-here\changelog\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/start-here/changelog)
+
+# Changelog & Versioning
+
+This page tracks releases of the GitBook and explains how disparate source drafts map into the unified **Freeze–Vote–Rebuild** structure.
+
+## Versioning Scheme
+
+We use semantic versioning to track the evolution of the framework:
+
+* **MAJOR (v1.0.0):** Structural changes (navigation, chapter layout, scope changes).
+* **MINOR (v0.1.0):** Significant content additions or policy/operational refinements.
+* **PATCH (v0.0.1):** Typo fixes, wording clarifications, and formatting updates.
+
+## Source Documents and Mapping
+
+This GitBook consolidates multiple inputs into a single maintained structure to ensure consistency across technical and political audiences:
+
+* **Comprehensive Proposal (Neutral, Verification-First):** Broad narrative and concept framing across Freeze/Vote/Rebuild.
+* **“v4—Operational Peace Framework”:** Implementation-oriented: sequencing, action items, legal/approval gating, and operational details.
+* **“McCormick-style Off-ramp” Essay:** Persuasive framing aimed at US realist audiences; narrative-style argumentation.
+* **“Projet du Pape François…” (French variant):** Alternate origin/variant framing and rhetorical positioning.
+
+**Unified Structure Logic:**
+- **Chapters 02–04:** The Core Mechanism (Freeze/Vote/Rebuild).
+- **Chapters 05–06:** Cross-cutting Verification + Legal Pathways.
+- **Chapter 10:** Essays/Variants (kept separate from the core mechanism).
+- **Chapter 11:** Archive of source texts to maintain traceability.
+
+## Change Control Workflow
+
+When updating the GitBook, the following workflow is recommended:
+
+1. **Document Rationale:** Make substantive design changes and document the reasoning in the **Decision Log (/initiatives/ukraine-peace-plan/fvr/appendices/decision-log)**.
+2. **Release Entry:** Record the release version and date here under **GitBook Releases**.
+3. **Delta Tracking:** If a change alters how previous drafts are interpreted, update the **Deltas Between Versions (/initiatives/ukraine-peace-plan/fvr/overview/deltas)**.
+
+## GitBook Releases
+
+- **Initial Scaffold:** File tree, navigation, and reader pathways established.
+- **Core Content Extraction:** Content extracted from source drafts for Freeze, Vote, and Rebuild phases.
+- **Governance & Legal:** Initial "Verification-First Gates" and "Domestic Approvals" logic populated.
+- **Risk Management:** Initial Risk Register and Failure Modes cataloged.
+
+- Initial scaffold created with placeholders.
+- Source-text archive populated with reference-only originals.
+
+## Conventions and Flags
+
+Use these markers within pages while drafting to maintain transparency:
+
+* **[TBD]** — Requires content drafting or data.
+* **[ASSUMPTION]** — Relies on a premise that should be made explicit and testable.
+* **[RISK]** — Introduces or depends on a non-trivial failure mode.
+* **[OPEN QUESTION]** — Requires stakeholder input or empirical validation.
+* **[SOURCE NOTE]** — Indicates which source draft introduced the idea for traceability.
+
+## Attribution and Licensing
+* **Document Maintainer:** [Insert Lead Organization/Author]
+* **Licensing:** [Insert Creative Commons or Proprietary Terms]
+* **Citation Guidance:** When referencing this framework, please cite the specific version number and date found in this changelog.

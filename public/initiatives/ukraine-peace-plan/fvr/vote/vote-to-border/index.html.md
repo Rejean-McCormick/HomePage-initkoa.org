@@ -1,0 +1,118 @@
+# Why Include Vote-to-Border at All?
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/vote/vote-to-border
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/vote/vote-to-border/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/vote/vote-to-border
+> Source: app\initiatives\ukraine-peace-plan\fvr\vote\vote-to-border\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/vote/vote-to-border)
+
+# Vote-to-Border Mechanics (Optional)
+
+Some variants of Freeze–Vote–Rebuild include a “vote-to-border” component: a published method that maps vote outcomes to territorial or administrative lines.
+
+In this GitBook, vote-to-border is treated as an **optional module**. If used, it must be designed to be:
+- **transparent** (published rules),
+- **version-locked** (no midstream changes),
+- **simulatable** (public sandbox before the vote),
+- **auditable** (inputs/outputs and edge cases are inspectable),
+- **resistant to manipulation** (especially via strategic displacement or gerrymandering).
+
+## Why Include Vote-to-Border at All?
+
+**Potential Benefits:**
+- Reduces arbitrariness by committing to rules in advance.
+- Narrows post-vote bargaining space (fewer “interpretation wars”).
+- Makes tradeoffs visible *before* voting, not after.
+
+**Potential Risks:**
+- Creates strong incentives to manipulate turnout or eligibility.
+- Hard edge cases (mixed areas, security constraints, minority protections).
+- May be viewed as legitimizing outcomes that should be negotiated separately.
+
+## Core Design Requirements
+
+### 1. Define the Mapping Unit
+Specify the unit that maps votes to outcomes, e.g.:
+- Municipality / district / precinct.
+- Contiguous geographic cells (grid-based).
+- Administrative units with defined boundaries.
+
+**Avoid ad hoc redrawing during or after the vote.**
+
+### 2. Define the Decision Rule
+Examples (illustrative only):
+- Simple majority by unit.
+- Supermajority thresholds for boundary changes.
+- Turnout-adjusted rules (high risk; can be gamed).
+- Multi-option outcomes with runoff rules.
+
+### 3. Define Contiguity and Coherence Constraints
+If borders are produced, specify constraints such as:
+- **Contiguity:** No isolated enclaves unless explicitly allowed.
+- **Corridor rules:** For access.
+- **Treatment of mixed units:** Subdivision rules or shared administration options.
+
+### 4. Define Minority Protections and Human Rights Constraints
+Vote-to-border must not be a “license” for rights violations. Specify:
+- Protections for minorities in any resultant zones.
+- Policing/security constraints under Freeze conditions.
+- Mechanisms for monitoring rights compliance post-result.
+
+### 5. Lock Inputs and Publish the Algorithm
+Before the vote:
+- Publish the full mapping algorithm and parameters.
+- Publish the data inputs that will be used (boundaries, units, registries).
+- Establish a version-lock and governance process for any emergency changes.
+- Define how disputes about inputs are handled.
+
+## The Simulation/Sandbox Requirement
+
+A public simulation platform should allow stakeholders to:
+- Test hypothetical vote distributions.
+- Explore edge cases (mixed units, low turnout, displaced participation).
+- Verify that the published rules behave as advertised.
+- Detect incentives for gaming.
+
+**Publish:**
+- Code (or at minimum a deterministic spec).
+- Sample datasets.
+- Documented examples and edge-case handling.
+- A changelog and cryptographic hashes (if applicable) to support version-locking.
+
+## Fraud and Manipulation Risks (and Mitigations)
+
+### Risk: Strategic Exclusion or Displacement
+**Mitigate via:**
+- Electorate inclusion rules with cutoffs.
+- Independent audits of registration and participation.
+- Transparency on participation by category (resident/IDP/refugee).
+
+(See: **Electorate Definition (/initiatives/ukraine-peace-plan/fvr/vote/electorate-definition)**)
+
+### Risk: Gerrymandering via Unit Choice
+**Mitigate via:**
+- Choosing stable, pre-existing administrative units where possible.
+- Publishing boundaries and forbidding midstream changes.
+- Independent review of unit design.
+
+### Risk: Low-Turnout Gaming
+**Mitigate via:**
+- Cautious use of turnout thresholds (can be exploited).
+- Robust anti-coercion measures and access support.
+- Explicit rules for inconclusive units (e.g., rerun, runoff, negotiated fallback).
+
+## When Not to Use Vote-to-Border
+Consider excluding this module if:
+- Security conditions make free participation implausible in key areas.
+- Displaced inclusion cannot be operationalized credibly.
+- Boundary consequences would create unacceptable rights risks.
+- Parties cannot pre-commit to rules and accept the outputs.
+
+## Links to Related Chapters
+- **Legitimacy Criteria (/initiatives/ukraine-peace-plan/fvr/vote/legitimacy-criteria)**
+- **Electorate Definition (/initiatives/ukraine-peace-plan/fvr/vote/electorate-definition)**
+- **Voting System Design (/initiatives/ukraine-peace-plan/fvr/vote/voting-system)**
+- **Dispute Resolution (/initiatives/ukraine-peace-plan/fvr/vote/dispute-resolution)**
+- **Data Governance (/initiatives/ukraine-peace-plan/fvr/governance/data-privacy)**

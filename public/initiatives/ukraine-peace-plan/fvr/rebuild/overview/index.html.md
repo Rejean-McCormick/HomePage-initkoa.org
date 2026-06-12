@@ -1,0 +1,70 @@
+# Rebuild Overview
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/overview
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/overview/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/rebuild/overview
+> Source: app\initiatives\ukraine-peace-plan\fvr\rebuild\overview\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/overview)
+
+# Rebuild Overview
+
+The **Rebuild** phase turns verified stability and a credible legitimacy outcome into reconstruction at scale.
+
+In **Freeze–Vote–Rebuild**, reconstruction is not treated as a vague promise; it is designed as an operational program with strict governance, performance incentives, and mandatory audits.
+
+## Table of Contents
+
+**Governance & Architecture**
+- **Reconstruction Architecture (/initiatives/ukraine-peace-plan/fvr/rebuild/architecture)**
+*The governance authority, funding models, and anti-corruption safeguards.*
+- **Accountability & Transparency (/initiatives/ukraine-peace-plan/fvr/rebuild/accountability)**
+*The "Transparency Stack" (audits, open contracting, debarment rules) required to maintain trust.*
+- **Peace-Build Campus Governance (Optional) (/initiatives/ukraine-peace-plan/fvr/rebuild/campus-governance)**
+*A model for symbolic, high-visibility coordination hubs.*
+
+**Delivery & Execution**
+- **The Construction Olympics (/initiatives/ukraine-peace-plan/concepts/construction-olympics)**
+*A competitive, gamified delivery model to accelerate speed and innovation.*
+- **Economic Restart Plan (/initiatives/ukraine-peace-plan/fvr/rebuild/economic-restart)**
+*Sequencing economic recovery: essential services -> logistics -> productive economy.*
+
+## Objectives
+- **Restore Essential Services:** Quickly bring power, water, and transport back online to stabilize lives.
+- **Rebuild at Scale:** Mobilize resources for housing, energy, health, and education infrastructure.
+- **Resist Capture:** Implement a governance and procurement model that is fast **and** resistant to corruption.
+- **Maintain Trust:** Make spending and results auditable to sustain donor confidence and public legitimacy.
+- **Create a "Peace Dividend":** Use visible reconstruction progress to reduce spoiler leverage and incentivize stability.
+
+## What a Rebuild Program Includes
+A credible reconstruction effort combines four key systems:
+
+1. **Governance:** Authority structures, decision rights, and anti-corruption controls.
+2. **Financing:** Tranche-based disbursement tied to verified KPIs and audits (escrow/conditional release).
+3. **Delivery Model:** Prioritized project pipelines, standardized designs for speed, and performance benchmarking.
+4. **Transparency:** Open contracting, independent monitoring, and public dashboards for costs and outcomes.
+
+## Sequencing the Rebuild
+Reconstruction cannot happen all at once. It must be staged:
+
+1. **Emergency Restoration:** Power, water, hospitals, winterization, and temporary housing.
+2. **Core Infrastructure:** Transport networks, grid resilience, schools/clinics, and logistics nodes.
+3. **Economic Restart:** Revitalizing industry, agriculture supply chains, and the investment climate.
+4. **Long-Term Modernization:** Building for resilience, climate adaptation, and new construction standards.
+
+## Entry & Exit Logic
+
+### Entry (Readiness)
+*Preconditions to scale up reconstruction:*
+- Freeze remains stable under independent monitoring.
+- The Vote phase has produced a certified outcome (or agreed legitimacy milestone).
+- Governance and audit controls are established and active.
+- Security conditions allow for safe delivery of materials and personnel.
+
+### Exit (Success Criteria)
+*Rebuild is an ongoing process, but "success" is measured by:*
+- Sustained, high-throughput project delivery.
+- Audited, transparent spending with low corruption indicators.
+- Measurable improvements in service availability and living standards.
+- Stable economic conditions that persist through political transitions.

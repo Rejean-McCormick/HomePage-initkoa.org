@@ -3,32 +3,34 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import {
-Gem,
-ShieldCheck,
-Package,
-Globe,
-Layers,
 ArrowRight,
 FileCheck2,
+Gem,
+Globe,
+Layers,
+Package,
+ShieldCheck,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
 title: 'Kristal — Portable Epistemic Artifacts | kOA',
 description:
 'Kristal is the portable epistemic artifact system in the kOA ecosystem: scoped validation, explicit certainty, plural authority, reader policies, offline-capable runtime packs, and durable versioning for governable knowledge.',
+alternates: { canonical: '/technology/kristal' },
 };
 
 export default function KristalPage() {
 return ( <main className="max-w-5xl mx-auto px-6 py-12">
 {/* Header */} <div className="mb-12"> <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-200 text-slate-600 bg-white"> <Gem className="w-4 h-4 text-[#1e6864]" /> <span className="text-xs font-mono">Technology / Kristal</span> </div>
 
-```
+
     <h1 className="mt-6 text-4xl md:text-5xl font-bold text-slate-900">Kristal</h1>
 
     <p className="mt-4 text-xl text-slate-600 max-w-3xl leading-relaxed">
-      A <strong>Kristal</strong> is a portable, verifiable epistemic artifact. It lets knowledge travel across
-      systems while keeping provenance, assertion status, certainty, authority, scope, and reader policy explicit.
-      It does not pretend disagreement has disappeared; it makes disagreement inspectable.
+      A <strong>Kristal</strong> is a portable, verifiable epistemic artifact. It lets
+      knowledge travel across systems while keeping provenance, assertion status, certainty,
+      authority, scope, and reader policy explicit. It does not pretend disagreement has
+      disappeared; it makes disagreement inspectable.
     </p>
 
     <div className="mt-8 flex flex-wrap gap-3">
@@ -88,9 +90,9 @@ return ( <main className="max-w-5xl mx-auto px-6 py-12">
   <section className="mb-14">
     <h2 className="text-2xl font-bold text-slate-900 mb-4">Where it fits in the ecosystem</h2>
     <p className="text-slate-600 max-w-3xl leading-relaxed mb-6">
-      Kristals are the memory objects that flow through kOA. They stabilize knowledge so deliberation, learning,
-      decision-making, publishing, and runtime systems can work from artifacts people can inspect, filter, validate,
-      contest, and preserve.
+      Kristals are the memory objects that flow through kOA. They stabilize knowledge so
+      deliberation, learning, decision-making, publishing, and runtime systems can work from
+      artifacts people can inspect, filter, validate, contest, and preserve.
     </p>
 
     <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 md:p-8">
@@ -100,35 +102,38 @@ return ( <main className="max-w-5xl mx-auto px-6 py-12">
             1
           </span>
           <div>
-            <strong>Structure:</strong> signals, drafts, datasets, submissions, or extracted claims become
-            Structured Epistemic States.
+            <strong>Structure:</strong> signals, drafts, datasets, submissions, or extracted
+            claims become Structured Epistemic States.
           </div>
         </li>
+
         <li className="flex gap-3">
           <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white border border-slate-200 text-xs font-bold">
             2
           </span>
           <div>
-            <strong>Compile:</strong> those states become portable Working Artifacts that can be inspected,
-            reviewed, validated, federated, or rendered.
+            <strong>Compile:</strong> those states become portable Working Artifacts that can
+            be inspected, reviewed, validated, federated, or rendered.
           </div>
         </li>
+
         <li className="flex gap-3">
           <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white border border-slate-200 text-xs font-bold">
             3
           </span>
           <div>
-            <strong>Recognize:</strong> authority channels may recognize artifacts, assertions, shards, or policies
-            for declared scopes.
+            <strong>Recognize:</strong> authority channels may recognize artifacts, assertions,
+            shards, or policies for declared scopes.
           </div>
         </li>
+
         <li className="flex gap-3">
           <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white border border-slate-200 text-xs font-bold">
             4
           </span>
           <div>
-            <strong>Distribute:</strong> Reference Artifacts and Runtime Packs move through Konnaxion, Orgo,
-            Architect, and other kOA systems under explicit reader policies.
+            <strong>Distribute:</strong> Reference Artifacts and Runtime Packs move through
+            Konnaxion, Orgo, Architect, and other kOA systems under explicit reader policies.
           </div>
         </li>
       </ol>
@@ -140,20 +145,25 @@ return ( <main className="max-w-5xl mx-auto px-6 py-12">
     <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-8">
       <h2 className="text-2xl font-bold text-slate-900 mb-4">The core principle</h2>
       <p className="text-slate-600 max-w-3xl leading-relaxed">
-        A Kristal may contain uncertain, disputed, fictional, mythological, speculative, incomplete, or erroneous
-        assertions. What it must not do is present an assertion as validated beyond the authority channel, scope,
-        certainty level, and validation policy that support that status.
+        A Kristal may contain uncertain, disputed, fictional, mythological, speculative,
+        incomplete, or erroneous assertions. What it must not do is present an assertion as
+        validated beyond the authority channel, scope, certainty level, and validation policy
+        that support that status.
       </p>
 
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-700">
         <div className="rounded-xl bg-slate-50 border border-slate-200 p-4">
           <strong className="block text-slate-900 mb-1">Readers choose policy</strong>
-          A strict reader may show only recognized references. A research reader may include disputed or
-          low-certainty material with labels visible.
+          A strict reader may show only recognized references. A research reader may include
+          disputed or low-certainty material with labels visible.
         </div>
+
         <div className="rounded-xl bg-slate-50 border border-slate-200 p-4">
-          <strong className="block text-slate-900 mb-1">Federation preserves disagreement</strong>
-          Multiple authority channels can coexist without silently merging their claims into one flattened answer.
+          <strong className="block text-slate-900 mb-1">
+            Federation preserves disagreement
+          </strong>
+          Multiple authority channels can coexist without silently merging their claims into
+          one flattened answer.
         </div>
       </div>
     </div>
@@ -163,9 +173,9 @@ return ( <main className="max-w-5xl mx-auto px-6 py-12">
   <section className="mb-6">
     <h2 className="text-2xl font-bold text-slate-900 mb-4">Explore Kristal</h2>
     <p className="text-slate-600 mb-8 max-w-3xl">
-      These pages stay focused on public meaning, outcomes, and guarantees. Deep technical details such as JSON
-      Schemas, canonicalization profiles, runtime manifests, and validation reports belong in the technical
-      reference docs.
+      These pages stay focused on public meaning, outcomes, and guarantees. Deep technical
+      details such as JSON Schemas, canonicalization profiles, runtime manifests, and validation
+      reports belong in the technical reference docs.
     </p>
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -202,7 +212,7 @@ return ( <main className="max-w-5xl mx-auto px-6 py-12">
     </div>
   </section>
 </main>
-```
+
 
 );
 }
@@ -223,6 +233,13 @@ return ( <Link
    href={href}
    className="group p-6 rounded-xl border border-slate-200 bg-white hover:border-[#1e6864] hover:shadow-sm transition-all"
  > <div className="flex items-center justify-between gap-4"> <div> <h3 className="text-lg font-bold text-slate-900 group-hover:underline decoration-1 underline-offset-4">
-{title} </h3> <p className="mt-2 text-slate-600 leading-relaxed">{desc}</p> </div> <ArrowRight className="w-5 h-5 text-slate-300 group-hover:text-[#1e6864] transition-colors flex-shrink-0" /> </div> </Link>
+{title} </h3> <p className="mt-2 text-slate-600 leading-relaxed">{desc}</p> </div>
+
+
+    <ArrowRight className="w-5 h-5 text-slate-300 group-hover:text-[#1e6864] transition-colors flex-shrink-0" />
+  </div>
+</Link>
+
+
 );
 }

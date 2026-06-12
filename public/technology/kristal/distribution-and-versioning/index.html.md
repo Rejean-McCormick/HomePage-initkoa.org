@@ -1,0 +1,354 @@
+# Distribution & versioning
+
+> Canonical HTML: https://initkoa.org/technology/kristal/distribution-and-versioning
+> Markdown mirror: https://initkoa.org/technology/kristal/distribution-and-versioning/index.html.md
+> Route: /technology/kristal/distribution-and-versioning
+> Source: app\technology\kristal\distribution-and-versioning\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/technology/kristal/distribution-and-versioning)
+
+"How Kristals are published, updated, activated, rolled back, and distributed safely, including offline and federated use.",
+
+# Distribution & versioning
+
+A Kristal is meant to travel: between devices, communities, institutions, environments, and time.
+
+This page explains **how Kristals are released, updated, activated, and distributed** while preserving the core promise:
+
+**portable epistemic artifacts, verifiable integrity, offline-capable use, and reader-policy-aware activation.**
+
+## The rule that makes updates safe
+
+### Releases never overwrite
+
+A Kristal release is **immutable**. If you need a change, you publish a **new** release.
+
+* You never “fix a pack in place”.
+* You never mutate a sealed artifact.
+* Every change creates a new identity or a new release record.
+* Prior releases remain auditable unless explicitly revoked or removed by policy.
+
+This gives users and institutions a stable foundation:
+
+**you can always know exactly what was used, when, where, under which policy, and from which source artifact.**
+
+## What gets distributed
+
+Kristal is typically distributed through several complementary artifact types.
+
+### 1) Exchange
+
+An **Exchange** is the compiled source artifact.
+
+It may be:
+
+* a **Working Exchange**, used for drafting, review, research, internal workflows, staging, or disputed material;
+* a **Reference Exchange**, recognized by one or more authority channels for a declared scope.
+
+An Exchange is what you cite, verify, federate, validate, or use as the source for derived runtime artifacts.
+
+A Reference Exchange does not mean universal truth. It means the artifact is recognized under explicit authority, validation, certainty, and scope constraints.
+
+### 2) Runtime Pack
+
+A **Runtime Pack** is the deployable offline/query package.
+
+It is optimized for:
+
+* local lookup;
+* constrained querying;
+* offline use;
+* caching;
+* field deployment;
+* device or classroom operation;
+* reader-policy-selected views.
+
+A Runtime Pack must preserve the labels needed to understand what it contains:
+
+* artifact status;
+* assertion status;
+* validation status;
+* certainty level;
+* validated-as mode;
+* authority channel;
+* recognition status;
+* provenance;
+* lineage.
+
+### 3) Supporting artifacts
+
+A complete release may also include:
+
+* Validation Reports;
+* Authority Recognition artifacts;
+* Authority Registry references;
+* Reader Policies;
+* Shard Manifests;
+* Federation Manifests;
+* Revocation lists;
+
+> Exchange = verifiable compiled source artifact
+> Runtime Pack = deployable offline/query package
+> Reader Policy = visibility and selection rules
+
+## Distribution happens through channels
+
+A **channel** is a named distribution target: a tenant, community, region, device cohort, institution, environment, or field deployment.
+
+* `university-public`
+* `heritage-official`
+* `school-lab-offline`
+* `personal-notes`
+* `tenant-demo-prod`
+* `field-classroom-2026`
+
+Channels are not just folders. They are **policy scopes**.
+
+A channel may define:
+
+* which authority channels are accepted;
+* which signatures are required;
+* which trust roots are valid;
+* which reader policies are available;
+* which Runtime Packs can activate;
+* which releases are pinned;
+* which versions are blocked;
+* which artifacts or keys are revoked;
+* which rollback targets are allowed.
+
+A channel can accept a Working Artifact for review while exposing only Reference Artifacts to a public reader policy.
+
+## Versioning model
+
+Kristal uses two ideas at once.
+
+### A) Strong identity
+
+Every identity-bearing artifact has an identity tied to its content and declared technical canonicalization / hashing surface.
+
+This supports machine-safe verification:
+
+* same content can be compared;
+* changed content gets a different identity;
+* signatures and hashes remain meaningful;
+* audit trails remain stable.
+
+### B) Release versions
+
+On top of strong identity, a publisher may use semantic or calendar release labels for human readability.
+
+Recommended practical rules:
+
+* release versions are monotonic within a channel;
+* release versions are never reused for different content;
+* release records point to exact artifact IDs;
+* release records declare source artifact status;
+* release records declare compatible Runtime Pack and reader policy surfaces.
+
+Example release labels:
+
+* `v5.0.0-reference-pack`
+* `tenant-demo-prod-2026-03`
+
+The version label helps humans. The artifact ID protects machines.
+
+## Activation is separate from existence
+
+A Runtime Pack is not active just because it exists on disk.
+
+Activation is a controlled switch that should be:
+
+* **strictly verified**: if required verification fails, the pack does not activate;
+* **atomic**: either fully activated, or not activated at all;
+* **deterministic**: given the same artifact, policy, and environment, the same activation decision occurs;
+* **policy-scoped**: activation may differ by tenant, environment, authority channel, or reader policy;
+* **auditable**: every activation points to an explicit release record.
+
+Required verification may include:
+
+* content hash checks;
+* signature checks;
+* trust-root checks;
+* revocation checks;
+* compatibility checks;
+* source artifact status checks;
+* reader policy checks;
+* downgrade prevention checks.
+
+This prevents partial installs, quiet corruption, and accidental exposure of material outside the active policy.
+
+## Downgrade prevention and rollback
+
+Two things must be true simultaneously.
+
+### 1) You can roll back fast
+
+If a new release behaves badly, you need a deterministic rollback mechanism:
+
+* **pinned rollback**: return to a specific known-good artifact or Runtime Pack;
+* **last-known-good rollback**: return to the last release that passed activation and runtime checks;
+* **channel rollback**: restore the channel pointer to a prior release record.
+
+Rollback should preserve auditability:
+
+* who triggered it;
+* which channel changed;
+* which release was active before;
+* which release became active after;
+* which policy allowed the rollback.
+
+### 2) Rollback must not become a downgrade vulnerability
+
+Rollback must still satisfy the active channel policy.
+
+Practical controls:
+
+* minimum allowed release per channel;
+* revoked release blocking;
+* revoked key blocking;
+* revoked authority-channel blocking;
+* monotonic version rules;
+* explicit downgrade exceptions;
+* expiration windows for rollback targets;
+* compatibility checks before activation.
+
+A rollback target may be old and still valid, or old and blocked. The channel policy decides.
+
+## Release strategies
+
+When devices update asynchronously, especially offline, “ship it and pray” does not work.
+
+Two rollout patterns fit Kristal well.
+
+### Blue / Green
+
+Keep two slots:
+
+* **Blue** = current active release;
+* **Green** = new candidate release.
+
+Green is downloaded, verified, indexed, warmed up, and checked before the channel pointer changes.
+
+If activation succeeds, the channel flips to Green.
+
+Blue remains available for rollback during a defined window.
+
+### Canary
+
+Roll out to a small cohort first.
+
+* 1% of devices;
+* one classroom;
+* one tenant;
+* one region;
+* one internal reviewer group.
+
+Expand only if verification, query behavior, reader-policy enforcement, and runtime checks pass.
+
+The invariant is:
+
+**every activation must be traceable to an explicit release record.**
+
+## Domain shards and federation
+
+Kristal v5 supports versioning without forcing every domain to move together.
+
+If you use domain sharding:
+
+* each shard evolves on its own cadence;
+* updating one shard creates a new shard identity;
+* other shards remain intact and verifiable;
+* a Federation Manifest can reference a new shard while keeping the rest unchanged;
+* reader policies can expose different subsets of the same federation.
+
+This supports real-world distribution:
+
+* weekly updates for fast-moving domains;
+* yearly updates for slow-moving reference corpora;
+* local community shards;
+* institutional reference shards;
+* research shards;
+* mythology or fiction corpus shards;
+* offline classroom packs.
+
+Federation should preserve:
+
+* source shard identity;
+* authority channel;
+* validation status;
+* certainty level;
+* validated-as mode;
+* recognition status;
+* disagreement labels.
+
+Federation must not silently merge disagreement into a single flattened result.
+
+## Offline distribution
+
+Kristal distribution should support degraded and offline environments:
+
+* USB transfer;
+* local mirrors;
+* school or clinic servers;
+* community caches;
+* intermittent connectivity;
+* field deployments;
+* air-gapped review environments.
+
+The principle stays the same:
+
+**verification must be possible before activation.**
+
+Offline verification may rely on:
+
+* bundled manifests;
+* content hashes;
+* signatures;
+* trust-root snapshots;
+* revocation snapshots;
+* authority registry snapshots;
+* reader policy snapshots.
+
+If the environment cannot verify what the active policy requires, it should not activate the release.
+
+## Reader policy and visible versions
+
+Different readers may see different material from the same release.
+
+* a public reader may use `reference_only`;
+* a reviewer may use `validated_only`;
+* a researcher may use `research`;
+* a creative or cultural archive view may use `creative`;
+* an internal audit may use `all_with_labels`.
+
+A release may therefore contain more than a given reader sees.
+
+The Runtime Pack and query layer must preserve the labels needed to enforce the selected reader policy.
+
+## Practical release record
+
+A useful release record should identify:
+
+* channel;
+* release label;
+* artifact IDs;
+* Runtime Pack IDs;
+* source Exchange or federation;
+* source artifact status;
+* authority registry reference;
+* reader policy references;
+* validation report references;
+* revocation list reference;
+* compatibility constraints;
+* rollback target;
+* activation timestamp;
+* publisher signature.
+
+This is what makes distribution auditable rather than merely copied.
+
+## Recommended page flow
+
+* **Trust & provenance:** `/technology/kristal/trust-and-provenance`
+* **Portability & offline:** `/technology/kristal/portability-and-offline`
+* **Integrations:** `/technology/kristal/integrations`

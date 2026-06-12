@@ -1,0 +1,554 @@
+
+
+============================================================
+PWD
+============================================================
+
+Path
+----
+C:\mycode\HomePage\HomePage
+
+
+
+============================================================
+Git status
+============================================================
+?? _diagnostics/
+
+
+============================================================
+Recent commits
+============================================================
+c31d445 .
+e7095bf Major update around Kristals v5
+7d05350 fix of adding Medium articles
+a23218c .
+a3d99ff Medium Articles Sync
+d6afdfb .
+824f786 .
+4c4adca .
+e854065 robots.txt
+586c0bf dead links and such
+a54ef86 dead links removed, and some other fixes
+0a281cd .
+
+
+============================================================
+Last commits touching build scripts
+============================================================
+e7095bf Major update around Kristals v5
+a3d99ff Medium Articles Sync
+eb07969 .
+4d77cb5 better llm parsing
+1a16e16 .
+f5756f6 .
+175182d better llm referencing
+bacdc5c fix mdx pages
+8f52669 .
+84bc953 .
+314eecf .
+92f33b2 .
+2053355 move to initkoa.org
+c38359f ssr and ai indexing
+bee47c6 .
+b68c4db .
+d6c26e5 fixed errors
+6bf7511 translated to english, Ukraine fixed
+fc34365 translated in english, Ukraine Peace added
+1781dab Initial commit sans node_modules ni build artifacts
+
+
+============================================================
+Diff HEAD~1..HEAD for build scripts
+============================================================
+
+
+============================================================
+package.json scripts
+============================================================
+
+dev              : next dev
+build            : npm run reading:ai-index && node scripts/generate-ai-assets.mjs && next build
+start            : next start
+lint             : next lint
+gen:ai           : node scripts/generate-ai-assets.mjs
+import:medium    : node scripts/import-medium-rss.mjs
+reading:import   : node scripts/import-reading-md-to-db.mjs
+reading:validate : node scripts/validate-reading-import.mjs
+reading:ai-index : node scripts/generate-reading-ai-index.mjs
+reading:sync     : npm run reading:import && npm run reading:validate && npm run reading:ai-index
+
+
+
+============================================================
+package.json build lines
+============================================================
+
+package.json:7:    "build": "npm run reading:ai-index && node scripts/generate-ai-assets.mjs && next build",
+package.json:10:    "gen:ai": "node scripts/generate-ai-assets.mjs",
+package.json:14:    "reading:ai-index": "node scripts/generate-reading-ai-index.mjs",
+package.json:15:    "reading:sync": "npm run reading:import && npm run reading:validate && npm run reading:ai-index"
+
+
+
+============================================================
+generate-reading-ai-index important lines
+============================================================
+
+scripts\generate-reading-ai-index.mjs:21:import { createClient } from "@supabase/supabase-js";
+scripts\generate-reading-ai-index.mjs:35:const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+scripts\generate-reading-ai-index.mjs:36:const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+scripts\generate-reading-ai-index.mjs:38:const SITE_URL = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || "");
+scripts\generate-reading-ai-index.mjs:40:  process.env.READING_AI_INDEX_PATH || "public/reading/ai-index.json";
+scripts\generate-reading-ai-index.mjs:45:  fail("Missing NEXT_PUBLIC_SUPABASE_URL");
+scripts\generate-reading-ai-index.mjs:48:if (!SUPABASE_SERVICE_ROLE_KEY) {
+scripts\generate-reading-ai-index.mjs:49:  fail("Missing SUPABASE_SERVICE_ROLE_KEY");
+scripts\generate-reading-ai-index.mjs:52:const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
+scripts\generate-reading-ai-index.mjs:108:      .from("documents")
+scripts\generate-reading-ai-index.mjs:131:      fail(`Failed to fetch published documents: ${error.message}`);
+scripts\generate-reading-ai-index.mjs:159:      .from("document_topics")
+scripts\generate-reading-ai-index.mjs:165:      fail(`Failed to fetch document topics: ${error.message}`);
+scripts\generate-reading-ai-index.mjs:218:  return Array.from(
+scripts\generate-reading-ai-index.mjs:321:function fail(message) {
+scripts\generate-reading-ai-index.mjs:323:  process.exit(1);
+scripts\generate-reading-ai-index.mjs:327:  fail(error instanceof Error ? error.message : String(error));
+
+
+
+============================================================
+generate-reading-ai-index full file
+============================================================
+#!/usr/bin/env node
+
+/**
+ * Generate public Reading AI index.
+ *
+ * Output:
+ *   public/reading/ai-index.json
+ *
+ * Purpose:
+ *   Lightweight discovery artifact for published Reading documents.
+ *
+ * This does NOT generate a full-text corpus.
+ * Full document text should remain available at:
+ *   /reading/[slug]
+ */
+
+import { config as loadDotEnv } from "dotenv";
+import { mkdir, writeFile, rename } from "node:fs/promises";
+import path from "node:path";
+import crypto from "node:crypto";
+import { createClient } from "@supabase/supabase-js";
+
+const ROOT_DIR = process.cwd();
+
+loadDotEnv({
+  path: path.join(ROOT_DIR, ".env.local"),
+  override: false,
+});
+
+loadDotEnv({
+  path: path.join(ROOT_DIR, ".env"),
+  override: false,
+});
+
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+const SITE_URL = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || "");
+const OUTPUT_PATH =
+  process.env.READING_AI_INDEX_PATH || "public/reading/ai-index.json";
+
+const PAGE_SIZE = 500;
+
+if (!SUPABASE_URL) {
+  fail("Missing NEXT_PUBLIC_SUPABASE_URL");
+}
+
+if (!SUPABASE_SERVICE_ROLE_KEY) {
+  fail("Missing SUPABASE_SERVICE_ROLE_KEY");
+}
+
+const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
+  auth: {
+    persistSession: false,
+    autoRefreshToken: false,
+  },
+});
+
+async function main() {
+  const documents = await fetchPublishedDocuments();
+  const topicsByDocumentId = await fetchTopicsForDocuments(
+    documents.map((document) => document.id),
+  );
+
+  const records = documents.map((document) =>
+    serializeDocument(document, topicsByDocumentId.get(document.id) || []),
+  );
+
+  const index = {
+    schema: "initkoa.reading.ai-index.v1",
+    generated_at: new Date().toISOString(),
+    source: "supabase.documents",
+    visibility: "public",
+    policy: {
+      includes: "published documents only",
+      excludes: ["draft", "archived"],
+      full_text_location: "/reading/[slug]",
+      note: "This index is for discovery and metadata. It is not the canonical full-text corpus.",
+    },
+    routes: {
+      reading_index: withSiteUrl("/reading"),
+      document_pattern: withSiteUrl("/reading/[slug]"),
+    },
+    counts: {
+      documents: records.length,
+      topics: countUniqueTopics(records),
+      sources: countUniqueSources(records),
+      languages: countUniqueLanguages(records),
+    },
+    documents: records,
+  };
+
+  await writeJsonFile(OUTPUT_PATH, index);
+
+  console.log(
+    `Generated ${OUTPUT_PATH} with ${records.length} published document(s).`,
+  );
+}
+
+async function fetchPublishedDocuments() {
+  const rows = [];
+  let from = 0;
+
+  while (true) {
+    const to = from + PAGE_SIZE - 1;
+
+    const { data, error } = await supabase
+      .from("documents")
+      .select(
+        [
+          "id",
+          "slug",
+          "title",
+          "description",
+          "source",
+          "canonical_url",
+          "author",
+          "language",
+          "status",
+          "published_at",
+          "updated_at",
+          "body_text",
+        ].join(","),
+      )
+      .eq("status", "published")
+      .order("published_at", { ascending: false, nullsFirst: false })
+      .order("updated_at", { ascending: false })
+      .range(from, to);
+
+    if (error) {
+      fail(`Failed to fetch published documents: ${error.message}`);
+    }
+
+    if (!data || data.length === 0) {
+      break;
+    }
+
+    rows.push(...data);
+
+    if (data.length < PAGE_SIZE) {
+      break;
+    }
+
+    from += PAGE_SIZE;
+  }
+
+  return rows;
+}
+
+async function fetchTopicsForDocuments(documentIds) {
+  const topicsByDocumentId = new Map();
+
+  if (documentIds.length === 0) {
+    return topicsByDocumentId;
+  }
+
+  for (const batch of chunkArray(documentIds, 200)) {
+    const { data, error } = await supabase
+      .from("document_topics")
+      .select("document_id, topic")
+      .in("document_id", batch)
+      .order("topic", { ascending: true });
+
+    if (error) {
+      fail(`Failed to fetch document topics: ${error.message}`);
+    }
+
+    for (const row of data || []) {
+      if (!topicsByDocumentId.has(row.document_id)) {
+        topicsByDocumentId.set(row.document_id, []);
+      }
+
+      topicsByDocumentId.get(row.document_id).push(row.topic);
+    }
+  }
+
+  return topicsByDocumentId;
+}
+
+function serializeDocument(document, topics) {
+  const bodyText = normalizeText(document.body_text || "");
+  const internalPath = `/reading/${document.slug}`;
+  const wordCount = countWords(bodyText);
+
+  return {
+    id: document.id,
+    slug: document.slug,
+    title: document.title,
+    description: nullIfEmpty(document.description),
+    summary: buildSummary(document.description, bodyText),
+    source: document.source,
+    language: document.language || "en",
+    author: nullIfEmpty(document.author),
+    topics: normalizeTopics(topics),
+    status: "published",
+    internal_path: internalPath,
+    url: withSiteUrl(internalPath),
+    canonical_url: nullIfEmpty(document.canonical_url),
+    published_at: document.published_at,
+    updated_at: document.updated_at,
+    word_count: wordCount,
+    reading_time_minutes: estimateReadingTimeMinutes(wordCount),
+    content_hash: hashText(bodyText),
+  };
+}
+
+function buildSummary(description, bodyText) {
+  const cleanDescription = normalizeText(description || "");
+
+  if (cleanDescription) {
+    return truncate(cleanDescription, 320);
+  }
+
+  return truncate(bodyText, 320);
+}
+
+function normalizeTopics(topics) {
+  return Array.from(
+    new Set(
+      topics
+        .map((topic) => String(topic || "").trim().toLowerCase())
+        .filter(Boolean),
+    ),
+  ).sort();
+}
+
+function normalizeText(value) {
+  return String(value || "")
+    .replace(/\r\n/g, "\n")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function truncate(value, maxLength) {
+  const text = normalizeText(value);
+
+  if (text.length <= maxLength) {
+    return text || null;
+  }
+
+  return `${text.slice(0, maxLength - 1).trimEnd()}…`;
+}
+
+function countWords(value) {
+  const text = normalizeText(value);
+
+  if (!text) {
+    return 0;
+  }
+
+  return text.split(/\s+/).filter(Boolean).length;
+}
+
+function estimateReadingTimeMinutes(wordCount) {
+  if (!wordCount) {
+    return null;
+  }
+
+  return Math.max(1, Math.ceil(wordCount / 225));
+}
+
+function hashText(value) {
+  const text = normalizeText(value);
+
+  if (!text) {
+    return null;
+  }
+
+  return crypto.createHash("sha256").update(text).digest("hex");
+}
+
+function nullIfEmpty(value) {
+  const text = normalizeText(value || "");
+  return text || null;
+}
+
+function withSiteUrl(route) {
+  if (!SITE_URL) {
+    return route;
+  }
+
+  return `${SITE_URL}${route}`;
+}
+
+function normalizeSiteUrl(value) {
+  return String(value || "").replace(/\/+$/, "");
+}
+
+function countUniqueTopics(records) {
+  return new Set(records.flatMap((record) => record.topics)).size;
+}
+
+function countUniqueSources(records) {
+  return new Set(records.map((record) => record.source).filter(Boolean)).size;
+}
+
+function countUniqueLanguages(records) {
+  return new Set(records.map((record) => record.language).filter(Boolean)).size;
+}
+
+function chunkArray(array, size) {
+  const chunks = [];
+
+  for (let index = 0; index < array.length; index += size) {
+    chunks.push(array.slice(index, index + size));
+  }
+
+  return chunks;
+}
+
+async function writeJsonFile(outputPath, data) {
+  const absolutePath = path.resolve(process.cwd(), outputPath);
+  const directory = path.dirname(absolutePath);
+  const tempPath = `${absolutePath}.tmp`;
+
+  await mkdir(directory, { recursive: true });
+  await writeFile(tempPath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
+  await rename(tempPath, absolutePath);
+}
+
+function fail(message) {
+  console.error(`generate-reading-ai-index: ${message}`);
+  process.exit(1);
+}
+
+main().catch((error) => {
+  fail(error instanceof Error ? error.message : String(error));
+});
+
+
+============================================================
+Environment variable presence — current shell
+============================================================
+
+Name                           Exists Scope_Process Scope_User Scope_Machine
+----                           ------ ------------- ---------- -------------
+NEXT_PUBLIC_SUPABASE_URL        False         False      False         False
+NEXT_PUBLIC_SUPABASE_ANON_KEY   False         False      False         False
+SUPABASE_SERVICE_ROLE_KEY       False         False      False         False
+NEXT_PUBLIC_SITE_URL            False         False      False         False
+READING_AI_INDEX_PATH           False         False      False         False
+SKIP_READING_AI_INDEX           False         False      False         False
+ALLOW_MISSING_READING_AI_INDEX  False         False      False         False
+
+
+
+============================================================
+.env / .env.local variable names only
+============================================================
+
+--- .env.local ---
+NEXT_PUBLIC_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY
+SUPABASE_SERVICE_ROLE_KEY
+DATABASE_URL
+READING_IMPORT_DIR
+READING_AI_INDEX_PATH
+NEXT_PUBLIC_SITE_URL
+MEDIUM_RSS_URL
+MEDIUM_SOURCE_DIR
+PDF_IMPORT_DIR
+OPENAI_API_KEY
+EMBEDDING_MODEL
+
+--- .env missing ---
+
+--- .env.example ---
+NEXT_PUBLIC_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY
+SUPABASE_SERVICE_ROLE_KEY
+NEXT_PUBLIC_SITE_URL
+READING_IMPORT_DIR
+READING_AI_INDEX_PATH
+MEDIUM_RSS_URL
+MEDIUM_SOURCE_DIR
+PDF_IMPORT_DIR
+OPENAI_API_KEY
+EMBEDDING_MODEL
+
+
+============================================================
+Vercel CLI version
+============================================================
+ERROR: The term 'vercel' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+
+============================================================
+Vercel env ls
+============================================================
+ERROR: The term 'vercel' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+
+============================================================
+Vercel env pull and inspect names only
+============================================================
+ERROR: The term 'vercel' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+
+============================================================
+Node and npm versions
+============================================================
+v22.11.0
+10.9.0
+
+
+============================================================
+npm run reading:ai-index
+============================================================
+
+> the-koa-initiative@1.0.0 reading:ai-index
+> node scripts/generate-reading-ai-index.mjs
+
+Ôùç injected env (12) from .env.local // tip: Ôùê encrypted .env [www.dotenvx.com]
+Ôùç injected env (0) from .env // tip: Ôùê secrets for agents [www.dotenvx.com]
+generate-reading-ai-index: Failed to fetch published documents: TypeError: fetch failed
+
+
+============================================================
+npm run build
+============================================================
+
+> the-koa-initiative@1.0.0 build
+> npm run reading:ai-index && node scripts/generate-ai-assets.mjs && next build
+
+
+> the-koa-initiative@1.0.0 reading:ai-index
+> node scripts/generate-reading-ai-index.mjs
+
+Ôùç injected env (12) from .env.local // tip: Ôùê secrets for agents [www.dotenvx.com]
+Ôùç injected env (0) from .env // tip: Ôîÿ enable debugging { debug: true }
+generate-reading-ai-index: Failed to fetch published documents: TypeError: fetch failed

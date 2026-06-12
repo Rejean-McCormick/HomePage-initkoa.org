@@ -1,0 +1,54 @@
+# The Peace Framework: Freeze & Vote
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/peace-framework
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/peace-framework/index.html.md
+> Route: /initiatives/ukraine-peace-plan/concepts/peace-framework
+> Source: app\initiatives\ukraine-peace-plan\concepts\peace-framework\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/concepts/peace-framework)
+
+# The Peace Framework: Freeze & Vote
+
+Before we can rebuild, the guns must fall silent. Our proposal rejects the binary of "total victory" for either side, which only prolongs suffering. Instead, we propose a **Radical Neutrality** framework enforced by moral authority rather than military escalation.
+
+This framework operates on two pillars: **The "Freeze"** (Immediate Cessation of Hostilities) and **The "Vote"** (Democratic Self-Determination).
+
+## 1. Phase One: The Freeze (Demilitarization)
+
+The current stalemate proves that military solutions are exhausted. We propose an immediate, unconditional ceasefire. Once the shelling stops, the soldiers leave, and the builders enter.
+
+### A. The "Army of Pope Francis" (The Reconstruction Workforce)
+This is not a military force, nor the Pontifical Swiss Guard. It is a massive, neutral workforce of engineers, cooks, carpenters, masons, and electricians.
+* **The Name:** We retain the name "Army of Pope Francis" to honor the spirit of service and humility he championed, distancing the project from the institutional Catholic Church while leveraging its global network of charitable volunteers.
+* **Leadership:** In this timeline, following the passing of Pope Francis, the initiative is mobilized under the guidance of **Pope Leo**. He provides the moral aegis, ensuring the force is viewed as humanitarian, not political.
+* **Composition:** Volunteers from strictly neutral nations (Brazil, India, etc.) and global Catholic charity networks. They are unarmed and dedicated solely to rebuilding.
+
+### B. Total Disarmament of the Zone
+* **Weapons Ban:** A strict ban on all firearms and explosives within the reconstruction zones. The "Army" carries tools, not guns.
+* **Amnesty & Rehabilitation:** A program to reintegrate soldiers from both sides into the civilian workforce. Combatants are offered a choice: continue fighting (outside the zone) or trade their rifle for a "Professional Patch" (apprenticeship).
+
+## 2. Phase Two: The Vote (Self-Determination)
+
+Territorial disputes in the Donbas and Crimea cannot be solved by tanks. They must be solved by the people who actually live there.
+
+### A. The "Status Referendum"
+We propose binding, internationally supervised referendums in the contested oblasts.
+* **The Question:** Residents will vote on three clear options:
+1. Reintegration into Ukraine (with special autonomy).
+2. Integration into the Russian Federation.
+3. Independence as a Neutral Buffer State.
+* **The Electorate:** Voting rights are restricted to **residents registered in the pre-war census**. This prevents demographic engineering (e.g., bussing in voters) from influencing the outcome.
+
+### B. Minority Protections
+Regardless of the vote's outcome, strict guarantees must be codified:
+* **Linguistic Rights:** The right to speak, teach, and conduct business in either Ukrainian or Russian must be constitutionally protected in these zones.
+* **Cultural Heritage:** No monuments or historical sites shall be destroyed. The "Cultural Bridge" policy ensures history is preserved, not erased.
+
+## 3. The Role of the Church & NGOs
+
+While the UN has been paralyzed by Security Council vetoes, religious and humanitarian organizations retain cross-border legitimacy.
+* **Vatican Diplomacy:** Pope Leo acts as the primary moral guarantor, facilitating prisoner exchanges and humanitarian corridors where politicians cannot.
+* **Orgo Integration:** All humanitarian aid is tracked on the **Orgo** platform to prevent theft and ensure it reaches the most vulnerable families, not military stockpiles.
+
+> *"Peace is not the absence of conflict, but the presence of justice."* — Adapted from MLK

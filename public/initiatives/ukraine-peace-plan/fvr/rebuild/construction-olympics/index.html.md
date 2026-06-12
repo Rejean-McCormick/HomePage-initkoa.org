@@ -1,0 +1,106 @@
+# Reconstruction Olympics
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics
+> Source: app\initiatives\ukraine-peace-plan\fvr\rebuild\construction-olympics\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics)
+
+# Reconstruction Olympics
+
+“Reconstruction Olympics” is a performance-based delivery model intended to accelerate rebuild while reducing corruption and waste through transparency, benchmarking, and competition.
+
+This chapter describes the model as a configurable mechanism. It can be implemented nationally, regionally, or by sector.
+
+## Objectives
+- **Increase reconstruction throughput** (more built, faster).
+- **Create measurable accountability** for cost, time, and quality.
+- **Reduce capture and favoritism** by making performance visible.
+- **Improve donor and public trust** through clear scorecards.
+
+## The Core Mechanism (What It Is)
+A Reconstruction Olympics program:
+- defines standardized project categories (e.g., schools, clinics, substations, bridges),
+- sets published performance metrics and scoring rules,
+- allows qualified delivery teams (public, private, mixed) to compete,
+- awards future work and/or bonuses based on verified performance,
+- publishes results through dashboards and audit reports.
+
+The intent is to reward delivery capacity, not political connections.
+
+## Program Design Components
+
+### 1. Competition Units
+Define what “competes”:
+- Contractors.
+- Consortia (contractor + local authority + NGO).
+- Regional delivery teams.
+- Sector-specific teams (energy, housing, transport).
+
+### 2. Standardized Project Templates
+To avoid bespoke procurement for every project:
+- Standard designs and bills of materials (where feasible).
+- Standardized contract terms.
+- Reference pricing catalogs.
+- Repeatable inspection checklists.
+
+### 3. Scoring and KPIs (Example Categories)
+- **Speed:** Time to mobilize; time to completion vs baseline.
+- **Cost:** Cost vs benchmark; variance control.
+- **Quality:** Inspection pass rates; defect rates; durability measures.
+- **Integrity:** Audit findings; procurement compliance; conflict-of-interest flags.
+- **Impact:** Service restored (MW, seats, beds, households), uptime, user satisfaction.
+- **Safety:** Workplace incidents; compliance with safety standards.
+
+Scoring rules must be published in advance and resistant to gaming.
+
+### 4. Verification and Anti-Fraud Controls
+- Independent inspections and QA/QC.
+- Random site audits and spot checks.
+- Payment verification tied to milestones.
+- Anomaly detection (pricing outliers, vendor networks).
+- Debarment rules for fraud/non-performance.
+
+### 5. Incentives and Rewards
+Options include:
+- Preferential access to future contracts (tiered qualification).
+- Performance bonuses tied to verified outcomes.
+- Accelerated payment schedules for top performers (with safeguards).
+- Public recognition and reputational incentives.
+
+### 6. Transparency and Public Dashboards
+- Participating teams and qualifications.
+- Project pipeline and assignments.
+- Milestone completion and evidence.
+- Scores, audit summaries, and debarments.
+- Aggregate sector and region performance.
+
+**Keep restricted:** Sensitive security details and personal data.
+
+## Avoiding Perverse Incentives
+
+**Common Pitfalls:**
+- Speed incentives that reduce quality.
+- Cherry-picking easy projects.
+- Manipulating metrics or inspections.
+
+**Mitigations:**
+- Balanced scorecards (Speed + Quality + Integrity).
+- Category weighting by project complexity.
+- Random assignment pools or mixed portfolios.
+- Independent inspectors with rotation.
+- Penalties for defects discovered after completion.
+
+## Where This Fits in the Broader Architecture
+Reconstruction Olympics is a delivery model within:
+- **Reconstruction Architecture (/initiatives/ukraine-peace-plan/fvr/rebuild/architecture)** (Governance, procurement, audits)
+- **Accountability & Transparency (/initiatives/ukraine-peace-plan/fvr/rebuild/accountability)** (Integrity layer)
+
+It also links to conditional disbursement gates:
+- **Verification-First Gates (/initiatives/ukraine-peace-plan/fvr/governance/verification-gates)**
+
+## Next
+- **Optional Institutional Concept: Peace-Build Campus (/initiatives/ukraine-peace-plan/fvr/rebuild/campus-governance)**
+- **Metrics and KPIs Toolkit (/initiatives/ukraine-peace-plan/fvr/toolkit/metrics-kpis)**

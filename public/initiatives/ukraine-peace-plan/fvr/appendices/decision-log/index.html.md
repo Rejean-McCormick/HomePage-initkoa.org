@@ -1,0 +1,50 @@
+# Decision Log
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/appendices/decision-log
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/appendices/decision-log/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/appendices/decision-log
+> Source: app\initiatives\ukraine-peace-plan\fvr\appendices\decision-log\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/appendices/decision-log)
+
+# Decision Log
+
+This log records editorial and design decisions made while consolidating multiple drafts into a single GitBook. The goal is **traceability**: reviewers should be able to see what was chosen, what was deferred, and why.
+
+## Decision Tracking Register
+
+| ID | Decision | Rationale | Impact |
+| **D-001** | **Canonical Structure:** Adopt **Freeze–Vote–Rebuild** as the core sequence. | Most drafts share this skeleton; it supports logical sequencing and verification-first gating. | All core content organized into chapters 02, 03, and 04. |
+| **D-002** | **Status-Neutral Framing:** Keep the core mechanism neutral; move advocacy to essays. | Neutrality improves technical reviewability and prevents misinterpretation as a pre-determined settlement. | Created "Background & Essays" section; drafted "What This Is Not." |
+| **D-003** | **Verification-First Gates:** Treat gates as the primary control logic for progression. | Reduces reliance on "good faith" and makes conditionality auditable and reversible. | Dedicated "Governance & Verification" chapter added. |
+| **D-004** | **Optional Vote-to-Border:** Include as an optional module with strict safeguards. | Preserves flexibility while reducing the risk of misuse or gerrymandering. | Created module with simulation and version-locking requirements. |
+| **D-005** | **Displaced Persons Inclusion:** Inclusion of IDPs/refugees is a "Hard Requirement." | Exclusion creates incentives for ethnic/demographic engineering and undermines legitimacy. | Built explicit electorate categories and participation metrics. |
+| **D-006** | **Auditable Reconstruction:** Mandate "Transparency Stack" and tranche gating in Rebuild. | Corruption is a dominant failure mode; auditable design is required for donor durability. | Added accountability chapter, templates, and KPI linkages. |
+| **D-007** | **"Peace-Build Campus":** Preserve symbolic governance concepts as an *optional* model. | High variance in political acceptance; useful for outreach but risky as a hard requirement. | Moved to optional governance variants. |
+| **D-008** | **Advocacy Preservation:** Keep American Realism and Papal-origin framings as separate essays. | Essential for stakeholder persuasion but must not contaminate the neutral technical spec. | Created standalone Background/Essays section. |
+| **D-009** | **Data Governance:** Add explicit privacy and security chapters as first-class constraints. | Voting and monitoring data can endanger lives if mishandled or leaked. | Added role-based access and publication policy requirements. |
+
+## Individual Decision Details
+
+### D-001 — Canonical structure: Freeze → Vote → Rebuild
+- **Date:** December 2025
+- **Alternatives Considered:** Freeze-only; Freeze + traditional negotiations; Rebuild-first narratives.
+- **Where Reflected:** Entire Table of Contents; **Proposal at a Glance (/initiatives/ukraine-peace-plan/fvr/overview/proposal-at-a-glance)**.
+- **Source Inputs:** Consolidated from v4 Operational Framework and Comprehensive Proposal.
+
+### D-004 — Vote-to-border is optional, not required
+- **Date:** December 2025
+- **Alternatives Considered:** Require vote-to-border as the only outcome; exclude it entirely.
+- **Where Reflected:** **Vote-to-Border Mechanics (/initiatives/ukraine-peace-plan/fvr/vote/vote-to-border)**.
+- **Note:** Implementation requires a **Version-Locked Algorithm (/initiatives/ukraine-peace-plan/fvr/start-here/glossary)**.
+
+### D-005 — Displaced persons inclusion is a hard requirement
+- **Date:** December 2025
+- **Alternatives Considered:** Current-residents-only electorate; symbolic inclusion without enforceable metrics.
+- **Where Reflected:** **Electorate Definition (/initiatives/ukraine-peace-plan/fvr/vote/electorate-definition)**.
+
+## Maintenance Note
+- **Sequential Entry:** Add new decisions whenever the canonical mechanism changes or a major option is added/removed.
+- **Stability:** Keep IDs stable; do not renumber previous decisions.
+- **Reversals:** If a new decision reverses a previous one, reference the earlier ID explicitly and explain the change in the security/political environment that necessitated it.

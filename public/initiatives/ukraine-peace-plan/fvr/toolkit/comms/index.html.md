@@ -1,0 +1,67 @@
+# Communications Toolkit
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/toolkit/comms
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/toolkit/comms/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/toolkit/comms
+> Source: app\initiatives\ukraine-peace-plan\fvr\toolkit\comms\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/toolkit/comms)
+
+# Communications Toolkit
+
+This toolkit provides optional messaging assets: short explanations, FAQs, and a critique-response starter set. It is kept separate from the core mechanism so the GitBook remains audit-friendly and technically neutral.
+
+## Core Message (One Paragraph)
+
+**Freeze–Vote–Rebuild** is a verification-first framework to move from war to a durable settlement by sequencing three tasks: **Freeze** the fighting under monitored conditions, **Vote** through a supervised legitimacy process that includes displaced people, and **Rebuild** with transparent governance and audited delivery. Progress is conditional: benefits unlock only when compliance is verified, and violations trigger predefined responses.
+
+## Three Key Differentiators (Talking Points)
+
+* **Verification-First, Not Trust-Based:** Gates, monitoring, and rollback logic are built-in. We don't rely on "good faith" but on observable data.
+* **Legitimacy That Includes Displaced People:** Avoids letting forced displacement define the electorate; refugees and IDPs are core participants.
+* **Rebuild as a Governed System:** Transparency, audits, and performance incentives reduce capture risk and ensure donor funds reach the ground.
+
+## What This Is (and Is Not)
+
+| **Is** | **Is Not** |
+| A sequenced framework with measurable gates | A final peace treaty text |
+| A modular design for legal drafting | A guarantee of any specific political outcome |
+| An auditable operational plan | A trust-based handshake agreement |
+
+(See: **What This Is Not (/initiatives/ukraine-peace-plan/fvr/overview/what-this-is-not)**)
+
+## FAQ (Starter Set)
+
+### “Isn’t a Freeze just a frozen conflict?”
+Only if there are no gates and no credible path to legitimacy. This framework uses verification-first gates and conditional incentives to keep the process moving and to make violations consequential.
+
+### “How can you run a legitimate vote during/after war?”
+The framework requires anti-coercion safeguards, independent observation, audit trails, and dispute remedies. If integrity criteria are not met, certification fails and remedies are triggered.
+
+### “What about displaced people?”
+Displaced persons are explicitly included through eligibility categories, registration pathways, and participation metrics. Exclusion is treated as a systemic legitimacy failure.
+
+### “Won’t reconstruction money be stolen?”
+Rebuild is gated by audits, milestone-based payments, debarment rules, and transparency dashboards. Integrity failures trigger immediate tranche suspension and remediation.
+
+### “Who enforces any of this?”
+The framework relies on pre-committed incentives and rollback logic tied to measurable gates, supported by governance structures and escalation ladders. Credibility depends on stakeholders committing to the rules they publish.
+
+## Message Discipline (Recommended)
+
+1. **Mechanism-First:** Keep the core proposal focused on the "how" (gates, metrics, audits).
+2. **Avoid Overpromising:** Tie all claims to gates, audits, and published rules.
+3. **Separate Narratives:** Keep advocacy essays in the **Background & Essays (/initiatives/ukraine-peace-plan/fvr/background/overview)** section to preserve the technical integrity of the core spec.
+
+## Short “Elevator” Versions
+
+### 1-Sentence Version
+A verification-first plan to stop the shooting, run a supervised legitimacy process that includes displaced people, and rebuild at scale with audited transparency.
+
+### 3-Sentence Version
+Freeze–Vote–Rebuild sequences the pathway from war to recovery. It freezes hostilities under monitoring, runs a credible legitimacy event, and then unlocks reconstruction through transparent governance and audits. Each step is conditional on verified compliance, with rollback triggers for violations.
+
+## Links
+For deeper critique responses, see:
+- **Common Critiques and Responses (/initiatives/ukraine-peace-plan/fvr/risks/critiques-and-responses)**

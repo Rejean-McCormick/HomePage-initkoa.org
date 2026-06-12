@@ -1,0 +1,107 @@
+# Economic Restart Plan
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/economic-restart
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/economic-restart/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/rebuild/economic-restart
+> Source: app\initiatives\ukraine-peace-plan\fvr\rebuild\economic-restart\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/economic-restart)
+
+# Economic Restart Plan
+
+Rebuild is not only construction; it is an economic restart. This chapter provides a sequencing framework to restore basic economic function while reconstruction scales, with an emphasis on measurable outputs and bottleneck removal.
+
+## Objectives
+- Restore essential services that enable economic activity (power, water, transport, payments).
+- Reopen logistics corridors and domestic supply chains.
+- Stabilize housing and labor mobility.
+- Create conditions for private investment alongside donor funding.
+- Reduce black-market dependence and corruption incentives.
+
+## Sequencing Logic: Restart in Layers
+
+### Layer 1: Essential Services (Days to Weeks)
+**Priority targets:**
+- Electric grid stabilization and redundancy.
+- Water/wastewater continuity.
+- Emergency healthcare capacity and medical supply chains.
+- Winterization/shelter and temporary housing.
+- Telecom and payments continuity (where feasible).
+
+**Outputs to track:**
+- Service uptime (% hours/day).
+- Restored capacity (MW, liters/day, beds).
+- Response time to outages.
+
+### Layer 2: Logistics and Access (Weeks to Months)
+**Priority targets:**
+- Rail and road choke points.
+- Bridges and key crossings.
+- Ports/terminals where applicable.
+- Customs and inspection throughput for essential goods.
+- Demining prioritization for key routes and sites.
+
+**Outputs to track:**
+- Freight throughput (tons/day, trains/day, trucks/day).
+- Transit times and reliability.
+- Corridor uptime and incident rates.
+
+### Layer 3: Housing and Workforce Stabilization (Months)
+**Priority targets:**
+- Rapid housing repair and modular housing deployment.
+- School and childcare re-openings (enables labor participation).
+- Workforce training and certification for reconstruction trades.
+
+**Outputs to track:**
+- Habitable housing units restored/created.
+- School seats restored.
+- Workforce availability and training completions.
+
+### Layer 4: Productive Economy (Months to Years)
+**Priority targets:**
+- Industrial restart in safe regions (energy-intensive sectors, manufacturing).
+- Agriculture supply chain restoration (inputs, storage, transport).
+- SME financing and risk guarantees.
+- Insurance, investment protections, and predictable procurement pipelines.
+
+**Outputs to track:**
+- Employment rates (where measurable).
+- Firm openings/closures.
+- Private capital mobilization alongside public funding.
+
+## Cross-Cutting Enablers
+
+### Procurement and Standards
+- Standard designs and material specs reduce cost and speed delivery.
+- Anti-corruption controls protect investor/donor confidence.
+(See **Reconstruction Architecture (/initiatives/ukraine-peace-plan/fvr/rebuild/architecture)**)
+
+### Transparency and Trust
+- Publish project registries and spending dashboards.
+- Independent audits and debarment rules.
+(See **Accountability & Transparency (/initiatives/ukraine-peace-plan/fvr/rebuild/accountability)**)
+
+### Security and Access
+- Economic restart depends on Freeze stability and corridor protections.
+- Infrastructure repair windows and protected infrastructure compliance are prerequisites.
+(See **Humanitarian Corridors (/initiatives/ukraine-peace-plan/fvr/freeze/humanitarian-corridors)**)
+
+## Bottleneck Checklist (What Typically Slows Restart)
+- Unstable power and fuel supply.
+- Damaged bridges and rail choke points.
+- Demining delays at critical sites.
+- Procurement delays and vendor qualification bottlenecks.
+- Corruption/capture risk raising costs and slowing donors/investors.
+- Workforce shortages and housing instability.
+- Insurance and risk pricing that blocks private capital.
+
+Use the Toolkit to translate this into operational checklists and KPIs:
+- **Operational Checklists (/initiatives/ukraine-peace-plan/fvr/toolkit/checklists)**
+- **Metrics and KPIs (/initiatives/ukraine-peace-plan/fvr/toolkit/metrics-kpis)**
+
+## Drafting Note
+This chapter becomes stronger with:
+- a prioritized “Top 20 bottlenecks” list,
+- a first-90-days project pipeline,
+- a published KPI dashboard spec.

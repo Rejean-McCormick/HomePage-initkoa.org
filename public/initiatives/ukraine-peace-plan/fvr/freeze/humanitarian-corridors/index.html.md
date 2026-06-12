@@ -1,0 +1,105 @@
+# Humanitarian Corridors & Protected Infrastructure
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/freeze/humanitarian-corridors
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/freeze/humanitarian-corridors/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/freeze/humanitarian-corridors
+> Source: app\initiatives\ukraine-peace-plan\fvr\freeze\humanitarian-corridors\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/freeze/humanitarian-corridors)
+
+# Humanitarian Corridors & Protected Infrastructure
+
+The Freeze phase must include practical protections for civilians and the systems that keep society functioning. This chapter defines a minimal, verifiable package for humanitarian access and critical infrastructure protection.
+
+## Objectives
+- Enable safe movement for civilians and humanitarian actors.
+- Reduce civilian casualties and suffering during the Freeze.
+- Protect and repair essential services (power, water, health, transport).
+- Make violations measurable and actionable through monitoring.
+
+## Humanitarian Corridors
+
+### What a Corridor Is (Operational Definition)
+A corridor is a **designated route and access regime** with:
+- mapped endpoints and checkpoints,
+- time windows (if needed),
+- verification/monitoring presence,
+- clear rules for permitted traffic (aid convoys, medical evac, civilians),
+- procedures for inspection that do not function as harassment.
+
+### Minimum Corridor Package
+- Corridor map annex (routes + alternates).
+- Access permissions and documentation rules.
+- Security commitments (no targeting; no military use).
+- Incident reporting + rapid dispute mechanism.
+- “Corridor uptime” metric (hours/days open vs closed).
+
+### Key Design Constraints
+- Corridors must be **usable**, not symbolic.
+- Rules must explicitly prohibit using corridors for:
+- forced displacement,
+- hostage-taking,
+- military repositioning (unless explicitly negotiated and monitored).
+- When closures occur, they must trigger:
+- recorded justification,
+- investigation within a time limit,
+- consequences for repeated obstruction.
+
+## Protected Infrastructure
+
+### What Qualifies as Protected Infrastructure
+Define categories upfront. Typical examples:
+- Power generation and transmission.
+- Water and wastewater systems.
+- Hospitals, clinics, and medical supply depots.
+- Schools and shelters (where civilians are concentrated).
+- Rail and logistics nodes used for civilian supply chains.
+- Key bridges and repairable transport chokepoints.
+
+Protection should be documented as a list:
+**Protected Infrastructure Register (PIR)** — uniquely identified sites, with coordinates and facility metadata.
+
+### Protection Rules (Minimum)
+- Prohibition on targeting PIR sites.
+- Prohibition on placing offensive military assets on or adjacent to PIR sites (to reduce “human shield” arguments).
+- Monitored “repair windows” allowing engineers and crews access.
+- Safe passage rules for repair convoys and equipment.
+
+## Repair Windows and “Humanitarian Engineering”
+
+A Freeze should include scheduled repair windows:
+- defined times/locations where repair work is permitted and protected,
+- monitored access for crews,
+- pre-notified movement of equipment and materials,
+- incident response procedures if work is disrupted.
+
+**Metrics to track:**
+- Number of repair windows scheduled vs executed.
+- Downtime for power/water by region.
+- Mean time to repair for critical outages.
+- Attacks or interference incidents at repair sites.
+
+## Verification and Enforcement
+
+Protected corridors and infrastructure only work if:
+- they are monitored,
+- incidents are classified and reported,
+- repeated violations trigger predictable consequences.
+
+**Recommended Linkages:**
+- Corridor and PIR violations feed into **Freeze Gates (/initiatives/ukraine-peace-plan/fvr/governance/verification-gates)**.
+- Repeated attacks on protected infrastructure are treated as **high-severity incidents**.
+- Systematic obstruction triggers **automatic review** and potential rollback.
+
+See: **Verification & Monitoring (/initiatives/ukraine-peace-plan/fvr/freeze/verification-monitoring)**
+
+## Common Failure Modes (and Mitigations)
+
+- **Corridors used for coercion:** Mitigate with observation, clear rules, and dispute mechanisms.
+- **“Dual-use” targeting claims:** Mitigate with PIR definitions and rules against militarizing protected sites.
+- **Token access:** Mitigate by measuring uptime and making closures consequential.
+- **Repair sabotage:** Mitigate with monitored repair windows and incident escalation.
+
+## Next
+- **Conditional Incentives & Sanctions Linkage (/initiatives/ukraine-peace-plan/fvr/freeze/sanctions-linkage)**

@@ -1,0 +1,132 @@
+# Reviews: cyclic overview
+
+> Canonical HTML: https://initkoa.org/platforms/orgo/reviews
+> Markdown mirror: https://initkoa.org/platforms/orgo/reviews/index.html.md
+> Route: /platforms/orgo/reviews
+> Source: app\platforms\orgo\reviews\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/platforms/orgo/reviews)
+
+CalendarDays,
+TrendingUp,
+ShieldCheck,
+ClipboardList,
+ArrowRight,
+
+"Weekly, monthly, and yearly review loops that turn operational patterns into accountable work: escalations, audit cases, leadership reviews, and profile adjustments.",
+
+# Reviews: cyclic overview
+
+Orgo reviews are the **cyclic learning layer** of execution.
+
+They turn day-to-day operations into:
+- **weekly reliability** (nothing urgent stays unresolved),
+- **monthly auditability** (patterns become investigations and improvement work),
+- **yearly governance** (systemic issues become leadership decisions and profile adjustments).
+
+Most systems produce dashboards. Orgo produces **new accountable work**.
+
+## What reviews do (in one sentence)
+
+**They detect patterns across Cases and Tasks, and when thresholds are crossed, they open new Cases/Tasks so systemic problems re-enter the operational loop.**
+
+title="Weekly: reliability"
+description="Focus on unresolved, overdue, and high-severity work. Escalate what is stuck. Close what should not remain open."
+href="/platforms/orgo/routing-escalation"
+title="Monthly: audits & improvements"
+description="Identify recurring issues by function, category, or location. Open audit cases with clear owners, deadlines, and follow-up tasks."
+href="/platforms/orgo/guarantees"
+title="Yearly: systemic reviews"
+description="Surface chronic risks, repeated failure modes, and structural overload. Open leadership review cases that must produce decisions."
+href="/platforms/orgo/trust"
+title="Always: accountability"
+description="Reviews do not summarize and forget. They create traceable Cases and Tasks, with ownership, deadlines, and closure."
+href="/platforms/orgo/security-audit"
+
+## The three review cadences
+
+### Weekly review (short horizon)
+Weekly review protects the organization from silent backlog and hidden drift:
+- unresolved cases past their response window,
+- repeated escalations over a short period,
+- high-severity work that still lacks closure,
+- blocked tasks that are preventing completion.
+
+**Outcome:** reassignment, escalation, unblock actions, and closure work—performed as Tasks attached to real Cases.
+
+### Monthly review (trend horizon)
+Monthly review is where recurring friction stops looking “normal”:
+- repeated incidents in the same category,
+- recurring service failures by department, location, or workflow,
+- duplicate or reopened cases that signal process weakness.
+
+**Outcome:** Orgo opens **Audit Cases** to verify the pattern, assign responsible functions, and generate improvement tasks.
+
+### Yearly review (system horizon)
+Yearly review is where governance becomes explicit:
+- risks that persist despite operational handling,
+- repeated overload or near-misses,
+- structural bottlenecks that require policy, staffing, budget, or profile changes,
+- institutional patterns that cannot be solved by frontline triage alone.
+
+**Outcome:** Orgo opens **Leadership Review Cases** that must end in a decision, an approved change, or an explicit refusal with rationale.
+
+## Why Orgo reviews are different
+
+### 1) Reviews create real work
+When a pattern matters, Orgo creates **Cases and Tasks**, not a report nobody owns.
+
+That means:
+- a response window or deadline,
+- a visible trail,
+- and a closure state.
+
+### 2) Review intensity is configurable by profile
+A hospital does not review like an artist collective.
+A municipality does not review like a small internal ops team.
+
+Orgo allows each organization to tune:
+- review cadence,
+- pattern sensitivity,
+- audit thresholds,
+- transparency defaults,
+- retention behavior,
+- and escalation strictness.
+
+These are not cosmetic settings.
+They are **governance choices** expressed through operating profiles.
+
+### 3) Reviews are part of the same operational spine
+Cyclic reviews are not “analytics on the side.”
+They are part of the same governed loop as intake, routing, escalation, and closure.
+
+Patterns become Cases.
+Cases generate Tasks.
+Tasks produce outcomes.
+Outcomes feed the next review cycle.
+
+## Example: from incidents to an audit
+
+1. Several similar incidents occur within a short time window.
+2. Weekly review flags the cluster and identifies unresolved or overdue related work.
+3. Monthly review confirms a recurring pattern by category, function, or location.
+4. Orgo opens an **Audit Case** and generates tasks: verify procedure, inspect records, adjust workflow, retrain staff, publish findings.
+5. If the issue is systemic or chronic, Yearly review opens a **Leadership Review Case**.
+6. Leadership decisions can then update policy, staffing, routing rules, or the organization’s operating profile.
+
+## What reviews protect against
+
+Without cyclic review, organizations drift into familiar failure modes:
+- urgent issues get handled, but recurring ones never get fixed,
+- teams normalize overload,
+- duplicate incidents remain disconnected,
+- and leadership sees symptoms without operational traceability.
+
+Orgo reviews prevent that by making pattern recognition actionable.
+
+## Next
+
+href="/platforms/orgo/offline-sovereignty"
+
+href="/platforms/orgo/profiles"

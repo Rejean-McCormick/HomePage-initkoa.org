@@ -1,0 +1,112 @@
+# Dispute Resolution
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/vote/dispute-resolution
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/vote/dispute-resolution/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/vote/dispute-resolution
+> Source: app\initiatives\ukraine-peace-plan\fvr\vote\dispute-resolution\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/vote/dispute-resolution)
+
+# Dispute Resolution
+
+Dispute resolution is what prevents the Vote phase from collapsing into post-result escalation. This chapter defines how complaints are processed, how remedies are applied, and how timelines prevent indefinite contestation.
+
+## Objectives
+
+- Provide a credible channel to resolve disputes without violence.
+- Detect and correct irregularities quickly enough to preserve legitimacy.
+- Ensure remedies are real (not symbolic) and rule-based (not political improvisation).
+- Produce a record that can withstand later challenge.
+
+## What Kinds of Disputes Must Be Handled
+
+At minimum, the mechanism should handle:
+
+### Registration and Eligibility Disputes
+- Rejected registrations (especially for displaced persons).
+- Duplicate registrations.
+- Documentation disputes and exception pathway disagreements.
+
+### Polling and Participation Disputes
+- Polling place access restrictions.
+- Intimidation incidents affecting participation.
+- Procedural violations (ballot handling, secrecy breaches).
+- Disruptions (violence, outages, closures).
+
+### Counting and Tabulation Disputes
+- Chain-of-custody breaks.
+- Reconciliation discrepancies.
+- Observer access violations.
+- Statistical anomalies (as triggers for review, not sole proof).
+
+### Rule Interpretation Disputes
+- Application of version-locked rules.
+- Any emergency procedural changes.
+- Application of vote-to-border rules (if used).
+
+## Institutional Design (Minimum Viable Structure)
+
+A credible dispute system typically needs:
+
+- **Intake Channel(s):** Hotline + written filings + observer submissions.
+- **Triage Unit:** Classifies severity and urgency.
+- **Investigative Capacity:** Ability to gather evidence quickly (including site access).
+- **Adjudication Body:** Independent panel/court/commission with authority to order remedies.
+- **Appeal Path:** Limited and time-bounded to prevent stalling.
+- **Publication Policy:** Decisions published with reasoning (privacy-aware).
+
+## Timelines (Recommended)
+
+Timelines must be defined and enforced.
+
+**Example Template:**
+- **T0 (Incident):** Event occurs.
+- **T0 + 24–48h:** Complaint filed and acknowledged.
+- **T0 + 72h:** Preliminary assessment and interim measures (if needed).
+- **T0 + 7–14d:** Final adjudication for most cases.
+- **T0 + 14–21d:** Appeal window (only for defined grounds).
+- **Final Certification Deadline:** Fixed date after which results are certified, subject to defined exceptions.
+
+The goal is not speed alone; it is preventing disputes from becoming permanent political weapons.
+
+## Evidence Standards and Chain-of-Custody
+
+- **Admissible evidence types** (observer reports, logs, records, verified imagery, testimony).
+- **Chain-of-custody requirements** for ballots/records.
+- **How digital evidence is authenticated** (hashing, logs, signed attestations).
+- **Protections for witnesses** and whistleblowers.
+
+## Remedies (Must Be Pre-Committed)
+
+Dispute systems fail when remedies are unclear. Define remedies such as:
+- **Corrective actions:** Reopen registration window, reinstate voters.
+- **Recounts:** Full or partial under defined triggers.
+- **Invalidation:** Of compromised precinct results.
+- **Reruns:** In specified locations.
+- **Sanctions:** For obstruction or intimidation (procedural consequences, not just rhetoric).
+- **Escalation:** To Freeze governance mechanisms if violence/disruption is involved.
+
+## Integration with Observation and Monitoring
+
+- Observer findings should have standing to trigger investigations.
+- Coercion and safety incidents must be linked to Freeze monitoring and escalation channels.
+- Systematic obstruction should be treated as a **high-severity integrity breach**.
+
+- **Integrity & Observation (/initiatives/ukraine-peace-plan/fvr/vote/integrity-observation)**
+- **Verification & Monitoring (/initiatives/ukraine-peace-plan/fvr/freeze/verification-monitoring)**
+- **Escalation & Deconfliction (/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination)**
+
+## Certification: How the Vote Ends
+
+Define a certification protocol:
+- **Who certifies:** (Commission + Observers + Audit authority).
+- **What documents are required:** (Audit report, observer report, dispute summary).
+- **What happens if criteria are not met:** (Pause, rerun parts, or fallback mechanism).
+
+## Links to Related Chapters
+
+- **Legitimacy Criteria (/initiatives/ukraine-peace-plan/fvr/vote/legitimacy-criteria)**
+- **Electorate Definition (/initiatives/ukraine-peace-plan/fvr/vote/electorate-definition)**
+- **Voting System Design (/initiatives/ukraine-peace-plan/fvr/vote/voting-system)**
+- **Verification Gates (/initiatives/ukraine-peace-plan/fvr/governance/verification-gates)**

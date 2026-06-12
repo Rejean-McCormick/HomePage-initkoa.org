@@ -1,0 +1,19 @@
+Diagnostics folder:
+C:\mycode\HomePage\HomePage\_diagnostics\vercel-build-20260612_184211
+
+Most relevant files:
+- C:\mycode\HomePage\HomePage\_diagnostics\vercel-build-20260612_184211\report.txt
+
+Next steps:
+1. Open report.txt
+2. Search for:
+   - Missing NEXT_PUBLIC_SUPABASE_URL
+   - Missing SUPABASE_SERVICE_ROLE_KEY
+   - Vercel env ls
+   - Diff after patch
+3. If Vercel Production lacks vars, add:
+   - NEXT_PUBLIC_SUPABASE_URL
+   - SUPABASE_SERVICE_ROLE_KEY
+   - optionally NEXT_PUBLIC_SITE_URL
+4. If Reading AI index is optional, set:
+   - SKIP_READING_AI_INDEX=1

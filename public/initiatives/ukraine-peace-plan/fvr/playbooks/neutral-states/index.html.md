@@ -1,0 +1,93 @@
+# UN / OSCE / Neutral States Playbook
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/playbooks/neutral-states
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/playbooks/neutral-states/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/playbooks/neutral-states
+> Source: app\initiatives\ukraine-peace-plan\fvr\playbooks\neutral-states\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/playbooks/neutral-states)
+
+# UN / OSCE / Neutral States Playbook
+
+This playbook translates **Freeze–Vote–Rebuild** into an operational checklist for international and neutral actors who might provide monitoring, observation, mediation support, or implementation capacity. It is written as a feasibility and mission-design guide.
+
+## Primary Goals (Process-Focused)
+- **Provide credible, independent monitoring** and observation.
+- **Reduce escalation risks** through predictable incident handling and deconfliction.
+- **Protect humanitarian access** and critical infrastructure.
+- **Support legitimacy** of the Vote phase through observation, audits, and dispute processes.
+- **Enable reconstruction governance integrity** through audits and transparency support (where mandated).
+
+## Key Risks
+- **Credibility Loss:** Mission access denial or intimidation undermining reporting.
+- **Mandate Ambiguity:** Leading to mission creep or operational paralysis.
+- **Security Threats:** Direct risks to personnel and mission infrastructure.
+- **Perception of Bias:** Reducing cooperation from one or more parties.
+- **Data Failures:** Privacy breaches or operational security leaks.
+
+## Non-Negotiables / Redlines (Operational)
+- **Freedom of Movement:** Access for mission personnel within the agreed scope.
+- **Reporting Independence:** Authority to report findings independently on a defined schedule.
+- **Security Provisions:** Clear Rules of Engagement (ROE) and operational boundaries.
+- **Standardization:** Clear incident classification and evidence standards.
+- **Data Governance:** Rules that protect privacy while preserving auditability.
+
+## Mission Design Checklist
+
+### 1. Monitoring (Freeze)
+- [ ] Define mandate scope and specific access rights.
+- [ ] Establish incident intake and verification workflows.
+- [ ] Define incident classification rubric and confidence levels.
+- [ ] Stand up 24/7 incident room and secure hotlines.
+- [ ] Establish publication policy and escalation ladder linkages.
+
+### 2. Observation (Vote)
+- [ ] Define observation coverage targets and statistical sampling plans.
+- [ ] Ensure access to registration sites, polling sites, and counting centers.
+- [ ] Publish methodology and reporting schedules in advance.
+- [ ] Integrate coercion reporting channels and protective procedures.
+- [ ] Coordinate with dispute resolution mechanisms.
+
+### 3. Reconstruction Integrity (Rebuild)
+- [ ] Define the specific audit role and independence safeguards.
+- [ ] Agree on transparency stack expectations (Project Registry, Disbursement Ledger).
+- [ ] Establish inspection and technical verification capacity.
+- [ ] Define debarment support and integrity reporting paths.
+
+## Operational Responsibilities
+*What neutral actors must prepare:*
+
+- **Staffing & Logistics:** Rapid deployment plans and specialized personnel.
+- **Cyber Hygiene:** Secure communications and data storage.
+- **Safety Protocols:** Evacuation contingencies and field safety training.
+- **Legal Status:** Status of Forces/Mission Agreements (SOFA/SOMA) and immunities.
+- **Standardization Training:** Training on incident classification and evidence handling.
+- **Coordination Protocols:** Standardized interfaces with all relevant parties.
+
+## Verification Demands (What to Insist On)
+- **Access Guarantees:** Explicit consequences for obstruction.
+- **Time-Bounded Adjudication:** Pathways for handling disputes without delays.
+- **Measurable Indicators:** Gate definitions that rely on data, not intent.
+- **Publication Rights:** Clear rules for what is made public and what is redacted.
+- **Audit Access:** Independent access to raw evidence under secure conditions.
+
+**Key References:**
+- **Verification & Monitoring (/initiatives/ukraine-peace-plan/fvr/freeze/verification-monitoring)**
+- **Verification-First Gates (/initiatives/ukraine-peace-plan/fvr/governance/verification-gates)**
+- **Coordination & Escalation (/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination)**
+- **Data Governance & Privacy (/initiatives/ukraine-peace-plan/fvr/governance/data-privacy)**
+
+## Failure Triggers and Fallback Options
+Plan for:
+- **Partial Access Denial:** Shift to technical verification and remote corroboration.
+- **Security Deterioration:** Site closures, remote observation, or adjusted coverage.
+- **Politicized Allegations:** Publish methodology and evidence standards consistently to maintain trust.
+- **Mission Withdrawal:** Clear criteria for when a mission is no longer viable.
+
+## Questions to Ask in the Room
+- What are the mission’s exact access rights and physical boundaries?
+- What happens automatically when access is denied?
+- How are incidents classified, and who adjudicates disputes?
+- What is the publication policy (what is public vs. restricted)?
+- How are mission safety and legal protections guaranteed?

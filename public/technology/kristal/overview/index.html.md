@@ -1,0 +1,256 @@
+# What a Kristal does
+
+> Canonical HTML: https://initkoa.org/technology/kristal/overview
+> Markdown mirror: https://initkoa.org/technology/kristal/overview/index.html.md
+> Route: /technology/kristal/overview
+> Source: app\technology\kristal\overview\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/technology/kristal/overview)
+
+"Kristal is the portable, verifiable epistemic artifact layer of the kOA ecosystem: a way to publish, audit, distribute, query, and read structured knowledge with explicit provenance, certainty, authority, and scope.",
+
+# Kristal (Overview)
+
+A **Kristal** is the core epistemic artifact of the kOA ecosystem.
+
+It is designed to make structured knowledge **portable**, **verifiable**, **traceable**, and **usable under degraded conditions** — including offline.
+
+Think of it as a *compiled unit of structured meaning* that can be shared, audited, queried, federated, and reused without requiring trust in a single platform, publisher, institution, or operator.
+
+A Kristal does not claim to be “the truth.”
+It preserves what is claimed, what is sourced, what is validated, what remains uncertain, who recognizes it, under which scope, and which reader policy is being applied.
+
+## What a Kristal does
+
+Kristals exist to solve a simple problem:
+
+> Most “knowledge” is stored as text, screenshots, websites, chat logs, or platform-specific records — hard to verify, hard to reuse, fragile under crisis, and easy to detach from context.
+
+A Kristal turns knowledge into something that can be:
+
+* **Verified** — provenance, integrity, signatures, publisher identity, and authority metadata can be checked.
+* **Traced** — assertions can point back to sources, evidence, claims, validation reports, and lineage.
+* **Queried** — structured assertions can be searched, filtered, inspected, and composed.
+* **Used offline** — runtime packs can operate when network access is limited or unavailable.
+* **Federated** — multiple authorities, domains, communities, or institutions can contribute without silent blending.
+* **Rendered safely** — summaries and explanations can preserve uncertainty, disagreement, authority, and scope.
+
+## What you get as a user
+
+When a system is backed by Kristals, you get:
+
+* answers and summaries that can be **traced back to sources**;
+* a clearer separation between:
+
+* what is **claimed**;
+* what is **sourced**;
+* what is **validated**;
+* what is **uncertain**;
+* what is **disputed**;
+* what is **fictional, mythological, symbolic, or speculative**;
+* visibility into **who recognizes what**, under which scope;
+* the ability to keep operating when the network fails, using local runtime packs;
+* a way to compare multiple authorities without pretending disagreement has disappeared.
+
+Kristals are meant to support **learning**, **deliberation**, **research**, **coordination**, **decision**, and **execution** while preserving a durable memory of what was known, by whom, when, why, and under which conditions.
+
+## Core model
+
+Kristal v5 keeps these layers separate:
+
+This separation matters.
+
+A Kristal may contain uncertain, disputed, incomplete, fictional, mythological, speculative, or low-certainty assertions.
+
+That is allowed.
+
+What matters is that the system must not present an assertion as more certain, more validated, more recognized, more factual, or more universal than its metadata supports.
+
+## The basic flow
+
+A Kristal usually follows this model:
+
+In plain language:
+
+1. knowledge is structured;
+2. it is compiled into a portable artifact;
+3. validation and authority recognition may be added;
+4. runtime packs make it usable offline;
+5. reader policies decide what a user, tool, or interface is allowed to see.
+
+## Structured Epistemic State
+
+The normative input unit for Kristal v5 is the **Structured Epistemic State**.
+
+It can contain:
+
+* assertions;
+* assertion status;
+* certainty levels;
+* provenance;
+* evidence references;
+* authority recognition references;
+* lineage;
+
+Older extractor formats such as Claim-IR may still be used internally by ingestion tools, but they are not the universal input boundary for Kristal v5.
+
+## Two main runtime forms
+
+A Kristal is typically published or used through two complementary forms.
+
+### 1) Exchange
+
+An **Exchange** is the compiled artifact.
+
+It may be:
+
+* a **Working Exchange**, used for drafting, review, research, internal collaboration, or unresolved material;
+* a **Reference Exchange**, recognized by one or more authority channels for a declared scope.
+
+An Exchange is the artifact you verify, cite, audit, federate, or use as the basis for runtime packaging.
+
+### 2) Runtime Pack
+
+A **Runtime Pack** is the portable offline/query bundle.
+
+It is optimized for local use:
+
+* browsing;
+* retrieval;
+* reader-policy filtering;
+* field deployment;
+* degraded or offline operation.
+
+A Runtime Pack should preserve the labels needed to understand assertion status, certainty, validation, authority, scope, and provenance.
+
+> In short: **Exchange = verifiable compiled artifact. Runtime Pack = usable offline/query package.**
+
+## Reader policies
+
+Reader policies determine what a person, interface, query engine, or renderer is allowed to expose.
+
+Common reader modes include:
+
+A `validated_only` reader policy does not mean that every visible assertion is a universal fact.
+
+It means that every visible assertion satisfies that policy’s validation, authority, certainty, and scope filters.
+
+For example, a reader policy may allow material validated as:
+
+* a high-confidence scientific fact;
+* an institutional reference;
+* a publisher declaration;
+* a technical specification;
+* a legal or policy position;
+* a mythological corpus;
+* a fictional corpus;
+* a symbolic model;
+* a disputed position;
+* a hypothesis.
+
+The important rule is that the label must remain clear.
+
+## Where Kristals fit in the ecosystem
+
+Kristals are not “a platform.”
+They are a shared artifact layer used by platforms, tools, institutions, and communities.
+
+Typical roles:
+
+* **Konnaxion** distributes Kristals, activates runtime packs, supports offline access, caching, rollback, and reader surfaces.
+* **Ariane** can use Kristal-backed structures to guide users through complex interfaces with better trust, provenance, and traceability.
+* **Orgo** can route the work that creates, reviews, validates, updates, or publishes Kristals while preserving the audit trail.
+* **SenTient** can help extract, resolve, normalize, and disambiguate claims while preserving ambiguity instead of forcing premature certainty.
+* **Architect** can render text and summaries from Kristals while keeping every factual assertion traceable to source claims and evidence.
+
+## Trust, provenance, and federation
+
+Kristals can be published by different authorities:
+
+* institutions;
+* communities;
+* governments;
+* associations;
+* research collectives;
+* publishers;
+* individuals;
+* AI validators;
+* hybrid human/AI review groups.
+
+The ecosystem needs two guarantees:
+
+1. **You can identify who published, validated, or recognized what.**
+2. **You can compose multiple sources without silent blending.**
+
+This is where concepts like **authority channels**, **domain shards**, **validation reports**, **federation manifests**, and **reader policies** matter.
+
+The public principle is simple:
+
+> If two sources disagree, the system should preserve the disagreement instead of hiding it.
+
+## What can be inside a Kristal?
+
+A Kristal may contain many kinds of structured material:
+
+* scientific facts;
+* hypotheses;
+* research claims;
+* institutional references;
+* local records;
+* policy positions;
+* legal interpretations;
+* educational material;
+* technical documentation;
+* mythological corpora;
+* fictional corpora;
+* symbolic models;
+* disputed positions;
+* rejected claims;
+* historical versions.
+
+The artifact must preserve the difference between these categories.
+
+A mythological corpus can be validated as mythology.
+A fictional corpus can be validated as fiction.
+A hypothesis can be validated as a hypothesis.
+A disputed claim can be recorded as disputed.
+
+None of those should be rendered as universal physical-world fact.
+
+## Use cases
+
+* A community publishes a **local policy Kristal** and distributes it as a Runtime Pack for offline access.
+* A school publishes **course Kristals** with versioned updates, source material, and clear provenance.
+* A civic project publishes a **decision record Kristal** containing claims, evidence, deliberation summaries, outcomes, and accountability trails.
+* A research collective publishes a **hypothesis Kristal** that can later be reviewed, challenged, validated, or rejected by authority channels.
+* A cultural archive publishes a **mythology Kristal** validated as a cultural corpus, not as a physical-world factual claim.
+* A publisher releases a **technical system Kristal** describing how its systems work, with versioning, provenance, and authority-scoped declarations.
+
+## Why this matters
+
+Kristal gives digital knowledge a stronger public structure.
+
+It makes it possible to ask:
+
+* Where did this come from?
+* Who claims it?
+* Who validates it?
+* Under what scope?
+* With what certainty?
+* Under which authority?
+* Is it disputed?
+* Is it fictional, mythological, symbolic, or factual?
+* Which reader policy made it visible?
+* Can I still use it offline?
+* Can another system verify it?
+
+That is the point: not to erase disagreement, but to make knowledge portable, inspectable, and usable without losing context.
+
+## Next pages
+
+* **What it does (in practice):** `/technology/kristal/what-it-does`
+* **Trust & provenance:** `/technology/kristal/trust-and-provenance`
+* **Portability & offline:** `/technology/kristal/portability-and-offline`
+* **Distribution & versioning:** `/technology/kristal/distribution-and-versioning`
+* **Integrations:** `/technology/kristal/integrations`

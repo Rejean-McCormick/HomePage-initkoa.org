@@ -1,0 +1,49 @@
+# Risks & Critiques Overview
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/risks/overview
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/risks/overview/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/risks/overview
+> Source: app\initiatives\ukraine-peace-plan\fvr\risks\overview\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/risks/overview)
+
+# Risks & Critiques Overview
+
+**Freeze–Vote–Rebuild** is designed to function under conditions of high distrust, but it still has significant failure modes. This section catalogs risks, common critiques, and mitigations, providing a structure for making the framework more resilient.
+
+## Objectives
+- **Identify Failure Modes Early:** Detect and define risks before they become active crises.
+- **Explicit Risk Ownership:** Clarify which actors (domestic or international) are responsible for specific mitigations.
+- **Design Integration:** Tie mitigations directly to verification gates, incentives, and operational rules.
+- **Credible Responses:** Provide objective, design-based replies to common political and ethical critiques.
+
+## How Risks are Handled in This Framework
+
+This section is organized into four key pillars:
+
+1. **Failure Modes:** A deep dive into *what* can go wrong (e.g., monitor obstruction, voter coercion) and *why*.
+2. **Risk Register:** A structured table containing likelihood, impact, specific mitigations, and assigned owners.
+3. **Common Critiques & Responses:** A "steelman" approach to objections (e.g., "This rewards the aggressor") paired with operational replies.
+4. **Ethical Considerations:** Managing moral and political risks, such as the tension between stability and justice.
+
+### Linking Risk to Execution
+Risk handling is not a separate exercise; it is hard-wired into the following systems:
+- **Verification-First Gates (/initiatives/ukraine-peace-plan/fvr/governance/verification-gates):** Gates fail if risk indicators exceed thresholds.
+- **Escalation Ladder (/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination):** Pre-committed responses to verified risk events.
+- **Dispute Remedies (/initiatives/ukraine-peace-plan/fvr/vote/dispute-resolution):** Standardized fixes for Vote-phase integrity failures.
+- **Reconstruction Integrity (/initiatives/ukraine-peace-plan/fvr/rebuild/accountability):** Gating fund releases based on audit performance.
+
+## Risk Philosophy
+
+- **Assume Adversarial Behavior:** Do not design for "good faith." Expect spoilers and manipulation attempts.
+- **Design for Reversibility:** Ensure that if a gate is failed, the process can pause or roll back to a safer state.
+- **Multi-Indicator Gating:** Use diverse data sources to make the system harder to "game" by single actors.
+- **Staged Commitments:** Prefer incremental unlocks over large, irreversible political concessions.
+
+## Where to Start
+
+- **Failure Modes (/initiatives/ukraine-peace-plan/fvr/risks/failure-modes)**
+*The technical and political ways the framework can break.*
+- **Risk Register (/initiatives/ukraine-peace-plan/fvr/risks/risk-register)**
+*The operational tool for tracking and mitigating active risks.*

@@ -1,0 +1,42 @@
+# Implementation Toolkit Overview
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/toolkit/overview
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/toolkit/overview/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/toolkit/overview
+> Source: app\initiatives\ukraine-peace-plan\fvr\toolkit\overview\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/toolkit/overview)
+
+# Implementation Toolkit Overview
+
+This section contains practical tools to implement **Freeze–Vote–Rebuild**. It is deliberately kept separate from the core narrative so the main chapters remain readable and audit-friendly.
+
+The toolkit is meant to be adapted into operational checklists, legal templates, and data dashboards.
+
+## What’s in the Toolkit
+
+- **Operational Checklists (/initiatives/ukraine-peace-plan/fvr/toolkit/checklists):** Phase-by-phase guides on what must be stood up and in what order.
+- **Templates (/initiatives/ukraine-peace-plan/fvr/toolkit/templates):** Repeatable structures for gates, incident reports, project registries, and debarment lists.
+- **Metrics & KPIs (/initiatives/ukraine-peace-plan/fvr/toolkit/metrics-kpis):** The suggested measurement framework for verification, voter inclusion, and reconstruction delivery.
+- **Comms Toolkit (/initiatives/ukraine-peace-plan/fvr/toolkit/comms):** Optional messaging assets, FAQs, and talking points (kept distinct from core technical specs).
+
+## How to Use It
+
+- **If you are designing an implementation plan:** Start with **Checklists** and **Metrics & KPIs**.
+- **If you are drafting instruments:** Use **Templates** and **Gate Definitions**.
+- **If you are preparing public-facing explanations:** Use the **Comms Toolkit**, but ensure it remains distinct from the technical audit requirements.
+
+## Integration Points
+
+The toolkit supports and operationalizes the following chapters:
+- **Monitoring & Incident Handling (/initiatives/ukraine-peace-plan/fvr/freeze/verification-monitoring)**
+- **Vote Integrity & Observation (/initiatives/ukraine-peace-plan/fvr/vote/integrity-observation)**
+- **Reconstruction Governance & Audits (/initiatives/ukraine-peace-plan/fvr/rebuild/accountability)**
+- **Verification-First Gates (/initiatives/ukraine-peace-plan/fvr/governance/verification-gates)**
+
+## Drafting Note
+As content is populated, keep toolkit items:
+- Short and directly reusable.
+- Explicitly linked to the chapters they support.
+- Versioned (as templates evolve with stakeholder feedback).

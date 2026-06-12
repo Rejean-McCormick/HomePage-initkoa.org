@@ -127,7 +127,7 @@ downloadAvailable: true,
 export default function ContextPacksPage() {
 return ( <main className="max-w-5xl mx-auto px-6 py-12"> <header className="mb-12 border-b border-slate-200 pb-8"> <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-200 text-slate-600 bg-white"> <Package className="w-4 h-4 text-[#1e6864]" /> <span className="text-xs font-mono">Technology / Context Packs</span> </div>
 
-```
+
     <h1 className="mt-6 text-4xl md:text-5xl font-bold text-slate-900">Context Packs</h1>
 
     <p className="mt-4 text-xl text-slate-600 max-w-3xl leading-relaxed">
@@ -153,7 +153,9 @@ return ( <main className="max-w-5xl mx-auto px-6 py-12"> <header className="mb-1
       <Pill icon={<Sparkles className="w-4 h-4" />}>AI-first</Pill>
       <Pill icon={<ShieldCheck className="w-4 h-4" />}>Versioned & stable</Pill>
       <Pill icon={<Boxes className="w-4 h-4" />}>Modular by domain</Pill>
-      <Pill icon={<BookOpenText className="w-4 h-4" />}>Human-readable, machine-usable</Pill>
+      <Pill icon={<BookOpenText className="w-4 h-4" />}>
+        Human-readable, machine-usable
+      </Pill>
     </div>
 
     <div className="mt-10 flex flex-col sm:flex-row gap-4">
@@ -168,6 +170,7 @@ return ( <main className="max-w-5xl mx-auto px-6 py-12"> <header className="mb-1
 
   <section className="mb-14">
     <h2 className="text-2xl font-bold text-slate-900 mb-4">How people use them</h2>
+
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       <InfoCard
         icon={<BookOpenText className="w-6 h-6 text-[#1e6864]" />}
@@ -221,16 +224,19 @@ return ( <main className="max-w-5xl mx-auto px-6 py-12"> <header className="mb-1
     </div>
   </section>
 </main>
-```
+
 
 );
 }
 
 function PackCard({ pack }: { pack: ContextPack }) {
-return ( <article className="p-6 rounded-xl border border-slate-200 bg-white hover:border-[#1e6864] hover:shadow-sm transition-all"> <div className="flex items-start justify-between gap-4"> <div> <h3 className="text-lg font-bold text-slate-900">{pack.title}</h3> <p className="mt-1 text-sm font-mono text-slate-500">{pack.version}</p> </div> <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-600">
-{pack.scope} </span> </div>
+return ( <article className="p-6 rounded-xl border border-slate-200 bg-white hover:border-[#1e6864] hover:shadow-sm transition-all"> <div className="flex items-start justify-between gap-4"> <div> <h3 className="text-lg font-bold text-slate-900">{pack.title}</h3> <p className="mt-1 text-sm font-mono text-slate-500">{pack.version}</p> </div>
 
-```
+    <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-600">
+      {pack.scope}
+    </span>
+  </div>
+
   <p className="mt-4 text-slate-600 leading-relaxed">{pack.description}</p>
 
   <div className="mt-5 flex flex-wrap gap-3">
@@ -259,7 +265,7 @@ return ( <article className="p-6 rounded-xl border border-slate-200 bg-white hov
     ))}
   </div>
 </article>
-```
+
 
 );
 }
@@ -270,7 +276,15 @@ return ( <span className="inline-flex items-center gap-2 text-xs px-3 py-1 round
 );
 }
 
-function InfoCard({ icon, title, body }: { icon: ReactNode; title: string; body: string }) {
+function InfoCard({
+icon,
+title,
+body,
+}: {
+icon: ReactNode;
+title: string;
+body: string;
+}) {
 return ( <div className="p-6 rounded-xl border border-slate-200 bg-white"> <div className="mb-3">{icon}</div> <h3 className="text-lg font-bold text-slate-900 mb-2">{title}</h3> <p className="text-slate-600 leading-relaxed">{body}</p> </div>
 );
 }

@@ -1,0 +1,213 @@
+# Operating profiles
+
+> Canonical HTML: https://initkoa.org/platforms/orgo/profiles
+> Markdown mirror: https://initkoa.org/platforms/orgo/profiles/index.html.md
+> Route: /platforms/orgo/profiles
+> Source: app\platforms\orgo\profiles\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/platforms/orgo/profiles)
+
+SlidersHorizontal,
+Timer,
+Eye,
+Archive,
+Search,
+GitBranch,
+ArrowRight,
+
+"Operating profiles tune how Orgo behaves by context: reactivity, transparency, pattern sensitivity, retention, and review intensity—without changing the core execution model.",
+"Operating profiles tune how Orgo behaves by context: reactivity, transparency, pattern sensitivity, retention, and review intensity—without changing the core execution model.",
+
+# Operating profiles
+
+Orgo keeps the same **operational spine** everywhere:
+
+**signal → case → routing → tasking → escalation → closure → review**
+
+That spine does not change from one organization to another.
+
+What changes is the **operating profile**: the behavioral posture that determines how fast Orgo reacts, how visible work should be, how easily recurring patterns should trigger review, and how long operational memory should be preserved.
+
+This is how Orgo adapts to hospitals, municipalities, justice workflows, schools, and internal operations **without becoming a different product every time**.
+
+## Why profiles exist
+
+Different organizations do not fail in the same way.
+
+A hospital may require:
+- aggressive reactivity,
+- tighter privacy boundaries,
+- stronger pattern sensitivity around repeated incidents,
+- and durable retention for safety review.
+
+A municipality may require:
+- broader traceability,
+- clearer public/private separation,
+- moderate but dependable response windows,
+- and stronger cyclic review around recurring service friction.
+
+A justice environment may require:
+- strict confidentiality,
+- highly controlled visibility,
+- durable recordkeeping,
+- and explicit reviewability for contested outcomes.
+
+Profiles let Orgo fit those realities **without rewriting the engine**.
+
+## What a profile changes
+
+description="How quickly different classes of work must be acknowledged, acted on, or escalated."
+href="/platforms/orgo/routing-escalation"
+
+description="Who can see which cases, statuses, and outcomes by default—shaped by role, sensitivity, and operational purpose."
+href="/platforms/orgo/security-audit"
+
+title="Pattern sensitivity"
+description="How easily repeated failures, anomalies, or escalations should trigger reviews, alerts, or follow-up cases."
+href="/platforms/orgo/reviews"
+
+description="How long records, event trails, attachments, and review artifacts should remain available."
+href="/platforms/orgo/security-audit"
+
+## What a profile does **not** change
+
+Profiles do **not** replace the core guarantees.
+
+They do not remove:
+- accountable ownership,
+- time-bounded escalation,
+- explicit closure,
+- auditable history,
+- or offline continuity.
+
+Profiles tune the **behavioral posture** of those guarantees.
+
+In other words:
+
+- the **core** defines what Orgo always is
+- the **profile** defines how firmly and how visibly it behaves in a given institutional setting
+
+## The five practical profile dimensions
+
+## 1) Reactivity profile
+
+A reactivity profile defines time expectations for different classes of work.
+
+- how long a critical case can wait before escalation
+- whether routine requests are measured in hours or days
+- whether acknowledgement is required before completion work begins
+- whether review-created cases inherit stricter response windows
+
+This is how Orgo encodes urgency as policy instead of relying on informal pressure.
+
+## 2) Transparency profile
+
+A transparency profile defines default visibility boundaries.
+
+- what requesters can see
+- what internal operators can see
+- which cases require restricted handling
+- when anonymised views should be used
+- when summaries can be shared while details remain private
+
+This is how Orgo avoids both overexposure and invisible handling.
+
+## 3) Pattern sensitivity profile
+
+A pattern sensitivity profile defines how quickly repeated events become review material.
+
+- how many similar incidents trigger a weekly review
+- whether repeated escalations should open an audit case
+- when low-grade but recurring friction should become visible
+- how aggressively anomalies should be surfaced to leadership or governance roles
+
+This is what lets Orgo behave differently in low-risk and high-risk environments without changing the review engine itself.
+
+## 4) Retention profile
+
+A retention profile defines how long operational memory should persist.
+
+- case history retention
+- event trail retention
+- attachment retention
+- review and audit artifact retention
+- shorter windows for low-value operational logs
+- longer windows for compliance-critical material
+
+Retention is not just storage policy.
+It is part of governance.
+
+## 5) Review intensity
+
+A profile also shapes how strongly cyclic reviews operate.
+
+- how often weekly, monthly, or yearly reviews should run
+- what thresholds create follow-up cases
+- what kinds of repetition deserve audit attention
+- how much evidence should be attached to review-created work
+
+This is how the same review mechanism can fit very different institutions.
+
+## Example operating profiles
+
+Same engine, different posture
+
+<strong>Hospital profile:</strong> fast escalation, narrow visibility, high pattern sensitivity, strong retention, strict continuity expectations.
+<strong>Municipal profile:</strong> broad operational traceability, moderate reactivity, stronger recurring-issue reviews, mixed public/private visibility.
+<strong>Justice profile:</strong> strict confidentiality, explicit authorship, durable auditability, tightly bounded visibility, durable recordkeeping.
+<strong>Internal operations profile:</strong> lighter visibility controls, pragmatic retention, simpler review thresholds, strong routing clarity.
+
+## Profiles are governance, not personalization
+
+An operating profile is not a theme, skin, or UI preference.
+
+It is an institutional choice about:
+- what counts as urgent,
+- what should remain visible,
+- what patterns justify intervention,
+- and how much memory the system should preserve.
+
+That makes profiles part of the governance layer of Orgo.
+
+They turn operational behavior from something accidental into something deliberate.
+
+## Why this matters
+
+Without profiles, one of two failures usually appears:
+
+### 1) One rigid system for everyone
+The system becomes too blunt for real organizations.
+
+### 2) Every deployment becomes custom
+The system loses coherence and becomes expensive to govern and maintain.
+
+Profiles are the middle path:
+
+**stable core, configurable posture**
+
+That is how Orgo remains both general and domain-fit.
+
+## How profiles relate to modules
+
+Profiles and modules are not the same thing.
+
+- **Modules** adapt domain vocabulary, intake shape, and typical handling patterns.
+- **Profiles** tune behavioral posture: urgency, visibility, sensitivity, retention, and review force.
+
+A hospital module and a hospital profile often reinforce one another, but they solve different problems.
+
+description="Domain packages that adapt Orgo to real-world work without changing the shared operational core."
+href="/platforms/orgo/modules"
+
+title="Core guarantees"
+description="The non-negotiable guarantees that stay true across all modules, profiles, and deployment modes."
+href="/platforms/orgo/guarantees"
+
+## Next
+
+href="/platforms/orgo/guarantees"
+
+href="/platforms/orgo/reviews"
+
+href="/platforms/orgo/security-audit"

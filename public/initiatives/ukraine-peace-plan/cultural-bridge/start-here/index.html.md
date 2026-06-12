@@ -1,0 +1,50 @@
+# Cultural Bridge Track
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/start-here
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/start-here/index.html.md
+> Route: /initiatives/ukraine-peace-plan/cultural-bridge/start-here
+> Source: app\initiatives\ukraine-peace-plan\cultural-bridge\start-here\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/start-here)
+
+# Cultural Bridge Track
+
+This is an **optional, parallel branch** to the main Freeze–Vote–Rebuild framework.
+
+It is designed to create non-military “margins for dignity” that reduce dehumanization, support cultural repair, and widen long-term maneuvering space—without changing the core security, vote-integrity, or reconstruction mechanics.
+
+## Table of Contents
+
+**The Two Pillars**
+- **Russian Literature Dignity Program (/initiatives/ukraine-peace-plan/cultural-bridge/russian-literature)**
+*Curated, independent library collections that separate culture from state violence.*
+- **Ukrainian Language Worldwide (/initiatives/ukraine-peace-plan/cultural-bridge/ukrainian-language)**
+*Mass-scale language access that employs diaspora Ukrainians as cultural ambassadors.*
+
+**Operational Safeguards**
+- **Governance & Guardrails (/initiatives/ukraine-peace-plan/cultural-bridge/guardrails)**
+*Anti-propaganda rules and independent oversight structures.*
+- **Implementation & Funding (/initiatives/ukraine-peace-plan/cultural-bridge/funding-partnerships)**
+*Partnership models for libraries, schools, and civil society.*
+- **Metrics & Evaluation (/initiatives/ukraine-peace-plan/cultural-bridge/metrics)**
+*KPIs, measurement design, and feedback loops to validate impact and prevent symbolic compliance.*
+- **Risks & Failsafes (/initiatives/ukraine-peace-plan/cultural-bridge/risks)**
+*Addressing critiques ("rewarding aggression") and preventing capture.*
+
+## What This Track Is (and Is Not)
+
+**It IS:**
+- A cultural and educational package with clear, enforceable guardrails.
+- Additive confidence-building measures (CBMs) that run in parallel to the security track.
+- Designed to be implementable by host countries, institutions, and civil society immediately.
+
+**It is NOT:**
+- A substitute for security verification, accountability, or legal pathways.
+- A vehicle for state propaganda or influence operations.
+- A “reward” for violence or an excuse for impunity.
+
+## Where It Fits
+This track sits alongside the core operational framework but does not block or gate it.
+- **Main Framework:** Freeze–Vote–Rebuild (/initiatives/ukraine-peace-plan/fvr/start-here/welcome)
+- **Plan Home:** Ukraine Peace & Reconstruction Plan (/initiatives/ukraine-peace-plan)

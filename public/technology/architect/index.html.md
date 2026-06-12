@@ -1,0 +1,314 @@
+# Semantik Architect
+
+> Canonical HTML: https://initkoa.org/technology/architect
+> Markdown mirror: https://initkoa.org/technology/architect/index.html.md
+> Route: /technology/architect
+> Source: app\technology\architect\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/technology/architect)
+
+"A deterministic multilingual rendering layer for structured knowledge, Kristal query results, and auditable natural-language generation.",
+
+# Semantik Architect
+
+**Semantik Architect** is a deterministic multilingual rendering and natural-language generation layer for structured knowledge.
+
+It can be used as a general **rule-based NLG toolkit** for structured data, with inspiration from **Abstract Wikipedia** and **Wikifunctions**. In the kOA ecosystem, it also acts as the rendering surface for **Kristal v5**: turning structured, scoped, traceable knowledge into readable multilingual text without flattening uncertainty, authority, or disagreement.
+
+Its job is not to invent facts.
+
+Its job is to render what the selected input and reader policy allow, while preserving meaning, labels, and traceability.
+
+## What it does
+
+Semantik Architect turns structured meaning into human-readable language.
+
+It can render:
+
+* short descriptions;
+* role and mandate summaries;
+* structured biographies;
+* governance process explanations;
+* decision summaries;
+* civic process narratives;
+* Kristal query results;
+* reader-policy-selected knowledge views;
+* multilingual cards, snippets, summaries, and reports.
+
+The output should remain:
+
+* **deterministic** — same inputs and render profile produce the same output;
+* **auditable** — generated statements can be traced back to structured inputs;
+* **label-preserving** — certainty, validation, authority, scope, and status are not hidden;
+* **multilingual** — the same structured meaning can be rendered across languages;
+* **testable** — language behavior is covered by regression suites.
+
+## Why this exists
+
+Structured knowledge is only useful if people can read it.
+
+Projects like Abstract Wikipedia and Wikifunctions show the importance of representing meaning independently from language, then rendering that meaning into many languages. But multilingual generation only works at scale if the system is:
+
+* **shared where languages share structure**;
+* **data-driven where languages differ**;
+* **testable** enough to catch regressions;
+* **traceable** enough to explain where rendered claims came from;
+* **strict about facts** so rendering does not silently add unsupported information.
+
+Semantik Architect is a concrete architecture for doing that.
+
+It treats language generation as reusable infrastructure instead of one-off text generation.
+
+> Note: Semantik Architect is not an official Wikimedia component. It is an independent experimental architecture designed to learn from that ecosystem while remaining usable outside it.
+
+## Core idea
+
+Instead of building “one renderer per language,” Semantik Architect separates meaning from language-specific realization.
+
+It uses:
+
+* shared **language-family engines** for grammar patterns used across related languages;
+* per-language **configuration cards** for settings and defaults;
+* reusable **sentence templates** called constructions;
+* a **lexicon** with linguistic features such as gender, case, noun class, animacy, and irregular forms;
+* compact **semantic frames** that describe meaning in a language-neutral way;
+* **render profiles** that define output shape, length, style, and constraints;
+* **QA and regression suites** so output quality stays measurable.
+
+## Relationship to Kristal v5
+
+Kristal v5 compiles Structured Epistemic States into portable, verifiable artifacts.
+
+Semantik Architect renders those artifacts into language.
+
+In a Kristal context, Architect should preserve:
+
+* assertion status;
+* validation status;
+* certainty level;
+* authority channel;
+* recognition status;
+* provenance;
+* evidence references;
+* reader policy;
+* dispute, fiction, mythology, symbolic, or research labels where applicable.
+
+Architect does not decide what is true.
+
+It renders the material selected by the active reader policy.
+
+For example, a validated-only reader policy may allow a claim validated as a high-confidence fact, a mythological corpus validated as mythology, or a technical declaration validated as a publisher declaration. Architect must not collapse those into the same kind of “truth.”
+
+## Rendering contract
+
+When used with Kristal v5, Semantik Architect follows a simple contract:
+
+Architect should not introduce factual claims that are not present in the input.
+
+This includes:
+
+* numbers;
+* rankings;
+* causal claims;
+* categorical claims;
+* institutional claims;
+* scientific claims;
+* policy claims.
+
+Architect may add:
+
+* headings;
+* transitions;
+* formatting;
+* connective phrasing;
+* localized labels;
+* stylistic phrasing that does not add information.
+
+If the input is ambiguous, disputed, uncertain, fictional, mythological, symbolic, or authority-scoped, the output must preserve that status when the render profile requires visible labels.
+
+## What it enables
+
+* **Multilingual summaries** from structured data.
+* **Reader-policy-aware rendering** from Kristal artifacts.
+* **Consistent phrasing across languages** for the same structured meaning.
+* **Traceable public explanations** of roles, mandates, decisions, and processes.
+* **Incremental language onboarding** through language cards, lexicon entries, and tests.
+* **Auditable output** suitable for governance, civic, educational, and knowledge infrastructure.
+
+## How it works
+
+Think of it as a pipeline:
+
+### 1) Structured input
+
+Inputs may come from:
+
+* semantic frames;
+* structured civic data;
+* governance process records;
+* Kristal Runtime Pack query results;
+* Exchange-derived query bundles;
+* Structured Epistemic State projections;
+* authority-recognized reference artifacts.
+
+### 2) Semantic frames
+
+Semantic frames represent meaning in a language-neutral form.
+
+* biography frame;
+* role or mandate frame;
+* membership frame;
+* event frame;
+* decision frame;
+* process frame;
+* assertion summary frame;
+* validation status frame;
+* authority recognition frame.
+
+### 3) Sentence templates
+
+Constructions decide what to say and how sentence parts relate.
+
+A construction may define:
+
+* subject;
+* predicate;
+* location;
+* authority;
+* certainty;
+* validation status;
+* optional qualifiers.
+
+### 4) Language-family engines
+
+Language-family engines implement shared grammar logic.
+
+* Romance family patterns;
+* Slavic family patterns;
+* Semitic family patterns;
+* Germanic family patterns.
+
+The family engine handles reusable structure; language cards provide local differences.
+
+### 5) Language cards
+
+Language cards define language-specific settings such as:
+
+* article behavior;
+* agreement;
+* gender handling;
+* case requirements;
+* word order preferences;
+* punctuation conventions;
+* fallback behavior;
+* label translations.
+
+### 6) Lexicon
+
+Lexicon entries provide the features languages need to produce grammatical output.
+
+A lexicon entry may include:
+
+* part of speech;
+* case forms;
+* noun class;
+* animacy;
+* irregular forms;
+* Wikidata or Wikibase identifiers;
+* language-specific aliases.
+
+### 7) Trace map
+
+When rendering from Kristal or other provenance-bearing inputs, Architect should output trace metadata showing which rendered segment came from which structured claim, evidence reference, or assertion.
+
+This makes rendered language inspectable instead of opaque.
+
+## Relationship to Konnaxion
+
+Konnaxion provides distribution, access, coordination, reader surfaces, and runtime activation for knowledge artifacts and civic processes.
+
+Semantik Architect fits as the language layer:
+
+* Konnaxion selects or delivers the structured material.
+* Reader policy determines what the user is allowed to see.
+* Architect renders that selected material into readable language.
+* Trace metadata keeps the rendered output connected to its source.
+
+In short:
+
+> Konnaxion distributes and presents governed knowledge surfaces; Semantik Architect renders structured knowledge into multilingual narrative.
+
+## Relationship to Orgo
+
+Orgo is the workflow and governance control plane.
+
+It may coordinate:
+
+* submissions;
+* reviews;
+* approvals;
+* validation routing;
+* audit trails;
+* lifecycle state;
+* operational governance.
+
+Semantik Architect can render Orgo-managed structures into readable summaries:
+
+* “X reviewed Y under policy Z.”
+* “This decision is pending authority recognition.”
+* “This process is blocked because required validation is missing.”
+* “This mandate applies to this scope and time window.”
+
+## Relationship to SenTient
+
+SenTient helps resolve and normalize meaning before rendering.
+
+It may support:
+
+* entity resolution;
+* predicate resolution;
+* ambiguity preservation;
+* normalization;
+* extraction;
+* confidence scoring;
+* projection into Structured Epistemic State.
+
+Architect should not silently resolve ambiguity that SenTient preserved.
+
+If the input says a subject is ambiguous, Architect either renders the ambiguity or refuses to render the ambiguous claim as a settled fact, depending on the active render profile and reader policy.
+
+## Practical entry points
+
+* **Repository:** https://github.com/Rejean-McCormick/SemantiK_Architect
+
+## Technical appendix
+
+### Core building blocks
+
+* **Frames:** language-neutral meaning structures.
+* **Constructions:** reusable sentence templates.
+* **Engines:** shared grammar logic per language family.
+* **Language profiles/cards:** per-language settings and defaults.
+* **Lexicon:** linguistic features and forms.
+* **Render profiles:** output kind, length, tone, and constraints.
+* **Trace maps:** links from rendered text back to source assertions or structured inputs.
+* **QA:** test suites and regression runners.
+
+### Typical directory map
+
+### Minimal conceptual example
+
+### Kristal-oriented conceptual example
+
+## Design principle
+
+Semantik Architect should be expressive, but not imaginative about facts.
+
+It may make language beautiful, clear, and multilingual.
+
+It must not make unsupported factual claims.
+
+When rendering from Kristal, the core invariant is:
+
+> A rendered statement must never appear more certain, more validated, more recognized, more factual, or more universal than the structured input and reader policy support.

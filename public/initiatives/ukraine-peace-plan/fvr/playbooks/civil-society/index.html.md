@@ -1,0 +1,100 @@
+# Civil Society & Displaced Persons Playbook
+
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/playbooks/civil-society
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/playbooks/civil-society/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/playbooks/civil-society
+> Source: app\initiatives\ukraine-peace-plan\fvr\playbooks\civil-society\page.mdx
+> Generated: 2026-06-12T23:26:14.521Z
+
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/playbooks/civil-society)
+
+# Civil Society & Displaced Persons Playbook
+
+This playbook translates **Freeze–Vote–Rebuild** into an operational checklist for civil society actors, community organizations, and displaced populations (IDPs and refugees), focusing on inclusion, safety, and accountability.
+
+## Primary Goals (Process-Focused)
+- **Ensure displaced persons** can register and participate meaningfully in the Vote phase.
+- **Protect voters and communities** from coercion, intimidation, and retaliation.
+- **Ensure humanitarian corridors** and protected infrastructure rules are real and monitored.
+- **Ensure reconstruction** is transparent, equitable, and resistant to corruption.
+- **Create channels for grievances** and oversight that do not rely on elite access.
+
+## Key Risks
+- **Exclusion:** Displaced populations excluded by documentation burdens or access barriers.
+- **Coercion:** Intimidation suppressing participation or distorting outcomes.
+- **Disinformation:** Confusing eligibility, safety, and procedures.
+- **Capture:** Reconstruction favoritism harming trust and equity.
+- **Privacy:** Breaches exposing vulnerable people to retaliation.
+
+## Non-Negotiables / Redlines (Operational)
+- Explicit eligibility pathways for displaced persons and refugees.
+- Accessible registration and participation modalities (including cross-border options).
+- **Secret ballot** protections and anti-coercion enforcement.
+- **Secure complaint channels** with protection for reporters and witnesses.
+- Transparency requirements for reconstruction spending and delivery outcomes.
+- Strong privacy protections for voter data and vulnerable populations.
+
+## What Civil Society Should Demand (Checklist)
+
+### During Freeze
+- [ ] **Corridor Uptime Reporting:** Regular updates and rapid response to closures.
+- [ ] **Infrastructure Register:** Monitoring of strikes on protected sites.
+- [ ] **Safe Reporting:** Channels to report abuses or access denials without fear.
+- [ ] **Public Dashboards:** Aggregated incident reporting with clear definitions.
+
+### During Vote
+- [ ] **Translated Rulebook:** Clear eligibility guidance in relevant languages.
+- [ ] **Support Centers:** Registration assistance specifically for displaced people.
+- [ ] **Site Coverage:** Observation coverage that includes displaced voting hubs.
+- [ ] **Anti-Coercion Hotline:** A channel with real investigative and remedy capacity.
+- [ ] **Published Audits:** Summaries of audit results and dispute outcomes.
+
+### During Rebuild
+- [ ] **Project Registry:** Public record of what is being built, where, and by whom.
+- [ ] **Procurement Transparency:** Awards summaries and debarment lists.
+- [ ] **Community Grievance Mechanisms:** Dedicated paths for local project feedback.
+- [ ] **Equity Monitoring:** Oversight of project distribution across regions.
+
+## Operational Responsibilities
+*How civil society can contribute to framework success:*
+
+- **Education:** Provide non-partisan voter education and counter disinformation.
+- **Assistance:** Support registration (documentation help, access support).
+- **Monitoring:** Report access issues, intimidation, and corruption signals.
+- **Feedback:** Participate in community feedback loops for reconstruction priorities.
+- **Protection:** Support whistleblower networks and safe reporting practices.
+
+## Safety and Privacy Practices
+- Avoid collecting unnecessary personal data.
+- Use secure communications for sensitive reports.
+- Protect the identities of complainants and witnesses.
+- Coordinate with official dispute mechanisms while preserving local safety.
+- Insist on strict data governance rules for voter and complaint data.
+
+(See: **Data Governance & Privacy (/initiatives/ukraine-peace-plan/fvr/governance/data-privacy)**)
+
+## Verification Demands (What to Insist On)
+- **Participation Metrics:** Published by category (resident/IDP/refugee) in aggregate.
+- **Coercion Thresholds:** Clear rules for when verified intimidation triggers reruns.
+- **Timeline Enforcement:** Transparent dispute resolution windows and published reasoning.
+- **Integrity Gates:** Rebuild funding releases must be tied to audit performance.
+
+**Key References:**
+- **Electorate Definition (/initiatives/ukraine-peace-plan/fvr/vote/electorate-definition)**
+- **Vote Integrity & Observation (/initiatives/ukraine-peace-plan/fvr/vote/integrity-observation)**
+- **Dispute Resolution (/initiatives/ukraine-peace-plan/fvr/vote/dispute-resolution)**
+- **Accountability & Transparency (/initiatives/ukraine-peace-plan/fvr/rebuild/accountability)**
+
+## Failure Triggers and Fallback Options
+Advocate for clear responses to:
+- **Systemic Exclusion:** Extend registration windows or deploy additional centers.
+- **Verified Intimidation:** Increase protection or rerun compromised precincts.
+- **Data Breaches:** Pause affected systems and initiate independent investigation.
+- **Reconstruction Corruption:** Suspend tranches, debar vendors, and replace operators.
+
+## Questions to Ask in the Room
+- How can displaced persons register if they lack documents, and what is the appeals process?
+- What protection exists for people reporting intimidation or coercion?
+- How will privacy be protected for voter rolls and complaint data?
+- What triggers a rerun or recount, and who decides?
+- Where can the public see reconstruction spending and progress in a usable form?
