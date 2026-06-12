@@ -1,0 +1,81 @@
+{
+  "schema": "initkoa.reading.ai-index.v1",
+  "generated_at": "2026-05-26T02:27:33.104Z",
+  "source": "supabase.documents",
+  "visibility": "public",
+  "policy": {
+    "includes": "published documents only",
+    "excludes": [
+      "draft",
+      "archived"
+    ],
+    "full_text_location": "/reading/[slug]",
+    "note": "This index is for discovery and metadata. It is not the canonical full-text corpus."
+  },
+  "routes": {
+    "reading_index": "http://localhost:3000/reading",
+    "document_pattern": "http://localhost:3000/reading/[slug]"
+  },
+  "counts": {
+    "documents": 2,
+    "topics": 12,
+    "sources": 1,
+    "languages": 1
+  },
+  "documents": [
+    {
+      "id": "41dffb33-2806-4171-ad47-3def99fb12c0",
+      "slug": "test-reading-document",
+      "title": "Test Reading Document",
+      "description": "Document de test pour valider l'import Markdown, l'index Reading et la page document.",
+      "summary": "Document de test pour valider l'import Markdown, l'index Reading et la page document.",
+      "source": "markdown",
+      "language": "en",
+      "author": "Réjean McCormick",
+      "topics": [
+        "markdown",
+        "reading",
+        "test"
+      ],
+      "status": "published",
+      "internal_path": "/reading/test-reading-document",
+      "url": "http://localhost:3000/reading/test-reading-document",
+      "canonical_url": null,
+      "published_at": "2026-05-25T00:00:00+00:00",
+      "updated_at": "2026-05-26T02:17:53.523254+00:00",
+      "word_count": 96,
+      "reading_time_minutes": 1,
+      "content_hash": "7427795e20f2c1c93ef14d5b0cf24d511a6c52326a19dbf006d738195ceab3b7"
+    },
+    {
+      "id": "c45d984b-f6cf-4e72-a26b-79fd35c8878a",
+      "slug": "hacking-reality",
+      "title": "Hacking Reality",
+      "description": "A practical guide to reality hacking, Christ-like function, symbolic innovation, narrative transmission, creative madness, alliances, and systems transformation.",
+      "summary": "A practical guide to reality hacking, Christ-like function, symbolic innovation, narrative transmission, creative madness, alliances, and systems transformation.",
+      "source": "markdown",
+      "language": "en",
+      "author": "King Klown",
+      "topics": [
+        "christ_function",
+        "creative_madness",
+        "king_klown",
+        "konnaxion",
+        "kristal_farms",
+        "narrative_transmission",
+        "orgo",
+        "reality_hacking",
+        "symbolic_innovation"
+      ],
+      "status": "published",
+      "internal_path": "/reading/hacking-reality",
+      "url": "http://localhost:3000/reading/hacking-reality",
+      "canonical_url": null,
+      "published_at": "2025-06-28T00:00:00+00:00",
+      "updated_at": "2026-05-26T02:27:13.322855+00:00",
+      "word_count": 12596,
+      "reading_time_minutes": 56,
+      "content_hash": "269047f6ca18133abf9a9848387c12bfa05b2fca51fe1a6ff1024f93c4ac5ddd"
+    }
+  ]
+}

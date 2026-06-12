@@ -1,154 +1,442 @@
 ﻿export const metadata = {
-  title: "Konnaxion â€“ Technical Architecture & Services"
+title: "Konnaxion – Technical Architecture & Services"
 };
 
-# Konnaxion â€“ Technical Architecture & Services
+# Konnaxion – Technical Architecture & Services
 
-This page collects the **technical details** of Konnaxion: service codeâ€‘names, core models, configuration parameters, routing invariants, and crossâ€‘module infrastructure. It complements:
+This page collects the **technical details** of Konnaxion: service code names, core models, configuration parameters, routing invariants, Kristal distribution surfaces, activation rules, and cross-module infrastructure.
 
-* the repository **README**, which focuses on vision, mythology, and highâ€‘level modules 
-* the wiki **hub page**, which explains civic workflows and navigation
-* the individual module pages (Knowledge, CertifiKation, Korum, etc.), which describe each subâ€‘module functionally
+It complements:
+
+* the repository README, which focuses on vision, purpose, and high-level modules
+* the wiki hub page, which explains civic workflows and navigation
+* the individual module pages — Knowledge, CertifiKation, Korum, Konsultations, Konservation, Kontact, Konstruct, Stockage, EkoH, Smart Vote — which describe each sub-module functionally
+* the Kristal v5 technical docs, which define portable epistemic artifacts, Runtime Packs, reader policies, authority recognition, validation reports, and federation manifests
 
 Use this page as the reference for development and integration work.
-
 
 ---
 
 ## 1. Platform overview
 
-### 1.1 kOA module map
+### 1.1 Konnaxion’s role in kOA
 
-Konnaxionâ€™s architecture is organized into six topâ€‘level modules: 
+Konnaxion is the kOA platform layer for learning, deliberation, civic participation, collaboration, cultural preservation, project coordination, reputation, and decision support.
 
-* **KonnectED** â€“ learning, knowledge, and certification
-* **Ethikos** â€“ structured debates and civic consultations
-* **Kreative** â€“ culture, preservation, and professional networks
-* **keenKonnect** â€“ project workspaces and storage
-* **Kollective Intelligence** â€“ reputation and voting (EkoH, Smart Vote)
-* **System / Core** â€“ crossâ€‘cutting auth, storage, search, analytics
+In the Kristal v5 architecture, Konnaxion also acts as a distribution and runtime surface for Kristal artifacts.
+
+Konnaxion may:
+
+* receive Working Artifacts and Reference Artifacts
+* distribute Exchanges, shards, federation manifests, validation reports, authority registries, reader policies, and Runtime Packs
+* enforce required integrity checks for activation
+* expose reader-policy-selected views
+* preserve labels for validation status, certainty, authority channel, recognition status, scope, dispute, mythology, fiction, and lineage
+* support offline access through Runtime Packs
+* cache, activate, roll back, and retire artifact versions without erasing history
+
+Konnaxion does not decide universal truth. It distributes, activates, filters, renders, and preserves structured epistemic artifacts according to declared policies.
+
+---
+
+### 1.2 kOA module map
+
+Konnaxion’s architecture is organized into six top-level modules:
+
+* **KonnectED** – learning, knowledge, certification, and educational pathways
+* **Ethikos** – structured debates, civic consultations, and public reasoning
+* **Kreative** – culture, preservation, creative archives, and professional networks
+* **keenKonnect** – project workspaces, versioned documents, and shared storage
+* **Kollective Intelligence** – reputation, voting, scoring, and decision analytics
+* **System / Core** – authentication, storage, search, analytics, Kristal integration, activation, verification, and operational services
 
 Each kOA module is implemented as one or more Django apps with:
 
-* **service codeâ€‘names** (e.g. `multidimensional_scoring`, `public_consultation`) mapping 1â€‘toâ€‘1 to service modules
-* **OLTP models** described in the v14 schema reference
-* **frozen configuration parameters** (thresholds, limits, routes)
+* **service code names** such as `multidimensional_scoring`, `public_consultation`, or `dynamic_weighted_vote`
+* **OLTP models** for transactional platform state
+* **configuration parameters** for thresholds, limits, schedules, and routes
+* **optional Kristal integration points** for portable state, audit bundles, validated references, Runtime Packs, or exported civic memory
 
-### 1.2 Shared technology stack
+---
+
+### 1.3 Shared technology stack
 
 Across modules, the technical stack is consistent:
 
-* **Backend**: Django + Django REST Framework
-* **Realtime**: Django Channels with Redis (`channels_redis.core.RedisChannelLayer`)
-* **Data store**: PostgreSQL with tsvector fullâ€‘text search
-* **Background tasks**: Celery (ETL, AI enrichment, packaging, recomputation)
-* **Object storage**: `/app/media/` root, typically backed by S3/MinIO
-* **Frontâ€‘end**: routes reserved per module (`/learn`, `/certs`, `/ethikos/korum`, etc.)
+* **Backend:** Django + Django REST Framework
+* **Realtime:** Django Channels with Redis (`channels_redis.core.RedisChannelLayer`)
+* **Data store:** PostgreSQL with `tsvector` full-text search
+* **Background tasks:** Celery for ETL, AI enrichment, packaging, score recomputation, validation tasks, and artifact preparation
+* **Object storage:** `/app/media/`, typically backed by S3 or MinIO
+* **Frontend:** reserved routes per module, such as `/learn`, `/certs`, `/ethikos/korum`, `/projects`, and `/kollective/konsensus`
+* **Artifact layer:** Kristal v5 Exchanges, Runtime Packs, validation reports, reader policies, authority registries, shard manifests, and federation manifests where durable portable knowledge is required
 
 ---
 
-## 2. Crossâ€‘module infrastructure
+## 2. Kristal v5 integration surface
 
-### 2.1 Service codeâ€‘name convention
+### 2.1 Core integration model
 
-Every subâ€‘module defines **named services** that are stable integration points. Examples:
+Konnaxion participates in the Kristal v5 pipeline after structured knowledge has been compiled, validated, recognized, packaged, or prepared for runtime use.
 
-* Korum: `structured_debate`, `ai_clone_management`, `comparative_argument_analysis`, `public_debate_archive`, `automated_debate_summary` 
-* Smart Vote: `dynamic_weighted_vote`, `voting_modalities`, `emerging_expert_detection`, `vote_transparency`, `vote_result_visualization`, `cross_module_vote_integration` 
-* EkoH: `multidimensional_scoring`, `configuration_weights`, `contextual_analysis`, `privacy_settings`, `score_history`, `score_visualization`, `expertise_field_classification` 
-* Knowledge: `library_resource_management`, `personalized_recommendation`, `content_co_creation`, `thematic_forum`, `learning_progress_tracking` 
+The typical flow is:
 
-Codeâ€‘names map 1â€‘toâ€‘1 to service modules (e.g. `services/dynamic_weighted_vote.py`), and are referenced by tasks, API endpoints, and configuration.
+```text
+Signal / Draft / Dataset / Submission
+-> Structured Epistemic State
+-> Compile
+-> Working Artifact
+-> Review / Validation / Attestation / Federation
+-> Authority Recognition
+-> Reference Artifact
+-> Distribution / Runtime Pack / Reader Policy
+-> Konnaxion activation and reader surface
+```
 
-### 2.2 Routing invariants
+Konnaxion is primarily responsible for the last stage:
 
-Topâ€‘level routes are **owned** by specific modules and treated as invariants. Namespacing is enforced for consistency:
-
-* `/learn`, `/course/[slug]` â†’ KonnectED / Knowledge 
-* `/certs` â†’ KonnectED / CertifiKation 
-* `/ethikos/korum`, `/ethikos/insights` â†’ Ethikos / Korum 
-* `/ethikos/consult` â†’ Ethikos / Konsultations 
-* `/projects`, `/projects/[slug]` â†’ keenKonnect / Konstruct + Stockage
-* `/kreative`, `/art/[id]`, `/archive` â†’ Kreative / Konservation 
-* `/connect`, `/profile/[user]` â†’ Kreative / Kontact 
-* `/kollective/konsensus`, `/reports/smart-vote` â†’ Kollective Intelligence / Smart Vote 
-
-No other module should claim these topâ€‘level paths.
-
-### 2.3 Storage and media
-
-* **Media root**: `MEDIA_ROOT=/app/media/` is shared across modules.
-* **File size & types** are fixed per context:
-
-  * Stockage / Konstruct: `MAX_BLUEPRINT_UPLOAD_MB = 150`, types `[".pdf", ".png", ".jpg", ".glb", ".gltf", ".stl"]`
-  * Konservation: `ARTWORK_MAX_IMAGE_MB = 50`, `ARTWORK_RESOLUTIONS = [256, 1024, 2048]` px 
-
-Storage is typically an object store (S3/MinIO) behind the media path.
-
-### 2.4 Search
-
-* Knowledge and Stockage explicitly use PostgreSQL fullâ€‘text search (`SEARCH_BACKEND = "postgres"`) for library resources and documents.
-* Tags (`Tag`, `ArtworkTag`) provide a shared taxonomy layer across Kreative and keenKonnect.
-
-### 2.5 Realtime and background jobs
-
-* **Django Channels + Redis** power:
-
-  * live stance and result updates in Korum and Konsultations
-  * realâ€‘time tallies in Smart Vote 
-  * project chat, notifications, and document events in Konstruct and Stockage
-  * collaboration rooms in Kontact 
-
-* **Celery tasks & schedules** include:
-
-  * `etl_smart_vote` every 10 minutes, with ~5â€‘year retention for facts 
-  * periodic EkoH score recomputation and leaderboard refresh 
-  * weekly offline packaging for Knowledge (`OFFLINE_PACKAGE_CRON = 0 3 * * SUN`) 
-  * image rendition, AI enrichment, and partner ingest for Konservation 
+* distribution
+* verification
+* activation
+* caching
+* rollback
+* reader policy application
+* runtime query surfaces
+* user-facing presentation and navigation
+* preserving provenance and status labels
 
 ---
 
-## 3. Moduleâ€“byâ€“module technical summary
+### 2.2 Kristal artifact types handled by Konnaxion
 
-### 3.1 KonnectED
+Konnaxion may store, index, distribute, or activate the following Kristal v5 artifact types:
 
-#### 3.1.1 Knowledge â€“ Collaborative Learning Library
+* `structured_epistemic_state`
+* `working_exchange`
+* `reference_exchange`
+* `runtime_pack`
+* `exchange_shard_manifest`
+* `exchange_federation_manifest`
+* `authority_registry`
+* `authority_recognition`
+* `validation_report`
+* `review_bundle`
+* `revocations`
+* `reader_policy`
+* `transparency_log_entry`
+
+Konnaxion should preserve artifact identity, content hashes, signatures, lineage, activation state, and reader policy references.
+
+---
+
+### 2.3 Artifact status handling
+
+Konnaxion must not collapse all artifacts into one operational class.
+
+Relevant artifact statuses include:
+
+* `draft`
+* `working`
+* `under_review`
+* `recognized`
+* `reference`
+* `deprecated`
+* `superseded`
+* `revoked`
+
+A working artifact may be visible in research, review, drafting, or internal collaboration surfaces.
+
+A reference artifact may be used in stricter reader policies, public reference views, or curated civic memory surfaces.
+
+A revoked artifact should remain auditable but should not be activated for normal reader-policy-selected use unless an explicit historical or audit workflow allows it.
+
+---
+
+### 2.4 Assertion labels preserved by Konnaxion
+
+When Konnaxion exposes Kristal-derived content, it should preserve or make recoverable the following labels:
+
+* `assertion_status`
+* `validation_status`
+* `certainty_level`
+* `validated_as`
+* `authority_channel`
+* `recognition_status`
+* `scope`
+* `provenance_refs`
+* `evidence_refs`
+* `lineage`
+* `reader_policy_refs`
+* `validation_refs`
+* `authority_recognition_refs`
+
+These labels matter because Kristal v5 separates:
+
+```text
+artifact existence
+≠ artifact integrity
+≠ assertion status
+≠ certainty level
+≠ validation status
+≠ authority recognition
+≠ reader visibility
+≠ runtime activation
+```
+
+Konnaxion user interfaces should not present scoped validation as universal agreement.
+
+---
+
+### 2.5 Reader policy support
+
+Konnaxion reader surfaces may apply Kristal reader policies such as:
+
+* `reference_only`
+* `validated_only`
+* `high_certainty_only`
+* `research`
+* `creative`
+* `all_with_labels`
+* `custom`
+
+A reader policy determines what the current user, group, tenant, public surface, or runtime context is allowed to see.
+
+For example:
+
+* a public education surface may use `reference_only`
+* a research workspace may use `research`
+* a cultural archive may use `creative`
+* an internal review queue may use `all_with_labels`
+* a civic report may use `validated_only`
+
+A validated-only view does not mean all visible material is universally factual. It means all visible material satisfies that policy’s validation, authority, certainty, and scope filters.
+
+---
+
+### 2.6 Runtime Pack activation
+
+Konnaxion can activate Runtime Packs for offline or service-backed query surfaces.
+
+A Runtime Pack activation record should track:
+
+* `runtime_pack_id`
+* source Exchange or federation reference
+* source artifact status
+* reader policy references
+* query contract reference
+* activation environment
+* tenant or audience scope
+* activation timestamp
+* previous active pack
+* verification result
+* rollback eligibility
+* revocation status
+* compatibility notes
+
+Activation should be atomic: either the complete selected pack is active, or the previous known-good pack remains active.
+
+---
+
+### 2.7 Verification expectations
+
+Before activating a Kristal artifact or Runtime Pack, Konnaxion should enforce required verification according to the declared policy.
+
+Relevant checks may include:
+
+* schema validity
+* content hash verification
+* signature verification
+* authority registry lookup
+* trust root match
+* revocation check
+* validation report availability
+* reader policy availability
+* runtime compatibility
+* downgrade and rollback policy compatibility
+* source artifact lineage check
+* tenant and environment scope match
+
+If a policy declares a check as required, Konnaxion should reject activation when the check fails or required evidence is missing.
+
+---
+
+### 2.8 Rollback and downgrade behavior
+
+Konnaxion should support safe rollback by preserving previous active activation pointers and previously verified Runtime Packs.
+
+Rollback should preserve:
+
+* artifact identity
+* activation reason
+* actor or automation that performed the rollback
+* timestamp
+* previous active Runtime Pack
+* new active Runtime Pack
+* verification status
+* reason code
+
+Downgrade should be policy-gated. It should not silently activate an older artifact when that artifact is revoked, incompatible, superseded by policy, or outside the tenant/environment scope.
+
+---
+
+## 3. Cross-module infrastructure
+
+### 3.1 Service code-name convention
+
+Every sub-module defines named services that are stable integration points.
+
+Examples:
+
+* Korum: `structured_debate`, `ai_clone_management`, `comparative_argument_analysis`, `public_debate_archive`, `automated_debate_summary`
+* Smart Vote: `dynamic_weighted_vote`, `voting_modalities`, `emerging_expert_detection`, `vote_transparency`, `vote_result_visualization`, `cross_module_vote_integration`
+* EkoH: `multidimensional_scoring`, `configuration_weights`, `contextual_analysis`, `privacy_settings`, `score_history`, `score_visualization`, `expertise_field_classification`
+* Knowledge: `library_resource_management`, `personalized_recommendation`, `content_co_creation`, `thematic_forum`, `learning_progress_tracking`
+* Kristal integration: `artifact_distribution`, `runtime_pack_activation`, `reader_policy_selection`, `authority_registry_resolution`, `validation_report_indexing`, `revocation_tracking`
+
+Service code names map to service modules and are referenced by tasks, API endpoints, configuration, permissions, and audit logs.
+
+---
+
+### 3.2 Routing invariants
+
+Top-level routes are owned by specific modules and treated as invariants.
+
+Namespacing is enforced for consistency:
+
+* `/learn`, `/course/[slug]` → KonnectED / Knowledge
+* `/certs` → KonnectED / CertifiKation
+* `/ethikos/korum`, `/ethikos/insights` → Ethikos / Korum
+* `/ethikos/consult` → Ethikos / Konsultations
+* `/projects`, `/projects/[slug]` → keenKonnect / Konstruct + Stockage
+* `/kreative`, `/art/[id]`, `/archive` → Kreative / Konservation
+* `/connect`, `/profile/[user]` → Kreative / Kontact
+* `/kollective/konsensus`, `/reports/smart-vote` → Kollective Intelligence / Smart Vote
+* `/kristals`, `/kristals/[id]`, `/runtime-packs/[id]` → System / Kristal distribution surface, if enabled
+
+No other module should claim these top-level paths without an explicit routing migration.
+
+---
+
+### 3.3 Storage and media
+
+The shared media root is:
+
+```text
+MEDIA_ROOT=/app/media/
+```
+
+Storage is typically backed by S3 or MinIO.
+
+File size and type constraints are fixed per context:
+
+* Stockage / Konstruct:
+
+  * `MAX_BLUEPRINT_UPLOAD_MB = 150`
+  * allowed types: `.pdf`, `.png`, `.jpg`, `.glb`, `.gltf`, `.stl`
+* Konservation:
+
+  * `ARTWORK_MAX_IMAGE_MB = 50`
+  * `ARTWORK_RESOLUTIONS = [256, 1024, 2048]`
+* Kristal distribution:
+
+  * Runtime Packs should be content-addressed
+  * validation reports, authority registries, reader policies, and revocation artifacts should be stored as immutable or versioned records
+  * activation pointers should be mutable but auditable
+
+---
+
+### 3.4 Search
+
+Knowledge and Stockage explicitly use PostgreSQL full-text search for library resources and documents.
+
+Tags such as `Tag` and `ArtworkTag` provide a shared taxonomy layer across Kreative and keenKonnect.
+
+Kristal-derived search indexes should preserve:
+
+* source artifact identity
+* assertion status
+* validation status
+* certainty level
+* authority channel
+* recognition status
+* scope
+* reader policy filterability
+
+Search should not strip labels that determine whether a result is visible under a reader policy.
+
+---
+
+### 3.5 Realtime and background jobs
+
+Django Channels + Redis power:
+
+* live stance and result updates in Korum and Konsultations
+* real-time tallies in Smart Vote
+* project chat, notifications, and document events in Konstruct and Stockage
+* collaboration rooms in Kontact
+* optional activation status and validation status notifications for Kristal Runtime Packs
+
+Celery tasks and schedules include:
+
+* `etl_smart_vote` every 10 minutes, with approximately 5-year retention for facts
+* periodic EkoH score recomputation and leaderboard refresh
+* weekly offline packaging for Knowledge, such as `OFFLINE_PACKAGE_CRON = 0 3 * * SUN`
+* image rendition, AI enrichment, and partner ingest for Konservation
+* optional Runtime Pack import, verification, activation, revocation polling, and index materialization tasks for Kristal
+
+---
+
+## 4. Module-by-module technical summary
+
+### 4.1 KonnectED
+
+#### 4.1.1 Knowledge – Collaborative Learning Library
 
 **Services**
-* `library_resource_management` â€“ CRUD and classify `KnowledgeResource`; enforce type enum.
-* `personalized_recommendation` â€“ compute `KnowledgeRecommendation` per user.
-* `content_co_creation` â€“ manage `CoCreationProject` and `CoCreationContribution` drafts.
-* `thematic_forum` â€“ forums via `ForumTopic` and `ForumPost`.
-* `learning_progress_tracking` â€“ track `LearningProgress` (per user + resource).
+
+* `library_resource_management` – CRUD and classify `KnowledgeResource`; enforce type enum
+* `personalized_recommendation` – compute `KnowledgeRecommendation` per user
+* `content_co_creation` – manage `CoCreationProject` and `CoCreationContribution` drafts
+* `thematic_forum` – forums via `ForumTopic` and `ForumPost`
+* `learning_progress_tracking` – track `LearningProgress` per user and resource
 
 **Core models**
 
 * `KnowledgeResource(id, title, type, url, author)`
 * `KnowledgeRecommendation(user, resource, recommended_at)`
 * `LearningProgress(user, resource, progress_percent)`
-* `CoCreationProject`, `CoCreationContribution`
-* `ForumTopic`, `ForumPost` 
+* `CoCreationProject`
+* `CoCreationContribution`
+* `ForumTopic`
+* `ForumPost`
 
 **Key configuration**
 
 * Content types: `article | video | lesson | quiz | dataset`
 * `MAX_CONTRIBUTION_DRAFTS = 10` per user
 * Search backend: `SEARCH_BACKEND = "postgres"`
-* Offline packaging: `OFFLINE_PACKAGE_CRON = 0 3 * * SUN` 
+* Offline packaging: `OFFLINE_PACKAGE_CRON = 0 3 * * SUN`
 
 **Routes**
 
-* `/learn` â€“ catalog, recommendations, offline download
-* `/course/[slug]` â€“ course player (lessons, progression) 
+* `/learn` – catalog, recommendations, offline download
+* `/course/[slug]` – course player, lessons, and progression
 
-#### 3.1.2 CertifiKation â€“ Skills & Certification
+**Kristal integration**
+
+Knowledge resources may be exported as Structured Epistemic States or packaged into Kristal artifacts when durable citation, reader-policy filtering, or offline reference use is required.
+
+---
+
+#### 4.1.2 CertifiKation – Skills & Certification
 
 **Services**
-* `certification_path_management` â€“ manage `CertificationPath`.
-* `automated_evaluation` â€“ create `Evaluation` with `raw_score` and metadata.
-* `peer_validation` â€“ handle `PeerValidation` decisions.
-* `skills_portfolio` â€“ connect to `Portfolio` and core `Certificate` records.
-* `certification_interoperability` â€“ manage `InteropMapping` with external LMS/registries.
+
+* `certification_path_management` – manage `CertificationPath`
+* `automated_evaluation` – create `Evaluation` with `raw_score` and metadata
+* `peer_validation` – handle `PeerValidation` decisions
+* `skills_portfolio` – connect to `Portfolio` and core `Certificate` records
+* `certification_interoperability` – manage `InteropMapping` with external LMS or registries
 
 **Core models**
 
@@ -157,45 +445,65 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 * `PeerValidation(evaluation, peer, decision)`
 * `Portfolio(user, title, description, items)`
 * `InteropMapping(local_certification, external_system, external_id)`
-* `Certificate` (core model for issued credentials) 
+* `Certificate`
 
 **Key configuration**
 
 * `CERT_PASS_PERCENT = 80`
 * `QUIZ_RETRY_COOLDOWN_MIN = 30` minutes
-* Routes reserved: `/certs` (Programs, My Certificates) 
+* Routes reserved: `/certs`
+
+**Kristal integration**
+
+Certification evidence, peer validation, issued certificates, and skill pathways may be represented as scoped assertions with provenance, authority, certainty, and validation metadata.
 
 ---
 
-### 3.2 Ethikos
+### 4.2 Ethikos
 
-#### 3.2.1 Korum â€“ Structured Debates
+#### 4.2.1 Korum – Structured Debates
 
 **Services**
-* `structured_debate`, `ai_clone_management`, `comparative_argument_analysis`, `public_debate_archive`, `automated_debate_summary`.
+
+* `structured_debate`
+* `ai_clone_management`
+* `comparative_argument_analysis`
+* `public_debate_archive`
+* `automated_debate_summary`
 
 **Core models**
 
-* `EthikosCategory` â€“ thematic categories
-* `EthikosTopic` â€“ debate topic/question
-* `EthikosStance(topic, user, value âˆ’3â€¦+3)`
-* `EthikosArgument(topic, author, content, parent, side)` 
+* `EthikosCategory` – thematic categories
+* `EthikosTopic` – debate topic or question
+* `EthikosStance(topic, user, value -3…+3)`
+* `EthikosArgument(topic, author, content, parent, side)`
 
 **Key configuration**
 
-* Stance scale: âˆ’3 â€¦ +3 (0 = neutral)
-* Expert cohort quorum: 12 distinct experts (EkoH threshold)
-* Moderation autoâ€‘hide: 3 independent reports 
+* Stance scale: `-3 … +3`, where `0` is neutral
+* Expert cohort quorum: `12` distinct experts, based on EkoH threshold
+* Moderation auto-hide: `3` independent reports
 
 **Routes**
 
-* `/ethikos/korum` â€“ Korum Hub (Open / Archived / Start New)
-* `/ethikos/insights` â€“ opinion analytics dashboards 
+* `/ethikos/korum` – Korum hub
+* `/ethikos/insights` – opinion analytics dashboards
 
-#### 3.2.2 Konsultations â€“ Public Consultations & Feedback
+**Kristal integration**
+
+Debate topics, stances, arguments, summaries, objections, and validated public positions may be compiled into Kristals as disputed or reviewed assertions, preserving source identity and disagreement.
+
+---
+
+#### 4.2.2 Konsultations – Public Consultations & Feedback
 
 **Services**
-* `public_consultation`, `citizen_suggestion`, `weighted_consultation_vote`, `consultation_result_visualization`, `impact_tracking`.
+
+* `public_consultation`
+* `citizen_suggestion`
+* `weighted_consultation_vote`
+* `consultation_result_visualization`
+* `impact_tracking`
 
 **Core models**
 
@@ -203,78 +511,109 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 * `CitizenSuggestion(consultation, author, content)`
 * `ConsultationVote(user, consultation, raw_value, weighted_value)`
 * `ConsultationResult(consultation, results_data JSONB)`
-* `ImpactTrack(consultation, action, status, date)` 
+* `ImpactTrack(consultation, action, status, date)`
 
 **Key configuration**
 
 * Ballot modalities: `approval | ranking | rating | preferential`
-* Consensus threshold (platformâ€‘wide): â‰¥ 75% weighted agreement
-* Route namespace: `/ethikos/consult` owned exclusively by Ethikos
+* Consensus threshold: `>= 75%` weighted agreement
+* Route namespace: `/ethikos/consult`
 
 **Routes**
 
-* `/ethikos/consult` â€“ Consultation Hub (Live / Results / Suggest)
-* `/ethikos/insights` â€“ shared with Korum analytics 
+* `/ethikos/consult` – consultation hub
+* `/ethikos/insights` – shared with Korum analytics
+
+**Kristal integration**
+
+Consultation inputs, results, impact tracking, minority reports, and authority-recognized summaries may become Kristal artifacts for audit, public memory, and reader-policy-based civic reporting.
 
 ---
 
-### 3.3 Kreative
+### 4.3 Kreative
 
-#### 3.3.1 Konservation â€“ Creative Content & Cultural Preservation
+#### 4.3.1 Konservation – Creative Content & Cultural Preservation
 
 **Services**
-* `digital_archive_management`, `virtual_exhibition`, `archive_documentation`, `ai_enriched_catalogue`, `cultural_partner_integration`.
+
+* `digital_archive_management`
+* `virtual_exhibition`
+* `archive_documentation`
+* `ai_enriched_catalogue`
+* `cultural_partner_integration`
 
 **Core models**
 
 * `KreativeArtwork(id, artist, title, description, media_file, media_type, year, medium, style)`
-* `Tag`, `ArtworkTag` (global tagging vocabulary and join table)
-* `Gallery`, `GalleryArtwork(order)`
-* `TraditionEntry(title, description, region, media_file, approved, approved_by)` 
+* `Tag`
+* `ArtworkTag`
+* `Gallery`
+* `GalleryArtwork(order)`
+* `TraditionEntry(title, description, region, media_file, approved, approved_by)`
 
 **Key configuration**
 
 * `ARTWORK_MAX_IMAGE_MB = 50`
 * `ARTWORK_RESOLUTIONS = [256, 1024, 2048]`
-* `VIRTUAL_GALLERY_CAPACITY = 24` artworks/room
-* `NSFW_FLAG_REQUIRED` (bool, default `False`)
-* `MEDIA_ROOT = /app/media/` 
+* `VIRTUAL_GALLERY_CAPACITY = 24` artworks per room
+* `NSFW_FLAG_REQUIRED`, default `False`
+* `MEDIA_ROOT = /app/media/`
 
 **Routes**
 
-* `/kreative` â€“ Creativity Hub
-* `/art/[id]` â€“ Artwork sheet
-* `/archive` â€“ Konservation archive/partners 
+* `/kreative` – Creativity hub
+* `/art/[id]` – artwork sheet
+* `/archive` – Konservation archive and partners
 
-#### 3.3.2 Kontact â€“ Collaboration & Networking
+**Kristal integration**
+
+Cultural corpora, mythology, fictional worlds, creative archives, symbolic models, and partner archives may be represented as Kristals without being misrepresented as physical-world factual claims. Reader policies should preserve mythology, fiction, symbolic, and cultural-corpus labels.
+
+---
+
+#### 4.3.2 Kontact – Collaboration & Networking
 
 **Services**
-* `professional_profile`, `intelligent_matching`, `collaboration_workspace`, `opportunity_announcement`, `partner_recommendation`.
+
+* `professional_profile`
+* `intelligent_matching`
+* `collaboration_workspace`
+* `opportunity_announcement`
+* `partner_recommendation`
 
 **Core models**
 
 * `CollabSession(id, name, host, session_type, started_at, ended_at, final_artwork)`
-* Reâ€‘uses `KreativeArtwork`, `Tag`, `ArtworkTag` for portfolios and tagging.
+* reuses `KreativeArtwork`, `Tag`, and `ArtworkTag` for portfolios and tagging
 
 **Key configuration**
 
 * `COLLAB_CANVAS_MAX_USERS = 6`
-* `MEDIA_ROOT = /app/media/` (shared)
-* Routes reserved: `/connect`, `/profile/[user]` 
+* `MEDIA_ROOT = /app/media/`
+* Routes reserved: `/connect`, `/profile/[user]`
 
 **Routes**
 
-* `/connect` â€“ People, Opportunities, Collaboration Workspace
-* `/profile/[user]` â€“ public profile/portfolio 
+* `/connect` – people, opportunities, collaboration workspace
+* `/profile/[user]` – public profile and portfolio
+
+**Kristal integration**
+
+Collaboration outputs may be preserved as Working Artifacts, reviewed outputs, or Reference Artifacts depending on policy, provenance, and authority recognition.
 
 ---
 
-### 3.4 keenKonnect
+### 4.4 keenKonnect
 
-#### 3.4.1 Konstruct â€“ Project Collaboration Spaces
+#### 4.4.1 Konstruct – Project Collaboration Spaces
 
 **Services**
-* `collaboration_space`, `project_task_management`, `real_time_document_editing`, `integrated_communication`, `ai_collaboration_analysis`.
+
+* `collaboration_space`
+* `project_task_management`
+* `real_time_document_editing`
+* `integrated_communication`
+* `ai_collaboration_analysis`
 
 **Core models**
 
@@ -284,7 +623,7 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 * `ProjectMessage(project, sender, content)`
 * `ProjectTeam(project, user, role, joined_at)`
 * `ProjectRating(project, user, rating, comment)`
-* `Tag` (shared)
+* `Tag`
 
 **Key configuration**
 
@@ -292,44 +631,67 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 * `ALLOWED_BLUEPRINT_TYPES = [".pdf", ".png", ".jpg", ".glb", ".gltf", ".stl"]`
 * `COLLAB_SPACE_MEMBER_CAP = 40`
 * `AI_SUGGESTION_TOP_N = 8`
-* `VIDEO_SESSION_PROVIDER = "livekit"` via `KC_VIDEO_PROVIDER` env var 
+* `VIDEO_SESSION_PROVIDER = "livekit"` via `KC_VIDEO_PROVIDER`
 
 **Routes**
 
-* `/projects` â€“ Project Studio (Browse, Create, My Projects)
-* `/projects/[slug]` â€“ workspace (Overview, Tasks, Blueprints, Chat, AI Insights, Settings) 
+* `/projects` – Project Studio
+* `/projects/[slug]` – workspace with overview, tasks, blueprints, chat, AI insights, and settings
 
-#### 3.4.2 Stockage â€“ Secure Repository & Versioned Storage
+**Kristal integration**
+
+Project plans, decisions, design states, technical declarations, review bundles, and deliverables may be compiled into Kristal artifacts for auditability, reuse, or governance.
+
+---
+
+#### 4.4.2 Stockage – Secure Repository & Versioned Storage
 
 **Services**
-* `secure_document_storage`, `document_versioning`, `intelligent_indexing`, `real_time_sync`, `granular_permissions`.
+
+* `secure_document_storage`
+* `document_versioning`
+* `intelligent_indexing`
+* `real_time_sync`
+* `granular_permissions`
 
 **Core models**
 
-* `ProjectResource` (same as above; canonical file record)
-* `Project` and `ProjectTeam` for scoping and access control
-* `Tag` for classification 
+* `ProjectResource`
+* `Project`
+* `ProjectTeam`
+* `Tag`
 
 **Key configuration**
 
 * `MAX_BLUEPRINT_UPLOAD_MB = 150`
-* Allowed types: `[".pdf", ".png", ".jpg", ".glb", ".gltf", ".stl"]`
+* allowed types: `.pdf`, `.png`, `.jpg`, `.glb`, `.gltf`, `.stl`
 * `SEARCH_BACKEND = "postgres"`
-* Realtime layer: `channels_redis.core.RedisChannelLayer`
-* `MEDIA_ROOT = /app/media/` 
+* realtime layer: `channels_redis.core.RedisChannelLayer`
+* `MEDIA_ROOT = /app/media/`
 
 **Routes**
 
-* Exposed inside `/projects/[slug]` as the â€œBlueprintsâ€ tab. 
+* exposed inside `/projects/[slug]` as the Blueprints tab
+
+**Kristal integration**
+
+Stockage can store Kristal artifacts and their related evidence, validation reports, signatures, Runtime Packs, and activation records. It should preserve immutable artifact records separately from mutable activation pointers.
 
 ---
 
-### 3.5 Kollective Intelligence
+### 4.5 Kollective Intelligence
 
-#### 3.5.1 EkoH â€“ Reputation & Expertise
+#### 4.5.1 EkoH – Reputation & Expertise
 
 **Services**
-* `multidimensional_scoring`, `configuration_weights`, `contextual_analysis`, `privacy_settings`, `score_history`, `score_visualization`, `expertise_field_classification`.
+
+* `multidimensional_scoring`
+* `configuration_weights`
+* `contextual_analysis`
+* `privacy_settings`
+* `score_history`
+* `score_visualization`
+* `expertise_field_classification`
 
 **Core models**
 
@@ -339,22 +701,41 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 * `ScoreConfiguration(weight_name, weight_value, field)`
 * `ContextAnalysisLog(entity_type, entity_id, field, input_metadata, adjustments_applied)`
 * `ConfidentialitySetting(user, level)`
-* `ScoreHistory(merit_score, old_value, new_value, change_reason)` 
+* `ScoreHistory(merit_score, old_value, new_value, change_reason)`
 
 **Key configuration**
 
-* Axis weights: `quality=1.000`, `expertise=1.500`, `frequency=0.750`
-* Ethical multiplier bounds: floor `0.20`, cap `1.50`
-* `EXPERTISE_DOMAIN_CHOICES`: 26 ISOâ€‘based domains 
+* Axis weights:
+
+  * `quality = 1.000`
+  * `expertise = 1.500`
+  * `frequency = 0.750`
+* Ethical multiplier bounds:
+
+  * floor `0.20`
+  * cap `1.50`
+* `EXPERTISE_DOMAIN_CHOICES`: 26 ISO-based domains
 
 **Runtime**
 
-* Periodic recomputation via Celery Beat; optional realtime pushes of score/leaderboard deltas over Channels+Redis. 
+Periodic recomputation runs through Celery Beat. Optional realtime pushes of score and leaderboard deltas can use Channels + Redis.
 
-#### 3.5.2 Smart Vote â€“ Weighted Voting System
+**Kristal integration**
+
+EkoH scores may inform reader policy, weighting, cohort selection, or consultation analysis. They should not be treated as universal authority. When exported into Kristal artifacts, their scope, calculation policy, provenance, and uncertainty should remain explicit.
+
+---
+
+#### 4.5.2 Smart Vote – Weighted Voting System
 
 **Services**
-* `dynamic_weighted_vote`, `voting_modalities`, `emerging_expert_detection`, `vote_transparency`, `vote_result_visualization`, `cross_module_vote_integration`.
+
+* `dynamic_weighted_vote`
+* `voting_modalities`
+* `emerging_expert_detection`
+* `vote_transparency`
+* `vote_result_visualization`
+* `cross_module_vote_integration`
 
 **Core models**
 
@@ -362,68 +743,239 @@ Storage is typically an object store (S3/MinIO) behind the media path.
 * `VoteModality(name, parameters JSON)`
 * `EmergingExpert(user, detection_date, score_delta)`
 * `VoteResult(target_type, target_id, sum_weighted_value, vote_count)`
-* `IntegrationMapping(module_name, context_type, mapping_details)` 
+* `IntegrationMapping(module_name, context_type, mapping_details)`
 
 **Key configuration**
 
 * Modalities: `approval | ranking | rating | preferential`
-* Emerging expert threshold: +15% EkoH delta over 30 days
-* Strong consensus threshold: â‰¥ 75% weighted agreement 
+* Emerging expert threshold: `+15%` EkoH delta over 30 days
+* Strong consensus threshold: `>= 75%` weighted agreement
 
-**Runtime & analytics**
+**Runtime and analytics**
 
-* Realtime results through Channels+Redis
-* ETL `etl_smart_vote` every 10 minutes â†’ `smart_vote_fact` table, 5â€‘year retention
-* UI: `/kollective/konsensus` (live polls/results), `/reports/smart-vote` (analytics) 
+* realtime results through Channels + Redis
+* ETL `etl_smart_vote` every 10 minutes into `smart_vote_fact`
+* 5-year retention for decision facts
+* UI routes:
 
----
+  * `/kollective/konsensus`
+  * `/reports/smart-vote`
 
-## 4. Data flows and integration
+**Kristal integration**
 
-### 4.1 Reputationâ€‘weighted voting
-
-* EkoH computes perâ€‘user, perâ€‘domain expertise and ethics scores with configurable weights and bounds. 
-* Smart Vote reads those scores to weight `Vote` records via `dynamic_weighted_vote`, adjusting tallies per modality. 
-* Korum and Konsultations integrate with Smart Vote to obtain EkoHâ€‘weighted stances and ballots:
-
-  * Korum aggregates `EthikosStance` using EkoH to compute expert cohort views.
-  * Konsultations uses `weighted_consultation_vote` to store raw + weighted values per ballot.
-
-### 4.2 Projects and documents
-
-* Konstruct manages projects, tasks, chat, and ratings via `Project*` models. 
-* Stockage attaches documents and blueprints as `ProjectResource` records and handles versioning, indexing, and sync. 
-* Realâ€‘time events (file added/updated/removed; chat messages) are emitted via Channels+Redis to subscribed project workspaces.
-
-### 4.3 Culture, archives, and networks
-
-* Konservationâ€™s `KreativeArtwork`, `Gallery`, and `TraditionEntry` store creative and heritage outputs with tagâ€‘based discovery. 
-* Kontact reuses those artefacts and tags for profiles and matching, and stores collaboration sessions in `CollabSession`.
-* AI enrichment and partner ingest tasks update the archive and related metadata in the background. 
-
-### 4.4 Learning and certification
-
-* Knowledge hosts resources, forums, and coâ€‘creation spaces and tracks progression per user/resource. 
-* CertifiKation uses `CertificationPath`, `Evaluation`, and `PeerValidation` to issue `Certificate` records and fill user portfolios. 
-* Although not strictly specified, these activities can feed EkoH via `multidimensional_scoring` as part of the platformâ€‘wide reputation engine. 
+Vote results, ballots, thresholds, weighting policies, minority positions, and final decision summaries may become Kristal assertions or validation evidence. Konnaxion should preserve raw and weighted values separately where both matter.
 
 ---
 
-## 5. Analytics and insights
+## 5. Data flows and integration
 
-* Smart Vote ETL (`etl_smart_vote`) is the central pipeline for decision analytics, aggregating delta changes from OLTP into a fact table with 5â€‘year retention, powering `/reports/smart-vote`. 
-* Ethikos exposes `/ethikos/insights` to visualize debate stances and consultation outcomes, consuming Smart Vote facts and Korum/konsultations data.
-* EkoH retains a full audit trail via `ScoreHistory` and `ContextAnalysisLog`, enabling longitudinal analysis of reputation evolution. 
+### 5.1 Reputation-weighted voting
+
+EkoH computes per-user, per-domain expertise and ethics scores with configurable weights and bounds.
+
+Smart Vote reads those scores to weight `Vote` records via `dynamic_weighted_vote`, adjusting tallies per modality.
+
+Korum and Konsultations integrate with Smart Vote to obtain EkoH-weighted stances and ballots:
+
+* Korum aggregates `EthikosStance` using EkoH to compute expert cohort views
+* Konsultations uses `weighted_consultation_vote` to store raw and weighted values per ballot
+
+When these outputs are persisted as Kristal artifacts, the weighting policy and scope should remain visible.
 
 ---
 
-## 6. Contribution guidelines and invariants (technical)
+### 5.2 Projects and documents
 
-When extending or integrating with Konnaxion, the following invariants should be respected (all documented above):
+Konstruct manages projects, tasks, chat, and ratings through `Project*` models.
 
-1. **Do not change topâ€‘level route ownership** (`/learn`, `/certs`, `/ethikos/korum`, `/ethikos/consult`, `/projects`, `/kreative`, `/connect`, `/kollective/konsensus`, `/reports/smart-vote`) without updating all dependent modules.
-2. **Preserve service codeâ€‘names** (e.g. `dynamic_weighted_vote`, `multidimensional_scoring`); treat them as public, versioned integration points.
-3. **Respect frozen parameter values** when relying on thresholds, caps, or schedule timings, or introduce new configuration entries in a documented way.
-4. **Reuse shared infrastructure** (Channels+Redis, Celery, `/app/media/`, PostgreSQL tsvector) to keep behavior consistent and predictable.
+Stockage attaches documents and blueprints as `ProjectResource` records and handles versioning, indexing, and sync.
 
-This page, together with the moduleâ€‘specific wiki entries, should provide enough technical context to navigate, extend, and integrate the Konnaxion codebase.
+Realtime events are emitted through Channels + Redis to subscribed project workspaces.
+
+Project outputs that need long-term portability, audit, external review, or public distribution can be compiled into Kristal Working Artifacts or Reference Artifacts.
+
+---
+
+### 5.3 Culture, archives, and networks
+
+Konservation’s `KreativeArtwork`, `Gallery`, and `TraditionEntry` models store creative and heritage outputs with tag-based discovery.
+
+Kontact reuses those artifacts and tags for profiles and matching, and stores collaboration sessions in `CollabSession`.
+
+AI enrichment and partner ingest tasks update the archive and related metadata in the background.
+
+When exported into Kristal artifacts, mythology, fiction, symbolic models, artistic works, heritage records, and cultural corpora should keep their validated-as mode explicit.
+
+---
+
+### 5.4 Learning and certification
+
+Knowledge hosts resources, forums, and co-creation spaces, and tracks progression per user/resource.
+
+CertifiKation uses `CertificationPath`, `Evaluation`, and `PeerValidation` to issue `Certificate` records and fill user portfolios.
+
+These activities may feed EkoH through `multidimensional_scoring` as part of the platform-wide reputation engine.
+
+When exported into Kristal artifacts, certificates and learning records should preserve issuing authority, evidence references, validation policy, recognition status, scope, and revocation status.
+
+---
+
+### 5.5 Kristal distribution and activation
+
+A typical Konnaxion Kristal distribution flow is:
+
+```text
+Receive manifest or pack
+-> Verify schema and declared hashes
+-> Verify signatures where required
+-> Resolve authority registry and reader policies
+-> Check revocation and downgrade policy
+-> Materialize indexes if needed
+-> Activate Runtime Pack atomically
+-> Expose reader-policy-selected views
+-> Preserve logs, lineage, and rollback pointers
+```
+
+This flow supports public reference surfaces, research workspaces, civic archives, offline learning bundles, and local governance deployments.
+
+---
+
+## 6. Analytics and insights
+
+Smart Vote ETL is the central pipeline for decision analytics, aggregating changes from OLTP into a fact table with 5-year retention.
+
+Ethikos exposes `/ethikos/insights` to visualize debate stances and consultation outcomes, consuming Smart Vote facts and Korum / Konsultations data.
+
+EkoH retains an audit trail through `ScoreHistory` and `ContextAnalysisLog`, enabling longitudinal analysis of reputation evolution.
+
+Kristal-derived analytics should retain the reader policy and source artifact context used to produce a displayed view. Analytics should not mix results from incompatible reader policies without making that visible.
+
+---
+
+## 7. Contribution guidelines and invariants
+
+When extending or integrating with Konnaxion, respect these invariants.
+
+### 7.1 Route ownership
+
+Do not change top-level route ownership without updating all dependent modules:
+
+* `/learn`
+* `/certs`
+* `/ethikos/korum`
+* `/ethikos/consult`
+* `/projects`
+* `/kreative`
+* `/connect`
+* `/kollective/konsensus`
+* `/reports/smart-vote`
+* `/kristals`, if enabled
+* `/runtime-packs`, if enabled
+
+### 7.2 Service code names
+
+Preserve service code names such as:
+
+* `dynamic_weighted_vote`
+* `multidimensional_scoring`
+* `structured_debate`
+* `public_consultation`
+* `runtime_pack_activation`
+* `reader_policy_selection`
+* `authority_registry_resolution`
+
+Treat them as public, versioned integration points.
+
+### 7.3 Configuration values
+
+Respect declared parameter values when relying on thresholds, caps, retention windows, or schedule timings.
+
+When adding new parameters, document:
+
+* default value
+* scope
+* environment override
+* migration impact
+* compatibility impact
+* whether the parameter affects artifact identity, reader policy, or runtime behavior
+
+### 7.4 Shared infrastructure
+
+Reuse shared infrastructure where possible:
+
+* Channels + Redis
+* Celery
+* `/app/media/`
+* PostgreSQL full-text search
+* artifact storage
+* structured logs
+* activation records
+* validation report indexes
+
+### 7.5 Kristal label preservation
+
+Any Konnaxion feature that imports, indexes, renders, or exports Kristal content should preserve labels for:
+
+* assertion status
+* validation status
+* certainty level
+* validated-as mode
+* authority channel
+* recognition status
+* scope
+* provenance
+* evidence
+* lineage
+* reader policy
+
+Do not flatten these labels into a single confidence score or a single “accepted” state.
+
+---
+
+## 8. Operational logging fields
+
+Konnaxion services should use structured logs and include relevant identifiers.
+
+Minimum common fields:
+
+* `tenant_id`
+* `environment`
+* `user_id`, where allowed
+* `request_id`
+* `correlation_id`
+* `stage`
+* `event`
+* `duration_ms`
+
+For Kristal-specific events, also include:
+
+* `artifact_type`
+* `artifact_id`
+* `exchange_id`
+* `runtime_pack_id`
+* `reader_policy_id`
+* `authority_channel_id`
+* `validation_report_id`
+* `activation_id`
+* `source_artifact_status`
+* `activation_status`
+* `reason_code`
+
+---
+
+## 9. Summary
+
+Konnaxion is the kOA platform surface where civic learning, debate, consultation, collaboration, culture, voting, and reputation meet operational distribution.
+
+In the Kristal v5 ecosystem, Konnaxion is also the layer that makes structured epistemic artifacts usable:
+
+* it receives them
+* verifies them
+* activates them
+* caches them
+* rolls them back when needed
+* applies reader policies
+* exposes selected views
+* preserves status, certainty, authority, scope, validation, and lineage labels
+
+This page, together with the module-specific entries, provides the technical context needed to navigate, extend, and integrate the Konnaxion codebase.

@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Konnaxion — Public Coordination Platform',
   description:
-    'The public spine of the kOA ecosystem: learn, deliberate, decide, build, and preserve—through modular civic utilities.',
+    'The public coordination spine of the kOA ecosystem: learn, deliberate, decide, build, distribute, and preserve public memory through modular civic utilities.',
 };
 
 export default function KonnaxionPage() {
@@ -17,23 +17,30 @@ export default function KonnaxionPage() {
         </h1>
 
         <h2 className="text-xl text-slate-500 font-light mb-8">
-          Learn • Deliberate • Decide • Build • Preserve
+          Learn • Deliberate • Decide • Build • Distribute • Preserve
         </h2>
 
         <div className="prose prose-slate prose-lg text-slate-600 leading-relaxed max-w-none">
           <p>
             Konnaxion is the <strong>public coordination spine</strong> of the kOA ecosystem. It brings learning,
-            structured deliberation, collective decision interfaces, and builder coordination into one coherent civic
-            platform.
+            structured deliberation, collective decision interfaces, builder coordination, and durable public memory into
+            one coherent civic platform.
           </p>
           <p>
             The goal is simple: help communities move from <strong>knowledge</strong> to{' '}
             <strong>legitimate decisions</strong> to <strong>executed work</strong> and{' '}
-            <strong>durable public memory</strong>—without turning governance into a black box.
+            <strong>verifiable public memory</strong>—without turning governance into a black box.
+          </p>
+          <p>
+            In the Kristal v5 stack, Konnaxion is the public distribution and runtime surface: it can expose Kristal
+            Exchanges, Runtime Packs, reader policies, authority-scoped references, and preserved disagreement without
+            pretending that every visible assertion has the same certainty, authority, or scope.
           </p>
           <p className="text-sm">
-            In this stack, <strong>EkoH</strong> is the expertise + ethics ledger (weights + audit context), and{' '}
-            <strong>Smart Vote</strong> is the decision engine (modalities + readings + publication).
+            In this stack, <strong>EkoH</strong> is the expertise + ethics ledger (weights + audit context),{' '}
+            <strong>Smart Vote</strong> is the decision engine (modalities + readings + publication), and{' '}
+            <strong>Kristal</strong> is the portable epistemic artifact layer that preserves provenance, certainty,
+            validation, authority, scope, and lineage.
           </p>
         </div>
 
@@ -61,10 +68,10 @@ export default function KonnaxionPage() {
             One platform, modular utilities
           </span>
           <span className="text-xs px-3 py-1 rounded-full border border-slate-200 text-slate-500 bg-white">
-            Contestable outcomes
+            Reader-policy selected views
           </span>
           <span className="text-xs px-3 py-1 rounded-full border border-slate-200 text-slate-500 bg-white">
-            Durable institutional memory
+            Runtime Packs + offline access
           </span>
           <span className="text-xs px-3 py-1 rounded-full border border-slate-200 text-slate-500 bg-white">
             Public coordination + builder continuity
@@ -73,6 +80,68 @@ export default function KonnaxionPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-6 py-16 space-y-20">
+        {/* KRISTAL ROLE */}
+        <section className="bg-slate-50 border border-slate-100 rounded-sm p-8">
+          <div className="mb-8">
+            <h2 className="text-3xl font-serif font-medium text-slate-900">Konnaxion in the Kristal v5 stack</h2>
+            <p className="text-slate-500 mt-2">
+              Konnaxion is where structured epistemic artifacts become public, usable, navigable, and governable.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white border border-slate-200 rounded-sm p-5">
+              <h3 className="font-bold text-slate-900 mb-2">Distribution and activation</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Konnaxion can distribute Kristal Exchanges and Runtime Packs to users, communities, schools,
+                organizations, regions, or low-connectivity deployments. Activation remains separate from artifact
+                existence: a pack may exist, verify, and still be hidden by local policy.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-sm p-5">
+              <h3 className="font-bold text-slate-900 mb-2">Reader policies</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Konnaxion can expose different views of the same Kristal material: reference-only, validated-only,
+                high-certainty, research, creative, or all-with-labels. Reader policy decides visibility without erasing
+                certainty, authority, validation, or scope labels.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-sm p-5">
+              <h3 className="font-bold text-slate-900 mb-2">Disagreement preserved</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Federated Kristals can preserve competing authority channels, disputed positions, research hypotheses,
+                mythological corpora, fictional corpora, and institutional references without silently merging them into
+                one flattened truth layer.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/technology/kristal"
+              className="px-5 py-3 bg-white border border-slate-300 text-slate-800 rounded-sm font-medium hover:border-slate-900 transition-colors text-center"
+            >
+              Open Kristal overview
+            </Link>
+
+            <Link
+              href="/technology/kristal/integrations"
+              className="px-5 py-3 bg-white border border-slate-300 text-slate-800 rounded-sm font-medium hover:border-slate-900 transition-colors text-center"
+            >
+              Kristal integrations
+            </Link>
+
+            <Link
+              href="/technology/kristal/portability-and-offline"
+              className="px-5 py-3 bg-white border border-slate-300 text-slate-800 rounded-sm font-medium hover:border-slate-900 transition-colors text-center"
+            >
+              Runtime Packs
+            </Link>
+          </div>
+        </section>
+
         {/* MODULES */}
         <section id="modules">
           <div className="flex items-end justify-between gap-6 mb-8">
@@ -207,8 +276,8 @@ export default function KonnaxionPage() {
                     Smart Vote
                   </Link>
                   <p className="text-sm text-slate-600">
-                    The decision engine: vote modalities + weighting + published readings (e.g., baseline vs
-                    merit-weighted), with audit artifacts and contestability.
+                    The decision engine: vote modalities + weighting + published readings, with audit artifacts,
+                    contestability, and the ability to cite Kristal references as structured evidence or policy context.
                   </p>
                 </div>
 
@@ -221,7 +290,8 @@ export default function KonnaxionPage() {
                   </Link>
                   <p className="text-sm text-slate-600">
                     The expertise + ethics ledger: domain score vectors, ethics multipliers, privacy levels, and audit
-                    context that Smart Vote (and other modules) consume.
+                    context that can weight recognition, visibility, distribution priority, featured packs, and curation
+                    status.
                   </p>
                 </div>
               </div>
@@ -234,8 +304,8 @@ export default function KonnaxionPage() {
           <div className="mb-8">
             <h2 className="text-3xl font-serif font-medium text-slate-900">Cross-cutting hubs</h2>
             <p className="text-slate-500 mt-2">
-              These pages explain how the modules connect over time: onboarding, preservation, and builder-facing
-              architecture.
+              These pages explain how the modules connect over time: onboarding, preservation, reader-policy selected
+              memory, and builder-facing architecture.
             </p>
           </div>
 
@@ -258,8 +328,8 @@ export default function KonnaxionPage() {
             >
               <h3 className="text-xl font-bold text-slate-900 mb-2">Kreative</h3>
               <p className="text-sm text-slate-600">
-                The curated commons: preservation, discovery, and reuse of validated outputs, references, and civic
-                artifacts.
+                The curated commons: preservation, discovery, and reuse of reference artifacts, working artifacts,
+                reader-policy selected packs, and civic outputs.
               </p>
               <span className="inline-block mt-4 text-sm font-mono text-primary">Open Kreative →</span>
             </Link>
@@ -270,8 +340,8 @@ export default function KonnaxionPage() {
             >
               <h3 className="text-xl font-bold text-slate-900 mb-2">Technical architecture</h3>
               <p className="text-sm text-slate-600">
-                Builder-facing reference for service boundaries, Kintsugi vs Kompendio, and the operational shape of the
-                platform.
+                Builder-facing reference for service boundaries, Kintsugi vs Kompendio, Kristal Runtime Packs, reader
+                policies, and the operational shape of the platform.
               </p>
               <span className="inline-block mt-4 text-sm font-mono text-primary">Open technical guide →</span>
             </Link>
@@ -282,8 +352,9 @@ export default function KonnaxionPage() {
         <section className="bg-slate-900 text-slate-300 p-8 rounded-sm">
           <h2 className="text-xl font-bold text-white mb-4">Reference (builders)</h2>
           <p className="mb-6 text-sm leading-relaxed">
-            If you are integrating or implementing Konnaxion, use the reference section for maps, standards, and the
-            integration vocabulary. This is intentionally separated from the public-facing module pages.
+            If you are integrating or implementing Konnaxion, use the reference section for service maps, standards,
+            Runtime Pack distribution, activation and rollback assumptions, reader-policy behavior, and integration
+            vocabulary. This is intentionally separated from the public-facing module pages.
           </p>
           <a
             href="https://github.com/Rejean-McCormick/Konnaxion/wiki"
