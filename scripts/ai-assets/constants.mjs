@@ -7,7 +7,21 @@ export const DEFAULT_PROJECT_TITLE = "kOA INITIATIVE";
 export const DEFAULT_PROJECT_DESCRIPTION =
   "Public documentation for the kOA INITIATIVE by Réjean McCormick: civic utilities for learning, coordination, and governable decision-making (offline-first, auditable).";
 
-export const DEFAULT_EXCLUDE_PREFIXES = Object.freeze(["/admin", "/api"]);
+export const DEFAULT_EXCLUDE_PREFIXES = Object.freeze([
+  "/admin",
+  "/api",
+
+  // Excluded from generated AI route corpus and mirrors.
+  // Context packs are referenced as external/static resources in /llms.txt,
+  // but their content and index route are not duplicated in generated AI assets.
+  "/context-packs",
+  "/technology/context-packs",
+
+  // Excluded from AI artifacts and compact AI discovery.
+  "/kreature",
+  "/initiatives/ukraine-peace-plan/fvr",
+  "/technology/swarmcraft",
+]);
 
 export const DEFAULT_INCLUDE_DYNAMIC_SEGMENTS = false;
 export const DEFAULT_SKIP_CODELIKE_PAGES = true;
@@ -38,7 +52,9 @@ export const SUMMARY_MAX_CHARS = DEFAULT_SUMMARY_MAX_CHARS;
 
 // Public AI artifact policy:
 // - llms.txt is the primary AI entrypoint.
-// - llms-full.txt, ai-corpus.txt, manifests, sitemaps, and context packs are auxiliary artifacts.
+// - llms-full.txt, ai-corpus.txt, manifests, and sitemaps are auxiliary artifacts.
+// - Context packs are linked from llms.txt as external/static references.
+// - Context pack content should not be duplicated into generated AI artifacts.
 // - Footer/navigation should normally expose only llms.txt as "AI access".
 export const AI_ENTRYPOINT_FILE_NAME = "llms.txt";
 export const AI_ENTRYPOINT_LABEL = "AI access";
@@ -85,16 +101,14 @@ export const AI_SUPPORTING_RESOURCES = Object.freeze([
     title: "AI corpus",
     path: `/${ARTIFACT_NAMES.aiCorpus}`,
     type: "text/plain",
-    purpose:
-      "Plain-text corpus extracted from public app routes.",
+    purpose: "Plain-text corpus extracted from public app routes.",
   },
   {
     fileName: ARTIFACT_NAMES.aiSitemap,
     title: "AI sitemap",
     path: `/${ARTIFACT_NAMES.aiSitemap}`,
     type: "application/json",
-    purpose:
-      "JSON route inventory with source paths and Markdown mirror URLs.",
+    purpose: "JSON route inventory with source paths and Markdown mirror URLs.",
   },
   {
     fileName: ARTIFACT_NAMES.mdManifest,
@@ -109,16 +123,7 @@ export const AI_SUPPORTING_RESOURCES = Object.freeze([
     title: "Markdown sitemap",
     path: `/${ARTIFACT_NAMES.mdSitemap}`,
     type: "application/xml",
-    purpose:
-      "XML sitemap dedicated to Markdown mirror URLs.",
-  },
-  {
-    fileName: "technology/context-packs",
-    title: "Context packs index",
-    path: "/technology/context-packs",
-    type: "text/html",
-    purpose:
-      "Human-facing index of downloadable context packs and AI-ready reference bundles.",
+    purpose: "XML sitemap dedicated to Markdown mirror URLs.",
   },
 ]);
 
@@ -160,8 +165,7 @@ export const CONTEXT_PACK_FILES = Object.freeze([
     path:
       "/context-packs/orgo-context-pack--case-task-workflow-platform--v3.0.txt",
     type: "text/plain",
-    purpose:
-      "Workflow and case/task coordination reference for Orgo.",
+    purpose: "Workflow and case/task coordination reference for Orgo.",
   },
   {
     fileName:
@@ -334,7 +338,6 @@ export const PRIORITY_LLMS_ROUTES = Object.freeze([
 
   // Technology
   "/technology",
-  "/technology/context-packs",
   "/technology/kristal",
   "/technology/kristal/overview",
   "/technology/kristal/trust-and-provenance",
