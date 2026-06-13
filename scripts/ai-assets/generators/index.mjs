@@ -1,5 +1,10 @@
 // scripts/ai-assets/generators/index.mjs
 
+import {
+  AI_SUPPORTING_RESOURCES,
+  CONTEXT_PACK_FILES,
+} from "../constants.mjs";
+
 function getPages(state) {
   return Array.isArray(state?.pages) ? state.pages : [];
 }
@@ -92,8 +97,48 @@ function compactText(value) {
     .trim();
 }
 
-function getPageSummary(page, maxChars = 220) {
-  const oneLine = getPageBody(page)
+function getExcludedPrefixes(config) {
+  return Array.isArray(config?.excludePrefixes)
+    ? config.excludePrefixes
+        .map((prefix) => String(prefix || "").trim())
+        .filter(Boolean)
+    : [];
+}
+
+function lineReferencesExcludedPrefix(line, excludedPrefixes) {
+  const value = String(line || "").toLowerCase();
+
+  return excludedPrefixes.some((prefix) => {
+    const normalizedPrefix = String(prefix || "").toLowerCase();
+    if (!normalizedPrefix) return false;
+
+    return (
+      value.includes(normalizedPrefix) ||
+      value.includes(encodeURI(normalizedPrefix).toLowerCase())
+    );
+  });
+}
+
+function stripExcludedReferenceLines(text, excludedPrefixes) {
+  if (!Array.isArray(excludedPrefixes) || excludedPrefixes.length === 0) {
+    return text;
+  }
+
+  return String(text || "")
+    .split("\n")
+    .filter((line) => !lineReferencesExcludedPrefix(line, excludedPrefixes))
+    .join("\n")
+    .trim();
+}
+
+function getPageSummary(page, maxChars = 220, options = {}) {
+  const excludedPrefixes = Array.isArray(options.excludedPrefixes)
+    ? options.excludedPrefixes
+    : [];
+
+  const body = stripExcludedReferenceLines(getPageBody(page), excludedPrefixes);
+
+  const oneLine = body
     .split("\n")
     .map((line) => line.trim())
     .filter(Boolean)
@@ -136,6 +181,28 @@ function pushLinkedResource(lines, title, url, description) {
   lines.push(`- [${title}](${url})`);
   if (description) {
     lines.push(`  - ${description}`);
+  }
+}
+
+function pushConfiguredResources(lines, resources, baseUrl) {
+  if (!Array.isArray(resources) || resources.length === 0) return;
+
+  for (const resource of resources) {
+    const title = String(
+      resource?.title || resource?.fileName || resource?.path || ""
+    ).trim();
+
+    const url = joinUrl(baseUrl, resource?.path || resource?.fileName || "");
+    const purpose = compactText(resource?.purpose || "");
+    const type = compactText(resource?.type || "");
+
+    if (!title || !url) continue;
+
+    const description = [purpose, type ? `Type: ${type}.` : ""]
+      .filter(Boolean)
+      .join(" ");
+
+    pushLinkedResource(lines, title, url, description);
   }
 }
 
@@ -261,17 +328,13 @@ export function buildLlmsTxt(state) {
   const selectedPages = selectLlmsPages(state);
   const omittedCount = Math.max(pages.length - selectedPages.length, 0);
   const generatedAt = getNowIso(state);
+  const excludedPrefixes = getExcludedPrefixes(config);
 
   const llmsFullName = artifactNames.llmsFull || "llms-full.txt";
-  const aiCorpusName = artifactNames.aiCorpus || "ai-corpus.txt";
   const mdManifestName = artifactNames.mdManifest || "md-manifest.json";
-  const mdSitemapName = artifactNames.mdSitemap || "md-sitemap.xml";
   const aiSitemapName = artifactNames.aiSitemap || "ai-sitemap.json";
 
-  const lines = [
-    `# ${config.siteLabel || "site"}`,
-    "",
-  ];
+  const lines = [`# ${config.siteLabel || "site"}`, ""];
 
   const description = compactText(config.projectDescription || "");
   if (description) {
@@ -281,11 +344,11 @@ export function buildLlmsTxt(state) {
   lines.push("## Purpose");
   lines.push("");
   lines.push(
-    "This is the primary AI entrypoint for the site. It gives agents a compact orientation, points to supporting machine-readable artifacts, and lists important page-level Markdown mirrors."
+    "This is the primary AI entrypoint for the site. It gives agents a compact orientation, points to supporting machine-readable artifacts, lists context packs as external references, and exposes important page-level Markdown mirrors."
   );
   lines.push("");
   lines.push(
-    "Use this file first. Use the auxiliary files only when deeper crawling, full context, or structured route discovery is needed."
+    "Use this file first. Use auxiliary files only when deeper crawling, full context, structured route discovery, or domain-specific context packs are needed."
   );
   lines.push("");
 
@@ -299,36 +362,16 @@ export function buildLlmsTxt(state) {
 
   lines.push("## Supporting machine-readable artifacts");
   lines.push("");
-  pushLinkedResource(
-    lines,
-    llmsFullName,
-    joinUrl(config.baseUrl, llmsFullName),
-    "Full aggregated AI context bundle. Use when the compact entrypoint is not enough."
+  pushConfiguredResources(lines, AI_SUPPORTING_RESOURCES, config.baseUrl);
+
+  lines.push("");
+  lines.push("## Context packs");
+  lines.push("");
+  lines.push(
+    "Context packs are linked here as external/static reference bundles. Their contents are not duplicated into this compact entrypoint or the generated route corpus."
   );
-  pushLinkedResource(
-    lines,
-    aiCorpusName,
-    joinUrl(config.baseUrl, aiCorpusName),
-    "Plain-text extracted corpus from public app routes."
-  );
-  pushLinkedResource(
-    lines,
-    mdManifestName,
-    joinUrl(config.baseUrl, mdManifestName),
-    "JSON index of HTML routes, Markdown mirrors, summaries, source paths, and character counts."
-  );
-  pushLinkedResource(
-    lines,
-    mdSitemapName,
-    joinUrl(config.baseUrl, mdSitemapName),
-    "XML sitemap dedicated to Markdown mirror URLs."
-  );
-  pushLinkedResource(
-    lines,
-    aiSitemapName,
-    joinUrl(config.baseUrl, aiSitemapName),
-    "JSON route inventory with source paths and mirror URLs."
-  );
+  lines.push("");
+  pushConfiguredResources(lines, CONTEXT_PACK_FILES, config.baseUrl);
 
   lines.push("");
   lines.push("## Important pages");
@@ -339,7 +382,7 @@ export function buildLlmsTxt(state) {
     const route = getPageRoute(page);
     const htmlUrl = getPageUrl(page);
     const markdownUrl = getPageMarkdownUrl(page);
-    const summary = getPageSummary(page, 220);
+    const summary = getPageSummary(page, 220, { excludedPrefixes });
 
     lines.push(`### ${title}`);
     lines.push("");
@@ -428,7 +471,9 @@ export function buildAiSitemapPayload(state) {
       url: getPageUrl(page),
       markdown_url: getPageMarkdownUrl(page),
       markdown_path: getPageMarkdownPath(page),
-      summary: getPageSummary(page, 180),
+      summary: getPageSummary(page, 180, {
+        excludedPrefixes: getExcludedPrefixes(getConfig(state)),
+      }),
       source: getPageSource(page),
     }))
     .filter((page) => {
@@ -451,7 +496,9 @@ export function buildMdManifestPayload(state) {
       url: getPageUrl(page),
       markdown_url: getPageMarkdownUrl(page),
       markdown_path: getPageMarkdownPath(page),
-      summary: getPageSummary(page, 180),
+      summary: getPageSummary(page, 180, {
+        excludedPrefixes: getExcludedPrefixes(getConfig(state)),
+      }),
       source: getPageSource(page),
       chars: getPageBody(page).length,
       generated_at: generatedAt,
