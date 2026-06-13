@@ -1,841 +1,813 @@
-===== TOC (13 files) =====
-0001  00_ARCHITECTURE_BLUEPRINT.md
-0002  01_INGESTION_LAYER.md
-0003  02_SEMANTIC_LAYER.md
-0004  03_CORE_LAYER.md
-0005  04_DATA_DICTIONARY.md
-0006  05_WIRING_AND_CONFIG.md
-0007  06_API_AND_FRONTEND.md
-0008  07_QA_AND_VALIDATION.md
-0009  Acknowledgements/falcon2_0.md
-0010  Acknowledgements/OpenRefine.md
-0011  Acknowledgements/OpenTapioca.md
-0012  deployPlan-GoogleResearch.txt
-0013  MajorUpgrade-Senior.txt
-===== END TOC =====
-
-
-===== BEGIN 00_ARCHITECTURE_BLUEPRINT.md (#0001) =====
-# SenTient Architecture Blueprint
-**Version:** 1.0.0-FINAL
-**Status:** IMPLEMENTED
-**Classification:** INTERNAL TECHNICAL REFERENCE
-
----
-
-## 1. Executive Summary
-**SenTient** is a next-generation Entity Reconciliation and Relation Extraction engine. It is designed to bridge the gap between messy, unstructured text and structured Knowledge Graphs (Wikidata/Wikibase).
-
-It is not a monolithic application but a **Hybrid Orchestration System** that combines three distinct technological lineages into a single pipeline:
-1.  **Speed (Layer 1):** The FST-based rapid tagging of **OpenTapioca** (Solr).
-2.  **Semantics (Layer 2):** The context-aware NLP of **Falcon 2.0** (Python/Elastic).
-3.  **Structure (Layer 3):** The **Hybrid Memory** data modeling of **OpenRefine** (Java + DuckDB).
-
-The goal is to achieve **High Precision (>0.85)** and **High Recall (>0.80)** on short-text queries while maintaining a sub-second response time for user interactivity.
-
----
-
-## 2. High-Level Architecture (The "Funnel" Logic)
-
-SenTient operates on a "Funnel" strategy: broad and fast at the top, narrow and precise at the bottom, with a **Sidecar Storage** pattern to handle massive datasets without crashing the Java Heap.
-
-
-
-```mermaid
-graph TD
-    User[User / Frontend] -->|1. Raw Text Batch| Core(Java Core Orchestrator)
-    User -->|Manual Correction| Feedback[(Correction Log)]
-
-    subgraph "Layer 0: Ingestion & Fingerprinting"
-    Core -->|2. Normalize & Fingerprint| Cache{Local Redis Cache}
-    Cache -->|Hit| Core
-    end
-
-    Cache -->|Miss| Layer1
-
-    subgraph "Layer 1: The Sieve (OpenTapioca)"
-    Layer1[Solr FST Tagger]
-    Layer1 -->|3. Spot Surface Forms| Candidates[Raw Candidates]
-    Layer1 -->|4. Inject Popularity Score| Candidates
-    end
-
-    subgraph "Layer 2: The Linguist (Falcon 2.0)"
-    Candidates -->|5. Context Extraction| NLP[Python NLP Service]
-    NLP -->|6. Fetch Properties| Elastic[(ElasticSearch)]
-    NLP -->|7. Vector Re-ranking| ScoredCandidates
-    end
-
-    subgraph "Layer 3: The Judge (OpenRefine Core)"
-    ScoredCandidates -->|8. Consensus Scoring| Core
-    Core -->|9. Scrutinizer QA| ValidatedCell
-    end
-
-    subgraph "Storage Layer (Hybrid Memory)"
-    ValidatedCell -->|10. Offload Heavy Data| DuckDB[(DuckDB Sidecar)]
-    DuckDB -->|11. Return Lightweight Ref| Core
-    end
-
-    Core -->|12. Async Status Update| User
-    User -.->|13. Lazy Fetch (On Scroll)| DuckDB
-===== END 00_ARCHITECTURE_BLUEPRINT.md (#0001) =====
-
-===== BEGIN 01_INGESTION_LAYER.md (#0002) =====
-# Layer 1: Ingestion & Fast Tagging (The Sieve)
-**Component:** `index_solr` + `core_java (Clustering)`  
-**Technology:** Apache Solr 9.x (FST Tagger) + Java String Algorithms  
-**Latency Budget:** < 50ms per batch
-
----
-
-## 1. Overview
-The **Ingestion Layer** is responsible for the initial intake of raw data and the high-speed identification of "Surface Forms" (substrings that resemble known entities).
-
-**Philosophy:** "Fail Fast, Filter Early."
-This layer does not attempt to understand context. Its only job is to reduce the infinite search space of text into a finite list of Candidate QIDs using strict string matching and pre-calculated popularity.
-
----
-
-## 2. The Processing Pipeline
-
-Data flows through this layer in three strict phases:
-
-### Phase A: Normalization & Fingerprinting (Client-Side / Java)
-Before any network call is made to Solr, the Java Orchestrator performs local deduplication to reduce API load.
-
-**The Algorithm (Key Collision):**
-We utilize the **OpenRefine Fingerprint** method:
-1.  **Tokenize:** Split string by whitespace.
-2.  **Clean:** Remove punctuation and control characters.
-3.  **Lowercase:** Convert all tokens to lowercase.
-4.  **Sort:** Alphabetize the tokens.
-5.  **Deduplicate:** Remove duplicate tokens.
-6.  **Join:** Reassemble into a normalized string.
-
-> **Example:**
-> * Input 1: "The  University  of... Oxford."
-> * Input 2: "Oxford, University of"
-> * **Fingerprint (Both):** `of oxford university`
->
-> *Result:* Both inputs map to the same Cache Key. We query Solr once, not twice.
-
-### Phase B: The FST Tagger (Server-Side / Solr)
-We do not use standard Lucene text search (TF-IDF). We use the **Solr TaggerHandler**.
-
-* **Mechanism:** The entire dictionary of Wikidata labels and aliases (~14M items) is compiled into a **Finite State Transducer (FST)** in memory.
-* **Operation:** The raw text acts as a cursor traversing the FST graph.
-* **Performance:** Lookup time is $O(k)$ where $k$ is the length of the input text, independent of the index size.
-
-
-
-### Phase C: The Authority Filter (Pruning)
-Solr returns candidates. We immediately discard any candidate that:
-1.  Has a `popularity_score` < 100 (log-likelihood threshold).
-2.  Is a "Stop Word" entity (e.g., "The" -> Band "The", "To" -> TV Show "To") unless exact capitalization matches.
-
----
-
-## 3. Configuration & Schemas
-
-### 3.1. Artificial Aliases (The OpenTapioca Strategy)
-To make Solr "smart" without NLP, we inject metadata into the `text` field during the build process. This allows users to search by IDs as if they were names.
-
-| Input Type | Raw Value | Indexed As (Solr `text`) | Resolved QID |
-| :--- | :--- | :--- | :--- |
-| **Label** | "Douglas Adams" | `douglas adams` | Q42 |
-| **Twitter** | "@dna" | `@dna` | Q42 |
-| **IMDb** | "nm0000726" | `nm0000726` | Q42 |
-| **GRID ID** | "grid.4991.5" | `grid.4991.5` | Q42 |
-
-### 3.2. Solr Request Parameters
-The Java Orchestrator must call Solr with these exact parameters to enable FST mode:
-
-```http
-POST /solr/sentient-tapioca/tag?overlaps=NO_SUB&tagsLimit=5000&fl=id,label,popularity_score,types
-Content-Type: text/plain
-
-<Raw Text Body>
-===== END 01_INGESTION_LAYER.md (#0002) =====
-
-===== BEGIN 02_SEMANTIC_LAYER.md (#0003) =====
-# Layer 2: The Semantic Linguist (Falcon 2.0)
-
-**Component:** `nlp_falcon`  
-**Technology:** Python 3.9+, Flask, ElasticSearch, SBERT (Sentence-BERT)  
-**Latency Budget:** ~200ms per entity batch (Target) / 15s (Hard Limit)
-
----
-
-## 1. Overview
-
-While Layer 1 (Solr) finds strings that *look like* entities, **Layer 2 (The Linguist)** determines if they *make sense* in the current sentence.
-
-**Philosophy:** "Context is King."  
-This layer solves the "Paris Problem":
-
-* Input: *"The Paris Hilton hotel is expensive."*
-* Layer 1 sees: "Paris" (City? Person?), "Hilton" (Hotel? Person?).
-* **Layer 2 decides:** The proximity of "hotel" vectors suggests "Paris" is a location/brand modifier, not the capital of France.
-
-
-
----
-
-## 2. The Processing Pipeline
-
-The Python service (`src/main.py`) executes a 3-step NLP pipeline for every "Ambiguous" batch received from the Java Core.
-
-
-
-### Phase A: The "Compression" (Stopwords & N-Grams)
-
-Before expensive vector math, we clean the signal using the **Falcon Optimization**:
-
-1.  **Tokenization:** Split sentence into words.
-2.  **Stopword Pruning:** Remove non-semantic noise ("the", "is", "at") using `data/stopwords/falcon_extended_en.txt`.
-    * *Note:* This list acts as a shared resource; users can update this file to filter domain-specific noise (e.g., "patient", "sample").
-3.  **N-Gram Generation:** Create sliding windows of tokens (size 1 to 6) to detect compound predicates (e.g., "Mayor of" -> `P6`).
-
-### Phase B: Property Extraction (The Edge Detector)
-
-Uniquely, SenTient tries to find the **Relationship (Predicate)** before confirming the **Entity (Subject)**.
-
-* **Mechanism:** The N-Grams are queried against the `sentient_properties_v1` ElasticSearch index.
-* **Query:** Matches `label` (fuzzy) and `usage_count` (boost).
-* **Result:** If we find "buried in" (P119), we boost candidate entities that are *Locations* (Q2221906) and penalize *People*.
-
-### Phase C: Contextual Vector Scoring (The SBERT Model)
-
-This is the heavy lifting. We calculate the pure semantic distance between the user's row context and the candidate's Wikidata description.
-
-1.  **Embedding:** The context window (surrounding 5 words) is encoded into a 768-dimensional vector using `all-MiniLM-L6-v2`.
-2.  **Retrieval:** We fetch the pre-encoded description vectors of the candidates from ElasticSearch (`sentient_entities_fallback`).
-3.  **Cosine Similarity:**
-    $$S_{Context} = \frac{A \cdot B}{\|A\| \|B\|}$$
-    * Where $A$ is the input context vector and $B$ is the candidate description vector.
-    * **Output:** A raw float between `0.0` (No relation) and `1.0` (Perfect semantic match).
-
-
-
-> **Architectural Note:** This layer does **NOT** apply Levenshtein string distance penalties. That calculation is strictly reserved for the Java Core (Layer 3) to allow independent visualization of "Spelling vs. Meaning" in the UI. Ensure `ranking.levenshtein.enabled` is set to `false` in `falcon_settings.yaml`.
-
----
-
-## 3. Data Integration (ElasticSearch)
-
-Layer 2 relies on two specific indices in ElasticSearch.
-
-### 3.1. `sentient_properties_v1`
-
-Stores Wikidata Properties (P-items).
-
-* **Mapping:** defined in `config/elastic/falcon_mapping.json`.
-* **Key Fields:**
-    * `label`: "place of birth"
-    * `expected_types`: ["Q5"] (indicates this property usually applies to humans).
-    * `context_vector`: Dense Vector of the property description.
-
-### 3.2. `sentient_entities_fallback`
-
-A partial mirror of Wikidata entities used *only* for re-ranking descriptions.
-
-* **Why?** Solr (Layer 1) is optimized for IDs and Labels, not long text descriptions. Elastic holds the descriptions for vector comparison.
-
----
-
-## 4. API Interface (Internal)
-
-The Java Orchestrator talks to the Python Layer via REST.
-
-**Endpoint:** `POST http://127.0.0.1:5005/api/v1/disambiguate`
-
-**Request Payload:**
-
-```json
-{
-  "surface_form": "Paris",
-  "context_window": ["Hilton", "hotel", "expensive"],
-  "candidates": ["Q90", "Q47796", "Q167646"],
-  "limit": 3
-}
-===== END 02_SEMANTIC_LAYER.md (#0003) =====
-
-===== BEGIN 03_CORE_LAYER.md (#0004) =====
-Here is the updated documentation for **Layer 3: The Core Orchestrator**.
-
-I have refined the technical specifications to align with the "Split-State" architecture we discussed, ensuring the distinction between the in-memory grid (Instant Faceting) and the on-disk vectorized storage (DuckDB) is clear.
-
----
-
-#Layer 3: The Core Orchestrator (Java / OpenRefine Heritage)**Component:** `sentient_core`
-**Technology:** Java 17, Jetty 10, Butterfly Framework
-**Role:** State Management, API Gateway, and Final Adjudication
-
----
-
-##1. OverviewThe **Core Layer** is the stable foundation upon which the experimental AI layers rest. It does not perform NLP; it performs **Management**.
-
-**Philosophy:** "Hybrid Memory Architecture"
-Unlike the original OpenRefine "Database in RAM" model—which hits a hard ceiling with large AI vectors—SenTient adopts a split-state strategy to handle the massive payloads generated by Falcon and Tapioca:
-
-1. **Hot Data (RAM):** Row IDs, Status flags (`JUDGED`, `PENDING`), and Raw text values. This preserves the **Instant Faceting** capability (< 10ms filtering) that users expect from OpenRefine.
-2. **Cold Data (DuckDB Sidecar):** Heavy AI payloads (Feature Vectors, Candidate descriptions, detailed Confidence Scores). These are "hydrated" (loaded) only when the user scrolls them into the Virtual DOM view or exports the data.
-
----
-
-##2. The Butterfly ArchitectureSenTient retains the **Butterfly** modular framework to handle the HTTP lifecycle, acting as the bridge between the React frontend and the heavy AI containers.
-
-###2.1. The Servlet ModelThe entry point is `com.google.refine.RefineServlet`. It routes requests based on the Command Pattern, decoupling the UI from the processing logic.
-
-* **Endpoint:** `http://localhost:3333/command/core/*`
-* **Routing Logic:**
-1. **Frontend** sends `POST /command/core/reconcile`.
-2. **Butterfly** looks up the registered **Command** class (e.g., `ReconcileCommand`).
-3. **Command** validates the request and triggers a **Process** (`LongRunningProcess`).
-4. **Command** returns a JSON response `{"code": "ok", "jobID": "123"}` immediately, preventing UI blocking.
-
-
-
-###2.2. The Async Process ManagerBecause Layer 2 (Falcon) can take minutes to process large datasets (e.g., calculating vectors for 100k rows), the Core uses a **Non-Blocking** architecture.
-
-* **Class:** `com.google.refine.process.ProcessManager`
-* **Mechanism:**
-* The `ProcessManager` maintains a priority queue of `LongRunningProcess` objects.
-* It uses the `ThreadPoolExecutorAdapter` (configured in `butterfly.properties`) to allocate threads for API calls to OpenTapioca and Falcon.
-* **Polling:** The Frontend polls `/command/core/get-processes` every 500ms to update the progress bar, ensuring the user is never left guessing.
-
-
-
----
-
-##3. The Data Model (The "SmartCell" in Java)The most significant modification in SenTient is the extension of the `Cell` and `Recon` objects to support "Split-State" persistence.
-
-###3.1. The `Cell` ObjectLocated in `com.google.refine.model.Cell`.
-It is the atomic unit of storage in the grid. In SenTient, it is polymorphic:
-
-* **Raw State:** Contains only the `value` (String/Number).
-* **Reconciled State:** Contains a pointer to a `recon` object.
-
-###3.2. The `EnhancedRecon` ObjectWe have extended the standard `Recon` class to support the **Consensus Score** and **Lazy Loading**. The heavy data is explicitly marked `transient` so it is not held in the Java Heap indefinitely.
-
-**Fields added to Java Class:**
-
-```java
-public class Recon {
-    // --- Standard OpenRefine Fields (Kept in RAM) ---
-    public long id;
-    public String judgment; // MATCHED, NEW, NONE
-    public Object [] features; // Lightweight feature flags
-    
-    // --- SenTient Extensions (Lazy Loaded from DuckDB Sidecar) ---
-    
-    // NOTE: These fields are transient. They are null by default and 
-    // only hydrated by DuckDBStore.fetchVisibleRows() when the 
-    // viewport requests them.
-    
-    public transient List<ReconCandidate> candidates; 
-    
-    // The aggregate confidence score calculated by Falcon
-    public transient float consensusScore; 
-    
-    // The raw embedding vector (e.g., [0.1, -0.5, ...]) used for cluster visualization
-    public transient float[] featureVector; 
-}
-
-```
-===== END 03_CORE_LAYER.md (#0004) =====
-
-===== BEGIN 04_DATA_DICTIONARY.md (#0005) =====
-# Data Dictionary & Type Mapping
-**Artifact:** `SmartCell` Protocol  
-**Schema Source:** `schemas/data/smart_cell.json`  
-**Role:** The immutable contract between Java, Python, and the UI.
-
----
-
-## 1. Introduction
-In SenTient, data is never a primitive string. It is always encapsulated in a **SmartCell**.
-This document defines the strict typing required to marshall/unmarshall this object across the three application layers.
-
-**Golden Rule:** If a field is not defined here, it must be stripped before serialization.
-
----
-
-## 2. Type Mapping Matrix
-
-| Logical Field | JSON Type | Java Type (`com.google.refine.*`) | Python Type (`falcon_service`) | TypeScript Interface |
-| :--- | :--- | :--- | :--- | :--- |
-| `id` | `UUID (String)` | `java.util.UUID` | `str` | `string` |
-| `raw_value` | `String` | `String` | `str` | `string` |
-| `status` | `Enum (String)` | `Recon.Judgment` | `str` (Literal) | `CellStatus` |
-| `consensus_score` | `Float` | `float` (transient) | `float` | `number` |
-| `fingerprint` | `String` | `String` | `str` | `string` |
-| `candidates` | `Array<Obj>` | `List<ReconCandidate>` | `List[dict]` | `Candidate[]` |
-| `vector` | `Array<Float>` | `double[]` | `np.ndarray` | `number[]` |
-
----
-
-## 3. The SmartCell Core Object
-
-The root container for all cell data.
-
-### `id`
-* **Description:** Unique, random identifier assigned at creation. Used to map asynchronous NLP results back to the UI row.
-* **Format:** UUID v4.
-* **Nullable:** No.
-
-### `raw_value`
-* **Description:** The original, immutable user input.
-* **Source:** User Upload (CSV/Excel).
-* **Note:** This field is **never** modified by the AI. We only modify the `reconciliation` object attached to it.
-
-### `fingerprint`
-* **Description:** The "Key Collision" string used for local clustering.
-* **Logic:** `lowercase(sort(tokenize(raw_value)))`.
-* **Example:** "The Beatles" -> `beatles the`.
-
-### `status`
-* **Description:** The current state of the cell in the lifecycle.
-* **Allowed Values:**
-    * `NEW`: No reconciliation attempted.
-    * `PENDING`: Sent to Solr/Falcon, awaiting Async response.
-    * `AMBIGUOUS`: Returned with multiple candidates (Score 0.40 - 0.85).
-    * `MATCHED`: Confirmed link to a QID (Score > 0.85 or User Action).
-    * `REVIEW_REQUIRED`: Auto-matched but flagged by Scrutinizers (QA Error).
-
-### `consensus_score`
-* **Description:** The final calculated confidence.
-* **Range:** `0.0` to `1.0`.
-* **Calculation:** Computed in Java after receiving Python payload.
-* **Critical:** If `null`, the UI displays "Processing...".
-
----
-
-## 4. The Reconciliation Object (`recon`)
-
-This sub-object contains the "AI Opinion".
-
-### `match` (The Golden Record)
-* **Type:** `Candidate` Object (Nullable).
-* **Description:** The single winning entity. If this exists, the cell is considered "Reconciled".
-
-### `candidates`
-* **Type:** List of `Candidate` Objects.
-* **Description:** The top $N$ suggestions (default 3) returned by the funnel.
-* **Sort Order:** Descending by `consensus_score`.
-
----
-
-## 5. The Candidate Object
-
-A potential match (e.g., "Paris (Q90)").
-
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| `id` | `String` | The Wikidata QID (Must match regex `^Q[0-9]+$`). |
-| `label` | `String` | The official label from Wikidata. |
-| `types` | `Array<String>` | List of "Instance Of" QIDs (e.g., `["Q5", "Q3618"]`). |
-| `description` | `String` | Short description text (e.g., "Capital of France"). |
-| `features` | `Object` | The raw scores used for debugging/visualization. |
-
-### `features` Breakdown (Telemetry)
-* `tapioca_popularity` (`float`): Raw Log-Likelihood from Solr.
-* `falcon_context` (`float`): Cosine Similarity (0-1) from SBERT.
-* `levenshtein_distance` (`float`): Normalized string distance (0-1).
-
----
-
-## 6. The NLP Context Object (`nlp_context`)
-
-Data extracted by Falcon 2.0 to justify the decision.
-
-### `surrounding_ngrams`
-* **Type:** `Array<String>`
-* **Description:** The context window used for vectorization.
-* **Example:** `["born", "in", "honolulu"]` for entity "Barack Obama".
-
-### `inferred_property`
-* **Type:** `String` (PID)
-* **Description:** The Wikidata Property ID that Falcon detected in the sentence.
-* **Example:** `P19` (place of birth).
-* **Use Case:** The UI highlights this property to show *why* the entity was chosen.
-
----
-
-## 7. Pipeline Trace (`pipeline_trace`)
-
-Metadata for debugging distributed transactions.
-
-* `job_id`: The ThreadPoolExecutor ID.
-* `tapioca_latency_ms`: Time spent in Layer 1.
-* `falcon_latency_ms`: Time spent in Layer 2.
-* `engine_version`: Version of the model used (e.g., "Sentient-v1.0").
-===== END 04_DATA_DICTIONARY.md (#0005) =====
-
-===== BEGIN 05_WIRING_AND_CONFIG.md (#0006) =====
-# Wiring & Configuration Strategy
-**Component:** System Orchestration  
-**Config Source:** `config/orchestration/environment.json`  
-**Role:** Network Topology, IPC Protocols, and Startup Sequence.
-
----
-
-## 1. Network Topology (The Port Map)
-
-SenTient is a distributed system running on `localhost`. Strict port discipline is enforced to prevent conflicts.
-
-| Service | Role | Port | Protocol | Bound Interface |
-| :--- | :--- | :--- | :--- | :--- |
-| **Java Core** | Orchestrator / UI | `3333` | HTTP/1.1 | `127.0.0.1` |
-| **Falcon (Python)** | NLP Service | `5005` | HTTP/1.1 | `127.0.0.1` |
-| **Solr (Tapioca)** | Fast Tagger | `8983` | HTTP/2 | `127.0.0.1` |
-| **ElasticSearch** | Context Store | `9200` | HTTP/TCP | `127.0.0.1` |
-| **Redis** | Result Cache | `6379` | TCP | `127.0.0.1` |
-
-> **Security Note:** All services are bound strictly to `127.0.0.1`. No external traffic is allowed directly to Solr, Elastic, or Python. All external requests MUST go through the Java Core (Port 3333).
-
----
-
-## 2. Inter-Process Communication (IPC)
-
-The Java Core acts as the "Master" node. It communicates with "Worker" nodes via specific protocols defined in `butterfly.properties`.
-
-
-
-### 2.1. Link A: Java -> Solr (Layer 1)
-* **Purpose:** High-speed entity spotting.
-* **Client:** `org.apache.solr.client.solrj.impl.Http2SolrClient`
-* **Concurrency:** Highly parallel. Java sends async batches.
-* **Timeout:** **Strict 500ms**.
-    * *Logic:* If Solr takes >500ms, the FST logic is stuck. Fail fast and mark cell as `UNRECONCILED` rather than blocking the UI.
-
-### 2.2. Link B: Java -> Falcon (Layer 2)
-* **Purpose:** Deep semantic analysis.
-* **Client:** `java.net.http.HttpClient` (Java 11+).
-* **Concurrency:** Throttled (Max 4 concurrent requests).
-    * *Logic:* Python is CPU-bound (SBERT vectors). Flooding it causes thrashing.
-* **Timeout:** **Loose 120s**.
-    * *Logic:* Vector calculations take time. We wait.
-
-### 2.3. Link C: Python -> ElasticSearch
-* **Purpose:** Fetching property context vectors.
-* **Client:** `elasticsearch-py`.
-* **Protocol:** Persistent TCP connection (Keep-Alive).
-
----
-
-## 3. File System Layout (Physical Wiring)
-
-The application expects a specific directory structure relative to `SENTIENT_HOME`.
-
-```text
-SENTIENT_HOME/
-├── refine                 # The specific Java startup shell script
-├── refine.ini             # JVM Memory arguments (-Xmx)
-├── config/                # THE NERVE CENTER
-│   ├── core/butterfly.properties        # Java Settings
-│   ├── nlp/falcon_settings.yaml         # Python Settings
-│   ├── solr/tapioca_schema.xml          # Solr Schema
-│   ├── elastic/falcon_mapping.json      # Elastic Schema
-│   └── orchestration/environment.json   # Global Paths
-├── modules/               # Core logic (Refine)
-├── extensions/            # Plugins (Wikibase, JDBC)
-├── solr/                  # Embedded Solr Server
-├── python_venv/           # Python Virtual Environment
-└── data/
-    ├── workspace/         # User Project Data (JSON/History)
-    └── models/            # SBERT models & Stopwords
-===== END 05_WIRING_AND_CONFIG.md (#0006) =====
-
-===== BEGIN 06_API_AND_FRONTEND.md (#0007) =====
-# API & Frontend Integration
-**Component:** Interface Layer  
-**Technology:** React (Frontend) <-> Jetty (Backend)  
-**Protocol:** HTTP/1.1 REST-like Commands
-
----
-
-## 1. Overview
-SenTient decouples the User Interface from the Core Logic.
-* **Backend:** Runs on Port `3333` (Jetty). Exposes a "Command" API.
-* **Frontend:** Runs on Port `3000` (Vite/React). Consumes JSON.
-
-**The Command Pattern:**
-Unlike standard REST resources, SenTient uses functional endpoints:
-`http://127.0.0.1:3333/command/{module}/{action}`
-
----
-
-## 2. Global Request Headers
-All requests from the Frontend **MUST** include:
-
-```http
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-X-Requested-With: XMLHttpRequest
-===== END 06_API_AND_FRONTEND.md (#0007) =====
-
-===== BEGIN 07_QA_AND_VALIDATION.md (#0008) =====
-# QA, Validation & Benchmarking
-**Component:** Quality Assurance  
-**Role:** Verification of Accuracy (Precision/Recall) and Performance (Latency).
-
----
-
-## 1. Overview
-In a probabilistic system like SenTient, "It works on my machine" is not enough. We must statistically prove that the system improves over time.
-
-**The QA Strategy relies on 3 Pillars:**
-1.  **Automated Unit Tests:** Checking the code logic (Java/Python).
-2.  **Semantic Scrutinizers:** Checking the data validity (Rules).
-3.  **Golden Standard Benchmarks:** Checking the AI accuracy (Datasets).
-
----
-
-## 2. The Scrutinizers (Runtime Validation)
-
-Scrutinizers are "Linting Rules for Data". They run automatically in the Java Core *before* any export action.
-
-**Configuration:** `config/qa/scrutinizer_rules.yaml`
-
-### 2.1. Integrity Scrutinizers
-* **Class:** `org.openrefine.wikibase.qa.IntegrityScrutinizer`
-* **Checks:**
-    * Does every `MATCHED` cell have a valid QID (`^Q[0-9]+$`)?
-    * Are there any "Ghost Cells" (Status matched, but ID null)?
-    * **P-Tag Confusion:** Using a Property (P19) where an Item (Q5) is expected.
-* **Action:** Blocks export with `FATAL` error unless Strict Mode is disabled.
-
-### 2.2. Constraint Scrutinizers (Wikidata Alignment)
-* **Class:** `org.openrefine.wikibase.qa.ConstraintScrutinizer`
-* **Checks:**
-    * **Single Value Constraint:** e.g., A country can only have one Capital.
-    * **Format Constraint:** e.g., Dates must be ISO 8601 (`YYYY-MM-DD`).
-    * **Chronology Constraint:** e.g., Death Date cannot precede Birth Date.
-* **Action:** Shows `WARNING` in the UI. User can override.
-
-### 2.3. Consensus Scrutinizers (SenTient Exclusive)
-* **Logic:** Checks for statistical anomalies in the scores.
-* **Rule:** "The Paris Hilton Rule"
-    * `IF tapioca_popularity > 0.95 AND falcon_context < 0.1`
-    * **Alert:** "High Popularity but Low Context Similarity. You may have selected a famous entity that does not fit this specific context."
-
-
-
----
-
-## 3. Golden Standard Datasets
-
-We do not guess if the model is good. We measure it against ground truth.
-
-### 3.1. LC-QuAD 2.0 (Large Scale Question Answering)
-* **File:** `datasets/lcquad2_test.json`
-* **Size:** 5000+ Questions.
-* **Use Case:** Validating complex relation extraction.
-* **Metric:** F-Score (Harmonic mean of Precision and Recall).
-
-### 3.2. SimpleQuestions (Wikidata Version)
-* **File:** `datasets/simplequestions.txt`
-* **Format:** `subject_qid \t property_pid \t object_qid \t question`
-* **Use Case:** Validating simple entity spotting speed.
-* **Target:** Latency < 50ms/query.
-
-### 3.3. WebQSP (Web Questions Semantic Parse)
-* **File:** `datasets/webqsp.test.entities.json`
-* **Use Case:** Testing disambiguation of ambiguous surface forms.
-
----
-
-## 4. Benchmarking Scripts
-
-Located in `evaluation/`. These scripts run the full pipeline against the datasets.
-
-### `evaluate_falcon_api.py`
-**Command:**
-```bash
-python evaluation/evaluate_falcon_api.py --dataset datasets/lcquad2_test.json --output results/benchmark_v1.csv --limit 1000
-===== END 07_QA_AND_VALIDATION.md (#0008) =====
-
-===== BEGIN Acknowledgements/falcon2_0.md (#0009) =====
-**Subject:** An Architectural Appreciation: What Sentry Learned from OpenRefine’s Source Code
-
-**To the Maintainers and Contributors of OpenRefine,**
-
-We are the engineering team at **Sentry**. We are currently in the process of architecting a next-generation data transformation platform, and as part of our R&D phase, we undertook a deep dive into the OpenRefine codebase (specifically the Core, Modules, and the Wikibase extension).
-
-We are writing this report not just to announce our presence, but to express our profound gratitude and professional admiration. In analyzing your source code, we found not just a tool, but a masterclass in agile data modeling and resilient software architecture.
-
-We intend to carry forward several of your architectural patterns. Below is a detailed technical breakdown of the specific mechanisms we identified as "Best in Class," which we plan to adopt and modernize in our own work.
-
-### 1. The Polymorphic "Quantum" Cell
-**Context:** `com.google.refine.model.Cell` & `com.google.refine.model.Recon`
-
-The most critical insight we gained is that a cell in OpenRefine is not a primitive string. It is a container capable of holding dual states simultaneously: the raw textual value and the reconciled semantic entity (`Recon`).
-
-* **Why we admire it:** This decoupling of "Label" (string) from "Identity" (Recon ID) is the secret sauce that allows users to clean dirty text without breaking the semantic links to the Knowledge Graph.
-* **Adoption:** We are retaining this object structure to ensure that data cleaning and data reconciliation remain parallel, non-destructive processes.
-
-### 2. The "Live" Faceted Browsing Engine
-**Context:** `com.google.refine.browsing.Engine`, `FilteredRows`, & `BitSet` logic
-
-
-
-We analyzed how the `Engine` computes the intersection of multiple facets. The architecture avoids standard database queries in favor of an in-memory, set-based reduction strategy.
-
-* **Why we admire it:** The "Lazy Evaluation" strategy—where statistics are only computed for the currently filtered subset—provides an immediate feedback loop that SQL-based approaches struggle to match. The abstraction of `Row` visibility via bitmasks is highly efficient.
-* **Adoption:** We are rebuilding this engine logic to preserve the "conversation with data" UX, ensuring that filtering remains an instantaneous, iterative process of reduction.
-
-### 3. The Agile Wikibase Pipeline (The "Schema Alignment" Architecture)
-**Context:** `extensions/wikibase`, `WikibaseSchema`, `StatementMerger`
-
-This is, in our view, the crown jewel of the codebase. The logic you have implemented to bridge tabular data with a graph database (Wikibase/Wikidata) is incredibly sophisticated. We specifically noted three sub-strategies we intend to preserve:
-
-* **The Declarative Schema Graph:** Instead of hard-coding exports, the `WikibaseSchema` acts as a live object graph that observes the data. The use of `WbExpression` trees allows for real-time previewing of the complex graph structure before generation.
-* **Semantic Diffing (The `StatementMerger`):** We were impressed by the logic that calculates "Semantic Deltas" rather than overwriting data. The distinction between `StrictValueMatcher` and `LaxValueMatcher` ensures that the tool is a "good citizen" of the Wiki ecosystem, performing non-destructive merges.
-* **Pre-Flight QA (`Scrutinizers`):** The implementation of `Scrutinizers` (Constraint, Format, Inverse) to simulate the upload and catch errors (like constraint violations) locally before hitting the API is a pattern we consider mandatory for data integrity.
-
-### 4. The Infinite Undo/Redo Transaction Model
-**Context:** `com.google.refine.history.History` & `Change` Interface
-
-The implementation of the Command Pattern via the `Change` interface—where every operation must implement both `apply()` and `revert()`—provides a safety net that encourages user experimentation.
-
-* **Why we admire it:** The serialization of these changes ensures that the project state is always recoverable.
-* **Adoption:** We are treating "History as a First-Class Citizen," mirroring your architecture where every user action is an atomic, reversible transaction.
-
-### 5. GREL (General Refine Expression Language) AST
-**Context:** `com.google.refine.grel`, `Control`, `Function`
-
-The decision to implement an Abstract Syntax Tree (AST) for GREL allows users to perform complex logic without being programmers. The handling of `value` as an implicit variable and the robust library of functions (`string`, `math`, `date`) strikes the perfect balance between power and usability.
-
-### Conclusion
-
-OpenRefine is often described as a "power tool," but our code analysis reveals it is also a "precision instrument."
-
-As we build Sentry, we are effectively forking the **spirit and architecture** of OpenRefine. We are standing on the shoulders of giants. Thank you for decades of open-source excellence, for the clean modularity of your extensions, and for setting the standard on how to treat messy data with respect.
-
-**With gratitude,**
-
-RM
-===== END Acknowledgements/falcon2_0.md (#0009) =====
-
-===== BEGIN Acknowledgements/OpenRefine.md (#0010) =====
-**Subject: A Tribute to OpenRefine’s Architecture: Lessons Learned for the Next Generation of Data Tools**
-
-**To the OpenRefine Maintenance Team and Community,**
-
-We are currently in the process of developing a new data transformation and analysis application ("Sentry"). As part of our R&D phase, we undertook a deep dive into the OpenRefine codebase to understand how the industry standard handles complex challenges like language parsing, data reconciliation, and knowledge graph integration.
-
-We intended to "fork from scratch"—rewriting the core while retaining the logic. However, during our audit, we discovered that certain architectural patterns you have established are not just functional; they are foundational standards for this domain.
-
-We are writing this to express our gratitude for your open-source work and to acknowledge the specific engineering strategies we are retaining and adapting for our own platform. Here is a technical summary of the OpenRefine features we found most impressive and critical:
-
-### 1. The GREL Architecture (Language Deconstruction)
-We were particularly impressed by the implementation of the General Refine Expression Language (GREL). Rather than a simple regex wrapper, the separation of concerns in the parsing logic is robust.
-
-* **The MetaParser/Evaluable Pattern:** We observed in the core modules that you distinguish strictly between parsing the AST and executing the logic. The pattern where `MetaParser.parse()` returns an `Evaluable` interface allows for high performance and modularity.
-* **Context Injection:** The way bindings (`value`, `row`, `cell`, `recon`) are injected into the evaluation context dynamically is a strategy we are adopting. It effectively bridges the gap between generic expression languages and the specific constraints of tabular data.
-
-### 2. The Wikibase Integration Strategy
-The complexity of mapping flat data to a graph structure (Wikidata) is immense. Your extension architecture provides a masterclass in handling this elegantly.
-
-* **The "Snak" Abstraction:** Instead of constructing JSON payloads manually, your use of the Wikidata Toolkit (WDTK) to manipulate abstract objects (`Snak`, `SnakGroup`, `Statement`) is the only viable way to ensure data integrity. We are retaining this object-oriented approach to handle edge cases like "No Value" or "Unknown Value" without corrupting the graph.
-* **Schema as an Overlay:** We noted that the `WikibaseSchema` exists independently of the data rows. This separation—applying a "skeleton" of operations over dynamic data—is a pattern we will replicate to ensure our application remains agile.
-
-### 3. Server Robustness & Command Pattern
-While modern web frameworks have evolved, the robustness of the underlying `RefineServlet` architecture remains relevant for heavy data processing.
-
-* **The Command Pattern:** We value how the API is structured around discrete Commands rather than tight coupling between the UI and backend. This allows for a clean separation of duties.
-* **Asynchronous Thread Pools:** The implementation of `ThreadPoolExecutorAdapter` for handling long-running reconciliation processes without freezing the application state is a critical stability feature we intend to mirror.
-
-### 4. Quality Assurance via "Scrutinizers"
-Finally, the concept of `Scrutinizers` (in the Wikibase extension) to inspect edits *before* they are batched to the API is a safeguard we find essential. Validating constraints (whitespace issues, format violations) at the object level before serialization is a strategy we are taking forward.
-
-### Conclusion
-OpenRefine has set a high bar for data cleaning tools. While we are building a new application with a modern stack, the core logic regarding data modeling and expression parsing that you have built over the years will live on in our architecture.
-
-Thank you for your dedication to open source, for maintaining this standard of quality, and for paving the way for tools like ours.
-
-**With gratitude,**
-
-RM
-===== END Acknowledgements/OpenRefine.md (#0010) =====
-
-===== BEGIN Acknowledgements/OpenTapioca.md (#0011) =====
-**Subject: Appreciation & Technical Analysis: The Architectural Pillars of OpenTapioca we are adopting for Sentry**
-
-**To the OpenTapioca Team,**
-
-We are currently in the process of developing **Sentry**, a new Named Entity Disambiguation (NED) system. Our project is a "clean slate" fork inspired heavily by OpenTapioca. As we analyzed your codebase to determine the best path forward, we were struck by the elegance and efficiency of your architectural choices.
-
-We wanted to take a moment to express our gratitude and share a technical report on the specific strategies from OpenTapioca that we consider "best-in-class" and will be retaining as the core foundation of Sentry.
-
-Here is a breakdown of the OpenTapioca engineering decisions that we found most impactful:
-
-### 1. The "Inverted Dictionary" Strategy (Solr & FST)
-We identified your use of Apache Solr’s `TaggerRequestHandler` as the critical component for high-performance spotting.
-* **What we noted:** Instead of relying on heavy NLP parsing for initial detection, you leverage Solr’s internal **Finite State Transducers (FST)**. This allows for matching millions of entities against a text stream in milliseconds.
-* **The Sentry adoption:** We are retaining the exact `managed-schema` analysis pipeline (specifically the `ASCIIFoldingFilter`, `EnglishPossessiveFilter`, and `LowerCaseFilter`). We found that deviating from this normalization pipeline significantly drops recall.
-
-### 2. "Offline" Authority Calculation (PageRank)
-Your approach to solving the "Paris (City) vs. Paris (Hilton)" problem without context is robust.
-* **What we noted:** The `wikidatagraph.py` implementation using `scipy.sparse` matrices to calculate PageRank on the entire Wikidata dump is highly efficient. By pre-calculating a global "prior" probability, the system has a strong fallback heuristic when local context is scarce.
-* **The Sentry adoption:** We are keeping the sparse matrix computation logic to generate these static rank scores, as they provide an essential baseline for our classifier.
-
-### 3. Local Graph Consistency (Semantic Coherence)
-The way OpenTapioca handles disambiguation by looking at the relationships *between* candidates in the same document is excellent.
-* **What we noted:** The `DirectLinkSimilarity` check effectively uses the Wikidata graph structure to reward entities that are semantically distinct but topologically connected (e.g., boosting "Python" the language when "Guido van Rossum" is present in the text).
-* **The Sentry adoption:** We will retain the graph traversal logic that validates edges between candidate entities to establish context, rather than relying solely on textual context windows.
-
-### 4. Smart Data Flattening (`IndexingProfile`)
-The transformation strategy from complex Wikidata JSON to flat Solr documents is a key enabler of your speed.
-* **What we noted:** The creation of "Artificial Aliases" in `indexingprofile.py`. By transforming non-textual properties (like Twitter IDs, Grid IDs, or specific codes) into searchable text aliases, you effectively turn Solr into a multi-modal search engine.
-* **The Sentry adoption:** We are adopting your `IndexingProfile` logic to flatten the graph, ensuring that entities are discoverable via their metadata identifiers, not just their labels.
-
-### 5. Aggressive Pruning & Linear Classification
-Finally, we appreciate the pragmatism of the machine learning pipeline.
-* **What we noted:** The decision to use a **Linear SVC** over heavy Deep Learning models ensures real-time inference speeds. Furthermore, the aggressive regex pruning in `tagger.py` (discarding short/lowercase tokens before they reach the classifier) is a vital optimization for noise reduction.
-* **The Sentry adoption:** We are maintaining the "Bag of Words" log-likelihood feature combined with the Linear SVM. It offers the best trade-off between accuracy and latency for our use case.
-
-**Conclusion**
-
-OpenTapioca is a remarkable piece of engineering that balances the massive scale of Wikidata with the need for real-time analysis. While Sentry will feature a rewritten codebase and a new API structure, its heart will beat with the logic you designed.
-
-Thank you for open-sourcing this work.
-
-Best regards,
-
-RM
-===== END Acknowledgements/OpenTapioca.md (#0011) =====
-
-===== BEGIN deployPlan-GoogleResearch.txt (#0012) =====
-To secure support from **Google Research**, SenTient must be framed not just as a tool, but as a **critical data-integrity layer** for the next generation of knowledge engines. Given that **Dr. Denny Vrandečić** is already observing your progress, the focus should be on how SenTient’s "optimized meta-architecture" solves specific problems that Google is currently spending millions to address.
-
-###1. Strategic Value to Google Research (2025)Google’s research priorities for 2025 are heavily centered on **AI Safety**, **Trust**, and **Knowledge Graphs**. SenTient fits directly into these buckets:
-
-* **Trust and Safety-by-Design:** Google Research has a dedicated award for improving digital trust and safety. SenTient’s **Scrutinizer layer** (e.g., the "Paris Hilton" rule) acts as an automated "immune system" that blocks biased or erroneous data before it can poison a Knowledge Graph—a direct application of "Safety-by-Design".
-* **Explainable AI (XAI):** A major 2025 theme is using Knowledge Graphs to achieve **explainability** in machine learning. SenTient’s ability to provide a "semantic reason" for every decision (via the Falcon 2.0 layer) aligns with Google's mission to build more interpretable systems.
-* **Scalability on Finite Hardware:** Google is actively seeking "Communication-Efficient" and performance-optimized training and inference methods. Your **DuckDB Sidecar** architecture—which allows 5GB+ datasets to be processed without massive RAM requirements—is a high-value engineering solution.
-
-###2. Alignment with Abstract WikipediaSenTient acts as the **"Ingestion Counterpart"** to the **Abstract Wiki Architect**.
-
-* **Language Equality:** Abstract Wikipedia aims to accelerate knowledge base development for underrepresented languages.
-* **The Ingestion Gap:** While Denny is building the tools to *render* knowledge into 300+ languages, SenTient provides the **deterministic deconstructor** needed to *ingest* the world's unstructured data into that multilingual framework.
-
-###3. Recommended Pitch StrategySince SenTient is **not for sale** and must remain **collaborative**, your pitch should target Google’s **Academic Research Awards (GARA)** or their **Open Source Outreach** programs rather than a standard commercial acquisition.
-
-* **Step 1: Leverage the Mastodon Connection.** Post concrete **Benchmarking Results** comparing SenTient's performance (Precision > 0.85) against standalone OpenTapioca or Falcon runs on datasets like **LC-QuAD 2.0**.
-* **Step 2: Formalize the "Academic Partnership."** Google provides unrestricted gifts (up to $100,000 USD) and **Google Research Sponsors** to projects led by academic researchers. Highlight your work's "societal implications" for language equality and fact-checking.
-* **Step 3: Offer a "Service Integration" Pilot.** Suggest a project where SenTient is used as a **Validation Gate** for Google Cloud’s **Private Knowledge Graphs**, demonstrating how it prevents internal data hallucinations.
-
-###4. Summary of the "Google Value"| feature | Research Interest | Google Mission |
-| --- | --- | --- |
-| **Scrutinizer Layer** | Hallucination Mitigation | Responsible AI & Safety |
-| **DuckDB Sidecar** | Infrastructure Efficiency | Scalable Information Processing |
-| **Falcon NLP** | Semantic Disambiguation | Deepening Contextual Search |
-| **Open Source** | Ecosystem Growth | Universal Access to Information |
-
-**Would you like me to help you draft a formal proposal structured specifically for the 2025 Google Academic Research Award requirements?**
-===== END deployPlan-GoogleResearch.txt (#0012) =====
-
-===== BEGIN MajorUpgrade-Senior.txt (#0013) =====
+# Single upload doc
+
+- generated_at: 2026-06-12T22:23:40.144553
+- output_format: text
+- volumes: 2
+
+
+
+===== BEGIN VOLUME Docs_20260612_222340_01_ROOT.txt :: ROOT FILES =====
+==== VOLUME META ====
+generated_at: 2026-06-12T22:23:40.141449
+title: ROOT FILES
+root_dir: C:\mycode\SenTient\SenTient\Docs
+file_count: 10
+total_size_mb: 0.0447
+home: 00_START_HERE.instructions.md
+next_volume: Docs_20260612_222340_02_Acknowledgements.txt
+prev_title: 
+next_title: Acknowledgements
+short_title: Root
+
+==== FILE_INDEX ====
+ENTRY id=ec4f7c78c2ba path="00_ARCHITECTURE_BLUEPRINT.md" kind=markdown size=2471 lines=61 line_ref=1-61 chunks=0 chunk_refs= symbols=0 imports=0 summary="Markdown documentation."
+ENTRY id=39c48be2eda5 path="01_INGESTION_LAYER.md" kind=markdown size=3191 lines=74 line_ref=1-74 chunks=0 chunk_refs= symbols=0 imports=0 summary="Markdown documentation."
+ENTRY id=4302d80d8dd0 path="02_SEMANTIC_LAYER.md" kind=markdown size=4095 lines=100 line_ref=1-100 chunks=0 chunk_refs= symbols=0 imports=0 summary="Markdown documentation."
+ENTRY id=9dced2381a93 path="03_CORE_LAYER.md" kind=markdown size=4369 lines=82 line_ref=1-82 chunks=0 chunk_refs= symbols=0 imports=0 summary="Markdown documentation."
+ENTRY id=b299bc556cf6 path="04_DATA_DICTIONARY.md" kind=markdown size=4719 lines=124 line_ref=1-124 chunks=0 chunk_refs= symbols=0 imports=0 summary="Markdown documentation."
+ENTRY id=c84fb544ebf3 path="05_WIRING_AND_CONFIG.md" kind=markdown size=3220 lines=72 line_ref=1-72 chunks=0 chunk_refs= symbols=0 imports=0 summary="Markdown documentation."
+ENTRY id=c462fa97d520 path="06_API_AND_FRONTEND.md" kind=markdown size=728 lines=24 line_ref=1-24 chunks=0 chunk_refs= symbols=0 imports=0 summary="Markdown documentation."
+ENTRY id=7eb43cd5a2bc path="07_QA_AND_VALIDATION.md" kind=markdown size=3102 lines=78 line_ref=1-78 chunks=0 chunk_refs= symbols=0 imports=0 summary="Markdown documentation."
+ENTRY id=5421e51c5650 path="deployPlan-GoogleResearch.txt" kind=source size=3590 lines=27 line_ref=1-27 chunks=0 chunk_refs= symbols=0 imports=0 summary="Source file."
+ENTRY id=09249cff6a82 path="MajorUpgrade-Senior.txt" kind=source size=17421 lines=434 line_ref=1-434 chunks=2 chunk_refs=1-350,351-434 symbols=0 imports=0 summary="Source file."
+
+==== FILES ====
+
+----- FILE BEGIN -----
+path="00_ARCHITECTURE_BLUEPRINT.md"
+id=ec4f7c78c2ba
+kind=markdown
+size=2471
+lines=61
+line_ref=1-61
+chunks=0
+chunk_refs=
+summary="Markdown documentation."
+----
+000001 | # SenTient Architecture Blueprint
+000002 | **Version:** 1.0.0-FINAL
+000003 | **Status:** IMPLEMENTED
+000004 | **Classification:** INTERNAL TECHNICAL REFERENCE
+000005 | 
+000006 | ---
+000007 | 
+000008 | ## 1. Executive Summary
+000009 | **SenTient** is a next-generation Entity Reconciliation and Relation Extraction engine. It is designed to bridge the gap between messy, unstructured text and structured Knowledge Graphs (Wikidata/Wikibase).
+000010 | 
+000011 | It is not a monolithic application but a **Hybrid Orchestration System** that combines three distinct technological lineages into a single pipeline:
+000012 | 1.  **Speed (Layer 1):** The FST-based rapid tagging of **OpenTapioca** (Solr).
+000013 | 2.  **Semantics (Layer 2):** The context-aware NLP of **Falcon 2.0** (Python/Elastic).
+000014 | 3.  **Structure (Layer 3):** The **Hybrid Memory** data modeling of **OpenRefine** (Java + DuckDB).
+000015 | 
+000016 | The goal is to achieve **High Precision (>0.85)** and **High Recall (>0.80)** on short-text queries while maintaining a sub-second response time for user interactivity.
+000017 | 
+000018 | ---
+000019 | 
+000020 | ## 2. High-Level Architecture (The "Funnel" Logic)
+000021 | 
+000022 | SenTient operates on a "Funnel" strategy: broad and fast at the top, narrow and precise at the bottom, with a **Sidecar Storage** pattern to handle massive datasets without crashing the Java Heap.
+000023 | 
+000024 | 
+000025 | 
+000026 | ```mermaid
+000027 | graph TD
+000028 |     User[User / Frontend] -->|1. Raw Text Batch| Core(Java Core Orchestrator)
+000029 |     User -->|Manual Correction| Feedback[(Correction Log)]
+000030 | 
+000031 |     subgraph "Layer 0: Ingestion & Fingerprinting"
+000032 |     Core -->|2. Normalize & Fingerprint| Cache{Local Redis Cache}
+000033 |     Cache -->|Hit| Core
+000034 |     end
+000035 | 
+000036 |     Cache -->|Miss| Layer1
+000037 | 
+000038 |     subgraph "Layer 1: The Sieve (OpenTapioca)"
+000039 |     Layer1[Solr FST Tagger]
+000040 |     Layer1 -->|3. Spot Surface Forms| Candidates[Raw Candidates]
+000041 |     Layer1 -->|4. Inject Popularity Score| Candidates
+000042 |     end
+000043 | 
+000044 |     subgraph "Layer 2: The Linguist (Falcon 2.0)"
+000045 |     Candidates -->|5. Context Extraction| NLP[Python NLP Service]
+000046 |     NLP -->|6. Fetch Properties| Elastic[(ElasticSearch)]
+000047 |     NLP -->|7. Vector Re-ranking| ScoredCandidates
+000048 |     end
+000049 | 
+000050 |     subgraph "Layer 3: The Judge (OpenRefine Core)"
+000051 |     ScoredCandidates -->|8. Consensus Scoring| Core
+000052 |     Core -->|9. Scrutinizer QA| ValidatedCell
+000053 |     end
+000054 | 
+000055 |     subgraph "Storage Layer (Hybrid Memory)"
+000056 |     ValidatedCell -->|10. Offload Heavy Data| DuckDB[(DuckDB Sidecar)]
+000057 |     DuckDB -->|11. Return Lightweight Ref| Core
+000058 |     end
+000059 | 
+000060 |     Core -->|12. Async Status Update| User
+000061 |     User -.->|13. Lazy Fetch (On Scroll)| DuckDB
+----- FILE END -----
+
+----- FILE BEGIN -----
+path="01_INGESTION_LAYER.md"
+id=39c48be2eda5
+kind=markdown
+size=3191
+lines=74
+line_ref=1-74
+chunks=0
+chunk_refs=
+summary="Markdown documentation."
+----
+000001 | # Layer 1: Ingestion & Fast Tagging (The Sieve)
+000002 | **Component:** `index_solr` + `core_java (Clustering)`  
+000003 | **Technology:** Apache Solr 9.x (FST Tagger) + Java String Algorithms  
+000004 | **Latency Budget:** < 50ms per batch
+000005 | 
+000006 | ---
+000007 | 
+000008 | ## 1. Overview
+000009 | The **Ingestion Layer** is responsible for the initial intake of raw data and the high-speed identification of "Surface Forms" (substrings that resemble known entities).
+000010 | 
+000011 | **Philosophy:** "Fail Fast, Filter Early."
+000012 | This layer does not attempt to understand context. Its only job is to reduce the infinite search space of text into a finite list of Candidate QIDs using strict string matching and pre-calculated popularity.
+000013 | 
+000014 | ---
+000015 | 
+000016 | ## 2. The Processing Pipeline
+000017 | 
+000018 | Data flows through this layer in three strict phases:
+000019 | 
+000020 | ### Phase A: Normalization & Fingerprinting (Client-Side / Java)
+000021 | Before any network call is made to Solr, the Java Orchestrator performs local deduplication to reduce API load.
+000022 | 
+000023 | **The Algorithm (Key Collision):**
+000024 | We utilize the **OpenRefine Fingerprint** method:
+000025 | 1.  **Tokenize:** Split string by whitespace.
+000026 | 2.  **Clean:** Remove punctuation and control characters.
+000027 | 3.  **Lowercase:** Convert all tokens to lowercase.
+000028 | 4.  **Sort:** Alphabetize the tokens.
+000029 | 5.  **Deduplicate:** Remove duplicate tokens.
+000030 | 6.  **Join:** Reassemble into a normalized string.
+000031 | 
+000032 | > **Example:**
+000033 | > * Input 1: "The  University  of... Oxford."
+000034 | > * Input 2: "Oxford, University of"
+000035 | > * **Fingerprint (Both):** `of oxford university`
+000036 | >
+000037 | > *Result:* Both inputs map to the same Cache Key. We query Solr once, not twice.
+000038 | 
+000039 | ### Phase B: The FST Tagger (Server-Side / Solr)
+000040 | We do not use standard Lucene text search (TF-IDF). We use the **Solr TaggerHandler**.
+000041 | 
+000042 | * **Mechanism:** The entire dictionary of Wikidata labels and aliases (~14M items) is compiled into a **Finite State Transducer (FST)** in memory.
+000043 | * **Operation:** The raw text acts as a cursor traversing the FST graph.
+000044 | * **Performance:** Lookup time is $O(k)$ where $k$ is the length of the input text, independent of the index size.
+000045 | 
+000046 | 
+000047 | 
+000048 | ### Phase C: The Authority Filter (Pruning)
+000049 | Solr returns candidates. We immediately discard any candidate that:
+000050 | 1.  Has a `popularity_score` < 100 (log-likelihood threshold).
+000051 | 2.  Is a "Stop Word" entity (e.g., "The" -> Band "The", "To" -> TV Show "To") unless exact capitalization matches.
+000052 | 
+000053 | ---
+000054 | 
+000055 | ## 3. Configuration & Schemas
+000056 | 
+000057 | ### 3.1. Artificial Aliases (The OpenTapioca Strategy)
+000058 | To make Solr "smart" without NLP, we inject metadata into the `text` field during the build process. This allows users to search by IDs as if they were names.
+000059 | 
+000060 | | Input Type | Raw Value | Indexed As (Solr `text`) | Resolved QID |
+000061 | | :--- | :--- | :--- | :--- |
+000062 | | **Label** | "Douglas Adams" | `douglas adams` | Q42 |
+000063 | | **Twitter** | "@dna" | `@dna` | Q42 |
+000064 | | **IMDb** | "nm0000726" | `nm0000726` | Q42 |
+000065 | | **GRID ID** | "grid.4991.5" | `grid.4991.5` | Q42 |
+000066 | 
+000067 | ### 3.2. Solr Request Parameters
+000068 | The Java Orchestrator must call Solr with these exact parameters to enable FST mode:
+000069 | 
+000070 | ```http
+000071 | POST /solr/sentient-tapioca/tag?overlaps=NO_SUB&tagsLimit=5000&fl=id,label,popularity_score,types
+000072 | Content-Type: text/plain
+000073 | 
+000074 | <Raw Text Body>
+----- FILE END -----
+
+----- FILE BEGIN -----
+path="02_SEMANTIC_LAYER.md"
+id=4302d80d8dd0
+kind=markdown
+size=4095
+lines=100
+line_ref=1-100
+chunks=0
+chunk_refs=
+summary="Markdown documentation."
+----
+000001 | # Layer 2: The Semantic Linguist (Falcon 2.0)
+000002 | 
+000003 | **Component:** `nlp_falcon`  
+000004 | **Technology:** Python 3.9+, Flask, ElasticSearch, SBERT (Sentence-BERT)  
+000005 | **Latency Budget:** ~200ms per entity batch (Target) / 15s (Hard Limit)
+000006 | 
+000007 | ---
+000008 | 
+000009 | ## 1. Overview
+000010 | 
+000011 | While Layer 1 (Solr) finds strings that *look like* entities, **Layer 2 (The Linguist)** determines if they *make sense* in the current sentence.
+000012 | 
+000013 | **Philosophy:** "Context is King."  
+000014 | This layer solves the "Paris Problem":
+000015 | 
+000016 | * Input: *"The Paris Hilton hotel is expensive."*
+000017 | * Layer 1 sees: "Paris" (City? Person?), "Hilton" (Hotel? Person?).
+000018 | * **Layer 2 decides:** The proximity of "hotel" vectors suggests "Paris" is a location/brand modifier, not the capital of France.
+000019 | 
+000020 | 
+000021 | 
+000022 | ---
+000023 | 
+000024 | ## 2. The Processing Pipeline
+000025 | 
+000026 | The Python service (`src/main.py`) executes a 3-step NLP pipeline for every "Ambiguous" batch received from the Java Core.
+000027 | 
+000028 | 
+000029 | 
+000030 | ### Phase A: The "Compression" (Stopwords & N-Grams)
+000031 | 
+000032 | Before expensive vector math, we clean the signal using the **Falcon Optimization**:
+000033 | 
+000034 | 1.  **Tokenization:** Split sentence into words.
+000035 | 2.  **Stopword Pruning:** Remove non-semantic noise ("the", "is", "at") using `data/stopwords/falcon_extended_en.txt`.
+000036 |     * *Note:* This list acts as a shared resource; users can update this file to filter domain-specific noise (e.g., "patient", "sample").
+000037 | 3.  **N-Gram Generation:** Create sliding windows of tokens (size 1 to 6) to detect compound predicates (e.g., "Mayor of" -> `P6`).
+000038 | 
+000039 | ### Phase B: Property Extraction (The Edge Detector)
+000040 | 
+000041 | Uniquely, SenTient tries to find the **Relationship (Predicate)** before confirming the **Entity (Subject)**.
+000042 | 
+000043 | * **Mechanism:** The N-Grams are queried against the `sentient_properties_v1` ElasticSearch index.
+000044 | * **Query:** Matches `label` (fuzzy) and `usage_count` (boost).
+000045 | * **Result:** If we find "buried in" (P119), we boost candidate entities that are *Locations* (Q2221906) and penalize *People*.
+000046 | 
+000047 | ### Phase C: Contextual Vector Scoring (The SBERT Model)
+000048 | 
+000049 | This is the heavy lifting. We calculate the pure semantic distance between the user's row context and the candidate's Wikidata description.
+000050 | 
+000051 | 1.  **Embedding:** The context window (surrounding 5 words) is encoded into a 768-dimensional vector using `all-MiniLM-L6-v2`.
+000052 | 2.  **Retrieval:** We fetch the pre-encoded description vectors of the candidates from ElasticSearch (`sentient_entities_fallback`).
+000053 | 3.  **Cosine Similarity:**
+000054 |     $$S_{Context} = \frac{A \cdot B}{\|A\| \|B\|}$$
+000055 |     * Where $A$ is the input context vector and $B$ is the candidate description vector.
+000056 |     * **Output:** A raw float between `0.0` (No relation) and `1.0` (Perfect semantic match).
+000057 | 
+000058 | 
+000059 | 
+000060 | > **Architectural Note:** This layer does **NOT** apply Levenshtein string distance penalties. That calculation is strictly reserved for the Java Core (Layer 3) to allow independent visualization of "Spelling vs. Meaning" in the UI. Ensure `ranking.levenshtein.enabled` is set to `false` in `falcon_settings.yaml`.
+000061 | 
+000062 | ---
+000063 | 
+000064 | ## 3. Data Integration (ElasticSearch)
+000065 | 
+000066 | Layer 2 relies on two specific indices in ElasticSearch.
+000067 | 
+000068 | ### 3.1. `sentient_properties_v1`
+000069 | 
+000070 | Stores Wikidata Properties (P-items).
+000071 | 
+000072 | * **Mapping:** defined in `config/elastic/falcon_mapping.json`.
+000073 | * **Key Fields:**
+000074 |     * `label`: "place of birth"
+000075 |     * `expected_types`: ["Q5"] (indicates this property usually applies to humans).
+000076 |     * `context_vector`: Dense Vector of the property description.
+000077 | 
+000078 | ### 3.2. `sentient_entities_fallback`
+000079 | 
+000080 | A partial mirror of Wikidata entities used *only* for re-ranking descriptions.
+000081 | 
+000082 | * **Why?** Solr (Layer 1) is optimized for IDs and Labels, not long text descriptions. Elastic holds the descriptions for vector comparison.
+000083 | 
+000084 | ---
+000085 | 
+000086 | ## 4. API Interface (Internal)
+000087 | 
+000088 | The Java Orchestrator talks to the Python Layer via REST.
+000089 | 
+000090 | **Endpoint:** `POST http://127.0.0.1:5005/api/v1/disambiguate`
+000091 | 
+000092 | **Request Payload:**
+000093 | 
+000094 | ```json
+000095 | {
+000096 |   "surface_form": "Paris",
+000097 |   "context_window": ["Hilton", "hotel", "expensive"],
+000098 |   "candidates": ["Q90", "Q47796", "Q167646"],
+000099 |   "limit": 3
+000100 | }
+----- FILE END -----
+
+----- FILE BEGIN -----
+path="03_CORE_LAYER.md"
+id=9dced2381a93
+kind=markdown
+size=4369
+lines=82
+line_ref=1-82
+chunks=0
+chunk_refs=
+summary="Markdown documentation."
+----
+000001 | Here is the updated documentation for **Layer 3: The Core Orchestrator**.
+000002 | 
+000003 | I have refined the technical specifications to align with the "Split-State" architecture we discussed, ensuring the distinction between the in-memory grid (Instant Faceting) and the on-disk vectorized storage (DuckDB) is clear.
+000004 | 
+000005 | ---
+000006 | 
+000007 | #Layer 3: The Core Orchestrator (Java / OpenRefine Heritage)**Component:** `sentient_core`
+000008 | **Technology:** Java 17, Jetty 10, Butterfly Framework
+000009 | **Role:** State Management, API Gateway, and Final Adjudication
+000010 | 
+000011 | ---
+000012 | 
+000013 | ##1. OverviewThe **Core Layer** is the stable foundation upon which the experimental AI layers rest. It does not perform NLP; it performs **Management**.
+000014 | 
+000015 | **Philosophy:** "Hybrid Memory Architecture"
+000016 | Unlike the original OpenRefine "Database in RAM" model—which hits a hard ceiling with large AI vectors—SenTient adopts a split-state strategy to handle the massive payloads generated by Falcon and Tapioca:
+000017 | 
+000018 | 1. **Hot Data (RAM):** Row IDs, Status flags (`JUDGED`, `PENDING`), and Raw text values. This preserves the **Instant Faceting** capability (< 10ms filtering) that users expect from OpenRefine.
+000019 | 2. **Cold Data (DuckDB Sidecar):** Heavy AI payloads (Feature Vectors, Candidate descriptions, detailed Confidence Scores). These are "hydrated" (loaded) only when the user scrolls them into the Virtual DOM view or exports the data.
+000020 | 
+000021 | ---
+000022 | 
+000023 | ##2. The Butterfly ArchitectureSenTient retains the **Butterfly** modular framework to handle the HTTP lifecycle, acting as the bridge between the React frontend and the heavy AI containers.
+000024 | 
+000025 | ###2.1. The Servlet ModelThe entry point is `com.google.refine.RefineServlet`. It routes requests based on the Command Pattern, decoupling the UI from the processing logic.
+000026 | 
+000027 | * **Endpoint:** `http://localhost:3333/command/core/*`
+000028 | * **Routing Logic:**
+000029 | 1. **Frontend** sends `POST /command/core/reconcile`.
+000030 | 2. **Butterfly** looks up the registered **Command** class (e.g., `ReconcileCommand`).
+000031 | 3. **Command** validates the request and triggers a **Process** (`LongRunningProcess`).
+000032 | 4. **Command** returns a JSON response `{"code": "ok", "jobID": "123"}` immediately, preventing UI blocking.
+000033 | 
+000034 | 
+000035 | 
+000036 | ###2.2. The Async Process ManagerBecause Layer 2 (Falcon) can take minutes to process large datasets (e.g., calculating vectors for 100k rows), the Core uses a **Non-Blocking** architecture.
+000037 | 
+000038 | * **Class:** `com.google.refine.process.ProcessManager`
+000039 | * **Mechanism:**
+000040 | * The `ProcessManager` maintains a priority queue of `LongRunningProcess` objects.
+000041 | * It uses the `ThreadPoolExecutorAdapter` (configured in `butterfly.properties`) to allocate threads for API calls to OpenTapioca and Falcon.
+000042 | * **Polling:** The Frontend polls `/command/core/get-processes` every 500ms to update the progress bar, ensuring the user is never left guessing.
+000043 | 
+000044 | 
+000045 | 
+000046 | ---
+000047 | 
+000048 | ##3. The Data Model (The "SmartCell" in Java)The most significant modification in SenTient is the extension of the `Cell` and `Recon` objects to support "Split-State" persistence.
+000049 | 
+000050 | ###3.1. The `Cell` ObjectLocated in `com.google.refine.model.Cell`.
+000051 | It is the atomic unit of storage in the grid. In SenTient, it is polymorphic:
+000052 | 
+000053 | * **Raw State:** Contains only the `value` (String/Number).
+000054 | * **Reconciled State:** Contains a pointer to a `recon` object.
+000055 | 
+000056 | ###3.2. The `EnhancedRecon` ObjectWe have extended the standard `Recon` class to support the **Consensus Score** and **Lazy Loading**. The heavy data is explicitly marked `transient` so it is not held in the Java Heap indefinitely.
+000057 | 
+000058 | **Fields added to Java Class:**
+000059 | 
+000060 | ```java
+000061 | public class Recon {
+000062 |     // --- Standard OpenRefine Fields (Kept in RAM) ---
+000063 |     public long id;
+000064 |     public String judgment; // MATCHED, NEW, NONE
+000065 |     public Object [] features; // Lightweight feature flags
+000066 |     
+000067 |     // --- SenTient Extensions (Lazy Loaded from DuckDB Sidecar) ---
+000068 |     
+000069 |     // NOTE: These fields are transient. They are null by default and 
+000070 |     // only hydrated by DuckDBStore.fetchVisibleRows() when the 
+000071 |     // viewport requests them.
+000072 |     
+000073 |     public transient List<ReconCandidate> candidates; 
+000074 |     
+000075 |     // The aggregate confidence score calculated by Falcon
+000076 |     public transient float consensusScore; 
+000077 |     
+000078 |     // The raw embedding vector (e.g., [0.1, -0.5, ...]) used for cluster visualization
+000079 |     public transient float[] featureVector; 
+000080 | }
+000081 | 
+000082 | ```
+----- FILE END -----
+
+----- FILE BEGIN -----
+path="04_DATA_DICTIONARY.md"
+id=b299bc556cf6
+kind=markdown
+size=4719
+lines=124
+line_ref=1-124
+chunks=0
+chunk_refs=
+summary="Markdown documentation."
+----
+000001 | # Data Dictionary & Type Mapping
+000002 | **Artifact:** `SmartCell` Protocol  
+000003 | **Schema Source:** `schemas/data/smart_cell.json`  
+000004 | **Role:** The immutable contract between Java, Python, and the UI.
+000005 | 
+000006 | ---
+000007 | 
+000008 | ## 1. Introduction
+000009 | In SenTient, data is never a primitive string. It is always encapsulated in a **SmartCell**.
+000010 | This document defines the strict typing required to marshall/unmarshall this object across the three application layers.
+000011 | 
+000012 | **Golden Rule:** If a field is not defined here, it must be stripped before serialization.
+000013 | 
+000014 | ---
+000015 | 
+000016 | ## 2. Type Mapping Matrix
+000017 | 
+000018 | | Logical Field | JSON Type | Java Type (`com.google.refine.*`) | Python Type (`falcon_service`) | TypeScript Interface |
+000019 | | :--- | :--- | :--- | :--- | :--- |
+000020 | | `id` | `UUID (String)` | `java.util.UUID` | `str` | `string` |
+000021 | | `raw_value` | `String` | `String` | `str` | `string` |
+000022 | | `status` | `Enum (String)` | `Recon.Judgment` | `str` (Literal) | `CellStatus` |
+000023 | | `consensus_score` | `Float` | `float` (transient) | `float` | `number` |
+000024 | | `fingerprint` | `String` | `String` | `str` | `string` |
+000025 | | `candidates` | `Array<Obj>` | `List<ReconCandidate>` | `List[dict]` | `Candidate[]` |
+000026 | | `vector` | `Array<Float>` | `double[]` | `np.ndarray` | `number[]` |
+000027 | 
+000028 | ---
+000029 | 
+000030 | ## 3. The SmartCell Core Object
+000031 | 
+000032 | The root container for all cell data.
+000033 | 
+000034 | ### `id`
+000035 | * **Description:** Unique, random identifier assigned at creation. Used to map asynchronous NLP results back to the UI row.
+000036 | * **Format:** UUID v4.
+000037 | * **Nullable:** No.
+000038 | 
+000039 | ### `raw_value`
+000040 | * **Description:** The original, immutable user input.
+000041 | * **Source:** User Upload (CSV/Excel).
+000042 | * **Note:** This field is **never** modified by the AI. We only modify the `reconciliation` object attached to it.
+000043 | 
+000044 | ### `fingerprint`
+000045 | * **Description:** The "Key Collision" string used for local clustering.
+000046 | * **Logic:** `lowercase(sort(tokenize(raw_value)))`.
+000047 | * **Example:** "The Beatles" -> `beatles the`.
+000048 | 
+000049 | ### `status`
+000050 | * **Description:** The current state of the cell in the lifecycle.
+000051 | * **Allowed Values:**
+000052 |     * `NEW`: No reconciliation attempted.
+000053 |     * `PENDING`: Sent to Solr/Falcon, awaiting Async response.
+000054 |     * `AMBIGUOUS`: Returned with multiple candidates (Score 0.40 - 0.85).
+000055 |     * `MATCHED`: Confirmed link to a QID (Score > 0.85 or User Action).
+000056 |     * `REVIEW_REQUIRED`: Auto-matched but flagged by Scrutinizers (QA Error).
+000057 | 
+000058 | ### `consensus_score`
+000059 | * **Description:** The final calculated confidence.
+000060 | * **Range:** `0.0` to `1.0`.
+000061 | * **Calculation:** Computed in Java after receiving Python payload.
+000062 | * **Critical:** If `null`, the UI displays "Processing...".
+000063 | 
+000064 | ---
+000065 | 
+000066 | ## 4. The Reconciliation Object (`recon`)
+000067 | 
+000068 | This sub-object contains the "AI Opinion".
+000069 | 
+000070 | ### `match` (The Golden Record)
+000071 | * **Type:** `Candidate` Object (Nullable).
+000072 | * **Description:** The single winning entity. If this exists, the cell is considered "Reconciled".
+000073 | 
+000074 | ### `candidates`
+000075 | * **Type:** List of `Candidate` Objects.
+000076 | * **Description:** The top $N$ suggestions (default 3) returned by the funnel.
+000077 | * **Sort Order:** Descending by `consensus_score`.
+000078 | 
+000079 | ---
+000080 | 
+000081 | ## 5. The Candidate Object
+000082 | 
+000083 | A potential match (e.g., "Paris (Q90)").
+000084 | 
+000085 | | Field | Type | Description |
+000086 | | :--- | :--- | :--- |
+000087 | | `id` | `String` | The Wikidata QID (Must match regex `^Q[0-9]+$`). |
+000088 | | `label` | `String` | The official label from Wikidata. |
+000089 | | `types` | `Array<String>` | List of "Instance Of" QIDs (e.g., `["Q5", "Q3618"]`). |
+000090 | | `description` | `String` | Short description text (e.g., "Capital of France"). |
+000091 | | `features` | `Object` | The raw scores used for debugging/visualization. |
+000092 | 
+000093 | ### `features` Breakdown (Telemetry)
+000094 | * `tapioca_popularity` (`float`): Raw Log-Likelihood from Solr.
+000095 | * `falcon_context` (`float`): Cosine Similarity (0-1) from SBERT.
+000096 | * `levenshtein_distance` (`float`): Normalized string distance (0-1).
+000097 | 
+000098 | ---
+000099 | 
+000100 | ## 6. The NLP Context Object (`nlp_context`)
+000101 | 
+000102 | Data extracted by Falcon 2.0 to justify the decision.
+000103 | 
+000104 | ### `surrounding_ngrams`
+000105 | * **Type:** `Array<String>`
+000106 | * **Description:** The context window used for vectorization.
+000107 | * **Example:** `["born", "in", "honolulu"]` for entity "Barack Obama".
+000108 | 
+000109 | ### `inferred_property`
+000110 | * **Type:** `String` (PID)
+000111 | * **Description:** The Wikidata Property ID that Falcon detected in the sentence.
+000112 | * **Example:** `P19` (place of birth).
+000113 | * **Use Case:** The UI highlights this property to show *why* the entity was chosen.
+000114 | 
+000115 | ---
+000116 | 
+000117 | ## 7. Pipeline Trace (`pipeline_trace`)
+000118 | 
+000119 | Metadata for debugging distributed transactions.
+000120 | 
+000121 | * `job_id`: The ThreadPoolExecutor ID.
+000122 | * `tapioca_latency_ms`: Time spent in Layer 1.
+000123 | * `falcon_latency_ms`: Time spent in Layer 2.
+000124 | * `engine_version`: Version of the model used (e.g., "Sentient-v1.0").
+----- FILE END -----
+
+----- FILE BEGIN -----
+path="05_WIRING_AND_CONFIG.md"
+id=c84fb544ebf3
+kind=markdown
+size=3220
+lines=72
+line_ref=1-72
+chunks=0
+chunk_refs=
+summary="Markdown documentation."
+----
+000001 | # Wiring & Configuration Strategy
+000002 | **Component:** System Orchestration  
+000003 | **Config Source:** `config/orchestration/environment.json`  
+000004 | **Role:** Network Topology, IPC Protocols, and Startup Sequence.
+000005 | 
+000006 | ---
+000007 | 
+000008 | ## 1. Network Topology (The Port Map)
+000009 | 
+000010 | SenTient is a distributed system running on `localhost`. Strict port discipline is enforced to prevent conflicts.
+000011 | 
+000012 | | Service | Role | Port | Protocol | Bound Interface |
+000013 | | :--- | :--- | :--- | :--- | :--- |
+000014 | | **Java Core** | Orchestrator / UI | `3333` | HTTP/1.1 | `127.0.0.1` |
+000015 | | **Falcon (Python)** | NLP Service | `5005` | HTTP/1.1 | `127.0.0.1` |
+000016 | | **Solr (Tapioca)** | Fast Tagger | `8983` | HTTP/2 | `127.0.0.1` |
+000017 | | **ElasticSearch** | Context Store | `9200` | HTTP/TCP | `127.0.0.1` |
+000018 | | **Redis** | Result Cache | `6379` | TCP | `127.0.0.1` |
+000019 | 
+000020 | > **Security Note:** All services are bound strictly to `127.0.0.1`. No external traffic is allowed directly to Solr, Elastic, or Python. All external requests MUST go through the Java Core (Port 3333).
+000021 | 
+000022 | ---
+000023 | 
+000024 | ## 2. Inter-Process Communication (IPC)
+000025 | 
+000026 | The Java Core acts as the "Master" node. It communicates with "Worker" nodes via specific protocols defined in `butterfly.properties`.
+000027 | 
+000028 | 
+000029 | 
+000030 | ### 2.1. Link A: Java -> Solr (Layer 1)
+000031 | * **Purpose:** High-speed entity spotting.
+000032 | * **Client:** `org.apache.solr.client.solrj.impl.Http2SolrClient`
+000033 | * **Concurrency:** Highly parallel. Java sends async batches.
+000034 | * **Timeout:** **Strict 500ms**.
+000035 |     * *Logic:* If Solr takes >500ms, the FST logic is stuck. Fail fast and mark cell as `UNRECONCILED` rather than blocking the UI.
+000036 | 
+000037 | ### 2.2. Link B: Java -> Falcon (Layer 2)
+000038 | * **Purpose:** Deep semantic analysis.
+000039 | * **Client:** `java.net.http.HttpClient` (Java 11+).
+000040 | * **Concurrency:** Throttled (Max 4 concurrent requests).
+000041 |     * *Logic:* Python is CPU-bound (SBERT vectors). Flooding it causes thrashing.
+000042 | * **Timeout:** **Loose 120s**.
+000043 |     * *Logic:* Vector calculations take time. We wait.
+000044 | 
+000045 | ### 2.3. Link C: Python -> ElasticSearch
+000046 | * **Purpose:** Fetching property context vectors.
+000047 | * **Client:** `elasticsearch-py`.
+000048 | * **Protocol:** Persistent TCP connection (Keep-Alive).
+000049 | 
+000050 | ---
+000051 | 
+000052 | ## 3. File System Layout (Physical Wiring)
+000053 | 
+000054 | The application expects a specific directory structure relative to `SENTIENT_HOME`.
+000055 | 
+000056 | ```text
+000057 | SENTIENT_HOME/
+000058 | ├── refine                 # The specific Java startup shell script
+000059 | ├── refine.ini             # JVM Memory arguments (-Xmx)
+000060 | ├── config/                # THE NERVE CENTER
+000061 | │   ├── core/butterfly.properties        # Java Settings
+000062 | │   ├── nlp/falcon_settings.yaml         # Python Settings
+000063 | │   ├── solr/tapioca_schema.xml          # Solr Schema
+000064 | │   ├── elastic/falcon_mapping.json      # Elastic Schema
+000065 | │   └── orchestration/environment.json   # Global Paths
+000066 | ├── modules/               # Core logic (Refine)
+000067 | ├── extensions/            # Plugins (Wikibase, JDBC)
+000068 | ├── solr/                  # Embedded Solr Server
+000069 | ├── python_venv/           # Python Virtual Environment
+000070 | └── data/
+000071 |     ├── workspace/         # User Project Data (JSON/History)
+000072 |     └── models/            # SBERT models & Stopwords
+----- FILE END -----
+
+----- FILE BEGIN -----
+path="06_API_AND_FRONTEND.md"
+id=c462fa97d520
+kind=markdown
+size=728
+lines=24
+line_ref=1-24
+chunks=0
+chunk_refs=
+summary="Markdown documentation."
+----
+000001 | # API & Frontend Integration
+000002 | **Component:** Interface Layer  
+000003 | **Technology:** React (Frontend) <-> Jetty (Backend)  
+000004 | **Protocol:** HTTP/1.1 REST-like Commands
+000005 | 
+000006 | ---
+000007 | 
+000008 | ## 1. Overview
+000009 | SenTient decouples the User Interface from the Core Logic.
+000010 | * **Backend:** Runs on Port `3333` (Jetty). Exposes a "Command" API.
+000011 | * **Frontend:** Runs on Port `3000` (Vite/React). Consumes JSON.
+000012 | 
+000013 | **The Command Pattern:**
+000014 | Unlike standard REST resources, SenTient uses functional endpoints:
+000015 | `http://127.0.0.1:3333/command/{module}/{action}`
+000016 | 
+000017 | ---
+000018 | 
+000019 | ## 2. Global Request Headers
+000020 | All requests from the Frontend **MUST** include:
+000021 | 
+000022 | ```http
+000023 | Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+000024 | X-Requested-With: XMLHttpRequest
+----- FILE END -----
+
+----- FILE BEGIN -----
+path="07_QA_AND_VALIDATION.md"
+id=7eb43cd5a2bc
+kind=markdown
+size=3102
+lines=78
+line_ref=1-78
+chunks=0
+chunk_refs=
+summary="Markdown documentation."
+----
+000001 | # QA, Validation & Benchmarking
+000002 | **Component:** Quality Assurance  
+000003 | **Role:** Verification of Accuracy (Precision/Recall) and Performance (Latency).
+000004 | 
+000005 | ---
+000006 | 
+000007 | ## 1. Overview
+000008 | In a probabilistic system like SenTient, "It works on my machine" is not enough. We must statistically prove that the system improves over time.
+000009 | 
+000010 | **The QA Strategy relies on 3 Pillars:**
+000011 | 1.  **Automated Unit Tests:** Checking the code logic (Java/Python).
+000012 | 2.  **Semantic Scrutinizers:** Checking the data validity (Rules).
+000013 | 3.  **Golden Standard Benchmarks:** Checking the AI accuracy (Datasets).
+000014 | 
+000015 | ---
+000016 | 
+000017 | ## 2. The Scrutinizers (Runtime Validation)
+000018 | 
+000019 | Scrutinizers are "Linting Rules for Data". They run automatically in the Java Core *before* any export action.
+000020 | 
+000021 | **Configuration:** `config/qa/scrutinizer_rules.yaml`
+000022 | 
+000023 | ### 2.1. Integrity Scrutinizers
+000024 | * **Class:** `org.openrefine.wikibase.qa.IntegrityScrutinizer`
+000025 | * **Checks:**
+000026 |     * Does every `MATCHED` cell have a valid QID (`^Q[0-9]+$`)?
+000027 |     * Are there any "Ghost Cells" (Status matched, but ID null)?
+000028 |     * **P-Tag Confusion:** Using a Property (P19) where an Item (Q5) is expected.
+000029 | * **Action:** Blocks export with `FATAL` error unless Strict Mode is disabled.
+000030 | 
+000031 | ### 2.2. Constraint Scrutinizers (Wikidata Alignment)
+000032 | * **Class:** `org.openrefine.wikibase.qa.ConstraintScrutinizer`
+000033 | * **Checks:**
+000034 |     * **Single Value Constraint:** e.g., A country can only have one Capital.
+000035 |     * **Format Constraint:** e.g., Dates must be ISO 8601 (`YYYY-MM-DD`).
+000036 |     * **Chronology Constraint:** e.g., Death Date cannot precede Birth Date.
+000037 | * **Action:** Shows `WARNING` in the UI. User can override.
+000038 | 
+000039 | ### 2.3. Consensus Scrutinizers (SenTient Exclusive)
+000040 | * **Logic:** Checks for statistical anomalies in the scores.
+000041 | * **Rule:** "The Paris Hilton Rule"
+000042 |     * `IF tapioca_popularity > 0.95 AND falcon_context < 0.1`
+000043 |     * **Alert:** "High Popularity but Low Context Similarity. You may have selected a famous entity that does not fit this specific context."
+000044 | 
+000045 | 
+000046 | 
+000047 | ---
+000048 | 
+000049 | ## 3. Golden Standard Datasets
+000050 | 
+000051 | We do not guess if the model is good. We measure it against ground truth.
+000052 | 
+000053 | ### 3.1. LC-QuAD 2.0 (Large Scale Question Answering)
+000054 | * **File:** `datasets/lcquad2_test.json`
+000055 | * **Size:** 5000+ Questions.
+000056 | * **Use Case:** Validating complex relation extraction.
+000057 | * **Metric:** F-Score (Harmonic mean of Precision and Recall).
+000058 | 
+000059 | ### 3.2. SimpleQuestions (Wikidata Version)
+000060 | * **File:** `datasets/simplequestions.txt`
+000061 | * **Format:** `subject_qid \t property_pid \t object_qid \t question`
+000062 | * **Use Case:** Validating simple entity spotting speed.
+000063 | * **Target:** Latency < 50ms/query.
+000064 | 
+000065 | ### 3.3. WebQSP (Web Questions Semantic Parse)
+000066 | * **File:** `datasets/webqsp.test.entities.json`
+000067 | * **Use Case:** Testing disambiguation of ambiguous surface forms.
+000068 | 
+000069 | ---
+000070 | 
+000071 | ## 4. Benchmarking Scripts
+000072 | 
+000073 | Located in `evaluation/`. These scripts run the full pipeline against the datasets.
+000074 | 
+000075 | ### `evaluate_falcon_api.py`
+000076 | **Command:**
+000077 | ```bash
+000078 | python evaluation/evaluate_falcon_api.py --dataset datasets/lcquad2_test.json --output results/benchmark_v1.csv --limit 1000
+----- FILE END -----
+
+----- FILE BEGIN -----
+path="deployPlan-GoogleResearch.txt"
+id=5421e51c5650
+kind=source
+size=3590
+lines=27
+line_ref=1-27
+chunks=0
+chunk_refs=
+summary="Source file."
+----
+000001 | To secure support from **Google Research**, SenTient must be framed not just as a tool, but as a **critical data-integrity layer** for the next generation of knowledge engines. Given that **Dr. Denny Vrandečić** is already observing your progress, the focus should be on how SenTient’s "optimized meta-architecture" solves specific problems that Google is currently spending millions to address.
+000002 | 
+000003 | ###1. Strategic Value to Google Research (2025)Google’s research priorities for 2025 are heavily centered on **AI Safety**, **Trust**, and **Knowledge Graphs**. SenTient fits directly into these buckets:
+000004 | 
+000005 | * **Trust and Safety-by-Design:** Google Research has a dedicated award for improving digital trust and safety. SenTient’s **Scrutinizer layer** (e.g., the "Paris Hilton" rule) acts as an automated "immune system" that blocks biased or erroneous data before it can poison a Knowledge Graph—a direct application of "Safety-by-Design".
+000006 | * **Explainable AI (XAI):** A major 2025 theme is using Knowledge Graphs to achieve **explainability** in machine learning. SenTient’s ability to provide a "semantic reason" for every decision (via the Falcon 2.0 layer) aligns with Google's mission to build more interpretable systems.
+000007 | * **Scalability on Finite Hardware:** Google is actively seeking "Communication-Efficient" and performance-optimized training and inference methods. Your **DuckDB Sidecar** architecture—which allows 5GB+ datasets to be processed without massive RAM requirements—is a high-value engineering solution.
+000008 | 
+000009 | ###2. Alignment with Abstract WikipediaSenTient acts as the **"Ingestion Counterpart"** to the **Abstract Wiki Architect**.
+000010 | 
+000011 | * **Language Equality:** Abstract Wikipedia aims to accelerate knowledge base development for underrepresented languages.
+000012 | * **The Ingestion Gap:** While Denny is building the tools to *render* knowledge into 300+ languages, SenTient provides the **deterministic deconstructor** needed to *ingest* the world's unstructured data into that multilingual framework.
+000013 | 
+000014 | ###3. Recommended Pitch StrategySince SenTient is **not for sale** and must remain **collaborative**, your pitch should target Google’s **Academic Research Awards (GARA)** or their **Open Source Outreach** programs rather than a standard commercial acquisition.
+000015 | 
+000016 | * **Step 1: Leverage the Mastodon Connection.** Post concrete **Benchmarking Results** comparing SenTient's performance (Precision > 0.85) against standalone OpenTapioca or Falcon runs on datasets like **LC-QuAD 2.0**.
+000017 | * **Step 2: Formalize the "Academic Partnership."** Google provides unrestricted gifts (up to $100,000 USD) and **Google Research Sponsors** to projects led by academic researchers. Highlight your work's "societal implications" for language equality and fact-checking.
+000018 | * **Step 3: Offer a "Service Integration" Pilot.** Suggest a project where SenTient is used as a **Validation Gate** for Google Cloud’s **Private Knowledge Graphs**, demonstrating how it prevents internal data hallucinations.
+000019 | 
+000020 | ###4. Summary of the "Google Value"| feature | Research Interest | Google Mission |
+000021 | | --- | --- | --- |
+000022 | | **Scrutinizer Layer** | Hallucination Mitigation | Responsible AI & Safety |
+000023 | | **DuckDB Sidecar** | Infrastructure Efficiency | Scalable Information Processing |
+000024 | | **Falcon NLP** | Semantic Disambiguation | Deepening Contextual Search |
+000025 | | **Open Source** | Ecosystem Growth | Universal Access to Information |
+000026 | 
+000027 | **Would you like me to help you draft a formal proposal structured specifically for the 2025 Google Academic Research Award requirements?**
+----- FILE END -----
+
+----- FILE BEGIN -----
+path="MajorUpgrade-Senior.txt"
+id=09249cff6a82
+kind=source
+size=17421
+lines=434
+line_ref=1-434
+chunks=2
+chunk_refs=1-350,351-434
+summary="Source file."
+
+--- CHUNK BEGIN ---
+id=09249cff6a82:1-350
+start=1
+end=350
+----
 This is the **Strategic Roadmap for the SenTient v1.1 Upgrade**.
 
 On a grand scale, we are moving the system from a "Research Prototype" (monolithic, fragile, English-only) to an **"International Enterprise Platform"** (modular, contract-driven, robust).
@@ -1186,6 +1158,13 @@ To prevent "Path Drift" between development environments (Mac/Linux/Windows), us
 
 ## 3. Network Topology Diagram
 
+--- CHUNK END ---
+
+--- CHUNK BEGIN ---
+id=09249cff6a82:351-434
+start=351
+end=434
+----
 
 
 ```mermaid
@@ -1270,5 +1249,211 @@ Used for the "Learning Loop".
 5. **Rebuild:** Run `./refine build` (Java) and `npm install` (Frontend).
 
 
+--- CHUNK END ---
+----- FILE END -----
 
-===== END MajorUpgrade-Senior.txt (#0013) =====
+===== END VOLUME Docs_20260612_222340_01_ROOT.txt =====
+
+
+===== BEGIN VOLUME Docs_20260612_222340_02_Acknowledgements.txt :: FOLDER: Acknowledgements =====
+==== VOLUME META ====
+generated_at: 2026-06-12T22:23:40.144086
+title: FOLDER: Acknowledgements
+root_dir: C:\mycode\SenTient\SenTient\Docs
+file_count: 3
+total_size_mb: 0.0128
+home: 00_START_HERE.instructions.md
+prev_volume: Docs_20260612_222340_01_ROOT.txt
+prev_title: Root
+next_title: 
+short_title: Acknowledgements
+
+==== FILE_INDEX ====
+ENTRY id=d0ac08d2c76e path="Acknowledgements/falcon2_0.md" kind=markdown size=5139 lines=59 line_ref=1-59 chunks=0 chunk_refs= symbols=0 imports=0 summary="Markdown documentation."
+ENTRY id=44610d498644 path="Acknowledgements/OpenRefine.md" kind=markdown size=4044 lines=39 line_ref=1-39 chunks=0 chunk_refs= symbols=0 imports=0 summary="Markdown documentation."
+ENTRY id=5aff46c26ddb path="Acknowledgements/OpenTapioca.md" kind=markdown size=4290 lines=44 line_ref=1-44 chunks=0 chunk_refs= symbols=0 imports=0 summary="Markdown documentation."
+
+==== FILES ====
+
+----- FILE BEGIN -----
+path="Acknowledgements/falcon2_0.md"
+id=d0ac08d2c76e
+kind=markdown
+size=5139
+lines=59
+line_ref=1-59
+chunks=0
+chunk_refs=
+summary="Markdown documentation."
+----
+000001 | **Subject:** An Architectural Appreciation: What Sentry Learned from OpenRefine’s Source Code
+000002 | 
+000003 | **To the Maintainers and Contributors of OpenRefine,**
+000004 | 
+000005 | We are the engineering team at **Sentry**. We are currently in the process of architecting a next-generation data transformation platform, and as part of our R&D phase, we undertook a deep dive into the OpenRefine codebase (specifically the Core, Modules, and the Wikibase extension).
+000006 | 
+000007 | We are writing this report not just to announce our presence, but to express our profound gratitude and professional admiration. In analyzing your source code, we found not just a tool, but a masterclass in agile data modeling and resilient software architecture.
+000008 | 
+000009 | We intend to carry forward several of your architectural patterns. Below is a detailed technical breakdown of the specific mechanisms we identified as "Best in Class," which we plan to adopt and modernize in our own work.
+000010 | 
+000011 | ### 1. The Polymorphic "Quantum" Cell
+000012 | **Context:** `com.google.refine.model.Cell` & `com.google.refine.model.Recon`
+000013 | 
+000014 | The most critical insight we gained is that a cell in OpenRefine is not a primitive string. It is a container capable of holding dual states simultaneously: the raw textual value and the reconciled semantic entity (`Recon`).
+000015 | 
+000016 | * **Why we admire it:** This decoupling of "Label" (string) from "Identity" (Recon ID) is the secret sauce that allows users to clean dirty text without breaking the semantic links to the Knowledge Graph.
+000017 | * **Adoption:** We are retaining this object structure to ensure that data cleaning and data reconciliation remain parallel, non-destructive processes.
+000018 | 
+000019 | ### 2. The "Live" Faceted Browsing Engine
+000020 | **Context:** `com.google.refine.browsing.Engine`, `FilteredRows`, & `BitSet` logic
+000021 | 
+000022 | 
+000023 | 
+000024 | We analyzed how the `Engine` computes the intersection of multiple facets. The architecture avoids standard database queries in favor of an in-memory, set-based reduction strategy.
+000025 | 
+000026 | * **Why we admire it:** The "Lazy Evaluation" strategy—where statistics are only computed for the currently filtered subset—provides an immediate feedback loop that SQL-based approaches struggle to match. The abstraction of `Row` visibility via bitmasks is highly efficient.
+000027 | * **Adoption:** We are rebuilding this engine logic to preserve the "conversation with data" UX, ensuring that filtering remains an instantaneous, iterative process of reduction.
+000028 | 
+000029 | ### 3. The Agile Wikibase Pipeline (The "Schema Alignment" Architecture)
+000030 | **Context:** `extensions/wikibase`, `WikibaseSchema`, `StatementMerger`
+000031 | 
+000032 | This is, in our view, the crown jewel of the codebase. The logic you have implemented to bridge tabular data with a graph database (Wikibase/Wikidata) is incredibly sophisticated. We specifically noted three sub-strategies we intend to preserve:
+000033 | 
+000034 | * **The Declarative Schema Graph:** Instead of hard-coding exports, the `WikibaseSchema` acts as a live object graph that observes the data. The use of `WbExpression` trees allows for real-time previewing of the complex graph structure before generation.
+000035 | * **Semantic Diffing (The `StatementMerger`):** We were impressed by the logic that calculates "Semantic Deltas" rather than overwriting data. The distinction between `StrictValueMatcher` and `LaxValueMatcher` ensures that the tool is a "good citizen" of the Wiki ecosystem, performing non-destructive merges.
+000036 | * **Pre-Flight QA (`Scrutinizers`):** The implementation of `Scrutinizers` (Constraint, Format, Inverse) to simulate the upload and catch errors (like constraint violations) locally before hitting the API is a pattern we consider mandatory for data integrity.
+000037 | 
+000038 | ### 4. The Infinite Undo/Redo Transaction Model
+000039 | **Context:** `com.google.refine.history.History` & `Change` Interface
+000040 | 
+000041 | The implementation of the Command Pattern via the `Change` interface—where every operation must implement both `apply()` and `revert()`—provides a safety net that encourages user experimentation.
+000042 | 
+000043 | * **Why we admire it:** The serialization of these changes ensures that the project state is always recoverable.
+000044 | * **Adoption:** We are treating "History as a First-Class Citizen," mirroring your architecture where every user action is an atomic, reversible transaction.
+000045 | 
+000046 | ### 5. GREL (General Refine Expression Language) AST
+000047 | **Context:** `com.google.refine.grel`, `Control`, `Function`
+000048 | 
+000049 | The decision to implement an Abstract Syntax Tree (AST) for GREL allows users to perform complex logic without being programmers. The handling of `value` as an implicit variable and the robust library of functions (`string`, `math`, `date`) strikes the perfect balance between power and usability.
+000050 | 
+000051 | ### Conclusion
+000052 | 
+000053 | OpenRefine is often described as a "power tool," but our code analysis reveals it is also a "precision instrument."
+000054 | 
+000055 | As we build Sentry, we are effectively forking the **spirit and architecture** of OpenRefine. We are standing on the shoulders of giants. Thank you for decades of open-source excellence, for the clean modularity of your extensions, and for setting the standard on how to treat messy data with respect.
+000056 | 
+000057 | **With gratitude,**
+000058 | 
+000059 | RM
+----- FILE END -----
+
+----- FILE BEGIN -----
+path="Acknowledgements/OpenRefine.md"
+id=44610d498644
+kind=markdown
+size=4044
+lines=39
+line_ref=1-39
+chunks=0
+chunk_refs=
+summary="Markdown documentation."
+----
+000001 | **Subject: A Tribute to OpenRefine’s Architecture: Lessons Learned for the Next Generation of Data Tools**
+000002 | 
+000003 | **To the OpenRefine Maintenance Team and Community,**
+000004 | 
+000005 | We are currently in the process of developing a new data transformation and analysis application ("Sentry"). As part of our R&D phase, we undertook a deep dive into the OpenRefine codebase to understand how the industry standard handles complex challenges like language parsing, data reconciliation, and knowledge graph integration.
+000006 | 
+000007 | We intended to "fork from scratch"—rewriting the core while retaining the logic. However, during our audit, we discovered that certain architectural patterns you have established are not just functional; they are foundational standards for this domain.
+000008 | 
+000009 | We are writing this to express our gratitude for your open-source work and to acknowledge the specific engineering strategies we are retaining and adapting for our own platform. Here is a technical summary of the OpenRefine features we found most impressive and critical:
+000010 | 
+000011 | ### 1. The GREL Architecture (Language Deconstruction)
+000012 | We were particularly impressed by the implementation of the General Refine Expression Language (GREL). Rather than a simple regex wrapper, the separation of concerns in the parsing logic is robust.
+000013 | 
+000014 | * **The MetaParser/Evaluable Pattern:** We observed in the core modules that you distinguish strictly between parsing the AST and executing the logic. The pattern where `MetaParser.parse()` returns an `Evaluable` interface allows for high performance and modularity.
+000015 | * **Context Injection:** The way bindings (`value`, `row`, `cell`, `recon`) are injected into the evaluation context dynamically is a strategy we are adopting. It effectively bridges the gap between generic expression languages and the specific constraints of tabular data.
+000016 | 
+000017 | ### 2. The Wikibase Integration Strategy
+000018 | The complexity of mapping flat data to a graph structure (Wikidata) is immense. Your extension architecture provides a masterclass in handling this elegantly.
+000019 | 
+000020 | * **The "Snak" Abstraction:** Instead of constructing JSON payloads manually, your use of the Wikidata Toolkit (WDTK) to manipulate abstract objects (`Snak`, `SnakGroup`, `Statement`) is the only viable way to ensure data integrity. We are retaining this object-oriented approach to handle edge cases like "No Value" or "Unknown Value" without corrupting the graph.
+000021 | * **Schema as an Overlay:** We noted that the `WikibaseSchema` exists independently of the data rows. This separation—applying a "skeleton" of operations over dynamic data—is a pattern we will replicate to ensure our application remains agile.
+000022 | 
+000023 | ### 3. Server Robustness & Command Pattern
+000024 | While modern web frameworks have evolved, the robustness of the underlying `RefineServlet` architecture remains relevant for heavy data processing.
+000025 | 
+000026 | * **The Command Pattern:** We value how the API is structured around discrete Commands rather than tight coupling between the UI and backend. This allows for a clean separation of duties.
+000027 | * **Asynchronous Thread Pools:** The implementation of `ThreadPoolExecutorAdapter` for handling long-running reconciliation processes without freezing the application state is a critical stability feature we intend to mirror.
+000028 | 
+000029 | ### 4. Quality Assurance via "Scrutinizers"
+000030 | Finally, the concept of `Scrutinizers` (in the Wikibase extension) to inspect edits *before* they are batched to the API is a safeguard we find essential. Validating constraints (whitespace issues, format violations) at the object level before serialization is a strategy we are taking forward.
+000031 | 
+000032 | ### Conclusion
+000033 | OpenRefine has set a high bar for data cleaning tools. While we are building a new application with a modern stack, the core logic regarding data modeling and expression parsing that you have built over the years will live on in our architecture.
+000034 | 
+000035 | Thank you for your dedication to open source, for maintaining this standard of quality, and for paving the way for tools like ours.
+000036 | 
+000037 | **With gratitude,**
+000038 | 
+000039 | RM
+----- FILE END -----
+
+----- FILE BEGIN -----
+path="Acknowledgements/OpenTapioca.md"
+id=5aff46c26ddb
+kind=markdown
+size=4290
+lines=44
+line_ref=1-44
+chunks=0
+chunk_refs=
+summary="Markdown documentation."
+----
+000001 | **Subject: Appreciation & Technical Analysis: The Architectural Pillars of OpenTapioca we are adopting for Sentry**
+000002 | 
+000003 | **To the OpenTapioca Team,**
+000004 | 
+000005 | We are currently in the process of developing **Sentry**, a new Named Entity Disambiguation (NED) system. Our project is a "clean slate" fork inspired heavily by OpenTapioca. As we analyzed your codebase to determine the best path forward, we were struck by the elegance and efficiency of your architectural choices.
+000006 | 
+000007 | We wanted to take a moment to express our gratitude and share a technical report on the specific strategies from OpenTapioca that we consider "best-in-class" and will be retaining as the core foundation of Sentry.
+000008 | 
+000009 | Here is a breakdown of the OpenTapioca engineering decisions that we found most impactful:
+000010 | 
+000011 | ### 1. The "Inverted Dictionary" Strategy (Solr & FST)
+000012 | We identified your use of Apache Solr’s `TaggerRequestHandler` as the critical component for high-performance spotting.
+000013 | * **What we noted:** Instead of relying on heavy NLP parsing for initial detection, you leverage Solr’s internal **Finite State Transducers (FST)**. This allows for matching millions of entities against a text stream in milliseconds.
+000014 | * **The Sentry adoption:** We are retaining the exact `managed-schema` analysis pipeline (specifically the `ASCIIFoldingFilter`, `EnglishPossessiveFilter`, and `LowerCaseFilter`). We found that deviating from this normalization pipeline significantly drops recall.
+000015 | 
+000016 | ### 2. "Offline" Authority Calculation (PageRank)
+000017 | Your approach to solving the "Paris (City) vs. Paris (Hilton)" problem without context is robust.
+000018 | * **What we noted:** The `wikidatagraph.py` implementation using `scipy.sparse` matrices to calculate PageRank on the entire Wikidata dump is highly efficient. By pre-calculating a global "prior" probability, the system has a strong fallback heuristic when local context is scarce.
+000019 | * **The Sentry adoption:** We are keeping the sparse matrix computation logic to generate these static rank scores, as they provide an essential baseline for our classifier.
+000020 | 
+000021 | ### 3. Local Graph Consistency (Semantic Coherence)
+000022 | The way OpenTapioca handles disambiguation by looking at the relationships *between* candidates in the same document is excellent.
+000023 | * **What we noted:** The `DirectLinkSimilarity` check effectively uses the Wikidata graph structure to reward entities that are semantically distinct but topologically connected (e.g., boosting "Python" the language when "Guido van Rossum" is present in the text).
+000024 | * **The Sentry adoption:** We will retain the graph traversal logic that validates edges between candidate entities to establish context, rather than relying solely on textual context windows.
+000025 | 
+000026 | ### 4. Smart Data Flattening (`IndexingProfile`)
+000027 | The transformation strategy from complex Wikidata JSON to flat Solr documents is a key enabler of your speed.
+000028 | * **What we noted:** The creation of "Artificial Aliases" in `indexingprofile.py`. By transforming non-textual properties (like Twitter IDs, Grid IDs, or specific codes) into searchable text aliases, you effectively turn Solr into a multi-modal search engine.
+000029 | * **The Sentry adoption:** We are adopting your `IndexingProfile` logic to flatten the graph, ensuring that entities are discoverable via their metadata identifiers, not just their labels.
+000030 | 
+000031 | ### 5. Aggressive Pruning & Linear Classification
+000032 | Finally, we appreciate the pragmatism of the machine learning pipeline.
+000033 | * **What we noted:** The decision to use a **Linear SVC** over heavy Deep Learning models ensures real-time inference speeds. Furthermore, the aggressive regex pruning in `tagger.py` (discarding short/lowercase tokens before they reach the classifier) is a vital optimization for noise reduction.
+000034 | * **The Sentry adoption:** We are maintaining the "Bag of Words" log-likelihood feature combined with the Linear SVM. It offers the best trade-off between accuracy and latency for our use case.
+000035 | 
+000036 | **Conclusion**
+000037 | 
+000038 | OpenTapioca is a remarkable piece of engineering that balances the massive scale of Wikidata with the need for real-time analysis. While Sentry will feature a rewritten codebase and a new API structure, its heart will beat with the logic you designed.
+000039 | 
+000040 | Thank you for open-sourcing this work.
+000041 | 
+000042 | Best regards,
+000043 | 
+000044 | RM
+----- FILE END -----
+
+===== END VOLUME Docs_20260612_222340_02_Acknowledgements.txt =====
