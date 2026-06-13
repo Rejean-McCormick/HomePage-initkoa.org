@@ -1,4 +1,3 @@
-// scripts/ai-assets/write-artifacts.mjs
 import fs from "node:fs";
 import path from "node:path";
 import {
@@ -42,6 +41,7 @@ function ensureString(value, label) {
   if (typeof value !== "string") {
     throw new TypeError(`${label} must be a string.`);
   }
+
   return value;
 }
 
@@ -49,6 +49,7 @@ function ensureArray(value, label) {
   if (!Array.isArray(value)) {
     throw new TypeError(`${label} must be an array.`);
   }
+
   return value;
 }
 
@@ -67,27 +68,45 @@ function normalizeRouteCase(route) {
 
 function getRequiredConfig(state) {
   const config = state?.config;
+
   if (!config) {
     throw new Error("writeArtifacts(state) requires state.config.");
   }
 
   const publicDir = ensureString(config.publicDir, "config.publicDir");
   const artifactNames = config.artifactNames;
+
   if (!artifactNames || typeof artifactNames !== "object") {
     throw new Error("config.artifactNames is required.");
   }
 
   const requiredArtifactNames = {
-    aiCorpus: ensureString(artifactNames.aiCorpus, "config.artifactNames.aiCorpus"),
+    aiCorpus: ensureString(
+      artifactNames.aiCorpus,
+      "config.artifactNames.aiCorpus"
+    ),
     llms: ensureString(artifactNames.llms, "config.artifactNames.llms"),
-    llmsFull: ensureString(artifactNames.llmsFull, "config.artifactNames.llmsFull"),
-    aiSitemap: ensureString(artifactNames.aiSitemap, "config.artifactNames.aiSitemap"),
-    mdManifest: ensureString(artifactNames.mdManifest, "config.artifactNames.mdManifest"),
-    mdSitemap: ensureString(artifactNames.mdSitemap, "config.artifactNames.mdSitemap"),
+    llmsFull: ensureString(
+      artifactNames.llmsFull,
+      "config.artifactNames.llmsFull"
+    ),
+    aiSitemap: ensureString(
+      artifactNames.aiSitemap,
+      "config.artifactNames.aiSitemap"
+    ),
+    mdManifest: ensureString(
+      artifactNames.mdManifest,
+      "config.artifactNames.mdManifest"
+    ),
+    mdSitemap: ensureString(
+      artifactNames.mdSitemap,
+      "config.artifactNames.mdSitemap"
+    ),
   };
 
   const generatedMdStateFile =
-    typeof config.generatedMdStateFile === "string" && config.generatedMdStateFile
+    typeof config.generatedMdStateFile === "string" &&
+    config.generatedMdStateFile
       ? config.generatedMdStateFile
       : path.join(publicDir, ".generated-md-mirrors.json");
 
@@ -105,6 +124,7 @@ function getSortedPages(state) {
   return [...pages].sort((a, b) => {
     const routeA = normalizeRouteCase(String(a?.route ?? ""));
     const routeB = normalizeRouteCase(String(b?.route ?? ""));
+
     return routeA.localeCompare(routeB);
   });
 }
@@ -121,9 +141,11 @@ function cleanupOldGeneratedMirrors(generatedMdStateFile, publicDir) {
 
 function getPageRoute(page) {
   const route = page?.route;
+
   if (!route || typeof route !== "string") {
     throw new Error("Each page must include a string route.");
   }
+
   return normalizeRouteCase(route);
 }
 
@@ -145,12 +167,19 @@ function getPageMarkdownMirror(page) {
 
 function writePublicArtifact(publicDir, fileName, text) {
   const absPath = path.join(publicDir, fileName);
-  writeFileSafe(absPath, typeof text === "string" ? text : String(text));
-  return absPath;
+  const normalizedText = typeof text === "string" ? text : String(text);
+
+  writeFileSafe(absPath, normalizedText);
+
+  return {
+    fileName,
+    absPath,
+    bytes: Buffer.byteLength(normalizedText, "utf8"),
+  };
 }
 
 function writeMarkdownMirrors(state, publicDir, generatedMdStateFile) {
-  if (!state.config.generateMdMirrors) {
+  if (!state?.config?.generateMdMirrors) {
     removeFileIfExists(generatedMdStateFile);
     return 0;
   }
@@ -163,6 +192,7 @@ function writeMarkdownMirrors(state, publicDir, generatedMdStateFile) {
 
   for (const page of pages) {
     const route = getPageRoute(page);
+
     if (seenRoutes.has(route)) continue;
     seenRoutes.add(route);
 
@@ -188,8 +218,14 @@ export function writeArtifacts(state) {
 
   fs.mkdirSync(publicDir, { recursive: true });
 
+  const writtenArtifacts = {};
+
   const aiCorpus = generateAiCorpus(state);
-  writePublicArtifact(publicDir, artifactNames.aiCorpus, aiCorpus);
+  writtenArtifacts.aiCorpus = writePublicArtifact(
+    publicDir,
+    artifactNames.aiCorpus,
+    aiCorpus
+  );
 
   const markdownMirrorCount = writeMarkdownMirrors(
     state,
@@ -197,28 +233,73 @@ export function writeArtifacts(state) {
     generatedMdStateFile
   );
 
+  // Primary AI entrypoint.
+  //
+  // /llms.txt should remain the human/agent-facing starting point.
+  // Auxiliary artifacts such as /llms-full.txt, /ai-corpus.txt, manifests,
+  // and sitemaps may remain public and fetchable, but they should be linked
+  // from the entrypoint or metadata rather than exposed as primary footer nav.
   const llms = generateLlmsTxt(state);
-  writePublicArtifact(publicDir, artifactNames.llms, llms);
+  writtenArtifacts.llms = writePublicArtifact(
+    publicDir,
+    artifactNames.llms,
+    llms
+  );
 
+  // Auxiliary full-context bundle.
+  //
+  // Kept because the Reading AI accessibility docs define a multi-artifact
+  // strategy: /llms.txt as the primary entrypoint, /llms-full.txt as optional
+  // expanded context, and /reading/[slug] as the canonical full-text route.
   if (config.generateLlmsFull) {
     const llmsFull = generateLlmsFull(state);
-    writePublicArtifact(publicDir, artifactNames.llmsFull, llmsFull);
+    writtenArtifacts.llmsFull = writePublicArtifact(
+      publicDir,
+      artifactNames.llmsFull,
+      llmsFull
+    );
   } else {
-    removeFileIfExists(path.join(publicDir, artifactNames.llmsFull));
+    const llmsFullPath = path.join(publicDir, artifactNames.llmsFull);
+    removeFileIfExists(llmsFullPath);
+
+    writtenArtifacts.llmsFull = {
+      fileName: artifactNames.llmsFull,
+      absPath: llmsFullPath,
+      bytes: 0,
+      removed: true,
+    };
   }
 
   const aiSitemap = generateAiSitemap(state);
-  writePublicArtifact(publicDir, artifactNames.aiSitemap, aiSitemap);
+  writtenArtifacts.aiSitemap = writePublicArtifact(
+    publicDir,
+    artifactNames.aiSitemap,
+    aiSitemap
+  );
 
   const mdManifest = generateMdManifest(state);
-  writePublicArtifact(publicDir, artifactNames.mdManifest, mdManifest);
+  writtenArtifacts.mdManifest = writePublicArtifact(
+    publicDir,
+    artifactNames.mdManifest,
+    mdManifest
+  );
 
   const mdSitemap = generateMdSitemap(state);
-  writePublicArtifact(publicDir, artifactNames.mdSitemap, mdSitemap);
+  writtenArtifacts.mdSitemap = writePublicArtifact(
+    publicDir,
+    artifactNames.mdSitemap,
+    mdSitemap
+  );
 
   return {
-    aiCorpusBytes: Buffer.byteLength(aiCorpus, "utf8"),
+    aiCorpusBytes: writtenArtifacts.aiCorpus.bytes,
+    llmsBytes: writtenArtifacts.llms.bytes,
+    llmsFullBytes: writtenArtifacts.llmsFull.bytes,
+    aiSitemapBytes: writtenArtifacts.aiSitemap.bytes,
+    mdManifestBytes: writtenArtifacts.mdManifest.bytes,
+    mdSitemapBytes: writtenArtifacts.mdSitemap.bytes,
     markdownMirrorCount,
+    writtenArtifacts,
   };
 }
 

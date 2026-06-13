@@ -1,12 +1,12 @@
 # What a Kristal does
 
-> Canonical HTML: https://initkoa.org/technology/kristal/overview
-> Markdown mirror: https://initkoa.org/technology/kristal/overview/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/kristal/overview
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/kristal/overview/index.html.md
 > Route: /technology/kristal/overview
 > Source: app\technology\kristal\overview\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/technology/kristal/overview)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/kristal/overview)
 
 "Kristal is the portable, verifiable epistemic artifact layer of the kOA ecosystem: a way to publish, audit, distribute, query, and read structured knowledge with explicit provenance, certainty, authority, and scope.",
 

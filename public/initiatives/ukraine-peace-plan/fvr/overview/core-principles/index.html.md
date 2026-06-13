@@ -1,12 +1,12 @@
 # Core Principles & Red Lines
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/overview/core-principles
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/overview/core-principles/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/overview/core-principles
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/overview/core-principles/index.html.md
 > Route: /initiatives/ukraine-peace-plan/fvr/overview/core-principles
 > Source: app\initiatives\ukraine-peace-plan\fvr\overview\core-principles\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/overview/core-principles)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/overview/core-principles)
 
 # Core Principles & Red Lines
 

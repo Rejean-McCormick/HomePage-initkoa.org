@@ -1,12 +1,12 @@
 # /platforms/konnaxion/kollective-intelligence
 
-> Canonical HTML: https://initkoa.org/platforms/konnaxion/kollective-intelligence
-> Markdown mirror: https://initkoa.org/platforms/konnaxion/kollective-intelligence/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/index.html.md
 > Route: /platforms/konnaxion/kollective-intelligence
 > Source: app\platforms\konnaxion\kollective-intelligence\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/konnaxion/kollective-intelligence)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence)
 
 Kollective Intelligence
 

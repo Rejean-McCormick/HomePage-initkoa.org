@@ -1,12 +1,12 @@
 # /infrastructures/kin-city/philosophy
 
-> Canonical HTML: https://initkoa.org/infrastructures/kin-city/philosophy
-> Markdown mirror: https://initkoa.org/infrastructures/kin-city/philosophy/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kin-city/philosophy
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kin-city/philosophy/index.html.md
 > Route: /infrastructures/kin-city/philosophy
 > Source: app\infrastructures\kin-city\philosophy\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/infrastructures/kin-city/philosophy)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kin-city/philosophy)
 
 Back to Kin City Overview
 

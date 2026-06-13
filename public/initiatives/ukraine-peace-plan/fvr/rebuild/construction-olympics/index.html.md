@@ -1,12 +1,12 @@
 # Reconstruction Olympics
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics/index.html.md
 > Route: /initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics
 > Source: app\initiatives\ukraine-peace-plan\fvr\rebuild\construction-olympics\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics)
 
 # Reconstruction Olympics
 

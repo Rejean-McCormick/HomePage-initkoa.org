@@ -1,12 +1,12 @@
 # /initiatives/ukraine-peace-plan/fvr/rebuild/campus-governance
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/campus-governance
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/campus-governance/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/rebuild/campus-governance
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/rebuild/campus-governance/index.html.md
 > Route: /initiatives/ukraine-peace-plan/fvr/rebuild/campus-governance
 > Source: app\initiatives\ukraine-peace-plan\fvr\rebuild\campus-governance\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/rebuild/campus-governance)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/rebuild/campus-governance)
 
 # Peace-Build Campus Governance (Optional Model)
 

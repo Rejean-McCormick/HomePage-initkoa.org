@@ -1,12 +1,12 @@
 # Knowledge
 
-> Canonical HTML: https://initkoa.org/platforms/konnaxion/konnected/knowledge
-> Markdown mirror: https://initkoa.org/platforms/konnaxion/konnected/knowledge/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/konnected/knowledge
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/konnected/knowledge/index.html.md
 > Route: /platforms/konnaxion/konnected/knowledge
 > Source: app\platforms\konnaxion\konnected\knowledge\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/konnaxion/konnected/knowledge)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/konnected/knowledge)
 
 # Knowledge
 

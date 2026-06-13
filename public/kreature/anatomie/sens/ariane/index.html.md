@@ -1,12 +1,12 @@
 # /kreature/anatomie/sens/ariane
 
-> Canonical HTML: https://initkoa.org/kreature/anatomie/sens/ariane
-> Markdown mirror: https://initkoa.org/kreature/anatomie/sens/ariane/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/kreature/anatomie/sens/ariane
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/kreature/anatomie/sens/ariane/index.html.md
 > Route: /kreature/anatomie/sens/ariane
 > Source: app\kreature\anatomie\sens\ariane\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/kreature/anatomie/sens/ariane)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/kreature/anatomie/sens/ariane)
 
 Ariane
 

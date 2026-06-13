@@ -1,12 +1,12 @@
 # Routing & Escalation
 
-> Canonical HTML: https://initkoa.org/platforms/orgo/routing-escalation
-> Markdown mirror: https://initkoa.org/platforms/orgo/routing-escalation/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/orgo/routing-escalation
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/orgo/routing-escalation/index.html.md
 > Route: /platforms/orgo/routing-escalation
 > Source: app\platforms\orgo\routing-escalation\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/orgo/routing-escalation)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/orgo/routing-escalation)
 
 'How Orgo prevents lost requests: route work to the right function, enforce response windows, and escalate safely when needed.',
 

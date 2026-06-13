@@ -1,12 +1,12 @@
 # /platforms/konnaxion/kompendio
 
-> Canonical HTML: https://initkoa.org/platforms/konnaxion/kompendio
-> Markdown mirror: https://initkoa.org/platforms/konnaxion/kompendio/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kompendio
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kompendio/index.html.md
 > Route: /platforms/konnaxion/kompendio
 > Source: app\platforms\konnaxion\kompendio\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/konnaxion/kompendio)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kompendio)
 
 Kompendio
 

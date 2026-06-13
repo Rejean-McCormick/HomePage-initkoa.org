@@ -1,0 +1,104 @@
+# Summary
+
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/summary
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/summary/index.html.md
+> Route: /initiatives/ukraine-peace-plan/summary
+> Source: app\initiatives\ukraine-peace-plan\summary\page.mdx
+> Generated: 2026-06-13T00:42:18.184Z
+
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/summary)
+
+# Summary
+
+- Ukraine Peace & Reconstruction Plan (Home) (/initiatives/ukraine-peace-plan)
+- Freeze–Vote–Rebuild (Start reading here) (/initiatives/ukraine-peace-plan/fvr/start-here/welcome)
+
+## Start here
+- Welcome (/initiatives/ukraine-peace-plan/fvr/start-here/welcome)
+- One-page summary (/initiatives/ukraine-peace-plan/fvr/start-here/one-page-summary)
+- How to use this book (/initiatives/ukraine-peace-plan/fvr/start-here/how-to-use)
+- Glossary (/initiatives/ukraine-peace-plan/fvr/start-here/glossary)
+- Changelog & versioning (/initiatives/ukraine-peace-plan/fvr/start-here/changelog)
+
+## The proposal at a glance
+- The proposal at a glance (/initiatives/ukraine-peace-plan/fvr/overview/proposal-at-a-glance)
+- Theory of change (/initiatives/ukraine-peace-plan/fvr/overview/theory-of-change)
+- Phased timeline (/initiatives/ukraine-peace-plan/fvr/overview/phased-timeline)
+- Core principles & red lines (/initiatives/ukraine-peace-plan/fvr/overview/core-principles)
+- What this is not (/initiatives/ukraine-peace-plan/fvr/overview/what-this-is-not)
+- Deltas between versions (/initiatives/ukraine-peace-plan/fvr/overview/deltas)
+
+## Freeze
+- Freeze overview (/initiatives/ukraine-peace-plan/fvr/freeze/overview)
+- Ceasefire architecture (/initiatives/ukraine-peace-plan/fvr/freeze/ceasefire-architecture)
+- Stabilization force concept (/initiatives/ukraine-peace-plan/fvr/freeze/stabilization-force)
+- Verification & monitoring (/initiatives/ukraine-peace-plan/fvr/freeze/verification-monitoring)
+- Humanitarian corridors & protected infrastructure (/initiatives/ukraine-peace-plan/fvr/freeze/humanitarian-corridors)
+- Sanctions/aid linkage during Freeze (/initiatives/ukraine-peace-plan/fvr/freeze/sanctions-linkage)
+
+## Vote
+- Vote overview (/initiatives/ukraine-peace-plan/fvr/vote/overview)
+- Objective & legitimacy criteria (/initiatives/ukraine-peace-plan/fvr/vote/legitimacy-criteria)
+- Electorate definition (/initiatives/ukraine-peace-plan/fvr/vote/electorate-definition)
+- Voting system design (/initiatives/ukraine-peace-plan/fvr/vote/voting-system)
+- Integrity & observation (/initiatives/ukraine-peace-plan/fvr/vote/integrity-observation)
+- Vote-to-border mechanics (/initiatives/ukraine-peace-plan/fvr/vote/vote-to-border)
+- Dispute resolution (/initiatives/ukraine-peace-plan/fvr/vote/dispute-resolution)
+
+## Rebuild
+- Rebuild overview (/initiatives/ukraine-peace-plan/fvr/rebuild/overview)
+- Reconstruction architecture (/initiatives/ukraine-peace-plan/fvr/rebuild/architecture)
+- Reconstruction Olympics (/initiatives/ukraine-peace-plan/fvr/rebuild/construction-olympics)
+- Peace-build campus governance (/initiatives/ukraine-peace-plan/fvr/rebuild/campus-governance)
+- Economic restart plan (/initiatives/ukraine-peace-plan/fvr/rebuild/economic-restart)
+- Accountability & transparency (/initiatives/ukraine-peace-plan/fvr/rebuild/accountability)
+
+## Governance and verification
+- Governance & verification overview (/initiatives/ukraine-peace-plan/fvr/governance/overview)
+- Status-neutral governance model (/initiatives/ukraine-peace-plan/fvr/governance/status-neutral-model)
+- Verification-first gates (/initiatives/ukraine-peace-plan/fvr/governance/verification-gates)
+- Coordination, deconfliction & escalation (/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination)
+- Data governance, privacy & security (/initiatives/ukraine-peace-plan/fvr/governance/data-privacy)
+
+## Legal and political pathways
+- Legal & political overview (/initiatives/ukraine-peace-plan/fvr/legal/overview)
+- Domestic approvals gate (/initiatives/ukraine-peace-plan/fvr/legal/domestic-approvals)
+- International legal considerations (/initiatives/ukraine-peace-plan/fvr/legal/international-considerations)
+- Justice & accountability options (/initiatives/ukraine-peace-plan/fvr/legal/justice-accountability)
+- Treaty structure & annexes (/initiatives/ukraine-peace-plan/fvr/legal/treaty-structure)
+
+## Stakeholder playbooks
+- Stakeholder playbooks overview (/initiatives/ukraine-peace-plan/fvr/playbooks/overview)
+- Ukraine playbook (/initiatives/ukraine-peace-plan/fvr/playbooks/ukraine)
+- Russia playbook (/initiatives/ukraine-peace-plan/fvr/playbooks/russia)
+- US/EU playbook (/initiatives/ukraine-peace-plan/fvr/playbooks/us-eu)
+- UN/OSCE/neutral states playbook (/initiatives/ukraine-peace-plan/fvr/playbooks/neutral-states)
+- Civil society & displaced persons playbook (/initiatives/ukraine-peace-plan/fvr/playbooks/civil-society)
+
+## Risks, critiques, and mitigations
+- Risks overview (/initiatives/ukraine-peace-plan/fvr/risks/overview)
+- Failure modes (/initiatives/ukraine-peace-plan/fvr/risks/failure-modes)
+- Risk register (/initiatives/ukraine-peace-plan/fvr/risks/risk-register)
+- Common critiques and responses (/initiatives/ukraine-peace-plan/fvr/risks/critiques-and-responses)
+- Ethical considerations (/initiatives/ukraine-peace-plan/fvr/risks/ethical-considerations)
+
+## Implementation toolkit
+- Toolkit overview (/initiatives/ukraine-peace-plan/fvr/toolkit/overview)
+- Operational checklists by phase (/initiatives/ukraine-peace-plan/fvr/toolkit/checklists)
+- Templates (/initiatives/ukraine-peace-plan/fvr/toolkit/templates)
+- Metrics & KPIs (/initiatives/ukraine-peace-plan/fvr/toolkit/metrics-kpis)
+- Comms toolkit (/initiatives/ukraine-peace-plan/fvr/toolkit/comms)
+
+## Background and essays
+- Background overview (/initiatives/ukraine-peace-plan/fvr/background/overview)
+- Origins and evolution (/initiatives/ukraine-peace-plan/fvr/background/origins)
+- American realism essay (/initiatives/ukraine-peace-plan/fvr/background/american-realism-essay)
+- Projet du Pape François variant (/initiatives/ukraine-peace-plan/fvr/background/pape-francois-variant)
+- Comparables and historical analogs (/initiatives/ukraine-peace-plan/fvr/background/historical-analogs)
+
+## Appendices
+- Appendices overview (/initiatives/ukraine-peace-plan/fvr/appendices/overview)
+- Definitions (/initiatives/ukraine-peace-plan/fvr/appendices/definitions)
+- Maps and scenarios (/initiatives/ukraine-peace-plan/fvr/appendices/maps-scenarios)
+- Decision log (/initiatives/ukraine-peace-plan/fvr/appendices/decision-log)
+- Source-text archive (/initiatives/ukraine-peace-plan/fvr/appendices/source-archive)

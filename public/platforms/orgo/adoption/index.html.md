@@ -1,12 +1,12 @@
 # Adoption
 
-> Canonical HTML: https://initkoa.org/platforms/orgo/adoption
-> Markdown mirror: https://initkoa.org/platforms/orgo/adoption/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/orgo/adoption
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/orgo/adoption/index.html.md
 > Route: /platforms/orgo/adoption
 > Source: app\platforms\orgo\adoption\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/orgo/adoption)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/orgo/adoption)
 
 CheckCircle2,
 Users,

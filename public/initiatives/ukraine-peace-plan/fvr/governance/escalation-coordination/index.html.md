@@ -1,12 +1,12 @@
 # Coordination, Deconfliction & Escalation
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination/index.html.md
 > Route: /initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination
 > Source: app\initiatives\ukraine-peace-plan\fvr\governance\escalation-coordination\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/governance/escalation-coordination)
 
 # Coordination, Deconfliction & Escalation
 

@@ -1,12 +1,12 @@
 # /principles/civic-principles-ethics
 
-> Canonical HTML: https://initkoa.org/principles/civic-principles-ethics
-> Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/principles/civic-principles-ethics
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/principles/civic-principles-ethics/index.html.md
 > Route: /principles/civic-principles-ethics
 > Source: app\principles\civic-principles-ethics\page.js
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/principles/civic-principles-ethics)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/principles/civic-principles-ethics)
 
 Civic Principles & Ethics
 

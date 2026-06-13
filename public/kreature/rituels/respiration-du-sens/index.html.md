@@ -1,12 +1,12 @@
 # /kreature/rituels/respiration-du-sens
 
-> Canonical HTML: https://initkoa.org/kreature/rituels/respiration-du-sens
-> Markdown mirror: https://initkoa.org/kreature/rituels/respiration-du-sens/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/kreature/rituels/respiration-du-sens
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/kreature/rituels/respiration-du-sens/index.html.md
 > Route: /kreature/rituels/respiration-du-sens
 > Source: app\kreature\rituels\respiration-du-sens\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/kreature/rituels/respiration-du-sens)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/kreature/rituels/respiration-du-sens)
 
 La Respiration du Sens
 

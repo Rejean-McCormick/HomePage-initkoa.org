@@ -1,12 +1,12 @@
 # /infrastructures/kin-city/zones
 
-> Canonical HTML: https://initkoa.org/infrastructures/kin-city/zones
-> Markdown mirror: https://initkoa.org/infrastructures/kin-city/zones/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kin-city/zones
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kin-city/zones/index.html.md
 > Route: /infrastructures/kin-city/zones
 > Source: app\infrastructures\kin-city\zones\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/infrastructures/kin-city/zones)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kin-city/zones)
 
 Back to City Overview
 

@@ -1,12 +1,12 @@
 # Use cases
 
-> Canonical HTML: https://initkoa.org/platforms/orgo/use-cases
-> Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/orgo/use-cases
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/orgo/use-cases/index.html.md
 > Route: /platforms/orgo/use-cases
 > Source: app\platforms\orgo\use-cases\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/orgo/use-cases)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/orgo/use-cases)
 
 Hospital,
 Landmark,

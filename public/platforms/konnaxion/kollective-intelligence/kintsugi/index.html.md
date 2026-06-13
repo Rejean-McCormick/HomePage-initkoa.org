@@ -1,12 +1,12 @@
 # /platforms/konnaxion/kollective-intelligence/kintsugi
 
-> Canonical HTML: https://initkoa.org/platforms/konnaxion/kollective-intelligence/kintsugi
-> Markdown mirror: https://initkoa.org/platforms/konnaxion/kollective-intelligence/kintsugi/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/kintsugi
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/kintsugi/index.html.md
 > Route: /platforms/konnaxion/kollective-intelligence/kintsugi
 > Source: app\platforms\konnaxion\kollective-intelligence\kintsugi\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/konnaxion/kollective-intelligence/kintsugi)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/kintsugi)
 
 'Operate Smart Vote + EkoH “under one roof” to run legitimate decisions under complexity: baseline voting + domain-bounded advisory readings + publishable accountability.',
 

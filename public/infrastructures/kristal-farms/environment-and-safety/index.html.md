@@ -1,12 +1,12 @@
 # Environment & Safety
 
-> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/environment-and-safety
-> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/environment-and-safety/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/environment-and-safety
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/environment-and-safety/index.html.md
 > Route: /infrastructures/kristal-farms/environment-and-safety
 > Source: app\infrastructures\kristal-farms\environment-and-safety\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/environment-and-safety)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/environment-and-safety)
 
 "Environmental safeguards and safety guarantees: ΔT compliance, near-zero water consumption, non-contact heat loops, audits, and transparent monitoring.",
 

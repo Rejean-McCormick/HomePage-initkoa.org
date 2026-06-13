@@ -1,12 +1,12 @@
 # /kreature/mythos/promethee
 
-> Canonical HTML: https://initkoa.org/kreature/mythos/promethee
-> Markdown mirror: https://initkoa.org/kreature/mythos/promethee/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/kreature/mythos/promethee
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/kreature/mythos/promethee/index.html.md
 > Route: /kreature/mythos/promethee
 > Source: app\kreature\mythos\promethee\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/kreature/mythos/promethee)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/kreature/mythos/promethee)
 
 Prométhée
 

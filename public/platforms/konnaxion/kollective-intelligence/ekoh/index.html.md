@@ -1,0 +1,103 @@
+# EkoH
+
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/ekoh
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/ekoh/index.html.md
+> Route: /platforms/konnaxion/kollective-intelligence/ekoh
+> Source: app\platforms\konnaxion\kollective-intelligence\ekoh\page.mdx
+> Generated: 2026-06-13T00:42:18.184Z
+
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/ekoh)
+
+# EkoH
+
+**EkoH (Expertise + Ethics Ledger)** — the merit ledger used by **Kollective Intelligence** and consumed by **Smart Vote** and other ranking/visibility surfaces.
+
+EkoH does **not** produce “decision readings.” Readings (lenses) are a **Smart Vote** concern.
+EkoH produces **auditable weight inputs**: domain expertise vectors, ethics multipliers, privacy constraints, and immutable snapshots.
+
+## 1) What EkoH is responsible for
+
+### Core outputs
+- **Domain expertise vectors** per user, aligned to a formal taxonomy (recommended: **UNESCO ISCED-F**).
+- **Ethics multiplier** per user (governance score applied by Smart Vote per lens policy).
+- **Confidentiality level** (public / pseudonym / anonymous) controlling disclosure.
+- **Audit artifacts**: score history, context adjustment logs, integrity events.
+- **Immutable snapshots** bound to consultations (Smart Vote consumes snapshots, not “live” scores).
+
+### What EkoH is *not*
+- Not the voting engine.
+- Not the reading/lens engine.
+- Not the consultation orchestration layer.
+Those live under **Smart Vote** / **ethiKos**.
+
+## 2) Ledger primitives (conceptual model)
+
+EkoH stores merit as two orthogonal components:
+
+1) **Expertise score per domain**
+A user can be strong in one domain and neutral in another; influence is domain-matched.
+
+2) **Ethics multiplier (global)**
+A governance score that modulates influence according to integrity signals and platform rules.
+How ethics is applied to voting weights is **lens-defined** in Smart Vote.
+
+## 3) Canonical storage model (schema: `ekoh_smartvote`)
+
+Core tables used to store expertise, ethics, privacy, and audit context:
+
+| Table / Model | Purpose | Key fields (illustrative) |
+| `user_expertise_score` | Per-user, per-domain expertise score. | `user_id`, `category_id`, `raw_score`, `weighted_score` |
+| `user_ethics_score` | Per-user ethics multiplier. | `user_id`, `ethical_score` |
+| `confidentiality_setting` | Privacy level for disclosure. | `user_id`, `level` (`public/pseudonym/anonymous`) |
+| `score_configuration` | Versioned coefficients/knobs. | `weight_name`, `weight_value`, `field` (nullable) |
+| `context_analysis_log` | Explainable adjustments / context traces. | `entity_type`, `entity_id`, `input_metadata` (json), `adjustments_applied` (json) |
+| `score_history` | Immutable audit trail for score changes. | `merit_score_id`, `old_value`, `new_value`, `change_reason`, `created_at` |
+| `integrity_event` | Integrity anomalies & handling state. | `event_type`, `score` (json), `handled`, `created_at` |
+
+Optional (only if you need stakeholder/cohort analytics):
+- `demographic_attribute`, `demographic_choice`, `user_demographic`
+
+## 4) Scoring rules (high-level)
+
+EkoH expertise scoring commonly uses three axes (coefficients are configuration-driven):
+- **Quality** (accuracy, evidence, peer signals)
+- **Expertise** (verified credentials / demonstrated competence)
+- **Frequency / Recency** (continued engagement, decay)
+
+Illustrative aggregation:
+- `weighted_score = Q*RAW_WEIGHT_QUALITY + X*RAW_WEIGHT_EXPERTISE + F*RAW_WEIGHT_FREQUENCY`
+
+All coefficient values must live in `score_configuration` and be **versioned**.
+
+## 5) Ethics multiplier (governance score)
+
+- Ethics is treated as a **governance signal** tied to platform rules and evidence.
+- Any negative adjustment must be:
+- logged (reason codes + evidence pointers),
+- auditable,
+- appealable (process is policy-defined).
+
+Typical policy bounds are configuration-driven (examples only):
+
+## 6) Snapshotting (critical for Smart Vote)
+
+Smart Vote consumes **immutable EkoH snapshots** bound to a consultation:
+- snapshot references the **exact** expertise vectors + ethics multipliers used
+- snapshot references the **score_configuration version hash**
+- snapshot is the reproducibility anchor for audits and result replays
+
+## 7) Smart Vote integration (what Smart Vote reads from EkoH)
+
+Smart Vote takes:
+- confidentiality constraints (from `confidentiality_setting`)
+- snapshot manifest (bound to consultation)
+
+Then applies a **lens-defined weight formula**, for example:
+or an alternative lens preserving an unscaled baseline vote.
+
+EkoH’s role is to make those inputs **legible, auditable, and contestable**.
+
+## Summary
+
+EkoH is a **merit ledger**: domain expertise vectors + ethics multipliers + privacy + audit context, with **immutable snapshots** for governance-grade reproducibility.
+**Smart Vote** is the decision engine that applies those inputs to modalities and publishes readings.

@@ -1,12 +1,12 @@
 # Why this exists
 
-> Canonical HTML: https://initkoa.org/platforms/konnaxion/konnected/kompendio
-> Markdown mirror: https://initkoa.org/platforms/konnaxion/konnected/kompendio/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/konnected/kompendio
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/konnected/kompendio/index.html.md
 > Route: /platforms/konnaxion/konnected/kompendio
 > Source: app\platforms\konnaxion\konnected\kompendio\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/konnaxion/konnected/kompendio)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/konnected/kompendio)
 
 BookOpen,
 Layers,

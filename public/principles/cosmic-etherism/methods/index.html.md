@@ -1,12 +1,12 @@
 # /principles/cosmic-etherism/methods
 
-> Canonical HTML: https://initkoa.org/principles/cosmic-etherism/methods
-> Markdown mirror: https://initkoa.org/principles/cosmic-etherism/methods/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/principles/cosmic-etherism/methods
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/principles/cosmic-etherism/methods/index.html.md
 > Route: /principles/cosmic-etherism/methods
 > Source: app\principles\cosmic-etherism\methods\page.js
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/principles/cosmic-etherism/methods)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/principles/cosmic-etherism/methods)
 
 Cosmic Etherism Methods
 

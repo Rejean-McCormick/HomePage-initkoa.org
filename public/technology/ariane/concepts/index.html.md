@@ -1,12 +1,12 @@
 # /technology/ariane/concepts
 
-> Canonical HTML: https://initkoa.org/technology/ariane/concepts
-> Markdown mirror: https://initkoa.org/technology/ariane/concepts/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ariane/concepts
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ariane/concepts/index.html.md
 > Route: /technology/ariane/concepts
 > Source: app\technology\ariane\concepts\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/technology/ariane/concepts)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ariane/concepts)
 
 Ariane Concepts
 

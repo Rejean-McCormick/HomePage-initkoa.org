@@ -28,10 +28,18 @@ import {
 
 function parseBooleanEnv(value, fallback) {
   if (value == null || value === "") return fallback;
-  return String(value).trim().toLowerCase() === "true";
+
+  const normalized = String(value).trim().toLowerCase();
+
+  if (["1", "true", "yes", "y", "on"].includes(normalized)) return true;
+  if (["0", "false", "no", "n", "off"].includes(normalized)) return false;
+
+  return fallback;
 }
 
 function parseNumberEnv(value, fallback) {
+  if (value == null || value === "") return fallback;
+
   const n = Number(value);
   return Number.isFinite(n) ? n : fallback;
 }
@@ -41,7 +49,7 @@ function normalizePrefix(prefix) {
   if (!raw) return null;
   if (raw === "/") return "/";
 
-  const normalized = raw.startsWith("/") ? raw : `/${raw}`;
+  const normalized = raw.startsWith("/") ? raw : "/" + raw;
   return normalized.replace(/\/+$/, "");
 }
 
@@ -62,8 +70,9 @@ function canonicalizeBaseUrl(raw) {
   if (!raw) return DEFAULT_BASE_URL;
 
   let value = String(raw).trim();
+
   if (!/^https?:\/\//i.test(value)) {
-    value = `https://${value}`;
+    value = "https://" + value;
   }
 
   value = value.replace(/\/+$/, "");
@@ -106,6 +115,47 @@ export function getAiAssetConfig() {
     ARTIFACT_NAMES.generatedMdState
   );
 
+  const generateLlmsFull = parseBooleanEnv(
+    env.AI_GENERATE_LLMS_FULL,
+    DEFAULT_GENERATE_LLMS_FULL
+  );
+
+  const artifactNames = { ...ARTIFACT_NAMES };
+
+  const artifactPaths = {
+    aiCorpus: path.join(publicDir, artifactNames.aiCorpus),
+    llms: path.join(publicDir, artifactNames.llms),
+    llmsFull: path.join(publicDir, artifactNames.llmsFull),
+    aiSitemap: path.join(publicDir, artifactNames.aiSitemap),
+    mdManifest: path.join(publicDir, artifactNames.mdManifest),
+    mdSitemap: path.join(publicDir, artifactNames.mdSitemap),
+    generatedMdStateFile,
+  };
+
+  const aiAccessPolicy = Object.freeze({
+    publicEntrypoint: artifactNames.llms,
+    publicEntrypointPath: artifactPaths.llms,
+    publicEntrypointPurpose:
+      "Primary human and agent entrypoint for AI-readable site discovery.",
+    visibleFooterLinks: Object.freeze([
+      {
+        href: "/" + artifactNames.llms,
+        label: "AI access",
+      },
+    ]),
+    auxiliaryArtifacts: Object.freeze([
+      artifactNames.aiCorpus,
+      artifactNames.llmsFull,
+      artifactNames.aiSitemap,
+      artifactNames.mdManifest,
+      artifactNames.mdSitemap,
+      artifactNames.generatedMdState,
+    ]),
+    footerExposure:
+      "Only the primary AI entrypoint should be shown in the visible footer. Auxiliary artifacts may remain public and discoverable through llms.txt, head metadata, manifests, or direct URLs.",
+    llmsFullStatus: generateLlmsFull ? "generated_auxiliary" : "disabled",
+  });
+
   const config = {
     rootDir,
     appDir,
@@ -131,10 +181,7 @@ export function getAiAssetConfig() {
       env.AI_GENERATE_MD_MIRRORS,
       DEFAULT_GENERATE_MD_MIRRORS
     ),
-    generateLlmsFull: parseBooleanEnv(
-      env.AI_GENERATE_LLMS_FULL,
-      DEFAULT_GENERATE_LLMS_FULL
-    ),
+    generateLlmsFull,
     fixMojibake: parseBooleanEnv(
       env.AI_FIX_MOJIBAKE,
       DEFAULT_FIX_MOJIBAKE
@@ -164,16 +211,9 @@ export function getAiAssetConfig() {
 
     generatedMdStateFile,
 
-    artifactNames: { ...ARTIFACT_NAMES },
-    artifactPaths: {
-      aiCorpus: path.join(publicDir, ARTIFACT_NAMES.aiCorpus),
-      llms: path.join(publicDir, ARTIFACT_NAMES.llms),
-      llmsFull: path.join(publicDir, ARTIFACT_NAMES.llmsFull),
-      aiSitemap: path.join(publicDir, ARTIFACT_NAMES.aiSitemap),
-      mdManifest: path.join(publicDir, ARTIFACT_NAMES.mdManifest),
-      mdSitemap: path.join(publicDir, ARTIFACT_NAMES.mdSitemap),
-      generatedMdStateFile,
-    },
+    artifactNames,
+    artifactPaths,
+    aiAccessPolicy,
 
     pageFilesPriority: [...PAGE_FILES_PRIORITY],
     pageFileRe: PAGE_FILE_RE,

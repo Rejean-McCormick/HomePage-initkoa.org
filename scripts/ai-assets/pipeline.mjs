@@ -29,6 +29,41 @@ function getSourceExt(fileAbsPath) {
   return path.extname(fileAbsPath || "").toLowerCase();
 }
 
+function isMarkdownLike(fileAbsPath) {
+  const ext = getSourceExt(fileAbsPath);
+  return ext === ".md" || ext === ".mdx";
+}
+
+function normalizeRoute(route) {
+  const value = String(route || "").trim();
+  if (!value) return "/";
+
+  const withSlash = value.startsWith("/") ? value : `/${value}`;
+  return withSlash.replace(/\/+$/, "") || "/";
+}
+
+function normalizeRoutePrefix(prefix) {
+  const value = String(prefix || "").trim();
+  if (!value || value === "/") return null;
+
+  const withSlash = value.startsWith("/") ? value : `/${value}`;
+  return withSlash.replace(/\/+$/, "");
+}
+
+function isExcludedRoute(route, excludePrefixes = []) {
+  const normalizedRoute = normalizeRoute(route);
+
+  return excludePrefixes
+    .map(normalizeRoutePrefix)
+    .filter(Boolean)
+    .some((prefix) => {
+      return (
+        normalizedRoute === prefix ||
+        normalizedRoute.startsWith(`${prefix}/`)
+      );
+    });
+}
+
 function normalizeWarningList(warnings) {
   return Array.isArray(warnings) ? [...warnings] : [];
 }
@@ -60,6 +95,12 @@ function appendDuplicateWarning(state, route, keptAbsPath, ignoredAbsPath) {
     `⚠ Duplicate route "${route}"\n` +
       `   - Kept: ${toRelativeFromCwd(keptAbsPath)}\n` +
       `   - Ignored: ${toRelativeFromCwd(ignoredAbsPath)}\n`
+  );
+}
+
+function appendExcludedRouteWarning(state, route, fileAbsPath) {
+  state.warnings.push(
+    `⚠ Excluded route: ${route} (${toRelativeFromCwd(fileAbsPath)})`
   );
 }
 
@@ -144,6 +185,7 @@ function buildSinglePage({ config, nowIso, route, fileAbsPath }) {
 
   if (
     config.skipCodeLikePages &&
+    !isMarkdownLike(fileAbsPath) &&
     codeLikenessScore(cleaned) > config.codeLikeThreshold
   ) {
     return { skippedAsCodeLike: true };
@@ -201,6 +243,11 @@ export function buildAiAssetState({ config, candidates, warnings = [] }) {
 
   for (const candidate of candidates) {
     const { route, fileAbsPath } = candidate;
+
+    if (isExcludedRoute(route, config.excludePrefixes)) {
+      appendExcludedRouteWarning(state, route, fileAbsPath);
+      continue;
+    }
 
     if (state.byRoute.has(route)) {
       appendDuplicateWarning(

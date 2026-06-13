@@ -1,12 +1,12 @@
 # Stakeholder Playbooks Overview
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/playbooks/overview
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/playbooks/overview/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/playbooks/overview
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/playbooks/overview/index.html.md
 > Route: /initiatives/ukraine-peace-plan/fvr/playbooks/overview
 > Source: app\initiatives\ukraine-peace-plan\fvr\playbooks\overview\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/playbooks/overview)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/playbooks/overview)
 
 # Stakeholder Playbooks Overview
 

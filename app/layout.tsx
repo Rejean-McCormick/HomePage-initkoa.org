@@ -1,16 +1,16 @@
 // app/layout.tsx
-import './globals.css';
-import { Baskervville } from 'next/font/google';
-import Header from '@/components/Header';
-import { ReactNode } from 'react';
-import type { Metadata } from 'next';
-import { Analytics } from '@vercel/analytics/next';
-import { getSiteUrl, toAbsoluteUrl } from '@/lib/site-url';
+import "./globals.css";
+import { Baskervville } from "next/font/google";
+import Header from "@/components/Header";
+import { ReactNode } from "react";
+import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { getSiteUrl, toAbsoluteUrl } from "@/lib/site-url";
 
 const baskervville = Baskervville({
-  subsets: ['latin'],
-  weight: '400',
-  display: 'swap',
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
 });
 
 const SITE_URL = getSiteUrl();
@@ -19,28 +19,28 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   alternates: {
-    canonical: './',
+    canonical: "./",
   },
 
-  title: 'The kOA Initiative - Civic Utilities by Réjean McCormick',
+  title: "The kOA Initiative - Civic Utilities by Réjean McCormick",
   description:
-    'The official socio-technical architecture initiative led by Réjean McCormick. Building civic utilities, democratic innovation, and the kOA ecosystem.',
+    "The official socio-technical architecture initiative led by Réjean McCormick. Building civic utilities, democratic innovation, and the kOA ecosystem.",
 
-  authors: [{ name: 'Réjean McCormick', url: SITE_URL }],
-  creator: 'Réjean McCormick',
+  authors: [{ name: "Réjean McCormick", url: SITE_URL }],
+  creator: "Réjean McCormick",
 
   icons: {
-    icon: '/LogoK.svg',
-    apple: '/apple-touch-icon.png',
+    icon: "/LogoK.svg",
+    apple: "/apple-touch-icon.png",
   },
-  manifest: '/site.webmanifest',
+  manifest: "/site.webmanifest",
 
   openGraph: {
     url: SITE_URL,
-    title: 'The kOA Initiative by Réjean McCormick',
-    description: 'Civic utilities for a fragmented world.',
-    type: 'website',
-    locale: 'fr_CA',
+    title: "The kOA Initiative by Réjean McCormick",
+    description: "Civic utilities for a fragmented world.",
+    type: "website",
+    locale: "fr_CA",
   },
 };
 
@@ -48,8 +48,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="fr" className={baskervville.className}>
       <head>
-        {/* Core AI discovery */}
-        <link rel="help" href="/llms.txt" title="LLM Instructions" />
+        {/* Primary AI discovery entrypoint */}
+        <link rel="help" href="/llms.txt" title="AI Access" />
+
+        {/* Auxiliary machine-readable artifacts */}
         <link
           rel="alternate"
           type="text/plain"
@@ -61,6 +63,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           type="text/plain"
           href="/ai-corpus.txt"
           title="AI Context Corpus"
+        />
+        <link
+          rel="alternate"
+          type="application/json"
+          href="/ai-sitemap.json"
+          title="AI Sitemap"
         />
 
         {/* Markdown mirrors */}
@@ -83,15 +91,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           title="Markdown Mirror Sitemap"
         />
 
-
-
         {/* Optional machine hints */}
-        <meta name="ai:llms" content={toAbsoluteUrl('/llms.txt')} />
-        <meta name="ai:llms-full" content={toAbsoluteUrl('/llms-full.txt')} />
-        <meta name="ai:corpus" content={toAbsoluteUrl('/ai-corpus.txt')} />
+        <meta name="ai:llms" content={toAbsoluteUrl("/llms.txt")} />
+        <meta name="ai:llms-full" content={toAbsoluteUrl("/llms-full.txt")} />
+        <meta name="ai:corpus" content={toAbsoluteUrl("/ai-corpus.txt")} />
+        <meta name="ai:sitemap" content={toAbsoluteUrl("/ai-sitemap.json")} />
         <meta
           name="ai:markdown-manifest"
-          content={toAbsoluteUrl('/md-manifest.json')}
+          content={toAbsoluteUrl("/md-manifest.json")}
         />
       </head>
 
@@ -103,7 +110,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
           <footer className="mt-24 pt-8 border-t border-slate-100 text-center text-sm text-slate-400 font-sans not-prose">
             <p>
-              © {new Date().getFullYear()} The kOA Initiative. Architected by{' '}
+              © {new Date().getFullYear()} The kOA Initiative. Architected by{" "}
               <a
                 href="/about"
                 className="hover:text-[#1e6864] transition-colors font-medium"
@@ -113,47 +120,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               .
             </p>
 
-            <nav
-              aria-label="AI and machine-readable resources"
-              className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs"
-            >
+            <p className="mt-4 text-xs">
               <a
                 href="/llms.txt"
                 className="hover:text-[#1e6864] transition-colors"
               >
-                llms.txt
+                AI access
               </a>
-              <a
-                href="/llms-full.txt"
-                className="hover:text-[#1e6864] transition-colors"
-              >
-                llms-full.txt
-              </a>
-              <a
-                href="/ai-corpus.txt"
-                className="hover:text-[#1e6864] transition-colors"
-              >
-                ai-corpus.txt
-              </a>
-              <a
-                href="/md-manifest.json"
-                className="hover:text-[#1e6864] transition-colors"
-              >
-                md-manifest.json
-              </a>
-              <a
-                href="/md-sitemap.xml"
-                className="hover:text-[#1e6864] transition-colors"
-              >
-                md-sitemap.xml
-              </a>
-              <a
-                href="/index.html.md"
-                className="hover:text-[#1e6864] transition-colors"
-              >
-                index.html.md
-              </a>
-            </nav>
+            </p>
           </footer>
         </div>
 

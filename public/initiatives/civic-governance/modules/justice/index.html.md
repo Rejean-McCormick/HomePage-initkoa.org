@@ -1,12 +1,12 @@
 # Justice Module: Procedural Fairness
 
-> Canonical HTML: https://initkoa.org/initiatives/civic-governance/modules/justice
-> Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/justice/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/justice
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/justice/index.html.md
 > Route: /initiatives/civic-governance/modules/justice
 > Source: app\initiatives\civic-governance\modules\justice\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/civic-governance/modules/justice)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/justice)
 
 'A justice workflow designed for speed, transparency, and recourse—using tools for assistance without unaccountable authority.',
 

@@ -31,7 +31,6 @@ function normalizeRouteCase(route) {
 
   const normalized = value.startsWith("/") ? value : `/${value}`;
 
-  // Canonicalize known case-sensitive public routes here.
   if (normalized.toLowerCase() === "/technology/ariane/concepts/glossary") {
     return "/technology/ariane/concepts/glossary";
   }
@@ -83,6 +82,16 @@ function getPageBody(page) {
   ).trim();
 }
 
+function compactText(value) {
+  return String(value || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function getPageSummary(page, maxChars = 220) {
   const oneLine = getPageBody(page)
     .split("\n")
@@ -112,6 +121,22 @@ function joinUrl(baseUrl, fileName) {
 
   if (!base) return file ? `/${file}` : "";
   return file ? `${base}/${file}` : base;
+}
+
+function pushMetadataLine(lines, label, value) {
+  const normalized = String(value || "").trim();
+  if (!normalized) return;
+
+  lines.push(`- ${label}: ${normalized}`);
+}
+
+function pushLinkedResource(lines, title, url, description) {
+  if (!url) return;
+
+  lines.push(`- [${title}](${url})`);
+  if (description) {
+    lines.push(`  - ${description}`);
+  }
 }
 
 export function selectLlmsPages(state) {
@@ -193,29 +218,35 @@ export function buildAiCorpus(state) {
 
   const lines = [
     `# ${config.siteLabel || "site"} — AI KNOWLEDGE BASE`,
-    `# Title: ${config.projectTitle || ""}`,
-    `# Date: ${generatedAt}`,
-    `# Base: ${config.baseUrl || ""}`,
-    `# Excludes: ${(config.excludePrefixes || []).join(", ") || "(none)"}`,
-    `# Include dynamic: ${Boolean(config.includeDynamicSegments)}`,
-    `# Skip code-like: ${Boolean(config.skipCodeLikePages)}`,
-    `# Generate markdown mirrors: ${Boolean(config.generateMdMirrors)}`,
+    "",
+    `Title: ${config.projectTitle || ""}`,
+    `Generated: ${generatedAt}`,
+    `Base: ${config.baseUrl || ""}`,
+    `Excludes: ${(config.excludePrefixes || []).join(", ") || "(none)"}`,
+    `Include dynamic: ${Boolean(config.includeDynamicSegments)}`,
+    `Skip code-like: ${Boolean(config.skipCodeLikePages)}`,
+    `Generate markdown mirrors: ${Boolean(config.generateMdMirrors)}`,
   ];
 
   if (config.maxCharsPerPage) {
-    lines.push(`# Max chars per page: ${config.maxCharsPerPage}`);
+    lines.push(`Max chars per page: ${config.maxCharsPerPage}`);
   }
 
+  lines.push("");
+  lines.push(
+    "This file is a plain-text corpus extracted from public app routes. Use /llms.txt as the primary AI entrypoint and the route-specific Markdown mirrors for page-level context."
+  );
   lines.push("");
 
   for (const page of pages) {
     lines.push("==================================================");
     lines.push(`PAGE: ${getPageRoute(page)}`);
+    lines.push(`TITLE: ${getPageTitle(page)}`);
     lines.push(`URL: ${getPageUrl(page)}`);
     lines.push(`MARKDOWN_URL: ${getPageMarkdownUrl(page)}`);
     lines.push(`SOURCE: ${getPageSource(page)}`);
-    lines.push(`TITLE: ${getPageTitle(page)}`);
     lines.push("==================================================");
+    lines.push("");
     lines.push(getPageBody(page));
     lines.push("");
   }
@@ -229,55 +260,111 @@ export function buildLlmsTxt(state) {
   const pages = getPages(state);
   const selectedPages = selectLlmsPages(state);
   const omittedCount = Math.max(pages.length - selectedPages.length, 0);
+  const generatedAt = getNowIso(state);
+
+  const llmsFullName = artifactNames.llmsFull || "llms-full.txt";
+  const aiCorpusName = artifactNames.aiCorpus || "ai-corpus.txt";
+  const mdManifestName = artifactNames.mdManifest || "md-manifest.json";
+  const mdSitemapName = artifactNames.mdSitemap || "md-sitemap.xml";
+  const aiSitemapName = artifactNames.aiSitemap || "ai-sitemap.json";
 
   const lines = [
     `# ${config.siteLabel || "site"}`,
     "",
-    `> ${config.projectDescription || ""}`,
-    "",
-    "## Key resources",
-    "",
-    `- [${artifactNames.llmsFull || "llms-full.txt"}](${joinUrl(
-      config.baseUrl,
-      artifactNames.llmsFull || "llms-full.txt"
-    )}): Full aggregated AI context bundle.`,
-    `- [${artifactNames.aiCorpus || "ai-corpus.txt"}](${joinUrl(
-      config.baseUrl,
-      artifactNames.aiCorpus || "ai-corpus.txt"
-    )}): Plain-text extracted corpus from app routes.`,
-    `- [${artifactNames.mdManifest || "md-manifest.json"}](${joinUrl(
-      config.baseUrl,
-      artifactNames.mdManifest || "md-manifest.json"
-    )}): JSON index of HTML routes and Markdown mirrors.`,
-    `- [${artifactNames.mdSitemap || "md-sitemap.xml"}](${joinUrl(
-      config.baseUrl,
-      artifactNames.mdSitemap || "md-sitemap.xml"
-    )}): Sitemap dedicated to Markdown mirror URLs.`,
-    `- [${artifactNames.aiSitemap || "ai-sitemap.json"}](${joinUrl(
-      config.baseUrl,
-      artifactNames.aiSitemap || "ai-sitemap.json"
-    )}): Route inventory with source paths and mirror URLs.`,
-    "",
-    "## Important pages",
-    "",
   ];
 
+  const description = compactText(config.projectDescription || "");
+  if (description) {
+    lines.push(`> ${description}`, "");
+  }
+
+  lines.push("## Purpose");
+  lines.push("");
+  lines.push(
+    "This is the primary AI entrypoint for the site. It gives agents a compact orientation, points to supporting machine-readable artifacts, and lists important page-level Markdown mirrors."
+  );
+  lines.push("");
+  lines.push(
+    "Use this file first. Use the auxiliary files only when deeper crawling, full context, or structured route discovery is needed."
+  );
+  lines.push("");
+
+  lines.push("## Metadata");
+  lines.push("");
+  pushMetadataLine(lines, "Generated", generatedAt);
+  pushMetadataLine(lines, "Site title", config.projectTitle || "");
+  pushMetadataLine(lines, "Base URL", config.baseUrl || "");
+  pushMetadataLine(lines, "Pages included in generated corpus", String(pages.length));
+  lines.push("");
+
+  lines.push("## Supporting machine-readable artifacts");
+  lines.push("");
+  pushLinkedResource(
+    lines,
+    llmsFullName,
+    joinUrl(config.baseUrl, llmsFullName),
+    "Full aggregated AI context bundle. Use when the compact entrypoint is not enough."
+  );
+  pushLinkedResource(
+    lines,
+    aiCorpusName,
+    joinUrl(config.baseUrl, aiCorpusName),
+    "Plain-text extracted corpus from public app routes."
+  );
+  pushLinkedResource(
+    lines,
+    mdManifestName,
+    joinUrl(config.baseUrl, mdManifestName),
+    "JSON index of HTML routes, Markdown mirrors, summaries, source paths, and character counts."
+  );
+  pushLinkedResource(
+    lines,
+    mdSitemapName,
+    joinUrl(config.baseUrl, mdSitemapName),
+    "XML sitemap dedicated to Markdown mirror URLs."
+  );
+  pushLinkedResource(
+    lines,
+    aiSitemapName,
+    joinUrl(config.baseUrl, aiSitemapName),
+    "JSON route inventory with source paths and mirror URLs."
+  );
+
+  lines.push("");
+  lines.push("## Important pages");
+  lines.push("");
+
   for (const page of selectedPages) {
-    lines.push(
-      `- [${getPageTitle(page)}](${getPageMarkdownUrl(page)}): Mirror for ${getPageRoute(page)} (${getPageUrl(page)}). ${getPageSummary(page, 180)}`
-    );
+    const title = getPageTitle(page);
+    const route = getPageRoute(page);
+    const htmlUrl = getPageUrl(page);
+    const markdownUrl = getPageMarkdownUrl(page);
+    const summary = getPageSummary(page, 220);
+
+    lines.push(`### ${title}`);
+    lines.push("");
+    pushMetadataLine(lines, "Route", route);
+    pushMetadataLine(lines, "HTML", htmlUrl);
+    pushMetadataLine(lines, "Markdown mirror", markdownUrl);
+    pushMetadataLine(lines, "Source", getPageSource(page));
+
+    if (summary) {
+      lines.push("");
+      lines.push(summary);
+    }
+
+    lines.push("");
   }
 
   if (omittedCount > 0) {
+    lines.push("## Additional pages");
     lines.push("");
     lines.push(
-      `Additional pages omitted here for brevity: ${omittedCount}. Use ${
-        artifactNames.llmsFull || "llms-full.txt"
-      } or ${artifactNames.mdManifest || "md-manifest.json"} for the exhaustive index.`
+      `${omittedCount} additional page(s) are omitted from this compact entrypoint. Use ${llmsFullName}, ${mdManifestName}, or ${aiSitemapName} for exhaustive discovery.`
     );
+    lines.push("");
   }
 
-  lines.push("");
   return lines.join("\n");
 }
 
@@ -289,21 +376,40 @@ export function buildLlmsFull(state) {
   const lines = [
     `# ${config.siteLabel || "site"} — Full AI Context`,
     "",
-    `Title: ${config.projectTitle || ""}`,
-    `Description: ${config.projectDescription || ""}`,
-    `Generated: ${generatedAt}`,
-    `Base: ${config.baseUrl || ""}`,
+    "## Metadata",
     "",
   ];
 
+  pushMetadataLine(lines, "Title", config.projectTitle || "");
+  pushMetadataLine(lines, "Description", compactText(config.projectDescription || ""));
+  pushMetadataLine(lines, "Generated", generatedAt);
+  pushMetadataLine(lines, "Base URL", config.baseUrl || "");
+  pushMetadataLine(lines, "Pages included", String(pages.length));
+
+  lines.push("");
+  lines.push("## Usage");
+  lines.push("");
+  lines.push(
+    "This file is the full aggregated AI context bundle. It is auxiliary to /llms.txt, which remains the primary entrypoint."
+  );
+  lines.push("");
+  lines.push("For page-level retrieval, prefer the Markdown mirror URL listed in each page section.");
+  lines.push("");
+  lines.push("## Pages");
+  lines.push("");
+
   for (const page of pages) {
-    lines.push("==================================================");
-    lines.push(`TITLE: ${getPageTitle(page)}`);
-    lines.push(`ROUTE: ${getPageRoute(page)}`);
-    lines.push(`URL: ${getPageUrl(page)}`);
-    lines.push(`MARKDOWN_URL: ${getPageMarkdownUrl(page)}`);
-    lines.push(`SOURCE: ${getPageSource(page)}`);
-    lines.push("==================================================");
+    lines.push("---");
+    lines.push("");
+    lines.push(`## ${getPageTitle(page)}`);
+    lines.push("");
+
+    pushMetadataLine(lines, "Route", getPageRoute(page));
+    pushMetadataLine(lines, "HTML", getPageUrl(page));
+    pushMetadataLine(lines, "Markdown mirror", getPageMarkdownUrl(page));
+    pushMetadataLine(lines, "Source", getPageSource(page));
+
+    lines.push("");
     lines.push(getPageBody(page));
     lines.push("");
   }

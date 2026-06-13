@@ -1,12 +1,12 @@
 # Portability & Offline
 
-> Canonical HTML: https://initkoa.org/technology/kristal/portability-and-offline
-> Markdown mirror: https://initkoa.org/technology/kristal/portability-and-offline/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/kristal/portability-and-offline
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/kristal/portability-and-offline/index.html.md
 > Route: /technology/kristal/portability-and-offline
 > Source: app\technology\kristal\portability-and-offline\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/technology/kristal/portability-and-offline)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/kristal/portability-and-offline)
 
 'How Kristals stay usable under weak networks: portable epistemic artifacts, offline runtime packs, verifiable provenance, integrity checks, and explicit reader-policy labels.',
 

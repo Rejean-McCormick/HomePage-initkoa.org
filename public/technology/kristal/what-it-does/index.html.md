@@ -1,12 +1,12 @@
 # Kristal — What it does
 
-> Canonical HTML: https://initkoa.org/technology/kristal/what-it-does
-> Markdown mirror: https://initkoa.org/technology/kristal/what-it-does/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/kristal/what-it-does
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/kristal/what-it-does/index.html.md
 > Route: /technology/kristal/what-it-does
 > Source: app\technology\kristal\what-it-does\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/technology/kristal/what-it-does)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/kristal/what-it-does)
 
 "Kristal turns structured epistemic work into portable, verifiable artifacts that preserve provenance, certainty, authority, scope, and reader-policy labels across the kOA ecosystem.",
 

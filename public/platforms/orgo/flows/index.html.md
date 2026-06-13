@@ -1,12 +1,12 @@
 # Flows — how work moves in Orgo
 
-> Canonical HTML: https://initkoa.org/platforms/orgo/flows
-> Markdown mirror: https://initkoa.org/platforms/orgo/flows/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/orgo/flows
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/orgo/flows/index.html.md
 > Route: /platforms/orgo/flows
 > Source: app\platforms\orgo\flows\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/orgo/flows)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/orgo/flows)
 
 ArrowRight,
 GitBranch,

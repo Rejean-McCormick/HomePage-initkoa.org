@@ -1,12 +1,12 @@
 # Radical Efficiency: The End of the Backlog
 
-> Canonical HTML: https://initkoa.org/initiatives/civic-governance/modules/justice/efficiency
-> Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/justice/efficiency/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/justice/efficiency
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/justice/efficiency/index.html.md
 > Route: /initiatives/civic-governance/modules/justice/efficiency
 > Source: app\initiatives\civic-governance\modules\justice\efficiency\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/civic-governance/modules/justice/efficiency)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/justice/efficiency)
 
 # Radical Efficiency: The End of the Backlog
 

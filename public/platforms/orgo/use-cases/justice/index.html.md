@@ -1,12 +1,12 @@
 # Use case: Justice system
 
-> Canonical HTML: https://initkoa.org/platforms/orgo/use-cases/justice
-> Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/justice/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/orgo/use-cases/justice
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/orgo/use-cases/justice/index.html.md
 > Route: /platforms/orgo/use-cases/justice
 > Source: app\platforms\orgo\use-cases\justice\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/orgo/use-cases/justice)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/orgo/use-cases/justice)
 
 Gavel,
 Bell,

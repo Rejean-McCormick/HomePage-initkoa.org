@@ -1,12 +1,12 @@
 # Heat-First Design
 
-> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/heat-first-design
-> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/heat-first-design/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/heat-first-design
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/heat-first-design/index.html.md
 > Route: /infrastructures/kristal-farms/heat-first-design
 > Source: app\infrastructures\kristal-farms\heat-first-design\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/heat-first-design)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/heat-first-design)
 
 "The operating principle of Kristal Farms: waste heat is a civic resource. Reuse → store → reject, with community heating prioritized over compute.",
 

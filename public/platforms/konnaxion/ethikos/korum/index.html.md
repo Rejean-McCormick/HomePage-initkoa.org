@@ -1,0 +1,86 @@
+# Korum
+
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/ethikos/korum
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/ethikos/korum/index.html.md
+> Route: /platforms/konnaxion/ethikos/korum
+> Source: app\platforms\konnaxion\ethikos\korum\page.mdx
+> Generated: 2026-06-13T00:42:18.184Z
+
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/ethikos/korum)
+
+{/* FILE: page.mdx
+Path: app/platforms/konnaxion/ethikos/korum/page.mdx */}
+
+# Korum
+
+**Korum (Structured Debates)** — sub-module under **ethiKos**.
+Owns debate artifacts and **stance facts** (−3…+3). **Smart Vote** publishes outcomes as baseline + declared readings; **EkoH** may be referenced by lenses via snapshot ids.
+
+## Contract (ethiKos v2)
+
+- **Korum owns:** topics, arguments, moderation artifacts, and stance events (−3…+3).
+- **Smart Vote owns:** aggregation/publication as baseline + declared readings (derived outputs only).
+- **EkoH owns:** expertise/ethics context and snapshot/audit references used by some readings.
+- **Foreign tools (Annex):** may feed Korum via adapters (artifacts + projections), never by merging or writing core tables.
+
+## **1) Functional Services (and expected files)**
+
+Each service name is stable and maps to a dedicated Django service module (file paths reflect the cookiecutter layout; exact filenames may vary by repo).
+
+| Display name | Code name / service | Purpose / behavior | Likely file or module |
+| Structured Debates | `structured_debate` | Create and manage ordered debate sequences and topics. | `ethikos/services/structured_debate.py` |
+| Klônes IA | `ai_clone_management` | Manage expert-emulating agents for continuity/testing. | `ethikos/services/ai_clone_management.py` |
+| Comparative Analysis | `comparative_argument_analysis` | Compare arguments to surface convergences/divergences. | `ethikos/services/comparative_argument_analysis.py` |
+| Public Archiving | `public_debate_archive` | Produce immutable debate snapshots for transparency. | `ethikos/services/public_debate_archive.py` |
+| Automated Summaries | `automated_debate_summary` | Generate concise, structured debate outcome digests. | `ethikos/services/automated_debate_summary.py` |
+
+## **2) Backend functionalities**
+
+* **Debate lifecycle:** CRUD for topics with status transitions (open/closed/archived), category assignment, and owner/moderation rules; exposed via DRF.
+
+* **Threaded arguments:** Nested replies under each topic with optional “pro/con” flag and moderation hooks.
+
+* **Nuanced stance capture:** Integer stance scale −3…+3 per user/topic; stance events are the canonical upstream facts for deliberation.
+
+* **Readings & cohorts (derived):** Outcomes are computed/published by **Smart Vote** using optional declared lenses (cohorts, roles, locality, time windows). If a lens uses EkoH, it MUST bind to an **EkoH snapshot id** (domain weights + ethics multipliers + eligibility thresholds).
+
+* **Quality & moderation:** Report/auto-hide thresholds; flagged content routed to shared moderation queue.
+
+Actual implemented tables for Korum (planned AI/summary/archive tables are intentionally omitted in v14).
+
+| Table / Model | Purpose | Key fields |
+| `EthikosCategory` | Thematic categories for debates. | `id`, `name`, `description` |
+
+Note: AI clones, comparative-analysis logs, public archives, and debate summaries are listed as services but not present as tables in the current schema snapshot.
+
+## **4) Supporting configuration (frozen)**
+
+* **Expert cohort quorum (display):** 12 distinct experts (eligibility derived from EkoH domain thresholds for the relevant topic tags).
+
+* **Moderation auto-hide:** Hide an argument after 3 independent reports.
+
+* **AI clone training batch:** 128 records.
+
+## **5) Frontend & navigation**
+
+* **Routes:** `/ethikos/korum` (Debate Hub: Open / Archived / Start New), `/ethikos/insights` (opinion analytics dashboards).
+
+* **Behavior:** Stance slider (−3…+3), live tallies, cohort filters, threaded arguments; analytics readouts live under Insights.
+
+## **6) Integration points**
+
+* **EkoH + Smart Vote:**
+- **EkoH** supplies auditable context when a lens references it (`ekoh_snapshot_id`).
+- **Smart Vote** computes and publishes the readings (baseline + declared lenses) for stances/outcomes.
+
+* **Insights module:** ETL ingests stance and vote facts; dashboards render trends with export limits and privacy safeguards (k-anonymity, hashed IDs).
+
+## **7) Realtime & ops**
+
+* **Push updates:** Optional WebSocket broadcasts via Django Channels + Redis for stance/result changes.
+
+* **Caching & rate control:** Use Redis caching for common cohort filters; apply API throttles consistent with platform policy.
+
+## **Summary**
+
+Korum provides structured topic management, nuanced stance capture, and threaded argumentation. Korum owns the upstream facts; **Smart Vote** publishes baseline + declared readings (derived outputs), optionally bound to **EkoH snapshot ids** for auditability.

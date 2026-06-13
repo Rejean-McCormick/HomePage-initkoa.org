@@ -1,12 +1,12 @@
 # /initiatives
 
-> Canonical HTML: https://initkoa.org/initiatives
-> Markdown mirror: https://initkoa.org/initiatives/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/index.html.md
 > Route: /initiatives
 > Source: app\initiatives\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives)
 
 Initiatives
 

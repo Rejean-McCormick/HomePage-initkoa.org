@@ -1,12 +1,12 @@
 # Objective & Legitimacy Criteria
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/vote/legitimacy-criteria
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/vote/legitimacy-criteria/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/vote/legitimacy-criteria
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/vote/legitimacy-criteria/index.html.md
 > Route: /initiatives/ukraine-peace-plan/fvr/vote/legitimacy-criteria
 > Source: app\initiatives\ukraine-peace-plan\fvr\vote\legitimacy-criteria\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/vote/legitimacy-criteria)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/vote/legitimacy-criteria)
 
 # Objective & Legitimacy Criteria
 

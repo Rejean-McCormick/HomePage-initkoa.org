@@ -1,12 +1,12 @@
 # Branes et couche de sens
 
-> Canonical HTML: https://initkoa.org/technology/ame-artificielle/branes-et-couche-de-sens
-> Markdown mirror: https://initkoa.org/technology/ame-artificielle/branes-et-couche-de-sens/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/branes-et-couche-de-sens
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/branes-et-couche-de-sens/index.html.md
 > Route: /technology/ame-artificielle/branes-et-couche-de-sens
 > Source: app\technology\ame-artificielle\branes-et-couche-de-sens\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/technology/ame-artificielle/branes-et-couche-de-sens)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/branes-et-couche-de-sens)
 
 "Les branes comme couche de sens dans l’me Artificielle : plan interprétatif, image d’unification, lecture des dualités et de la hiérarchie des niveaux.",
 

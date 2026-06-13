@@ -1,12 +1,12 @@
 # /kreature/mythos/serments
 
-> Canonical HTML: https://initkoa.org/kreature/mythos/serments
-> Markdown mirror: https://initkoa.org/kreature/mythos/serments/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/kreature/mythos/serments
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/kreature/mythos/serments/index.html.md
 > Route: /kreature/mythos/serments
 > Source: app\kreature\mythos\serments\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/kreature/mythos/serments)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/kreature/mythos/serments)
 
 Serments
 

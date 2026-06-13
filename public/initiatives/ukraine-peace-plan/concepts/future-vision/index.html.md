@@ -1,12 +1,12 @@
 # Future Vision: Ukraine as a Global Cultural Bridge
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/future-vision
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/future-vision/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/concepts/future-vision
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/concepts/future-vision/index.html.md
 > Route: /initiatives/ukraine-peace-plan/concepts/future-vision
 > Source: app\initiatives\ukraine-peace-plan\concepts\future-vision\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/concepts/future-vision)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/concepts/future-vision)
 
 # Future Vision: Ukraine as a Global Cultural Bridge
 

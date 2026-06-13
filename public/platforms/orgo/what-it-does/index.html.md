@@ -1,12 +1,12 @@
 # What Orgo does
 
-> Canonical HTML: https://initkoa.org/platforms/orgo/what-it-does
-> Markdown mirror: https://initkoa.org/platforms/orgo/what-it-does/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/orgo/what-it-does
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/orgo/what-it-does/index.html.md
 > Route: /platforms/orgo/what-it-does
 > Source: app\platforms\orgo\what-it-does\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/orgo/what-it-does)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/orgo/what-it-does)
 
 "Orgo turns signals into accountable work: route by function, escalate by time, and close every case with a traceable outcome—even offline."
 

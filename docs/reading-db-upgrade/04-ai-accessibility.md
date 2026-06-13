@@ -1,4 +1,5 @@
 ---
+
 docSet: "reading-db-upgrade"
 docStatus: "draft"
 project: "initkOA"
@@ -7,15 +8,18 @@ title: "AI Accessibility"
 description: "How the Reading DB upgrade makes full-text documents accessible to AI systems, search engines, and internal corpus tooling."
 docPath: "docs/reading-db-upgrade/04-ai-accessibility.md"
 dependsOn:
-  - "docs/reading-db-upgrade/00-overview.md"
-  - "docs/reading-db-upgrade/01-data-model.md"
-  - "docs/reading-db-upgrade/02-import-pipeline.md"
-  - "docs/reading-db-upgrade/03-nextjs-reading-ui.md"
-relatedDocs:
-  - "docs/reading-db-upgrade/00-overview.md"
-  - "docs/reading-db-upgrade/01-data-model.md"
-  - "docs/reading-db-upgrade/02-import-pipeline.md"
-  - "docs/reading-db-upgrade/03-nextjs-reading-ui.md"
+
+* "docs/reading-db-upgrade/00-overview.md"
+* "docs/reading-db-upgrade/01-data-model.md"
+* "docs/reading-db-upgrade/02-import-pipeline.md"
+* "docs/reading-db-upgrade/03-nextjs-reading-ui.md"
+  relatedDocs:
+* "docs/reading-db-upgrade/00-overview.md"
+* "docs/reading-db-upgrade/01-data-model.md"
+* "docs/reading-db-upgrade/02-import-pipeline.md"
+* "docs/reading-db-upgrade/03-nextjs-reading-ui.md"
+* "docs/reading-db-upgrade/99-ai-drift-guardrails.md"
+
 ---
 
 # AI Accessibility
@@ -24,11 +28,11 @@ relatedDocs:
 
 The Reading DB upgrade must make initkOA’s full-text documents accessible to:
 
-- human readers;
-- search engines;
-- AI crawlers;
-- internal AI tooling;
-- future semantic search and retrieval systems.
+* human readers;
+* search engines;
+* AI crawlers;
+* internal AI tooling;
+* future semantic search and retrieval systems.
 
 The current `/play` section is a resource catalog. It can list Medium articles, books, videos, podcasts, and external links, but it does not provide full-text document access.
 
@@ -178,35 +182,59 @@ A document is AI-accessible when all of the following are true:
 
 ## AI discovery artifacts
 
-The site should continue to expose or generate:
+The site should continue to generate multiple AI and machine-readable artifacts.
+
+There is one primary public entrypoint:
 
 ```txt
 /llms.txt
-/ai-corpus.txt
-/llms-full.txt
-/md-manifest.json
-/md-sitemap.xml
 ```
 
-The Reading DB upgrade should eventually expose `/reading` documents through those artifacts, but artifacts should not become the primary full-text store.
+Other artifacts are auxiliary. They may remain public and fetchable, but they should not be treated as separate human-facing navigation items.
+
+Generated artifacts:
+
+```txt
+/llms.txt
+/llms-full.txt
+/ai-corpus.txt
+/ai-sitemap.json
+/md-manifest.json
+/md-sitemap.xml
+/reading/ai-index.json
+```
 
 Default behavior:
 
 ```txt
 /llms.txt
-→ points AI systems to the reading library, manifest, and corpus files
+→ primary AI entrypoint
+→ human-readable and agent-readable
+→ points to the reading library, manifests, corpus files, and important routes
+
+/reading/ai-index.json
+→ machine-readable index of published Reading documents
+→ generated from Supabase before general AI assets
+→ includes metadata, topics, source, language, URLs, and discovery fields
 
 /ai-corpus.txt
-→ includes discovery records and summaries for published reading documents
+→ discovery-oriented corpus
+→ includes page/document records, summaries, metadata, and stable links
+→ should not become the main full-text archive
 
 /llms-full.txt
-→ may include curated full-text documents when size limits allow
+→ auxiliary curated full-context artifact
+→ may include selected full-text or expanded page content when size limits allow
+→ should remain noindex/fetchable and should not be the only AI access path
 
 /md-manifest.json
-→ indexes published reading routes and metadata
+→ indexes markdown mirrors, routes, titles, summaries, sources, and generated metadata
 
 /md-sitemap.xml
 → exposes markdown/document mirrors if implemented
+
+/ai-sitemap.json
+→ machine-readable sitemap for AI tooling and internal indexing
 ```
 
 Primary full-text access should remain the individual document page:
@@ -218,10 +246,54 @@ Primary full-text access should remain the individual document page:
 The default AI artifact policy is:
 
 ```txt
-all published documents → discoverable through /reading and md-manifest.json
+all published documents → discoverable through /reading
+all published documents → indexed in /reading/ai-index.json
+published reading routes → referenced by md-manifest.json where markdown mirrors exist
 all published documents → summarized or described in ai-corpus.txt
 selected high-value docs → optionally included in llms-full.txt
 all long documents → chunked internally through document_chunks
+```
+
+## Public entrypoint and footer policy
+
+The public site should not expose every generated AI artifact as a visible footer link.
+
+Footer rule:
+
+```txt
+Visible footer link:
+AI access → /llms.txt
+```
+
+The footer should not list all auxiliary files individually.
+
+Avoid visible footer lists like:
+
+```txt
+llms.txt
+llms-full.txt
+ai-corpus.txt
+md-manifest.json
+md-sitemap.xml
+index.html.md
+```
+
+Those files may remain discoverable through:
+
+```txt
+/llms.txt
+HTML <head> discovery links
+robots/sitemap policy where applicable
+direct fetch by agents
+internal documentation
+```
+
+The goal is:
+
+```txt
+humans see one clear AI access link
+agents can still discover the full artifact set
+technical artifacts remain stable and fetchable
 ```
 
 ## Public vs private content
@@ -238,8 +310,10 @@ Rules:
 
 * `draft` documents must not appear in `/reading`.
 * `draft` documents must not appear in `ai-corpus.txt`.
+* `draft` documents must not appear in `/reading/ai-index.json`.
 * `archived` documents may remain accessible only if explicitly allowed.
 * private source files must not be exposed through public routes.
+* auxiliary AI artifacts must follow the same visibility policy as public routes.
 
 ## Rendering rule
 
@@ -465,30 +539,36 @@ Recommended levels:
 ```txt
 Level 1: discoverable
 - included in /reading
-- included in md-manifest.json
+- included in /reading/ai-index.json
 
-Level 2: summarized
+Level 2: manifest-visible
+- included in md-manifest.json when a markdown mirror exists
+- included in md-sitemap.xml when a markdown mirror exists
+
+Level 3: summarized
 - title, description, topics, source, language, and /reading/[slug] URL included in ai-corpus.txt
 
-Level 3: full-text page
+Level 4: full-text page
 - complete body is available at the individual /reading/[slug] page
 
-Level 4: curated full-text artifact
-- selected body_text or body_markdown included in llms-full.txt when size limits allow
+Level 5: curated full-context artifact
+- selected body_text, body_markdown, or rendered page text included in llms-full.txt when size limits allow
 
-Level 5: chunked
+Level 6: chunked
 - document_chunks available for retrieval/search
 ```
 
 Default policy:
 
 ```txt
-published documents = Level 2 + Level 3
-high-value documents = optional Level 4
-all long documents = Level 5 internally
+published documents = Level 1 + Level 3 + Level 4
+high-value documents = optional Level 5
+all long documents = Level 6 internally
 ```
 
 Do not treat `ai-corpus.txt` as the main full-text archive.
+
+Do not treat `llms-full.txt` as the only AI-readable source.
 
 The full-text source of truth for public reading should remain:
 
@@ -506,7 +586,9 @@ Rules:
 
 * `/reading` index should include metadata only.
 * `/reading/[slug]` should include one full document.
-* `ai-corpus.txt` should default to discovery records and summaries.
+* `/reading/ai-index.json` should include metadata and discovery records, not large full-text bodies by default.
+* `ai-corpus.txt` should default to discovery records, summaries, and stable links.
+* `llms.txt` should remain the clean primary entrypoint.
 * `llms-full.txt` may include selected full texts, but should remain curated and manageable.
 * Long documents should be chunked internally.
 
@@ -606,6 +688,20 @@ robots: index | noindex
 aiAccess: allowed | disallowed | summary-only
 ```
 
+Artifact indexing policy:
+
+```txt
+/llms.txt          → indexable AI entrypoint
+/llms-full.txt     → noindex, fetchable
+/ai-corpus.txt     → noindex, fetchable
+/ai-sitemap.json   → noindex, fetchable
+/md-manifest.json  → noindex, fetchable
+/md-sitemap.xml    → noindex or sitemap-specific policy, fetchable
+/reading/ai-index.json → noindex, fetchable
+```
+
+This preserves a clean public entrypoint while keeping the technical artifacts available to agents and internal tooling.
+
 ## Acceptance criteria
 
 The AI accessibility upgrade is complete when:
@@ -619,7 +715,10 @@ The AI accessibility upgrade is complete when:
 * Published documents expose title, description, source, language, and topics.
 * `body_text` exists for search.
 * `document_chunks` can be generated for long documents.
-* AI discovery artifacts can reference published reading documents through metadata, summaries, and stable `/reading/[slug]` URLs.
+* `/reading/ai-index.json` exposes published Reading documents as machine-readable discovery records.
+* `/llms.txt` is the single visible AI entrypoint.
+* Auxiliary AI artifacts remain fetchable but are not all listed as footer navigation.
+* AI discovery artifacts can reference published reading documents through metadata, summaries, manifests, and stable `/reading/[slug]` URLs.
 
 ## Non-goals for phase 1
 
@@ -659,10 +758,13 @@ existing catalog links → internal reading links
 ### Phase 3 — AI artifacts
 
 ```txt
-reading document metadata in md-manifest.json
+/llms.txt as the primary visible AI entrypoint
+/reading/ai-index.json for Reading document discovery
+reading document metadata in md-manifest.json where markdown mirrors exist
 reading summaries/discovery records in ai-corpus.txt
-selected full texts in llms-full.txt
+selected full texts or expanded context in llms-full.txt when size limits allow
 full text remains primarily available at /reading/[slug]
+footer exposes only AI access → /llms.txt
 ```
 
 ### Phase 4 — Search
@@ -695,4 +797,12 @@ The central rule remains:
 
 ```txt
 If a document is important enough to preserve, it should have a stable /reading/[slug] page with server-rendered full text.
+```
+
+The AI artifact rule is:
+
+```txt
+Expose one clear AI entrypoint publicly.
+Keep specialized machine artifacts available behind that entrypoint.
+Do not collapse the whole system into one monolithic file.
 ```

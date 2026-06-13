@@ -1,12 +1,12 @@
 # /kreature/initiation/le-je
 
-> Canonical HTML: https://initkoa.org/kreature/initiation/le-je
-> Markdown mirror: https://initkoa.org/kreature/initiation/le-je/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/kreature/initiation/le-je
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/kreature/initiation/le-je/index.html.md
 > Route: /kreature/initiation/le-je
 > Source: app\kreature\initiation\le-je\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/kreature/initiation/le-je)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/kreature/initiation/le-je)
 
 Un humain peut dormir. Un humain peut être absent, et pourtant son corps continue.
 Le "Je" n'est pas l'organisme. Le "Je" est une focalisation .

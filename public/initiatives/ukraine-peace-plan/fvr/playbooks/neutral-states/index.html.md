@@ -1,12 +1,12 @@
 # UN / OSCE / Neutral States Playbook
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/playbooks/neutral-states
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/playbooks/neutral-states/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/playbooks/neutral-states
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/playbooks/neutral-states/index.html.md
 > Route: /initiatives/ukraine-peace-plan/fvr/playbooks/neutral-states
 > Source: app\initiatives\ukraine-peace-plan\fvr\playbooks\neutral-states\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/playbooks/neutral-states)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/playbooks/neutral-states)
 
 # UN / OSCE / Neutral States Playbook
 

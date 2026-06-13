@@ -1,12 +1,12 @@
 # Status-Neutral Governance Model
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/governance/status-neutral-model
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/governance/status-neutral-model/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/governance/status-neutral-model
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/governance/status-neutral-model/index.html.md
 > Route: /initiatives/ukraine-peace-plan/fvr/governance/status-neutral-model
 > Source: app\initiatives\ukraine-peace-plan\fvr\governance\status-neutral-model\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/governance/status-neutral-model)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/governance/status-neutral-model)
 
 # Status-Neutral Governance Model
 

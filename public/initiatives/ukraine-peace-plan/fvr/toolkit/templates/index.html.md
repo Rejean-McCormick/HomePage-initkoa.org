@@ -1,0 +1,118 @@
+# Implementation Templates
+
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/toolkit/templates
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/toolkit/templates/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/toolkit/templates
+> Source: app\initiatives\ukraine-peace-plan\fvr\toolkit\templates\page.mdx
+> Generated: 2026-06-13T00:42:18.184Z
+
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/toolkit/templates)
+
+# Implementation Templates
+
+This page contains reusable templates that support the operational implementation of **Freeze–Vote–Rebuild**. Copy these into working documents and adapt them to specific mission requirements as needed.
+
+## Template A: Verification Gate Definition
+*Use this to define the formal criteria for transition between phases.*
+
+**Gate Name:** **Purpose:** **Phase:** (Freeze / Vote / Rebuild / Cross-cutting)
+
+**Indicators:** - Indicator 1:
+- Indicator 2:
+
+**Thresholds:** - Indicator 1 Threshold:
+- Indicator 2 Threshold:
+
+**Measurement Window:** (e.g., rolling 14 days)
+**Data Sources:** (Monitors, sensors, audits, observers)
+**Decision Authority:** (Who certifies the pass/fail)
+**Dispute Process:** (How contested determinations are handled)
+
+**Consequences if PASS:** (What unlocks)
+**Consequences if FAIL:** (Pause/rollback; what changes immediately)
+
+**Publication Policy:** (What is published vs. restricted)
+
+## Template B: Incident Report (Freeze)
+*Use this for standardized reporting of ceasefire or movement violations.*
+
+**Incident ID:** **Date/Time (UTC):** **Location:** (Coordinates + Locality)
+**Reporting Channel:** (Hotline / Monitor / Sensor / Other)
+
+**Description:** **Immediate Safety Actions Taken:** **Parties Involved (if known):** **Classification (Preliminary):** - **Severity:** (S1–S4)
+- **Recurrence Flag:** (Yes/No)
+
+**Evidence:** - Photos/Video:
+- Witness Statements:
+- Sensor Data:
+
+**Access Status:** (Full / Partial / Denied)
+**Obstruction/Intimidation Noted:** (Yes/No; details)
+**Adjudication Status:** (Open / Resolved / Disputed)
+
+## Template C: Vote Complaint Filing
+*Standardized intake form for registration, coercion, or procedural challenges.*
+
+**Complaint ID:** **Filed By:** (Voter / Observer / Official / Other; anonymize if needed)
+**Type:** (Registration / Coercion / Procedure / Counting / Other)
+**Location/Modality:** (Polling place / Registration center / Remote)
+
+**Description:** **Evidence Attached:** **Immediate Risk/Safety Concerns:** (Yes/No; details)
+
+**Requested Remedy:** (Recount / Rerun / Corrective Action)
+**Timeline Commitments:** - Acknowledge by:
+- Preliminary decision by:
+- Final decision by:
+
+## Template D: Vote Audit Summary
+*Use this for reporting the results of Risk-Limiting Audits or reconciliation checks.*
+
+**Audit Method:** (Risk-Limiting / Recount Triggers / Other)
+**Scope:** (Sites covered, sample size, modalities)
+
+**Key Reconciliation Checks:** - Issued vs. Returned:
+- Pollbook vs. Counted:
+- Chain-of-Custody Exceptions:
+
+**Findings:** - Discrepancies:
+- Anomalies Flagged:
+- Procedural Violations:
+
+**Conclusion:** (Within Tolerance / Requires Action / Fails Integrity Threshold)
+
+## Template E: Reconstruction Project Registry Entry
+*Standard format for the public project database.*
+
+**Project ID:** **Category:** (Housing / Energy / Transport / Health / Education)
+**Location:** (General locality + Precise coordinates in restricted record)
+**Beneficiaries:** (Estimated households/users)
+
+**Budget & Funding Source:** **Contractor(s):** **Procurement Method:** (Competitive / Emergency / Other)
+
+**Milestones:** - M1 (Mobilization):
+- M2 (Intermediate):
+
+**Verification Evidence Required:** (Photos, Inspections, Certificates)
+**Audit Requirements:** (Thresholds, Cadence)
+**Status:** (Planned / In Progress / Completed)
+
+## Template F: Debarment Decision Record (Rebuild)
+*Use this to document the exclusion of corrupt or non-performing vendors.*
+
+**Vendor/Entity Name:** **Reason for Action:** (Fraud / Non-performance / Conflict-of-interest)
+**Evidence Summary:** **Due Process Steps Taken:** (Notice, Response window, Hearing)
+**Decision:** (Debarred / Suspended / Warning)
+**Duration:** ---
+
+## Template G: KPI Dashboard Spec
+*Technical requirements for building the transparency dashboards.*
+
+**Dashboard Name:** **Audience:** (Public / Restricted / Audit-only)
+**Update Frequency:** **Indicators Included:** - Indicator Definition:
+- Data Source:
+- Calculation Method:
+
+**Redaction Rules:** **Access Controls:** **Auditor Trail/Logging Requirements:** ---
+
+## Drafting Note
+As the framework is implemented, these templates should be kept **versioned**. Major changes to template structures should be recorded in the **Changelog (/initiatives/ukraine-peace-plan/fvr/start-here/changelog)** and the **Decision Log (/initiatives/ukraine-peace-plan/fvr/appendices/decision-log)** to maintain auditability.

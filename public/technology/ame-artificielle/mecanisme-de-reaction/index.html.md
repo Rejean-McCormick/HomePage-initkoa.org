@@ -1,12 +1,12 @@
 # Mécanisme de réaction
 
-> Canonical HTML: https://initkoa.org/technology/ame-artificielle/mecanisme-de-reaction
-> Markdown mirror: https://initkoa.org/technology/ame-artificielle/mecanisme-de-reaction/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/mecanisme-de-reaction
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/mecanisme-de-reaction/index.html.md
 > Route: /technology/ame-artificielle/mecanisme-de-reaction
 > Source: app\technology\ame-artificielle\mecanisme-de-reaction\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/technology/ame-artificielle/mecanisme-de-reaction)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/mecanisme-de-reaction)
 
 "Le cœur opératoire de l’me Artificielle : objet en entrée, cheminement intérieur, traversée de la structure du sujet, puis réaction en sortie.",
 

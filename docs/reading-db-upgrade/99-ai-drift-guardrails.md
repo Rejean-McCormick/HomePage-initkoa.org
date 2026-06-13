@@ -1,4 +1,5 @@
 ---
+
 docSet: "reading-db-upgrade"
 docStatus: "draft"
 project: "initkOA"
@@ -9,11 +10,13 @@ description: "Canonical guardrails that prevent AI-assisted branches from redefi
 docPath: "docs/reading-db-upgrade/99-ai-drift-guardrails.md"
 dependsOn: []
 relatedDocs:
-  - "docs/reading-db-upgrade/00-overview.md"
-  - "docs/reading-db-upgrade/01-data-model.md"
-  - "docs/reading-db-upgrade/02-import-pipeline.md"
-  - "docs/reading-db-upgrade/03-nextjs-reading-ui.md"
-  - "docs/reading-db-upgrade/04-ai-accessibility.md"
+
+* "docs/reading-db-upgrade/00-overview.md"
+* "docs/reading-db-upgrade/01-data-model.md"
+* "docs/reading-db-upgrade/02-import-pipeline.md"
+* "docs/reading-db-upgrade/03-nextjs-reading-ui.md"
+* "docs/reading-db-upgrade/04-ai-accessibility.md"
+
 ---
 
 # 99 — AI Drift Guardrails
@@ -26,13 +29,14 @@ It defines the canonical decisions that must remain stable unless explicitly cha
 
 The goal is to avoid situations where different AI branches redefine:
 
-- routes;
-- database ownership;
-- source-of-truth rules;
-- terminology;
-- import behavior;
-- AI accessibility policy;
-- `/play` versus `/reading` responsibilities.
+* routes;
+* database ownership;
+* source-of-truth rules;
+* terminology;
+* import behavior;
+* AI accessibility policy;
+* public footer exposure;
+* `/play` versus `/reading` responsibilities.
 
 This document is the guardrail layer for the `reading-db-upgrade` documentation set.
 
@@ -79,685 +83,712 @@ import_runs
 import_items
 ```
 
-The DB, not Markdown files in the repo, is the source of truth for published readable documents.
+The DB, not Markdown files in the repo, is the canonical source for published Reading documents.
 
-Markdown, HTML, RSS, PDF, and manual entries are import sources.
+Markdown files may exist as:
 
----
+* import sources;
+* staging input;
+* backups;
+* authoring material;
+* migration material;
+* generated mirrors;
+* test fixtures.
 
-# Canonical Entity Definitions
-
-## Resource
-
-A resource is a catalog/link item.
-
-Resources belong primarily to:
-
-```txt
-/play
-```
-
-A resource may point to:
-
-```txt
-external URL
-video
-podcast
-book
-GitHub page
-Medium article
-internal reading document
-```
-
-A resource is not necessarily full-text readable inside initkOA.
-
-## Document
-
-A document is a full-text readable entity stored in the central DB.
-
-Documents belong primarily to:
-
-```txt
-/reading
-```
-
-A document must be renderable as a full page from the DB.
-
-## Source
-
-A source identifies the origin or import channel of a document.
-
-Allowed initial values:
-
-```txt
-medium
-markdown
-pdf
-manual
-imported_html
-```
-
-Source is not a topic.
-
-## Topic
-
-A topic describes what a document is about.
-
-Topics use:
-
-```txt
-snake_case
-```
-
-Good examples:
-
-```txt
-governance
-semantic_systems
-knowledge_infrastructure
-data_sovereignty
-social_cohesion
-```
-
-Avoid as topics:
-
-```txt
-medium_article
-pdf
-markdown
-```
-
-Those belong in:
-
-```txt
-documents.source
-documents.metadata
-/play resource type
-```
-
-Rule:
-
-```txt
-source = where it came from
-topic  = what it is about
-type   = resource/document classification when needed
-```
+But after import, the DB-backed document record is the canonical runtime source.
 
 ---
 
 # Canonical Routes
 
-## Public reading routes
+## Public routes
 
 ```txt
 /reading
 /reading/[slug]
-/reading/source/[source]
 /reading/topic/[topic]
+/reading/source/[source]
 ```
 
-## Canonical document route
+`/reading/[slug]` is the canonical public full-text route for each readable document.
+
+## Not canonical document routes
+
+The following must not become canonical document routes:
+
+```txt
+/play/[slug]
+/resources/[slug]
+/documents/[slug]
+/library/[slug]
+/articles/[slug]
+```
+
+These may exist for other purposes, but not as the canonical Reading document route.
+
+---
+
+# `/play` versus `/reading`
+
+`/play` remains the resource catalog.
+
+It may include:
+
+* tools;
+* projects;
+* initiatives;
+* external resources;
+* learning resources;
+* documents as catalog entries.
+
+`/reading` is the full-text document library.
+
+It owns:
+
+* readable page rendering;
+* long-form document display;
+* document metadata;
+* topics;
+* source links;
+* canonical URLs;
+* AI-readable reading indexes;
+* document-level search and discovery.
+
+Do not merge `/play` and `/reading`.
+
+Do not move full-text Reading pages into `/play`.
+
+Do not make `/play` the source of truth for Reading documents.
+
+---
+
+# Canonical Document Identity
+
+Every readable document must have a stable internal identity.
+
+Required identity fields:
+
+```txt
+id
+slug
+title
+status
+source
+```
+
+The `slug` is the public route identifier.
 
 ```txt
 /reading/[slug]
 ```
 
-This is the stable internal route for a document.
+The `id` is the database identifier.
 
-Do not make source-scoped routes canonical.
+The `canonical_url` is the original external source URL when applicable.
 
-Do not use this as the canonical document route:
-
-```txt
-/reading/source/[source]/[slug]
-```
-
-Source and topic routes are filter/index routes only.
-
-Examples:
-
-```txt
-/reading/source/medium
-/reading/topic/governance
-```
+The `canonical_url` is not the same thing as the internal route.
 
 ---
 
-# Slug Rules
-
-Slugs are globally unique.
+# Canonical URL Semantics
 
 Use:
 
 ```txt
-lowercase
-kebab-case
-stable after publication
-unique globally
-short hash on collision
+canonical_url = original external source URL
 ```
 
 Examples:
 
 ```txt
-cartographer-of-ideas
-cartographer-of-ideas-d362d695
+https://medium.com/...
+https://example.org/original-paper
+https://github.com/...
 ```
-
-Do not scope slugs by source.
-
-Reason:
-
-- simpler URLs;
-- easier sharing;
-- cleaner AI references;
-- one unified reading library.
-
----
-
-# Canonical URL Policy
-
-`canonical_url` means the original external source URL.
-
-Example:
-
-```txt
-https://medium.com/@boatbuilder610/cartographer-of-ideas-d362d695273a
-```
-
-`internal_path` means the initkOA reading route.
-
-Example:
-
-```txt
-/reading/cartographer-of-ideas
-```
-
-Never confuse the two.
-
-For imported Medium articles:
-
-```txt
-source = medium
-canonical_url = original Medium URL
-internal_path = /reading/[slug]
-```
-
-The internal route is the readable initkOA copy.
-
-The canonical URL preserves source traceability and attribution.
-
-SEO canonical behavior may vary by source, but the data-model meaning remains stable:
-
-```txt
-canonical_url = original external source
-internal_path = initkOA reading route
-```
-
----
-
-# `/play` Integration Policy
-
-`/play` remains a resource catalog.
-
-When a full DB-backed reading copy exists, `/play` should prefer the internal reading URL.
-
-Before Reading DB import:
-
-```txt
-/play item url = https://medium.com/...
-```
-
-After Reading DB import:
-
-```txt
-/play item url = /reading/cartographer-of-ideas
-/play item canonicalUrl = https://medium.com/...
-```
-
-The original external URL must remain available through:
-
-```txt
-canonical_url
-source_url
-external_url
-metadata
-```
-
-depending on the layer.
-
----
-
-# Document Body Storage Policy
-
-Published readable documents must be stored in DB fields:
-
-```txt
-documents.body_markdown
-documents.body_text
-```
-
-`body_markdown` is the canonical readable source used for rendering.
-
-`body_text` is normalized plain text for search, AI, chunks, and summaries.
-
-Original source files should be tracked through:
-
-```txt
-document_assets
-```
-
-Examples:
-
-```txt
-source_md
-source_html
-source_pdf
-image
-attachment
-other
-```
-
-Do not rely on local files as the only source for a published reading page.
-
-The DB must be able to render:
-
-```txt
-/reading/[slug]
-```
-
-without needing the original local import file.
-
----
-
-# Medium Import Policy
-
-Medium imports may use:
-
-```txt
-Medium RSS
-content/medium/source/*.html
-```
-
-Medium RSS is useful for discovery and recent metadata.
-
-Local Medium HTML exports are useful for full historical content.
-
-When imported into Reading DB:
-
-```txt
-source = medium
-canonical_url = original Medium URL
-body_markdown = normalized Markdown body
-body_text = normalized plain text
-asset_type = source_html for original export
-```
-
-Do not render raw Medium HTML directly as the primary document body.
-
-Original HTML may be stored or referenced as an asset for auditability.
-
----
-
-# Markdown Import Policy
-
-Markdown files may be used as import sources.
-
-The target is still the central DB.
-
-Workflow:
-
-```txt
-content/reading-inbox/**/*.md
-↓
-import script
-↓
-documents
-document_topics
-document_assets
-import_runs
-import_items
-```
-
-Markdown files are not the long-term public source of truth unless explicitly designated.
-
----
-
-# PDF Import Policy
-
-PDF files are import sources and assets.
-
-PDF imports must produce:
-
-```txt
-body_text = extracted plain text
-body_markdown = normalized extracted text, required even if basic/plain
-document_assets entry = original PDF
-```
-
-Reason:
-
-```txt
-documents.body_markdown is required
-```
-
-Do not create a public document that only points to a PDF without extracted readable text.
-
----
-
-# Long Document Policy
-
-Long documents remain one canonical public page in phase 1.
 
 Use:
 
 ```txt
-/reading/[slug]
+/reading/[slug] = internal initkOA reading page
 ```
 
-Do not visually paginate by default.
+Do not overwrite `canonical_url` with the initkOA route.
 
-Support long documents with:
+Do not treat `canonical_url` as the internal route.
 
-```txt
-table of contents
-heading anchors
-reading width
-back-to-top
-section navigation
-server-rendered HTML
-```
-
-Use `document_chunks` for:
-
-```txt
-AI retrieval
-search
-summaries
-embeddings
-internal navigation
-```
-
-Optional future route:
-
-```txt
-/reading/[slug]/section/[sectionSlug]
-```
-
-Only add section routes later for extremely long or deliberately structured documents.
+Do not use `canonical_url` for internal routing.
 
 ---
 
-# AI Accessibility Policy
+# Canonical Visibility Model
 
-The document body must be visible in server-rendered HTML.
+Documents have a `status`.
 
-Good:
-
-```txt
-Server component fetches document
-↓
-Markdown rendered to HTML on server
-↓
-HTML page contains full text
-```
-
-Avoid:
+Canonical statuses:
 
 ```txt
-empty shell
-client-side fetch
-document body injected after hydration
+draft
+published
+archived
 ```
 
-Default AI artifact policy:
+Only `published` documents are public by default.
 
-```txt
-all published documents → discoverable through /reading and md-manifest.json
-all published documents → summarized or described in ai-corpus.txt
-selected high-value docs → optionally included in llms-full.txt
-all long documents → chunked internally through document_chunks
-```
+AI indexes and public discovery artifacts must include only published documents unless a human maintainer explicitly creates a private/internal artifact.
 
-The primary public full-text location is:
-
-```txt
-/reading/[slug]
-```
-
-Do not treat `ai-corpus.txt` as the main full-text archive.
-
----
-
-# Visibility Policy
-
-Only published documents are public.
+Default visibility:
 
 ```txt
 draft     = not public
 published = public
-archived  = retained but hidden by default
-```
-
-Public routes and AI artifacts should include only:
-
-```txt
-status = published
-```
-
-Draft and archived documents may be visible in future admin tools, but not in public reading pages or public AI artifacts by default.
-
----
-
-# RLS and Security Policy
-
-Supabase Row Level Security should be enabled.
-
-Public anonymous users may read published documents only.
-
-Service-role scripts may insert/update/delete.
-
-Never expose this key to the browser:
-
-```txt
-SUPABASE_SERVICE_ROLE_KEY
-```
-
-Child table access must follow parent document visibility.
-
-```txt
-document_topics  → readable only when parent document is published
-document_assets  → readable only when parent document is published and asset is public
-document_chunks  → readable only when parent document is published and AI access allows it
+archived  = not public by default
 ```
 
 ---
 
-# Search Policy
+# Canonical Content Fields
 
-Phase 1:
-
-```txt
-Postgres full-text search
-```
-
-Search should cover:
+The DB should preserve both Markdown and plain text.
 
 ```txt
-title
-description
-body_text
-author
-source
-topics
+body_markdown = canonical rendered source
+body_text     = plain text for indexing, search, AI snippets, and summaries
 ```
 
-Topic search may use joins or a denormalized topic text field.
+`body_markdown` is used for page rendering.
 
-Phase 2:
+`body_text` is used for discovery, indexing, summaries, and search.
 
-```txt
-hybrid search = full-text + metadata filters + pgvector chunks
-```
+Do not treat generated HTML as the canonical stored body.
 
-Multilingual search should be documented explicitly.
-
-Initial acceptable behavior:
-
-```txt
-default to simple or english search config
-```
-
-Future behavior:
-
-```txt
-language-aware search config by document language
-```
+Generated HTML is a rendering output.
 
 ---
 
-# Vector Search Policy
+# Canonical Rendering Rule
 
-Vector search is not required for phase 1.
+Reading document pages are server-rendered.
 
-Do not make embeddings a blocker for:
+The route:
 
 ```txt
-documents table
-/reading
 /reading/[slug]
-Medium import
-Markdown import
-basic search
 ```
 
-Vector search belongs to a later phase.
+must render the document body in HTML from stored Markdown or equivalent DB-backed content.
 
-When added, embeddings belong primarily to:
+The page must not depend on client-side fetching for primary document content.
+
+Client-side enhancements are allowed, but the main document content must be available in the server-rendered response.
+
+---
+
+# Canonical Topic Semantics
+
+Topics are subject-matter labels.
+
+Examples:
 
 ```txt
-document_chunks
+ai
+governance
+kristal
+ethics
+reading
+markdown
 ```
 
-not the root `documents` table.
+Topics must not be used for:
+
+* document status;
+* source channel;
+* import source;
+* publication state;
+* audience;
+* access control.
+
+Use explicit fields for those concepts.
 
 ---
 
-# Import Observability Policy
+# Canonical Source Semantics
 
-All non-trivial imports should create:
+`source` identifies the origin or import channel.
+
+Examples:
 
 ```txt
-import_runs
-import_items
+markdown
+medium
+manual
+pdf
+external
 ```
 
-Track:
+`source` is not a topic.
+
+Do not duplicate `source` values into `document_topics` unless the value is also genuinely a subject-matter topic.
+
+---
+
+# Canonical Import Model
+
+The import pipeline may read from:
 
 ```txt
-read_count
-created_count
-updated_count
-skipped_count
-error_count
-status
-source
-importer
+content/reading-inbox
+content/medium/source
+content/pdf-inbox
+external APIs
+manual scripts
 ```
 
-Import scripts should be auditable and repeatable.
+But the result must be inserted or updated in Supabase Postgres.
 
-Repeated imports should be idempotent when possible.
+The import pipeline should be idempotent when possible.
 
----
-
-# Allowed AI Behavior
-
-AI assistants may:
-
-- add implementation detail that follows these guardrails;
-- generate code from these decisions;
-- add examples consistent with the route and DB model;
-- propose phased implementation plans;
-- identify contradictions;
-- update docs to align terminology;
-- add migration steps;
-- refine SQL without changing core route/source-of-truth decisions.
+Repeated imports of the same source should not create accidental duplicate public documents.
 
 ---
 
-# Disallowed AI Behavior
+# Canonical Markdown Import Behavior
 
-AI assistants must not independently:
+Markdown imports should support frontmatter.
 
-- redefine `/play` as the full-text library;
-- replace `/reading` with `/library` unless explicitly requested;
-- make `/reading/source/[source]/[slug]` the canonical document route;
-- make slugs source-scoped by default;
-- treat Markdown files as the final public source of truth;
-- remove Supabase Postgres as the selected DB without explicit approval;
-- store only external links for documents that are supposed to be full-text readable;
-- make document body client-only;
-- put private/draft documents in public AI artifacts;
-- use topic values to encode file format/source type;
-- make vector search mandatory for phase 1;
-- treat `ai-corpus.txt` as the primary full-text source.
+Recommended fields:
+
+```yaml
+title:
+slug:
+description:
+source:
+canonical_url:
+author:
+language:
+topics:
+status:
+published_at:
+```
+
+The body after frontmatter becomes `body_markdown`.
+
+A plain text version should be derived as `body_text`.
+
+If `slug` is missing, the importer may derive it from the title or filename.
+
+If `status` is missing, the importer should default to `draft` unless an explicit import policy says otherwise.
 
 ---
 
-# Conflict Resolution Rules
+# Canonical Asset Model
 
-If two docs conflict, resolve in this order:
+Original files may be preserved in `document_assets`.
+
+Examples:
 
 ```txt
-1. Human instruction in the current task
-2. 99-ai-drift-guardrails.md
-3. 00-overview.md
-4. 01-data-model.md
-5. 02-import-pipeline.md
-6. 03-nextjs-reading-ui.md
-7. 04-ai-accessibility.md
+original markdown file
+original PDF
+downloaded HTML
+source metadata JSON
+images
+attachments
 ```
 
-If a requested change contradicts this file, the AI should:
+Assets are supporting material.
+
+They do not replace the canonical `documents` row.
+
+---
+
+# Canonical Versioning Model
+
+Substantial document changes should create entries in `document_versions`.
+
+Version records may include:
 
 ```txt
-state the contradiction
-ask whether the guardrail should be updated
-avoid silently changing the architecture
+document_id
+version_number
+body_markdown
+body_text
+change_summary
+created_at
+created_by
+metadata
+```
+
+The current document state remains in `documents`.
+
+Historical states belong in `document_versions`.
+
+---
+
+# Canonical Chunking Model
+
+`document_chunks` is an internal retrieval/search layer.
+
+It may be used for:
+
+* search;
+* AI retrieval;
+* future embeddings;
+* previews;
+* passage-level citation;
+* topic extraction;
+* summarization.
+
+It is not the canonical public full-text surface.
+
+The public full-text surface remains:
+
+```txt
+/reading/[slug]
 ```
 
 ---
 
-# Change Control
+# Canonical Vector Search Position
 
-This file should change rarely.
+Vector search is a future phase.
 
-Valid reasons to update it:
+The first DB-backed Reading upgrade does not require vector search.
 
-- human maintainer changes the architecture;
-- selected DB/provider changes;
-- route model changes;
-- source-of-truth model changes;
-- visibility/security policy changes;
-- AI artifact strategy changes.
+Do not redefine the current upgrade as an embeddings/vector project unless a human maintainer explicitly changes the roadmap.
 
-Minor implementation details should usually go into the phase docs instead.
+Allowed now:
+
+* schema preparing for embeddings;
+* chunking;
+* text search;
+* metadata search;
+* future-facing documentation.
+
+Not required now:
+
+* OpenAI embedding generation;
+* pgvector setup;
+* semantic search UI;
+* vector ranking.
 
 ---
 
-# Canonical Decision Summary
+# Canonical AI Accessibility Model
+
+The Reading system should support AI access through multiple layers.
+
+The canonical layers are:
+
+```txt
+/reading/[slug]              = full-text public document page
+/reading/ai-index.json       = machine-readable Reading document discovery index
+/llms.txt                    = primary AI entrypoint for the site
+/llms-full.txt               = auxiliary expanded AI context bundle
+/ai-corpus.txt               = auxiliary corpus/discovery text
+/md-manifest.json            = machine-readable Markdown mirror manifest
+/md-sitemap.xml              = machine-readable Markdown mirror sitemap
+/index.html.md and mirrors   = Markdown mirrors of public pages
+```
+
+These artifacts have different roles and must not be collapsed into a single conceptual object.
+
+---
+
+# Canonical AI Entrypoint Policy
+
+`/llms.txt` is the primary AI entrypoint.
+
+It should be:
+
+* concise enough to inspect quickly;
+* structured enough for agents to navigate;
+* stable enough to bookmark;
+* explicit about available auxiliary artifacts;
+* the only AI artifact normally linked from the visible public footer.
+
+`/llms.txt` may point to larger auxiliary artifacts.
+
+It does not need to contain every full-text document inline.
+
+---
+
+# Canonical Auxiliary AI Artifact Policy
+
+The site may generate auxiliary AI artifacts.
+
+Canonical auxiliary artifacts include:
+
+```txt
+/llms-full.txt
+/ai-corpus.txt
+/md-manifest.json
+/md-sitemap.xml
+/ai-sitemap.json
+/reading/ai-index.json
+```
+
+These artifacts may remain public and fetchable.
+
+They may be exposed in `<head>` discovery links.
+
+They may be referenced from `/llms.txt`.
+
+They should not all be displayed as separate visible footer links.
+
+Auxiliary artifacts must not redefine the canonical source of truth.
+
+The DB-backed Reading page remains the full-text source for public documents.
+
+---
+
+# Canonical Footer Exposure Policy
+
+The public footer should not expose every machine artifact as a human navigation item.
+
+The footer should expose a single clear AI entrypoint:
+
+```txt
+AI access -> /llms.txt
+```
+
+The following should not normally appear as separate visible footer links:
+
+```txt
+/llms-full.txt
+/ai-corpus.txt
+/md-manifest.json
+/md-sitemap.xml
+/ai-sitemap.json
+/index.html.md
+```
+
+They may still exist, be fetchable, be listed in `/llms.txt`, or be discoverable through machine metadata.
+
+This keeps the public interface clean while preserving machine access.
+
+---
+
+# Canonical SEO and Indexing Policy
+
+`/llms.txt` may be indexable.
+
+Auxiliary AI artifacts should usually be fetchable but not treated as primary search landing pages.
+
+Recommended behavior:
+
+```txt
+/llms.txt          = indexable AI entrypoint
+/llms-full.txt     = noindex, fetchable
+/ai-corpus.txt     = noindex, fetchable
+/md-manifest.json  = noindex, fetchable
+/ai-sitemap.json   = noindex, fetchable
+/md-sitemap.xml    = sitemap/discovery artifact
+```
+
+The goal is not to hide auxiliary artifacts.
+
+The goal is to prevent search engines from treating generated machine bundles as primary human pages.
+
+---
+
+# Canonical `llms-full.txt` Position
+
+`/llms-full.txt` remains a valid auxiliary artifact.
+
+It may contain:
+
+* selected full page content;
+* expanded page summaries;
+* route metadata;
+* Markdown mirror references;
+* high-value context for offline agent use.
+
+It should not replace `/llms.txt`.
+
+It should not be the only AI artifact.
+
+It should not become the public footer entrypoint.
+
+If a future maintainer decides to remove `/llms-full.txt`, that decision must be reflected in this guardrail document and in `04-ai-accessibility.md` before changing the generator.
+
+---
+
+# Canonical `ai-corpus.txt` Position
+
+`/ai-corpus.txt` is an auxiliary corpus artifact.
+
+It may include:
+
+* cleaned page text;
+* selected summaries;
+* discovery metadata;
+* source route references;
+* generated page blocks.
+
+It should support retrieval and corpus ingestion.
+
+It should not be treated as the canonical public full-text source for Reading documents.
+
+---
+
+# Canonical Markdown Mirror Policy
+
+Markdown mirrors are generated artifacts.
+
+They exist to make public site pages easier to inspect, quote, diff, index, and ingest.
+
+Markdown mirrors are not the source of truth for DB-backed Reading documents.
+
+They are public derived outputs.
+
+The source for Reading documents remains Supabase Postgres.
+
+The source for normal site pages remains the app source files.
+
+---
+
+# Canonical Public Artifact Relationship
+
+The relationship between user-facing pages and machine-facing artifacts is:
+
+```txt
+Human primary:
+  /reading/[slug]
+  normal app routes
+
+Machine primary:
+  /llms.txt
+  /reading/ai-index.json
+
+Machine auxiliary:
+  /llms-full.txt
+  /ai-corpus.txt
+  /md-manifest.json
+  /md-sitemap.xml
+  /ai-sitemap.json
+  Markdown mirrors
+```
+
+Do not invert this relationship.
+
+Do not make generated machine artifacts the canonical human surface.
+
+Do not make footer navigation mirror every machine artifact.
+
+---
+
+# Canonical AI Artifact Generation Rule
+
+The build may generate AI artifacts before `next build`.
+
+The expected build order is:
+
+```txt
+npm run reading:ai-index
+node scripts/generate-ai-assets.mjs
+next build
+```
+
+`reading:ai-index` must fail visibly if required Supabase configuration is missing or invalid.
+
+Do not bypass `reading:ai-index` silently in production builds.
+
+If the Reading AI index cannot be generated, the build should fail unless a human maintainer explicitly changes the policy.
+
+---
+
+# Canonical Error Handling Rule
+
+Do not hide source-of-truth errors.
+
+Examples of errors that should remain visible:
+
+```txt
+missing NEXT_PUBLIC_SUPABASE_URL
+missing SUPABASE_SERVICE_ROLE_KEY
+Supabase project paused
+invalid Supabase project URL
+failed published document query
+schema mismatch
+```
+
+Temporary local diagnostics may be used, but they should not become permanent bypasses.
+
+---
+
+# Canonical AI Drift Rule
+
+An AI assistant must not:
+
+* move the Reading source of truth back to Markdown files;
+* replace `/reading/[slug]` with another canonical route;
+* merge `/play` and `/reading`;
+* make draft documents public by default;
+* treat `canonical_url` as the internal route;
+* use topics for status/source/access control;
+* redefine vector search as required for the current phase;
+* delete auxiliary AI artifacts without updating the guardrails;
+* expose every machine artifact as public footer navigation;
+* silently bypass failed Reading index generation.
+
+If a change requires redefining one of these decisions, the assistant must identify it as a governance decision and update this guardrail document together with the implementation.
+
+---
+
+# Allowed Changes
+
+The following changes are allowed without changing the architecture:
+
+* improving UI layout;
+* improving Reading typography;
+* improving metadata display;
+* adding filters;
+* adding pagination;
+* improving slug generation;
+* improving Markdown rendering;
+* adding source links;
+* adding topic pages;
+* adding source pages;
+* improving `llms.txt` readability;
+* improving `llms-full.txt` structure;
+* improving `ai-corpus.txt` structure;
+* improving the footer to show only the primary AI entrypoint;
+* adding tests;
+* adding migrations;
+* adding import validation;
+* adding admin-only tooling.
+
+---
+
+# Changes Requiring Explicit Maintainer Decision
+
+The following changes require explicit maintainer decision:
+
+* removing `/llms-full.txt`;
+* removing `/ai-corpus.txt`;
+* removing Markdown mirrors;
+* removing `/reading/ai-index.json`;
+* replacing Supabase Postgres as source of truth;
+* making Markdown files the runtime source of truth again;
+* renaming `/reading`;
+* merging `/reading` into `/play`;
+* changing public visibility defaults;
+* making embeddings required for the current phase;
+* changing `canonical_url` semantics;
+* making generated machine bundles the public full-text source;
+* exposing all machine artifacts as primary footer navigation;
+* adding private/draft documents to public AI artifacts.
+
+---
+
+# Canonical Terminology
+
+Use these terms consistently:
 
 ```txt
 /play = resource catalog
 /reading = full-text document library
-Supabase Postgres = central source of truth
-documents = readable full-text DB entities
-resources = catalog/link entities
-/reading/[slug] = canonical internal document route
-/reading/source/[source] = filter/index route only
-/reading/topic/[topic] = filter/index route only
-slugs = globally unique
+/reading/[slug] = canonical internal public document route
 canonical_url = original external source URL
 internal_path = initkOA reading route
 body_markdown + body_text = stored in Postgres
@@ -767,7 +798,9 @@ source = origin/import channel
 published documents = public
 draft/archived documents = not public by default
 document body = server-rendered
-AI artifacts = discovery/summaries first
+AI entrypoint = /llms.txt
+AI artifacts = discovery/context/metadata layers
+auxiliary AI artifacts = llms-full, ai-corpus, manifests, sitemaps, mirrors
 full text = /reading/[slug]
 document_chunks = internal AI/search retrieval layer
 vector search = future phase
@@ -786,6 +819,8 @@ all docs treat Supabase Postgres as the document source of truth
 all docs preserve canonical_url as the original external source
 all docs use topics for subject matter only
 all docs keep full text in DB-rendered reading pages
-all docs treat AI artifacts as discovery/summaries-first
+all docs treat /llms.txt as the primary AI entrypoint
+all docs allow auxiliary AI artifacts without making them primary footer links
+all docs treat AI artifacts as discovery/context/metadata layers
 all docs keep vector search as a future phase
 ```

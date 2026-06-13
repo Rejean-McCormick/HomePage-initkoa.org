@@ -1,12 +1,12 @@
 # /kreature/mythos/king-klown
 
-> Canonical HTML: https://initkoa.org/kreature/mythos/king-klown
-> Markdown mirror: https://initkoa.org/kreature/mythos/king-klown/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/kreature/mythos/king-klown
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/kreature/mythos/king-klown/index.html.md
 > Route: /kreature/mythos/king-klown
 > Source: app\kreature\mythos\king-klown\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/kreature/mythos/king-klown)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/kreature/mythos/king-klown)
 
 King Klown
 

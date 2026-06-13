@@ -1,12 +1,12 @@
 # /kreature/anatomie/esprit/konnaxion/konnected/knowledge
 
-> Canonical HTML: https://initkoa.org/kreature/anatomie/esprit/konnaxion/konnected/knowledge
-> Markdown mirror: https://initkoa.org/kreature/anatomie/esprit/konnaxion/konnected/knowledge/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/kreature/anatomie/esprit/konnaxion/konnected/knowledge
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/kreature/anatomie/esprit/konnaxion/konnected/knowledge/index.html.md
 > Route: /kreature/anatomie/esprit/konnaxion/konnected/knowledge
 > Source: app\kreature\anatomie\esprit\konnaxion\konnected\knowledge\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/kreature/anatomie/esprit/konnaxion/konnected/knowledge)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/kreature/anatomie/esprit/konnaxion/konnected/knowledge)
 
 Knowledge
 

@@ -1,12 +1,12 @@
 # Education Module — Verified Competence
 
-> Canonical HTML: https://initkoa.org/initiatives/civic-governance/modules/education
-> Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/education/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/education
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/education/index.html.md
 > Route: /initiatives/civic-governance/modules/education
 > Source: app\initiatives\civic-governance\modules\education\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/civic-governance/modules/education)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/education)
 
 'Replace prestige credentials with a portable competence portfolio: modular learning, mastery validation, and auditable proof of skills.',
 

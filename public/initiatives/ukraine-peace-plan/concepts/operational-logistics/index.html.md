@@ -1,12 +1,12 @@
 # Operational Logistics: The Mechanics of Rebuild
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/operational-logistics
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/operational-logistics/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/concepts/operational-logistics
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/concepts/operational-logistics/index.html.md
 > Route: /initiatives/ukraine-peace-plan/concepts/operational-logistics
 > Source: app\initiatives\ukraine-peace-plan\concepts\operational-logistics\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/concepts/operational-logistics)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/concepts/operational-logistics)
 
 # Operational Logistics: The Mechanics of Rebuild
 

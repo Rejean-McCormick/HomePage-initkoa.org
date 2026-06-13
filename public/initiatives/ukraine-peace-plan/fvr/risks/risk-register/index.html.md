@@ -1,0 +1,45 @@
+# Risk Register
+
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/risks/risk-register
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/risks/risk-register/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/risks/risk-register
+> Source: app\initiatives\ukraine-peace-plan\fvr\risks\risk-register\page.mdx
+> Generated: 2026-06-13T00:42:18.184Z
+
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/risks/risk-register)
+
+# Risk Register
+
+This page is the working risk register for **Freeze–Vote–Rebuild**. It is designed to be updated as the framework is refined and as stakeholders stress-test assumptions.
+
+## How to Use This Register
+For each risk, we track:
+- **Phase:** Freeze, Vote, Rebuild, or Cross-cutting.
+- **Likelihood/Impact:** Rated Low, Medium, or High.
+- **Mitigations:** Design choices intended to reduce the risk.
+- **Linked Gates:** The specific verification gate that monitors this risk.
+- **Response Plan:** The pre-committed action (pause, rollback, or remediate).
+
+## Central Risk Register
+
+| ID | Risk Statement | Phase | Likelihood / Impact | Early Warning Indicators | Mitigations | Linked Gates / Triggers | Response Plan |
+| **R-F1** | **Freeze used for regrouping** | Freeze | Med / High | Unusual redeployments; spikes in restricted movements. | Explicit movement limits; pattern-based monitoring. | Freeze Stability Gate (S3/S4) | Pause incentives; escalation ladder level-up. |
+| **R-F2** | **Monitor obstruction** | Freeze | Med / High | Denied site visits; delayed access; intimidation reports. | Obstruction = S4 violation; redundant technical verification. | Monitor Access Indicator | Immediate gate failure; tier rollback; publish findings. |
+| **R-F3** | **Corridor weaponization** | Freeze | Med / High | Frequent closures; selective access; coercion claims. | Corridors Uptime KPI; rapid adjudication of closures. | Humanitarian Access Gate | Investigation window; consequences for recurrence. |
+| **R-V1** | **Coercion distorts Vote** | Vote | Med / High | Turnout anomalies; clustered complaints; observer threats. | Anti-coercion package; observer coverage; re-run triggers. | Vote Integrity / Certification Gate | Invalidate/re-run compromised precincts; extend window. |
+| **R-V2** | **Displaced people excluded** | Vote | Med / High | Low registration; high rejection rates; access barriers. | Explicit displaced categories; proof ladders; appeals. | Vote Readiness Gate (Inclusion Metrics) | Extend registration; deploy extra centers; reopen appeals. |
+| **R-V3** | **Cyber compromise** | Vote | Med / High | System outages; integrity alerts; intrusion reports. | Audit-first design; offline fallbacks; independent testing. | Vote Readiness & Integrity Gates | Switch to fallback mode; isolate systems; investigate. |
+| **R-V4** | **Dispute resolution drag** | Vote | Med / High | Backlog growth; missed deadlines; refusal to comply. | Strict timelines; limited appeal grounds; published decisions. | Certification Deadlines | Enforce deadlines; apply remedies; escalate via governance. |
+| **R-R1** | **Reconstruction capture** | Rebuild | Med / High | Sole-source spikes; vendor concentration; audit flags. | Transparency Stack; independent audits; debarment. | Reconstruction Integrity Gate | Suspend tranches; debar vendors; replace operators. |
+| **R-R2** | **Rebuild too slow** | Rebuild | Med / High | Pipeline stagnation; procurement delays; low KPIs. | Standardized templates; performance incentives. | Delivery KPIs in Tranche Gates | Re-sequence pipeline; adjust incentives; increase capacity. |
+| **R-X1** | **Incentives non-deliverable** | Cross | Med / High | Legislative resistance; lack of legal authority. | Domestic Approvals Gate; activation clauses. | Domestic Approvals Gate | Revise incentive schedule; renegotiate commitments. |
+| **R-X2** | **Governance paralysis** | Cross | Med / High | Deadlock; decision delays; transparency suppression. | Balanced composition; deadlock-breaking rules. | Governance Performance Indicators | Invoke deadlock rules; external arbitration; restructure. |
+| **R-X3** | **Data breach/privacy failure** | Cross | Med / High | Unauthorized access logs; leaks; post-disclosure threats. | Data minimization; role-based access; secure audit rooms. | Data Governance Compliance Checks | Incident response; system pause; independent remediation. |
+
+## Maintenance & Evolution
+
+1. **Iterative Review:** Add new risks as they emerge during stakeholder review or operational deployment.
+2. **Condition Monitoring:** Update Likelihood and Impact ratings as the security and political environment changes.
+3. **Audit Trail:** Record all major mitigation decisions and risk-driven changes in the **Decision Log (/initiatives/ukraine-peace-plan/fvr/appendices/decision-log)**.
+
+**Next Step:** Would you like me to develop the **Implementation Toolkit** which includes the operational checklists for these response plans?

@@ -1,12 +1,12 @@
 # Healthcare & hospitals
 
-> Canonical HTML: https://initkoa.org/platforms/orgo/use-cases/healthcare
-> Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/healthcare/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/orgo/use-cases/healthcare
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/orgo/use-cases/healthcare/index.html.md
 > Route: /platforms/orgo/use-cases/healthcare
 > Source: app\platforms\orgo\use-cases\healthcare\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/orgo/use-cases/healthcare)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/orgo/use-cases/healthcare)
 
 Siren,
 Stethoscope,

@@ -1,12 +1,12 @@
 # Sanctions/Aid Linkage During Freeze
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/freeze/sanctions-linkage
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/freeze/sanctions-linkage/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/freeze/sanctions-linkage
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/freeze/sanctions-linkage/index.html.md
 > Route: /initiatives/ukraine-peace-plan/fvr/freeze/sanctions-linkage
 > Source: app\initiatives\ukraine-peace-plan\fvr\freeze\sanctions-linkage\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/freeze/sanctions-linkage)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/freeze/sanctions-linkage)
 
 # Sanctions/Aid Linkage During Freeze
 

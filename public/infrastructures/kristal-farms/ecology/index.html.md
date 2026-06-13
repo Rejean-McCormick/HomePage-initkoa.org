@@ -1,12 +1,12 @@
 # /infrastructures/kristal-farms/ecology
 
-> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/ecology
-> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/ecology/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/ecology
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/ecology/index.html.md
 > Route: /infrastructures/kristal-farms/ecology
 > Source: app\infrastructures\kristal-farms\ecology\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/ecology)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/ecology)
 
 Back to Kristal Farms Hub
 

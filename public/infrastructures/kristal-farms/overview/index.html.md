@@ -1,12 +1,12 @@
 # Kristal Farms — Overview
 
-> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/overview
-> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/overview/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/overview
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/overview/index.html.md
 > Route: /infrastructures/kristal-farms/overview
 > Source: app\infrastructures\kristal-farms\overview\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/overview)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/overview)
 
 "A cold-climate, hydro-powered compute and heat-reuse infrastructure: modular compute pads, exported by fiber, with waste heat recycled into local heating and food production.",
 

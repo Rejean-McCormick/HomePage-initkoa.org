@@ -1,12 +1,12 @@
 # /technology/voting-machine/specifications
 
-> Canonical HTML: https://initkoa.org/technology/voting-machine/specifications
-> Markdown mirror: https://initkoa.org/technology/voting-machine/specifications/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/voting-machine/specifications
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/voting-machine/specifications/index.html.md
 > Route: /technology/voting-machine/specifications
 > Source: app\technology\voting-machine\specifications\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/technology/voting-machine/specifications)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/voting-machine/specifications)
 
 Back to VM-ENGINE Overview
 

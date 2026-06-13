@@ -1,12 +1,12 @@
 # Welcome
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/start-here/welcome
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/start-here/welcome/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/start-here/welcome
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/start-here/welcome/index.html.md
 > Route: /initiatives/ukraine-peace-plan/fvr/start-here/welcome
 > Source: app\initiatives\ukraine-peace-plan\fvr\start-here\welcome\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/start-here/welcome)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/start-here/welcome)
 
 # Welcome
 

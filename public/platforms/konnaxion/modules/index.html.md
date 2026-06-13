@@ -1,12 +1,12 @@
 # /platforms/konnaxion/modules
 
-> Canonical HTML: https://initkoa.org/platforms/konnaxion/modules
-> Markdown mirror: https://initkoa.org/platforms/konnaxion/modules/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/modules
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/modules/index.html.md
 > Route: /platforms/konnaxion/modules
 > Source: app\platforms\konnaxion\modules\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/konnaxion/modules)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/modules)
 
 Konnaxion / Modules
 

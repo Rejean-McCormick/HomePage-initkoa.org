@@ -1,12 +1,12 @@
 # /kreature/rituels/parlement-interieur
 
-> Canonical HTML: https://initkoa.org/kreature/rituels/parlement-interieur
-> Markdown mirror: https://initkoa.org/kreature/rituels/parlement-interieur/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/kreature/rituels/parlement-interieur
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/kreature/rituels/parlement-interieur/index.html.md
 > Route: /kreature/rituels/parlement-interieur
 > Source: app\kreature\rituels\parlement-interieur\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/kreature/rituels/parlement-interieur)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/kreature/rituels/parlement-interieur)
 
 Le Parlement Intérieur
 

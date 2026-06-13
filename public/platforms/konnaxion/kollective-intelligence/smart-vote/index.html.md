@@ -1,0 +1,93 @@
+# Smart Vote
+
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/smart-vote
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/smart-vote/index.html.md
+> Route: /platforms/konnaxion/kollective-intelligence/smart-vote
+> Source: app\platforms\konnaxion\kollective-intelligence\smart-vote\page.mdx
+> Generated: 2026-06-13T00:42:18.184Z
+
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/smart-vote)
+
+"Weighted voting + decision readings (lenses) powered by EkoH snapshots: transparent outcomes, reproducible tallies, and cross-module targeting."
+
+# Smart Vote
+
+**Smart Vote** — the decision engine under **Kollective Intelligence**.
+It consumes **EkoH** (expertise + ethics ledger) via immutable **snapshots**, applies a declared **lens** (reading), and produces **reproducible** results with audit artifacts.
+
+## 1) Core Architecture (single name, split internally)
+
+| Internal component | Responsibility | Output artifacts |
+| `smartvote.engine` | Validate ballot → compute weight → tally per modality deterministically. | Tally trace, result hashes, per-target aggregates |
+| `smartvote.lenses` | Run one or more declared lenses (“readings”) over the same ballots + snapshot. | Result bundle (baseline + weighted readings) |
+| `smartvote.audit` | Compare readings, explain deltas, compute robustness diagnostics (caps/floors/cohorts). | Audit report, comparison metrics |
+| `smartvote.registry` | Versioned registry of lens specs, defaults, governance controls (enable/disable). | Lens ID + version hash, publication policy |
+
+**Naming rule:** UI/prose uses **Smart Vote**. Code identifiers may use `SmartVote` / `smartvote`.
+
+## 2) Functional Capabilities (services)
+
+| Display name | Code name / service | Purpose / behavior | Likely module |
+| Weighted Vote Application | `weighted_vote_engine` | Applies EkoH snapshot weights to ballots under a declared lens. | `smartvote.engine` |
+| Voting Modalities | `voting_modalities` | Approval, ranking, rating, preferential, budget split; parameters drive tally. | `smartvote.engine.modalities` |
+| Decision Readings (Lenses) | `decision_readings` | Baseline + one or more weighted readings; explicit publication bundle. | `smartvote.lenses` |
+| Transparency & Explainability | `result_transparency` | Publish raw + weighted totals, lens spec, snapshot manifest, and comparisons. | `smartvote.lenses` + `smartvote.audit` |
+| Emerging Expert Detection (adjunct) | `emerging_expert_detection` | Flags rapid EkoH score growth (mentorship + integrity monitoring). | `tasks/emerging_expert_detection` |
+| Cross-Module Targeting | `cross_module_vote_integration` | Any entity becomes a vote target (consultations, debates, docs, projects). | `integration_mapping` + adapters |
+
+## 3) Runtime Behavior (what happens during a vote)
+
+- **Consultation context.** A consultation declares:
+- electorate / eligibility policy,
+- a **domain relevance vector** `R(c,d)` (recommended normalized and documented),
+- a vote modality + parameters,
+- the bound **EkoH snapshot**,
+- the governing **lens** (and optionally additional readings to publish).
+
+- **Ballot intake (idempotent).** A user casts one ballot per `(user_id, target_type, target_id)` (upsert or strict unique constraint).
+
+- **Weight application.** Smart Vote computes a weight `W(u,c)` under the chosen lens using:
+
+- **Aggregation.** The system stores:
+- **raw_value** (what the user voted),
+- **weighted_value** (raw_value × W),
+- and updates per-target aggregates deterministically.
+
+- governing weighted reading,
+- optional alternate ethics reading (policy choice),
+- optional robustness reading (caps/floors).
+
+> Canonical schema: `ekoh_smartvote`
+
+| Table / Model | Purpose | Key fields |
+| `vote_modality` | Defines modality + parameters for tally logic. | `id`, `name`, `parameters` (JSONB) |
+| `vote_result` | Aggregated totals per target (counts + weighted sums + modality outputs). | `id`, `target_type`, `target_id`, `result_payload` (JSONB), `vote_count` |
+| `vote_ledger` | Append-only hash log for audit anchoring and reproducibility. | `id`, `vote_id`, `hash`, `created_at` |
+| `integration_mapping` | Cross-module mapping for vote targets and contexts. | `id`, `module_name`, `context_type`, `mapping_details` (JSONB) |
+| `emerging_expert` | Flags rapid EkoH score deltas (adjunct). | `id`, `user_id`, `detection_date`, `score_delta` |
+
+## 5) Configuration & Defaults (versioned)
+
+- **Vote modalities enum:** `approval | ranking | rating | preferential | budget_split`
+- **Emerging expert threshold:** `+15%` EkoH delta over 30 days (`EMERGING_EXPERT_THRESHOLD = 0.15`)
+- **Strong consensus threshold:** `≥ 75%` weighted agreement (`CONSENSUS_STRONG_THRESHOLD = 0.75`)
+- **Lens policy:** lens spec is **versioned** (ID + hash) and must be attached to every published result bundle.
+- **EkoH scoring knobs:** live in `score_configuration` (EkoH-side), referenced by snapshot manifests.
+
+> Avoid “frozen” parameters unless you truly intend they never change; prefer **versioned defaults**.
+
+## 6) Analytics & Reporting (optional, implementation-dependent)
+
+- Near-real-time aggregates come from OLTP (`vote_result`).
+- Longer-term analytics can be derived into a fact table (e.g., `smart_vote_fact`) on a schedule.
+- Published reports must preserve:
+- lens spec version,
+- snapshot manifest ID,
+- modality parameters,
+- privacy constraints (cohort suppression where applicable).
+
+## Summary
+
+**Smart Vote** provides modality-aware weighted voting **plus decision readings** (lenses), backed by immutable **EkoH snapshots** and audit artifacts. It makes outcomes **legible, comparable, and contestable** while enabling cross-module governance targets across the Konnaxion platform.
+
+Note: some earlier uploaded files in this conversation have expired from the workspace index; re-upload them if you want me to cross-check this page against those sources.

@@ -1,0 +1,61 @@
+# How to Use This Book
+
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/start-here/how-to-use
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/start-here/how-to-use/index.html.md
+> Route: /initiatives/ukraine-peace-plan/fvr/start-here/how-to-use
+> Source: app\initiatives\ukraine-peace-plan\fvr\start-here\how-to-use\page.mdx
+> Generated: 2026-06-13T00:42:18.184Z
+
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/start-here/how-to-use)
+
+# How to Use This Book
+
+This GitBook is organized for two complementary reading modes:
+- **Narrative Mode:** Understand the proposal end-to-end (**Freeze → Vote → Rebuild**).
+- **Implementation Mode:** Review mechanisms, legal pathways, and operational details as modular components.
+
+## Reader Pathways
+
+### General Reader
+1. **One-Page Summary (/initiatives/ukraine-peace-plan/fvr/start-here/one-page-summary)**
+2. **The Proposal at a Glance (/initiatives/ukraine-peace-plan/fvr/overview/proposal-at-a-glance)**
+3. **Core Phases:** Freeze (/initiatives/ukraine-peace-plan/fvr/freeze), Vote (/initiatives/ukraine-peace-plan/fvr/vote), and Rebuild (/initiatives/ukraine-peace-plan/fvr/rebuild)
+4. **Risks & Critiques (/initiatives/ukraine-peace-plan/fvr/risks/overview)**
+
+### Diplomatic & Policy Reader
+1. **The Proposal at a Glance (/initiatives/ukraine-peace-plan/fvr/overview/proposal-at-a-glance)**
+2. **Governance & Verification (/initiatives/ukraine-peace-plan/fvr/governance/overview)**
+3. **Legal & Political Pathways (/initiatives/ukraine-peace-plan/fvr/legal/overview)**
+4. **Stakeholder Playbooks (/initiatives/ukraine-peace-plan/fvr/playbooks/overview)**
+5. **Risks, Critiques, & Mitigations (/initiatives/ukraine-peace-plan/fvr/risks/overview)**
+
+### Operational & Implementation Reader
+1. **Core Phases:** Freeze (/initiatives/ukraine-peace-plan/fvr/freeze) $\rightarrow$ Vote (/initiatives/ukraine-peace-plan/fvr/vote) $\rightarrow$ Rebuild (/initiatives/ukraine-peace-plan/fvr/rebuild)
+2. **Implementation Toolkit (/initiatives/ukraine-peace-plan/fvr/toolkit/overview)**
+3. **Metrics & KPIs (/initiatives/ukraine-peace-plan/fvr/toolkit/metrics-kpis)**
+4. **Risk Register (/initiatives/ukraine-peace-plan/fvr/risks/risk-register)**
+
+### Legal & Compliance Reader
+1. **Verification-First Gates (/initiatives/ukraine-peace-plan/fvr/governance/verification-gates)**
+2. **Domestic Approvals Gate (/initiatives/ukraine-peace-plan/fvr/legal/domestic-approvals)**
+3. **International Legal Considerations (/initiatives/ukraine-peace-plan/fvr/legal/international-considerations)**
+4. **Treaty Structure & Annexes (/initiatives/ukraine-peace-plan/fvr/legal/treaty-structure)**
+5. **Justice & Accountability Options (/initiatives/ukraine-peace-plan/fvr/legal/justice-accountability)**
+
+## Structure Conventions
+
+* **Chapters 02–04** are the **Core Mechanism** (Freeze, Vote, Rebuild).
+* **Chapters 05–06** are **Cross-Cutting Enablers** (Governance, Verification, Legal).
+* **Chapters 07–09** are **Application Layers** (Playbooks, Risks, Toolkit).
+* **Chapters 10–11** preserve **History and Traceability** (Essays, Archive, Decision Log).
+
+## How Updates are Handled
+
+- **Track Releases:** Use the **Changelog & Versioning (/initiatives/ukraine-peace-plan/fvr/start-here/changelog)** to follow framework iterations.
+- **Document Decisions:** Record major design choices in the **Decision Log (/initiatives/ukraine-peace-plan/fvr/appendices/decision-log)**.
+- **Messaging:** Keep advocacy and talking points in the **Comms Toolkit (/initiatives/ukraine-peace-plan/fvr/toolkit/comms)** so the core framework remains audit-friendly and neutral.
+
+## Where to Look for Source Material
+
+- **Deltas Between Versions (/initiatives/ukraine-peace-plan/fvr/overview/deltas):** Explains how various essays and drafts map into this unified structure.
+- **Source-Text Archive (/initiatives/ukraine-peace-plan/fvr/appendices/source-archive):** The reference-only repository of original drafts and variant framings.

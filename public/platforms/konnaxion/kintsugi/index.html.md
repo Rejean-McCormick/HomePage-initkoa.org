@@ -1,12 +1,12 @@
 # /platforms/konnaxion/kintsugi
 
-> Canonical HTML: https://initkoa.org/platforms/konnaxion/kintsugi
-> Markdown mirror: https://initkoa.org/platforms/konnaxion/kintsugi/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kintsugi
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kintsugi/index.html.md
 > Route: /platforms/konnaxion/kintsugi
 > Source: app\platforms\konnaxion\kintsugi\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/konnaxion/kintsugi)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kintsugi)
 
 Konnaxion / Kintsugi
 

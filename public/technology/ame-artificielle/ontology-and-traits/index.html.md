@@ -1,12 +1,12 @@
 # Ontologie & Traits
 
-> Canonical HTML: https://initkoa.org/technology/ame-artificielle/ontology-and-traits
-> Markdown mirror: https://initkoa.org/technology/ame-artificielle/ontology-and-traits/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/ontology-and-traits
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/ontology-and-traits/index.html.md
 > Route: /technology/ame-artificielle/ontology-and-traits
 > Source: app\technology\ame-artificielle\ontology-and-traits\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/technology/ame-artificielle/ontology-and-traits)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/ontology-and-traits)
 
 "Formalisation technique de la couche archétypale : comment la numérologie pythagoricienne inversée peut être traduite en ontologie, traits, polarités et trace exploitable.",
 

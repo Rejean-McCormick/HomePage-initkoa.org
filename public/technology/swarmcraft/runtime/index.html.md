@@ -1,12 +1,12 @@
 # /technology/swarmcraft/runtime
 
-> Canonical HTML: https://initkoa.org/technology/swarmcraft/runtime
-> Markdown mirror: https://initkoa.org/technology/swarmcraft/runtime/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/swarmcraft/runtime
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/swarmcraft/runtime/index.html.md
 > Route: /technology/swarmcraft/runtime
 > Source: app\technology\swarmcraft\runtime\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/technology/swarmcraft/runtime)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/swarmcraft/runtime)
 
 Runtime & Operations
 

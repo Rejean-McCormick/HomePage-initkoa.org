@@ -1,12 +1,12 @@
 # Why this exists
 
-> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/why-this-exists
-> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/why-this-exists/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/why-this-exists
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/why-this-exists/index.html.md
 > Route: /infrastructures/kristal-farms/why-this-exists
 > Source: app\infrastructures\kristal-farms\why-this-exists\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/why-this-exists)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/why-this-exists)
 
 "Kristal Farms exist to turn clean power and cold climate into resilient local infrastructure: compute capacity, heat recovery, food production, and connectivity—governed for public benefit.",
 

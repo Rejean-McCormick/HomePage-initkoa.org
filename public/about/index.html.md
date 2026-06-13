@@ -1,12 +1,12 @@
 # /about
 
-> Canonical HTML: https://initkoa.org/about
-> Markdown mirror: https://initkoa.org/about/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/about
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/about/index.html.md
 > Route: /about
 > Source: app\about\page.js
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/about)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/about)
 
 Réjean McCormick
 

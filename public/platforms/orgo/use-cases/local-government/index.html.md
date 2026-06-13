@@ -1,12 +1,12 @@
 # Use case: Local Government
 
-> Canonical HTML: https://initkoa.org/platforms/orgo/use-cases/local-government
-> Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/local-government/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/orgo/use-cases/local-government
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/orgo/use-cases/local-government/index.html.md
 > Route: /platforms/orgo/use-cases/local-government
 > Source: app\platforms\orgo\use-cases\local-government\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/platforms/orgo/use-cases/local-government)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/orgo/use-cases/local-government)
 
 "Route citizen requests to the right function, enforce response windows with escalation, and close cases with traceable outcomes—even during outages.",
 

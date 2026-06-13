@@ -1,12 +1,12 @@
 # Domestic Approvals Gate
 
-> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/legal/domestic-approvals
-> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/fvr/legal/domestic-approvals/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/legal/domestic-approvals
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/legal/domestic-approvals/index.html.md
 > Route: /initiatives/ukraine-peace-plan/fvr/legal/domestic-approvals
 > Source: app\initiatives\ukraine-peace-plan\fvr\legal\domestic-approvals\page.mdx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/fvr/legal/domestic-approvals)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/fvr/legal/domestic-approvals)
 
 # Domestic Approvals Gate
 

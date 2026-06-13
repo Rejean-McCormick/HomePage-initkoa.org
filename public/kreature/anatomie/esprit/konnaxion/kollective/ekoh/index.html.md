@@ -1,12 +1,12 @@
 # /kreature/anatomie/esprit/konnaxion/kollective/ekoh
 
-> Canonical HTML: https://initkoa.org/kreature/anatomie/esprit/konnaxion/kollective/ekoh
-> Markdown mirror: https://initkoa.org/kreature/anatomie/esprit/konnaxion/kollective/ekoh/index.html.md
+> Canonical HTML: [https://initkoa.org](https://initkoa.org)/kreature/anatomie/esprit/konnaxion/kollective/ekoh
+> Markdown mirror: [https://initkoa.org](https://initkoa.org)/kreature/anatomie/esprit/konnaxion/kollective/ekoh/index.html.md
 > Route: /kreature/anatomie/esprit/konnaxion/kollective/ekoh
 > Source: app\kreature\anatomie\esprit\konnaxion\kollective\ekoh\page.tsx
-> Generated: 2026-06-12T23:26:14.521Z
+> Generated: 2026-06-13T00:42:18.184Z
 
-[Open the HTML page](https://initkoa.org/kreature/anatomie/esprit/konnaxion/kollective/ekoh)
+[Open the HTML page]([https://initkoa.org](https://initkoa.org)/kreature/anatomie/esprit/konnaxion/kollective/ekoh)
 
 EkoH
 
