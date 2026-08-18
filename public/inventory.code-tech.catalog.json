@@ -103,21 +103,46 @@
       "featured": true
     },
     {
-      "title": "Abstract Wiki Architect",
-      "url": "https://github.com/Rejean-McCormick/abstract-wiki-architect/wiki",
-      "description": "Family-based, data-driven NLG toolkit for Abstract Wikipedia and Wikifunctions that organizes generation via shared language-family engines, per-language configuration cards, cross-linguistic constructions, lexicon bridges, semantic frames, and QA test suites.",
-      "type": "github_wiki",
+      "title": "SemantiK Architect",
+      "url": "https://github.com/Rejean-McCormick/SemantiK_Architect",
+      "description": "Industrial-grade data-driven NLG system for Abstract Wikipedia, Wikifunctions, and standalone API use, built around a modular Python backend, GF grammar assets, language-specific schema/config data, and a separate Next.js frontend.",
+      "type": "github_repository",
       "language": "en",
-      "id": "github_wiki-abstract-wiki-architect-9f3a85bb",
+      "id": "github_repository-semantik-architect",
       "platform": "github",
       "embed": null,
       "topics": [
-        "data_sovereignty",
-        "infrastructure",
-        "konnaxion",
-        "kristal(semantic_data)",
+        "semantik_architect",
+        "abstract_wikipedia",
+        "wikifunctions",
         "natural_language_generation",
-        "orgo"
+        "gf",
+        "pgf",
+        "semantic_frames",
+        "language_generation",
+        "infrastructure"
+      ],
+      "level": "expert",
+      "featured": false
+    },
+    {
+      "title": "GF Zone Auditor",
+      "url": "https://github.com/Rejean-McCormick/SemantiK-Architect-GF-Zone-Auditor",
+      "description": "Project-level audit tool for GF grammars and SemantiK grammar-surface verification. It scans GF source files, optionally compiles them with gf.exe, classifies failures, separates scan findings from compile failures, and produces AI-ready debugging reports.",
+      "type": "github_repository",
+      "language": "en",
+      "id": "github_repository-gf-zone-auditor",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "gf",
+        "gf_audit",
+        "grammar_surface",
+        "grammar_auditing",
+        "compile_diagnostics",
+        "language_auditing",
+        "ai_ready_reports",
+        "infrastructure"
       ],
       "level": "expert",
       "featured": false

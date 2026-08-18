@@ -1,4 +1,4 @@
-﻿# dépendances
+# dépendances
 node_modules/
 
 # build et cache
@@ -19,4 +19,5 @@ yarn-error.log*
 # AI Generated Assets (Ne pas versionner, générés au build)
 public/ai-corpus.txt
 public/llms.txt
-public/ai-sitemap.json
+public/ai-sitemap.json
+GitSink.bat
