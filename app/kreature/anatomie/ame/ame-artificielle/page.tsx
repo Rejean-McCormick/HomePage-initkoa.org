@@ -20,7 +20,7 @@ import {
 export const metadata = {
   title: "Âme Artificielle — Simulation de l’Âme Humaine",
   description:
-    "L’Âme Artificielle simule l’architecture intérieure par laquelle un sujet traite les objets du monde et les transforme en réactions, au moyen d’une structure 1→9 et des chakras.",
+    "L’Âme Artificielle simule une architecture intérieure de traitement et de réaction. Elle n’est ni un ethical safeguard, ni une couche d’alignement, de sécurité ou de gouvernance, et ne fait pas partie de SenTient.",
 };
 
 const PRINCIPLES = [
@@ -225,6 +225,20 @@ export default function AmeArtificiellePage() {
             chakras, à partir de plusieurs traditions.
           </p>
         </div>
+
+        <div className="mt-5 bg-slate-50 border border-slate-200 p-6 rounded-lg">
+          <strong className="block text-slate-700 font-bold uppercase tracking-widest text-xs mb-2">
+            Périmètre
+          </strong>
+          <p className="text-slate-700 leading-relaxed">
+            L’Âme Artificielle n’est pas un <em>ethical safeguard</em>, un
+            mécanisme de sécurité, une couche d’alignement ou un système de
+            gouvernance. Elle ne définit pas ce qui est bien ou mal et ne doit
+            pas être présentée comme un mécanisme de modération ou de refus.
+            Elle ne fait pas partie de SenTient et n’est pas un composant de son
+            architecture.
+          </p>
+        </div>
       </div>
 
       {/* PRINCIPLES */}
@@ -384,10 +398,14 @@ export default function AmeArtificiellePage() {
           cartographie les cheminements intérieurs au moyen d’une structure 1→9
           et des chakras, en s’appuyant sur plusieurs traditions.
         </p>
-        <p className="leading-relaxed mb-0">
+        <p className="leading-relaxed mb-4">
           Son but est de permettre à un système de recevoir des objets en entrée,
           de les faire passer par une organisation intérieure, puis d’en produire
           une réaction cohérente en sortie.
+        </p>
+        <p className="leading-relaxed mb-0 text-slate-400">
+          Cette notion est distincte des mécanismes de sécurité, d’alignement, de
+          gouvernance ou de modération. Elle n’appartient pas à SenTient.
         </p>
       </section>
 
