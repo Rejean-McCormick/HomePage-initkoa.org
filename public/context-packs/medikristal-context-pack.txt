@@ -1,0 +1,1363 @@
+# INITKOA CONTEXT PACK
+
+repository: Rejean-McCormick/MediKristal
+source_path: C:\mycode\MediKristal\MediKristal
+source_commit: 245f5a3007d538aea65e0fba0020ee8178079353
+working_tree_markdown: clean
+generated_at: 2026-08-25T09:32:51-04:00
+files: 3
+content_sha256: 1833d1fc4bfeb0fb039307910f7171d6ace817e7f970cf024b6e9c65ee5c2674
+
+================================================================================================
+FILE INDEX
+================================================================================================
+
+1. docs/Foundational_Document-Medikristal_Architecture.md
+2. docs/MediKristal_Information_Sources.md
+3. README.md
+
+
+================================================================================================
+FILE: docs/Foundational_Document-Medikristal_Architecture.md
+================================================================================================
+
+# Foundational Document — Medikristal Architecture
+
+**Working name:** Medikristal
+**Type:** medical knowledge architecture, protocol engine, and semantic data format
+**Status:** foundational draft
+**Purpose:** define an application that orchestrates existing medical knowledge bases — symptoms, diseases, tests, medications/remedies — through a semantic graph, deterministic protocols, and verifiable knowledge artifacts.
+
+This architecture is inspired by your Kristal model: portable, verifiable, traceable, Wikidata/Wikibase-aligned knowledge artifacts that can be executed offline.  It also adopts the Kristal v5 distinction between “working” knowledge and “canonical” promoted knowledge. 
+
+---
+
+## 1. Vision
+
+Medikristal is a system for turning structured medical knowledge into a consultable, verifiable, protocol-driven application.
+
+The goal is **not** to build an AI that guesses diagnoses.
+The goal is to build a **deterministic orchestrator** that connects:
+
+```text
+Patient → clinical context → symptoms → possible diseases → tests → results → protocols → treatments
+```
+
+The system does not replace clinical judgment. It organizes medical knowledge into explicit, traceable, reviewable, versioned, and machine-readable structures.
+
+---
+
+## 2. Core principle
+
+Medicine should be represented as a **relationship graph**, not merely as four separate databases.
+
+The four core databases are:
+
+```text
+1. Symptoms / signs
+2. Diseases / diagnoses
+3. Tests / investigations
+4. Medications / remedies / treatments
+```
+
+But the system also needs a fifth layer:
+
+```text
+5. Patient context
+```
+
+Age, sex, pregnancy, allergies, medical history, ethnicity, geography, travel, kidney function, liver function, and risk factors are not symptoms. They are **clinical modifiers**.
+
+So instead of putting “80 years old” inside the symptom database, Medikristal stores it as:
+
+```text
+patient_context.age = 80
+```
+
+Then protocols use that value to modify recommendations.
+
+Example:
+
+```text
+IF age > 75
+AND symptom = acute confusion
+AND temperature = elevated
+THEN increase priority of:
+- infection
+- sepsis
+- pneumonia
+- urinary tract infection
+- dehydration
+- medication adverse effect
+```
+
+---
+
+## 3. Short definition
+
+**Medikristal is a structured medical knowledge compilation system that transforms validated medical sources into semantic, versioned, queryable, and protocol-executable artifacts.**
+
+It separates:
+
+```text
+Medical knowledge
+≠
+Clinical protocol
+≠
+Patient data
+≠
+Final medical decision
+```
+
+---
+
+## 4. General architecture
+
+```text
+┌────────────────────────────────────┐
+│ Medical sources                    │
+│ SNOMED, ICD, LOINC, drug databases,│
+│ guidelines, institutional protocols│
+└───────────────┬────────────────────┘
+                │
+                ▼
+┌────────────────────────────────────┐
+│ Semantic normalization             │
+│ codes, synonyms, units, relations  │
+└───────────────┬────────────────────┘
+                │
+                ▼
+┌────────────────────────────────────┐
+│ Medikristal medical graph          │
+│ symptoms ↔ diseases ↔ tests ↔      │
+│ treatments ↔ patient context       │
+└───────────────┬────────────────────┘
+                │
+                ▼
+┌────────────────────────────────────┐
+│ Protocol engine                    │
+│ deterministic rules, trees,        │
+│ thresholds, contraindications      │
+└───────────────┬────────────────────┘
+                │
+                ▼
+┌────────────────────────────────────┐
+│ Clinical output                    │
+│ possibilities, tests to consider,  │
+│ red flags, protocols, sources      │
+└────────────────────────────────────┘
+```
+
+The engine does not “think.”
+It applies explicit, auditable rules.
+
+---
+
+## 5. The five data layers
+
+### 5.1 Patient Context Layer
+
+Contains what is known about the person.
+
+```json
+{
+  "patient_context": {
+    "age": 80,
+    "sex": "female",
+    "pregnancy_status": "not_applicable",
+    "allergies": ["penicillin"],
+    "known_conditions": ["chronic_kidney_disease"],
+    "medications_current": ["warfarin"],
+    "geography": "Quebec",
+    "recent_travel": false
+  }
+}
+```
+
+This layer does not contain possible diagnoses.
+It contains patient-specific facts.
+
+---
+
+### 5.2 Symptoms / Signs Layer
+
+Contains what the patient reports or what the clinician observes.
+
+```json
+{
+  "symptom_observation": {
+    "code": "symptom:fever",
+    "label": "fever",
+    "onset": "acute",
+    "duration": "2 days",
+    "severity": "moderate",
+    "certainty": "reported",
+    "source": "patient"
+  }
+}
+```
+
+A symptom can be subjective:
+
+```text
+pain, fatigue, nausea
+```
+
+A sign can be objective:
+
+```text
+temperature 39°C, oxygen saturation 88%, low blood pressure
+```
+
+---
+
+### 5.3 Diseases / Diagnoses Layer
+
+Contains diseases, syndromes, differential diagnoses, and clinical conditions.
+
+```json
+{
+  "condition": {
+    "code": "condition:pneumonia",
+    "label": "pneumonia",
+    "category": "infectious_disease",
+    "typical_symptoms": [
+      "symptom:cough",
+      "symptom:fever",
+      "symptom:dyspnea"
+    ],
+    "risk_modifiers": [
+      "patient_context:age_over_65",
+      "condition:copd"
+    ]
+  }
+}
+```
+
+A disease is not only a label.
+It is linked to symptoms, tests, criteria, treatments, complications, exclusions, and risk modifiers.
+
+---
+
+### 5.4 Tests / Investigations Layer
+
+Contains available tests, their indications, limits, and interpretation rules.
+
+```json
+{
+  "test": {
+    "code": "test:chest_xray",
+    "label": "chest X-ray",
+    "type": "imaging",
+    "used_for": ["condition:pneumonia"],
+    "indicated_when": [
+      "symptom:dyspnea",
+      "symptom:fever",
+      "sign:low_oxygen_saturation"
+    ],
+    "contraindications": [],
+    "interpretation_model": "protocol:pneumonia_initial_workup"
+  }
+}
+```
+
+Tests are not just names.
+They have conditions of use.
+
+---
+
+### 5.5 Medications / Remedies / Treatments Layer
+
+Contains medications, non-drug treatments, doses, contraindications, interactions, and adjustments.
+
+```json
+{
+  "treatment": {
+    "code": "drug:amoxicillin",
+    "label": "amoxicillin",
+    "type": "antibiotic",
+    "treats": ["condition:pneumonia"],
+    "contraindicated_if": ["allergy:penicillin"],
+    "dose_adjustment_if": ["condition:chronic_kidney_disease"],
+    "interaction_risks": ["drug:warfarin"]
+  }
+}
+```
+
+The “remedies” database should include:
+
+```text
+medications
+doses
+forms
+contraindications
+interactions
+dose adjustments
+non-drug treatments
+protocol references
+```
+
+---
+
+## 6. The semantic graph
+
+The core of the system is a graph.
+
+```text
+Fever
+  may_indicate → Pneumonia
+  may_indicate → Urinary tract infection
+  may_indicate → Meningitis
+
+Pneumonia
+  typical_symptom → Cough
+  typical_symptom → Fever
+  initial_test → Chest X-ray
+  initial_test → Oxygen saturation
+  possible_treatment → Antibiotic
+  urgent_if → Low oxygen saturation
+
+Amoxicillin
+  treats → Bacterial pneumonia
+  contraindicated_if → Penicillin allergy
+  adjust_dose_if → Kidney impairment
+```
+
+This graph can be represented in an RDF / Wikidata / Wikibase-like format.
+
+Conceptual example:
+
+```text
+Q:Fever
+P:may_indicate
+Q:Pneumonia
+
+Q:Pneumonia
+P:recommended_test
+Q:Chest_Xray
+
+Q:Amoxicillin
+P:contraindicated_if
+Q:Penicillin_allergy
+```
+
+---
+
+## 7. Foundational data format
+
+The base unit of Medikristal is the:
+
+```text
+Clinical Epistemic State
+```
+
+This is the medical equivalent of Kristal v5’s **Structured Epistemic State**: a structured, versioned, traceable object that carries uncertainty, status, and provenance. 
+
+### 7.1 Minimal example
+
+```json
+{
+  "artifact_type": "clinical_epistemic_state",
+  "artifact_version": "0.1",
+  "artifact_id": "sha256:...",
+  "scope": {
+    "domain": "medicine",
+    "subdomain": "respiratory",
+    "jurisdiction": "CA-QC",
+    "language": "en"
+  },
+  "status": "draft",
+  "certainty": "partial",
+  "created_at": "2026-05-02T00:00:00Z",
+  "created_by": "authority:medikristal-core",
+  "assertions": [],
+  "provenance": [],
+  "review_refs": [],
+  "policy_refs": []
+}
+```
+
+---
+
+## 8. Medical assertion
+
+A medical assertion is a verifiable medical relationship.
+
+```json
+{
+  "assertion_id": "assertion:pneumonia-fever-001",
+  "subject": "condition:pneumonia",
+  "predicate": "has_common_symptom",
+  "object": "symptom:fever",
+  "qualifiers": {
+    "population": "adult",
+    "frequency": "common",
+    "certainty": "high"
+  },
+  "provenance_refs": ["source:guideline-001"],
+  "status": "under_review"
+}
+```
+
+Each assertion must be:
+
+```text
+structured
+sourced
+versioned
+reviewable
+validatable
+revocable if outdated
+```
+
+---
+
+## 9. Deterministic medical protocol
+
+A protocol is a rule or decision tree.
+
+```json
+{
+  "protocol_id": "protocol:adult_pneumonia_initial_assessment",
+  "protocol_version": "1.0",
+  "applies_to": {
+    "age_min": 18,
+    "suspected_conditions": ["condition:pneumonia"]
+  },
+  "triggers": [
+    {
+      "if": [
+        { "symptom": "symptom:fever" },
+        { "symptom": "symptom:cough" },
+        { "symptom": "symptom:dyspnea" }
+      ],
+      "then": [
+        { "recommend_test": "test:oxygen_saturation" },
+        { "recommend_test": "test:chest_xray" },
+        { "consider_condition": "condition:pneumonia" }
+      ]
+    }
+  ],
+  "red_flags": [
+    {
+      "if": [
+        { "sign": "sign:oxygen_saturation_low" },
+        { "patient_context": "age_over_75" }
+      ],
+      "then": [
+        { "urgency": "urgent_evaluation" }
+      ]
+    }
+  ],
+  "provenance_refs": ["source:guideline-001"],
+  "status": "under_review"
+}
+```
+
+The protocol must not be hidden in free text.
+It must be machine-readable.
+
+---
+
+## 10. Working knowledge vs canonical knowledge
+
+Medikristal should support three levels:
+
+```text
+1. Draft / working
+2. Locally validated
+3. Canonical / promoted
+```
+
+This is a central Kristal v5 idea: an artifact may be compiled before it is canonical, but promotion to canonical status is a separate governed step. 
+
+Medical example:
+
+```text
+The relationship “fever → pneumonia” may exist in the graph.
+
+But it can have a status:
+- draft
+- under_review
+- disputed
+- working_accepted
+- canonical
+- revoked
+```
+
+This allows the system to grow without pretending that everything is fully validated from the start.
+
+---
+
+## 11. Trust statuses
+
+Every medical element should have a status.
+
+```text
+draft              preliminary
+under_review       being reviewed
+partial            incomplete
+disputed           contested
+working_accepted   accepted for internal use
+promoted           promoted by policy
+canonical          canonical for a given trust surface
+revoked            withdrawn
+```
+
+The key distinction is:
+
+```text
+exists in the system
+≠
+trusted for clinical use
+≠
+canonical medical knowledge
+```
+
+---
+
+## 12. Complete pipeline
+
+```text
+1. Import medical sources
+   guidelines, drug databases, terminologies, protocols
+
+2. Normalize
+   synonyms, codes, units, languages, jurisdictions
+
+3. Create assertions
+   symptom → disease
+   disease → test
+   test → interpretation
+   disease → treatment
+   medication → contraindication
+
+4. Compile into a working artifact
+   usable graph, not necessarily canonical
+
+5. Validate
+   schemas, sources, coherence, conflicts, safety
+
+6. Review
+   humans, experts, governance rules
+
+7. Promote
+   artifact becomes canonical for a defined context
+
+8. Distribute
+   executable pack, local or offline
+
+9. Use
+   protocol engine + clinical interface
+
+10. Continuously revise
+   new sources, errors, changed recommendations
+```
+
+---
+
+## 13. Protocol engine
+
+The protocol engine receives:
+
+```text
+patient_context
++ symptoms
++ signs
++ test results
++ current medications
++ allergies
+```
+
+It queries:
+
+```text
+medical graph
++ protocols
++ contraindications
++ emergency rules
+```
+
+It outputs:
+
+```text
+diagnoses to consider
+tests to consider
+red flags
+possible treatments
+contraindications
+interactions
+justification
+sources
+```
+
+Example:
+
+```text
+Input:
+- age: 80
+- fever
+- confusion
+- hypotension
+
+Output:
+- red flag: possible sepsis
+- tests to consider: complete vital signs, lactate, CBC, cultures, urinalysis, imaging depending on source
+- possible diagnoses: urinary tract infection, pneumonia, sepsis, dehydration, medication adverse effect
+- urgency: rapid medical evaluation
+- justification: protocol X, source Y
+```
+
+---
+
+## 14. What Medikristal is not
+
+Medikristal is not:
+
+```text
+an AI that invents diagnoses
+a replacement for physicians
+a closed proprietary medical database
+a simple medical wiki
+a medical chatbot
+an opaque probabilistic engine
+```
+
+Medikristal is:
+
+```text
+a structured medical knowledge system
+a relationship engine
+a rule engine
+a medical artifact compiler
+a traceability and protocol system
+```
+
+---
+
+## 15. Offline execution
+
+The system should be able to run without requiring a live server for every query.
+
+Kristal already defines the idea of runtime packs: compiled, indexed, offline-executable knowledge artifacts. 
+
+In Medikristal, a device could contain:
+
+```text
+symptom pack
+disease pack
+test pack
+medication pack
+protocol pack
+search index
+validation rules
+```
+
+This enables use in low-connectivity settings, rural clinics, field medicine, institutional networks, or offline-first deployments.
+
+---
+
+## 16. Validation
+
+Validation must be explicit.
+
+There are several levels:
+
+```text
+Structural validation:
+the file follows the schema
+
+Semantic validation:
+the relationships make sense
+
+Clinical validation:
+the source is acceptable
+
+Safety validation:
+no dangerous recommendation without conditions
+
+Protocol validation:
+rules are complete and non-contradictory
+```
+
+Examples:
+
+```text
+ERROR:
+medication recommended despite known allergy
+
+WARNING:
+test recommended but unavailable in this jurisdiction
+
+INFO:
+protocol applies only to adults
+```
+
+---
+
+## 17. Governance
+
+Medikristal must separate roles.
+
+```text
+Author:
+proposes an assertion or protocol
+
+Validator:
+checks structure and consistency
+
+Clinical expert:
+approves or rejects clinical content
+
+Promoter:
+grants canonical status
+
+Distributor:
+publishes runtime packs
+
+User:
+consults protocols
+```
+
+This follows the Kristal v5 separation of responsibilities: workflow/control plane, truth/artifact plane, and distribution/runtime plane. 
+
+---
+
+## 18. Module architecture
+
+```text
+Medikristal Core
+│
+├── Terminology Resolver
+│   ├── synonyms
+│   ├── medical codes
+│   └── multilingual alignment
+│
+├── Medical Graph Store
+│   ├── symptoms
+│   ├── diseases
+│   ├── tests
+│   ├── medications
+│   └── relations
+│
+├── Protocol Engine
+│   ├── IF/THEN rules
+│   ├── decision trees
+│   ├── red flags
+│   └── contraindications
+│
+├── Validation Engine
+│   ├── schema validation
+│   ├── SHACL/ShEx-style validation
+│   ├── clinical coherence
+│   └── conflict detection
+│
+├── Promotion System
+│   ├── review
+│   ├── approval
+│   ├── canonical status
+│   └── revocation
+│
+├── Runtime Pack Compiler
+│   ├── symptom pack
+│   ├── disease pack
+│   ├── test pack
+│   ├── medication pack
+│   └── protocol pack
+│
+└── Clinical UI
+    ├── patient input
+    ├── protocol consultation
+    ├── justification
+    └── sources
+```
+
+---
+
+## 19. Example query
+
+### Input
+
+```json
+{
+  "patient_context": {
+    "age": 80,
+    "sex": "male",
+    "known_conditions": ["condition:chronic_kidney_disease"],
+    "current_medications": ["drug:warfarin"]
+  },
+  "observations": [
+    { "type": "symptom", "code": "symptom:fever" },
+    { "type": "symptom", "code": "symptom:confusion" },
+    { "type": "sign", "code": "sign:hypotension" }
+  ]
+}
+```
+
+### Output
+
+```json
+{
+  "red_flags": [
+    {
+      "code": "red_flag:possible_sepsis",
+      "urgency": "urgent",
+      "reason": "fever + confusion + hypotension in older adult"
+    }
+  ],
+  "conditions_to_consider": [
+    "condition:sepsis",
+    "condition:urinary_tract_infection",
+    "condition:pneumonia",
+    "condition:dehydration",
+    "condition:adverse_drug_event"
+  ],
+  "tests_to_consider": [
+    "test:vital_signs",
+    "test:cbc",
+    "test:creatinine",
+    "test:urinalysis",
+    "test:blood_culture",
+    "test:chest_xray"
+  ],
+  "treatment_warnings": [
+    {
+      "code": "warning:renal_dose_adjustment",
+      "reason": "known chronic kidney disease"
+    },
+    {
+      "code": "warning:drug_interaction_check",
+      "reason": "current warfarin use"
+    }
+  ]
+}
+```
+
+---
+
+## 20. Recommended MVP
+
+The MVP should not attempt to cover all of medicine.
+
+Possible first domains:
+
+```text
+Option A: urinary tract infections
+Option B: respiratory symptoms
+Option C: chest pain
+Option D: medications and contraindications in older adults
+Option E: clinical red flags and initial tests
+```
+
+The strongest MVP would likely be:
+
+```text
+Medikristal — Red Flags + Initial Tests
+```
+
+This is useful, bounded, and safer than immediately recommending treatments.
+
+---
+
+## 21. Foundational rules
+
+1. **No recommendation without a source.**
+
+2. **No source without a version.**
+
+3. **No rule without a status.**
+
+4. **No canonical content without promotion.**
+
+5. **No opaque protocol.**
+
+6. **No automated final medical decision.**
+
+7. **Every output must be justifiable.**
+
+8. **Every artifact must be versioned.**
+
+9. **Every contradiction must be visible.**
+
+10. **The system must separate knowledge, protocol, patient context, and clinical decision.**
+
+---
+
+## 22. One-sentence summary
+
+**Medikristal is a semantic medical knowledge architecture that compiles relationships between symptoms, diseases, tests, treatments, and patient context into verifiable artifacts, then applies deterministic protocols to guide clinical investigation without replacing medical judgment.**
+
+
+================================================================================================
+FILE: docs/MediKristal_Information_Sources.md
+================================================================================================
+
+# MediKristal Information Sources
+
+**Purpose:** define the free or no-cost medical information sources that MediKristal can use to build its semantic medical knowledge graph, protocol engine, and offline runtime packs.
+
+> MediKristal should not invent medical knowledge. It should compile, normalize, link, validate, and cite trusted medical sources.
+
+---
+
+## 1. Source Strategy
+
+MediKristal separates medical information into five source categories:
+
+```text
+1. Clinical concepts
+2. Diseases / diagnoses
+3. Tests / observations
+4. Medications / treatments
+5. Clinical guidelines / protocols
+```
+
+Each category should be linked to an official terminology, database, or guideline source whenever possible.
+
+---
+
+## 2. Primary Free / No-Cost Sources
+
+| MediKristal Layer                  | Preferred Source                 | Use in MediKristal                                                              |
+| ---------------------------------- | -------------------------------- | ------------------------------------------------------------------------------- |
+| Symptoms, signs, clinical concepts | SNOMED CT / SNOMED CT CA         | Standard codes for symptoms, signs, procedures, findings, and clinical concepts |
+| Diseases / diagnoses               | ICD-11, SNOMED CT                | Diagnosis classification and condition mapping                                  |
+| Tests / observations               | LOINC, pCLOCD                    | Laboratory tests, measurements, clinical observations                           |
+| Canadian medications               | CCDD, Health Canada DPD          | Canadian drug names, products, codes, and availability                          |
+| International / US medications     | RxNorm                           | Normalized clinical drug names and identifiers                                  |
+| Clinical protocols                 | WHO, NICE, CDC, local guidelines | Source material for deterministic rules and protocols                           |
+| Rules / logic format               | CQL, FHIR Clinical Reasoning     | Machine-readable clinical decision logic                                        |
+
+---
+
+## 3. SNOMED CT / SNOMED CT CA
+
+**Role in MediKristal:** symptoms, signs, findings, procedures, body structures, clinical concepts, and some conditions.
+
+SNOMED CT is the main source for structured clinical terminology. The Canadian Edition includes Canadian English, Canadian French, and Canadian value sets, and is released quarterly. Canada Health Infoway states that SNOMED CT, LOINC, and Infoway software tools are available at no cost to users with an active Infoway account. ([InfoCentral][1])
+
+Use SNOMED CT for:
+
+```text
+symptom:fever
+symptom:chest_pain
+sign:hypotension
+finding:low_oxygen_saturation
+procedure:physical_exam
+condition:pneumonia
+```
+
+**MediKristal usage rule:** SNOMED CT should be the preferred terminology for clinical concepts, but the system must store source version, edition, jurisdiction, and license metadata.
+
+---
+
+## 4. ICD-11
+
+**Role in MediKristal:** disease classification and diagnosis grouping.
+
+ICD-11 is the World Health Organization’s international classification for diagnostic health information. WHO provides an ICD API for programmatic access, and ICD-11 is licensed under Creative Commons Attribution-NoDerivs 3.0 IGO. ([ICD-11][2])
+
+Use ICD-11 for:
+
+```text
+diagnosis classification
+disease grouping
+billing / reporting alignment
+mapping conditions to global identifiers
+```
+
+**MediKristal usage rule:** ICD-11 should classify diseases, but it should not be the only source for clinical reasoning. Protocol logic should come from guidelines, not from ICD codes alone.
+
+---
+
+## 5. LOINC
+
+**Role in MediKristal:** laboratory tests, observations, measurements, panels, and clinical documents.
+
+LOINC identifies health measurements, observations, and documents. It is available worldwide at no cost, and the LOINC database can be downloaded for free with a LOINC login. ([LOINC][3])
+
+Use LOINC for:
+
+```text
+CBC
+creatinine
+urinalysis
+blood glucose
+oxygen saturation
+blood pressure observations
+lab panels
+```
+
+**MediKristal usage rule:** LOINC should be the preferred identifier for tests and observations. MediKristal should store units, normal ranges, jurisdictional ranges, and interpretation rules separately.
+
+---
+
+## 6. pCLOCD
+
+**Role in MediKristal:** Canadian laboratory and observation coding.
+
+For Canada-focused deployments, pCLOCD can complement LOINC. Infoway has migrated terminology content such as SNOMED CT CA, pCLOCD, CCDD, and value sets to its FHIR Terminology Server. ([InfoCentral][4])
+
+Use pCLOCD for:
+
+```text
+Canadian lab terminology
+Canadian observation mappings
+local laboratory interoperability
+```
+
+**MediKristal usage rule:** use pCLOCD when the deployment is Canadian and needs compatibility with Canadian lab systems.
+
+---
+
+## 7. Health Canada Drug Product Database
+
+**Role in MediKristal:** Canadian drug products authorized for sale.
+
+Health Canada’s Drug Product Database lists drugs authorized for sale in Canada, is updated nightly, and includes product availability and product monographs for human drugs. Health Canada also provides a DPD API that returns data in JSON and XML. ([Canada][5])
+
+Use Health Canada DPD for:
+
+```text
+Canadian drug products
+brand names
+active ingredients
+DINs
+market status
+product monographs
+human drug availability in Canada
+```
+
+**MediKristal usage rule:** DPD should be used for Canadian product availability and official product-level drug information.
+
+---
+
+## 8. Canadian Clinical Drug Data Set
+
+**Role in MediKristal:** Canadian medication terminology.
+
+The Canadian Clinical Drug Data Set provides codes and a consistent naming approach for medications and some medical devices in Canada. It is freely available for use in digital health solutions and application design. ([InfoCentral][6])
+
+Use CCDD for:
+
+```text
+standard Canadian medication names
+medication coding
+clinical drug representation
+Canadian e-prescribing interoperability
+```
+
+**MediKristal usage rule:** CCDD should be preferred for normalized Canadian medication terminology; DPD should be used for Health Canada product authorization and product details.
+
+---
+
+## 9. RxNorm
+
+**Role in MediKristal:** normalized drug names and identifiers, especially for US or international interoperability.
+
+RxNorm provides normalized names for clinical drugs and links them to many drug vocabularies. The U.S. National Library of Medicine states that it does not charge for RxNorm licensing, although some non-RxNorm source data may require separate licensing. The RxNorm API generally does not require a license, subject to terms of service. ([National Library of Medicine][7])
+
+Use RxNorm for:
+
+```text
+normalized clinical drug names
+ingredient / strength / dose form modeling
+cross-system drug interoperability
+mapping medication concepts
+```
+
+**MediKristal usage rule:** RxNorm is useful for international interoperability, but Canadian deployments should also use CCDD and Health Canada DPD.
+
+---
+
+## 10. Clinical Guidelines and Protocol Sources
+
+**Role in MediKristal:** source material for deterministic rules.
+
+Terminologies tell MediKristal what things are called. Guidelines tell MediKristal what should be done.
+
+Potential free or public guideline sources include:
+
+| Source                        | Use                                                           |
+| ----------------------------- | ------------------------------------------------------------- |
+| WHO Guidelines                | global public health and clinical recommendations             |
+| NICE / NICE CKS               | primary care summaries and evidence-based guidance            |
+| CDC Guidance                  | public health, infection control, infectious disease guidance |
+| Local / provincial guidelines | jurisdiction-specific clinical protocols                      |
+
+WHO defines its guidelines as information products containing recommendations for clinical practice or public health policy. NICE provides evidence-based recommendations for health and social care, and NICE CKS provides accessible summaries for primary care. CDC publishes guidance and recommendations across public health and clinical safety domains. ([World Health Organization][8])
+
+**MediKristal usage rule:** guidelines should be transformed into explicit, versioned, source-backed protocol rules. The original source, publication date, jurisdiction, and applicability must always be retained.
+
+---
+
+## 11. Clinical Logic Standards
+
+**Role in MediKristal:** machine-readable protocol execution.
+
+MediKristal should support deterministic protocol logic using standards such as:
+
+```text
+FHIR Clinical Reasoning
+CQL
+PlanDefinition
+ActivityDefinition
+Library
+ValueSet
+```
+
+Clinical Quality Language is a domain-specific language focused on clinical quality and decision support artifacts. HL7 FHIR also includes a Clinical Reasoning module for representing and applying clinical knowledge artifacts. ([FHIR Build][9])
+
+**MediKristal usage rule:** protocol logic should eventually be represented in CQL/FHIR-compatible structures where possible, while simple MVP rules may begin as JSON IF/THEN rules.
+
+---
+
+## 12. Source Metadata Required by MediKristal
+
+Every imported source must be recorded with metadata.
+
+```json
+{
+  "source_id": "source:loinc",
+  "source_name": "LOINC",
+  "source_type": "terminology",
+  "publisher": "Regenstrief Institute",
+  "version": "2.82",
+  "jurisdiction": "international",
+  "access_model": "free_with_account",
+  "license": "LOINC license",
+  "retrieved_at": "2026-05-02",
+  "used_for": ["tests", "observations", "measurements"]
+}
+```
+
+Minimum required fields:
+
+```text
+source_id
+source_name
+publisher
+version
+license_or_terms
+retrieved_at
+jurisdiction
+language
+used_for
+```
+
+---
+
+## 13. Source Trust Tiers
+
+MediKristal should classify sources by trust tier.
+
+```text
+Tier 1 — Official terminology or government source
+Examples: SNOMED CT, ICD-11, LOINC, Health Canada DPD, CCDD, RxNorm
+
+Tier 2 — Official guideline source
+Examples: WHO, NICE, CDC, provincial guidelines
+
+Tier 3 — Institutional protocol
+Examples: hospital-specific order sets, clinic protocols
+
+Tier 4 — Working / draft source
+Examples: internal mappings, experimental rules, community proposals
+```
+
+Only Tier 1 and Tier 2 sources should be eligible for canonical clinical content by default.
+
+---
+
+## 14. What These Sources Do Not Provide
+
+These databases do **not** automatically create a complete diagnostic engine.
+
+They provide:
+
+```text
+standard names
+codes
+identifiers
+classifications
+drug records
+test identifiers
+guideline text
+```
+
+MediKristal must still create and validate:
+
+```text
+symptom-to-disease relationships
+disease-to-test rules
+test interpretation rules
+contraindication logic
+red flag rules
+clinical protocols
+jurisdiction-specific workflows
+```
+
+---
+
+## 15. Foundational Rule
+
+**MediKristal must never treat a database entry as a clinical recommendation unless that recommendation is backed by a guideline, protocol, or validated clinical rule.**
+
+Terminology is not protocol.
+
+```text
+SNOMED / ICD / LOINC / RxNorm / CCDD = names and codes
+Guidelines / protocols / CQL rules = clinical action
+MediKristal = orchestration, validation, traceability, execution
+```
+
+---
+
+## 16. Recommended First Source Stack
+
+For a Canadian-first MVP:
+
+```text
+Clinical concepts: SNOMED CT CA
+Diseases: ICD-11 + SNOMED CT CA
+Tests: LOINC + pCLOCD
+Medications: CCDD + Health Canada DPD
+Protocols: WHO + NICE + Canadian/provincial guidelines
+Logic: JSON rules first, then CQL/FHIR Clinical Reasoning
+```
+
+For an international MVP:
+
+```text
+Clinical concepts: SNOMED CT
+Diseases: ICD-11
+Tests: LOINC
+Medications: RxNorm
+Protocols: WHO + NICE + CDC
+Logic: JSON rules first, then CQL/FHIR Clinical Reasoning
+```
+
+---
+
+## 17. One-Sentence Summary
+
+**MediKristal uses free or no-cost official medical terminologies, drug databases, and guideline sources as raw knowledge inputs, then normalizes them into versioned semantic artifacts and deterministic clinical protocols with full source traceability.**
+
+[1]: https://infocentral.infoway-inforoute.ca/en/standards/canadian/snomed-ct?utm_source=chatgpt.com "SNOMED CT CA / SNOMED CT - InfoCentral"
+[2]: https://icd.who.int/?utm_source=chatgpt.com "ICD-11"
+[3]: https://loinc.org/?utm_source=chatgpt.com "LOINC: Home"
+[4]: https://infocentral.infoway-inforoute.ca/en/tools/standards-tools/terminology-gateway?utm_source=chatgpt.com "Terminology Gateway - InfoCentral - Canada Health Infoway"
+[5]: https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database.html?utm_source=chatgpt.com "Drug Product Database: Access the database"
+[6]: https://infocentral.infoway-inforoute.ca/en/standards/canadian/ccdd?utm_source=chatgpt.com "Canadian Clinical Drug Data Set - InfoCentral"
+[7]: https://www.nlm.nih.gov/research/umls/rxnorm/index.html?utm_source=chatgpt.com "RxNorm - National Library of Medicine - NIH"
+[8]: https://www.who.int/publications/who-guidelines?utm_source=chatgpt.com "WHO Guidelines"
+[9]: https://build.fhir.org/ig/HL7/cql/?utm_source=chatgpt.com "Clinical Quality Language (CQL)"
+
+
+================================================================================================
+FILE: README.md
+================================================================================================
+
+ÿþ#   M e d i K r i s t a l 
+ 
+ 
+ 
+ * * M e d i K r i s t a l * *   i s   a   s e m a n t i c   m e d i c a l   k n o w l e d g e   a r c h i t e c t u r e   t h a t   l i n k s   s y m p t o m s ,   d i s e a s e s ,   t e s t s ,   t r e a t m e n t s ,   a n d   p a t i e n t   c o n t e x t   i n t o   v e r i f i a b l e   a r t i f a c t s ,   t h e n   a p p l i e s   d e t e r m i n i s t i c   p r o t o c o l s   t o   g u i d e   c l i n i c a l   r e a s o n i n g   w i t h   t r a c e a b l e   s o u r c e s . 
+ 
+ 
+ 
+ >   S t a t u s :   e a r l y   f o u n d a t i o n a l   a r c h i t e c t u r e     
+ 
+ >   S c o p e :   r e s e a r c h ,   p r o t o t y p i n g ,   a n d   c l i n i c a l   k n o w l e d g e   m o d e l i n g     
+ 
+ >   N o t   i n t e n d e d   f o r   d i r e c t   c l i n i c a l   u s e   w i t h o u t   v a l i d a t i o n ,   g o v e r n a n c e ,   a n d   r e g u l a t o r y   r e v i e w . 
+ 
+ 
+ 
+ - - - 
+ 
+ 
+ 
+ # #   O v e r v i e w 
+ 
+ 
+ 
+ M e d i K r i s t a l   i s   d e s i g n e d   a s   a   s t r u c t u r e d   m e d i c a l   k n o w l e d g e   s y s t e m ,   n o t   a s   a   b l a c k - b o x   A I . 
+ 
+ 
+ 
+ I t   o r g a n i z e s   m e d i c a l   k n o w l e d g e   i n t o   f o u r   c o r e   d o m a i n s : 
+ 
+ 
+ 
+ 1 .   S y m p t o m s   a n d   s i g n s 
+ 
+ 2 .   D i s e a s e s   a n d   d i a g n o s e s 
+ 
+ 3 .   T e s t s   a n d   i n v e s t i g a t i o n s 
+ 
+ 4 .   M e d i c a t i o n s ,   r e m e d i e s ,   a n d   t r e a t m e n t s 
+ 
+ 
+ 
+ A   f i f t h   l a y e r ,   * * p a t i e n t   c o n t e x t * * ,   m o d i f i e s   h o w   t h e   s y s t e m   i n t e r p r e t s   t h e   o t h e r   f o u r : 
+ 
+ 
+ 
+ -   a g e 
+ 
+ -   s e x 
+ 
+ -   p r e g n a n c y   s t a t u s 
+ 
+ -   a l l e r g i e s 
+ 
+ -   c u r r e n t   m e d i c a t i o n s 
+ 
+ -   k n o w n   c o n d i t i o n s 
+ 
+ -   g e o g r a p h y 
+ 
+ -   t r a v e l   h i s t o r y 
+ 
+ -   k i d n e y / l i v e r   f u n c t i o n 
+ 
+ -   r i s k   f a c t o r s 
+ 
+ 
+ 
+ T h e   g o a l   i s   t o   c o n n e c t   t h e s e   l a y e r s   t h r o u g h   a   s e m a n t i c   g r a p h   a n d   e x e c u t e   e x p l i c i t   c l i n i c a l   p r o t o c o l s . 
+ 
+ 
+ 
+ - - - 
+ 
+ 
+ 
+ # #   C o r e   I d e a 
+ 
+ 
+ 
+ ` ` ` t e x t 
+ 
+ P a t i e n t   C o n t e x t 
+ 
+             “!
+ 
+ S y m p t o m s   /   S i g n s 
+ 
+             “!
+ 
+ P o s s i b l e   C o n d i t i o n s 
+ 
+             “!
+ 
+ T e s t s   /   I n v e s t i g a t i o n s 
+ 
+             “!
+ 
+ T r e a t m e n t   O p t i o n s   /   W a r n i n g s 
+ 
+             “!
+ 
+ T r a c e a b l e   P r o t o c o l   O u t p u t 

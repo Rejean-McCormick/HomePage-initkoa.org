@@ -1,0 +1,2130 @@
+# INITKOA CONTEXT PACK
+
+repository: Rejean-McCormick/science-silk-road-koali
+source_path: C:\mycode\Science_Silk_Road
+source_commit: 26a3d32da3292b0964e288357dd4ed44a77a99d4
+working_tree_markdown: clean
+generated_at: 2026-08-25T09:32:49-04:00
+files: 21
+content_sha256: 63240eca576ba5589c4ce3832f3d61afb1b57d8f29c16caf83f188f4ecc542d9
+
+================================================================================================
+FILE INDEX
+================================================================================================
+
+01. docs/01-core-thesis.md
+02. docs/02-theory-from-construction.md
+03. docs/03-science-silk-road-fit.md
+04. docs/04-capability-trajectories.md
+05. docs/05-authority-provenance-transitions.md
+06. docs/06-dialogue-han-cheng.md
+07. docs/07-dialogue-anna-ahlers.md
+08. docs/08-dialogue-hang-zhou.md
+09. docs/09-research-design.md
+10. docs/10-current-system-status.md
+11. docs/11-conceptual-foundations.md
+12. evidence/CHRONOLOGY_AND_PRIORITY.md
+13. evidence/CLAIM_EVIDENCE_MATRIX.md
+14. evidence/KOA_SOURCE_MAP.md
+15. LINK_CHECK.md
+16. MANIFEST.md
+17. OUTREACH_EMAIL.md
+18. README.md
+19. references/LINKS.md
+20. references/SELECTED_BIBLIOGRAPHY.md
+21. SUBMISSION_NOTE.md
+
+
+================================================================================================
+FILE: docs/01-core-thesis.md
+================================================================================================
+
+# 01 — Core Thesis
+
+## 1. The research problem
+
+Scientific cooperation is often described through resources and outputs:
+
+```text
+funding + equipment + training + networks
+→ laboratories + data + publications + patents + projects
+```
+
+Those outputs matter, but they do not tell us whether a partner organization has acquired durable capability.
+
+A more demanding chain is:
+
+```text
+resources
+→ access
+→ situated practice
+→ competence
+→ institutionalization
+→ transmission
+→ reconfiguration
+→ durable capability
+```
+
+The central research problem is therefore the **formation and reproduction of scientific capability across transnational infrastructures**.
+
+## 2. Core distinctions
+
+This dossier proposes several distinctions as analytical safeguards:
+
+```text
+Connectivity ≠ Capability
+Training ≠ Mastery
+Infrastructure delivery ≠ Institutional capability
+Capability gain ≠ Dependency reduction
+Expertise ≠ Decision authority
+Data access ≠ Data authority
+Documentation ≠ Reproducible practice
+Output ≠ Outcome ≠ Learning ≠ Future capability
+```
+
+These are not intended as universal laws. They are questions that prevent premature equivalence.
+
+## 3. Capability is multidimensional
+
+A scientific organization may be strong in one function and dependent in another. Capability should therefore be represented as a profile, not a scalar ranking.
+
+A useful heuristic is:
+
+```text
+C(t) = [O, M, V, A, G, T, R]
+```
+
+where:
+
+- **O — Operate:** use the system reliably in routine conditions.
+- **M — Maintain:** diagnose failure, repair, replace, and sustain operation.
+- **V — Validate:** interpret data/results and assess their epistemic status.
+- **A — Adapt:** modify protocols, software, hardware, methods, or workflows.
+- **G — Govern:** influence priorities, access rules, standards, and research agendas.
+- **T — Transmit:** train others and reproduce competence across personnel turnover.
+- **R — Reconfigure:** continue scientific activity when suppliers, funding, personnel, partnerships, or objectives change.
+
+No ordering from O to R is assumed. A partner may rationally choose not to localize every function.
+
+## 4. Dependency is a second variable
+
+Dependency is not the opposite of capability. A collaboration can increase both.
+
+```text
+D(t) = [finance, hardware, software, data, standards, expertise, authority]
+```
+
+The relevant object is therefore a **capability–dependency configuration**:
+
+```text
+(C(t), D(t))
+```
+
+This avoids the false choice between “autonomy” and “dependence.” Highly capable scientific systems are often deeply interdependent.
+
+## 5. The political variable: reconfigurability
+
+The key question is not whether a partner can eliminate all external dependency. It is whether the arrangement can be renegotiated, substituted, adapted, or continued under changing conditions.
+
+```text
+Interdependence + reconfiguration capacity
+≠
+Interdependence + rigid lock-in
+```
+
+This makes the framework symmetrical: it can analyze Chinese, European, North American, multilateral, or mixed infrastructures without presupposing that Chinese involvement is uniquely dependency-producing.
+
+## 6. Why this fits Science Silk Road
+
+The official Science Silk Road project studies new infrastructures, networks, and partnerships and their multi-level effects on knowledge production, research, society, development, and international scientific cooperation:
+
+- https://sciencesilkroad.mpiwg-berlin.mpg.de/
+- https://www.mpiwg-berlin.mpg.de/research/projects/chinas-science-silk-road-and-new-geopolitics-knowledge-production
+
+This dossier adds a mechanism-focused question:
+
+> **Through which transitions do infrastructures become durable scientific capabilities, and how are authority and dependency redistributed during those transitions?**
+
+
+## 7. From scientific outputs to portable epistemic objects
+
+The first diagram in this document emphasizes late-stage outputs such as publications, patents, datasets, and projects. Yet scientific knowledge usually exists in a meaningful form **before** those outputs are finalized: as hypotheses, theories, claims, technical declarations, invention disclosures, research notes, disputed interpretations, or partially validated results.
+
+Kristal provides a concrete architectural model for representing this intermediate layer:
+
+```text
+unstructured or early-stage scientific knowledge
+→ Structured Epistemic State
+→ working Kristal
+→ review / evidence / validation / recognition
+→ reference or federated Kristal
+→ query, AI use, distribution, and multilingual rendering
+```
+
+The important distinction is:
+
+```text
+portable record ≠ validated fact ≠ institutional recognition ≠ legal right
+```
+
+Kristal v5 explicitly permits hypotheses, claims, disputed assertions, and research material while preserving status, certainty, provenance, authority, scope, evidence references, and lineage. Compilation can therefore precede final recognition. This makes a Kristal suitable as an **informal epistemic record** of a theory or an invention disclosure without implying that the theory has been scientifically validated or that the invention has been legally patented.
+
+For the Science Silk Road context, this matters because knowledge exchange need not be reduced to document exchange. A partner institution could receive a structured object whose claims, evidence, uncertainty, provenance, and authority labels remain machine-readable and queryable. SemantiK Architect can then render the same structured meaning into target-language text while preserving the epistemic labels required by the rendering contract.
+
+The phrase **semantic Kristal** can therefore be used descriptively for the end-to-end pattern—structured Kristal semantics plus resolution and multilingual rendering—but it should not be confused with a distinct artifact class in the Kristal v5 specification.
+
+This suggests an additional research question:
+
+> **Can portable, provenance-preserving, AI-ready, multilingual epistemic artifacts change who can inspect, translate, reuse, contest, and build upon scientific knowledge across transnational collaborations?**
+
+### Patent-sensitive material
+
+The term **invention disclosure** is deliberately used instead of “informal patent registration.” A Kristal does not replace a patent application or create patent rights. WIPO also cautions that public disclosure before filing may destroy novelty in many jurisdictions. Where patent protection may be sought, access and distribution policy therefore become part of the knowledge-governance problem itself.
+
+- https://www.wipo.int/en/web/patents/faq_patents
+- https://www.wipo.int/en/web/patents/protection
+
+
+## 8. From knowledge peacebuilding to executable cooperation
+
+The architectural proposition has a public conceptual lineage beyond the technical repositories. A series of essays develops a sequence that is particularly relevant to Science Silk Road research:
+
+```text
+cooperation through knowledge
+→ wider participation in knowledge production
+→ structured epistemic artifacts
+→ semantic and multilingual portability
+→ human + AI usability
+→ explicit evaluation and authority
+→ coordinated action and institutional memory
+```
+
+This sequence is not offered as empirical proof. It is useful because it exposes the assumptions behind the architecture and turns them into research questions. In particular:
+
+- Does structured exchange allow earlier-stage knowledge to circulate without being mistaken for validated fact?
+- Can semantic representation reduce language friction while preserving local interpretation and disagreement?
+- Does machine-readable operational knowledge strengthen the ability of partner organizations to maintain, adapt, and transmit scientific capability?
+- Can broader contribution coexist with credible validation and expertise-sensitive authority?
+- Under what conditions does knowledge exchange become durable cooperation rather than one-way transfer?
+
+The relevant essays and their precise role in the dossier are mapped in [`11-conceptual-foundations.md`](11-conceptual-foundations.md).
+
+
+================================================================================================
+FILE: docs/02-theory-from-construction.md
+================================================================================================
+
+# 02 — Theory from Construction
+
+## 1. Why construction matters epistemically
+
+kOA was not initially designed as a theory of the Science Silk Road. It was designed as an operating architecture for connecting knowledge, deliberation, decision, execution, evidence, and memory.
+
+That matters because implementation forces distinctions that can remain underspecified in abstract discourse.
+
+A software architecture must eventually answer:
+
+- Which object is canonical?
+- Which component owns it?
+- Who may change state?
+- Which evidence permits the transition?
+- What survives the transition?
+- Which authority has jurisdiction?
+- What happens if the authority is unavailable?
+- How is disagreement represented?
+- How is rollback performed?
+- How can a component or provider be replaced?
+- What remains after the people who built the system leave?
+
+The resulting theoretical contribution is best described as **theory from construction**: implementation generates disciplined hypotheses about coordination, authority, memory, and capability.
+
+## 2. The transition is the primary analytical object
+
+The kOA architecture repeatedly separates states that are often collapsed in ordinary language:
+
+```text
+claim → evidence → validation → recognition
+knowledge → judgment → decision → mandate
+mandate → task → execution → closure
+result → evidence → review → institutional memory
+learning → assessment → competence → credential
+artifact → validation → activation → rollback / replacement
+```
+
+The recurring problem is not merely “workflow.” It is **controlled transformation**: what changes, what remains stable, what becomes authoritative, and what evidence preserves the lineage.
+
+Public technical anchors:
+
+- Global invariants: https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/02-global-invariants.md
+- Explicit authority: https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/04-explicit-authority.md
+- Critical transitions / receipts: https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/20-receipts-and-critical-transitions.md
+- Technical foundations of Konnaxion: https://initkoa.org/platforms/konnaxion/technical
+
+## 3. Separation of authority types
+
+kOA explicitly resists a single undifferentiated notion of authority. Different subsystems own different decisions, data, and transitions.
+
+This becomes a research heuristic:
+
+```text
+scientific expertise
+≠ data authority
+≠ validation authority
+≠ organizational authority
+≠ agenda authority
+≠ political authority
+≠ operational permission
+```
+
+The point is not to impose kOA's technical authority model on empirical cases. It is to ask whether scientific collaborations also contain functionally distinct authority surfaces that ordinary categories such as “control” or “ownership” obscure.
+
+## 4. Provenance as institutional memory
+
+In kOA, provenance is not merely bibliographic citation. It supports reconstruction of how an object, decision, artifact, or capability reached its current state.
+
+This generates an empirical question for scientific infrastructures:
+
+> When a capability persists, what memory structures make persistence possible?
+
+Possibilities include manuals, source code, tacit routines, mentoring, procurement records, calibration histories, institutional procedures, data lineages, maintenance logs, standards, credential systems, or communities of practice.
+
+## 5. Portability and exit
+
+kOA-Linux treats portability, restore, recovery, and exit as explicit architectural concerns:
+
+- https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/11-portability-restore-and-exit.md
+- https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/08-operations/10-portability-and-exit.md
+
+The research translation should be weaker and more neutral than the software rule:
+
+> **Can the scientific activity be reconfigured when a critical dependency changes?**
+
+This avoids assuming that “exit” is always desirable. It makes change, rather than autarky, the test.
+
+## 6. What is genuinely being claimed
+
+This dossier does **not** claim:
+
+- that kOA invented institutional memory;
+- that kOA invented provenance;
+- that kOA invented capacity building;
+- that kOA invented theories of dependency;
+- that kOA proves a social theory through software.
+
+It claims something narrower:
+
+> kOA independently **integrates and operationalizes** a cluster of problems—authority differentiation, provenance, transition evidence, institutional memory, portability, capability, and continuity—in one architecture. This combination generates a distinctive set of empirical questions that can now be tested outside the system.
+
+
+================================================================================================
+FILE: docs/03-science-silk-road-fit.md
+================================================================================================
+
+# 03 — Science Silk Road Fit
+
+## 1. The project as currently framed
+
+The official *China’s Science Silk Road and the New Geopolitics of Knowledge Production* project (2026–2030) examines how China’s international cooperation in science, technology, and innovation is reshaping global knowledge production through new infrastructures, networks, and partnerships. It explicitly targets multi-level implications for BRI countries, established science powers, and international scientific cooperation.
+
+Primary sources:
+
+- https://sciencesilkroad.mpiwg-berlin.mpg.de/
+- https://www.mpiwg-berlin.mpg.de/research/projects/chinas-science-silk-road-and-new-geopolitics-knowledge-production
+- https://www.mpiwg-berlin.mpg.de/news/volkswagen-foundation-grant-chinas-science-silk-road-and-new-geopolitics-knowledge-production
+
+The project is jointly led by **Anna L. Ahlers, Han Cheng, and Hang Zhou**, combining sociology of science, geography, international relations, anthropology, STS, and related approaches.
+
+## 2. The missing middle this proposal targets
+
+A generic impact formulation can be represented as:
+
+```text
+Scientific infrastructure / network
+→ ?
+→ research, social, developmental, and geopolitical effects
+```
+
+The proposed research focuses on that middle layer:
+
+```text
+infrastructure
+→ access
+→ practice
+→ capability formation
+→ institutionalization
+→ reproduction / loss
+→ reconfiguration under change
+```
+
+This is not a replacement for the project's broader impact analysis. It is a mechanism that could explain why similar forms of connectivity produce different long-term outcomes across institutions and places.
+
+## 3. Why “capacity building” is insufficient
+
+China–South cooperation documents and scholarship already use the language of training, technology transfer, technical assistance, demonstration centers, policy planning, and capacity building. Han Cheng's work with Emma Mawdsley and Weidong Liu on FOCAC tracks the deepening of Chinese involvement from exchange and infrastructure toward policy, governance, training, and implementation.
+
+Relevant paper:
+
+- Han Cheng, Emma Mawdsley, Weidong Liu, “Reading the Forum on China–Africa Cooperation (2000–2021): geoeconomics, governance, and embedding ‘creative involvement’” — https://doi.org/10.1080/23792949.2022.2092018
+
+The research gap is not whether *capacity building* is promised. It is how capability is formed, retained, transmitted, and reconfigured after the intervention.
+
+## 4. Four analytically distinct outcomes
+
+A scientific partnership may produce any combination of:
+
+1. **High connectivity + high local capability**
+2. **High connectivity + concentrated external dependency**
+3. **High capability + low connectivity**
+4. **Capabilities that become generative**, allowing partner organizations to train others, alter methods, build new networks, or create subsequent infrastructures.
+
+The fourth is especially important because it concerns **cumulative scientific agency**, not merely project success.
+
+## 5. Neutrality toward China
+
+The framework should not operationalize a presumption that Chinese involvement is dependence-producing. The same capability–dependency analysis should be applicable to:
+
+- Chinese bilateral projects;
+- European or North American infrastructure programs;
+- multilateral scientific platforms;
+- South–South or triangular cooperation;
+- mixed vendor ecosystems.
+
+This symmetry is necessary both analytically and in dialogue with Han Cheng's critiques of reductive geopolitical narratives.
+
+
+## 6. A concrete cross-border knowledge primitive: Kristal
+
+The capability framework above concerns institutions and long-term trajectories. Kristal adds a more immediate, testable infrastructure proposition: **what exactly moves between scientific partners?**
+
+A conventional answer is documents, datasets, publications, software, instruments, people, and training. A Kristal introduces another unit of exchange: a portable structured epistemic artifact that can represent scientific knowledge before final publication or institutional recognition.
+
+A plausible collaboration flow is:
+
+```text
+Lab A formulates a hypothesis, theory, technical claim,
+or invention disclosure
+        │
+        ▼
+structured Kristal with creator, provenance, sources,
+evidence, scope, certainty, status, and lineage
+        │
+        ├── private / restricted collaboration
+        ├── review and validation
+        ├── AI-assisted query or analysis
+        ├── federation with related or conflicting Kristals
+        └── deterministic multilingual rendering
+        │
+        ▼
+Lab B can inspect and reuse the knowledge structure
+without treating it automatically as validated fact
+```
+
+This is relevant to the Science Silk Road because linguistic and institutional boundaries can otherwise force repeated reinterpretation of the same knowledge through prose, translation, local databases, and platform-specific metadata. A Kristal-based exchange model attempts to preserve the semantic and epistemic structure underneath those renderings.
+
+For clarity, this dossier may refer to the combined pattern as a **semantic Kristal**: the Kristal carries the structured epistemic object, while SenTient/semantic identifiers and SemantiK Architect support resolution and multilingual rendering. The term is descriptive here, not a new Kristal v5 artifact type.
+
+The combination is therefore:
+
+```text
+Kristal
+= structured, portable, traceable, queryable, AI-ready epistemic artifact
+
+SemantiK Architect
+= deterministic renderer from structured meaning into target-language text
+
+Konnaxion
+= distribution, discovery, access, and reader-policy layer
+
+Orgo
+= workflow around review, validation, publication, and operational follow-through
+```
+
+This should be treated as an **architectural proposition to investigate**, not as evidence that such an exchange layer already governs international science. Empirical work could test whether structured artifacts actually reduce translation loss, lower integration costs, preserve provenance better than document-centric workflows, or redistribute scientific agency between partner institutions.
+
+### Inventions and patent strategy
+
+Kristal can represent an **invention disclosure or pre-patent research record** and preserve its authorship/provenance history. That is different from registering a patent. Patent rights arise through the applicable patent system, not through the existence of a Kristal artifact. WIPO further advises that public disclosure before filing can compromise novelty in many jurisdictions; patent-sensitive Kristals would therefore require restricted reader/distribution policies when confidentiality matters.
+
+- https://www.wipo.int/en/web/patents/faq_patents
+- https://www.wipo.int/en/web/patents/protection
+
+
+## 7. Knowledge peacebuilding as a researchable outcome
+
+The essay **“Knowledge Peacebuilding: Building Peace Through Knowledge and Cooperation”** supplies a broader motivation for the architecture: scientific and technical cooperation can create practical relationships across political and cultural boundaries. In this dossier, that proposition should be treated as a **hypothesis**, not as an assumed virtue of scientific exchange.
+
+A Science Silk Road case can therefore be examined at two levels simultaneously:
+
+```text
+Level 1 — capability
+What knowledge, skills, authority, infrastructure, and reconfiguration capacity are formed?
+
+Level 2 — cooperation
+Do repeated knowledge-producing relationships create durable channels of trust, reciprocity,
+problem solving, and continued collaboration across institutional or geopolitical difference?
+```
+
+The kOA conceptual sequence makes the mechanism more concrete:
+
+```text
+Knowledge Peacebuilding
+→ distributed contribution
+→ Kristal epistemic artifacts
+→ semantic / multilingual exchange
+→ AI-readable knowledge
+→ expertise-sensitive evaluation
+→ Konnaxion / Orgo coordination and action
+```
+
+This gives the project an additional empirical question:
+
+> **When scientific knowledge is made portable, inspectable, multilingual, and reusable across institutions, does that merely increase information flow, or can it also create more durable and reciprocal forms of scientific cooperation?**
+
+The public essays supporting this design lineage are catalogued in [`11-conceptual-foundations.md`](11-conceptual-foundations.md). They are treated as authorial design rationale, not as external evidence of impact.
+
+
+================================================================================================
+FILE: docs/04-capability-trajectories.md
+================================================================================================
+
+# 04 — Capability Trajectories
+
+## 1. Unit of analysis
+
+The proposed unit of analysis is the **capability trajectory** rather than the country, project, laboratory, or institution taken as a whole.
+
+A capability trajectory follows a specific scientific function over time.
+
+Example:
+
+```text
+instrument procurement
+→ installation
+→ initial training
+→ routine operation
+→ calibration
+→ failure
+→ diagnosis
+→ repair
+→ software / protocol update
+→ staff turnover
+→ local retraining
+→ new research use
+```
+
+At every step, the same questions can be asked:
+
+- Who has the knowledge?
+- Who has permission to act?
+- Who can validate the result?
+- Who owns or controls the necessary data?
+- Which standards or external services are indispensable?
+- Which records make the transition reconstructible?
+- Can the capability be transmitted to another person or institution?
+- What happens when a critical dependency changes?
+
+## 2. Capability profile
+
+Use a multidimensional profile rather than a composite “capacity score.”
+
+| Dimension | Empirical question |
+|---|---|
+| Operate | Can local actors use the infrastructure reliably? |
+| Maintain | Can they diagnose, repair, replace, and sustain it? |
+| Validate | Can they independently interpret and assess outputs? |
+| Adapt | Can protocols, methods, code, or components be modified? |
+| Govern | Can priorities, access rules, standards, or agendas be influenced? |
+| Transmit | Can competence be reproduced across personnel turnover? |
+| Reconfigure | Can the activity continue when suppliers, funding, people, or partnerships change? |
+
+## 3. Dependency profile
+
+Capability should be paired with an explicit dependency map.
+
+| Dependency | Questions |
+|---|---|
+| Finance | Who funds recurrent operation, replacement, and expansion? |
+| Hardware | Are critical components repairable or substitutable? |
+| Software | Who controls source, licenses, updates, models, or cloud services? |
+| Data | Who collects, stores, grants access to, and can reuse data? |
+| Standards | Which external standards determine interoperability and legitimacy? |
+| Expertise | Where does scarce tacit knowledge reside? |
+| Authority | Which decisions require external approval? |
+
+## 4. Reconfiguration events as natural tests
+
+Capabilities become especially visible when systems are perturbed.
+
+Useful events include:
+
+- staff turnover;
+- equipment failure;
+- contract expiration;
+- change of supplier;
+- withdrawal or reduction of funding;
+- new scientific question;
+- new data-governance regulation;
+- sanctions or export controls;
+- software deprecation;
+- institutional restructuring.
+
+A capability that only exists in stable conditions may be operationally useful but institutionally fragile.
+
+## 5. No universal ladder
+
+The framework must not imply:
+
+```text
+operate < maintain < modify < reproduce
+```
+
+as a universal hierarchy of development.
+
+A research institution may rationally specialize in interpretation while relying on external satellite infrastructure. Another may choose to localize hardware maintenance. Another may pool expensive capabilities regionally.
+
+The relevant questions are:
+
+```text
+Who can do what?
+Who decides this division of functions?
+Can the arrangement be renegotiated?
+What becomes possible over time?
+```
+
+
+================================================================================================
+FILE: docs/05-authority-provenance-transitions.md
+================================================================================================
+
+# 05 — Authority, Provenance, and Critical Transitions
+
+## 1. Why “control” is too coarse
+
+Scientific infrastructures distribute several different powers that should not be collapsed into a single ownership/control variable.
+
+A working analytical map can distinguish:
+
+- **epistemic authority** — who can credibly interpret or validate a claim;
+- **data authority** — who can collect, access, transform, publish, or delete data;
+- **technical authority** — who may alter hardware, software, protocols, or configurations;
+- **organizational authority** — who allocates roles, resources, and responsibilities;
+- **agenda authority** — who defines legitimate research questions and priorities;
+- **political authority** — who can impose binding constraints or strategic objectives;
+- **operational permission** — who is authorized to execute a concrete action.
+
+The research task is to observe how these authority surfaces align, overlap, or conflict.
+
+## 2. Architectural origin in kOA
+
+kOA-Linux gives explicit authority constitutional status. Its documentation distinguishes authority from execution and requires critical transitions to be traceable.
+
+Sources:
+
+- https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/04-explicit-authority.md
+- https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/02-global-invariants.md
+- https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/20-receipts-and-critical-transitions.md
+
+K-Port/EkoH applies the same separation to competence evidence: evidence may originate from many systems, while source authority, admissibility, and reputation scoring remain distinct responsibilities. In the supplied archive see:
+
+- `K-Port/docs/00-ekoh-expertise-claims-app-alignment.md`
+- `K-Port/docs/02-expertise-claim-evidence-model.md`
+- `K-Port/docs/05-governance-privacy-and-audit.md`
+
+## 3. Provenance is not merely citation
+
+For this research, provenance should include the chain by which scientific capability is produced and stabilized:
+
+```text
+source / training / design
+→ interpretation
+→ validated practice
+→ authorized use
+→ operational result
+→ review
+→ institutional memory
+→ future reuse
+```
+
+Empirical traces might include:
+
+- maintenance and calibration logs;
+- version histories;
+- training records;
+- data lineage;
+- procurement documents;
+- role and authorization records;
+- publication workflows;
+- software repositories;
+- lab notebooks;
+- standard operating procedures;
+- post-incident reports;
+- tacit mentoring practices.
+
+## 4. Critical transition analysis
+
+A **critical transition** is a point where one or more of the following changes:
+
+- object identity;
+- epistemic status;
+- responsible actor;
+- authority holder;
+- access rights;
+- dependency structure;
+- evidence requirements;
+- reversibility.
+
+This makes the transition itself an object of field research.
+
+## 5. Research value
+
+This framework can reveal situations such as:
+
+- local scientists have strong epistemic authority but weak data authority;
+- a host institution owns equipment but cannot modify proprietary software;
+- external engineers maintain a system while local researchers set the agenda;
+- a ministry controls budgets but professional scientific validation remains insulated;
+- training is extensive but competence is not reproduced after staff turnover.
+
+These configurations are more informative than labeling the whole partnership “autonomous,” “dependent,” or “controlled.”
+
+
+================================================================================================
+FILE: docs/06-dialogue-han-cheng.md
+================================================================================================
+
+# 06 — Dialogue with Han Cheng
+
+## 1. Why the fit is strong
+
+Han Cheng's work connects three areas central to this dossier:
+
+1. the **geographies and politics of knowledge production**;
+2. the material and relational politics of **infrastructure**;
+3. the production of geographical imagination and **world-writing** in China's global expansion.
+
+His current MPIWG profile explicitly identifies political and development geography, territory and infrastructure, geographies of knowledge, and histories of geographical thought as central interests:
+
+- https://www.mpiwg-berlin.mpg.de/people/hcheng
+
+## 2. Knowledge reproduction, not only production
+
+In *Global China’s spatial ambition and area studies with geography* (2025), Cheng examines China's area studies and world geography as a state-disciplinary landscape and explicitly draws attention to the spatialities of **knowledge translation, consumption, circulation, and reproduction**.
+
+- DOI: https://doi.org/10.1111/tran.70027
+
+This creates a direct bridge to the proposed capability question:
+
+```text
+knowledge reproduction
+→ what institutional, technical, and human capabilities reproduce the conditions of knowledge production itself?
+```
+
+The proposal does not treat these as equivalent. It asks whether knowledge reproduction depends on a deeper layer of capability reproduction.
+
+## 3. World-writing and semantic authority
+
+In *Geography, area studies and Chinese world-writing* (2022), Cheng and Liu situate knowledge production in place-specific institutional contexts and analyze how contemporary Chinese world-writing brings identities, discourses, power relations, and implications for local–global epistemic inequality.
+
+- DOI: https://doi.org/10.1177/03091325221096179
+
+For this dossier, the implication is that capability cannot be reduced to technical skill. Scientific capability also includes the capacity to:
+
+- define categories;
+- formulate questions;
+- interpret evidence;
+- select valid representations;
+- circulate results in authoritative venues;
+- preserve local languages, concepts, and priorities when appropriate.
+
+## 4. Infrastructure as relational and contingent
+
+Cheng's BRI work resists treating infrastructure as a monolithic top-down object. The edited volume *The Material Geographies of the Belt and Road Initiative* emphasizes grounded, relational, contested, and locally mediated outcomes.
+
+Open-access book:
+
+- https://library.oapen.org/handle/20.500.12657/108372
+
+This is why the proposed framework uses **capability formation**, not capability transfer or conversion. Capabilities emerge through relations among infrastructures, institutions, local actors, prior knowledge, political conditions, and material constraints.
+
+## 5. Guardrail: no developmental ladder
+
+Cheng's work on Chinese development thinking and boundary-making is also a warning against turning spatial difference into temporal or civilizational hierarchy.
+
+- *Temporality and the Geopolitical Enframing of Chinese International Development Thinking*: https://doi.org/10.1080/14650045.2022.2089563
+- *Boundary-making with India: Chinese developmental identity and the uses of geography*: https://doi.org/10.1080/21622671.2022.2096686
+
+Therefore this dossier should never operationalize capability as a universal scale of “civilizational maturity.” It studies **configurations**, choices, and power relations.
+
+## 6. Potential contribution to Cheng's research program
+
+The strongest additive proposition is:
+
+> Existing work maps how knowledge is produced, translated, circulated, and reproduced across unequal geographies. Capability-trajectory analysis asks what infrastructures of maintenance, transmission, authority, and institutional memory make those processes durable—or leave them contingent on specific transnational relations.
+
+
+================================================================================================
+FILE: docs/07-dialogue-anna-ahlers.md
+================================================================================================
+
+# 07 — Dialogue with Anna Lisa Ahlers
+
+## 1. Why the fit is strong
+
+Anna Lisa Ahlers' research examines China's science policy, the relationship between scientific knowledge and policymaking, political regimes as conditions for science, and the dynamics of global science and its local variants.
+
+Current profile and group framing:
+
+- https://www.mpiwg-berlin.mpg.de/people/alahlers
+- https://www.mpiwg-berlin.mpg.de/research/LMRG-china-science/about
+
+The group's general comparative interest in the **global structures of scientific knowledge production and their local varieties** is particularly compatible with a capability-configuration approach.
+
+## 2. Political steering and professional scientific authority
+
+Ahlers' 2024 analysis of CCP steering of China's science, technology, and innovation system describes strong political efforts to shape scientific organizations while also recognizing the continuing importance of professional expertise, global scientific standards, and international collaboration.
+
+Open-access paper:
+
+- https://ucigcc.org/publication/the-communist-partys-steering-of-chinas-science-technology-and-innovation-system-aspirations-and-reality/
+
+The proposed contribution is to disaggregate “control” into functional authority surfaces:
+
+```text
+political steering
+≠ professional validation
+≠ operational permission
+≠ data authority
+≠ agenda authority
+≠ technical modification rights
+```
+
+This could make visible hybrid arrangements that a single centralized/decentralized variable would miss.
+
+## 3. Evaluation systems as infrastructures of behavior
+
+Ahlers and Christmann-Budian's work on university rankings shows how quantification, competition, and evaluation metrics become political and organizational instruments and can generate behavioral effects, gaming, and policy reaction.
+
+- https://doi.org/10.1007/s10734-023-01014-y
+
+This provides a direct methodological warning for the kOA-derived framework: **capability should not be compressed into a single index**. A multidimensional profile preserves heterogeneity and reduces the temptation to turn measurement into a normative ranking system.
+
+## 4. Output versus outcome
+
+Ahlers' environmental-governance work also emphasizes the difference between state capacity to generate rapid policy outputs and the local, dispersed processes that determine outcomes.
+
+- *Breathe Easy? Local Nuances of Authoritarian Environmentalism in China’s Battle Against Air Pollution*: https://doi.org/10.1017/S0305741017001370
+
+The capability extension is:
+
+```text
+scientific infrastructure output
+≠ capability outcome
+≠ institutional learning
+≠ reproduced future capability
+```
+
+## 5. Differentiation and expertise
+
+Ahlers' broader comparative political sociology treats modern political systems as internally differentiated and asks how institutions, inclusion roles, expertise, and decision-making interact across levels.
+
+- *Democratic and Authoritarian Political Systems in 21st Century World Society*: https://doi.org/10.14361/9783839451267
+
+This makes the project a natural site for studying how scientific and political authority are coupled without assuming that either is singular.
+
+## 6. Potential contribution to Ahlers' research program
+
+> Capability-trajectory analysis provides a way to observe how political steering, professional expertise, institutional rules, metrics, and transnational infrastructure interact at concrete transitions—especially when scientific activity must be maintained, validated, transmitted, or reconfigured over time.
+
+
+================================================================================================
+FILE: docs/08-dialogue-hang-zhou.md
+================================================================================================
+
+# 08 — Dialogue with Hang Zhou
+
+## 1. Why Zhou is essential to the fit
+
+Hang Zhou's research brings the micro- and meso-level empirical orientation that prevents this dossier from becoming an abstract systems model.
+
+His current Université Laval profile emphasizes:
+
+- South–South relations, especially Africa–China;
+- development cooperation and development policy;
+- infrastructure;
+- natural-resource governance;
+- the state, bureaucracy, and everyday governance in sub-Saharan Africa;
+- ethnographic field research.
+
+Current profiles:
+
+- https://www.fss.ulaval.ca/notre-faculte/repertoire-du-personnel/hang-zhou
+- https://www.ulaval.ca/la-recherche/repertoire-corps-professoral/hang-zhou
+
+## 2. Why ethnography matters for capability
+
+Capability is often invisible in official documents. A project may report:
+
+- people trained;
+- equipment delivered;
+- data produced;
+- memoranda signed;
+- laboratories opened.
+
+But whether capability is durable may depend on practices that appear only through close observation:
+
+- who is called when equipment fails;
+- who knows undocumented procedures;
+- who has passwords or vendor contacts;
+- who can interpret anomalies;
+- who can authorize changes;
+- what happens when a trained staff member leaves;
+- which workarounds emerge locally;
+- which forms of knowledge never enter formal reports.
+
+These are ethnographic questions.
+
+## 3. Local agency and negotiated infrastructure
+
+Zhou's work on African infrastructure and China–Africa relations is especially useful because it treats host actors as active participants rather than passive recipients.
+
+Relevant work:
+
+- *Western and Chinese Development Engagements in Uganda’s Roads Sector: An Implicit Division of Labour* — https://doi.org/10.1093/afraf/adac005
+- *Unbinding Global China: Fieldnotes from a West African fishing port* — https://doi.org/10.1177/20438206251388520
+- *Provincial variations and entrepreneurialism in the development of China’s Distant Water Fisheries (2011–2020)* — https://doi.org/10.1016/j.marpol.2022.105344
+
+The capability framework should therefore ask not only what an external actor transfers, but how local institutions **appropriate, redirect, combine, resist, bypass, or repurpose** the resources and constraints they receive.
+
+## 4. Bureaucratic capability as part of scientific capability
+
+Science infrastructures depend on more than scientists. Procurement, customs, visas, budgeting, security, maintenance contracts, data rules, staffing, and inter-ministerial coordination can determine whether scientific activity persists.
+
+This expands the unit of analysis from laboratory skill to **institutional capability ecology**.
+
+## 5. Potential contribution to Zhou's research program
+
+> Capability trajectories provide a structured way to connect everyday bureaucratic and infrastructural practices to longer-term questions of scientific agency, dependence, and institutional reproduction—without erasing local negotiation or reducing outcomes to state-level strategy.
+
+
+================================================================================================
+FILE: docs/09-research-design.md
+================================================================================================
+
+# 09 — Proposed Research Design
+
+## 1. Central question
+
+> **How do transnational scientific infrastructures form, distribute, institutionalize, and reproduce scientific capabilities across partner organizations over time?**
+
+## 2. Secondary questions
+
+1. How are epistemic, technical, data, organizational, agenda, and political authorities distributed across the infrastructure lifecycle?
+2. Which capability gains are accompanied by new dependencies, and which dependencies become negotiable or substitutable?
+3. What mechanisms allow competence to survive staff turnover, technical failure, contract expiration, or changes in funding and partnership?
+4. Under what conditions do partner institutions become able to train others, modify systems, create new research agendas, or build successor infrastructures?
+5. How do local categories, languages, standards, and institutional practices shape capability formation rather than merely receive external models?
+
+## 3. Candidate hypotheses
+
+### H1 — Infrastructure without equivalent authority redistribution
+
+Scientific infrastructure can strongly increase local operational capability without proportionally redistributing agenda, data, validation, or technical modification authority.
+
+### H2 — Capability–dependency co-production
+
+Capability gains and dependency gains can occur simultaneously. They should be measured as separate dimensions rather than opposite ends of one scale.
+
+### H3 — Reproduction requires more than training
+
+Durable capability depends less on the number of training events than on repeated practice, institutional memory, access to resources, authority to modify or diagnose systems, and the capacity to train successors.
+
+### H4 — Reconfiguration is a stronger durability test than nominal ownership
+
+An institution may formally own an infrastructure yet remain fragile if it cannot respond to changes in personnel, suppliers, standards, or funding. Conversely, an institution may not own all components but remain highly capable if dependencies are transparent and substitutable.
+
+## 4. Comparative design
+
+A strong design would compare **capability trajectories**, not simply countries.
+
+Possible comparative contrasts:
+
+- two different host institutions using similar Chinese infrastructure;
+- the same scientific function under Chinese and non-Chinese partnerships;
+- different phases of one infrastructure's lifecycle;
+- one infrastructure before and after a disruption;
+- two capabilities within the same project (e.g. data interpretation vs hardware maintenance).
+
+## 5. Methods
+
+### Process tracing
+Reconstruct the sequence from design and procurement through operation, maintenance, adaptation, and transmission.
+
+### Semi-structured interviews
+Interview scientists, engineers, administrators, funders, vendors, policymakers, technicians, students, and former staff.
+
+### Ethnographic observation
+Observe routine work, failure, maintenance, coordination, documentation, and informal learning.
+
+### Document analysis
+Contracts, training materials, maintenance records, data agreements, standard operating procedures, budgets, governance rules, publication policies, and procurement documents.
+
+### Digital / technical artifact analysis
+Where appropriate: code repositories, version histories, metadata schemas, APIs, data flows, access-control structures, model dependencies, and interoperability standards.
+
+### Scientometrics as context, not sole measure
+Use publication, coauthorship, citation, patent, or mobility indicators to contextualize trajectories while avoiding reduction of capability to output counts.
+
+## 6. Evidence table for each transition
+
+| Transition | Actor(s) | Required knowledge | Authority | Evidence / record | Dependency | Failure mode | Reconfiguration option |
+|---|---|---|---|---|---|---|---|
+| Install → operate | | | | | | | |
+| Operate → maintain | | | | | | | |
+| Data → interpretation | | | | | | | |
+| Training → independent practice | | | | | | | |
+| Staff exit → successor | | | | | | | |
+| Supplier change → continuity | | | | | | | |
+
+## 7. Falsification conditions
+
+The framework should be revised or rejected if fieldwork shows that:
+
+- capability profiles do not add explanatory value beyond existing capacity measures;
+- authority differentiation is empirically trivial in the cases studied;
+- transmission and reconfiguration are not associated with longer-term continuity;
+- dependency profiles fail to explain observed vulnerability or agency;
+- actors themselves organize capability in ways the framework systematically misses.
+
+Explicit falsification is essential because the goal is not to validate kOA through external cases.
+
+
+================================================================================================
+FILE: docs/10-current-system-status.md
+================================================================================================
+
+# 10 — Current kOA System Status and Limits
+
+## 1. Why this document exists
+
+The credibility of this dossier depends on separating **architectural maturity**, **implemented components**, **publicly active workflows**, and **production deployment**.
+
+The whole kOA ecosystem should not be presented as production-complete.
+
+## 2. Public status as of 2026-08-17
+
+### kOA public hub
+https://initkoa.org/
+
+The current public framing describes kOA as a system of systems for governable knowledge-to-action, with Konnaxion, Orgo, Kristal, and related components.
+
+### Konnaxion
+- Public overview: https://initkoa.org/platforms/konnaxion
+- Journeys: https://initkoa.org/platforms/konnaxion/journeys
+- Technical foundations: https://initkoa.org/platforms/konnaxion/technical
+- Repository: https://github.com/Rejean-McCormick/Konnaxion
+
+The public journeys currently mark several flows as **Active**, including:
+
+- Learn → Validate → Certify
+- Discover → Deliberate → Draft
+- Vote → Compare Readings → Publish Outcome
+- Plan → Execute → Preserve
+
+The curated-commons flow is explicitly marked **TBD**. The GitHub README also states that Konnaxion remains in active development and is not yet exposed as a public demo instance.
+
+### Current public context-pack versions
+https://initkoa.org/technology/context-packs
+
+As listed publicly on 2026-08-17:
+
+| System | Public context-pack version |
+|---|---:|
+| Kristal | 5.0 |
+| Konnaxion | 14.0 |
+| Orgo | 3.0 |
+| SenTient | 1.0 |
+| SemantiK Architect | 2.5 |
+| kOA Digital Ecosystem | 1.0 |
+
+### kOA-Linux
+- Repository: https://github.com/Rejean-McCormick/kOA-Linux
+- Supplied documentation changelog: `kOA-Linux/docs/CHANGELOG.md`
+
+The supplied source corpus records documentation release **1.1.0 (2026-08-06)**, after the 1.0.0 governance foundation release on 2026-08-03. The documentation defines explicit authority, conformance, security controls, portability, rollback, recovery, profile separation, critical transition receipts, and component boundaries.
+
+## 3. What can be claimed safely
+
+The evidence supports saying that kOA is:
+
+- a substantial, multi-repository sociotechnical architecture;
+- documented through public repositories, wikis, technical specifications, schemas, and context packs;
+- implemented to varying degrees across Konnaxion, Orgo, Kristal, SemantiK, kOA-Linux, and related systems;
+- actively developed and increasingly integrated;
+- already explicit about authority, provenance, lifecycle, portability, institutional memory, and capability-related workflows;
+- explicit in Kristal v5 about portable **AI-ready**, queryable epistemic artifacts that may contain hypotheses, claims, disputed positions, research material, and technical declarations before final recognition;
+- explicit in the Kristal × Architect integration contract about deterministic target-language rendering that preserves validation, authority, certainty, scope, and disputed status.
+
+## 4. What should not be claimed without additional proof
+
+Avoid saying that:
+
+- every module is production-complete;
+- every documented invariant is fully enforced in deployed code;
+- the complete ecosystem has already been validated at institutional scale;
+- the architecture empirically proves its social theory;
+- all concepts were first formulated two years ago unless timestamped evidence is assembled;
+- Kristal constitutes a patent application, patent-office filing, legal registration, or guarantee of patent priority;
+- public publication of a patent-sensitive Kristal is harmless to patentability across jurisdictions;
+- deterministic multilingual rendering by itself proves semantic equivalence or scientific validity across every supported language.
+
+## 5. Why the limitation strengthens the research proposal
+
+The research value does not depend on claiming a finished universal platform. It depends on a more defensible proposition:
+
+> Building a sufficiently complex, partially implemented sociotechnical system forced a set of distinctions to become explicit. Those distinctions now generate hypotheses that can be tested in a domain independent of the architecture.
+
+
+================================================================================================
+FILE: docs/11-conceptual-foundations.md
+================================================================================================
+
+# 11 — Conceptual Foundations and Public Design Lineage
+
+## 1. Purpose of this document
+
+This dossier is primarily a research proposition grounded in documented kOA architecture and external literature. A parallel body of public essays by Réjean McCormick helps explain **why the architecture was built this way** and how its components fit together conceptually.
+
+These essays should be treated as:
+
+- **conceptual foundations**;
+- **design rationale**;
+- **public intellectual lineage**;
+- evidence that the ideas have been articulated as a connected program.
+
+They should **not** be treated as independent empirical validation of the claims in this dossier. External evidence remains the role of the scholarly literature, project sources, standards, and empirical fieldwork.
+
+## 2. Core Science Silk Road sequence
+
+The most relevant essays form a coherent progression:
+
+```text
+Knowledge Peacebuilding
+        │
+        ▼
+knowledge cooperation as a nonviolent common ground
+        │
+        ▼
+Knowledge Has Left the Temple
+        │
+        ▼
+knowledge production extends beyond institutional monopolies
+        │
+        ▼
+Kristal
+        │
+        ▼
+portable, structured, provenance-preserving epistemic artifacts
+        │
+        ▼
+Semantic Web / semantic architecture
+        │
+        ▼
+meaning can travel across languages and technical systems
+        │
+        ▼
+Artificial Intelligences Need the World's Manuals
+        │
+        ▼
+knowledge should be usable by machines as well as humans
+        │
+        ▼
+SmartVote / sociotechnical governance
+        │
+        ▼
+quality, expertise, legitimacy, and discovery require governance
+        │
+        ▼
+Konnaxion → Orgo
+        │
+        ▼
+knowledge can become coordinated, accountable action
+```
+
+For the Science Silk Road, this sequence suggests that scientific cooperation can be studied not only as the movement of people, funding, equipment, papers, and datasets, but also as the movement of **structured epistemic objects that preserve provenance, uncertainty, authority, language independence, and machine readability**.
+
+## 3. Tier I — Core conceptual foundations
+
+### 3.1 Knowledge Peacebuilding: Building Peace Through Knowledge and Cooperation
+
+https://medium.com/@boatbuilder610/knowledge-peacebuilding-building-peace-through-knowledge-and-cooperation-a05ee980d068
+
+**Science Silk Road relevance:** foundational purpose.
+
+This essay provides the broadest normative motivation for the Science Silk Road connection: knowledge cooperation can create a domain of nonviolent, practical collaboration even when political systems, institutions, and national interests do not fully converge.
+
+For this dossier, the useful proposition is not that science automatically produces peace. It is the narrower research question:
+
+> **Under what institutional and technical conditions can shared knowledge production create durable channels of cooperation across political boundaries?**
+
+This framing keeps the peacebuilding idea empirically testable rather than treating it as a presumed outcome.
+
+### 3.2 Kristal: the next infrastructure layer for reliable knowledge — and for developing knowledge
+
+https://medium.com/@boatbuilder610/kristal-the-next-infrastructure-layer-for-reliable-knowledge-and-for-developing-knowledge-556f2926db51
+
+**Science Silk Road relevance:** core exchange primitive.
+
+Kristal supplies the concrete object that can move through a transnational knowledge network: a structured artifact carrying claims, provenance, certainty, evidence, authority references, lineage, and status.
+
+Its relevance is strongest for **developing knowledge**: hypotheses, theories, disputed claims, research material, technical declarations, and invention disclosures can be represented before they become final publications or institutionally recognized facts.
+
+This directly supports the dossier's distinction:
+
+```text
+portable epistemic record
+≠ validated fact
+≠ institutional recognition
+≠ patent right
+```
+
+### 3.3 From the First Spoken Words to the Semantic Web
+
+https://medium.com/@boatbuilder610/from-the-first-spoken-words-to-the-semantic-web-how-humanity-built-knowledge-networks-that-can-a36577c88f68
+
+**Science Silk Road relevance:** semantic and multilingual portability.
+
+The article places semantic infrastructure in a longer history of attempts to make meaning portable across people, languages, documents, and networks. That is directly relevant to scientific cooperation in which the same research object may need to be inspected in Chinese, English, French, Arabic, or other languages without silently changing its epistemic status.
+
+Within kOA, the architectural interpretation is:
+
+```text
+Kristal = structured epistemic meaning and provenance
+SemantiK Architect = deterministic language rendering
+semantic identifiers / resolution = stable conceptual reference
+```
+
+The research question is whether this separation between **meaning structure** and **language rendering** can reduce translation loss and integration friction in real scientific collaborations.
+
+### 3.4 Artificial Intelligences Need the World's Manuals
+
+https://medium.com/@boatbuilder610/artificial-intelligences-need-the-worlds-manuals-06e8b53dff3e
+
+**Science Silk Road relevance:** AI-readable operational knowledge.
+
+Scientific capability does not live only in journal articles. It also lives in manuals, procedures, calibration knowledge, maintenance practice, troubleshooting paths, local adaptations, and operational documentation.
+
+This essay supports an important extension of the dossier: a Science Silk Road concerned with capability formation should examine whether **operational knowledge is portable and machine-usable**, not merely whether papers and datasets are accessible.
+
+Kristal's AI-ready structure provides one candidate mechanism for making such knowledge queryable without stripping away provenance and epistemic status.
+
+### 3.5 Knowledge Has Left the Temple
+
+https://medium.com/@boatbuilder610/knowledge-has-left-the-temple-c2592e7ee8b2
+
+**Science Silk Road relevance:** distributed contribution and legitimacy.
+
+The relevant tension is between two facts:
+
+1. valuable knowledge can originate outside established institutions;
+2. scientific legitimacy cannot be reduced to unrestricted publication or popularity.
+
+This makes the article especially relevant to the Kristal model. A researcher, student, technician, local operator, or independent contributor can create a traceable epistemic object without requiring that the object be treated as validated merely because it exists.
+
+The Science Silk Road question becomes:
+
+> **Can transnational infrastructures widen who can contribute knowledge while preserving meaningful mechanisms of review, authority, provenance, and contestation?**
+
+### 3.6 Konnaxion and Orgo: Starting from the Core
+
+https://medium.com/@boatbuilder610/konnaxion-and-orgo-routing-knowledge-and-action-f6092dc0594d
+
+**Science Silk Road relevance:** knowledge-to-action continuity.
+
+Scientific cooperation does not end when information is exchanged. Findings may trigger review, funding decisions, maintenance, procurement, policy changes, new experiments, training, or joint projects.
+
+Konnaxion and Orgo make this transition explicit:
+
+```text
+knowledge / signal
+→ discovery and evaluation
+→ legitimate decision
+→ accountable work
+→ result / evidence
+→ institutional memory
+```
+
+For Science Silk Road research, this provides a way to ask how transnational knowledge becomes operational capacity rather than remaining a disconnected output.
+
+## 4. Tier II — Architectural and governance support
+
+### 4.1 SmartVote: A Governance-Grade “Like” That Surfaces the Best Work in Konnaxion
+
+https://medium.com/@boatbuilder610/smartvote-a-governance-grade-like-that-surfaces-the-best-work-in-konnaxion-9110973383e4
+
+**Use in the dossier:** discovery, review, and epistemic signaling.
+
+Open knowledge networks create a ranking problem: high visibility is not the same as high quality, and raw popularity is not the same as domain expertise. SmartVote is relevant as a design exploration of baseline participation plus expertise-sensitive endorsement.
+
+It should be presented as a **governance mechanism to investigate**, not as a validated scientific-review system.
+
+### 4.2 Sociotechnical Operating Systems: When Collective Intelligence Becomes Executable
+
+https://medium.com/@boatbuilder610/sociotechnical-operating-systems-when-collective-intelligence-becomes-executable-d5d116a177e3
+
+**Use in the dossier:** system-level framing.
+
+This concept helps explain why kOA is not merely a publishing platform or repository. The architecture attempts to connect knowledge, authority, decision, execution, evidence, and memory into a persistent operating environment.
+
+For Science Silk Road, the useful question is whether research infrastructures should be analyzed as **sociotechnical operating systems** whose technical rules and institutional authority structures jointly shape capability.
+
+### 4.3 A Real Architecture Mistaken for a Utopia
+
+https://medium.com/@boatbuilder610/a-real-architecture-mistaken-for-a-utopia-566a115668c8
+
+**Use in the dossier:** integration of the architectural components.
+
+This essay is useful as a map of the broader kOA architecture and the relation between semantic tools, knowledge artifacts, collective evaluation, coordination, and institutional memory.
+
+It can support the integrative loop:
+
+```text
+Know → Choose → Act → Remember → Know better
+```
+
+It should remain secondary to the repository documentation when making technical claims about current implementation.
+
+### 4.4 Why Education and Certification Should Not Be Monetized
+
+https://medium.com/@boatbuilder610/education-and-certification-should-not-be-monetized-ea7b80f88ed4
+
+**Use in the dossier:** access and capability reproduction.
+
+This article is relevant where the research examines whether scientific capability can reproduce itself through training, recognition, and access to learning. It supplies a normative design position in favor of minimizing economic barriers to learning and certification.
+
+It is supporting context, not a central Science Silk Road thesis.
+
+## 5. Tier III — Broader political and economic context
+
+The following essays belong to the larger worldview surrounding kOA, but should not lead the Science Silk Road dossier because they could shift the proposal from a focused study of scientific cooperation toward a general political-economic critique.
+
+### When Wealth Extraction Is Called Wealth Creation
+https://medium.com/@boatbuilder610/when-wealth-extraction-is-called-wealth-creation-4d8d52d7c05c
+
+Potential relevance: distribution of gains, extraction, and value capture in international partnerships.
+
+### The Democratic Illusion: The People Vote, Money Governs
+https://medium.com/@boatbuilder610/the-democratic-illusion-the-people-vote-money-governs-1b56fec52e9d
+
+Potential relevance: influence, authority, and the difference between formal participation and effective power.
+
+### Capitalism Needs a Counterweight
+https://medium.com/@boatbuilder610/capitalism-needs-a-counterweight-cb23bacd9125
+
+Potential relevance: institutional counterweights, solidarity, and protection against concentration of power.
+
+### Beyond the State: Media, Networks, Code, and the Fragmentation of Religious Power
+https://medium.com/@boatbuilder610/beyond-the-state-media-networks-code-and-the-fragmentation-of-religious-power-ecd4117096ca
+
+Potential relevance: how networks and code redistribute authority beyond formal state institutions.
+
+These may become useful if empirical Science Silk Road cases raise questions about value capture, platform power, non-state authority, or unequal bargaining capacity. They should otherwise remain background context.
+
+## 6. Recommended use in the submission
+
+The public essays are best used in three ways:
+
+1. **Conceptual lineage** — to show how the knowledge, semantic, governance, and action layers were developed as a connected architecture.
+2. **Design rationale** — to explain why certain technical features exist, especially provenance, explicit status, multilingual rendering, expertise-sensitive evaluation, and knowledge-to-action continuity.
+3. **Question generation** — to convert architectural propositions into falsifiable Science Silk Road research questions.
+
+They should not be used to claim that:
+
+- the Science Silk Road already operates according to kOA principles;
+- Kristal has been empirically proven superior to document-centric exchange;
+- semantic rendering eliminates political or linguistic disagreement;
+- open contribution automatically democratizes science;
+- scientific cooperation automatically produces peace.
+
+## 7. Condensed Science Silk Road proposition
+
+Taken together, the core essays support the following research-facing proposition:
+
+> **A Science Silk Road can be studied not only as a network through which scientific resources and outputs circulate, but as a possible transnational knowledge infrastructure in which developing knowledge can be represented as structured, provenance-preserving epistemic artifacts; rendered across languages; inspected by humans and AI systems; evaluated through explicit authority and expertise mechanisms; and connected to accountable cooperative action. The empirical question is whether such arrangements broaden scientific agency and durable capability without erasing uncertainty, local interpretation, institutional autonomy, or legitimate disagreement.**
+
+This proposition is intentionally stronger than a description of today's infrastructure and weaker than a claim of demonstrated effectiveness. It defines an architecture-informed research agenda.
+
+
+================================================================================================
+FILE: evidence/CHRONOLOGY_AND_PRIORITY.md
+================================================================================================
+
+# Chronology and Priority Protocol
+
+## Purpose
+
+The strongest form of the argument is not “I had the same idea first.” It is **independent convergence from a different problem-solving trajectory**. If priority is mentioned at all, it should be supported with reproducible evidence.
+
+## 1. Current limitation
+
+The supplied ZIP contains extensive current source material, but the embedded wiki `.git` directories are incomplete and cannot by themselves reconstruct full commit history. File extraction timestamps are also not reliable evidence of original authorship dates.
+
+Therefore, this dossier does **not yet establish** a two-year priority claim.
+
+## 2. Evidence hierarchy
+
+Use the strongest available evidence in this order:
+
+1. **Git commit hashes and timestamps** from the public repository history.
+2. **Tagged releases** and release notes.
+3. **Archived web pages** with verifiable capture dates.
+4. **Published DOI / repository deposits** with timestamps.
+5. **Signed or hashed exported documents** with independent storage timestamps.
+6. Local file metadata only as supporting evidence, never as primary proof.
+
+## 3. Public history anchors
+
+- Konnaxion: https://github.com/Rejean-McCormick/Konnaxion/commits/main/
+- kOA-Linux: https://github.com/Rejean-McCormick/kOA-Linux/commits/main/
+- Orgo: https://github.com/Rejean-McCormick/Orgo/commits/main/
+- Kristal Framework: https://github.com/Rejean-McCormick/kristal-framework/commits/main/
+- kOA Digital Ecosystem: https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem/commits/main/
+- SemantiK Architect: https://github.com/Rejean-McCormick/SemantiK_Architect/commits/main/
+
+## 4. Chronology table to complete
+
+| Concept | Earliest verifiable formulation | Commit / artifact | Implementation milestone | Later external convergence | Notes |
+|---|---|---|---|---|---|
+| Explicit authority separation | TBD | | | Ahlers / science governance | |
+| Provenance across transitions | TBD | | | Cheng / knowledge circulation & reproduction | |
+| Knowledge → decision → execution → memory loop | TBD | | | Science Silk Road impact architecture | |
+| Capability / competence evidence | TBD | | | Capacity-building literature | |
+| Portability / exit / reconfiguration | TBD | | | Dependency / infrastructure debates | |
+| Plural authority without flattened truth | TBD | | | Cheng / epistemic plurality | |
+| Institutional reproduction / continuity | TBD | | | Science-system durability | |
+
+## 5. Recommended scholarly wording
+
+Until the table is complete:
+
+> “I arrived independently at a convergent set of problems through system construction.”
+
+After strong timestamp verification:
+
+> “Several of these architectural formulations are documented in repositories predating the present Science Silk Road project. I treat this not as a priority claim over the underlying literatures, but as evidence that the convergence arose independently.”
+
+## 6. What not to claim
+
+Do not claim priority over broad concepts such as:
+
+- capacity building;
+- dependency;
+- provenance;
+- institutional memory;
+- systems theory;
+- sociotechnical systems;
+- knowledge infrastructures;
+- reproducibility;
+- modularity;
+- expert governance.
+
+The potentially distinctive object is the **specific integrated architecture and the transition logic it required**, not ownership of the underlying intellectual traditions.
+
+
+================================================================================================
+FILE: evidence/CLAIM_EVIDENCE_MATRIX.md
+================================================================================================
+
+# Claim–Evidence Matrix
+
+The purpose of this matrix is to keep the submission defensible. “Evidence” here means documentary support for what kOA currently specifies or implements; it does not prove the derived social-science hypothesis.
+
+| Dossier claim | Evidence in kOA corpus | Status of claim |
+|---|---|---|
+| kOA separates authority from execution | `kOA-Linux/docs/01-constitution/04-explicit-authority.md`; global invariants | **Directly documented** |
+| kOA treats critical transitions as auditable events | `kOA-Linux/docs/02-system/20-receipts-and-critical-transitions.md` | **Directly documented** |
+| kOA treats portability and credible exit as architectural concerns | `kOA-Linux/docs/01-constitution/11-portability-restore-and-exit.md`; operations portability doc | **Directly documented** |
+| kOA uses explicit capability modeling and degradation rules | `kOA-Linux/docs/02-system/06-capability-model.md`; `17-capability-degradation.md` | **Directly documented** |
+| Konnaxion links learning, validation, decision, execution, and preservation | https://initkoa.org/platforms/konnaxion/journeys | **Publicly documented; several journeys marked Active** |
+| Konnaxion does not collapse baseline voting into expertise-weighted reading | `Konnaxion/wiki/Smart-Vote.md`; public Konnaxion journeys | **Directly documented** |
+| EkoH/K-Port separates evidence sources, admissibility, and scoring authority | `K-Port/docs/00-ekoh-expertise-claims-app-alignment.md` | **Directly documented; K-Port doc is draft** |
+| Kristal preserves provenance, certainty, validation, authority, scope, and lineage | Kristal wiki / public Konnaxion overview | **Directly documented** |
+| Kristal can represent hypotheses, claims, scientific claims, technical declarations, and research material before final recognition | `kristal-framework/docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md`; `structured-epistemic-state.md` | **Directly documented** |
+| Kristal is designed as an AI-ready, queryable, portable epistemic artifact rather than free text | `kristal-framework/docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md` | **Directly documented** |
+| A working Kristal can exist before final recognition/validation | `kristal-framework/docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md`; `01-core-spec/structured-epistemic-state.md` | **Directly documented** |
+| SemantiK Architect renders structured meaning into target-language text with deterministic/multilingual goals | `SemantiK_Architect/wiki/What-SemantiK-Architect-Is.md`; Kristal `06-integration/architect-rendering-contract.md` | **Directly documented** |
+| Kristal can serve as an informal epistemic record for an invention disclosure, but not as a legal patent filing | Architectural interpretation + WIPO patent filing/public-disclosure guidance | **Bounded interpretation; not a patent-law function of Kristal** |
+| Public Medium essays document the conceptual lineage connecting knowledge peacebuilding, Kristal, semantic/multilingual exchange, AI-readable knowledge, governance, and action | `docs/11-conceptual-foundations.md`; Medium links in `references/LINKS.md` | **Authorial design rationale; not independent empirical evidence** |
+| Orgo converts signals and decisions into accountable cases/tasks and recurring review | `Orgo/wiki/Home.md` and v3 technical reference | **Directly documented** |
+| kOA architecture can generate a theory of capability trajectories | Derived from the above architecture | **Research interpretation** |
+| Capability gain and dependency can increase simultaneously | Not proved by kOA | **Research hypothesis** |
+| Capability reproduction predicts long-term durability better than training counts | Not proved by kOA | **Research hypothesis** |
+| Reconfiguration capacity is a stronger test than nominal ownership | Not proved by kOA | **Research hypothesis** |
+| kOA anticipated the Science Silk Road team's current theoretical concerns by two years | Requires timestamped historical evidence | **Do not claim yet as established fact** |
+
+## Recommended wording
+
+### Safe
+
+> “The kOA architecture independently formalized several problems—authority differentiation, provenance, transition evidence, continuity, portability, and institutional memory—that now intersect closely with the Science Silk Road research agenda.”
+
+### Requires chronology package
+
+> “These formulations predate specific 2025–2026 publications or project formulations.”
+
+Use the second only after completing `CHRONOLOGY_AND_PRIORITY.md` with verifiable timestamps.
+
+
+================================================================================================
+FILE: evidence/KOA_SOURCE_MAP.md
+================================================================================================
+
+# kOA Source Map
+
+This file maps the research claims in this dossier to the supplied kOA source archive and to current public documentation where available.
+
+## 1. Core architecture
+
+| Research concept | Supplied source | Public anchor |
+|---|---|---|
+| System of systems | `kOA-Linux/wiki/System-of-Systems.md`; `kOA-Linux/wiki/Home.md` | https://github.com/Rejean-McCormick/kOA-Linux/wiki |
+| Knowledge-to-action loop | `kOA-Linux/wiki/Knowledge-to-Action-Loop.md` | https://github.com/Rejean-McCormick/kOA-Linux/wiki/Knowledge-to-Action-Loop |
+| Institutional memory | `kOA-Linux/wiki/Institutional-Memory-and-Learning.md` | https://github.com/Rejean-McCormick/kOA-Linux/wiki/Institutional-Memory-and-Learning |
+| Societal / organizational continuity | `kOA-Linux/wiki/Societal-Outcomes.md` | https://github.com/Rejean-McCormick/kOA-Linux/wiki/Societal-Outcomes |
+
+## 2. Authority and transitions
+
+| Research concept | Supplied source | Public anchor |
+|---|---|---|
+| Explicit authority | `kOA-Linux/docs/01-constitution/04-explicit-authority.md` | https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/04-explicit-authority.md |
+| Global invariants | `kOA-Linux/docs/01-constitution/02-global-invariants.md` | https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/02-global-invariants.md |
+| Critical transition receipts | `kOA-Linux/docs/02-system/20-receipts-and-critical-transitions.md` | https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/20-receipts-and-critical-transitions.md |
+| Component separation | `kOA-Linux/docs/01-constitution/07-component-separation.md` | https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/07-component-separation.md |
+| Data authority and ownership | `kOA-Linux/docs/01-constitution/08-data-authority-and-ownership.md` | https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/08-data-authority-and-ownership.md |
+
+## 3. Capability, portability, and resilience
+
+| Research concept | Supplied source | Public anchor |
+|---|---|---|
+| Capability model | `kOA-Linux/docs/02-system/06-capability-model.md` | https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/06-capability-model.md |
+| Capability degradation | `kOA-Linux/docs/02-system/17-capability-degradation.md` | https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/17-capability-degradation.md |
+| Portability / restore / exit | `kOA-Linux/docs/01-constitution/11-portability-restore-and-exit.md` | https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/11-portability-restore-and-exit.md |
+| Operational portability / exit | `kOA-Linux/docs/08-operations/10-portability-and-exit.md` | https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/08-operations/10-portability-and-exit.md |
+| Offline continuity | `kOA-Linux/docs/01-constitution/09-offline-continuity.md` | https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/09-offline-continuity.md |
+| Backup / restore | `kOA-Linux/docs/08-operations/08-backup.md`; `09-restore.md` | https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/08-operations |
+
+## 4. Evidence and expertise
+
+| Research concept | Supplied source | Public anchor |
+|---|---|---|
+| Evidence ≠ scoring authority | `K-Port/docs/00-ekoh-expertise-claims-app-alignment.md` | Konnaxion public architecture: https://initkoa.org/platforms/konnaxion |
+| Structured claim evidence | `K-Port/docs/02-expertise-claim-evidence-model.md` | — |
+| Privacy / audit / contestability | `K-Port/docs/05-governance-privacy-and-audit.md` | — |
+| EkoH expertise + ethics ledger | `Konnaxion/wiki/EkoH.md` | https://github.com/Rejean-McCormick/Konnaxion/wiki/EkoH |
+| Smart Vote readings | `Konnaxion/wiki/Smart-Vote.md` | https://github.com/Rejean-McCormick/Konnaxion/wiki/Smart-Vote |
+
+## 5. Knowledge artifacts and plural authority
+
+| Research concept | Supplied source | Public anchor |
+|---|---|---|
+| Portable epistemic artifacts | `kristal-framework/wiki/What-is-Kristal.md`; `Artifacts.md` | https://github.com/Rejean-McCormick/kristal-framework |
+| Provenance / validation / authority metadata | `kristal-framework/wiki/Artifacts.md` | https://github.com/Rejean-McCormick/kristal-framework/wiki/Artifacts |
+| Authority registries | `kristal-framework/wiki/Artifact-Authority-Registry.md` | https://github.com/Rejean-McCormick/kristal-framework/wiki/Artifact-Authority-Registry |
+| Plural authority / disagreement preservation | `kristal-framework/wiki/Concepts-and-Mental-Model.md`; Konnaxion public overview | https://initkoa.org/platforms/konnaxion |
+| Determinism / identity | `kristal-framework/wiki/Identity-and-Determinism.md` | https://github.com/Rejean-McCormick/kristal-framework/wiki/Identity-and-Determinism |
+| Hypotheses / claims / scientific assertions as explicit states | `kristal-framework/docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md` | https://github.com/Rejean-McCormick/kristal-framework/tree/main/docs/Technical-Reference/kristal-docs-v5/01-core-spec |
+| Structured research material before final recognition | `kristal-framework/docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md` | https://github.com/Rejean-McCormick/kristal-framework/tree/main/docs/Technical-Reference/kristal-docs-v5/01-core-spec |
+| AI-ready / queryable / exchange-oriented Kristal role | `kristal-framework/docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md` | https://github.com/Rejean-McCormick/kristal-framework/tree/main/docs/Technical-Reference/kristal-docs-v5/00-overview |
+
+## 6. Execution and organizational learning
+
+| Research concept | Supplied source | Public anchor |
+|---|---|---|
+| Cases / tasks / routing / accountability | `Orgo/wiki/Home.md` and technical reference | https://github.com/Rejean-McCormick/Orgo |
+| Cyclic review / pattern detection | `Orgo/wiki/Home.md`; `Orgo/docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md` | https://github.com/Rejean-McCormick/Orgo |
+| Plan → Execute → Preserve | Konnaxion public journeys | https://initkoa.org/platforms/konnaxion/journeys |
+
+## 7. Semantic and linguistic plurality
+
+| Research concept | Supplied source | Public anchor |
+|---|---|---|
+| Semantic sovereignty | `kOA-Linux/wiki/Semantic-Sovereignty.md` | https://github.com/Rejean-McCormick/kOA-Linux/wiki/Semantic-Sovereignty |
+| Multilingual operation | `kOA-Linux/wiki/Multilingual-Operation.md` | https://github.com/Rejean-McCormick/kOA-Linux/wiki/Multilingual-Operation |
+| Deterministic multilingual rendering | `SemantiK_Architect/wiki/Home.md` and technical docs | https://github.com/Rejean-McCormick/SemantiK_Architect |
+| Language-independent meaning → multilingual text | `SemantiK_Architect/wiki/What-SemantiK-Architect-Is.md`; `Conceptual-Flow-Meaning-to-Text.md` | https://github.com/Rejean-McCormick/SemantiK_Architect/wiki |
+| Kristal → Architect rendering with epistemic labels preserved | `kristal-framework/docs/Technical-Reference/kristal-docs-v5/06-integration/architect-rendering-contract.md` | https://github.com/Rejean-McCormick/kristal-framework/tree/main/docs/Technical-Reference/kristal-docs-v5/06-integration |
+
+## 8. Current version anchors
+
+- Public context packs: https://initkoa.org/technology/context-packs
+- kOA-Linux supplied documentation changelog: `kOA-Linux/docs/CHANGELOG.md`
+- Konnaxion repo: https://github.com/Rejean-McCormick/Konnaxion
+- kOA-Linux repo: https://github.com/Rejean-McCormick/kOA-Linux
+
+
+================================================================================================
+FILE: LINK_CHECK.md
+================================================================================================
+
+# Internal Link Check
+
+All internal relative links resolve.
+
+
+================================================================================================
+FILE: MANIFEST.md
+================================================================================================
+
+# Repository Manifest
+
+## Submission-facing files
+
+- `README.md`
+- `SUBMISSION_NOTE.md`
+- `docs/01-core-thesis.md`
+- `docs/02-theory-from-construction.md`
+- `docs/03-science-silk-road-fit.md`
+- `docs/04-capability-trajectories.md`
+- `docs/05-authority-provenance-transitions.md`
+- `docs/06-dialogue-han-cheng.md`
+- `docs/07-dialogue-anna-ahlers.md`
+- `docs/08-dialogue-hang-zhou.md`
+- `docs/09-research-design.md`
+- `docs/10-current-system-status.md`
+- `docs/11-conceptual-foundations.md`
+- `evidence/CLAIM_EVIDENCE_MATRIX.md`
+- `evidence/KOA_SOURCE_MAP.md`
+- `evidence/CHRONOLOGY_AND_PRIORITY.md`
+- `references/SELECTED_BIBLIOGRAPHY.md`
+- `references/LINKS.md`
+
+## Design choices
+
+- English is used because the target team is international and the project operates across Berlin and Québec.
+- The dossier distinguishes documented implementation, research interpretation, and empirical hypothesis.
+- The public status section deliberately avoids claiming full production readiness.
+- Chronological priority is treated as unproven until commit-level evidence is assembled.
+- “Knowledge sovereignty” and “civilizational capability” are not used as the primary framing because they introduce unnecessary normative assumptions.
+- The main analytical terms are **capability trajectory**, **capability–dependency configuration**, **functional distribution of authority**, **institutional reproduction**, and **reconfiguration capacity**.
+- Kristal is framed as an **informal epistemic record / invention-disclosure format**, never as an informal patent office or substitute for legal patent filing.
+- The Kristal + SemantiK proposition is presented as a **structured, AI-ready, multilingual knowledge-exchange architecture** to be empirically investigated, not as an already proven global science infrastructure.
+- Medium essays are catalogued as **conceptual foundations / design rationale**, with a strict separation from external empirical evidence.
+
+
+================================================================================================
+FILE: OUTREACH_EMAIL.md
+================================================================================================
+
+# Outreach Email — Science Silk Road
+
+**To:** Han Cheng `<hcheng@mpiwg-berlin.mpg.de>`; Hang Zhou `<hang.zhou@pol.ulaval.ca>`  
+**Cc:** Anna Lisa Ahlers `<office-ahlers@mpiwg-berlin.mpg.de>`  
+**Subject:** Koali — an implemented architecture for the problem behind the Science Silk Road
+
+---
+
+Anna Lisa Ahlers, Han Cheng, Hang Zhou,
+
+I am following up with a more explicit formulation of why I am contacting you.
+
+The convergence between the Science Silk Road project and my work on **Koali** is not accidental. We are responding, from different directions, to the same structural transformation.
+
+As knowledge production becomes increasingly distributed across institutions, infrastructures, jurisdictions, technologies, and communities, a predictable set of problems follows: knowledge must cross organizational boundaries; expertise must be distinguished from authority; evidence must remain traceable; decisions must become executable; institutional learning must survive personnel turnover; and capabilities created through cooperation must be maintainable, transmissible, and reconfigurable rather than remaining permanently dependent on their original source.
+
+I identified this problem two years ago and built Koali around it.
+
+Koali is not a speculative framework. It is a sociotechnical architecture that is substantially designed and implemented, and is approaching functional deployment. Its purpose is broader than scientific cooperation: it addresses the general problem of transforming distributed knowledge and competence into durable collective agency and cumulative future capability.
+
+The architecture follows the full chain:
+
+**source → knowledge → interpretation → learning → competence → contribution → deliberation → judgment → decision → mandate → execution → result → evidence → memory → new capability**
+
+Making that chain operational required explicit separation of concepts that are often compressed together:
+
+**Evidence ≠ Advice**  
+**Advice ≠ Authority**  
+**Expertise ≠ Decision Authority**  
+**Decision ≠ Execution**  
+**Output ≠ Outcome ≠ Learning ≠ Capability Gain**  
+**Access ≠ Mastery**  
+**Training ≠ Capability Reproduction**  
+**Repository Clone ≠ Functional Reproduction**
+
+This is why I consider Koali relevant to the Science Silk Road at a deeper level than thematic overlap.
+
+Your project examines how China’s expanding scientific and technological cooperation is reorganizing knowledge production, infrastructure, institutions, and international scientific relations.
+
+Koali addresses the underlying systems problem:
+
+> **How does knowledge, infrastructure, or expertise actually become a durable capability in another institutional context—and under what conditions can that capability later be maintained, transmitted, modified, and reproduced?**
+
+For scientific cooperation, the relevant trajectory is not simply:
+
+**technology transfer → capacity building**
+
+but:
+
+**infrastructure → access → practice → competence → institutionalization → transmission → reproduction → reconfiguration**
+
+At every transition, authority and dependency can change.
+
+An institution may operate an instrument without being able to repair it.  
+It may analyze data without controlling access to them.  
+It may possess expertise without setting the research agenda.  
+It may receive extensive training without being able to train the next generation.  
+It may reproduce software without being able to reproduce the surrounding institutional capability.
+
+This produces a more precise empirical problem:
+
+> **Which scientific capabilities are actually being formed, where do they reside, which forms of authority accompany them, which dependencies are produced simultaneously, and can the resulting configuration survive and reconfigure itself when people, technologies, funding, or partners change?**
+
+Koali already treats these questions architecturally through provenance, differentiated authority, competence evidence, institutional memory, lifecycle continuity, modular composition, portability, and independent capability reproduction.
+
+The Science Silk Road is therefore not simply an application domain that happens to resemble Koali. It is one major empirical manifestation of a broader transformation that Koali was designed to address.
+
+This is not a mysterious convergence of unrelated ideas. The same historical pressures are making these questions unavoidable. Your work is theorizing and investigating that transformation in the global system of science. My work has approached it by asking what architecture is actually required for such systems to function without losing provenance, agency, institutional memory, contestability, or the capacity to become independently reproducible.
+
+Koali also extends beyond the immediate scope of scientific cooperation. The same architecture addresses capability formation and reproduction across education, institutional governance, software, technical production, collective decision-making, and the preservation of organizational knowledge.
+
+I have organized the architecture, the conceptual argument, the points of correspondence with your respective work, and a proposed empirical research programme here:
+
+**[GitHub repository URL]**
+
+The dossier also documents the development history of Koali so that the chronology and independent origin of these concepts can be assessed directly rather than taken on assertion.
+
+I would welcome a substantive discussion of the framework and of its potential contribution to the Science Silk Road programme.
+
+Best regards,
+
+**Réjean McCormick**  
+Québec, Canada  
+rejean.mccormick@initkoa.org
+
+
+================================================================================================
+FILE: README.md
+================================================================================================
+
+# kOA × China’s Science Silk Road
+## A research dossier on scientific capability formation, authority, provenance, and institutional reproduction
+
+**Prepared by Réjean McCormick**  
+**Version:** 2026-08-17  
+**Audience:** Anna L. Ahlers, Han Cheng, Hang Zhou, and the *China’s Science Silk Road and the New Geopolitics of Knowledge Production* research team.
+
+---
+
+## Purpose
+
+This repository presents a research proposition emerging from an independent design trajectory: the construction of **kOA**, a modular sociotechnical architecture for moving from knowledge to legitimate action while preserving provenance, explicit authority, contestability, continuity, and institutional memory.
+
+The dossier does **not** claim that concepts such as capacity building, institutional memory, provenance, dependency, expertise, or distributed authority are new. Its narrower claim is that building kOA forced these concerns to be formalized together as **operational transition problems**. That architectural work generated research hypotheses that intersect unusually closely with the Science Silk Road project.
+
+The proposed academic question is therefore not “Is kOA a solution for the Science Silk Road?” It is:
+
+> **How do transnational scientific infrastructures form, distribute, institutionalize, and reproduce capabilities across partner organizations over time—and what configurations of authority and dependency emerge in the process?**
+
+Science Silk Road offers an external empirical domain in which these hypotheses can be tested, challenged, revised, or rejected.
+
+---
+
+## Short reading path
+
+### 10 minutes
+1. [Submission Note](SUBMISSION_NOTE.md)
+2. [Core Thesis](docs/01-core-thesis.md)
+3. [Science Silk Road Fit](docs/03-science-silk-road-fit.md)
+
+### 30–45 minutes
+4. [Theory from Construction](docs/02-theory-from-construction.md)
+5. [Capability Trajectories](docs/04-capability-trajectories.md)
+6. [Authority, Provenance, and Critical Transitions](docs/05-authority-provenance-transitions.md)
+7. [Research Design](docs/09-research-design.md)
+
+### Deep dive
+8. [Dialogue with Han Cheng](docs/06-dialogue-han-cheng.md)
+9. [Dialogue with Anna Lisa Ahlers](docs/07-dialogue-anna-ahlers.md)
+10. [Dialogue with Hang Zhou](docs/08-dialogue-hang-zhou.md)
+11. [Current kOA System Status](docs/10-current-system-status.md)
+12. [Claim–Evidence Matrix](evidence/CLAIM_EVIDENCE_MATRIX.md)
+13. [kOA Source Map](evidence/KOA_SOURCE_MAP.md)
+14. [Chronology and Priority Protocol](evidence/CHRONOLOGY_AND_PRIORITY.md)
+15. [Selected Bibliography](references/SELECTED_BIBLIOGRAPHY.md)
+16. [Conceptual Foundations and Public Design Lineage](docs/11-conceptual-foundations.md)
+17. [Relevant Links](references/LINKS.md)
+
+---
+
+## Core proposition in one diagram
+
+```text
+Scientific infrastructure / partnership
+                │
+                ▼
+      access + resources + standards
+                │
+                ▼
+      situated scientific practice
+                │
+                ▼
+  capability formation across functions
+                │
+                ├── operate
+                ├── maintain
+                ├── validate / interpret
+                ├── adapt / modify
+                ├── govern / set agendas
+                ├── teach / transmit
+                └── reconfigure under change
+                │
+                ▼
+      institutionalization over time
+                │
+                ▼
+      capability reproduction
+                │
+                ├── continuity
+                ├── accumulated learning
+                └── new scientific agency
+
+At every transition:
+Who knows? Who can act? Who authorizes? Who owns the data?
+What evidence survives? What dependencies deepen or weaken?
+```
+
+
+---
+
+## Concrete knowledge-exchange proposition: Kristal
+
+One concrete implication of the kOA architecture for transnational science is that scientific knowledge does not need to wait until it becomes a paper, database release, or formally recognized result before it can be represented in a portable form.
+
+A **Kristal** can encode a working scientific object such as a research hypothesis, theory, claim, technical declaration, or invention disclosure as a structured epistemic artifact with explicit provenance, scope, certainty, status, authority references, evidence, and lineage. Kristal v5 explicitly separates artifact existence from validation and recognition, so an artifact can be structurally valid and shareable while its assertions remain explicitly labeled `hypothesis`, `claimed`, `sourced`, or `disputed`, or while the artifact itself remains under review, rather than being presented as established fact.
+
+```text
+research note / theory / hypothesis / invention disclosure
+                         │
+                         ▼
+             Structured Epistemic State
+                         │
+                         ▼
+              working Kristal artifact
+                         │
+          ┌──────────────┼──────────────┐
+          ▼              ▼              ▼
+      review /       query / AI     federation /
+     validation          use         distribution
+          │              │              │
+          └──────────────┼──────────────┘
+                         ▼
+              SemantiK Architect
+                         │
+                         ▼
+         deterministic multilingual rendering
+```
+
+This creates a possible **semantic exchange layer for science**: institutions can circulate structured knowledge objects across languages and technical environments without collapsing uncertainty, disagreement, provenance, or authority into undifferentiated prose. The Kristal documentation describes the format as **AI-ready** and queryable; SemantiK Architect provides language-independent-to-language rendering with deterministic multilingual goals.
+
+In this dossier, **semantic Kristal** is useful shorthand for this combined capability—Kristal as the structured epistemic object plus semantic resolution/rendering around it. It is **not** presented as a separate Kristal v5 artifact type.
+
+### Intellectual-property boundary
+
+A Kristal may document an **invention disclosure or pre-patent research record**, but it is **not** a patent application, patent-office filing, legal registration, or guarantee of patent priority. WIPO advises that public disclosure before filing can destroy novelty in many jurisdictions, subject to jurisdiction-specific exceptions or grace periods. Patent-sensitive Kristals should therefore be governed by appropriate confidentiality and reader/distribution policies until the relevant filing or disclosure decision has been made.
+
+- WIPO patent FAQ: https://www.wipo.int/en/web/patents/faq_patents
+- WIPO, *How to Protect Inventions through Patents*: https://www.wipo.int/en/web/patents/protection
+
+## Conceptual lineage: knowledge cooperation → semantic exchange → action
+
+A set of public essays documents the conceptual path behind the architecture. For this Science Silk Road dossier, the most relevant sequence is:
+
+```text
+Knowledge Peacebuilding
+→ Knowledge Has Left the Temple
+→ Kristal
+→ Semantic Web / SemantiK
+→ AI-readable operational knowledge
+→ expertise-sensitive governance
+→ Konnaxion → Orgo
+```
+
+The essays are treated as **design rationale and public conceptual lineage**, not as external empirical evidence. Their value is to show how the peacebuilding, open-contribution, structured-knowledge, multilingual, AI, governance, and action layers were conceived as parts of one system.
+
+See [Conceptual Foundations and Public Design Lineage](docs/11-conceptual-foundations.md) for the full mapping and all fourteen supplied Medium articles.
+
+## Current public anchors
+
+### Science Silk Road
+- Project website: https://sciencesilkroad.mpiwg-berlin.mpg.de/
+- MPIWG project page: https://www.mpiwg-berlin.mpg.de/research/projects/chinas-science-silk-road-and-new-geopolitics-knowledge-production
+- Anna Lisa Ahlers: https://www.mpiwg-berlin.mpg.de/people/alahlers
+- Han Cheng: https://www.mpiwg-berlin.mpg.de/people/hcheng
+- Hang Zhou: https://www.fss.ulaval.ca/notre-faculte/repertoire-du-personnel/hang-zhou
+- Lise Meitner Research Group: https://www.mpiwg-berlin.mpg.de/research/LMRG-china-science/about
+
+### kOA
+- Public hub: https://initkoa.org/
+- GitHub profile: https://github.com/Rejean-McCormick
+- Konnaxion: https://initkoa.org/platforms/konnaxion
+- Konnaxion journeys: https://initkoa.org/platforms/konnaxion/journeys
+- Konnaxion technical foundations: https://initkoa.org/platforms/konnaxion/technical
+- Context packs / current public versions: https://initkoa.org/technology/context-packs
+- kOA-Linux repository: https://github.com/Rejean-McCormick/kOA-Linux
+- Konnaxion repository: https://github.com/Rejean-McCormick/Konnaxion
+- Orgo repository: https://github.com/Rejean-McCormick/Orgo
+- Kristal Framework: https://github.com/Rejean-McCormick/kristal-framework
+- SemantiK Architect: https://github.com/Rejean-McCormick/SemantiK_Architect
+
+---
+
+## Scope note
+
+This repository separates three levels that should not be conflated:
+
+1. **Documented kOA architecture and implementation** — claims supported by public repositories, current documentation, or the supplied source archive.
+2. **Research interpretation** — concepts abstracted from that architecture, such as capability trajectories and functional distributions of authority.
+3. **Research hypotheses** — propositions to be tested empirically in the Science Silk Road context.
+
+The dossier intentionally avoids presenting kOA as proof that its derived theory is correct. Construction generates hypotheses; field research must test them.
+
+
+================================================================================================
+FILE: references/LINKS.md
+================================================================================================
+
+# Relevant Links
+
+## Science Silk Road / team
+
+- Project site — https://sciencesilkroad.mpiwg-berlin.mpg.de/
+- MPIWG project page — https://www.mpiwg-berlin.mpg.de/research/projects/chinas-science-silk-road-and-new-geopolitics-knowledge-production
+- Volkswagen Foundation grant announcement — https://www.mpiwg-berlin.mpg.de/news/volkswagen-foundation-grant-chinas-science-silk-road-and-new-geopolitics-knowledge-production
+- Anna Lisa Ahlers — https://www.mpiwg-berlin.mpg.de/people/alahlers
+- Han Cheng — https://www.mpiwg-berlin.mpg.de/people/hcheng
+- Hang Zhou — https://www.fss.ulaval.ca/notre-faculte/repertoire-du-personnel/hang-zhou
+- Hang Zhou research directory — https://www.ulaval.ca/la-recherche/repertoire-corps-professoral/hang-zhou
+- Lise Meitner Research Group — https://www.mpiwg-berlin.mpg.de/research/LMRG-china-science/about
+
+## kOA public presentation
+
+- Main hub — https://initkoa.org/
+- Konnaxion — https://initkoa.org/platforms/konnaxion
+- Konnaxion journeys — https://initkoa.org/platforms/konnaxion/journeys
+- Konnaxion technical foundations — https://initkoa.org/platforms/konnaxion/technical
+- KonnectED — https://initkoa.org/platforms/konnaxion/konnected
+- Context packs — https://initkoa.org/technology/context-packs
+- GitHub profile — https://github.com/Rejean-McCormick
+
+## Core repositories
+
+- Konnaxion — https://github.com/Rejean-McCormick/Konnaxion
+- kOA-Linux — https://github.com/Rejean-McCormick/kOA-Linux
+- Orgo — https://github.com/Rejean-McCormick/Orgo
+- Kristal Framework — https://github.com/Rejean-McCormick/kristal-framework
+- kOA Digital Ecosystem — https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem
+- SemantiK Architect — https://github.com/Rejean-McCormick/SemantiK_Architect
+- SenTient — https://github.com/Rejean-McCormick/SenTient
+- Konnaxion Capsule Manager — https://github.com/Rejean-McCormick/Konnaxion_Capsule_Manager
+
+## High-value kOA source documents
+
+- Global invariants — https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/02-global-invariants.md
+- Explicit authority — https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/04-explicit-authority.md
+- Portability, restore, exit — https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/11-portability-restore-and-exit.md
+- Capability model — https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/06-capability-model.md
+- Critical transition receipts — https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/20-receipts-and-critical-transitions.md
+- Institutional memory — https://github.com/Rejean-McCormick/kOA-Linux/wiki/Institutional-Memory-and-Learning
+- Semantic sovereignty — https://github.com/Rejean-McCormick/kOA-Linux/wiki/Semantic-Sovereignty
+- Konnaxion EkoH — https://github.com/Rejean-McCormick/Konnaxion/wiki/EkoH
+- Konnaxion Smart Vote — https://github.com/Rejean-McCormick/Konnaxion/wiki/Smart-Vote
+- Kristal artifacts — https://github.com/Rejean-McCormick/kristal-framework/wiki/Artifacts
+- Kristal authority registry — https://github.com/Rejean-McCormick/kristal-framework/wiki/Artifact-Authority-Registry
+
+
+## Kristal scientific-exchange / multilingual anchors
+
+- Kristal v5 ecosystem integration — https://github.com/Rejean-McCormick/kristal-framework/blob/main/docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md
+- Kristal v5 structured epistemic state — https://github.com/Rejean-McCormick/kristal-framework/blob/main/docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md
+- Kristal v5 assertion status and certainty — https://github.com/Rejean-McCormick/kristal-framework/blob/main/docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md
+- Kristal × Architect rendering contract — https://github.com/Rejean-McCormick/kristal-framework/blob/main/docs/Technical-Reference/kristal-docs-v5/06-integration/architect-rendering-contract.md
+- SemantiK Architect overview — https://github.com/Rejean-McCormick/SemantiK_Architect/wiki/What-SemantiK-Architect-Is
+
+## Patent / disclosure boundary
+
+- WIPO patent FAQ — https://www.wipo.int/en/web/patents/faq_patents
+- WIPO, *How to Protect Inventions through Patents* — https://www.wipo.int/en/web/patents/protection
+
+
+## Public conceptual foundations — Réjean McCormick / Medium
+
+### Core Science Silk Road relevance
+
+- Knowledge Peacebuilding: Building Peace Through Knowledge and Cooperation — https://medium.com/@boatbuilder610/knowledge-peacebuilding-building-peace-through-knowledge-and-cooperation-a05ee980d068
+- Kristal: the next infrastructure layer for reliable knowledge — and for developing knowledge — https://medium.com/@boatbuilder610/kristal-the-next-infrastructure-layer-for-reliable-knowledge-and-for-developing-knowledge-556f2926db51
+- From the First Spoken Words to the Semantic Web — https://medium.com/@boatbuilder610/from-the-first-spoken-words-to-the-semantic-web-how-humanity-built-knowledge-networks-that-can-a36577c88f68
+- Artificial Intelligences Need the World's Manuals — https://medium.com/@boatbuilder610/artificial-intelligences-need-the-worlds-manuals-06e8b53dff3e
+- Knowledge Has Left the Temple — https://medium.com/@boatbuilder610/knowledge-has-left-the-temple-c2592e7ee8b2
+- Konnaxion and Orgo: Starting from the Core — https://medium.com/@boatbuilder610/konnaxion-and-orgo-routing-knowledge-and-action-f6092dc0594d
+
+### Architectural / governance support
+
+- SmartVote: A Governance-Grade “Like” That Surfaces the Best Work in Konnaxion — https://medium.com/@boatbuilder610/smartvote-a-governance-grade-like-that-surfaces-the-best-work-in-konnaxion-9110973383e4
+- Sociotechnical Operating Systems: When Collective Intelligence Becomes Executable — https://medium.com/@boatbuilder610/sociotechnical-operating-systems-when-collective-intelligence-becomes-executable-d5d116a177e3
+- A Real Architecture Mistaken for a Utopia — https://medium.com/@boatbuilder610/a-real-architecture-mistaken-for-a-utopia-566a115668c8
+- Why Education and Certification Should Not Be Monetized — https://medium.com/@boatbuilder610/education-and-certification-should-not-be-monetized-ea7b80f88ed4
+
+### Broader political-economic context
+
+- When Wealth Extraction Is Called Wealth Creation — https://medium.com/@boatbuilder610/when-wealth-extraction-is-called-wealth-creation-4d8d52d7c05c
+- The Democratic Illusion: The People Vote, Money Governs — https://medium.com/@boatbuilder610/the-democratic-illusion-the-people-vote-money-governs-1b56fec52e9d
+- Capitalism Needs a Counterweight — https://medium.com/@boatbuilder610/capitalism-needs-a-counterweight-cb23bacd9125
+- Beyond the State: Media, Networks, Code, and the Fragmentation of Religious Power — https://medium.com/@boatbuilder610/beyond-the-state-media-networks-code-and-the-fragmentation-of-religious-power-ecd4117096ca
+
+For the role of each essay in the dossier, see `docs/11-conceptual-foundations.md`. These links document conceptual lineage; they are not substitutes for external scholarly evidence.
+
+
+================================================================================================
+FILE: references/SELECTED_BIBLIOGRAPHY.md
+================================================================================================
+
+# Selected Bibliography
+
+This is a focused reading list for the proposed dialogue. It is not intended as a complete literature review.
+
+## Han Cheng
+
+1. Cheng, Han. **“Global China’s spatial ambition and area studies with geography.”** *Transactions of the Institute of British Geographers* (2025).  
+   https://doi.org/10.1111/tran.70027
+
+2. Cheng, Han, and Weidong Liu. **“Geography, area studies and Chinese world-writing.”** *Progress in Human Geography* (2022).  
+   https://doi.org/10.1177/03091325221096179
+
+3. Cheng, Han, and Deen Sharp. **“Worlding geography, area studies and the study of area.”** *Transactions of the Institute of British Geographers* (2025).  
+   https://doi.org/10.1111/tran.70025
+
+4. Cheng, Han, and Weidong Liu. **“Temporality and the Geopolitical Enframing of Chinese International Development Thinking.”** *Geopolitics*.  
+   https://doi.org/10.1080/14650045.2022.2089563
+
+5. Cheng, Han, Emma Mawdsley, and Weidong Liu. **“Reading the Forum on China–Africa Cooperation (2000–2021): geoeconomics, governance, and embedding ‘creative involvement’.”** *Area Development and Policy*.  
+   https://doi.org/10.1080/23792949.2022.2092018
+
+6. Apostolopoulou, Elia, Han Cheng, Jonathan Silver, and Alan Wiig, eds. **The Material Geographies of the Belt and Road Initiative: Infrastructures and Political Ecologies on the New Silk Road.**  
+   Open access: https://library.oapen.org/handle/20.500.12657/108372
+
+## Anna Lisa Ahlers
+
+1. Ahlers, Anna L. **The Communist Party’s Steering of China’s Science, Technology, and Innovation System: Aspirations and Reality.** UC IGCC / MERICS (2024).  
+   https://ucigcc.org/publication/the-communist-partys-steering-of-chinas-science-technology-and-innovation-system-aspirations-and-reality/
+
+2. Ahlers, Anna L., and Stephanie Christmann-Budian. **“The Politics of University Rankings in China.”** *Higher Education* 86 (2023): 751–770.  
+   https://doi.org/10.1007/s10734-023-01014-y
+
+3. Ahlers, Anna L., and Yongdong Shen. **“Breathe Easy? Local Nuances of Authoritarian Environmentalism in China’s Battle Against Air Pollution.”** *The China Quarterly*.  
+   https://doi.org/10.1017/S0305741017001370
+
+4. Ahlers, Anna L., Damien Krichewsky, Evelyn Moser, and Rudolf Stichweh. **Democratic and Authoritarian Political Systems in 21st Century World Society.**  
+   https://doi.org/10.14361/9783839451267
+
+5. Ahlers, Anna L. **“Technocracy on the Ground: Cadre Competence, Expert Involvement, and Scientific Advice in China’s Local Governance.”** In *Handbook on Local Governance in China* (2023).  
+   Publisher: https://www.elgaronline.com/edcollchap/book/9781800883246/book-part-9781800883246-18.xml
+
+## Hang Zhou
+
+1. Zhou, Hang. **“Western and Chinese Development Engagements in Uganda’s Roads Sector: An Implicit Division of Labour.”** *African Affairs* (2022).  
+   https://doi.org/10.1093/afraf/adac005
+
+2. Zhou, Hang. **“Unbinding Global China: Fieldnotes from a West African fishing port.”** *Dialogues in Human Geography* (2025).  
+   https://doi.org/10.1177/20438206251388520
+
+3. Zhou, Hang. **“Provincial variations and entrepreneurialism in the development of China’s Distant Water Fisheries (2011–2020).”** *Marine Policy* (2023).  
+   https://doi.org/10.1016/j.marpol.2022.105344
+
+## Project-level sources
+
+- China’s Science Silk Road project: https://sciencesilkroad.mpiwg-berlin.mpg.de/
+- MPIWG project page: https://www.mpiwg-berlin.mpg.de/research/projects/chinas-science-silk-road-and-new-geopolitics-knowledge-production
+- Lise Meitner Research Group “China in the Global System of Science”: https://www.mpiwg-berlin.mpg.de/research/LMRG-china-science/about
+
+
+## Authorial conceptual foundations (not external evidence)
+
+The following public essays are included to document the design rationale and conceptual lineage of kOA. They should not be counted as independent scholarly support for the dossier's empirical claims.
+
+1. McCormick, Réjean. **“Knowledge Peacebuilding: Building Peace Through Knowledge and Cooperation.”** Medium.  
+   https://medium.com/@boatbuilder610/knowledge-peacebuilding-building-peace-through-knowledge-and-cooperation-a05ee980d068
+
+2. McCormick, Réjean. **“Kristal: the next infrastructure layer for reliable knowledge — and for developing knowledge.”** Medium.  
+   https://medium.com/@boatbuilder610/kristal-the-next-infrastructure-layer-for-reliable-knowledge-and-for-developing-knowledge-556f2926db51
+
+3. McCormick, Réjean. **“From the First Spoken Words to the Semantic Web.”** Medium.  
+   https://medium.com/@boatbuilder610/from-the-first-spoken-words-to-the-semantic-web-how-humanity-built-knowledge-networks-that-can-a36577c88f68
+
+4. McCormick, Réjean. **“Artificial Intelligences Need the World's Manuals.”** Medium.  
+   https://medium.com/@boatbuilder610/artificial-intelligences-need-the-worlds-manuals-06e8b53dff3e
+
+5. McCormick, Réjean. **“Knowledge Has Left the Temple.”** Medium.  
+   https://medium.com/@boatbuilder610/knowledge-has-left-the-temple-c2592e7ee8b2
+
+6. McCormick, Réjean. **“Konnaxion and Orgo: Starting from the Core.”** Medium.  
+   https://medium.com/@boatbuilder610/konnaxion-and-orgo-routing-knowledge-and-action-f6092dc0594d
+
+See `docs/11-conceptual-foundations.md` for the full fourteen-article relevance map.
+
+
+================================================================================================
+FILE: SUBMISSION_NOTE.md
+================================================================================================
+
+# Submission Note
+## From sociotechnical construction to an empirical research problem
+
+Dear Professors Ahlers, Cheng, and Zhou,
+
+I am writing because your project, *China’s Science Silk Road and the New Geopolitics of Knowledge Production*, intersects with a set of problems I reached independently from a different direction: not initially through the study of Chinese science, but through the design and implementation of a sociotechnical architecture called **kOA**.
+
+The Science Silk Road project asks how China’s expanding international cooperation in science, technology, and innovation is reshaping global knowledge production through new infrastructures, networks, and partnerships. Its official framing emphasizes multi-level effects on research, society, development, partner countries, established science powers, and international scientific cooperation:
+
+- https://sciencesilkroad.mpiwg-berlin.mpg.de/
+- https://www.mpiwg-berlin.mpg.de/research/projects/chinas-science-silk-road-and-new-geopolitics-knowledge-production
+
+While building kOA, I encountered a related but more general problem: **how capabilities survive transitions**.
+
+A document does not automatically become knowledge. Knowledge does not automatically become expertise. Expertise does not automatically become legitimate authority. A decision does not automatically become executable work. An output does not automatically become an outcome. An outcome does not automatically become organizational learning. Training does not automatically become mastery. Access to an infrastructure does not automatically become the capability to maintain, modify, transmit, or reconfigure it.
+
+Because kOA had to make such transitions operational, it formalized distinctions between evidence, validation, authority, execution, provenance, institutional memory, portability, and recovery. Examples are visible in the public architecture:
+
+- kOA-Linux constitutional invariants: https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/02-global-invariants.md
+- explicit authority model: https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/04-explicit-authority.md
+- portability, restore, and exit: https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/11-portability-restore-and-exit.md
+- capability model: https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/06-capability-model.md
+- receipts and critical transitions: https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/20-receipts-and-critical-transitions.md
+- Konnaxion journeys: https://initkoa.org/platforms/konnaxion/journeys
+
+One concrete example is **Kristal**, kOA's portable structured epistemic artifact model. Kristal v5 can represent hypotheses, scientific claims, research material, technical declarations, and disputed positions before final recognition while preserving provenance, certainty, scope, evidence, authority references, and lineage. Its documentation describes the format as AI-ready and queryable; paired with SemantiK Architect, the same structured meaning can be rendered into target-language text while retaining epistemic labels. This suggests a practical Science Silk Road question: whether cross-border scientific cooperation could exchange not only papers and datasets, but also structured, machine-readable, multilingual knowledge objects during earlier stages of research.
+
+An invention disclosure can be represented in that same structure, but this should not be confused with patent registration: a Kristal is not a patent-office filing or a substitute for patent law. Patent-sensitive artifacts may also require restricted distribution before filing because public disclosure can affect novelty.
+
+A parallel set of public essays documents the conceptual lineage behind this architecture: **Knowledge Peacebuilding** frames knowledge cooperation as a possible nonviolent common ground; **Knowledge Has Left the Temple** addresses contribution beyond institutional monopolies; **Kristal** provides the portable epistemic object; the semantic-web essay addresses meaning across languages; **Artificial Intelligences Need the World’s Manuals** extends the problem to machine-usable operational knowledge; and **Konnaxion and Orgo** connect knowledge to coordinated action. I treat these essays as design rationale and question-generating material, not as independent empirical evidence. They are mapped in `docs/11-conceptual-foundations.md`.
+
+This design trajectory leads to a research proposition that I believe complements, rather than duplicates, your project:
+
+> **How do transnational scientific infrastructures redistribute and reproduce the capabilities to operate, maintain, interpret, validate, adapt, govern, transmit, and reconfigure scientific activity across partner institutions over time?**
+
+A second question follows:
+
+> **What forms of dependency are co-produced with these capability gains, and under what conditions do those dependencies remain negotiable and reconfigurable rather than becoming rigid lock-in?**
+
+I use **capability trajectory** as the unit of analysis. Instead of treating a laboratory, country, or partnership as having a single level of “capacity,” the research would follow a scientific function across transitions: procurement → installation → training → routine use → failure → maintenance → modification → staff turnover → retraining → new research uses. At every step, the empirical questions are: who can act, who can authorize, who can interpret, what evidence persists, what knowledge is transmitted, and which dependencies become decisive?
+
+This creates specific points of dialogue with your work:
+
+- **Han Cheng:** geographies and politics of knowledge production, *world-writing*, infrastructure, situated knowledge, and the translation, circulation, and reproduction of knowledge.
+- **Anna Lisa Ahlers:** science systems, political steering, expertise, professional autonomy, evaluation regimes, and the coexistence of different forms of authority inside scientific organizations.
+- **Hang Zhou:** ethnographic attention to China–Africa relations, infrastructure, development cooperation, state capacity, bureaucratic practice, local agency, and the everyday operation of transnational projects.
+
+The aim is not to export kOA into the research setting as a normative model. It is to **extract falsifiable propositions from an architecture that has already had to formalize these problems**, then expose those propositions to external empirical cases where the actors, institutions, technologies, histories, and political conditions are not controlled by the architecture itself.
+
+This repository provides the conceptual bridge, the source evidence, and a proposed empirical design.
+
+Réjean McCormick  
+https://initkoa.org/  
+https://github.com/Rejean-McCormick

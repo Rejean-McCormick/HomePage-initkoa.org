@@ -1,0 +1,1133 @@
+# INITKOA CONTEXT PACK
+
+repository: Rejean-McCormick/partners-for-public-good_pressure-test-koali
+source_path: C:\mycode\PPG
+source_commit: edfc5e843aa5e92179925c07182854d1d1f5d485
+working_tree_markdown: clean
+generated_at: 2026-08-25T09:32:49-04:00
+files: 7
+content_sha256: f865ae6ed0102157b249f944f6b049baca0291160b5fe0075a45c10f93addd02
+
+================================================================================================
+FILE INDEX
+================================================================================================
+
+1. CLAIMS_UNDER_TEST.md
+2. PRESSURE_TEST.md
+3. QUESTIONS.md
+4. README.md
+5. SCOPE.md
+6. SOURCES.md
+7. WHY_PPG.md
+
+
+================================================================================================
+FILE: CLAIMS_UNDER_TEST.md
+================================================================================================
+
+# Claims Under Test
+
+
+> **Navigation:** [README](README.md) · [Scope](SCOPE.md) · [Why PPG](WHY_PPG.md) · [Claims](CLAIMS_UNDER_TEST.md) · [Pressure Test](PRESSURE_TEST.md) · [Questions](QUESTIONS.md) · [Sources](SOURCES.md)
+Koali is a large technical architecture.
+
+A pressure test becomes useful only when broad architectural language is translated into claims that can fail.
+
+The following claims are derived from the current Koali / `kOA-Linux` constitutional and system documentation.
+
+---
+
+## Claim 1 — Scope can remain broad without becoming universal
+
+Koali uses a global baseline plus profiles, overlays, optional capabilities, prohibited capabilities, and external integrations.
+
+### Claim
+
+A broad operating environment can support many deployment contexts **without silently turning repeated or convenient choices into universal requirements**.
+
+### This claim weakens if
+
+- most realistic government deployments converge on one huge mandatory profile;
+- profile composition requires specialist overhead greater than the problem it solves;
+- optional capabilities become practically mandatory through hidden dependencies;
+- profile conflicts are too frequent to administer.
+
+### Canonical areas
+
+- [Koali constitution](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/01-constitution) → `01-scope-and-non-goals.md`
+- [Koali profiles](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/03-profiles) → `00-profile-model.md`
+
+---
+
+## Claim 2 — Explicit authority can prevent silent authority transfer
+
+Koali requires authority to be attributable rather than inferred from implementation convenience.
+
+### Claim
+
+A heterogeneous environment can preserve a clear distinction between:
+
+- who requests;
+- who authorizes;
+- who executes;
+- who commits authoritative state;
+- who records evidence.
+
+### This claim weakens if
+
+- legal or institutional authority cannot be mapped without distorting real practice;
+- staff must constantly bypass the model to exercise legitimate discretion;
+- integrations routinely require undeclared authority;
+- formal authority mapping creates more ambiguity than it removes.
+
+### Canonical areas
+
+- [Koali constitution](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/01-constitution) → `04-explicit-authority.md`
+- [Koali system docs](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/02-system) → `20-receipts-and-critical-transitions.md`
+
+---
+
+## Claim 3 — Component separation can coexist with useful integration
+
+Koali keeps logical responsibility and data ownership separated even when components share infrastructure or communicate.
+
+### Claim
+
+Systems can integrate without one component silently becoming the owner of another component's state or authority.
+
+### This claim weakens if
+
+- separation causes excessive duplication;
+- handoffs become operational bottlenecks;
+- common government platforms cannot fit the boundary model;
+- practical integration repeatedly requires cross-component ownership violations.
+
+### Canonical areas
+
+- [Koali constitution](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/01-constitution) → `07-component-separation.md`
+- [Koali system docs](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/02-system) → `04-component-boundaries.md`
+- [Koali system docs](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/02-system) → `07-cross-component-communication.md`
+
+---
+
+## Claim 4 — External integrations can remain genuinely removable
+
+Koali treats external integrations as bounded, capability-scoped, and removable unless an explicit profile says otherwise.
+
+### Claim
+
+An external vendor, cloud service, AI provider, or application can fail or be removed **without automatically collapsing unrelated core capabilities**.
+
+### This claim weakens if
+
+- removing a common provider makes the deployment practically unusable;
+- migration requires hidden proprietary state;
+- the cost of maintaining abstraction boundaries exceeds the lock-in avoided;
+- external systems become de facto authority despite formal classification.
+
+### Canonical areas
+
+- [Koali constitution](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/01-constitution) → `01-scope-and-non-goals.md`
+- [Koali system docs](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/02-system) → `16-external-integrations.md`
+- [Koali profiles](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/03-profiles) → `00-profile-model.md`
+
+---
+
+## Claim 5 — AI can assist without becoming hidden authority
+
+Koali's native baseline does not require generative AI, and approved external AI surfaces remain bounded candidate-input mechanisms.
+
+### Claim
+
+Useful AI assistance can coexist with an institutional core that does not silently treat model output as authoritative state.
+
+### This claim weakens if
+
+- practical government AI workflows require direct model authority to be useful;
+- acceptance boundaries create intolerable workload;
+- non-AI fallback behavior is too weak to matter;
+- provenance and data-transfer controls are too difficult for normal operations.
+
+### Canonical areas
+
+- [Koali system docs](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/02-system) → `09-ai-boundary.md`
+- [Koali system docs](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/02-system) → `10-external-ai-surfaces.md`
+- [Koali governance docs](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/00-governance) → `07-ai-read-write-protocol.md`
+
+---
+
+## Claim 6 — Critical-transition receipts improve reconstructibility without creating a panopticon
+
+Koali requires receipts for defined critical transitions while excluding routine reads and ordinary navigation by default.
+
+### Claim
+
+Important institutional transitions can be reconstructed later **without logging every ordinary action or centralizing underlying authority in the audit layer**.
+
+### This claim weakens if
+
+- receipt generation is too administratively expensive;
+- the line between critical and ordinary events is ungovernable;
+- privacy / records obligations make receipts unusable;
+- the audit system becomes a de facto central authority;
+- staff cannot understand the resulting evidence.
+
+### Canonical areas
+
+- [Koali system docs](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/02-system) → `20-receipts-and-critical-transitions.md`
+- [Koali constitution](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/01-constitution) → `10-selective-audit-and-recourse.md`
+
+---
+
+## Claim 7 — Safe degradation and offline continuity are operationally meaningful
+
+Koali distinguishes total failure from capability-scoped degradation and supports stronger local/offline requirements in relevant profiles.
+
+### Claim
+
+A deployment can lose an external capability while preserving unrelated valid local authority and functions.
+
+### This claim weakens if
+
+- real government dependencies make local continuity illusory;
+- offline-capable operation is too expensive to maintain;
+- degraded modes create unsafe or confusing partial states;
+- only rare high-assurance environments benefit.
+
+### Canonical areas
+
+- [Koali constitution](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/01-constitution) → `06-safe-degradation.md`
+- [Koali constitution](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/01-constitution) → `09-offline-continuity.md`
+- [Koali system docs](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/02-system) → `17-capability-degradation.md`
+- [Koali profiles](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/03-profiles) → `12-sovereign-offline.md`
+
+---
+
+## Claim 8 — Exit can be an architectural property rather than a promise
+
+Koali treats portability, restoration, migration, and exit as constitutional concerns.
+
+### Claim
+
+An institution can preserve meaningful data, authority records, and operational continuity while replacing or abandoning components.
+
+### This claim weakens if
+
+- export formats are technically portable but operationally useless;
+- restore cannot reproduce authoritative state;
+- migration loses provenance or decision context;
+- replacement requires the original component to interpret its own history;
+- the cost of exit remains equivalent to conventional lock-in.
+
+### Canonical areas
+
+- [Koali constitution](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/01-constitution) → `11-portability-restore-and-exit.md`
+
+---
+
+# The pressure-test standard
+
+The goal is not to prove all eight claims at once.
+
+A serious institutional review can destroy, narrow, or substantially revise any one of them.
+
+That is progress.
+
+> **A Koali claim that survives only because the test was designed to confirm it has not been pressure-tested.**
+
+
+================================================================================================
+FILE: PRESSURE_TEST.md
+================================================================================================
+
+# Proposed Pressure Test
+## Government technology environment, not a Koali showcase
+
+
+> **Navigation:** [README](README.md) · [Scope](SCOPE.md) · [Why PPG](WHY_PPG.md) · [Claims](CLAIMS_UNDER_TEST.md) · [Pressure Test](PRESSURE_TEST.md) · [Questions](QUESTIONS.md) · [Sources](SOURCES.md)
+This document proposes a method, not a predetermined pilot.
+
+The test should begin from an existing government workflow and constraints, then ask whether Koali can represent them without forcing them into a Koali-shaped answer.
+
+---
+
+## Stage 1 — Start with the institution
+
+Before selecting any Koali subsystem, capture the environment as it already exists.
+
+At minimum:
+
+### Authority
+
+- Who can recommend?
+- Who can approve?
+- Who can sign?
+- Who can execute?
+- Which decisions are legally authoritative?
+- Which records are legally authoritative?
+
+### Systems
+
+- identity provider;
+- procurement platform;
+- document / records systems;
+- ERP / finance;
+- ticketing or case management;
+- project / workflow systems;
+- cloud services;
+- vendor systems;
+- AI services.
+
+### Data
+
+- public;
+- internal;
+- confidential;
+- regulated;
+- resident data;
+- vendor-confidential data;
+- records subject to retention or legal hold.
+
+### Operational constraints
+
+- staffing;
+- procurement timelines;
+- connectivity;
+- legacy dependencies;
+- security requirements;
+- recovery expectations;
+- vendor contracts;
+- acceptable downtime.
+
+The first Koali test is whether the architecture can **accept this reality without redefining it unnecessarily**.
+
+---
+
+## Stage 2 — Express the environment as a Koali test composition
+
+This repository should not create a new canonical Koali profile.
+
+For the pressure test, construct a provisional composition that classifies capabilities as:
+
+- required;
+- optional;
+- conditional;
+- prohibited;
+- external integration only;
+- not applicable.
+
+Then map:
+
+- component responsibility;
+- authoritative data ownership;
+- cross-component communication;
+- policy and legal authority;
+- AI surfaces;
+- offline requirements;
+- safe degradation;
+- critical transitions;
+- evidence / receipt requirements;
+- restore and exit paths.
+
+The test is not "Can Koali turn everything on?"
+
+It is:
+
+> **Can Koali express what should remain off, external, separate, or independently authoritative?**
+
+---
+
+## Stage 3 — Use an actual technology lifecycle
+
+A useful candidate is the lifecycle of a government technology or AI purchase:
+
+**need → evaluation → procurement → decision → implementation → operation → vendor management → renewal / replacement → institutional learning**
+
+This naturally introduces cross-functional and vendor boundaries.
+
+Selected independently governed systems may be used if the real workflow benefits from them:
+
+- [**Kristal**](https://github.com/Rejean-McCormick/kristal-framework) for governed knowledge / provenance;
+- [**Konnaxion**](https://github.com/Rejean-McCormick/Konnaxion) for structured coordination, consultation, or decision-support capabilities defined by that system;
+- [**Orgo**](https://github.com/Rejean-McCormick/Orgo) for operational execution.
+
+They are not required, and this repository does not redefine their behavior.
+
+A government can retain existing systems and use them as external integrations or independent components.
+
+The object under test remains **Koali's ability to govern the composition and boundaries**.
+
+---
+
+## Stage 4 — Attack the composition
+
+A useful pressure test deliberately injects failure.
+
+### External AI disappears
+
+The API is unavailable, becomes too expensive, changes terms, or is prohibited.
+
+**Question:** What continues? What fails? Did the AI surface become hidden core authority?
+
+### Vendor platform becomes unavailable
+
+A SaaS system fails or the contract terminates.
+
+**Question:** Can unrelated capabilities remain operational? Is exit real?
+
+### Procurement authority conflicts with technical recommendation
+
+IT strongly prefers one solution; the legally authorized procurement process chooses another.
+
+**Question:** Can Koali preserve the distinction without silently converting technical authority into institutional authority?
+
+### Sensitive data must not leave a boundary
+
+A proposed integration would export a prohibited data class.
+
+**Question:** Does the operation fail closed, degrade, or produce an actionable denial?
+
+### A component is compromised
+
+One subsystem produces invalid or hostile output.
+
+**Question:** Can its failure remain bounded?
+
+### Audit infrastructure is unavailable
+
+The central receipt collector is temporarily down.
+
+**Question:** Can critical transitions buffer safely, and when must the system block?
+
+### Staff are overloaded
+
+A theoretically correct control is ignored because it takes too much time.
+
+**Question:** Which controls survive ordinary government workload?
+
+### A vendor must be replaced
+
+The institution needs to migrate.
+
+**Question:** What data, authority history, evidence, and operational state actually survive?
+
+### Network access is lost
+
+A site or function loses connectivity.
+
+**Question:** Which profile guarantees are genuinely useful, and which are unnecessary?
+
+---
+
+## Stage 5 — Measure burden as aggressively as benefit
+
+Possible measures:
+
+### Administrative burden
+
+- added steps per transaction;
+- time required to classify authority;
+- time required to maintain profiles;
+- staff training burden;
+- number of controls bypassed.
+
+### Governance clarity
+
+- ability to identify the authoritative decision;
+- ability to identify the component owning authoritative state;
+- number of ambiguous handoffs;
+- time required to reconstruct a critical transition.
+
+### Integration cost
+
+- engineering effort per external system;
+- custom adapters required;
+- failure modes introduced by Koali itself;
+- component replacement cost.
+
+### Resilience
+
+- capability retained during external failure;
+- time to restore;
+- data or authority lost during degradation;
+- operational usefulness of offline mode.
+
+### Exit
+
+- time and cost to remove a vendor or component;
+- data preserved;
+- provenance preserved;
+- ability to resume operation elsewhere.
+
+### Audit / privacy tradeoff
+
+- critical events captured;
+- unnecessary events captured;
+- sensitive data exposed;
+- staff ability to interpret receipts.
+
+---
+
+## Stage 6 — Produce one of four conclusions
+
+A useful test should be able to end with:
+
+### 1. Reject
+
+The Koali model adds more complexity than institutional value.
+
+### 2. Narrow
+
+Some claims are useful, but the operating environment should cover a smaller scope.
+
+### 3. Revise
+
+The architectural direction is useful but specific boundaries, profiles, controls, or contracts need redesign.
+
+### 4. Continue
+
+The claims survive enough pressure to justify a bounded implementation or demonstration.
+
+None of these outcomes is failure of the pressure-test process.
+
+The only bad outcome is a test incapable of producing "reject."
+
+
+================================================================================================
+FILE: QUESTIONS.md
+================================================================================================
+
+# Hard Questions for Koali
+
+
+> **Navigation:** [README](README.md) · [Scope](SCOPE.md) · [Why PPG](WHY_PPG.md) · [Claims](CLAIMS_UNDER_TEST.md) · [Pressure Test](PRESSURE_TEST.md) · [Questions](QUESTIONS.md) · [Sources](SOURCES.md)
+These are the questions I would want PPG to answer, replace, or sharpen.
+
+## 1. What does Koali misunderstand about government?
+
+Which assumption in the architecture most obviously fails against how state and local technology work is actually done?
+
+## 2. Which boundary is too rigid?
+
+Where does legitimate government discretion require ambiguity, negotiation, or informal coordination that Koali tries too hard to formalize?
+
+## 3. Which boundary is not strict enough?
+
+Where would a real institution require stronger separation of authority, data, vendors, records, or security than Koali currently provides?
+
+## 4. Does the profile model reduce complexity or merely move it?
+
+Can normal government technology teams realistically govern required, optional, conditional, prohibited, and external capabilities over time?
+
+## 5. What would staff bypass first?
+
+Which Koali control is least likely to survive workload, deadlines, turnover, and organizational pressure?
+
+## 6. Are critical-transition receipts worth their cost?
+
+Which events actually deserve durable reconstructibility, and where would receipt production create excessive privacy, records, storage, or administrative burden?
+
+## 7. Does component separation reduce lock-in or create integration tax?
+
+At what point do clean ownership boundaries produce too many adapters, handoffs, duplicated data, or operational dependencies?
+
+## 8. Is local-first / offline continuity a real government requirement?
+
+Which public-sector contexts justify it, and where is it architectural overengineering?
+
+## 9. Is the AI boundary practical?
+
+Can governments get meaningful value from AI while keeping external models non-authoritative, or will real workflows constantly pressure the system to bypass that boundary?
+
+## 10. What happens when Koali's canonical state is not the legal record?
+
+How should the architecture behave when a legally authoritative procurement, financial, records, or case-management system is external to Koali?
+
+## 11. What existing standard or product already does this better?
+
+Which Koali claims are redundant with mature government architecture, security, interoperability, records, or procurement standards?
+
+## 12. What should kill the idea?
+
+What empirical or operational result should cause Koali to abandon a claim rather than explain the failure away?
+
+---
+
+# The most useful final question
+
+> **What would PPG remove first?**
+
+A serious answer to that question would probably improve Koali more than a generic endorsement.
+
+
+================================================================================================
+FILE: README.md
+================================================================================================
+
+# Partners for Public Good: Pressure-Test Koali
+
+**Status:** Open public call  
+**Version:** 1.0  
+**Published:** 2026-08-17  
+**PPG public sources last checked:** 2026-08-17
+
+> **Independent public call. This repository does not imply affiliation, endorsement, partnership, or participation by Partners for Public Good.**
+
+Partners for Public Good is building a public-sector technology practice around hands-on implementation and governance support, supported technology pilots, product feedback, vendor accountability, and learning from what works in real government environments.
+
+Koali makes concrete architectural claims in exactly that terrain.
+
+I am putting those claims in public and asking PPG to challenge them under real institutional constraints.
+
+> **Partners for Public Good: pressure-test Koali against government reality.**
+
+This is not a request for endorsement, adoption of the broader kOA initiative, or validation of a worldview. It is an invitation to take a bounded technical object, apply institutional constraints that matter in practice, and identify where its architecture fails, overreaches, duplicates existing solutions, or adds more burden than value.
+
+---
+
+## The object under test
+
+**Koali** — currently documented in the [`kOA-Linux`](https://github.com/Rejean-McCormick/kOA-Linux) repository — is a local-first, offline-capable, modular operating environment for governed digital systems.
+
+Its current constitutional and system documentation makes strong claims about:
+
+- explicit authority;
+- component and data separation;
+- profile-scoped requirements rather than universal configuration;
+- optional and removable external integrations;
+- bounded external AI;
+- fail-closed authority;
+- safe degradation;
+- offline continuity;
+- selective audit and recourse;
+- critical-transition receipts;
+- portability, restoration, and credible exit.
+
+Those claims should not be accepted because their architect believes in them.
+
+They should survive contact with institutions that know what technology implementation actually costs.
+
+---
+
+## The central Koali proposition
+
+Government technology is heterogeneous by nature. Institutions already depend on different vendors, applications, records, workflows, departments, policies, networks, and legal authorities.
+
+Koali does **not** start from the proposition that these should converge onto one platform.
+
+It asks a different question:
+
+> **Can independently governed systems cooperate under explicit, inspectable boundaries without being absorbed into one platform or silently transferring authority?**
+
+This is the distinction behind the Koali approach:
+
+> **Broad operating environment. Distributed authority. Profile-scoped deployment.**
+
+and:
+
+> **Cooperation without absorption.**
+
+A valid Koali profile can require one capability, make another optional, prohibit another, and leave an external service external. Optional components and integrations are not supposed to become global requirements simply because they are useful or common.
+
+That discipline is central to the pressure test.
+
+---
+
+## How this repository connects to the existing ecosystem
+
+This repo is intentionally **not** another kOA or Koali documentation center.
+
+```text
+Partners for Public Good public problem space
+                    ↓
+          this public call / test frame
+                    ↓
+      Koali / kOA-Linux — object under test
+                    ↓
+     ┌──────────────┼──────────────┐
+     ↓              ↓              ↓
+  Kristal       Konnaxion        Orgo
+ knowledge      coordination     execution
+     └──────────────┼──────────────┘
+                    ↓
+      independently governed systems
+```
+
+**Canonical routes:**
+
+- [Koali / kOA-Linux](https://github.com/Rejean-McCormick/kOA-Linux) — the operating environment being pressure-tested.
+- [kOA Digital Ecosystem](https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem) — technical system-of-systems context; not the full kOA cultural/philosophical universe.
+- [Kristal Framework](https://github.com/Rejean-McCormick/kristal-framework) — governed knowledge artifacts.
+- [Konnaxion](https://github.com/Rejean-McCormick/Konnaxion) — public coordination and civic capabilities.
+- [Orgo](https://github.com/Rejean-McCormick/Orgo) — organizational execution and operational continuity.
+
+Other subsystems remain governed by their own repositories and should only enter a test when the selected government workflow actually requires them.
+
+> **Reference the source that owns the claim. Do not make this repo the new owner.**
+
+---
+
+## Why PPG
+
+PPG Tech's current public work is unusually relevant because it is explicitly concerned with the human and operational problems around government technology: cross-department collaboration, strategic procurement, AI governance, government/vendor relationships, supported pilots, implementation capacity, and measuring what works.
+
+PPG has also publicly emphasized a point that matters here: governments are not asking for one tool that solves everything. They need better ways to test technology, govern it, work with vendors, and build internal capacity.
+
+Koali should therefore be tested **as an environment for plural systems**, not pitched as another totalizing product.
+
+→ [Why this call is directed to PPG](WHY_PPG.md)
+
+---
+
+## What I am asking PPG to test
+
+Not whether every kOA application works.
+
+Not whether every Koali feature is desirable.
+
+The first test is more architectural:
+
+> **Can Koali describe and govern a real public-sector technology environment without becoming the new source of hidden centralization it was designed to prevent?**
+
+A useful pressure test could start with a government technology procurement and implementation lifecycle, then force Koali to represent:
+
+- existing institutional systems rather than replacing them;
+- real decision and legal authorities;
+- data ownership and disclosure boundaries;
+- external vendors and AI services;
+- degraded and offline states;
+- integration failure;
+- component removal;
+- audit obligations;
+- operational exceptions;
+- migration and exit.
+
+If Koali cannot model those constraints without excessive complexity, the architecture needs to change.
+
+→ [Claims under test](CLAIMS_UNDER_TEST.md)
+
+→ [Proposed pressure-test method](PRESSURE_TEST.md)
+
+→ [Hard questions](QUESTIONS.md)
+
+### Repository map
+
+| Document | Purpose |
+|---|---|
+| [SCOPE.md](SCOPE.md) | Establishes the boundary: kOA is the broader work; Koali is the institutional test object |
+| [WHY_PPG.md](WHY_PPG.md) | Shows why PPG's current public work creates a serious test environment |
+| [CLAIMS_UNDER_TEST.md](CLAIMS_UNDER_TEST.md) | Converts Koali architecture into claims that can fail |
+| [PRESSURE_TEST.md](PRESSURE_TEST.md) | Defines a workflow-first stress-test method |
+| [QUESTIONS.md](QUESTIONS.md) | Lists the questions most likely to expose weak assumptions |
+| [SOURCES.md](SOURCES.md) | Routes every technical or PPG claim back to its canonical source |
+
+---
+
+## Why this call is public
+
+Koali is public. Its architectural claims are inspectable. A critique of public-interest infrastructure should be able to exist independently of whether a private message receives a response.
+
+Publishing the call creates a durable object that anyone can inspect:
+
+**claim → source → challenge → evidence → revision**
+
+That is also consistent with the architecture being proposed.
+
+PPG is free to ignore, reject, privately critique, or publicly engage with the call. The point of publishing it is not to manufacture endorsement. It is to make the proposition difficult to confuse with a private sales pitch.
+
+---
+
+## kOA and Koali are not synonyms
+
+Koali is part of the broader **kOA** body of work. kOA is intentionally larger than a technical operating environment and includes technical systems, civic and political theory, cultural and narrative work, King Klown, and separate speculative and metaphysical exploration.
+
+This call does not sanitize or redefine that larger body of work.
+
+It sets a test boundary:
+
+> **Koali can be evaluated as an institutional operating environment without requiring PPG to validate or endorse the rest of kOA.**
+
+The fuller scope boundary is documented in [SCOPE.md](SCOPE.md).
+
+---
+
+## Source policy
+
+This repository is an interface, not a new documentation authority.
+
+> **Reference, do not replicate.**
+
+Canonical Koali claims belong to the live Koali / `kOA-Linux` documentation. Claims about Kristal, Konnaxion, Orgo, SmartVote, or other systems belong to their own repositories.
+
+Implementation state must be checked against current code, contracts, tests, releases, and evidence.
+
+> **Documented ≠ Implemented ≠ Tested ≠ Validated.**
+
+→ [Canonical sources](SOURCES.md)
+
+---
+
+## The call
+
+**Partners for Public Good: bring a government workflow, constraint set, or failure mode that your team understands deeply. Try to make Koali fail against it.**
+
+A useful outcome is not agreement. It is knowing which claims survive and which ones must be revised.
+
+**Don't endorse Koali. Try to break it.**
+
+
+================================================================================================
+FILE: SCOPE.md
+================================================================================================
+
+# Scope of the Public Call
+## kOA is the broader work. Koali is the test object.
+
+
+> **Navigation:** [README](README.md) · [Scope](SCOPE.md) · [Why PPG](WHY_PPG.md) · [Claims](CLAIMS_UNDER_TEST.md) · [Pressure Test](PRESSURE_TEST.md) · [Questions](QUESTIONS.md) · [Sources](SOURCES.md)
+This distinction is essential.
+
+## kOA
+
+**kOA** is the broader initiative and body of work.
+
+For the technical system-of-systems view, see the [kOA Digital Ecosystem](https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem) repository. That repository is an architectural entry point, not a complete representation of the wider cultural, narrative, philosophical, and metaphysical kOA corpus.
+
+Its public corpus spans several connected domains, including:
+
+- software and infrastructure;
+- collective intelligence and governance;
+- knowledge and semantic architecture;
+- political and civic theory;
+- culture and public narrative;
+- King Klown;
+- philosophical work;
+- separate speculative and metaphysical exploration.
+
+The existence of those layers is not being hidden here, and this repository does not claim that they have no relationship to one another.
+
+The point is narrower:
+
+> **They do not all have the same test method or institutional authority.**
+
+A public-sector technology organization can evaluate an operating environment through architecture, contracts, code, conformance, failure behavior, integration tests, deployment constraints, and empirical use without first adjudicating the artistic, philosophical, narrative, religious, or metaphysical parts of the larger kOA corpus.
+
+---
+
+## Koali
+
+**Koali** is the bounded operating environment under test in this repository.
+
+The current live implementation/documentation source is:
+
+[`Rejean-McCormick/kOA-Linux`](https://github.com/Rejean-McCormick/kOA-Linux)
+
+The Civilizational Coherence source registry identifies **kOA-Linux / Koali** as the implementation reference for:
+
+- local runtime;
+- sovereignty;
+- offline operation;
+- integration environment.
+
+The current Koali documentation describes a constitutional operating environment with explicit scope, authority, profile, component, integration, failure, evidence, and exit rules.
+
+This repository does not reproduce those rules.
+
+It asks whether they survive institutional scrutiny.
+
+---
+
+## What is inside the pressure-test boundary
+
+The call is concerned with claims such as:
+
+- whether optional capabilities actually remain optional;
+- whether profile-specific choices can avoid becoming universal assumptions;
+- whether component authority and data ownership remain distinct under integration;
+- whether external AI can remain optional and non-authoritative;
+- whether a missing external integration can fail without collapsing unrelated capabilities;
+- whether critical transitions can remain reconstructible;
+- whether selective audit can avoid becoming indiscriminate surveillance;
+- whether offline continuity and safe degradation are useful in realistic government profiles;
+- whether portability, restoration, replacement, and exit are credible in practice.
+
+---
+
+## What is outside the pressure-test boundary
+
+This repository is **not** asking PPG to determine:
+
+- whether the full kOA worldview is correct;
+- whether King Klown is effective cultural mediation;
+- whether the broader civilizational thesis will prove historically consequential;
+- whether metaphysical or spiritual claims are true;
+- whether every kOA subsystem should be adopted;
+- whether every SmartVote or EkoH policy is appropriate.
+
+Those are different questions with different evidence requirements.
+
+---
+
+## Relationship to other kOA systems
+
+[Kristal](https://github.com/Rejean-McCormick/kristal-framework), [Konnaxion](https://github.com/Rejean-McCormick/Konnaxion), [Orgo](https://github.com/Rejean-McCormick/Orgo), [SemantiK Architect](https://github.com/Rejean-McCormick/SemantiK_Architect), [SenTient](https://github.com/Rejean-McCormick/SenTient), and other independently documented systems may be composed with or referenced by Koali.
+
+That does not make them mandatory Koali dependencies or automatically place them inside this test.
+
+When a pressure-test workflow uses one of them, its own canonical repository remains authoritative for its behavior.
+
+> **Koali is being tested as the governed environment of composition, not as a way to absorb ownership of the systems it composes.**
+
+
+================================================================================================
+FILE: SOURCES.md
+================================================================================================
+
+# Sources and Source Policy
+
+
+> **Navigation:** [README](README.md) · [Scope](SCOPE.md) · [Why PPG](WHY_PPG.md) · [Claims](CLAIMS_UNDER_TEST.md) · [Pressure Test](PRESSURE_TEST.md) · [Questions](QUESTIONS.md) · [Sources](SOURCES.md)
+This public call is intentionally thin.
+
+It should not become a second authority for Koali or any other kOA subsystem.
+
+---
+
+## Source rule
+
+The source discipline used across the supplied Civilizational Coherence corpus is:
+
+```text
+interpretive document
+        ↓
+live repository / documentation
+        ↓
+current default branch
+```
+
+For a publication audit or real pressure-test result, additionally record the exact reviewed commit.
+
+> **Reference, do not replicate.**
+
+> **Documented ≠ Implemented ≠ Tested ≠ Validated.**
+
+---
+
+# Canonical ecosystem routing
+
+## 1. Koali / kOA-Linux — object under test
+
+**Repository:** [Rejean-McCormick/kOA-Linux](https://github.com/Rejean-McCormick/kOA-Linux)
+
+Current public status in the repository: **normative target architecture; implementation validation required**.
+
+The live repository explicitly says that it owns the local operating boundary while independently documented systems retain authority over their own domains. It also documents optional/replaceable experience layers, safe degradation, offline continuity, explicit authority, component separation, selective disclosure, and portability/exit.
+
+### Primary documentation directories
+
+- [Governance](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/00-governance)
+- [Constitution](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/01-constitution)
+- [System architecture](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/02-system)
+- [Deployment profiles](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/03-profiles)
+- [Components and subsystem boundaries](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/04-components)
+- [Security](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/07-security)
+- [Operations](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/08-operations)
+- [Conformance](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/09-conformance)
+
+---
+
+## 2. kOA Digital Ecosystem — technical context above Koali
+
+**Repository:** [Rejean-McCormick/kOA_Digital_Ecosystem](https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem)
+
+Use this for the technical system-of-systems context linking knowledge, coordination, decision, execution, and memory.
+
+It is **not** treated here as a complete representation of the broader kOA cultural, narrative, philosophical, and metaphysical corpus.
+
+---
+
+## 3. Independently governed systems that may participate in a Koali composition
+
+These systems remain authoritative in their own repositories.
+
+- [Kristal Framework](https://github.com/Rejean-McCormick/kristal-framework) — portable, versioned, provenance-bearing knowledge artifacts.
+- [Konnaxion](https://github.com/Rejean-McCormick/Konnaxion) — public coordination, contribution, governance, deliberation, and related civic capabilities.
+- [Orgo](https://github.com/Rejean-McCormick/Orgo) — organizational routing, cases, tasks, escalation, closure, and operational continuity.
+- [SemantiK Architect](https://github.com/Rejean-McCormick/SemantiK_Architect) — structured multilingual / language-realization implementation.
+- [SenTient](https://github.com/Rejean-McCormick/SenTient) — language/entity processing implementation; use only when a pressure-test claim actually depends on it.
+
+The call deliberately does **not** enumerate every kOA repository. A system belongs here only when it is relevant to the institutional test.
+
+---
+
+# Partners for Public Good — official sources
+
+The PPG-specific framing in this repository was checked against official PPG pages on **2026-08-17**.
+
+## PPG — Our Work
+
+[Official page](https://partnersforpublicgood.org/work/)
+
+PPG describes its focus on core government levers including budgeting, procurement, technology, and staffing, supported through implementation, policy, talent, community, and learning.
+
+## PPG Tech
+
+[Official technology page](https://partnersforpublicgood.org/work/technology/)
+
+PPG Tech describes public-sector technology work around operational excellence, data governance, enterprise AI change management, IT capacity, hands-on support, partnerships, and products.
+
+## PPG Tech — field discovery and operating model
+
+[Designing the Human Help that Government Technology Needs in the AI Era](https://partnersforpublicgood.org/news/designing-the-human-help-that-government-technology-needs-in-the-ai-era/)
+
+Denise Linn Riedl describes discovery with more than 75 government technology leaders, vendors, peer nonprofits, and funders. The article identifies problems around technology procurement, cross-team collaboration, governance, vendor accountability, AI, and supported technology testing, and describes PPG Tech's plans for vendor-neutral implementation/governance assistance, pilots, product feedback, capacity, measurement, and direct government demonstration projects.
+
+## PPG Tech — why back-office convergence matters
+
+[PPG Tech: Our Next Step to Power Effective Government](https://partnersforpublicgood.org/news/ppg-tech-our-next-step-to-power-effective-government/)
+
+PPG describes a government case where procurement, legal, budget, accounting, and technology failures interacted across silos, and frames technology as a core part of the government back-office operating system.
+
+## Responsible AI procurement
+
+[Purchasing Responsible AI: Balancing Innovation, Risk, & Accountability](https://partnersforpublicgood.org/procurement-excellence-network/event/purchasing-responsible-ai-balancing-innovation-risk-accountability/)
+
+PPG's Procurement Excellence Network addresses evaluation of AI vendors, transparency, accountability, data use, vendor commitments versus marketing claims, and responsible purchasing.
+
+## Denise Linn Riedl
+
+[Official profile](https://partnersforpublicgood.org/about/team/denise-linn-riedl/)
+
+Head of Public Sector Technology at PPG.
+
+## Emily Binet Royall
+
+[Official profile](https://partnersforpublicgood.org/about/team/emily-binet-royall/)
+
+Assistant Director overseeing the Procurement Excellence Network; her background includes public-interest technology, strategic procurement, governance, smart cities, and responsible AI.
+
+---
+
+# Verification discipline for a real pressure test
+
+Before any result is presented as evidence:
+
+1. record the Koali commit under review;
+2. record the relevant profile and contract versions;
+3. identify which claims are only documented;
+4. identify which claims have implementation evidence;
+5. identify which claims have tests;
+6. identify which claims have external validation, if any;
+7. preserve the institution's pre-existing systems and authority model as part of the test record.
+
+The pressure-test result should preserve those distinctions.
+
+
+================================================================================================
+FILE: WHY_PPG.md
+================================================================================================
+
+# Why Partners for Public Good
+
+
+> **Navigation:** [README](README.md) · [Scope](SCOPE.md) · [Why PPG](WHY_PPG.md) · [Claims](CLAIMS_UNDER_TEST.md) · [Pressure Test](PRESSURE_TEST.md) · [Questions](QUESTIONS.md) · [Sources](SOURCES.md)
+The use of PPG's name in this repository is deliberate.
+
+This is a public call addressed to a specific organization because its current work creates a strong test environment for Koali's claims.
+
+It is not a claim that PPG agrees.
+
+---
+
+## PPG's current technology problem space
+
+PPG says it helps state and local governments improve core operational functions including **technology, procurement, budgeting, and staffing**.
+
+PPG Tech's 2026 [technology practice](https://partnersforpublicgood.org/work/technology/) and [field-discovery account](https://partnersforpublicgood.org/news/designing-the-human-help-that-government-technology-needs-in-the-ai-era/) describe recurring problems heard from government technology leaders, vendors, nonprofits, and funders:
+
+- technology procurement and governance remain difficult;
+- cross-team collaboration is a persistent constraint;
+- vendors make large promises that governments need to evaluate and manage;
+- governments want easier, better-supported ways to test new technology;
+- AI creates governance, workforce, procurement, and change-management questions;
+- government teams need practical implementation capacity, not only strategy.
+
+PPG Tech's response is explicitly hands-on and vendor-neutral: work alongside government teams, support pilots, mediate product feedback, add implementation capacity, and measure what works. Its public materials also say the team is undertaking direct government demonstration projects and is eager to engage new partners.
+
+That is unusually compatible with the kind of criticism Koali needs.
+
+---
+
+## Why this is a pressure test rather than a pitch
+
+Koali should not be introduced to PPG as the next tool government should buy.
+
+PPG's own research warns against exactly that kind of simplistic technology framing.
+
+Koali makes a different claim:
+
+> **Government technology will remain plural. The operating problem is how to preserve explicit authority, data ownership, failure boundaries, replaceability, and exit across that plurality.**
+
+If that claim is useful, PPG should be able to recognize the problem without being asked to adopt a new monolith.
+
+If it is wrong, PPG should be able to expose where it diverges from operational reality.
+
+---
+
+## PPG problem space → Koali claim to challenge
+
+| PPG problem space | Koali claim worth challenging | Canonical Koali area |
+|---|---|---|
+| Cross-functional technology work | Authority and responsibility can remain explicit across component boundaries | Constitution / explicit authority |
+| Technology modernization | Profiles can compose different capabilities without universalizing one deployment | Profile model |
+| AI governance | External AI can remain optional, bounded, and non-authoritative | AI boundary / external AI surfaces |
+| Procurement and vendors | External systems can remain integrations rather than hidden core authority | External integrations |
+| Vendor lock-in | Optional integrations can be removed without breaking unrelated core capabilities | Scope / profile model / integrations |
+| Data governance | Component data ownership can remain explicit even when infrastructure is shared | Data authority and ownership |
+| Accountability | Critical transitions can produce reconstructible evidence without turning every action into an audit event | Receipts / selective audit |
+| Service continuity | Relevant profiles can degrade safely and continue locally during external failure | Safe degradation / offline continuity |
+| Implementation diversity | Koali can integrate with existing systems rather than requiring a Koali-native application stack | Component / integration boundaries |
+| Long-term sustainability | Portability, restore, migration, and exit can be designed as first-class capabilities | Portability, restore and exit |
+
+This is a map of questions, not evidence that Koali has already solved them.
+
+---
+
+## Why PPG would be useful even if it rejects Koali
+
+PPG operates inside constraints that an architecture can underestimate:
+
+- government procurement and contracting;
+- legacy platforms;
+- legal and records requirements;
+- limited staff capacity;
+- vendor incentives;
+- risk allocation;
+- political accountability;
+- resident expectations;
+- change management;
+- budget and implementation pressure.
+
+A strong pressure test may conclude that:
+
+- a Koali rule belongs in policy rather than software;
+- an authority boundary is too rigid;
+- a receipt requirement is too expensive;
+- an offline profile solves a rare problem at excessive cost;
+- a simpler existing standard is better;
+- or Koali's profile system is itself too difficult to govern.
+
+Those conclusions would be useful.
+
+The point of calling on PPG is not that PPG is expected to agree.
+
+It is that PPG is positioned to identify forms of institutional reality the architecture must survive.
+
+
+---
+
+## Strongest current PPG signal
+
+PPG's own description of its technology expansion is unusually close to the systems premise Koali is meant to face: a recent government case crossed procurement, legal, budget, accounting, and technology, while those functions remained in separate lanes. PPG describes the back office as succeeding or struggling as a unit and technology as a core part of that operating system.
+
+Source: [PPG Tech: Our Next Step to Power Effective Government](https://partnersforpublicgood.org/news/ppg-tech-our-next-step-to-power-effective-government/)

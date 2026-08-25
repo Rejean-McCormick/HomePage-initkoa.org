@@ -1,0 +1,2367 @@
+# INITKOA CONTEXT PACK
+
+repository: Rejean-McCormick/XKaliber
+source_path: C:\mycode\XKaliber\XKaliber
+source_commit: 855ca89a77e7175b64ac632ff73f5aab008bbfcb
+working_tree_markdown: clean
+generated_at: 2026-08-25T09:32:47-04:00
+files: 38
+content_sha256: 5a90089aee9e55ef364dc338836c12044cef2e9ba22c596db307a9ada023d503
+
+================================================================================================
+FILE INDEX
+================================================================================================
+
+01. BRAND.md
+02. contracts/README.md
+03. CONTRIBUTING.md
+04. decisions/0001-name-and-positioning.md
+05. decisions/0002-technology-agnostic-start.md
+06. docs/architecture/data-boundaries.md
+07. docs/architecture/module-map.md
+08. docs/architecture/overview.md
+09. docs/evaluation/adaptive-assessment-model.md
+10. docs/evaluation/caliber-profile.md
+11. docs/evaluation/fairness-checklist.md
+12. docs/evaluation/item-design-guidelines.md
+13. docs/evaluation/scoring-principles.md
+14. docs/governance/audit-log-requirements.md
+15. docs/governance/decision-use-policy.md
+16. docs/integration/certifikation-evidence.md
+17. docs/integration/ekoh-smartvote-signal.md
+18. docs/integration/konnaxion-map.md
+19. docs/product/mvp-scope.md
+20. docs/product/user-personas.md
+21. docs/product/user-stories.md
+22. docs/README.md
+23. docs/ux/content-guidelines.md
+24. docs/ux/core-flows.md
+25. docs/ux/screen-inventory.md
+26. examples/sample-caliber-profile.md
+27. examples/sample-certifikation-seal.md
+28. examples/sample-competency-map.md
+29. examples/sample-session.md
+30. GOVERNANCE.md
+31. LICENSE.md
+32. PRODUCT_BRIEF.md
+33. PROJECT_BOARD.md
+34. README.md
+35. ROADMAP.md
+36. SECURITY_AND_PRIVACY.md
+37. tests/acceptance/acceptance-scenarios.md
+38. tests/acceptance/mvp-checklist.md
+
+
+================================================================================================
+FILE: BRAND.md
+================================================================================================
+
+# Branding — XKaliber
+
+## Nom
+
+**XKaliber**
+
+## Signature
+
+**L’épreuve qui révèle le vrai calibre.**
+
+## Promesse
+
+XKaliber mesure le vrai calibre d’une personne afin de déterminer quelles compétences, responsabilités et décisions elle peut porter dans une gouvernance collective opérante.
+
+## Phrase maîtresse
+
+**XKaliber révèle qui peut porter quoi.**
+
+## Métaphore
+
+| Mythe arthurien | XKaliber dans Konnaxion |
+|---|---|
+| L’épée dans la pierre | La compétence encore non révélée |
+| L’épreuve d’extraction | L’évaluation adaptative XKaliber |
+| Celui qui peut porter la fonction | La personne dont le niveau est validé |
+| La Table ronde | La gouvernance collective opérante dans Konnaxion |
+| Les chevaliers | Les contributeurs compétents par domaine |
+| La quête | Le passage de la connaissance à l’action |
+
+## Ton de marque
+
+XKaliber doit être :
+
+- précis ;
+- sobre ;
+- exigeant ;
+- humain ;
+- non humiliant ;
+- non technocratique ;
+- orienté vers la responsabilité plutôt que le classement.
+
+## Ce que la marque ne doit pas faire
+
+XKaliber ne doit pas donner l’impression de :
+
+- couronner une élite permanente ;
+- réduire une personne à un score ;
+- remplacer le jugement humain ;
+- produire une autorité globale ;
+- transformer la compétence en domination ;
+- confondre confiance, statut et capacité réelle.
+
+## Slogans possibles
+
+- **Révéler le vrai calibre.**
+- **Le test qui ne classe pas : il révèle.**
+- **Mesurer la compétence. Fonder la légitimité.**
+- **Trouver qui peut vraiment porter le rôle.**
+- **De l’épreuve à la responsabilité collective.**
+- **Au-delà de la note : le calibre réel.**
+
+## Vocabulaire produit
+
+| Concept | Terme XKaliber |
+|---|---|
+| Test adaptatif | Épreuve XKaliber |
+| Rapport final | Profil de Calibre |
+| Niveau confirmé | Calibre validé |
+| Niveau maximal exploré | Portée maximale |
+| Test plus difficile | Épreuve du Tranchant |
+| Compétence fiable | Maîtrise portée |
+| Preuve exportable | Sceau CertifiKation |
+| Rapport synthétique | Fiche de Calibre |
+| Domaine évalué | Champ de maîtrise |
+| Réévaluation périodique | Recalibrage |
+| Groupe de validation | Table de validation |
+
+## Formule d’architecture
+
+**KonnectED développe.**  
+**XKaliber éprouve.**  
+**CertifiKation atteste.**  
+**EkoH situe.**  
+**SmartVote pondère.**  
+**Konnaxion rassemble la Table ronde.**
+
+## Direction visuelle initiale
+
+Symbole possible :
+
+- une épée verticale ;
+- la lame forme subtilement un X ;
+- la garde évoque un cercle ou une table ronde ;
+- la pointe entre dans une pierre, un socle ou un repère de calibration ;
+- des anneaux indiquent des niveaux de maîtrise.
+
+Sens :
+
+- l’épée représente l’épreuve ;
+- le X représente l’inconnu à révéler ;
+- le calibre représente la mesure réelle ;
+- la table ronde représente la compétence mise au service du collectif.
+
+
+================================================================================================
+FILE: contracts/README.md
+================================================================================================
+
+# Contrats conceptuels
+
+Ce dossier contient des contrats neutres pour décrire les objets et échanges de XKaliber.
+
+Ils ne prescrivent aucune technologie. Les formats sont lisibles par humains et peuvent être traduits plus tard vers une API, une base de données, des formulaires ou des événements.
+
+
+================================================================================================
+FILE: CONTRIBUTING.md
+================================================================================================
+
+# Contribuer à XKaliber
+
+## Types de contributions utiles
+
+- amélioration du vocabulaire produit ;
+- définition de domaines de compétence ;
+- rédaction de scénarios utilisateurs ;
+- conception d’épreuves ;
+- règles d’équité ;
+- modèles de profil ;
+- exemples de rapports ;
+- critères d’intégration avec CertifiKation, KonnectED, EkoH ou SmartVote.
+
+## Règles de contribution
+
+1. Écrire clairement.
+2. Éviter le jargon inutile.
+3. Ne pas imposer une technologie précise dans les documents de base.
+4. Toujours préciser le domaine concerné.
+5. Distinguer preuve, interprétation et décision.
+6. Ne jamais proposer un score universel de personne.
+7. Prévoir l’explication du résultat pour la personne évaluée.
+
+## Format recommandé pour une proposition
+
+```text
+Titre :
+Problème :
+Proposition :
+Domaine concerné :
+Effet sur l’évaluation :
+Effet sur la personne évaluée :
+Effet sur CertifiKation :
+Risques :
+Mesures de protection :
+```
+
+## Décisions
+
+Toute décision structurante doit être ajoutée dans le dossier `decisions/` sous forme de décision datée.
+
+
+================================================================================================
+FILE: decisions/0001-name-and-positioning.md
+================================================================================================
+
+# Décision 0001 — Nom et positionnement
+
+## Statut
+
+Acceptée comme base de départ.
+
+## Décision
+
+Nommer l’application **XKaliber**.
+
+Positionnement :
+
+**XKaliber est le moteur de mesure adaptative des compétences de CertifiKation, dans KonnectED.**
+
+## Raison
+
+Le nom fait le pont entre :
+
+- Excalibur comme épreuve de légitimité ;
+- calibre comme mesure réelle ;
+- X comme inconnue à révéler ;
+- K comme cohérence avec Konnaxion, KonnectED et CertifiKation.
+
+## Conséquence
+
+La marque peut utiliser l’imaginaire de l’épée et de la Table ronde, mais doit éviter une logique monarchique ou élitiste.
+
+La métaphore doit rester fonctionnelle : XKaliber ne couronne pas, il situe la capacité à porter une responsabilité.
+
+
+================================================================================================
+FILE: decisions/0002-technology-agnostic-start.md
+================================================================================================
+
+# Décision 0002 — Départ agnostique technologiquement
+
+## Statut
+
+Acceptée comme base de départ.
+
+## Décision
+
+Ne pas choisir de langage, framework, base de données ou fournisseur dans le dépôt initial.
+
+## Raison
+
+Le risque principal au départ n’est pas technique. Il est conceptuel :
+
+- mauvaise définition des compétences ;
+- mesure opaque ;
+- usage abusif des résultats ;
+- confusion entre certification et score ;
+- intégration prématurée à la gouvernance.
+
+## Conséquence
+
+Le dépôt démarre par :
+
+- documents produit ;
+- modèles conceptuels ;
+- contrats neutres ;
+- scénarios ;
+- principes de gouvernance ;
+- critères d’acceptation.
+
+Les choix techniques viendront après validation du modèle.
+
+
+================================================================================================
+FILE: docs/architecture/data-boundaries.md
+================================================================================================
+
+# Frontières de données
+
+## Séparer les couches
+
+XKaliber doit séparer clairement les objets suivants :
+
+1. **Données de session** : réponses, temps, items, progression.
+2. **Interprétation** : niveau estimé, confiance, erreurs typiques.
+3. **Profil** : version lisible et partageable du résultat.
+4. **Preuve CertifiKation** : attestation minimale et vérifiable.
+5. **Paquet d’évidence K-Port** : preuve source, bornée par domaine, avec provenance, statut, validité, confiance et consentement.
+6. **Signal EkoH** : signal de scoring préparé par K-Port à partir de l’évidence admissible.
+7. **Décision externe** : embauche, accès, promotion ou participation.
+
+## Raison
+
+Une même évaluation peut servir à plusieurs usages, mais chaque usage doit avoir sa propre limite.
+
+Exemple :
+
+- une école peut voir le détail pédagogique ;
+- une organisation peut voir le niveau certifié ;
+- K-Port peut recevoir un paquet d’évidence source vérifiable ;
+- EkoH peut recevoir de K-Port un signal de scoring borné par domaine ;
+- SmartVote ne devrait jamais recevoir les réponses brutes ni un signal direct de XKaliber ;
+- un public ne devrait pas voir le profil sans consentement.
+
+## Principe
+
+**Plus l’usage est éloigné de l’évaluation initiale, plus le signal doit être résumé, contextualisé et limité.**
+
+La frontière d’autorité est également explicite : **XKaliber mesure, CertifiKation atteste, K-Port qualifie et route l’évidence, EkoH calcule la réputation.**
+
+
+================================================================================================
+FILE: docs/architecture/module-map.md
+================================================================================================
+
+# Carte des modules conceptuels
+
+## 1. Assessment Designer
+
+Permet de définir :
+
+- domaines ;
+- compétences ;
+- niveaux ;
+- types d’épreuves ;
+- critères de réussite ;
+- conditions de certification.
+
+## 2. Item Bank
+
+Contient les items, tâches ou scénarios évaluatifs.
+
+Chaque item doit avoir :
+
+- domaine ;
+- compétence ;
+- difficulté ;
+- durée estimée ;
+- critères ;
+- risques de biais ;
+- version ;
+- statut de validation.
+
+## 3. Adaptive Engine
+
+Choisit la prochaine tâche selon :
+
+- performance actuelle ;
+- incertitude ;
+- niveau visé ;
+- niveau exploré ;
+- diversité des tâches ;
+- règles de fatigue ;
+- contraintes de temps.
+
+## 4. Evaluation Session
+
+Gère le déroulement :
+
+- démarrage ;
+- consentement ;
+- consignes ;
+- réponses ;
+- pauses ;
+- incidents ;
+- fin de session.
+
+## 5. Scoring and Interpretation
+
+Transforme la performance en lecture utile :
+
+- niveau confirmé ;
+- marge de confiance ;
+- erreurs récurrentes ;
+- forces ;
+- zones à approfondir ;
+- recommandation.
+
+## 6. Caliber Profile
+
+Génère le rapport lisible.
+
+## 7. CertifiKation Export
+
+Produit une preuve exportable, avec traces et limites.
+
+## 8. Governance Log
+
+Conserve :
+
+- règles utilisées ;
+- versions ;
+- exceptions ;
+- interventions humaines ;
+- appels ;
+- corrections.
+
+## 9. Integration Gateway
+
+Définit les échanges avec :
+
+- KonnectED ;
+- CertifiKation ;
+- **K-Port, passerelle canonique d’évidence vers EkoH** ;
+- Konnaxion ;
+- systèmes externes autorisés.
+
+XKaliber ne pousse pas directement de résultat de compétence dans le moteur de réputation EkoH ni dans SmartVote. Les usages réputationnels passent par K-Port, puis par les interfaces gouvernées d’EkoH.
+
+
+================================================================================================
+FILE: docs/architecture/overview.md
+================================================================================================
+
+# Architecture conceptuelle
+
+## Définition
+
+XKaliber est un moteur d’évaluation adaptative qui transforme des performances observées en profils de compétence contextualisés.
+
+Il ne remplace pas CertifiKation. Il fournit la mesure qui permet à CertifiKation d’attester.
+
+Lorsqu’une preuve XKaliber doit contribuer à la réputation EkoH, elle ne contourne pas la couche d’évidence. Le Profil de Calibre ou le Sceau CertifiKation est transmis à **K-Port**, qui agit comme passerelle canonique d’évidence vers EkoH. K-Port vérifie la provenance, le statut, la portée, le consentement et le mapping de domaine sans recalculer la performance évaluée par XKaliber.
+
+## Chaîne conceptuelle
+
+```text
+Parcours d’apprentissage
+→ Demande d’évaluation
+→ Scan initial
+→ Épreuve adaptative
+→ Profil de Calibre
+→ Sceau CertifiKation
+→ Portfolio KonnectED, si souhaité
+→ Handoff de preuve vers K-Port
+→ Contrôle de provenance, statut, portée et consentement par K-Port
+→ Signal admissible vers EkoH
+→ Calcul de réputation par EkoH
+→ Usage gouverné dans Konnaxion
+```
+
+## Composants conceptuels
+
+### Domaine
+
+Champ de compétence : programmation, soins, gouvernance, médiation, mécanique, enseignement, etc.
+
+### Compétence
+
+Capacité précise à évaluer dans un domaine.
+
+### Niveau
+
+Degré de complexité ou de responsabilité.
+
+### Item ou tâche
+
+Élément d’épreuve : question, simulation, étude de cas, production, jugement, geste, résolution.
+
+### Session
+
+Évaluation vécue par une personne à un moment donné.
+
+### Moteur adaptatif
+
+Logique qui choisit la suite de l’épreuve selon la performance.
+
+### Profil de Calibre
+
+Rapport final de compétence.
+
+### Sceau CertifiKation
+
+Preuve exportable attestant un niveau confirmé.
+
+## Frontières
+
+XKaliber ne devrait pas contenir toute la logique de :
+
+- gestion complète des cours ;
+- réseau social ;
+- gouvernance globale ;
+- vote ;
+- embauche ;
+- gestion RH ;
+- identité permanente.
+
+Ces fonctions appartiennent à KonnectED, CertifiKation, **K-Port**, EkoH, SmartVote, Orgo ou d’autres modules.
+
+En particulier, XKaliber ne doit pas devenir une seconde couche d’intake ou de scoring réputationnel : K-Port centralise l’évidence admissible et EkoH reste l’autorité de scoring.
+
+## Sorties
+
+XKaliber produit principalement :
+
+- un profil ;
+- des preuves structurées ;
+- des recommandations ;
+- des traces ;
+- des paquets d’évidence bornés par domaine destinés à CertifiKation et, lorsque requis, à K-Port.
+
+
+================================================================================================
+FILE: docs/evaluation/adaptive-assessment-model.md
+================================================================================================
+
+# Modèle d’évaluation adaptative
+
+## But
+
+Trouver le niveau où une compétence demeure fiable.
+
+## Étapes
+
+### 1. Scan initial
+
+Le système estime un niveau de départ à partir de :
+
+- autoévaluation ;
+- parcours KonnectED ;
+- antécédents CertifiKation ;
+- mini-épreuve ;
+- expérience déclarée ;
+- recommandation d’un évaluateur.
+
+Le scan initial ne certifie rien. Il sert à choisir un point de départ raisonnable.
+
+### 2. Zone de maîtrise
+
+Le système propose des tâches qu’une personne de ce niveau devrait réussir avec un haut taux de réussite.
+
+Objectif : confirmer sans déstabiliser.
+
+### 3. Zone de précision
+
+Si la personne réussit trop facilement, le système augmente la difficulté.
+
+Objectif : éviter l’effet plafond.
+
+### 4. Épreuve du Tranchant
+
+Le système explore un niveau supérieur pour vérifier jusqu’où la personne peut aller.
+
+Objectif : mesurer la portée maximale, pas seulement la compétence de base.
+
+### 5. Stabilisation
+
+Le système s’arrête quand :
+
+- le niveau confirmé est assez clair ;
+- le niveau supérieur est suffisamment exploré ;
+- la fatigue ou le temps devient une contrainte ;
+- l’incertitude ne peut plus être réduite utilement ;
+- un seuil de certification est atteint ou refusé.
+
+## Règle intuitive
+
+- Trop facile : on ne mesure pas le plafond.
+- Trop difficile : on mesure surtout l’échec.
+- Bon niveau : la personne reste engagée, mais le système apprend quelque chose.
+
+## Sortie
+
+La sortie n’est pas seulement une note. Elle indique :
+
+- ce qui est confirmé ;
+- ce qui est partiel ;
+- ce qui est non mesuré ;
+- ce qui devrait être réévalué ;
+- ce qui peut être attesté.
+
+
+================================================================================================
+FILE: docs/evaluation/caliber-profile.md
+================================================================================================
+
+# Profil de Calibre
+
+## Définition
+
+Le Profil de Calibre est le rapport principal produit par XKaliber.
+
+Il doit être lisible par :
+
+- la personne évaluée ;
+- un formateur ;
+- un évaluateur ;
+- une organisation ;
+- CertifiKation ;
+- un système de crédibilité par domaine, selon consentement et règles.
+
+## Structure recommandée
+
+```text
+Titre : Profil de Calibre
+Personne : [identité ou pseudonyme]
+Domaine : [domaine]
+Compétence : [compétence]
+Contexte : [école, poste, parcours, certification]
+Date : [date]
+Version des règles : [version]
+
+Résumé :
+- Calibre validé : [niveau]
+- Portée maximale explorée : [niveau]
+- Marge de confiance : [faible/moyenne/élevée]
+- Recommandation : [certifier / approfondir / recalibrer]
+
+Détail :
+- Forces observées
+- Limites observées
+- Erreurs fréquentes
+- Conditions de validité
+- Prochaines étapes
+
+Traçabilité :
+- types d’épreuves utilisées
+- niveaux couverts
+- interventions humaines
+- règles utilisées
+- limites d’interprétation
+```
+
+## Exemple court
+
+```text
+Domaine : Analyse de données
+Compétence : Interpréter un tableau de résultats
+Calibre validé : Niveau 3
+Portée maximale explorée : Niveau 4
+Marge de confiance : Moyenne-haute
+Recommandation : CertifiKation niveau 3 ; réévaluation niveau 4 après pratique ciblée.
+```
+
+
+================================================================================================
+FILE: docs/evaluation/fairness-checklist.md
+================================================================================================
+
+# Liste de vérification — équité
+
+## Avant publication d’une épreuve
+
+- [ ] La compétence évaluée est clairement définie.
+- [ ] Le niveau de difficulté est justifié.
+- [ ] Les consignes sont compréhensibles.
+- [ ] Les critères de correction sont explicites.
+- [ ] Les biais linguistiques ont été examinés.
+- [ ] Les biais culturels ont été examinés.
+- [ ] La tâche mesure bien la compétence visée.
+- [ ] Des accommodations sont prévues si nécessaire.
+- [ ] Un recours humain est possible.
+- [ ] Les limites d’interprétation sont affichées.
+
+## Après usage
+
+- [ ] Les anomalies de résultat sont examinées.
+- [ ] Les différences entre groupes sont surveillées.
+- [ ] Les plaintes sont analysées.
+- [ ] Les items problématiques sont retirés ou corrigés.
+- [ ] Les seuils sont révisés périodiquement.
+- [ ] Les profils peuvent être recalibrés.
+
+## Question clé
+
+**Est-ce que cette épreuve mesure la compétence, ou mesure-t-elle autre chose par accident ?**
+
+
+================================================================================================
+FILE: docs/evaluation/item-design-guidelines.md
+================================================================================================
+
+# Guide de conception des items et tâches
+
+## Chaque item doit préciser
+
+- domaine ;
+- compétence ;
+- niveau ;
+- type de tâche ;
+- consigne ;
+- durée ;
+- critères de correction ;
+- erreurs observables ;
+- prérequis ;
+- risques de biais ;
+- version ;
+- statut de validation.
+
+## Types d’épreuves
+
+### Question fermée
+
+Utile pour vérifier des connaissances précises.
+
+### Question ouverte
+
+Utile pour analyser le raisonnement.
+
+### Étude de cas
+
+Utile pour juger l’application en contexte.
+
+### Simulation
+
+Utile pour observer une décision dynamique.
+
+### Production
+
+Utile pour évaluer la capacité à créer un résultat.
+
+### Revue par pairs
+
+Utile lorsque la qualité exige un jugement humain.
+
+### Entrevue structurée
+
+Utile pour compléter une mesure automatisée.
+
+## Qualité d’un item
+
+Un bon item :
+
+- cible une compétence claire ;
+- évite les pièges inutiles ;
+- distingue les niveaux ;
+- permet une correction stable ;
+- réduit les biais culturels inutiles ;
+- explique ce qui est attendu ;
+- peut être révisé.
+
+## Items à éviter
+
+- questions ambiguës ;
+- devinettes ;
+- références culturelles non pertinentes ;
+- vitesse excessive sans raison ;
+- pièges linguistiques ;
+- tâches qui mesurent surtout la familiarité avec le format du test ;
+- tâches qui confondent conformité et compétence.
+
+
+================================================================================================
+FILE: docs/evaluation/scoring-principles.md
+================================================================================================
+
+# Principes de score et d’interprétation
+
+## Ne pas réduire à une note
+
+Une note brute peut être conservée pour audit, mais elle ne doit pas être la sortie principale.
+
+La sortie principale est le **Profil de Calibre**.
+
+## Dimensions du profil
+
+### Calibre validé
+
+Niveau confirmé avec confiance suffisante.
+
+### Portée maximale
+
+Niveau le plus élevé exploré où la personne montre encore une capacité réelle.
+
+### Marge de confiance
+
+Niveau d’incertitude du résultat.
+
+### Type de maîtrise
+
+- procédurale ;
+- conceptuelle ;
+- créative ;
+- stratégique ;
+- relationnelle ;
+- éthique ;
+- contextuelle.
+
+### Conditions de validité
+
+Contexte où le résultat est valable.
+
+### Conditions de non-validité
+
+Ce que le résultat ne permet pas de conclure.
+
+## Interprétation recommandée
+
+| Résultat observé | Interprétation prudente |
+|---|---|
+| Réussite élevée sur tâches faciles | Maîtrise confirmée, plafond non mesuré |
+| Réussite élevée sur tâches difficiles | Niveau supérieur probable |
+| Réussite moyenne sur tâches difficiles | Zone de précision utile |
+| Échec sur tâches trop difficiles | Ne prouve pas absence de compétence au niveau inférieur |
+| Forte variabilité | Recalibrage ou évaluation humaine recommandé |
+
+## Seuils à éviter
+
+Ne jamais dire :
+
+- “Cette personne est compétente en général.”
+- “Cette personne vaut X.”
+- “Cette personne ne peut pas apprendre.”
+- “Cette personne est inférieure.”
+- “Cette personne peut décider sur tous les sujets.”
+
+Dire plutôt :
+
+- “Cette compétence est confirmée jusqu’au niveau X dans le contexte Y.”
+- “Le niveau supérieur est partiellement démontré.”
+- “Une évaluation complémentaire est recommandée.”
+
+
+================================================================================================
+FILE: docs/governance/audit-log-requirements.md
+================================================================================================
+
+# Exigences d’audit
+
+## Ce qui doit être traçable
+
+- version de l’épreuve ;
+- version des règles d’adaptation ;
+- consentement ;
+- identité du domaine ;
+- items présentés ;
+- niveaux de difficulté ;
+- réponses ou productions ;
+- corrections ;
+- interventions humaines ;
+- anomalies ;
+- résultat final ;
+- export CertifiKation ;
+- partage vers d’autres modules ;
+- appels et corrections.
+
+## Ce qui doit être explicable
+
+- pourquoi un niveau a été confirmé ;
+- pourquoi un niveau supérieur n’a pas été confirmé ;
+- pourquoi le système a augmenté ou réduit la difficulté ;
+- quelles limites s’appliquent ;
+- comment le résultat peut être contesté.
+
+## Ce qui doit être versionné
+
+- domaines ;
+- compétences ;
+- items ;
+- niveaux ;
+- seuils ;
+- règles ;
+- profils ;
+- preuves ;
+- politiques d’usage.
+
+
+================================================================================================
+FILE: docs/governance/decision-use-policy.md
+================================================================================================
+
+# Politique d’usage dans les décisions
+
+## Principe
+
+XKaliber peut informer une décision. Il ne devrait pas, seul, décider automatiquement d’un résultat lourd de conséquences.
+
+## Usages acceptables
+
+- orienter un parcours d’apprentissage ;
+- recommander une formation ;
+- confirmer une compétence ;
+- aider une décision d’embauche ;
+- préparer une entrevue ;
+- situer une expertise par domaine ;
+- alimenter un profil de crédibilité avec consentement ;
+- soutenir une gouvernance collective transparente.
+
+## Usages exigeant prudence
+
+- refus d’embauche ;
+- exclusion d’un programme ;
+- perte d’un statut ;
+- réduction d’accès ;
+- pondération dans une décision collective ;
+- publication d’un profil.
+
+## Usages interdits par défaut
+
+- décision automatique sans recours ;
+- score global de personne ;
+- usage hors domaine ;
+- surveillance continue sans consentement ;
+- classement public forcé ;
+- déduction de traits psychologiques non évalués.
+
+## Règle de décision
+
+Plus l’impact sur la personne est élevé, plus il faut :
+
+- expliquer ;
+- contextualiser ;
+- permettre le recours ;
+- inclure un jugement humain ;
+- limiter l’automatisation.
+
+
+================================================================================================
+FILE: docs/integration/certifikation-evidence.md
+================================================================================================
+
+# Sceau CertifiKation
+
+## Définition
+
+Le Sceau CertifiKation est la preuve exportable produite à partir d’un Profil de Calibre.
+
+Il ne doit pas contenir toutes les réponses ni tous les détails de session. Il doit contenir l’essentiel nécessaire pour attester une compétence.
+
+## Contenu recommandé
+
+- personne ou identifiant ;
+- domaine ;
+- compétence ;
+- niveau confirmé ;
+- date ;
+- durée de validité ;
+- version des règles ;
+- source XKaliber ;
+- marge de confiance ;
+- conditions de validité ;
+- lien vers explication ou audit autorisé ;
+- statut : actif, expiré, révoqué, contesté, corrigé.
+
+## Statuts
+
+### Actif
+
+La preuve est valide.
+
+### Expiré
+
+La preuve doit être recalibrée.
+
+### Contesté
+
+Une révision est en cours.
+
+### Corrigé
+
+Un changement a été appliqué après révision.
+
+### Révoqué
+
+La preuve ne doit plus être utilisée.
+
+## Handoff vers K-Port
+
+Lorsqu’un Sceau CertifiKation doit contribuer à EkoH, il est transmis à **K-Port**, pas directement au moteur de scoring EkoH.
+
+Le handoff devrait préserver au minimum :
+
+- l’identifiant du Sceau et sa provenance ;
+- la personne concernée ;
+- le domaine et la compétence ;
+- le niveau confirmé ;
+- la confiance issue de XKaliber ;
+- les dates d’évaluation, d’émission et d’expiration ;
+- la version des règles ;
+- le statut courant ;
+- les conditions et limites de validité ;
+- le consentement ;
+- une référence d’audit ou de vérification.
+
+K-Port vérifie la provenance, le statut, la portée, l’identité, le consentement et le mapping EkoH. Il ne refait pas l’évaluation XKaliber et ne modifie pas le niveau confirmé.
+
+Toute correction, expiration ou révocation du Sceau doit pouvoir être propagée à K-Port afin qu’EkoH puisse réévaluer l’impact réputationnel si nécessaire.
+
+## Limite
+
+Un Sceau CertifiKation ne doit pas être utilisé comme preuve hors de son domaine, de son niveau et de son contexte. Il ne constitue pas, à lui seul, un score ou une réputation EkoH.
+
+
+================================================================================================
+FILE: docs/integration/ekoh-smartvote-signal.md
+================================================================================================
+
+# Handoff vers K-Port, EkoH et SmartVote
+
+## Principe
+
+XKaliber peut contribuer à la crédibilité par domaine, mais il ne doit ni créer une autorité globale ni écrire directement dans la réputation EkoH.
+
+La chaîne canonique est :
+
+```text
+XKaliber
+→ Profil de Calibre / résultat confirmé
+→ Sceau CertifiKation, lorsque applicable
+→ K-Port
+→ signal de scoring admissible
+→ EkoH
+→ usages gouvernés, dont SmartVote lorsque permis
+```
+
+**K-Port est la passerelle canonique d’évidence vers EkoH.**
+
+## Paquet d’évidence minimal vers K-Port
+
+Une preuve XKaliber ou CertifiKation transmise à K-Port devrait contenir au minimum :
+
+- identifiant de la personne ou référence d’identité autorisée ;
+- `source_module` : `xkaliber` ou `certifikation` ;
+- identifiant stable du Profil de Calibre ou du Sceau ;
+- domaine ;
+- compétence ;
+- niveau confirmé ;
+- date de l’évaluation ;
+- date d’émission de la preuve, si différente ;
+- confiance ou marge de confiance ;
+- durée de validité ou date d’expiration ;
+- version des règles / de l’épreuve ;
+- statut : actif, expiré, contesté, corrigé ou révoqué ;
+- limites d’usage ;
+- consentement et visibilité ;
+- référence d’audit ou mécanisme de vérification de provenance.
+
+## Autorité source et contrôle K-Port
+
+Pour une preuve XKaliber valide, K-Port doit distinguer deux responsabilités :
+
+**XKaliber / CertifiKation sont autoritatifs pour :**
+
+- la performance observée ;
+- le niveau confirmé ;
+- la confiance issue de l’évaluation ;
+- les règles et versions ayant produit le résultat ;
+- les corrections ou révocations de cette preuve.
+
+**K-Port est autoritatif pour :**
+
+- vérifier que la preuve provient bien de XKaliber / CertifiKation ;
+- lier la preuve à la bonne personne ;
+- vérifier le statut, l’expiration et les révocations ;
+- vérifier les limites et le consentement ;
+- prévenir les doublons ;
+- mapper ou confirmer la correspondance avec les domaines EkoH ;
+- déterminer si l’évidence est admissible au handoff EkoH.
+
+K-Port **ne doit pas refaire l’épreuve, modifier le niveau confirmé ou recalculer la confiance XKaliber**. Toute contestation de la mesure retourne au processus de révision XKaliber / CertifiKation.
+
+## Signal EkoH
+
+XKaliber ne construit pas le score de réputation. K-Port prépare le handoff à partir de l’évidence admissible, puis EkoH décide :
+
+- si la preuve doit avoir un impact ;
+- sur quel domaine EkoH ;
+- avec quel poids selon ses paramètres ;
+- comment la fraîcheur, les autres preuves et les règles de réputation interagissent ;
+- comment le changement est consigné dans l’historique de score.
+
+La confiance XKaliber est un **attribut de la preuve**, pas un score EkoH.
+
+## Ce qu’il ne faut pas envoyer par défaut
+
+Ni K-Port, ni EkoH, ni SmartVote ne devraient recevoir par défaut :
+
+- réponses brutes ;
+- temps détaillés ;
+- erreurs personnelles sensibles ;
+- commentaires privés ;
+- données non nécessaires ;
+- interprétations hors domaine.
+
+## Usage SmartVote
+
+SmartVote peut utiliser des signaux de compétence ou de réputation seulement si :
+
+- le signal provient d’une interface gouvernée d’EkoH plutôt que directement de XKaliber ;
+- le domaine du vote correspond au domaine validé ;
+- les règles de pondération sont publiques ;
+- les lectures non pondérées restent visibles ;
+- la personne sait que le signal est utilisé ;
+- la communauté peut contester la règle ;
+- le signal est limité dans le temps.
+
+## Propagation des changements
+
+Une correction, expiration ou révocation XKaliber / CertifiKation doit pouvoir se propager vers K-Port. K-Port met alors à jour l’état de l’évidence et déclenche, si nécessaire, une réévaluation de l’impact par EkoH. XKaliber ne corrige pas directement un score EkoH.
+
+## Phrase clé
+
+**XKaliber mesure ; K-Port qualifie l’évidence ; EkoH attribue la réputation ; SmartVote n’utilise que des signaux gouvernés.**
+
+
+================================================================================================
+FILE: docs/integration/konnaxion-map.md
+================================================================================================
+
+# Intégration avec Konnaxion
+
+## Relation entre les modules
+
+```text
+KonnectED / parcours d’apprentissage
+        ↓
+     XKaliber
+        ↓
+Profil de Calibre
+        ↓
+  CertifiKation
+        ↓
+      K-Port
+        ↓
+       EkoH
+        ↓
+SmartVote / autres usages gouvernés
+```
+
+Le portfolio KonnectED peut conserver et afficher la preuve, mais il ne remplace pas K-Port comme passerelle d’évidence lorsqu’une preuve doit influencer EkoH.
+
+## Rôles
+
+### KonnectED
+
+Développe les compétences par parcours, cours, activités et portfolio.
+
+### XKaliber
+
+Mesure le calibre réel par épreuve adaptative et produit un résultat de compétence source-authoritatif.
+
+### CertifiKation
+
+Atteste une compétence confirmée et produit une preuve exportable, bornée par domaine, niveau, date et conditions de validité.
+
+### K-Port
+
+Agit comme **passerelle canonique d’évidence vers EkoH**. Il reçoit notamment les preuves XKaliber / CertifiKation, vérifie leur provenance, leur statut, leur portée, leur association à la bonne personne, leur consentement et leur mapping vers les domaines EkoH.
+
+K-Port **ne refait pas l’évaluation XKaliber et ne recalcule pas le niveau confirmé**. XKaliber reste l’autorité source pour la performance observée.
+
+### EkoH
+
+Reçoit de K-Port des signaux admissibles et bornés par domaine. EkoH reste la seule autorité qui décide de l’impact sur la réputation, applique les paramètres de scoring et conserve l’historique des changements.
+
+### SmartVote
+
+Peut utiliser certains signaux de compétence ou de réputation fournis par les interfaces gouvernées d’EkoH, si les règles publiques le permettent. SmartVote ne reçoit pas directement les résultats bruts XKaliber.
+
+### Konnaxion
+
+Rend la Table ronde opérante : apprentissage, compétence, preuve, réputation, délibération, décision et action peuvent se relier sans confondre leurs autorités.
+
+## Principe d’échange
+
+XKaliber ne doit pas partager plus que nécessaire et ne doit pas contourner K-Port pour un usage EkoH.
+
+| Destination | Donnée recommandée | Autorité |
+|---|---|---|
+| KonnectED | profil complet ou pédagogique | XKaliber pour le résultat |
+| CertifiKation | niveau confirmé et éléments nécessaires à l’attestation | XKaliber / CertifiKation |
+| K-Port | preuve structurée, provenance, statut, confiance, limites et consentement | XKaliber comme source; K-Port pour l’admissibilité |
+| EkoH | aucun flux direct depuis XKaliber; signal préparé par K-Port | EkoH pour le scoring |
+| SmartVote | aucun flux direct depuis XKaliber; indicateur gouverné issu d’EkoH | règles SmartVote / EkoH |
+| Konnaxion public | résumé seulement si consentement et politique de visibilité | politique Konnaxion |
+
+## Phrase d’intégration
+
+**XKaliber mesure la compétence. CertifiKation l’atteste. K-Port qualifie et route l’évidence. EkoH transforme l’évidence admissible en réputation. Konnaxion utilise ensuite cette réputation selon des règles gouvernées.**
+
+
+================================================================================================
+FILE: docs/product/mvp-scope.md
+================================================================================================
+
+# Périmètre MVP
+
+## Inclus
+
+- domaines et compétences ;
+- niveaux de difficulté ;
+- banque d’items simple ;
+- session d’évaluation ;
+- adaptation par blocs ;
+- Profil de Calibre ;
+- Sceau CertifiKation minimal ;
+- journal d’audit ;
+- consentement ;
+- explication du résultat ;
+- export conceptuel vers CertifiKation et K-Port.
+
+## Exclu du MVP
+
+- marketplace d’évaluations ;
+- gestion complète des cours ;
+- pondération SmartVote active ;
+- score EkoH automatisé ;
+- intégration directe XKaliber → EkoH ou XKaliber → SmartVote ;
+- correction avancée par IA ;
+- épreuves de haute sécurité ;
+- surveillance vidéo ;
+- intégration RH complète ;
+- identité décentralisée définitive ;
+- certifications réglementées.
+
+## Hypothèse MVP
+
+Une première version peut fonctionner avec :
+
+- quelques domaines ;
+- une banque limitée d’items ;
+- des règles d’adaptation simples ;
+- des profils générés de manière explicable ;
+- un processus de révision humain.
+
+## Mesures de succès MVP
+
+- Les utilisateurs comprennent mieux leur niveau.
+- Les évaluateurs trouvent le profil plus utile qu’une note.
+- Les effets plafond sont détectés.
+- Les personnes peuvent contester ou demander un recalibrage.
+- Les preuves exportées sont lisibles et limitées au bon contexte.
+
+
+================================================================================================
+FILE: docs/product/user-personas.md
+================================================================================================
+
+# Personas
+
+## 1. Apprenante KonnectED
+
+### Besoin
+
+Comprendre son niveau, progresser et obtenir une reconnaissance.
+
+### Succès
+
+Elle reçoit un Profil de Calibre clair, avec un niveau confirmé et des prochaines étapes.
+
+### Risque
+
+Elle se sent jugée ou réduite à un score.
+
+### Protection
+
+Le profil doit expliquer les forces, les limites et les conditions de validité.
+
+## 2. Recruteur
+
+### Besoin
+
+Évaluer une compétence avant d’embaucher.
+
+### Succès
+
+Il comprend quelles responsabilités la personne peut porter.
+
+### Risque
+
+Il utilise le résultat comme décision automatique.
+
+### Protection
+
+XKaliber doit rappeler que le profil informe une décision et ne remplace pas tout le jugement.
+
+## 3. Formatrice
+
+### Besoin
+
+Adapter la formation au niveau réel des apprenants.
+
+### Succès
+
+Elle voit les zones de maîtrise et les zones à travailler.
+
+### Risque
+
+Elle interprète une faiblesse temporaire comme une incapacité durable.
+
+### Protection
+
+Le système recommande le recalibrage et indique les conditions de validité.
+
+## 4. Table de validation
+
+### Besoin
+
+Définir les niveaux et seuils pour un domaine.
+
+### Succès
+
+Les critères deviennent cohérents, audités et révisables.
+
+### Risque
+
+Le domaine devient capturé par un groupe fermé.
+
+### Protection
+
+Les règles et seuils sont publics, contestables et versionnés.
+
+## 5. Communauté Konnaxion
+
+### Besoin
+
+Faire émerger une compétence pertinente dans la gouvernance collective.
+
+### Succès
+
+La compétence est visible sans devenir une autorité absolue.
+
+### Risque
+
+La pondération devient opaque.
+
+### Protection
+
+Les signaux sont bornés par domaine et affichés avec leurs limites.
+
+
+================================================================================================
+FILE: docs/product/user-stories.md
+================================================================================================
+
+# User stories
+
+## Apprentissage
+
+### US-001
+
+En tant qu’apprenante, je veux passer une épreuve adaptée à mon niveau afin de connaître mes forces et mes prochaines étapes.
+
+### US-002
+
+En tant qu’apprenante, je veux comprendre pourquoi un niveau m’a été attribué afin de pouvoir accepter, contester ou améliorer mon résultat.
+
+### US-003
+
+En tant qu’apprenante, je veux obtenir un Sceau CertifiKation lorsque mon niveau est confirmé afin de valoriser ma compétence.
+
+## Évaluation
+
+### US-004
+
+En tant qu’évaluateur, je veux créer une épreuve par compétence afin de mesurer ce qui est réellement pertinent.
+
+### US-005
+
+En tant qu’évaluateur, je veux voir la marge de confiance afin de savoir si le résultat est solide ou doit être complété.
+
+### US-006
+
+En tant qu’évaluateur, je veux comparer le niveau confirmé et la portée maximale afin de distinguer maîtrise validée et potentiel exploré.
+
+## Organisation
+
+### US-007
+
+En tant qu’organisation, je veux utiliser XKaliber dans un processus d’embauche afin de mieux situer les candidats.
+
+### US-008
+
+En tant qu’organisation, je veux savoir quelles limites s’appliquent au profil afin de ne pas l’utiliser hors contexte.
+
+## Konnaxion
+
+### US-009
+
+En tant que membre de Konnaxion, je veux que mes compétences validées puissent être transmises à K-Port et, si elles sont admissibles, enrichir mon profil EkoH par domaine avec mon consentement.
+
+### US-010
+
+En tant que communauté, je veux que les preuves XKaliber utilisées dans la gouvernance passent par les couches de preuve et de réputation gouvernées, sans transformer l’expertise en autorité opaque.
+
+## Gouvernance
+
+### US-011
+
+En tant qu’auditeur, je veux voir les règles utilisées pour produire un profil afin de vérifier la validité du résultat.
+
+### US-012
+
+En tant que personne évaluée, je veux pouvoir demander une révision afin de corriger une erreur ou un biais.
+
+
+================================================================================================
+FILE: docs/README.md
+================================================================================================
+
+# Documentation
+
+Ce dossier contient la documentation fonctionnelle, conceptuelle, UX, gouvernance et intégration de XKaliber.
+
+Lire dans cet ordre :
+
+1. `../PRODUCT_BRIEF.md`
+2. `architecture/overview.md`
+3. `evaluation/adaptive-assessment-model.md`
+4. `evaluation/caliber-profile.md`
+5. `integration/konnaxion-map.md`
+6. `governance/decision-use-policy.md`
+7. `../ROADMAP.md`
+
+
+================================================================================================
+FILE: docs/ux/content-guidelines.md
+================================================================================================
+
+# Guide de contenu UX
+
+## Éviter
+
+- “Vous avez échoué.”
+- “Vous êtes faible.”
+- “Vous êtes niveau 2, point final.”
+- “Votre score détermine votre valeur.”
+- “Le système a décidé.”
+
+## Préférer
+
+- “Le niveau 3 est confirmé.”
+- “Le niveau 4 est partiellement démontré.”
+- “Une évaluation complémentaire est recommandée.”
+- “Ce résultat est valable dans ce contexte.”
+- “Vous pouvez demander une révision.”
+
+## Principes de formulation
+
+- parler de compétence, pas d’identité ;
+- parler de contexte, pas de vérité absolue ;
+- parler de progression, pas seulement de performance ;
+- expliquer les limites ;
+- montrer les prochaines étapes.
+
+## Exemple de résultat
+
+Mauvais :
+
+> Vous êtes niveau 3.
+
+Meilleur :
+
+> Votre compétence est confirmée jusqu’au niveau 3 dans ce contexte. Le niveau 4 montre des signes prometteurs, mais demande une validation complémentaire.
+
+
+================================================================================================
+FILE: docs/ux/core-flows.md
+================================================================================================
+
+# Flux UX principaux
+
+## Flux 1 — Passer une épreuve
+
+```text
+Accueil
+→ Choix du domaine
+→ Consentement
+→ Scan initial
+→ Épreuve adaptative
+→ Résumé provisoire
+→ Profil de Calibre
+→ Options : sauvegarder, partager, contester, recalibrer
+```
+
+## Flux 2 — Créer une épreuve
+
+```text
+Créer un domaine
+→ Définir les compétences
+→ Définir les niveaux
+→ Ajouter des items
+→ Définir les critères
+→ Tester l’épreuve
+→ Soumettre à validation
+→ Publier
+```
+
+## Flux 3 — Générer une CertifiKation
+
+```text
+Profil de Calibre
+→ Vérifier seuil de certification
+→ Générer Sceau CertifiKation
+→ Ajouter au portfolio KonnectED
+→ Définir partage public/privé
+→ Planifier recalibrage
+```
+
+## Flux 4 — Réviser un résultat
+
+```text
+Profil contesté
+→ Motif de contestation
+→ Revue des traces
+→ Intervention humaine
+→ Décision de maintien/correction/reprise
+→ Journal d’audit mis à jour
+```
+
+## Flux 5 — Alimenter EkoH via K-Port
+
+```text
+Profil de Calibre / Sceau CertifiKation
+→ Consentement
+→ Paquet d’évidence borné par domaine
+→ Handoff vers K-Port
+→ Contrôle de provenance, statut, portée, identité et consentement
+→ Mapping / admissibilité K-Port
+→ Signal transmis par K-Port à EkoH
+→ EkoH décide de l’impact réputationnel
+→ Affichage explicable dans le profil Konnaxion
+```
+
+Une contestation du **résultat d’évaluation** retourne vers XKaliber. Une contestation de **l’admissibilité ou du mapping de l’évidence** relève de K-Port. Une contestation du **score de réputation** relève d’EkoH.
+
+
+================================================================================================
+FILE: docs/ux/screen-inventory.md
+================================================================================================
+
+# Inventaire des écrans
+
+## Public
+
+- page d’accueil ;
+- explication du concept ;
+- exemples de profils ;
+- FAQ ;
+- politique d’usage.
+
+## Personne évaluée
+
+- tableau de bord ;
+- choix du domaine ;
+- consentement ;
+- scan initial ;
+- épreuve ;
+- pause ;
+- résultats ;
+- profil ;
+- partage ;
+- contestation ;
+- recalibrage.
+
+## Évaluateur
+
+- domaines ;
+- compétences ;
+- items ;
+- sessions ;
+- profils ;
+- validations ;
+- anomalies ;
+- appels.
+
+## Organisation
+
+- cohortes ;
+- profils agrégés ;
+- certificats ;
+- seuils ;
+- conformité ;
+- exports.
+
+## Gouvernance
+
+- versions des règles ;
+- décisions ;
+- audits ;
+- tables de validation ;
+- rapports d’équité ;
+- politiques.
+
+
+================================================================================================
+FILE: examples/sample-caliber-profile.md
+================================================================================================
+
+# Exemple — Profil de Calibre
+
+## Résumé
+
+**Domaine :** Analyse de données  
+**Compétence :** Interprétation de résultats  
+**Contexte :** Évaluation pré-embauche  
+**Calibre validé :** Niveau 3  
+**Portée maximale explorée :** Niveau 4  
+**Marge de confiance :** Moyenne-haute  
+**Statut :** CertifiKation recommandée au niveau 3
+
+## Forces observées
+
+- Lit correctement les tableaux simples et intermédiaires.
+- Compare les valeurs sans erreur majeure.
+- Identifie plusieurs limites des données.
+- Évite les conclusions excessivement rapides dans la majorité des cas.
+
+## Limites observées
+
+- Généralise parfois à partir d’un échantillon incomplet.
+- A besoin d’un cadre plus structuré pour traiter les cas ambigus.
+- Le niveau 4 montre un potentiel, mais n’est pas encore stable.
+
+## Conditions de validité
+
+Ce profil est valable pour des tâches d’analyse de données générales, non spécialisées, dans un contexte organisationnel standard.
+
+Il ne certifie pas :
+
+- l’analyse statistique avancée ;
+- la modélisation prédictive ;
+- la conception de bases de données ;
+- la décision stratégique autonome.
+
+## Recommandation
+
+Accorder la CertifiKation niveau 3. Prévoir un parcours KonnectED ciblé pour consolider le niveau 4, suivi d’un recalibrage.
+
+
+================================================================================================
+FILE: examples/sample-certifikation-seal.md
+================================================================================================
+
+# Exemple — Sceau CertifiKation
+
+```text
+Sceau CertifiKation
+Source : XKaliber
+Domaine : Analyse de données
+Compétence : Interprétation de résultats
+Niveau confirmé : 3
+Confiance : moyenne-haute
+Date d’émission : 2026-07-05
+Durée recommandée : 18 mois
+Statut : actif
+Limites : ne couvre pas l’analyse statistique avancée
+Usage : portfolio KonnectED, preuve d’embauche, signal EkoH borné par domaine avec consentement
+```
+
+
+================================================================================================
+FILE: examples/sample-competency-map.md
+================================================================================================
+
+# Exemple — carte de compétence
+
+## Domaine
+
+Analyse de données
+
+## Compétence
+
+Interpréter un tableau de résultats et formuler une conclusion prudente.
+
+## Niveaux
+
+### Niveau 1 — Lecture simple
+
+La personne peut lire une valeur, repérer un total ou identifier une catégorie.
+
+### Niveau 2 — Comparaison
+
+La personne peut comparer deux valeurs, repérer une tendance simple et éviter une conclusion évidente mais fausse.
+
+### Niveau 3 — Interprétation fiable
+
+La personne peut expliquer ce que les données suggèrent, ce qu’elles ne prouvent pas et quelles limites existent.
+
+### Niveau 4 — Analyse contextuelle
+
+La personne peut relier les données à un contexte, identifier des biais possibles et proposer une décision prudente.
+
+### Niveau 5 — Analyse stratégique
+
+La personne peut formuler des scénarios, évaluer les risques et recommander une action avec conditions.
+
+## Seuil CertifiKation initial
+
+Certification possible au niveau 3 si :
+
+- réussite stable sur tâches niveau 3 ;
+- au moins une tâche niveau 4 explorée ;
+- erreurs critiques absentes ;
+- explication des limites correcte.
+
+
+================================================================================================
+FILE: examples/sample-session.md
+================================================================================================
+
+# Exemple — session d’évaluation
+
+## Contexte
+
+Une personne postule pour un rôle qui demande une compétence d’analyse de données de niveau intermédiaire.
+
+## Scan initial
+
+Le parcours KonnectED indique une expérience de base. Le système démarre au niveau 2.
+
+## Déroulement
+
+### Bloc 1 — Niveau 2
+
+Résultat : réussite élevée.
+
+Interprétation : niveau 2 probablement maîtrisé.
+
+Action : passer au niveau 3.
+
+### Bloc 2 — Niveau 3
+
+Résultat : réussite solide, explication correcte des limites.
+
+Interprétation : niveau 3 confirmé.
+
+Action : explorer le niveau 4.
+
+### Bloc 3 — Niveau 4
+
+Résultat : performance partielle. La personne voit certains biais, mais généralise trop vite.
+
+Interprétation : niveau 4 partiellement démontré.
+
+Action : ajouter une tâche de précision.
+
+### Bloc 4 — Niveau 4
+
+Résultat : performance moyenne, mais amélioration après consigne structurée.
+
+Interprétation : niveau 4 non certifié, mais potentiel présent.
+
+## Sortie
+
+Calibre validé : niveau 3  
+Portée maximale explorée : niveau 4  
+Confiance : moyenne-haute  
+Recommandation : CertifiKation niveau 3 ; formation ciblée avant niveau 4.
+
+
+================================================================================================
+FILE: GOVERNANCE.md
+================================================================================================
+
+# Gouvernance du projet XKaliber
+
+## Principe directeur
+
+XKaliber ne doit jamais devenir un outil de classement total des personnes. Il mesure des compétences contextualisées, dans des domaines précis, avec des règles explicites et révisables.
+
+## Règles fondamentales
+
+1. **Domaine avant score**  
+   Toute mesure doit être liée à un domaine et à une compétence précise.
+
+2. **Preuve avant influence**  
+   Aucune compétence ne doit alimenter un profil de crédibilité sans trace vérifiable.
+
+3. **Explication avant usage**  
+   Une personne doit pouvoir comprendre pourquoi un profil ou niveau a été produit.
+
+4. **Révision avant sanction**  
+   Toute décision importante fondée sur XKaliber doit permettre un recours humain.
+
+5. **Temporalité avant permanence**  
+   Les profils doivent pouvoir expirer, être recalibrés ou être corrigés.
+
+6. **Contexte avant généralisation**  
+   Une compétence dans un contexte ne prouve pas une compétence générale.
+
+7. **Table de validation avant standard public**  
+   Les seuils importants doivent être définis avec des personnes capables de juger le domaine.
+
+## Rôles de gouvernance
+
+### Mainteneur produit
+
+Responsable de la cohérence fonctionnelle et de la roadmap.
+
+### Gardien de l’évaluation
+
+Responsable des principes de mesure, des seuils, des effets plafond/plancher et de la qualité des épreuves.
+
+### Gardien de l’équité
+
+Responsable des biais, appels, impacts sociaux et limites d’usage.
+
+### Table de validation
+
+Groupe de personnes compétentes dans un domaine qui valide les niveaux, critères et types d’épreuves.
+
+### Auditeur
+
+Personne ou groupe pouvant vérifier les traces, règles et sorties du système.
+
+## Décisions qui exigent une trace
+
+- modification d’un seuil de certification ;
+- modification d’une règle d’adaptation ;
+- ajout d’un domaine ;
+- usage de XKaliber dans SmartVote ;
+- usage de XKaliber dans un processus d’embauche ;
+- changement de durée de validité d’un profil ;
+- changement de politique d’accès aux résultats.
+
+## Usage interdit
+
+XKaliber ne doit pas être utilisé pour :
+
+- produire un score global de valeur humaine ;
+- exclure automatiquement sans recours ;
+- classer publiquement des personnes sans consentement ;
+- transférer l’autorité décisionnelle à un système opaque ;
+- utiliser une compétence hors de son domaine ;
+- confondre performance ponctuelle et identité permanente.
+
+
+================================================================================================
+FILE: LICENSE.md
+================================================================================================
+
+# Licence
+
+À définir.
+
+Ce dépôt de départ est fourni comme structure initiale de conception. Avant publication publique, choisir une licence adaptée :
+
+- licence ouverte pour documentation ;
+- licence logicielle si du code est ajouté ;
+- licence de marque séparée pour le nom XKaliber, les logos et l’identité visuelle ;
+- politique de contribution claire si des tiers participent.
+
+
+================================================================================================
+FILE: PRODUCT_BRIEF.md
+================================================================================================
+
+# Product brief — XKaliber
+
+## Résumé
+
+XKaliber est une application de mesure adaptative des compétences. Elle sert à produire des profils de compétence plus fins qu’une note brute, utilisables pour l’apprentissage, la certification, l’embauche, la formation continue et la gouvernance collective.
+
+## Problème
+
+Les tests classiques posent plusieurs problèmes :
+
+- même niveau de difficulté pour tous ;
+- effet plafond pour les personnes très compétentes ;
+- effet plancher pour les personnes moins avancées ;
+- stress inutile quand le test est trop difficile ;
+- surconfiance quand le test est trop facile ;
+- notes difficiles à interpréter dans un contexte réel ;
+- faible capacité à dire quelle responsabilité une personne peut porter.
+
+## Proposition
+
+XKaliber ajuste la difficulté selon la performance observée afin de situer la personne dans une zone de mesure utile.
+
+Le système vise deux moments :
+
+1. **Validation confortable** : confirmer que la personne maîtrise une compétence avec une difficulté qu’elle devrait réussir autour de 85–90 %.
+2. **Exploration du plafond** : si la performance est trop élevée, augmenter la difficulté pour identifier le niveau maximal où la compétence reste fiable.
+
+## Utilisateurs
+
+### Candidat ou apprenant
+
+Souhaite comprendre son niveau réel, obtenir une certification, progresser et valoriser ses compétences.
+
+### Évaluateur
+
+Souhaite mesurer une compétence sans réduire la personne à une note brute.
+
+### Organisation
+
+Souhaite embaucher, former, certifier ou affecter des responsabilités à partir de preuves lisibles.
+
+### Communauté Konnaxion
+
+Souhaite intégrer des signaux de compétence dans des processus collectifs, sans transformer ces signaux en domination opaque.
+
+## Sortie principale
+
+Le résultat principal est le **Profil de Calibre**.
+
+Il contient :
+
+- domaine évalué ;
+- compétences évaluées ;
+- niveau confirmé ;
+- niveau exploré ;
+- portée maximale estimée ;
+- niveau de confiance ;
+- erreurs typiques ;
+- recommandations d’apprentissage ;
+- conditions de certification ;
+- date et contexte ;
+- traçabilité de l’évaluation ;
+- preuve exportable vers CertifiKation.
+
+## Critères de succès
+
+XKaliber réussit si :
+
+- les résultats sont plus utiles qu’une note classique ;
+- les personnes évaluées comprennent leur profil ;
+- les organisations peuvent justifier leurs décisions ;
+- les évaluations sont équitables et révisables ;
+- les preuves peuvent être réutilisées dans KonnectED, CertifiKation, EkoH et Konnaxion ;
+- le système évite les effets plafond et plancher.
+
+## Non-objectifs initiaux
+
+La première version ne cherche pas à :
+
+- remplacer toutes les entrevues humaines ;
+- certifier tous les domaines possibles ;
+- produire un score universel de mérite ;
+- automatiser l’embauche de bout en bout ;
+- déterminer la valeur globale d’une personne ;
+- imposer une autorité algorithmique.
+
+
+================================================================================================
+FILE: PROJECT_BOARD.md
+================================================================================================
+
+# Project board initial
+
+## Épique 1 — Modèle de compétence
+
+- [ ] Définir les domaines initiaux.
+- [ ] Définir les compétences par domaine.
+- [ ] Définir les niveaux de difficulté.
+- [ ] Définir les critères de maîtrise.
+- [ ] Définir les conditions de certification.
+
+## Épique 2 — Épreuve adaptative
+
+- [ ] Définir le Scan initial.
+- [ ] Définir la Zone de maîtrise.
+- [ ] Définir l’Épreuve du Tranchant.
+- [ ] Définir les règles d’arrêt.
+- [ ] Définir les seuils d’incertitude.
+- [ ] Définir le recalibrage.
+
+## Épique 3 — Profil de Calibre
+
+- [ ] Définir le format du profil.
+- [ ] Définir le Calibre validé.
+- [ ] Définir la Portée maximale.
+- [ ] Définir la Marge de confiance.
+- [ ] Définir les recommandations.
+- [ ] Définir la version exportable.
+
+## Épique 4 — CertifiKation
+
+- [ ] Définir le Sceau CertifiKation.
+- [ ] Définir les preuves requises.
+- [ ] Définir les statuts de certification.
+- [ ] Définir l’expiration et le recalibrage.
+- [ ] Définir les règles de révocation ou correction.
+
+## Épique 5 — Konnaxion
+
+- [ ] Définir le lien vers KonnectED.
+- [ ] Définir le lien vers EkoH.
+- [ ] Définir les usages permis dans SmartVote.
+- [ ] Définir les limites d’usage des scores.
+- [ ] Définir l’affichage public/privé des profils.
+
+## Épique 6 — Équité et gouvernance
+
+- [ ] Définir le processus d’appel.
+- [ ] Définir les audits réguliers.
+- [ ] Définir les avertissements d’usage.
+- [ ] Définir les protections contre le classement abusif.
+- [ ] Définir les règles de transparence.
+
+
+================================================================================================
+FILE: README.md
+================================================================================================
+
+# XKaliber
+
+**The assessment that reveals true calibre.**
+
+XKaliber is the adaptive competency assessment engine of **CertifiKation**, within **KonnectED**, a module of **Konnaxion**.
+
+This repository is intentionally **technology-agnostic**. It does not prescribe any framework, programming language, database, or provider. It serves as a product, functional, architectural, and governance starting point for designing the application before technical choices are made.
+
+## Core idea
+
+A uniform test mostly measures how well someone fits the test. XKaliber instead measures the level at which a person remains reliably competent.
+
+The system starts by validating existing knowledge and skills, then gradually adjusts difficulty to reveal:
+
+- what the person can perform comfortably;
+- the threshold at which their competency remains reliable;
+- the upper boundary worth exploring;
+- areas of uncertainty;
+- evidence that can be exported to CertifiKation;
+- structured competency evidence that can be routed through **K-Port** to **EkoH** for domain-bounded reputation processing within Konnaxion.
+
+## Brand metaphor
+
+In the myth, Excalibur is the trial that reveals who is capable of carrying a role.
+
+Within Konnaxion, **XKaliber** becomes the assessment that reveals which competency, responsibility, or decision a person is equipped to carry.
+
+The Round Table becomes operational: people are not merely heard; their competencies are situated, their expertise is bounded by domain, and collective governance can rely on explicit evidence rather than status, noise, or popularity.
+
+## Repository structure
+
+```text
+xkaliber-starter/
+├─ README.md
+├─ BRAND.md
+├─ PRODUCT_BRIEF.md
+├─ ROADMAP.md
+├─ PROJECT_BOARD.md
+├─ GOVERNANCE.md
+├─ CONTRIBUTING.md
+├─ SECURITY_AND_PRIVACY.md
+├─ LICENSE.md
+├─ docs/
+│  ├─ architecture/
+│  ├─ evaluation/
+│  ├─ governance/
+│  ├─ product/
+│  ├─ ux/
+│  └─ integration/
+├─ contracts/
+├─ examples/
+├─ tests/
+│  └─ acceptance/
+└─ decisions/
+```
+
+## Design principles
+
+XKaliber must remain:
+
+1. **adaptive** — difficulty changes according to performance;
+2. **explainable** — the person understands how their profile is produced;
+3. **governable** — rules, thresholds, and weightings are visible and revisable;
+4. **domain-bounded** — a validated competency does not grant general authority;
+5. **useful** — results support learning, hiring, certification, or guidance;
+6. **contestable** — errors, bias, and anomalies must be reviewable;
+7. **exportable** — assessment evidence can flow into CertifiKation and, through K-Port, into EkoH and the wider Konnaxion ecosystem.
+
+## Integration boundary
+
+XKaliber is responsible for **measuring competency and producing assessment evidence**. It does not calculate a person's final reputation or authority within Konnaxion.
+
+The intended flow is:
+
+```text
+XKaliber
+   ↓
+Calibre Profile
+   ↓
+CertifiKation evidence
+   ↓
+K-Port
+   ↓
+EkoH
+   ↓
+Governed downstream use in Konnaxion
+```
+
+**CertifiKation** attests the XKaliber result. **K-Port** is the canonical evidence gateway: it validates provenance, status, scope, consent, and domain mapping without re-scoring the XKaliber assessment. **EkoH** is responsible for transforming qualified evidence into domain-bounded reputation signals.
+
+## Initial MVP objective
+
+Create an initial version capable of:
+
+- defining domains and competencies;
+- launching a simple adaptive assessment;
+- adjusting difficulty after each block of questions or tasks;
+- producing a Calibre Profile;
+- generating CertifiKation evidence;
+- explaining the result to the assessed person and the organization;
+- recording assessment decisions in an auditable manner;
+- exporting structured assessment evidence for ingestion by K-Port.
+
+## Decisions not to make too early
+
+This repository intentionally avoids choosing:
+
+- programming language;
+- front-end framework;
+- database;
+- AI provider;
+- cloud infrastructure;
+- final identity protocol;
+- final certificate format.
+
+These choices should be made only after validating the needs, workflows, competency model, integration boundaries, and required level of evidence.
+
+
+================================================================================================
+FILE: ROADMAP.md
+================================================================================================
+
+# Roadmap — XKaliber
+
+## Phase 0 — Cadrage
+
+- Définir le langage produit.
+- Définir les domaines de compétence initiaux.
+- Définir les niveaux de difficulté.
+- Définir les types d’épreuves.
+- Définir les sorties attendues.
+- Rédiger les principes de gouvernance.
+
+## Phase 1 — Prototype conceptuel
+
+Objectif : simuler une évaluation sans choix technique final.
+
+Livrables :
+
+- modèle de compétence ;
+- banque d’items fictifs ;
+- règles d’adaptation ;
+- exemples de sessions ;
+- exemples de profils ;
+- grille de lecture pour évaluateurs.
+
+## Phase 2 — MVP fonctionnel
+
+Objectif : faire passer une épreuve adaptative simple.
+
+Fonctions :
+
+- création d’un domaine ;
+- création de compétences ;
+- création d’items ou tâches ;
+- lancement d’une session ;
+- ajustement de difficulté ;
+- génération d’un Profil de Calibre ;
+- export d’un Sceau CertifiKation.
+
+## Phase 3 — Validation organisationnelle
+
+Objectif : rendre le système utilisable par une école, équipe ou organisation.
+
+Fonctions :
+
+- espace évaluateur ;
+- tableaux de bord ;
+- comparaison de cohortes ;
+- suivi de progression ;
+- commentaires humains ;
+- audit de l’évaluation ;
+- mécanisme de contestation.
+
+## Phase 4 — Intégration Konnaxion
+
+Objectif : connecter XKaliber au cycle plus large.
+
+Fonctions :
+
+- portfolio KonnectED ;
+- preuve CertifiKation ;
+- signal de domaine vers EkoH ;
+- usage possible dans SmartVote ;
+- intégration à des parcours d’apprentissage ;
+- historique de recalibrage.
+
+## Phase 5 — Gouvernance avancée
+
+Objectif : rendre les règles révisables et publiques.
+
+Fonctions :
+
+- versionnement des règles ;
+- comités de validation ;
+- tables de validation ;
+- analyse d’équité ;
+- rapports de biais ;
+- processus d’appel ;
+- seuils publics par domaine.
+
+
+================================================================================================
+FILE: SECURITY_AND_PRIVACY.md
+================================================================================================
+
+# Sécurité, confidentialité et limites d’usage
+
+## Données sensibles
+
+XKaliber peut manipuler des données sensibles :
+
+- identité ;
+- résultats d’évaluation ;
+- historique d’apprentissage ;
+- commentaires d’évaluateurs ;
+- signaux de compétence ;
+- décisions d’embauche ou de certification ;
+- traces de performance.
+
+## Principes
+
+### Minimisation
+
+Ne recueillir que les données nécessaires à l’évaluation et à la preuve.
+
+### Consentement
+
+La personne doit savoir :
+
+- ce qui est évalué ;
+- pourquoi ;
+- qui verra les résultats ;
+- combien de temps ils seront conservés ;
+- quels usages secondaires sont possibles.
+
+### Séparation
+
+Séparer :
+
+- les réponses brutes ;
+- le profil de compétence ;
+- la preuve CertifiKation ;
+- les signaux EkoH ;
+- les décisions organisationnelles.
+
+### Explicabilité
+
+Un résultat doit être accompagné d’une explication claire.
+
+### Recours
+
+Toute personne doit pouvoir demander :
+
+- révision ;
+- correction ;
+- suppression selon les règles applicables ;
+- recalibrage ;
+- explication humaine.
+
+## Risques à surveiller
+
+- biais culturel ou linguistique ;
+- surinterprétation des résultats ;
+- usage hors contexte ;
+- pression sociale à rendre les profils publics ;
+- classement abusif ;
+- effet de verrouillage d’une mauvaise évaluation ;
+- confusion entre compétence technique et valeur morale.
+
+## Limites d’usage à afficher
+
+XKaliber mesure une performance contextualisée. Il ne mesure pas la valeur globale d’une personne, son potentiel complet, son éthique générale ni sa capacité à exercer tout rôle dans tout contexte.
+
+
+================================================================================================
+FILE: tests/acceptance/acceptance-scenarios.md
+================================================================================================
+
+# Scénarios d’acceptation
+
+## Scénario 1 — Éviter l’effet plafond
+
+Étant donné une personne qui réussit tous les items faciles,  
+quand elle passe une épreuve XKaliber,  
+alors le système doit augmenter la difficulté,  
+et le profil doit indiquer que le niveau initial était maîtrisé mais insuffisant pour mesurer le plafond.
+
+## Scénario 2 — Ne pas humilier une personne sous le niveau attendu
+
+Étant donné une personne qui échoue à un niveau trop difficile,  
+quand le système détecte que la difficulté est mal calibrée,  
+alors il doit ajuster vers un niveau plus informatif,  
+et le rapport doit distinguer échec au niveau supérieur et compétence possible au niveau inférieur.
+
+## Scénario 3 — Produire une certification limitée
+
+Étant donné un profil avec niveau 3 confirmé et niveau 4 partiel,  
+quand CertifiKation génère une preuve,  
+alors la preuve doit certifier seulement le niveau 3,  
+et indiquer que le niveau 4 n’est pas confirmé.
+
+## Scénario 4 — Contester un résultat
+
+Étant donné une personne qui conteste son profil,  
+quand elle soumet une demande de révision,  
+alors le système doit enregistrer le motif,  
+ouvrir une revue humaine,  
+et marquer le profil comme contesté jusqu’à décision.
+
+## Scénario 5 — Limiter le signal EkoH
+
+Étant donné un profil XKaliber en analyse de données,  
+quand un signal est envoyé vers EkoH,  
+alors le signal doit rester borné au domaine concerné,  
+et ne doit pas augmenter l’influence de la personne dans des domaines non liés.
+
+## Scénario 6 — Préserver la lecture démocratique
+
+Étant donné un signal de compétence utilisé dans SmartVote,  
+quand un résultat de gouvernance est affiché,  
+alors la lecture pondérée ne doit pas remplacer la lecture une-personne-un-vote,  
+et les règles de pondération doivent être visibles.
+
+
+================================================================================================
+FILE: tests/acceptance/mvp-checklist.md
+================================================================================================
+
+# Checklist MVP
+
+## Produit
+
+- [ ] Une personne peut comprendre ce que XKaliber mesure.
+- [ ] Une personne peut consentir avant l’épreuve.
+- [ ] Une personne peut passer une épreuve complète.
+- [ ] Une personne peut recevoir un Profil de Calibre.
+- [ ] Une personne peut comprendre les limites du résultat.
+- [ ] Une personne peut demander une révision.
+
+## Évaluation
+
+- [ ] Le système peut démarrer à un niveau estimé.
+- [ ] Le système peut augmenter la difficulté.
+- [ ] Le système peut réduire ou stabiliser la difficulté.
+- [ ] Le système peut détecter un effet plafond.
+- [ ] Le système peut produire une marge de confiance.
+- [ ] Le système peut distinguer niveau confirmé et niveau exploré.
+
+## CertifiKation
+
+- [ ] Le système peut générer un Sceau CertifiKation.
+- [ ] Le sceau contient des limites d’usage.
+- [ ] Le sceau contient une durée de validité.
+- [ ] Le sceau peut être contesté ou expiré.
+
+## Gouvernance
+
+- [ ] Les règles sont versionnées.
+- [ ] Les items ont un statut de validation.
+- [ ] Les interventions humaines sont tracées.
+- [ ] Les changements de seuil sont documentés.
+- [ ] Les usages dans EkoH ou SmartVote sont limités.

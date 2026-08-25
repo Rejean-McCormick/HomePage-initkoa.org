@@ -1,0 +1,1192 @@
+# INITKOA CONTEXT PACK
+
+repository: Rejean-McCormick/konnaxion-ashoka-systems-change-dossier
+source_path: C:\mycode\Ashoka
+source_commit: 1f31769e0f5f484bb7a439382b895d28d9595a9d
+working_tree_markdown: clean
+generated_at: 2026-08-25T09:32:55-04:00
+files: 10
+content_sha256: 1f1e5863d60534e60dc1628bf0918255440ba4bafe459fc87f1404eac797092d
+
+================================================================================================
+FILE INDEX
+================================================================================================
+
+01. ASHOKA_CRITERIA_MAP.md
+02. EPISTEMIC_INTEGRITY.md
+03. EVIDENCE_AND_LIMITS.md
+04. FOUNDER_CASE.md
+05. LINKS.md
+06. PILOT_AND_PROOF.md
+07. PUBLIC_REQUEST_TO_ASHOKA.md
+08. PUBLIC_REVIEW_PRECEDENTS.md
+09. README.md
+10. SYSTEMS_CHANGE_CASE.md
+
+
+================================================================================================
+FILE: ASHOKA_CRITERIA_MAP.md
+================================================================================================
+
+# Ashoka Criteria Map
+
+Official criteria reference:  
+https://www.ashoka.org/fr-ca/program/venture-selecting-our-ashoka-fellows
+
+Systems-change reference:  
+https://www.ashoka.org/en-us/systems-change
+
+## New Idea
+
+### Claim
+
+The novelty is not provenance, knowledge graphs, digital deliberation, or civic software individually.
+
+The proposed novelty is the **composition of provenance, epistemic status, situated expertise, semantic plurality, deliberation, execution, memory, and independent reproducibility into one governable social pattern**.
+
+### Proof needed
+
+Contemporary comparison and independent pilot.
+
+---
+
+## Creativity
+
+### Evidence
+
+- multidisciplinary synthesis;
+- technical architecture;
+- pattern library;
+- narrative-to-action method;
+- Mimic / Annex;
+- explicit anti-domination constraints;
+- translation of abstract social problems into operational mechanisms.
+
+### Proof needed
+
+Historical founder examples beyond the current project.
+
+---
+
+## Entrepreneurial Quality
+
+### Evidence
+
+- sustained independent construction;
+- substantial public corpus;
+- repeated formalization across technical, social, and pedagogical layers;
+- persistence through resource constraints;
+- explicit move from theory to pressure testing and external research propositions.
+
+### Proof needed
+
+A clear founder chronology, external references, and evidence of mobilizing an operational team.
+
+---
+
+## Social Impact
+
+### Evidence
+
+Current evidence supports architecture and readiness for independent testing.
+
+### Main gap
+
+The strongest social-impact claim is still prospective.
+
+### Proof needed
+
+Independent use, measurable change, and replication.
+
+---
+
+## Ethical Fiber
+
+### Architectural evidence
+
+- contestability;
+- provenance;
+- attribution;
+- non-sovereign expertise;
+- non-sovereign AI;
+- fork / exit;
+- anti-cult rules;
+- narrative/fact boundaries;
+- capacity for derivative institutions to become independent.
+
+### Personal proof needed
+
+External references and concrete episodes of ethical judgment under pressure.
+
+---
+
+## Systems-change fit
+
+The pattern aims to modify:
+
+- **Roles:** citizen, expert, institution, platform, founder.
+- **Relationships:** contribution, authority, dependence, review.
+- **Rules:** validation, attribution, advice, contestation, exit.
+- **Resources:** provenance, memory, semantic capability, coordination.
+- **Results:** cumulative capacity rather than repeated informational loss.
+
+That is the level at which the proposition should be challenged.
+
+
+================================================================================================
+FILE: EPISTEMIC_INTEGRITY.md
+================================================================================================
+
+# Epistemic Integrity, Provenance & Attribution
+
+## Not a truth authority
+
+Konnaxion is not designed to declare truth by institutional fiat.
+
+It is designed to make:
+
+- claims traceable;
+- uncertainty visible;
+- expertise contextual;
+- disagreements legible;
+- conclusions contestable;
+- revisions inspectable.
+
+## Against two failure modes
+
+### Attention-market failure
+
+Claims gain apparent truth through:
+
+- virality;
+- repetition;
+- status;
+- emotional force;
+- distribution power.
+
+### Centralized truth-authority failure
+
+Governments, companies, media, expert institutions, platforms, or AI systems may become practically difficult to challenge even when wrong.
+
+Konnaxion refuses the premise that society must choose between those two conditions.
+
+## Provenance
+
+A claim should be linked to:
+
+- source;
+- evidence;
+- context;
+- assumptions;
+- version;
+- epistemic state;
+- revision history.
+
+## Attribution and human knowledge lineage
+
+The same logic applies to inventions, theories, discoveries, methods, and cultural works.
+
+Knowledge history should be able to preserve:
+
+```text
+initial contribution
+→ precursor sources
+→ formalization
+→ experiment / evidence
+→ critique
+→ validation
+→ replication
+→ generalization
+→ application
+```
+
+Different people may have contributed at each stage.
+
+Principle:
+
+> **Aggregation != Attribution Erasure.**
+
+## Important distinctions
+
+> **Attribution != Truth**
+
+Priority does not prove correctness.
+
+> **Attribution != Legal Ownership**
+
+A provenance record is not automatically a patent or copyright determination.
+
+> **Recognition != Sovereignty**
+
+A major contribution does not create permanent authority over a domain.
+
+> **Diffusion != Erasure**
+
+A public good may spread freely while preserving honest lineage.
+
+## A compact political formulation
+
+> **Move from a regime where citizens must choose which authority to believe to one where competing claims can be examined through shared infrastructure for provenance, uncertainty, situated expertise, and contestation.**
+
+
+================================================================================================
+FILE: EVIDENCE_AND_LIMITS.md
+================================================================================================
+
+# Evidence, Maturity & Limits
+
+## Evidence discipline
+
+The dossier uses four distinct categories.
+
+### 1. Public / inspectable
+
+Code, repositories, documentation, architecture, contracts, essays, and public dossiers.
+
+### 2. Documented architecture
+
+Mechanisms specified coherently but not necessarily fully deployed.
+
+### 3. Partially functional
+
+Implemented slices or components whose full integrated institutional use is not yet demonstrated.
+
+### 4. Scenario / hypothesis
+
+A test case or research proposition.
+
+> **Scenario != Evidence.**
+
+## What the current corpus supports
+
+The public body of work supports serious claims of:
+
+- sustained independent systems construction;
+- substantial technical and governance documentation;
+- modular system-of-systems architecture;
+- explicit epistemic-state modeling;
+- provenance and traceability;
+- local/offline and bounded-AI design;
+- semantic and multilingual architecture;
+- mechanisms for deliberation and contextual expertise;
+- explicit anti-capture and exit logic;
+- pedagogy and capability reproduction;
+- public willingness to expose claims to criticism.
+
+## Technical documentation discipline
+
+The kOA-Linux documentation includes automated validation of architectural contracts and boundaries.
+
+A local validation run on 2026-08-17 completed successfully:
+
+```text
+python docs/tools/validate_docs.py
+```
+
+Result:
+
+```text
+validate_docs: pass
+```
+
+This is evidence of documentation and architecture discipline.
+
+It is **not** evidence of social impact.
+
+## What is not yet sufficiently proven
+
+The dossier should not claim established evidence for:
+
+- broad institutional adoption;
+- national-scale behavior change;
+- measured misinformation reduction;
+- measured improvement in democratic decisions;
+- reliable social mobility through expertise discovery;
+- scientific priority disputes resolved in practice;
+- multilingual parity at scale;
+- independent replication by a second institution.
+
+These are precisely the next proof obligations.
+
+## Strongest current weakness
+
+> **Social validation has not yet caught up with architectural development.**
+
+This is not solved by writing another paper.
+
+It requires independent use.
+
+
+================================================================================================
+FILE: FOUNDER_CASE.md
+================================================================================================
+
+# The Entrepreneur / Founder Case
+
+## Réjean McCormick
+
+The work should not be evaluated only as an architecture.
+
+The question is whether the architecture reflects a repeatable entrepreneurial pattern in the person who built it.
+
+## Documented trajectory
+
+The available corpus describes a multidisciplinary trajectory crossing:
+
+- humanities;
+- electromechanics;
+- systems design;
+- R&D prototyping;
+- organizational transformation;
+- software architecture;
+- civic governance;
+- semantics;
+- education;
+- cultural and narrative work.
+
+The claim is not that breadth itself is exceptional.
+
+The relevant pattern is **integration under a persistent problem**.
+
+## Modus operandi
+
+> I identify where a system is losing human capability. I cross the disciplinary boundaries necessary to understand the failure. I extract reusable primitives, build mechanisms to reconnect the lost capacities, document them, translate them into teachable forms, and then try to make the resulting infrastructure governable by people other than me.
+
+This pattern is visible across:
+
+- Kristal;
+- Konnaxion;
+- Koali;
+- Orgo;
+- EkoH;
+- semantic infrastructure;
+- UCKK;
+- narrative methodology;
+- pressure-test and research dossiers.
+
+## Creativity
+
+The work combines:
+
+- social theory with technical contracts;
+- provenance with civic legitimacy;
+- expertise with democratic equality;
+- multilingual semantics with infrastructure sovereignty;
+- narrative with formal safeguards;
+- modular software with institutional roles;
+- public-good logic with exit and fork.
+
+## Adaptability
+
+The architecture institutionalizes revision:
+
+- replaceable components;
+- Mimic vs Annex;
+- versioning;
+- explicit profiles;
+- post-mortem;
+- contestation;
+- fail-closed behavior;
+- Scenario != Evidence;
+- reopenability.
+
+## Determination
+
+A substantial public corpus has been developed independently rather than as the output of a university, laboratory, company, or funded research program acting as the project owner.
+
+The stronger public case should ultimately include a dated personal chronology of:
+
+- early prototypes;
+- major failures;
+- pivots;
+- resource constraints;
+- periods of sustained work;
+- moments when the architecture was materially changed.
+
+## Ethical orientation
+
+The most important founder claim is not:
+
+> “I am ethical.”
+
+It is:
+
+> **I am building an infrastructure against manipulation and arbitrary authority, so the same architecture must prevent my own system—and me—from becoming incontestable.**
+
+That is why the work includes:
+
+- fork and exit;
+- non-sovereign expert advice;
+- non-sovereign AI;
+- non-sovereign narrative persona;
+- explicit attribution to other contributors;
+- independent replication;
+- public claims that may be rejected.
+
+## The founder-dependence problem
+
+At present, the founder still carries a large share of the cross-system coherence.
+
+That is a risk, not a virtue.
+
+The next stage must therefore prove:
+
+> **non-founder comprehension → non-founder operation → non-founder teaching → independent reproduction.**
+
+
+================================================================================================
+FILE: LINKS.md
+================================================================================================
+
+# Canonical Links
+
+## Public hubs
+
+- kOA: https://initkoa.org/
+- GitHub profile: https://github.com/Rejean-McCormick
+
+## Core technical repositories
+
+- kOA-Linux / Koali: https://github.com/Rejean-McCormick/kOA-Linux
+- Konnaxion: https://github.com/Rejean-McCormick/Konnaxion
+- Orgo: https://github.com/Rejean-McCormick/Orgo
+- Kristal Framework: https://github.com/Rejean-McCormick/kristal-framework
+- SemantiK Architect: https://github.com/Rejean-McCormick/SemantiK_Architect
+- kOA Digital Ecosystem: https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem
+
+## Public review / research dossiers
+
+- Science Silk Road / Koali:  
+  https://github.com/Rejean-McCormick/science-silk-road-koali
+
+- Partners for Public Good — Pressure-Test Koali:  
+  https://github.com/Rejean-McCormick/partners-for-public-good_pressure-test-koali
+
+## Ashoka official references
+
+- Fellowship selection criteria — Canada (French):  
+  https://www.ashoka.org/fr-ca/program/venture-selecting-our-ashoka-fellows
+
+- Systems Change:  
+  https://www.ashoka.org/en-us/systems-change
+
+- Systems Change — High-Level Summary:  
+  https://www.ashoka.org/en-us/story/systems-change-high-level-summary
+
+
+================================================================================================
+FILE: PILOT_AND_PROOF.md
+================================================================================================
+
+# Pilot & Independent Proof
+
+## Objective
+
+Test a bounded end-to-end social pattern, not the entire ecosystem.
+
+## Minimal complete cycle
+
+```text
+real contribution
+→ provenance
+→ relevant review
+→ visible epistemic status
+→ structured deliberation
+→ real decision / action
+→ traceable outcome
+→ reusable memory
+```
+
+## Candidate domains
+
+- civic / municipal workflow;
+- scientific or research collaboration;
+- cultural provenance and attribution;
+- education and capability reproduction;
+- public-interest organizational coordination.
+
+## Core measures
+
+### Articulation
+
+- time contribution → action;
+- handoff failures;
+- decision-to-execution completion.
+
+### Epistemic integrity
+
+- provenance completeness;
+- corrections;
+- visible uncertainty;
+- challenge/redress time.
+
+### Epistemic mobility
+
+- access to review by prior status;
+- recognition of local/non-institutional expertise;
+- reviewer diversity.
+
+### Attribution
+
+- contribution lineage retained after aggregation;
+- corrections of attribution;
+- visibility of precursor work.
+
+### Multilingual dignity
+
+- semantic non-equivalence documented;
+- contribution quality across languages;
+- access parity.
+
+### Non-domination
+
+- export;
+- offline operation;
+- bounded AI;
+- ability to ignore advisory outputs;
+- independent audit;
+- credible exit/fork.
+
+### Replication
+
+- non-founder operator;
+- non-founder instructor;
+- time to deploy a second instance;
+- amount of founder intervention required.
+
+## Success condition
+
+> **A partner becomes more capable and can reproduce the capability without becoming dependent on the founder or a mandatory central platform.**
+
+
+================================================================================================
+FILE: PUBLIC_REQUEST_TO_ASHOKA.md
+================================================================================================
+
+# Public Request for Support — Addressed to Ashoka
+
+**Réjean McCormick**  
+Québec, Canada  
+2026-08-17
+
+> **Independent public request. This document does not imply affiliation, endorsement, partnership, or participation by Ashoka.**
+
+## Ashoka,
+
+I am making a public request for support around **Konnaxion and the kOA knowledge-to-action work**.
+
+The request is deliberately narrower than asking you to endorse a platform or validate a worldview.
+
+I am asking Ashoka to examine a systems-change proposition on its substance.
+
+The proposition is this:
+
+> **Modern societies have connected people and information at unprecedented scale, but they have not built the shared infrastructure that allows distributed intelligence to become cumulative collective agency.**
+
+Konnaxion is an attempt to build that missing articulation layer.
+
+It connects:
+
+```text
+knowledge
+→ provenance
+→ contextual competence
+→ deliberation
+→ judgment
+→ decision
+→ execution
+→ memory
+→ future capability
+```
+
+while imposing limits designed to prevent that infrastructure from becoming a new center of domination.
+
+Those limits include:
+
+- explicit uncertainty rather than forced certainty;
+- provenance rather than source prestige alone;
+- contextual expertise rather than permanent expert rank;
+- advisory expertise rather than expert sovereignty;
+- multilingual semantic governance rather than silent linguistic hegemony;
+- local/offline capability rather than mandatory cloud dependence;
+- auditability and contestability rather than opaque mediation;
+- portability, self-hosting, and fork rather than lock-in;
+- preserved attribution rather than erasure through aggregation;
+- AI assistance without final civic authority;
+- independent reproduction rather than permanent dependence on the founder.
+
+## Why I am addressing this to Ashoka
+
+Ashoka says it looks for a **new idea that changes the pattern in a field**, combined with creativity, entrepreneurial quality, social impact, and ethical fiber.
+
+Ashoka's own systems-change work emphasizes changing the way systems operate—not merely scaling one organization's direct services—and explicitly examines roles, relationships, rules, resources, and results.
+
+That is the correct level at which this work should be evaluated.
+
+Official references:
+
+- https://www.ashoka.org/fr-ca/program/venture-selecting-our-ashoka-fellows
+- https://www.ashoka.org/en-us/systems-change
+- https://www.ashoka.org/en-us/story/systems-change-high-level-summary
+
+I am therefore not asking for ceremonial recognition.
+
+I am asking for **serious institutional engagement with a body of work that makes a systems-change claim Ashoka is unusually well positioned to interrogate.**
+
+## The request
+
+I am asking Ashoka for one or more of the following forms of support.
+
+### 1. Examine the pattern-change claim
+
+Assess the central proposition at the level Ashoka itself uses:
+
+- What roles change?
+- What relationships change?
+- What rules change?
+- What resources become newly available?
+- What results could become structurally different?
+- What would have to become common practice for this to count as a genuine new pattern?
+
+If the claim is too broad, identify where it must be narrowed.
+
+If it duplicates an existing pattern, identify the strongest contemporary comparison.
+
+If the novelty lies in the composition rather than individual components, evaluate it at that level.
+
+### 2. Help expose the architecture to independent social proof
+
+The most important gap is not another conceptual document.
+
+It is an independent pilot capable of testing a complete but bounded cycle:
+
+```text
+contribution
+→ provenance
+→ qualified review
+→ deliberation
+→ decision / action
+→ memory
+→ reuse
+```
+
+Support could take the form of:
+
+- introduction to an appropriate Ashoka Fellow;
+- introduction to a civic, scientific, educational, cultural, or institutional partner;
+- connection to a practitioner willing to pressure-test the model;
+- methodological critique of the proposed impact measures.
+
+### 3. State the missing threshold clearly
+
+I am prepared for the possibility that the current evidence is insufficient.
+
+If so, the most useful support is precision:
+
+> **What evidence would distinguish an unusually developed architecture from an Ashoka-level systems-change trajectory?**
+
+A serious negative answer is more useful than generic encouragement.
+
+## What I am not asking
+
+I am not asking Ashoka to:
+
+- certify a universal truth system;
+- endorse every component of kOA;
+- accept scenarios as evidence;
+- accept technical depth as a substitute for social impact;
+- accept founder claims without external reference;
+- fund an attempt to build everything at once.
+
+The dossier is explicit about its present boundary:
+
+> **Documented ≠ Implemented ≠ Tested ≠ Socially Validated.**
+
+## Why the request is public
+
+The work is public-interest infrastructure.
+
+Its claims should be inspectable independently of whether any single organization replies.
+
+Making the request public also creates accountability on my side. I cannot quietly change the proposition depending on the audience. The architecture, the limits, the evidence standard, and the gaps remain visible.
+
+This is the same discipline I have used in two other public dossiers.
+
+### Science Silk Road / Koali
+
+This research dossier does not ask a research team to accept kOA as the answer. It extracts hypotheses from the architecture and places them against an external empirical field: scientific capability formation, authority, provenance, dependency, and institutional reproduction.
+
+https://github.com/Rejean-McCormick/science-silk-road-koali
+
+### Partners for Public Good / Koali
+
+This public call asks PPG to start from government reality and attempt to break Koali's architectural claims.
+
+https://github.com/Rejean-McCormick/partners-for-public-good_pressure-test-koali
+
+Its closing instruction is intentionally simple:
+
+> **Don't endorse Koali. Try to break it.**
+
+The request to Ashoka follows the same principle, applied to the social entrepreneur and systems-change claim:
+
+> **Do not support this work because it is ambitious. Support it if the pattern, the entrepreneur, the safeguards, and the path to independent proof justify serious engagement.**
+
+## What I believe is already demonstrated
+
+The public corpus supports a serious claim of:
+
+- sustained independent construction;
+- multidisciplinary systems engineering;
+- unusual breadth of integrated social and technical mechanisms;
+- explicit attention to non-domination;
+- mechanisms for provenance, contestation, semantic sovereignty, and attribution;
+- a public architecture designed for modularity and independent operation;
+- a pedagogy and transmission layer intended to reduce founder dependence;
+- willingness to publish limitations and conditions under which claims should fail.
+
+## What remains to be demonstrated
+
+I do not claim that the full social impact is already proven.
+
+The decisive next evidence is:
+
+- independent operation by people other than me;
+- measurable change in a real institutional workflow;
+- evidence that integrity safeguards survive actual use;
+- evidence that a contribution or expertise signal can cross status barriers fairly;
+- evidence that action produces reusable institutional memory;
+- evidence that a second group can reproduce the capability without depending on the founder.
+
+## The point of support
+
+The goal is not to make Konnaxion a compulsory global platform.
+
+The goal is to test whether the underlying social pattern can become reproducible:
+
+> **distributed intelligence → governable collective capacity**
+
+with:
+
+> **common power rather than common dependency.**
+
+If Ashoka believes this is within the territory it exists to identify and strengthen, I am asking for engagement.
+
+If Ashoka believes it is not, I am asking for the strongest substantive reason.
+
+Either response advances the work.
+
+**Réjean McCormick**  
+Québec, Canada  
+https://initkoa.org/  
+https://github.com/Rejean-McCormick
+
+
+================================================================================================
+FILE: PUBLIC_REVIEW_PRECEDENTS.md
+================================================================================================
+
+# Public Review Precedents
+
+## Why this matters
+
+The Ashoka request is not an isolated communications tactic.
+
+It follows an existing method:
+
+> **publish a bounded claim, identify the relevant institution or empirical field, make the evidence route visible, and allow the proposition to fail.**
+
+## 1. Science Silk Road / Koali
+
+Repository:
+
+https://github.com/Rejean-McCormick/science-silk-road-koali
+
+### What it does
+
+The dossier presents a research proposition around:
+
+- scientific capability formation;
+- authority;
+- provenance;
+- institutional reproduction;
+- dependency;
+- reconfigurability;
+- multilingual epistemic exchange.
+
+It explicitly avoids presenting kOA as empirical proof.
+
+Instead:
+
+> architecture generates hypotheses; external field research must test them.
+
+### Why it is relevant here
+
+It demonstrates a willingness to place kOA-derived ideas into a field where:
+
+- the cases are external;
+- the institutions are independent;
+- the architecture does not control the evidence;
+- the hypotheses may be revised or rejected.
+
+## 2. Partners for Public Good — Pressure-Test Koali
+
+Repository:
+
+https://github.com/Rejean-McCormick/partners-for-public-good_pressure-test-koali
+
+### What it does
+
+The repository asks Partners for Public Good to start with a real government workflow and attempt to expose where Koali:
+
+- fails;
+- overreaches;
+- duplicates existing tools;
+- centralizes authority;
+- creates too much complexity;
+- adds more burden than value.
+
+Its core posture is:
+
+> **Don't endorse Koali. Try to break it.**
+
+### Why it is relevant here
+
+It demonstrates a distinction between:
+
+- seeking endorsement;
+- and seeking a credible adversarial test.
+
+## Application to Ashoka
+
+The object being tested here is different.
+
+PPG pressure-tests a **technical/institutional architecture**.
+
+Science Silk Road can test **research hypotheses**.
+
+Ashoka is being asked to test the **systems-change and entrepreneur proposition**.
+
+The common rule is:
+
+> **Recognition should follow inspectable evidence, not replace it.**
+
+
+================================================================================================
+FILE: README.md
+================================================================================================
+
+# Konnaxion — Systems Change & Public Support Dossier
+
+**Prepared by Réjean McCormick — Québec, Canada**  
+**Status:** Public dossier for independent review, support, critique, and pilot collaboration  
+**Date:** 2026-08-17
+
+> **This repository is a public request for serious engagement with a systems-change proposition. It does not imply affiliation, endorsement, partnership, or participation by Ashoka or any other organization named here.**
+
+## The central question
+
+> **How can distributed human knowledge, expertise, and participation become cumulative collective capacity without concentrating authority over truth, meaning, recognition, or coordination in a single institution, platform, or AI system?**
+
+Konnaxion is the public coordination layer of a broader body of work, **kOA**, built around a simple problem:
+
+Humanity does not lack intelligence. It repeatedly loses intelligence **between** contribution, knowledge, judgment, decision, execution, and memory.
+
+The proposed pattern is:
+
+```text
+Contribution
+  ↓
+Provenance + attribution
+  ↓
+Structured meaning + explicit uncertainty
+  ↓
+Contextual expertise
+  ↓
+Deliberation
+  ↓
+Advice + legitimate decision
+  ↓
+Execution
+  ↓
+Accountability
+  ↓
+Reusable memory
+  ↓
+Future capability
+```
+
+The architecture is designed so that the system itself remains contestable:
+
+- no automatic truth authority;
+- no universal expert caste;
+- no AI with final civic authority;
+- no mandatory global controller;
+- portable knowledge artifacts;
+- offline/local operation;
+- self-hosting and credible exit;
+- attribution preserved through aggregation;
+- multilingual semantic governance;
+- independent replication rather than permanent founder dependence.
+
+## Why publish this publicly
+
+A systems-change claim should not depend on a private pitch.
+
+Publishing the dossier creates an inspectable object:
+
+> **claim → source → evidence → challenge → revision**
+
+This repository therefore separates:
+
+- what is **implemented or publicly inspectable**;
+- what is **documented architecture**;
+- what is **partially functional**;
+- what is a **scenario or research hypothesis**;
+- what still requires **independent social proof**.
+
+Core rule:
+
+> **Scenario != Evidence.**
+
+## Public request to Ashoka
+
+This dossier includes a direct but bounded request to **Ashoka**.
+
+Ashoka publicly describes its Fellowship criteria around a new idea that changes the pattern in a field, creativity, entrepreneurial quality, social impact, and ethical fiber. It also describes systems change as changing how a system operates, including roles, relationships, rules, resources, and results, with an emphasis on spreading impact beyond the entrepreneur's own organization.
+
+Those criteria are unusually close to the questions this work is now ready to face.
+
+→ [Public Request to Ashoka](PUBLIC_REQUEST_TO_ASHOKA.md)
+
+Official references:
+
+- Ashoka Canada — Fellowship selection criteria:  
+  https://www.ashoka.org/fr-ca/program/venture-selecting-our-ashoka-fellows
+- Ashoka — Systems Change:  
+  https://www.ashoka.org/en-us/systems-change
+- Ashoka — Systems Change, high-level summary:  
+  https://www.ashoka.org/en-us/story/systems-change-high-level-summary
+
+## This is not a request for blanket endorsement
+
+I am **not** asking Ashoka to endorse every kOA component, philosophical text, technical claim, or future scenario.
+
+I am asking for serious engagement with a narrower proposition:
+
+> **Does this work represent a credible systems-change trajectory, and what independent evidence would be required to establish that it can become a new social pattern?**
+
+The strongest possible response is not praise.
+
+It is a rigorous answer.
+
+## Precedent: public, falsifiable engagement
+
+This is not the first time I have made a proposition public before asking an institution to engage with it.
+
+### Science Silk Road / Koali
+
+A public research dossier proposes Koali as a source of falsifiable hypotheses about scientific capability formation, authority, provenance, dependency, and institutional reproduction. It explicitly treats field research—not the architecture—as the test.
+
+https://github.com/Rejean-McCormick/science-silk-road-koali
+
+### Partners for Public Good / Koali pressure test
+
+A second repository asks Partners for Public Good to pressure-test Koali against real government technology constraints. The invitation is deliberately adversarial in the constructive sense:
+
+> **Don't endorse Koali. Try to break it.**
+
+https://github.com/Rejean-McCormick/partners-for-public-good_pressure-test-koali
+
+The same principle applies here:
+
+> **Do not accept the systems-change claim because I make it. Test whether the evidence, trajectory, safeguards, and replication logic support it.**
+
+## Reading path
+
+1. [Public Request to Ashoka](PUBLIC_REQUEST_TO_ASHOKA.md)
+2. [The Systems-Change Case](SYSTEMS_CHANGE_CASE.md)
+3. [The Entrepreneur / Founder Case](FOUNDER_CASE.md)
+4. [Epistemic Integrity, Provenance & Attribution](EPISTEMIC_INTEGRITY.md)
+5. [Evidence, Maturity & Limits](EVIDENCE_AND_LIMITS.md)
+6. [Pilot & Independent Proof](PILOT_AND_PROOF.md)
+7. [Ashoka Criteria Map](ASHOKA_CRITERIA_MAP.md)
+8. [Public Review Precedents](PUBLIC_REVIEW_PRECEDENTS.md)
+9. [Canonical Links](LINKS.md)
+
+## The present threshold
+
+The work is no longer an abstract idea.
+
+It is also not presented as a fully validated social infrastructure.
+
+The present threshold is:
+
+> **architecture → independent pilot → measured learning → independent reproduction**
+
+That is the work for which I am asking support.
+
+
+================================================================================================
+FILE: SYSTEMS_CHANGE_CASE.md
+================================================================================================
+
+# The Systems-Change Case
+
+## Thesis
+
+Konnaxion is not primarily a product innovation.
+
+The proposed innovation is a change in the social pattern by which groups convert distributed intelligence into collective capacity.
+
+## Current pattern
+
+Many systems remain separated:
+
+```text
+people publish
+experts advise
+citizens discuss
+institutions decide
+teams execute
+archives store
+```
+
+The transitions between them routinely lose:
+
+- provenance;
+- attribution;
+- uncertainty;
+- context;
+- responsibility;
+- dissent;
+- learning.
+
+This creates a **conversion loss**.
+
+## Proposed pattern
+
+```text
+Distributed human capability
+          ↓
+Traceable contribution
+          ↓
+Governed meaning
+          ↓
+Explicit epistemic status
+          ↓
+Situated expertise
+          ↓
+Structured disagreement
+          ↓
+Legitimate choice
+          ↓
+Accountable execution
+          ↓
+Reusable memory
+          ↓
+Expanded future capability
+```
+
+The intellectual center is in the arrows.
+
+## Role changes
+
+### Citizen
+
+```text
+consumer / commenter
+→ contributor
+→ investigator
+→ reviewer
+→ builder
+```
+
+### Expert
+
+```text
+prestige authority
+→ contextual adviser
+```
+
+### Institution
+
+```text
+exclusive gatekeeper
+→ accountable steward / participant
+```
+
+### Platform
+
+```text
+attention and dependency engine
+→ governable infrastructure
+```
+
+### Learner
+
+```text
+recipient
+→ producer of demonstrated capability
+```
+
+### Founder
+
+```text
+permanent center
+→ architect of a reproducible method
+```
+
+## Rule changes
+
+- claims may remain contested;
+- uncertainty must remain visible;
+- expertise does not transfer automatically across domains;
+- informed readings remain advisory;
+- provenance follows knowledge;
+- attribution survives aggregation;
+- AI is bounded;
+- local operation is possible;
+- exit and fork are legitimate;
+- semantic definitions are governable;
+- narrative is not evidence.
+
+## Resource changes
+
+Konnaxion treats the following as civic resources:
+
+- provenance;
+- contextual competence;
+- traceable contribution;
+- institutional memory;
+- semantic mappings;
+- reusable learning;
+- portable knowledge;
+- coordination capacity.
+
+## Result changes
+
+The intended result is not simply higher participation.
+
+It is a group with greater ability to:
+
+- know;
+- challenge;
+- decide;
+- execute;
+- learn;
+- reproduce capability.
+
+## Why this is systems change rather than service delivery
+
+The goal is not to grow a single organization until it personally serves every community.
+
+The architecture is designed around:
+
+> **Strong local capability + portable patterns + independent instances + optional federation**
+
+Success therefore means another institution can reproduce the method without permission or permanent operational dependence.
+
+## The social pattern in one sentence
+
+> **Change how groups turn distributed intelligence and participation into cumulative collective capacity.**
