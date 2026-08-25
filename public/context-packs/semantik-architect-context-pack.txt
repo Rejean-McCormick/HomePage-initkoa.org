@@ -4,9 +4,14 @@ repository: Rejean-McCormick/SemantiK_Architect
 source_path: C:\mycode\SemantiK_Architect\SemantiK_Architect
 source_commit: cf1cf76cc2a95c50b933d49e1afaff7c28117ffd
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:48-04:00
-files: 42
-content_sha256: a44797907ae81b7593bf73914977c4164ec63f339b1db82a67743e37f33a6f6e
+wiki_source_path: C:\mycode\SemantiK_Architect\SemantiK_Architect.wiki
+wiki_source_commit: cbc326182d54c35df74b244751714d19aa2e7869
+wiki_working_tree_markdown: clean
+repo_files: 42
+wiki_files: 25
+generated_at: 2026-08-25T11:30:41-04:00
+files: 67
+content_sha256: 8b3eb919ace6c0a5133eedd6f15cacc3e26fe5e5c3115ff5aa0a02bbbe130c80
 
 ================================================================================================
 FILE INDEX
@@ -54,6 +59,31 @@ FILE INDEX
 40. LICENSE_EXCLUSION_RATIONALE.md
 41. README.md
 42. RELEASE.md
+43. wiki/_Footer.md
+44. wiki/_Sidebar.md
+45. wiki/Add-a-Language-High-Level.md
+46. wiki/API-Overview.md
+47. wiki/Changelog.md
+48. wiki/Conceptual-Flow-Meaning-to-Text.md
+49. wiki/Context.md
+50. wiki/Correctness-and-Verifiability-Gold-Standards-UD-Export-Judge.md
+51. wiki/Decisions.md
+52. wiki/Glossary.md
+53. wiki/Grammar.md
+54. wiki/Home.md
+55. wiki/Improve-a-Language-High-Level.md
+56. wiki/Inputs-Frames.md
+57. wiki/Inputs-Ninai.md
+58. wiki/Language-Coverage-Strategy-Tiers.md
+59. wiki/Lexicon.md
+60. wiki/Outputs-Text.md
+61. wiki/Outputs-UD.md
+62. wiki/Positioning-Ninai-Udiron-GF-UD-No-WMF-AW-Affiliation.md
+63. wiki/Renderer.md
+64. wiki/Repo-Map.md
+65. wiki/Roadmap.md
+66. wiki/Setup.md
+67. wiki/What-SemantiK-Architect-Is.md
 
 
 ================================================================================================
@@ -10157,3 +10187,1372 @@ Releases are Git tagged `YYYYMMDD`, and for each release a binary package (as `.
 
 1. Run the "Create release" workflow through the GitHub actions interface
    (instructions [here](https://docs.github.com/en/free-pro-team@latest/actions/managing-workflow-runs/manually-running-a-workflow)).
+
+
+================================================================================================
+FILE: wiki/_Footer.md
+================================================================================================
+
+---
+
+**SemantiK Architect Wiki**  
+- Navigation: use the sidebar to browse pages.  
+- Conventions: page titles use *Title Case*; links use `[[Page Name]]` or `[[Label|File-Name]]`.  
+- Status: if a page is draft or version-specific, it should say so at the top.
+
+---
+
+
+================================================================================================
+FILE: wiki/_Sidebar.md
+================================================================================================
+
+# SemantiK Architect
+
+## Start here
+- [[Home]]
+- [[What SemantiK Architect Is|What-SemantiK-Architect-Is]]
+- [[Positioning: Ninai, Udiron, GF, UD (No WMF/AW Affiliation)|Positioning-Ninai-Udiron-GF-UD-No-WMF-AW-Affiliation]]
+
+## How it works
+- [[Conceptual Flow: Meaning → Text|Conceptual-Flow-Meaning-to-Text]]
+- [[Lexicon]]
+- [[Grammar]]
+- [[Renderer]]
+- [[Context]]
+- [[Language Coverage Strategy (Tiers)|Language-Coverage-Strategy-Tiers]]
+
+## Quality
+- [[Correctness & Verifiability (Gold Standards, UD Export, Judge)|Correctness-and-Verifiability-Gold-Standards-UD-Export-Judge]]
+
+## Using SemantiK Architect
+- [[Inputs: Frames|Inputs-Frames]]
+- [[Inputs: Ninai|Inputs-Ninai]]
+- [[Outputs: Text|Outputs-Text]]
+- [[Outputs: UD|Outputs-UD]]
+- [[Add a Language (High Level)|Add-a-Language-High-Level]]
+- [[Improve a Language (High Level)|Improve-a-Language-High-Level]]
+
+## Developer notes
+- [[Setup]]
+- [[API Overview|API-Overview]]
+- [[Repo Map|Repo-Map]]
+
+## Project
+- [[Decisions]]
+- [[Roadmap]]
+- [[Changelog]]
+- [[Glossary]]
+
+
+================================================================================================
+FILE: wiki/Add-a-Language-High-Level.md
+================================================================================================
+
+# 15. Add a Language (High Level)
+
+## Goal
+
+Bring a new language online with a **minimal, runnable** generation path first, then iterate toward higher quality using the project’s maturity signals.
+
+SemantiK Architect treats “language support” as a **measured state** (not a checkbox): the system computes per-language maturity and uses it to decide what is runnable and which strategy to use (high-quality vs safe-mode).
+
+---
+
+## Step 1 — Choose an initial quality path (Tier choice)
+
+Pick the best available strategy for the language:
+
+- **Tier 1 (High quality):** choose this when the language already has strong, mature grammar support (e.g., a robust GF/RGL-class path).
+- **Tier 3 (Guaranteed availability / Safe Mode):** choose this for under-resourced languages so the language is available quickly via the **weighted topology / factory** approach, then improve later.
+- **Tier 2 (Manual overrides):** use this as the bridge when you want to improve phrasing/behavior for a specific language without waiting for full Tier 1 coverage.
+
+---
+
+## Step 2 — Create the language “home” (language code and identity)
+
+Use a **two-letter ISO-2 code** as the **internal language key** (folder names, core data identity, and internal registry expectations).
+
+Important nuance:
+- **Internal identity** is ISO-2 (the consistent key the system reasons about).
+- **External/public identifiers** (if you expose them) may require explicit mapping and do not have to be “ISO-2 everywhere.”
+
+---
+
+## Step 3 — Seed the minimum Lexicon so the language is runnable
+
+A language becomes runnable only when it clears a minimum **lexicon maturity** threshold.
+
+Minimal expectations (example policy):
+- **Minimal:** `core.json` exists and contains enough entries to generate basic sentences.
+- **Functional:** adds essential domain shards (often starting with `people` for biographies).
+
+Bootstrapping workflow (high level):
+1. Create the language lexicon directory.
+2. Seed `core.json` (manually or with helper tooling).
+3. Run an audit/index step so the system discovers the new language.
+
+Guardrail:
+- If the “core seed” is too small, the system should treat the language as **non-runnable** to avoid brittle generation paths.
+
+Optional:
+- A “lexicon bootstrapper”/helper can generate a starter `core.json` specifically to prevent “empty dictionary” languages.
+
+---
+
+## Step 4 — Register + audit via the Everything Matrix (no hardcoded lists)
+
+Do **not** hardcode language lists.
+
+The rule is:
+- **Create the expected file structure**, then
+- Let the indexing/audit step pick up the language and compute maturity.
+
+The Matrix acts as the “central nervous system” for autonomous decisions (e.g., whether to run Tier 1 or fall back to safe-mode).
+
+---
+
+## Step 5 — Add at least one correctness checkpoint (so it can’t silently regress)
+
+“Done” is not “it compiles.” Add at least one baseline check that can fail if quality regresses.
+
+Minimum recommendation:
+- Add **one gold-standard example** for the language and ensure the automated evaluator (“Judge”) runs it.
+
+Project policies sometimes use a similarity threshold (e.g., **0.8**) to block regressions; treat the exact number as a project-level policy that can evolve.
+
+If your language work introduces new factory-path constructions, keep the **validation/export mapping** (e.g., UD view) aligned so the output remains auditable.
+
+---
+
+## Definition of “done” (for a first PR)
+
+A new language is “added” when:
+
+- It exists under the **internal ISO-2 key** (with any external mapping handled explicitly if needed)
+- It has at least a **minimal lexicon seed** that makes it runnable
+- It is discovered by the **Everything Matrix** audit/index step
+- It has at least **one gold-standard case** so quality can be tracked over time
+
+
+================================================================================================
+FILE: wiki/API-Overview.md
+================================================================================================
+
+# API Overview
+
+SemantiK Architect is accessed through a **versioned HTTP API**. The **stable convention** is to keep client-facing endpoints under the **`/api/v1`** prefix.
+
+> Note: some deployments also mount the UI/API under a **base path**. Treat the base path as a deployment choice, not an API rule.
+
+## Base path (deployment)
+
+In packaged deployments, the UI may be served under a base path and the API is served under:
+
+- **`{BASE_PATH}/api/v1`**
+
+Example (legacy): UI under `/abstract_wiki_architect`, API under `/abstract_wiki_architect/api/v1`.
+
+## Public vs admin endpoints (auth boundary)
+
+- **Public read endpoints** may be accessible without admin credentials (deployment-configurable).
+- **Admin endpoints** require authentication (API key/token).
+- The **Tools API** is **admin-only**.
+
+## Core generation endpoint (meaning → text)
+
+### `POST /api/v1/generate/{lang}`
+
+- `lang` is passed as a **path parameter**.
+
+**Two supported input shapes (conceptually):**
+- **Strict / production path:** a flat “frame” JSON (example: `BioFrame`).
+- **Prototype / experimental path:** a recursive Ninai-style tree (`UniversalNode`).
+
+**Response shape (stable envelope):**
+- `surface_text`: the generated text
+- `meta`: lightweight provenance (e.g., engine/adapter/strategy)
+
+## Session/context support (multi-sentence coherence)
+
+Requests may include a session identifier header to enable discourse behavior across sentences (example: `X-Session-ID`).
+
+## Discovery endpoints (used by the UI)
+
+Some deployments/UI flows rely on discovery endpoints such as:
+- `GET /api/v1/languages` returning a list of languages (for a language selector).
+- `GET /api/v1/entities/...` returning a defined entity schema (for browsing/search).
+
+If your current build does not expose these yet, treat them as the **target contract** for UI/API alignment.
+
+## Tools API (GUI-driven operations; admin-only)
+
+Tools are executed via an **allowlisted registry** (no arbitrary command execution).
+
+- `GET /api/v1/tools/registry`: lists tool metadata
+- `POST /api/v1/tools/run`: runs a tool by `tool_id` and returns a stable execution envelope (trace/output/events/exit code)
+
+**Security note:** do not pass secrets in tool args; args may be echoed in responses and/or surfaced in UI logs.
+
+
+================================================================================================
+FILE: wiki/Changelog.md
+================================================================================================
+
+## 22. Changelog
+
+### Unreleased (SemantiK Architect)
+
+* Project renamed from **“Abstract Wiki Architect” → “SemantiK Architect”** (independent project; no WMF/Abstract Wiki affiliation).
+* Wiki scope reduced to a simpler v1 (high-level pages first; deeper material postponed).
+
+### v2.5 (Docs baseline: setup/deploy + operator workflow)
+
+* Documented the **Windows + WSL2 hybrid** dev model (Windows for editing/frontend, Linux/WSL for backend + GF), driven by the GF `libpgf` Linux dependency. 
+* Standardized prerequisites (WSL2, Ubuntu, Docker Desktop, VS Code WSL extension, Node 18+). 
+* Clarified **deployment via docker-compose**, including base-path conventions for UI and versioned API prefix. 
+* Formalized config/ops knobs in `.env`, including explicit **AI tool gating**. 
+
+### v2.1 (Architecture and build system clarified/expanded)
+
+* Consolidated the system model as a **4-layer architecture**: Lexicon, Grammar, Renderer, Context. 
+* Defined the **dual-path input** (Strict Frames vs Prototype Ninai/UniversalNode) and dual output (Text or UD/CoNLL-U). 
+* Codified the **3-tier language strategy** (Tier 1 “High Road”, Tier 2 overrides, Tier 3 weighted-topology factory) for long-tail coverage. 
+* Made the build “self-aware” via the **Everything Matrix** (filesystem scanning → maturity scoring → build strategy). 
+
+### v2.0 (Omni-upgrade milestone: expansion beyond sentence-level generation)
+
+* Stated the core shift: from a **sentence-level rule-based engine** to a **context-aware, interoperable, AI-augmented platform**. 
+* Introduced the “7 pillars” roadmap: Ninai bridge, UD exporter, discourse planner, automation agent, interactive QA, weighted topology factory, learned micro-planning. 
+* Introduced a unified **“Check, Build, Serve”** pipeline and a single operational entry point for developers (`manage.py`). 
+* Established the **Everything Matrix** as a dynamic registry replacing static language lists/config.
+
+
+================================================================================================
+FILE: wiki/Conceptual-Flow-Meaning-to-Text.md
+================================================================================================
+
+# 4. Conceptual Flow: Meaning → Text
+
+SemantiK Architect is **generation-first**: it does not “interpret” text. It takes an **unambiguous meaning payload** and renders it into surface language.
+
+## Flow (at a glance)
+
+**Meaning (Frame or Ninai)** → **Normalize meaning** → **Apply discourse context (optional)** → **Pick language strategy (tier)** → **Realize text (lexicon + grammar)** → **Export (text, optionally UD)** → **Quality checks (optional)**
+
+## Step-by-step
+
+1. **Provide meaning (input)**  
+   SemantiK Architect accepts meaning in two shapes:
+   - a **strict, flat semantic frame** (stable production input)
+   - a **recursive Ninai-style object tree** (more expressive, experimental input)
+
+2. **Normalize meaning (adapter stage)**  
+   Inputs are normalized into an internal “intent” representation:
+   - validate required fields / structure
+   - resolve defaults and normalize naming
+   - if the input is Ninai-style, an adapter walks the object tree and converts it into the internal intent/frame representation (a recursive object-walker approach, not text parsing)
+
+3. **Use context for multi-sentence coherence (optional but important for naturalness)**  
+   If a session is active, the system can track what entity is “in focus” and apply simple discourse decisions (e.g., reducing repeated names via pronouns when appropriate).
+
+4. **Select a language strategy (coverage vs precision)**  
+   To cover both high-resource and long-tail languages, the renderer selects a tiered strategy:
+   - a higher-precision **rule-based** path (when strong grammar resources exist)
+   - a broader-coverage **factory/topology-based** fallback (when they don’t)
+   - optional manual overrides can take precedence when available
+
+5. **Realize the sentence (meaning → surface text)**  
+   Rendering is the assembly step that combines:
+   - **lexical choice** (words and their properties)
+   - **grammar / linearization** (how those words become a correct sentence in the target language)
+
+6. **Export (outputs)**  
+   The primary output is **natural language text**. Optionally, the system can also output a **Universal Dependencies (CoNLL-U) view** for validation and evaluation.
+
+7. **Close the loop with quality checks (optional workflow)**  
+   A QA loop can compare generated output against a **gold standard** and flag regressions (including automated reporting workflows), so improvements remain stable over time.
+
+
+================================================================================================
+FILE: wiki/Context.md
+================================================================================================
+
+# Context
+
+## What “Context” means in SemantiK Architect
+
+Context is the **memory layer** that lets SemantiK Architect move beyond generating isolated sentences and instead produce **coherent multi-sentence text**. In the architecture, it is explicitly the layer responsible for **session state** used for **discourse planning**. 
+
+## Why it exists
+
+Without context, the system repeats full names and produces text that feels unnatural. The docs illustrate this with a two-sentence example where repeating “Marie Curie” is correct but stylistically poor. 
+Context exists to address that by tracking which entity is currently “in focus” so the system can choose more natural referring expressions. 
+
+## What it tracks (conceptually)
+
+SemantiK Architect keeps a lightweight “discourse state” that includes:
+
+* **Mentioned entities**
+* **Which entity is salient / in focus**
+* **Last mention and topic selection signals** 
+
+This is intentionally “light but real”: enough structure to handle multi-sentence needs without adopting a heavy formal discourse/semantics framework. 
+
+## What it enables (user-visible effects)
+
+### 1) Pronominalization (avoiding repetition)
+
+When the subject of the current sentence matches the current “in-focus” entity from the session, the system can replace a repeated name with a pronoun (“Swap Name → Pronoun”). 
+
+### 2) Basic coherence across sentences
+
+Context supports “discourse planning” decisions such as:
+
+* pronouns vs full names,
+* topic markers vs default word order,
+* basic ordering of information. 
+
+## What Context is *not*
+
+* It is **not** a full semantic/discourse formalism (the docs explicitly reject heavy approaches for the initial implementation). 
+* It is **not** “style generation” by itself; it’s a control layer that helps the renderer make consistent choices across sentences.
+
+## How it fits with the rest of the system
+
+* The **Renderer** decides what sentence to produce now.
+* **Context** provides the “what has been said / what is in focus” memory so the renderer can produce a better next sentence. 
+* The “Summary of Systems” explicitly pairs the discourse planner with **Centering Theory / coreference** as the conceptual grounding. 
+
+## Where this is going (safe, high-level roadmap)
+
+The docs describe future upgrades toward more powerful discourse models for anaphora and topic shifts, enabling longer multi-sentence texts while keeping coherence.
+
+
+================================================================================================
+FILE: wiki/Correctness-and-Verifiability-Gold-Standards-UD-Export-Judge.md
+================================================================================================
+
+# 10. Correctness & Verifiability (Gold Standards, UD Export, Judge)
+
+## Why this matters
+
+SemantiK Architect is designed to scale to **hundreds of languages**, which makes “manual checking” impossible as a primary quality strategy. The system therefore treats correctness as something that must be **measurable, repeatable, and enforceable**. 
+
+## What “verifiable” means here
+
+“Verifiable” means SemantiK Architect doesn’t just generate text—it also produces **checkable evidence** that the output remains consistent and linguistically sound across time and across languages. One key source of high-confidence correctness is the rule-based grammar path (GF/RGL) for high-resource languages, described as providing “verifiable correctness.” 
+
+## The three mechanisms
+
+### 1) UD Export (standards-based validation surface)
+
+SemantiK Architect can export a **Universal Dependencies (UD)** representation (CoNLL-U mapping) so outputs can be validated and compared in a standardized way. The documentation sets a strict rule: every syntactic constructor must have a corresponding UD tag mapping—so validation coverage can’t silently drift. 
+
+### 2) Gold Standards (ground truth expectations)
+
+A “Gold Standard” is a curated set of **verified intent → expected text** pairs used as a regression baseline. Major changes are expected to be validated against this dataset. 
+The spec also describes ingesting a test suite as ground truth (migrated from Udiron in the original lineage), reinforcing that Gold Standards are meant to be **externalized, reusable, and stable**. 
+
+### 3) The Judge (automated regression gate)
+
+“The Judge” is the evaluation loop that compares current outputs to Gold Standards and flags regressions. The docs describe a hard gating concept: PRs can be blocked if the Judge score drops below a threshold (0.8 is explicitly mentioned). 
+The same quality loop is also described as closing the loop operationally by validating and (optionally) auto-reporting failures. 
+
+## How to interpret failures (high level)
+
+When a regression is detected, it usually points to one of four buckets:
+
+* **Lexicon gap** (missing/incorrect word data),
+* **Grammar/realization issue** (wrong structure or morphology),
+* **Mapping/validation gap** (UD mapping missing or inconsistent),
+* **Renderer/context behavior change** (surface text changed unintentionally).
+
+The purpose of this page in the wiki is to make one idea clear: **SemantiK Architect treats correctness as a first-class product feature, enforced by standards export + gold truth + automated judging**, not as a best-effort manual process.
+
+
+================================================================================================
+FILE: wiki/Decisions.md
+================================================================================================
+
+# 20. Decisions
+
+## Purpose
+
+This page records the **product-defining choices** that explain *why SemantiK Architect works the way it does*, and what must stay stable when the system evolves.
+
+(Notes: the source docs use the former name “Abstract Wiki Architect”; the decisions below remain applicable under the SemantiK Architect rename.)
+
+---
+
+## Canonical decisions (high level)
+
+### 1) Data-driven registry instead of hardcoded configuration (“Everything Matrix”)
+
+* **Problem:** hardcoded language lists drift from reality.
+* **Decision:** a dynamic registry is rebuilt by scanning what exists on disk before each build.
+* **Why:** it becomes the single source of truth; adding a language becomes “add the files.” 
+
+### 2) Hybrid language strategy instead of a single approach
+
+* **Decision:** a tiered strategy: high-resource languages use GF/RGL; under-resourced languages use a weighted-topology approach (from the Udiron lineage) for coverage. 
+* **Why:** it explicitly manages the quality vs coverage tradeoff rather than pretending one method fits all.
+
+### 3) Standards interoperability as a first-class requirement
+
+* **Decision:** design for interoperability with **Ninai** (meaning protocol) and **UD** (validation/export surface), framed as a core architecture choice. 
+
+### 4) Discourse/context is a core capability (not an afterthought)
+
+* **Decision:** maintain session context (e.g., for pronouns/discourse planning) as a key architectural pillar. 
+
+### 5) Quality is enforced via Gold Standards + an automated Judge
+
+* **Decision:** regressions are checked against Gold Standard data (explicitly ingesting the Udiron test suite lineage) and gated by a similarity threshold (0.8 is called out). 
+
+### 6) AI is used as a scale multiplier for generation and evaluation (as designed in v2.0)
+
+* **Decision:** specialized agents (“Architect” for generating Tier-3 grammar assets and “Judge” for validation + issue filing). 
+* **Note for your wiki:** if your current SemantiK direction reduces/removes build-time AI, keep this decision as “historical” or “optional mode,” not as the default.
+
+### 7) “No arbitrary execution” in tooling
+
+* **Decision:** operational tools are run through a strict allowlist registry rather than arbitrary commands, to keep the system safe and predictable. 
+
+---
+
+## How new decisions should be recorded
+
+When changing any of the above (e.g., removing AI from builds, changing tier strategy, changing gating thresholds), add an entry that states:
+
+* Context / problem
+* Decision
+* Why
+* Consequences (what becomes easier/harder)
+
+This keeps SemantiK Architect understandable without turning the wiki into low-level technical documentation.
+
+
+================================================================================================
+FILE: wiki/Glossary.md
+================================================================================================
+
+# Glossary (SemantiK Architect)
+
+> **Naming note:** *SemantiK Architect* is the current name of the project (formerly **Abstract Wiki Architect** in earlier docs and some filenames).
+>
+> **Independence note:** SemantiK Architect is **not affiliated with** or developed in collaboration with **WMF / Abstract Wikipedia / Abstract Wiki**.
+
+---
+
+## Project + related tools (boundaries)
+
+- **SemantiK Architect**: A multilingual **renderer** that turns structured meaning into readable natural-language text, designed to scale across high-resource and long-tail languages.
+- **Abstract Wiki Architect (legacy name)**: Former project name that may still appear in v2 docs, historical notes, and some repo artifacts.
+- **GF (Grammatical Framework)**: A grammar formalism/toolchain used (where available) to define and run high-quality grammars.
+- **RGL (Resource Grammar Library)**: GF’s standard library for morphology/syntax in a set of languages; often the basis of the “high-quality” path when applicable.
+- **UD (Universal Dependencies)**: A dependency-grammar standard used here mainly as a **validation/evaluation view** (often via CoNLL-U export).
+- **Ninai (meaning representation)**: A recursive, constructor-tree style meaning representation that SemantiK Architect can accept (typically via an adapter/bridge).
+- **Udiron / weighted-topology approach**: A coverage-oriented strategy that uses configurable ordering/topology rules to scale to many languages when full expert grammars are not available.
+
+---
+
+## Meaning representations (inputs)
+
+- **Semantic Frame (Frame)**: A language-agnostic, usually flat JSON object expressing intent (e.g., “bio”, “event”) meant to be stable and easy to validate.
+- **BioFrame / EventFrame**: Concrete frame “shapes” (types) used by the strict/production input path.
+- **Recursive meaning tree**: A nested, tree-shaped input form (often Ninai-style) used for richer meaning composition and prototyping.
+- **Adapter / Bridge**: A component that converts an external meaning format (e.g., Ninai-style trees) into the renderer’s internal representation.
+
+---
+
+## Core generation concepts
+
+- **Lexicon**: Vocabulary entries (words/lemmas + properties) used during realization.
+- **Grammar**: Rules that handle morphology (inflection) and syntax/word order.
+- **Renderer**: The “assembly” layer that maps meaning to a sentence plan and realizes it into output text (and optional validation views).
+- **Context**: Discourse/session state used to keep multi-sentence generation coherent (e.g., reference, repetition, pronouns). Implementation details may vary.
+
+---
+
+## GF / linguistics terms (only when relevant)
+
+- **Abstract syntax**: Language-independent structures defining *what* can be expressed.
+- **Concrete syntax**: Language-specific rules defining *how* to express it in a given language.
+- **Linearization**: Turning an abstract structure/tree into a final surface string.
+- **Morphology**: Word-level inflection (plural, tense, case, agreement, etc.).
+
+---
+
+## Language coverage strategy
+
+- **Tier 1 (High quality)**: Uses strong, mature grammar resources (often GF/RGL-class) for best grammatical correctness.
+- **Tier 2 (Manual overrides)**: Targeted language-specific improvements/overrides layered on top of other tiers.
+- **Tier 3 (Factory / Safe Mode)**: Coverage-first grammars driven by configurable topology/ordering so a language is available quickly, even if nuance is limited.
+- **Weighted topology**: A Tier 3 mechanism that uses configurable weights/rules to decide ordering (e.g., SVO/SOV tendencies) rather than hardcoded templates.
+
+---
+
+## Build/runtime and configuration terms
+
+- **Everything Matrix**: A computed registry of what exists per language (assets, maturity signals, runnable status) used to avoid hardcoded language lists.
+- **Two-phase build (concept)**: A build strategy that verifies components first and then links/aggregates them, to avoid partial overwrites and “last one wins” behavior.
+- **PGF (Portable Grammar Format)**: The compiled GF artifact loaded at runtime. Filenames may still include legacy naming in some repos.
+
+---
+
+## Outputs + evaluation
+
+- **Text output**: The default natural-language surface string.
+- **CoNLL-U output**: Optional export of a UD-style dependency representation for validation/evaluation.
+- **Gold Standard**: A curated set of reference examples used to track quality over time.
+- **Judge**: An automated evaluator that compares output against Gold Standard data and flags regressions (optionally integrated with CI and issue tracking, depending on setup).
+
+---
+
+## Data organization
+
+- **Domain sharding**: Splitting vocabulary into topic-focused files (e.g., `core`, `people`, `science`) so systems can load what they need.
+- **Wikidata QID mapping**: Grounding lexicon entries to stable identifiers when available, to keep meaning aligned across languages.
+
+---
+
+## Software architecture terms (lightweight)
+
+- **Ports & adapters (hexagonal architecture)**: A structuring approach that separates core generation logic from infrastructure (APIs, storage, tooling).
+
+---
+
+## Automation / agent terms (status may vary)
+
+- **Automation agent (e.g., “Architect”, “Surgeon”)**: Names used for optional tooling intended to assist with authoring/repairing data or grammars. These are **not required** for the core deterministic generation path, and whether they are active depends on the project’s current workflow.
+- **Frozen system prompt**: A fixed prompt template concept used to keep automated outputs consistent when agents are used.
+
+
+================================================================================================
+FILE: wiki/Grammar.md
+================================================================================================
+
+# Grammar
+
+The **Grammar** layer is the rule system that turns structured meaning into **well-formed text** in a target language.
+
+In SemantiK Architect, “grammar” covers two things:
+- **Morphology** (inflection): how words change form (agreement, conjugation, declension).
+- **Syntax** (structure + word order): how parts combine into phrases/clauses and how they are ordered.
+
+This is the “rules” layer of the overall architecture: it defines morphology and syntax/word order, and it supports a **hybrid** approach that balances quality and coverage.
+
+---
+
+## Why this layer exists
+
+SemantiK Architect aims for:
+- **Determinism** (same input → same output),
+- **Broad language coverage** (including the long tail),
+- **Reasonable grammatical quality** even when a language lacks a full expert grammar.
+
+The grammar layer is where those tradeoffs are managed: high precision when strong resources exist, and graceful degradation when they don’t.
+
+---
+
+## The hybrid strategy (tiers)
+
+SemantiK Architect uses a tiered approach to grammar resources:
+
+- **Tier 1 (High Road): expert grammars**
+  For high-resource languages, use expert-grade grammar resources (GF/RGL-class) for richer morphology and more precise sentence realization.
+
+- **Tier 2: manual / curated overrides**
+  When a community or project-maintained grammar exists, it can override both Tier 1 and Tier 3 for that language to improve naturalness and correctness.
+
+- **Tier 3 (Factory): weighted-topology fallback**
+  For under-resourced languages, use a configuration-driven fallback based on **weighted topology / dependency-role ordering**. This exists to avoid “missing language” dead ends and ensure the system can still produce a grammatical-enough sentence.
+
+See also: [[Language Coverage Strategy (Tiers)|Language-Coverage-Strategy-Tiers]]
+
+---
+
+## Grammar matrices and language cards
+
+To scale efficiently, grammar knowledge is organized at two levels:
+
+- **Family grammar matrices**
+  Reusable defaults shared across related languages (e.g., Romance, Slavic). They capture broad paradigm space and common patterns.
+
+- **Language cards**
+  Language-specific overrides for quirks that shouldn’t live in the shared family matrix (e.g., special elision or clitic behavior).
+
+This keeps the system modular: broad coverage from shared structure, with targeted exceptions where needed.
+
+---
+
+## Relationship to other layers
+
+- **Lexicon → Grammar**
+  The lexicon supplies lemmas and features (e.g., gender/number) that the grammar needs to inflect and agree.  
+  See: [[Lexicon]]
+
+- **Grammar → Renderer**
+  The renderer selects a grammar strategy (tier) and uses it to realize a sentence plan into text.  
+  See: [[Renderer]]
+
+- **Context ↔ Grammar**
+  Context can change *what* gets expressed (e.g., pronoun vs name); grammar ensures the chosen form fits correctly in the sentence.  
+  See: [[Context]]
+
+---
+
+## What this page is (and is not)
+
+This page explains what “Grammar” means in SemantiK Architect and how it supports coverage and quality.
+
+It is **not** a build guide or an API reference.
+- Setup/build: [[Setup]]
+- API surface: [[API Overview|API-Overview]]
+
+
+================================================================================================
+FILE: wiki/Home.md
+================================================================================================
+
+# SemantiK Architect
+
+SemantiK Architect is an **independent multilingual text renderer**: it turns **structured meaning** into **encyclopedic natural language**, with a focus on scaling to the **long tail** of languages (including under-resourced ones).
+
+> Note: SemantiK Architect is **not affiliated with WMF / Abstract Wikipedia** and is **not developed in collaboration** with the Abstract Wiki team. It is the continuation/rename of “Abstract Wiki Architect” as an independent project.
+
+---
+
+## What it does
+
+SemantiK Architect:
+- **Accepts meaning** in a structured form (e.g., *Frames* or *Ninai-style* recursive objects).
+- **Generates text** in a target language.
+- Optionally **exports a linguistic view** (e.g., Universal Dependencies / CoNLL-U) to support validation and evaluation.
+
+---
+
+## How it works (conceptual)
+
+At a high level, the system is organized into four conceptual parts:
+
+- **Lexicon** — vocabulary (words + properties), grounded to stable identifiers when possible.
+- **Grammar** — rules for inflection and word order.
+- **Renderer** — turns the input meaning into a sentence plan and realizes it as text.
+- **Context** — tracks discourse state across sentences (e.g., reference, focus, pronouns).
+
+To scale language coverage, SemantiK Architect uses a **tiered strategy**:
+- **Tier 1**: highest-quality grammars where available (e.g., GF/RGL-class resources).
+- **Tier 2**: curated/manual improvements and overrides.
+- **Tier 3**: automated “factory” grammars (e.g., topology/word-order driven), inspired by UD/Udiron-style approaches, to avoid missing-language dead ends.
+
+---
+
+## Where it stands vs related tools
+
+- **Ninai**: a meaning representation / protocol. SemantiK Architect is a **renderer** that can consume it.
+- **GF**: a grammar technology. SemantiK Architect **uses/hosts** grammars as part of a larger end-to-end renderer.
+- **Udiron-style topology**: a strategy for rapid scaling via word-order/topology configuration; used as a **coverage path**.
+- **UD (Universal Dependencies)**: a cross-linguistic interface useful for **evaluation and verification** (not a replacement for generation).
+
+See: [[Positioning: Ninai, Udiron, GF, UD (No WMF/AW Affiliation)|Positioning-Ninai-Udiron-GF-UD-No-WMF-AW-Affiliation]]
+
+---
+
+## How to read this wiki
+
+Recommended order:
+1. [[What SemantiK Architect Is|What-SemantiK-Architect-Is]]
+2. [[Positioning: Ninai, Udiron, GF, UD (No WMF/AW Affiliation)|Positioning-Ninai-Udiron-GF-UD-No-WMF-AW-Affiliation]]
+3. [[Conceptual Flow: Meaning → Text|Conceptual-Flow-Meaning-to-Text]]
+4. Components: [[Lexicon]] → [[Grammar]] → [[Renderer]] → [[Context]]
+5. [[Language Coverage Strategy (Tiers)|Language-Coverage-Strategy-Tiers]]
+6. [[Correctness & Verifiability (Gold Standards, UD Export, Judge)|Correctness-and-Verifiability-Gold-Standards-UD-Export-Judge]]
+7. Using pages: [[Inputs: Frames|Inputs-Frames]] / [[Inputs: Ninai|Inputs-Ninai]] / [[Outputs: Text|Outputs-Text]] / [[Outputs: UD|Outputs-UD]]
+
+Project pages:
+- [[Roadmap]], [[Changelog]], [[Decisions]], [[Glossary]]
+
+---
+
+## What this wiki is (and is not)
+
+- **This wiki is** a high-level explanation of what SemantiK Architect is, how it fits in its ecosystem, and how the main concepts connect.
+- **This wiki is not** a full technical manual (setup scripts, build internals, exhaustive API reference). Those belong in minimal “Developer Notes” pages and/or repository docs.
+
+If you’re here to implement or integrate quickly, start at: [[API Overview|API-Overview]] and [[Repo Map|Repo-Map]].
+
+
+================================================================================================
+FILE: wiki/Improve-a-Language-High-Level.md
+================================================================================================
+
+# Improve a Language (High Level)
+
+SemantiK Architect can generate usable sentences for many languages, but languages are not all supported at the same quality level. “Improving a language” means moving it upward on a quality ladder while keeping output stable, predictable, and buildable.
+
+This page explains the **levers you can pull** (vocabulary, grammar, and QA), and the **typical path** from “it works” to “it feels native”.
+
+---
+
+## 1) The 3 support tiers (how a language is handled)
+
+SemantiK Architect uses a three-tier approach:
+
+- **Tier 1 — High Road (RGL-quality)**
+  - Best grammatical quality and richest morphology.
+  - Preferred when the language has strong, mature grammar coverage.
+
+- **Tier 2 — Manual Overrides**
+  - Community-contributed or project-contributed grammar improvements.
+  - Takes precedence when present (it can “override” the other tiers).
+
+- **Tier 3 — Safe Mode (Factory)**
+  - A fallback designed to avoid “we don’t support that language”.
+  - Prioritizes *always returning a sentence*, even if style/nuance is simpler.
+
+---
+
+## 2) What makes a language “better” in practice
+
+Language quality is usually felt through three things:
+
+### A. Vocabulary coverage (Lexicon)
+A language improves quickly when it has the right words available *in the right places*. SemantiK Architect organizes vocabulary in **domain shards** (not one giant dictionary). Typical shards include:
+- **core**: the skeleton words you need for almost any sentence (copulas, pronouns, articles, connectors)
+- **people**: professions, roles, relations (so biographies sound correct)
+- **geography**: countries, demonyms, adjectives
+- **science**: specialized terminology
+
+### B. Grammar behavior (how meaning becomes a sentence)
+Even with good words, a language needs reliable sentence-building rules:
+- Word order that fits the language’s typology
+- Agreement and inflection that feels consistent
+- Fewer “robotic” constructions as quality rises
+
+Tier 2 contributions (manual overrides) are the typical bridge to make a language feel more natural before it ever becomes Tier 1.
+
+### C. Quality assurance (staying good over time)
+A language is “improved” only if it stays improved. QA is how you prevent regressions:
+- Reference examples (“gold standard” sentences)
+- Regression checks when changing lexicon/grammar
+- Clear signals when output quality drops
+
+---
+
+## 3) How SemantiK decides what to do with a language
+
+SemantiK Architect relies on a central inventory (“the brain”) that:
+- Discovers what language assets exist
+- Scores maturity/readiness
+- Decides whether the language should run Tier 1, Tier 2, or Tier 3
+- Can downgrade to Safe Mode when a language is too incomplete (to avoid brittle builds)
+
+The key idea: the system is **data-driven**, not a manually curated list of languages.
+
+---
+
+## 4) The improvement loop (recommended workflow)
+
+### Step 1 — Make sure the “skeleton” exists
+Start with the minimum vocabulary needed to form basic clauses (core shard). If the language can’t reliably express “X is Y”, everything else will feel broken.
+
+### Step 2 — Make biographies work end-to-end
+Biographies are often the first “real” use case. Add/expand:
+- professions, roles, relations (people shard)
+- nationality and demonyms (geography shard)
+
+### Step 3 — Fix missing words as they surface
+When generation fails because a word is missing, treat it as a signal:
+- Add the missing entry in the appropriate shard
+- Keep shards small and meaningful rather than dumping everything into one file
+
+### Step 4 — Improve grammar feel with Tier 2 (manual overrides)
+When output is grammatical but awkward:
+- Add targeted manual grammar improvements (Tier 2)
+- Focus on the constructions that appear most often (biographies, basic relations, simple events)
+
+### Step 5 — Graduate to Tier 1 where possible
+Some languages may eventually rely primarily on Tier 1-quality grammar coverage. This is a longer path, but it’s the highest ceiling.
+
+### Step 6 — Protect the gains with QA
+Once a language looks good:
+- Add representative examples to your reference set (“gold standard”)
+- Use automated checking so “it used to work” doesn’t become a recurring problem
+
+---
+
+## 5) What you can contribute (non-technical categories)
+
+- **Lexicon contributions**
+  - Add missing words in the right shard
+  - Expand coverage in domains that matter (people/geography first)
+
+- **Grammar contributions**
+  - Improve the most-visible sentence patterns first
+  - Provide Tier 2 “overrides” that reduce awkward phrasing
+
+- **QA contributions**
+  - Add a small set of high-signal reference sentences
+  - Track regressions and decide what “good enough” means for each tier
+
+---
+
+## 6) Practical “definition of done” (for a language milestone)
+
+A language can be considered “meaningfully improved” when:
+- It reliably generates key sentence types (especially biographies) without missing-word failures
+- It has a functional lexicon skeleton plus the main domain shards needed for your targets
+- It has at least a minimal QA baseline (so improvements don’t evaporate)
+
+---
+
+## 7) Optional: measuring progress (simple mental model)
+
+Think of progress as:
+1) **Coverage** (can we say it?)  
+2) **Naturalness** (does it sound right?)  
+3) **Durability** (does it stay right after changes?)
+
+Tier 3 gets you coverage fast, Tier 2 improves naturalness, and QA makes it durable.
+
+
+================================================================================================
+FILE: wiki/Inputs-Frames.md
+================================================================================================
+
+# Inputs: Frames
+
+Frames are the **strict**, **flat JSON** input format used by SemantiK Architect for stable generation. In the system’s dual-path design, Frames correspond to the **“Strict Path”** (validated internal frame objects such as `BioFrame`) intended for production reliability.
+
+---
+
+## What a “Frame” is
+
+A Frame is a compact, structured way to express **meaning/intention** without tying it to any particular language’s surface grammar.
+
+Think of it as: **“what you want to say”**, expressed with a small set of named fields that the renderer can reliably turn into text.
+
+---
+
+## How SemantiK Architect interprets Frames
+
+- A Frame is identified by a **`frame_type`** field (e.g., `"bio"`).
+- The remaining fields are the **arguments/slots** needed to express that meaning (e.g., `name`, `profession`, etc.).
+- The request is routed to the corresponding strict handler and **validated** before generation.
+
+---
+
+## Example: BioFrame (illustrative)
+
+This example shows the “shape” of a typical Frame request:
+
+```json
+{
+  "frame_type": "bio",
+  "name": "Alan Turing",
+  "profession": "computer scientist",
+  "nationality": "british",
+  "gender": "m"
+}
+````
+
+(Other frame types will define different required/optional slots.)
+
+---
+
+## When to use Frames vs Ninai
+
+Use **Frames** when you want:
+
+* a **simple, stable contract** for upstream systems you control,
+* **strict validation** and predictable behavior,
+* an intentionally “flat” meaning form that is easy to author and debug.
+
+Use **Ninai** when you want:
+
+* a **recursive object-tree** meaning representation (more expressive),
+* a format that can be **adapted into internal frames** through the Ninai bridge.
+
+See also:
+
+* [[Inputs: Ninai|Inputs-Ninai]]
+* [[API Overview|API-Overview]]
+
+
+================================================================================================
+FILE: wiki/Inputs-Ninai.md
+================================================================================================
+
+## 12. Inputs: Ninai
+
+**Ninai** is a **meaning representation**: a structured way to express “what you want to say” before choosing any particular language. In the docs, it’s described as **recursive JSON object trees** (constructor-style structures), not plain text. 
+
+### Why SemantiK Architect supports Ninai
+
+SemantiK Architect uses Ninai as its **interoperability input**: a way to accept rich, language-independent meaning in a form that can be rendered across many languages. This is explicitly part of the v2 pillars (“Ninai Bridge”). 
+
+### How it fits in the product (high level)
+
+* Ninai is the **prototype/experimental input port** into the Renderer (the “UniversalNode / recursive Ninai JSON” path). 
+* SemantiK Architect then **maps** that Ninai tree into its internal intent structures (e.g., Bio/Event frames) so it can generate text deterministically. 
+* The key conceptual point: Ninai is the **meaning layer**, and Architect is the **renderer** that turns it into text. 
+
+### What Ninai looks like (conceptually)
+
+* A **tree** where each node states a “constructor/function” plus its arguments. 
+* Because it’s recursive, the system treats it as a **meaning tree** and walks it (not a string to parse). 
+
+### When to use Ninai vs Frames
+
+* Use **Ninai** when you want: portability, richer semantics, experimentation, and a single meaning structure that can be rendered in many languages. 
+* Use **Frames** when you want: a stable, constrained “production” input shape (the docs explicitly separate strict vs prototype paths). 
+
+*(Project note: SemantiK Architect is independent and not affiliated with WMF/Abstract Wiki; Ninai is treated here as an external meaning format that SemantiK Architect can consume.)*
+
+
+================================================================================================
+FILE: wiki/Language-Coverage-Strategy-Tiers.md
+================================================================================================
+
+# 9. Language Coverage Strategy (Tiers)
+
+SemantiK Architect uses a **three-tier strategy** so it can deliver **high quality where possible** and still provide **broad language coverage** (the “long tail”) without blocking on writing perfect grammars for every language. 
+
+## Why tiers exist
+
+* **Tier 1** maximizes linguistic quality (best output).
+* **Tier 3** maximizes coverage and robustness (never “no language support”).
+* **Tier 2** is the human/community override layer that can improve output without waiting for upstream libraries. 
+
+## The tiers
+
+### Tier 1 — “High Road” (Best quality)
+
+Uses the GF Resource Grammar Library for languages where it’s strong (high-resource languages). 
+
+### Tier 2 — Manual contributions (Overrides)
+
+Community or project-maintained grammars that aren’t in the official RGL yet, but are better than automated stubs. If present, this tier **overrides** both Tier 1 and Tier 3. 
+
+### Tier 3 — “Weighted Factory” (Coverage + safety)
+
+An automated fallback that uses **weighted topology sorting** (adapted from Udiron) so word order can be configured rather than hardcoded templates. The intent is that the system remains usable across many word-order types and **doesn’t fail closed**. 
+
+## How a language’s tier is chosen (at a high level)
+
+A central registry (“Everything Matrix”) audits what exists on disk (grammar readiness, lexicon readiness), assigns a score, and selects a build strategy:
+
+* **High score → Tier 1**
+* **Low score → Tier 3** (graceful degradation / “safe mode”) 
+
+This is also the meaning of “Hybrid Factory”: combining expert grammars (Tier 1) with automated simplified grammars (Tier 3) to reach full coverage.
+
+
+================================================================================================
+FILE: wiki/Lexicon.md
+================================================================================================
+
+# 5. Lexicon
+
+## What the Lexicon is
+
+The Lexicon is SemantiK Architect’s **vocabulary layer**: the words (and key linguistic properties) the system needs to express meaning in a specific language. It is designed to support **300+ languages** without becoming a single unmaintainable dictionary. 
+
+## Core principles
+
+* **Grounded meaning:** entries are traced back to **Wikidata QIDs** so terms stay anchored to stable identifiers (provenance + alignment). 
+* **Usage-based sharding:** vocabulary is split into **domain shards** so the engine can load only what it needs for the current context (instead of loading “everything”). 
+* **Strict validation:** every entry must follow a schema so generation doesn’t fail because a required property (e.g., grammatical gender) is missing. 
+
+## How it’s organized (human-friendly mental model)
+
+* **One namespace per language**, using **ISO 639-1 two-letter codes**. 
+* Inside each language, the Lexicon is split into a few **semantic domains** (files) that match real generation needs: 
+
+  * **core**: “skeleton” function words needed to build any sentence (highest priority). 
+  * **people**: terms used for biographies (professions, relations, titles). 
+  * **geography**: countries/places and derived forms (adjectives, demonyms). 
+  * **science**: specialized terminology (grows over time). 
+
+## Why this matters operationally (readiness scoring)
+
+SemantiK Architect treats Lexicon coverage as a measurable readiness signal (“Zone B”): a scanner counts words in these shards to grade whether a language is **data-ready** (from “no files” to “production-ready”). 
+
+## Typical workflows (high level)
+
+* **Bootstrap a new language:** start with **core** first (so basic sentences are possible), then add **people/geography** for biographies. 
+* **Grow coverage from Wikidata:** use Wikidata as the upstream source for translations and QID provenance, then store locally in the right domain shard. 
+* **Fix “missing word” issues:** add the missing term to the appropriate shard (often **people** for biographies), keeping schema-valid entries.
+
+
+================================================================================================
+FILE: wiki/Outputs-Text.md
+================================================================================================
+
+# Outputs: Text
+
+## What “Text” output is
+
+SemantiK Architect’s primary output is **natural language surface text**: the human-readable sentence(s) you would display in a UI, store, or publish. In the engine architecture, the Renderer’s output port is explicitly **“Natural Language Text”** (alongside an optional UD/CoNLL-U output). 
+
+This output is intended to be **encyclopedic**, and the system is framed around producing **verifiable, high-quality encyclopedic text** across **300+ languages**. 
+
+## What you receive (conceptual response envelope)
+
+When you request generation, the response includes:
+
+* **`surface_text`**: the generated text string (the thing you display)
+* **`meta`**: minimal provenance about how that string was produced (engine/adapter/strategy), useful for debugging and QA—not required for basic usage. 
+
+## What shapes the text output (high level)
+
+### 1) Grammar realization (quality when available)
+
+Where strong grammars exist, the system relies on rule-based realization (GF linearization into concrete strings) to produce well-formed text. 
+
+### 2) Coverage strategy (consistent output across many languages)
+
+SemantiK Architect is designed to keep producing usable text even when a language has limited handcrafted grammar support (via its tiered/hybrid approach). 
+
+### 3) Context (when generating more than one sentence)
+
+If you generate text in a session, the Context layer can influence surface text choices (e.g., avoiding repetition via pronouns), because it exists specifically to manage discourse state. 
+
+## Relationship to UD output (optional)
+
+Text is the “publishable” output; UD/CoNLL-U is an **optional companion output** meant to support verification and evaluation. The system treats both as first-class output ports.
+
+
+================================================================================================
+FILE: wiki/Outputs-UD.md
+================================================================================================
+
+# 14. Outputs: UD
+
+SemantiK Architect can optionally output **Universal Dependencies (UD)** as a **CoNLL-U-style** representation of the generated sentence, alongside the normal surface text.  
+
+## What this output is
+
+* A **dependency-grammar view** of the same sentence you just generated (token-level structure and relations), produced by the **UD Exporter / UD Mapping** component. 
+* Conceptually, it’s an **“audit trail”**: a standardized linguistic structure you can compare across languages and against UD resources. 
+
+## Why SemantiK Architect outputs UD
+
+* **Evaluation & benchmarking:** the docs explicitly frame UD output as something you can evaluate “against treebanks.” 
+* **Interoperability:** UD is treated as a standards layer (“Standards: UD Exporter (CoNLL-U Tag Mapping)”). 
+* **Separation of concerns:** UD Mapping is a first-class *output port* alongside the text renderer (so you can use it without changing the core engine). 
+
+## When you should use UD output
+
+* When you want to **validate** that generation follows a consistent syntactic structure across languages.
+* When you want a **language-agnostic diagnostic** view (useful when surface text quality varies due to tier/coverage).
+* When building QA workflows where “text looks OK” is not enough and you want a structural signal.
+
+## Important constraints (high level)
+
+* UD output only works as well as the **mapping coverage**: every syntactic constructor needs a corresponding CoNLL-U mapping rule. 
+* If a mapping is missing, UD export can fail (the API error table explicitly calls out “UD Exporter failed to map a function”).
+
+
+================================================================================================
+FILE: wiki/Positioning-Ninai-Udiron-GF-UD-No-WMF-AW-Affiliation.md
+================================================================================================
+
+# Positioning: Ninai, Udiron, GF, UD (No WMF/AW Affiliation)
+
+SemantiK Architect (formerly “Abstract Wiki Architect”) is an **independent project**. It is **not affiliated with WMF / Abstract Wiki**, and does not imply collaboration or endorsement.
+
+## The short version (one paragraph)
+
+SemantiK Architect is a **renderer platform**: it takes a **language-independent meaning representation** and produces **encyclopedic text** across many languages, optimizing for the “long tail” (high coverage) while staying **deterministic** and **verifiable**.
+
+## Who does what (clear boundaries)
+
+### Ninai — meaning (input standard)
+
+* **Role:** A language-independent way to express meaning as constructor trees (“what you want to say”).
+* **What it’s not:** It does not decide word order, morphology, or surface realization.
+* **Relationship to SemantiK Architect:** SemantiK Architect can **consume Ninai-style object trees** as an input path.
+
+### GF — high-quality grammar (best-case realization)
+
+* **Role:** A rule-based grammar system (abstract syntax → concrete syntax) that can produce high-quality text where strong grammars exist.
+* **What it’s not:** It is not a full product platform (language selection policy, lexicon lifecycle, QA strategy, discourse memory).
+* **Relationship to SemantiK Architect:** SemantiK Architect uses GF as a **Tier-1 “high road”** option where available, inside a broader system that must still cover under-resourced languages.
+
+### Udiron — topology/ordering approach (coverage accelerator)
+
+* **Role (in this doc set):** A dependency/topology-inspired approach to **linearize** constituents via configurable ordering (weights), used to scale faster than hand-writing full grammars.
+* **What it’s not:** It is not a complete end-to-end renderer stack (lexicon + tiering + API + context + QA).
+* **Relationship to SemantiK Architect:** SemantiK Architect adapts a **weighted topology** strategy as the coverage fallback (Tier-3).
+
+### UD (Universal Dependencies) — evaluation/interchange surface (validation)
+
+* **Role:** A standard way to represent dependency structure, useful for **evaluation** and interoperability.
+* **What it’s not:** UD is not a generator; it does not produce text by itself.
+* **Relationship to SemantiK Architect:** SemantiK Architect can **export UD/CoNLL-U** as an output format to make correctness/analysis measurable and comparable.
+
+## What SemantiK Architect adds (the “product layer” the others don’t)
+
+SemantiK Architect’s unique responsibility is the **end-to-end orchestration** from meaning → text at scale:
+
+* **Hybrid realization strategy:** chooses between high-quality grammars and coverage fallbacks (tiered approach).
+* **Lexicon + grounding:** manages vocabulary as a first-class system (including grounding to identifiers such as Wikidata QIDs in the current docs).
+* **Discourse/context memory:** supports multi-sentence coherence (e.g., pronouns) as a core capability.
+* **Quality workflow:** explicit “gold standard / judge” style validation mindset (beyond “it compiles”).
+
+## Mental model (one line)
+
+**Ninai says what you mean → SemantiK Architect decides how to realize it → GF (when strong) or topology (when needed) produces the sentence → UD export helps verify what was produced.**
+
+
+================================================================================================
+FILE: wiki/Renderer.md
+================================================================================================
+
+## 7. Renderer
+
+The **Renderer** is the “assembly” layer of SemantiK Architect: it takes an **abstract intent** (meaning) and produces **readable text**.
+
+### What the Renderer is responsible for
+
+- **Turn intent into language output**: the Renderer is where “meaning becomes wording.”
+- **Support two input styles (dual-path)**:
+  - a **strict/production path** (stable, predictable structured input), and
+  - a **prototype path** that can accept a **recursive Ninai-style meaning tree**.
+- **Expose two output forms**:
+  - **natural language text**, and optionally
+  - a **Universal Dependencies (CoNLL-U)** representation for validation/evaluation workflows.
+
+### What the Renderer decides (high level)
+
+- **Which realization strategy to use** for a given language and input (e.g., “high-resource vs long-tail” behavior). This is the practical place where the system chooses between grammar-driven rendering and coverage-oriented fallback approaches.
+
+### What the Renderer does *not* do
+
+- It is **not** the lexicon (it doesn’t define vocabulary).
+- It is **not** the grammar matrix (it doesn’t author the linguistic rules).
+- It is **not** the context store (it doesn’t own discourse memory; it uses it).
+
+### Why this layer exists
+
+Separating the Renderer makes SemantiK Architect easier to scale:
+
+- You can improve **inputs** (add richer meaning formats) without rewriting lexicon/grammar.
+- You can add **outputs** (like UD export) without changing how text is produced.
+- You can evolve language strategies while keeping a stable “meaning → text” contract.
+
+
+================================================================================================
+FILE: wiki/Repo-Map.md
+================================================================================================
+
+# Repo Map
+
+This map lists the **main repo areas you’ll touch most**, grouped by purpose (not exhaustive). It reflects the **current repo layout**, with notes where naming is **legacy** or where behavior is a **target contract** rather than guaranteed in every branch.
+
+## Top-level (conceptual)
+
+* **Backend API (server-side)**
+  The backend is where generation, discovery endpoints, and admin/tooling endpoints live. Historically there have been multiple entrypoints; the intent is to converge on a **single canonical API app** and deprecate duplicates over time.
+
+* **Frontend UI (client-side)**
+  The UI lives under `architect_frontend/`. It is expected to behave as a single client against the versioned API (see `architect_frontend/src/lib/api.ts` for the central API wrapper).
+
+* **Data (lexicon + configuration)**
+  - Lexicon data is stored per language under `data/lexicon/{LANG}/...`.
+  - `{LANG}` is typically the **two-letter ISO code** for internal directories (e.g., `data/lexicon/en/`).  
+    If you also maintain external/public identifiers, treat them as a **mapped surface**, not a directory rule.
+  - Key mappings and configuration live under `data/config/` (e.g., `data/config/iso_to_wiki.json`).
+
+* **Grammars (grammar sources + compiled artifact)**
+  Grammar sources live under `gf/` (abstract syntax + per-language grammars such as `gf/Wiki{WikiCode}.gf`). A compiled **PGF** artifact is typically generated under `gf/` as part of the build.  
+  Note: some filenames may still carry **legacy naming** from the project’s earlier name.
+
+* **Generated sources (build outputs)**
+  Generated language sources are produced under `generated/`. If there are multiple mirrors (e.g., an older `gf/generated/...` layout), treat `generated/` as the **preferred** source of truth and regard mirrors as legacy compatibility.
+
+* **Tools & utilities (operators + QA + data ops)**
+  - `tools/` contains operator-facing tools (including QA suites).
+  - `utils/` contains helper scripts and data operations.
+  This split may evolve; avoid hardcoding paths in automation where possible.  
+  The Tools Registry is served by the backend router (commonly referenced under `app/adapters/api/routers/...`).
+
+* **Deployment**
+  Deployment wiring typically lives in `deploy/` (reverse proxy config, etc.) and `docker-compose.yml` (services wiring).
+
+* **Project launcher / orchestrator**
+  `manage.py` is the main “project command” entrypoint used for common flows (build/clean/align), depending on how your repo is operated.
+
+---
+
+## Suggested tree view (high level)
+
+* `app/` — Backend API (canonical entrypoint under `app/adapters/api/...`)
+* `architect_frontend/` — Frontend UI
+* `data/`
+  * `data/lexicon/{LANG}/...` — Lexicon per language
+  * `data/config/...` — Configuration + mappings (e.g., `iso_to_wiki.json`)
+* `gf/` — Grammar sources + compiled grammar artifact (PGF)
+* `generated/` — Preferred generated sources
+* `tools/` — Operator tools / QA
+* `utils/` — Data ops + helper scripts
+* `deploy/` — Reverse proxy configuration
+* `docker-compose.yml` — Services wiring
+* `manage.py` — Orchestration entrypoint
+
+
+================================================================================================
+FILE: wiki/Roadmap.md
+================================================================================================
+
+# Roadmap — SemantiK Architect
+
+> Formerly “Abstract Wiki Architect”. SemantiK Architect is **independent** and **not affiliated with WMF / Abstract Wiki**.
+
+## Guiding principles
+- **Deterministic by default**: normal builds and runtime operation do not rely on automated LLM calls.
+- **Human-in-the-loop for hard repairs**: any AI assistance (if enabled) is interactive and reviewable, not an unattended build hook.
+- **Quality is enforceable**: improvements must be measurable and protected against regressions (Gold Standard + gating).
+
+---
+
+## Near-term (Wiki v1 scope)
+
+### 1) Product clarity + documentation stabilization
+- Publish the **short GitHub Wiki** (Home, Positioning, How it Works, Quality, Using, Dev Notes, Project).
+- Align wording across pages on AI usage and determinism (remove contradictions, mark “target contract” vs “current behavior”).
+- Normalize naming (“SemantiK Architect”) across UI/docs/repo, and clearly label legacy repo paths/names where they still exist.
+
+### 2) Language onboarding (reliable first pass)
+- Make “Add a language” consistently result in a **runnable** language (minimum lexicon seed + basic grammar selection).
+- Keep the **Everything Matrix** as the single discovery/health registry that drives the language strategy (tier selection, readiness signals).
+
+### 3) Verifiability baseline
+- Establish a **Gold Standard** set for high-signal sentence types and keep gating behavior stable and documented.
+- Keep **UD export** usable as a validation surface where applicable.
+
+---
+
+## Execution order (implementation roadmap, simplified)
+1. **Foundation**: naming cleanup, configuration cleanup, and a clear “language strategy” registry model.
+2. **Deterministic adapters**: stable input adapters (Frames + Ninai) and stable validation/export surfaces (e.g., UD).
+3. **Core generation coverage**: ensure Tier 3/fallback coverage is reliable; integrate tier selection cleanly.
+4. **Context support**: enable multi-sentence coherence in a controlled, testable way.
+5. **Optional AI tools**: keep AI-assisted workflows out of the default build path; improve evaluation tooling and developer experience.
+
+---
+
+## Later (v2 — explicitly out of “simple wiki” scope)
+- **Learned micro-planning**: optional pre-render rewriting for style variation (tone, synonym choice) before deterministic rendering.
+- **Richer discourse planning**: broader context control beyond basic reference/pronouns.
+- **Expanded validation**: broader gold standards, stronger automated regression analysis, and clearer quality dashboards.
+
+
+================================================================================================
+FILE: wiki/Setup.md
+================================================================================================
+
+## 17. Setup
+
+This page explains how to get **SemantiK Architect** running locally (for development) and how to deploy it (for production). The system’s backend runtime depends on **GF C-libraries**, so it must run in a **Linux environment**; on Windows, the recommended approach is a **Windows + WSL2 hybrid** (Windows for editing/frontend, WSL2 for backend + GF). 
+
+### Supported development setup (recommended)
+
+* **Windows 10/11 + WSL2 (Ubuntu)**: edit code and run the frontend on Windows, run backend services and GF tooling in WSL2. 
+* Keep the repo on the **Windows drive** so both Windows and WSL can access the same working tree; avoid cloning into the Linux-only filesystem if you edit in Windows. 
+
+### Prerequisites (high level)
+
+You’ll need:
+
+* WSL2 + Ubuntu (22.04+ suggested in the docs)
+* Docker Desktop (WSL2 backend enabled)
+* VS Code with the WSL extension
+* Node.js 18+ (for the frontend) 
+
+### Core setup steps (conceptual)
+
+1. **System initialization (Linux side):** install OS build dependencies and the GF toolchain, and obtain the GF Resource Grammar Library (RGL). 
+2. **Python environment (Linux side):** create a virtual environment and install Python dependencies. 
+3. **Configuration:** create a `.env` at repo root to point the backend to repo paths, GF/RGL paths, compiled grammar artifact path, Redis, and tool limits. AI-related tools are explicitly gated by an environment flag. 
+
+### Running locally
+
+The docs describe two ways:
+
+* **Unified launcher (recommended):** one entry point that starts API, worker, and frontend. 
+* **Manual mode:** run Redis, the API backend, the worker, and the frontend as separate processes. 
+
+The UI is served under a **base path** (not at the root), and there are dedicated dev/tools pages. 
+
+### Production deployment (Docker)
+
+For production/full-stack container runs, the docs use `docker-compose`. Key conceptual differences vs local:
+
+* repo path is mounted into containers
+* services talk via container hostnames (not `localhost`)
+* UI and API are served under the configured base path and versioned API prefix 
+
+### Troubleshooting (common themes)
+
+* Backend errors about **pgf/lib** typically mean you’re running outside the Linux environment or missing system deps. 
+* Windows/WSL file **line endings** can break scripts; convert when needed. 
+* API calls should use the **versioned `/api/v1` prefix**. 
+* Tool execution failures usually come from an incorrect repo-root path configuration. 
+* AI tools may return authorization/gating errors if they’re disabled in configuration. 
+
+### Verification (smoke test)
+
+The docs include two end-to-end checks:
+
+* a **standard structured frame** generation request
+* a **Ninai protocol** generation request
+
+
+================================================================================================
+FILE: wiki/What-SemantiK-Architect-Is.md
+================================================================================================
+
+## 2. What SemantiK Architect Is
+
+**SemantiK Architect** (renamed from “Abstract Wiki Architect” in these docs) is an **independent** project: a **hybrid Natural Language Generation (NLG) engine** designed to produce **verifiable encyclopedic text** in the **long tail of languages (300+)**. 
+
+### What it does (in one sentence)
+
+It takes a **language-independent intent** and turns it into **natural language text**, with an emphasis on **determinism**, **scalability across many languages**, and **evaluation-ready outputs**.  
+
+### The guiding idea
+
+SemantiK Architect combines:
+
+* A **deterministic, rule-based core** for correctness, and
+* **AI-assisted tools at the edges** (copilot/QA/bootstrapping) to scale language coverage without turning generation into free-form “chat text”. 
+
+### The four core “building blocks” (conceptual)
+
+The system is organized as four layers, so each concern stays clear and replaceable:
+
+1. **Lexicon**: words + linguistic properties, grounded to **Wikidata QIDs** for semantic consistency. 
+2. **Grammar**: rules for word forms and word order, with a hybrid approach for both high-resource and under-resourced languages. 
+3. **Renderer**: the assembly step that converts intent into text and supports multiple input styles. 
+4. **Context**: a memory layer to support multi-sentence behavior (e.g., pronouns, discourse continuity). 
+
+### Inputs and outputs (high level)
+
+* **Inputs:**
+
+  * A **strict** structured “frame” for stable production behavior, and
+  * A **recursive Ninai-style object tree** for expressive/experimental meaning input.  
+* **Outputs:**
+
+  * **Surface text**, and optionally
+  * A **Universal Dependencies (CoNLL-U)** representation intended for evaluation/validation workflows.   
+
+### What it is *not*
+
+* Not a knowledge base or encyclopedia: it’s the **rendering engine**, not the source of truth.
+* Not a “prompt-and-pray” text generator: it is explicitly **generation-first and structured**. 
+* Not affiliated with the WMF/Abstract Wiki team (project note based on your stated context).

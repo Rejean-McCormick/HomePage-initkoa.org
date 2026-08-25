@@ -4,9 +4,14 @@ repository: Rejean-McCormick/kristal-framework
 source_path: C:\mycode\Kristal\kristal-framework
 source_commit: bad7346b387ad61fa141ecba0031c5859c6b15d0
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:52-04:00
-files: 41
-content_sha256: b8d56356133e383a4edb9f61da03b5909326ac530b7668ca5d227a6a24adda3a
+wiki_source_path: C:\mycode\Kristal\kristal-framework.wiki
+wiki_source_commit: 917d33f25ede7ed795dc8fa9cce0df6ccdb02861
+wiki_working_tree_markdown: clean
+repo_files: 41
+wiki_files: 31
+generated_at: 2026-08-25T11:30:50-04:00
+files: 72
+content_sha256: dab44e2196b1b70ae6d23869ed08b4299fb8f7dc577bde5f16d0961ab4400acd
 
 ================================================================================================
 FILE INDEX
@@ -53,6 +58,37 @@ FILE INDEX
 39. docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md
 40. docs/Technical-Reference/kristal-docs-v5/09-test-vectors/rdfc/README.md
 41. README.md
+42. wiki/_Footer.md
+43. wiki/_Sidebar.md
+44. wiki/Artifact-Authority-Registry.md
+45. wiki/Artifact-Exchange.md
+46. wiki/Artifact-Federation-Manifest.md
+47. wiki/Artifact-Runtime-Pack.md
+48. wiki/Artifact-Shard-Manifest.md
+49. wiki/Artifact-Validation-Report.md
+50. wiki/Artifacts.md
+51. wiki/Concepts-and-Mental-Model.md
+52. wiki/FAQ.md
+53. wiki/Getting-Started.md
+54. wiki/Glossary.md
+55. wiki/Home.md
+56. wiki/Identity-and-Determinism.md
+57. wiki/Operations-Compatibility.md
+58. wiki/Operations-Observability-and-Troubleshooting.md
+59. wiki/Operations-Release-Strategy.md
+60. wiki/Operations.md
+61. wiki/Query-Basics.md
+62. wiki/Query-Pagination-and-Capabilities.md
+63. wiki/Query.md
+64. wiki/Quickstart.md
+65. wiki/Trust-Authority-and-Signatures.md
+66. wiki/What-is-Kristal.md
+67. wiki/Workflow-Activate-Rollback-Downgrade.md
+68. wiki/Workflow-Build-and-Validate.md
+69. wiki/Workflow-Federation-and-Curation.md
+70. wiki/Workflow-Publish-and-Distribute.md
+71. wiki/Workflow-Subsets-Recipes.md
+72. wiki/Workflows.md
 
 
 ================================================================================================
@@ -32247,3 +32283,2587 @@ Major-version changes are required for changes that alter:
 ## One-sentence definition
 
 > Kristal v5 is a deterministic, portable epistemic artifact system that compiles Structured Epistemic States into verifiable artifacts while keeping validation scoped, authority plural, certainty explicit, reader policy selectable, and disagreement preserved.
+
+
+================================================================================================
+FILE: wiki/_Footer.md
+================================================================================================
+
+_Last updated:_ 2026-06-12 · _Kristal Framework Wiki_
+
+- Source repo: https://github.com/Rejean-McCormick/kristal-framework
+- Technical docs: `docs/Technical-Reference/kristal-docs-v5/`
+- Schemas: `docs/Technical-Reference/kristal-docs-v5/02-schemas/`
+- Examples: `docs/Technical-Reference/kristal-docs-v5/10-examples/`
+- Issues / feedback: https://github.com/Rejean-McCormick/kristal-framework/issues
+
+> This wiki is operational and product-oriented. For normative requirements, use the Kristal v5 technical docs and schemas.
+
+
+================================================================================================
+FILE: wiki/_Sidebar.md
+================================================================================================
+
+# Kristal Wiki
+
+## Démarrer
+- [[Home]]
+- [[Getting-Started]]
+- [[Quickstart]]
+- [[Glossary]]
+
+## Comprendre Kristal v5
+- [[What-is-Kristal]]
+- [[Concepts-and-Mental-Model]]
+- [[Identity-and-Determinism]]
+- [[Trust-Authority-and-Signatures]]
+
+## Artefacts
+- [[Artifacts]]
+- [[Artifact-Exchange]]
+- [[Artifact-Runtime-Pack]]
+- [[Artifact-Validation-Report]]
+- [[Artifact-Shard-Manifest]]
+- [[Artifact-Federation-Manifest]]
+- [[Artifact-Authority-Registry]]
+
+## Workflows
+- [[Workflows]]
+- [[Workflow-Build-and-Validate]]
+- [[Workflow-Publish-and-Distribute]]
+- [[Workflow-Activate-Rollback-Downgrade]]
+- [[Workflow-Subsets-Recipes]]
+- [[Workflow-Federation-and-Curation]]
+
+## Query & reader policy
+- [[Query]]
+- [[Query-Basics]]
+- [[Query-Pagination-and-Capabilities]]
+
+## Ops
+- [[Operations]]
+- [[Operations-Release-Strategy]]
+- [[Operations-Observability-and-Troubleshooting]]
+- [[Operations-Compatibility]]
+
+## Support
+- [[FAQ]]
+
+
+================================================================================================
+FILE: wiki/Artifact-Authority-Registry.md
+================================================================================================
+
+# Artifact: Authority Registry
+
+The **Authority Registry** defines authority channels, trust roots, validation policies, recognition policies, and scoped rules used to decide which authorities are acceptable for which purposes.
+
+It is the policy artifact that makes plural authority usable without hiding disagreement.
+
+---
+
+## What it is
+
+A versioned, content-addressed registry that records:
+
+- authority channels;
+- trust roots;
+- validation policies;
+- recognition policies;
+- revocation references;
+- scope rules;
+- signature material.
+
+---
+
+## Why it exists
+
+Kristal v5 assumes authority is plural.
+
+Different groups, institutions, communities, validators, publishers, and research collectives may recognize different artifacts or assertions for different scopes.
+
+The Authority Registry makes those boundaries explicit.
+
+---
+
+## What it contains
+
+### Authority channels
+
+Authority channels identify who is making a validation, recognition, publication, or policy decision.
+
+Examples:
+
+- individual;
+- community;
+- research collective;
+- academic institution;
+- standards body;
+- company;
+- government;
+- intergovernmental organization;
+- AI validator;
+- hybrid collective.
+
+### Trust roots
+
+Trust roots anchor verification for signatures and recognition.
+
+### Policies
+
+The registry may include or reference:
+
+- validation policies;
+- recognition policies;
+- revocation policies;
+- delegation rules;
+- scope rules.
+
+---
+
+## How consumers use it
+
+A consumer typically:
+
+1. loads the authority registry referenced by an artifact, shard, federation, or local configuration;
+2. identifies the active authority channel and scope;
+3. verifies signatures and trust roots where required;
+4. checks whether the authority is recognized for the target domain/scope;
+5. applies the active reader policy.
+
+---
+
+## Related pages
+
+- [[Trust-Authority-and-Signatures]]
+- [[Artifact-Federation-Manifest]]
+- [[Artifact-Shard-Manifest]]
+- [[Artifact-Validation-Report]]
+
+---
+
+## Technical details
+
+- Schema: `kristal-docs-v5/02-schemas/authority-registry.schema.json`
+- Example: `kristal-docs-v5/10-examples/authority-registry.example.json`
+- Core spec: `kristal-docs-v5/01-core-spec/authority-recognition.md`
+
+
+================================================================================================
+FILE: wiki/Artifact-Exchange.md
+================================================================================================
+
+# Artifact: Exchange
+
+An **Exchange** is a compiled Kristal artifact.
+
+It may be a **Working Exchange** or a **Reference Exchange**.
+
+A Working Exchange is portable, immutable, content-addressed, and queryable, but it may contain unvalidated, disputed, low-certainty, fictional, mythological, speculative, or incomplete assertions when those statuses are explicit.
+
+A Reference Exchange is recognized under one or more authority channels for declared scopes.
+
+---
+
+## What it is for
+
+Use an Exchange when you need:
+
+- a portable compiled artifact;
+- stable content identity;
+- reproducible build metadata;
+- queryable assertion payloads;
+- preserved provenance and evidence references;
+- validation, certainty, authority, and scope labels;
+- a source artifact for Runtime Packs.
+
+---
+
+## What it contains conceptually
+
+An Exchange typically records:
+
+- artifact identity and status;
+- technical canonicalization and hashing metadata;
+- source Structured Epistemic State or input references;
+- build metadata;
+- assertions or compiled payload references;
+- validation report references;
+- authority recognition references;
+- reader policy references;
+- lineage and provenance;
+- signatures where applicable.
+
+---
+
+## Working vs Reference Exchange
+
+### Working Exchange
+
+Used for drafting, review, research, internal collaboration, partial validation, disputed positions, or material awaiting authority recognition.
+
+### Reference Exchange
+
+Used when an authority channel recognizes the artifact for a declared scope.
+
+Reference status is scoped. It does not imply universal truth or universal agreement.
+
+---
+
+## Who produces and consumes it
+
+**Produced by**
+
+- compiler/build pipeline;
+- ingestion workflows;
+- federation or shard builders.
+
+**Consumed by**
+
+- validators;
+- Runtime Pack builders;
+- query services;
+- renderers;
+- Konnaxion distribution/activation flows;
+- authority and governance workflows.
+
+---
+
+## Related pages
+
+- [[Artifacts]]
+- [[Artifact-Runtime-Pack]]
+- [[Artifact-Validation-Report]]
+- [[Trust-Authority-and-Signatures]]
+- [[Workflow-Build-and-Validate]]
+
+---
+
+## Technical details
+
+- Schema: `kristal-docs-v5/02-schemas/exchange-manifest.schema.json`
+- Example: `kristal-docs-v5/10-examples/exchange.example.json`
+- Core spec: `kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md`
+
+
+================================================================================================
+FILE: wiki/Artifact-Federation-Manifest.md
+================================================================================================
+
+# Artifact: Federation Manifest
+
+A **Federation Manifest** defines deterministic composition across shards, authority channels, validation policies, reader policies, and disagreement-preserving rules.
+
+Federation does not rewrite shards or erase disagreement. It preserves shard identity, source authority, validation status, certainty level, and scope.
+
+---
+
+## What it is for
+
+Use a Federation Manifest when you need to:
+
+- combine multiple shards into one federated Kristal view;
+- preserve the authority channel behind each shard;
+- expose different views through reader policies;
+- keep conflicts visible rather than silently resolving them;
+- update one shard without rebuilding every other shard;
+- distribute a single composition entrypoint.
+
+---
+
+## What it contains conceptually
+
+A Federation Manifest typically records:
+
+- federation identity;
+- shard references;
+- shard scopes;
+- authority channel references;
+- validation report references;
+- authority recognition references;
+- reader policy references;
+- validation policy references;
+- composition policy;
+- trust requirements;
+- publisher signatures;
+- optional conflict summaries.
+
+---
+
+## Conflict strategy
+
+Kristal v5’s default federation strategy is:
+
+```text
+preserve_disagreement
+```
+
+This means a federation may contain multiple claims or positions about the same topic when their authority, certainty, validation status, or scope differs.
+
+Reader policies decide which material is visible.
+
+---
+
+## Relationship to other artifacts
+
+- **Shard Manifest**: referenced by the federation.
+- **Authority Registry**: defines which authority channels are acceptable.
+- **Validation Report**: records validation findings for shards or the federation.
+- **Reader Policy**: selects which federated material is visible.
+
+---
+
+## Technical details
+
+- Schema: `kristal-docs-v5/02-schemas/exchange-federation-manifest.schema.json`
+- Example: `kristal-docs-v5/10-examples/exchange-federation-manifest.example.json`
+- Overview: `kristal-docs-v5/00-overview/sharding-and-federation.md`
+
+
+================================================================================================
+FILE: wiki/Artifact-Runtime-Pack.md
+================================================================================================
+
+# Artifact: Runtime Pack
+
+A **Runtime Pack** is an offline-capable runtime/query artifact derived from an Exchange or shard set.
+
+It is optimized for activation and query performance while preserving the Kristal v5 labels needed for validation, certainty, authority, scope, provenance, and reader policy.
+
+---
+
+## What it is for
+
+Use a Runtime Pack when you need to:
+
+- activate a Kristal in a local or service runtime;
+- serve queries efficiently;
+- support offline operation;
+- record runtime policies that affect reproducibility;
+- preserve labels required by reader policies;
+- support safe rollout, rollback, and compatibility checks.
+
+---
+
+## What it contains conceptually
+
+A Runtime Pack typically includes:
+
+- manifest identity;
+- source Exchange or federation reference;
+- source artifact status;
+- data files;
+- indexes and auxiliary structures;
+- query contract reference;
+- reader policy references;
+- runtime policies;
+- validation and authority labels;
+- integrity and signature metadata.
+
+---
+
+## What it must preserve
+
+Runtime Pack construction must preserve or faithfully index:
+
+- artifact status;
+- assertion status;
+- validation status;
+- certainty level;
+- `validated_as`;
+- authority channel;
+- recognition status;
+- scope;
+- provenance references;
+- evidence references;
+- lineage.
+
+A Runtime Pack must not flatten scoped validation into universal truth.
+
+---
+
+## Activation
+
+Runtime activation is separate from artifact existence and validation.
+
+A pack may exist and verify technically, but still be unavailable under a deployment’s reader policy, authority policy, environment, tenant, or rollback constraints.
+
+---
+
+## Related pages
+
+- [[Artifact-Exchange]]
+- [[Query-Basics]]
+- [[Workflow-Activate-Rollback-Downgrade]]
+- [[Operations-Release-Strategy]]
+
+---
+
+## Technical details
+
+- Schema: `kristal-docs-v5/02-schemas/runtime-pack-manifest.schema.json`
+- Example: `kristal-docs-v5/10-examples/runtime-pack-manifest.example.json`
+- Runtime policies: `kristal-docs-v5/03-reproducibility/allowed-runtime-pack-policies.md`
+
+
+================================================================================================
+FILE: wiki/Artifact-Shard-Manifest.md
+================================================================================================
+
+# Artifact: Shard Manifest
+
+A **Shard Manifest** describes a scoped shard of Kristal material and the metadata needed to verify, validate, recognize, and compose it.
+
+A shard may represent a domain, subdomain, tenant, time window, authority channel, dataset subset, or federation slice.
+
+---
+
+## What it is
+
+A Shard Manifest is a verifiable pointer to shard content or a shard Exchange, annotated with:
+
+- shard identity;
+- artifact status;
+- scope;
+- authority channel;
+- validation references;
+- authority recognition references;
+- integrity metadata;
+- lineage;
+- reader-policy-relevant labels.
+
+---
+
+## When it exists
+
+You create a Shard Manifest when:
+
+- a publisher produces a domain-scoped artifact;
+- an authority channel publishes only a scoped subset;
+- a federation needs to compose many sources;
+- a tenant, environment, or time window needs independent update cadence;
+- you want validation and authority metadata at the shard boundary.
+
+---
+
+## How consumers use it
+
+Consumers typically:
+
+1. read the shard scope;
+2. verify integrity metadata if required;
+3. inspect validation report references;
+4. inspect authority recognition references;
+5. check the authority registry and reader policy;
+6. decide whether the shard can be used, hidden, rejected, or exposed with labels.
+
+---
+
+## Relationship to other artifacts
+
+- **Exchange**: shard content may be an Exchange or Exchange-derived payload.
+- **Validation Report**: records checks on the shard.
+- **Authority Registry**: determines authority acceptance for the shard scope.
+- **Federation Manifest**: composes shard manifests.
+- **Runtime Pack**: may materialize a shard or federated shard set.
+
+---
+
+## Technical details
+
+- Schema: `kristal-docs-v5/02-schemas/exchange-shard-manifest.schema.json`
+- Example: `kristal-docs-v5/10-examples/exchange-shard-manifest.example.json`
+
+
+================================================================================================
+FILE: wiki/Artifact-Validation-Report.md
+================================================================================================
+
+# Artifact: Validation Report
+
+A **Validation Report** records a scoped validation decision and the findings behind it.
+
+It does not turn a claim into universal truth. It records what was evaluated, by whom or by which validator, under which policy, for which scope, with which result.
+
+---
+
+## What it can validate
+
+A Validation Report may target:
+
+- an assertion;
+- a Structured Epistemic State;
+- an Exchange;
+- a shard;
+- a Federation Manifest;
+- a Runtime Pack;
+- a dataset;
+- a reader policy;
+- a validation policy;
+- an authority channel.
+
+---
+
+## What it records
+
+At a high level, it records:
+
+- target artifact or assertion;
+- target level;
+- scope;
+- issuer authority channel;
+- validation policy reference;
+- validation status;
+- certainty level;
+- `validated_as` classification;
+- findings;
+- evidence and provenance references;
+- authority recognition references;
+- warnings and errors;
+- signatures when applicable.
+
+---
+
+## Common validation statuses
+
+- `not_evaluated`
+- `in_review`
+- `validated`
+- `conditionally_validated`
+- `disputed`
+- `rejected`
+- `revoked`
+
+---
+
+## Why it matters
+
+Validation Reports make it possible to show readers:
+
+- validated as what;
+- by whom;
+- under which policy;
+- for which scope;
+- with what certainty;
+- with what evidence;
+- with what limitations.
+
+---
+
+## Relationship to other artifacts
+
+- Exchanges and Shards may reference Validation Reports.
+- Federation Manifests may require Validation Reports for included shards.
+- Reader Policies may expose only assertions with matching validation status.
+- Runtime Packs must preserve validation labels when materializing indexes.
+
+---
+
+## Technical details
+
+- Schema: `kristal-docs-v5/02-schemas/validation-report.schema.json`
+- Example: `kristal-docs-v5/10-examples/validation-report.example.json`
+
+
+================================================================================================
+FILE: wiki/Artifacts.md
+================================================================================================
+
+# Artifacts
+
+Kristal v5 produces a small set of standard artifacts that can be verified, distributed, queried, composed, and interpreted under reader policy.
+
+This page is a map of what exists, what it is for, and when you see it.
+
+> This wiki stays high-level. For exact fields and schemas, use `kristal-docs-v5/02-schemas/` and the examples in `kristal-docs-v5/10-examples/`.
+
+---
+
+## Core artifacts
+
+### Structured Epistemic State
+
+**What it is:** the normative v5 input unit. It represents assertions with scope, status, certainty, provenance, evidence, validation, and authority metadata.
+
+**When you get it:** before compilation, after extraction/resolution, or as an explicit submitted state.
+
+### Exchange
+
+**What it is:** a compiled working or reference artifact.
+
+**When you get it:** after compiling a Structured Epistemic State or equivalent accepted input.
+
+See: [[Artifact-Exchange]]
+
+### Validation Report
+
+**What it is:** scoped validation findings for an assertion, artifact, shard, dataset, runtime pack, reader policy, federation, or authority surface.
+
+See: [[Artifact-Validation-Report]]
+
+### Runtime Pack
+
+**What it is:** an offline/query-optimized package derived from an Exchange or shard set.
+
+See: [[Artifact-Runtime-Pack]]
+
+---
+
+## Federation artifacts
+
+### Shard Manifest
+
+**What it is:** a manifest for a scoped shard, including scope, integrity, validation, and authority-channel metadata.
+
+See: [[Artifact-Shard-Manifest]]
+
+### Federation Manifest
+
+**What it is:** a deterministic composition of shards, authority channels, validation policies, reader policies, and disagreement-preserving composition rules.
+
+See: [[Artifact-Federation-Manifest]]
+
+### Authority Registry
+
+**What it is:** the artifact that defines authority channels, trust roots, recognition policies, validation policies, revocation rules, and scope rules.
+
+See: [[Artifact-Authority-Registry]]
+
+---
+
+## Supporting artifact families
+
+Kristal v5 also uses or may reference:
+
+- Authority Recognition artifacts
+- Reader Policies
+- Revocations
+- Review bundles
+- Transparency log entries
+- Query contracts
+- Runtime pack manifests
+- Test vectors
+
+---
+
+## Conceptual dependency graph
+
+```text
+Structured Epistemic State -> Exchange
+Exchange -> Runtime Pack
+Exchange / Shard / Assertion -> Validation Report
+Authority Channel -> Authority Recognition
+Shard Manifest -> Exchange or shard payload
+Federation Manifest -> Shard Manifests + authority registry + reader policies
+Reader Policy -> visible/queryable/renderable subset
+```
+
+---
+
+## How to choose what you need
+
+- If you want to compile structured work: **Structured Epistemic State + Exchange**
+- If you want to evaluate status: **Validation Report**
+- If you want offline query: **Runtime Pack**
+- If you want multi-authority composition: **Shard Manifest + Federation Manifest + Authority Registry**
+- If you want controlled visibility: **Reader Policy**
+
+
+================================================================================================
+FILE: wiki/Concepts-and-Mental-Model.md
+================================================================================================
+
+# Concepts & Mental Model
+
+This page explains Kristal v5 in system terms: what the pieces are, how they fit, and what guarantees you should expect.
+
+---
+
+## Mental model in one sentence
+
+Kristal turns structured epistemic work into portable, verifiable artifacts without confusing existence, integrity, validation, authority, certainty, or reader visibility.
+
+---
+
+## The core loop
+
+1. **Collect** signals, drafts, datasets, submissions, or extracted claims.
+2. **Represent** them as a Structured Epistemic State.
+3. **Compile** them into a Working Artifact.
+4. **Validate** assertions, datasets, artifacts, or shards under scoped policies.
+5. **Recognize** authority for declared scopes.
+6. **Publish** working or reference artifacts.
+7. **Package** Runtime Packs for offline/query use.
+8. **Read/query/render** through explicit reader policies.
+9. **Evolve** through versions, forks, revocations, rollback, and federation.
+
+---
+
+## The separation that matters
+
+```text
+artifact existence
+≠ artifact integrity
+≠ assertion status
+≠ certainty level
+≠ validation status
+≠ authority recognition
+≠ reader visibility
+≠ runtime activation
+```
+
+This is the core of Kristal v5.
+
+An artifact may be technically valid and still contain uncertain, disputed, fictional, mythological, speculative, or rejected assertions.
+
+---
+
+## Structured Epistemic State
+
+The Structured Epistemic State is the normative input unit for Kristal v5.
+
+It can contain assertions, provenance, evidence, certainty, validation metadata, authority references, scope, and lineage.
+
+`Claim-IR` may still be used by extractors and resolvers, but it is not the universal required input boundary.
+
+---
+
+## Working vs Reference artifacts
+
+A **Working Artifact** is compiled, portable, and queryable. It may contain unvalidated or disputed material if those states are explicit.
+
+A **Reference Artifact** is recognized for a declared scope by one or more authority channels.
+
+Reference does not mean universal certainty or universal agreement.
+
+---
+
+## Validation
+
+Validation is scoped. It answers questions like:
+
+- What was evaluated?
+- Which validation policy applied?
+- Which authority channel issued the validation?
+- What status was assigned?
+- What certainty level and `validated_as` classification apply?
+- Which evidence supports the result?
+
+Validation can apply to assertions, artifacts, datasets, shards, runtime packs, reader policies, and federations.
+
+---
+
+## Authority
+
+Authority is plural.
+
+Different authority channels may recognize different assertions, corpora, policies, or reference artifacts for different scopes.
+
+Federation must preserve those authority labels rather than merging everything into a single undifferentiated truth layer.
+
+---
+
+## Reader policy
+
+Reader policy determines what a reader, runtime, query, export, or renderer may expose.
+
+Examples:
+
+- `reference_only`
+- `validated_only`
+- `high_certainty_only`
+- `research`
+- `creative`
+- `all_with_labels`
+- `custom`
+
+---
+
+## Integrity
+
+Integrity protects artifacts. It does not decide whether every assertion is true.
+
+Hashes, signatures, trust roots, and reproducibility checks answer whether an artifact is the artifact it claims to be.
+
+They do not erase uncertainty, disagreement, fiction, mythology, or scoped validation labels.
+
+
+================================================================================================
+FILE: wiki/FAQ.md
+================================================================================================
+
+# FAQ
+
+## What is Kristal, in one sentence?
+Kristal v5 is a deterministic, portable epistemic artifact system that compiles Structured Epistemic States into verifiable artifacts while keeping validation scoped, authority plural, certainty explicit, reader policy selectable, and disagreement preserved.
+
+## Is Kristal a database?
+Not exactly. Kristal produces portable artifacts such as Exchanges and Runtime Packs that can be queried, but it is primarily a build, verification, distribution, federation, and reader-policy framework.
+
+## Does Kristal decide what is universally true?
+No. Kristal records assertion status, certainty level, validation status, authority recognition, scope, and reader visibility. It prevents those labels from being confused.
+
+## What is a Structured Epistemic State?
+It is the normative v5 input unit. It represents assertions with provenance, evidence, scope, certainty, validation, authority, and lineage metadata.
+
+## Is Claim-IR still used?
+Yes, but as an extractor proposal profile. It is not the universal required input boundary for Kristal v5.
+
+## What is the difference between Working and Reference artifacts?
+A Working Artifact is compiled and portable but may contain unvalidated, disputed, or incomplete material. A Reference Artifact is recognized by one or more authority channels for a declared scope.
+
+## What is a Validation Report?
+A Validation Report records what was validated, under which policy and scope, by which authority or validator, with which findings, certainty level, and `validated_as` classification.
+
+## What is an Authority Registry?
+It is a registry of authority channels, trust roots, recognition policies, validation policies, revocation references, and scope rules.
+
+## What is a reader policy?
+A reader policy decides what material is visible or usable for a reader, query, export, renderer, or runtime. Examples include `reference_only`, `validated_only`, `research`, `creative`, and `all_with_labels`.
+
+## Does validated-only mean all visible content is universally factual?
+No. Validated-only means the visible content satisfies that reader policy’s validation, authority, certainty, and scope filters. It may include material validated as a hypothesis, mythological corpus, fictional corpus, symbolic model, publisher declaration, or disputed position.
+
+## What are Shards and Federations?
+A shard is scoped material that can be validated, recognized, and updated independently. A federation composes shards while preserving source identity, authority, validation, certainty, scope, and disagreement labels.
+
+## What does strict verification mean?
+When hashes, signatures, trust roots, revocation checks, or activation rules are declared mandatory, consumers reject artifacts that do not satisfy those checks.
+
+## Where are the technical details?
+Use the technical docs in the main repository:
+
+- Core specs: `kristal-docs-v5/01-core-spec/`
+- Schemas: `kristal-docs-v5/02-schemas/`
+- Examples: `kristal-docs-v5/10-examples/`
+- Test vectors: `kristal-docs-v5/09-test-vectors/`
+
+
+================================================================================================
+FILE: wiki/Getting-Started.md
+================================================================================================
+
+# Getting Started
+
+Kristal v5 is a deterministic, portable epistemic artifact system. You build artifacts from structured epistemic work, validate and recognize them under scoped policies, distribute them with integrity metadata, and query or render them under reader policy.
+
+---
+
+## What you can do with Kristal
+
+- Compile Structured Epistemic States into Working Artifacts.
+- Preserve provenance, evidence, status, certainty, validation, authority, and scope labels.
+- Validate assertions or artifacts under explicit policy.
+- Recognize artifacts or assertions through authority channels.
+- Publish Reference Artifacts for declared scopes.
+- Build Runtime Packs for offline query.
+- Federate shards from multiple authorities without erasing disagreement.
+- Control visibility through reader policies.
+
+---
+
+## Core building blocks
+
+- **Structured Epistemic State** — normative input unit.
+- **Exchange** — compiled artifact, either working or reference.
+- **Validation Report** — scoped validation findings and status.
+- **Authority Registry** — authority channels, trust roots, and rules.
+- **Shard Manifest** — scoped shard metadata.
+- **Federation Manifest** — deterministic composition of shards.
+- **Runtime Pack** — offline/query-optimized artifact.
+- **Reader Policy** — visibility and selection rules.
+
+---
+
+## Typical workflow
+
+1. **Represent**
+   - Create or ingest a Structured Epistemic State.
+   - Preserve provenance, evidence, scope, certainty, and assertion status.
+
+2. **Compile**
+   - Produce a Working Exchange.
+   - Record build metadata and technical canonicalization/hash policy.
+
+3. **Validate**
+   - Run schema, profile, policy, or domain validation.
+   - Produce Validation Reports.
+
+4. **Recognize**
+   - Record authority recognition where applicable.
+   - Keep recognition scoped.
+
+5. **Publish & distribute**
+   - Publish working or reference artifacts.
+   - Include integrity and signature metadata where required.
+
+6. **Package & activate**
+   - Build Runtime Packs.
+   - Activate only when local policy allows.
+
+7. **Query or render**
+   - Apply reader policy.
+   - Preserve labels for status, certainty, validation, authority, scope, and lineage.
+
+---
+
+## If you are new
+
+Read these pages first:
+
+- [[What-is-Kristal]]
+- [[Concepts-and-Mental-Model]]
+- [[Artifacts]]
+- [[Workflow-Build-and-Validate]]
+- [[Query-Basics]]
+- [[FAQ]]
+
+---
+
+## Technical details
+
+Use the main repository technical docs:
+
+- `kristal-docs-v5/00-overview/`
+- `kristal-docs-v5/01-core-spec/`
+- `kristal-docs-v5/02-schemas/`
+- `kristal-docs-v5/10-examples/`
+
+
+================================================================================================
+FILE: wiki/Glossary.md
+================================================================================================
+
+# Glossary
+
+A compact reference of Kristal v5 terms used across the wiki. Formal definitions live in the technical docs.
+
+---
+
+## Artifact
+A packaged, distributable unit produced or consumed by the Kristal pipeline.
+
+## Artifact integrity
+The technical property that an artifact matches its declared identity, hashes, signatures, and verification metadata.
+
+## Assertion
+A structured statement or claim-like unit inside a Kristal artifact. Assertions may be factual, hypothetical, disputed, fictional, mythological, symbolic, institutional, technical, or policy-oriented.
+
+## Assertion status
+The epistemic state of an assertion, such as `hypothesis`, `claimed`, `sourced`, `disputed`, `reviewed`, `validated`, `rejected`, `retracted`, or `superseded`.
+
+## Authority channel
+The entity or channel that issues validation, recognition, publication, policy, or trust decisions for a declared scope.
+
+## Authority recognition
+A scoped decision that an authority channel recognizes a target as valid, accepted, disputed, deprecated, rejected, or revoked under a declared policy.
+
+## Authority Registry
+A v5 artifact that records authority channels, trust roots, validation policies, recognition policies, revocation references, and scope rules.
+
+## Certainty level
+A label describing certainty, such as `unknown`, `speculative`, `low`, `medium`, `high`, `established`, or `not_applicable`.
+
+## Claim-IR
+An extractor proposal profile that may be used by extraction pipelines. It is not the universal required input boundary for Kristal v5.
+
+## Compilation
+The deterministic process of producing a portable artifact from a Structured Epistemic State or accepted input.
+
+## Federation
+A composition of multiple shards or artifacts that preserves source identity, authority, validation, certainty, scope, and disagreement labels.
+
+## Federation Manifest
+A manifest that defines shard composition, authority references, validation policy references, reader policy references, and disagreement-preserving composition rules.
+
+## Integrity
+Hashing, signatures, reproducibility, and verification mechanisms that protect artifact identity.
+
+## Reader policy
+A policy that determines what material a reader, query, export, renderer, or runtime is allowed to expose.
+
+## Reference Artifact
+An artifact recognized by one or more authority channels for a declared scope.
+
+## Runtime Pack
+An offline-capable, query-optimized artifact derived from an Exchange or shard set.
+
+## Scope
+The domain, subdomain, jurisdiction, time window, tenant, environment, or language context where a status, validation, or recognition applies.
+
+## Shard
+A scoped artifact or artifact subset used for independent publishing, update, validation, and federation.
+
+## Shard Manifest
+A manifest describing a shard’s identity, scope, authority channel, validation references, recognition references, and integrity metadata.
+
+## Structured Epistemic State
+The normative Kristal v5 input unit for representing assertions with provenance, evidence, scope, certainty, validation, authority, and lineage metadata.
+
+## Technical canonicalization
+A stable byte-representation process used for hashing and signatures. It is not an epistemic authority claim.
+
+## Validation
+A scoped evaluation of a target under a validation policy.
+
+## Validation Report
+An artifact recording validation target, policy, findings, status, certainty, `validated_as`, evidence, and issuer authority channel.
+
+## Validated as
+A classification of what kind of thing the assertion is validated as, for example `high_confidence_fact`, `institutional_reference`, `publisher_declaration`, `technical_specification`, `mythological_corpus`, `fictional_corpus`, `symbolic_model`, or `disputed_position`.
+
+## Working Artifact
+A compiled artifact that may be used for review, research, staging, or collaboration before authority recognition as a reference artifact.
+
+
+================================================================================================
+FILE: wiki/Home.md
+================================================================================================
+
+# Kristal Framework — Wiki
+
+Kristal v5 is a deterministic, portable epistemic artifact system.
+
+It compiles **Structured Epistemic States** into immutable, verifiable, queryable artifacts while keeping validation scoped, authority plural, certainty explicit, reader policy selectable, and disagreement preserved.
+
+This wiki is product and usage oriented. Normative requirements, JSON Schemas, examples, and conformance rules live in the technical docs under:
+
+```text
+C:\mycode\Kristal\kristal-framework\docs\Technical-Reference\kristal-docs-v5
+```
+
+---
+
+## Start here
+
+- **Quickstart:** [[Quickstart]]
+- **What is Kristal:** [[What-is-Kristal]]
+- **Mental model:** [[Concepts-and-Mental-Model]]
+- **Glossary:** [[Glossary]]
+
+---
+
+## What Kristal v5 does
+
+Kristal v5 lets teams:
+
+- compile structured epistemic work into portable artifacts;
+- preserve provenance, evidence, scope, certainty, validation, and authority metadata;
+- distribute artifacts that can be verified offline;
+- query or render selected material under explicit reader policy;
+- federate multiple authority channels without erasing disagreement;
+- operate rollouts, rollback, and compatibility checks safely.
+
+---
+
+## Core distinction
+
+Kristal v5 keeps these concepts separate:
+
+```text
+artifact existence
+≠ artifact integrity
+≠ assertion status
+≠ certainty level
+≠ validation status
+≠ authority recognition
+≠ reader visibility
+≠ runtime activation
+```
+
+An artifact can be signed, content-addressed, reproducible, and queryable while still containing assertions that are hypothetical, disputed, fictional, mythological, low-certainty, rejected by one authority channel, recognized by another, or hidden by a reader policy.
+
+---
+
+## Core artifacts
+
+- [[Artifact-Exchange]] — compiled working or reference artifact
+- [[Artifact-Runtime-Pack]] — offline/query-optimized runtime artifact
+- [[Artifact-Validation-Report]] — scoped validation results and findings
+- [[Artifact-Shard-Manifest]] — scoped shard pointer with authority and validation metadata
+- [[Artifact-Federation-Manifest]] — composition across shards and authority channels
+- [[Artifact-Authority-Registry]] — scoped authority channels, trust roots, and rules
+
+---
+
+## Core workflows
+
+- [[Workflow-Build-and-Validate]]
+- [[Workflow-Publish-and-Distribute]]
+- [[Workflow-Activate-Rollback-Downgrade]]
+- [[Workflow-Subsets-Recipes]]
+- [[Workflow-Federation-and-Curation]]
+
+---
+
+## Technical docs
+
+For exact fields, schemas, conformance requirements, test vectors, and examples, use:
+
+- `kristal-docs-v5/00-overview/`
+- `kristal-docs-v5/01-core-spec/`
+- `kristal-docs-v5/02-schemas/`
+- `kristal-docs-v5/09-test-vectors/`
+- `kristal-docs-v5/10-examples/`
+
+
+================================================================================================
+FILE: wiki/Identity-and-Determinism.md
+================================================================================================
+
+# Identity and Determinism
+
+Kristal v5 is designed so independent builders can produce the same identifiers and verifiable artifacts from the same inputs, policies, profiles, and compiler configuration.
+
+This page explains the operational model. Exact technical canonicalization and hashing rules are defined in the technical docs.
+
+---
+
+## Identity
+
+Identity answers: **which artifact is this?**
+
+Kristal artifacts use content-derived identifiers and hash references so consumers can verify that the artifact they received matches the artifact that was built, signed, published, or activated.
+
+Identity protects artifacts. It does not decide whether every assertion inside an artifact is true.
+
+---
+
+## Determinism
+
+Determinism answers: **will the same inputs produce the same output?**
+
+A deterministic build requires declared:
+
+- inputs;
+- source snapshots;
+- compiler identity;
+- compiler configuration;
+- build-affecting policies;
+- technical canonicalization profile;
+- hashing rules;
+- optional profile behavior that affects output.
+
+---
+
+## Technical canonicalization
+
+In Kristal v5, the word **canonicalization** should be used for the technical hashing process only: producing a stable byte representation for identity, hashes, and signatures.
+
+It should not be used to mean epistemic authority, truth, or reference acceptance.
+
+---
+
+## What must be recorded
+
+At minimum, identity-bearing artifacts should record:
+
+1. **Inputs**
+   - source snapshots;
+   - Structured Epistemic State references;
+   - prior artifacts;
+   - recipes or subset policies.
+
+2. **Policies**
+   - ordering;
+   - membership filters;
+   - reader policy materialization;
+   - authority or validation filters that affect output.
+
+3. **Tooling identity**
+   - compiler name and version;
+   - configuration hash;
+   - build identifiers.
+
+4. **Integrity metadata**
+   - hash algorithm;
+   - technical canonicalization profile;
+   - hash target policy;
+   - signatures where applicable.
+
+---
+
+## Strict verification
+
+When a manifest declares that hashes, signatures, trust roots, revocation data, or activation rules are mandatory, consumers should enforce those requirements strictly.
+
+Strict verification failure protects the artifact boundary.
+
+It does not erase the need to preserve assertion status, certainty level, validation status, authority recognition, and reader visibility labels.
+
+---
+
+## What is not part of identity
+
+The following should not change content identity unless a profile explicitly makes them identity-bearing:
+
+- wall-clock timestamps used only for logging;
+- local paths;
+- hostnames;
+- transient deployment metadata;
+- runtime cache state;
+- UI rendering state;
+- operational logs.
+
+---
+
+## Technical details
+
+- `kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md`
+- `kristal-docs-v5/03-reproducibility/deterministic-build-rules.md`
+- `kristal-docs-v5/09-test-vectors/jcs/`
+
+
+================================================================================================
+FILE: wiki/Operations-Compatibility.md
+================================================================================================
+
+# Operations: Compatibility
+
+This page explains how to operate Kristal v5 artifacts without breaking consumers.
+
+Compatibility is about preserving artifact identity, query expectations, runtime behavior, reader policy semantics, and verification rules.
+
+---
+
+## Compatibility goals
+
+A compatibility strategy should ensure:
+
+- consumers can reject incompatible artifacts early;
+- publishers can roll out changes gradually;
+- rollback remains possible;
+- reader policy behavior remains explicit;
+- authority and validation labels remain interpretable;
+- schema and profile changes are versioned.
+
+---
+
+## What should remain stable
+
+Across compatible changes, keep stable:
+
+- artifact identity expectations;
+- technical canonicalization and hashing behavior;
+- signature verification semantics;
+- query contract semantics;
+- reader policy interpretation;
+- required labels for status, validation, certainty, authority, and scope.
+
+---
+
+## What may change with coordination
+
+- additive optional fields;
+- new profiles;
+- new validation policies;
+- new reader policy modes;
+- new query capabilities;
+- new Runtime Pack policies;
+- new authority channels.
+
+These should be explicitly declared and versioned.
+
+---
+
+## Breaking changes
+
+Treat these as breaking unless explicitly version-gated:
+
+- removing required fields;
+- changing field meaning;
+- changing technical canonicalization or hashing;
+- changing signature semantics;
+- changing reader policy semantics;
+- changing federation composition behavior;
+- changing Runtime Pack activation compatibility;
+- changing authority recognition semantics.
+
+---
+
+## Upgrade playbook
+
+1. Publish new artifacts without activation.
+2. Validate schemas and profiles.
+3. Run smoke queries under representative reader policies.
+4. Verify rollback targets remain available.
+5. Canary activation for a small scope.
+6. Expand activation gradually.
+7. Keep prior artifacts available for audit and rollback.
+8. Deprecate old surfaces only after consumers have migrated.
+
+---
+
+## Related pages
+
+- [[Workflow-Activate-Rollback-Downgrade]]
+- [[Operations-Release-Strategy]]
+- [[Operations-Observability-and-Troubleshooting]]
+- [[Query-Pagination-and-Capabilities]]
+
+
+================================================================================================
+FILE: wiki/Operations-Observability-and-Troubleshooting.md
+================================================================================================
+
+# Operations: Observability & Troubleshooting
+
+This page describes what to monitor and how to diagnose Kristal v5 build, validation, distribution, activation, federation, reader policy, and query failures.
+
+---
+
+## What to observe
+
+### Build pipeline
+
+- success/failure rate;
+- duration;
+- queue depth;
+- retries and timeouts;
+- compiler version and config hash;
+- reproducibility mismatches.
+
+### Validation
+
+- validation status counts;
+- validation policy failures;
+- evidence missing;
+- schema failures;
+- profile failures;
+- rejected or disputed assertions.
+
+### Authority and trust
+
+- signature verification failures;
+- trust root mismatch;
+- unrecognized authority channel;
+- revoked key or authority;
+- recognition status changes.
+
+### Distribution and activation
+
+- publish failures;
+- missing artifact references;
+- hash mismatch events;
+- activation failures;
+- rollback events;
+- downgrade blocks;
+- stale pack rejection.
+
+### Query and reader policy
+
+- query latency;
+- pagination errors;
+- capability mismatch;
+- reader policy denial;
+- missing labels;
+- unexpected visibility.
+
+---
+
+## Recommended log fields
+
+Use structured logs with:
+
+- `tenant_id`
+- `environment`
+- `build_id`
+- `artifact_id`
+- `runtime_pack_id`
+- `authority_channel_id`
+- `reader_policy_id`
+- `validation_policy_id`
+- `scope.domain`
+- `scope.subdomain`
+- `stage`
+- `event`
+- `duration_ms`
+- `error_code`
+- `correlation_id`
+
+---
+
+## Common troubleshooting paths
+
+### Artifact verifies but content is hidden
+
+Check reader policy, authority channel filters, validation status filters, certainty level filters, and scope filters.
+
+### Artifact exists but cannot activate
+
+Check activation policy, revocation state, compatibility, tenant/environment scope, and Runtime Pack source artifact status.
+
+### Federation shows conflicting claims
+
+This may be expected. Check whether the composition policy is `preserve_disagreement` and whether reader policy includes disputed positions.
+
+### Query result missing labels
+
+Check Runtime Pack materialization and query contract. The pack may not have preserved labels required by the reader policy.
+
+---
+
+## Related pages
+
+- [[Operations]]
+- [[Operations-Release-Strategy]]
+- [[Query-Pagination-and-Capabilities]]
+- [[Workflow-Activate-Rollback-Downgrade]]
+
+
+================================================================================================
+FILE: wiki/Operations-Release-Strategy.md
+================================================================================================
+
+# Operations: Release Strategy
+
+A Kristal release strategy controls how artifacts, Runtime Packs, authority registries, reader policies, and activation pointers move through environments.
+
+---
+
+## Release units
+
+A release may include:
+
+- Exchange;
+- Runtime Pack;
+- Validation Reports;
+- Authority Recognition artifacts;
+- Authority Registry updates;
+- Federation Manifest;
+- Shard Manifests;
+- Reader Policies;
+- Revocation updates.
+
+---
+
+## Release stages
+
+Common stages:
+
+1. build;
+2. validate;
+3. recognize if applicable;
+4. publish;
+5. distribute;
+6. verify;
+7. activate;
+8. monitor;
+9. rollback if needed.
+
+---
+
+## Activation strategy
+
+Activation should be scoped by:
+
+- tenant;
+- environment;
+- region;
+- service;
+- authority channel;
+- reader policy;
+- Runtime Pack version.
+
+---
+
+## Canary strategy
+
+Canary releases should validate:
+
+- hash/signature verification;
+- query behavior;
+- reader policy enforcement;
+- label preservation;
+- latency and error rates;
+- rollback readiness.
+
+---
+
+## Rollback readiness
+
+A release is not operationally safe unless the prior known-good activation target is still available and verifies under current policy.
+
+---
+
+## Related pages
+
+- [[Workflow-Publish-and-Distribute]]
+- [[Workflow-Activate-Rollback-Downgrade]]
+- [[Operations-Compatibility]]
+
+
+================================================================================================
+FILE: wiki/Operations.md
+================================================================================================
+
+# Operations
+
+Kristal operations cover release, distribution, activation, rollback, compatibility, observability, and troubleshooting.
+
+The operational model preserves the v5 separations:
+
+```text
+artifact existence
+≠ artifact integrity
+≠ validation status
+≠ authority recognition
+≠ reader visibility
+≠ runtime activation
+```
+
+---
+
+## Main operations pages
+
+- [[Operations-Release-Strategy]]
+- [[Operations-Observability-and-Troubleshooting]]
+- [[Operations-Compatibility]]
+
+---
+
+## Operational responsibilities
+
+Operators should ensure:
+
+- artifacts are published with stable identity;
+- required hashes and signatures verify;
+- revocations are applied;
+- activation is atomic;
+- rollback is available;
+- reader policy is enforced;
+- authority and scope labels are preserved;
+- Runtime Packs preserve validation and certainty labels;
+- monitoring surfaces integrity, validation, activation, and query failures separately.
+
+---
+
+## What operations must not do
+
+Operations should not:
+
+- treat working artifacts as reference artifacts without recognition;
+- hide validation scope;
+- flatten authority channels;
+- strip certainty labels;
+- expose rejected or revoked material when policy blocks it;
+- present scoped validation as universal truth.
+
+
+================================================================================================
+FILE: wiki/Query-Basics.md
+================================================================================================
+
+# Query Basics
+
+Kristal v5 query is label-preserving.
+
+A query result should not lose the labels that tell a reader what kind of assertion they are seeing, who recognizes it, how certain it is, and which policy made it visible.
+
+---
+
+## Basic query flow
+
+1. Select a source artifact or Runtime Pack.
+2. Verify integrity if required.
+3. Select or resolve a reader policy.
+4. Execute the declared query contract.
+5. Return results with labels and provenance references.
+
+---
+
+## Common filters
+
+- subject / predicate / object;
+- domain or scope;
+- authority channel;
+- assertion status;
+- validation status;
+- certainty level;
+- `validated_as`;
+- recognition status;
+- reader policy;
+- time window or tenant.
+
+---
+
+## Result labels
+
+Results should keep visible:
+
+- `assertion_status`;
+- `validation_status`;
+- `certainty_level`;
+- `validated_as`;
+- `authority_channel`;
+- `recognition_status`;
+- `scope`;
+- evidence/provenance references when available.
+
+---
+
+## Reader policy examples
+
+- `reference_only`: show recognized reference material.
+- `validated_only`: show material validated under allowed policies and authority channels.
+- `research`: show broader material with labels.
+- `creative`: show fictional, mythological, or symbolic corpora when allowed.
+- `all_with_labels`: show all allowed material with explicit status labels.
+
+---
+
+## Related pages
+
+- [[Query]]
+- [[Query-Pagination-and-Capabilities]]
+- [[Artifact-Runtime-Pack]]
+
+
+================================================================================================
+FILE: wiki/Query-Pagination-and-Capabilities.md
+================================================================================================
+
+# Query: Pagination & Capabilities
+
+Kristal query runtimes declare their capabilities so clients can adapt, fail early, or select a different reader policy or runtime pack.
+
+---
+
+## Capabilities
+
+A runtime may declare support for:
+
+- pagination;
+- cardinality estimates;
+- subject/predicate/object filters;
+- authority channel filters;
+- validation status filters;
+- certainty level filters;
+- `validated_as` filters;
+- scope filters;
+- disagreement views;
+- reader policy filters.
+
+---
+
+## Pagination
+
+Pagination must be deterministic for the declared ordering and query contract.
+
+Continuation tokens should preserve enough state to avoid skipped or duplicated rows under the same artifact identity and query contract.
+
+---
+
+## Capability mismatch
+
+A client should not assume unsupported filters exist.
+
+If a reader policy requires a filter that the runtime cannot enforce, the runtime should return an explicit capability error or require a different materialized view.
+
+---
+
+## Label preservation
+
+Pagination and capabilities must not strip labels required by reader policy.
+
+At minimum, returned results should preserve labels needed to understand:
+
+- validation;
+- certainty;
+- authority;
+- scope;
+- status;
+- lineage.
+
+---
+
+## Related pages
+
+- [[Query]]
+- [[Query-Basics]]
+- [[Operations-Observability-and-Troubleshooting]]
+
+
+================================================================================================
+FILE: wiki/Query.md
+================================================================================================
+
+# Query
+
+Kristal query surfaces expose selected material from Exchanges, Runtime Packs, shards, or federations under declared query contracts and reader policies.
+
+Query does not decide truth. It returns what the active artifact, query contract, and reader policy allow.
+
+---
+
+## Query sources
+
+Queries may run over:
+
+- Runtime Packs;
+- Exchanges;
+- shard sets;
+- federation-derived views;
+- reader-policy-selected subsets;
+- exported indexes.
+
+---
+
+## What query results must preserve
+
+Query results should preserve or expose:
+
+- assertion ID;
+- statement or payload reference;
+- assertion status;
+- validation status;
+- certainty level;
+- `validated_as`;
+- authority channel;
+- recognition status;
+- scope;
+- provenance and evidence references;
+- lineage;
+- reader policy used.
+
+---
+
+## Reader policy
+
+Reader policy is part of the query surface.
+
+A validated-only query should not expose unvalidated assertions.
+
+A research query may expose disputed or low-certainty material if the active policy permits it and labels are preserved.
+
+---
+
+## Query contract
+
+The query contract declares:
+
+- supported operators;
+- pagination behavior;
+- ordering;
+- limits;
+- filters;
+- continuation token semantics;
+- capability reporting;
+- error behavior.
+
+---
+
+## Related pages
+
+- [[Query-Basics]]
+- [[Query-Pagination-and-Capabilities]]
+- [[Artifact-Runtime-Pack]]
+
+
+================================================================================================
+FILE: wiki/Quickstart.md
+================================================================================================
+
+# Quickstart
+
+This quickstart gives the operational shape of a Kristal v5 flow. It is conceptual; exact commands depend on your compiler, storage, and runtime tooling.
+
+---
+
+## 1. Start with structured epistemic input
+
+The v5 input model starts from a **Structured Epistemic State**.
+
+It should preserve:
+
+- assertions;
+- assertion status;
+- certainty level;
+- scope;
+- provenance;
+- evidence;
+- validation metadata where available;
+- authority references where available;
+- lineage.
+
+`Claim-IR` may be used by extractors, but it is not the universal required input boundary.
+
+---
+
+## 2. Compile a Working Exchange
+
+Compile the state into a Working Exchange.
+
+The Working Exchange is:
+
+- immutable;
+- content-addressed;
+- queryable;
+- portable;
+- reproducible within its declared build surface;
+- explicit about its artifact status.
+
+Working does not mean false. It means not necessarily recognized as a reference artifact.
+
+---
+
+## 3. Validate under declared policy
+
+Run validation appropriate to the target:
+
+- schema validation;
+- profile validation;
+- evidence checks;
+- authority checks;
+- domain-specific validation;
+- reader-policy validation.
+
+Produce Validation Reports.
+
+---
+
+## 4. Apply authority recognition if needed
+
+If the artifact or assertions should become reference material for a scope, record Authority Recognition.
+
+Recognition must identify:
+
+- authority channel;
+- scope;
+- recognition status;
+- validation policy;
+- certainty level;
+- `validated_as` classification.
+
+---
+
+## 5. Publish and distribute
+
+Publish the Exchange, Validation Reports, Authority Recognition artifacts, and supporting files.
+
+Distributors should preserve integrity metadata, signatures, revocation references, and lineage.
+
+---
+
+## 6. Build a Runtime Pack
+
+Build a Runtime Pack when you need offline or optimized query.
+
+The Runtime Pack must preserve labels needed by reader policy:
+
+- assertion status;
+- validation status;
+- certainty level;
+- `validated_as`;
+- authority channel;
+- scope;
+- provenance;
+- lineage.
+
+---
+
+## 7. Query with reader policy
+
+Select a reader policy before presenting results.
+
+Common modes:
+
+- `reference_only`
+- `validated_only`
+- `high_certainty_only`
+- `research`
+- `creative`
+- `all_with_labels`
+- `custom`
+
+Reader policy determines visibility, not artifact existence.
+
+---
+
+## Next pages
+
+- [[What-is-Kristal]]
+- [[Artifacts]]
+- [[Workflow-Build-and-Validate]]
+- [[Workflow-Publish-and-Distribute]]
+- [[Query-Basics]]
+
+
+================================================================================================
+FILE: wiki/Trust-Authority-and-Signatures.md
+================================================================================================
+
+# Trust, Authority & Signatures
+
+Kristal v5 separates artifact integrity from authority recognition.
+
+A signature may prove that a key signed an artifact. It does not by itself prove universal truth, universal authority, or reader visibility.
+
+---
+
+## Artifact integrity
+
+Integrity asks:
+
+- Does the content hash match?
+- Was the declared technical canonicalization used?
+- Does the signature verify?
+- Is the key trusted for this purpose?
+- Has the artifact, key, or authority channel been revoked?
+
+---
+
+## Authority recognition
+
+Authority recognition asks:
+
+- Which authority channel recognizes this artifact, assertion, dataset, shard, policy, or runtime pack?
+- For which scope?
+- Under which validation policy?
+- With which recognition status?
+- At what certainty level?
+- As what kind of assertion or corpus?
+
+---
+
+## Authority channels
+
+An authority channel may represent:
+
+- an individual;
+- a community;
+- a research collective;
+- an academic institution;
+- a standards body;
+- a company;
+- a government;
+- an intergovernmental organization;
+- an AI validator;
+- a hybrid collective.
+
+Authority is scoped. A channel may be trusted for one domain, jurisdiction, tenant, language, time window, or environment and not another.
+
+---
+
+## Signatures
+
+Signatures protect artifact identity and attest that a signer produced, published, validated, recognized, or approved a declared target.
+
+Consumers still need policy to decide whether that signer is acceptable for the target scope.
+
+---
+
+## Authority Registry
+
+The Authority Registry records:
+
+- authority channels;
+- trust roots;
+- validation policies;
+- recognition policies;
+- revocation references;
+- scope rules.
+
+See: [[Artifact-Authority-Registry]]
+
+---
+
+## Reader policy
+
+Even when an artifact verifies and an authority recognizes it, a reader policy may still hide or label it.
+
+Reader policy controls visibility.
+
+---
+
+## Technical details
+
+- `kristal-docs-v5/01-core-spec/signatures-trust.md`
+- `kristal-docs-v5/01-core-spec/authority-recognition.md`
+- `kristal-docs-v5/02-schemas/authority-recognition.schema.json`
+- `kristal-docs-v5/02-schemas/authority-registry.schema.json`
+
+
+================================================================================================
+FILE: wiki/What-is-Kristal.md
+================================================================================================
+
+# What is Kristal?
+
+Kristal v5 is a deterministic, portable epistemic artifact system.
+
+It compiles structured epistemic work into immutable, verifiable, queryable artifacts while preserving the labels needed to understand what each assertion is, who recognizes it, how certain it is, and which reader policies may expose it.
+
+---
+
+## One-sentence definition
+
+> Kristal v5 compiles Structured Epistemic States into portable and verifiable artifacts while keeping validation scoped, authority plural, certainty explicit, reader policy selectable, and disagreement preserved.
+
+---
+
+## What Kristal is for
+
+Kristal is useful when you need to:
+
+- preserve provenance and evidence across compilation;
+- make artifacts reproducible and content-addressed;
+- validate claims, corpora, datasets, or artifacts under scoped policies;
+- recognize authority without pretending that one authority is universal;
+- publish offline-verifiable artifacts;
+- query selected material under explicit reader policies;
+- federate multiple sources without flattening disagreement.
+
+---
+
+## What Kristal is not
+
+Kristal is not a single global truth database.
+
+It does not say that every assertion inside an artifact is universally true.
+
+A Kristal may contain:
+
+- hypotheses;
+- claims;
+- sourced statements;
+- high-confidence facts;
+- institutional references;
+- publisher declarations;
+- legal or policy positions;
+- mythological corpora;
+- fictional corpora;
+- symbolic models;
+- disputed positions;
+- rejected or retracted claims.
+
+The system’s job is to prevent status confusion.
+
+---
+
+## Core rule
+
+A Kristal may contain uncertain, disputed, fictional, mythological, speculative, incomplete, or erroneous assertions.
+
+A Kristal must not present an assertion as validated outside the authority channel, scope, certainty level, and validation policy that support that status.
+
+---
+
+## Core pipeline
+
+```text
+Signal / Draft / Dataset / Submission
+-> Structured Epistemic State
+-> Compile
+-> Working Artifact
+-> Review / Validation / Attestation / Federation
+-> Authority Recognition
+-> Reference Artifact
+-> Distribution / Runtime Pack / Reader Policy
+```
+
+---
+
+## Reader policy matters
+
+Readers do not have to see everything inside an artifact.
+
+A reader policy can select only:
+
+- reference material;
+- validated material;
+- high-certainty material;
+- research material;
+- creative or mythological material;
+- all material with labels;
+- a custom combination.
+
+A validated-only policy does not mean “universal truth.” It means visible assertions satisfy that policy’s validation, authority, certainty, and scope filters.
+
+
+================================================================================================
+FILE: wiki/Workflow-Activate-Rollback-Downgrade.md
+================================================================================================
+
+# Workflow: Activate, Rollback & Downgrade
+
+Activation selects which artifact or Runtime Pack is active for a tenant, environment, region, service, reader policy, or authority channel.
+
+Activation is separate from artifact existence and validation.
+
+---
+
+## Activation
+
+Before activation, a client or platform should check:
+
+- artifact identity;
+- required hashes;
+- required signatures;
+- trust roots;
+- revocation status;
+- compatibility constraints;
+- source artifact status;
+- reader policy constraints;
+- environment and tenant scope.
+
+---
+
+## Runtime Packs
+
+Runtime Packs are common activation targets because they are optimized for query and offline use.
+
+A Runtime Pack must preserve the source artifact status and reader-policy-relevant labels.
+
+---
+
+## Rollback
+
+Rollback returns activation to a previous known-good artifact or pack.
+
+Rollback should be:
+
+- atomic;
+- auditable;
+- tied to explicit artifact IDs;
+- subject to the same verification and policy checks as normal activation.
+
+---
+
+## Downgrade
+
+Downgrade means selecting an older artifact or runtime surface.
+
+It should be policy-gated because older artifacts may be:
+
+- revoked;
+- superseded;
+- incompatible;
+- missing required labels;
+- signed by deprecated keys;
+- outside an active reader policy.
+
+---
+
+## What activation does not mean
+
+Activation does not mean:
+
+- every assertion is universally true;
+- every assertion is validated;
+- all authority channels agree;
+- all readers can see all material.
+
+Reader policy still applies.
+
+---
+
+## Related pages
+
+- [[Operations-Release-Strategy]]
+- [[Operations-Compatibility]]
+- [[Artifact-Runtime-Pack]]
+- [[Trust-Authority-and-Signatures]]
+
+
+================================================================================================
+FILE: wiki/Workflow-Build-and-Validate.md
+================================================================================================
+
+# Workflow: Build & Validate
+
+This workflow turns structured epistemic input into a compiled artifact and records validation findings without confusing validation with compilation.
+
+---
+
+## Inputs
+
+Typical inputs include:
+
+- Structured Epistemic State;
+- extractor outputs projected into Structured Epistemic State;
+- datasets;
+- institutional records;
+- research submissions;
+- local notes;
+- mythology or fiction corpora;
+- previous artifacts or shard inputs.
+
+---
+
+## Build
+
+The build step compiles input into a Working Exchange.
+
+It should record:
+
+- source references;
+- build ID;
+- compiler name and version;
+- configuration hash;
+- technical canonicalization profile;
+- hash target policy;
+- reproducibility-affecting policies;
+- lineage.
+
+---
+
+## Validate
+
+Validation may target:
+
+- assertions;
+- Structured Epistemic States;
+- Exchanges;
+- shards;
+- datasets;
+- Runtime Packs;
+- reader policies;
+- federation manifests.
+
+Validation produces Validation Reports.
+
+---
+
+## Important v5 distinction
+
+Validation is scoped.
+
+A failed or incomplete validation does not necessarily mean the artifact cannot exist. It means the artifact or assertion must not be presented as validated outside the supporting policy, scope, certainty level, and authority channel.
+
+---
+
+## Outputs
+
+Common outputs:
+
+- Working Exchange;
+- Validation Reports;
+- warnings and errors;
+- lineage records;
+- optional Authority Recognition artifacts;
+- optional Reference Exchange when recognition applies.
+
+---
+
+## Operational checklist
+
+- [ ] Is the input represented as or projected into Structured Epistemic State?
+- [ ] Are assertion statuses explicit?
+- [ ] Are certainty levels explicit?
+- [ ] Are validation policies declared?
+- [ ] Are authority channels declared where relevant?
+- [ ] Are scope fields present?
+- [ ] Are provenance and evidence references preserved?
+- [ ] Are build-affecting policies recorded?
+- [ ] Are Validation Reports emitted?
+
+---
+
+## Related pages
+
+- [[Artifact-Exchange]]
+- [[Artifact-Validation-Report]]
+- [[Trust-Authority-and-Signatures]]
+- [[Identity-and-Determinism]]
+
+
+================================================================================================
+FILE: wiki/Workflow-Federation-and-Curation.md
+================================================================================================
+
+# Workflow: Federation & Curation
+
+Federation composes shards from multiple scopes, publishers, or authority channels without rewriting them into a single flattened status.
+
+Curation selects and labels material. It does not erase disagreement.
+
+---
+
+## When to federate
+
+Use federation when you need:
+
+- multiple publishers;
+- multiple authority channels;
+- scoped domains or subdomains;
+- independent update cadence;
+- tenant-specific views;
+- reference and working material side by side;
+- reader-policy-selected visibility;
+- preserved disagreement.
+
+---
+
+## Federation inputs
+
+Typical inputs:
+
+- Shard Manifests;
+- shard Exchanges;
+- Validation Reports;
+- Authority Recognition artifacts;
+- Authority Registry;
+- Reader Policies;
+- Composition Policy.
+
+---
+
+## Composition
+
+A Federation Manifest records composition rules.
+
+The recommended default conflict behavior is:
+
+```text
+preserve_disagreement
+```
+
+This means conflicting assertions can coexist when their authority channel, validation status, certainty level, validated-as classification, or scope differs.
+
+---
+
+## Curation
+
+A curator may select which shards are included and which reader policies are available.
+
+Curation must preserve:
+
+- source shard IDs;
+- authority channels;
+- validation references;
+- certainty levels;
+- `validated_as` labels;
+- scopes;
+- disagreement labels.
+
+---
+
+## Reader policy
+
+Different reader policies can expose different views of the same federation.
+
+For example:
+
+- reference-only science education view;
+- validated-only with labels;
+- research-all-with-labels;
+- creative/mythology view.
+
+---
+
+## Related pages
+
+- [[Artifact-Federation-Manifest]]
+- [[Artifact-Shard-Manifest]]
+- [[Artifact-Authority-Registry]]
+- [[Trust-Authority-and-Signatures]]
+
+
+================================================================================================
+FILE: wiki/Workflow-Publish-and-Distribute.md
+================================================================================================
+
+# Workflow: Publish & Distribute
+
+Publishing makes Kristal artifacts available. Distribution moves them across stores, mirrors, clients, or platforms.
+
+Publishing does not by itself make every assertion validated, recognized, or visible.
+
+---
+
+## What can be published
+
+A publisher may publish:
+
+- Working Exchanges;
+- Reference Exchanges;
+- Validation Reports;
+- Authority Recognition artifacts;
+- Authority Registries;
+- Shard Manifests;
+- Federation Manifests;
+- Runtime Packs;
+- Reader Policies;
+- Revocation lists;
+- test vectors and examples.
+
+---
+
+## Publication metadata
+
+Published artifacts should preserve:
+
+- artifact status;
+- content hashes;
+- signatures where applicable;
+- validation references;
+- authority recognition references;
+- reader policy references;
+- scope;
+- lineage;
+- revocation references.
+
+---
+
+## Working vs reference publication
+
+A Working Artifact may be published for review, research, staging, or collaboration.
+
+A Reference Artifact should indicate the authority channel, recognition status, scope, validation policy, and certainty metadata that support its reference use.
+
+---
+
+## Distribution checks
+
+Consumers should enforce required verification when declared:
+
+- hash checks;
+- signature checks;
+- trust root checks;
+- revocation checks;
+- compatibility checks;
+- downgrade/rollback rules;
+- reader policy constraints.
+
+---
+
+## Konnaxion role
+
+Konnaxion distribution flows may manage:
+
+- artifact retrieval;
+- manifest resolution;
+- signature verification;
+- activation pointers;
+- runtime pack delivery;
+- cache and rollback state;
+- reader-policy-selected access.
+
+---
+
+## Related pages
+
+- [[Workflow-Activate-Rollback-Downgrade]]
+- [[Artifact-Runtime-Pack]]
+- [[Artifact-Federation-Manifest]]
+- [[Operations-Release-Strategy]]
+
+
+================================================================================================
+FILE: wiki/Workflow-Subsets-Recipes.md
+================================================================================================
+
+# Workflow: Subsets & Recipes
+
+Subsets and recipes let builders produce scoped artifacts from larger inputs without losing determinism, provenance, or reader-policy-relevant labels.
+
+---
+
+## What a subset is
+
+A subset is a selected portion of source material, such as:
+
+- a domain;
+- a subdomain;
+- an authority channel;
+- a tenant;
+- a language;
+- a time window;
+- a reader-policy-selected view;
+- a research or review slice.
+
+---
+
+## What a recipe is
+
+A recipe records how the subset was selected.
+
+It should be stable, explicit, and reproducible.
+
+---
+
+## What must be preserved
+
+Subset generation must preserve:
+
+- source identity;
+- assertion IDs where possible;
+- assertion status;
+- certainty level;
+- validation status;
+- `validated_as`;
+- authority channel;
+- recognition status;
+- scope;
+- provenance;
+- evidence;
+- lineage.
+
+---
+
+## Where subsets appear
+
+Subsets may produce:
+
+- Structured Epistemic States;
+- Working Exchanges;
+- Reference Exchanges;
+- Shards;
+- Runtime Packs;
+- query result bundles;
+- export artifacts.
+
+---
+
+## Related pages
+
+- [[Identity-and-Determinism]]
+- [[Artifact-Shard-Manifest]]
+- [[Artifact-Runtime-Pack]]
+- [[Query-Basics]]
+
+
+================================================================================================
+FILE: wiki/Workflows.md
+================================================================================================
+
+# Workflows
+
+Kristal v5 workflows separate compilation, validation, authority recognition, distribution, runtime activation, and reader visibility.
+
+---
+
+## Main workflow pages
+
+- [[Workflow-Build-and-Validate]]
+- [[Workflow-Publish-and-Distribute]]
+- [[Workflow-Activate-Rollback-Downgrade]]
+- [[Workflow-Subsets-Recipes]]
+- [[Workflow-Federation-and-Curation]]
+
+---
+
+## End-to-end flow
+
+```text
+Structured Epistemic State
+-> Working Exchange
+-> Validation Reports
+-> Authority Recognition
+-> Reference Exchange or working publication
+-> Runtime Pack
+-> Reader-policy selected query/render output
+```
+
+---
+
+## Key principle
+
+Compilation creates portable artifacts.
+
+Validation and authority recognition assign scoped status.
+
+Reader policy controls visibility.
+
+No workflow should confuse these layers.

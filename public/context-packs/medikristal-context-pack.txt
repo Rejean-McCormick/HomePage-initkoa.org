@@ -4,17 +4,41 @@ repository: Rejean-McCormick/MediKristal
 source_path: C:\mycode\MediKristal\MediKristal
 source_commit: 245f5a3007d538aea65e0fba0020ee8178079353
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:51-04:00
-files: 3
-content_sha256: 1833d1fc4bfeb0fb039307910f7171d6ace817e7f970cf024b6e9c65ee5c2674
+wiki_source_path: C:\mycode\MediKristal\MediKristal.wiki
+wiki_source_commit: 93fba2ff54b0d2066bc5f3ba8afecf16ec10590c
+wiki_working_tree_markdown: clean
+repo_files: 3
+wiki_files: 19
+generated_at: 2026-08-25T11:30:47-04:00
+files: 22
+content_sha256: 98a509378796ee5dd5822c38a396feed7668afcc10f584e372a1d3e62dabb7dc
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-1. docs/Foundational_Document-Medikristal_Architecture.md
-2. docs/MediKristal_Information_Sources.md
-3. README.md
+01. docs/Foundational_Document-Medikristal_Architecture.md
+02. docs/MediKristal_Information_Sources.md
+03. README.md
+04. wiki/_Footer.md
+05. wiki/_Sidebar.md
+06. wiki/AI-and-MediKristal.md
+07. wiki/Clinical-Epistemic-States.md
+08. wiki/Distribution-through-UCKK.md
+09. wiki/Glossary.md
+10. wiki/Governance-and-Smart-Vote.md
+11. wiki/Home.md
+12. wiki/Kristal-Lifecycle-in-MediKristal.md
+13. wiki/Medical-Source-Orchestration.md
+14. wiki/MediKristal-on-kOA-Linux.md
+15. wiki/Multilingual-Model.md
+16. wiki/Protocols-and-Clinical-Logic.md
+17. wiki/README-INSTALL.md
+18. wiki/Related-Systems-and-Links.md
+19. wiki/Roadmap.md
+20. wiki/Semantic-Medical-Graph.md
+21. wiki/Trust-Provenance-and-Versioning.md
+22. wiki/What-MediKristal-Is.md
 
 
 ================================================================================================
@@ -1361,3 +1385,1823 @@ FILE: README.md
              “!
  
  T r a c e a b l e   P r o t o c o l   O u t p u t 
+
+
+================================================================================================
+FILE: wiki/_Footer.md
+================================================================================================
+
+MediKristal — early foundational architecture. Research and prototyping only; not validated for direct clinical use. · [kOA-Linux Wiki](https://github.com/Rejean-McCormick/kOA-Linux/wiki) · [MediKristal repository](https://github.com/Rejean-McCormick/MediKristal)
+
+
+================================================================================================
+FILE: wiki/_Sidebar.md
+================================================================================================
+
+## MediKristal Wiki
+
+**Start**
+- [[Home]]
+- [[What MediKristal Is]]
+- [[MediKristal on kOA-Linux]]
+
+**Knowledge**
+- [[Medical Source Orchestration]]
+- [[Semantic Medical Graph]]
+- [[Clinical Epistemic States]]
+- [[Kristal Lifecycle in MediKristal]]
+
+**Governance & trust**
+- [[Governance and Smart Vote]]
+- [[Trust Provenance and Versioning]]
+
+**Execution & interfaces**
+- [[Protocols and Clinical Logic]]
+- [[Multilingual Model]]
+- [[AI and MediKristal]]
+- [[Distribution through UCKK]]
+
+**Development**
+- [[Roadmap]]
+- [[Related Systems and Links]]
+- [[Glossary]]
+
+
+================================================================================================
+FILE: wiki/AI-and-MediKristal.md
+================================================================================================
+
+# AI and MediKristal
+
+MediKristal is **not an AI system**. It is a governed medical knowledge system that AI can consult.
+
+## Why this matters
+
+A large language model can be excellent at:
+
+- understanding a natural-language question;
+- extracting candidate entities;
+- comparing documents;
+- summarizing evidence;
+- generating an explanation;
+- helping a reviewer navigate a complex corpus.
+
+But none of those capabilities should silently create medical authority.
+
+## Desired architecture
+
+```text
+User question
+    ↓
+AI or conventional interface
+    ↓
+structured MediKristal query
+    ↓
+versioned governed medical knowledge
+    ↓
+protocol / evidence / provenance result
+    ↓
+AI may explain the result
+```
+
+The AI is a **reader, interface, and optional reasoning assistant**. It is not the owner of the corpus.
+
+## Retrieval instead of memorized authority
+
+A central purpose of MediKristal is to let AI systems retrieve formalized medical knowledge instead of depending exclusively on statistical memory learned from uncontrolled text corpora.
+
+The desired pattern is:
+
+```text
+Structured substance → Optional AI
+```
+
+not:
+
+```text
+Unstructured documents → AI reconstructs the medical truth every time
+```
+
+## Potential AI roles
+
+AI can assist with:
+
+- natural-language querying;
+- semantic search;
+- candidate terminology mappings;
+- extraction of candidate assertions from publications;
+- comparing guideline versions;
+- summarizing evidence for reviewers;
+- explaining graph paths;
+- identifying conflicts or missing mappings;
+- multilingual interaction when allowed by policy.
+
+A tool such as [SenTient](https://github.com/Rejean-McCormick/SenTient) can help reconcile unstructured material into **candidate knowledge**, which remains subject to review.
+
+## What AI cannot silently do
+
+AI should not silently:
+
+- create promoted medical knowledge;
+- approve its own mapping;
+- erase conflicting evidence;
+- rewrite provenance;
+- transform terminology into a treatment rule;
+- alter historical knowledge states;
+- hide the protocol or source behind an answer.
+
+## Fail visibly
+
+When the governed corpus does not support an answer, the system should be able to return:
+
+```text
+unknown
+insufficient evidence
+conflicting evidence
+outside validated scope
+unsupported language realization
+```
+
+These are valid results.
+
+## AI and Smart Vote
+
+AI may summarize arguments or help professionals inspect evidence, but it is not a certified medical expert and does not receive professional voting authority merely because it can generate fluent text.
+
+
+================================================================================================
+FILE: wiki/Clinical-Epistemic-States.md
+================================================================================================
+
+# Clinical Epistemic States
+
+A core MediKristal object is the **Clinical Epistemic State**: a representation of medical knowledge together with its provenance, scope, uncertainty, review state, and governance history.
+
+## Three separate questions
+
+```text
+Does this claim exist in the system?
+
+Is it usable for a defined purpose?
+
+Has it been promoted for a defined trust surface?
+```
+
+These are not equivalent.
+
+## Proposed lifecycle
+
+```text
+draft
+  ↓
+under_review
+  ↓
+working_accepted / disputed
+  ↓
+promoted for defined scope
+  ↓
+superseded or revoked when necessary
+```
+
+Disputed content may remain represented without being promoted.
+
+## Scope belongs to the claim
+
+Medical assertions often depend on:
+
+- jurisdiction;
+- population;
+- age range;
+- pregnancy applicability;
+- care setting;
+- product availability;
+- guideline version;
+- effective date;
+- review/expiration date.
+
+Therefore “promoted” should never silently mean “universally true forever.”
+
+## Provenance chain
+
+```text
+MediKristal assertion
+        ↓ supported_by
+Guideline / terminology / government data / protocol
+        ↓
+source version + date + jurisdiction + original identifier
+```
+
+## Historical fidelity
+
+When medical knowledge changes, the new version should not rewrite history.
+
+A system must be able to reconstruct:
+
+> **Why did this node or application produce this result on that date?**
+
+That requires retaining the prior source versions, promoted state, protocol version, Runtime Pack identity, and relevant policy.
+
+## Compile versus promote
+
+```text
+compile ≠ approve
+```
+
+A proposed mapping, translation, or protocol can be compiled and tested before it is accepted for a clinical trust surface.
+
+
+================================================================================================
+FILE: wiki/Distribution-through-UCKK.md
+================================================================================================
+
+# Distribution through UCKK
+
+[UCKK](https://uckk.org) is an external online learning and publication environment in the wider kOA ecosystem. In the current kOA-Linux architecture, it is **not an internal MediKristal database and not the canonical authority for Kristal knowledge**.
+
+- [UCKK in the kOA-Linux Wiki](https://github.com/Rejean-McCormick/kOA-Linux/wiki/UCKK)
+- [kOA and UCKK Mediatheques](https://github.com/Rejean-McCormick/kOA-Linux/wiki/UCKK-Mediatheque)
+- [Global Communications and Distribution](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Global-Communications-and-Distribution)
+
+## Why publish MediKristal knowledge to UCKK?
+
+MediKristal can provide structured, governed medical knowledge. UCKK can provide a human-facing distribution and learning surface.
+
+Possible published representations include:
+
+- medical reference cards;
+- multilingual patient education resources;
+- professional learning modules;
+- versioned guideline summaries;
+- diagrams and knowledge pathways;
+- quizzes or competence-learning material derived from approved knowledge;
+- public-health information packages;
+- Mediatheque resources linked to their source/provenance.
+
+## The publication boundary
+
+The kOA-Linux model defines an explicit operation:
+
+```text
+publish_to_uckk
+```
+
+For MediKristal, the safe conceptual model is:
+
+```mermaid
+flowchart LR
+    K[Promoted MediKristal Kristal] --> P[Publication transform]
+    P --> R[Human-readable / learning representation]
+    R --> G[kOA-Linux publication policy]
+    G --> U[UCKK object]
+```
+
+The published UCKK object is a **representation derived from** a MediKristal knowledge state. It does not silently become the canonical Kristal.
+
+## Preserve publication provenance
+
+A published representation should carry enough metadata to reconnect it to the source knowledge state:
+
+```text
+MediKristal artifact/release ID
+source knowledge version
+publication date
+language
+jurisdiction / audience
+publication transformation version
+rights / restrictions
+supersession status
+```
+
+If the MediKristal source is later revoked or superseded, UCKK should be able to identify the affected published object.
+
+## Import is also explicit
+
+The kOA-Linux model also provides:
+
+```text
+import_from_uckk
+```
+
+A selected UCKK resource can therefore be imported as a **distinct local copy or candidate input**. It should not be silently merged into the canonical MediKristal corpus.
+
+```text
+UCKK resource
+→ imported local object
+→ provenance preserved
+→ optional candidate extraction/review
+→ only then possible Kristal change
+```
+
+## No hidden synchronization
+
+There should be no generic operation equivalent to:
+
+```text
+sync_everything_and_merge_authority
+```
+
+MediKristal, local kOA data, and UCKK retain separate databases, identities, authorities, and lifecycles.
+
+## Medical publication safety
+
+For medical material, a UCKK representation should make visible when relevant:
+
+- source/release identity;
+- date/version;
+- jurisdiction;
+- intended audience;
+- educational/reference purpose;
+- whether the content is superseded;
+- whether the material is validated for clinical use or only research/prototyping.
+
+Distribution expands access; it must not erase the governance that made the information trustworthy.
+
+
+================================================================================================
+FILE: wiki/Glossary.md
+================================================================================================
+
+# Glossary
+
+**Assertion**  
+A specific medical relationship or claim represented as a governed object rather than an anonymous database edge.
+
+**CCDD**  
+Canadian Clinical Drug Data Set; normalized Canadian medication terminology.
+
+**Clinical Epistemic State**  
+A structured representation of medical knowledge carrying scope, provenance, uncertainty, status, review, and policy references.
+
+**CQL**  
+Clinical Quality Language; a language for representing clinical quality and decision-support logic.
+
+**DPD**  
+Health Canada Drug Product Database; product-level information on drugs authorized for sale in Canada.
+
+**FHIR Clinical Reasoning**  
+FHIR resources and patterns for representing and applying computable clinical knowledge.
+
+**ICD-11**  
+WHO international disease classification used in MediKristal for disease/diagnosis classification and grouping.
+
+**Kristal**  
+Portable, status-aware knowledge artifact preserving provenance, versions, uncertainty, semantic relations, validation state, and reader policy.
+
+**kOA-Linux**  
+The sovereign local runtime for the wider kOA ecosystem. In MediKristal it provides the controlled environment for verification, activation, offline use, recovery, policy, and publication boundaries around knowledge artifacts.
+
+**Lens**  
+An explicit, reproducible rule for selecting, filtering, grouping, or weighting participation data to produce a Smart Vote reading.
+
+**LOINC**  
+Terminology for laboratory tests, observations, measurements, panels, and clinical documents.
+
+**MediKristal**  
+A governed, multilingual medical knowledge compilation and orchestration system that turns validated medical sources into semantic, versioned, queryable Kristal artifacts.
+
+**pCLOCD**  
+Canadian laboratory/observation terminology and mapping resource used with LOINC in Canadian contexts.
+
+**Promotion**  
+A distinct governance act that approves a knowledge artifact for a defined trust surface, scope, jurisdiction, or use.
+
+**Protocol**  
+Explicit clinical action logic derived from validated guidelines, policies, or institutional rules.
+
+**Provenance**  
+Information showing where a concept, assertion, mapping, rule, or publication representation came from and which source/version supports it.
+
+**Runtime Pack**  
+A read-optimized, verifiable package of promoted knowledge for local/offline use.
+
+**RxNorm**  
+Normalized medication terminology used especially for cross-system and international drug interoperability.
+
+**SemantiK Architect**  
+A system for deterministic multilingual realization of structured meaning.
+
+**Smart Vote**  
+A system for producing explicit, reproducible readings of qualified participation through named lenses. In MediKristal it is intended for competence-aware expert governance, not public popularity voting or autonomous truth creation.
+
+**SNOMED CT / SNOMED CT CA**  
+Clinical terminology used for symptoms, findings, disorders, procedures, and other clinical concepts; the Canadian edition supports Canadian requirements and multilingual terminology.
+
+**Trust surface**  
+A defined context in which a knowledge artifact is approved for use. Approval on one trust surface does not imply approval everywhere.
+
+**UCKK**  
+External online learning/publication environment in the wider kOA ecosystem. MediKristal may publish authorized derived representations to UCKK without merging canonical knowledge authority into UCKK.
+
+
+================================================================================================
+FILE: wiki/Governance-and-Smart-Vote.md
+================================================================================================
+
+# Governance and Smart Vote
+
+> **Status:** intended MediKristal governance architecture. Exact credential rules, thresholds, conflict policies, and promotion authorities still require formal specification and testing.
+
+MediKristal is intended to evolve through **qualified expert participation**, not unrestricted public voting and not autonomous AI authority.
+
+## Basic principle
+
+```text
+proposed medical change
+        ↓
+source evidence + explicit assertion
+        ↓
+verified relevant professional eligibility
+        ↓
+review / objections / alternatives
+        ↓
+reproducible Smart Vote reading(s)
+        ↓
+explicit governance decision
+        ↓
+promotion for a defined trust surface
+```
+
+## Smart Vote is domain-specific
+
+The people eligible to review a change depend on what is being changed.
+
+| Domain | Examples of relevant expertise |
+|---|---|
+| diagnosis / clinical reasoning | physicians in the relevant specialty or practice domain |
+| medications | physicians, pharmacists, pharmacologists where appropriate |
+| laboratory tests | laboratory medicine specialists, relevant clinicians, technologists where appropriate |
+| nursing protocols | nurses and relevant clinical experts |
+| epidemiology / screening | epidemiologists, public-health physicians, relevant specialists |
+| terminology mappings | terminology specialists plus domain clinicians |
+| multilingual clinical wording | language specialists plus domain professionals where safety requires it |
+
+A medical license is not universal expertise over every medical question.
+
+## Verified professional eligibility
+
+The system may use evidence such as:
+
+- professional license;
+- specialty certification;
+- recognized scope of practice;
+- institutional role;
+- documented domain competence;
+- current professional standing.
+
+Credentials establish eligibility evidence; they do not magically make every opinion correct.
+
+## Facts and readings remain separate
+
+MediKristal should preserve individual review events separately from aggregate Smart Vote outputs.
+
+```text
+review record ≠ aggregate reading ≠ promotion decision
+```
+
+A reproducible Smart Vote reading can expose:
+
+- exact-domain specialists;
+- front-line practitioners;
+- pharmacists;
+- Quebec-certified professionals;
+- reviewers with declared conflicts removed;
+- other explicit competence lenses.
+
+Divergence between these readings is information and should remain visible to the governance process.
+
+## Reproducibility
+
+A Smart Vote result used in MediKristal should identify:
+
+```text
+lens definition + version
+eligibility rules
+credential / competence snapshot
+assertion version
+review population
+participation rate
+calculation method
+timestamp
+```
+
+Same inputs + same lens should reproduce the same reading.
+
+## Promotion is distinct
+
+```text
+Smart Vote output ≠ automatic medical truth
+```
+
+A promotion event should record:
+
+- the exact artifact/version promoted;
+- jurisdiction/population/trust surface;
+- sources considered;
+- Smart Vote readings considered;
+- unresolved dissent;
+- promotion authority/process;
+- effective date/version.
+
+## What experts vote on
+
+Smart Vote belongs to the **knowledge-governance lifecycle**. It is not intended to vote on the treatment of an individual patient.
+
+Examples of reviewable objects:
+
+- terminology mappings;
+- evidence-backed medical assertions;
+- applicability conditions;
+- protocol rules;
+- guideline transformations;
+- language realizations where clinical meaning is at stake;
+- supersession/revocation proposals.
+
+## No public condemnation architecture
+
+Professional accountability does not require public spectacle. Review identity, audit evidence, access policy, privacy, and legal duties can be managed within the governed system.
+
+The objective is to improve the corpus and the quality of care, not to create a public reputation game.
+
+## Related ecosystem
+
+Smart Vote belongs to the wider kOA/Konnaxion collective-intelligence architecture. MediKristal narrows that idea to **competence-aware medical knowledge governance**.
+
+- [kOA-Linux Wiki](https://github.com/Rejean-McCormick/kOA-Linux/wiki)
+- [Konnaxion Wiki](https://github.com/Rejean-McCormick/Konnaxion/wiki)
+- [Collective Intelligence to Governance](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Collective-Intelligence-to-Governance)
+
+
+================================================================================================
+FILE: wiki/Home.md
+================================================================================================
+
+# MediKristal
+
+> **MediKristal is a governed, multilingual medical knowledge system: a living reference work in which medical knowledge is formalized as traceable, versioned, machine-readable Kristal artifacts.**
+
+MediKristal is **not an AI doctor**. It does not ask a language model to invent medicine from memory. Its purpose is to organize existing medical knowledge so that humans, conventional software, and AI systems can consult the **same governed corpus**.
+
+## The idea in one view
+
+```mermaid
+flowchart TD
+    S[Official medical sources] --> N[Normalize and link concepts]
+    N --> W[Working MediKristal Kristals]
+    W --> R[Qualified expert review]
+    R --> V[Smart Vote readings]
+    V --> P[Explicit promotion]
+    P --> K[Promoted medical knowledge]
+    K --> C[Compile Runtime Pack]
+    C --> H[Human reference]
+    C --> A[Software / API]
+    C --> AI[AI retrieval]
+    C --> U[Authorized publication to UCKK]
+    H --> F[Feedback / revision]
+    A --> F
+    AI --> F
+    U --> F
+    F --> W
+```
+
+The medical corpus begins with sources that already exist:
+
+- **SNOMED CT / SNOMED CT CA** — symptoms, findings, procedures, clinical concepts;
+- **ICD-11** — diseases and diagnostic classification;
+- **LOINC / pCLOCD** — tests, measurements, observations;
+- **CCDD + Health Canada Drug Product Database (DPD)** — Canadian medication concepts and authorized products;
+- **RxNorm** — normalized medication identifiers and cross-system interoperability;
+- **WHO, NICE, CDC, Canadian, provincial, and institutional guidelines** — recommendations and protocols;
+- **CQL / FHIR Clinical Reasoning** — future machine-readable clinical logic.
+
+MediKristal does not replace these sources. It **orchestrates them while preserving where every claim came from**.
+
+## The five medical layers
+
+```text
+Patient context
+      ↓ modifies
+Symptoms / signs ↔ Conditions ↔ Tests ↔ Treatments
+                         ↕
+                 Guidelines / protocols
+```
+
+Patient context is kept separate from medical knowledge. Age, allergies, pregnancy, current medications, geography, organ function, and risk factors modify applicability; they are not themselves medical doctrine.
+
+## The role of Kristal
+
+A **Kristal** is the portable knowledge artifact used to carry a medical assertion together with the information needed to interpret it responsibly: provenance, versions, uncertainty, scope, semantic relations, validation state, and reader policy.
+
+MediKristal uses Kristals so that a medical statement is not just an anonymous database row.
+
+```text
+claim
++ source
++ source version
++ jurisdiction
++ applicability
++ status
++ review history
++ language representations
+= inspectable medical knowledge artifact
+```
+
+See [[Kristal Lifecycle in MediKristal]].
+
+## The role of kOA-Linux
+
+[kOA-Linux](https://github.com/Rejean-McCormick/kOA-Linux/wiki) is the **sovereign operating environment** around this knowledge lifecycle.
+
+It provides the controlled local environment in which MediKristal tools can:
+
+- ingest and stage source data;
+- modify and compile working Kristals;
+- run schema, provenance, and conformance checks;
+- apply identity, trust, and policy boundaries;
+- activate, pin, update, and roll back Runtime Packs;
+- continue offline;
+- preserve audit evidence;
+- control import and publication boundaries, including publication toward UCKK.
+
+kOA-Linux does **not** decide what is medically true. The medical authority remains in sources, qualified review, declared governance, and explicit promotion.
+
+See [[MediKristal on kOA-Linux]].
+
+## The role of Smart Vote
+
+MediKristal is intended to evolve through professional review. Smart Vote is not a public popularity vote and does not let an AI promote its own output.
+
+For a medical change, eligibility is tied to **verified relevant competence**: physicians, pharmacists, laboratory specialists, nurses, epidemiologists, terminology experts, or other certified professionals according to the domain under review.
+
+```text
+candidate change
+→ evidence
+→ eligible expert review
+→ reproducible Smart Vote reading
+→ explicit promotion decision
+→ new governed version
+```
+
+See [[Governance and Smart Vote]].
+
+## Multilingual by structure
+
+MediKristal separates medical meaning from wording.
+
+```text
+Validated medical meaning
+          ↓
+Structured representation
+          ↓
+Language-specific realization
+```
+
+The same governed knowledge can therefore be rendered in French, English, or another supported language without requiring a generative AI to recreate the underlying meaning.
+
+See [[Multilingual Model]].
+
+## AI is a reader, not the corpus
+
+An AI may query MediKristal, explain a result, compare versions, or help a reviewer inspect evidence. But the AI does not own the medical corpus and cannot silently promote new medical knowledge.
+
+```text
+Question → AI/interface → MediKristal query → governed result + provenance → explanation
+```
+
+See [[AI and MediKristal]].
+
+## UCKK is a distribution surface
+
+[UCKK](https://uckk.org) can distribute authorized representations of MediKristal knowledge for learning and reference. The canonical MediKristal/Kristal state remains distinct from the published UCKK object.
+
+The kOA-Linux boundary already defines the explicit model:
+
+```text
+publish_to_uckk
+import_from_uckk
+```
+
+There is no hidden database merge or automatic synchronization of authority.
+
+See [[Distribution through UCKK]].
+
+## Current status
+
+MediKristal remains an **early foundational architecture**. The immediate objective is not to import all of medicine. It is to prove one small medical domain end-to-end:
+
+```text
+source
+→ normalization
+→ working Kristal
+→ expert review
+→ promotion
+→ Runtime Pack
+→ multilingual query
+→ human/software/AI use
+→ traceable revision
+```
+
+## Start here
+
+- [[What MediKristal Is]]
+- [[MediKristal on kOA-Linux]]
+- [[Medical Source Orchestration]]
+- [[Kristal Lifecycle in MediKristal]]
+- [[Semantic Medical Graph]]
+- [[Governance and Smart Vote]]
+- [[Multilingual Model]]
+- [[AI and MediKristal]]
+- [[Distribution through UCKK]]
+- [[Related Systems and Links]]
+
+
+================================================================================================
+FILE: wiki/Kristal-Lifecycle-in-MediKristal.md
+================================================================================================
+
+# Kristal Lifecycle in MediKristal
+
+MediKristal uses the **Kristal** model to turn a medical claim into a portable, inspectable artifact rather than an anonymous row in a database.
+
+- [Kristal Framework repository](https://github.com/Rejean-McCormick/kristal-framework)
+- [Kristal in the kOA-Linux Wiki](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Kristal)
+- [Portable Knowledge with Kristal](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Portable-Knowledge-with-Kristal)
+
+## What a medical Kristal can carry
+
+Conceptually, a MediKristal artifact can preserve:
+
+```text
+assertion identity
+subject / predicate / object
+source references
+source versions
+jurisdiction
+population / applicability
+certainty / uncertainty
+status
+review history
+semantic relations
+language representations
+reader / disclosure policy
+supersession / revocation links
+```
+
+## Working knowledge and promoted knowledge
+
+A central design principle is that compiling something does not make it medically authoritative.
+
+```text
+working Kristal
+    ↓ validate
+reviewable Kristal
+    ↓ expert review
+reviewed Kristal
+    ↓ governance decision
+promoted Kristal
+    ↓ compile
+Runtime Pack
+```
+
+A working artifact can be useful for research, comparison, testing, or review without being approved for a clinical trust surface.
+
+## Example lifecycle
+
+A new guideline changes the recommended threshold for a test.
+
+1. The new guideline release is imported with source/version metadata.
+2. The affected medical assertion is identified.
+3. A working Kristal is modified.
+4. Automated validation checks structure, provenance, identifiers, and required metadata.
+5. Qualified experts review the proposed change.
+6. Smart Vote produces one or more reproducible expert readings.
+7. A governance authority promotes, rejects, or returns the change for revision.
+8. A new knowledge release is compiled.
+9. kOA-Linux verifies and activates the Runtime Pack.
+10. The previous release remains historically referenceable.
+
+## Runtime Packs
+
+A Runtime Pack is a read-optimized, locally verifiable projection of promoted knowledge.
+
+A MediKristal Runtime Pack may include:
+
+```text
+medical graph subset
+terminology mappings
+protocols
+guideline/source metadata
+jurisdiction
+language artifacts
+integrity metadata
+release identity
+```
+
+The Runtime Pack is not the same thing as the working authoring corpus. This separation allows local systems to consume a stable release while authors and reviewers continue working on the next one.
+
+## Portable knowledge, not central-server dependence
+
+A hospital, clinic, school, research group, or field deployment should be able to carry a verified knowledge package locally rather than depend on a live central server for every query.
+
+This supports:
+
+- offline reference;
+- controlled institutional deployment;
+- reproducible historical behavior;
+- explicit release management;
+- local policy overlays;
+- safe degradation when networks fail.
+
+
+================================================================================================
+FILE: wiki/Medical-Source-Orchestration.md
+================================================================================================
+
+# Medical Source Orchestration
+
+MediKristal begins from a simple premise: **there is no single “medical database.”** Medicine is already distributed across terminologies, classifications, drug databases, guideline publishers, local protocols, and clinical standards.
+
+MediKristal does not replace those authorities. It creates a traceable semantic layer between them.
+
+## Core source stack
+
+| Source | Primary role in MediKristal | Official link |
+|---|---|---|
+| **SNOMED CT / SNOMED CT CA** | symptoms, findings, procedures, clinical concepts | [SNOMED International](https://www.snomed.org/) · [Canada Health Infoway](https://infocentral.infoway-inforoute.ca/en/standards/canadian/snomed-ct) |
+| **ICD-11** | disease classification and diagnosis grouping | [WHO ICD-11](https://icd.who.int/) |
+| **LOINC** | laboratory tests, measurements, observations, panels | [LOINC](https://loinc.org/) |
+| **pCLOCD** | Canadian laboratory/observation terminology and mappings | [Canada Health Infoway terminology](https://infocentral.infoway-inforoute.ca/en/standards/canadian/terminology) |
+| **CCDD** | normalized Canadian clinical drug terminology | [Canada Health Infoway terminology](https://infocentral.infoway-inforoute.ca/en/standards/canadian/terminology) |
+| **Health Canada DPD** | authorized Canadian drug products, DINs, market status, monographs | [Drug Product Database](https://health-products.canada.ca/dpd-bdpp/index-eng.jsp) |
+| **RxNorm** | normalized drug concepts and cross-system interoperability | [U.S. NLM RxNorm](https://www.nlm.nih.gov/research/umls/rxnorm/) |
+| **WHO Guidelines** | global clinical/public-health recommendations | [WHO Guidelines](https://www.who.int/publications/who-guidelines) |
+| **NICE / NICE CKS** | evidence-based recommendations and primary-care guidance | [NICE Guidance](https://www.nice.org.uk/guidance) |
+| **CDC guidance** | public-health and clinical guidance | [CDC](https://www.cdc.gov/) |
+| **Canadian / provincial / institutional guidelines** | jurisdiction-specific clinical practice | source-specific |
+| **CQL** | machine-readable clinical quality/decision logic | [Clinical Quality Language](https://cql.hl7.org/) |
+| **FHIR Clinical Reasoning** | computable clinical knowledge artifacts | [HL7 FHIR Clinical Reasoning](https://hl7.org/fhir/clinicalreasoning-module.html) |
+
+## Orchestration is not anonymous merging
+
+A normalized MediKristal concept can point to several source identities while keeping them distinct.
+
+```json
+{
+  "concept_id": "medikristal:condition/example",
+  "external_ids": [
+    {"system": "SNOMED_CT_CA", "code": "..."},
+    {"system": "ICD_11", "code": "..."}
+  ]
+}
+```
+
+The mapping itself is a medical knowledge claim. It therefore needs provenance, versioning, and review.
+
+## Terminology is not protocol
+
+```text
+SNOMED / ICD / LOINC / CCDD / DPD / RxNorm
+                    ↓
+      names, codes, products, classifications
+
+Guidelines / protocols / validated rules
+                    ↓
+          what should be considered or done
+```
+
+A disease code does not establish a diagnostic rule. A drug record does not establish an indication. A test identifier does not establish when the test should be ordered.
+
+MediKristal keeps these layers separate and then links them explicitly.
+
+## Canadian medication orchestration
+
+```text
+CCDD
+  → normalized Canadian clinical drug concept
+
+Health Canada DPD
+  → authorized product / DIN / market status / monograph
+
+RxNorm
+  → international or cross-system mapping
+
+Guideline / formulary / protocol
+  → indication / contraindication / dose / monitoring
+```
+
+No single source replaces the others.
+
+## Diagnostic investigation orchestration
+
+```text
+SNOMED CT CA
+  → symptom / sign / finding concepts
+
+ICD-11 + SNOMED CT CA
+  → disease identity and classification
+
+LOINC + pCLOCD
+  → test and observation identities
+
+Guideline / protocol
+  → when a test is relevant and how it changes the pathway
+```
+
+## Required source metadata
+
+Every imported source should retain at least:
+
+```text
+source identifier
+publisher / authority
+source type
+version / release
+retrieval date
+jurisdiction
+language(s)
+license / terms
+intended MediKristal use
+original record/document reference
+```
+
+## Trust is purpose-specific
+
+“Official” does not mean “sufficient for every purpose.”
+
+- SNOMED CT may be authoritative for a concept identifier but not for a treatment rule.
+- DPD may be authoritative for Canadian product authorization but not for a full therapeutic recommendation.
+- a guideline may support a recommendation but only for a defined population and jurisdiction.
+- an institutional protocol may be authoritative locally but not globally.
+
+The relevant question is always:
+
+> **Trusted for what, by whom, for which scope, and under which version?**
+
+## Canadian-first reference stack
+
+```text
+Clinical concepts      SNOMED CT CA
+Diseases               ICD-11 + SNOMED CT CA
+Tests / observations   LOINC + pCLOCD
+Medications            CCDD + Health Canada DPD
+Cross-system mapping   RxNorm
+Protocols              Canadian/provincial + WHO/NICE/CDC where applicable
+Logic                   JSON initially → CQL/FHIR-compatible artifacts
+```
+
+The objective is not maximum database volume. It is a coherent, traceable medical surface.
+
+
+================================================================================================
+FILE: wiki/MediKristal-on-kOA-Linux.md
+================================================================================================
+
+# MediKristal on kOA-Linux
+
+MediKristal defines a medical knowledge domain. **kOA-Linux provides the sovereign operating environment in which that knowledge can be worked on, validated, activated, used locally, and published through controlled boundaries.**
+
+- [kOA-Linux Wiki](https://github.com/Rejean-McCormick/kOA-Linux/wiki)
+- [What kOA-Linux does](https://github.com/Rejean-McCormick/kOA-Linux/wiki/What-kOA-Linux-Does)
+- [kOA-Linux responsibilities](https://github.com/Rejean-McCormick/kOA-Linux/wiki/kOA-Linux-Responsibilities)
+- [Knowledge-to-action loop](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Knowledge-to-Action-Loop)
+
+## Separation of responsibilities
+
+| Layer | Responsibility |
+|---|---|
+| **MediKristal** | medical source orchestration, medical graph, assertions, protocols, domain governance |
+| **Kristal Framework** | portable knowledge artifacts, provenance, status, versions, validation state, reader policy |
+| **kOA-Linux** | local execution, isolation, verification, activation, policy, offline operation, recovery, controlled publication |
+| **SenTient** | optional extraction/reconciliation of candidate structured knowledge from unstructured material |
+| **SemantiK Architect** | deterministic multilingual realization of structured meaning |
+| **Konnaxion / Smart Vote** | competence-aware participation, deliberation, learning, governance surfaces |
+| **UCKK** | external online learning/publication environment and Mediatheque |
+
+The OS is therefore **not the medical authority** and is not the entire Kristal authoring system. It is the environment that can safely host and coordinate the tools that modify and compile Kristals.
+
+## A MediKristal workstation flow
+
+A kOA-Linux installation can conceptually support this workflow:
+
+```mermaid
+flowchart TD
+    A[Import official source release] --> B[Stage source locally]
+    B --> C[Normalize / map concepts]
+    C --> D[Create or modify working Kristals]
+    D --> E[Schema + provenance + consistency checks]
+    E --> F[Qualified professional review]
+    F --> G[Smart Vote reading]
+    G --> H[Governance promotion]
+    H --> I[Compile MediKristal Runtime Pack]
+    I --> J[Verify and activate locally]
+    J --> K[Human / software / AI consultation]
+    J --> L[Authorized publication representation]
+    L --> M[UCKK]
+    K --> N[Revision evidence]
+    M --> N
+    N --> D
+```
+
+## What “modify a Kristal” means here
+
+A working medical Kristal may be changed because:
+
+- a new terminology release adds or retires a concept;
+- a guideline changes;
+- a drug product changes market status;
+- a mapping is discovered to be wrong;
+- a French/English terminology mapping is improved;
+- new evidence changes certainty or applicability;
+- an institutional protocol changes;
+- expert review identifies a conflict or missing qualification.
+
+The modification remains a **working change** until the relevant governance process promotes it.
+
+```text
+edit / compile ≠ approve
+```
+
+## What kOA-Linux contributes
+
+The kOA-Linux architecture supplies host-level controls around this process:
+
+- **local execution** — the knowledge system can operate on a local node;
+- **identity and trust** — reviewer and operator actions can be bounded by identity and policy;
+- **verified activation** — only declared/verified artifacts are activated;
+- **version pinning** — a node can remain on a known knowledge release;
+- **rollback / recovery** — a failed update does not silently replace the current verified state;
+- **offline continuity** — Runtime Packs can remain usable without a live cloud dependency;
+- **audit boundaries** — important transitions can produce receipts/evidence;
+- **controlled external integration** — import/publication is explicit rather than an invisible database merge.
+
+See also:
+
+- [Portable Knowledge with Kristal](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Portable-Knowledge-with-Kristal)
+- [Release and Artifact Lifecycle](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Release-and-Artifact-Lifecycle)
+- [Conformance and Validation](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Conformance-and-Validation)
+- [Offline-First Operation](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Offline-First-Operation)
+
+## Why this matters in medicine
+
+Medical knowledge changes continuously, but clinical environments need reproducibility.
+
+A hospital should be able to know:
+
+```text
+Which MediKristal release was active?
+Which source versions were inside it?
+Which protocol version ran?
+Which language pack rendered the result?
+Who promoted that release?
+What changed afterward?
+```
+
+kOA-Linux provides the operating conditions needed to make that kind of historical reconstruction possible.
+
+
+================================================================================================
+FILE: wiki/Multilingual-Model.md
+================================================================================================
+
+# Multilingual Model
+
+MediKristal is intended to make medical knowledge multilingual **by structure**, not merely by translating pages of prose.
+
+## Meaning before wording
+
+```text
+Validated medical meaning
+          ↓
+Structured representation
+          ↓
+Language-specific realization
+```
+
+This makes language a rendering layer over governed knowledge rather than the place where medical authority lives.
+
+## SemantiK Architect
+
+The wider kOA architecture provides [SemantiK Architect](https://github.com/Rejean-McCormick/SemantiK_Architect) for deterministic realization of structured meaning.
+
+- [SemantiK Architect Wiki](https://github.com/Rejean-McCormick/SemantiK_Architect/wiki)
+- [Multilingual operation in kOA-Linux](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Multilingual-Operation)
+- [Multilingual knowledge networks](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Multilingual-Knowledge-Networks)
+
+A MediKristal concept should keep one underlying identity while supporting multiple validated labels, definitions, instructions, and explanations.
+
+## Official terminology first
+
+Where an authoritative source already provides French and English terminology — for example Canadian terminology resources — MediKristal should preserve those official labels rather than regenerate them unnecessarily.
+
+## Language metadata
+
+A language-dependent artifact should retain:
+
+```text
+language
+locale / region
+source or language authority
+version
+validation status
+relationship to the underlying concept/assertion
+```
+
+## Translation is not medical promotion
+
+```text
+medical approval ≠ language validation
+```
+
+A medically approved assertion can still be rendered badly. Conversely, a perfect translation does not promote an unapproved medical claim.
+
+Both states should remain explicit.
+
+## Hospital use without required generative AI
+
+A practical target is a multilingual hospital or clinic where short, validated instructions can be rendered without requiring cloud AI.
+
+```text
+Structured medical substance
+        + patient/context selection
+        + validated language artifact
+        ↓
+Language-specific clinical presentation
+```
+
+Examples can include short instructions, explanations, navigation, medication statements, or validated educational sequences.
+
+Generative AI may assist later, but it is not required for canonical output.
+
+## Safety boundary
+
+```text
+Validated information presentation
+≠ Automated clinical decision
+```
+
+The system should reject unsupported linguistic constructions rather than silently improvise beyond its validated language coverage.
+
+
+================================================================================================
+FILE: wiki/Protocols-and-Clinical-Logic.md
+================================================================================================
+
+# Protocols and Clinical Logic
+
+MediKristal separates **medical knowledge** from **rules that act on patient context**.
+
+## Why protocols are separate
+
+A medical source may establish that a condition is associated with a symptom. A protocol establishes what should happen under defined conditions.
+
+```text
+knowledge assertion
+≠ protocol rule
+```
+
+## Conceptual rule
+
+```json
+{
+  "protocol_id": "protocol:adult_pneumonia_initial_assessment",
+  "version": "1.0",
+  "applies_to": {
+    "age_min": 18,
+    "jurisdiction": "CA-QC"
+  },
+  "trigger": {
+    "all": [
+      {"symptom": "symptom:fever"},
+      {"symptom": "symptom:cough"}
+    ]
+  },
+  "then": [
+    {"consider_test": "test:oxygen_saturation"},
+    {"consider_test": "test:chest_xray"}
+  ],
+  "provenance_refs": ["source:guideline-example"],
+  "status": "under_review"
+}
+```
+
+## Deterministic does not mean simplistic
+
+MediKristal favors explicit and auditable execution. That can include deterministic rules, thresholds, decision trees, contraindication checks, and validated scoring systems.
+
+Probabilistic medical information can still be represented, but it should remain explicit:
+
+```text
+model identity
+version
+inputs
+calibration / evidence
+output meaning
+applicability
+policy governing use
+```
+
+The goal is not to ban probability. It is to prevent hidden authority.
+
+## Future standards
+
+MediKristal can begin with simple JSON rules, then move toward standard computable representations:
+
+- [Clinical Quality Language (CQL)](https://cql.hl7.org/)
+- [FHIR Clinical Reasoning](https://hl7.org/fhir/clinicalreasoning-module.html)
+- `PlanDefinition`
+- `ActivityDefinition`
+- `Library`
+- `ValueSet`
+
+## Required explanation
+
+A protocol output should expose:
+
+```text
+which rule fired
+which patient facts matched
+which assertions were used
+which source versions supported them
+which warnings or exclusions applied
+which Runtime Pack produced the result
+```
+
+## Safety boundary
+
+MediKristal can support clinical reasoning without collapsing the distinction between information and professional decision.
+
+```text
+validated information / protocol output
+≠ automated final clinical decision
+```
+
+
+================================================================================================
+FILE: wiki/README-INSTALL.md
+================================================================================================
+
+# MediKristal Wiki v0.2
+
+This directory is ready to copy into the MediKristal GitHub Wiki repository.
+
+Pages:
+- `AI-and-MediKristal.md`
+- `Clinical-Epistemic-States.md`
+- `Distribution-through-UCKK.md`
+- `Glossary.md`
+- `Governance-and-Smart-Vote.md`
+- `Home.md`
+- `Kristal-Lifecycle-in-MediKristal.md`
+- `MediKristal-on-kOA-Linux.md`
+- `Medical-Source-Orchestration.md`
+- `Multilingual-Model.md`
+- `Protocols-and-Clinical-Logic.md`
+- `Related-Systems-and-Links.md`
+- `Roadmap.md`
+- `Semantic-Medical-Graph.md`
+- `Trust-Provenance-and-Versioning.md`
+- `What-MediKristal-Is.md`
+- `_Footer.md`
+- `_Sidebar.md`
+
+
+================================================================================================
+FILE: wiki/Related-Systems-and-Links.md
+================================================================================================
+
+# Related Systems and Links
+
+MediKristal sits inside a larger knowledge-to-action ecosystem. The systems below have different responsibilities and should remain distinguishable.
+
+## Core ecosystem
+
+| System | Role relative to MediKristal | Links |
+|---|---|---|
+| **MediKristal** | medical knowledge domain, source orchestration, medical graph, protocols | [Repository](https://github.com/Rejean-McCormick/MediKristal) |
+| **Kristal Framework** | portable, verifiable, status-aware knowledge artifacts | [Repository](https://github.com/Rejean-McCormick/kristal-framework) · [kOA-Linux Kristal page](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Kristal) |
+| **kOA-Linux** | sovereign local runtime, verification, activation, offline continuity, policy, recovery, controlled publication | [Repository](https://github.com/Rejean-McCormick/kOA-Linux) · [Wiki](https://github.com/Rejean-McCormick/kOA-Linux/wiki) |
+| **SenTient** | optional extraction/reconciliation of candidate knowledge | [Repository](https://github.com/Rejean-McCormick/SenTient) |
+| **SemantiK Architect** | deterministic multilingual realization | [Repository](https://github.com/Rejean-McCormick/SemantiK_Architect) · [Wiki](https://github.com/Rejean-McCormick/SemantiK_Architect/wiki) |
+| **Konnaxion** | learning, public collaboration, governance, collective-intelligence surfaces including Smart Vote | [Repository](https://github.com/Rejean-McCormick/Konnaxion) · [Wiki](https://github.com/Rejean-McCormick/Konnaxion/wiki) |
+| **Orgo** | accountable operational execution, cases/tasks/routing/closure | [Repository](https://github.com/Rejean-McCormick/Orgo) · [Wiki](https://github.com/Rejean-McCormick/Orgo/wiki) |
+| **UCKK** | external online learning/publication environment and Mediatheque | [UCKK](https://uckk.org) · [kOA-Linux UCKK page](https://github.com/Rejean-McCormick/kOA-Linux/wiki/UCKK) |
+
+## Particularly relevant kOA-Linux wiki pages
+
+- [Home](https://github.com/Rejean-McCormick/kOA-Linux/wiki)
+- [Knowledge-to-Action Loop](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Knowledge-to-Action-Loop)
+- [Kristal](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Kristal)
+- [Portable Knowledge with Kristal](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Portable-Knowledge-with-Kristal)
+- [Multilingual Knowledge Networks](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Multilingual-Knowledge-Networks)
+- [Multilingual Operation](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Multilingual-Operation)
+- [UCKK](https://github.com/Rejean-McCormick/kOA-Linux/wiki/UCKK)
+- [kOA and UCKK Mediatheques](https://github.com/Rejean-McCormick/kOA-Linux/wiki/UCKK-Mediatheque)
+- [Global Communications and Distribution](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Global-Communications-and-Distribution)
+- [Release and Artifact Lifecycle](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Release-and-Artifact-Lifecycle)
+- [Conformance and Validation](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Conformance-and-Validation)
+- [AI without Automatic Authority](https://github.com/Rejean-McCormick/kOA-Linux/wiki/AI-without-Automatic-Authority)
+
+## Medical source links
+
+- [SNOMED International](https://www.snomed.org/)
+- [SNOMED CT CA — Canada Health Infoway](https://infocentral.infoway-inforoute.ca/en/standards/canadian/snomed-ct)
+- [WHO ICD-11](https://icd.who.int/)
+- [LOINC](https://loinc.org/)
+- [Canada Health Infoway Terminology](https://infocentral.infoway-inforoute.ca/en/standards/canadian/terminology)
+- [Health Canada Drug Product Database](https://health-products.canada.ca/dpd-bdpp/index-eng.jsp)
+- [RxNorm](https://www.nlm.nih.gov/research/umls/rxnorm/)
+- [WHO Guidelines](https://www.who.int/publications/who-guidelines)
+- [NICE Guidance](https://www.nice.org.uk/guidance)
+- [CDC](https://www.cdc.gov/)
+- [Clinical Quality Language](https://cql.hl7.org/)
+- [FHIR Clinical Reasoning](https://hl7.org/fhir/clinicalreasoning-module.html)
+
+## Boundary rule
+
+A link between systems does not imply a shared database or shared authority.
+
+```text
+integration ≠ authority merge
+```
+
+MediKristal should preserve this boundary explicitly.
+
+
+================================================================================================
+FILE: wiki/Roadmap.md
+================================================================================================
+
+# Roadmap
+
+MediKristal should prove **depth of traceability before breadth of coverage**.
+
+## Phase 0 — Documentation and boundaries
+
+- define MediKristal versus Kristal versus kOA-Linux;
+- document source authorities;
+- define working/promoted states;
+- define initial governance roles;
+- document UCKK publication boundary;
+- define multilingual safety assumptions.
+
+## Phase 1 — Core schema
+
+Formalize schemas for:
+
+```text
+source
+concept
+external mapping
+medical assertion
+clinical epistemic state
+protocol
+review event
+Smart Vote reading
+promotion event
+language realization
+Runtime Pack manifest
+publication representation
+```
+
+## Phase 2 — Small Canadian reference domain
+
+Choose one narrow domain and include, where relevant:
+
+```text
+SNOMED CT CA concept
+ICD-11 condition
+LOINC / pCLOCD test
+CCDD / DPD medication
+source-backed guideline rule
+French + English realization
+```
+
+Coverage is not the goal. Traceability is.
+
+## Phase 3 — kOA-Linux authoring environment
+
+Demonstrate the local lifecycle:
+
+```text
+import source
+→ stage
+→ modify working Kristal
+→ validate
+→ review
+→ promote
+→ compile
+→ verify
+→ activate
+```
+
+## Phase 4 — Smart Vote governance pilot
+
+Implement one competence-aware review class with:
+
+- credentialed eligibility;
+- explicit lens definition;
+- reproducible aggregation;
+- dissent preservation;
+- separate promotion authority.
+
+## Phase 5 — Runtime Pack
+
+Build a signed/versioned read-optimized package for local/offline use.
+
+## Phase 6 — Multilingual deterministic realization
+
+Use SemantiK Architect or compatible language artifacts to demonstrate:
+
+```text
+same structured medical meaning
+→ French realization
+→ English realization
+```
+
+without requiring generative AI for canonical output.
+
+## Phase 7 — Query surfaces
+
+Provide access for:
+
+- human reference UI;
+- API/software consumers;
+- AI retrieval.
+
+All three should access the same governed knowledge objects.
+
+## Phase 8 — UCKK publication
+
+Demonstrate:
+
+```text
+promoted MediKristal knowledge
+→ authorized publication transform
+→ UCKK learning/reference object
+→ provenance back to source release
+```
+
+## Phase 9 — Clinical validation
+
+Before any direct clinical use:
+
+- expert medical review;
+- source licensing review;
+- terminology validation;
+- protocol validation;
+- multilingual safety testing;
+- privacy/security review;
+- regulatory assessment;
+- controlled real-world evaluation.
+
+## What not to optimize for yet
+
+Do not treat these as early success metrics:
+
+- number of diseases imported;
+- number of database rows;
+- number of connected AI models;
+- chatbot fluency;
+- number of languages claimed without validation.
+
+A stronger early milestone is:
+
+> **One medical result that can be traced, reproduced, reviewed, translated, updated, rolled back, and safely distributed.**
+
+
+================================================================================================
+FILE: wiki/Semantic-Medical-Graph.md
+================================================================================================
+
+# Semantic Medical Graph
+
+MediKristal represents medicine as explicit relationships between independently governed objects.
+
+## Core graph
+
+```mermaid
+flowchart LR
+    PC[Patient context] -->|modifies applicability| S[Symptoms / signs]
+    PC --> C[Conditions]
+    PC --> T[Tests]
+    PC --> M[Treatments]
+    S <--> C
+    C <--> T
+    C <--> M
+    T --> C
+    G[Guidelines / protocols] --> C
+    G --> T
+    G --> M
+```
+
+## Five domain layers
+
+### Patient context
+
+Patient-specific facts that modify applicability:
+
+- age;
+- sex;
+- pregnancy status;
+- allergies;
+- known conditions;
+- current medications;
+- kidney/liver function;
+- geography/jurisdiction;
+- travel;
+- risk factors.
+
+### Symptoms and signs
+
+Reported or observed clinical phenomena.
+
+### Diseases and diagnoses
+
+Conditions, syndromes, differential possibilities, complications, exclusions, and classifications.
+
+### Tests and investigations
+
+Laboratory tests, measurements, imaging, procedures, indications, limits, and interpretation rules.
+
+### Medications and treatments
+
+Drugs, formulations, dose concepts, contraindications, interactions, adjustments, and non-drug interventions.
+
+## Assertions, not anonymous edges
+
+A graph relation should carry its epistemic context.
+
+```json
+{
+  "assertion_id": "assertion:pneumonia-fever-001",
+  "subject": "condition:pneumonia",
+  "predicate": "has_common_symptom",
+  "object": "symptom:fever",
+  "scope": {
+    "jurisdiction": "CA-QC",
+    "population": "adult"
+  },
+  "status": "under_review",
+  "provenance": ["source:guideline-example"],
+  "review_refs": []
+}
+```
+
+The semantic relation and the epistemic state remain linked.
+
+## Useful predicates
+
+```text
+has_symptom
+may_indicate
+risk_increased_by
+recommended_test
+measured_by
+supports_diagnosis
+argues_against
+contraindicated_if
+interacts_with
+requires_dose_adjustment_if
+recommended_treatment
+urgent_if
+applies_in_jurisdiction
+supported_by
+supersedes
+```
+
+## Concept identity versus labels
+
+A single medical concept may have:
+
+- a MediKristal identity;
+- a SNOMED CT code;
+- an ICD-11 classification;
+- LOINC or drug mappings;
+- French and English labels;
+- local aliases;
+- historical identifiers.
+
+MediKristal should distinguish **what the concept is** from **how a system names or classifies it**.
+
+## Query principle
+
+A MediKristal query should ideally return not only an answer but the path supporting it.
+
+Examples:
+
+- Which conditions are associated with this symptom cluster?
+- Which red flags apply in this patient context?
+- Which tests are recommended by a named protocol?
+- Which medication is contraindicated by this allergy or organ impairment?
+- Which source/version justifies the relation?
+- Which relations changed between two releases?
+
+```text
+result
++ semantic path
++ source chain
++ applicability
++ status
++ release identity
+```
+
+
+================================================================================================
+FILE: wiki/Trust-Provenance-and-Versioning.md
+================================================================================================
+
+# Trust, Provenance, and Versioning
+
+MediKristal treats provenance and versioning as part of medical knowledge itself.
+
+## No recommendation without a traceable chain
+
+A target rule is:
+
+> **No clinical recommendation without an attributable evidence chain and an applicable policy or protocol.**
+
+```text
+output
+ ↓
+protocol rule
+ ↓
+medical assertion(s)
+ ↓
+source(s)
+ ↓
+source version / jurisdiction / date
+```
+
+## Version everything that can change
+
+Potentially versioned objects include:
+
+- terminology releases;
+- imported source snapshots;
+- source-to-source mappings;
+- MediKristal assertions;
+- guidelines;
+- institutional protocols;
+- Smart Vote lenses;
+- eligibility/competence snapshots;
+- language realizations;
+- Runtime Packs;
+- publication representations sent to UCKK.
+
+## Jurisdiction matters
+
+A recommendation can differ because of:
+
+- approved products;
+- formularies;
+- test availability;
+- public-health rules;
+- institutional resources;
+- professional regulation;
+- local protocols.
+
+Jurisdiction therefore belongs inside the knowledge model.
+
+## Revocation and supersession
+
+Outdated content should normally be **superseded or revoked**, not silently deleted.
+
+This preserves historical auditability.
+
+## Runtime reproducibility
+
+A Runtime Pack should make it possible to identify exactly which knowledge state was in use.
+
+```text
+release identity
+source versions
+promoted assertions
+protocol versions
+jurisdiction
+language artifacts
+integrity metadata
+```
+
+See:
+
+- [Portable Knowledge with Kristal](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Portable-Knowledge-with-Kristal)
+- [Release and Artifact Lifecycle](https://github.com/Rejean-McCormick/kOA-Linux/wiki/Release-and-Artifact-Lifecycle)
+
+
+================================================================================================
+FILE: wiki/What-MediKristal-Is.md
+================================================================================================
+
+# What MediKristal Is
+
+## Short definition
+
+**MediKristal is a medical knowledge compilation and orchestration system that transforms validated medical sources into semantic, versioned, multilingual, queryable, governable Kristal artifacts.**
+
+A useful mental model is a **living, machine-readable reference work of medicine**.
+
+It is intended to make medical knowledge easier to:
+
+- connect across terminology systems;
+- inspect and cite;
+- update without erasing history;
+- review by qualified professionals;
+- represent in multiple languages;
+- compile into local Runtime Packs;
+- query through human interfaces, APIs, or AI systems;
+- distribute in authorized forms without losing provenance.
+
+## What problem it addresses
+
+Medicine already has large, authoritative knowledge systems. The problem is that they were built for different purposes.
+
+```text
+SNOMED CT       → clinical concepts
+ICD-11          → classification
+LOINC / pCLOCD  → tests and observations
+CCDD / DPD      → Canadian drugs and products
+RxNorm          → normalized drug interoperability
+guidelines      → recommendations
+local protocols → jurisdiction-specific action
+```
+
+The hard part is the **relationship between these layers**.
+
+MediKristal therefore focuses on orchestration rather than replacement.
+
+## What MediKristal is not
+
+MediKristal is not:
+
+- a chatbot;
+- a large language model;
+- an autonomous diagnostic engine;
+- a replacement for SNOMED CT, ICD-11, LOINC, CCDD, DPD, or RxNorm;
+- a single universal medical database that erases source identity;
+- an automatic authority over physicians;
+- a substitute for professional clinical judgment;
+- a claim that uncertainty can be removed from medicine.
+
+## Formalized knowledge, not generated knowledge
+
+The core distinction is:
+
+```text
+AI-generated wording ≠ medical knowledge authority
+```
+
+MediKristal aims to make the medical knowledge itself explicit:
+
+```text
+Concept
+Relationship
+Source
+Version
+Jurisdiction
+Applicability
+Uncertainty
+Review
+Promotion status
+Language realization
+```
+
+An AI can then consult this structure instead of reconstructing medical knowledge from unstructured prose or relying only on model memory.
+
+## Reference work and protocol system
+
+MediKristal has two related but distinct functions:
+
+### 1. Medical reference
+
+Represent what is known, by whom, under which source/version, and how concepts relate.
+
+### 2. Clinical protocol representation
+
+Represent explicit rules that apply medical knowledge to a defined context.
+
+These must not be collapsed:
+
+```text
+Medical knowledge
+≠ Clinical guideline
+≠ Local protocol
+≠ Patient data
+≠ Recommendation
+≠ Final clinical decision
+```
+
+## Questions MediKristal should answer
+
+For any significant result, a mature MediKristal system should be able to answer:
+
+- What does the system know?
+- Where did this claim come from?
+- Which version of the source supports it?
+- Which jurisdiction and population does it apply to?
+- Is it working, disputed, promoted, superseded, or revoked?
+- Who was eligible to review it?
+- Which review and Smart Vote reading contributed to promotion?
+- Which rule produced the result?
+- Which language artifact rendered the explanation?
+- Can the historical result be reproduced?
+
+That audit trail is part of the knowledge architecture, not an afterthought.

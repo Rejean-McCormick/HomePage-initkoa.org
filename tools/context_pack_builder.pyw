@@ -57,6 +57,27 @@ COMMIT_MESSAGE = "Update context packs"
 CREATE_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 
+# GitHub owners whose repositories must never be included or synchronized.
+# The CSV audit supplied on 2026-08-25 identified MA-Gustave as the owner to exclude.
+EXCLUDED_GITHUB_OWNERS = {"ma-gustave"}
+
+# Wiki remotes verified by the supplied github-repos-wikis-clean.csv.
+# These are hints/fallbacks only: Sync Wikis still probes GitHub online with git ls-remote,
+# so a newly-created or removed wiki is handled correctly at runtime.
+VERIFIED_WIKI_REMOTES = {
+    str(MYCODE / "AmeArtificielle" / "Ame-Artificielle").casefold(): "https://github.com/Rejean-McCormick/Ame-Artificielle.wiki.git",
+    str(MYCODE / "kOA" / "kOA_Digital_Ecosystem").casefold(): "https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem.wiki.git",
+    str(MYCODE / "kOA-Linux" / "koa-linux").casefold(): "https://github.com/Rejean-McCormick/kOA-Linux.wiki.git",
+    str(MYCODE / "Konnaxion" / "Konnaxion").casefold(): "https://github.com/Rejean-McCormick/Konnaxion.wiki.git",
+    str(MYCODE / "Kristal_Farms" / "kristal-farms-docs").casefold(): "https://github.com/Rejean-McCormick/Kristal_Farms.wiki.git",
+    str(MYCODE / "Kristal" / "kristal-framework").casefold(): "https://github.com/Rejean-McCormick/kristal-framework.wiki.git",
+    str(MYCODE / "MediKristal" / "MediKristal").casefold(): "https://github.com/Rejean-McCormick/MediKristal.wiki.git",
+    str(MYCODE / "Orgo" / "Orgo").casefold(): "https://github.com/Rejean-McCormick/Orgo.wiki.git",
+    str(MYCODE / "SemantiK_Architect" / "SemantiK_Architect").casefold(): "https://github.com/Rejean-McCormick/SemantiK_Architect.wiki.git",
+    str(MYCODE / "SenTient" / "SenTient").casefold(): "https://github.com/Rejean-McCormick/SenTient.wiki.git",
+}
+
+
 class CommandError(RuntimeError):
     pass
 
@@ -90,11 +111,16 @@ def is_git_repo(path: Path) -> bool:
     return result.returncode == 0 and result.stdout.strip() == "true"
 
 
-def github_repo_from_remote(repo: Path, fallback: str) -> str:
+def origin_remote_url(repo: Path) -> str | None:
     result = git(repo, "remote", "get-url", "origin", check=False)
     if result.returncode != 0:
-        return fallback
+        return None
     url = result.stdout.strip()
+    return url or None
+
+
+def github_repo_from_remote(repo: Path, fallback: str) -> str:
+    url = origin_remote_url(repo)
     if not url:
         return fallback
     if url.startswith("git@") and ":" in url:
@@ -104,6 +130,220 @@ def github_repo_from_remote(repo: Path, fallback: str) -> str:
     if owner_repo.endswith(".git"):
         owner_repo = owner_repo[:-4]
     return owner_repo or fallback
+
+
+def _github_owner_repo_from_url(url: str | None) -> tuple[str, str] | None:
+    """Return (owner, repo) for a GitHub HTTPS/SSH remote, otherwise None."""
+    if not url:
+        return None
+    value = url.strip()
+    if value.startswith("git@github.com:"):
+        owner_repo = value.split(":", 1)[1]
+    else:
+        parsed = urlparse(value)
+        if parsed.hostname not in {"github.com", "www.github.com"}:
+            return None
+        owner_repo = parsed.path.lstrip("/")
+    owner_repo = owner_repo.rstrip("/")
+    if owner_repo.endswith(".git"):
+        owner_repo = owner_repo[:-4]
+    parts = owner_repo.split("/", 1)
+    if len(parts) != 2 or not all(parts):
+        return None
+    return parts[0], parts[1]
+
+
+def repo_is_excluded(repo: Path) -> bool:
+    """Exclude Gustave-owned repos even if they are accidentally added to REPOS later."""
+    # Local path guard handles a missing/broken Git origin.
+    parts = {part.casefold() for part in repo.parts}
+    if "gustave" in parts:
+        return True
+    parsed = _github_owner_repo_from_url(origin_remote_url(repo)) if repo.exists() else None
+    return bool(parsed and parsed[0].casefold() in EXCLUDED_GITHUB_OWNERS)
+
+
+def _wiki_remote_from_origin(url: str | None) -> str | None:
+    if not url:
+        return None
+    parsed = _github_owner_repo_from_url(url)
+    if not parsed:
+        return None
+    owner, repo_name = parsed
+    if owner.casefold() in EXCLUDED_GITHUB_OWNERS:
+        return None
+    if url.startswith("git@github.com:"):
+        return f"git@github.com:{owner}/{repo_name}.wiki.git"
+    return f"https://github.com/{owner}/{repo_name}.wiki.git"
+
+
+def wiki_remote_from_repo(repo: Path) -> str | None:
+    """Resolve the wiki Git remote from the real origin, with CSV-verified fallback hints."""
+    if repo_is_excluded(repo):
+        return None
+    derived = _wiki_remote_from_origin(origin_remote_url(repo))
+    if derived:
+        return derived
+    return VERIFIED_WIKI_REMOTES.get(str(repo).casefold())
+
+
+def _wiki_repo_name_from_remote(remote: str | None) -> str | None:
+    """Extract the GitHub repository name without the trailing .wiki suffix."""
+    if not remote:
+        return None
+    parsed = _github_owner_repo_from_url(remote)
+    if not parsed:
+        return None
+    name = parsed[1]
+    if name.casefold().endswith(".wiki"):
+        name = name[:-5]
+    return name or None
+
+
+def _normalise_repo_name(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", value.casefold())
+
+
+def wiki_path_for_repo(repo: Path) -> Path:
+    """Return the canonical sibling wiki path based on the *GitHub repo name*."""
+    remote_name = _wiki_repo_name_from_remote(wiki_remote_from_repo(repo))
+    folder_name = f"{remote_name}.wiki" if remote_name else f"{repo.name}.wiki"
+    return repo.parent / folder_name
+
+
+def existing_wiki_path_for_repo(repo: Path) -> Path | None:
+    """Find an already-present sibling wiki without renaming, pulling or overwriting it.
+
+    Besides GitHub's canonical ``<repo>.wiki`` name, this recognizes older local
+    conventions such as ``<repo>-wiki`` (for example ``koa-linux-wiki``).
+    """
+    canonical = wiki_path_for_repo(repo)
+    candidates = [
+        canonical,
+        repo.parent / f"{repo.name}.wiki",
+        repo.parent / f"{repo.name}-wiki",
+        repo.parent / f"{repo.name}_wiki",
+    ]
+    seen: set[str] = set()
+    for candidate in candidates:
+        key = str(candidate).casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        if candidate.exists() and candidate.is_dir():
+            return candidate
+
+    remote_name = _wiki_repo_name_from_remote(wiki_remote_from_repo(repo)) or repo.name
+    wanted = {_normalise_repo_name(remote_name), _normalise_repo_name(repo.name)}
+    try:
+        siblings = list(repo.parent.iterdir())
+    except OSError:
+        return None
+
+    for sibling in siblings:
+        if not sibling.is_dir() or sibling == repo:
+            continue
+        name = sibling.name
+        base = re.sub(r"(?:\.wiki|-wiki|_wiki)$", "", name, flags=re.IGNORECASE)
+        if base == name:
+            continue
+        if _normalise_repo_name(base) in wanted:
+            return sibling
+    return None
+
+def _run_git_network(args, cwd=None):
+    """Run a non-interactive Git network command used only for optional wikis."""
+    env = os.environ.copy()
+    env.setdefault("GIT_TERMINAL_PROMPT", "0")
+    return subprocess.run(
+        [str(x) for x in args],
+        cwd=str(cwd) if cwd else None,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        creationflags=CREATE_NO_WINDOW,
+        env=env,
+    )
+
+
+def sync_wiki_for_repo(label: str, repo: Path, log=None) -> dict:
+    """Clone a missing wiki beside its repo. Existing local wiki folders are never touched."""
+    if repo_is_excluded(repo):
+        if log:
+            log("    Repo MA-Gustave : exclu")
+        return {"label": label, "path": None, "status": "excluded", "changed": False}
+
+    existing = existing_wiki_path_for_repo(repo)
+    if existing is not None:
+        if log:
+            log(f"    Wiki local présent : {existing.name} [conservé, aucun overwrite]")
+        return {"label": label, "path": existing, "status": "existing", "changed": False}
+
+    wiki_path = wiki_path_for_repo(repo)
+    if not is_git_repo(repo):
+        return {"label": label, "path": wiki_path, "status": "repo-unavailable", "changed": False}
+
+    wiki_remote = wiki_remote_from_repo(repo)
+    if not wiki_remote:
+        return {"label": label, "path": wiki_path, "status": "no-origin", "changed": False}
+
+    # Always query GitHub/Git online. Repositories without a wiki are optional and ignored.
+    probe = _run_git_network(["git", "ls-remote", "--exit-code", wiki_remote, "HEAD"])
+    if probe.returncode != 0 or not probe.stdout.strip():
+        if log:
+            log("    Wiki distant : aucun / inaccessible [ignoré]")
+        return {"label": label, "path": wiki_path, "status": "missing", "changed": False}
+
+    temp_path = repo.parent / f".{wiki_path.name}.context-pack-clone-tmp"
+    if temp_path.exists():
+        shutil.rmtree(temp_path, ignore_errors=True)
+
+    clone = _run_git_network(["git", "clone", "--quiet", wiki_remote, temp_path])
+    if clone.returncode != 0:
+        shutil.rmtree(temp_path, ignore_errors=True)
+        if log:
+            log("    Wiki distant détecté mais clone impossible [ignoré]")
+        return {"label": label, "path": wiki_path, "status": "clone-failed", "changed": False}
+
+    # Never overwrite if any recognized local wiki appeared while cloning.
+    appeared = existing_wiki_path_for_repo(repo)
+    if appeared is not None:
+        shutil.rmtree(temp_path, ignore_errors=True)
+        if log:
+            log(f"    Wiki local apparu pendant le clone : {appeared.name} [conservé]")
+        return {"label": label, "path": appeared, "status": "existing", "changed": False}
+
+    temp_path.rename(wiki_path)
+    if log:
+        log(f"    Wiki cloné : {wiki_path}")
+    return {"label": label, "path": wiki_path, "status": "cloned", "changed": True}
+
+def included_repos():
+    """Configured repositories minus explicitly excluded GitHub owners (MA-Gustave)."""
+    return [(label, repo) for label, repo in REPOS if not repo_is_excluded(repo)]
+
+
+def sync_all_wikis(log):
+    results = []
+    active = included_repos()
+    excluded_count = len(REPOS) - len(active)
+    log("SYNC WIKIS (query Git en ligne; clone seulement si absent localement)")
+    if excluded_count:
+        log(f"Repos MA-Gustave exclus : {excluded_count}")
+    for index, (label, repo) in enumerate(active, 1):
+        log(f"[{index}/{len(active)}] {label}")
+        try:
+            results.append(sync_wiki_for_repo(label, repo, log))
+        except Exception as exc:
+            # Wiki support is optional: never block Context Pack generation.
+            results.append({"label": label, "path": wiki_path_for_repo(repo), "status": "error", "changed": False, "error": str(exc)})
+            log(f"    Wiki : erreur ignorée : {exc}")
+    cloned = sum(1 for r in results if r.get("status") == "cloned")
+    existing = sum(1 for r in results if r.get("status") == "existing")
+    log(f"Wikis : {cloned} cloné(s), {existing} déjà présent(s); absents distants ignorés.")
+    return results
 
 
 def current_commit(repo: Path) -> str:
@@ -129,6 +369,16 @@ def git_markdown_files(repo: Path) -> list[Path]:
     raw_paths = [x.decode("utf-8", errors="surrogateescape") for x in result.stdout.split(b"\0") if x]
     relative_paths = sorted(set(raw_paths), key=lambda s: (s.lower(), s))
     return [repo / Path(rel) for rel in relative_paths if (repo / Path(rel)).is_file()]
+
+
+def markdown_files_in_folder(folder: Path) -> list[Path]:
+    """List Markdown from a Git checkout, or recursively from a plain local wiki folder."""
+    if not folder.exists() or not folder.is_dir():
+        return []
+    if is_git_repo(folder):
+        return git_markdown_files(folder)
+    files = [p for p in folder.rglob("*.md") if p.is_file() and ".git" not in p.parts]
+    return sorted(files, key=lambda p: (p.relative_to(folder).as_posix().lower(), p.relative_to(folder).as_posix()))
 
 
 def slugify(value: str) -> str:
@@ -170,27 +420,53 @@ def make_pack(label: str, repo: Path):
     if not is_git_repo(repo):
         raise RuntimeError(f"Ce dossier n'est pas un repo Git : {repo}")
 
-    markdown_files = git_markdown_files(repo)
+    repo_markdown_files = git_markdown_files(repo)
+    wiki_path = existing_wiki_path_for_repo(repo) or wiki_path_for_repo(repo)
+    wiki_markdown_files = markdown_files_in_folder(wiki_path)
+
     remote_name = github_repo_from_remote(repo, label)
     commit = current_commit(repo)
     dirty = markdown_dirty(repo)
 
+    wiki_is_git = is_git_repo(wiki_path)
+    wiki_commit = current_commit(wiki_path) if wiki_is_git else ("local-unversioned" if wiki_path.exists() else "none")
+    wiki_dirty = markdown_dirty(wiki_path) if wiki_is_git else False
+
     file_entries = []
     hash_material = bytearray()
-    for path in markdown_files:
-        rel = path.relative_to(repo).as_posix()
+
+    def add_file(pack_rel: str, path: Path):
         content = read_markdown(path)
-        file_entries.append((rel, content))
-        hash_material.extend(rel.encode("utf-8"))
+        file_entries.append((pack_rel, content))
+        hash_material.extend(pack_rel.encode("utf-8"))
         hash_material.extend(b"\0")
         hash_material.extend(content.encode("utf-8"))
         hash_material.extend(b"\0")
 
+    for path in repo_markdown_files:
+        add_file(path.relative_to(repo).as_posix(), path)
+
+    # The wiki is a sibling Git repository on GitHub. It is folded into the
+    # same Context Pack under a stable prefix instead of creating a second pack.
+    for path in wiki_markdown_files:
+        add_file(f"wiki/{path.relative_to(wiki_path).as_posix()}", path)
+
     content_hash = hashlib.sha256(bytes(hash_material)).hexdigest()
     output_path = OUTPUT_DIR / f"{slugify(remote_name)}-context-pack.txt"
 
+    result_base = {
+        "label": label,
+        "remote": remote_name,
+        "output": output_path,
+        "files": len(file_entries),
+        "repo_files": len(repo_markdown_files),
+        "wiki_files": len(wiki_markdown_files),
+        "wiki_path": wiki_path,
+        "hash": content_hash,
+    }
+
     if existing_pack_hash(output_path) == content_hash:
-        return {"label": label, "remote": remote_name, "output": output_path, "files": len(file_entries), "changed": False, "hash": content_hash}
+        return {**result_base, "changed": False}
 
     generated_at = datetime.now().astimezone().isoformat(timespec="seconds")
     lines = [
@@ -200,6 +476,11 @@ def make_pack(label: str, repo: Path):
         f"source_path: {repo}",
         f"source_commit: {commit}",
         f"working_tree_markdown: {'dirty' if dirty else 'clean'}",
+        f"wiki_source_path: {wiki_path if wiki_path.exists() else 'none'}",
+        f"wiki_source_commit: {wiki_commit}",
+        f"wiki_working_tree_markdown: {'dirty' if wiki_dirty else ('clean' if wiki_is_git else 'not-git')}",
+        f"repo_files: {len(repo_markdown_files)}",
+        f"wiki_files: {len(wiki_markdown_files)}",
         f"generated_at: {generated_at}",
         f"files: {len(file_entries)}",
         f"content_sha256: {content_hash}",
@@ -227,7 +508,7 @@ def make_pack(label: str, repo: Path):
     temp_path.write_text(final_text, encoding="utf-8", newline="\n")
     temp_path.replace(output_path)
 
-    return {"label": label, "remote": remote_name, "output": output_path, "files": len(file_entries), "changed": True, "hash": content_hash}
+    return {**result_base, "changed": True}
 
 
 
@@ -346,9 +627,15 @@ def build_all(log):
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     if install_self_into_initkoa():
         log(f"Builder copié dans : {TOOL_TARGET}")
+
+    # Optional GitHub wikis are materialized once, beside each repository.
+    # Existing local wiki directories are deliberately never pulled or overwritten.
+    sync_all_wikis(log)
+
     results = []
-    for index, (label, repo) in enumerate(REPOS, 1):
-        log(f"[{index}/{len(REPOS)}] {label}")
+    active = included_repos()
+    for index, (label, repo) in enumerate(active, 1):
+        log(f"[{index}/{len(active)}] {label}")
         try:
             result = make_pack(label, repo)
             results.append(result)
@@ -419,19 +706,22 @@ class ContextPackApp(Tk):
         self.build_button.pack(side=LEFT, padx=(8, 0))
         self.sync_button = ttk.Button(buttons, text="Sync initkoa", command=self.sync_only)
         self.sync_button.pack(side=LEFT, padx=(8, 0))
+        self.wiki_button = ttk.Button(buttons, text="Sync Wikis", command=self.sync_wikis_only)
+        self.wiki_button.pack(side=LEFT, padx=(8, 0))
         ttk.Button(buttons, text="Ouvrir les packs", command=self.open_output).pack(side=RIGHT)
         ttk.Button(buttons, text="Actualiser", command=self.refresh_repo_status).pack(side=RIGHT, padx=(0, 8))
 
         table_frame = ttk.Frame(self, padding=(12, 0, 12, 8))
         table_frame.pack(fill=BOTH, expand=True)
-        columns = ("repo", "path", "md", "status")
+        columns = ("repo", "path", "md", "wiki", "status")
         self.tree = ttk.Treeview(table_frame, columns=columns, show="headings", height=17)
-        for col, text in [("repo", "Repo"), ("path", "Chemin local"), ("md", ".md"), ("status", "État")]:
+        for col, text in [("repo", "Repo"), ("path", "Chemin local"), ("md", "Repo .md"), ("wiki", "Wiki .md"), ("status", "État")]:
             self.tree.heading(col, text=text)
-        self.tree.column("repo", width=250, minwidth=180)
-        self.tree.column("path", width=560, minwidth=300)
-        self.tree.column("md", width=70, anchor="center", stretch=False)
-        self.tree.column("status", width=150, minwidth=100)
+        self.tree.column("repo", width=235, minwidth=180)
+        self.tree.column("path", width=500, minwidth=280)
+        self.tree.column("md", width=75, anchor="center", stretch=False)
+        self.tree.column("wiki", width=75, anchor="center", stretch=False)
+        self.tree.column("status", width=180, minwidth=120)
         scroll_y = ttk.Scrollbar(table_frame, orient="vertical", command=self.tree.yview)
         self.tree.configure(yscrollcommand=scroll_y.set)
         self.tree.pack(side=LEFT, fill=BOTH, expand=True)
@@ -457,6 +747,7 @@ class ContextPackApp(Tk):
         self.build_sync_button.configure(state=state)
         self.build_button.configure(state=state)
         self.sync_button.configure(state=state)
+        self.wiki_button.configure(state=state)
 
     def _run_background(self, name, function):
         if self.is_working:
@@ -497,8 +788,11 @@ class ContextPackApp(Tk):
             return
         for item in self.tree.get_children():
             self.tree.delete(item)
-        for label, repo in REPOS:
+        active = included_repos()
+        for label, repo in active:
             repo_display = label
+            wiki_path = existing_wiki_path_for_repo(repo) or wiki_path_for_repo(repo)
+            wiki_count = "-"
             if not repo.exists():
                 md_count, status = "-", "ABSENT"
             elif not is_git_repo(repo):
@@ -507,11 +801,17 @@ class ContextPackApp(Tk):
                 try:
                     md_count = str(len(git_markdown_files(repo)))
                     repo_display = github_repo_from_remote(repo, label)
-                    status = "OK"
+                    if wiki_path.exists():
+                        wiki_count = str(len(markdown_files_in_folder(wiki_path)))
+                        status = "OK + WIKI"
+                    else:
+                        status = "OK"
                 except Exception:
-                    md_count, status = "?", "ERREUR"
-            self.tree.insert("", END, values=(repo_display, str(repo), md_count, status))
-        self.status_var.set(f"{len(REPOS)} repos configurés. Destination : {OUTPUT_DIR}")
+                    md_count, wiki_count, status = "?", "?", "ERREUR"
+            self.tree.insert("", END, values=(repo_display, str(repo), md_count, wiki_count, status))
+        excluded_count = len(REPOS) - len(active)
+        suffix = f"; {excluded_count} MA-Gustave exclu(s)" if excluded_count else ""
+        self.status_var.set(f"{len(active)} repos inclus{suffix}. Destination : {OUTPUT_DIR}")
 
     def build_only(self):
         def task():
@@ -542,6 +842,15 @@ class ContextPackApp(Tk):
             sync_initkoa(self.log, pull_first=False)
             return results
         self._run_background("Build + Sync", task)
+
+    def sync_wikis_only(self):
+        def task():
+            self.log("=" * 72)
+            results = sync_all_wikis(self.log)
+            cloned = sum(1 for r in results if r.get("status") == "cloned")
+            self.log(f"Sync Wikis terminé : {cloned} nouveau(x) wiki(s) cloné(s).")
+            return results
+        self._run_background("Sync Wikis", task)
 
     def sync_only(self):
         def task():

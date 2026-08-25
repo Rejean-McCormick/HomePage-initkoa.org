@@ -4,9 +4,14 @@ repository: Rejean-McCormick/kOA-Linux
 source_path: C:\mycode\kOA-Linux\koa-linux
 source_commit: cf2a5e971eeb89e1b87354a03532919076efae08
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:47-04:00
-files: 349
-content_sha256: 71026ed713418efa69f6b6b787b36e5db813072ec17ca8bb0a6683c77efcd5a7
+wiki_source_path: C:\mycode\kOA-Linux\koa-linux-wiki
+wiki_source_commit: 514fe72709c8a917f6864ee876cc804b63aafaa4
+wiki_working_tree_markdown: clean
+repo_files: 349
+wiki_files: 76
+generated_at: 2026-08-25T11:30:38-04:00
+files: 425
+content_sha256: fa2353ce1b5e86ed70a8e4065189de9daaa7743623d3ac7060e66e93b82e1fd7
 
 ================================================================================================
 FILE INDEX
@@ -361,6 +366,82 @@ FILE INDEX
 347. tests/README.md
 348. tools/README.md
 349. VALIDATION.md
+350. wiki/_Footer.md
+351. wiki/_Sidebar.md
+352. wiki/About-the-Wiki.md
+353. wiki/AI-and-External-Integrations.md
+354. wiki/AI-without-Automatic-Authority.md
+355. wiki/Architecture-Decisions.md
+356. wiki/Ariane.md
+357. wiki/Assisted-Navigation-with-Ariane.md
+358. wiki/Authority-and-Documentation.md
+359. wiki/Capability-Status.md
+360. wiki/Collective-Intelligence-to-Governance.md
+361. wiki/Community-and-Civic-Use.md
+362. wiki/Conformance-and-Validation.md
+363. wiki/Constitutional-Principles.md
+364. wiki/Contracts-and-Schemas.md
+365. wiki/Contributing.md
+366. wiki/Control-Portability-and-Recovery.md
+367. wiki/Crisis-Field-and-Air-Gapped-Use.md
+368. wiki/Cultural-Sovereignty.md
+369. wiki/Current-Scope-and-Limits.md
+370. wiki/Decisions-to-Execution.md
+371. wiki/Deployment-Choices.md
+372. wiki/Deployment-Profiles.md
+373. wiki/Deployment-Scenarios.md
+374. wiki/Development-Model.md
+375. wiki/Documentation-Map.md
+376. wiki/Education-and-Learning.md
+377. wiki/Everyday-Use.md
+378. wiki/FAQ.md
+379. wiki/Feature-Source-Map.md
+380. wiki/Files-Media-and-Provenance.md
+381. wiki/Global-Communications-and-Distribution.md
+382. wiki/Glossary.md
+383. wiki/Governance-Plane.md
+384. wiki/Governance-Trust-and-Recourse.md
+385. wiki/Groups-to-Organizations.md
+386. wiki/Home.md
+387. wiki/Institutional-Memory-and-Learning.md
+388. wiki/Integrated-Subsystems.md
+389. wiki/Internal-Components.md
+390. wiki/Knowledge-to-Action-Loop.md
+391. wiki/kOA-Linux-Responsibilities.md
+392. wiki/Konnaxion.md
+393. wiki/Kristal.md
+394. wiki/Local-and-Offline-Operation.md
+395. wiki/Modules-and-Submodules.md
+396. wiki/Multilingual-Knowledge-Networks.md
+397. wiki/Multilingual-Operation.md
+398. wiki/Municipality-and-Public-Service.md
+399. wiki/Naming-and-Scope.md
+400. wiki/Offline-First-Operation.md
+401. wiki/Operations.md
+402. wiki/Organizational-Operations.md
+403. wiki/Orgo.md
+404. wiki/Personal-and-Local-Use.md
+405. wiki/Portable-Knowledge-with-Kristal.md
+406. wiki/Related-Wikis.md
+407. wiki/Release-and-Artifact-Lifecycle.md
+408. wiki/Roles-Tasks-and-Accountability.md
+409. wiki/Security-Model.md
+410. wiki/Semantic-Sovereignty.md
+411. wiki/Semantik-Architect.md
+412. wiki/SenTient.md
+413. wiki/Siloed-and-Sovereign-Environments.md
+414. wiki/Societal-Outcomes.md
+415. wiki/Sociotechnical-Operating-System.md
+416. wiki/Start-Here.md
+417. wiki/Subsystem-Documentation-Mounts.md
+418. wiki/System-Architecture.md
+419. wiki/System-of-Systems.md
+420. wiki/Technical-Reference.md
+421. wiki/UCKK-Mediatheque.md
+422. wiki/UCKK.md
+423. wiki/Use-Cases.md
+424. wiki/What-kOA-Does.md
+425. wiki/What-kOA-Linux-Does.md
 
 
 ================================================================================================
@@ -234709,3 +234790,3270 @@ Commit: `28a224bfff300913ad297eea18650db3c29cac3f`
 ## Blocked by execution environment
 
 `cargo metadata`, `cargo fmt --check`, `cargo check`, and `cargo test` could not be executed because Cargo/Rustup are not installed. An installation attempt for Rust 1.85.1 failed because the environment could not resolve `sh.rustup.rs`.
+
+
+================================================================================================
+FILE: wiki/_Footer.md
+================================================================================================
+
+---
+**kOA-Linux Operating System Wiki** · Main path: what the ecosystem enables · Technical path: how the sovereign runtime supports it · [Related Wikis](Related-Wikis)
+
+
+================================================================================================
+FILE: wiki/_Sidebar.md
+================================================================================================
+
+<!-- Explanatory wiki projection. -->
+
+# kOA-Linux Operating System
+
+- [[Home]]
+- [[Start here|Start-Here]]
+- [[Naming and scope|Naming-and-Scope]]
+
+## Main — what it does
+- [[What kOA does|What-kOA-Does]]
+- [[Sociotechnical Operating System|Sociotechnical-Operating-System]]
+- [[Knowledge-to-action loop|Knowledge-to-Action-Loop]]
+- [[Modules and submodules|Modules-and-Submodules]]
+- [[Societal outcomes|Societal-Outcomes]]
+- [[Use cases|Use-Cases]]
+- [[Related Wikis|Related-Wikis]]
+
+## Principles
+- [[Collective intelligence to governance|Collective-Intelligence-to-Governance]]
+- [[Semantic sovereignty|Semantic-Sovereignty]]
+- [[Cultural sovereignty|Cultural-Sovereignty]]
+- [[Governance, trust, and recourse|Governance-Trust-and-Recourse]]
+- [[AI without automatic authority|AI-without-Automatic-Authority]]
+- [[Offline-first operation|Offline-First-Operation]]
+- [[Control, portability, and recovery|Control-Portability-and-Recovery]]
+
+## Systems and platforms
+- [[System of systems|System-of-Systems]]
+- [[Capability and ownership map|Feature-Source-Map]]
+- [[Konnaxion]]
+- [[Orgo]]
+- [[Kristal]]
+- [[Ariane]]
+- [[SemantiK Architect|Semantik-Architect]]
+- [[SenTient]]
+- [[Files, media, and provenance|Files-Media-and-Provenance]]
+- [[UCKK external platform|UCKK]]
+
+## From groups to action
+- [[Groups to organizations|Groups-to-Organizations]]
+- [[Decisions to execution|Decisions-to-Execution]]
+- [[Roles, tasks, and accountability|Roles-Tasks-and-Accountability]]
+- [[Institutional memory and learning|Institutional-Memory-and-Learning]]
+- [[Global communications and distribution|Global-Communications-and-Distribution]]
+
+## Scenarios
+- [[Everyday use|Everyday-Use]]
+- [[Personal and local use|Personal-and-Local-Use]]
+- [[Community and civic use|Community-and-Civic-Use]]
+- [[Organizational operations|Organizational-Operations]]
+- [[Education and learning|Education-and-Learning]]
+- [[Municipality and public service|Municipality-and-Public-Service]]
+- [[Crisis and air-gapped use|Crisis-Field-and-Air-Gapped-Use]]
+- [[Multilingual knowledge networks|Multilingual-Knowledge-Networks]]
+
+## Technical reference
+- [[Technical reference index|Technical-Reference]]
+- [[What kOA-Linux does|What-kOA-Linux-Does]]
+- [[System architecture|System-Architecture]]
+- [[Deployment profiles|Deployment-Profiles]]
+- [[Internal components|Internal-Components]]
+- [[Integrated systems|Integrated-Subsystems]]
+- [[Development model|Development-Model]]
+- [[Security model|Security-Model]]
+- [[Release and artifact lifecycle|Release-and-Artifact-Lifecycle]]
+- [[Operations]]
+- [[AI and external integrations|AI-and-External-Integrations]]
+- [[Contracts and schemas|Contracts-and-Schemas]]
+- [[Conformance and validation|Conformance-and-Validation]]
+- [[Authority and documentation|Authority-and-Documentation]]
+- [[Architecture decisions|Architecture-Decisions]]
+- [[Documentation map|Documentation-Map]]
+- [[Contributing]]
+- [[Glossary]]
+- [[FAQ]]
+- [[About this Wiki|About-the-Wiki]]
+
+
+================================================================================================
+FILE: wiki/About-the-Wiki.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# About This Wiki
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Two reading paths
+
+### Main — what it does
+
+The main path explains the social and operational purpose of the ecosystem: knowledge, learning, deliberation, judgment, execution, memory, culture, language, autonomy, and collective capacity.
+
+### Technical reference — how kOA-Linux supports it
+
+The technical path summarizes profiles, components, trust, lifecycle, security, operations, contracts, and conformance.
+
+## Duplication rule
+
+This Wiki should explain the role of independent products but not recreate their internal documentation. Konnaxion, Orgo, SemantiK Architect, Kristal, SenTient, and other systems keep their own repositories or Wikis. This Wiki links to them and documents only the kOA-Linux boundary.
+
+## Authority
+
+The Wiki is explanatory. Repository contracts, accepted decisions, normative source documents, generated catalogs, and validators remain authoritative for kOA-Linux. Product Wikis remain authoritative for their own product-level explanations.
+
+
+================================================================================================
+FILE: wiki/AI-and-External-Integrations.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# AI and External Integrations
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+## Baseline rule
+
+AI is optional, capability-scoped, attributable, and unable to create invisible authority. Core operation remains deterministic and does not require native generative AI.
+
+External outputs remain non-authoritative unless an explicit review and admission process transfers accepted facts into an authoritative owner.
+
+## Declared integrations
+
+| Integration | Type | Role | Authority | Availability | Contract |
+| --- | --- | --- | --- | --- | --- |
+| Ariane Voice | external_voice | Optional voice-input surface for Ariane. | non_authoritative | optional | [contract](../blob/main/docs/contracts/integrations/ariane-voice.integration.json) |
+| ChatGPT | external_ai | Approved candidate metadata and analysis surface. | non_authoritative | optional | [contract](../blob/main/docs/contracts/integrations/chatgpt.integration.json) |
+| Gamma | external_media_service | Optional external presentation surface. | non_authoritative | optional | [contract](../blob/main/docs/contracts/integrations/gamma.integration.json) |
+| Suno | external_media_service | Optional external media-generation surface. | non_authoritative | optional | [contract](../blob/main/docs/contracts/integrations/suno.integration.json) |
+
+## Boundary rules
+
+- explicit user or system authorization;
+- declared capability and data scope;
+- no silent provider substitution;
+- no direct mutation of authoritative state;
+- privacy, consent, disclosure, and cultural-rights controls;
+- bounded failure and safe degradation when the provider is unavailable.
+
+## Sources
+
+- [`docs/02-system/09-ai-boundary.md`](../blob/main/docs/02-system/09-ai-boundary.md)
+- [`docs/02-system/10-external-ai-surfaces.md`](../blob/main/docs/02-system/10-external-ai-surfaces.md)
+- [`docs/02-system/16-external-integrations.md`](../blob/main/docs/02-system/16-external-integrations.md)
+- [`docs/07-security/11-ai-boundaries.md`](../blob/main/docs/07-security/11-ai-boundaries.md)
+- [`docs/07-security/12-external-integration-classification.md`](../blob/main/docs/07-security/12-external-integration-classification.md)
+- [`docs/contracts/integration-types.contract.json`](../blob/main/docs/contracts/integration-types.contract.json)
+
+
+================================================================================================
+FILE: wiki/AI-without-Automatic-Authority.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# AI Assistance and Automation
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## AI is optional capability, not hidden authority
+
+kOA-Linux Operating System may expose local or external AI services for search assistance, summarization, classification, drafting, reconciliation, translation support or interface guidance. Those services do not automatically become authoritative sources of facts, policy, permissions or system state.
+
+## Allowed roles
+
+Depending on policy, an AI system may:
+
+- propose classifications or candidate entities;
+- summarize selected material with source links;
+- draft text for human review;
+- recommend a navigation path;
+- suggest tasks or routing;
+- assist multilingual work where deterministic resources are unavailable;
+- identify patterns for review.
+
+## Prohibited shortcuts
+
+An AI service must not silently:
+
+- invent missing architectural authority;
+- convert a candidate claim into a validated fact;
+- approve its own output;
+- bypass consent or disclosure limits;
+- gain unrestricted filesystem, database or host access;
+- replace a missing subsystem with an undeclared provider;
+- execute a sensitive action without the required task, policy and authorization chain.
+
+## Automation as accountable work
+
+Automated activity should be represented as tasks or declared operations with an actor identity, input references, capability restrictions, resource limits, expected output, status, evidence and failure code.
+
+## External services
+
+When data leaves the local environment, the user and policy layer need to know what is sent, to whom, for which purpose, under which retention assumptions, and whether a local alternative exists.
+
+## Sources
+
+- [docs/02-system/09-ai-boundary.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/09-ai-boundary.md)
+- [docs/02-system/10-external-ai-surfaces.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/10-external-ai-surfaces.md)
+- [docs/07-security/11-ai-boundaries.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/07-security/11-ai-boundaries.md)
+- [SenTient status and scope](https://initkoa.org/technology/sentient)
+
+
+================================================================================================
+FILE: wiki/Architecture-Decisions.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# Architecture Decision Records
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+ADRs preserve context, considered options, rationale, consequences, and impact. Active system facts remain in the applicable source contracts and normative documents.
+
+## Accepted ADR set
+
+| ADR | Decision | Source |
+| --- | --- | --- |
+| ADR-001 | — Use a Standard Maintained Linux Kernel | [record](../blob/main/docs/10-adrs/ADR-001-standard-maintained-linux-kernel.md) |
+| ADR-002 | — Immutable Signed OS Image | [record](../blob/main/docs/10-adrs/ADR-002-immutable-signed-os-image.md) |
+| ADR-003 | — Appliance Shell Without GNOME | [record](../blob/main/docs/10-adrs/ADR-003-appliance-shell-without-gnome.md) |
+| ADR-004 | — Minimal Wayland and Embedded Web Engine | [record](../blob/main/docs/10-adrs/ADR-004-minimal-wayland-and-embedded-web-engine.md) |
+| ADR-005 | Rootless Podman and Quadlet | [record](../blob/main/docs/10-adrs/ADR-005-rootless-podman-and-quadlet.md) |
+| ADR-006 | — Expanded First-Class Component Boundaries | [record](../blob/main/docs/10-adrs/ADR-006-expanded-first-class-component-boundaries.md) |
+| ADR-007 | — Kristal as a Transversal Knowledge Layer | [record](../blob/main/docs/10-adrs/ADR-007-kristal-as-transversal-foundation.md) |
+| ADR-008 | Four Independent Release Channels | [record](../blob/main/docs/10-adrs/ADR-008-four-independent-release-channels.md) |
+| ADR-009 | — Governance Policy Runtime | [record](../blob/main/docs/10-adrs/ADR-009-governance-policy-runtime.md) |
+| ADR-010 | — Selective Audit | [record](../blob/main/docs/10-adrs/ADR-010-selective-audit.md) |
+| ADR-011 | — No Kubernetes Requirement on Endpoints | [record](../blob/main/docs/10-adrs/ADR-011-no-kubernetes-requirement-on-endpoints.md) |
+| ADR-012 | — Single Narrow Privileged Broker | [record](../blob/main/docs/10-adrs/ADR-012-single-narrow-privileged-broker.md) |
+| ADR-013 | — System Baseline and Profile Separation | [record](../blob/main/docs/10-adrs/ADR-013-system-baseline-and-profile-separation.md) |
+| ADR-014 | — Strict External AI Boundary | [record](../blob/main/docs/10-adrs/ADR-014-strict-external-ai-boundary.md) |
+| ADR-015 | Development Workspace Isolation with UV | [record](../blob/main/docs/10-adrs/ADR-015-development-workspace-isolation-with-uv.md) |
+| ADR-016 | — Generated Markdown Projections | [record](../blob/main/docs/10-adrs/ADR-016-generated-markdown-projections.md) |
+| ADR-017 | — User Lightweight Hardware Profile | [record](../blob/main/docs/10-adrs/ADR-017-user-lightweight-hardware-profile.md) |
+| ADR-018 | SenTient as an Isolated Optional Workbench | [record](../blob/main/docs/10-adrs/ADR-018-sentient-as-isolated-optional-workbench.md) |
+| ADR-019 | Resource Governor and Policy Runtime Separation | [record](../blob/main/docs/10-adrs/ADR-019-resource-governor-and-policy-runtime-separation.md) |
+| ADR-021 | Ariane Local Navigation with Optional External Voice | [record](../blob/main/docs/10-adrs/ADR-021-ariane-local-navigation-with-optional-external-voice.md) |
+| ADR-023 | — Explicit Profile Overlays | [record](../blob/main/docs/10-adrs/ADR-023-explicit-profile-overlays.md) |
+| ADR-024 | — Logical Data Ownership with Profile-Dependent Physical Isolation | [record](../blob/main/docs/10-adrs/ADR-024-logical-data-ownership-with-profile-dependent-physical-isolation.md) |
+| ADR-025 | — English-Only Active Documentation | [record](../blob/main/docs/10-adrs/ADR-025-english-only-active-documentation.md) |
+| ADR-026 | — No Unresolved Active Authority | [record](../blob/main/docs/10-adrs/ADR-026-no-unresolved-active-authority.md) |
+| ADR-027 | Contract-First Documentation and Generated Navigation | [record](../blob/main/docs/10-adrs/ADR-027-contract-first-documentation-and-generated-navigation.md) |
+| ADR-028 | Subsystem Documentation Remains Authoritative | [record](../blob/main/docs/10-adrs/ADR-028-subsystem-documentation-remains-authoritative.md) |
+
+## Decision workflow
+
+A significant architectural change should identify the affected authority, record the decision, update the owning contracts and documents, rebuild generated projections, and pass validation before activation.
+
+## Sources
+
+- [`docs/10-adrs/README.md`](../blob/main/docs/10-adrs/README.md)
+- [`docs/generated/decision-index.md`](../blob/main/docs/generated/decision-index.md)
+
+
+================================================================================================
+FILE: wiki/Ariane.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Ariane
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+Ariane represents interfaces, controls, actions, states, and relationships as a semantic navigation graph. It supports intent-based guidance, accessibility, and bounded automation without conflating navigation with authorization.
+
+Use the [public Ariane overview](https://initkoa.org/technology/ariane) and [Assisted Navigation with Ariane](Assisted-Navigation-with-Ariane).
+
+kOA-Linux provides local runtime, profile selection, permissions, resources, and optional external voice boundaries.
+
+
+================================================================================================
+FILE: wiki/Assisted-Navigation-with-Ariane.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Assisted Navigation with Ariane
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## What Ariane changes
+
+Traditional automation sees an interface as pixels, coordinates, selectors or undocumented scripts. Ariane treats the interface as data: screens, controls, actions, states and relationships form a semantic graph.
+
+That graph allows a person, an assistive technology, or a bounded agent to ask not only “where is the button?” but “what action is available, what does it do, what state is required, and what happens next?”
+
+## Navigation by intention
+
+```text
+user intention
+    ↓
+permitted capability and current context
+    ↓
+Ariane interface graph
+    ↓
+possible actions and prerequisites
+    ↓
+guided step, assistive action or bounded automation
+    ↓
+visible result and receipt when required
+```
+
+## Use cases
+
+- guide a user through a complex administrative process;
+- expose software to screen readers and other assistive systems through semantic actions;
+- provide consistent navigation across profile-specific interfaces;
+- help a local agent locate a permitted control without unrestricted host access;
+- support multilingual labels while preserving one underlying action model;
+- record which action was requested and which interface transition occurred.
+
+## Boundaries
+
+Ariane describes navigation and interaction possibilities. It does not automatically authorize an action. Authorization, consent, data disclosure and host privilege remain separate decisions.
+
+External voice or AI services are optional integrations. The local navigation model remains distinct from any provider and must degrade explicitly when an optional service is unavailable.
+
+## Offline behavior
+
+The local graph and approved interface metadata can remain usable without network access. Remote voice recognition or remote language services may be unavailable, but their absence must not silently change the action model.
+
+## Sources
+
+- [Ariane public overview](https://initkoa.org/technology/ariane)
+- [docs/02-system/11-ariane-system-boundary.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/11-ariane-system-boundary.md)
+- [docs/10-adrs/ADR-021-ariane-local-navigation-with-optional-external-voice.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/10-adrs/ADR-021-ariane-local-navigation-with-optional-external-voice.md)
+- [docs/contracts/subsystems/ariane.subsystem.json](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/contracts/subsystems/ariane.subsystem.json)
+
+
+================================================================================================
+FILE: wiki/Authority-and-Documentation.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# Authority and Documentation
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+## Contract-first architecture
+
+The documentation system is contract-first. Source contracts and focused explanatory documents own facts. Catalogs, indexes, matrices, manifests, and AI context packages are generated projections.
+
+## Authority order
+
+| Layer | Responsibility |
+| --- | --- |
+| Accepted decisions | Close significant architectural choices |
+| Source contracts | Own machine-readable system, component, profile, subsystem-boundary, integration, toolchain, and artifact facts |
+| Normative source documents | Explain requirements and procedures within their declared scope |
+| Executable validators | Enforce identities, schemas, references, boundaries, generated consistency, and release gates |
+| Generated outputs | Support discovery only; never override a source |
+| Recipes and examples | Provide bounded non-authoritative implementation guidance |
+
+## Scope discipline
+
+Authority remains explicit across global, profile, component, subsystem-boundary, integration, artifact, and recipe scopes. A narrower source cannot silently become global.
+
+## Subsystem authority
+
+Mounted subsystem documentation owns internal product behavior. kOA boundary contracts own deployment, resources, lifecycle, trust, health, storage exposure, artifact admission, and cross-subsystem interactions.
+
+Missing, conflicting, or unresolved authority blocks the affected activation. No undeclared replacement is selected.
+
+## Generated navigation
+
+Generated files under `docs/generated/` are disposable and rebuildable. Do not edit them manually.
+
+```bash
+python docs/tools/build_indexes.py
+python docs/tools/build_ai_context.py
+python docs/tools/check_generated_content.py
+```
+
+## AI reading order
+
+1. [`docs/AI_CONTEXT.md`](../blob/main/docs/AI_CONTEXT.md)
+2. [`docs/contracts/ai-navigation.contract.json`](../blob/main/docs/contracts/ai-navigation.contract.json)
+3. applicable source contract;
+4. applicable kOA boundary page;
+5. mounted subsystem documentation when internal behavior is needed;
+6. generated indexes for discovery only.
+
+## Sources
+
+- [`docs/00-governance/00-documentation-architecture.md`](../blob/main/docs/00-governance/00-documentation-architecture.md)
+- [`docs/00-governance/01-authority.md`](../blob/main/docs/00-governance/01-authority.md)
+- [`docs/00-governance/08-generated-content-policy.md`](../blob/main/docs/00-governance/08-generated-content-policy.md)
+- [`docs/00-governance/09-canonical-ownership.md`](../blob/main/docs/00-governance/09-canonical-ownership.md)
+- [`docs/00-governance/13-validation-pipeline.md`](../blob/main/docs/00-governance/13-validation-pipeline.md)
+- [`docs/contracts/ai-navigation.contract.json`](../blob/main/docs/contracts/ai-navigation.contract.json)
+
+
+================================================================================================
+FILE: wiki/Capability-Status.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Capability Status
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Status vocabulary
+
+| Status | Meaning |
+| --- | --- |
+| Publicly described | The capability is described on initkoa.org or an official public context pack. |
+| Boundary specified | The kOA-Linux repository defines how the subsystem integrates or operates. |
+| Target architecture | The required behavior is specified but needs implementation evidence. |
+| Profile-dependent | Availability depends on the selected deployment profile and installed artifacts. |
+| Experimental | The public source explicitly presents the system or feature as conceptual or experimental. |
+
+## Capability matrix
+
+| Capability | Public description | kOA-Linux boundary | Production claim |
+| --- | --- | --- | --- |
+| Siloed sovereign operation | System-of-systems and offline/portable architecture | Strongly specified | Requires deployment evidence |
+| Kristal portable knowledge | Core public technology | Runtime and artifact lifecycle specified | Requires implementation and conformance evidence |
+| Ariane assisted navigation | Public technology | Local boundary and optional external voice ADR | Requires subsystem implementation evidence |
+| Orgo roles, tasks and closure | Core public platform | Subsystem boundary specified | Requires Orgo deployment evidence |
+| Konnaxion public coordination | Core public platform | Subsystem boundary specified | Requires Konnaxion deployment evidence |
+| Multilingual deterministic rendering | Publicly described | Language boundary and artifact lifecycle specified | Semantik Architect is still described as experimental |
+| SenTient reconciliation | Public conceptual architecture | Optional isolated boundary | Explicitly not production-ready |
+| Offline operation | Core design commitment | Profiles, operations and lifecycle specified | Must be tested per profile |
+| Collective governance to execution | Cross-system design | Governance and boundary components specified | End-to-end integration evidence required |
+
+## Sources
+
+- [initkoa.org AI entry point](https://initkoa.org/llms.txt)
+- [docs/09-conformance/00-conformance-model.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/09-conformance/00-conformance-model.md)
+- [docs/03-profiles/03-profile-conformance-claims.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/03-profiles/03-profile-conformance-claims.md)
+
+
+================================================================================================
+FILE: wiki/Collective-Intelligence-to-Governance.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Collective Intelligence to Governance
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## The objective
+
+Collective intelligence is useful only when it improves understanding without hiding legitimacy. Governance becomes operational only when accepted outcomes can be converted into bounded authority, responsibilities, tasks, deadlines, review and recourse.
+
+## Konnaxion's role
+
+Konnaxion supports learning, structured deliberation, proposals, argument, drafting and collective decision interfaces. Kollective Intelligence can expose multiple transparent readings of a decision while keeping the democratic baseline visible.
+
+Smart Vote and EkoH-style readings may show domain-bounded competence signals. They are advisory views unless an explicit constitutional rule grants a specific effect. They do not silently reallocate decision rights.
+
+## Governance layer
+
+The governance layer evaluates:
+
+- which procedure applies;
+- whether quorum or thresholds are satisfied;
+- which authority recognizes the result;
+- what scope and duration the decision has;
+- which rights, consent or disclosure limits apply;
+- how the decision can be contested, reviewed or revoked;
+- whether the result may produce a mandate or operational authorization.
+
+## Orgo's role
+
+Orgo turns an accepted outcome into accountable work:
+
+```text
+decision or mandate
+    ↓
+responsible function or role
+    ↓
+case and tasks
+    ↓
+response windows and escalation
+    ↓
+explicit closure and evidence
+    ↓
+review and institutional learning
+```
+
+## Critical separation
+
+A vote or collective reading does not directly become root access, a signing key, a database write or an unbounded automated action. Policy evaluation, authorization and technical privilege remain separate boundaries.
+
+## Sources
+
+- [Kollective Intelligence](https://initkoa.org/platforms/konnaxion/kollective-intelligence)
+- [Smart Vote](https://initkoa.org/platforms/konnaxion/kollective-intelligence/smart-vote)
+- [EkoH](https://initkoa.org/initiatives/civic-governance/constitution/ekoh)
+- [Civic Constitution](https://initkoa.org/initiatives/civic-governance/constitution)
+- [docs/02-system/15-governance-policy-runtime.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/15-governance-policy-runtime.md)
+
+
+================================================================================================
+FILE: wiki/Community-and-Civic-Use.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Community and Civic Use
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Intended environment
+
+A community deployment uses Konnaxion for learning, projects, deliberation, collective decisions, distribution and shared memory, while kOA-Linux provides local continuity, trust and separation from private operational data.
+
+## Example flow
+
+1. Local knowledge packages are distributed online or offline.
+2. Members learn, discuss and submit proposals.
+3. Arguments and evidence remain linked to sources.
+4. Decision procedures publish a baseline result and any declared advisory readings.
+5. Accepted outcomes become mandates or Orgo cases.
+6. Progress and outcomes return to the community under disclosure policy.
+
+## Governance requirements
+
+Participation rules, privacy, consent, authority channels, thresholds, appeals and public evidence must remain explicit. Technical operators cannot silently alter civic legitimacy.
+
+## Sources
+
+- [Konnaxion](https://initkoa.org/platforms/konnaxion)
+- [Kollective Intelligence](https://initkoa.org/platforms/konnaxion/kollective-intelligence)
+- [Civic Constitution](https://initkoa.org/initiatives/civic-governance/constitution)
+
+
+================================================================================================
+FILE: wiki/Conformance-and-Validation.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# Conformance and Validation
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+## Complete pipeline
+
+Run from the repository root:
+
+```bash
+python docs/tools/validate_docs.py
+```
+
+The pipeline runs the specialized documentation controls before a documentation release can be considered valid.
+
+## Specialized validators
+
+| Validator | Purpose |
+| --- | --- |
+| `check_ai_boundary.py` | AI and external-integration authority boundaries |
+| `check_artifact_contracts.py` | Artifact schemas and examples |
+| `check_canonical_ownership.py` | Canonical ownership uniqueness |
+| `check_component_boundaries.py` | Component and subsystem separation |
+| `check_decision_closure.py` | Decision closure and unresolved choices |
+| `check_document_graph.py` | Document identities and dependency graph |
+| `check_generated_blocks.py` | Generated blocks inside source documents |
+| `check_generated_content.py` | Deterministic generated outputs |
+| `check_greenfield_architecture.py` | Active architecture constraints |
+| `check_interfile_locks.py` | Cross-file alignment locks |
+| `check_language.py` | Active documentation language policy |
+| `check_no_unresolved_state.py` | Unresolved authority or placeholder states |
+| `check_normative_language.py` | Normative language use |
+| `check_profile_inheritance.py` | Profile and overlay composition |
+| `check_release_sets.py` | Release-set and channel compatibility |
+| `check_subsystem_alignment.py` | Subsystem boundary contracts and mounts |
+| `check_traceability.py` | Decision, requirement, test, and evidence traceability |
+
+## Generated-content rebuild
+
+```bash
+python docs/tools/build_indexes.py
+python docs/tools/build_ai_context.py
+python docs/tools/check_generated_content.py
+```
+
+## Subsystem mounts
+
+Normal validation permits reserved paths to remain unmounted:
+
+```bash
+python docs/tools/check_subsystem_alignment.py
+```
+
+After all six official documentation trees are linked, require their presence:
+
+```bash
+python docs/tools/check_subsystem_alignment.py --require-mounted
+```
+
+## Evidence model
+
+Conformance claims require traceable requirements, tests, and evidence. Architectural prose alone is not sufficient for an implementation claim.
+
+## Sources
+
+- [`docs/09-conformance/00-conformance-model.md`](../blob/main/docs/09-conformance/00-conformance-model.md)
+- [`docs/09-conformance/01-requirement-identification.md`](../blob/main/docs/09-conformance/01-requirement-identification.md)
+- [`docs/09-conformance/02-requirement-traceability.md`](../blob/main/docs/09-conformance/02-requirement-traceability.md)
+- [`docs/09-conformance/05-test-evidence.md`](../blob/main/docs/09-conformance/05-test-evidence.md)
+- [`docs/09-conformance/06-release-evidence.md`](../blob/main/docs/09-conformance/06-release-evidence.md)
+- [`docs/09-conformance/19-release-gates.md`](../blob/main/docs/09-conformance/19-release-gates.md)
+- [`docs/09-conformance/20-subsystem-documentation-alignment.md`](../blob/main/docs/09-conformance/20-subsystem-documentation-alignment.md)
+- [`docs/09-conformance/21-generated-navigation-rebuild.md`](../blob/main/docs/09-conformance/21-generated-navigation-rebuild.md)
+- [`docs/tools/validate_docs.py`](../blob/main/docs/tools/validate_docs.py)
+
+
+================================================================================================
+FILE: wiki/Constitutional-Principles.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# Constitutional Principles
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+## Global commitments
+
+1. **Offline capability** — Core consultation, verification, execution, and recovery remain available without permanent cloud connectivity.
+2. **Verified activation** — Artifacts, policies, services, and releases activate only after integrity, compatibility, trust, and authorization checks succeed.
+3. **Safe degradation** — Failures block unsafe actions while preserving context, status, evidence, and recoverability.
+4. **Deterministic-first execution** — Core transformations are reproducible; AI remains optional, bounded, attributable, and unable to create invisible authority.
+5. **Least privilege** — Integrated subsystems and optional services do not receive unrestricted host capabilities.
+6. **Explicit governance** — Governance rules are versioned policy artifacts rather than undocumented operator behavior.
+7. **Selective audit** — The system remains auditable without indiscriminate disclosure of personal or operational data.
+8. **Semantic sovereignty** — Terminology, authority channels, contested concepts, and multilingual mappings remain governed and portable.
+9. **Cultural rights enforcement** — Consent, community authority, access conditions, withdrawal, and AI restrictions are enforced across the data lifecycle.
+10. **Credible exit** — Export, transfer, restore, self-hosting, trust handover, and operator independence are tested capabilities.
+
+## Interpretation
+
+Profiles and overlays may strengthen or narrow implementation choices, but they do not weaken global constitutional requirements. Components define behavior only inside active system, profile, security, lifecycle, data-ownership, and integration boundaries.
+
+## Key constitutional documents
+
+- [`docs/01-constitution/00-charter.md`](../blob/main/docs/01-constitution/00-charter.md)
+- [`docs/01-constitution/01-scope-and-non-goals.md`](../blob/main/docs/01-constitution/01-scope-and-non-goals.md)
+- [`docs/01-constitution/02-global-invariants.md`](../blob/main/docs/01-constitution/02-global-invariants.md)
+- [`docs/01-constitution/03-system-principles.md`](../blob/main/docs/01-constitution/03-system-principles.md)
+- [`docs/01-constitution/04-explicit-authority.md`](../blob/main/docs/01-constitution/04-explicit-authority.md)
+- [`docs/01-constitution/05-fail-closed-authority.md`](../blob/main/docs/01-constitution/05-fail-closed-authority.md)
+- [`docs/01-constitution/06-safe-degradation.md`](../blob/main/docs/01-constitution/06-safe-degradation.md)
+- [`docs/01-constitution/07-component-separation.md`](../blob/main/docs/01-constitution/07-component-separation.md)
+- [`docs/01-constitution/08-data-authority-and-ownership.md`](../blob/main/docs/01-constitution/08-data-authority-and-ownership.md)
+- [`docs/01-constitution/09-offline-continuity.md`](../blob/main/docs/01-constitution/09-offline-continuity.md)
+- [`docs/01-constitution/10-selective-audit-and-recourse.md`](../blob/main/docs/01-constitution/10-selective-audit-and-recourse.md)
+- [`docs/01-constitution/11-portability-restore-and-exit.md`](../blob/main/docs/01-constitution/11-portability-restore-and-exit.md)
+- [`docs/01-constitution/12-cultural-rights-and-consent.md`](../blob/main/docs/01-constitution/12-cultural-rights-and-consent.md)
+
+
+================================================================================================
+FILE: wiki/Contracts-and-Schemas.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Contracts and Schemas
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+The technical corpus uses source contracts for system, component, subsystem-boundary, profile, integration, toolchain, and artifact facts.
+
+Key directories:
+
+- `docs/contracts/components/` — internal kOA-Linux components;
+- `docs/contracts/subsystems/` — boundaries for independently owned systems;
+- `docs/contracts/profiles/` — deployable operating envelopes;
+- `docs/contracts/integrations/` — optional external services and platforms;
+- `docs/contracts/artifact-contracts/` — exchanged records, packages, manifests, and receipts;
+- `docs/generated/` — rebuildable discovery projections.
+
+Use [Related Wikis](Related-Wikis) for product-internal behavior. The kOA-Linux contracts define only the operating and exchange boundaries for those products.
+
+Repository entry points:
+
+- [System contract](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/contracts/system.contract.json)
+- [Generated component catalog](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/generated/component-catalog.md)
+- [Generated subsystem catalog](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/generated/subsystem-catalog.md)
+- [Generated profile catalog](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/generated/profile-catalog.md)
+- [Generated integration catalog](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/generated/integration-catalog.md)
+
+
+================================================================================================
+FILE: wiki/Contributing.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# Contributing
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+## Documentation change sequence
+
+1. Update the authoritative source contract or normative source document.
+2. When the change belongs to an independent subsystem, update its official documentation and only the kOA boundary in this repository.
+3. Add or update an ADR when an architectural decision changes.
+4. Rebuild generated indexes and AI context.
+5. Run the complete validation pipeline.
+6. Commit source changes and regenerated outputs together.
+7. Update the wiki only when its navigation or explanatory summary changes.
+
+## Prohibited documentation patterns
+
+Do not:
+
+- recreate hand-maintained registries or file catalogs;
+- duplicate a subsystem's internal model, complete API, workflow, or user interface;
+- edit generated outputs as sources;
+- infer missing authority from historical material;
+- introduce undeclared substitution or compatibility behavior;
+- use `.lnk` files for subsystem documentation mounts;
+- make an implementation claim without test and evidence support.
+
+## Commands
+
+```bash
+python docs/tools/build_indexes.py
+python docs/tools/build_ai_context.py
+python docs/tools/validate_docs.py
+```
+
+## Sources
+
+- [Repository overview and contribution summary](../blob/main/README.md)
+- [Documentation contribution guidance](../blob/main/docs/CONTRIBUTING.md)
+- [`docs/00-governance/04-change-protocol.md`](../blob/main/docs/00-governance/04-change-protocol.md)
+- [`docs/00-governance/11-change-impact-and-versioning.md`](../blob/main/docs/00-governance/11-change-impact-and-versioning.md)
+
+
+================================================================================================
+FILE: wiki/Control-Portability-and-Recovery.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Control, Portability, and Recovery
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+Sovereignty requires practical control over data, meaning, software, trust, and continuity.
+
+The architecture therefore treats the following as tested capabilities:
+
+- export of local data, knowledge artifacts, media manifests, policies, cases, tasks, and evidence;
+- verification of exported packages;
+- restoration on another compatible node;
+- backup and recovery without permanent cloud dependency;
+- trust-root and operator handover;
+- revocation of former access;
+- visibility into active versions and queued exchanges;
+- preservation of source authority when artifacts move between systems.
+
+Portability does not mean that every external platform database is copied locally. It means that selected, governed artifacts can move while preserving identity, provenance, rights, versions, and authority boundaries.
+
+
+================================================================================================
+FILE: wiki/Crisis-Field-and-Air-Gapped-Use.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Crisis, Field, and Air-Gapped Use
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Intended environment
+
+A field team, crisis unit, remote institution or high-assurance environment may operate with intermittent or no network access. The deployment must preserve local knowledge, operational work, evidence and recovery without pretending that remote services are available.
+
+## Local capabilities
+
+- verified procedures and knowledge packs;
+- local search and navigation;
+- offline Orgo cases and tasks;
+- local files and evidence;
+- local policy evaluation where required;
+- queued synchronization and publication;
+- removable-media updates with verification;
+- backup and restore without cloud dependency.
+
+## Safety rules
+
+- stale or unverified data remains visibly labeled;
+- conflicts are reviewed under declared strategies;
+- failed verification blocks activation;
+- emergency or break-glass actions are bounded, logged and reviewed;
+- offline does not remove accountability.
+
+## Sources
+
+- [Kristal offline scenarios](https://initkoa.org/technology/kristal/portability-and-offline)
+- [Orgo offline-first resilience](https://initkoa.org/platforms/orgo/guarantees)
+- [docs/03-profiles/12-sovereign-offline.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/03-profiles/12-sovereign-offline.md)
+- [docs/07-security/18-offline-import-security.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/07-security/18-offline-import-security.md)
+
+
+================================================================================================
+FILE: wiki/Cultural-Sovereignty.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Cultural Sovereignty
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Culture as governed memory
+
+Cultural sovereignty requires more than a repository of files. A cultural system must preserve the relationships that make a work meaningful:
+
+- creator and community identity;
+- provenance and lineage;
+- cultural context;
+- rights, restrictions, licences, and attribution;
+- consent and withdrawal;
+- authority to interpret, display, reuse, translate, or train AI;
+- moderation, disputes, revisions, and decision records.
+
+## Kreative and Konservation
+
+Within Konnaxion:
+
+- **Kreative** is the cultural memory, collaboration, discovery, and creator-network layer.
+- **Konservation** is the preservation and archive-oriented submodule.
+- **Kontact** connects creators, communities, institutions, collaborators, patrons, and opportunities.
+
+Detailed product documentation belongs in the [Konnaxion Wiki](https://github.com/Rejean-McCormick/Konnaxion/wiki), especially [Konservation](https://github.com/Rejean-McCormick/Konnaxion/wiki/Konservation) and [Kontact](https://github.com/Rejean-McCormick/Konnaxion/wiki/Kontact).
+
+## Integration without appropriation
+
+External collections can be mapped into shared structures while preserving source identity, stewardship, rights, and access restrictions. Interoperability must not erase the authority of museums, archives, Indigenous governance bodies, artists, or communities.
+
+AI may suggest tags, descriptions, translations, accessibility text, or duplicate candidates. It must not silently define cultural meaning or override community authority.
+
+
+================================================================================================
+FILE: wiki/Current-Scope-and-Limits.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Current Scope and Limits
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## What is complete in this repository
+
+The documentation corpus defines and validates a contract-first target architecture for kOA-Linux Operating System. It includes system principles, profiles, component boundaries, security, lifecycle, operations, conformance, schemas, accepted ADRs, generators and validators.
+
+## What remains implementation-dependent
+
+The repository does not prove that every component is already implemented or production-tested. Evidence is still required for final host distribution choices, immutable image mechanisms, production key custody, hardware assurance, capacity limits, database isolation at scale, regulatory profiles and production implementations of internal services.
+
+## Subsystem dependency
+
+The detailed user behavior of Ariane, Konnaxion, Orgo, SenTient, and SemantiK Architect belongs to those subsystem specifications. The kOA-Linux repository currently reserves documentation mount points for pinned official subsystem documentation.
+
+## Public-site status distinctions
+
+- Konnaxion, Orgo, Kristal and the governance model are described as core parts of the kOA ecosystem.
+- Semantik Architect is described as an independent experimental architecture for deterministic multilingual rendering.
+- SenTient is explicitly described as conceptual or experimental and not production-ready.
+- The wiki therefore distinguishes **intended capability**, **specified boundary**, and **production evidence**.
+
+## No silent completion claims
+
+A validated documentation tree proves consistency of the documentation and contracts. It does not by itself prove performance, security, usability, legal compliance or operational readiness on every target deployment.
+
+## Sources
+
+- [Repository implementation status](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/README.md)
+- [docs/01-constitution/01-scope-and-non-goals.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/01-scope-and-non-goals.md)
+- [docs/09-conformance/00-conformance-model.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/09-conformance/00-conformance-model.md)
+- [SenTient status](https://initkoa.org/technology/sentient)
+- [Semantik Architect status](https://initkoa.org/technology/architect)
+
+
+================================================================================================
+FILE: wiki/Decisions-to-Execution.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# From Decisions to Execution
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Why decisions often fail
+
+Many institutions can discuss and vote but cannot reliably convert an outcome into accountable follow-through. Responsibility remains implicit, deadlines disappear, and closure is replaced by status meetings or message threads.
+
+Orgo supplies the execution layer, while kOA-Linux supplies the environment and governance boundary.
+
+## Execution contract
+
+An operationalized decision should identify:
+
+- the decision or mandate reference;
+- the responsible function or role;
+- affected organizations, people or locations;
+- required cases and tasks;
+- inputs and expected outputs;
+- response and completion windows;
+- escalation rules;
+- confidentiality and visibility;
+- approval or human-review gates;
+- closure criteria and evidence;
+- review, appeal or revocation conditions.
+
+## Signal-to-closure lifecycle
+
+1. A decision, report, request or incident becomes a signal.
+2. The signal is normalized and classified.
+3. A case provides durable context and ownership.
+4. Tasks express executable work.
+5. Work routes to functions or roles rather than relying only on named individuals.
+6. Time windows make delay visible.
+7. Escalation occurs under explicit rules.
+8. Closure records what happened and what remains open.
+9. Patterns create review work.
+
+## Automation
+
+Tasks may be performed by humans, deterministic tools, constrained agents or hybrid methods. Automation must remain allowlisted, resource-bounded, attributable and subject to the same approval and evidence requirements.
+
+## Sources
+
+- [Orgo workflow](https://initkoa.org/platforms/orgo/workflow)
+- [Orgo flows](https://initkoa.org/platforms/orgo/flows)
+- [Routing and escalation](https://initkoa.org/platforms/orgo/routing-escalation)
+- [Core guarantees](https://initkoa.org/platforms/orgo/guarantees)
+- [docs/02-system/20-receipts-and-critical-transitions.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/20-receipts-and-critical-transitions.md)
+
+
+================================================================================================
+FILE: wiki/Deployment-Choices.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# Deployment Choices
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## One architecture, different capability sets
+
+kOA-Linux Operating System uses profiles to state what a deployment includes, how much resource it may consume, which network assumptions apply, and how it behaves when a capability is unavailable.
+
+## Main choices
+
+| Profile or overlay | What it is for |
+| --- | --- |
+| User Lightweight | Daily local use on commodity hardware with bounded resources |
+| Developer Linux Workstation | Isolated local development and testing on Linux |
+| Developer Windows WSL | Isolated development from a Windows workstation using WSL |
+| Sovereign Linux Node | Hardened production operation on one Linux node |
+| Sovereign Hub | Locally autonomous shared services and coordination |
+| Build Farm | Heavy compilation, validation, indexing, and artifact production |
+| Control Plane | Release coordination, policy distribution, fleet metadata, and controlled oversight |
+| Appliance Shell overlay | A focused appliance-style user surface |
+| High Assurance overlay | Stronger trust, key custody, separation of duties, audit, and recovery requirements |
+| Sovereign Offline overlay | Stricter offline and disconnected-operation conditions |
+
+Profiles can compose with overlays, but an overlay may not silently weaken the primary profile's baseline.
+
+## Sources
+
+- [Profile model](../blob/main/docs/03-profiles/00-profile-model.md)
+- [Profile composition](../blob/main/docs/03-profiles/01-profile-composition-and-overlays.md)
+- [Generated profile catalog](../blob/main/docs/generated/profile-catalog.md)
+- [Profile contracts](../tree/main/docs/contracts/profiles/)
+
+
+================================================================================================
+FILE: wiki/Deployment-Profiles.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# Deployment Profiles
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+Profiles define deployable capability sets, resource limits, connectivity, component and subsystem membership, activation rules, degradation behavior, and conformance claims.
+
+## Active profiles and overlays
+
+| Profile | Type | Summary | Documentation | Contract |
+| --- | --- | --- | --- | --- |
+| Appliance Shell Overlay | overlay |  | [guide](../blob/main/docs/03-profiles/13-appliance-shell.md) | [contract](../blob/main/docs/contracts/profiles/appliance-shell.profile.json) |
+| Build Farm |  |  | [guide](../blob/main/docs/03-profiles/09-build-farm.md) | [contract](../blob/main/docs/contracts/profiles/build-farm.profile.json) |
+| Control Plane | primary_deployment_profile |  | [guide](../blob/main/docs/03-profiles/10-control-plane.md) | [contract](../blob/main/docs/contracts/profiles/control-plane.profile.json) |
+| Developer Linux Workstation | deployment_profile |  | [guide](../blob/main/docs/03-profiles/05-developer-linux-workstation.md) | [contract](../blob/main/docs/contracts/profiles/developer-linux-workstation.profile.json) |
+| Developer Windows WSL | primary_profile |  | [guide](../blob/main/docs/03-profiles/06-developer-windows-wsl.md) | [contract](../blob/main/docs/contracts/profiles/developer-windows-wsl.profile.json) |
+| High Assurance | profile_overlay | A composable security and governance overlay that strengthens boot identity, hardware-backed trust, key custody, separation of duties, privileged operations, artifact verification, audit, recovery, and conformance evidence without changing the global product model or becoming a… | [guide](../blob/main/docs/03-profiles/11-high-assurance.md) | [contract](../blob/main/docs/contracts/profiles/high-assurance.profile.json) |
+| Sovereign Hub | deployment_profile |  | [guide](../blob/main/docs/03-profiles/08-sovereign-hub.md) | [contract](../blob/main/docs/contracts/profiles/sovereign-hub.profile.json) |
+| Sovereign Linux Node | primary | A hardened single-node Linux production profile with a maintained standard kernel, verified immutable signed system images, atomic activation, explicit release identity, closed-by-default networking, narrow privileged host mutation, selective audit, offline recovery, and tested… | [guide](../blob/main/docs/03-profiles/07-sovereign-linux-node.md) | [contract](../blob/main/docs/contracts/profiles/sovereign-linux-node.profile.json) |
+| Sovereign Offline Overlay | deployment_profile_overlay |  | [guide](../blob/main/docs/03-profiles/12-sovereign-offline.md) | [contract](../blob/main/docs/contracts/profiles/sovereign-offline.profile.json) |
+| User Lightweight | primary | A resource-bounded, general-purpose Linux deployment for daily local use on commodity hardware. | [guide](../blob/main/docs/03-profiles/04-user-lightweight.md) | [contract](../blob/main/docs/contracts/profiles/user-lightweight.profile.json) |
+
+## Composition rules
+
+- Primary profiles establish the deployment baseline.
+- Overlays add stricter or narrower conditions without silently weakening the baseline.
+- Profile membership is explicit; components do not infer deployment from their own contracts.
+- Resource, connectivity, security, offline, and degradation claims remain profile-scoped.
+
+## Model sources
+
+- [`docs/03-profiles/00-profile-model.md`](../blob/main/docs/03-profiles/00-profile-model.md)
+- [`docs/03-profiles/01-profile-composition-and-overlays.md`](../blob/main/docs/03-profiles/01-profile-composition-and-overlays.md)
+- [`docs/03-profiles/02-profile-inheritance.md`](../blob/main/docs/03-profiles/02-profile-inheritance.md)
+- [`docs/03-profiles/03-profile-conformance-claims.md`](../blob/main/docs/03-profiles/03-profile-conformance-claims.md)
+- [`docs/generated/profile-catalog.md`](../blob/main/docs/generated/profile-catalog.md)
+
+
+================================================================================================
+FILE: wiki/Deployment-Scenarios.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Deployment Scenarios
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Select a scenario
+
+| Scenario | Primary pages |
+| --- | --- |
+| One person or a lightweight local machine | [Personal and local use](Personal-and-Local-Use) |
+| Community learning and civic coordination | [Community and civic use](Community-and-Civic-Use) |
+| Private organizational execution | [Organizational operations](Organizational-Operations) |
+| Schools, learning groups and mentorship | [Education and learning](Education-and-Learning) |
+| Municipality or public service | [Municipality and public service](Municipality-and-Public-Service) |
+| Field, crisis, remote or air-gapped operations | [Crisis, field, and air-gapped use](Crisis-Field-and-Air-Gapped-Use) |
+| Cross-language knowledge sharing | [Multilingual knowledge networks](Multilingual-Knowledge-Networks) |
+
+## Profile selection
+
+A scenario does not automatically determine one deployment profile. Capacity, connectivity, assurance, number of users, data sensitivity, build requirements and administrative model determine whether the system uses a lightweight endpoint, sovereign node, hub, build farm, control plane or high-assurance overlay.
+
+See [Deployment choices](Deployment-Choices) and [Deployment profiles](Deployment-Profiles) for the technical model.
+
+
+================================================================================================
+FILE: wiki/Development-Model.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# Development Model
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+## Workspace isolation
+
+A development workspace is the isolation unit for one application, branch, or worktree. Each workspace receives its own identity, mutable dependency environment, service state, ports, secrets, databases, volumes, and resource budget.
+
+Shared content-addressed download and build caches may be reused. Mutable installed environments and runtime state are not shared.
+
+## Python toolchain
+
+UV is the declared Python dependency and environment manager. Workspaces use versioned `pyproject.toml` and `uv.lock` files with a workspace-local virtual environment.
+
+## Service isolation
+
+- rootless service containers where applicable;
+- workspace-specific networks, sockets, volumes, and databases;
+- explicit port allocation;
+- no shared mutable secrets or application state;
+- bounded CPU, memory, I/O, queues, and concurrency.
+
+## Publication boundary
+
+Development output is a candidate until it passes build, test, schema, provenance, evidence, and release admission controls. A local workspace cannot directly activate a production artifact.
+
+## Sources
+
+- [`docs/05-development/00-development-model.md`](../blob/main/docs/05-development/00-development-model.md)
+- [`docs/05-development/02-workspace-identity.md`](../blob/main/docs/05-development/02-workspace-identity.md)
+- [`docs/05-development/03-workspace-isolation.md`](../blob/main/docs/05-development/03-workspace-isolation.md)
+- [`docs/05-development/04-dependency-isolation.md`](../blob/main/docs/05-development/04-dependency-isolation.md)
+- [`docs/05-development/05-python-uv.md`](../blob/main/docs/05-development/05-python-uv.md)
+- [`docs/05-development/06-service-containers.md`](../blob/main/docs/05-development/06-service-containers.md)
+- [`docs/05-development/07-ports-networks-and-sockets.md`](../blob/main/docs/05-development/07-ports-networks-and-sockets.md)
+- [`docs/05-development/08-volumes-and-persistent-data.md`](../blob/main/docs/05-development/08-volumes-and-persistent-data.md)
+- [`docs/05-development/09-secrets-and-local-identities.md`](../blob/main/docs/05-development/09-secrets-and-local-identities.md)
+- [`docs/05-development/14-build-test-and-validation.md`](../blob/main/docs/05-development/14-build-test-and-validation.md)
+- [`docs/05-development/15-artifact-publication.md`](../blob/main/docs/05-development/15-artifact-publication.md)
+- [`docs/contracts/toolchains/python-uv.toolchain.json`](../blob/main/docs/contracts/toolchains/python-uv.toolchain.json)
+
+
+================================================================================================
+FILE: wiki/Documentation-Map.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Documentation Map
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Main Wiki map
+
+- [What kOA does](What-kOA-Does)
+- [Sociotechnical Operating System](Sociotechnical-Operating-System)
+- [Knowledge-to-action loop](Knowledge-to-Action-Loop)
+- [Modules and submodules](Modules-and-Submodules)
+- [Societal outcomes](Societal-Outcomes)
+- [Use cases](Use-Cases)
+- [Related Wikis](Related-Wikis)
+
+## Repository documentation
+
+- [Documentation README](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/README.md)
+- [System overview](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/00-system-overview.md)
+- [Profile model](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/03-profiles/00-profile-model.md)
+- [Component documentation](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/04-components/README.md)
+- [Lifecycle](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/06-lifecycle/00-artifact-model.md)
+- [Security](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/07-security/00-threat-model.md)
+- [Operations](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/08-operations/00-operating-model.md)
+- [Conformance](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/09-conformance/00-conformance-model.md)
+- [Generated indexes](https://github.com/Rejean-McCormick/kOA-Linux/tree/main/docs/generated)
+
+
+================================================================================================
+FILE: wiki/Education-and-Learning.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Education and Learning
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Intended environment
+
+Konnaxion can distribute learning materials, learning paths, mentorship and community knowledge. Kristals preserve provenance and offline usability. Semantik Architect can render structured material into multiple languages. Orgo can coordinate educational cases, tasks, groups and support workflows.
+
+## Example capabilities
+
+- offline learning packages for low-connectivity environments;
+- multilingual content and localized navigation;
+- mentorship requests and learning groups;
+- portable competence or certification evidence;
+- routing support needs to accountable roles;
+- preservation of learning resources and provenance.
+
+## Important boundary
+
+Educational validity, certification authority and curriculum recognition require explicit authority channels. A generated summary or automated completion signal does not create recognized competence by itself.
+
+## Sources
+
+- [Konnaxion](https://initkoa.org/platforms/konnaxion)
+- [Education module](https://initkoa.org/initiatives/civic-governance/modules/education)
+- [Offline knowledge](https://initkoa.org/technology/kristal/portability-and-offline)
+
+
+================================================================================================
+FILE: wiki/Everyday-Use.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Everyday Use
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+A person does not interact with the entire architecture at once. They enter through the workspace relevant to their role and purpose.
+
+Examples:
+
+- learn from local or shared resources;
+- navigate a complex process with Ariane assistance;
+- join a Konnaxion project, consultation, debate, or cultural space;
+- inspect the evidence and provenance behind a claim;
+- see baseline and advisory readings of collective support;
+- receive an Orgo task because a decision or signal requires action;
+- work offline with local knowledge, files, and queued updates;
+- preserve or publish selected cultural and educational content under explicit rights.
+
+The interface should always show which organization, authority, profile, version, connectivity state, and next responsibility apply.
+
+
+================================================================================================
+FILE: wiki/FAQ.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Frequently Asked Questions
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Is kOA-Linux the whole kOA ecosystem?
+
+No. kOA-Linux is the sovereign runtime. The wider ecosystem includes independently documented platforms, modules, knowledge systems, language systems, governance services, and cultural layers.
+
+## Where are Konnaxion's modules documented?
+
+In the [Konnaxion Wiki](https://github.com/Rejean-McCormick/Konnaxion/wiki). This Wiki lists the modules only to show how they fit into the knowledge-to-action loop.
+
+## Where is Orgo documented?
+
+In the [Orgo Wiki](https://github.com/Rejean-McCormick/Orgo/wiki).
+
+## Is collective intelligence the same as majority rule?
+
+No. The architecture distinguishes equal political standing, advisory credibility, expertise signals, decision procedures, and technical authorization.
+
+## Does kOA require consensus?
+
+No. It aims to make disagreement structured, visible, and actionable while preserving minority positions, uncertainty, and recourse.
+
+## Is UCKK part of kOA-Linux?
+
+No. UCKK is an external Moodle platform. The kOA Mediatheque is the local media authority.
+
+## Can the system work offline?
+
+Yes, for profile-selected capabilities and artifacts present locally. External exchange and remote services are deferred or unavailable explicitly.
+
+## Does AI decide?
+
+No. AI may assist with extraction, summaries, translation, classification, or routing. Authoritative acceptance and sensitive actions remain governed.
+
+## Does a passing documentation validation prove production readiness?
+
+No. It proves the checks implemented for the documentation corpus. Runtime and deployment evidence remain separate.
+
+
+================================================================================================
+FILE: wiki/Feature-Source-Map.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Capability and Ownership Map
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+| Capability | Product owner | Role of kOA-Linux |
+| --- | --- | --- |
+| Portable validated knowledge | Kristal | verify, activate, store, expose, and distribute artifacts locally |
+| Candidate semantic reconciliation | SenTient | optional isolated execution and resource limits |
+| Learning and knowledge sharing | Konnaxion / KonnectED | local hosting, identity, storage, offline packages, controlled exchange |
+| Structured deliberation | Konnaxion / Ethikos | trusted runtime and integration boundaries |
+| Credibility and advisory readings | EkoH and Smart Vote | preserve policy, evidence, audit, and separation from machine privilege |
+| Project and innovation collaboration | keenKonnect | local services, resources, files, and external boundaries |
+| Cultural memory and creator networks | Kreative / Konservation / Kontact | local storage, rights enforcement, privacy, backup, and publication controls |
+| Organizational execution | Orgo | isolation, local databases and queues, identity, availability, recovery |
+| Multilingual realization | SemantiK Architect | activate verified language artifacts and bound runtime resources |
+| Assisted navigation | Ariane | host local navigation, authorize actions separately, bound external voice/AI |
+| Local media authority | kOA Mediatheque | complete internal ownership |
+| External learning distribution | UCKK | explicit, optional publication/import integration only |
+| Policy and rights enforcement | Governance Policy Runtime | complete internal ownership |
+| Offline and sovereign operation | kOA-Linux | primary owner |
+
+Cross-system outcomes—such as group-to-organization, collective judgment-to-execution, multilingual assisted navigation, or culture-to-governance—must identify the owner of every transition.
+
+
+================================================================================================
+FILE: wiki/Files-Media-and-Provenance.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Files, Media, and Provenance
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Local authority
+
+The **kOA Mediatheque** owns media and file records held by the local installation: identity, version, verified hash, managed content reference, metadata, provenance, rights, restrictions, relations, collections, languages, renditions, lifecycle, import/export history, backup, and restore state.
+
+## Cultural context
+
+Konnaxion's Kreative and Konservation layers add cultural context, creator and community authority, consent, exhibitions, collaboration, and rights-aware discovery. They should link to local media records rather than silently replace their authority.
+
+## External UCKK objects
+
+An object published to UCKK becomes a distinct UCKK object. A resource imported from UCKK becomes a distinct local kOA object. Provenance relates the records without merging databases or lifecycles.
+
+## AI boundary
+
+AI may propose tags, descriptions, translations, accessibility text, or duplicate candidates. The owning workflow accepts, rejects, or corrects those candidates; AI does not silently define meaning, rights, or authority.
+
+Repository sources:
+
+- [kOA Mediatheque system boundary](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/12-koa-mediatheque-system-boundary.md)
+- [kOA Mediatheque component](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/04-components/koa-mediatheque.md)
+- [UCKK publication bridge](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/04-components/uckk-publication-bridge.md)
+
+
+================================================================================================
+FILE: wiki/Global-Communications-and-Distribution.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Global Communications and Distribution
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Communication is part of coordination
+
+The kOA model does not treat communication as an isolated chat feature. A communication may be public knowledge, an announcement, a request, an incident report, a decision, a task-generating signal, a distribution package or a synchronization event.
+
+## Two complementary paths
+
+### Konnaxion: public and community distribution
+
+Konnaxion supports the publication and distribution of learning resources, knowledge, projects, deliberation, decisions and shared memory. Content may be delivered online, mirrored locally or packaged for offline use.
+
+### Orgo: communications that require accountable action
+
+Orgo can ingest email, forms, APIs, field notes, call logs, imported archives and other signals. Role inboxes map communication channels to functions. Workflow rules decide whether a signal opens a case, creates tasks, routes work, starts a timer or triggers escalation.
+
+## A governed communication path
+
+```text
+message, report or event
+    ↓
+identity, consent and disclosure checks
+    ↓
+classification: information / request / update / decision / report / distribution
+    ↓
+public distribution or private organizational routing
+    ↓
+receipt, ownership, task or queued delivery
+    ↓
+response, escalation and closure when action is required
+```
+
+## Global does not mean centralized
+
+Distribution can cross organizations and regions while each node preserves its own authority, storage and policy. Portable artifacts, local mirrors, asynchronous queues and explicit gateways reduce dependence on one global service.
+
+## Automation boundaries
+
+Automated messages must identify their source, applicable policy, target scope and whether action is expected. High-volume automation must be rate-limited and cannot bypass consent, visibility or role permissions.
+
+## Sources
+
+- [Konnaxion](https://initkoa.org/platforms/konnaxion)
+- [What Orgo does](https://initkoa.org/platforms/orgo/what-it-does)
+- [Routing and escalation](https://initkoa.org/platforms/orgo/routing-escalation)
+- [docs/02-system/07-cross-component-communication.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/07-cross-component-communication.md)
+- [docs/07-security/17-cross-domain-publication.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/07-security/17-cross-domain-publication.md)
+
+
+================================================================================================
+FILE: wiki/Glossary.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# Glossary
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+| Term | Meaning |
+| --- | --- |
+| Active authority | The currently activated source contracts, accepted decisions, normative documents, and validation rules for a declared scope. |
+| Artifact | A versioned object admitted, verified, activated, transferred, retained, or removed through a declared lifecycle contract. |
+| Boundary contract | A machine-readable declaration of responsibilities, exchanges, dependencies, health, resources, security, and prohibited behavior at an integration boundary. |
+| Candidate output | Information produced by an optional workbench or external integration that has not been accepted by an authoritative owner. |
+| Component | An internal kOA unit whose responsibilities, state, interfaces, failure behavior, and evidence obligations are fully documented by kOA. |
+| Contract-first | A documentation model in which source contracts own machine-readable facts and generated indexes provide discovery. |
+| Credible exit | The tested ability to export, transfer, restore, self-host, hand over trust, or leave an operator or provider. |
+| Generated projection | A rebuildable catalog, index, matrix, manifest, or AI context package with no independent authority. |
+| Profile | A deployable selection of capabilities, components, subsystems, resources, connectivity, security, and degradation behavior. |
+| Receipt | A machine-readable record of a governed decision or critical transition, including identity, authority, inputs, outcome, and evidence references. |
+| Release set | A compatible, verified selection of versioned release-channel artifacts activated together. |
+| Safe degradation | Failure behavior that blocks unsafe actions while preserving context, state, evidence, and a declared recovery path. |
+| Selective audit | Auditability controlled by purpose, policy, disclosure class, and recourse rather than unrestricted transparency. |
+| Subsystem | An independently documented product integrated through a kOA operating and integration boundary. |
+| Workspace | A development isolation unit with its own identity, mutable dependencies, services, state, ports, secrets, databases, and resource budget. |
+
+The canonical vocabulary is owned by [`docs/contracts/terminology.contract.json`](../blob/main/docs/contracts/terminology.contract.json). The readable source glossary is [`docs/01-constitution/13-glossary.md`](../blob/main/docs/01-constitution/13-glossary.md).
+
+
+================================================================================================
+FILE: wiki/Governance-Plane.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Governance Plane
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Purpose
+
+The governance plane turns explicit sociotechnical rules into inspectable decisions about authorization, disclosure, activation, consent, rights, emergency behavior, export and recourse.
+
+## It does not do
+
+A governance result does not directly become root privilege. The system separates civic legitimacy, organizational mandates, knowledge authority, service permissions, signing authority and host operations.
+
+## Main outputs
+
+- authorization or denial;
+- disclosure and publication decisions;
+- activation decisions;
+- policy and version references;
+- conditions and expiry;
+- receipts and evidence links;
+- recourse or review hooks.
+
+## Sources
+
+- [Civic Constitution](https://initkoa.org/initiatives/civic-governance/constitution)
+- [docs/02-system/15-governance-policy-runtime.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/15-governance-policy-runtime.md)
+- [docs/04-components/governance-policy-runtime.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/04-components/governance-policy-runtime.md)
+
+
+================================================================================================
+FILE: wiki/Governance-Trust-and-Recourse.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Governance, Trust, Rights, and Recourse
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Governance as an operating constraint
+
+Governance is not a decorative policy page. It defines which actions are legitimate, which data may be disclosed, who may authorize sensitive transitions, how decisions are recorded, and how people can contest or exit the system.
+
+## Core safeguards
+
+- **Non-domination:** operators and technical administrators do not receive unlimited civic or organizational authority.
+- **Auditability:** important outcomes can be traced to inputs, rules and authorized roles.
+- **Contestability:** decisions and automated outcomes expose a review path.
+- **Fail-closed integrity:** failed verification blocks authority rather than silently weakening rules.
+- **Selective disclosure:** institutions can be accountable without publishing every personal or operational detail.
+- **Consent and cultural rights:** access, use, withdrawal and AI restrictions follow explicit policy.
+- **Right to exit:** people and organizations can export data, rules and portable artifacts.
+
+## Trust layers
+
+The system separates:
+
+- identity of people and services;
+- role or mandate authority;
+- artifact integrity and signer trust;
+- recognition of knowledge assertions;
+- permission to disclose data;
+- authorization to perform an operation;
+- host privilege.
+
+One form of trust does not automatically grant the others.
+
+## Receipts and recourse
+
+Critical decisions and operations should produce machine-readable receipts that identify the policy, inputs, decision, actor, time and relevant evidence. Recourse may reopen a case, suspend an action, create a review task or activate an appeal procedure.
+
+## Sources
+
+- [Civic Constitution](https://initkoa.org/initiatives/civic-governance/constitution)
+- [Civic Bill of Rights](https://initkoa.org/initiatives/civic-governance/constitution/rights)
+- [docs/01-constitution/10-selective-audit-and-recourse.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/10-selective-audit-and-recourse.md)
+- [docs/02-system/15-governance-policy-runtime.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/15-governance-policy-runtime.md)
+- [docs/02-system/20-receipts-and-critical-transitions.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/20-receipts-and-critical-transitions.md)
+
+
+================================================================================================
+FILE: wiki/Groups-to-Organizations.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# From Groups to Organizations
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## A cross-system outcome
+
+“Turn a group of people into an organization” is not one button or one database table. It is a progression from shared attention to legitimate structure and accountable execution. In kOA, this outcome spans Konnaxion, governance rules and Orgo.
+
+## The progression
+
+### 1. Gather around a subject, place or need
+
+Konnaxion provides spaces for learning, collaboration, projects, public discussion and shared resources.
+
+### 2. Form a shared purpose
+
+The group develops a mission, problem statement, proposal or project. Relevant knowledge can be packaged and cited through Kristal.
+
+### 3. Make membership and participation visible
+
+The group identifies participants, contribution rules, consent, rights and the scope of public or private information.
+
+### 4. Establish legitimate rules
+
+The group adopts a charter, decision procedure, delegation model and review process. Advisory expertise can inform decisions without silently replacing the democratic baseline.
+
+### 5. Create operational structure
+
+Orgo represents the organization, roles, permissions, teams, role inboxes, cases, tasks, response windows and escalation ladders.
+
+### 6. Execute and learn
+
+Accepted decisions become owned work. Outcomes, unresolved issues, audits and recurring patterns return to the collective for review.
+
+## What the operating system contributes
+
+kOA-Linux provides the separated public and private environments, identity and trust services, policy evaluation, local databases, messaging boundaries, artifact storage, offline operation, backup and recovery.
+
+## What remains a product contract
+
+The exact onboarding flow, legal status, membership lifecycle, voting rules, role taxonomy and dissolution procedure must be defined by Konnaxion, Orgo and governance specifications. The operating system must not invent those rules.
+
+## Sources
+
+- [Konnaxion](https://initkoa.org/platforms/konnaxion)
+- [What Orgo does](https://initkoa.org/platforms/orgo/what-it-does)
+- [Civic Constitution](https://initkoa.org/initiatives/civic-governance/constitution)
+- [docs/02-system/04-component-boundaries.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/04-component-boundaries.md)
+
+
+================================================================================================
+FILE: wiki/Home.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# kOA-Linux Operating System
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+> **kOA-Linux Operating System is the sovereign runtime for a wider knowledge-to-action ecosystem.**
+
+## The big picture
+
+Communities, schools, organizations, researchers, public institutions, and cultural networks often possess information, experience, and motivation but lack a reliable path from what they know to what they can do together.
+
+The wider **kOA ecosystem** is designed to operate that path:
+
+```text
+Know → Choose → Act → Remember → Know better
+```
+
+In operational terms:
+
+```text
+signals, documents, experience, and cultural memory
+→ structured and verifiable knowledge
+→ learning, consultation, and deliberation
+→ legitimate decisions with visible reasoning
+→ roles, tasks, coordination, escalation, and closure
+→ evidence, institutional memory, and renewed knowledge
+```
+
+The aim is not to build one giant application. kOA is a **system of systems**: each platform owns a distinct part of the cycle, while kOA-Linux provides local execution, isolation, offline continuity, trust, policy, resources, recovery, and controlled integration.
+
+## What the ecosystem does
+
+| Collective need | kOA capability |
+| --- | --- |
+| Turn fragmented information into reusable knowledge | Semantic processing, [Kristal artifacts](https://github.com/Rejean-McCormick/kristal-framework), provenance, versions, uncertainty, and verification |
+| Help people learn and build competence | [Konnaxion](https://github.com/Rejean-McCormick/Konnaxion/wiki) learning modules, portable resources, multilingual rendering, and offline packages |
+| Make disagreement understandable | Structured consultation, argumentation, drafting, and visible decision procedures |
+| Improve judgment without replacing democracy | EkoH credibility signals and Smart Vote advisory readings kept separate from sovereign results |
+| Turn decisions into accountable action | [Orgo](https://github.com/Rejean-McCormick/Orgo/wiki) Cases, Tasks, roles, routing, deadlines, escalation, closure, and operational memory |
+| Help groups become durable organizations | Membership, purpose, governance, roles, workflows, responsibility, and review loops |
+| Preserve culture with authority and context | Kreative and Konservation: provenance, consent, rights, community authority, exhibitions, and cultural memory |
+| Work across languages and meanings | [SemantiK Architect](https://github.com/Rejean-McCormick/SemantiK_Architect), governed terminology, multilingual mappings, and semantic sovereignty |
+| Reconcile unstructured information with semantic systems | [SenTient](https://github.com/Rejean-McCormick/SenTient) extraction, entity linking, structured review, and candidate knowledge |
+| Navigate complex software by intention | [Ariane](Ariane) semantic interface graphs and assisted navigation |
+| Preserve and exchange learning media | Local kOA media authority plus the operational [UCKK Mediatheque](https://uckk.org), under separate databases and authorities |
+| Continue locally and offline | kOA-Linux profiles, local storage, verified artifacts, queued exchange, backup, and safe degradation |
+| Deploy Konnaxion as a governed local service | [Konnaxion Capsule Manager](https://github.com/Rejean-McCormick/Konnaxion_Capsule_Manager) packaging, verification, deployment, backup, restore, and rollback |
+| Keep AI subordinate to governed workflows | AI may assist extraction, translation, synthesis, or routing; it does not create invisible authority |
+
+## Modules and systems
+
+### Public knowledge and civic collaboration — Konnaxion
+
+[Konnaxion](https://github.com/Rejean-McCormick/Konnaxion) is the commons-facing platform. Its modules cover learning, governance, innovation, culture, and collective intelligence:
+
+- **KonnectED** — Knowledge, CertifiKation
+- **Ethikos** — Korum, Konsultations
+- **keenKonnect** — Konstruct, Stockage
+- **Kreative** — Konservation, Kontact
+- **Kollective Intelligence** — EkoH, Smart Vote
+
+Use the [Konnaxion Wiki](https://github.com/Rejean-McCormick/Konnaxion/wiki) for detailed module and submodule documentation.
+
+For packaging and governed local deployment, use the [Konnaxion Capsule Manager repository](https://github.com/Rejean-McCormick/Konnaxion_Capsule_Manager).
+
+### Organizational execution — Orgo
+
+[Orgo](https://github.com/Rejean-McCormick/Orgo) turns signals and decisions into Cases, Tasks, roles, routing, reactivity windows, escalation, closure, and recurring review.
+
+Use the [Orgo Wiki](https://github.com/Rejean-McCormick/Orgo/wiki) for its complete organizational and operational model.
+
+### Knowledge, semantics, and language
+
+- **[Kristal Framework](https://github.com/Rejean-McCormick/kristal-framework)** — portable, status-aware knowledge artifacts with provenance, validation, versioning, and offline runtime packs.
+- **[SenTient](https://github.com/Rejean-McCormick/SenTient)** — optional semantic reconciliation and structured-extraction workbench whose outputs remain candidates until accepted.
+- **[SemantiK Architect](https://github.com/Rejean-McCormick/SemantiK_Architect)** — deterministic multilingual realization of structured meaning.
+- **[Ariane](Ariane)** — semantic navigation and interaction orchestration inside the kOA environment.
+
+See [Related Wikis and Documentation](Related-Wikis) for the public repositories and product-specific documentation. This Wiki presents their place in the ecosystem without duplicating their complete specifications.
+
+### Media, learning resources, and provenance
+
+The **kOA Mediatheque** provides local, private-by-default, offline-capable media authority. The **UCKK Mediatheque** provides the online learning and publication environment available at [uckk.org](https://uckk.org).
+
+The UCKK Mediatheque is operational, but its source repository is not public at this time. The local and online Mediatheques use compatible descriptive frames while retaining separate databases, identities, authorities, and lifecycles.
+
+See [UCKK Mediatheque and exchange boundary](UCKK-Mediatheque) for the two explicit operations:
+
+```text
+publish_to_uckk
+import_from_uckk
+```
+
+### Sovereign operating environment — kOA-Linux
+
+kOA-Linux is responsible for the conditions under which the ecosystem operates:
+
+- local execution and deployment profiles;
+- identity, trust, and isolation;
+- verified activation and fail-closed integrity;
+- policy enforcement and bounded privilege;
+- resource limits and workload admission;
+- offline continuity and safe degradation;
+- backup, recovery, and rollback;
+- audit boundaries and traceable transitions;
+- controlled publication, import, and external integration.
+
+It does not absorb the product authority of Konnaxion, Orgo, Kristal Framework, SenTient, SemantiK Architect, or other independently documented systems.
+
+## Public repositories and documentation
+
+| System | Public documentation |
+| --- | --- |
+| Konnaxion | [Repository](https://github.com/Rejean-McCormick/Konnaxion) · [Wiki](https://github.com/Rejean-McCormick/Konnaxion/wiki) |
+| Orgo | [Repository](https://github.com/Rejean-McCormick/Orgo) · [Wiki](https://github.com/Rejean-McCormick/Orgo/wiki) |
+| Konnaxion Capsule Manager | [Repository](https://github.com/Rejean-McCormick/Konnaxion_Capsule_Manager) |
+| Kristal Framework | [Repository](https://github.com/Rejean-McCormick/kristal-framework) |
+| SenTient | [Repository](https://github.com/Rejean-McCormick/SenTient) |
+| SemantiK Architect | [Repository](https://github.com/Rejean-McCormick/SemantiK_Architect) |
+| UCKK Mediatheque | [Operational service](https://uckk.org) — source repository not yet public |
+
+Only systems that belong to the documented kOA ecosystem are listed here. Other repositories under the same GitHub account are not automatically part of this architecture.
+
+## Social and institutional purpose
+
+kOA treats collective intelligence as infrastructure, not as an automatic wisdom of crowds. A group becomes capable when it can govern the passages between contribution, meaning, knowledge, choice, responsibility, action, and memory.
+
+The design therefore emphasizes:
+
+- democratic legitimacy without technocracy;
+- semantic sovereignty and multilingual dignity;
+- non-domination, contestability, portability, and exit;
+- social cohesion through shared reference points rather than forced uniformity;
+- cultural sovereignty through provenance, consent, rights, and community authority;
+- durable institutional memory;
+- global collaboration combined with local autonomy.
+
+## Read next
+
+### Main path — what it does
+
+- [What kOA does](What-kOA-Does)
+- [Sociotechnical Operating System](Sociotechnical-Operating-System)
+- [Knowledge-to-action loop](Knowledge-to-Action-Loop)
+- [Modules and submodules](Modules-and-Submodules)
+- [Societal outcomes](Societal-Outcomes)
+- [Use cases](Use-Cases)
+- [Related Wikis and documentation](Related-Wikis)
+
+### Technical branch — how it operates
+
+- [What kOA-Linux itself does](What-kOA-Linux-Does)
+- [System architecture](System-Architecture)
+- [Deployment profiles](Deployment-Profiles)
+- [Security model](Security-Model)
+- [Operations](Operations)
+- [Conformance and validation](Conformance-and-Validation)
+- [Technical reference](Technical-Reference)
+
+## Status
+
+The ecosystem contains products and components at different maturity levels. This Wiki explains the intended architecture and currently documented capabilities; it does not claim that every module is production-complete or institutionally deployed at full scale.
+
+
+================================================================================================
+FILE: wiki/Institutional-Memory-and-Learning.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Institutional Memory and Learning
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+Memory is not one database. It is the reconstructable relationship between knowledge, decisions, work, evidence, culture, and later review.
+
+The ecosystem preserves complementary forms of memory:
+
+- **Kristal** — claims, provenance, uncertainty, semantic relations, and versions;
+- **Orgo** — signals, cases, tasks, ownership, escalation, outcomes, and recurring operational patterns;
+- **Konnaxion** — learning, proposals, deliberation, public outcomes, projects, and cultural participation;
+- **Kreative / Konservation** — cultural works with context, rights, consent, authority, and exhibitions;
+- **kOA Mediatheque** — local media and file authority;
+- **governance and audit services** — policies, decisions, receipts, exceptions, and recourse;
+- **kOA-Linux** — backup, restore, portability, and continuity of local operation.
+
+Memory becomes learning when results update knowledge, procedures, curriculum, policy, and the next cycle of action.
+
+
+================================================================================================
+FILE: wiki/Integrated-Subsystems.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Integrated Systems
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+Ariane, Konnaxion, Orgo, SenTient, and SemantiK Architect retain their own product authority and documentation. kOA-Linux owns only their operating and integration boundaries.
+
+| System | Role | Product documentation |
+| --- | --- | --- |
+| Ariane | semantic navigation and interaction orchestration | [public overview](https://initkoa.org/technology/ariane) |
+| Konnaxion | public learning, collaboration, deliberation, culture, and collective intelligence | [Wiki](https://github.com/Rejean-McCormick/Konnaxion/wiki) |
+| Orgo | organizational execution and operational continuity | [Wiki](https://github.com/Rejean-McCormick/Orgo/wiki) |
+| SenTient | optional semantic reconciliation workbench | [repository](https://github.com/Rejean-McCormick/SenTient) |
+| SemantiK Architect | deterministic multilingual realization | [Wiki](https://github.com/Rejean-McCormick/SemantiK_Architect/wiki) |
+
+Kristal Runtime is a local internal runtime boundary around independently developed Kristal artifacts and tooling. UCKK is an external platform, not an integrated local subsystem.
+
+kOA-Linux boundary ownership includes deployment, resources, identity, trust, storage exposure, network access, lifecycle compatibility, health, offline behavior, backup coordination, and safe degradation.
+
+
+================================================================================================
+FILE: wiki/Internal-Components.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Internal kOA-Linux Components
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+Internal components are fully owned by the kOA-Linux documentation corpus.
+
+| Component | Purpose |
+| --- | --- |
+| Audit Broker | route and selectively preserve audit and evidence events |
+| Governance Policy Runtime | evaluate authorization, disclosure, consent, privilege, and governed exceptions |
+| Identity and Trust | identities, credentials, trust roots, and relying-context results |
+| kOA Mediatheque | local media and file authority |
+| kOA Node Agent | narrow host lifecycle, activation, health, recovery, and privileged operations |
+| Kristal Runtime | verify and expose activated Kristal artifacts locally |
+| Publication Gateway | authorize governed cross-domain disclosure |
+| Resource Governor | deterministic resource limits, queues, concurrency, and pressure control |
+
+The UCKK adapter is an external-integration bridge, not a local media owner. Konnaxion, Orgo, Ariane, SenTient, and SemantiK Architect are independently documented products, not internal components.
+
+
+================================================================================================
+FILE: wiki/Knowledge-to-Action-Loop.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Knowledge-to-Action Loop
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## The collective cycle
+
+```text
+Know → Choose → Act → Remember → Know better
+```
+
+The expanded operational loop is:
+
+```text
+1. Observe and contribute
+2. Structure meaning and preserve provenance
+3. Compile reusable knowledge
+4. Learn, consult, and deliberate
+5. Produce explicit decision readings and outcomes
+6. Convert outcomes into mandates, roles, cases, and tasks
+7. Execute, escalate, close, and record evidence
+8. Preserve institutional and cultural memory
+9. Review results and update knowledge
+```
+
+## Systems along the loop
+
+| Passage | Primary systems |
+| --- | --- |
+| Raw inputs → structured candidates | SenTient and deterministic ingestion tools |
+| Structured candidates → portable knowledge | Kristal and validation workflows |
+| Knowledge → learning and public collaboration | Konnaxion / KonnectED |
+| Disagreement → structured deliberation | Konnaxion / Ethikos / Korum / Konsultations |
+| Deliberation → multiple transparent readings | EkoH and Smart Vote |
+| Accepted outcomes → organized execution | Governance rules and Orgo |
+| Execution → cases, tasks, escalation, closure | Orgo |
+| Results → memory and renewed knowledge | Kristal, operational records, cultural repositories, and audit evidence |
+| Entire loop → local resilient operation | kOA-Linux |
+
+## Why the transitions matter
+
+A contribution is not automatically knowledge. Knowledge is not automatically a decision. A vote is not automatically authorization. A decision is not automatically work. Completed work is not automatically institutional learning.
+
+Each transition requires declared authority, evidence, thresholds, roles, receipts, and a way to contest or repair the result.
+
+## Example: a municipality
+
+A flood-mitigation proposal can move from local reports and research, to structured knowledge, to public consultation, to a documented decision, to departmental cases and tasks, to implementation evidence, and finally to updated knowledge that improves the next planning cycle.
+
+The value of the ecosystem is not one interface. It is the continuity of this chain.
+
+
+================================================================================================
+FILE: wiki/kOA-Linux-Responsibilities.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Operating-System Responsibilities
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Host and deployment
+
+- maintained Linux host and selected immutable-image mechanism;
+- boot, service management and recovery environment;
+- deployment profiles and overlays;
+- hardware and resource envelopes;
+- local storage, networks and device access.
+
+## Security and trust
+
+- service identities and least privilege;
+- trust roots, signatures and artifact verification;
+- rootless service boundaries where applicable;
+- narrow privileged host operations;
+- secrets, keys and data-at-rest controls;
+- network and publication boundaries.
+
+## Runtime governance
+
+- policy bundle activation;
+- authorization and disclosure checks;
+- receipts for critical transitions;
+- audit routing and selective evidence preservation;
+- AI and external-integration restrictions.
+
+## Lifecycle and resilience
+
+- release sets and compatibility;
+- verified activation and rollback;
+- offline bundles and transport;
+- backup, restore and disaster recovery;
+- capability degradation and health;
+- export, transfer and credible exit.
+
+## Integration
+
+kOA-Linux owns the boundary, not the subsystem internals. It mounts or references pinned official documentation and validates compatibility before activation.
+
+## Sources
+
+- [README.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/README.md)
+- [docs/02-system/00-system-overview.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/00-system-overview.md)
+- [docs/06-lifecycle/02-release-model.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/06-lifecycle/02-release-model.md)
+- [docs/07-security/01-security-baseline.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/07-security/01-security-baseline.md)
+- [docs/08-operations/00-operating-model.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/08-operations/00-operating-model.md)
+
+
+================================================================================================
+FILE: wiki/Konnaxion.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Konnaxion
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+Konnaxion is the public, civic, learning, cultural, and collaboration platform of the kOA ecosystem.
+
+This Wiki does not reproduce its module specifications. Use:
+
+- [Konnaxion GitHub Wiki](https://github.com/Rejean-McCormick/Konnaxion/wiki)
+- [Konnaxion repository](https://github.com/Rejean-McCormick/Konnaxion)
+- [Public overview](https://initkoa.org/platforms/konnaxion)
+- [Modules and submodules in this Wiki](Modules-and-Submodules)
+
+At the kOA-Linux boundary, Konnaxion remains an independently owned system. kOA-Linux defines only deployment, resources, trust, storage exposure, health, offline behavior, integration, backup coordination, and safe degradation.
+
+
+================================================================================================
+FILE: wiki/Kristal.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Kristal
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+Kristals are portable, status-aware knowledge artifacts that preserve claims, provenance, uncertainty, versions, semantic relations, validation state, and reader policy.
+
+Use:
+
+- [Kristal framework repository](https://github.com/Rejean-McCormick/kristal-framework)
+- [Public overview](https://initkoa.org/technology/kristal)
+- [Portable knowledge summary](Portable-Knowledge-with-Kristal)
+
+kOA-Linux owns the constrained local runtime boundary, not the complete authoring and compilation system.
+
+
+================================================================================================
+FILE: wiki/Local-and-Offline-Operation.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Local and Offline Operation
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+This page is retained for the original wiki URL. The expanded explanation is now in [Offline-first operation](Offline-First-Operation).
+
+Related pages:
+
+- [Siloed and sovereign environments](Siloed-and-Sovereign-Environments)
+- [Portable knowledge with Kristal](Portable-Knowledge-with-Kristal)
+- [Crisis, field, and air-gapped use](Crisis-Field-and-Air-Gapped-Use)
+- [Technical operations](Operations)
+
+
+================================================================================================
+FILE: wiki/Modules-and-Submodules.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Modules and Submodules
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Navigation principle
+
+This Wiki names the major systems so readers can understand the full operating cycle. It does not duplicate their internal documentation. Follow the linked product Wikis and repositories for detailed models, routes, schemas, services, and user workflows.
+
+## Konnaxion
+
+[Konnaxion Wiki](https://github.com/Rejean-McCormick/Konnaxion/wiki)
+
+| Module | Submodules | Purpose |
+| --- | --- | --- |
+| **KonnectED** | [Knowledge](https://github.com/Rejean-McCormick/Konnaxion/wiki/Knowledge), [CertifiKation](https://github.com/Rejean-McCormick/Konnaxion/wiki/CertifiKation) | learning resources, collaborative knowledge, pathways, evaluation, portfolios, and credentials |
+| **Ethikos** | [Korum](https://github.com/Rejean-McCormick/Konnaxion/wiki/Korum), [Konsultations](https://github.com/Rejean-McCormick/Konnaxion/wiki/Konsultations) | structured debate, consultation, disagreement mapping, proposals, and public input |
+| **keenKonnect** | [Konstruct](https://github.com/Rejean-McCormick/Konnaxion/wiki/Konstruct), [Stockage](https://github.com/Rejean-McCormick/Konnaxion/wiki/Stockage) | project collaboration, blueprints, shared workspaces, versioned resources, and implementation support |
+| **Kreative** | [Konservation](https://github.com/Rejean-McCormick/Konnaxion/wiki/Konservation), [Kontact](https://github.com/Rejean-McCormick/Konnaxion/wiki/Kontact) | cultural memory, exhibitions, provenance, creator networks, collaboration, opportunities, and trust |
+| **Kollective Intelligence** | [EkoH](https://github.com/Rejean-McCormick/Konnaxion/wiki/EkoH), [Smart Vote](https://github.com/Rejean-McCormick/Konnaxion/wiki/Smart-Vote) | domain-bounded credibility signals and multiple transparent readings of support |
+
+## Orgo
+
+[Orgo Wiki](https://github.com/Rejean-McCormick/Orgo/wiki)
+
+Orgo owns the operational chain from signals to Cases and Tasks, functional routing, reactivity windows, escalation, closure, insights, and cyclical review.
+
+## Semantic and language systems
+
+| System | Detailed documentation | Role in the ecosystem |
+| --- | --- | --- |
+| **Kristal** | [Repository](https://github.com/Rejean-McCormick/kristal-framework), [public overview](https://initkoa.org/technology/kristal) | portable, verifiable, status-aware knowledge artifacts and offline runtime packs |
+| **SenTient** | [Repository](https://github.com/Rejean-McCormick/SenTient), [public overview](https://initkoa.org/technology/sentient) | optional reconciliation, entity linking, extraction, and ambiguity-preserving candidate production |
+| **SemantiK Architect** | [Wiki](https://github.com/Rejean-McCormick/SemantiK_Architect/wiki), [public overview](https://initkoa.org/technology/architect) | deterministic multilingual realization from structured meaning |
+| **Ariane** | [public overview](https://initkoa.org/technology/ariane) | semantic interface graphs, assisted navigation, and interaction orchestration |
+
+## Runtime, governance, and storage
+
+- **kOA-Linux Operating System** — sovereign local runtime, profiles, isolation, trust, resources, lifecycle, offline continuity, backup, and recovery.
+- **Governance Policy Runtime** — policy evaluation for authorization, disclosure, consent, exceptions, and governed transitions.
+- **kOA Mediatheque** — local, private-by-default authority for files and media held by the installation.
+- **UCKK** — external Moodle platform for online learning and dissemination; exchange is explicit and does not make UCKK a local subsystem.
+
+## External and symbolic layers
+
+Additional tools, narrative systems, and partner platforms may connect to the ecosystem, but they do not silently become authority. The symbolic layer helps make the architecture memorable and transmissible; it does not determine rights, decisions, or host privilege.
+
+
+================================================================================================
+FILE: wiki/Multilingual-Knowledge-Networks.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Multilingual Knowledge Networks
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Intended environment
+
+Several communities or institutions can share structured knowledge while using different languages, terminology and authority channels. The underlying meaning and provenance remain portable; each reader receives a policy-selected rendering appropriate to the available language resources.
+
+## Capability chain
+
+1. Kristal carries structured assertions, provenance, scope and authority.
+2. Reader policy selects the permitted view.
+3. Semantik Architect renders the selected meaning in a target language.
+4. Ariane exposes actions and navigation labels semantically.
+5. Konnaxion distributes the resulting knowledge surface.
+6. kOA-Linux activates the required packs locally and supports offline use.
+
+## Non-equivalence and disagreement
+
+A term without an exact translation should remain explicitly mapped or unresolved. The system must preserve disputed meanings and authority-scoped language rather than forcing every community into one vocabulary.
+
+## Sources
+
+- [Semantik Architect](https://initkoa.org/technology/architect)
+- [Kristal](https://initkoa.org/technology/kristal)
+- [docs/01-constitution/13-glossary.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/13-glossary.md)
+- [docs/00-governance/16-language-terminology-and-style.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/00-governance/16-language-terminology-and-style.md)
+
+
+================================================================================================
+FILE: wiki/Multilingual-Operation.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Multilingual Operation
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## More than interface translation
+
+The multilingual objective is to preserve meaning across languages, not merely replace strings. A governance decision, role description, uncertainty label or knowledge assertion must not become stronger, weaker or less qualified because it is rendered in another language.
+
+## Semantik Architect
+
+Semantik Architect separates structured meaning from language-specific realization. It uses semantic frames, constructions, language-family engines, language profiles, lexicons, render profiles and regression tests to produce deterministic text.
+
+It may render:
+
+- role and mandate summaries;
+- decision explanations;
+- knowledge query results;
+- civic process descriptions;
+- multilingual cards, snippets, reports and notices;
+- localized labels for Ariane-assisted navigation.
+
+It must not invent facts absent from the selected structured input.
+
+## Operational chain
+
+```text
+structured, policy-selected meaning
++ active language artifact
++ render profile
++ reader policy
+= rendered text
++ trace metadata
+```
+
+## Language artifacts in kOA-Linux
+
+The operating system verifies and activates compiled language artifacts. A user profile can load only the languages required for its context, while build systems produce and test heavier artifacts separately.
+
+## Important limits
+
+Multilingual capability depends on available lexicons, constructions, grammar resources and quality tests. A missing language resource must be exposed as a limitation; the system must not silently substitute unreviewed machine translation for a governed deterministic rendering.
+
+## Sources
+
+- [Semantik Architect](https://initkoa.org/technology/architect)
+- [docs/02-system/13-language-system-boundary.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/13-language-system-boundary.md)
+- [docs/06-lifecycle/09-language-artifacts.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/06-lifecycle/09-language-artifacts.md)
+- [docs/contracts/subsystems/semantik-architect.subsystem.json](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/contracts/subsystems/semantik-architect.subsystem.json)
+
+
+================================================================================================
+FILE: wiki/Municipality-and-Public-Service.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Municipality and Public Service
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Intended environment
+
+A municipality or public-service organization can separate public participation from private operational handling. Konnaxion receives knowledge, proposals and civic input; governance rules define legitimate decisions; Orgo routes service requests and decisions to accountable departments.
+
+## Example flow
+
+```text
+citizen report
+→ public or private intake
+→ case classification
+→ responsible municipal function
+→ response window
+→ escalation if overdue
+→ recorded outcome
+→ public update when disclosure policy permits
+```
+
+## Benefits of the architecture
+
+- public transparency without exposing private case details;
+- continuity when staff change;
+- offline operation for field offices;
+- multilingual public explanations;
+- traceable decisions and appeal paths;
+- portable institutional memory.
+
+## Sources
+
+- [Orgo guarantees](https://initkoa.org/platforms/orgo/guarantees)
+- [Konnaxion](https://initkoa.org/platforms/konnaxion)
+- [docs/07-security/16-public-evidence-and-private-proof.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/07-security/16-public-evidence-and-private-proof.md)
+
+
+================================================================================================
+FILE: wiki/Naming-and-Scope.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Naming and Scope
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Four scopes
+
+### kOA initiative
+
+The broader body of theory, civic principles, cultural work, research, narrative, and institutional proposals.
+
+### kOA ecosystem
+
+The interoperating digital systems that support the cycle from knowledge to deliberation, decision, execution, and memory.
+
+### kOA-Linux Operating System
+
+The sovereign runtime and deployment environment. It hosts selected capabilities and enforces local isolation, resources, trust, lifecycle, offline behavior, recovery, and integration boundaries.
+
+### Product systems and modules
+
+Konnaxion, Orgo, Kristal, Ariane, SenTient, SemantiK Architect, and other products retain their own internal documentation and authority. Konnaxion also contains named modules and submodules documented in its own Wiki.
+
+## Naming rule
+
+This Wiki must not use **kOA-Linux** as a synonym for the complete kOA ecosystem. It may explain the ecosystem because the operating system exists to run it, but it must always identify which product owns a capability.
+
+UCKK is an external Moodle platform, not an internal kOA-Linux subsystem. The local kOA Mediatheque and UCKK exchange remain secondary infrastructure topics, not the definition of the ecosystem.
+
+
+================================================================================================
+FILE: wiki/Offline-First-Operation.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Offline-First Operation
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+Offline capability is a governance guarantee: a community should be able to preserve local knowledge, work, evidence, and continuity without permanent dependence on a cloud provider.
+
+Depending on the active profile, local operation can include:
+
+- Kristal knowledge and provenance;
+- Ariane navigation graphs;
+- Konnaxion portable resources and selected local spaces;
+- Orgo cases, tasks, routing, and queues;
+- kOA Mediatheque files and imported learning packages;
+- deterministic multilingual rendering with installed artifacts;
+- local policy evaluation, backup, and recovery.
+
+External publication, remote discovery, federation, and optional AI services wait for connectivity. The system must show what is local, queued, stale, unavailable, or awaiting review.
+
+
+================================================================================================
+FILE: wiki/Operations.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# Operations
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+## Operating model
+
+Operations preserve declared authority, evidence, recoverability, resource bounds, and profile-specific guarantees. A node remains locally authoritative for final admission and sensitive host mutations.
+
+## Operational domains
+
+| Domain | Main concerns |
+| --- | --- |
+| Observability | Health, readiness, events, receipts, metrics, and bounded diagnostics |
+| Resources | CPU, memory, I/O, concurrency, queues, scheduling, and capacity |
+| Continuity | Offline operation, safe degradation, backup, restore, and disaster recovery |
+| Incidents | Detection, containment, evidence, repair, communication, and recourse |
+| Maintenance | Verified updates, storage care, key rotation, cleanup, and lifecycle tasks |
+| Profile operations | User-lightweight, sovereign-node, hub, control-plane, and build-farm procedures |
+
+## Backup and restore
+
+Backups preserve authoritative data, contracts, keys or key references, manifests, provenance, and verification evidence according to the active profile. Restore is tested and does not silently merge incompatible authority states.
+
+## Sources
+
+- [`docs/08-operations/00-operating-model.md`](../blob/main/docs/08-operations/00-operating-model.md)
+- [`docs/08-operations/01-observability.md`](../blob/main/docs/08-operations/01-observability.md)
+- [`docs/08-operations/02-health-and-readiness.md`](../blob/main/docs/08-operations/02-health-and-readiness.md)
+- [`docs/08-operations/04-resource-envelopes.md`](../blob/main/docs/08-operations/04-resource-envelopes.md)
+- [`docs/08-operations/05-capacity-management.md`](../blob/main/docs/08-operations/05-capacity-management.md)
+- [`docs/08-operations/06-job-scheduling.md`](../blob/main/docs/08-operations/06-job-scheduling.md)
+- [`docs/08-operations/07-capability-degradation.md`](../blob/main/docs/08-operations/07-capability-degradation.md)
+- [`docs/08-operations/08-backup.md`](../blob/main/docs/08-operations/08-backup.md)
+- [`docs/08-operations/09-restore.md`](../blob/main/docs/08-operations/09-restore.md)
+- [`docs/08-operations/10-portability-and-exit.md`](../blob/main/docs/08-operations/10-portability-and-exit.md)
+- [`docs/08-operations/11-offline-operations.md`](../blob/main/docs/08-operations/11-offline-operations.md)
+- [`docs/08-operations/12-incident-response.md`](../blob/main/docs/08-operations/12-incident-response.md)
+- [`docs/08-operations/13-disaster-recovery.md`](../blob/main/docs/08-operations/13-disaster-recovery.md)
+- [`docs/08-operations/14-maintenance.md`](../blob/main/docs/08-operations/14-maintenance.md)
+- [`docs/08-operations/15-support-and-diagnostics.md`](../blob/main/docs/08-operations/15-support-and-diagnostics.md)
+
+
+================================================================================================
+FILE: wiki/Organizational-Operations.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Organizational Operations
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Intended environment
+
+An organization uses Orgo to replace fragile inbox-, chat- and memory-based coordination with durable cases, tasks, functional ownership, response windows, escalation and closure.
+
+## Typical workflows
+
+- service requests and incident handling;
+- approvals and reviews;
+- procurement or maintenance;
+- compliance and audit follow-up;
+- HR or sensitive case management;
+- project execution and recurring operational cycles;
+- role inboxes that convert communications into accountable work.
+
+## Why kOA-Linux matters
+
+The operating system isolates the organization's data, applies identity and resource boundaries, supports offline nodes, provides backups and controls external publication or AI access.
+
+## Sources
+
+- [What Orgo does](https://initkoa.org/platforms/orgo/what-it-does)
+- [Orgo adoption](https://initkoa.org/platforms/orgo/adoption)
+- [Security and auditability](https://initkoa.org/platforms/orgo/security-audit)
+
+
+================================================================================================
+FILE: wiki/Orgo.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Orgo
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+Orgo is the organizational execution and operational-continuity system. It turns signals and decisions into Cases, Tasks, roles, routing, reactivity windows, escalation, closure, insights, and recurring review.
+
+Use:
+
+- [Orgo GitHub Wiki](https://github.com/Rejean-McCormick/Orgo/wiki)
+- [Orgo repository](https://github.com/Rejean-McCormick/Orgo)
+- [Public overview](https://initkoa.org/platforms/orgo/what-it-does)
+
+kOA-Linux provides the runtime boundary; it does not redefine Orgo's internal object model or workflows.
+
+
+================================================================================================
+FILE: wiki/Personal-and-Local-Use.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Personal and Local Use
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+A lightweight local profile can provide:
+
+- Ariane-assisted navigation;
+- selected Kristal runtime packs;
+- local kOA Mediatheque files and media;
+- personal or small-team Orgo work;
+- selected Konnaxion spaces or portable capsules;
+- installed language artifacts;
+- offline reading, editing, backup, and queued exchange.
+
+Heavy compilers, research workbenches, large search engines, and local AI models remain optional or run on other nodes. UCKK is not required for local education or media use.
+
+
+================================================================================================
+FILE: wiki/Portable-Knowledge-with-Kristal.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Portable Knowledge with Kristal
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## What a Kristal provides
+
+A Kristal is a portable, verifiable epistemic artifact. It allows knowledge to move between people, organizations and systems while keeping provenance, integrity, assertion status, certainty, authority, scope and reader policy visible.
+
+The purpose is not to label every statement as universally true. A Kristal can preserve uncertainty, disagreement, symbolic material, research claims and scoped recognition without flattening them into one confidence score.
+
+## User outcomes
+
+A person or organization can:
+
+- carry a knowledge package between systems;
+- verify the package locally;
+- browse and query it without a central server;
+- inspect sources and status;
+- compare versions;
+- combine knowledge from several authorities without silently merging their claims;
+- preserve durable references that do not depend on a live webpage.
+
+## Offline Runtime Packs
+
+A Runtime Pack is a read-optimized package for local browsing and query. The canonical exchange and provenance remain distinct from the local runtime projection. When verification fails or a pack is outdated, the system exposes that status rather than silently treating it as current authority.
+
+## Role of kOA-Linux Operating System
+
+The operating system stores, verifies, activates, pins, updates and rolls back Runtime Packs. It also enforces resource limits and reader/disclosure policy at the local boundary.
+
+## Sources
+
+- [Kristal](https://initkoa.org/technology/kristal)
+- [What a Kristal does](https://initkoa.org/technology/kristal/overview)
+- [Portability and offline](https://initkoa.org/technology/kristal/portability-and-offline)
+- [docs/04-components/kristal-runtime.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/04-components/kristal-runtime.md)
+- [docs/06-lifecycle/08-kristal-artifacts.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/06-lifecycle/08-kristal-artifacts.md)
+
+
+================================================================================================
+FILE: wiki/Related-Wikis.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Related Wikis and Documentation
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Product Wikis
+
+| Product | Documentation |
+| --- | --- |
+| Konnaxion | [GitHub Wiki](https://github.com/Rejean-McCormick/Konnaxion/wiki) · [Repository](https://github.com/Rejean-McCormick/Konnaxion) · [Public overview](https://initkoa.org/platforms/konnaxion) |
+| Orgo | [GitHub Wiki](https://github.com/Rejean-McCormick/Orgo/wiki) · [Repository](https://github.com/Rejean-McCormick/Orgo) · [Public overview](https://initkoa.org/platforms/orgo/what-it-does) |
+| SemantiK Architect | [GitHub Wiki](https://github.com/Rejean-McCormick/SemantiK_Architect/wiki) · [Repository](https://github.com/Rejean-McCormick/SemantiK_Architect) · [Public overview](https://initkoa.org/technology/architect) |
+| Kristal | [Repository](https://github.com/Rejean-McCormick/kristal-framework) · [Public overview](https://initkoa.org/technology/kristal) |
+| SenTient | [Repository](https://github.com/Rejean-McCormick/SenTient) · [Public overview](https://initkoa.org/technology/sentient) |
+| Ariane | [Public overview](https://initkoa.org/technology/ariane) |
+| kOA-Linux | [Repository](https://github.com/Rejean-McCormick/kOA-Linux) · [Technical reference](Technical-Reference) |
+
+## Ecosystem documentation
+
+- [initkoa.org](https://initkoa.org/)
+- [AI-oriented context index](https://initkoa.org/llms.txt)
+- [kOA Digital Ecosystem repository](https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem)
+- [Omni-Wiki repository](https://github.com/Rejean-McCormick/Omni-Wiki)
+
+## Documentation boundary
+
+This Wiki explains the role of each product in the common knowledge-to-action cycle. It should not reproduce the full internal specifications of the linked products. When product behavior changes, update the owning Wiki first, then update only the boundary or summary here.
+
+
+================================================================================================
+FILE: wiki/Release-and-Artifact-Lifecycle.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# Release and Artifact Lifecycle
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+## Lifecycle model
+
+Artifacts are identified, verified, staged, activated, observed, recovered, retained, and removed through declared contracts. Activation is atomic or otherwise fail-safe for the applicable artifact class.
+
+An activation failure leaves the current verified release active. Recovery restores the latest verified release as one unit; it does not activate an undeclared operating mode.
+
+## Core lifecycle stages
+
+```mermaid
+flowchart LR
+    BUILD[Build] --> VERIFY[Verify]
+    VERIFY --> STAGE[Stage]
+    STAGE --> AUTHORIZE[Authorize]
+    AUTHORIZE --> ACTIVATE[Activate]
+    ACTIVATE --> OBSERVE[Observe]
+    OBSERVE -->|failure| RECOVER[Recover or forward repair]
+    OBSERVE --> RETAIN[Retain or remove by policy]
+```
+
+## Artifact contracts
+
+| Artifact or exchanged object | Schema |
+| --- | --- |
+| kOA Cultural Rights Policy Artifact | [schema](../blob/main/docs/contracts/artifact-contracts/cultural-rights-policy.schema.json) |
+| kOA Decision Receipt | [schema](../blob/main/docs/contracts/artifact-contracts/decision-receipt.schema.json) |
+| kOA Developer Workspace Manifest | [schema](../blob/main/docs/contracts/artifact-contracts/developer-workspace.schema.json) |
+| kOA Integration Manifest Schema | [schema](../blob/main/docs/contracts/artifact-contracts/integration-manifest.schema.json) |
+| kOA Language Runtime Pack Artifact Contract | [schema](../blob/main/docs/contracts/artifact-contracts/language-pack.schema.json) |
+| kOA Node Profile Artifact | [schema](../blob/main/docs/contracts/artifact-contracts/node-profile.schema.json) |
+| kOA Offline Bundle | [schema](../blob/main/docs/contracts/artifact-contracts/offline-bundle.schema.json) |
+| kOA Governance Policy Bundle | [schema](../blob/main/docs/contracts/artifact-contracts/policy-bundle.schema.json) |
+| kOA Provenance Receipt | [schema](../blob/main/docs/contracts/artifact-contracts/provenance-receipt.schema.json) |
+| kOA Publication Receipt | [schema](../blob/main/docs/contracts/artifact-contracts/publication-receipt.schema.json) |
+| kOA Publication Request | [schema](../blob/main/docs/contracts/artifact-contracts/publication-request.schema.json) |
+| kOA Release Set | [schema](../blob/main/docs/contracts/artifact-contracts/release-set.schema.json) |
+| kOA Resource Envelope | [schema](../blob/main/docs/contracts/artifact-contracts/resource-envelope.schema.json) |
+| kOA Runtime Pack | [schema](../blob/main/docs/contracts/artifact-contracts/runtime-pack.schema.json) |
+| kOA Sovereignty Bundle Schema | [schema](../blob/main/docs/contracts/artifact-contracts/sovereignty-bundle.schema.json) |
+| kOA Workspace Port Allocation | [schema](../blob/main/docs/contracts/artifact-contracts/workspace-port-allocation.schema.json) |
+
+## Release controls
+
+- release channels are independently versioned;
+- a release set pins compatible identities;
+- signatures, provenance, SBOM, compatibility, policy, and evidence are checked before activation;
+- offline bundles preserve verification and admission rules;
+- data schema evolution and contract removal remain explicit;
+- forward repair is preferred when rollback would violate data or compatibility constraints.
+
+## Sources
+
+- [`docs/06-lifecycle/00-artifact-model.md`](../blob/main/docs/06-lifecycle/00-artifact-model.md)
+- [`docs/06-lifecycle/02-release-model.md`](../blob/main/docs/06-lifecycle/02-release-model.md)
+- [`docs/06-lifecycle/03-release-channels.md`](../blob/main/docs/06-lifecycle/03-release-channels.md)
+- [`docs/06-lifecycle/04-release-sets.md`](../blob/main/docs/06-lifecycle/04-release-sets.md)
+- [`docs/06-lifecycle/11-offline-bundles.md`](../blob/main/docs/06-lifecycle/11-offline-bundles.md)
+- [`docs/06-lifecycle/12-artifact-verification.md`](../blob/main/docs/06-lifecycle/12-artifact-verification.md)
+- [`docs/06-lifecycle/13-activation-and-verification.md`](../blob/main/docs/06-lifecycle/13-activation-and-verification.md)
+- [`docs/06-lifecycle/14-recovery.md`](../blob/main/docs/06-lifecycle/14-recovery.md)
+- [`docs/06-lifecycle/15-data-schema-evolution.md`](../blob/main/docs/06-lifecycle/15-data-schema-evolution.md)
+- [`docs/06-lifecycle/16-forward-repair.md`](../blob/main/docs/06-lifecycle/16-forward-repair.md)
+- [`docs/06-lifecycle/17-contract-evolution-and-removal.md`](../blob/main/docs/06-lifecycle/17-contract-evolution-and-removal.md)
+- [`docs/06-lifecycle/18-sbom-provenance-and-signing.md`](../blob/main/docs/06-lifecycle/18-sbom-provenance-and-signing.md)
+- [`docs/contracts/release-channels.contract.json`](../blob/main/docs/contracts/release-channels.contract.json)
+- [`docs/contracts/artifact-classes.contract.json`](../blob/main/docs/contracts/artifact-classes.contract.json)
+
+
+================================================================================================
+FILE: wiki/Roles-Tasks-and-Accountability.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Roles, Tasks, and Accountability
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## Function-first coordination
+
+Orgo routes work to responsibilities such as Intake, Incident Response, Procurement, Legal Review, Case Management or Maintenance. This reduces dependence on whoever happens to read a message and preserves continuity when people leave or teams reorganize.
+
+## Roles
+
+A role represents a durable responsibility with scoped permissions. People may be assigned to roles for an organization, team, location, unit or other declared scope. Role assignments are revocable and auditable.
+
+## Cases
+
+A case is the durable context for a situation: why work exists, which policy applies, who owns it, which artifacts are linked, what tasks belong to it, and how the outcome can be reviewed.
+
+## Tasks
+
+A task is an executable unit of work with:
+
+- identity and parent case;
+- owning role or person;
+- status and allowed transitions;
+- inputs and expected outputs;
+- deadline and retry limits;
+- approval and capability gates;
+- visibility and confidentiality;
+- evidence and completion criteria.
+
+## Escalation and closure
+
+An overdue task does not disappear silently. Policy determines when responsibility escalates and who is notified. Closure records the result, actors, changes, evidence and unresolved matters.
+
+## Organizational learning
+
+Recurring delays, duplicates, failures or policy friction can become new review or audit cases. The system therefore converts operational patterns into governed improvement work.
+
+## Sources
+
+- [What Orgo does](https://initkoa.org/platforms/orgo/what-it-does)
+- [Routing and escalation](https://initkoa.org/platforms/orgo/routing-escalation)
+- [Core guarantees](https://initkoa.org/platforms/orgo/guarantees)
+- [docs/contracts/subsystems/orgo.subsystem.json](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/contracts/subsystems/orgo.subsystem.json)
+
+
+================================================================================================
+FILE: wiki/Security-Model.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# Security Model
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+## Security posture
+
+kOA uses explicit trust, least privilege, compartmentalized authority, signed artifacts, narrow privileged interfaces, bounded integrations, and recoverable failure states.
+
+## Major security boundaries
+
+- identity and trust roots;
+- profile-scoped privilege and service identities;
+- network and storage isolation;
+- encrypted data and key handling;
+- AI and external-integration boundaries;
+- privacy, disclosure, consent, and cultural rights;
+- selective audit and evidence access;
+- cross-domain publication;
+- offline import and software supply chain;
+- break-glass authority with receipts and review.
+
+## Privileged operations
+
+The kOA Node Agent exposes closed high-level operations rather than arbitrary shell, package, file, container, service-manager, device, or private-key interfaces. The active node performs final local validation before a sensitive mutation.
+
+## Disclosure and audit
+
+Audit is selective. Evidence access follows policy, purpose, identity, disclosure class, and recourse rules. Auditability does not imply unrestricted transparency.
+
+## Sources
+
+- [`docs/07-security/00-threat-model.md`](../blob/main/docs/07-security/00-threat-model.md)
+- [`docs/07-security/01-security-baseline.md`](../blob/main/docs/07-security/01-security-baseline.md)
+- [`docs/07-security/02-security-domains.md`](../blob/main/docs/07-security/02-security-domains.md)
+- [`docs/07-security/03-identity-trust-and-signatures.md`](../blob/main/docs/07-security/03-identity-trust-and-signatures.md)
+- [`docs/07-security/05-privilege-boundaries.md`](../blob/main/docs/07-security/05-privilege-boundaries.md)
+- [`docs/07-security/06-privileged-broker.md`](../blob/main/docs/07-security/06-privileged-broker.md)
+- [`docs/07-security/08-network-boundaries.md`](../blob/main/docs/07-security/08-network-boundaries.md)
+- [`docs/07-security/09-storage-boundaries.md`](../blob/main/docs/07-security/09-storage-boundaries.md)
+- [`docs/07-security/13-privacy-and-disclosure.md`](../blob/main/docs/07-security/13-privacy-and-disclosure.md)
+- [`docs/07-security/14-cultural-rights-and-consent.md`](../blob/main/docs/07-security/14-cultural-rights-and-consent.md)
+- [`docs/07-security/15-selective-audit.md`](../blob/main/docs/07-security/15-selective-audit.md)
+- [`docs/07-security/17-cross-domain-publication.md`](../blob/main/docs/07-security/17-cross-domain-publication.md)
+- [`docs/07-security/18-offline-import-security.md`](../blob/main/docs/07-security/18-offline-import-security.md)
+- [`docs/07-security/19-software-supply-chain.md`](../blob/main/docs/07-security/19-software-supply-chain.md)
+- [`docs/07-security/20-break-glass-security.md`](../blob/main/docs/07-security/20-break-glass-security.md)
+
+
+================================================================================================
+FILE: wiki/Semantic-Sovereignty.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Semantic Sovereignty
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## The problem
+
+Systems often centralize meaning in one vendor's database, ranking model, taxonomy, language model, or interface vocabulary. When definitions, confidence, authority and disagreement are hidden, users can no longer tell what a statement means, where it came from, or which institution recognizes it.
+
+Semantic sovereignty means that meaning remains **portable, inspectable, governed and revisable**.
+
+## What must remain explicit
+
+- terminology and concept identifiers;
+- provenance and evidence references;
+- assertion status and certainty;
+- authority channel and recognition scope;
+- disputed, symbolic, fictional, mythological or research status;
+- reader policy and disclosure constraints;
+- multilingual mappings and non-equivalent terms;
+- version history and supersession.
+
+## Systems involved
+
+### Kristal
+
+Kristal packages structured epistemic state so knowledge can be verified, queried, distributed and preserved without pretending that every assertion has universal authority.
+
+### Semantik Architect
+
+Architect renders the selected structured meaning into language. It must not make a statement appear more certain, factual, validated or universal than the input allows.
+
+### Ariane
+
+Ariane represents the meaning and action structure of interfaces, allowing navigation by function rather than by fragile visual coordinates alone.
+
+### SenTient
+
+SenTient may help reconcile ambiguous or messy inputs, but its output remains candidate material until separately reviewed and validated.
+
+## Role of the operating system
+
+kOA-Linux verifies and activates the relevant artifacts, keeps versions visible, applies reader and disclosure policy, and ensures that optional AI cannot silently replace governed semantics.
+
+## Sources
+
+- [Kristal](https://initkoa.org/technology/kristal)
+- [Semantik Architect](https://initkoa.org/technology/architect)
+- [Ariane](https://initkoa.org/technology/ariane)
+- [docs/01-constitution/03-system-principles.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/03-system-principles.md)
+- [docs/02-system/13-language-system-boundary.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/13-language-system-boundary.md)
+
+
+================================================================================================
+FILE: wiki/Semantik-Architect.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# SemantiK Architect
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+SemantiK Architect is the multilingual meaning-realization system. It produces deterministic language output from structured meaning while preserving status, scope, provenance, and disagreement.
+
+Use:
+
+- [SemantiK Architect GitHub Wiki](https://github.com/Rejean-McCormick/SemantiK_Architect/wiki)
+- [Repository](https://github.com/Rejean-McCormick/SemantiK_Architect)
+- [Public overview](https://initkoa.org/technology/architect)
+
+kOA-Linux activates verified language artifacts and supplies runtime isolation and resources. It does not duplicate grammar, lexicon, construction, or QA specifications.
+
+
+================================================================================================
+FILE: wiki/SenTient.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# SenTient
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+SenTient is an optional semantic-processing and reconciliation workbench for transforming ambiguous or fragmented inputs into structured candidates.
+
+Use:
+
+- [SenTient repository](https://github.com/Rejean-McCormick/SenTient)
+- [Public overview](https://initkoa.org/technology/sentient)
+
+Its outputs remain candidates until accepted by an authoritative workflow. It is optional, isolated, and not part of lightweight baselines by default.
+
+
+================================================================================================
+FILE: wiki/Siloed-and-Sovereign-Environments.md
+================================================================================================
+
+<!-- Explanatory wiki projection; not an independent normative authority. -->
+
+# Siloed and Sovereign Environments
+
+> **Authority and status:** This wiki is an explanatory navigation layer. The repository contracts, accepted ADRs, normative documents, and executable validators remain authoritative for kOA-Linux Operating System. Public initkoa.org pages explain the wider kOA ecosystem and the product capabilities provided by its independently documented subsystems.
+
+## What “silo” means here
+
+A silo is not automatically a defect. A community, organization, institution, field team, municipality, or high-assurance unit may need its own data, identities, rules, storage, availability and authority. The problem is not separation itself; the problem is separation without safe interoperability, portability or exit.
+
+kOA-Linux Operating System is designed to support **bounded environments that can cooperate without becoming one shared database or one central authority**.
+
+## Isolation dimensions
+
+A deployment can separate:
+
+- identities and role assignments;
+- databases and authoritative stores;
+- files, media and encryption keys;
+- service accounts and host privileges;
+- network segments and outbound access;
+- policy bundles and trust roots;
+- release channels and activation schedules;
+- audit visibility and evidence access;
+- synchronization and publication gateways.
+
+## Interoperability between silos
+
+Cooperation happens through declared objects and transitions:
+
+- Kristals and other portable artifacts;
+- signed or verified bundles;
+- publication gateways;
+- Orgo signals, cases, tasks and receipts;
+- explicit synchronization sessions;
+- scoped identity and trust assertions;
+- controlled exports and imports.
+
+Direct writes into another subsystem's authoritative database are prohibited by the architecture.
+
+## Deployment patterns
+
+### Independent organization
+
+One organization runs a local node with private Orgo services, local files, selected knowledge packs and controlled external publication.
+
+### Community hub
+
+A hub serves local users, distributes knowledge and civic surfaces, and synchronizes when connectivity is available.
+
+### Federated institutions
+
+Several institutions maintain separate authorities but exchange verified artifacts and accountable requests.
+
+### Air-gapped environment
+
+Updates and exports travel through removable media or controlled transfer, with local verification before activation.
+
+## Safe failure behavior
+
+A missing remote system does not justify broadening access or substituting a different provider. The system preserves queued work, visible version state and explicit unavailable/degraded labels.
+
+## Sources
+
+- [docs/01-constitution/07-component-separation.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/01-constitution/07-component-separation.md)
+- [docs/02-system/04-component-boundaries.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/02-system/04-component-boundaries.md)
+- [docs/07-security/02-security-domains.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/07-security/02-security-domains.md)
+- [docs/07-security/08-network-boundaries.md](https://github.com/Rejean-McCormick/kOA-Linux/blob/main/docs/07-security/08-network-boundaries.md)
+- [Kristal portability and offline use](https://initkoa.org/technology/kristal/portability-and-offline)
+
+
+================================================================================================
+FILE: wiki/Societal-Outcomes.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Societal Outcomes
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Collective capacity
+
+The principal outcome is not engagement. It is the ability of a group to organize knowledge, clarify disagreement, make legitimate choices, coordinate execution, and preserve reconstructable memory.
+
+## Democratic infrastructure
+
+kOA treats discoverability, credibility, classification, deliberation, decision protocols, accountability, and memory as political infrastructure. These functions shape what a public can see, compare, decide, and act upon.
+
+To avoid technocracy, equal political standing and advisory competence signals remain distinct. EkoH and Smart Vote can provide domain-bounded readings without silently replacing the baseline decision result.
+
+## Non-domination
+
+A system is not legitimate merely because it coordinates efficiently. People and communities must be able to understand, contest, repair, export, self-host, fork, or leave the infrastructure they depend on.
+
+This is why offline capability, fail-closed integrity, auditability, portability, explicit authority, and semantic sovereignty are social and political requirements—not only technical features.
+
+## Social cohesion without uniformity
+
+Social cohesion does not require everyone to agree. It requires enough shared, inspectable reference points to distinguish evidence, uncertainty, value conflicts, decisions, responsibilities, and results.
+
+The system aims to make plurality governable rather than erase it.
+
+## Cultural sovereignty
+
+Culture cannot be protected by storage alone. Cultural memory requires provenance, context, creator and community authority, consent, rights, restrictions, review, withdrawal, and governance pathways.
+
+Kreative and Konservation provide the relevant cultural layer inside Konnaxion. See [Cultural Sovereignty](Cultural-Sovereignty).
+
+## Institutional continuity
+
+Cases, tasks, decisions, receipts, versions, provenance, and post-action review allow organizations and communities to retain knowledge when people, mandates, or platforms change.
+
+## Global-local collaboration
+
+The architecture supports globally reusable knowledge and locally governed action. A community can share selected artifacts while keeping local deliberation, private work, cultural restrictions, or organizational operations within its own authority.
+
+
+================================================================================================
+FILE: wiki/Sociotechnical-Operating-System.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Sociotechnical Operating System
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Governance as runtime
+
+A conventional platform hosts content or interaction. A **Sociotechnical Operating System** runs the combined social and technical rules that make collective action possible:
+
+- roles and permissions;
+- integrity and validation rules;
+- decision protocols;
+- accountability workflows;
+- audit and recourse;
+- semantic and language infrastructure;
+- operational routing, escalation, and closure;
+- local and offline continuity.
+
+The social structure is not an external policy document added after the software is built. Roles, norms, authority, consent, and review are part of the operating model.
+
+## Why a system of systems
+
+No single platform should own knowledge, public deliberation, organizational execution, language, culture, identity, media, and host privilege at once. kOA separates these functions into systems with explicit boundaries.
+
+This supports **integration without contamination**: systems exchange artifacts, requests, events, and receipts without silently absorbing each other's authority or databases.
+
+## Conditions of legitimacy
+
+Operational power is acceptable only when it remains:
+
+- inspectable and auditable;
+- contestable and revisable;
+- explicit about the difference between credibility and decision result;
+- portable and locally operable;
+- resistant to platform capture;
+- multilingual without flattening differences;
+- bounded by consent, rights, and cultural authority;
+- capable of safe failure rather than hidden substitution.
+
+## Role of kOA-Linux
+
+kOA-Linux is the technical runtime beneath this social architecture. It supplies the host-level conditions—profiles, isolation, trust, resources, activation, offline behavior, backup, and recovery—without claiming ownership of the product logic of Konnaxion, Orgo, Ariane, SemantiK Architect, SenTient, or other independent systems.
+
+
+================================================================================================
+FILE: wiki/Start-Here.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Start Here
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Main path — what it does
+
+1. [What kOA does](What-kOA-Does)
+2. [Sociotechnical Operating System](Sociotechnical-Operating-System)
+3. [Knowledge-to-action loop](Knowledge-to-Action-Loop)
+4. [Modules and submodules](Modules-and-Submodules)
+5. [Societal outcomes](Societal-Outcomes)
+6. [Use cases](Use-Cases)
+7. [Related Wikis](Related-Wikis)
+
+## Principles
+
+- [Collective intelligence to governance](Collective-Intelligence-to-Governance)
+- [Semantic sovereignty](Semantic-Sovereignty)
+- [Cultural sovereignty](Cultural-Sovereignty)
+- [Governance, trust, and recourse](Governance-Trust-and-Recourse)
+- [Local and offline operation](Offline-First-Operation)
+- [AI without automatic authority](AI-without-Automatic-Authority)
+
+## Product and module documentation
+
+Use [Modules and Submodules](Modules-and-Submodules) and [Related Wikis](Related-Wikis). This Wiki keeps only concise role and integration summaries for independently documented products.
+
+## Technical path — how kOA-Linux supports it
+
+1. [What kOA-Linux does](What-kOA-Linux-Does)
+2. [System architecture](System-Architecture)
+3. [Deployment profiles](Deployment-Profiles)
+4. [Internal components](Internal-Components)
+5. [Integrated systems](Integrated-Subsystems)
+6. [Security model](Security-Model)
+7. [Operations](Operations)
+8. [Contracts and schemas](Contracts-and-Schemas)
+9. [Conformance and validation](Conformance-and-Validation)
+
+
+================================================================================================
+FILE: wiki/Subsystem-Documentation-Mounts.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Subsystem Documentation Mounts
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+The repository reserves documentation mount points for independently maintained systems:
+
+```text
+docs/subsystems/ariane
+docs/subsystems/konnaxion
+docs/subsystems/orgo
+docs/subsystems/sentient
+docs/subsystems/semantik-architect
+```
+
+These paths may be directory junctions or symbolic links to pinned official documentation repositories. They are not copied into kOA-Linux as a second authority.
+
+There is no UCKK subsystem mount because UCKK is an external Moodle platform. Product readers should normally use the public Wikis listed in [Related Wikis](Related-Wikis).
+
+
+================================================================================================
+FILE: wiki/System-Architecture.md
+================================================================================================
+
+<!-- Navigational projection. Normative authority remains in the repository docs/ corpus. -->
+
+# System Architecture
+
+> **Authority notice:** This wiki is a readable navigation layer. Source contracts, accepted ADRs, normative documents, and executable validators in the repository remain authoritative.
+
+## System class
+
+The system contract defines kOA as a local-first, offline-capable, modular operating environment for governed knowledge, coordination, language, media, navigation, publication, and sovereign deployment.
+
+## Architectural layers
+
+```mermaid
+flowchart TB
+    C["L0 — Constitutional principles"]
+    S["L1 — System baseline"]
+    P["L2 — Deployment profiles"]
+    X["L3 — Internal component and subsystem-boundary contracts"]
+    R["L4 — Non-normative implementation recipes"]
+    C --> S --> P --> X --> R
+```
+
+## Operating modes
+
+| Mode | Purpose | Connectivity |
+| --- | --- | --- |
+| `interactive_user` | Operate the local user-facing kOA environment with deterministic core services and task-activated heavy work. | online, restricted_network, offline |
+| `development` | Develop multiple kOA applications, branches, and worktrees in isolated reproducible workspaces. | online, restricted_network |
+| `build` | Produce reproducible, validated, provenance-bearing system, service, governance, and knowledge artifacts. | online, restricted_network, offline_with_imported_sources |
+| `service_node` | Host a persistent kOA node with profile-defined availability, security, recovery, and offline guarantees. | online, restricted_network, offline |
+| `hub` | Coordinate multiple nodes, artifacts, or governed domains without replacing component or node authority. | online, restricted_network, intermittent |
+| `control_plane` | Operate deployment, release, policy, and fleet coordination services for profiles that require a control plane. | online, restricted_network |
+| `recovery` | Restore a valid system, artifact set, or authoritative data state without creating partial authority. | online, restricted_network, offline |
+
+## Boundary rules
+
+- Components do not write directly into another component or subsystem's authoritative state.
+- Privileged host mutations pass through narrow, declared interfaces.
+- External integrations are optional, capability-scoped, and non-authoritative.
+- Profile contracts select deployment membership, resources, connectivity, and degradation behavior.
+- Release and artifact identity must agree before activation.
+
+## System documentation
+
+- [`docs/02-system/00-system-overview.md`](../blob/main/docs/02-system/00-system-overview.md)
+- [`docs/02-system/01-system-context.md`](../blob/main/docs/02-system/01-system-context.md)
+- [`docs/02-system/02-logical-architecture.md`](../blob/main/docs/02-system/02-logical-architecture.md)
+- [`docs/02-system/03-operating-modes.md`](../blob/main/docs/02-system/03-operating-modes.md)
+- [`docs/02-system/04-component-boundaries.md`](../blob/main/docs/02-system/04-component-boundaries.md)
+- [`docs/02-system/05-data-authority-and-ownership.md`](../blob/main/docs/02-system/05-data-authority-and-ownership.md)
+- [`docs/02-system/06-capability-model.md`](../blob/main/docs/02-system/06-capability-model.md)
+- [`docs/02-system/07-cross-component-communication.md`](../blob/main/docs/02-system/07-cross-component-communication.md)
+- [`docs/02-system/08-offline-behavior.md`](../blob/main/docs/02-system/08-offline-behavior.md)
+- [`docs/02-system/17-capability-degradation.md`](../blob/main/docs/02-system/17-capability-degradation.md)
+- [`docs/02-system/19-release-and-artifact-identity.md`](../blob/main/docs/02-system/19-release-and-artifact-identity.md)
+- [`docs/02-system/20-receipts-and-critical-transitions.md`](../blob/main/docs/02-system/20-receipts-and-critical-transitions.md)
+- [`docs/contracts/system.contract.json`](../blob/main/docs/contracts/system.contract.json)
+
+
+================================================================================================
+FILE: wiki/System-of-Systems.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# A System of Systems
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Why not one platform
+
+The architecture spans public collaboration, organizational execution, validated knowledge, semantics, language, interfaces, culture, governance, storage, identity, and infrastructure. One monolith would concentrate excessive authority and become difficult to evolve or exit.
+
+kOA therefore separates product ownership while connecting the products through a common knowledge-to-action cycle.
+
+## Ecosystem map
+
+| Layer | Systems and modules | Primary role |
+| --- | --- | --- |
+| Knowledge and semantic artifacts | Kristal, SenTient | structured knowledge, provenance, candidate reconciliation, portability |
+| Public learning and collaboration | Konnaxion / KonnectED, keenKonnect, Kreative | learning, projects, culture, public participation, creation |
+| Deliberation and judgment | Ethikos, Korum, Konsultations, EkoH, Smart Vote | disagreement mapping, consultation, decision procedures, advisory readings |
+| Organizational execution | Orgo | signals, cases, tasks, roles, routing, escalation, closure, insights |
+| Language and navigation | SemantiK Architect, Ariane | multilingual realization, semantic interfaces, assisted navigation |
+| Local media and exchange | kOA Mediatheque, optional external UCKK exchange | local private media authority and explicit learning-content exchange |
+| Governance and trust | Governance runtime, identity, audit, receipts | authorization, disclosure, consent, recourse, evidence |
+| Sovereign runtime | kOA-Linux | profiles, isolation, resources, activation, offline continuity, recovery |
+
+## Cooperation rules
+
+1. Each system owns its internal state and product rules.
+2. Exchanges use explicit artifacts, APIs, events, tasks, and receipts.
+3. Advisory credibility signals do not silently become sovereign decisions.
+4. Optional AI does not create invisible authority.
+5. Failure of one system does not authorize another to absorb its role.
+6. Local autonomy and global interoperability coexist through portable, governed exchanges.
+
+See [Modules and Submodules](Modules-and-Submodules) and [Related Wikis](Related-Wikis).
+
+
+================================================================================================
+FILE: wiki/Technical-Reference.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Technical Reference
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+This is the secondary reading path. It explains how kOA-Linux hosts and governs the capabilities described in the main Wiki.
+
+## Architecture and authority
+
+- [Authority and documentation](Authority-and-Documentation)
+- [Constitutional principles](Constitutional-Principles)
+- [System architecture](System-Architecture)
+- [Architecture decisions](Architecture-Decisions)
+
+## Deployment and runtime
+
+- [Deployment profiles](Deployment-Profiles)
+- [Internal components](Internal-Components)
+- [Integrated systems](Integrated-Subsystems)
+- [Subsystem documentation mounts](Subsystem-Documentation-Mounts)
+- [Development model](Development-Model)
+
+## Security, lifecycle, and operations
+
+- [Security model](Security-Model)
+- [Release and artifact lifecycle](Release-and-Artifact-Lifecycle)
+- [Operations](Operations)
+- [Control, portability, and recovery](Control-Portability-and-Recovery)
+- [AI and external integrations](AI-and-External-Integrations)
+
+## Contracts and validation
+
+- [Contracts and schemas](Contracts-and-Schemas)
+- [Conformance and validation](Conformance-and-Validation)
+- [Documentation map](Documentation-Map)
+- [Contributing](Contributing)
+
+For Konnaxion, Orgo, SemantiK Architect, and other products, use [Related Wikis](Related-Wikis) rather than treating this technical branch as their full documentation.
+
+
+================================================================================================
+FILE: wiki/UCKK-Mediatheque.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# kOA and UCKK Mediatheques
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+The Mediatheque relationship is one infrastructure topic inside the larger ecosystem.
+
+- **kOA Mediatheque** — local, private-by-default, offline authority for media and files held by the installation.
+- **UCKK Mediatheque** — online authority for content accepted by the external UCKK Moodle platform.
+
+They may implement compatible frames for identity, versions, hashes, metadata, provenance, rights, restrictions, relations, collections, languages, renditions, and lifecycle. Compatibility does not create a shared database, shared authority, or automatic synchronization.
+
+See [Files, Media, and Provenance](Files-Media-and-Provenance) and [UCKK](UCKK).
+
+
+================================================================================================
+FILE: wiki/UCKK.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# UCKK
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+UCKK is an external Moodle platform for online learning, courses, pathways, activities, resources, and learning communities.
+
+It is not an internal kOA-Linux subsystem and does not define the kOA ecosystem. Its own Mediatheque is distinct from the local kOA Mediatheque.
+
+Where enabled, kOA-Linux can support two explicit operations:
+
+- `publish_to_uckk` — publish an authorized local representation as a distinct UCKK object;
+- `import_from_uckk` — import a selected UCKK resource as a distinct local offline copy.
+
+There is no implicit database merge or generic `sync_mediatheques` operation.
+
+
+================================================================================================
+FILE: wiki/Use-Cases.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# Use Cases
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Education
+
+Schools can use portable knowledge, multilingual resources, local media, and offline packages. Learners can move from study to collaborative projects, while credentials, provenance, and local adaptations remain governed.
+
+## Municipal and civic action
+
+Residents, experts, and officials can build shared knowledge around an issue, deliberate proposals, preserve multiple readings, make an explicit decision, route implementation through accountable roles, and publish evidence of progress.
+
+## Organizational operations
+
+An organization can turn email, forms, reports, incidents, and decisions into Cases and Tasks with owners, reactivity windows, escalation, closure, and recurring review through Orgo.
+
+## Research and innovation
+
+Researchers can combine sources, datasets, candidate extraction, semantic artifacts, project workspaces, blueprints, validation, and reusable outputs. Knowledge produced in one project can become a portable input for another.
+
+## Cultural memory and collaboration
+
+Artists, communities, archives, and institutions can document works with provenance, rights, consent, context, exhibitions, trust signals, collaboration spaces, and governance workflows through Kreative and Konservation.
+
+## Crisis and field operations
+
+A local node can retain procedures, knowledge, files, tasks, identity, and recovery capabilities during network failure. Remote exchange waits; local authority and evidence remain available.
+
+## Global-local networks
+
+Global collaboration can produce shared artifacts and reference models, while local nodes decide what to adopt, adapt, publish, keep private, or reject.
+
+See the scenario pages for longer examples:
+
+- [Community and civic use](Community-and-Civic-Use)
+- [Organizational operations](Organizational-Operations)
+- [Education and learning](Education-and-Learning)
+- [Municipality and public service](Municipality-and-Public-Service)
+- [Crisis and air-gapped use](Crisis-Field-and-Air-Gapped-Use)
+- [Multilingual knowledge networks](Multilingual-Knowledge-Networks)
+
+
+================================================================================================
+FILE: wiki/What-kOA-Does.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# What kOA Does
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## The direct answer
+
+kOA helps a collective govern the full cycle through which it knows, chooses, acts, and remembers.
+
+It does not assume that more information automatically creates better decisions, or that participation automatically creates action. Each transition is treated as a governed transformation:
+
+- contributions require interpretation and provenance before becoming knowledge;
+- knowledge requires deliberation and explicit procedures before informing a decision;
+- decisions require mandates, owners, resources, and tasks before becoming action;
+- action requires evidence and review before becoming durable memory;
+- memory must remain reusable so the next cycle starts from accumulated learning rather than institutional amnesia.
+
+## Five operating questions
+
+The ecosystem is organized around five questions:
+
+1. What is reliable enough to act on?
+2. How can disagreement become legible instead of collapsing into noise?
+3. How can judgment improve without expertise becoming sovereign power?
+4. How do decisions become responsibilities, tasks, escalation, closure, and learning?
+5. How can the entire chain be reconstructed, contested, repaired, and reused later?
+
+## What this produces
+
+When the chain works, a group can:
+
+- build and share verified knowledge;
+- learn across languages and locations;
+- deliberate without losing evidence or minority positions;
+- distinguish equal democratic standing from advisory competence signals;
+- convert outcomes into accountable organizational work;
+- preserve cultural and institutional memory;
+- operate locally during network failure;
+- remain able to inspect, contest, export, fork, or leave the infrastructure it depends on.
+
+kOA is therefore not primarily a content platform. It is infrastructure for **controlled transformation from knowledge to collective capacity**.
+
+
+================================================================================================
+FILE: wiki/What-kOA-Linux-Does.md
+================================================================================================
+
+<!-- Explanatory wiki projection. Normative authority remains in the repository and subsystem documentation. -->
+
+# What kOA-Linux Operating System Does
+
+> **Reading model:** The main path explains what the kOA ecosystem enables. The technical reference explains how kOA-Linux hosts, isolates, verifies, and operates those capabilities. Product-specific details remain in each subsystem's own documentation.
+
+## Its role in the big picture
+
+kOA-Linux does not implement the entire sociotechnical ecosystem. It provides the sovereign runtime in which selected systems can operate together without collapsing their authority boundaries.
+
+## Responsibilities
+
+- run profile-selected capabilities locally;
+- isolate identities, services, stores, networks, keys, and privilege;
+- verify and activate software, policy, language, and knowledge artifacts;
+- allocate CPU, memory, storage, queues, and background work;
+- preserve declared offline behavior and safe degradation;
+- provide backup, restore, recovery, export, and credible exit;
+- control publication, import, AI, and external-integration boundaries;
+- preserve audit evidence and receipts for critical transitions.
+
+## What it does not own
+
+kOA-Linux does not define Konnaxion's civic modules, Orgo's internal workflows, SemantiK grammar construction, SenTient's reconciliation pipeline, Ariane's full navigation model, or UCKK's Moodle internals. Those belong to their owning products and Wikis.
+
+Use [Related Wikis](Related-Wikis) for product detail and [Technical Reference](Technical-Reference) for the operating-system architecture.

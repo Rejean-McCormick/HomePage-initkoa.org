@@ -2,11 +2,16 @@
 
 repository: Rejean-McCormick/Konnaxion
 source_path: C:\mycode\Konnaxion\Konnaxion
-source_commit: 7149c2e549509edd3de928c47162b2c95e5a8c8a
+source_commit: b919a5970f777c4c40e722b07ec82775547076c2
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:46-04:00
-files: 139
-content_sha256: 1d71b50f0038fec9857a03e497729019d881110e7ebdbd8c00541875f6c5ef39
+wiki_source_path: C:\mycode\Konnaxion\Konnaxion.wiki
+wiki_source_commit: fe0e86e9ebd84e2b407131a88355eb9db09a7510
+wiki_working_tree_markdown: clean
+repo_files: 139
+wiki_files: 12
+generated_at: 2026-08-25T11:30:37-04:00
+files: 151
+content_sha256: dbf93fcb5bf3e65872fe50d9892e4c299190d21ff6d80863c2ac495d8c0b6f1e
 
 ================================================================================================
 FILE INDEX
@@ -151,6 +156,18 @@ FILE INDEX
 137. README_WALKTHROUGH.md
 138. seed-data/ethikos/canada_quebec_public_debates_2026_inventory.md
 139. VALIDATION_REPORT.md
+140. wiki/CertifiKation.md
+141. wiki/EkoH.md
+142. wiki/Home.md
+143. wiki/Knowledge.md
+144. wiki/Konnaxion-–-Technical-Architecture-&-Services.md
+145. wiki/Konservation.md
+146. wiki/Konstruct.md
+147. wiki/Konsultations.md
+148. wiki/Kontact.md
+149. wiki/Korum.md
+150. wiki/Smart-Vote.md
+151. wiki/Stockage.md
 
 
 ================================================================================================
@@ -106281,3 +106298,1384 @@ contract changed in this hotfix.
 ## V4.1.2 display-name hotfix
 
 Demo actor imports now persist `display_name` into Konnaxion `User.name`, while Smart Vote and EkoH profile serialization reject the inherited `"None None"` artefact and fall back safely to the username. No schema or migration change.
+
+
+================================================================================================
+FILE: wiki/CertifiKation.md
+================================================================================================
+
+**CertifiKation (Skills & Certification)** — sub‑module under **KonnectED**.  
+ Implements five core services with fixed code‑names and routes exposed via the DRF backend and `/certs` UI flows.
+
+---
+
+### **1\) Functional Services (and expected files)**
+
+Code‑names come from the v14 Functional Inventory; each maps 1‑to‑1 to a Django service module (e.g., `services/<code_name>.py`).
+
+| Display name | Code name / service | Purpose / behavior | Likely file or module |
+| ----- | ----- | ----- | ----- |
+| Certification Paths | `certification_path_management` | Define/maintain modular learning paths and competency milestones. | `services/certification_path_management.py` |
+| Automated Evaluation | `automated_evaluation` | Auto‑graded quizzes/tests and score calculation with metadata. | `services/automated_evaluation.py` |
+| Peer Validation | `peer_validation` | Mentor/peer approval workflow on submitted evidence tied to an evaluation. | `services/peer_validation.py` |
+| Skills Portfolio | `skills_portfolio` | User portfolio of validated skills and artifacts, surfaced in “My Certificates.” | `services/skills_portfolio.py` |
+| Interoperability (LMS) | `certification_interoperability` | Map/import/export certifications with external LMS/registries. | `services/certification_interoperability.py` |
+
+The inventory explicitly lists these five services for CertifiKation and describes the code‑name→service convention used across modules.
+
+---
+
+### **2\) Backend Functionalities**
+
+* **Program & curriculum management.** CRUD for *CertificationPath* (name, description), ordering of steps, and visibility rules; exposed via DRF to power `/certs` → “Programs.”
+
+* **Evaluations & scoring.** Creating an *Evaluation* per user/path records `raw_score` and structured `metadata` (e.g., answers, rubric). Pass/fail uses frozen thresholds (see CERT\_PASS\_PERCENT), and retries respect a cooldown policy.
+
+* **Peer validation workflow.** *PeerValidation* ties to an Evaluation; authorized peers issue an `approved`/`rejected` decision that finalizes the evaluation outcome when required by the path.
+
+* **Certificate issuance.** On successful completion (auto‑evaluation and/or peer validation), a **Certificate** record (core/common model) links the user to the earned credential for display and download from `/certs` → “My Certificates.”
+
+* **Skills portfolio linkage.** Portfolio items (evidence, learning artifacts) can be attached to programs and evaluations so achievements surface coherently in the user’s skill profile.
+
+* **Interoperability.** *InteropMapping* maps internal paths to external systems’ identifiers to support import/export and verification workflows.
+
+* **Permissions & roles.** Uses the platform’s unified JWT/RBAC and Krowd user model; module actions inherit common auth and moderation controls.
+
+---
+
+### **3\) Database Models**
+
+These are the concrete tables tied to CertifiKation features; “Certificate” is defined at the common/core layer and consumed here.
+
+| Table / Model | Purpose | Key fields |
+| ----- | ----- | ----- |
+| **CertificationPath** | Defines a named certification/learning path. | `id`, `name`, `description` |
+| **Evaluation** | Stores a user’s attempt and score on a path. | `id`, `user`, `path`, `raw_score`, `metadata` (JSON) |
+| **PeerValidation** | Peer/mentor decision for an Evaluation. | `id`, `evaluation`, `peer`, `decision` (enum) |
+| **Portfolio** (KonnectED) | User skill/evidence showcase used by skills\_portfolio. | `id`, `user`, `title`, `description`, `items` (M2M) |
+| **InteropMapping** | Links internal CertificationPath to external LMS IDs. | `id`, `local_certification`, `external_system`, `external_id` |
+| **Certificate** (Core) | Issued credential linking user↔certification. | fields per core “Certificate (CertifiKation)” model |
+
+Model purposes/fields are specified in the v14 schema reference and the core database description.
+
+---
+
+### **4\) Supporting Configuration**
+
+* **Pass threshold:** `CERT_PASS_PERCENT = 80%` (applied by automated\_evaluation/issuance logic).
+
+* **Retry policy:** `QUIZ_RETRY_COOLDOWN_MIN = 30` minutes between failed attempts.
+
+* **Module routes:** `/certs` reserved for the CertifiKation Center (Programs, My Certificates).
+
+---
+
+### **Summary**
+
+CertifiKation delivers end‑to‑end credentialing: define programs (*CertificationPath*), assess learners (*Evaluation*), adjudicate evidence (*PeerValidation*), issue credentials (core *Certificate*), and present outcomes via portfolios and the `/certs` flows. Its five named services (`certification_path_management`, `automated_evaluation`, `peer_validation`, `skills_portfolio`, `certification_interoperability`) are version‑locked in the inventory and backed by concrete schema and parameters.
+
+
+================================================================================================
+FILE: wiki/EkoH.md
+================================================================================================
+
+**EkoH (Reputation & Expertise)** — first sub‑module under **Kollective Intelligence**.  
+ Implements seven core services with clear code‑names, supported by dedicated models and fixed parameters.
+
+---
+
+### **1\) Functional Services (and expected files)**
+
+Code‑name list per the v14 inventory; each code‑name maps to a Django service module (e.g., `services/scoring.py` contains `multidimensional_scoring`).
+
+| Display name | Code name / service | Purpose / behavior | Likely file or module |
+| ----- | ----- | ----- | ----- |
+| Multidimensional Scoring | `multidimensional_scoring` | Compute per‑user/content scores across axes (quality, frequency, relevance, expertise). | `services/scoring.py` |
+| Criteria Customization | `configuration_weights` | Adjust scoring weights per axis/domain; read from stored configuration. | `services/configuration.py` (reads `ScoreConfiguration`) |
+| Automatic Contextual Analysis | `contextual_analysis` | AI tweaks sub‑scores in real time by topic/history/complexity signals. | `services/contextual_analysis.py` |
+| Dynamic Privacy | `privacy_settings` | Enforce anonymity/pseudonym modes while still exposing merit outputs. | `services/privacy.py` |
+| History & Traceability | `score_history` | Persist every recalculation/config change for auditability. | `services/history.py` (+ model hooks) |
+| Interactive Visualizations | `score_visualization` | Serve aggregated data for dashboards/skill maps/matrices. | `services/visualization.py` |
+| Expertise Classification by Field | `expertise_field_classification` | Bind scores to formal knowledge domains (taxonomy). | `services/expertise.py` |
+
+—
+
+### **2\) Backend Functionalities**
+
+* **Reputation engine & triggers.** A Django service updates users’ domain‑specific Ekoh scores from platform activity; scheduled Celery jobs perform periodic recalculation, and event hooks apply immediate updates on impactful actions.
+
+* **Ethical multiplier.** An ethics score multiplies domain expertise to produce final influence weights (raises for constructive behavior, lowers for flagged behavior).
+
+* **Smart‑Vote integration.** Voting across modules (e.g., Ethikos) is weighted by the voter’s relevant Ekoh score; live results may be pushed via Channels.
+
+* **Cross‑module APIs.** Provides shared search/notifications/feed/recommendation surfaces that consume Ekoh signals (e.g., leaderboards, relevance).
+
+* **Quality controls.** Thresholds and moderation safeguards prevent brigading/spam from distorting reputation and consensus.
+
+—
+
+### **3\) Database Models (OLTP)**
+
+Canonical tables powering EkoH scoring, ethics, audit, and privacy.
+
+| Table / Model | Purpose | Key fields |
+| ----- | ----- | ----- |
+| `ExpertiseCategory` | Domain taxonomy for expertise classification. | `id`, `name` |
+| `UserExpertiseScore` | Per‑user per‑domain raw/weighted score. | `id`, `user`, `category`, `raw_score`, `weighted_score` |
+| `UserEthicsScore` | Per‑user ethical multiplier (applied to expertise). | `user` (PK), `ethical_score` |
+| `ScoreConfiguration` | Named weights/coefficients (global or per field). | `id`, `weight_name`, `weight_value`, `field` |
+| `ContextAnalysisLog` | AI context adjustments applied to scores. | `id`, `entity_type`, `entity_id`, `field`, `input_metadata` (JSON), `adjustments_applied` (JSON) |
+| `ConfidentialitySetting` | User privacy level for identity display near scores. | `user` (PK), `level` (enum: public/pseudonym/anonymous) |
+| `ScoreHistory` | Full audit trail of score changes. | `id`, `merit_score` (FK), `old_value`, `new_value`, `change_reason` |
+
+—
+
+### **4\) Supporting Configuration (frozen)**
+
+Finalized parameters for EkoH engine and domain taxonomy.
+
+* **Initial axis weights:** `quality=1.000`, `expertise=1.500`, `frequency=0.750` → used by `multidimensional_scoring`.
+
+* **Ethical multiplier bounds:** floor `0.20`, cap `1.50`.
+
+* **Expertise domains:** `EXPERTISE_DOMAIN_CHOICES` (26 ISO‑based domains; seeded fixtures).
+
+—
+
+### **5\) Schedules & runtime**
+
+* **Periodic recomputation:** Celery Beat tasks (nightly/interval) to refresh Ekoh scores and any precomputed leaderboards; monitored in CI/ops.
+
+* **Realtime delivery:** Optionally push score/leaderboard deltas or weighted results via Django Channels \+ Redis.
+
+—
+
+### **Summary**
+
+EkoH exposes seven concrete services (`multidimensional_scoring`, `configuration_weights`, `contextual_analysis`, `privacy_settings`, `score_history`, `score_visualization`, `expertise_field_classification`) mapped to Django service modules; it persists expertise/ethics/traceability/privacy via dedicated tables and operates under fixed, reviewable parameters. It is the weighting backbone for Smart‑Vote and cross‑module relevance, with periodic recomputation and optional realtime updates.
+
+
+================================================================================================
+FILE: wiki/Home.md
+================================================================================================
+
+# Konnaxion – Civic Workflows & Module Interactions
+
+Konnaxion is a socio‑technical framework for coordinating people, knowledge, and action through an ethical, modular civic architecture built on the KOA model: **KonnectED, Ethikos, Kreative, keenKonnect, EkoH, Smart Vote**. 
+
+This page is the **hub** for the wiki. It summarizes how modules relate to each other, and it links to detailed pages for each sub‑module. For implementation details (models, services, parameters), use the dedicated technical page linked at the end.
+
+https://konnaxion.com/ekoh/dashboard to visit it!
+
+[For an illustrated presentation of the purpose of Konnaxion, the "Knowledge Plateform".](https://kingklown.wiki/)
+
+---
+
+## Wiki structure
+
+Overall structure:
+
+* **Konnaxion – Civic Workflows & Module Interactions** *(this page)*
+
+### KonnectED
+
+* [[Knowledge]] — Collaborative Learning Library: catalog, recommendations, co‑creation, forums, progress tracking. 
+* [[CertifiKation]] — Skills & Certification: paths, evaluations, peer validation, portfolios, credentials. 
+
+### Ethikos
+
+* [[Korum]] — Structured Debates: topics, −3…+3 stances, threaded arguments, expert cohorts, summaries. 
+* [[Konsultations]] — Public Consultations & Feedback: time‑boxed consultations, citizen suggestions, weighted ballots, impact tracking. 
+
+### Kreative
+
+* [[Konservation]] — Creative Content & Cultural Preservation: digital archives, virtual exhibitions, AI‑enriched catalog, partner collections. 
+* [[Kontact]] — Collaboration & Networking: profiles, intelligent matching, collaboration rooms, opportunities, endorsements. 
+
+### keenKonnect
+
+* [[Konstruct]] — Project Collaboration Spaces: project workspaces, tasks, chat, AI insights, project ratings. 
+* [[Stockage]] — Secure Repository & Versioned Storage: document/blueprint storage, versioning, indexing, real‑time sync. 
+
+### Kollective Intelligence
+
+* [[EkoH]] — Reputation & Expertise: multidimensional scoring, ethical multipliers, privacy controls, audit trails. 
+* [[Smart Vote]] — Weighted Voting System: EkoH‑weighted voting, multiple modalities, emerging‑expert detection, analytics. 
+
+Use this section as the navigation menu for the wiki: start from the KOA area you care about, then dive into its sub‑module page for details.
+
+---
+
+## Civic workflow at a glance
+
+The README outlines a civic workflow “proposal → deliberation → decision → action.” 
+The KOA modules map onto that pipeline as follows:
+
+1. **Learn & build competence – KonnectED**
+   People explore resources and courses in **Knowledge**, then earn certifications through **CertifiKation**, building skills and portfolios.
+
+2. **Deliberate & consult – Ethikos**
+   Complex issues are debated in **Korum** with nuanced stances and arguments, while broader participation is organized via **Konsultations** for structured public input.
+
+3. **Weigh & decide – Kollective Intelligence**
+   **EkoH** computes domain‑specific reputation and ethics scores; **Smart Vote** uses them to weight ballots and stances, exposing both raw and weighted outcomes.
+
+4. **Execute & coordinate – keenKonnect**
+   Adopted proposals become projects in **Konstruct**, with tasks, chat, and AI summaries, while **Stockage** manages all related documents and blueprints.
+
+5. **Preserve & connect – Kreative**
+   Outputs are archived and exhibited through **Konservation**, and relationships and opportunities are managed via **Kontact**, feeding back into future cycles of work.
+
+---
+
+## Technical architecture and services
+
+For details about:
+
+* service code‑names and how they map to Django modules
+* core models and configuration parameters (thresholds, limits, routes)
+* real‑time infrastructure (Channels/Redis), ETL jobs, and analytics flows
+
+see the dedicated technical page:
+
+* [[Konnaxion – Technical Architecture & Services]]
+
+That page consolidates the “technicalities” from the module specifications and the original system‑overview draft, so this hub can stay focused on workflows and navigation.
+
+
+================================================================================================
+FILE: wiki/Knowledge.md
+================================================================================================
+
+**Knowledge (Collaborative Learning Library)** — sub‑module under **KonnectED**.  
+ Implements five concrete services with code‑names, backed by specific tables and fixed parameters, and exposed through the **/learn** and **/course/** flows.
+
+---
+
+### **1\) Functional Services (and expected files)**
+
+Code‑name → service module mapping follows the v14 inventory convention.
+
+| Display name | Code name / service | Purpose / behavior | Likely file or module |
+| ----- | ----- | ----- | ----- |
+| Collaborative Library | `library_resource_management` | CRUD, classify, and publish library resources; enforce type enums and moderation. | `services/library_resource_management.py` |
+| Personalized Recommendations | `personalized_recommendation` | Suggest resources per learner profile, usage, and expertise signals. | `services/personalized_recommendation.py` |
+| Co‑Creation Tools | `content_co_creation` | Real‑time authoring/versioning of lessons and media with contribution workflow. | `services/content_co_creation.py` |
+| Thematic Forums | `thematic_forum` | Subject‑based discussion boards tied to resources and courses. | `services/thematic_forum.py` |
+| Learning Progress Tracking | `learning_progress_tracking` | Track per‑user progress and completion across resources/lessons. | `services/learning_progress_tracking.py` |
+
+---
+
+### **2\) Backend Functionalities**
+
+* **Library management & contribution.** Resource CRUD with enforced content types, draft/publish states, and per‑user draft caps; surfaced in **/learn**.
+
+* **Search & discovery.** Full‑text search over titles/descriptions using the platform’s PostgreSQL tsvector backend; results feed the library listing and global search.
+
+* **Recommendations.** Periodic or on‑demand generation of **KnowledgeRecommendation** rows per user; ranking blends popularity, recency, and profile relevance.
+
+* **Co‑creation workflow.** Collaborative editing spaces for lessons/media with versioned **CoCreationContribution** entries; authors can iterate before publishing to the library.
+
+* **Forums.** Topic and post threads by theme/subject with moderation hooks; linked from resource or course views and listed under **/learn**.
+
+* **Progress tracking & player.** The **/course/\[slug\]** player reads/writes **LearningProgress** to drive completion %, resumes, and achievements.
+
+* **Offline distribution.** Scheduled packaging of selected knowledge content for low‑connectivity environments.
+
+---
+
+### **3\) Database Models**
+
+Custom tables for Knowledge, Co‑Creation, and Forums; plus recommendation/progress records.
+
+| Table / Model | Purpose | Key fields |
+| ----- | ----- | ----- |
+| **KnowledgeResource** | Canonical library item (article, video, lesson, quiz, dataset). | `id`, `title`, `type` *(enum)*, `url`, `author` |
+| **KnowledgeRecommendation** | Records a recommended resource for a user. | `id`, `user`, `resource`, `recommended_at` |
+| **LearningProgress** | Per‑user progress for a resource/lesson. | `id`, `user`, `resource`, `progress_percent` *(unique per user+resource)* |
+| **CoCreationProject** | Collaborative content project container. | `id`, `title`, `status` *(enum)* |
+| **CoCreationContribution** | Individual draft/edit within a project. | `id`, `project`, `user`, `content` |
+| **ForumTopic** | Thematic forum thread (subject/question). | `id`, `title`, `category`, `creator` |
+| **ForumPost** | Post/reply within a topic. | `id`, `topic`, `author`, `content` |
+
+---
+
+### **4\) Supporting Configuration & Routes**
+
+* **Allowed content types (enum):** `article`, `video`, `lesson`, `quiz`, `dataset`.
+
+* **Draft cap:** `MAX_CONTRIBUTION_DRAFTS = 10` per user.
+
+* **Search backend:** `SEARCH_BACKEND = "postgres"` (tsvector).
+
+* **Offline packaging schedule:** `OFFLINE_PACKAGE_CRON = 0 3 * * SUN`.
+
+* **Navigation:** **/learn** (Catalog, Recommendations, Offline Download) and **/course/\[slug\]** (Course Player: Lessons, Assessments, Progress).
+
+---
+
+### **Summary**
+
+Knowledge delivers the learning library and its social layer: resource management, personalized recommendations, collaborative authoring, themed forums, and progress tracking. It provides five named services (`library_resource_management`, `personalized_recommendation`, `content_co_creation`, `thematic_forum`, `learning_progress_tracking`) mapped to Django modules and backed by concrete tables and parameters, integrated with **/learn** and **/course/** UX.
+
+
+================================================================================================
+FILE: wiki/Konnaxion-–-Technical-Architecture-&-Services.md
+================================================================================================
+
+# Konnaxion – Technical Architecture & Services
+
+This page collects the **technical details** of Konnaxion: service code‑names, core models, configuration parameters, routing invariants, and cross‑module infrastructure. It complements:
+
+* the repository **README**, which focuses on vision, mythology, and high‑level modules 
+* the wiki **hub page**, which explains civic workflows and navigation
+* the individual module pages (Knowledge, CertifiKation, Korum, etc.), which describe each sub‑module functionally
+
+Use this page as the reference for development and integration work.
+
+---
+
+## 1. Platform overview
+
+### 1.1 KOA module map
+
+Konnaxion’s architecture is organized into six top‑level modules: 
+
+* **KonnectED** – learning, knowledge, and certification
+* **Ethikos** – structured debates and civic consultations
+* **Kreative** – culture, preservation, and professional networks
+* **keenKonnect** – project workspaces and storage
+* **Kollective Intelligence** – reputation and voting (EkoH, Smart Vote)
+* **System / Core** – cross‑cutting auth, storage, search, analytics
+
+Each KOA module is implemented as one or more Django apps with:
+
+* **service code‑names** (e.g. `multidimensional_scoring`, `public_consultation`) mapping 1‑to‑1 to service modules
+* **OLTP models** described in the v14 schema reference
+* **frozen configuration parameters** (thresholds, limits, routes)
+
+### 1.2 Shared technology stack
+
+Across modules, the technical stack is consistent:
+
+* **Backend**: Django + Django REST Framework
+* **Realtime**: Django Channels with Redis (`channels_redis.core.RedisChannelLayer`)
+* **Data store**: PostgreSQL with tsvector full‑text search
+* **Background tasks**: Celery (ETL, AI enrichment, packaging, recomputation)
+* **Object storage**: `/app/media/` root, typically backed by S3/MinIO
+* **Front‑end**: routes reserved per module (`/learn`, `/certs`, `/debate`, etc.)
+
+---
+
+## 2. Cross‑module infrastructure
+
+### 2.1 Service code‑name convention
+
+Every sub‑module defines **named services** that are stable integration points. Examples:
+
+* Korum: `structured_debate`, `ai_clone_management`, `comparative_argument_analysis`, `public_debate_archive`, `automated_debate_summary` 
+* Smart Vote: `dynamic_weighted_vote`, `voting_modalities`, `emerging_expert_detection`, `vote_transparency`, `vote_result_visualization`, `cross_module_vote_integration` 
+* EkoH: `multidimensional_scoring`, `configuration_weights`, `contextual_analysis`, `privacy_settings`, `score_history`, `score_visualization`, `expertise_field_classification` 
+* Knowledge: `library_resource_management`, `personalized_recommendation`, `content_co_creation`, `thematic_forum`, `learning_progress_tracking` 
+
+Code‑names map 1‑to‑1 to service modules (e.g. `services/dynamic_weighted_vote.py`), and are referenced by tasks, API endpoints, and configuration.
+
+### 2.2 Routing invariants
+
+Top‑level routes are **owned** by specific modules and treated as invariants:
+
+* `/learn`, `/course/[slug]` → KonnectED / Knowledge 
+* `/certs` → KonnectED / CertifiKation 
+* `/debate`, `/ethikos/insights` → Ethikos / Korum 
+* `/consult` → Ethikos / Konsultations 
+* `/projects`, `/projects/[slug]` → keenKonnect / Konstruct + Stockage
+* `/kreative`, `/art/[id]`, `/archive` → Kreative / Konservation 
+* `/connect`, `/profile/[user]` → Kreative / Kontact 
+* `/konsensus`, `/reports/smart-vote` → Kollective Intelligence / Smart Vote 
+
+No other module should claim these top‑level paths.
+
+### 2.3 Storage and media
+
+* **Media root**: `MEDIA_ROOT=/app/media/` is shared across modules.
+* **File size & types** are fixed per context:
+
+  * Stockage / Konstruct: `MAX_BLUEPRINT_UPLOAD_MB = 150`, types `[".pdf", ".png", ".jpg", ".glb", ".gltf", ".stl"]`
+  * Konservation: `ARTWORK_MAX_IMAGE_MB = 50`, `ARTWORK_RESOLUTIONS = [256, 1024, 2048]` px 
+
+Storage is typically an object store (S3/MinIO) behind the media path.
+
+### 2.4 Search
+
+* Knowledge and Stockage explicitly use PostgreSQL full‑text search (`SEARCH_BACKEND = "postgres"`) for library resources and documents.
+* Tags (`Tag`, `ArtworkTag`) provide a shared taxonomy layer across Kreative and keenKonnect.
+
+### 2.5 Realtime and background jobs
+
+* **Django Channels + Redis** power:
+
+  * live stance and result updates in Korum and Konsultations
+  * real‑time tallies in Smart Vote 
+  * project chat, notifications, and document events in Konstruct and Stockage
+  * collaboration rooms in Kontact 
+
+* **Celery tasks & schedules** include:
+
+  * `etl_smart_vote` every 10 minutes, with ~5‑year retention for facts 
+  * periodic EkoH score recomputation and leaderboard refresh 
+  * weekly offline packaging for Knowledge (`OFFLINE_PACKAGE_CRON = 0 3 * * SUN`) 
+  * image rendition, AI enrichment, and partner ingest for Konservation 
+
+---
+
+## 3. Module–by–module technical summary
+
+### 3.1 KonnectED
+
+#### 3.1.1 Knowledge – Collaborative Learning Library
+
+**Services** 
+
+* `library_resource_management` – CRUD and classify `KnowledgeResource`; enforce type enum.
+* `personalized_recommendation` – compute `KnowledgeRecommendation` per user.
+* `content_co_creation` – manage `CoCreationProject` and `CoCreationContribution` drafts.
+* `thematic_forum` – forums via `ForumTopic` and `ForumPost`.
+* `learning_progress_tracking` – track `LearningProgress` (per user + resource).
+
+**Core models**
+
+* `KnowledgeResource(id, title, type, url, author)`
+* `KnowledgeRecommendation(user, resource, recommended_at)`
+* `LearningProgress(user, resource, progress_percent)`
+* `CoCreationProject`, `CoCreationContribution`
+* `ForumTopic`, `ForumPost` 
+
+**Key configuration**
+
+* Content types: `article | video | lesson | quiz | dataset`
+* `MAX_CONTRIBUTION_DRAFTS = 10` per user
+* Search backend: `SEARCH_BACKEND = "postgres"`
+* Offline packaging: `OFFLINE_PACKAGE_CRON = 0 3 * * SUN` 
+
+**Routes**
+
+* `/learn` – catalog, recommendations, offline download
+* `/course/[slug]` – course player (lessons, progression) 
+
+#### 3.1.2 CertifiKation – Skills & Certification
+
+**Services** 
+
+* `certification_path_management` – manage `CertificationPath`.
+* `automated_evaluation` – create `Evaluation` with `raw_score` and metadata.
+* `peer_validation` – handle `PeerValidation` decisions.
+* `skills_portfolio` – connect to `Portfolio` and core `Certificate` records.
+* `certification_interoperability` – manage `InteropMapping` with external LMS/registries.
+
+**Core models**
+
+* `CertificationPath(id, name, description)`
+* `Evaluation(user, path, raw_score, metadata)`
+* `PeerValidation(evaluation, peer, decision)`
+* `Portfolio(user, title, description, items)`
+* `InteropMapping(local_certification, external_system, external_id)`
+* `Certificate` (core model for issued credentials) 
+
+**Key configuration**
+
+* `CERT_PASS_PERCENT = 80`
+* `QUIZ_RETRY_COOLDOWN_MIN = 30` minutes
+* Routes reserved: `/certs` (Programs, My Certificates) 
+
+---
+
+### 3.2 Ethikos
+
+#### 3.2.1 Korum – Structured Debates
+
+**Services** 
+
+* `structured_debate`, `ai_clone_management`, `comparative_argument_analysis`,
+  `public_debate_archive`, `automated_debate_summary`.
+
+**Core models**
+
+* `EthikosCategory` – thematic categories
+* `EthikosTopic` – debate topic/question
+* `EthikosStance(topic, user, value −3…+3)`
+* `EthikosArgument(topic, author, content, parent, side)` 
+
+**Key configuration**
+
+* Stance scale: −3 … +3 (0 = neutral)
+* Expert cohort quorum: 12 distinct experts (EkoH threshold)
+* Moderation auto‑hide: 3 independent reports 
+
+**Routes**
+
+* `/debate` – Debate Hub (Open / Archived / Start New)
+* `/ethikos/insights` – opinion analytics dashboards 
+
+#### 3.2.2 Konsultations – Public Consultations & Feedback
+
+**Services** 
+
+* `public_consultation`, `citizen_suggestion`,
+  `weighted_consultation_vote`, `consultation_result_visualization`, `impact_tracking`.
+
+**Core models**
+
+* `Consultation(id, title, open_date, close_date, status)`
+* `CitizenSuggestion(consultation, author, content)`
+* `ConsultationVote(user, consultation, raw_value, weighted_value)`
+* `ConsultationResult(consultation, results_data JSONB)`
+* `ImpactTrack(consultation, action, status, date)` 
+
+**Key configuration**
+
+* Ballot modalities: `approval | ranking | rating | preferential`
+* Consensus threshold (platform‑wide): ≥ 75% weighted agreement
+* Route namespace: `/consult` owned exclusively by Ethikos
+
+**Routes**
+
+* `/consult` – Consultation Hub (Live / Results / Suggest)
+* `/ethikos/insights` – shared with Korum analytics 
+
+---
+
+### 3.3 Kreative
+
+#### 3.3.1 Konservation – Creative Content & Cultural Preservation
+
+**Services** 
+
+* `digital_archive_management`, `virtual_exhibition`,
+  `archive_documentation`, `ai_enriched_catalogue`, `cultural_partner_integration`.
+
+**Core models**
+
+* `KreativeArtwork(id, artist, title, description, media_file, media_type, year, medium, style)`
+* `Tag`, `ArtworkTag` (global tagging vocabulary and join table)
+* `Gallery`, `GalleryArtwork(order)`
+* `TraditionEntry(title, description, region, media_file, approved, approved_by)` 
+
+**Key configuration**
+
+* `ARTWORK_MAX_IMAGE_MB = 50`
+* `ARTWORK_RESOLUTIONS = [256, 1024, 2048]`
+* `VIRTUAL_GALLERY_CAPACITY = 24` artworks/room
+* `NSFW_FLAG_REQUIRED` (bool, default `False`)
+* `MEDIA_ROOT = /app/media/` 
+
+**Routes**
+
+* `/kreative` – Creativity Hub
+* `/art/[id]` – Artwork sheet
+* `/archive` – Konservation archive/partners 
+
+#### 3.3.2 Kontact – Collaboration & Networking
+
+**Services** 
+
+* `professional_profile`, `intelligent_matching`,
+  `collaboration_workspace`, `opportunity_announcement`, `partner_recommendation`.
+
+**Core models**
+
+* `CollabSession(id, name, host, session_type, started_at, ended_at, final_artwork)`
+* Re‑uses `KreativeArtwork`, `Tag`, `ArtworkTag` for portfolios and tagging.
+
+**Key configuration**
+
+* `COLLAB_CANVAS_MAX_USERS = 6`
+* `MEDIA_ROOT = /app/media/` (shared)
+* Routes reserved: `/connect`, `/profile/[user]` 
+
+**Routes**
+
+* `/connect` – People, Opportunities, Collaboration Workspace
+* `/profile/[user]` – public profile/portfolio 
+
+---
+
+### 3.4 keenKonnect
+
+#### 3.4.1 Konstruct – Project Collaboration Spaces
+
+**Services** 
+
+* `collaboration_space`, `project_task_management`,
+  `real_time_document_editing`, `integrated_communication`, `ai_collaboration_analysis`.
+
+**Core models**
+
+* `Project(id, title, description, creator, category, status)`
+* `ProjectResource(project, title, url, added_by)`
+* `ProjectTask(project, title, description, assignee, status, due_date)`
+* `ProjectMessage(project, sender, content)`
+* `ProjectTeam(project, user, role, joined_at)`
+* `ProjectRating(project, user, rating, comment)`
+* `Tag` (shared)
+
+**Key configuration**
+
+* `MAX_BLUEPRINT_UPLOAD_MB = 150`
+* `ALLOWED_BLUEPRINT_TYPES = [".pdf", ".png", ".jpg", ".glb", ".gltf", ".stl"]`
+* `COLLAB_SPACE_MEMBER_CAP = 40`
+* `AI_SUGGESTION_TOP_N = 8`
+* `VIDEO_SESSION_PROVIDER = "livekit"` via `KC_VIDEO_PROVIDER` env var 
+
+**Routes**
+
+* `/projects` – Project Studio (Browse, Create, My Projects)
+* `/projects/[slug]` – workspace (Overview, Tasks, Blueprints, Chat, AI Insights, Settings) 
+
+#### 3.4.2 Stockage – Secure Repository & Versioned Storage
+
+**Services** 
+
+* `secure_document_storage`, `document_versioning`,
+  `intelligent_indexing`, `real_time_sync`, `granular_permissions`.
+
+**Core models**
+
+* `ProjectResource` (same as above; canonical file record)
+* `Project` and `ProjectTeam` for scoping and access control
+* `Tag` for classification 
+
+**Key configuration**
+
+* `MAX_BLUEPRINT_UPLOAD_MB = 150`
+* Allowed types: `[".pdf", ".png", ".jpg", ".glb", ".gltf", ".stl"]`
+* `SEARCH_BACKEND = "postgres"`
+* Realtime layer: `channels_redis.core.RedisChannelLayer`
+* `MEDIA_ROOT = /app/media/` 
+
+**Routes**
+
+* Exposed inside `/projects/[slug]` as the “Blueprints” tab. 
+
+---
+
+### 3.5 Kollective Intelligence
+
+#### 3.5.1 EkoH – Reputation & Expertise
+
+**Services** 
+
+* `multidimensional_scoring`, `configuration_weights`,
+  `contextual_analysis`, `privacy_settings`,
+  `score_history`, `score_visualization`, `expertise_field_classification`.
+
+**Core models**
+
+* `ExpertiseCategory(id, name)`
+* `UserExpertiseScore(user, category, raw_score, weighted_score)`
+* `UserEthicsScore(user, ethical_score)`
+* `ScoreConfiguration(weight_name, weight_value, field)`
+* `ContextAnalysisLog(entity_type, entity_id, field, input_metadata, adjustments_applied)`
+* `ConfidentialitySetting(user, level)`
+* `ScoreHistory(merit_score, old_value, new_value, change_reason)` 
+
+**Key configuration**
+
+* Axis weights: `quality=1.000`, `expertise=1.500`, `frequency=0.750`
+* Ethical multiplier bounds: floor `0.20`, cap `1.50`
+* `EXPERTISE_DOMAIN_CHOICES`: 26 ISO‑based domains 
+
+**Runtime**
+
+* Periodic recomputation via Celery Beat; optional realtime pushes of score/leaderboard deltas over Channels+Redis. 
+
+#### 3.5.2 Smart Vote – Weighted Voting System
+
+**Services** 
+
+* `dynamic_weighted_vote`, `voting_modalities`,
+  `emerging_expert_detection`, `vote_transparency`,
+  `vote_result_visualization`, `cross_module_vote_integration`.
+
+**Core models**
+
+* `Vote(user, target_type, target_id, raw_value, weighted_value)`
+* `VoteModality(name, parameters JSON)`
+* `EmergingExpert(user, detection_date, score_delta)`
+* `VoteResult(target_type, target_id, sum_weighted_value, vote_count)`
+* `IntegrationMapping(module_name, context_type, mapping_details)` 
+
+**Key configuration**
+
+* Modalities: `approval | ranking | rating | preferential`
+* Emerging expert threshold: +15% EkoH delta over 30 days
+* Strong consensus threshold: ≥ 75% weighted agreement 
+
+**Runtime & analytics**
+
+* Realtime results through Channels+Redis
+* ETL `etl_smart_vote` every 10 minutes → `smart_vote_fact` table, 5‑year retention
+* UI: `/konsensus` (live polls/results), `/reports/smart-vote` (analytics) 
+
+---
+
+## 4. Data flows and integration
+
+### 4.1 Reputation‑weighted voting
+
+* EkoH computes per‑user, per‑domain expertise and ethics scores with configurable weights and bounds. 
+* Smart Vote reads those scores to weight `Vote` records via `dynamic_weighted_vote`, adjusting tallies per modality. 
+* Korum and Konsultations integrate with Smart Vote to obtain EkoH‑weighted stances and ballots:
+
+  * Korum aggregates `EthikosStance` using EkoH to compute expert cohort views.
+  * Konsultations uses `weighted_consultation_vote` to store raw + weighted values per ballot.
+
+### 4.2 Projects and documents
+
+* Konstruct manages projects, tasks, chat, and ratings via `Project*` models. 
+* Stockage attaches documents and blueprints as `ProjectResource` records and handles versioning, indexing, and sync. 
+* Real‑time events (file added/updated/removed; chat messages) are emitted via Channels+Redis to subscribed project workspaces.
+
+### 4.3 Culture, archives, and networks
+
+* Konservation’s `KreativeArtwork`, `Gallery`, and `TraditionEntry` store creative and heritage outputs with tag‑based discovery. 
+* Kontact reuses those artefacts and tags for profiles and matching, and stores collaboration sessions in `CollabSession`.
+* AI enrichment and partner ingest tasks update the archive and related metadata in the background. 
+
+### 4.4 Learning and certification
+
+* Knowledge hosts resources, forums, and co‑creation spaces and tracks progression per user/resource. 
+* CertifiKation uses `CertificationPath`, `Evaluation`, and `PeerValidation` to issue `Certificate` records and fill user portfolios. 
+* Although not strictly specified, these activities can feed EkoH via `multidimensional_scoring` as part of the platform‑wide reputation engine. 
+
+---
+
+## 5. Analytics and insights
+
+* Smart Vote ETL (`etl_smart_vote`) is the central pipeline for decision analytics, aggregating delta changes from OLTP into a fact table with 5‑year retention, powering `/reports/smart-vote`. 
+* Ethikos exposes `/ethikos/insights` to visualize debate stances and consultation outcomes, consuming Smart Vote facts and Korum/Konsultations data.
+* EkoH retains a full audit trail via `ScoreHistory` and `ContextAnalysisLog`, enabling longitudinal analysis of reputation evolution. 
+
+---
+
+## 6. Contribution guidelines and invariants (technical)
+
+When extending or integrating with Konnaxion, the following invariants should be respected (all documented above):
+
+1. **Do not change top‑level route ownership** (`/learn`, `/certs`, `/debate`, `/consult`, `/projects`, `/kreative`, `/connect`, `/konsensus`, `/reports/smart-vote`) without updating all dependent modules.
+2. **Preserve service code‑names** (e.g. `dynamic_weighted_vote`, `multidimensional_scoring`); treat them as public, versioned integration points.
+3. **Respect frozen parameter values** when relying on thresholds, caps, or schedule timings, or introduce new configuration entries in a documented way.
+4. **Reuse shared infrastructure** (Channels+Redis, Celery, `/app/media/`, PostgreSQL tsvector) to keep behavior consistent and predictable.
+
+This page, together with the module‑specific wiki entries, should provide enough technical context to navigate, extend, and integrate the Konnaxion codebase.
+
+
+================================================================================================
+FILE: wiki/Konservation.md
+================================================================================================
+
+**Konservation (Creative Content & Cultural Preservation)** — sub‑module under **Kreative**.  
+ Implements five core services with named code‑functions, backed by dedicated models and frozen parameters.
+
+---
+
+### **1\) Functional Services (and expected files)**
+
+Code‑names follow the v14 inventory and map 1:1 to service modules.
+
+| Display name | Code name / service | Purpose / behavior | Likely file or module |
+| ----- | ----- | ----- | ----- |
+| Digital Archives | `digital_archive_management` | Ingest, store, and retrieve digitized artworks and heritage media; handle provenance and rights metadata. | `kreative/services/digital_archive.py` |
+| Virtual Exhibitions | `virtual_exhibition` | Build interactive online galleries/VR rooms from curated sets; enforce per‑room capacity; publish exhibits. | `kreative/services/virtual_exhibition.py` |
+| Documentation Base | `archive_documentation` | Manage bios, provenance notes, and supplemental documents attached to artworks/galleries. | `kreative/services/archive_documentation.py` |
+| AI‑Enriched Catalogue | `ai_enriched_catalogue` | Auto‑classify artworks, generate tags/labels and fill style/medium using ML; writes to tagging/metadata. | `kreative/services/catalogue_ai.py` and `kreative/tasks/ai_enrichment.py` |
+| Cultural Partners Integration | `cultural_partner_integration` | Import/sync collections from partner museums/heritage systems; map external metadata to local schema. | `kreative/services/partner_integration.py` and `kreative/tasks/partner_ingest.py` |
+
+Mapping guidance (“each code name maps to a service module”) per the Functional Code‑Name Inventory.
+
+---
+
+### **2\) Backend Functionalities**
+
+* **Artwork & media lifecycle.** Upload, validate, and persist artworks; generate multiple image renditions for fast delivery; enforce upload size and allowed media types.
+
+* **Curation & exhibitions.** Curators assemble **Galleries** (ordered sets) and publish **Virtual Exhibitions** with capacity limits per room.
+
+* **Tagging & discovery.** Global **Tag** vocabulary with many‑to‑many mapping to artworks; AI service can propose tags and styles.
+
+* **Heritage submissions.** Community submits **TraditionEntry** items (media \+ description \+ region) to the archive; moderator approval workflow.
+
+* **Rights, privacy, and moderation.** NSFW flag on upload; shared moderation policies across modules; provenance and creator attribution preserved.
+
+* **API & stack.** Exposed via Django REST Framework to the Next.js frontend; object storage for media; background workers for image/AI pipelines.
+
+---
+
+### **3\) Database Models (OLTP)**
+
+Canonical tables for Konservation content and curation.
+
+| Table / Model | Purpose | Key fields (excerpt) |
+| ----- | ----- | ----- |
+| `KreativeArtwork` | A single artwork or creative work (image/video/audio/other). | `id`, `artist` (FK User), `title`, `description`, `media_file`, `media_type` (ENUM), `year`, `medium`, `style` |
+| `Tag` | Global tagging vocabulary reused by artworks (and other content). | `id`, `name` (unique) |
+| `ArtworkTag` | Join table linking artworks ↔ tags (M2M; unique per pair). | `id`, `artwork` (FK), `tag` (FK) |
+| `Gallery` | Curated collection or exhibition container. | `id`, `title`, `description`, `created_by` (FK User, nullable), `theme`, `created_at` |
+| `GalleryArtwork` | Through‑table to place artworks in a gallery with order. | `id`, `gallery` (FK), `artwork` (FK), `order` |
+| `TraditionEntry` | Cultural heritage submission for long‑term archive. | `id`, `title`, `description`, `region`, `media_file`, `submitted_by` (FK, nullable), `submitted_at`, `approved` (bool), `approved_by` (FK, nullable), `approved_at` |
+
+Models live under the Kreative app (e.g., `kreative/models/artwork.py`, `gallery.py`, `tradition.py`).
+
+---
+
+### **4\) Supporting Configuration (frozen)**
+
+Operational parameters and invariants affecting Konservation features.
+
+* **ARTWORK\_MAX\_IMAGE\_MB:** **50 MB** — upload limit for image media.
+
+* **ARTWORK\_RESOLUTIONS:** **\[256, 1024, 2048\]** px — renditions generated on ingest.
+
+* **VIRTUAL\_GALLERY\_CAPACITY:** **24 artworks / room** — enforced by `virtual_exhibition`.
+
+* **NSFW\_FLAG\_REQUIRED:** boolean (default **False**) — surfaced in upload form and display gates.
+
+* **MEDIA\_ROOT:** `/app/media/` — single bucket mount for all modules (shared invariant).
+
+---
+
+### **5\) Routes & Ownership (UI)**
+
+Top‑level navigation and page ownership for this sub‑module.
+
+* **/kreative** — Creativity Hub (tabs: Gallery, Incubator, Virtual Exhibitions).
+
+* **/art/\[id\]** — Artwork Sheet (details, comments, metadata).
+
+* **/archive** — Konservation Archive (Heritage, Partners).
+
+---
+
+### **6\) DevOps & Tasks**
+
+* **Image pipeline.** Celery task generates `ARTWORK_RESOLUTIONS` on upload; stores renditions alongside originals in object storage.
+
+* **AI enrichment.** Scheduled worker applies `ai_enriched_catalogue` to new/updated artworks (tags, style/medium suggestions).
+
+* **Partner ingest.** Periodic sync jobs fetch external collections and map metadata via `cultural_partner_integration`.
+
+* **Publishing.** Exhibition build step compiles gallery selections into front‑end consumables (JSON descriptors / assets), respecting capacity limits.
+
+---
+
+### **Summary**
+
+Konservation provides **digital archiving**, **virtual exhibitions**, **documentation**, **AI‑assisted cataloguing**, and **partner integrations** via the five services above, grounded in the `KreativeArtwork`, `Gallery`, `Tag/ArtworkTag`, and `TraditionEntry` models and governed by fixed upload, rendition, and exhibition parameters.
+
+
+================================================================================================
+FILE: wiki/Konstruct.md
+================================================================================================
+
+**Konstruct (Project Collaboration Spaces)** — first sub‑module under **keenKonnect**.  
+ Implements five core services with concrete code‑names, backed by project/task/chat models and fixed parameters.
+
+---
+
+### **1\) Functional Services (and expected files)**
+
+| Display name | Code name / service | Purpose / behavior | Likely file or module | Status |
+| ----- | ----- | ----- | ----- | ----- |
+| Virtual Collaboration Spaces | `collaboration_space` | Create/join project rooms with membership, roles, and access rules. | `keenkonnect/services/collaboration_space.py` | Implemented (projects & teams) |
+| Project Management Tools | `project_task_management` | Tasks, Kanban states, assignees, due dates, and activity logs. | `keenkonnect/services/project_task_management.py` | Implemented (tasks) |
+| Real‑Time Editing | `real_time_document_editing` | Synchronous co‑editing of docs; conflict resolution (OT/CRDT pattern). | `keenkonnect/services/real_time_document_editing.py` | Planned (MVP uses resource versioning) |
+| Integrated Chat & Video | `integrated_communication` | Per‑project chat via sockets; optional video sessions via provider. | `keenkonnect/services/integrated_communication.py` | Chat implemented; video wired by env |
+| AI Collaborative Analysis | `ai_collaboration_analysis` | Live summaries, action suggestions, and collaborator recommendations. | `keenkonnect/services/ai_collaboration_analysis.py` | Implemented (summaries/reco service) |
+
+Code‑names and scope are defined in the v14 service inventory.
+
+---
+
+### **2\) Backend Functionalities**
+
+* **Project lifecycle & membership.** Create/update/archive projects; manage membership and roles; enforce access on project‑scoped endpoints.
+
+* **Tasking.** CRUD tasks with statuses (todo/in‑progress/done/blocked), assignment, due dates, ordering; emits project activity events.
+
+* **Resources & blueprints.** Attach documents and 3D assets; optional background conversion/previews for CAD/3D models (e.g., glTF) via worker jobs.
+
+* **Collaboration channels.** Real‑time project chat over WebSockets; optional video sessions bound by provider config; rate‑limits and moderation hooks applied.
+
+* **Real‑time document editing (MVP).** Until dedicated models land, uses resource versioning plus optimistic locking; planned upgrade to true real‑time persistence.
+
+* **AI assistance.** Generate meeting notes, decisions, and next‑actions from chat/tasks; recommend collaborators based on skills/Ekoh domains.
+
+---
+
+### **3\) Database Models (OLTP)**
+
+Actual models present in the codebase for Konstruct‑level collaboration; names/purposes below.
+
+| Table / Model | Purpose | Key fields (abridged) |
+| ----- | ----- | ----- |
+| `Project` | Project workspace container. | `id`, `title`, `description`, `creator`, `category`, `status` |
+| `ProjectResource` | Files/links attached to a project (incl. blueprints). | `id`, `project`, `title`, `url`, `added_by` |
+| `ProjectTask` | Tasks/milestones for the project. | `id`, `project`, `title`, `description`, `assignee`, `status`, `due_date` |
+| `ProjectMessage` | Project chat/message history. | `id`, `project`, `sender`, `content` |
+| `ProjectTeam` | Membership and roles. | `id`, `project`, `user`, `role`, `joined_at` |
+| `ProjectRating` | Community validation signal. | `id`, `project`, `user`, `rating`, `comment` |
+| `Tag` | Reusable keyword taxonomy. | `id`, `name` |
+
+**Not present (planned names suggested by docs):** `RealTimeDocument`, `DocumentRevision`, `VideoSession`, `AIInteractionLog`. The schema note explicitly calls these out as missing today.
+
+---
+
+### **4\) Supporting Configuration (frozen)**
+
+| Parameter | Location | Final value / notes |
+| ----- | ----- | ----- |
+| `MAX_BLUEPRINT_UPLOAD_MB` | `settings.STORAGE` | **150 MB** maximum per file |
+| `ALLOWED_BLUEPRINT_TYPES` | `ProjectResource` | `[".pdf", ".png", ".jpg", ".glb", ".gltf", ".stl"]` |
+| `COLLAB_SPACE_MEMBER_CAP` | `CollaborationSpace` | **40** members per space |
+| `AI_SUGGESTION_TOP_N` | `settings.KEENKONNECT` | **8** collaborator suggestions |
+| `VIDEO_SESSION_PROVIDER` | env `KC_VIDEO_PROVIDER` | `"livekit"` (self‑hosted) |
+
+These parameters are locked in the Global Parameter Reference.
+
+---
+
+### **5\) Routes & UI Surface**
+
+* **/projects** → Project Studio (Browse, Create, My Projects).
+
+* **/projects/\[slug\]** → Single Workspace with tabs: **Overview**, **Tasks**, **Blueprints**, **Chat**, **AI Insights**, **Settings**.  
+   Top‑level routing invariants assign these paths to the keenKonnect app.
+
+---
+
+### **6\) Runtime & real‑time**
+
+* **WebSockets:** Django Channels \+ Redis for chat/notifications; project‑scoped groups per workspace.
+
+* **File storage:** Object storage (S3/MinIO) for blueprints; optional preview/convert workers for 3D assets.
+
+* **Video:** Session bootstrap via the configured provider (`KC_VIDEO_PROVIDER`).
+
+---
+
+### **Summary**
+
+Konstruct exposes five services—`collaboration_space`, `project_task_management`, `real_time_document_editing`, `integrated_communication`, `ai_collaboration_analysis`—implemented over the `Project`, `ProjectTask`, `ProjectMessage`, `ProjectTeam`, `ProjectResource`, `ProjectRating`, and `Tag` models, with fixed size/type/member caps and dedicated routes under `/projects`. Real‑time editing is currently backed by resource versioning, with dedicated models planned.
+
+
+================================================================================================
+FILE: wiki/Konsultations.md
+================================================================================================
+
+**Konsultations (Public Consultations & Feedback)** — sub‑module under **ethiKos**.  
+ Implements five core services with stable code‑names, backed by consultation/suggestion/vote/result/impact models and frozen routing/analytics invariants.
+
+---
+
+### **1\) Functional Services (and expected files)**
+
+Code‑names map 1:1 to Django service modules; file names follow the `services/<code_name>.py` convention.
+
+| Display name | Code name / service | Purpose / behavior | Likely file or module |
+| ----- | ----- | ----- | ----- |
+| Public Consultations | `public_consultation` | Create and run time‑boxed civic consultations (setup, schedule, close). | `services/public_consultation.py` |
+| Citizen Suggestions | `citizen_suggestion` | Intake pipeline for user‑proposed ideas/amendments feeding into consultations. | `services/citizen_suggestion.py` |
+| Weighted Voting (EkoH) | `weighted_consultation_vote` | Cast ballots with optional EkoH‑based weighting; aggregates to results. | `services/weighted_consultation_vote.py` |
+| Results Visualization | `consultation_result_visualization` | Compute/serve KPIs and breakdowns for dashboards. | `services/consultation_result_visualization.py` |
+| Impact Tracking | `impact_tracking` | Log follow‑up actions and implementation status for adopted proposals. | `services/impact_tracking.py` |
+
+---
+
+### **2\) Backend functionalities**
+
+* **Consultation lifecycle.** CRUD for consultations with scheduling (open/close) and status transitions; business rules on who can launch/manage, exposed via DRF.
+
+* **Suggestion intake → consultation.** Users submit suggestions; moderators/owners triage and link them to an active consultation or backlog for future cycles.
+
+* **Ballots with weighting.** Store raw and EkoH‑weighted ballot values per user/consultation; recompute totals on each vote/change; optional live push via Channels/Redis.
+
+* **Results & dashboards.** Persist snapshot JSONs for totals/segments; serve aggregates to the UI and to the analytics pipeline.
+
+* **Impact follow‑through.** Record action items that implement approved proposals; status progression and audit trail.
+
+---
+
+### **3\) Database models (OLTP)**
+
+Actual tables implemented for Konsultations.
+
+| Table / Model | Purpose | Key fields |
+| ----- | ----- | ----- |
+| `Consultation` | A consultation instance (time‑boxed). | `id`, `title`, `open_date`, `close_date`, `status` (ENUM) |
+| `CitizenSuggestion` | User‑submitted ideas tied to a consultation. | `id`, `consultation` (FK), `author` (FK), `content` |
+| `ConsultationVote` | Ballots with raw and EkoH‑weighted values. | `id`, `user` (FK), `consultation` (FK), `raw_value`, `weighted_value` |
+| `ConsultationResult` | Aggregated outcomes (snapshot). | `id`, `consultation` (FK), `results_data` (JSONB) |
+| `ImpactTrack` | Post‑consultation action log. | `id`, `consultation` (FK), `action`, `status`, `date` |
+
+---
+
+### **4\) Supporting configuration (frozen)**
+
+* **Ballot modalities** (available to consultations via Smart Vote): `approval`, `ranking`, `rating`, `preferential`.
+
+* **Smart‑Vote thresholds** (used when labeling outcomes, platform‑wide): e.g., `CONSENSUS_STRONG_THRESHOLD ≥ 75%` weighted agreement.
+
+* **Route invariants:** `/consult` namespace is owned by **ethiKos** (no other module may claim it).
+
+---
+
+### **5\) Routes & ownership**
+
+* **Primary UI:** `/consult` (**Consultation Hub**) with tabs **Live / Results / Suggest**.
+
+* **Analytics:** `/ethikos/insights` for opinion analytics related to debates/consultations (read‑only).
+
+---
+
+### **6\) Integration points**
+
+* **EkoH weighting & Smart Vote.** Consultation ballots can use the same reputation‑weighted engine as debates; results reflect domain expertise where configured.
+
+* **Insights (ETL \+ dashboards).** Voting events flow to the analytics star schema via `etl_smart_vote` (every 10 min) and power `/reports/smart-vote`.
+
+---
+
+### **7\) Realtime & ops**
+
+* **Live updates:** Optional push of result deltas via Django Channels \+ Redis.
+
+* **Caching:** Use Redis to cache popular result filters/segments to reduce recomputation.
+
+---
+
+**Summary**  
+ Konsultations provides time‑boxed consultations, suggestion intake, EkoH‑weighted ballots, and transparent result snapshots through five services (`public_consultation`, `citizen_suggestion`, `weighted_consultation_vote`, `consultation_result_visualization`, `impact_tracking`). Data persists in `Consultation`, `CitizenSuggestion`, `ConsultationVote`, `ConsultationResult`, and `ImpactTrack`; routing is fixed at `/consult`, and analytics integrate with the platform’s Smart‑Vote ETL and dashboards.
+
+
+================================================================================================
+FILE: wiki/Kontact.md
+================================================================================================
+
+**Kontact (Collaboration & Networking)** — sub‑module under **Kreative**.  
+ Implements **five core services** with stable code‑names and module ownership under the `/connect` and `/profile/[user]` routes.
+
+---
+
+### **1\) Functional Services (and expected files)**
+
+Code‑names are canonical; each maps 1:1 to a Django service module consumed by DRF views and Celery tasks.
+
+| Display name | Code name / service | Purpose / behavior | Likely file or module |
+| ----- | ----- | ----- | ----- |
+| Professional Profiles | `professional_profile` | Rich public profiles for creators/diffusers: bio, skills, portfolio links; integrates artwork and tags for discovery. | `kreative/services/professional_profile.py` |
+| Intelligent Matching | `intelligent_matching` | Recommends people to follow/contact or invite into collaborations based on skills, tags, and activity signals (Ekoh context optional). | `kreative/services/intelligent_matching.py` |
+| Collaboration Workspaces | `collaboration_workspace` | Lightweight networking‑context rooms (chat/notes/canvas) to meet, plan, and co‑create; reuses real‑time infra. | `kreative/services/collaboration_workspace.py` |
+| Opportunities Board | `opportunity_announcement` | Post/browse residencies, exhibitions, calls, jobs; searchable by tags, region, dates. | `kreative/services/opportunity_announcement.py` |
+| Reviews & Endorsements | `partner_recommendation` | Post‑engagement endorsements/ratings to establish trust and reputation between collaborators/hosts. | `kreative/services/partner_recommendation.py` |
+
+---
+
+### **2\) Backend Functionalities**
+
+* **Profiles & portfolios.** Exposes read/write APIs for creator profiles, linking to existing creative assets (artworks, tags) for rich portfolios and searchability.
+
+* **People matching.** `intelligent_matching` ranks suggested contacts via skills/tags overlap and activity; tunable top‑N, and optional Ekoh/Smart‑Vote signals when relevant.
+
+* **Real‑time meetups.** `collaboration_workspace` provisions ephemeral rooms (DM/group), built on the same Channels/Redis stack used elsewhere; participant cap enforced at runtime.
+
+* **Opportunity lifecycle.** `opportunity_announcement` provides CRUD for postings (type, location, dates, attachments), listing/search, and status (open/closed/filled).
+
+* **Trust signals.** `partner_recommendation` lets collaborators leave structured endorsements after a workspace or engagement concludes; surfaced on profile pages.
+
+* **Routes & ownership.** UI/API bound to **/connect** (People, Opportunities, Workspace) and **/profile/\[user\]** (public profile), per navigation invariants.
+
+---
+
+### **3\) Database Models**
+
+The database reference explicitly lists the **CollabSession** table under Kreative/Kontact. Profiles, opportunities, and endorsements use existing/core objects and Kontact app models not enumerated in that reference.
+
+| Table / Model | Purpose | Key fields (excerpt) |
+| ----- | ----- | ----- |
+| `CollabSession` | Real‑time collaborative session (networking/co‑creation room). | `id`, `name`, `host (FK User)`, `session_type (ENUM)`, `started_at`, `ended_at`, `final_artwork (FK KreativeArtwork, nullable)` |
+| *(Reused)* `KreativeArtwork` | Portfolio items surfaced on profiles (read‑only in Kontact). | `id`, `artist (FK)`, `title`, `media_file`, `media_type`, `style` |
+| *(Reused)* `Tag` / `ArtworkTag` | Skills/genre tags used for discovery/matching. | `Tag.name (unique)`; `ArtworkTag (artwork, tag)` |
+
+*Note:* Only `CollabSession` is listed under Kontact in the v14 schema reference; other Kontact records (profiles, opportunities, recommendations) are implemented at the app level and/or reuse core tables.
+
+---
+
+### **4\) Supporting Configuration**
+
+Fixed parameters and route invariants that affect Kontact behavior.
+
+* **COLLAB\_CANVAS\_MAX\_USERS:** **6** simultaneous editors in a real‑time room.
+
+* **MEDIA\_ROOT:** `/app/media/` for attachments (shared across modules).
+
+* **Routes reserved:** `/connect`, `/profile/[user]` owned by Kreative/Kontact; additional nested tabs do not create new top‑level routes.
+
+---
+
+### **Summary**
+
+Kontact delivers networking‑centric capabilities via five services — `professional_profile`, `intelligent_matching`, `collaboration_workspace`, `opportunity_announcement`, `partner_recommendation` — integrated with the Kreative domain and routed under `/connect` and `/profile/[user]`. Data persists primarily through `CollabSession` and reused creative/Tag tables; real‑time rooms and matching leverage the platform’s DRF \+ Channels \+ Redis stack and frozen configuration.
+
+
+================================================================================================
+FILE: wiki/Korum.md
+================================================================================================
+
+**Korum (Structured Debates)** — sub‑module under **ethiKos**.  
+ Implements five core services with defined code‑names, backed by concrete debate/stance/argument models and fixed parameters.
+
+---
+
+### **1\) Functional Services (and expected files)**
+
+Each service name is stable and maps to a dedicated Django service module (file paths reflect the cookiecutter layout; exact filenames may vary by repo).
+
+| Display name | Code name / service | Purpose / behavior | Likely file or module |
+| ----- | ----- | ----- | ----- |
+| Structured Debates | `structured_debate` | Create and manage ordered debate sequences and topics. | `ethikos/services/structured_debate.py` |
+| Klônes IA | `ai_clone_management` | Manage AI expert‑emulating agents for continuity/testing. | `ethikos/services/ai_clone_management.py` |
+| Comparative Analysis | `comparative_argument_analysis` | Compare arguments to surface convergences/divergences. | `ethikos/services/comparative_argument_analysis.py` |
+| Public Archiving | `public_debate_archive` | Produce immutable debate snapshots for transparency. | `ethikos/services/public_debate_archive.py` |
+| Automated Summaries | `automated_debate_summary` | Generate concise, structured debate outcome digests. | `ethikos/services/automated_debate_summary.py` |
+
+---
+
+### **2\) Backend functionalities**
+
+* **Debate lifecycle:** CRUD for topics with status transitions (open/closed/archived), category assignment, and owner/moderation rules; exposed via DRF.
+
+* **Threaded arguments:** Nested replies under each topic with optional “pro/con” flag and moderation hooks.
+
+* **Nuanced stance capture:** Integer stance scale −3…+3 per user/topic; integrates with Smart Vote for weighted aggregation.
+
+* **Weighted results & cohorts:** Results recomputed by expertise cohorts (EkoH) and other filters; realtime push optional via Channels/Redis.
+
+* **Quality & moderation:** Report/auto‑hide thresholds; flagged content routed to shared moderation queue.
+
+---
+
+### **3\) Database models (OLTP)**
+
+Actual implemented tables for Korum (planned AI/summary/archive tables are intentionally omitted in v14).
+
+| Table / Model | Purpose | Key fields |
+| ----- | ----- | ----- |
+| `EthikosCategory` | Thematic categories for debates. | `id`, `name`, `description` |
+| `EthikosTopic` | Debate topic/question. | `id`, `title`, `status`, `start_date`, `end_date` |
+| `EthikosStance` | User stance on a topic (−3…+3). | `id`, `topic` (FK), `user` (FK), `value` |
+| `EthikosArgument` | User argument/post (threaded). | `id`, `topic` (FK), `author` (FK), `content`, `parent` (FK), `side` (enum, optional) |
+
+Note: AI clones, comparative‑analysis logs, public archives, and debate summaries are listed as services but not present as tables in the current schema snapshot.
+
+---
+
+### **4\) Supporting configuration (frozen)**
+
+* **Stance scale:** −3 … \+3 (0 \= neutral).
+
+* **Expert cohort quorum (display):** 12 distinct experts (Ekoh threshold per domain).
+
+* **Moderation auto‑hide:** Hide an argument after 3 independent reports.
+
+* **AI clone training batch:** 128 records.
+
+---
+
+### **5\) Frontend & navigation**
+
+* **Routes:** `/debate` (Debate Hub: Open / Archived / Start New), `/ethikos/insights` (opinion analytics dashboards).
+
+* **Behavior:** Stance slider (−3…+3), live tallies, cohort filters, threaded arguments; analytics readouts live under Insights.
+
+---
+
+### **6\) Integration points**
+
+* **EkoH & Smart Vote:** Stances are aggregated using EkoH reputation to compute weighted results; outcomes can feed analytics (/reports/smart‑vote).
+
+* **Insights module:** ETL ingests vote/stance facts; dashboards render trends with export limits and privacy safeguards (k‑anonymity, hashed IDs).
+
+---
+
+### **7\) Realtime & ops**
+
+* **Push updates:** Optional WebSocket broadcasts via Django Channels \+ Redis for stance/result changes.
+
+* **Caching & rate control:** Use Redis caching for common cohort filters; apply API throttles consistent with platform policy.
+
+---
+
+### **Summary**
+
+Korum provides structured topic management, nuanced stance capture, and threaded argumentation, with weighted consensus via EkoH/Smart Vote. Its five named services are stable integration points; the production schema covers categories, topics, stances, and arguments, while advanced AI/archive features run as services without additional OLTP tables in v14. Routes and parameters are version‑locked to ensure predictable behavior across UI, API, and analytics.
+
+
+================================================================================================
+FILE: wiki/Smart-Vote.md
+================================================================================================
+
+**Smart Vote (Weighted Voting System)** — second sub‑module under **Kollective Intelligence**.  
+ Implements six core services with explicit code‑names, backed by vote/aggregation models, global parameters, and analytics pipelines.
+
+---
+
+### **1\) Functional Services (and expected files)**
+
+| Display name | Code name / service | Purpose / behavior | Likely file or module |
+| ----- | ----- | ----- | ----- |
+| Dynamic Weighted Voting | `dynamic_weighted_vote` | Re‑weights each vote in real time using the voter’s EkoH domain weight. | `services/dynamic_weighted_vote.py` |
+| Flexible Voting Modalities | `voting_modalities` | Supports approval, ranking, rating, preferential ballots; modality parameters drive tally logic. | `services/voting_modalities.py` |
+| Emerging Expert Detection | `emerging_expert_detection` | Flags users whose EkoH score is rising sharply to surface new experts. | `tasks/emerging_expert_detection.py` |
+| Transparency of Results | `vote_transparency` | Publishes raw and weighted totals with context (no private data). | `services/vote_transparency.py` |
+| Advanced Result Visualizations | `vote_result_visualization` | Produces histograms, distributions, network graphs for outcomes. | `services/vote_result_visualization.py` |
+| Cross‑Module Integration | `cross_module_vote_integration` | Makes Smart Vote available across modules (e.g., debates, content, projects). | `services/cross_module_vote_integration.py` |
+
+---
+
+### **2\) Backend Functionalities**
+
+* **Vote intake & aggregation.** API records a per‑user vote on a target (`target_type`, `target_id`), applies EkoH‑weighted scoring, and updates an aggregated result object; concurrency‑safe updates with immediate read‑back for live UIs.
+
+* **Modalities engine.** Aggregation logic switches by `VoteModality` parameters (approval/rating/ranking/preferential); modality configuration stored and read at runtime.
+
+* **Realtime delivery.** Updated tallies pushed via Django Channels \+ Redis for live dashboards and pages displaying current consensus.
+
+* **Cohort/segment views.** Aggregator exposes filtered outcomes (e.g., experts‑only, verified‑only) when the calling module requests segmented results.
+
+* **Cross‑module linkage.** Generic mapping allows any app entity to become a vote target (e.g., debates, consultations, projects).
+
+---
+
+### **3\) Database Models (OLTP)**
+
+| Table / Model | Purpose | Key fields |
+| ----- | ----- | ----- |
+| `Vote` | Stores each user vote (raw value \+ weighted value). | `id`, `user`, `target_type`, `target_id`, `raw_value`, `weighted_value` |
+| `VoteModality` | Config for voting modes (approval, ranking, rating, preferential). | `id`, `name`, `parameters` (JSON) |
+| `EmergingExpert` | Flags users with sharp reputation gains. | `id`, `user`, `detection_date`, `score_delta` |
+| `VoteResult` | Aggregated totals per target (cumulative weighted sums \+ counts). | `id`, `target_type`, `target_id`, `sum_weighted_value`, `vote_count` |
+| `IntegrationMapping` | Cross‑module link from vote context to other modules’ objects. | `id`, `module_name`, `context_type`, `mapping_details` (JSON) |
+
+---
+
+### **4\) Supporting Configuration (frozen)**
+
+* **Vote modalities:** `"approval" | "ranking" | "rating" | "preferential"` (`VOTE_MODALITY_CHOICES`).
+
+* **Emerging expert threshold:** `+15%` EkoH delta over 30 days.
+
+* **Strong consensus threshold:** `≥ 75%` weighted agreement.
+
+---
+
+### **5\) Schedules, Analytics & Runtime**
+
+* **Realtime channel layer:** `channels_redis.core.RedisChannelLayer` used for live result pushes.
+
+* **Analytics ETL:** `etl_smart_vote` runs every **10 minutes** to load OLTP deltas into `smart_vote_fact`; retention **5 years**; cached views power `/reports/smart-vote`.
+
+* **UI surfaces:**
+
+  * **Konsensus Center** (end‑user portal with live polls/results): `/konsensus`.
+
+  * **Insights dashboard (read‑only analytics):** `/reports/smart-vote`.
+
+---
+
+### **Summary**
+
+Smart Vote provides modality‑aware, EkoH‑weighted voting with real‑time aggregation, transparent reporting, and cross‑module targeting. Its models (`Vote`, `VoteModality`, `VoteResult`, `EmergingExpert`, `IntegrationMapping`), frozen parameters, and analytics pipelines make it the consensus backbone across the platform.
+
+
+================================================================================================
+FILE: wiki/Stockage.md
+================================================================================================
+
+**Stockage (Secure Repository & Versioned Storage)** — second sub‑module under **keenKonnect**.  
+ Implements five services with defined code‑names, backed by project‑scoped resource models and fixed storage/search parameters.
+
+---
+
+### **1\) Functional Services (and expected files)**
+
+Code‑names come from the v14 services inventory; each maps to a Django service module imported by API controllers and Celery tasks.
+
+| Display name | Code name / service | Purpose / behavior | Likely file or module |
+| ----- | ----- | ----- | ----- |
+| Secure Repository | `secure_document_storage` | Persist files with authenticated access and per‑project visibility. | `apps/keenkonnect/services/secure_storage.py` |
+| Automatic Versioning | `document_versioning` | Maintain sequential revisions; enable diff/rollback semantics. | `apps/keenkonnect/services/document_versioning.py` |
+| Intelligent Indexing | `intelligent_indexing` | Extract metadata/keywords; update full‑text search index. | `apps/keenkonnect/services/indexing.py` |
+| Real‑Time Sync | `real_time_sync` | Broadcast file add/update/delete to active collaborators. | `apps/keenkonnect/services/real_time_sync.py`, `apps/keenkonnect/channels/consumers.py` |
+| Fine‑Grained Permissions | `granular_permissions` | Enforce document‑level ACLs beyond project roles. | `apps/keenkonnect/services/permissions.py` |
+
+---
+
+### **2\) Backend Functionalities**
+
+* **Upload & storage pipeline.** Accept files under an explicit size/type policy; persist metadata and storage URL on the `ProjectResource` table; store blobs in the configured media bucket (S3/MinIO).
+
+* **Versioning semantics.** Expose create‑new‑revision, list revisions, restore, and compute diffs via `document_versioning`. The Database Reference documents `ProjectResource` as the current file record; dedicated version entities are not detailed there and can be added alongside this service.
+
+* **Indexing & search.** On upload/update, `intelligent_indexing` extracts text/keywords and refreshes the platform’s PostgreSQL full‑text index (SEARCH\_BACKEND=“postgres”), enabling global search and in‑workspace filtering.
+
+* **Access control.** Enforce read/write/admin by project membership (`ProjectTeam`) and, where required, per‑document ACL through `granular_permissions`. Current schema formalizes project‑level roles; document‑level ACL tables are not enumerated in the v14 schema file.
+
+* **Real‑time notifications.** `real_time_sync` uses Django Channels over Redis to push “file added/updated/removed” events to clients in `/projects/[slug]` workspaces.
+
+---
+
+### **3\) Database Models**
+
+Stockage persists file metadata as project resources; project membership governs default access.
+
+| Table / Model | Purpose | Key fields (abridged) |
+| ----- | ----- | ----- |
+| `ProjectResource` | Link a document/file (blueprint, image, 3D model, guide) to a project. | `id`, `project`, `title`, `url`, `added_by`, timestamps |
+| `Project` | Workspace container for resources and collaboration. | `id`, `title`, `description`, `creator`, `category`, `status` |
+| `ProjectTeam` | Membership & role for access control. | `id`, `project`, `user`, `role`, `joined_at` |
+| `Tag` | Reusable keywords for classification (optional). | `id`, `name` |
+
+*Notes.* The schema file does not list dedicated version/ACL tables for documents; if `document_versioning`/`granular_permissions` introduces them, add to the canonical schema alongside `ProjectResource`.
+
+---
+
+### **4\) Supporting Configuration (frozen)**
+
+* **File size cap:** `MAX_BLUEPRINT_UPLOAD_MB = 150`.
+
+* **Allowed types:** `[".pdf", ".png", ".jpg", ".glb", ".gltf", ".stl"]`.
+
+* **Search backend:** `SEARCH_BACKEND = "postgres"` (tsvector indexing).
+
+* **Realtime layer:** Channels backend \= `channels_redis.core.RedisChannelLayer`.
+
+* **Media root/bucket:** `MEDIA_ROOT=/app/media/` (object storage mount used across modules).
+
+---
+
+### **5\) Routes & UI Surface**
+
+* Users access Stockage features inside project workspaces: **/projects** and **/projects/\[slug\] → “Blueprints” tab** for uploads, previews, version/history, and permissions UI. Route ownership lives with keenKonnect.
+
+---
+
+### **6\) Runtime & Real‑Time**
+
+* **Object storage & previews.** Files live in the media bucket; optional workers can generate previews/conversions (e.g., glTF thumbnails) per the technical spec’s storage guidance.
+
+* **WebSockets.** Document events publish to project channel groups so collaborators see updates without refresh.
+
+---
+
+### **Summary**
+
+Stockage provides `secure_document_storage`, `document_versioning`, `intelligent_indexing`, `real_time_sync`, and `granular_permissions`. Today’s schema centers on `ProjectResource` within `/projects/[slug]` workspaces, governed by `ProjectTeam` roles, with search on PostgreSQL tsvectors and real‑time updates via Channels/Redis. Version and per‑document ACL tables can be added when those services move from interface to implementation.

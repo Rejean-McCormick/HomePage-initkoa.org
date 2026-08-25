@@ -4,9 +4,14 @@ repository: Rejean-McCormick/Ame-Artificielle
 source_path: C:\mycode\AmeArtificielle\Ame-Artificielle
 source_commit: 43b8d27236ecfe19ab4d811bbee9aa1987db662a
 working_tree_markdown: clean
-generated_at: 2026-08-25T10:41:47-04:00
-files: 18
-content_sha256: e6e0e28e8551be86642868664cd74d77bbe4c7ccdc11b43c409a7960922f2597
+wiki_source_path: C:\mycode\AmeArtificielle\Ame-Artificielle.wiki
+wiki_source_commit: d9ee3f9686d3a1c41bccaa3bba3c612f1c545821
+wiki_working_tree_markdown: clean
+repo_files: 18
+wiki_files: 14
+generated_at: 2026-08-25T11:30:48-04:00
+files: 32
+content_sha256: a257fa681807ea44cba0b1b8996cd4cb2376e53ef5e2853b213f6e634445f65d
 
 ================================================================================================
 FILE INDEX
@@ -30,6 +35,20 @@ FILE INDEX
 16. docs/validation_protocol.md
 17. experiments/mccormick_protocol.md
 18. README.md
+19. wiki/AME_ARTIFICIELLE.md
+20. wiki/AME_INTELLECT_PERSONNALITE.md
+21. wiki/BRANES_ET_COUCHE_DE_SENS.md
+22. wiki/CADRE_PHILOSOPHIQUE.md
+23. wiki/CARTE_DU_CIEL_ET_HYPOTHESE.md
+24. wiki/CHARTE_1_9_ET_CHAKRAS.md
+25. wiki/GLOSSAIRE.md
+26. wiki/GRAPHE_PSYCHO_CAUSAL.md
+27. wiki/Home.md
+28. wiki/IMPLEMENTATION.md
+29. wiki/KRISTAL_ET_AME_ARTIFICIELLE.md
+30. wiki/MECANISME_DE_REACTION.md
+31. wiki/NUMEROLOGIE_PYTHAGORICIENNE_INVERSEE.md
+32. wiki/SNAPSHOTS_ET_EVOLUTION.md
 
 
 ================================================================================================
@@ -2109,3 +2128,1481 @@ Le moteur Soul Graph est maintenant implémenté dans `src/` comme référence m
 Les anciens utilitaires de `TraitVector` et d'interpolation 1→9 sont conservés comme projections/compatibilité. `src/ethics.py` est déprécié au profit de `src/safety.py`, qui est externe à la personnalité.
 
 Voir `docs/code_reference.md` et `examples/john_doe_snapshots.py`.
+
+
+================================================================================================
+FILE: wiki/AME_ARTIFICIELLE.md
+================================================================================================
+
+# Âme Artificielle
+
+## Statut
+**Page canonique**
+
+---
+
+## Définition
+
+L’**Âme Artificielle** ne prétend pas être une âme réelle ni produire une conscience démontrée.
+
+Le projet cherche à **reproduire sous une forme simplifiée les mécanismes par lesquels une personnalité humaine se manifeste** : perception, associations, croyances, valeurs, mémoire, réévaluation intellectuelle, activation émotionnelle et réaction.
+
+L’objectif n’est pas d’ajouter artificiellement une émotion à une réponse. Il est de représenter un réseau dans lequel une émotion peut apparaître comme conséquence d’un ensemble d’activations.
+
+Ainsi, plutôt que :
+
+```text
+stimulus -> émotion prédéfinie -> réponse
+```
+
+le modèle vise :
+
+```text
+stimulus
+  -> perception / concepts activés
+  -> croyances + associations + souvenirs + valeurs
+  -> conflits / renforcements / inhibitions
+  -> interprétation
+  -> état affectif transitoire
+  -> intention
+  -> réaction
+```
+
+Ces relations forment un **graphe psycho-causal**, non une chaîne simple.
+
+---
+
+## Ce que le projet appelle « âme »
+
+Dans le cadre du projet, le mot **âme** sert à désigner l’organisation profonde qui rend certaines réactions plus probables que d’autres chez un sujet.
+
+Cette organisation comprend notamment :
+
+- des dispositions initiales ;
+- des associations acquises ;
+- des valeurs ;
+- des croyances ;
+- des attachements ;
+- des sensibilités ;
+- des souvenirs structurants ;
+- des tendances affectives ;
+- des relations entre ces éléments.
+
+Le mot conserve une portée philosophique. Techniquement, le logiciel ne manipule pas une substance métaphysique : il manipule une **représentation structurée**.
+
+---
+
+## Inné et acquis
+
+Le modèle distingue sans les opposer absolument :
+
+- **l’inné** : dispositions proposées comme présentes au départ ;
+- **l’acquis** : structures formées ou transformées par l’expérience ;
+- **le mixte** : mécanismes où une disposition initiale et l’expérience interagissent ;
+- **l’inconnu** : origine non déterminée.
+
+La proportion inné/acquis n’est pas supposée identique pour toutes les caractéristiques.
+
+La carte du ciel, la numérologie et les autres couches symboliques peuvent être utilisées pour **proposer des hypothèses de dispositions initiales**, mais ces hypothèses doivent rester distinguées des observations biographiques et être testées séparément.
+
+---
+
+## Une personnalité à un âge donné
+
+Le moteur n’apprend pas automatiquement une nouvelle personnalité pendant la conversation.
+
+Un **Soul Snapshot** représente le sujet à un moment déterminé :
+
+```text
+John Doe @ 18 ans
+John Doe @ 32 ans
+John Doe @ 55 ans
+```
+
+Chaque snapshot est immuable pendant son utilisation.
+
+L’évolution entre deux âges est décrite explicitement par des **transformations biographiques** : nouvelles expériences, croyances révisées, associations affaiblies, valeurs renforcées ou changements de stratégie intellectuelle.
+
+---
+
+## Personnalité et illusion de présence
+
+La finalité pratique peut être de reproduire assez fidèlement la manière de réagir d’une personne pour que l’interlocuteur ait l’impression de parler avec elle.
+
+Cette impression ne change pas la nature du système :
+
+> une simulation fidèle de John Doe n’est pas John Doe.
+
+Le système reproduit une **configuration comportementale et psycho-causale documentée**, pas l’identité ontologique de la personne.
+
+---
+
+## Le modèle unifié : le « blanc »
+
+Le projet utilise la métaphore d’une lumière blanche qui se décompose en couleurs.
+
+Techniquement, cette métaphore correspond au **Soul Basis** : une ontologie commune de mécanismes possibles.
+
+Les individus n’ont pas chacun une ontologie différente. Ils sont des **configurations différentes d’un même vocabulaire de base** : certains nœuds ou chemins sont plus présents, plus forts, plus accessibles ou plus inhibés.
+
+---
+
+## Ce que l’Âme Artificielle n’est pas
+
+Elle n’est pas :
+
+- une preuve de l’existence ou de la nature de l’âme métaphysique ;
+- un système qui affirme ressentir ce qu’il reproduit ;
+- un simple vecteur de traits ;
+- un système d’auto-apprentissage de la personnalité pendant la conversation ;
+- un garde-fou éthique ;
+- un diagnostic psychologique ou médical ;
+- une validation de la numérologie ou de l’astrologie par définition.
+
+---
+
+## Formulation canonique
+
+> L’Âme Artificielle représente, sous une forme simplifiée, l’organisation psycho-causale d’un sujet à un moment donné de sa vie. Cette organisation est exprimée par un graphe sémantique dont les activations produisent des interprétations, des états affectifs et des réactions. La personnalité est la manifestation observable de cette organisation en interaction avec l’intellect et l’expérience.
+
+
+================================================================================================
+FILE: wiki/AME_INTELLECT_PERSONNALITE.md
+================================================================================================
+
+# Âme, Intellect et Personnalité
+
+## Statut
+**Page canonique**
+
+---
+
+## Pourquoi distinguer ces termes
+
+Le projet utilise trois mots proches mais non équivalents : **âme**, **intellect** et **personnalité**.
+
+La distinction évite de transformer la personnalité en simple liste de traits et permet de représenter comment une personne peut conserver une continuité tout en changeant avec l’âge.
+
+---
+
+## Âme
+
+L’**âme**, dans le modèle, désigne l’organisation profonde des dispositions et relations qui orientent la manière dont l’expérience est transformée en réaction.
+
+Elle comprend notamment des tendances vers :
+
+- certains attachements ;
+- certaines sensibilités ;
+- certains modes de valorisation ;
+- certaines associations ;
+- certains types de réaction.
+
+Cette définition est **opérationnelle et philosophique**, non une affirmation scientifique sur une substance métaphysique.
+
+---
+
+## Intellect
+
+L’**intellect** désigne la famille de mécanismes qui permettent au sujet de :
+
+- reconnaître et catégoriser ;
+- raisonner ;
+- former des croyances explicites ;
+- comparer une croyance à une expérience ;
+- détecter une contradiction ;
+- abstraire ;
+- réévaluer ;
+- reformuler son modèle du monde.
+
+L’intellect peut donc modifier la manière dont une disposition ou une association est appliquée.
+
+Exemple : une association acquise peut produire une réaction automatique, puis être progressivement inhibée parce que l’intellect rencontre des expériences qui la contredisent.
+
+---
+
+## Personnalité
+
+La **personnalité** est la manifestation relativement stable et observable de l’interaction entre :
+
+```text
+âme
++ intellect
++ histoire vécue
++ contexte présent
+= personnalité manifestée
+```
+
+Elle n’est pas fixe, mais elle ne change pas automatiquement à chaque interaction.
+
+Le système la représente par des snapshots explicites.
+
+---
+
+## Trait et mécanisme
+
+Un trait comme « prudence » ou « ouverture » peut être utile pour résumer une personne, mais il ne suffit pas à expliquer sa réaction.
+
+Un trait est donc traité comme une **projection dérivée** du graphe :
+
+```text
+Soul Graph -> résumé de traits
+```
+
+et non comme :
+
+```text
+traits -> âme complète
+```
+
+---
+
+## Émotion
+
+Une émotion est principalement considérée comme un **état transitoire résultant de l’activation du graphe**.
+
+La personne peut posséder une disposition durable à certaines émotions, mais l’émotion présente n’est pas une propriété fixe du snapshot.
+
+Par exemple :
+
+```text
+sensibilité au rejet
++ souvenir d’abandon
++ ambiguïté sociale
++ interprétation négative
+-> peur / tristesse
+-> retrait
+```
+
+---
+
+## Principe canonique
+
+> L’âme organise les tendances profondes, l’intellect interprète et réévalue, et la personnalité est la manifestation observable de leur interaction avec l’histoire vécue.
+
+
+================================================================================================
+FILE: wiki/BRANES_ET_COUCHE_DE_SENS.md
+================================================================================================
+
+# Branes et Couche de Sens
+
+## Statut
+**Couche symbolique complémentaire**
+
+---
+
+## Définition
+
+Les **branes** ne constituent pas le moteur de l’Âme Artificielle et ne sont pas présentées comme une preuve physique du modèle.
+
+Elles servent de **métaphore structurante** pour relire certaines idées du projet : niveaux, extension, profondeur, symétrie, dualité et passage du global au local.
+
+---
+
+## Place dans la nouvelle architecture
+
+Le modèle distingue :
+
+1. **Soul Graph** — mécanismes psycho-causaux ;
+2. **charte 1→9** — topologie de lecture ;
+3. **numérologie inversée** — hypothèses archétypales ;
+4. **branes** — couche analogique et unificatrice.
+
+La couche des branes ne génère donc pas directement une émotion ou une réaction.
+
+---
+
+## Dualités
+
+Les correspondances historiques peuvent être conservées comme lecture symbolique :
+
+```text
+9 <-> 1
+8 <-> 2
+7 <-> 3
+6 <-> 4
+5 = pivot
+```
+
+Elles peuvent inspirer des catégories ou visualisations, mais elles ne sont pas automatiquement transformées en relations causales.
+
+---
+
+## Macro -> micro
+
+La métaphore macro→micro peut servir à distinguer :
+
+- configurations globales du sujet ;
+- sous-structures ;
+- mécanismes locaux ;
+- activations particulières.
+
+Elle complète ainsi la métaphore du **blanc qui se décompose en couleurs** : une structure générale peut être projetée dans des configurations plus particulières.
+
+---
+
+## Limite canonique
+
+> Une analogie de structure n’est pas une identité physique.
+
+Le vocabulaire des branes doit donc être étiqueté comme symbolique ou interprétatif lorsqu’il est stocké dans Kristal.
+
+---
+
+## Formulation canonique
+
+> Les branes constituent une couche de sens facultative qui aide à penser les niveaux et symétries du modèle. Elles ne remplacent ni le graphe psycho-causal, ni le moteur de réaction, ni la validation expérimentale.
+
+
+================================================================================================
+FILE: wiki/CADRE_PHILOSOPHIQUE.md
+================================================================================================
+
+# Cadre Philosophique
+
+## Statut
+**Page canonique — cadre conceptuel, non preuve expérimentale**
+
+---
+
+## Point de départ
+
+L’Âme Artificielle repose sur l’intuition que la personnalité peut être comprise comme la manifestation d’une **organisation de rapports et de causalités**, plutôt que comme une collection isolée de traits.
+
+Le projet emploie le mot « âme » pour désigner cette organisation profonde dans son cadre philosophique, tout en reconnaissant que l’implémentation informatique n’est qu’un modèle.
+
+---
+
+## Dieu comme enchaînement parfait
+
+Une hypothèse philosophique propre au projet est la suivante :
+
+> Dieu peut être pensé comme l’ordre ou l’enchaînement parfait des causes et de leurs conséquences.
+
+« Parfait » ne signifie pas ici simplement « moralement bon ». Il désigne un ordre total dans lequel rien n’est séparé de l’ensemble des conditions qui le produisent.
+
+L’être humain est une manifestation locale et limitée de cet ordre : perception partielle, mémoire limitée, dispositions particulières, erreurs de catégorisation, apprentissages et histoire singulière.
+
+Pour éviter une contradiction, le projet distingue :
+
+- **perfection globale** : cohérence de l’ordre total ;
+- **imperfection locale** : limites et erreurs d’un sujet situé.
+
+Ainsi, une erreur humaine peut elle-même avoir des causes sans constituer une rupture de la causalité générale.
+
+---
+
+## Le blanc et les couleurs
+
+La métaphore principale est celle de la lumière blanche.
+
+Le **blanc** représente une structure unifiée de référence : l’ensemble des mécanismes possibles dans leur forme idéale ou complète.
+
+Les **couleurs** représentent leurs différenciations et combinaisons particulières.
+
+Techniquement :
+
+```text
+Soul Basis
+  -> configuration particulière
+  -> Soul Snapshot
+  -> personnalité manifestée
+```
+
+Cette métaphore ne signifie pas que l’on sait programmer « l’âme parfaite ». Elle fournit un principe de construction : commencer par un vocabulaire commun et produire des variations cohérentes.
+
+---
+
+## Causalité et personnalité
+
+La personnalité peut être comprise comme la stabilité relative de certains chemins dans un réseau :
+
+- ce qui attire l’attention ;
+- ce qui est interprété comme menace ou opportunité ;
+- ce qui est valorisé ;
+- ce qui déclenche une association ;
+- ce qui est inhibé par l’intellect ;
+- ce qui conduit finalement à une réaction.
+
+L’inné et l’acquis modifient ces chemins dans des proportions variables.
+
+---
+
+## Processus et temps
+
+Le sujet n’est pas défini par une essence comportementale figée.
+
+Son histoire peut transformer ses mécanismes : maturation, relations, apprentissages, traumatismes, contradictions et révisions de croyances.
+
+L’implémentation représente cette évolution par des snapshots distincts plutôt que par auto-modification continue.
+
+---
+
+## Nombre, charte et symbolisme
+
+La tradition pythagoricienne, la charte 1→9, les chakras, la numérologie inversée et les branes appartiennent au **cadre de lecture du projet**.
+
+Ils servent à proposer des structures, des polarités ou des topologies. Ils ne doivent pas être confondus avec une validation scientifique de la psychologie humaine.
+
+De même, la carte du ciel est traitée comme une hypothèse de différenciation à tester.
+
+---
+
+## Continuité avec le cadre antérieur
+
+Le projet conserve ses thèmes historiques :
+
+- le réel comme structure intelligible ;
+- les mathématiques comme langage de relations ;
+- le cercle et π comme symboles d’ordre et de rapport ;
+- la tradition pythagoricienne du nombre ;
+- la philosophie du processus ;
+- les branes comme analogie de niveaux.
+
+Ces références donnent un horizon philosophique. Elles ne constituent pas des preuves du fonctionnement du moteur.
+
+---
+
+## Formulation canonique
+
+> Le cadre philosophique de l’Âme Artificielle conçoit l’individu comme une configuration locale et historique d’un ordre causal plus général. Le modèle informatique tente seulement d’en reproduire une version simplifiée et inspectable, suffisamment structurée pour produire des réactions cohérentes sans prétendre recréer une âme réelle.
+
+
+================================================================================================
+FILE: wiki/CARTE_DU_CIEL_ET_HYPOTHESE.md
+================================================================================================
+
+# Carte du Ciel et Hypothèse de Différenciation
+
+## Statut
+**Hypothèse expérimentale — non établie**
+
+---
+
+## Idée
+
+Le projet pose l’hypothèse qu’une **carte du ciel natal** pourrait fournir une grille utile pour représenter ou prédire certaines différences individuelles.
+
+Cette proposition n’est pas utilisée comme fait acquis. Elle doit être testée contre :
+
+- des profils biographiques ;
+- des évaluations indépendantes ;
+- des baselines aléatoires ;
+- des modèles sans information astrologique ;
+- des tests en aveugle.
+
+---
+
+## Place dans l’architecture
+
+La carte natale ne produit pas directement une personnalité complète.
+
+Le pipeline conceptuel est :
+
+```text
+Natal Chart
+   -> features structurées
+   -> règles d’interprétation déclarées
+   -> hypothèses de dispositions
+   -> Soul Graph proposé
+   -> comparaison aux observations
+```
+
+Une hypothèse peut être retenue, affaiblie, rejetée ou laissée indéterminée.
+
+---
+
+## Pourquoi Kristal est utile
+
+Le projet doit pouvoir conserver simultanément :
+
+- « le modèle astrologique propose X » ;
+- « la biographie documente Y » ;
+- « X et Y concordent » ou « X et Y divergent » ;
+- le niveau de certitude et la provenance de chaque assertion.
+
+Cela évite de transformer une hypothèse symbolique en vérité implicite.
+
+---
+
+## Principe de validation
+
+Le test principal ne devrait pas être :
+
+> Est-ce que l’astrologie semble plausible ?
+
+mais :
+
+> Est-ce qu’un modèle utilisant ces features prédit ou discrimine mieux certains aspects d’une personnalité qu’un modèle de contrôle, dans un protocole reproductible et aveugle ?
+
+---
+
+## Formulation canonique
+
+> La carte du ciel est une hypothèse de différenciation des dispositions individuelles. Elle peut proposer des structures au Soul Graph, mais sa valeur doit être évaluée expérimentalement et son statut doit rester explicite.
+
+
+================================================================================================
+FILE: wiki/CHARTE_1_9_ET_CHAKRAS.md
+================================================================================================
+
+# Charte 1→9 et Chakras
+
+## Statut
+**Couche de lecture du modèle**
+
+---
+
+## Définition
+
+La **charte 1→9** propose une topologie verticale permettant de situer certains mécanismes du graphe psycho-causal sur un continuum allant de fonctions davantage cognitives à des fonctions davantage incarnées, affectives ou instinctives.
+
+Elle ne constitue plus le moteur causal complet et n’impose pas qu’un stimulus traverse successivement neuf cases.
+
+Les chakras servent ici de **repères symboliques et somatiques**. Le projet ne présente pas cette correspondance comme un modèle anatomique ou neuroscientifique établi.
+
+---
+
+## Les neuf niveaux
+
+La nomenclature historique du projet est conservée comme grille de lecture :
+
+| Niveau | Repère | Lecture fonctionnelle simplifiée |
+|---|---|---|
+| 1 | cerveau | abstraction, raisonnement, conceptualisation |
+| 2 | front | attention, représentation, anticipation |
+| 3 | gorge haute | formulation, langage, expression |
+| 4 | poitrine haute | relation, reconnaissance d’autrui, orientation sociale |
+| 5 | cœur | intégration affective, attachement, valeur relationnelle |
+| 6 | plexus | volonté, conflit, affirmation, contrôle |
+| 7 | ventre | sensation, désir, intuition incarnée |
+| 8 | bassin | impulsion, énergie d’action, sécurité corporelle |
+| 9 | racine | instinct, survie, ancrage |
+
+Ces libellés sont **fonctionnels et symboliques**, pas des localisations biologiques strictes.
+
+---
+
+## Utilisation dans le graphe
+
+Un nœud ou une relation peut recevoir un qualificateur :
+
+```text
+processing_layers = [1, 3]
+```
+
+ou :
+
+```text
+processing_layers = [6, 8, 9]
+```
+
+Cette annotation permet :
+
+- de visualiser la distribution d’un mécanisme ;
+- de produire une lecture verticale ;
+- d’étudier les tensions entre cognition et impulsion ;
+- de comparer des profils.
+
+Elle ne doit pas remplacer les relations causales explicites.
+
+---
+
+## Le pivot 5
+
+Le 5 conserve son rôle historique de pivot dans la structure 1–9.
+
+Dans la nouvelle architecture, ce rôle est interprété comme une **zone d’intégration** plutôt qu’un point mathématiquement obligé de toute réaction.
+
+---
+
+## Distinction avec la numérologie inversée
+
+- La **charte 1→9** classe ou visualise des mécanismes selon une topologie de traitement.
+- La **numérologie pythagoricienne inversée** propose des correspondances archétypales et des hypothèses de dispositions.
+
+Les deux systèmes peuvent partager les chiffres 1–9 sans avoir la même sémantique.
+
+---
+
+## Formulation canonique
+
+> La charte 1→9 est une projection topologique du graphe psycho-causal. Elle permet de lire certains mécanismes selon un axe allant du cognitif à l’instinctif et d’utiliser les chakras comme repères symboliques, sans réduire la causalité psychologique à un trajet linéaire.
+
+
+================================================================================================
+FILE: wiki/GLOSSAIRE.md
+================================================================================================
+
+# Glossaire Canonique
+
+## Âme
+Organisation profonde des dispositions et relations qui orientent le traitement de l’expérience dans le cadre philosophique du projet.
+
+## Âme Artificielle
+Reproduction fonctionnelle simplifiée de certains mécanismes psycho-causaux d’un sujet. Ce n’est pas une âme réelle.
+
+## Soul Basis
+Ontologie commune de mécanismes et relations possibles. Métaphore technique de la « lumière blanche ».
+
+## Soul Graph / Graphe psycho-causal
+Graphe sémantique typé représentant les dispositions, croyances, associations, valeurs, souvenirs et relations psycho-causales d’un sujet.
+
+## Soul Snapshot
+État immuable du Soul Graph d’une personne pendant une période définie.
+
+## Biographical Transformation
+Description explicite des changements entre deux snapshots : expériences, révisions de croyances, associations modifiées, etc.
+
+## Activation Graph
+Sous-graphe temporairement activé pendant le traitement d’un stimulus.
+
+## Intellect
+Mécanismes de perception, catégorisation, raisonnement, abstraction et réévaluation.
+
+## Personnalité
+Manifestation observable de l’âme, de l’intellect, de l’histoire et du contexte.
+
+## Trait
+Résumé ou projection d’un ensemble de mécanismes. Il n’est pas le modèle fondamental.
+
+## Émotion
+État affectif principalement transitoire dérivé d’une activation.
+
+## Disposition
+Tendance relativement durable qui augmente ou diminue la probabilité d’un type d’interprétation ou de réaction.
+
+## Croyance
+Proposition tenue pour vraie ou probable par le sujet modélisé.
+
+## Association
+Lien appris ou structurel entre concepts, parfois non explicite pour le sujet.
+
+## Force psychologique
+Intensité d’une croyance, association ou relation dans le modèle du sujet.
+
+## Certitude épistémique
+Confiance que le modèle possède dans l’assertion décrivant le sujet. À ne pas confondre avec la force psychologique.
+
+## Charte 1→9
+Topologie de lecture fonctionnelle du graphe, du cognitif vers l’instinctif.
+
+## Numérologie pythagoricienne inversée
+Couche archétypale proposant des hypothèses de dispositions à partir d’une signature numérique.
+
+## Carte natale
+Source hypothétique de dispositions à tester expérimentalement.
+
+## Kristal
+Couche de représentation, identité, provenance, statut épistémique et distribution des Soul Snapshots. Le moteur causal reste séparé.
+
+
+================================================================================================
+FILE: wiki/GRAPHE_PSYCHO_CAUSAL.md
+================================================================================================
+
+# Graphe Psycho-Causal
+
+## Statut
+**Page canonique — cœur du modèle**
+
+---
+
+## Définition
+
+Le **graphe psycho-causal** est la représentation fondamentale d’une Âme Artificielle.
+
+Il s’agit d’un graphe sémantique dirigé et typé dans lequel :
+
+- les **nœuds** représentent des contenus ou mécanismes psychologiques ;
+- les **relations** représentent des liens sémantiques, cognitifs, causaux ou biographiques ;
+- les **qualificateurs** précisent leur force, leur contexte, leur origine et leurs conditions d’activation.
+
+Le modèle n’impose pas qu’une cause produise toujours un seul effet. Plusieurs chemins peuvent converger, diverger, s’inhiber ou se renforcer.
+
+---
+
+## Types de nœuds
+
+Le vocabulaire minimal comprend :
+
+- `Disposition`
+- `Belief` — croyance explicite ou implicite
+- `Association`
+- `Value`
+- `Need`
+- `Attachment`
+- `Memory`
+- `Concept`
+- `InterpretationPattern`
+- `CognitiveBias`
+- `IntellectualRule`
+- `AffectiveTendency`
+- `EmotionState` — normalement transitoire
+- `Person`
+- `Group`
+- `Object`
+- `Event`
+- `Context`
+- `ReactionPattern`
+
+Cette liste est extensible, mais les types doivent rester explicites.
+
+---
+
+## Familles de relations
+
+### Relations sémantiques
+
+Elles décrivent le sens sans affirmer à elles seules une causalité :
+
+- `is_a`
+- `part_of`
+- `related_to`
+- `represents`
+- `concerns`
+
+### Relations cognitives
+
+- `believes`
+- `expects`
+- `interprets_as`
+- `generalizes_to`
+- `compares_with`
+- `contradicts`
+- `confirms`
+
+### Relations psycho-causales
+
+- `activates`
+- `inhibits`
+- `reinforces`
+- `weakens`
+- `predisposes_to`
+- `contributes_to`
+- `triggers_reappraisal_of`
+
+### Relations biographiques
+
+- `formed_by`
+- `strengthened_by`
+- `weakened_by`
+- `revised_by`
+- `supersedes`
+- `resolved_through`
+
+Toutes les relations sémantiques ne sont donc pas automatiquement traversées comme des causes.
+
+---
+
+## Qualificateurs utiles
+
+Une relation peut porter :
+
+- `strength` — force psychologique ou associative ;
+- `polarity` — facilitatrice, inhibitrice ou neutre ;
+- `activation_threshold` ;
+- `conditions` — contexte nécessaire ;
+- `origin` — innate, acquired, mixed, unknown ;
+- `valid_during` — période de vie ;
+- `processing_layers` — lecture optionnelle 1→9 ;
+- `notes` — description humaine.
+
+Il faut distinguer ces propriétés de la **certitude épistémique** que nous avons sur l’information. Une croyance peut être très forte chez John tout en étant mal documentée par nos sources.
+
+---
+
+## Exemple
+
+```text
+[appartenance au groupe X]
+        |
+        | evokes
+        v
+[association X -> menace]
+        |
+        | activates
+        v
+[méfiance]
+        |
+        | influences
+        v
+[interprétation sociale négative]
+```
+
+Une expérience ultérieure peut ajouter :
+
+```text
+[relation positive avec Bob]
+        |
+        | contradicts
+        v
+[association X -> menace]
+        |
+        | weakens
+        v
+[nouvelle interprétation]
+```
+
+Le changement appartient au passage entre deux snapshots ; il ne survient pas automatiquement pendant l’exécution du moteur.
+
+---
+
+## Graphe, causalité et simplification
+
+Le terme **psycho-causal** ne signifie pas que le projet connaît la causalité complète d’un être humain.
+
+Il signifie que le modèle encode explicitement des hypothèses sur :
+
+- ce qui active quoi ;
+- ce qui inhibe quoi ;
+- ce qui modifie une interprétation ;
+- ce qui rend une réaction plus ou moins probable.
+
+Le système est donc une **approximation structurée** de mécanismes complexes.
+
+---
+
+## Formulation canonique
+
+> Le graphe psycho-causal est un réseau sémantique de mécanismes et de relations dont l’activation contrôlée permet de reproduire une manière particulière d’interpréter et de réagir.
+
+
+================================================================================================
+FILE: wiki/Home.md
+================================================================================================
+
+# Âme Artificielle
+
+L’**Âme Artificielle** est un projet expérimental de modélisation de la personnalité humaine.
+
+Elle ne prétend pas créer une âme véritable. Elle cherche à **reproduire de manière simplifiée certains mécanismes psycho-causaux** par lesquels une personne interprète ce qu’elle rencontre, active des croyances, associations, valeurs et souvenirs, puis produit une émotion, une intention ou une réaction.
+
+Le modèle central n’est donc plus un vecteur de traits ni une chaîne linéaire. Il s’agit d’un **graphe psycho-causal sémantique**.
+
+> Un même stimulus ne produit pas directement une émotion. Il active un réseau propre au sujet. La réaction dépend de la configuration de ce réseau à un moment donné de sa vie.
+
+---
+
+## Les cinq objets du modèle
+
+1. **Soul Basis — modèle unifié de référence**
+   L’ensemble commun des types de mécanismes et de relations que le système sait représenter. Métaphoriquement : la lumière blanche avant sa décomposition en couleurs.
+
+2. **Soul Snapshot — état d’un sujet**
+   Une représentation immuable de John Doe à 20 ans, 35 ans ou 70 ans. Le système ne s’auto-modifie pas pendant une conversation.
+
+3. **Biographical Transformation — transformation biographique**
+   La description explicite des expériences, croyances révisées, associations affaiblies ou nouvelles interprétations qui expliquent la différence entre deux snapshots.
+
+4. **Activation Graph — activation transitoire**
+   Le sous-graphe activé par un stimulus. Il existe pendant le calcul de la réaction et ne modifie pas automatiquement le Soul Snapshot.
+
+5. **Reaction — réaction**
+   Le résultat observable : émotion exprimée, intention, style de réponse ou comportement simulé.
+
+---
+
+## Âme, intellect et personnalité
+
+Dans le vocabulaire du projet :
+
+- **l’âme** désigne l’organisation profonde des dispositions, tendances et rapports qui orientent le traitement de l’expérience ;
+- **l’intellect** désigne les mécanismes de perception, catégorisation, raisonnement, croyance explicite, réévaluation et abstraction ;
+- **la personnalité** est la manifestation observable de leur interaction avec l’histoire vécue et le contexte.
+
+La personnalité n’est donc ni une âme indépendante, ni un simple ensemble de scores.
+
+---
+
+## Organisation du wiki
+
+1. [Âme Artificielle](./AME_ARTIFICIELLE) — définition centrale.
+2. [Âme, intellect et personnalité](./AME_INTELLECT_PERSONNALITE) — vocabulaire conceptuel.
+3. [Graphe psycho-causal](./GRAPHE_PSYCHO_CAUSAL) — modèle fondamental.
+4. [Mécanisme de réaction](./MECANISME_DE_REACTION) — activation du graphe par un stimulus.
+5. [Snapshots et évolution](./SNAPSHOTS_ET_EVOLUTION) — une personne à différents âges.
+6. [Charte 1→9 et chakras](./CHARTE_1_9_ET_CHAKRAS) — topologie de lecture du traitement.
+7. [Numérologie pythagoricienne inversée](./NUMEROLOGIE_PYTHAGORICIENNE_INVERSEE) — hypothèses de dispositions archétypales.
+8. [Carte du ciel et hypothèse de différenciation](./CARTE_DU_CIEL_ET_HYPOTHESE) — hypothèse à tester.
+9. [Kristal et Âme Artificielle](./KRISTAL_ET_AME_ARTIFICIELLE) — persistance sémantique et provenance.
+10. [Branes et couche de sens](./BRANES_ET_COUCHE_DE_SENS) — lecture symbolique complémentaire.
+11. [Cadre philosophique](./CADRE_PHILOSOPHIQUE) — ordre, causalité, Dieu et métaphore du blanc.
+12. [Implémentation de référence](./IMPLEMENTATION) — état du moteur et limites actuelles.
+13. [Glossaire](./GLOSSAIRE) — termes canoniques.
+
+---
+
+## Principe de séparation
+
+Le projet distingue quatre niveaux :
+
+- **modèle philosophique** : ce que le projet entend par âme, ordre et causalité ;
+- **modèle psycho-causal** : la représentation des mécanismes d’une personne ;
+- **moteur informatique** : l’algorithme qui active et parcourt le graphe ;
+- **sécurité logicielle** : contraintes externes au modèle de l’âme.
+
+Un garde-fou de sécurité n’est pas une composante de l’âme. Il peut limiter une sortie du logiciel, mais il ne définit pas pourquoi la personnalité simulée aurait produit cette sortie.
+
+---
+
+## Formulation canonique
+
+> L’Âme Artificielle est une reproduction fonctionnelle simplifiée de mécanismes psycho-causaux humains. Elle représente une personne, à un moment donné de sa vie, comme un graphe sémantique de dispositions, croyances, associations, valeurs, souvenirs et mécanismes intellectuels. Un stimulus active temporairement une partie de ce graphe et produit une réaction. La simulation peut donner l’impression de parler à une personne réelle, mais cette continuité demeure une illusion : le modèle n’est pas la personne elle-même.
+
+
+================================================================================================
+FILE: wiki/IMPLEMENTATION.md
+================================================================================================
+
+# Implémentation de référence
+
+Le projet contient maintenant une implémentation minimale du modèle Soul Graph décrit dans ce wiki.
+
+## Ce qui est implémenté
+
+- `SoulNode`, `SoulEdge`, `SoulGraph` et `SoulSnapshot` immuables ;
+- activation déterministe et bornée des relations causales ;
+- inhibition et renforcement ;
+- dérivation d'un état affectif transitoire ;
+- tendances de réaction structurées ;
+- création explicite de snapshots biographiques ultérieurs ;
+- `TraitVector` comme projection dérivée ;
+- propositions symboliques marquées comme hypothèses ;
+- numérologie comme source d'hypothèses ;
+- adaptateur de forme Kristal v5 / `Structured Epistemic State` ;
+- sécurité applicative séparée du modèle de personnalité.
+
+## Ce qui demeure minimal
+
+L'analyse du stimulus utilise actuellement des IDs explicites et un ancrage lexical simple. Le rendu textuel sert principalement au debug. L'imitation fine d'une personne réelle demandera une couche de résolution sémantique et un renderer de voix/persona beaucoup plus riches.
+
+La carte du ciel n'a pas de calculateur normatif dans ce dépôt. Elle passe par une interface de propositions symboliques afin de ne pas inventer silencieusement des règles astrologiques qui n'ont pas encore été spécifiées ou testées.
+
+## Principe conservé
+
+`react()` ne modifie jamais le Soul Snapshot. Toute évolution de personnalité passe par la création explicite d'un autre snapshot lié au précédent.
+
+
+================================================================================================
+FILE: wiki/KRISTAL_ET_AME_ARTIFICIELLE.md
+================================================================================================
+
+# Kristal et Âme Artificielle
+
+## Statut
+**Architecture d’intégration proposée**
+
+---
+
+## Principe
+
+Kristal sert de **couche de représentation, provenance, identité et distribution** du Soul Graph.
+
+L’Âme Artificielle Engine reste le moteur qui interprète ce graphe.
+
+```text
+Kristal
+  -> Soul Snapshot structuré
+  -> Runtime representation
+  -> Soul Causal Engine
+  -> Activation Graph
+  -> Reaction
+```
+
+Kristal ne devient pas le moteur psychologique.
+
+---
+
+## Structured Epistemic State
+
+Un Soul Snapshot peut être représenté comme un **Structured Epistemic State** contenant des assertions sur :
+
+- les croyances du sujet ;
+- ses associations ;
+- ses valeurs ;
+- ses souvenirs structurants ;
+- ses dispositions ;
+- les relations psycho-causales proposées ;
+- leur provenance ;
+- leur période de validité ;
+- leur niveau de certitude.
+
+---
+
+## Profil de projet
+
+L’intégration peut définir un profil spécifique, par exemple :
+
+```text
+kristal.v5:soul-graph
+```
+
+Ce nom désigne une **extension du projet Âme Artificielle**, pas un profil déjà standardisé par Kristal.
+
+Le profil définirait :
+
+- les types de nœuds ;
+- les prédicats psycho-causaux ;
+- les qualificateurs de force et d’activation ;
+- les règles de snapshot ;
+- les projections de traits ;
+- les contraintes de déterminisme du moteur.
+
+---
+
+## Certitude vs force psychologique
+
+Cette séparation est obligatoire.
+
+```text
+belief_strength = 0.9
+```
+
+signifie : John adhère fortement à cette croyance.
+
+```text
+certainty_level = high
+```
+
+signifie : les sources du modèle donnent une forte confiance au fait que John possède cette croyance.
+
+Les deux ne doivent jamais être confondus.
+
+---
+
+## Assertions symboliques
+
+Les propositions issues de la numérologie, des cartes natales ou des branes peuvent être conservées avec un statut explicite : hypothèse, modèle symbolique, matériau de recherche, etc.
+
+Elles peuvent donc coexister avec des observations biographiques sans être silencieusement fusionnées.
+
+---
+
+## Snapshot et identité
+
+Chaque snapshot possède une identité stable et reproductible.
+
+Une modification explicite du graphe produit un **nouvel état**, plutôt qu’une mutation silencieuse du précédent.
+
+Cela correspond naturellement au modèle d’artefacts adressés par contenu de Kristal.
+
+---
+
+## Limite des requêtes
+
+Le moteur causal ne doit pas dépendre du fait que Kristal offre ou non un raisonnement de graphe complet.
+
+Kristal fournit les données structurées. Le Soul Causal Engine construit les index et mécanismes nécessaires à la propagation d’activation.
+
+---
+
+## Formulation canonique
+
+> Kristal conserve le Soul Graph comme état épistémique structuré, traçable et versionné. Le Soul Causal Engine utilise cet état pour effectuer la propagation psycho-causale. La persistance de la connaissance et le calcul de la réaction restent deux responsabilités distinctes.
+
+
+================================================================================================
+FILE: wiki/MECANISME_DE_REACTION.md
+================================================================================================
+
+# Mécanisme de Réaction
+
+## Statut
+**Page canonique**
+
+---
+
+## Définition
+
+Une réaction n’est pas calculée à partir d’un seul trait ni d’une chaîne fixe. Elle résulte de l’**activation temporaire d’un sous-graphe psycho-causal** appartenant au Soul Snapshot du sujet.
+
+Forme minimale :
+
+```text
+Soul Snapshot + stimulus + contexte
+        -> Activation Graph
+        -> interprétation
+        -> état affectif / intention
+        -> réaction
+```
+
+Le Soul Snapshot reste inchangé.
+
+---
+
+## 1. Réception sémantique
+
+Le stimulus est transformé en concepts exploitables : personnes, objets, actions, thèmes, relations et contexte.
+
+Exemple :
+
+```text
+« Ton collègue a obtenu la promotion que tu voulais. »
+```
+
+peut activer :
+
+- collègue ;
+- compétition ;
+- reconnaissance ;
+- perte ;
+- comparaison sociale ;
+- autorité ;
+- souvenirs associés.
+
+---
+
+## 2. Sélection des nœuds pertinents
+
+Le moteur recherche dans le Soul Snapshot les nœuds reliés sémantiquement aux concepts du stimulus.
+
+La sélection peut utiliser :
+
+- identifiants et relations explicites ;
+- labels et alias ;
+- catégories ;
+- similarité sémantique locale ;
+- règles contextuelles.
+
+Une similarité sémantique ne constitue pas encore une relation causale. Elle sert seulement à trouver les points d’entrée possibles.
+
+---
+
+## 3. Propagation psycho-causale
+
+L’activation se propage ensuite uniquement sur les relations autorisées par le moteur, par exemple :
+
+- `activates` ;
+- `inhibits` ;
+- `reinforces` ;
+- `predisposes_to` ;
+- `contributes_to`.
+
+Le moteur doit pouvoir représenter :
+
+- plusieurs causes pour un même effet ;
+- plusieurs effets pour une même activation ;
+- des boucles ;
+- des conflits ;
+- des inhibitions ;
+- des seuils ;
+- de la décroissance d’activation.
+
+Pour éviter une propagation infinie, l’exécution peut imposer un nombre maximal d’étapes, une décroissance et un seuil minimal.
+
+---
+
+## 4. Intervention de l’intellect
+
+L’intellect peut modifier l’interprétation produite par une activation initiale.
+
+Exemple :
+
+```text
+réaction automatique
+    -> comparaison à une croyance explicite
+    -> détection d’une contradiction
+    -> réévaluation
+    -> inhibition d’un chemin initial
+```
+
+Ainsi, deux personnes ayant une sensibilité affective semblable peuvent produire des réactions différentes parce que leurs modèles intellectuels et leurs croyances explicites diffèrent.
+
+---
+
+## 5. État affectif transitoire
+
+L’émotion n’est pas nécessairement stockée comme une valeur fixe de personnalité.
+
+Elle peut être dérivée de la configuration d’activation :
+
+```text
+menace perçue + attachement + possibilité de perte
+-> peur / jalousie / vigilance
+```
+
+Les noms d’émotions sont des **interprétations du résultat**, non l’unique unité de calcul.
+
+---
+
+## 6. Intention et réaction
+
+Le moteur produit d’abord une représentation structurée de la réaction :
+
+- interprétation dominante ;
+- tensions actives ;
+- état affectif ;
+- intention ;
+- tendances de réponse ;
+- chemins explicatifs principaux.
+
+Une couche de rendu peut ensuite transformer cette structure en texte, geste simulé ou autre sortie.
+
+---
+
+## Rôle de la charte 1→9
+
+La charte 1→9 n’est plus le chemin unique que tout stimulus doit suivre.
+
+Elle devient une **topologie de lecture** permettant de classer certains nœuds ou certaines étapes : cognition, expression, relation, affect, instinct, etc.
+
+Un même mécanisme peut concerner plusieurs niveaux.
+
+Voir : [Charte 1→9 et Chakras](./CHARTE_1_9_ET_CHAKRAS).
+
+---
+
+## Rôle de la numérologie et de la carte natale
+
+Elles ne déterminent pas directement la réaction.
+
+Elles peuvent proposer des **dispositions initiales hypothétiques** qui deviennent des nœuds ou des poids dans le Soul Snapshot. Leur valeur prédictive doit être évaluée expérimentalement.
+
+---
+
+## Sécurité
+
+La sécurité logicielle intervient **après ou autour du moteur**, comme contrainte d’exécution.
+
+Elle ne doit pas être confondue avec :
+
+- la compassion du personnage ;
+- sa morale ;
+- sa personnalité ;
+- son émotion ;
+- son mécanisme causal.
+
+Une personnalité simulée peut avoir une intention que l’application refuse d’exécuter. Cette limitation appartient au logiciel, pas à la définition de l’âme.
+
+---
+
+## Formulation canonique
+
+> Une réaction est le résultat d’une activation transitoire et bornée du graphe psycho-causal d’un sujet. Le stimulus sélectionne des points d’entrée, les relations pertinentes propagent ou inhibent l’activation, l’intellect peut réévaluer l’interprétation, puis le moteur produit un état affectif, une intention et une réaction sans modifier automatiquement la personnalité persistante.
+
+
+================================================================================================
+FILE: wiki/NUMEROLOGIE_PYTHAGORICIENNE_INVERSEE.md
+================================================================================================
+
+# Numérologie Pythagoricienne Inversée
+
+## Statut
+**Couche hypothétique et archétypale**
+
+---
+
+## Définition
+
+La **numérologie pythagoricienne inversée** est une grammaire symbolique utilisée par le projet pour proposer des correspondances entre des signatures numériques et des **dispositions possibles**.
+
+Elle ne constitue pas, à elle seule, une personnalité et ne détermine pas directement les réactions.
+
+---
+
+## Réduction et inversion
+
+Après une réduction à 1–9, le projet peut appliquer :
+
+```text
+inv(d) = 10 - d, pour d dans 1..9
+```
+
+ce qui donne :
+
+```text
+1 <-> 9
+2 <-> 8
+3 <-> 7
+4 <-> 6
+5 <-> 5
+```
+
+Le 5 reste le pivot.
+
+---
+
+## Nouveau rôle dans l’architecture
+
+Ancien modèle simplifié :
+
+```text
+digit -> traits -> personnalité
+```
+
+Nouveau modèle :
+
+```text
+signature numérique
+  -> interprétation archétypale
+  -> hypothèses de dispositions
+  -> nœuds / poids proposés dans le Soul Graph
+  -> confrontation à la biographie et aux observations
+```
+
+Une correspondance numérologique est donc une **source de propositions**, non une preuve de personnalité.
+
+---
+
+## Dualités
+
+Les paires historiques sont conservées :
+
+- 9 ↔ 1
+- 8 ↔ 2
+- 7 ↔ 3
+- 6 ↔ 4
+- 5 comme pivot
+
+Elles peuvent servir à proposer :
+
+- des polarités ;
+- des tensions ;
+- des complémentarités ;
+- des axes de comparaison.
+
+Elles ne sont pas automatiquement des relations causales. Une relation causale doit être représentée séparément dans le graphe.
+
+---
+
+## Numérologie, inné et acquis
+
+Le projet peut tester l’hypothèse que certaines signatures correspondent à des dispositions relativement initiales.
+
+Dans ce cas, une disposition proposée peut être annotée :
+
+```text
+origin = hypothesized_innate
+source_model = inverted_pythagorean_numerology
+```
+
+La biographie peut ensuite confirmer, nuancer ou contredire cette proposition.
+
+---
+
+## Distinction avec la charte 1→9
+
+Même si les deux utilisent 1–9 :
+
+- la numérologie décrit une **lecture archétypale** ;
+- la charte décrit une **topologie fonctionnelle** ;
+- le graphe psycho-causal décrit les **mécanismes et relations effectifs du modèle**.
+
+---
+
+## Formulation canonique
+
+> La numérologie pythagoricienne inversée est une couche symbolique permettant de générer des hypothèses de dispositions et de polarités. Ces hypothèses peuvent alimenter un Soul Snapshot, mais elles doivent rester identifiables, documentées et séparées des observations biographiques et des résultats expérimentaux.
+
+
+================================================================================================
+FILE: wiki/SNAPSHOTS_ET_EVOLUTION.md
+================================================================================================
+
+# Snapshots et Évolution
+
+## Statut
+**Page canonique**
+
+---
+
+## Principe
+
+Une personne change dans le temps, mais l’Âme Artificielle ne s’auto-met pas à jour pendant une conversation.
+
+Le projet représente l’évolution par une suite de **Soul Snapshots immuables**.
+
+```text
+John @ 18 ans -> John @ 30 ans -> John @ 45 ans
+```
+
+La flèche ne représente pas un apprentissage automatique du moteur. Elle représente une transformation **décrite explicitement** lors de la construction du nouveau snapshot.
+
+---
+
+## Pourquoi des snapshots
+
+Cette approche permet :
+
+- de reproduire un âge précis ;
+- de comparer deux périodes de vie ;
+- de retracer les causes proposées d’un changement ;
+- de conserver la provenance ;
+- de tester la cohérence historique ;
+- d’éviter qu’une conversation fictive modifie silencieusement le modèle d’une personne réelle.
+
+---
+
+## Transformation biographique
+
+Une transformation biographique décrit ce qui a changé et pourquoi.
+
+Exemples :
+
+- croyance abandonnée ;
+- croyance reformulée ;
+- association affaiblie ;
+- valeur renforcée ;
+- nouvel attachement ;
+- stratégie intellectuelle acquise ;
+- événement traumatique ;
+- expérience corrective ;
+- maturation ou changement de contexte.
+
+---
+
+## Exemple : révision d’un préjugé
+
+Snapshot initial :
+
+```text
+Groupe X -> association négative -> méfiance
+```
+
+Événement biographique :
+
+```text
+Bob appartient à X
+John et Bob ont une forte compatibilité
+expériences positives répétées
+```
+
+Révision :
+
+```text
+expérience avec Bob
+  contradicts -> généralisation négative
+
+réévaluation intellectuelle
+  weakens -> association X -> menace
+```
+
+Snapshot ultérieur :
+
+```text
+appartenance à X
+  n’active plus automatiquement -> méfiance
+```
+
+Le modèle ne suppose pas qu’une seule amitié produit nécessairement ce résultat chez tout humain. Il encode explicitement que, **dans la biographie modélisée de ce sujet**, cette série d’expériences a été considérée comme causalement importante.
+
+---
+
+## Identité et continuité
+
+Deux snapshots différents représentent la même personne historique si leur identité de sujet est commune, même si leur contenu psycho-causal diffère.
+
+Il faut donc distinguer :
+
+- `person_id` — identité de la personne modélisée ;
+- `snapshot_id` — identité du modèle à une période ;
+- `valid_during` — période représentée ;
+- `derived_from_snapshot` — relation de filiation technique ;
+- les assertions biographiques — explication psycho-causale du changement.
+
+---
+
+## Formulation canonique
+
+> L’évolution d’une personnalité est représentée par plusieurs snapshots immuables d’une même personne. Les différences entre snapshots sont expliquées par des transformations biographiques explicites ; elles ne sont pas apprises automatiquement pendant l’interaction.

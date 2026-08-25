@@ -4,85 +4,119 @@ repository: Rejean-McCormick/kOA_Digital_Ecosystem
 source_path: C:\mycode\kOA\kOA_Digital_Ecosystem
 source_commit: 0ea910d8eeb38b962f0de8e7deefc3327cd770e6
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:56-04:00
-files: 71
-content_sha256: 7a7e9a7a6b26a44dedc81a06394193039aff0055ec2c6d3a601e11e42410cc74
+wiki_source_path: C:\mycode\kOA\kOA_Digital_Ecosystem.wiki
+wiki_source_commit: 830fb28abe030d070752041488d19a185057d6c1
+wiki_working_tree_markdown: clean
+repo_files: 71
+wiki_files: 29
+generated_at: 2026-08-25T11:30:58-04:00
+files: 100
+content_sha256: c77a030cff73ef4a4cb5453c9072ffadc5fd188f1011f0888c545bf8f9a458e8
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. docs_layer-model/00_README.md
-02. docs_layer-model/01_LAYER_MODEL.md
-03. docs_layer-model/02_LAYER_INDEX.md
-04. docs_layer-model/03_LAYER_TEMPLATE.md
-05. docs_layer-model/layers/00_separation_of_functions.md
-06. docs_layer-model/layers/01_orientation_mandate.md
-07. docs_layer-model/layers/02_semantics_meaning.md
-08. docs_layer-model/layers/03_provenance_ingestion.md
-09. docs_layer-model/layers/04_structured_knowledge.md
-10. docs_layer-model/layers/05_validation_canon.md
-11. docs_layer-model/layers/06_deliberation.md
-12. docs_layer-model/layers/07_decision_legitimacy.md
-13. docs_layer-model/layers/08_execution.md
-14. docs_layer-model/layers/09_memory_learning.md
-15. docs_layer-model/layers/10_resilience_autonomy.md
-16. docs_layer-model/layers/11_learning_interface.md
-17. docs_layer-model/layers/12_narrative_adoption.md
-18. docs_layer-model/layers/13_deployment_translation.md
-19. docs_technical/00-overview/faq.md
-20. docs_technical/00-overview/glossary.md
-21. docs_technical/00-overview/scope.md
-22. docs_technical/00-overview/system-at-a-glance.md
-23. docs_technical/10-system/architecture.md
-24. docs_technical/10-system/components.md
-25. docs_technical/10-system/determinism.md
-26. docs_technical/10-system/failure-modes.md
-27. docs_technical/10-system/lifecycle.md
-28. docs_technical/10-system/trust-boundaries.md
-29. docs_technical/20-nodes/binah-blueprint.md
-30. docs_technical/20-nodes/chesed-konnaxion.md
-31. docs_technical/20-nodes/chokmah-inputs.md
-32. docs_technical/20-nodes/daat-kristal-bridge.md
-33. docs_technical/20-nodes/gevurah-orgo.md
-34. docs_technical/20-nodes/hod-architect-render.md
-35. docs_technical/20-nodes/index.md
-36. docs_technical/20-nodes/keter-mandate.md
-37. docs_technical/20-nodes/malkuth-runtime.md
-38. docs_technical/20-nodes/netzach-architect-strategy.md
-39. docs_technical/20-nodes/tiferet-sentient.md
-40. docs_technical/20-nodes/yesod-compiler.md
-41. docs_technical/30-artifacts/build-record.md
-42. docs_technical/30-artifacts/index.md
-43. docs_technical/30-artifacts/konnaxion-state.md
-44. docs_technical/30-artifacts/mandate-bundle.md
-45. docs_technical/30-artifacts/orgo-case.md
-46. docs_technical/30-artifacts/orgo-task.md
-47. docs_technical/30-artifacts/release-record.md
-48. docs_technical/40-integration/kristal-v4/conformance.md
-49. docs_technical/40-integration/kristal-v4/contract-pointers.md
-50. docs_technical/40-integration/kristal-v4/index.md
-51. docs_technical/40-integration/kristal-v4/koa-profile.md
-52. docs_technical/40-integration/kristal-v4/legacy-compat.md
-53. docs_technical/40-integration/kristal-v4/pinned-dependency.md
-54. docs_technical/50-operations/incident-response.md
-55. docs_technical/50-operations/key-management.md
-56. docs_technical/50-operations/pipeline.md
-57. docs_technical/50-operations/releases.md
-58. docs_technical/50-operations/rollback.md
-59. docs_technical/60-guides/implementers.md
-60. docs_technical/60-guides/integrators.md
-61. docs_technical/60-guides/testing.md
-62. docs_technical/60-guides/tooling.md
-63. docs_technical/90-reference/adr/adr-0001-truth-boundary.md
-64. docs_technical/90-reference/adr/adr-0002-determinism-policy.md
-65. docs_technical/90-reference/adr/adr-0003-konnaxion-activation-rollback.md
-66. docs_technical/90-reference/adr/adr-0004-architect-split.md
-67. docs_technical/90-reference/adr/adr-0005-compatibility-versioning.md
-68. docs_technical/90-reference/adr/index.md
-69. docs_technical/90-reference/terminology.md
-70. docs_technical/index.md
-71. README.md
+001. docs_layer-model/00_README.md
+002. docs_layer-model/01_LAYER_MODEL.md
+003. docs_layer-model/02_LAYER_INDEX.md
+004. docs_layer-model/03_LAYER_TEMPLATE.md
+005. docs_layer-model/layers/00_separation_of_functions.md
+006. docs_layer-model/layers/01_orientation_mandate.md
+007. docs_layer-model/layers/02_semantics_meaning.md
+008. docs_layer-model/layers/03_provenance_ingestion.md
+009. docs_layer-model/layers/04_structured_knowledge.md
+010. docs_layer-model/layers/05_validation_canon.md
+011. docs_layer-model/layers/06_deliberation.md
+012. docs_layer-model/layers/07_decision_legitimacy.md
+013. docs_layer-model/layers/08_execution.md
+014. docs_layer-model/layers/09_memory_learning.md
+015. docs_layer-model/layers/10_resilience_autonomy.md
+016. docs_layer-model/layers/11_learning_interface.md
+017. docs_layer-model/layers/12_narrative_adoption.md
+018. docs_layer-model/layers/13_deployment_translation.md
+019. docs_technical/00-overview/faq.md
+020. docs_technical/00-overview/glossary.md
+021. docs_technical/00-overview/scope.md
+022. docs_technical/00-overview/system-at-a-glance.md
+023. docs_technical/10-system/architecture.md
+024. docs_technical/10-system/components.md
+025. docs_technical/10-system/determinism.md
+026. docs_technical/10-system/failure-modes.md
+027. docs_technical/10-system/lifecycle.md
+028. docs_technical/10-system/trust-boundaries.md
+029. docs_technical/20-nodes/binah-blueprint.md
+030. docs_technical/20-nodes/chesed-konnaxion.md
+031. docs_technical/20-nodes/chokmah-inputs.md
+032. docs_technical/20-nodes/daat-kristal-bridge.md
+033. docs_technical/20-nodes/gevurah-orgo.md
+034. docs_technical/20-nodes/hod-architect-render.md
+035. docs_technical/20-nodes/index.md
+036. docs_technical/20-nodes/keter-mandate.md
+037. docs_technical/20-nodes/malkuth-runtime.md
+038. docs_technical/20-nodes/netzach-architect-strategy.md
+039. docs_technical/20-nodes/tiferet-sentient.md
+040. docs_technical/20-nodes/yesod-compiler.md
+041. docs_technical/30-artifacts/build-record.md
+042. docs_technical/30-artifacts/index.md
+043. docs_technical/30-artifacts/konnaxion-state.md
+044. docs_technical/30-artifacts/mandate-bundle.md
+045. docs_technical/30-artifacts/orgo-case.md
+046. docs_technical/30-artifacts/orgo-task.md
+047. docs_technical/30-artifacts/release-record.md
+048. docs_technical/40-integration/kristal-v4/conformance.md
+049. docs_technical/40-integration/kristal-v4/contract-pointers.md
+050. docs_technical/40-integration/kristal-v4/index.md
+051. docs_technical/40-integration/kristal-v4/koa-profile.md
+052. docs_technical/40-integration/kristal-v4/legacy-compat.md
+053. docs_technical/40-integration/kristal-v4/pinned-dependency.md
+054. docs_technical/50-operations/incident-response.md
+055. docs_technical/50-operations/key-management.md
+056. docs_technical/50-operations/pipeline.md
+057. docs_technical/50-operations/releases.md
+058. docs_technical/50-operations/rollback.md
+059. docs_technical/60-guides/implementers.md
+060. docs_technical/60-guides/integrators.md
+061. docs_technical/60-guides/testing.md
+062. docs_technical/60-guides/tooling.md
+063. docs_technical/90-reference/adr/adr-0001-truth-boundary.md
+064. docs_technical/90-reference/adr/adr-0002-determinism-policy.md
+065. docs_technical/90-reference/adr/adr-0003-konnaxion-activation-rollback.md
+066. docs_technical/90-reference/adr/adr-0004-architect-split.md
+067. docs_technical/90-reference/adr/adr-0005-compatibility-versioning.md
+068. docs_technical/90-reference/adr/index.md
+069. docs_technical/90-reference/terminology.md
+070. docs_technical/index.md
+071. README.md
+072. wiki/_Footer.md
+073. wiki/_Sidebar.md
+074. wiki/Artifacts-Kristal.md
+075. wiki/Artifacts-Operational.md
+076. wiki/Artifacts.md
+077. wiki/Components-Architect.md
+078. wiki/Components-Binah.md
+079. wiki/Components-Chokmah.md
+080. wiki/Components-Konnaxion-and-Malkuth.md
+081. wiki/Components-Kristal-and-Daat.md
+082. wiki/Components-Orgo.md
+083. wiki/Components-SenTient.md
+084. wiki/Components-SwarmCraft.md
+085. wiki/Components.md
+086. wiki/FAQ.md
+087. wiki/Glossary.md
+088. wiki/Home.md
+089. wiki/Integration-External-systems.md
+090. wiki/Integration-Kristal-v4.md
+091. wiki/Integration.md
+092. wiki/Lifecycle.md
+093. wiki/Non-goals.md
+094. wiki/Operations-Builds.md
+095. wiki/Operations-Incident-response.md
+096. wiki/Operations-Observability.md
+097. wiki/Operations-Releases.md
+098. wiki/Operations-Rollbacks.md
+099. wiki/Operations.md
+100. wiki/Principles-and-invariants.md
 
 
 ================================================================================================
@@ -15586,3 +15620,3431 @@ FILE: README.md
  
  
  
+
+
+================================================================================================
+FILE: wiki/_Footer.md
+================================================================================================
+
+---
+
+**kOA Digital Ecosystem Wiki**
+
+- [Home](Home) · [Lifecycle](Lifecycle) · [Components](Components) · [Artifacts](Artifacts) · [Operations](Operations) · [Integration](Integration) · [Glossary](Glossary) · [FAQ](FAQ)
+
+**Normative boundary**
+- Kristal v4 is the source of truth for Kristal artifact contracts (Exchange, Runtime Pack, Validation Report, etc.).
+- This wiki documents kOA architecture, responsibilities, operational workflows, and kOA-native artifacts; it does not duplicate Kristal schemas.
+- See: [Kristal v4 integration](Integration-Kristal-v4)
+
+**Contributing**
+- Propose changes via PRs and link new/updated pages from `_Sidebar.md`.
+- When changing invariants or system-wide rules, add/update an ADR under `docs/90-reference/adr/` and reference it from the relevant wiki page.
+
+---
+
+
+================================================================================================
+FILE: wiki/_Sidebar.md
+================================================================================================
+
+* [Home](Home)
+
+* [Principles & invariants](Principles-and-invariants)
+* [Non-goals](Non-goals)
+
+* [Lifecycle](Lifecycle)
+
+* [Components](Components)
+  * [Orgo](Components-Orgo)
+  * [Chokmah](Components-Chokmah)
+  * [Binah](Components-Binah)
+  * [SenTient](Components-SenTient)
+  * [Kristal & Daat](Components-Kristal-and-Daat)
+  * [Konnaxion & Malkuth](Components-Konnaxion-and-Malkuth)
+  * [Architect](Components-Architect)
+  * [SwarmCraft](Components-SwarmCraft)
+
+* [Artifacts](Artifacts)
+  * [Kristal artifacts](Artifacts-Kristal)
+  * [Operational artifacts](Artifacts-Operational)
+
+* [Operations](Operations)
+  * [Builds](Operations-Builds)
+  * [Releases](Operations-Releases)
+  * [Rollbacks](Operations-Rollbacks)
+  * [Observability](Operations-Observability)
+  * [Incident response](Operations-Incident-response)
+
+* [Integration](Integration)
+  * [Kristal v4](Integration-Kristal-v4)
+  * [External systems](Integration-External-systems)
+
+* [Glossary](Glossary)
+* [FAQ](FAQ)
+
+
+================================================================================================
+FILE: wiki/Artifacts-Kristal.md
+================================================================================================
+
+# Kristal Artifacts
+
+**Normative for kOA:** NO
+**External normative reference:** Kristal v4 (pinned)
+
+Kristal artifacts are the **contract boundary** where “truth” becomes canonical and where offline runtime behavior is packaged for distribution. In kOA, these artifacts are **normatively defined by Kristal v4**; kOA documents only how they are used, gated, verified, and referenced. 
+
+## Non-redundancy rule
+
+kOA **must not** duplicate Kristal schemas, field lists, canonicalization rules, or signature formats in this wiki. Instead, point to the pinned Kristal dependency and its schema/spec paths.  
+
+## Where Kristal artifacts sit in the lifecycle
+
+```mermaid
+flowchart LR
+  A[Ingest inputs] --> B[Extract -> Claim-IR]
+  B --> C[Resolve -> Resolved Claim-IR]
+  C --> D[Validate -> Validation Report]
+  D --> E[Compile -> Exchange + Runtime Pack]
+  E --> F[Distribute/Verify/Activate Runtime Pack]
+```
+
+High-level stage ordering reference: 
+
+## The core Kristal artifacts used by kOA
+
+| Artifact                               | What it is (plain terms)                                             | Typical producer in kOA | Primary consumer in kOA             |
+| -------------------------------------- | -------------------------------------------------------------------- | ----------------------- | ----------------------------------- |
+| **Claim-IR**                           | Proposed structured claims extracted from inputs                     | Extractors              | SenTient + Validation               |
+| **Resolved Claim-IR**                  | Claims after entity/property/literal resolution (ambiguity explicit) | SenTient                | Validation + Compilation            |
+| **Validation Report**                  | Deterministic accept/reject decision + reasons                       | Validator               | Orgo gate (“no compile on fail”)    |
+| **Exchange (commit + manifest)**       | Canonical truth boundary (what is “canon”)                           | Kristal compiler        | Query / Render / Export             |
+| **Runtime Pack (manifest + payloads)** | Offline execution boundary (what gets activated at the edge)         | Kristal compiler        | Konnaxion verify/activate/rollback  |
+
+## How kOA uses these artifacts (without schema details)
+
+### 1) Validate before “truth” (hard gate)
+
+* The Validation Report is produced deterministically and is used to authorize compilation.
+* If validation fails, compilation must not proceed (“no compile on fail”). 
+
+### 2) Compile into canon + offline runtime
+
+* Compilation produces **Exchange** (canon) and **Runtime Pack** (offline runtime form). 
+
+### 3) Verify before activation (fail-closed)
+
+Before a Runtime Pack can become active, kOA requires **verify-before-activate** and **fail-closed** behavior (schema validity, integrity, compatibility), with **atomic activation** and deterministic rollback to last-known-good. 
+
+## What kOA records about Kristal artifacts
+
+kOA operational artifacts (Build/Release records, Cases/Tasks) must store Kristal artifacts as **opaque references** (IDs + manifest refs / hashes), without assuming Kristal internal structure.  
+
+## Where to find the actual Kristal contracts
+
+Use these kOA integration docs as the single pointer set:
+
+* **Pinned dependency (how the Kristal version is pinned, and how to reference schema paths):** `40-integration/kristal-v4/pinned-dependency.md` 
+* **Contract pointers (exact Kristal schema paths for each artifact):** `40-integration/kristal-v4/contract-pointers.md` 
+* **Conformance (the gates and checks required in CI/runtime):** `40-integration/kristal-v4/conformance.md` 
+
+## Related pages
+
+* `Artifacts-Operational` (kOA-native artifacts) 
+* `Integration-Kristal-v4` (integration invariant and quick start)
+
+
+================================================================================================
+FILE: wiki/Artifacts-Operational.md
+================================================================================================
+
+# Operational Artifacts (kOA-native)
+
+Operational artifacts are **typed payloads** used to **operate, govern, distribute, and observe** the ecosystem. :contentReference[oaicite:0]{index=0}  
+They do **not** redefine Kristal artifacts; they reference Kristal outputs by opaque IDs defined in the pinned Kristal spec. :contentReference[oaicite:1]{index=1}
+
+---
+
+## What makes an artifact “operational”
+
+An operational artifact exists to answer questions like:
+
+- What work was authorized and executed?
+- What inputs/policies were pinned?
+- What passed/failed (and why)?
+- What was rolled out, where, and what is active now?
+- What was rolled back, and what evidence supports that decision?
+
+Each kOA artifact has:
+- a documented contract (human-readable),
+- a JSON Schema for validation, and
+- explicit versioning/compat expectations. :contentReference[oaicite:2]{index=2}
+
+---
+
+## Operational artifact catalog
+
+### 1) Governance artifacts (Orgo)
+
+#### Orgo Case
+A **case** is the top-level unit of governed operational work (incident, remediation, investigation, rollout review, etc.). It provides:
+- a stable identifier and status,
+- ownership and routing,
+- links to evidence and related tasks.
+
+#### Orgo Task
+A **task** is an executable unit of work under constraints (tool/agent/human/hybrid), with pinned inputs and declared expected outputs.
+Tasks are the primary way the system turns “needed action” into auditable execution and evidence linkage. :contentReference[oaicite:3]{index=3}
+
+**Typical usage**
+- “Investigate repeated validation failures”
+- “Re-run build under pinned context”
+- “Rollback stable channel to last-known-good”
+- “Rotate trust material and verify activation”
+
+---
+
+### 2) Pipeline operational records
+
+#### Build Record
+A **Build Record** is the audit-grade record of a pipeline run. It must allow an auditor to reconstruct:
+- exactly which input snapshots were used,
+- what pinned context was applied (blueprint/mandate/policy/toolchain identity),
+- which stages ran and their outcomes,
+- gate decisions (especially validation),
+- which outputs were produced (Kristal Exchange + Runtime Pack refs). :contentReference[oaicite:4]{index=4}
+
+**Key invariant**
+- **No compile on fail**: if validation fails, the Build Record must not claim Exchange/Runtime Pack outputs for that attempt. :contentReference[oaicite:5]{index=5}
+
+**Why it exists**
+- Reproducibility (“same pinned context → comparable results”)
+- Gate accountability (“what failed, where, and why”)
+- Release eligibility input (releases start from a PASS build)
+
+---
+
+#### Release Record
+A **Release Record** captures **distribution intent** and **rollout state** for publishing verified build outputs (e.g., Runtime Packs) to channels/cohorts. :contentReference[oaicite:6]{index=6}  
+It binds:
+- what is being released (references to build outputs),
+- where it is released (channels/cohorts),
+- how it is released (policy + rollout strategy),
+- what happened (verification/activation outcomes, timestamps, operators, reasons). :contentReference[oaicite:7]{index=7}
+
+**Important boundary**
+- A Release Record does not mutate canonical truth; it is operational governance used by Orgo/Konnaxion. :contentReference[oaicite:8]{index=8}
+
+---
+
+### 3) Policy / mandate
+
+#### Mandate Bundle
+A **Mandate Bundle** is a pinned, versioned bundle of governance inputs that define what the ecosystem is allowed to do and how it must behave. :contentReference[oaicite:9]{index=9}  
+It exists to:
+- provide a single content-addressed governance package referenced by builds/releases/audits,
+- enable reproducible policy decisions,
+- separate governance configuration from runtime execution and from canonical truth artifacts. :contentReference[oaicite:10]{index=10}
+
+---
+
+### 4) Distribution / runtime
+
+#### Konnaxion State
+**Konnaxion State** captures the local distribution/activation state of a Konnaxion instance (or cluster) in a structured, auditable form. :contentReference[oaicite:11]{index=11}  
+It is designed to:
+- provide a consistent view of what is installed/active/pinned,
+- support deterministic rollback decisions,
+- correlate activation outcomes with health signals. :contentReference[oaicite:12]{index=12}
+
+**When it’s emitted**
+Konnaxion updates this record on verify/activate attempts (success or fail), rollback start/completion, pin/unpin changes, and optionally periodic heartbeat. :contentReference[oaicite:13]{index=13}
+
+---
+
+## How these artifacts fit together (operator mental model)
+
+- **Orgo Case/Task**: the governed work and evidence linkage.
+- **Build Record**: what ran, under what pinned context, and what passed/failed.
+- **Release Record**: how a successful build was rolled out (channels/cohorts), and what happened.
+- **Konnaxion State**: what is actually installed/active/pinned in runtime environments.
+- **Mandate Bundle**: the pinned policy context that constrains all of the above.
+
+---
+
+## Related pages
+
+- Artifacts.md
+- Operations.md
+- Operations-Builds.md
+- Operations-Releases.md
+- Operations-Rollbacks.md
+
+
+================================================================================================
+FILE: wiki/Artifacts.md
+================================================================================================
+
+# Artifacts
+
+Artifacts are the **typed payloads** that cross boundaries between kOA components (and between kOA and Kristal). They exist so the system can be **deterministic, auditable, and operable** without hidden shared state.
+
+## Two artifact families
+
+### 1) Kristal artifacts (external, normative)
+Kristal defines the contracts for:
+- Claim-IR / Resolved Claim-IR
+- Validation Report
+- Exchange (canonical truth)
+- Runtime Pack (offline-executable pack) and manifests/signatures
+
+kOA treats these as **opaque references** (IDs + manifest references) and does not restate their schemas here.
+
+### 2) kOA-native artifacts (kOA-owned)
+kOA defines artifacts needed to **operate, govern, distribute, and observe** the ecosystem. Examples:
+- **Governance:** Orgo Case, Orgo Task (work + approvals + audit trail)
+- **Pipeline records:** Build Record, Release Record (what ran, what passed, what was promoted)
+- **Distribution/runtime state:** Konnaxion State, activation/rollback records, cache/index artifacts
+- **Policy context:** Mandate Bundle (pinned policy/mandate context)
+
+## What artifacts are for (why they exist)
+
+Artifacts make the system:
+- **Reproducible:** build/release decisions can be reconstructed from pinned references
+- **Fail-closed:** gates and verification have explicit, recorded outcomes
+- **Auditable:** operations leave an append-only trail of what happened and why
+- **Composable:** integrations exchange references, not implicit state
+
+## How artifacts are handled (high-level rules)
+
+### References, not payloads
+- Prefer **content-addressed references** where possible.
+- Do not embed large payloads inside operational artifacts; store pointers/hashes instead.
+- References should include enough context to resolve the artifact (type + ID + hash/ref).
+
+### Opaque IDs across boundaries
+- Kristal artifact IDs and internals are treated as **opaque** by kOA-native records.
+- kOA records store “what” (refs + outcomes), not Kristal’s internal structure.
+
+## Contract expectations (what “done” looks like)
+
+Each **kOA-native** artifact should have:
+- A human-readable contract page (this wiki)
+- A machine-validated schema (in-repo schemas folder)
+- Clear versioning/compatibility expectations
+
+## Minimal artifact lifecycle (operator view)
+
+1. **Produced** by a component (e.g., ingest snapshot, build record, runtime state)
+2. **Referenced** by governance/work records (Case/Task) and pipeline records (Build/Release)
+3. **Promoted** via release controls (channel/cohort/pinning)
+4. **Activated** by Konnaxion after verification (atomic switch, rollback-safe)
+5. **Superseded** by a newer build/release or rolled back to last-known-good
+6. **Audited** via append-only records and stored references
+
+## Where to go next
+
+- For the list of kOA-native artifacts: see `Artifacts-Operational.md`
+- For Kristal artifacts and authoritative contracts: see `Integration-Kristal-v4.md`
+- For operational behavior (release/rollback): see `Operations.md`
+
+
+================================================================================================
+FILE: wiki/Components-Architect.md
+================================================================================================
+
+# Architect (Articulation Plane)
+
+Architect is the ecosystem’s **articulation layer**: it turns canonical knowledge into **actionable plans** and **user-facing outputs** while preserving the truth boundary.
+
+Architect is explicitly split into two roles:
+
+- **Architect-Strategy (Netzach):** decides *what to do next* (governed work proposals)
+- **Architect-Render (Hod):** explains *what is true* (deterministic outputs with traceability)
+
+---
+
+## Why Architect is split
+
+Combining planning and rendering creates failure modes (plans being treated as truth, rendering varying based on planning heuristics, feedback loops hiding provenance). The split enforces a clean separation between **governed proposals** and **deterministic articulation**.
+
+---
+
+## Architect-Strategy (Netzach)
+
+### What it does
+Architect-Strategy converts **canonical truth + operating context** into **governed work proposals** that Orgo can accept, decompose into Cases/Tasks, execute, and audit.
+
+### What it produces
+- Plans that map cleanly to **Orgo Cases/Tasks**
+- (Optionally) rendering specs/templates selection (without inventing facts)
+
+### Key constraints (plain language)
+- Strategy proposals are **not truth**. They can recommend actions, but they do not publish or mutate canonical knowledge.
+- Strategy may use heuristic/probabilistic methods, but outcomes must be captured as governed work objects.
+
+---
+
+## Architect-Render (Hod)
+
+### What it does
+Architect-Render turns **validated knowledge** into **user-consumable outputs** (text or structured blocks) under strict rules:
+- deterministic output
+- **no new facts**
+- complete trace coverage (`trace_map`)
+- explicit ambiguity handling
+- deterministic refusal/error behavior
+
+Architect-Render is formatting and composing—not deciding truth, not executing work.
+
+### What it consumes (conceptual)
+Architect-Render accepts only **validated** bundles derived from:
+- Runtime Pack query results, or
+- Exchange-derived verified query results
+plus a **pinned** template/profile and rendering parameters.
+
+### What it produces (conceptual)
+A **Render Bundle** containing:
+- the rendered output
+- a machine-readable `trace_map`
+- render metadata (template/profile version, language, etc.)
+
+### Non-negotiable behavior
+- **Accept only validated inputs** (reject unverified/untraceable provenance)
+- **Deterministic rendering** (same pinned inputs + same template/profile/params ⇒ identical output and identical `trace_map`)
+- **No new facts** (no “gap filling” with plausible guesses; no external factual enrichment)
+- **Trace coverage** (every factual statement must trace to validated lineage; otherwise omit / mark-uncertain only if upstream uncertainty exists / or refuse)
+- **Ambiguity preservation** (render ambiguity explicitly or refuse; never silently disambiguate)
+- **Offline correctness** (no network dependency for factual correctness; network calls, if used for non-factual assets, must not affect factual assertions)
+
+### Deterministic refusal (examples)
+Architect-Render refuses deterministically with stable codes when, for example:
+- input provenance cannot be proven (`UNVERIFIED_INPUT`)
+- stable evidence identifiers are missing (`MISSING_TRACE_IDS`)
+- ambiguity cannot be rendered under requested constraints (`AMBIGUOUS_INPUT`)
+- render kind is unsupported (`UNSUPPORTED_RENDER_KIND`)
+- projection constraints are violated (`PROJECTION_MISMATCH`)
+- requested output would introduce an unsupported fact (`POLICY_VIOLATION_NEW_FACT_RISK`)
+
+---
+
+## Where Architect sits in the lifecycle
+
+- **Render is Stage 7**: it runs after validation + compilation and produces Render Bundles with trace coverage.
+- **Strategy feeds Orgo**: it produces governed work proposals that Orgo manages through its lifecycle and auditing.
+
+---
+
+## Operational signals (what operators should expect)
+
+Architect-Render should emit, at minimum:
+- Exchange/Pack reference used
+- template/profile id + version
+- render kind, language, (optional) projection
+- determinism mode
+- status + refusal/error code (if not `ok`)
+- trace coverage metrics (assertions rendered / omitted / uncertain / refused)
+
+---
+
+## Links
+
+- [Lifecycle](Lifecycle)
+- [Artifacts](Artifacts) (Render Bundle)
+- [Operations](Operations) (release/rollback behavior that keeps the runtime safe)
+- [Components — Orgo](Components-Orgo)
+- [Components — Konnaxion & Malkuth](Components-Konnaxion-and-Malkuth)
+
+
+================================================================================================
+FILE: wiki/Components-Binah.md
+================================================================================================
+
+# Binah — Blueprint
+
+**Normative for kOA:** YES  
+**External normative reference:** Kristal v4 (pinned)
+
+Binah is the planning node that turns a **Mandate** + **available inputs** into a **Blueprint**: an explicit, auditable plan describing what will be built, how it will be grounded, and which downstream nodes execute each step.
+
+Binah does **not** validate truth. It structures work so that truth validation downstream is possible and deterministic.
+
+---
+
+## Responsibility
+
+### Binah owns
+- Producing a **Blueprint** that is complete enough for deterministic execution downstream
+- Declaring required inputs, grounding strategy, and which policy gates must be enforced downstream
+- Assigning execution responsibilities across downstream nodes (e.g., SenTient, Architect, Compiler, Daat)
+
+### Binah does not own
+- Ground-truth resolution (SenTient)
+- Kristal artifact verification or publication (Daat)
+- Distribution/activation (Konnaxion)
+- Governance approvals (Orgo), except to request them via work items
+
+---
+
+## Inputs
+
+- **Mandate Bundle** — goals, constraints, target channels/environments, approvals state
+- **Input Snapshot References** — opaque references to deterministic input sets
+- **Policy Configuration** — which policy families must be enforced downstream
+- **System Capabilities** — supported compilers/runtimes, target environment matrix, feature flags
+
+---
+
+## Outputs
+
+### Blueprint (kOA artifact)
+A Blueprint specifies:
+- Plan steps with explicit stage boundaries
+- Evidence/anchor requirements per step
+- Policy gates (by name)
+- Expected Kristal artifact *types* to be produced (by type only)
+
+### Optional: Orgo Work Items
+Requests for missing inputs, approvals, or exception handling.
+
+### Diagnostics
+Reasons planning is blocked (e.g., missing inputs, conflicting constraints).
+
+---
+
+## Blueprint at a glance
+
+A Blueprint is an **ordered set of steps**. Each step should make the following explicit (kOA-level, not schema-level):
+- Stable step identity
+- Which node executes the step
+- Which artifact types are required as inputs and expected as outputs
+- Preconditions/guards (including “must be Kristal-verified” where applicable)
+- Named policy gates to be enforced
+- Determinism constraints (e.g., pinned toolchain required)
+- Rollback plan (required when the plan targets activation channels)
+
+Binah may include scheduling/parallelization metadata, but must not introduce nondeterministic dependencies.
+
+---
+
+## Guards (when Binah refuses to emit a Blueprint)
+
+Binah must refuse to emit a Blueprint if any of the following are true:
+- Mandate is missing required approvals for the requested channel(s)
+- Required input snapshot references are missing or not pinned
+- The plan would require producing Kristal artifacts without a declared path through Daat
+- The plan depends on non-pinned tools, non-versioned policies, or “live” data without snapshot identity
+- Target environments include incompatible runtime constraints without a mitigation/rollback plan
+
+---
+
+## Failure modes
+
+- **F1 Input acquisition failures:** missing snapshot references, input identity ambiguity
+- **F2 Planning failures:** inconsistent constraints, incomplete step guards, missing rollback plan
+- **F4 Determinism failures (prevention):** plan depends on unpinned toolchain or nondeterministic execution
+- **F6 Activation risk:** plan targets rollout without rollback path
+
+---
+
+## Operational notes
+
+- **Idempotent planning:** if Mandate + Snapshot References + Policy Profile are unchanged, Binah must emit the same Blueprint (or a blueprint with a stable semantic hash).
+- **Change control:** any change in inputs, policies, or target matrix requires a new Blueprint revision.
+- **Traceability:** step outputs must remain traceable to their inputs via references captured downstream (Build/Release records).
+
+---
+
+## Interfaces with other nodes
+
+- **Keter → Binah:** mandate content and governance constraints
+- **Chokmah → Binah:** snapshot references for deterministic inputs
+- **Binah → SenTient:** resolution steps and evidence requirements
+- **Binah → Architect:** render strategy and deterministic constraints
+- **Binah → Compiler:** toolchain pinning and packaging targets
+- **Binah → Daat:** expected Kristal artifacts and publish/verification intent
+- **Binah → Orgo:** approvals and remediation work items
+
+---
+
+## Related pages
+
+- Components: Orgo, Chokmah, SenTient, Daat, Konnaxion
+- Artifacts: Mandate Bundle, Build Record, Release Record
+- Operations: Pipeline, Releases, Rollbacks
+
+
+================================================================================================
+FILE: wiki/Components-Chokmah.md
+================================================================================================
+
+# Chokmah (Inputs)
+
+Chokmah is the system’s **ingest + provenance boundary**. It captures raw external inputs and turns them into **immutable, content-addressed snapshots** so downstream stages can be reproduced and audited.
+
+Chokmah does **not** decide truth. It guarantees only that “what we saw” is captured, traceable, and replayable.
+
+---
+
+## Purpose
+
+- Provide a safe, repeatable ingest boundary for raw data (files, feeds, APIs, user submissions).
+- Produce stable snapshot references that the rest of the pipeline can pin to a build.
+
+---
+
+## Responsibilities
+
+Chokmah **must**:
+
+- Ingest raw materials from configured sources.
+- Produce **immutable Input Snapshots** stored in a content-addressed store.
+- Capture and persist **provenance** per snapshot (source identity, retrieval time, auth/context, routing tags, policy tags).
+- Enforce confidentiality and access control (including encryption at rest when required).
+- Provide **idempotent ingestion** (same bytes → same snapshot reference).
+- Emit a deterministic, machine-readable **input set** reference for downstream builds.
+- Emit deterministic ingestion results with stable error codes.
+
+Chokmah **may**:
+
+- Normalize transport/container formats **without changing meaning** (e.g., decode/decompress/charset normalization) only if:
+  - the transform is deterministic, and
+  - the transform is recorded explicitly in the snapshot manifest (tool id/version + steps).
+
+Chokmah **must not**:
+
+- Interpret, enrich, or “fix” content in a way that changes meaning without recording it as a derived artifact.
+- Generate or alter canonical truth artifacts.
+
+---
+
+## Interfaces
+
+### Inputs to Chokmah
+
+**Ingest Request** (from Orgo or an ingestion orchestrator), including:
+
+- Source descriptor (URI / connector type / credentials reference)
+- Expected content type and size (if known)
+- Confidentiality classification / handling constraints
+- Mandate/policy tags
+- Optional retention/quarantine directives
+
+### Outputs from Chokmah
+
+- **Input Snapshot Set**: one or more content-addressed snapshot references
+- **Snapshot Manifest**:
+  - deterministic mapping of snapshot ref → provenance + acquisition metadata
+  - ingestion policy version/ref applied
+  - transformation steps (if any) with deterministic tooling identifiers
+  - integrity metadata (hashes/checksums)
+- **Ingest Receipt**:
+  - snapshot refs created/confirmed
+  - errors/partial results (if any)
+  - diagnostics pointers
+- Optional **Quarantine Report** (when content is blocked/sanitized/quarantined per policy)
+
+---
+
+## Snapshot identity model
+
+- Snapshot identity is **content-addressed**: same payload bytes → same snapshot reference.
+- Metadata changes do **not** change the payload reference; metadata lives in the manifest/records.
+- If the source is mutable (e.g., “latest.json”), Chokmah still stores the retrieved bytes as an immutable snapshot and records retrieval context.
+
+---
+
+## Invariants
+
+1) **Immutability**: once issued, snapshot bytes never change.  
+2) **Content addressing**: refs derive from content (and any explicitly defined deterministic packaging rules).  
+3) **Complete provenance**: every snapshot records where/when/how it was fetched, under what policy/authority context, and any transformations applied.  
+4) **Confidentiality enforcement**: restricted snapshots are encrypted at rest and access-controlled; downstream should receive only refs unless explicitly authorized to fetch bytes.  
+5) **Idempotent ingestion**: re-ingesting identical bytes returns the same ref; retries don’t create duplicates.  
+6) **Build reproducibility**: Orgo can bind a build to a stable snapshot set; downstream must not depend on live sources.  
+7) **No hidden enrichment**: ingest captures and packages input material; it does not introduce new facts.
+
+---
+
+## Error handling (fail closed)
+
+Chokmah fails closed when it cannot guarantee correctness. Common failures include:
+
+- Source unreachable / authentication failure
+- Partial download or truncated payload
+- Hash mismatch during streaming verification
+- Policy violation (disallowed source / classification mismatch)
+- Quarantine triggered (malware, sensitive data, unsafe content)
+- Unsupported format / decoding failure
+- Storage failure (cannot commit snapshot immutably)
+- Malformed content violating declared type constraints (record as ingest error; do not coerce)
+
+Errors should be structured and stable:
+
+- `code` (stable)
+- `message` (human)
+- `diagnostics_ref` (pointer)
+
+---
+
+## Observability
+
+Chokmah should emit:
+
+### Metrics
+- ingest requests, successes/failures
+- bytes ingested, throughput
+- latency per connector/source type
+- retry counts and idempotency hits
+- rejection/quarantine rates and reasons
+
+### Structured logs
+- request id, source descriptor hash, snapshot refs
+- policy/classification decisions
+- failure codes and diagnostics pointers
+
+### Audit events
+- snapshot created/confirmed
+- access grants/denials
+- retention/expiration actions
+
+---
+
+## Security and trust boundary notes
+
+- Chokmah touches untrusted external data; treat all inputs as untrusted until committed immutably.
+- Connector credentials are handled via a secure secret mechanism (never embedded in artifacts).
+- Confidentiality policy is enforced consistently with mandate and operational policy.
+
+---
+
+## Related pages
+
+- Components-Orgo.md
+- Lifecycle.md
+- Operations-Builds.md
+- Artifacts-Operational.md
+
+
+================================================================================================
+FILE: wiki/Components-Konnaxion-and-Malkuth.md
+================================================================================================
+
+# Components — Konnaxion & Malkuth
+
+Konnaxion and Malkuth are the **distribution + runtime** pair that make “offline-first, verified knowledge” real:
+
+- **Konnaxion (Distribution)** decides what can be installed/activated, verifies it **fail-closed**, activates it **atomically**, and rolls back **deterministically**.
+- **Malkuth (Runtime)** serves deterministic queries (and optionally executes pack-defined routines) **only** over the currently active, verified pack.
+
+---
+
+## Konnaxion (Distribution)
+
+### Purpose
+Safely deliver Runtime Packs to environments (edge, device, offline node, cluster) and ensure that only **verified, compatible** packs become active.
+
+### Owns
+- Fetching/mirroring Runtime Packs and keeping multiple versions installed per channel/environment.
+- Verification-before-activation (integrity/signature/required content).
+- Compatibility checks before activation.
+- Atomic activation and deterministic rollback.
+- Downgrade and substitution protection (per policy).
+- Offline-capable trust verification (no correctness dependency on online trust-root fetches).
+
+### Does not own
+- Defining Runtime Pack format/schemas (external).
+- Deciding canonical truth (upstream of distribution).
+- Rendering user-facing outputs (Architect).
+- Executing tasks (SwarmCraft).
+
+### How it works (high level)
+1. **Receive** a candidate pack reference (from a release channel/index or an explicit operator action).
+2. **Verify** the pack (fail-closed): parse/validate the manifest, validate integrity, validate signatures (when declared), ensure required files are present.
+3. **Check compatibility** with the local runtime capabilities/profile.
+4. **Activate atomically**: switch the “active” pointer from old → new with no partial states.
+5. **Record state and diagnostics** for operators and Orgo (including stable reason codes on failures).
+6. If needed, **rollback deterministically** (pinned known-good or last-known-good), with explicit authorization and auditability.
+
+### Key invariants (non-negotiable)
+- **Verification-before-activation** (fail-closed).
+- **Compatibility is mandatory** (incompatible means no activation).
+- **Atomic activation** (partial activation forbidden).
+- **Deterministic rollback** (same triggers + same verified inputs → same rollback outcome).
+- **Offline correctness**: trust verification must be possible offline; do not require live network trust roots for correctness.
+
+### Operational artifact: Konnaxion State
+Konnaxion emits a structured **Konnaxion State** record so operators and Orgo can see:
+- what is installed,
+- what is active,
+- what is pinned/revoked,
+- what the last attempt did and why,
+- what rollback target is available.
+
+This is an operational record; it references external artifacts by ID, it does not redefine them.
+
+---
+
+## Malkuth (Runtime)
+
+### Purpose
+Provide a stable runtime surface over the currently active pack:
+- deterministic **query/lookup/search** over pack-provided indexes/tables, and
+- optionally deterministic **execute** for pack-defined routines (policy-gated).
+
+### Owns
+- Deterministic serving over active pack payloads.
+- Fail-closed refusal to serve if the active pack is not verified/compatible.
+- Stable error codes and stable ordering/tie-breakers.
+- Runtime safety controls (sandboxing, quotas/timeouts, deterministic-mode constraints).
+
+### Does not own
+- Activating packs (Konnaxion).
+- Deciding truth or compiling canon (upstream).
+- Mutating pack payloads (read-only).
+- Introducing new canonical facts.
+
+### How it works (high level)
+1. Reads the **active pack pointer** as set by Konnaxion.
+2. Validates that the active pack is **verified and compatible** (or refuses).
+3. Serves deterministic queries over pack data structures.
+4. Emits observability signals (pack identity, request ids, stable error codes, resource usage).
+
+### Key invariants (non-negotiable)
+- **No new facts**: outputs are derived only from the active pack payloads plus explicit request inputs.
+- **Fail-closed** if pack verification/compatibility is not satisfied.
+- **Deterministic serving**: stable outputs, stable ordering, stable tie-breakers under the same inputs/config.
+- **Immutable payload**: pack is read-only.
+
+---
+
+## How they work together
+
+```mermaid
+flowchart LR
+  R[Release/Channel Index] --> K[Konnaxion]
+  K -->|verified + activated pack| A[(Active Pack Pointer)]
+  A --> M[Malkuth]
+  M --> C[Consumers (apps, Architect, SwarmCraft, tooling)]
+  K --> S[Konnaxion State (ops/audit)]
+  S --> O[Orgo / Ops / Monitoring]
+````
+
+* Konnaxion is the **gatekeeper**: it prevents corrupted, incompatible, revoked, substituted, or downgraded packs from becoming active.
+* Malkuth is the **runtime contract**: it only serves from what Konnaxion has made active, and it stays deterministic and fail-closed.
+
+---
+
+## Operator cues (what to look at first)
+
+* If a rollout “stalls”: check Konnaxion State for the last attempt’s **reason code** and whether verification or compatibility blocked activation.
+* If runtime answers look inconsistent: confirm Malkuth is in deterministic mode and that the active pack identity matches expectations.
+* If an incident occurs: prefer **explicit rollback** to last-known-good/pinned known-good, and preserve the audit trail.
+
+
+================================================================================================
+FILE: wiki/Components-Kristal-and-Daat.md
+================================================================================================
+
+# Kristal & Daat
+
+Kristal is the system’s **truth compiler**. Daat is the **governed bridge** between kOA and Kristal that makes the Kristal interaction reproducible, auditable, and safe.
+
+---
+
+## What this component is responsible for
+
+### Kristal (truth compiler)
+- Compiles **validated knowledge** into **canonical truth artifacts**
+- Produces derived runtime deliverables (e.g., **Runtime Packs**) that downstream runtime systems can verify and use offline
+- Treats validation as a hard gate: **no compilation or publish of “truth” if validation failed**
+
+### Daat (Kristal bridge)
+- Pins and controls the **Kristal version** used (no floating “latest”)
+- Ensures kOA only consumes/produces **Kristal-defined artifact types**
+- Enforces **fail-closed** behavior at the boundary (schema/compatibility/integrity checks must pass)
+- Records the operational evidence needed to reproduce and audit a build/release
+
+---
+
+## What it is not responsible for
+
+- It does **not** decide what the product UI should look like (that’s rendering)
+- It does **not** execute tasks or workflows (that’s execution)
+- It does **not** mutate canonical truth directly via side effects (truth changes happen only through the governed pipeline)
+
+---
+
+## Inputs and outputs (high level)
+
+### Typical inputs (to the Kristal boundary)
+- Claim proposals (extracted facts that are not yet canonical)
+- Resolution outputs (explicit decisions about entities/properties/values where needed)
+- Validation policy context (what rules must be satisfied for truth to be accepted)
+
+### Typical outputs (from the Kristal boundary)
+- Validation report (pass/fail + reasons)
+- Canonical truth artifacts (the compiled “truth” set)
+- Runtime Pack + manifest (portable, verifiable bundle for runtime/offline use)
+
+> Note: The exact schemas and names of Kristal artifacts are defined by the pinned Kristal version. This wiki intentionally avoids duplicating those contracts.
+
+---
+
+## How it works (conceptual)
+
+1. **Pin Kristal**
+   - Daat selects the approved Kristal version for the environment and build.
+
+2. **Submit staged inputs**
+   - kOA hands off prepared artifacts to the Kristal boundary (claims, resolutions, policy context).
+
+3. **Validate (hard gate)**
+   - Kristal produces a validation report.
+   - If validation fails, the pipeline stops at the truth boundary.
+
+4. **Compile**
+   - When validation passes, Kristal compiles canonical truth.
+
+5. **Package**
+   - Kristal produces a Runtime Pack intended for verification and offline/runtime consumption.
+
+6. **Handoff**
+   - Daat registers outputs as immutable build results and makes them available to distribution/release.
+
+---
+
+## Operational expectations
+
+- **Reproducibility**
+  - The same pinned Kristal version + the same pinned inputs should produce the same canonical results (or canonically equivalent results).
+
+- **Auditability**
+  - Builds and releases should be able to reference “what Kristal produced” without copying it into operational records.
+
+- **Safety at the boundary**
+  - If any verification, compatibility, or integrity check fails, the system must not activate or promote outputs downstream.
+
+---
+
+## Common failure modes (non-technical)
+
+- **Pinned version mismatch**
+  - A build tries to compile with a Kristal version that is not approved for that environment.
+
+- **Schema/contract mismatch**
+  - An artifact presented to Kristal (or received from Kristal) does not conform to the expected contract.
+
+- **Validation fails**
+  - The report indicates a deterministic failure; compilation and release must not proceed.
+
+- **Pack cannot be verified**
+  - Downstream systems reject activation; rollback or hold is required.
+
+---
+
+## Upgrade and compatibility policy (practical)
+
+- Treat Kristal upgrades like a release:
+  - Pin a new version
+  - Run conformance checks
+  - Roll out gradually (channels/cohorts)
+  - Keep rollback available to the last-known-good Kristal pin and pack lineage
+
+---
+
+## Quick FAQ
+
+**Why have Daat instead of calling Kristal directly?**  
+To keep the truth boundary governed: pinning, fail-closed checks, and operational evidence are enforced consistently.
+
+**Why not document the Kristal schemas here?**  
+To avoid drift. Kristal schemas are owned by Kristal and are referenced by pin, not duplicated in the wiki.
+
+**Does Kristal run the product runtime?**  
+No. Kristal produces truth and packs. Runtime systems consume verified packs to serve queries and experiences.
+
+
+================================================================================================
+FILE: wiki/Components-Orgo.md
+================================================================================================
+
+# Orgo (Control Plane)
+
+**Role:** Governance + pipeline control plane. 
+Orgo enforces the canonical stage spine (ingest → extract → resolve → validate → compile → distribute → render/execute), applies deterministic gates, and records an auditable trail of what happened and why. 
+
+```mermaid
+flowchart LR
+  O[Orgo<br/>control plane] --> S[Stage spine<br/>orchestration + gates]
+  S --> BR[Build Record]
+  S --> RR[Release Record]
+  S --> D[Distribute/Activate<br/>(Konnaxion)]
+  S --> R[Render/Execute<br/>(Architect/SwarmCraft)]
+```
+
+## What Orgo owns (and what it doesn’t)
+
+### Owns
+
+* **Stage orchestration:** enforce stage order; run stages with explicit inputs and pinned configs; idempotent retries. 
+* **Deterministic gating:** enforce “no compile on fail”; block downstream activation/release when integrity checks fail (fail-closed). 
+* **Governance workflow:** Cases/Tasks lifecycle and deterministic routing. 
+* **Audit + reproducibility evidence:** Build Record + Release Record; immutable audit logs for gate outcomes and governance changes. 
+
+### Does not own
+
+* Kristal artifact formats/schemas/canonicalization rules (treated as external, pinned contracts). 
+
+## Responsibilities (operator-facing)
+
+### 1) Enforce the stage spine
+
+Orgo enforces an ordered pipeline from ingest through activation and feedback. 
+
+### 2) Make “truth gating” non-negotiable
+
+If validation fails, Orgo stops the pipeline and must not run compile (“no compile on fail”). 
+
+### 3) Make releases controlled and auditable
+
+Orgo ties an eligible build to a rollout intent (channels/cohorts/pins), monitors rollout, and drives rollback when needed—while recording the full decision trail in Release Records. 
+
+## Inputs (what Orgo listens to)
+
+### Upstream signals
+
+* Ingest/provenance signals (Chokmah) 
+* Blueprint/policy bundles (Keter/Binah) 
+* Resolution outputs (SenTient) 
+* Verification/activation telemetry (Konnaxion) 
+* Execution telemetry (SwarmCraft, if present) 
+
+### Operator actions
+
+* Create/triage/resolve Cases and Tasks; approve/pin/revoke releases; trigger rebuilds/rollbacks (within policy). 
+
+## Outputs (what Orgo produces)
+
+### kOA-native artifacts (owned by Orgo)
+
+* Orgo Case, Orgo Task, Build Record, Release Record. 
+
+Orgo persists a **Build Record** for every pipeline execution and a **Release Record** for every promotion/publish action. 
+
+## Deterministic gates (what Orgo blocks/permits)
+
+Orgo gates are policy-driven but must be deterministic for the same inputs/configuration. 
+
+Gate categories:
+
+1. **Schema/contract gates:** validate kOA-native artifacts against kOA schemas; validate Kristal artifacts against pinned Kristal v4 schemas. 
+2. **Stage dependency gates:** stages run only when dependencies are complete/valid; compile/release prohibited unless validation passes. 
+3. **Integrity gates:** distribution/activation must be fail-closed; rollback must be deterministic under policy. 
+
+## Invariants (must always hold)
+
+* **No compile on fail:** validation failure blocks compilation, release intent, and activation. 
+* **Explicit decisions are recorded:** policy/blueprint selection and overrides are recorded in Build/Release Records. 
+* **Auditability:** terminal failures include stable reason codes and traceable references. 
+* **Idempotent stage execution:** retries do not create ambiguous dual outputs; Orgo records what is authoritative. 
+* **Fail-closed rollout:** verification/compat uncertainty blocks activation unless policy explicitly overrides (and it’s recorded). 
+
+## Interfaces (recommended shapes)
+
+### Control-plane API
+
+* Case/Task CRUD + lifecycle transitions
+* Build orchestration (start/stop/retry stage, fetch build status)
+* Release orchestration (create intent, promote, pin, revoke, rollback)
+* Read-only audit endpoints (gate decisions, stage timeline, artifact refs) 
+
+### Event stream
+
+Orgo should emit events for stage start/finish/fail, gate pass/fail (with stable reason codes), Case/Task transitions, rollout milestones, rollback triggers/completion. 
+
+### Storage (non-negotiable)
+
+Orgo persists Case/Task history, Build/Release Records, gate outcomes, and operator actions with append-only or versioned history. 
+
+## Failure modes (classes)
+
+* Pipeline failures: missing/incorrect provenance; invalid extractor/resolver outputs; validation failures (must block compile/release). 
+* Governance failures: conflicting manual actions; inconsistent case/task state; intent drift vs rollout state. 
+* Safety failures (critical): attempted activation without verification; bypassed gates; unlogged admin changes. 
+
+## Observability (minimum)
+
+Metrics and logs should make it easy to answer:
+
+* What build/release is failing, where, and why?
+* Which reason codes are trending?
+* How often are rollbacks happening, and what triggered them?
+
+Minimum metrics: build throughput/durations, validation pass rate and top reasons, release success/time-to-rollout, rollback frequency, case/task lead time/backlog. 
+Minimum logs: gate decisions with reason codes and referenced artifact IDs; operator actions with before/after state. 
+Recommended traces: correlate build IDs across stage jobs and downstream distribution; correlate release IDs to activation/rollback and client health. 
+
+## Related pages
+
+* Pipeline operations (Orgo): `Operations-Builds` / `Operations` 
+* Orgo-native artifacts: Build Record / Release Record / Case / Task
+
+
+================================================================================================
+FILE: wiki/Components-SenTient.md
+================================================================================================
+
+# Components — SenTient (Resolution Plane)
+
+**Normative for kOA:** YES  
+**External normative reference:** Kristal v4 (pinned) for Claim-IR / Resolved Claim-IR schemas
+
+## Purpose
+
+SenTient is the ecosystem’s **resolution and reconciliation engine**. It takes extracted claim proposals (Claim-IR) and produces **Resolved Claim-IR** by:
+- mapping ambiguous surfaces to explicit, canonical identifiers (e.g., entities/properties),
+- normalizing literals deterministically (dates, numbers, units, etc.),
+- preserving unresolved ambiguity explicitly (never guessing “silently”).
+
+SenTient sits between **Extract** and **Validate** in the stage spine: it makes claims *explicit enough* for deterministic validation and compilation.
+
+## What SenTient owns (and why)
+
+SenTient owns the **deterministic resolution boundary**:
+- candidate selection outputs (with stable ordering + tie-breakers),
+- literal normalization,
+- explicit ambiguity objects (when resolution is not unique),
+- structured warnings/errors that downstream gates can use.
+
+This is what turns “probably this thing” into “these are the possible things, ranked, with reasons” (or “no valid resolution”).
+
+## What SenTient does NOT own
+
+SenTient does not:
+- validate acceptance (that is the Validation gate),
+- compile or mutate canonical truth (Kristal),
+- publish artifacts to channels (Orgo/Konnaxion),
+- invent missing facts or “fill gaps”.
+
+## Inputs (conceptual)
+
+- **Claim-IR batch** (structured claim proposals; pre-truth)
+- **Resolution policy + candidate sources** (pinned versions/resources)
+- Optional: provenance attachments for audit (as references)
+
+## Outputs (conceptual)
+
+- **Resolved Claim-IR batch** reference
+  - resolved identifiers where possible,
+  - normalized literals,
+  - explicit ambiguity preserved where unresolved,
+  - diagnostics (warnings/errors) emitted deterministically.
+
+On **partial resolution**, SenTient still emits Resolved Claim-IR but marks affected claims as ambiguous/rejected with diagnostics.
+
+## Key invariants
+
+- **Deterministic behavior:** same inputs + same pinned resources/policies ⇒ same outputs.
+- **Ambiguity preservation:** unresolved ambiguity must remain explicit (no silent coercion).
+- **Stable ordering:** candidate lists must be stably ordered with deterministic tie-breakers.
+- **Stable diagnostics:** warnings/errors use stable codes and structured parameters (not free-text-only).
+
+Orgo decides gating rules; SenTient must provide the signals needed for those decisions.
+
+## Error model (high-level)
+
+SenTient emits stable warning/error codes. Typical categories include:
+- entity resolution not found / ambiguous,
+- property resolution not found / ambiguous,
+- literal normalization invalid / lossy,
+- evidence pointer invalid,
+- policy violation,
+- missing pinned resource/version,
+- internal resolver error.
+
+Each diagnostic should include: claim reference, field/path (when relevant), severity, and deterministic message template + parameters.
+
+## Failure modes (examples)
+
+- Candidate source unavailable or version not pinned
+- Ambiguity too high (no deterministic selection)
+- Invalid or lossy literal normalization
+- Policy blocks a resolution path
+- Resource integrity issue (hash/signature mismatch)
+- Determinism violation (non-stable ordering, non-pinned dependency)
+
+## Observability (minimum)
+
+SenTient should emit:
+- resolver identity/version/config reference
+- input content reference(s)
+- pinned policy/resource versions
+- resolved-claim-ir output reference
+- diagnostic code counts + key rates
+
+Suggested metrics:
+- throughput (claims/sec)
+- latency (p50/p95/p99)
+- candidate hit-rate (entity/property)
+- ambiguity rate
+- rejection rate
+- normalization error rate
+- resource cache hit-rate
+
+## Security and privacy
+
+- Treat inputs as potentially sensitive; follow tenant policy for logging/redaction.
+- Resolver resources must be integrity-checked and version-pinned.
+- No external network calls unless explicitly allowed by policy and audited.
+
+## Conformance expectations (summary)
+
+Minimum tests typically cover:
+- deterministic rerun (same inputs/resources ⇒ same outputs)
+- ambiguity preservation
+- literal normalization golden tests
+- resource pinning failures (mismatched resource ref ⇒ failure)
+- diagnostic stability (codes and shapes stable across patch releases)
+
+## Related pages
+
+- [Lifecycle](Lifecycle)
+- [Integration — Kristal v4](Integration-Kristal-v4)
+- [Operations](Operations)
+
+
+================================================================================================
+FILE: wiki/Components-SwarmCraft.md
+================================================================================================
+
+# SwarmCraft
+
+SwarmCraft is the system’s **execution layer**. It runs **governed tasks** using already-validated knowledge, produces **telemetry**, and reports outcomes back to operations—without changing canonical truth by side effects.
+
+---
+
+## What SwarmCraft is responsible for
+
+- Executing **approved tasks** derived from the pipeline (e.g., refresh jobs, checks, downstream actions)
+- Enforcing **governance constraints** at runtime (what can run, where, and under which mandate)
+- Producing **execution evidence**:
+  - task outcomes (success/failure)
+  - timing and performance metrics
+  - structured logs and traces
+  - retry/rollback signals (when applicable)
+- Keeping execution **separate from truth**:
+  - SwarmCraft can *use* canonical truth and packs
+  - SwarmCraft does **not** create or mutate canonical truth directly
+
+---
+
+## What it is not responsible for
+
+- Defining canonical truth (that’s handled upstream by validation/compilation)
+- Packaging/distributing runtime packs (that’s distribution/runtime infrastructure)
+- Rendering user-facing explanations (that’s rendering)
+- Making release decisions (that’s operations/control plane)
+
+---
+
+## Inputs and outputs (high level)
+
+### Inputs
+- A **task definition** (what to do, with what limits)
+- A **mandate/context** (who authorized it, policy constraints)
+- References to **validated artifacts** or an **activated runtime pack**
+- Execution parameters (target, schedule, scope, concurrency limits)
+
+### Outputs
+- **Task result** (success/failure + reason category)
+- **Execution telemetry** (metrics/logs/traces)
+- **Operational events** (alerts, escalation hooks, retry signals)
+- Optional **derived artifacts** that are explicitly marked as non-canonical outputs (e.g., reports)
+
+---
+
+## How it works (conceptual)
+
+1. **Receive a governed task**
+   - The task arrives with an explicit authorization context and constraints.
+
+2. **Acquire the correct truth snapshot**
+   - SwarmCraft executes against a specified, activated pack or pinned artifact references.
+   - It should not “wing it” with whatever is latest.
+
+3. **Execute with guardrails**
+   - Applies resource limits, timeouts, concurrency rules, and allow/deny constraints.
+
+4. **Report outcomes**
+   - Emits structured results and telemetry for operations.
+   - Failures are classified so they can be routed (retry, hold, rollback, escalate).
+
+5. **Feed back into governance**
+   - Execution outcomes become inputs for future governed work (e.g., follow-up tasks, incident handling).
+
+---
+
+## Task classes (examples)
+
+- **Verification tasks**
+  - sanity checks, pack validation checks, drift detectors
+
+- **Maintenance tasks**
+  - cache warmups, index refresh, routine housekeeping
+
+- **Operational workflows**
+  - canary probes, rollout health checks, automated rollback triggers
+
+- **External actions (controlled)**
+  - calling downstream systems via approved connectors, with explicit scopes and rate limits
+
+---
+
+## Safety and governance guarantees
+
+- **No “new truth”**
+  - SwarmCraft cannot introduce facts into canonical truth. Any new knowledge must go back through the governed pipeline.
+
+- **Pinned execution context**
+  - Tasks execute against a specific pack or pinned artifact set to preserve reproducibility.
+
+- **Fail closed by default**
+  - If required context is missing or verification fails, the task should not proceed.
+
+- **Evidence-first**
+  - Every meaningful action produces telemetry and an auditable outcome record.
+
+---
+
+## Common failure modes (non-technical)
+
+- **Missing or invalid execution context**
+  - No approved mandate, expired authorization, or incompatible pack reference.
+
+- **External dependency outage**
+  - Downstream system is unavailable; SwarmCraft records failure category and follows retry/backoff policy.
+
+- **Resource exhaustion**
+  - Limits exceeded (time, memory, concurrency); task is terminated and reported.
+
+- **Non-deterministic inputs**
+  - Task attempted to use “latest” rather than the pinned context; should be blocked or flagged.
+
+- **Policy violation**
+  - Task attempted an action outside its allowed scope; execution is denied and logged.
+
+---
+
+## Operational guidance
+
+- Prefer **small, composable tasks** with clear success criteria.
+- Use **canary execution** for risky task types before broad rollout.
+- Treat repeated failures as **signals for rollback/hold**, not as reasons to loosen gates.
+- Keep telemetry **consistent and structured** so incidents can be triaged quickly.
+
+---
+
+## Quick FAQ
+
+**Does SwarmCraft change the knowledge base?**  
+No. It uses validated knowledge and reports outcomes. Any change to canonical truth must go through the governed pipeline.
+
+**Can SwarmCraft run while offline?**  
+It can execute tasks that only require an activated pack and local dependencies. Tasks that need external systems must be explicitly approved and handled as such.
+
+**How is SwarmCraft related to releases?**  
+SwarmCraft can run health checks and rollout-related tasks, but it does not decide promotions. Operations/control plane decides.
+
+
+================================================================================================
+FILE: wiki/Components.md
+================================================================================================
+
+# Components
+
+This page is a map of the ecosystem’s components, their responsibilities, and how they fit together. It is intentionally **not** a node spec and does **not** restate Kristal artifact schemas.
+
+## Planes (system at a glance)
+
+- **Control plane:** Orgo (governance, orchestration, audit)
+- **Truth plane (canonical):** Kristal (Exchange + Runtime Pack)
+- **Resolution plane:** SenTient (Claim-IR → Resolved Claim-IR)
+- **Distribution + interface plane:** Konnaxion (verify/activate/rollback; offline delivery + navigation)
+- **Articulation plane:** Architect (Strategy + Render; deterministic outputs + trace)
+- **Execution plane:** SwarmCraft (governed execution + telemetry)
+- **Trust + impact plane (optional):** EkoH (signals/ledger; never mutates canon)
+
+## Where components sit in the lifecycle
+
+```mermaid
+flowchart LR
+  A[Chokmah<br/>Ingest + provenance] --> B[Binah<br/>Blueprint planning]
+  B --> C[SenTient<br/>Resolve ambiguity]
+  C --> D[Kristal<br/>Compile canonical truth]
+  D --> E[Konnaxion<br/>Distribute + verify + activate]
+  E --> F[Malkuth<br/>Runtime query/serve]
+  F --> G[Architect<br/>Render with trace]
+  G --> H[SwarmCraft<br/>Execute governed tasks]
+  H --> I[Feedback -> Orgo<br/>New governed work]
+````
+
+## Component index (what to read next)
+
+| Component               | What it does (high-level)                                                                                                    | Wiki page                                                            |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Orgo**                | Enforces stage order + hard gates; records operational evidence; drives releases/rollbacks                                   | [Components-Orgo](Components-Orgo)                                   |
+| **Chokmah**             | Ingest boundary: turns raw inputs into immutable, provenance-pinned snapshots                                                | [Components-Chokmah](Components-Chokmah)                             |
+| **Binah**               | Planning: converts mandate + available inputs into an auditable Blueprint (what will be built and how)                       | [Components-Binah](Components-Binah)                                 |
+| **SenTient**            | Resolution: produces explicit, deterministic resolution outputs while preserving ambiguity when needed                       | [Components-SenTient](Components-SenTient)                           |
+| **Kristal + Daat**      | Truth compilation + bridge: compile canonical Exchange + Runtime Pack; enforce pinned Kristal contracts at boundaries        | [Components-Kristal-and-Daat](Components-Kristal-and-Daat)           |
+| **Konnaxion + Malkuth** | Distribution/runtime: verify-before-activate (fail-closed), atomic activation, deterministic rollback; serve offline queries | [Components-Konnaxion-and-Malkuth](Components-Konnaxion-and-Malkuth) |
+| **Architect**           | Strategy + Render: propose governed work; render deterministic user-facing outputs with trace and “no new facts”             | [Components-Architect](Components-Architect)                         |
+| **SwarmCraft**          | Execution: runs governed tasks, emits telemetry, does not mutate canonical truth directly                                    | [Components-SwarmCraft](Components-SwarmCraft)                       |
+
+## Boundaries (what crosses between components)
+
+kOA components exchange **typed artifacts**, not implicit state. The main pipeline carries (by type): input snapshots, claim proposals, resolution outputs, validation evidence, canonical truth artifacts, derived runtime packs, render outputs with trace, and kOA operational artifacts (cases/tasks/records).
+
+## Where the detailed contracts live
+
+* Node-by-node interface specs: see [Architecture / Nodes](Components-%28Nodes%29) (and each node page)
+* kOA-owned operational artifacts: see [Artifacts](Artifacts)
+* Kristal artifact contracts/schemas: see [Kristal v4 integration](Kristal-v4-integration) (pinned references; not duplicated here)
+
+
+================================================================================================
+FILE: wiki/FAQ.md
+================================================================================================
+
+# FAQ
+
+## What is this wiki?
+This wiki explains the **kOA Digital Ecosystem**: what it does, its major components, and how it is operated in production.
+
+## What is *not* in this wiki?
+This wiki does **not** re-specify **Kristal** artifact contracts (schemas, canonicalization rules, signature formats, etc.). Kristal v4 remains the external source of truth for those contracts.
+
+## Where is the Kristal spec?
+See the pinned Kristal v4 reference and pointers in:
+- [Integration: Kristal v4](Integration-Kristal-v4)
+
+## What is “canonical” vs “informative” here?
+- **Canonical for kOA**: ecosystem invariants, operational rules, component responsibilities, and **kOA-native** operational artifacts.
+- **External canonical**: Kristal artifacts and schemas (Exchange, Runtime Pack, Validation Report, Claim-IR, Resolved Claim-IR, etc.).
+
+## Which artifacts are “kOA-native”?
+Artifacts owned by kOA components, for example:
+- Orgo operational artifacts (Cases, Tasks, Build/Release Records)
+- Konnaxion operational state and rollout/activation records (where standardized here)
+
+Kristal artifacts remain externally specified.
+
+## How do I know what schemas to validate against?
+- For **kOA-native artifacts**, validate against the schemas shipped with this repo (operational artifact schemas).
+- For **Kristal artifacts**, validate against the **pinned Kristal v4 schemas** referenced from the Kristal integration section.
+
+## Why is there a hard “no redundancy” rule?
+Duplicating normative contracts causes drift. kOA documentation stays stable by pointing to Kristal as the source of truth, and only documenting **kOA’s integration constraints, gates, and operational policies**.
+
+## Where do I start if I’m implementing?
+Start with:
+- [Home](Home)
+- [Principles & invariants](Principles-and-invariants)
+- [Lifecycle](Lifecycle)
+- [Components](Components)
+- [Artifacts](Artifacts)
+- [Integration: Kristal v4](Integration-Kristal-v4)
+- [Operations](Operations)
+
+## Where do I start if I’m operating?
+Start with:
+- [Operations](Operations)
+- [Operations: Releases](Operations-Releases)
+- [Operations: Rollbacks](Operations-Rollbacks)
+- [Operations: Observability](Operations-Observability)
+- [Operations: Incident response](Operations-Incident-response)
+
+## How do changes get made safely?
+- Changes to **kOA** invariants/interfaces/operational contracts should be accompanied by an ADR and conformance updates.
+- Changes to **Kristal** contracts must happen in the pinned Kristal source of truth, and then kOA updates its Kristal integration profile/conformance accordingly.
+
+## What should I do if I find a mismatch between kOA and Kristal?
+Treat it as a **kOA integration issue** unless you are also changing the pinned Kristal version. Update:
+- [Integration: Kristal v4](Integration-Kristal-v4)
+- Any impacted operations or artifact pages that reference the integration behavior
+
+## Does kOA require online connectivity to use Kristal artifacts?
+No by default. Distribution/activation and runtime use are designed to be compatible with offline-first operation; connectivity is a deployment choice, not a contract requirement.
+
+## What are the core components?
+- **Orgo**: workflow/control plane + gating
+- **SenTient**: resolution/reconciliation
+- **Kristal**: truth pivot + compilation (externally specified)
+- **Konnaxion**: distribution/activation + rollback safety
+- **Architect**: deterministic rendering (no new facts)
+- **SwarmCraft**: governed execution (optional)
+
+
+================================================================================================
+FILE: wiki/Glossary.md
+================================================================================================
+
+# Glossary
+
+## Activation
+Making a specific Runtime Pack the currently active pack for a target scope (environment/channel/cohort), typically as an atomic switch.
+
+## Artifact
+A versioned, typed output that crosses a component boundary (inputs/outputs/results/evidence). Artifacts are used to make runs reproducible and auditable.
+
+## Audit trail
+The recorded evidence showing what ran, what was produced, what was released, where it went, and why decisions were made.
+
+## Blueprint
+An auditable plan for a run that declares required inputs, gates, determinism constraints, and rollback expectations.
+
+## Build
+A completed pipeline run that produced eligible outputs (e.g., a Runtime Pack) and recorded evidence about inputs, policies, gates, and results.
+
+## Canonical truth
+The system’s authoritative, compiled knowledge state. It exists only after deterministic validation and compilation.
+
+## Channel
+A named release lane (e.g., canary/stable/lts) that defines rollout behavior and guardrails.
+
+## Claim
+A proposed statement about the world (an assertion) produced by extraction, before validation/compilation.
+
+## Claim-IR
+A structured representation of claims intended for validation/compilation. Pre-truth.
+
+## Cohort
+A subset of a channel (by tenant group, region, rollout percentage, etc.) used to ramp exposure gradually.
+
+## Compile / Compilation
+Transforming validated knowledge into canonical truth artifacts and derived runtime artifacts (e.g., Runtime Packs).
+
+## Conformance
+Meeting the required integration and safety expectations (e.g., pinned dependencies, schema validation, fail-closed behavior, determinism).
+
+## Determinism
+The property that the same pinned inputs, policies, and configuration produce the same outputs (or canonically identical outputs).
+
+## Distribution
+Making a Runtime Pack available to runtime systems (fetch/cache) without implying activation.
+
+## Exchange
+A standardized bundle of artifacts used to move validated/compiled knowledge across boundaries (as defined by Kristal).
+
+## Fail-closed
+If a required check cannot be completed or fails, the system must not proceed (e.g., no activation without verification).
+
+## Feedback
+Signals or observations produced downstream (runtime/rendering/execution) that are turned into new governed work, not direct truth mutation.
+
+## Gate
+A pass/fail checkpoint that must succeed before moving to the next stage (e.g., validation gate, verification gate).
+
+## Ingest
+Capturing inputs as immutable, provenance-linked snapshots so they can be audited and replayed.
+
+## Integrity check
+Verification that an artifact/pack is unmodified and complete (e.g., hash/signature/manifest checks).
+
+## Kristal
+The truth compilation subsystem and the normative source for Kristal artifact contracts (schemas/canonicalization/signing rules).
+
+## Konnaxion
+The distribution/runtime platform that fetches/caches packs, verifies them fail-closed, activates atomically, and supports deterministic rollback.
+
+## Last-known-good (LKG)
+A known safe pack/version that can be selected deterministically as a rollback target.
+
+## Mandate Bundle
+The governance and policy context used to run and release safely (rules, constraints, approvals, and references).
+
+## Malkuth
+The runtime environment that serves queries and execution over the currently active pack in a safe, repeatable way.
+
+## Node
+A named component with a clear responsibility and defined artifact boundaries.
+
+## Orgo
+The control plane: orchestrates stage ordering, enforces gates, records operational evidence, and drives releases.
+
+## Pack / Runtime Pack
+A portable, offline-capable bundle of compiled knowledge and required runtime metadata used by runtime systems.
+
+## Pinning / Version pinning
+Locking dependencies, policies, or packs to a specific version/reference to prevent “floating latest” behavior.
+
+## Policy
+The rules and constraints that govern what is allowed (validation requirements, rollout rules, downgrade prevention, logging/redaction, etc.).
+
+## Provenance
+The recorded origin and lineage of inputs and outputs (what source data was used, how it was processed, and by which versions).
+
+## Renderer
+A component that produces user-facing outputs deterministically from the active pack and must not introduce new facts.
+
+## Resolution
+The process of mapping ambiguous surfaces to explicit identifiers and normalized literals, preserving ambiguity explicitly when unresolved.
+
+## Resolved Claim-IR
+Claim-IR after resolution: explicit identifiers/normalized literals plus explicit ambiguity and diagnostics as needed.
+
+## Release
+The operational act of distributing and activating a specific Runtime Pack in target environments/channels/cohorts.
+
+## Rollback
+Restoring a previous pack/version (typically LKG or pinned prior) via a controlled, atomic activation when a release fails or regresses.
+
+## Schema
+A formal contract describing artifact structure and validation requirements.
+
+## Stage spine
+The end-to-end lifecycle of stages from ingest through feedback, used as the shared mental model for the system.
+
+## Telemetry
+Operational signals emitted by components (metrics/logs/traces/events) used for monitoring, debugging, and audit support.
+
+## Tenant isolation
+Ensuring one tenant’s data, behavior, and failures cannot affect another tenant.
+
+## Trace
+A record linking a user-facing output back to the canonical sources/artifacts it was derived from (for transparency and auditability).
+
+## Validate / Validation
+Deterministic acceptance/rejection of resolved claims against rules and constraints, producing a validation report.
+
+## Verification
+Runtime-side checks (integrity/compatibility/policy) that must pass before activation is allowed.
+
+
+================================================================================================
+FILE: wiki/Home.md
+================================================================================================
+
+# kOA Digital Ecosystem
+
+kOA is a **contract-driven pipeline** that turns raw inputs into **validated, canonical knowledge** (via Kristal) and then safely **distributes and uses** that knowledge in **offline-capable** products and workflows.
+
+This wiki focuses on **features**, **operational behavior**, and **how the pieces fit together**—without diving into schema-level technicalities.
+
+---
+
+## System at a glance
+
+### The stage spine (end-to-end)
+
+1. **Ingest** raw inputs (snapshots + provenance)
+2. **Extract** structured proposals (claims)
+3. **Resolve** ambiguity (entities, properties, literals)
+4. **Validate** deterministically (accept/reject with a report)
+5. **Compile** canonical knowledge + a portable offline pack
+6. **Distribute** packs with fail-closed verification
+7. **Render** deterministic user-facing output with trace coverage
+8. **Execute** work (tasks) with telemetry
+9. **Feedback** becomes new governed work (never mutates canon)
+
+```mermaid
+flowchart TD
+  A[Mandate + Blueprint] --> B[Ingest Inputs]
+  B --> C[Extract -> Claim proposals]
+  C --> D[Resolve -> Explicit resolutions]
+  D --> E{Validate?}
+  E -- fail --> X[Stop: No Canon / No Pack / No Release]
+  E -- pass --> F[Compile -> Exchange + Runtime Pack]
+  F --> G{Verify for Activation?}
+  G -- fail --> Y[Reject: Fail-Closed / Rollback-or-Stay]
+  G -- pass --> H[Distribute Runtime Pack]
+  H --> I[Render -> Render Bundle + trace_map]
+  I --> J[Execute Tasks -> Telemetry]
+  J --> K[Feedback -> New Case/Task]
+````
+
+---
+
+## Core components (who does what)
+
+* **Orgo (control plane):** orchestrates stages, enforces gates, records operational evidence, drives releases.
+* **SenTient (resolver):** turns ambiguous surfaces into explicit resolution outputs (keeps ambiguity explicit when unresolved).
+* **Kristal (truth pivot):** compiles canonical truth artifacts (Exchange) and derived offline artifacts (Runtime Pack).
+* **Konnaxion (distribution + platform):** verifies/activates/rolls back packs; powers offline-first delivery.
+* **Architect (renderer):** produces deterministic outputs that cannot introduce new facts and must trace.
+* **SwarmCraft (execution):** executes tasks under constraints; emits telemetry.
+
+---
+
+## The rules that keep the ecosystem safe
+
+* **Truth boundary:** only validated + compiled artifacts become canonical; downstream does not mutate canon.
+* **No compile on fail:** failed validation blocks compilation/publication.
+* **Fail-closed distribution:** verification/compatibility must pass before activation; otherwise stay on current/last-known-good.
+* **Atomic activation + deterministic rollback:** no partial activation; rollback is explicit and reproducible.
+* **No new facts downstream:** rendering must trace to validated lineage or refuse deterministically.
+
+See: [Principles & invariants](Principles-and-invariants)
+
+---
+
+## What this wiki covers (and what it doesn’t)
+
+### In scope here
+
+* What each component is responsible for, and how they cooperate
+* Operational behavior: gates, releases, rollback, observability, incident response
+* Integration expectations (without duplicating external specs)
+
+### Out of scope (by design)
+
+* Field-level Kristal schemas, canonicalization mechanics, signature formats, etc.
+
+See: [Non-goals](Non-goals)
+
+---
+
+## How to navigate
+
+* Want the flow: [Lifecycle](Lifecycle)
+* Want the parts: [Components](Components)
+* Want what crosses boundaries: [Artifacts](Artifacts)
+* Want how it runs in production: [Operations](Operations)
+* Want external integration: [Integration](Integration)
+* Need vocabulary and quick answers: [Glossary](Glossary), [FAQ](FAQ)
+
+---
+
+## Who this is for
+
+* **Implementers:** building services that produce/consume artifacts and participate in gates
+* **Integrators:** connecting external systems to ingestion, distribution, or rendering
+* **Operators:** running builds, releases, rollbacks, incident response, and audits
+* **Architects:** evolving contracts and invariants through ADRs
+
+
+================================================================================================
+FILE: wiki/Integration-External-systems.md
+================================================================================================
+
+# Integration — External systems
+
+This page describes **how kOA connects to systems outside the ecosystem** without breaking the core invariants (truth boundary, determinism, fail-closed gates, offline correctness).
+
+kOA integrates with external systems through **explicit adapters and artifacts**—not implicit shared state.
+
+---
+
+## Integration map (conceptual)
+
+```mermaid
+flowchart LR
+  subgraph External["External systems"]
+    S1[Content sources\n(docs, feeds, uploads)]
+    S2[Systems of record\n(services, databases)]
+    S3[Automation\n(schedule/webhook/CI)]
+    S4[Identity & secrets\n(SSO, KMS/HSM, secret store)]
+    S5[Observability\n(logs/metrics/traces)]
+    S6[Runtime consumers\n(apps/services/devices)]
+  end
+
+  S1 --> A[Ingest adapters\n-> snapshots + provenance]
+  S2 --> A
+  S3 --> O[Orgo\ncontrol plane]
+  S4 --> O
+  S4 --> K[Konnaxion\nverify/activate/rollback]
+  S5 <--> O
+  S5 <--> K
+  A --> P[Pipeline stages\n(extract/resolve/validate/compile)]
+  P --> K --> S6
+````
+
+---
+
+## 1) Ingest sources (how external inputs enter safely)
+
+**Goal:** turn external inputs into **immutable snapshots with provenance**, so builds are replayable and auditable.
+
+Common source types:
+
+* Documents and file drops (batches)
+* Feeds and APIs (polled or pushed)
+* Operational inputs (tickets, incidents, runbooks)
+* Manual uploads (operator-triggered)
+
+Integration pattern:
+
+* Build an **ingest adapter** per source type.
+* The adapter produces **snapshots** (content-addressed is recommended) plus **provenance pointers** (opaque references are fine).
+* Credentials and access policies are managed outside the adapter logic (see Security).
+
+Design rules:
+
+* Do not let “live” external state flow downstream un-snapshotted.
+* Treat ingest as **capture + provenance**, not interpretation.
+
+---
+
+## 2) Automation triggers (how work starts)
+
+External systems may initiate work via:
+
+* **Manual** operator requests
+* **Schedules** (cron/CI timers)
+* **Webhooks** (push events from external systems)
+* **Incident** triggers (operational events)
+* **Release** triggers (promotion/rollback workflows)
+
+Integration pattern:
+
+* External triggers create or update **governed work** in Orgo (Cases/Tasks).
+* Triggers must be recorded with “who/why/where from” metadata (for auditability).
+
+Rule:
+
+* A trigger may start work, but it **cannot bypass gates** (validation, verification-before-activation, etc.).
+
+---
+
+## 3) Runtime consumers (how downstream products use knowledge)
+
+**Goal:** downstream consumers receive **verified Runtime Packs** and can operate **offline**.
+
+Typical consumers:
+
+* Edge nodes / devices
+* Internal services that need fast local query
+* User-facing applications that must remain deterministic and traceable
+
+Integration pattern:
+
+* Consumers talk to Konnaxion (or the platform layer it powers) to obtain packs.
+* Activation is **atomic** and can be **rolled back deterministically**.
+* Consumers should treat the pack as their source of facts; avoid coupling correctness to live external calls.
+
+Rule:
+
+* If a consumer needs “freshness,” it is handled by **controlled pack rollout**, not by bypassing the pack.
+
+---
+
+## 4) Security integrations (identity, secrets, key management)
+
+**Goal:** external security platforms provide identity and cryptographic trust while kOA enforces fail-closed behavior.
+
+What typically integrates here:
+
+* **SSO / identity provider** (human access)
+* **Workload identity** (service-to-service auth)
+* **Secret manager** (adapter credentials, CI secrets, non-prod keys)
+* **KMS/HSM** (distribution signing keys, trust roots, rotation)
+
+Integration rules:
+
+* Production verification must rely on **production-trusted keys only** (no dev/test keys).
+* Key rotation must be operationally safe (planned and auditable).
+* Authorization must respect environment and tenant boundaries.
+
+---
+
+## 5) Observability and audit integrations
+
+**Goal:** external observability stacks make the system operable, and audit evidence stays linkable.
+
+What to emit (minimum):
+
+* Build and release identifiers
+* Artifact references (snapshot-set, validation evidence, pack identifiers)
+* Gate outcomes (validation pass/fail, verify pass/fail, activation/rollback)
+* Deterministic refusal/error codes for downstream stages
+
+Integration pattern:
+
+* Logs/metrics/traces go to your existing stack (SIEM, metrics store, tracing backend).
+* Audit evidence should be recoverable by operators and correlate to releases and rollbacks.
+
+Rule:
+
+* “What happened?” must be answerable from records without re-running the pipeline.
+
+---
+
+## 6) Multi-environment and multi-tenant considerations
+
+Recommended separation:
+
+* Separate channels/environments (dev/staging/prod) with distinct trust roots and signing policies.
+* Explicit tenant isolation for snapshots, packs, and activation state.
+* Prevent cross-environment artifact reuse unless explicitly allowed by policy.
+
+Rule:
+
+* Treat boundaries as security boundaries: keys, identities, and activation state should not bleed across.
+
+---
+
+## Integration checklist (non-technical)
+
+Before connecting an external system, confirm:
+
+* [ ] The integration point is an **adapter or artifact boundary**, not shared mutable state.
+* [ ] Inputs become **snapshots + provenance** before entering the pipeline.
+* [ ] Triggers create **governed work** and do not bypass gates.
+* [ ] Runtime consumers rely on **verified packs** (offline correctness preserved).
+* [ ] Keys/secrets are managed by **approved identity and key platforms**.
+* [ ] Observability ties events to **build/release ids** and gate outcomes.
+* [ ] Rollback story is clear (what happens on verify failure or bad rollout).
+
+---
+
+## Links
+
+* [Integration (Overview)](Integration)
+* [Integration — Kristal v4](Integration-Kristal-v4)
+* [Operations](Operations)
+* [Artifacts](Artifacts)
+
+
+================================================================================================
+FILE: wiki/Integration-Kristal-v4.md
+================================================================================================
+
+# Kristal v4 integration
+
+Kristal v4 is the **normative source** for truth-compilation contracts in this ecosystem (schemas, canonicalization rules, and integrity targets). kOA integrates with Kristal by **pinning** a specific Kristal version, enforcing **fail-closed gates**, and recording **opaque references** to Kristal artifacts (not re-specifying them).
+
+## What this integration is (in one sentence)
+
+kOA uses Kristal v4 to turn validated inputs into **canonical truth + runtime packs**, while kOA owns orchestration, governance, release/rollback, and operational evidence.
+
+## Integration principles
+
+1. **Pin Kristal (no floating “latest”)**
+   - Builds and releases must reference a specific Kristal version.
+2. **Do not duplicate Kristal contracts**
+   - This wiki does not restate Kristal schemas or canonicalization rules.
+3. **Fail-closed boundaries**
+   - If validation/verification cannot be completed, the system must not compile or activate.
+4. **Opaque references across the boundary**
+   - kOA-native records store Kristal artifact IDs/manifests/references, not Kristal internals.
+
+## What flows between kOA and Kristal (conceptual)
+
+### Into Kristal
+- Pinned inputs (snapshots + policy context)
+- Resolved/validated material required for compilation
+- Compilation intent (what pack(s) to build)
+
+### Out of Kristal
+- Canonical truth artifacts (Exchange)
+- Runtime artifacts (Runtime Pack + manifests)
+- Evidence artifacts (Validation Report and related outputs)
+
+kOA treats these as **Kristal-owned artifact families**.
+
+## Where the contracts live
+
+- **Kristal schemas/specs:** in the pinned Kristal v4 dependency (authoritative)
+- **kOA integration profile:** the kOA rules for how Kristal is used (pinning, gating, release expectations)
+- **Conformance tests/checks:** the minimum checks required for a build/release to be considered valid in kOA
+
+This page stays at the “what/why” level; see `Integration.md` for the overall integration map and `Operations.md` for release/rollback behavior.
+
+## Pinning and upgrades (operator view)
+
+### Pinning
+- The Kristal version used by a build is recorded as part of the build/release evidence.
+- Different channels/environments may intentionally run different pinned versions during staged rollouts.
+
+### Upgrading
+Upgrades are treated like a controlled change:
+1. Pin the new Kristal version (explicitly).
+2. Run conformance checks.
+3. Build packs in a pre-production channel.
+4. Canary rollout with monitoring.
+5. Promote to stable if gates remain green; rollback if integrity or behavior deviates.
+
+## Conformance expectations (plain language)
+
+A conformant kOA↔Kristal integration should ensure:
+- **Typed artifact boundaries** (no hidden shared state)
+- **Schema validation** against the pinned Kristal version
+- **Fail-closed behavior** at compilation and activation boundaries
+- **Deterministic builds** for pinned inputs/policies/configuration
+- **Auditable evidence** (records that show what ran and what was promoted)
+
+## What kOA owns vs what Kristal owns
+
+### kOA owns
+- Orchestration and gates (control plane)
+- Governance workflow and operational evidence (build/release records)
+- Distribution/activation/rollback mechanics
+- Observability and incident process
+
+### Kristal owns
+- Normative schema contracts for Kristal artifacts
+- Canonicalization rules and integrity targets for truth artifacts and runtime packs
+- The artifact family definitions themselves
+
+## Common integration failures (non-technical)
+
+- “Drift”: Kristal version was not pinned consistently across build/release.
+- “Contract mismatch”: artifacts validated against the wrong Kristal version.
+- “Best-effort activation”: pack was activated without full verification.
+- “Leaky boundary”: downstream layers treat non-canonical outputs as truth.
+
+## Related pages
+
+- `Integration.md` (overall integration map)
+- `Operations.md` (release/rollback behavior)
+- `Artifacts.md` (artifact families and why they exist)
+
+
+================================================================================================
+FILE: wiki/Integration.md
+================================================================================================
+
+# Integration
+
+This section explains how external systems integrate with the kOA Digital Ecosystem—without requiring you to learn internal schemas or deep implementation details.
+
+## What “integration” means here
+
+An integration is any system that:
+- produces inputs that flow toward canonical truth,
+- implements a pipeline stage under Orgo control,
+- consumes runtime knowledge (Runtime Packs) through Konnaxion/Malkuth,
+- or needs to interoperate with Kristal v4 artifacts at the contract boundary.
+
+## Non-negotiable integration rules
+
+- **Do not duplicate Kristal contracts.** Kristal v4 is the sole normative source for Kristal artifact schemas/contracts. kOA points to the pinned Kristal source-of-truth.  
+- **Pin Kristal v4.** Never integrate against “latest”; always integrate against a pinned Kristal version + pinned schema pointers.  
+- **Fail-closed.** If verification/validation cannot be proven, do not proceed. No “best effort” activation or truth compilation paths.  
+- **Opaque references.** kOA operational records store opaque references to Kristal artifacts (IDs + manifest refs), not re-parsed Kristal internals.
+
+## Integration entry points (choose what you are)
+
+### 1) Input producer (upstream)
+You provide raw inputs/evidence that will eventually become canonical through validation + compilation. Expect to provide stable provenance and replayable snapshots (so builds can be reproduced).
+
+### 2) Stage service (pipeline component)
+You implement a stage (e.g., extractor, resolution adjunct, validation adjunct) that Orgo orchestrates. Your contract is: accept explicit artifact references, produce explicit artifacts, be retry-safe, and emit stable reason codes.
+
+### 3) Distribution/runtime consumer
+You run Konnaxion (or consume its outputs) to deliver offline-first Runtime Packs to runtime environments. Your contract is: verify-before-activate, atomic activation, deterministic rollback, and auditable events.
+
+## Where the authoritative contracts live
+
+- **Kristal v4 boundary contracts (pinned):** see [Integration-Kristal-v4](Integration-Kristal-v4)  
+- **kOA operational expectations (gates, rollout, rollback, evidence):** see [Operations](Operations)  
+- **Practical checklists/patterns:** see Integrator Guide (optional) in the main docs set (not duplicated in the wiki)
+
+## Quick start checklist
+
+1. Confirm the pinned Kristal v4 dependency used by this repo.
+2. Produce/consume Kristal artifacts using the pinned Kristal schema pointers.
+3. Apply the kOA profile defaults (verification/activation expectations).
+4. Run the conformance suite (determinism + fail-closed + rollback).
+5. If migrating legacy formats, use the documented legacy-compat window and deprecation path.
+
+## Telemetry expectations (high level)
+
+Integrations should emit:
+- build/release correlation IDs (from Orgo),
+- stage timing and stable error codes,
+- references to logs/traces (not raw blobs in-band),
+- activation/rollback outcomes and health signals (if distribution/runtime).
+
+## Security expectations (high level)
+
+- Never leak secrets into logs/telemetry.
+- Treat verification (schema/integrity/signature/compatibility) as mandatory gates.
+- Prefer least privilege and audit-grade logging for privileged actions.
+
+## Next pages
+
+- [Integration-Kristal-v4](Integration-Kristal-v4)
+- [Integration-External-systems](Integration-External-systems)
+
+
+================================================================================================
+FILE: wiki/Lifecycle.md
+================================================================================================
+
+# Lifecycle (kOA end-to-end)
+
+**Purpose:** Define the end-to-end lifecycle of the ecosystem: how raw inputs become validated canonical truth (Kristal Exchange), how that truth becomes portable offline execution artifacts (Runtime Packs), how outputs are rendered deterministically, how work is executed, and how feedback re-enters the system without mutating canon.
+
+---
+
+## 1) Key terms
+
+- **Build:** A governed run of the pipeline producing a new Kristal Exchange + Runtime Pack (or failing before canon).
+- **Release:** A distributed publication of a Runtime Pack (and associated metadata) through Konnaxion.
+- **Case / Task:** Orgo’s governance units. A **Task** is the atomic unit of work; a **Case** groups tasks over time.
+- **Canon:** Kristal Exchange (the authoritative, immutable truth artifact).
+- **Derived:** Runtime Pack and Render Bundles (must be traceable to canon + pinned configuration).
+- **Gate:** A deterministic acceptance point; failure blocks downstream stages (fail-closed when integrity is declared).
+
+---
+
+## 2) Lifecycle overview
+
+### 2.1 High-level stage spine
+
+0) Load Mandate + Blueprint  
+1) Ingest inputs  
+2) Extract Claim-IR  
+3) Resolve Claim-IR (SenTient)  
+4) Validate (Orgo gate)  
+5) Compile canon + runtime (Kristal)  
+6) Publish/Distribute (Konnaxion)  
+7) Render outputs (Architect-Render)  
+8) Execute work (SwarmCraft)  
+9) Feedback → new governed work (Orgo)
+
+### 2.2 Mermaid (conceptual)
+
+```mermaid
+flowchart TD
+  A[Mandate + Blueprint] --> B[Ingest Inputs]
+  B --> C[Extract -> Claim-IR]
+  C --> D[Resolve -> Resolved Claim-IR]
+  D --> E{Validate?}
+  E -- fail --> X[Stop: No Canon / No Pack / No Release]
+  E -- pass --> F[Compile -> Exchange + Runtime Pack]
+  F --> G{Verify for Activation?}
+  G -- fail --> Y[Reject: Fail-Closed / Rollback-or-Stay]
+  G -- pass --> H[Distribute Runtime Pack]
+  H --> I[Render -> Render Bundle + trace_map]
+  I --> J[Execute Tasks -> Telemetry]
+  J --> K[Feedback -> New Case/Task]
+  K --> C
+```
+
+---
+
+## 3) Stage-by-stage specification
+
+Each stage specifies: **Owner**, **Inputs**, **Outputs**, **Gate**, **Observability**.
+
+### Stage 0 — Mandate + Blueprint load
+
+**Owner:** Keter (Mandate) + Binah (Blueprint), enforced by Orgo.
+
+**Inputs**
+- Mandate bundle (scope, constraints, success criteria)
+- Blueprint bundle (schemas, ontologies, policies, versions)
+
+**Outputs**
+- Pinned runtime context reference (immutable refs to mandate + blueprint)
+
+**Gate**
+- Must refuse to run without an active mandate (when required by policy).
+- Must pin exact blueprint revisions used for the build.
+
+**Observability**
+- mandate_ref, blueprint_ref, policy pins
+- correlation IDs (build_id / request_id if present)
+
+---
+
+### Stage 1 — Ingest (raw inputs)
+
+**Owner:** Chokmah (Inputs adapters), orchestrated by Orgo.
+
+**Inputs**
+- Source documents, feeds, uploads, connectors
+- Ingest policy + provenance rules (from Blueprint)
+
+**Outputs**
+- Input snapshots (immutable snapshot refs)
+- Optional snapshot set manifest (listing snapshots + provenance pointers)
+
+**Gate**
+- Provenance must be preserved.
+- Snapshots must be immutable (content-addressed strongly recommended).
+
+**Observability**
+- ingest adapter version/config ref
+- snapshot IDs, snapshot-set ref
+- provenance pointers (opaque refs allowed)
+
+---
+
+### Stage 2 — Extract → Claim-IR
+
+**Owner:** Extractor(s), governed by Orgo.
+
+**Inputs**
+- Input snapshots (or snapshot-set ref)
+- Claim-IR schema/policy (pinned from Blueprint)
+
+**Outputs**
+- Claim-IR batch reference
+
+**Gate**
+- Extractors must output proposals only (no “truth”).
+- Evidence pointers and uncertainty markers must be preserved.
+
+**Observability**
+- extractor identity/version/config ref
+- input snapshot refs used
+- claim-ir ref
+
+---
+
+### Stage 3 — Resolve → Resolved Claim-IR (SenTient)
+
+**Owner:** SenTient, governed by Orgo.
+
+**Inputs**
+- Claim-IR batch
+- Resolution policy + candidate sources (pinned)
+
+**Outputs**
+- Resolved Claim-IR batch reference (with explicit ambiguity preserved)
+
+**Gate**
+- Must be deterministic under pinned policy/config.
+- Must preserve unresolved ambiguity explicitly (no silent coercion).
+
+**Observability**
+- resolver identity/version/config ref
+- warnings/errors summary (stable codes)
+- resolved-claim-ir ref
+
+---
+
+### Stage 4 — Validate (deterministic acceptance gate)
+
+**Owner:** Validation engine, enforced by Orgo.
+
+**Inputs**
+- Resolved Claim-IR
+- Validation policy/profile set (pinned)
+
+**Outputs**
+- Validation Report reference
+
+**Gate (hard)**
+- If validation fails, compilation must not proceed (“no compile on fail”).
+
+**Observability**
+- validator identity/version/config ref
+- validation report ref
+- gate decision + reason codes
+
+---
+
+### Stage 5 — Compile (Kristal)
+
+**Owner:** Kristal compiler, invoked by Orgo after Stage 4 pass.
+
+**Inputs**
+- Resolved Claim-IR
+- Validation Report (pass)
+- Compiler config + pinned profiles/policies
+
+**Outputs**
+- Kristal Exchange (+ Exchange Manifest)
+- Runtime Pack (+ Runtime Pack Manifest)
+
+**Gate**
+- Must produce schema-conformant artifacts (Kristal-owned schemas).
+- Must record reproducibility metadata sufficient for rebuild determinism (via manifests/build records).
+
+**Observability**
+- compiler identity/version/config ref
+- exchange refs + pack refs
+- manifest refs
+- content-hash / signature verification results (if produced)
+
+---
+
+### Stage 6 — Publish / Distribute (Konnaxion)
+
+**Owner:** Konnaxion (distribution facet), triggered and tracked by Orgo.
+
+**Inputs**
+- Runtime Pack + manifest
+- Channel/release intent (from Orgo)
+- Trust roots / revocation info (tenant-scoped)
+
+**Outputs**
+- Published artifacts in channel(s)
+- Activation/verification status updates
+- Rollback records (when applicable)
+
+**Gate (hard)**
+- If integrity material is declared (hash/signatures), verification must be fail-closed.
+- Activation must be atomic; rollback must be deterministic.
+
+**Observability**
+- verification results (pass/fail + codes)
+- active pack ID, previous pack ID
+- rollout cohort/channel + timestamps
+
+---
+
+### Stage 7 — Render outputs (Architect-Render)
+
+**Owner:** Architect-Render.
+
+**Inputs**
+- Kristal query results (from Exchange and/or Pack, per policy)
+- Render template + parameters (pinned)
+- Render policy (no-new-facts + trace requirements)
+
+**Outputs**
+- Render Bundle (includes trace coverage)
+
+**Gate (hard)**
+- Rendering must not introduce new facts.
+- Output must be deterministic under pinned inputs/template/params.
+- If trace coverage is insufficient, renderer must deterministically omit / mark-uncertain / refuse per policy.
+
+**Observability**
+- renderer identity/version/config ref
+- template + params refs
+- render bundle ref + trace coverage metrics
+
+---
+
+### Stage 8 — Execute work (SwarmCraft)
+
+**Owner:** SwarmCraft (or equivalent execution plane), governed by Orgo.
+
+**Inputs**
+- Orgo Tasks (and required inputs)
+- Execution policy (resource caps, tool allow-lists)
+
+**Outputs**
+- Execution results
+- Telemetry events
+
+**Gate**
+- Must follow deterministic policy where required (stable toolchain versions, fixed seeds when applicable).
+- Must emit telemetry sufficient for audit and feedback routing.
+
+**Observability**
+- task_id, case_id, correlation IDs
+- result refs
+- telemetry refs
+
+---
+
+### Stage 9 — Feedback → new governed work
+
+**Owner:** Orgo (ingestion of signals).
+
+**Inputs**
+- Telemetry, user feedback, ops events, trust/impact signals
+
+**Outputs**
+- New Cases/Tasks (governed work items)
+- Optional prioritization/triage updates
+
+**Gate**
+- Feedback must not mutate canon directly.
+- Any canon-affecting change must be a new build (new artifacts, new IDs).
+
+**Observability**
+- signal source + classification
+- created case/task IDs + routing
+- linkage to triggering build/release IDs (when applicable)
+
+---
+
+## 4) Cross-cutting hard rules (summary)
+
+- **No compile on fail:** Stage 4 fail blocks Stage 5.
+- **Fail-closed integrity:** Any declared hashes/signatures must verify before activation/publish.
+- **Immutable canon:** Exchange is never edited in place; updates produce new artifacts/IDs.
+- **No new facts downstream:** Rendering cannot invent; it must trace or refuse deterministically.
+
+---
+
+## 5) Pointers
+
+- Build orchestration details: `Operations-Builds.md` / `Operations.md`
+- Releases + rollback: `Operations-Releases.md`, `Operations-Rollbacks.md`
+- Kristal v4 integration: `Integration-Kristal-v4.md`
+- Conformance and testing: `Operations-Observability.md` / `Reference` pages
+
+
+================================================================================================
+FILE: wiki/Non-goals.md
+================================================================================================
+
+# Non-goals
+
+This page defines what kOA (and this wiki) intentionally does **not** try to be. These boundaries prevent drift, “best effort” correctness, and accidental duplication of external contracts.
+
+## 1) Not a restatement of Kristal
+
+- This wiki does **not** restate or re-implement Kristal’s normative artifact definitions (schemas, canonicalization, hashing, signing targets).
+- When Kristal details are needed, we **link** to the pinned Kristal v4 source and kOA’s integration pointers.
+
+## 2) Not a schema catalog for boundary artifacts
+
+- We do not list field-by-field schemas for Claim-IR, Resolved Claim-IR, Validation Report, Exchange, Runtime Pack, Render Bundle, etc.
+- We describe where each artifact sits in the lifecycle and what kOA requires at the boundary (gates, verification, determinism), not the artifact internals.
+
+## 3) Not product marketing or a user manual
+
+- No product marketing, UX copy, or end-user documentation for specific applications built on top of kOA.
+- Only ecosystem-level behavior, responsibilities, and operational expectations.
+
+## 4) Not a deployment/topology specification
+
+- No cloud-vendor specifics, infrastructure wiring, or full deployment topology.
+- Ops content focuses on portable procedures (release/rollback/incident response), not “how to run it on Vendor X”.
+
+## 5) Not an “always-available” system that trades correctness for uptime
+
+- No “best effort” integrity checks at truth-compilation or activation boundaries.
+- If declared verification cannot be completed, the correct behavior is to **stop/deny/rollback**, not to proceed.
+
+## 6) Not a mutable truth store
+
+- Canonical truth is not hot-edited during incidents or runtime.
+- Fixes happen by creating new governed work and producing new versions, not patching canon in place.
+
+## 7) Not an ungoverned execution platform
+
+- Nothing executes “just because it can.”
+- Execution is expressed as governed work with recorded inputs/outputs and auditability.
+
+---
+
+## If you were looking for…
+
+- **Kristal schemas/contracts:** see **Integration → Kristal v4** (pinned dependency + contract pointers).
+- **What kOA does cover:** see **Architecture**, **How it works (Lifecycle)**, **Components**, **Artifacts**, and **Operations**.
+- **Operational safety rules:** see **Operations → Incident response**.
+
+
+================================================================================================
+FILE: wiki/Operations-Builds.md
+================================================================================================
+
+# Operations — Builds
+
+This page explains how kOA runs **builds** in operational terms (no schema deep-dives).
+
+A **build** is one governed pipeline run that *attempts* to produce:
+- a **Kristal Exchange** (canonical truth), and
+- a **Runtime Pack** (portable/offline runtime artifact),
+with full audit evidence.
+
+---
+
+## 1) What a build is (and is not)
+
+A build is:
+- reproducible under pinned inputs/config/policies,
+- gated (deterministic pass/fail),
+- auditable (a Build Record exists for every attempt).
+
+A build is not:
+- a “best effort” job that partially publishes on failure,
+- a way to hot-edit canon (canon changes require a new build).
+
+---
+
+## 2) Preconditions (before you start)
+
+A build must have:
+- a pinned **Blueprint** (schemas/config/policies),
+- a pinned **Mandate** when required (governance/approvals),
+- a defined input surface (sources/tenants/scope),
+- a place to persist artifacts and operational records.
+
+Operational rule: Orgo must be able to persist a **Build Record** for every attempt.
+
+---
+
+## 3) Stage spine (normative ordering)
+
+Orgo enforces this ordered spine:
+
+1. **Ingest** → input snapshots recorded  
+2. **Extract** → Claim-IR produced  
+3. **Resolve** → Resolved Claim-IR produced  
+4. **Validate** → Validation Report produced (**acceptance gate**)  
+5. **Compile** → Exchange + Runtime Pack produced  
+6. (Optional in build flow) **Distribute / Activate** happens via Release operations
+
+Hard rule: **If Validate fails, the build stops and must not Compile** (“no compile on fail”).
+
+---
+
+## 4) What gets recorded (Build Record)
+
+Every build attempt produces a **Build Record** that allows someone to reconstruct:
+
+- exactly which inputs were used,
+- what was pinned (blueprint/mandate/policies/tool identities),
+- which stages ran and in what order,
+- the gate decisions (especially validation),
+- which outputs were produced (or explicitly absent on failure).
+
+The Build Record is the primary operational evidence for:
+- audits,
+- reproducibility checks,
+- release eligibility decisions,
+- incident triage.
+
+---
+
+## 5) Gates (what can block the build)
+
+### 5.1 Validation gate (hard)
+- Deterministic pass/fail.
+- On FAIL: stop; persist the Validation Report reference; open a triage Case/Task if required by policy.
+
+### 5.2 Schema/contract checks (hard where applicable)
+- Produced artifacts must be schema-valid against the pinned contracts (Kristal-owned for Kristal artifacts; kOA-owned for kOA artifacts).
+
+### 5.3 Integrity checks (policy-defined)
+- If hashes/signatures are declared, verification is fail-closed (no bypass).
+
+---
+
+## 6) Outputs (what “success” means)
+
+A successful build produces references to:
+- Validation Report (PASS),
+- Exchange + Exchange Manifest,
+- Runtime Pack + Runtime Pack Manifest,
+and records them in the Build Record.
+
+A failed build produces:
+- Build Record (FAIL),
+- the most recent stage outputs (as refs),
+- deterministic failure reason codes,
+- **no** Exchange/Runtime Pack outputs if validation did not pass.
+
+---
+
+## 7) Reruns and idempotency (operational expectations)
+
+- Re-running a build with the **same pinned context** should yield identical (or canonically identical) outputs.
+- Retries should not create ambiguous “double outputs”: the Build Record must make it clear which attempt/output is authoritative.
+- If determinism cannot be met, move nondeterminism upstream and freeze it as an input artifact.
+
+---
+
+## 8) Common failure classes (operator view)
+
+- Ingest: missing provenance, access policy rejection, snapshotting failure
+- Extract/Resolve: schema-invalid outputs, unstable ordering, unresolved ambiguity mishandled
+- Validate: deterministic rejection (expected), or unstable rejection (investigate determinism)
+- Compile: compiler failure or non-conformant output (block downstream)
+- Environment/tooling: unpinned dependency drift, incompatible pins, artifact store failures
+
+---
+
+## 9) Operator checklist (quick)
+
+1. Identify `build_id`
+2. Retrieve the Build Record
+3. Confirm pinned context: blueprint/mandate/policy/tool identities
+4. Inspect stage timeline + first failing stage
+5. For validation failures: retrieve Validation Report ref and failure codes
+6. Confirm “no compile on fail” was respected
+7. If recurring failures: open/attach Orgo Case and track remediation tasks
+
+---
+
+## 10) Links
+
+- Pipeline runbook (stage-by-stage operational checks): `Operations.md` / pipeline references
+- Releases (turn builds into controlled rollouts): `Operations-Releases.md`
+- Rollbacks (when distribution/activation goes wrong): `Operations-Rollbacks.md`
+- Artifact evidence: `Artifacts.md` → Build Record / Release Record
+
+
+================================================================================================
+FILE: wiki/Operations-Incident-response.md
+================================================================================================
+
+# Operations — Incident response
+
+**Status:** Normative (kOA)  
+**External normative references:** Kristal v4 docs + schemas (pinned dependency)
+
+---
+
+## 1) Purpose
+
+Provide a deterministic, auditable procedure for detecting, triaging, mitigating, and resolving incidents across:
+- Orgo build pipeline (validation/compile/publish)
+- Konnaxion distribution/activation/rollback
+- Architect rendering (trace / no-new-facts)
+- SwarmCraft execution (side effects + telemetry)
+- Trust roots / keys / revocations
+- Multi-tenant isolation
+
+This runbook avoids schema-level duplication. When you need artifact formats, follow the pinned Kristal references or kOA-native schemas.  
+
+---
+
+## 2) Non-negotiable rules
+
+1. **Fail-closed on declared integrity** (no bypass on signature/hash failures).
+2. **No canon mutation under incident pressure** (no “hot edits” to canon).
+3. **Prefer rollback over patching** when a publish/activation broke consumers.
+4. **Preserve evidence** (snapshot first; do not overwrite).
+5. **Tenant isolation always** (no cross-tenant “quick fixes”).
+
+---
+
+## 3) Roles and ownership
+
+- **Incident Commander (IC):** timeline, decisions, comms, final resolution call.
+- **Operations Lead (Ops):** freezes/holds, rollbacks, rollout controls.
+- **Security Lead (Sec):** keys, trust roots, revocations, tampering response.
+- **Orgo Lead:** pipeline gates, reproducibility, publish controls.
+- **Konnaxion Lead:** activation/rollback, channel integrity, cache/runtime state.
+- **Architect Lead:** render determinism, trace coverage, template/model regressions.
+- **SwarmCraft Lead:** execution failures, telemetry integrity, side-effect containment.
+
+---
+
+## 4) Severity model
+
+- **SEV0:** active compromise, cross-tenant breach, or integrity-bypass risk.
+- **SEV1:** system-wide outage or incorrect canon distribution (bad pack broadly activated).
+- **SEV2:** major degradation or correctness risk limited to a subset.
+- **SEV3:** minor degradation, localized issue, workaround exists.
+- **SEV4:** informational / no user impact.
+
+Escalate to **SEV0/SEV1** when integrity or isolation is uncertain (signature/hash failures at scale, downgrade/substitution attempts, key compromise suspicion, cross-tenant mixing, or regulated “no-new-facts” violations).
+
+---
+
+## 5) Triage checklist (first 10 minutes)
+
+### 5.1 Stabilize
+- [ ] Assign IC + required leads.
+- [ ] Freeze risky automation if it could worsen impact (publishes, auto-activation, key rotation).
+- [ ] Establish incident channel + single source of timeline truth.
+
+### 5.2 Identify scope
+- [ ] Which tenants/channels/environments are impacted?
+- [ ] Which stage is failing: build, publish, activation, render, execute?
+- [ ] Is this correctness, availability, or security?
+
+### 5.3 Preserve evidence (before destructive actions)
+Snapshot:
+- [ ] Orgo Build Record + stage logs
+- [ ] Validation report(s) for failing builds
+- [ ] Runtime Pack Manifest + channel index (as received)
+- [ ] Konnaxion activation/local state (active pack, LKG, rejection reasons)
+- [ ] Render bundles + trace maps for affected outputs
+- [ ] SwarmCraft execution envelopes + telemetry for affected tasks
+- [ ] Trust root set (per channel) + revocation state
+
+---
+
+## 6) Containment and mitigation playbooks
+
+### 6.1 Bad release / bad pack activated
+**Goal:** stop spread and restore last-known-good deterministically.
+- [ ] Pause auto-activation for affected channel(s).
+- [ ] Roll back to last-known-good pack (per channel/targets).
+- [ ] Pin channel to a known safe release (if supported).
+- [ ] Quarantine offending release (revoke/block in distribution controls).
+- [ ] Open a governed Orgo Case to fix forward.
+
+### 6.2 Verification failures (signature/hash mismatch)
+**Goal:** decide if this is packaging error, wrong trust roots, or tampering.
+- [ ] Identify which verification step failed (index vs manifest vs payload hash).
+- [ ] Confirm tenant/channel trust roots are correct.
+- [ ] Re-fetch artifacts via a trusted path to rule out transient corruption.
+- [ ] If mismatch persists: treat as **SEV0/SEV1** until proven benign; quarantine artifacts.
+- [ ] If trust roots are wrong: deploy corrected, tenant-scoped roots; do not broaden acceptance without governance + audit.
+
+### 6.3 Schema validation failures (manifests / envelopes)
+**Goal:** detect non-conformant producer vs incorrect consumer pinning.
+- [ ] Identify schema version expected by the consumer.
+- [ ] Confirm producer pinned dependency version (Kristal v4 tag/commit).
+- [ ] If producer is non-conformant: block publish at Orgo gate; fix producer; regenerate.
+- [ ] If consumer pinning is wrong: roll back consumer deployment or correct pinning; do not relax validation in production.
+
+### 6.4 Canon mismatch / reproducibility failure (same inputs, different IDs)
+**Goal:** locate non-determinism source.
+- [ ] Confirm canonicalization settings are pinned and consistent.
+- [ ] Confirm inputs are identical (snapshot refs, blueprint/config refs, policy refs).
+- [ ] Compare toolchain/environment metadata.
+- [ ] If any dependency is unpinned: treat as root cause; remediate by pinning.
+- [ ] Block publish until determinism is restored.
+
+### 6.5 Rendering correctness incident (no-new-facts / trace failures)
+**Goal:** prevent propagation of untraceable or policy-violating outputs.
+- [ ] Disable/gate affected templates/models for impacted tenants.
+- [ ] Switch to safe rendering mode (strict trace-required; omit/refuse when not traced).
+- [ ] Capture render bundle + trace map examples and failing assertions.
+- [ ] If systematic: roll back template/model bundle; open a governed Orgo Case with repro steps.
+
+### 6.6 Execution incident (side effects, runaway tasks, unsafe actions)
+**Goal:** stop harm, contain side effects, preserve audit.
+- [ ] Halt dispatch for affected task types/queues.
+- [ ] Isolate/cancel running tasks when safe (do not destroy evidence).
+- [ ] Capture task envelopes, runtime logs, telemetry, and external side-effect audit logs.
+- [ ] Review mandate constraints (permissions, approvals, forbidden actions).
+- [ ] Resume only after control-plane gates are corrected.
+
+### 6.7 Suspected security compromise (keys, trust roots, tampering, cross-tenant)
+**Goal:** contain and rotate without breaking invariants.
+- [ ] Treat as **SEV0**.
+- [ ] Freeze publish/activation for impacted channels.
+- [ ] Snapshot and lock down trust root stores, revocation sources, and signing infrastructure.
+- [ ] Rotate keys per tenant/environment; publish revocations via governed mechanism.
+- [ ] Validate that consumers reject compromised keys post-rotation.
+- [ ] Perform cross-tenant audit (ensure no shared roots were incorrectly configured).
+
+---
+
+## 7) Communication requirements
+
+### 7.1 Internal updates (IC cadence)
+- SEV0/SEV1: every 15 minutes
+- SEV2: every 30 minutes
+- SEV3/SEV4: as needed
+
+Each update includes:
+- what changed since last update
+- current impact/scope
+- mitigation status (freeze/rollback/quarantine)
+- next actions + owner
+
+### 7.2 External updates (if applicable)
+Only publish externally when:
+- scope is confirmed
+- mitigation path exists
+- you can state clear customer impact and next steps
+
+Avoid speculation about root cause until verified.
+
+---
+
+## 8) Recovery and validation
+
+Before declaring resolved:
+- [ ] Impact has stopped (no new failures / incorrect outputs).
+- [ ] Stable state achieved (LKG active; gates re-enabled safely).
+- [ ] Verification checks pass end-to-end (publish → distribute → activate → render → execute).
+- [ ] Monitoring confirms recovery (errors, verify rejects, trace failures, task failures).
+- [ ] A governed Orgo Case exists for permanent fix (if not already created).
+
+---
+
+## 9) Post-incident requirements (within 24–72 hours)
+
+### 9.1 Postmortem packet (required)
+- Timeline (UTC)
+- Impact scope (tenants/channels)
+- Root cause analysis (technical + process)
+- What worked / what didn’t
+- Corrective actions (owners + deadlines)
+
+### 9.2 Corrective actions (typical)
+- Strengthen conformance tests (schema, determinism, verification ordering).
+- Improve guardrails (publish holds, canary activation, stricter rollback criteria).
+- Update pinned dependencies and document them.
+- If contract changes are needed: record a kOA ADR; update integration profile docs; never patch around divergence silently.
+
+---
+
+## 10) Quick reference (by symptom)
+
+- **Activation failing across a channel** → pause auto-activation → rollback → inspect verification step
+- **New release causes crashes** → rollback → quarantine release → open fix-forward case
+- **Signature/hash mismatch** → quarantine → verify trust roots → treat as security until proven otherwise
+- **Schema validation errors** → block publish → confirm pinned versions → fix producer/consumer pinning
+- **Untraceable rendered facts** → safe rendering mode → roll back template/model → collect bundles
+- **Unsafe execution behavior** → halt dispatch → isolate tasks → capture telemetry → enforce mandate gates
+
+
+================================================================================================
+FILE: wiki/Operations-Observability.md
+================================================================================================
+
+# Observability
+
+This page defines the **minimum observability** needed to operate kOA safely: detect failures early, explain outcomes deterministically, and preserve evidence for audit and incident response.
+
+kOA treats observability as part of the pipeline: Orgo includes an explicit **Observe** stage (metrics/events/logs) before feedback/cases are created. :contentReference[oaicite:0]{index=0}
+
+---
+
+## Goals
+
+1. **Fail fast, fail closed**: if the system cannot verify/validate, it must not proceed and must emit enough telemetry to diagnose without guesswork. :contentReference[oaicite:1]{index=1}  
+2. **Deterministic diagnosis**: failures should produce **stable reason codes** and repeatable outcomes. :contentReference[oaicite:2]{index=2}  
+3. **End-to-end correlation**: every signal ties back to a build/release/task and the active pack lineage. :contentReference[oaicite:3]{index=3} :contentReference[oaicite:4]{index=4}  
+4. **Audit-grade evidence**: key actions and decisions are reconstructable (especially activation, rollback, and trust events). :contentReference[oaicite:5]{index=5}
+
+---
+
+## Correlation model (what every signal must reference)
+
+At minimum, emit correlation IDs for:
+- **Build** (pipeline execution) :contentReference[oaicite:6]{index=6}  
+- **Release** (promotion/publish action)
+- **Task** (Orgo Task identity + attempt identity) :contentReference[oaicite:7]{index=7}  
+- **Runtime Pack** (pack ID / manifest ref) :contentReference[oaicite:8]{index=8}  
+- **Target scope** (tenant / env / channel / cohort / device group), as applicable
+
+Do not embed large payloads in-band; emit **references to logs/traces** and content-addressed artifacts instead. :contentReference[oaicite:9]{index=9} :contentReference[oaicite:10]{index=10}
+
+---
+
+## Required telemetry (baseline)
+
+Integrations and operators should emit, at minimum: :contentReference[oaicite:11]{index=11}
+- build/release correlation IDs (from Orgo)
+- stage timing (start/end/fail)
+- stable error codes + human-readable summaries
+- references to logs/traces (not raw blobs in-band)
+
+If you operate Konnaxion, also emit **Konnaxion State** records and activation/rollback outcomes with health signals. :contentReference[oaicite:12]{index=12} :contentReference[oaicite:13]{index=13}
+
+---
+
+## Signals by category
+
+### Metrics
+Use metrics to answer: “Is it healthy?” and “Is it getting worse?”
+
+Typical examples (not exhaustive):
+- Pipeline: stage success/failure rate; latency per stage; determinism/rebuild pass rate
+- Distribution/runtime (Konnaxion): fetch latency/failure, verification pass/fail by reason, activation success/time, rollback frequency/triggers, cache utilization and corruption detection, active-pack drift :contentReference[oaicite:14]{index=14}
+- Ingest (Chokmah): ingest req/success/failure, bytes/throughput, latency per connector/source type, retries/idempotency hits, quarantine/rejection rates by reason :contentReference[oaicite:15]{index=15}
+
+### Logs (structured)
+Logs must be structured and include correlation IDs and stable reason codes. :contentReference[oaicite:16]{index=16}  
+Example ingest log fields: request id, source descriptor hash, snapshot refs, policy decisions, failure codes, diagnostics pointers. :contentReference[oaicite:17]{index=17}
+
+### Traces
+Traces should connect:
+- Orgo stage execution → produced artifact refs → downstream distribution/activation attempts
+- Task dispatch (Orgo Task) → executor run → result + telemetry refs :contentReference[oaicite:18]{index=18}
+
+### Events (audit / operational)
+Emit explicit events for:
+- stage transitions (start/finish/fail) with reason codes :contentReference[oaicite:19]{index=19}
+- key activation actions (verify/activate/rollback/pin/unpin/revoke)
+- trust material events (key creation/rotation/revocation; verification failures) :contentReference[oaicite:20]{index=20}
+
+### Operational artifacts as observability
+Some observability is captured as **typed artifacts**, not just logs:
+- **Konnaxion State** (installed/active/pinned, last attempt status, health, telemetry refs) :contentReference[oaicite:21]{index=21} :contentReference[oaicite:22]{index=22}  
+- Orgo Case/Task audit trails for decisions and remediation work :contentReference[oaicite:23]{index=23}
+
+---
+
+## Release and rollback observability (must-have)
+
+### During activation and rollback
+Emit, per target: activation attempt events, preflight outcomes (pass/fail + reason codes), post-activation health results, and final active pack ID. :contentReference[oaicite:24]{index=24}
+
+### Dashboards and alerts should include
+- rollback success rate by channel/environment
+- time-to-restore by incident
+- rollback loops (flapping)
+- divergence: reported active pack ID vs expected :contentReference[oaicite:25]{index=25}
+
+---
+
+## Diagnostic standards
+
+- **Stable reason codes**: required for fail-closed behavior and repeatable triage. :contentReference[oaicite:26]{index=26}  
+- **Deterministic diagnostics** at activation boundaries (verification failures must produce stable reason codes). :contentReference[oaicite:27]{index=27}  
+- **Diagnostics pointers**: prefer `diagnostics_ref` / `telemetry_refs` over dumping blobs into control-plane records. :contentReference[oaicite:28]{index=28} :contentReference[oaicite:29]{index=29}
+
+---
+
+## Minimal checklist
+
+- [ ] Every stage emits start/end/fail with duration and stable reason code. :contentReference[oaicite:30]{index=30}  
+- [ ] Every signal includes build/release/task correlation IDs. :contentReference[oaicite:31]{index=31}  
+- [ ] Konnaxion emits verification/activation/rollback signals and Konnaxion State updates. :contentReference[oaicite:32]{index=32}  
+- [ ] Rollback dashboards include success rate, TTR, flapping, and drift detection. :contentReference[oaicite:33]{index=33}  
+- [ ] Trust events (rotate/revoke/verify failures) are recorded and routed to security monitoring and incident response. :contentReference[oaicite:34]{index=34}
+
+
+================================================================================================
+FILE: wiki/Operations-Releases.md
+================================================================================================
+
+# Operations — Releases
+
+Releases are how validated knowledge moves into runtime safely. A release takes an eligible build output (Runtime Pack) and rolls it out through controlled stages (channels/cohorts), with verification gates, monitoring, and reversible activation.
+
+## Goals
+
+- Deliver new knowledge to users safely and predictably
+- Prevent partial or unsafe activations (fail-closed)
+- Support controlled rollout (canary → stable) and fast rollback
+- Preserve evidence: what was released, where, why, and with which results
+
+## Core concepts
+
+### Build vs Release
+- **Build**: the result of the pipeline producing artifacts (including a Runtime Pack) that are eligible for distribution.
+- **Release**: the operational act of distributing and activating a specific Runtime Pack in one or more environments/channels.
+
+### Channel
+A named release lane (examples: `canary`, `stable`, `lts`). Channels define default rollout speed, guardrails, and who receives updates.
+
+### Cohort
+A subset within a channel (by tenant group, region, percent rollout, etc.). Cohorts let you ramp exposure gradually.
+
+### Pinning
+Holding a channel (or cohort) to a specific pack/version to stop automatic upgrades until intentionally changed.
+
+### Last-known-good (LKG)
+A known safe pack/version you can roll back to deterministically.
+
+## Release lifecycle (high level)
+
+1. **Request**
+   - A release is requested for a specific build output (Runtime Pack reference) and a target (env + channel + optional cohort plan).
+
+2. **Prepare**
+   - Resolve targets (channels/cohorts), confirm eligibility, and collect the operational record that will track the release.
+
+3. **Distribute**
+   - Make the pack available to runtime distribution (fetchable by Konnaxion).
+   - Distribution must not imply activation.
+
+4. **Verify (fail-closed)**
+   - Integrity, compatibility, and policy checks must pass before activation is allowed.
+
+5. **Activate (atomic)**
+   - Activation is an atomic switch of “active pack” for the target scope.
+   - No partial activation is allowed.
+
+6. **Monitor**
+   - Observe key health signals over a defined window (errors, latency, correctness signals, downstream impacts).
+
+7. **Promote / Expand**
+   - Expand cohorts (or promote from canary → stable) only after monitoring criteria are met.
+
+8. **Pin / Hold (optional)**
+   - Pin a channel/cohort to lock it to a specific pack/version.
+
+9. **Close**
+   - Record outcomes (success, rolled back, pinned, aborted) and link postmortems if needed.
+
+## Eligibility (what can be released)
+
+A pack is eligible only if:
+- It was produced from a validated pipeline run (validation gate passed).
+- It matches the target’s compatibility constraints (schema/profile/runtime).
+- It has all required references for audit (provenance and build identity).
+
+## Verification gates (non-negotiable)
+
+Release must fail closed if any of the following fails:
+- Pack integrity (hash/signature/manifest mismatch)
+- Schema/profile compatibility with the pinned runtime expectations
+- Policy blocks (forbidden downgrade, forbidden source, forbidden scope, etc.)
+- Missing required evidence records (build identity, provenance references)
+
+## Operator workflow
+
+### Pre-flight checklist
+- Confirm target environment(s) and channels
+- Confirm cohort plan (if used) and monitoring window
+- Confirm rollback target strategy (LKG or pinned prior)
+- Confirm alerting/observability is in place for the release window
+- Confirm the release has an owner and an escalation path
+
+### Execution checklist
+- Start release in smallest safe scope (canary / smallest cohort)
+- Confirm verification gates passed before any activation
+- Activate atomically
+- Monitor until criteria are met or violated
+- If clean: expand cohort / promote channel
+- If not clean: roll back deterministically and preserve evidence
+
+## Monitoring (what “good” looks like)
+
+Define success criteria per release. Typical signals:
+- Activation success rate and time-to-activate
+- Runtime error rates (spikes, new error classes)
+- Latency regressions (p95/p99)
+- Data correctness signals (trace coverage, query mismatch alarms)
+- Tenant-impact indicators (support tickets, escalation rate)
+
+Minimum monitoring windows:
+- Canary: short but real (enough to catch immediate failures)
+- Stable: longer (enough to catch delayed regressions)
+
+## Promotion and expansion
+
+Promotion is gated by:
+- Canary health within thresholds
+- No new critical errors introduced
+- No policy violations observed
+- Rollback readiness confirmed (LKG available and valid)
+
+Recommended strategy:
+- **Canary first**, then expand cohorts gradually, then promote to stable.
+
+## Pinning strategy (when to pin)
+
+Pin when you need:
+- Controlled freeze during incident response
+- A stable baseline for audits or regulated workflows
+- A compatibility hold while upstream/downstream dependencies catch up
+
+Pinning should be time-bounded and recorded with rationale.
+
+## Rollback (what triggers it)
+
+Rollback triggers:
+- Verification failure (never activate)
+- Activation failure (immediate rollback)
+- Monitoring failure (regression detected)
+- Policy violation discovered post-activation
+- Unexpected tenant impact
+
+Rollback principles:
+- Deterministic target selection (pinned or LKG)
+- Atomic activation of the rollback target
+- Preserve the release record and link incident notes
+
+See: [Operations — Rollbacks](Operations-Rollbacks)
+
+## Evidence and audit trail
+
+Every release should leave an auditable trail:
+- Release identity (who/what/when)
+- Target scope (env/channel/cohort)
+- Pack identity (what was activated)
+- Gate outcomes (verification results, activation result)
+- Monitoring window + results
+- Promotion/pinning/rollback decisions + rationale
+- Links to incident/postmortem if applicable
+
+See: [Artifacts — Operational](Artifacts-Operational)
+
+## Common pitfalls
+
+- Activating without a verified pack (must be fail-closed)
+- Rolling out too broadly before monitoring criteria are met
+- Not defining a rollback plan before activating
+- Allowing “floating latest” dependencies that break determinism
+- Missing evidence links (hard to debug, hard to audit)
+
+## Related pages
+
+- [Operations](Operations)
+- [Operations — Builds](Operations-Builds)
+- [Operations — Rollbacks](Operations-Rollbacks)
+- [Operations — Observability](Operations-Observability)
+- [Operations — Incident response](Operations-Incident-response)
+- [Integration — Kristal v4](Integration-Kristal-v4)
+
+
+================================================================================================
+FILE: wiki/Operations-Rollbacks.md
+================================================================================================
+
+# Rollbacks
+
+**Purpose:** Restore a known-safe runtime state quickly and deterministically when a release causes correctness, availability, or safety risk.
+
+Rollback is an operational action on **Runtime Pack activation state**. It does not modify canonical truth or Kristal artifact schemas.
+
+---
+
+## Non-negotiables
+
+- **Fail-closed:** if a candidate pack cannot be verified or is incompatible, do not activate it.
+- **Atomic activation:** activation is an all-or-nothing switch; partial activation is forbidden.
+- **Downgrade prevention:** do not activate older versions unless explicitly authorized as a rollback.
+- **Deterministic rollback:** given the same triggers and state history, rollback target selection must be deterministic.
+- **Offline correctness:** rollback/activation must not depend on fetching trust roots over the network.
+
+---
+
+## Rollback modes
+
+At minimum, support one (recommended: both):
+
+1) **Pinned rollback**  
+Activate an explicitly pinned known-good pack.
+
+2) **Last-known-good (LKG) rollback**  
+Activate the most recent previously active verified pack that is still present and passes preflight.
+
+---
+
+## When rollback is the correct action
+
+Rollback is the correct action if:
+- A newly activated pack causes elevated errors, regressions, or unsafe outcomes.
+- Policy enforcement is not functioning as expected.
+- Determinism or verification guarantees are in question.
+- Activation is partially complete and must be normalized quickly.
+
+Do not rollback (or rollback only after containment) if:
+- The issue is purely upstream (inputs) and the active pack is not implicated.
+- The issue is confined to a single target with environmental failure (prefer repair).
+- The rollback candidate is known-bad for the same failure class.
+
+---
+
+## Triggers (examples)
+
+Rollback can be triggered by:
+- Explicit operator action (recommended primary trigger).
+- Verified distribution control updates (e.g., revocation added, rollback authorization published).
+- Local runtime health signals (optional; must be policy-defined).
+
+---
+
+## End-to-end shape (mental model)
+
+```mermaid
+flowchart LR
+  A[Detect issue] --> B[Freeze / stop rollout]
+  B --> C[Select rollback target (Pinned or LKG)]
+  C --> D[Preflight: verify + compatibility]
+  D -->|pass| E[Atomic activate rollback target]
+  D -->|fail| F[Try earlier candidate or Safe Mode]
+  E --> G[Post-check: health + correctness]
+  G --> H[Record evidence + unfreeze (gated)]
+````
+
+---
+
+## Procedure: automatic rollback (activation-time)
+
+Automatic rollback is triggered when rollout detects:
+
+* activation preflight failure
+* post-activation health check failure
+* policy enforcement failure (channel-defined)
+
+Steps:
+
+1. Stop further rollout in the same stage.
+2. Attempt rollback to the **last-known-good** pack for the failing target(s).
+3. If rollback succeeds:
+
+   * mark rollout as failed
+   * require human approval to proceed further
+4. If rollback fails:
+
+   * escalate to emergency procedure
+   * place targets in **safe mode** if supported
+
+---
+
+## Procedure: emergency rollback
+
+Use when there is strong evidence of integrity compromise, unsafe behavior, or fast-spreading outage.
+
+1. **Immediate freeze**
+
+* Freeze promotions and activations for the entire channel (or all channels if global).
+
+2. **Scope containment**
+
+* Identify impacted targets and expand scope conservatively if uncertain.
+
+3. **Rollback to LKG**
+
+* Execute rollback with priority on restoring safe operation.
+* If LKG is unavailable or fails preflight, select the most recent prior verified pack that passes preflight.
+
+4. **If rollback cannot restore safety**
+
+* Enter **safe mode** (only if explicitly allowed for the channel):
+
+  * deny/disable unsafe capabilities
+  * serve minimal safe responses
+  * disable optional modules suspected in failures
+
+5. **Trust response (if integrity concern)**
+
+* Rotate or revoke trust material as required by policy.
+* Require conformance re-verification before any new promotion.
+
+6. **Audit + incident**
+
+* Open/attach an incident.
+* Record all decisions and activation events in Release Record + Orgo.
+
+---
+
+## Rollback failure handling
+
+If rollback activation fails on any target:
+
+* Stop further actions for that stage.
+* Attempt rollback to an earlier candidate (prior LKG) if policy allows.
+* If no candidate passes preflight:
+
+  * place target into safe mode (if supported)
+  * escalate to incident response
+  * require manual remediation
+
+---
+
+## Required observability and audit
+
+During rollback, emit:
+
+* per-target activation attempt events
+* preflight outcomes (pass/fail + reason codes)
+* post-activation health results
+* final active pack ID per target
+
+Dashboards/alerts should include:
+
+* rollback success rate by channel and environment
+* time-to-restore by incident
+* repeated rollback loops (flapping)
+* divergence: reported active pack ID vs expected
+
+Audit linkage requirements:
+
+* every rollback-related metric/event must reference `build_id` and/or `release_id` and relevant artifact refs (where applicable)
+
+Konnaxion must also update and emit **Konnaxion State** on:
+
+* rollback start and rollback completion
+* failed verification or failed activation attempt
+
+---
+
+## Operational hygiene
+
+* Maintain at least **N prior verified packs** per channel (policy-defined) to ensure rollback availability.
+* Periodically perform **rollback drills** in non-prod and canary channels.
+* Treat frequent rollbacks as a signal to investigate pipeline quality, conformance tests, and gate strictness.
+* Ensure rollback tooling remains compatible across runtime versions (backward compatibility plan).
+
+---
+
+## Orgo integration
+
+Operator-initiated and emergency rollbacks should be expressed as:
+
+* an **Orgo Case** (incident/regression)
+* one or more **Orgo Tasks**, such as:
+
+  * `freeze-promotions`
+  * `rollback-activation`
+  * `post-rollback-validation`
+  * `unfreeze-promotions` (optional, gated)
+
+Rollback tasks must reference:
+
+* channel/targets
+* candidate selection rule or explicit candidate IDs
+* required validations and success criteria
+
+
+================================================================================================
+FILE: wiki/Operations.md
+================================================================================================
+
+# Operations
+
+This page describes how to run the system safely in production terms: how builds become releases, how rollouts are controlled, and how recovery works when something goes wrong.
+
+## What “Operations” owns
+
+Operations ensures that:
+- Only **validated** outputs become candidates for release (“no compile on fail”).
+- Only **verified** runtime packs activate (“fail closed”).
+- Rollouts are controlled (channels/cohorts/pinning) and fully auditable.
+- Rollbacks are deterministic and prevent partial activation.
+
+## Golden path (build → release → runtime)
+
+```mermaid
+flowchart LR
+  A[Build (Orgo)<br/>gated pipeline] --> B[Eligible output<br/>passed validation]
+  B --> C[Release (channels/cohorts)<br/>promotion + monitoring]
+  C --> D[Konnaxion<br/>verify -> activate]
+  D --> E[Runtime (Malkuth)<br/>serve offline]
+  E --> F[Rollback if needed<br/>deterministic target]
+````
+
+## Key operational concepts
+
+* **Build**: a gated run that produces a candidate Runtime Pack and evidence of what happened.
+* **Release**: controlled rollout of a Runtime Pack into an environment via channels/cohorts.
+* **Channel**: a logical track (e.g., canary/stable/lts) with its own promotion and rollback behavior.
+* **Cohort**: a controlled subset of traffic/tenants/devices for progressive rollout.
+* **Pin**: holding a channel/cohort to a specific pack (freeze promotion).
+* **Last-known-good (LKG)**: the deterministic fallback target used for rollback when not explicitly pinned.
+
+## Build operations
+
+### What happens in a build
+
+* Inputs are ingested as immutable snapshots with provenance.
+* Claim extraction/resolution happens upstream of truth.
+* Validation is a hard gate.
+* If validation passes, compilation produces canonical outputs + a Runtime Pack for distribution.
+
+### What operators care about
+
+* A build is **eligible** only if all gates pass.
+* Every build produces operational evidence (records) so it can be audited and reproduced.
+
+## Release operations
+
+### Release lifecycle
+
+1. **Create release** from an eligible build.
+2. **Select channel + cohorts** for progressive rollout.
+3. **Verify-before-activate**: integrity/compatibility checks must pass (fail closed).
+4. **Monitor** health signals during rollout.
+5. **Promote or pin** once confidence is sufficient.
+6. **Record** outcomes and decisions (promotion/pin/rollback) in auditable release records.
+
+### Operator checklist for a safe rollout
+
+* Start with canary cohort(s)
+* Require verification success before activation
+* Promote in steps, not all at once
+* Pin if signals are uncertain
+* Roll back quickly if verification or health regresses
+
+## Rollback operations
+
+Rollback is the default recovery mechanism when a release is unsafe.
+
+### Rollback triggers (examples)
+
+* Pack verification failures
+* Runtime health regressions during rollout
+* Detected incompatibility with an environment/channel
+* Policy violation or unexpected determinism drift
+
+### Rollback invariants
+
+* Target selection is deterministic (pinned target or LKG).
+* Activation is atomic (avoid partial activation).
+* Downgrade prevention policies may block unsafe rollback targets.
+* Evidence is preserved (rollback is recorded; nothing is silently overwritten).
+
+## Observability
+
+Operations relies on two categories of signals:
+
+### 1) System health signals (for go/no-go decisions)
+
+* Verification pass/fail rates
+* Activation success rates and latency
+* Cohort/channel error rates and performance regressions
+* Pack fetch/cache integrity signals (offline readiness)
+
+### 2) Evidence and audit signals (for explainability)
+
+* Build records: what inputs/policies were used and which gates passed/failed
+* Release records: which pack was promoted/pinned/rolled back, where, and why
+
+## Incident response (operator posture)
+
+When an incident is declared:
+
+1. **Stop the blast radius**: pause promotion and/or pin the channel.
+2. **Prefer rollback** over patching in place.
+3. **Preserve evidence** (records and traces) for root cause.
+4. **Recover deterministically** (pinned/LKG targets; atomic activation).
+5. **Document** what happened and what changed (post-incident record).
+
+
+================================================================================================
+FILE: wiki/Principles-and-invariants.md
+================================================================================================
+
+# Principles & invariants
+
+This page is the “non-negotiables” view of the system. If any of these are violated, treat it as a bug or an incident, not an acceptable tradeoff.
+
+## 1) Truth boundary
+
+- **Canonical truth exists only after compilation** into the canonical truth artifact (the “truth pivot”).
+- **Upstream outputs are proposals**, not truth (inputs, extracted claims, resolved claims, validation outputs).
+- **Validation is a hard gate**: if validation fails, canonical outputs must not be produced or distributed.
+
+## 2) No redundancy of external contracts
+
+- **Do not copy or restate external artifact contracts** (schemas, canonicalization rules, signing formats, etc.).
+- The system points to the pinned external spec and enforces it at boundaries.
+
+## 3) Typed boundaries (no hidden state)
+
+- Components exchange **typed artifacts**, not implicit shared state.
+- “Truth” cannot move through side channels; it must go through the declared pipeline and gates.
+
+## 4) Determinism over availability
+
+- Same **pinned inputs + pinned configuration + pinned policies** must yield **identical (or canonically identical)** results.
+- Determinism also applies to failure behavior: same pinned context → same class of failure + stable reasons.
+
+## 5) Fail-closed integrity and activation
+
+- If integrity is declared (hashes/signatures/compat rules), **verification is mandatory**.
+- If verification cannot be completed or fails, **activation must not proceed**.
+- Activation must be **atomic** (no partial activation).
+
+## 6) Immutable canon and governed change
+
+- Canonical artifacts are **immutable once published**.
+- Any canon-affecting change is a **new build**, producing new artifacts/IDs (no hot-edits).
+
+## 7) No new facts downstream
+
+- Rendering and execution layers must **not introduce new factual claims**.
+- They can only:
+  - trace outputs to canonical sources,
+  - omit/refuse deterministically under policy,
+  - emit governed feedback that becomes new work.
+
+## 8) Offline correctness
+
+- Correctness must not depend on live network calls at the moment of use.
+- Runtime behavior is based on verified, activated packs that can be used offline.
+
+## 9) Auditability as a first-class requirement
+
+- Every build/release must leave an auditable trail that can answer:
+  - what inputs were used,
+  - which policies/configuration applied,
+  - which gates ran and why they passed/failed,
+  - which outputs were produced and promoted.
+
+## 10) Tenant isolation and pinned trust roots
+
+- Trust roots and acceptance policy are **tenant-scoped** and **pinned**.
+- The system must resist downgrade/substitution and cross-tenant trust confusion.
+
+## Quick “invariant check” list
+
+If you’re reviewing a change, confirm:
+
+- Validation failure cannot produce publishable/activatable outputs.
+- Any declared integrity mismatch blocks publish/activation (no bypass).
+- A component cannot smuggle facts around validation/compile.
+- Output is deterministic under pinned context (including error behavior).
+- Rendering cannot invent facts and always provides trace coverage or deterministic refusal.
+- Activation is atomic and rollback target selection is deterministic.

@@ -4,9 +4,14 @@ repository: Rejean-McCormick/Kristal_Farms
 source_path: C:\mycode\Kristal_Farms\kristal-farms-docs
 source_commit: e0b64f9416913d1779c3569402b3d55ff0d6d7aa
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:51-04:00
-files: 172
-content_sha256: 8c15207795e86e6d1399c9242de2ebdf5c00722b13cfc4d9c439f52334bdda35
+wiki_source_path: C:\mycode\Kristal_Farms\Kristal_Farms.wiki
+wiki_source_commit: 25b5ff05c38fef86fa49159c214b27bd9826c5e4
+wiki_working_tree_markdown: clean
+repo_files: 172
+wiki_files: 34
+generated_at: 2026-08-25T11:30:49-04:00
+files: 206
+content_sha256: 6d9e565c949eafc09b4615d602197c8eb2a093c70cffffd7e924dd2f9f5cc32c
 
 ================================================================================================
 FILE INDEX
@@ -184,6 +189,40 @@ FILE INDEX
 170. sources/originals/README.md
 171. sources/owner-direction/2026-08-17-international-learning-direction.md
 172. sources/owner-direction/2026-08-17-strategic-direction.md
+173. wiki/_Footer.md
+174. wiki/_Sidebar.md
+175. wiki/Cold-Climate-Cooling.md
+176. wiki/Communities-Languages-and-Dignity.md
+177. wiki/Contributing.md
+178. wiki/Environmental-Design-and-Site-Selection.md
+179. wiki/FAQ.md
+180. wiki/Fibre-as-the-Export-Corridor.md
+181. wiki/From-One-Site-to-a-Northern-Network.md
+182. wiki/Future-AI-Compute.md
+183. wiki/Glossary.md
+184. wiki/Governance-FPIC-and-Community-Benefits.md
+185. wiki/Harmonious-Deployment.md
+186. wiki/Heat-First.md
+187. wiki/Home.md
+188. wiki/Human-Infrastructure.md
+189. wiki/International-Learning-and-Universities.md
+190. wiki/Kristals-Knowledge-Commons.md
+191. wiki/Metrics-and-Public-Dashboard.md
+192. wiki/Nain-First-Application.md
+193. wiki/Public-Repository-and-Confidence-Levels.md
+194. wiki/README.md
+195. wiki/Risks-and-Go-No-Go-Gates.md
+196. wiki/Secure-Compute-and-Black-Box-Tenancy.md
+197. wiki/Site-Archetypes.md
+198. wiki/Source-Basis.md
+199. wiki/Structural-Cost-Advantage.md
+200. wiki/The-Core-Idea.md
+201. wiki/Transmission-vs-Digital-Export.md
+202. wiki/What-Is-Validated-and-What-Is-Being-Tested.md
+203. wiki/Why-the-North.md
+204. wiki/WIKI_QA.md
+205. wiki/WIKI_SETUP.md
+206. wiki/Working-Economic-Examples.md
 
 
 ================================================================================================
@@ -39758,3 +39797,1292 @@ Repository treatment:
 ## Scope clarification — 2026-08-17
 
 The owner explicitly directed that separatist / territorial-status disputes remain outside the Kristal Farms project dossier. The project may retain a long-term human-infrastructure and multicultural welcoming-community vision, but it is to be developed within applicable existing legal frameworks and kept separate from sovereignty, boundary or internationalization strategies.
+
+
+================================================================================================
+FILE: wiki/_Footer.md
+================================================================================================
+
+**Kristal Farms — Public Working Wiki** · Open project development · Assumptions and validation status are stated explicitly.
+
+
+================================================================================================
+FILE: wiki/_Sidebar.md
+================================================================================================
+
+### Kristal Farms Wiki
+
+- [[Home]]
+- [[The Core Idea]]
+- [[Why the North]]
+
+### Infrastructure advantage
+- [[Structural Cost Advantage]]
+- [[Transmission vs Digital Export]]
+- [[Cold Climate Cooling]]
+- [[Heat First]]
+- [[Fibre as the Export Corridor]]
+- [[Secure Compute and Black Box Tenancy]]
+- [[Environmental Design and Site Selection]]
+
+### Deployment and sites
+- [[Harmonious Deployment]]
+- [[Nain First Application]]
+- [[Site Archetypes]]
+- [[From One Site to a Northern Network]]
+- [[Future AI Compute]]
+
+### People and institutions
+- [[Human Infrastructure]]
+- [[Communities Languages and Dignity]]
+- [[International Learning and Universities]]
+- [[Governance FPIC and Community Benefits]]
+- [[Kristals Knowledge Commons]]
+
+### Evidence and openness
+- [[Metrics and Public Dashboard]]
+- [[Risks and Go No Go Gates]]
+- [[Working Economic Examples]]
+- [[What Is Validated and What Is Being Tested]]
+- [[Public Repository and Confidence Levels]]
+- [[Source Basis]]
+- [[FAQ]]
+- [[Glossary]]
+- [[Contributing]]
+
+
+================================================================================================
+FILE: wiki/Cold-Climate-Cooling.md
+================================================================================================
+
+# Cold Climate Cooling
+
+Cooling is one of the major infrastructure and operating burdens of a data centre. Kristal Farms treats the northern climate as part of the cooling system.
+
+## Baseline architecture
+
+The detailed community-integrated design uses:
+
+- liquid or rear-door heat capture;
+- a closed IT cooling loop;
+- plate heat exchangers;
+- a separate village heat loop;
+- non-contact exchange with cold seawater or bay water where appropriate;
+- backup dry coolers;
+- no routine mixing between IT coolant, building-loop water and environmental water.
+
+## Why this matters economically
+
+The supplied Canadian data-centre cost study estimates complete cooling — capital, energy and maintenance — at roughly **8–15% of total cost** in a modern centre, potentially higher for some high-density AI configurations.
+
+The project economic model therefore treats cold climate as a structural cost advantage, not simply an operating convenience.
+
+## PUE target
+
+The working economic model studies a future Kristal Farms PUE target around **1.10–1.20**, subject to engineering validation. This should not be read as an achieved operating result.
+
+## Water
+
+The design avoids evaporative cooling towers and uses closed loops, so the intended consumptive water use for cooling is near zero except for minor system top-ups. Environmental heat rejection still requires temperature limits, monitoring and site-specific approval.
+
+
+================================================================================================
+FILE: wiki/Communities-Languages-and-Dignity.md
+================================================================================================
+
+# Communities, Languages and Dignity
+
+The project vision supports cultural plurality without treating culture as a reason to reduce individual freedom.
+
+## Host communities first
+
+Existing Indigenous peoples, municipalities, residents and rights holders must have meaningful decision rights over local expansion. No project should treat inhabited or culturally used land as empty simply because population density is low.
+
+## Language
+
+The long-term education/community vision proposes site-level language charters in which the host people's language or languages can hold primary local institutional standing, to the maximum extent permitted by applicable law and as determined with the host people.
+
+Additional working languages can support international science, technical documentation and exchange. Translation and interpretation are treated as infrastructure rather than an afterthought.
+
+## Culture, rites and customs
+
+Communities can preserve and develop language, food, dress, ceremonies, religion, arts, celebrations and social institutions.
+
+The boundary is individual dignity and consent. No project-controlled custom or rite can justify coercion, violence, discrimination, forced participation, denial of education or health care, restriction of lawful movement or loss of independent remedy.
+
+The dual principle is:
+
+> **Protect communities from forced assimilation, and protect individuals from coercion inside any community or institution.**
+
+
+================================================================================================
+FILE: wiki/Contributing.md
+================================================================================================
+
+# Contributing
+
+Kristal Farms is a public working project. Useful contributions include:
+
+- corrections to site or hydro data;
+- better transmission and road benchmarks;
+- cooling and heat-recovery engineering;
+- fibre-route and telecom analysis;
+- environmental lifecycle comparisons;
+- community-governance design;
+- northern construction experience;
+- security architecture;
+- economic-model review;
+- academic and training partnerships;
+- corrections to citations and source quality.
+
+## Contribution principle
+
+A contribution is strongest when it distinguishes:
+
+1. **evidence** — what a source or measurement establishes;
+2. **assumption** — what is being used for modelling;
+3. **inference** — what follows from the evidence;
+4. **decision** — what the project chooses to do;
+5. **result** — what has actually been measured in operation.
+
+Open development is most useful when disagreement improves the model rather than being hidden.
+
+
+================================================================================================
+FILE: wiki/Environmental-Design-and-Site-Selection.md
+================================================================================================
+
+# Environmental Design and Site Selection
+
+Kristal Farms does not treat "the North" as one ecological category. Some northern areas are highly sensitive, protected or culturally important. The project documentation already identifies candidate rivers and areas that should be excluded or heavily constrained for those reasons.
+
+## Preferred siting principles
+
+Where practical, the project favours:
+
+- existing or previously disturbed industrial or port land;
+- compact modular yards;
+- short local electrical routes;
+- minimal unnecessary corridor clearing;
+- reduced need for new inland roads through marine logistics;
+- closed-loop, non-contact cooling;
+- no evaporative cooling towers;
+- heat reuse before rejection;
+- reversible equipment and restoration planning;
+- explicit fish, habitat, water, cultural and rights-holder review.
+
+## Why not say "low biodiversity"?
+
+Low species count is not the same as low ecological importance. Arctic and subarctic ecosystems can be highly sensitive, slow to recover and culturally significant.
+
+The public criterion is therefore **low ecological sensitivity and low habitat conflict**, not a generic claim of low biodiversity.
+
+## Site exclusion is part of the model
+
+A river or site should be rejected if protected-area status, fish habitat, cultural use, rights, construction burden or other impacts make the project inappropriate.
+
+Environmental discipline is not a mitigation step added after site selection. It is part of the selection algorithm.
+
+
+================================================================================================
+FILE: wiki/FAQ.md
+================================================================================================
+
+# Frequently Asked Questions
+
+## Is Kristal Farms just a data centre?
+
+No. The model integrates renewable energy, compute, fibre, cooling, useful heat, community infrastructure, governance and staged deployment.
+
+## Why not simply transmit the electricity south?
+
+For remote sites, long transmission can become an enormous infrastructure project. Kristal Farms tests whether consuming the power locally and exporting digital value can produce a much lower total infrastructure burden.
+
+## Are you claiming this is cheaper everywhere?
+
+No. Kristal Farms is designed to **select sites where it is significantly better**. A site that cannot demonstrate a strong stacked advantage should not advance.
+
+## Does the project build on land with "low biodiversity"?
+
+That is not the criterion. The criterion is low ecological sensitivity, low habitat conflict and preferably previously disturbed land. Some northern ecosystems are extremely sensitive and should be excluded.
+
+## Does the host see tenant data?
+
+Under the black-box tenancy model, no. The host operates physical infrastructure and monitors physical/network-health metrics, while the tenant retains control of data, models, logs, software and packet content.
+
+## Is server heat really useful?
+
+Yes, if appropriate heat users are close enough and temperatures match. The design prioritizes buildings, hot-water preheat, greenhouses and storage before rejecting heat.
+
+## Why put compute near a village instead of at the river?
+
+Because heat loses value over distance. The preferred architecture keeps compute close to heat users while keeping the electrical connection short enough to avoid a long HV export system.
+
+## Does Kristal Farms require new large dams?
+
+No. The partner model is explicitly not a mega-dam strategy. The deployment plan can consider existing hydro, micro/small hydro, run-of-river systems, wind-hydro hybrids or other renewable configurations if they pass the required gates.
+
+## Is subsea fibre already planned?
+
+It is a strategic opportunity, not a validated route. Any marine cable requires carrier, seabed, landing, regulatory, environmental and rights-holder work.
+
+## Are decommissioned mines part of the main architecture?
+
+No. They are a separate exploratory high-security site archetype.
+
+## Is Nain approved for construction?
+
+No. Nain is the first target for validation. The preliminary hydro concept, fibre, heat users, permits, community process, economics and engineering still require confirmation.
+
+## Is Kristal Farms already an international university?
+
+No. The long-term vision includes training, research partnerships and possibly future accredited university institutions only after formal academic and legal requirements are met.
+
+## Is the project political or separatist?
+
+No. The repository explicitly excludes separatism, border revision, sovereignty disputes and territorial-status strategies from the Kristal Farms project scope.
+
+
+================================================================================================
+FILE: wiki/Fibre-as-the-Export-Corridor.md
+================================================================================================
+
+# Fibre as the Export Corridor
+
+Fibre is not a secondary utility in Kristal Farms. It is the infrastructure that exports the site's economic output.
+
+## Why fibre is central
+
+The project does not primarily sell electricity to distant markets. It sells compute services and digital results. Reliable connectivity therefore performs the role that a long electrical export corridor performs in a conventional remote-energy model.
+
+## Baseline connectivity design
+
+The partner architecture includes:
+
+- a network operations centre (NOC);
+- high-capacity regional trunk fibre;
+- dual A/B pad uplinks;
+- path diversity where feasible;
+- automatic failover;
+- monitoring of uptime, latency, jitter and errors;
+- network separation between tenant and community traffic;
+- no deep packet inspection of tenant payloads.
+
+## Coastal and subsea opportunity
+
+Coastal sites may eventually support:
+
+- marine landing points;
+- subsea fibre routes;
+- coastal rings;
+- multiple northern compute nodes linked by resilient paths.
+
+These are strategic opportunities, not yet established assets. Specific seabed routes, permits, landing rights, carrier agreements, latency and cost must be validated separately.
+
+## The long-term idea
+
+A collection of successful nodes could eventually support a **northern fibre crown**: a resilient network that connects energy-rich compute sites and strengthens regional communications at the same time.
+
+
+================================================================================================
+FILE: wiki/From-One-Site-to-a-Northern-Network.md
+================================================================================================
+
+# From One Site to a Northern Network
+
+The long-term platform idea is not one giant campus. It is a **portfolio of selected nodes** that can share standards, fibre, workforce capability, maintenance practices and knowledge.
+
+## Potential network effects
+
+A multi-site platform could support:
+
+- route diversity and stronger connectivity;
+- common NOC practices;
+- shared spares and repair capability;
+- standardized pad and utility interfaces;
+- workload placement across different site classes;
+- specialized high-security locations;
+- local and international training;
+- a regional supply chain for cold-climate infrastructure.
+
+## The "northern fibre crown"
+
+The repository uses this phrase for a future resilient fibre topology connecting selected northern nodes. It is a strategic design direction, not an existing network.
+
+## The deeper asset: expertise
+
+Repeated deployment can turn difficult northern construction and operation into a body of know-how:
+
+- marine logistics;
+- cold-climate civil work;
+- modular electrical systems;
+- liquid cooling;
+- heat recovery;
+- fibre construction and repair;
+- remote commissioning;
+- environmental monitoring;
+- emergency response.
+
+The long-term platform therefore exports not only compute, but eventually **expertise**.
+
+
+================================================================================================
+FILE: wiki/Future-AI-Compute.md
+================================================================================================
+
+# Future AI Compute
+
+AI and scientific computing are becoming increasingly power-intensive. Kristal Farms is designed to investigate whether northern renewable-energy sites can host part of that future demand.
+
+## Why the architecture may fit AI
+
+- large electrical load can be placed close to energy;
+- liquid cooling is compatible with high-density accelerators;
+- modular pads allow phased capacity additions;
+- black-box tenancy supports external tenants;
+- higher-assurance security options can be added for sensitive workloads;
+- fibre exports the work product;
+- heat can be reused locally.
+
+## What is not yet proven
+
+The repository does not yet establish:
+
+- future regional AI market share;
+- committed tenants;
+- exact rack densities;
+- required total MW/GW capacity;
+- future accelerator economics;
+- long-term fibre demand;
+- the competitiveness of every site against other global compute regions.
+
+Future AI demand is therefore a **strategic market driver to validate**, not a guaranteed revenue forecast.
+
+
+================================================================================================
+FILE: wiki/Glossary.md
+================================================================================================
+
+# Glossary
+
+**Black-box tenancy** — A hosting model in which the infrastructure operator provides physical services without accessing tenant data, models, software or application content.
+
+**Compute pad** — A prepared modular location with standardized power, cooling, heat and fibre interfaces for a containerized compute unit.
+
+**Digital export** — Exporting value through compute services/results over fibre rather than exporting the electricity itself.
+
+**Dry cooler** — An air-cooled heat-rejection unit used as backup or supplemental cooling without evaporative water consumption.
+
+**FPIC** — Free, Prior and Informed Consent.
+
+**Heat-first** — The operational principle that useful heat reuse takes priority over heat rejection.
+
+**HUF** — Heat Utilization Factor: the share of available server heat that is used productively.
+
+**Kristal** — A reusable, versioned, validated knowledge capsule in the proposed knowledge commons.
+
+**MV** — Medium voltage.
+
+**NOC** — Network Operations Centre.
+
+**PUE** — Power Usage Effectiveness: total facility energy divided by IT energy.
+
+**Reuse → Store → Reject** — The thermal dispatch hierarchy used by the project.
+
+**Subsea fibre** — Fibre-optic cable installed in a marine environment.
+
+**WUE** — Water Usage Effectiveness: water consumption per unit of IT energy.
+
+
+================================================================================================
+FILE: wiki/Governance-FPIC-and-Community-Benefits.md
+================================================================================================
+
+# Governance, FPIC and Community Benefits
+
+Kristal Farms treats governance as part of the infrastructure.
+
+## Community process
+
+The baseline partner model requires a community-first process and uses **Free, Prior and Informed Consent (FPIC)** as a governing principle where applicable. The first-phase documentation treats community consent and a Community Benefits / Impact Benefit Agreement as gates before operation.
+
+## Proposed governance bodies
+
+The detailed model includes:
+
+- **Project Council** — overall strategy, budgets and major issues;
+- **Heat Committee** — seasonal heat priorities and heat-use performance;
+- **Environment Committee** — discharge limits, water/environmental monitoring and incidents;
+- **Kristals Council** — public-interest knowledge topics and validation.
+
+## Expansion is not automatic
+
+Additional compute pads should be reviewed against:
+
+- renewable capacity;
+- heat offtake;
+- summer rejection capacity;
+- fibre capacity and redundancy;
+- environmental results;
+- jobs and training commitments;
+- unresolved grievances;
+- tenant compliance;
+- emergency readiness.
+
+A community/partner process can approve, condition, delay, limit or reject expansion.
+
+
+================================================================================================
+FILE: wiki/Harmonious-Deployment.md
+================================================================================================
+
+# Harmonious Deployment
+
+Kristal Farms is designed to grow through **learning stages**, not through one irreversible megaproject decision.
+
+The deployment principle in the source plan is:
+
+> **Start small, learn fast, train local teams, document results, and scale only where technical, economic, environmental and community conditions support it.**
+
+## Possible sequence
+
+A site may progress through:
+
+1. community process and local capability building;
+2. early monitoring and enabling infrastructure;
+3. a first renewable asset or construction-energy layer;
+4. site preparation, fibre and telemetry;
+5. small hydro or other renewable integration;
+6. first modular compute pads;
+7. heat recovery and local infrastructure;
+8. post-mortem review;
+9. expansion, adjustment, relocation or stop.
+
+The supplied deployment concept suggests coastal wind as a possible early bootstrap and training layer at some sites. It is **not mandatory for every Kristal Farms site**.
+
+## Multiple stopping points
+
+After each phase, the project should be able to decide:
+
+- repeat;
+- adjust;
+- scale;
+- relocate;
+- reduce;
+- stop.
+
+That reversibility is a core part of the project's risk-control philosophy.
+
+
+================================================================================================
+FILE: wiki/Heat-First.md
+================================================================================================
+
+# Heat First
+
+Nearly all electricity consumed by servers ultimately becomes heat. Kristal Farms treats this heat as a second product.
+
+The operating hierarchy is:
+
+> **Reuse → Store → Reject**
+
+## Reuse
+
+Useful heat can serve, where technically appropriate:
+
+- clinics, schools and public buildings;
+- nearby homes;
+- domestic hot-water preheat;
+- greenhouses;
+- other validated local thermal users.
+
+## Store
+
+Thermal storage can smooth the mismatch between constant compute heat and variable building demand. The baseline design describes stratified hot-water storage for short-term balancing.
+
+## Reject
+
+Only when useful sinks and storage cannot absorb the heat should the system reject it through the environmental cold-source loop or backup dry coolers, within environmental limits.
+
+## Temperature levels
+
+The detailed architecture anticipates server heat in approximately the **45–60°C** range. Some legacy buildings may need higher temperatures, in which case a central heat-pump booster can raise supply temperatures toward roughly **65–75°C**.
+
+## Expansion discipline
+
+Compute capacity should not grow independently of heat capacity. The baseline architecture stages new pads so that local heat sinks, storage and rejection capacity remain adequate.
+
+
+================================================================================================
+FILE: wiki/Home.md
+================================================================================================
+
+# Kristal Farms
+
+**Public working wiki**
+
+Kristal Farms is a northern infrastructure model built around a simple inversion:
+
+> **Bring compute to renewable energy, consume the electricity locally, export digital value by fibre, and reuse the heat.**
+
+The model is designed for remote northern sites where moving electricity to distant markets can require large transmission corridors, substations, access works and long construction schedules. Instead of treating remoteness and cold as disadvantages, Kristal Farms tries to make them part of the infrastructure advantage.
+
+For the class of sites Kristal Farms is designed to select, the goal is a **significantly lower total infrastructure burden** than the realistic alternative of exporting electricity over long distances. A site should not qualify merely because it has renewable energy. It should demonstrate a strong combination of:
+
+- renewable energy close to the load;
+- short local electrical connections;
+- cold-climate cooling advantage;
+- marine or compact logistics where available;
+- a credible fibre export path;
+- useful local heat demand;
+- low ecological conflict or previously disturbed land;
+- community and rights-holder support;
+- modularity, reversibility and measurable economics.
+
+Kristal Farms is therefore more than a data-centre concept. It combines **energy, compute, fibre, heat, security, community infrastructure, northern engineering capability and knowledge transfer**.
+
+## Start here
+
+- [[The Core Idea]]
+- [[Why the North]]
+- [[Structural Cost Advantage]]
+- [[Transmission vs Digital Export]]
+- [[Cold Climate Cooling]]
+- [[Heat First]]
+- [[Fibre as the Export Corridor]]
+- [[Secure Compute and Black Box Tenancy]]
+- [[Environmental Design and Site Selection]]
+- [[Harmonious Deployment]]
+- [[Nain First Application]]
+- [[From One Site to a Northern Network]]
+- [[International Learning and Universities]]
+- [[FAQ]]
+
+## Presentations
+
+- [Kristal Farms — Public-facing presentation](https://gamma.app/docs/Kristal-Farms-k8zyuei4qypvs5v)
+- [Kristal Farms — Partners-facing presentation](https://gamma.app/docs/Kristal-Farms-1fn8kacrmu40ovk)
+
+## Public working status
+
+This wiki explains the project openly. It distinguishes between:
+
+- **baseline design principles** already developed in the project documentation;
+- **working economic assumptions** that require site-specific validation;
+- **strategic opportunities** such as subsea fibre, secure mine sites and a northern fibre network;
+- **long-term visions** such as international learning campuses and university partnerships.
+
+Transparency does not mean every number is final. It means the assumptions, uncertainties and validation gates are visible.
+
+
+================================================================================================
+FILE: wiki/Human-Infrastructure.md
+================================================================================================
+
+# Human Infrastructure
+
+The long-term project vision extends beyond machines and utilities.
+
+If compute and energy infrastructure create durable economic value, Kristal Farms proposes studying better northern living infrastructure, including:
+
+- housing;
+- health services;
+- indoor civic space;
+- education and training;
+- food production and greenhouses;
+- cultural and recreational facilities;
+- workshops;
+- mobility and sheltered connections where justified.
+
+## Designing for the climate
+
+The project documentation rejects the idea of simply moving a southern urban design north. Indoor public environments can be designed as a core part of life in harsh periods, while schedules for work, school and community activities can remain flexible enough to take advantage of good weather and daylight.
+
+## Avoiding the company-town trap
+
+Housing, employment, education, immigration support, health information and grievance decisions should not all be controlled by one project authority.
+
+The long-term principle is:
+
+> **Build infrastructure that increases people's options rather than infrastructure that captures them.**
+
+
+================================================================================================
+FILE: wiki/International-Learning-and-Universities.md
+================================================================================================
+
+# International Learning and Universities
+
+The long-term vision is to turn real northern infrastructure expertise into transferable skills.
+
+A learner could come from another region or country for a defined period, train on functioning systems, participate in applied research, earn portable records or credentials, and return home with useful capability.
+
+## Progression
+
+The documentation proposes a staged path:
+
+1. technical training and apprenticeships;
+2. applied research partnerships with existing institutions;
+3. visiting students and researchers;
+4. joint programs, microcredentials and recognized qualifications;
+5. independent or federated university institutions only when accreditation, governance, faculty, financing and degree-recognition requirements are satisfied.
+
+Kristal Farms should not call a site a university before those requirements are met.
+
+## Potential fields
+
+- cold-climate construction;
+- hydro, wind and energy systems;
+- liquid cooling and heat recovery;
+- fibre and subsea connectivity;
+- high-density compute;
+- cybersecurity and confidential computing;
+- environmental monitoring;
+- greenhouse and controlled-environment agriculture;
+- northern housing and civic architecture;
+- community infrastructure governance;
+- AI and scientific computing;
+- remote logistics and emergency operations.
+
+## Skills circulation
+
+The objective is not to retain every international participant. Success can mean **learn, contribute, return, and reproduce the capability elsewhere**.
+
+
+================================================================================================
+FILE: wiki/Kristals-Knowledge-Commons.md
+================================================================================================
+
+# Kristals: A Knowledge Commons
+
+The internal reference includes a separate concept called **Kristals**: reusable, validated knowledge capsules.
+
+The idea is to recycle intelligence in the same spirit that the physical project recycles heat.
+
+## A Kristal can contain
+
+- a clear question;
+- a concise answer;
+- sources;
+- creation/update date;
+- model/method information;
+- validation status;
+- version history;
+- an integrity identifier or hash.
+
+## Why reuse matters
+
+If a high-quality answer already exists and remains current, retrieving it can avoid repeating expensive computation.
+
+The project proposes metrics such as:
+
+- number of Kristals published;
+- hit rate;
+- revisions;
+- estimated compute avoided.
+
+Kristals are a secondary knowledge-layer concept, not required for the first physical infrastructure pilot.
+
+
+================================================================================================
+FILE: wiki/Metrics-and-Public-Dashboard.md
+================================================================================================
+
+# Metrics and Public Dashboard
+
+Kristal Farms is intended to be measured, not just described.
+
+The internal reference proposes a small stable set of metrics covering efficiency, heat, reliability, environmental performance and community value.
+
+## Core technical metrics
+
+- **PUE — Power Usage Effectiveness**
+- **WUE — Water Usage Effectiveness**
+- **HUF — Heat Utilization Factor**
+- useful heat delivered (MWhth)
+- diesel/fuel avoided
+- pad occupancy
+- power and pad uptime
+- fibre availability
+- latency and network performance
+- environmental temperature-limit compliance
+
+## Community and capability metrics
+
+- local jobs;
+- training hours and certifications;
+- local procurement;
+- buildings connected to heat;
+- greenhouse output where relevant;
+- grievances and resolution time;
+- public reporting cadence.
+
+## Public reporting
+
+The design proposes near-real-time or monthly dashboard updates, quarterly governance review and annual public reporting. Tenant data and personal information remain outside the public dashboard.
+
+
+================================================================================================
+FILE: wiki/Nain-First-Application.md
+================================================================================================
+
+# Nain: First Application
+
+The inherited partner package identifies **Nain, Nunatsiavut** as the first target for detailed pre-feasibility.
+
+## Why Nain
+
+The project documentation highlights a combination of:
+
+- northern coastal setting;
+- marine logistics;
+- community heating demand;
+- diesel-displacement potential;
+- potential local hydro development;
+- a village-edge/port-area compute model;
+- relevance as a first Labrador coast demonstration.
+
+## Preliminary hydro concept
+
+The project inventory describes a preliminary Fraser River concept in the approximate **15–20 MW** range. This is a screening basis, not a construction-ready resource estimate.
+
+It still requires confirmation of:
+
+- hydrology and firm winter power;
+- fish and environmental impacts;
+- rights and community process;
+- civil and electrical engineering;
+- cost;
+- local feeder route;
+- fibre availability and redundancy;
+- pad-yard location;
+- heat users;
+- logistics;
+- tenant demand.
+
+## Why the first site matters
+
+Nain is not meant to prove that every northern community should host compute. It is intended to test whether the **full Kristal Farms stack** can work in one place and then become a repeatable standard.
+
+
+================================================================================================
+FILE: wiki/Public-Repository-and-Confidence-Levels.md
+================================================================================================
+
+# Public Repository and Confidence Levels
+
+Kristal Farms is intended to be developed transparently.
+
+A public repository can include unfinished research without pretending it is final.
+
+## Suggested confidence labels
+
+### Design principle
+A deliberate part of the architecture or governance model.
+
+### Working assumption
+A number or condition used to test economics or engineering.
+
+### Screening evidence
+Information useful for deciding what deserves deeper study.
+
+### Strategic hypothesis
+A direction worth investigating but not yet proven.
+
+### Validated site fact
+A fact supported by current site-specific engineering, legal, environmental, commercial or community evidence.
+
+### Operational result
+Measured performance from a functioning project.
+
+The goal is not to remove uncertainty from the repository. It is to **label uncertainty correctly**.
+
+
+================================================================================================
+FILE: wiki/README.md
+================================================================================================
+
+# Kristal Farms Public Wiki — English
+
+This directory contains the rebuilt public-facing English wiki for Kristal Farms.
+
+It is based on the supplied project documentation and is intentionally different from the internal/partner documentation:
+
+- simpler language;
+- stronger explanation of the structural infrastructure thesis;
+- explicit separation of design principles, working assumptions and unvalidated strategic opportunities;
+- no assumption that all northern land is ecologically low-value;
+- no claim that preliminary site numbers are construction-ready;
+- public working status by default.
+
+For GitHub Wiki, `Home.md`, `_Sidebar.md` and `_Footer.md` are ready to use.
+
+
+================================================================================================
+FILE: wiki/Risks-and-Go-No-Go-Gates.md
+================================================================================================
+
+# Risks and Go/No-Go Gates
+
+Kristal Farms is designed around formal gates. A site or expansion phase should stop if critical conditions are not met.
+
+## Core gates
+
+### Community and rights
+
+- consent/process completed where required;
+- benefit agreements in place;
+- governance bodies seated;
+- unresolved rights issues addressed.
+
+### Energy and electrical
+
+- resource validated;
+- seasonal/firm-power profile understood;
+- local load protected;
+- substation and protection systems commissioned.
+
+### Cooling and heat
+
+- non-contact loops pressure-tested;
+- environmental temperature limits demonstrated;
+- useful heat sinks confirmed;
+- backup rejection available;
+- heat-first controls operational.
+
+### Fibre
+
+- latency and availability tested;
+- dual-link failover proven;
+- tenant/community network separation demonstrated.
+
+### Safety and security
+
+- electrical, mechanical and fire requirements passed;
+- black-box separation audited;
+- emergency procedures tested.
+
+### Economics
+
+- cost advantage remains credible after site-specific engineering;
+- tenant and heat demand match phased capacity;
+- lifecycle obligations and restoration are funded.
+
+The point of a gate is not to make every site pass. It is to make failure visible early enough to stop or redesign.
+
+
+================================================================================================
+FILE: wiki/Secure-Compute-and-Black-Box-Tenancy.md
+================================================================================================
+
+# Secure Compute and Black-Box Tenancy
+
+Kristal Farms separates **running the physical infrastructure** from **accessing the tenant's computation**.
+
+## The black-box boundary
+
+The host provides and operates:
+
+- power;
+- cooling interface;
+- heat export;
+- fibre handoff;
+- physical security;
+- metering;
+- alarms;
+- infrastructure monitoring;
+- maintenance coordination.
+
+The tenant controls:
+
+- servers and accelerators;
+- operating systems;
+- software;
+- models and weights;
+- datasets;
+- application logs;
+- encryption;
+- workload scheduling;
+- internal cybersecurity.
+
+The host may monitor the physical quantities required to operate the infrastructure — such as power, temperatures, flow, heat transfer, link status and aggregate bandwidth — but the model explicitly excludes host access to tenant datasets, proprietary code, model content, application logs or packet payloads.
+
+## Higher-assurance options
+
+The documentation also proposes optional stronger security configurations, including:
+
+- hardware attestation;
+- confidential computing;
+- stronger physical/network isolation;
+- controlled-access brownfield sites;
+- possible decommissioned-mine sites.
+
+Mine-based compute is an **exploratory secure-site archetype**, not the baseline village architecture. Mine sites would require dedicated geotechnical, ventilation, fire/life-safety, flooding, remediation, power, fibre and economic studies.
+
+
+================================================================================================
+FILE: wiki/Site-Archetypes.md
+================================================================================================
+
+# Site Archetypes
+
+The detailed internal reference focuses on a community-integrated hydro site, but the broader platform vision identifies several possible site classes.
+
+## 1. Community-integrated node
+
+Renewable energy, modular compute, heat recovery, local fibre and community infrastructure are tightly connected. This is the baseline and most developed archetype.
+
+## 2. Coastal connectivity node
+
+A site where marine logistics and possible terrestrial/subsea fibre access create additional value.
+
+## 3. Secure brownfield or mine node
+
+A separate high-security archetype using hardened or decommissioned industrial infrastructure. Heat reuse may be less community-centred, and dedicated engineering is required.
+
+## 4. Regional node
+
+A larger compute site considered only where energy, fibre, environmental conditions, rights-holder/community process and economics support it.
+
+## Common rule
+
+Different archetypes may share standardized power, cooling, fibre, telemetry, tenancy and governance interfaces without forcing every site into the same physical layout.
+
+
+================================================================================================
+FILE: wiki/Source-Basis.md
+================================================================================================
+
+# Source Basis for This Wiki
+
+This wiki was rebuilt from the supplied Kristal Farms repository rather than from general descriptions of data centres.
+
+The main source families are:
+
+## Core architecture
+
+- `docs/10-core/Kristal_Farms_Internal_Reference.md`
+- `docs/10-core/deployment/Gradual_and_Harmonious_Deployment_Plan_EN.md`
+
+## Partner package
+
+The numbered English partner documents `00` through `14`, especially:
+
+- Partner Overview
+- Labrador Coast Project Thesis
+- Cost Advantage and Strategic Rationale
+- Technical Architecture
+- Heat Recycling and Community Value
+- Connectivity and Black-Box Tenancy
+- Project Roadmap and Decision Gates
+- Governance, FPIC and Community Benefits
+- Metrics, Dashboard and Audit Framework
+- Risk Register
+
+## Economic working sources
+
+- `Economic_Cost_Advantage_and_Savings_Model.md`
+- `Couts_ligne_transmission_cote_ouest_Quebec.md`
+- `Repartition_couts_ferme_serveurs_Canada_refroidissement.md`
+- the partner cost workbook
+
+## Site screening
+
+- Labrador hydro inventory and maps
+- village inventory
+- Nunavik river screening
+- climate/precipitation source material
+
+## Strategic direction
+
+- platform vision
+- human-infrastructure vision
+- international-learning vision
+- Human Dignity Framework
+- project-owner strategic-direction records
+
+## Important source rule
+
+Some research extracts contain preliminary or imperfect citations. They can inform research but should not automatically be treated as independently verified public evidence. The wiki therefore emphasizes the **project model and its documented reasoning**, while keeping site-specific claims and numeric estimates visibly provisional.
+
+
+================================================================================================
+FILE: wiki/Structural-Cost-Advantage.md
+================================================================================================
+
+# Structural Cost Advantage
+
+The economic documentation describes Kristal Farms as a **cost-avoidance infrastructure model** rather than a project whose only advantage is cheap electricity.
+
+The intended advantage comes from reducing several major cost drivers at the same time.
+
+## Cost drivers the model seeks to avoid or reduce
+
+1. **Long-distance high-voltage transmission** — fewer long lines, remote substations, rights-of-way and line losses.
+2. **Major new access roads** — coastal logistics and modular delivery can reduce heavy inland road requirements.
+3. **Mechanical cooling infrastructure** — cold climate, liquid cooling and non-contact heat exchange can reduce cooling overhead.
+4. **Heat rejection** — recovered heat becomes useful local energy instead of a pure disposal cost.
+5. **Large permanent data-centre buildings** — standardized containerized pads allow staged deployment.
+6. **Speculative overbuilding** — capacity can be added pad by pad as tenants, power, fibre and heat sinks are confirmed.
+7. **Urban land and some physical-security burden** — remote or port-adjacent industrial locations can have different land and perimeter economics.
+8. **Diesel heating** — useful server heat can offset part of local fossil-fuel demand where the heat network supports it.
+
+## Why the wiki uses strong language
+
+Kristal Farms is not designed to compete on every possible site. It is designed to **select sites where these advantages stack together**. For that target class, the project objective is a significant structural advantage in total infrastructure cost and footprint.
+
+That is stronger than saying the model is merely "sometimes useful." It is also more precise than saying it is automatically superior everywhere.
+
+## Numbers are still site-specific
+
+The supplied studies use different transmission benchmarks for different comparison purposes. They demonstrate that long northern transmission can be extremely expensive, but they are not interchangeable project estimates. See [[Working Economic Examples]] for the current ranges and caveats.
+
+
+================================================================================================
+FILE: wiki/The-Core-Idea.md
+================================================================================================
+
+# The Core Idea
+
+Conventional remote-energy development often starts with this question:
+
+> How do we move electricity from a remote renewable resource to an existing load centre?
+
+Kristal Farms asks a different question:
+
+> **Can we move the load to the energy, use the electricity on site, and export the value digitally?**
+
+That inversion changes the infrastructure stack.
+
+## Conventional direction
+
+**Remote generation → long electrical corridor → distant load**
+
+This can require high-voltage lines, substations, rights-of-way, clearing, roads, maintenance access and transmission losses.
+
+## Kristal Farms direction
+
+**Renewable resource → short local electrical connection → modular compute → fibre export**
+
+The compute produces a second local product: **heat**. Rather than treating server heat as waste, the baseline design routes it to buildings, domestic hot-water preheat, greenhouses, storage or other useful sinks before rejection.
+
+## The qualifying rule
+
+Kristal Farms is not intended for every river or every northern site. A site should advance only if the full system demonstrates a compelling advantage after accounting for:
+
+- generation;
+- local power connection;
+- compute infrastructure;
+- cooling and heat recovery;
+- fibre;
+- logistics;
+- environmental effects;
+- community process;
+- reliability;
+- lifetime economics.
+
+In other words, **structural advantage is a site-selection requirement, not a marketing afterthought**.
+
+
+================================================================================================
+FILE: wiki/Transmission-vs-Digital-Export.md
+================================================================================================
+
+# Transmission vs Digital Export
+
+The central infrastructure substitution in Kristal Farms is:
+
+> **Move bits over fibre instead of moving bulk electricity over very long distances.**
+
+## Electrical export can require
+
+- high-voltage transmission lines;
+- substations and transformation equipment;
+- rights-of-way and corridor clearing;
+- access roads and construction camps;
+- river and terrain crossings;
+- long permitting schedules;
+- long-term line inspection and maintenance;
+- electrical losses over distance.
+
+## Local compute requires
+
+- local generation or a nearby renewable connection;
+- a short local feeder and substation;
+- compute pads;
+- cooling and heat infrastructure;
+- a reliable fibre path;
+- network operations and repair capability.
+
+The comparison is therefore not "a transmission line versus nothing." It is **one complete infrastructure pathway versus another**.
+
+## Working cost evidence in the repository
+
+The project documentation contains two useful but different transmission benchmarks:
+
+- a northern Canadian transmission benchmark of roughly **C$1.09 million/km** derived from a large northern Ontario project;
+- a Québec 735 kV benchmark of roughly **C$5 million/km** derived from the Micoua–Saguenay line for a simplified Nunavik screening exercise.
+
+The Québec screening explicitly excludes substations, local connections, roads, camps, studies, environmental/territorial compensation, contingencies, financing and network reinforcement. It is therefore a **comparison benchmark**, not a project quotation.
+
+The strategic conclusion is robust even though exact costs vary: **distance can turn electrical export into a very large infrastructure program.** Kristal Farms exists to test whether a digital-export architecture is a better use of selected remote resources.
+
+
+================================================================================================
+FILE: wiki/What-Is-Validated-and-What-Is-Being-Tested.md
+================================================================================================
+
+# What Is Validated and What Is Being Tested
+
+This is a public working project. Not every part of the vision has the same evidence status.
+
+## Well-developed project design principles
+
+The supplied documentation consistently develops:
+
+- local consumption of renewable power;
+- short local electrical integration;
+- modular containerized compute pads;
+- heat-first operation;
+- closed-loop/non-contact cooling;
+- black-box tenancy;
+- fibre as the compute-export path;
+- staged expansion;
+- community governance/FPIC;
+- public metrics;
+- reversibility and restoration.
+
+These are **design principles**, not proof that a specific site has already been built.
+
+## Current first-site hypothesis
+
+- Nain is the first target in the partner package.
+- A preliminary 15–20 MW Fraser River concept exists in the screening material.
+- The site is not construction-ready and requires hydrology, engineering, fibre, environmental, community and economic validation.
+
+## Strategic opportunities still being tested
+
+- exact cost advantage versus each transmission alternative;
+- lifecycle ecological comparison;
+- subsea fibre routes and landing points;
+- a northern fibre crown;
+- decommissioned-mine secure compute;
+- large future AI demand;
+- international university institutions;
+- long-term welcoming-community programs.
+
+The wiki is public so these questions can be visible rather than hidden.
+
+
+================================================================================================
+FILE: wiki/Why-the-North.md
+================================================================================================
+
+# Why the North
+
+Kristal Farms is designed around conditions that can be disadvantages for conventional infrastructure but advantages for this model.
+
+## Cold
+
+Cold air and cold coastal water can reduce the mechanical effort required to remove heat from high-density compute. The baseline design uses liquid cooling, closed loops and non-contact heat exchangers rather than relying on large evaporative cooling towers.
+
+Cold also creates real demand for recovered heat. A megawatt of computing power eventually becomes roughly a megawatt of heat, so a northern site can use what another data centre may need to discard.
+
+## Remote renewable resources
+
+Some rivers and renewable resources are far from major electrical load centres. Their energy may be technically valuable but expensive to monetize if the first requirement is a major transmission build-out.
+
+Kristal Farms changes the export product from **electricity** to **digital work**.
+
+## Coastal access
+
+Many target communities are coastal. Marine access can support delivery of standardized containers, electrical skids, piping and other modules while reducing reliance on long new inland roads.
+
+Coastal geography may also create future opportunities for marine or subsea fibre, although specific routes and landing rights still require engineering, carrier, rights-holder and regulatory validation.
+
+## Space — but not empty space
+
+Northern territory is not treated as unused simply because population density is low. Site screening must account for ecological sensitivity, protected areas, fishing, traditional land use, rights, cultural value and community decisions.
+
+The project preference is for **compact sites with low ecological conflict, previously disturbed industrial/port land where practical, and minimal unnecessary new corridors**.
+
+
+================================================================================================
+FILE: wiki/WIKI_QA.md
+================================================================================================
+
+# Wiki QA
+
+- Pages: **34**
+- Missing internal wiki targets: **0**
+- Language: English
+- Status: Public working wiki
+- Source basis: supplied Kristal Farms repository reviewed before rebuild
+
+
+================================================================================================
+FILE: wiki/WIKI_SETUP.md
+================================================================================================
+
+# GitHub Wiki Setup
+
+GitHub stores the wiki as a separate Git repository ending in `.wiki.git`.
+
+After the main GitHub repository exists and the Wiki feature is enabled, clone the wiki repository and copy these Markdown files into it.
+
+Example:
+
+```bash
+git clone https://github.com/OWNER/REPOSITORY.wiki.git
+cp /path/to/kristal-farms-public-wiki-en-rebuilt/*.md REPOSITORY.wiki/
+cd REPOSITORY.wiki
+git add .
+git commit -m "Rebuild public Kristal Farms wiki"
+git push
+```
+
+Replace `OWNER/REPOSITORY` with the actual GitHub repository.
+
+
+================================================================================================
+FILE: wiki/Working-Economic-Examples.md
+================================================================================================
+
+# Working Economic Examples
+
+The repository contains several illustrative models. They help explain scale, but they are **not construction bids or investment-grade estimates**.
+
+## Transmission
+
+Two source exercises use different benchmarks:
+
+| Working benchmark | Approximate value | Intended use |
+|---|---:|---|
+| Northern Ontario transmission comparison | ~C$1.09M/km | Broad Canadian avoided-transmission illustration |
+| Québec 735 kV comparison | ~C$5M/km | Simplified west-Nunavik long-distance screening |
+
+The Québec exercise explicitly excludes substations, roads, camps, studies, environmental/territorial compensation, contingencies, financing and reinforcement of the existing southern network.
+
+## Roads
+
+The working economic model cites an illustrative northern all-season-road benchmark around **C$3M/km**. Actual cost depends heavily on terrain, bridges, permafrost, material sources, construction season and logistics.
+
+## Cooling
+
+The supplied Canadian data-centre study estimates:
+
+- complete cooling around **8–15% of total cost** for a modern centre;
+- potentially **10–20%** for some high-density configurations;
+- cooling electricity alone as a smaller subset of total cost.
+
+## PUE
+
+The economic model studies a future Kristal Farms target around **1.10–1.20**, while using conventional comparison cases around the mid-1.4 range. This is a target assumption, not measured project performance.
+
+## Heat
+
+The economic model uses illustrative HUF scenarios of 50%, 70% and 90% to show how useful heat can offset fuel. Actual heat value depends on building demand, network losses, temperature, boiler efficiency, seasonal demand and storage.
+
+## The correct interpretation
+
+The numbers are best used to show **why site-specific comparison matters**. The project thesis is that a qualifying Kristal Farms site should show large stacked savings — not that one generic C$/km figure applies everywhere.
