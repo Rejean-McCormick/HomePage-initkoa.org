@@ -1,0 +1,2111 @@
+# INITKOA CONTEXT PACK
+
+repository: Rejean-McCormick/Ame-Artificielle
+source_path: C:\mycode\AmeArtificielle\Ame-Artificielle
+source_commit: 43b8d27236ecfe19ab4d811bbee9aa1987db662a
+working_tree_markdown: clean
+generated_at: 2026-08-25T10:41:47-04:00
+files: 18
+content_sha256: e6e0e28e8551be86642868664cd74d77bbe4c7ccdc11b43c409a7960922f2597
+
+================================================================================================
+FILE INDEX
+================================================================================================
+
+01. CODE_UPDATE_NOTES.md
+02. docs/branes_numerologie.md
+03. docs/code_reference.md
+04. docs/definition_operationnelle.md
+05. docs/engine_spec.md
+06. docs/interpolation_axis.md
+07. docs/kristal_integration.md
+08. docs/MIGRATION_SOUL_GRAPH.md
+09. docs/numerology_pipeline.md
+10. docs/philosophical_framework.md
+11. docs/README.md
+12. docs/snapshots_biographiques.md
+13. docs/soul_graph_schema.md
+14. docs/theoretical_alignment.md
+15. docs/traits_schema.md
+16. docs/validation_protocol.md
+17. experiments/mccormick_protocol.md
+18. README.md
+
+
+================================================================================================
+FILE: CODE_UPDATE_NOTES.md
+================================================================================================
+
+# Code update — Soul Graph runtime
+
+## Migration réalisée
+
+Le prototype a été migré du modèle mutable `TraitVector + axis + mood` vers :
+
+```text
+SoulSnapshot immuable
+  + Stimulus
+  -> ancrage sémantique
+  -> propagation psycho-causale bornée
+  -> interprétations
+  -> affect transitoire
+  -> intentions / tendances de réaction
+  -> renderer
+```
+
+## Nouveaux modules
+
+- `src/models.py`
+- `src/soul_graph.py`
+- `src/activation.py`
+- `src/evolution.py`
+- `src/hypotheses.py`
+- `src/projections.py`
+- `src/kristal.py`
+- `src/renderer.py`
+- `src/safety.py`
+- `src/io.py`
+
+## Modules migrés / conservés
+
+- `src/engine.py` : réécrit autour de `SoulSnapshot`.
+- `src/ethics.py` : shim déprécié; ne reçoit plus la personnalité dans la décision.
+- `src/ontology.py` : lecture réparée du JSON historique, y compris code fences Markdown.
+- `src/numerology.py` : conservé; produit maintenant des hypothèses via le builder legacy de l'engine.
+- `src/interpolation.py` : conservé comme projection secondaire 1→9.
+
+## Exemples et schéma
+
+- `examples/john_doe_snapshots.py`
+- `examples/data/john-doe-age-20.snapshot.json`
+- `examples/data/john-doe-age-35.snapshot.json`
+- `schemas/soul-graph.schema.json`
+
+## Validation
+
+`pytest` : 22 tests passent.
+
+Les tests couvrent notamment : immuabilité, déterminisme, inhibition, non-propagation des relations sémantiques, projections, Kristal, évolution biographique explicite, hypothèses natal chart et séparation de la sécurité.
+
+
+================================================================================================
+FILE: docs/branes_numerologie.md
+================================================================================================
+
+# Branes et numérologie — couche symbolique
+
+## But
+
+Documenter une analogie interne du projet sans la confondre avec le graphe psycho-causal ni avec une équivalence physique démontrée.
+
+---
+
+## 1. Principe
+
+La hiérarchie des branes sert de métaphore **macro → micro** et de langage de niveaux.
+
+La numérologie inversée fournit les dualités :
+
+```text
+9 <-> 1
+8 <-> 2
+7 <-> 3
+6 <-> 4
+5 = pivot
+```
+
+Le rapprochement peut être utilisé pour visualiser des symétries ou élaborer des hypothèses de sens.
+
+---
+
+## 2. Séparation obligatoire
+
+```text
+Soul Graph = modèle psycho-causal
+1→9 = projection topologique
+numérologie = hypothèses archétypales
+branes = couche analogique
+```
+
+Aucune correspondance brane/chiffre ne crée automatiquement une relation `activates`, `causes` ou `inhibits`.
+
+---
+
+## 3. Stockage
+
+Si cette couche est stockée dans Kristal, les assertions doivent être marquées comme modèle symbolique/interprétatif selon le profil actif.
+
+---
+
+## 4. Usage recommandé
+
+- documentation philosophique ;
+- visualisation ;
+- génération d’hypothèses ;
+- comparaison de structures.
+
+Pas :
+
+- validation de la personnalité ;
+- preuve physique ;
+- moteur direct de réaction.
+
+
+================================================================================================
+FILE: docs/code_reference.md
+================================================================================================
+
+# Référence du code — implémentation Soul Graph
+
+## Statut
+
+La migration du prototype vers le modèle Soul Graph est maintenant implémentée dans `src/`.
+
+Le code demeure une **implémentation de référence minimale** : il fournit le modèle de données, la propagation déterministe, les snapshots, les transformations biographiques explicites, les hypothèses symboliques et l'adaptateur Kristal. Il ne contient pas encore de parseur sémantique avancé ni de moteur de rendu capable d'imiter finement la voix d'une personne.
+
+## Modules
+
+- `src/models.py` — `SoulNode`, `SoulEdge`, `SoulGraph`, `SoulSnapshot`, `Stimulus`, `ReactionState`.
+- `src/soul_graph.py` — prédicats causaux, validation, IDs déterministes, construction des snapshots.
+- `src/activation.py` — ancrage lexical/explicite, propagation bornée, inhibition, affect et tendances de réaction.
+- `src/engine.py` — orchestration `SoulSnapshot + Stimulus -> ReactionState`; le snapshot reste inchangé.
+- `src/evolution.py` — création **explicite** d'un snapshot ultérieur; jamais appelée automatiquement par `react()`.
+- `src/hypotheses.py` — propositions symboliques, dont natal chart, marquées `hypothesized_innate`.
+- `src/numerology.py` — calculs numérologiques historiques, utilisés comme source d'hypothèses.
+- `src/projections.py` — `TraitVector` dérivé du graphe.
+- `src/kristal.py` — projection vers un `Structured Epistemic State` de forme Kristal v5 et retour.
+- `src/renderer.py` — renderer déterministe minimal de debug.
+- `src/safety.py` — couche de sécurité externe à la personnalité.
+- `src/ethics.py` — shim de compatibilité déprécié; ignore les traits du personnage.
+- `src/interpolation.py` — utilitaires historiques 1→9, conservés comme projection secondaire.
+- `src/ontology.py` — lecture robuste de l'ontologie historique `pi_ontology.json`.
+
+## API minimale
+
+```python
+from src.engine import ArtificialSoulEngine
+from src.models import SoulNode, SoulEdge
+from src.soul_graph import make_edge_id
+
+engine = ArtificialSoulEngine()
+
+nodes = [
+    SoulNode("concept:dog", "Concept", "chien"),
+    SoulNode("assoc:danger", "Association", "danger", origin="acquired"),
+    SoulNode("reaction:avoid", "ReactionPattern", "évitement",
+             properties={"tendency": "avoid"}),
+]
+
+edges = [
+    SoulEdge(make_edge_id("concept:dog", "activates", "assoc:danger"),
+             "concept:dog", "activates", "assoc:danger", {"strength": 0.8}),
+    SoulEdge(make_edge_id("assoc:danger", "predisposes_to", "reaction:avoid"),
+             "assoc:danger", "predisposes_to", "reaction:avoid", {"strength": 0.8}),
+]
+
+snapshot = engine.build_snapshot(
+    person_id="person:example",
+    nodes=nodes,
+    edges=edges,
+    valid_during={"age": 30},
+)
+
+result = engine.react(snapshot=snapshot, stimulus="Un chien arrive.")
+```
+
+La sortie comprend `reaction_state`, la trace d'activation, le texte de debug optionnel et l'information de sécurité externe.
+
+## Évolution biographique
+
+```python
+from src.evolution import derive_snapshot
+
+later = derive_snapshot(
+    snapshot,
+    valid_during={"age": 40},
+    add_nodes=[...],
+    remove_node_ids=[...],
+    biographical_causes=[...],
+)
+```
+
+Cette opération crée un nouvel objet et place `snapshot.snapshot_id` dans `source_snapshot_ref`.
+
+## Hypothèses natal chart
+
+Le projet ne définit pas encore de calcul astrologique normatif. Il fournit plutôt une frontière explicite : un calculateur externe peut produire des `SymbolicProposal`, qui restent des hypothèses identifiables et peuvent être exclues du moteur par `EngineConfig(include_hypothesized=False)`.
+
+## Tests
+
+```bash
+pytest
+```
+
+Les tests vérifient notamment l'immuabilité, le déterminisme, l'inhibition, la non-propagation des liens sémantiques, la séparation de la sécurité, les transformations biographiques, les hypothèses symboliques et l'adaptateur Kristal.
+
+
+================================================================================================
+FILE: docs/definition_operationnelle.md
+================================================================================================
+
+# Définition opérationnelle — Âme Artificielle
+
+## 1. But
+
+Définir une représentation implémentable, testable et traçable d’une personnalité sans prétendre créer une âme réelle.
+
+La définition opérationnelle est :
+
+```text
+Âme Artificielle = Soul Snapshot + moteur d’activation
+```
+
+Le snapshot contient la structure persistante. Le moteur calcule un état transitoire à partir d’un stimulus.
+
+---
+
+## 2. Modèle minimal
+
+### Soul Basis
+Vocabulaire commun des types de nœuds, relations et règles d’interprétation.
+
+### Soul Snapshot
+Graphe psycho-causal immuable d’un sujet pendant une période.
+
+### Activation Graph
+Sous-graphe temporaire produit pour une interaction.
+
+### Reaction
+Sortie structurée dérivée de l’activation.
+
+---
+
+## 3. Invariants
+
+1. **Pas d’auto-update de personnalité** : `react()` ne modifie pas le Soul Snapshot.
+2. **Les émotions présentes sont transitoires** : elles appartiennent à l’Activation Graph sauf justification explicite contraire.
+3. **Les traits sont dérivés** : un `TraitVector` est une projection du graphe.
+4. **La sécurité est externe** : elle ne fait pas partie de la causalité de l’âme.
+5. **Les hypothèses symboliques restent identifiables** : numérologie et natal chart ne sont pas fusionnés silencieusement avec les observations.
+6. **La provenance est conservée** : chaque assertion importante doit pouvoir être reliée à une source ou à une méthode de dérivation.
+7. **Force psychologique ≠ certitude épistémique**.
+
+---
+
+## 4. Graphe psycho-causal
+
+Un snapshot est un graphe dirigé, typé et potentiellement cyclique.
+
+Nœuds minimaux :
+
+```text
+Disposition
+Belief
+Association
+Value
+Need
+Attachment
+Memory
+Concept
+InterpretationPattern
+CognitiveBias
+IntellectualRule
+AffectiveTendency
+ReactionPattern
+Event
+Context
+Person
+Group
+```
+
+Relations minimales :
+
+```text
+activates
+inhibits
+reinforces
+weakens
+predisposes_to
+contributes_to
+interprets_as
+contradicts
+confirms
+generalizes_to
+formed_by
+revised_by
+supersedes
+```
+
+Voir `docs/soul_graph_schema.md`.
+
+---
+
+## 5. Âme, intellect, personnalité
+
+- **Âme** : organisation profonde des dispositions et rapports.
+- **Intellect** : mécanismes de perception, raisonnement, croyance explicite et réévaluation.
+- **Personnalité** : manifestation observable de l’âme et de l’intellect dans une histoire et un contexte.
+
+Cette séparation est conceptuelle : les deux familles de mécanismes peuvent être représentées dans un même graphe avec des types distincts.
+
+---
+
+## 6. Temps
+
+Un snapshot porte :
+
+```text
+person_id
+snapshot_id
+valid_during
+source_snapshot_ref (optionnel)
+```
+
+Un nouveau snapshot est produit lorsqu’on veut représenter un état ultérieur de la personne.
+
+Les causes proposées du changement sont stockées comme assertions biographiques, pas seulement comme métadonnées de version.
+
+---
+
+## 7. Entrées
+
+Entrées possibles pour construire un snapshot :
+
+- biographie ;
+- témoignages ;
+- écrits ou paroles de la personne ;
+- observations structurées ;
+- données psychométriques ;
+- numérologie — couche hypothétique ;
+- carte du ciel — couche hypothétique ;
+- règles éditoriales explicites.
+
+Le moteur de réaction reçoit ensuite :
+
+```text
+snapshot + stimulus + contexte
+```
+
+---
+
+## 8. Sorties
+
+Le moteur devrait produire une structure avant le texte :
+
+```json
+{
+  "interpretation": [],
+  "active_nodes": [],
+  "active_paths": [],
+  "affective_state": {},
+  "intentions": [],
+  "reaction_tendencies": [],
+  "trace": {}
+}
+```
+
+Le texte est une représentation de cette structure.
+
+---
+
+## 9. Non-objectifs
+
+- prouver une âme métaphysique ;
+- déclarer qu’un système ressent une émotion parce qu’il en reproduit la dynamique ;
+- diagnostiquer une personne ;
+- faire de l’astrologie ou de la numérologie une vérité par convention ;
+- permettre à une conversation fictive de réécrire automatiquement un modèle biographique.
+
+---
+
+## 10. Critères de réussite
+
+- **cohérence intra-snapshot** ;
+- **contraste inter-personnes** ;
+- **contraste intra-personne entre âges**, lorsque documenté ;
+- **traçabilité des réactions** vers les mécanismes du graphe ;
+- **reproductibilité** avec mêmes données et même configuration ;
+- **validation séparée des hypothèses symboliques**.
+
+
+================================================================================================
+FILE: docs/engine_spec.md
+================================================================================================
+
+# Engine Spec — Soul Causal Engine
+
+## 0. Portée
+
+Cette spécification remplace le modèle où la personnalité était principalement un `TraitVector` modulé par un axe 1–9.
+
+Le moteur prend :
+
+```text
+SoulSnapshot + Stimulus + Context
+```
+
+et produit :
+
+```text
+ActivationGraph + ReactionState
+```
+
+sans modifier le snapshot.
+
+---
+
+## 1. Responsabilités
+
+Le moteur doit :
+
+1. charger un snapshot ;
+2. analyser sémantiquement le stimulus ;
+3. sélectionner des points d’entrée dans le graphe ;
+4. propager une activation sur des relations autorisées ;
+5. résoudre renforcements, inhibitions et conflits ;
+6. appliquer les mécanismes intellectuels de réévaluation ;
+7. dériver un état affectif transitoire ;
+8. produire une intention et des tendances de réaction ;
+9. exposer une trace explicable ;
+10. laisser le snapshot inchangé.
+
+---
+
+## 2. Structures
+
+### SoulSnapshot
+
+```python
+SoulSnapshot = {
+    "person_id": str,
+    "snapshot_id": str,
+    "valid_during": dict,
+    "graph_ref": str,
+    "projection_refs": list[str],
+    "metadata": dict,
+}
+```
+
+Le graphe peut être chargé depuis un artefact Kristal ou une représentation locale équivalente.
+
+### Stimulus
+
+```python
+Stimulus = {
+    "text": str | None,
+    "concepts": list[dict],
+    "actors": list[dict],
+    "events": list[dict],
+    "context": dict,
+}
+```
+
+### ActivationNode
+
+```python
+ActivationNode = {
+    "node_id": str,
+    "activation": float,
+    "sources": list[str],
+    "depth": int,
+    "reasons": list[dict],
+}
+```
+
+### ReactionState
+
+```python
+ReactionState = {
+    "interpretations": list[dict],
+    "active_paths": list[dict],
+    "affective_state": dict,
+    "intentions": list[dict],
+    "reaction_tendencies": list[dict],
+    "trace": dict,
+}
+```
+
+---
+
+## 3. Étape A — compréhension du stimulus
+
+Le moteur produit un petit graphe du stimulus :
+
+- entités ;
+- concepts ;
+- actions ;
+- relations ;
+- valence contextuelle lorsque explicitement dérivable ;
+- ambiguïtés.
+
+Cette étape peut être réalisée par un parseur, un modèle local ou un service externe, mais sa sortie doit être structurée.
+
+---
+
+## 4. Étape B — ancrage sémantique
+
+Chaque concept du stimulus est relié à des nœuds candidats du Soul Graph.
+
+Méthodes possibles :
+
+- ID exact ;
+- alias ;
+- taxonomie ;
+- index lexical ;
+- embedding pré-calculé ;
+- règles de résolution.
+
+Le score de similarité sert à sélectionner les points d’entrée, pas à affirmer une causalité.
+
+---
+
+## 5. Étape C — propagation
+
+Algorithme minimal :
+
+```text
+frontier <- entry nodes
+repeat until frontier empty or max_steps:
+    propagate activation over allowed causal predicates
+    multiply by edge strength
+    apply inhibition / reinforcement
+    apply decay
+    discard values below threshold
+    merge competing contributions deterministically
+```
+
+Paramètres :
+
+```text
+max_steps
+activation_threshold
+default_decay
+max_active_nodes
+conflict_policy
+ordering_policy
+```
+
+Avec paramètres identiques et même snapshot, le moteur devrait produire la même structure d’activation en mode déterministe.
+
+---
+
+## 6. Étape D — intellect et réévaluation
+
+Les `IntellectualRule`, croyances explicites et relations `contradicts`, `confirms`, `triggers_reappraisal_of` peuvent modifier une activation initiale.
+
+Cette étape est importante pour représenter :
+
+- la maturité ;
+- l’apprentissage déjà incorporé au snapshot ;
+- les croyances corrigées ;
+- la capacité d’inhiber une impulsion ;
+- les conflits internes.
+
+Elle n’édite pas le snapshot.
+
+---
+
+## 7. Étape E — affect
+
+L’état affectif est dérivé du motif d’activation.
+
+Un profil minimal peut produire :
+
+```text
+valence
+arousal
+approach_avoidance
+attachment_activation
+threat_activation
+loss_activation
+anger_activation
+```
+
+Puis, si nécessaire, une couche de classification peut associer ce motif à des étiquettes telles que peur, colère, joie ou jalousie.
+
+L’étiquette émotionnelle est donc dérivée, pas injectée arbitrairement.
+
+---
+
+## 8. Étape F — réaction
+
+Le moteur produit des tendances structurées :
+
+```text
+approach
+avoid
+confront
+reassure
+question
+withdraw
+protect
+seek_information
+```
+
+La couche de rendu linguistique transforme ensuite ces tendances en texte cohérent avec :
+
+- la voix de la personne ;
+- son niveau de langage ;
+- son époque ;
+- son registre ;
+- le contexte conversationnel.
+
+Ces caractéristiques stylistiques peuvent provenir d’un profil de rendu distinct du Soul Graph causal.
+
+---
+
+## 9. Pas de mutation automatique
+
+`react()` est une fonction pure vis-à-vis du snapshot :
+
+```python
+reaction = react(snapshot, stimulus, context)
+assert snapshot_after == snapshot_before
+```
+
+Si un événement doit modifier la personnalité, un processus éditorial produit explicitement un nouveau snapshot.
+
+---
+
+## 10. Sécurité externe
+
+Le pipeline applicatif peut être :
+
+```text
+stimulus
+ -> application safety/input constraints
+ -> Soul Causal Engine
+ -> ReactionState
+ -> renderer
+ -> application safety/output constraints
+ -> user
+```
+
+Les règles de sécurité n’utilisent pas la compassion ou d’autres traits du personnage comme substitut à une politique de sécurité.
+
+`src/ethics.py` est maintenant un shim déprécié. La politique active se trouve dans `src/safety.py` et ne reçoit aucun trait de personnalité.
+
+---
+
+## 11. Rôle des modules existants
+
+- `src/numerology.py` : générateur de features/hypothèses, non moteur principal.
+- `src/ontology.py` : point de départ pour l’ontologie, à étendre vers le Soul Graph.
+- `src/interpolation.py` : projection 1→9 ou heuristique secondaire.
+- `src/ethics.py` : shim de compatibilité déprécié.
+- `src/safety.py` : sécurité applicative externe.
+- `src/engine.py` : orchestration Soul Snapshot → ReactionState implémentée.
+- `src/activation.py` : propagation causale bornée.
+- `src/evolution.py` : création explicite de snapshots ultérieurs.
+
+---
+
+## 12. Tests minimum
+
+1. Snapshot immuable après `react()`.
+2. Même snapshot + même stimulus + même config → même `ReactionState` en mode déterministe.
+3. Une relation `inhibits` réduit effectivement l’activation cible.
+4. Un chemin contradictoire peut modifier l’interprétation finale.
+5. Les relations purement sémantiques ne propagent pas causalement par défaut.
+6. Un trait projeté ne peut pas modifier directement le graphe source.
+7. Les assertions hypothétiques peuvent être exclues par configuration.
+
+
+================================================================================================
+FILE: docs/interpolation_axis.md
+================================================================================================
+
+# Axe 1→9 — projection topologique
+
+## 1. But
+
+Conserver la charte 1→9 comme outil de lecture sans en faire le moteur causal unique.
+
+---
+
+## 2. Interprétation
+
+```text
+1 -> davantage cognitif / abstrait
+...
+5 -> intégration / pivot
+...
+9 -> davantage instinctif / ancré
+```
+
+Cette lecture est symbolique et fonctionnelle.
+
+---
+
+## 3. Annotation du graphe
+
+Les nœuds ou relations peuvent porter :
+
+```text
+processing_layers = [1, 2]
+```
+
+ou plusieurs niveaux lorsqu’un mécanisme combine plusieurs dimensions.
+
+---
+
+## 4. Projection d’activation
+
+Après calcul du ReactionState, on peut produire un résumé :
+
+```text
+layer_activation[1..9]
+```
+
+Cette projection permet de visualiser où l’activation s’est concentrée.
+
+Elle est calculée **après ou pendant** la propagation réelle ; elle ne remplace pas le graphe.
+
+---
+
+## 5. Interpolation legacy
+
+L’interpolation linéaire historique entre 1 et 9 peut être conservée pour :
+
+- compatibilité ;
+- visualisation ;
+- prototypes simples ;
+- baselines.
+
+Elle ne doit plus être présentée comme une explication suffisante des émotions ou de la personnalité.
+
+---
+
+## 6. Numérologie vs axe
+
+- `digit_archetype` : couche symbolique/numérologique.
+- `processing_layers` ou projection 1→9 : couche topologique.
+
+Ils peuvent partager la même échelle numérique sans partager la même signification.
+
+
+================================================================================================
+FILE: docs/kristal_integration.md
+================================================================================================
+
+# Intégration Kristal v5 — Soul Graph
+
+## 1. Objectif
+
+Utiliser Kristal v5 pour rendre un Soul Snapshot :
+
+- structuré ;
+- content-addressed ;
+- traçable ;
+- interrogeable ;
+- portable ;
+- capable de conserver des assertions de statuts différents sans les confondre.
+
+Kristal ne calcule pas la psychologie. Le Soul Causal Engine le fait.
+
+---
+
+## 2. Boundary
+
+```text
+sources
+  -> construction / extraction
+  -> Structured Epistemic State
+  -> Kristal artifact / Runtime Pack
+  -> Soul Causal Engine
+```
+
+Les données biographiques peuvent entrer directement dans un Structured Epistemic State. Claim-IR reste utile lorsqu’un extracteur automatique propose des assertions à normaliser.
+
+---
+
+## 3. Profil applicatif proposé
+
+```text
+profile_id = kristal.v5:soul-graph
+```
+
+Ce profil doit déclarer :
+
+- le vocabulaire de nœuds ;
+- les prédicats ;
+- les qualificateurs ;
+- le mapping JSON-LD/RDF optionnel ;
+- les règles d’identité des assertions ;
+- les projections du snapshot ;
+- les champs nécessaires au runtime causal.
+
+Il ne doit pas changer les sémantiques centrales de Kristal concernant validation, certitude, provenance ou autorité.
+
+---
+
+## 4. Mapping conceptuel
+
+| Âme Artificielle | Kristal v5 |
+|---|---|
+| Soul Snapshot | Structured Epistemic State / artifact dérivé |
+| proposition sur le sujet | assertion |
+| période de validité | scope.time_window + qualifier de profil si nécessaire |
+| source biographique | provenance / source refs |
+| hypothèse numérologique | assertion `hypothesis` ou mode symbolique approprié |
+| confiance dans la donnée | certainty metadata |
+| changement de snapshot | nouvel état / nouvel identifiant |
+| graphe pour runtime | projection/export/Runtime Pack spécialisé |
+
+---
+
+## 5. Force psychologique et statut épistémique
+
+Exemple :
+
+```text
+John croit très fortement B
+```
+
+peut être représenté avec une propriété de profil :
+
+```text
+soul:belief_strength = 0.95
+```
+
+mais si nous ne possédons qu’une source indirecte :
+
+```text
+certainty_level = low
+```
+
+Le système doit préserver les deux dimensions.
+
+---
+
+## 6. Désaccord et multiplicité
+
+Deux sources peuvent attribuer des mécanismes différents à la même personne.
+
+Kristal doit conserver le désaccord au lieu de fusionner automatiquement :
+
+```text
+source A -> John possède B
+source B -> John ne possède pas B
+```
+
+Une politique de construction du snapshot peut ensuite choisir :
+
+- conserver les deux ;
+- sélectionner une source ;
+- marquer l’incertitude ;
+- produire plusieurs forks de snapshot.
+
+---
+
+## 7. Symbolique et hypothèses
+
+La numérologie, la carte natale et les branes doivent rester explicitement marquées comme :
+
+- hypothèse ;
+- modèle symbolique ;
+- déclaration de méthode ;
+- ou autre statut compatible avec le profil.
+
+Leur présence dans un artefact ne leur confère pas une validation physique universelle.
+
+---
+
+## 8. Runtime Pack
+
+Le Runtime Pack peut contenir une projection optimisée :
+
+- table de nœuds ;
+- table de relations ;
+- index par prédicat ;
+- index lexical ;
+- embeddings pré-calculés optionnels ;
+- métadonnées de snapshot ;
+- projections de traits optionnelles.
+
+Le moteur causal peut ainsi fonctionner hors ligne sans exiger un endpoint SPARQL ou un LLM distant.
+
+---
+
+## 9. Reproductibilité
+
+Pour un mode déterministe, la configuration de runtime doit déclarer notamment :
+
+```text
+profile_version
+activation_rules_version
+thresholds
+decay
+max_steps
+conflict_policy
+semantic_index_version
+trait_projection_version
+```
+
+La réaction textuelle peut rester non déterministe si un renderer génératif est utilisé, mais le **ReactionState causal** devrait pouvoir être reproduit indépendamment.
+
+
+================================================================================================
+FILE: docs/MIGRATION_SOUL_GRAPH.md
+================================================================================================
+
+# Migration vers Soul Graph — état de l’implémentation
+
+## 1. Objectif
+
+Faire évoluer le prototype existant sans perdre les composants utiles.
+
+---
+
+## 2. Ancien -> nouveau
+
+| Ancien concept | Nouveau rôle |
+|---|---|
+| `TraitVector` | projection dérivée du Soul Graph |
+| `SoulState.mood` | état transitoire dans Activation Graph |
+| `digit_axis` | projection topologique 1→9 |
+| interpolation 2–8 | baseline / visualisation / heuristique secondaire |
+| numérologie -> traits | numérologie -> hypothèses de dispositions |
+| `src/ethics.py` dans le moteur | sécurité applicative externe |
+| persona qui évolue en session | snapshot immuable + nouvelle version explicite |
+| chaîne stimulus->réaction | graphe psycho-causal avec propagation bornée |
+
+---
+
+## 3. Ordre recommandé
+
+### Phase 1 — données
+
+1. définir `soul_graph_schema` ;
+2. créer un fixture John Doe minimal ;
+3. créer deux snapshots d’âges différents ;
+4. produire une projection TraitVector compatible.
+
+### Phase 2 — moteur
+
+1. index sémantique ;
+2. propagation activation/inhibition ;
+3. trace ;
+4. affect transitoire ;
+5. réaction structurée.
+
+### Phase 3 — Kristal
+
+1. profil `kristal.v5:soul-graph` ;
+2. mapping Structured Epistemic State ;
+3. Runtime Pack ;
+4. tests de stabilité.
+
+### Phase 4 — couches symboliques
+
+1. numérologie comme propositions ;
+2. natal chart comme propositions ;
+3. activation configurable de ces couches ;
+4. protocoles d’ablation.
+
+---
+
+## 4. État actuel
+
+La migration du noyau est réalisée : `src/engine.py` utilise désormais un `SoulSnapshot` immuable et délègue la propagation à `src/activation.py`. Les traits et l’interpolation 1→9 restent disponibles comme projections secondaires. La sécurité a été déplacée vers `src/safety.py`.
+
+Restent principalement à approfondir : résolution sémantique avancée du stimulus, ontologie psycho-causale plus riche, renderer de voix/persona et validation empirique des couches symboliques.
+
+
+================================================================================================
+FILE: docs/numerology_pipeline.md
+================================================================================================
+
+# Numerology Pipeline — génération d’hypothèses
+
+## 0. Rôle
+
+Ce pipeline calcule des signatures numérologiques et les transforme en **propositions de dispositions** destinées au Soul Graph.
+
+Il ne produit pas directement une personnalité finale.
+
+---
+
+## 1. Étapes
+
+```text
+inputs
+ -> calcul pythagoricien
+ -> réduction
+ -> inversion optionnelle
+ -> archétype
+ -> règles de mapping versionnées
+ -> hypothèses de dispositions
+```
+
+---
+
+## 2. Inversion
+
+```text
+inv(0) = 0
+inv(d) = 10 - d, d dans 1..9
+```
+
+Les dualités :
+
+```text
+9/1, 8/2, 7/3, 6/4, 5 pivot
+```
+
+sont conservées comme structure archétypale.
+
+---
+
+## 3. Sortie recommandée
+
+```json
+{
+  "signature": {
+    "reduced": [7],
+    "inverted": [3]
+  },
+  "model": "inverted_pythagorean",
+  "model_version": "1.0",
+  "proposals": [
+    {
+      "node_type": "Disposition",
+      "label": "introspection",
+      "proposed_strength": 0.6,
+      "origin": "hypothesized_innate",
+      "status": "hypothesis"
+    }
+  ]
+}
+```
+
+Les valeurs numériques sont des paramètres de modèle, pas des mesures psychologiques établies.
+
+---
+
+## 4. Intégration
+
+Les propositions sont converties en assertions distinctes dans le snapshot ou dans un artefact de travail.
+
+Elles doivent conserver :
+
+- méthode de calcul ;
+- version ;
+- inputs utilisés ;
+- statut hypothétique ;
+- éventuelle concordance avec des observations.
+
+---
+
+## 5. Tests
+
+- réduction correcte ;
+- inversion correcte ;
+- stabilité du résultat ;
+- couverture 1..9 ;
+- aucun mapping silencieux lorsqu’un archétype manque ;
+- séparation des propositions symboliques et des observations.
+
+
+================================================================================================
+FILE: docs/philosophical_framework.md
+================================================================================================
+
+# Cadre philosophique — notes techniques
+
+## 1. Rôle
+
+Ce document relie les hypothèses philosophiques aux choix d’architecture sans les présenter comme preuves scientifiques.
+
+---
+
+## 2. Ordre causal
+
+Le projet explore l’idée d’un ordre causal global, décrit philosophiquement comme **enchaînement parfait**.
+
+La notion de perfection est prise au sens de cohérence totale des causes et conséquences, non comme simple moralité.
+
+Le sujet humain est une configuration locale : partielle, historique et limitée.
+
+---
+
+## 3. Soul Basis
+
+La métaphore de la lumière blanche est traduite techniquement par un **Soul Basis** :
+
+- types de mécanismes ;
+- types de relations ;
+- règles de composition ;
+- possibilités de projection.
+
+Une personne est une configuration particulière de cette base.
+
+---
+
+## 4. Processus
+
+Le modèle est compatible avec une vision processuelle de la personnalité : l’histoire transforme les structures.
+
+L’implémentation choisit toutefois des **snapshots immuables** afin de séparer clairement :
+
+- la personnalité représentée ;
+- l’activation de session ;
+- l’édition biographique.
+
+---
+
+## 5. Couches symboliques
+
+Numérologie, chakras, charte 1→9, branes, cercle et π peuvent servir de :
+
+- métaphores ;
+- ontologies symboliques ;
+- générateurs d’hypothèses ;
+- systèmes de classification.
+
+Ils ne remplacent pas la provenance, l’observation ou la validation expérimentale.
+
+---
+
+## 6. Limite
+
+La cohérence philosophique d’un système n’établit pas son exactitude psychologique ou physique. Cette distinction doit être maintenue dans la documentation, dans Kristal et dans les expériences.
+
+
+================================================================================================
+FILE: docs/README.md
+================================================================================================
+
+# Documentation — Âme Artificielle
+
+Cette documentation décrit l’architecture cible fondée sur le **Soul Graph**.
+
+## Ordre de lecture
+
+1. `definition_operationnelle.md` — définitions et invariants.
+2. `soul_graph_schema.md` — nœuds, relations et qualificateurs.
+3. `engine_spec.md` — propagation d’activation et calcul des réactions.
+4. `snapshots_biographiques.md` — représentation d’une personne à différents âges.
+5. `kristal_integration.md` — persistance et provenance avec Kristal v5.
+6. `traits_schema.md` — traits comme projection dérivée.
+7. `interpolation_axis.md` — charte 1→9 comme projection topologique.
+8. `numerology_pipeline.md` — numérologie comme générateur d’hypothèses.
+9. `validation_protocol.md` — validation technique, persona et natal chart.
+10. `code_reference.md` — modules et API de l’implémentation.
+11. `MIGRATION_SOUL_GRAPH.md` — historique et état de la migration.
+
+## Documents de contexte
+
+- `philosophical_framework.md` — traduction technique du cadre philosophique.
+- `theoretical_alignment.md` — séparation des niveaux de preuve.
+- `branes_numerologie.md` — couche analogique complémentaire.
+
+## Statut du code
+
+Les fichiers `src/` implémentent maintenant le noyau Soul Graph. Le renderer et l'analyse sémantique du stimulus restent volontairement minimaux; ils constituent les principaux espaces d'extension.
+
+
+================================================================================================
+FILE: docs/snapshots_biographiques.md
+================================================================================================
+
+# Snapshots biographiques
+
+## 1. But
+
+Représenter la même personne à différents âges sans apprentissage automatique en session.
+
+---
+
+## 2. Structure
+
+```json
+{
+  "person_id": "person:john-doe",
+  "snapshot_id": "sha256:...",
+  "valid_during": {
+    "from_age": 30,
+    "to_age": 39
+  },
+  "derived_from_snapshot": "sha256:...",
+  "transformation_refs": ["bio-transform:..."]
+}
+```
+
+---
+
+## 3. Transformation
+
+Une transformation doit décrire séparément :
+
+- événements ;
+- mécanismes affectés ;
+- direction du changement ;
+- sources ;
+- degré de confiance ;
+- justification éditoriale.
+
+Exemple :
+
+```json
+{
+  "event": "event:friendship-bob",
+  "changes": [
+    {
+      "target": "association:group-x-threat",
+      "operation": "weaken",
+      "magnitude": 0.4,
+      "reason": "repeated contradictory experience"
+    }
+  ]
+}
+```
+
+Ce format décrit une **décision de modélisation**. Il ne prétend pas mesurer directement la psychologie réelle avec une précision numérique.
+
+---
+
+## 4. Types de changement
+
+```text
+add_node
+remove_node
+strengthen_edge
+weaken_edge
+add_inhibition
+revise_belief
+supersede_belief
+add_memory
+change_context_rule
+change_intellectual_rule
+```
+
+Pour un artefact content-addressed, le résultat est un nouveau snapshot.
+
+---
+
+## 5. Maturation
+
+La maturation peut être représentée comme un ensemble de transformations documentées, par exemple :
+
+- meilleure inhibition d’une réaction impulsive ;
+- augmentation d’une règle de réévaluation ;
+- abandon d’une croyance absolue ;
+- complexification d’une catégorie sociale ;
+- déplacement d’une valeur prioritaire.
+
+Le système ne doit pas utiliser « maturité » comme explication opaque lorsqu’une transformation plus précise peut être décrite.
+
+---
+
+## 6. Reconstruction d’une personne historique
+
+Lorsqu’une personne n’est plus disponible pour validation directe, les snapshots peuvent être construits à partir de :
+
+- écrits datés ;
+- entrevues ;
+- témoignages ;
+- décisions ou comportements documentés ;
+- biographies ;
+- sources primaires et secondaires.
+
+La provenance et le désaccord entre sources sont essentiels.
+
+---
+
+## 7. Identité simulée
+
+Même avec plusieurs snapshots très fidèles, le système représente une **reconstruction**.
+
+Il ne doit pas présenter le modèle comme une continuité réelle de la personne.
+
+
+================================================================================================
+FILE: docs/soul_graph_schema.md
+================================================================================================
+
+# Soul Graph Schema — profil psycho-causal
+
+## 1. Statut
+
+Spécification de travail pour le profil applicatif proposé :
+
+```text
+kristal.v5:soul-graph
+```
+
+Ce profil appartient au projet Âme Artificielle. Il ne modifie pas le cœur de Kristal v5.
+
+---
+
+## 2. Objectif
+
+Définir un vocabulaire suffisamment petit pour représenter un sujet sous forme de graphe sémantique tout en permettant :
+
+- la propagation d’activation ;
+- la provenance ;
+- les snapshots temporels ;
+- la distinction hypothèse / observation ;
+- les projections de traits ;
+- l’explication des réactions.
+
+---
+
+## 3. Nœud
+
+Forme logique :
+
+```json
+{
+  "node_id": "soul:node:...",
+  "node_type": "Belief",
+  "label": "...",
+  "description": "...",
+  "origin": "acquired",
+  "properties": {}
+}
+```
+
+### `node_type`
+
+Valeurs de base :
+
+```text
+Disposition
+Belief
+Association
+Value
+Need
+Attachment
+Memory
+Concept
+InterpretationPattern
+CognitiveBias
+IntellectualRule
+AffectiveTendency
+ReactionPattern
+Person
+Group
+Object
+Event
+Context
+```
+
+### `origin`
+
+```text
+innate
+acquired
+mixed
+unknown
+hypothesized_innate
+```
+
+`hypothesized_innate` est utile lorsqu’une disposition provient d’une couche comme la carte natale ou la numérologie et n’est pas encore confirmée par d’autres observations.
+
+---
+
+## 4. Relation
+
+Forme logique :
+
+```json
+{
+  "edge_id": "soul:edge:...",
+  "source": "soul:node:a",
+  "predicate": "soul:activates",
+  "target": "soul:node:b",
+  "qualifiers": {
+    "strength": 0.72,
+    "polarity": "facilitating",
+    "activation_threshold": 0.25,
+    "processing_layers": [4, 5],
+    "conditions": []
+  }
+}
+```
+
+### Relations sémantiques
+
+```text
+is_a
+part_of
+related_to
+represents
+concerns
+```
+
+### Relations cognitives
+
+```text
+believes
+expects
+interprets_as
+generalizes_to
+compares_with
+contradicts
+confirms
+```
+
+### Relations de propagation
+
+```text
+activates
+inhibits
+reinforces
+weakens
+predisposes_to
+contributes_to
+triggers_reappraisal_of
+```
+
+### Relations biographiques
+
+```text
+formed_by
+strengthened_by
+weakened_by
+revised_by
+resolved_through
+supersedes
+```
+
+---
+
+## 5. Qualificateurs psycho-causaux
+
+Ces champs ne sont **pas** des niveaux de certitude Kristal :
+
+```text
+strength
+polarity
+activation_threshold
+decay
+context_weight
+processing_layers
+valid_during
+```
+
+`strength` décrit la force dans la personnalité modélisée.
+
+La confiance que nous avons dans cette description appartient aux métadonnées épistémiques Kristal.
+
+---
+
+## 6. Représentation Kristal
+
+Le mapping recommandé utilise un `Structured Epistemic State`.
+
+Chaque nœud, relation ou proposition importante peut être représenté par une assertion dont `statement` est défini par ce profil.
+
+Exemple conceptuel :
+
+```json
+{
+  "assertion_id": "sha256:...",
+  "statement": {
+    "subject": {"id": "person:john@25"},
+    "predicate": {"id": "soul:holds_belief"},
+    "object": {"id": "belief:b17"},
+    "qualifiers": [
+      {"predicate": {"id": "soul:strength"}, "object": {"kind": "number", "value": 0.9}}
+    ]
+  },
+  "assertion_status": "sourced",
+  "certainty_level": "medium",
+  "scope": {
+    "domain": "research",
+    "subdomain": "artificial-soul",
+    "time_window": "age:25"
+  },
+  "provenance_refs": ["source:bio:42"]
+}
+```
+
+Les noms exacts d’IRI/IDs devront être stabilisés avant implémentation.
+
+---
+
+## 7. Couches symboliques
+
+Une assertion dérivée d’un modèle symbolique doit conserver sa source de dérivation.
+
+Exemple :
+
+```text
+source_model = natal_chart
+assertion_status = hypothesis
+validated_as = symbolic_model
+```
+
+ou l’équivalent permis par le profil Kristal actif.
+
+Le moteur peut choisir d’inclure ou d’exclure ces hypothèses selon sa configuration.
+
+---
+
+## 8. Projection de traits
+
+Un trait est calculé à partir d’un ensemble de motifs du graphe :
+
+```text
+trait_score = projection(graph, trait_definition)
+```
+
+Une définition de trait peut référencer :
+
+- types de nœuds ;
+- relations ;
+- forces ;
+- conditions ;
+- importance de certains chemins.
+
+Le `TraitVector` n’est donc pas source de vérité du snapshot.
+
+---
+
+## 9. Contraintes
+
+- Les relations sémantiques ne doivent pas être parcourues comme causales sans règle explicite.
+- Les cycles sont autorisés dans le graphe, mais l’algorithme d’activation doit être borné.
+- Les émotions de session ne sont pas persistées dans le snapshot par défaut.
+- Un nouveau snapshot reçoit une nouvelle identité lorsque son contenu stable change.
+
+
+================================================================================================
+FILE: docs/theoretical_alignment.md
+================================================================================================
+
+# Alignement théorique et niveaux de preuve
+
+## 1. Pourquoi ce document change
+
+La documentation antérieure mélangeait parfois contexte philosophique, spéculation cosmologique et validation du moteur.
+
+La nouvelle architecture sépare les claims.
+
+---
+
+## 2. Claim A — modèle d’ingénierie
+
+**Proposition :** une personnalité peut être représentée utilement par un graphe sémantique de mécanismes et un moteur d’activation borné.
+
+Statut : hypothèse d’ingénierie testable par cohérence, fidélité, ablation et reproductibilité.
+
+---
+
+## 3. Claim B — modèle psycho-causal
+
+**Proposition :** certaines différences de réactions humaines peuvent être approximées par des relations entre croyances, associations, valeurs, souvenirs, dispositions et mécanismes intellectuels.
+
+Statut : modèle simplifié. Il ne prétend pas épuiser la psychologie humaine ni résoudre la conscience phénoménale.
+
+---
+
+## 4. Claim C — natal chart / numérologie
+
+**Proposition :** des systèmes symboliques pourraient fournir des features utiles pour différencier certaines dispositions.
+
+Statut : hypothèse empirique non établie dans le projet tant que les protocoles de validation n’ont pas produit de résultats robustes.
+
+---
+
+## 5. Claim D — cadre métaphysique
+
+**Proposition :** le réel peut être pensé comme ordre causal/mathématique, et Dieu comme enchaînement parfait.
+
+Statut : cadre philosophique. Il ne devient pas un résultat expérimental du moteur.
+
+---
+
+## 6. Règle documentaire
+
+Chaque nouvelle affirmation doit pouvoir être classée comme :
+
+```text
+engineering_spec
+observed_biographical_claim
+psychological_model
+hypothesis
+symbolic_model
+philosophical_claim
+experimental_result
+```
+
+Cette classification doit guider son statut dans Kristal et sa présentation au lecteur.
+
+
+================================================================================================
+FILE: docs/traits_schema.md
+================================================================================================
+
+# Traits Schema — projection dérivée
+
+## 1. Rôle
+
+Les traits restent utiles, mais ils ne constituent plus le modèle fondamental de la personnalité.
+
+```text
+Soul Graph -> Trait Projection -> TraitVector
+```
+
+Le `TraitVector` sert à :
+
+- comparer des sujets ;
+- faire du matching ;
+- afficher une interface ;
+- calculer des distances ;
+- créer des baselines expérimentales ;
+- résumer rapidement un snapshot.
+
+---
+
+## 2. Trait
+
+```json
+{
+  "trait_id": "openness",
+  "label": "Ouverture",
+  "definition": "...",
+  "scale": [-1, 1],
+  "projection_version": "1.0"
+}
+```
+
+---
+
+## 3. Projection
+
+Un score est calculé à partir de motifs du graphe.
+
+Exemple conceptuel :
+
+```text
+openness =
+  + weight(curiosity dispositions)
+  + weight(novelty-seeking relations)
+  + weight(tolerance-of-ambiguity rules)
+  - weight(rigidity patterns)
+```
+
+La formule doit être versionnée et testable.
+
+---
+
+## 4. Set minimal recommandé
+
+### Cognition
+- curiosity
+- analysis
+- abstraction
+- focus
+- flexibility
+
+### Affect
+- emotional_stability
+- threat_sensitivity
+- attachment_intensity
+- empathy
+- compassion
+
+### Social
+- cooperation
+- assertiveness
+- social_openness
+- dominance
+- trust_propensity
+
+### Volition
+- discipline
+- order
+- risk_taking
+- adaptability
+- responsibility
+
+### Sens / valeurs
+- meaning_seeking
+- transcendence
+- altruism
+- autonomy
+
+Les émotions instantanées comme `joy`, `anger` ou `fear` devraient généralement être sorties du TraitVector et traitées comme états transitoires, sauf lorsqu’on mesure explicitement une **disposition** à ces états.
+
+---
+
+## 5. Numérologie
+
+Un digit numérologique ne mappe plus directement vers le TraitVector comme vérité de personnalité.
+
+Il peut fournir des **priors hypothétiques** qui participent à une projection expérimentale séparée.
+
+Il faut donc distinguer :
+
+```text
+observed_trait_projection
+symbolic_prior_projection
+combined_experimental_projection
+```
+
+---
+
+## 6. Compatibilité
+
+Les fonctions et fichiers existants qui attendent un TraitVector peuvent continuer à l’utiliser pendant la migration. Ils doivent cependant considérer ce vecteur comme une **vue dérivée d’un snapshot**.
+
+
+================================================================================================
+FILE: docs/validation_protocol.md
+================================================================================================
+
+# Validation Protocol — Âme Artificielle
+
+## 1. Principe
+
+La validation doit séparer **trois questions différentes** :
+
+1. Le moteur est-il techniquement cohérent et reproductible ?
+2. Le Soul Snapshot reproduit-il de manière crédible une personnalité documentée ?
+3. Les couches hypothétiques comme la carte natale ou la numérologie ajoutent-elles un pouvoir prédictif mesurable ?
+
+Une réussite dans une question ne valide pas automatiquement les autres.
+
+---
+
+# A. Validation du moteur causal
+
+## A1. Déterminisme structurel
+
+Avec :
+
+- même snapshot ;
+- même stimulus structuré ;
+- même configuration ;
+
+le `ReactionState` doit être identique en mode déterministe.
+
+## A2. Invariants
+
+Tester :
+
+- snapshot non modifié ;
+- propagation bornée ;
+- inhibition fonctionnelle ;
+- renforcement fonctionnel ;
+- traitement des cycles ;
+- ordre stable ;
+- trace des chemins actifs.
+
+## A3. Tests contrefactuels
+
+Supprimer ou modifier un mécanisme du graphe et vérifier que la réaction change dans la direction prévue.
+
+---
+
+# B. Validation de fidélité de personnalité
+
+## B1. Données
+
+Pour chaque sujet :
+
+- sources biographiques datées ;
+- échantillons de langage lorsque disponibles ;
+- événements connus ;
+- snapshots par périodes lorsque nécessaire ;
+- ensemble de situations de test non utilisées pour la construction.
+
+## B2. Tests aveugles
+
+Exemples :
+
+### Matching de réactions
+
+Présenter aux évaluateurs plusieurs réactions possibles et demander laquelle ressemble le plus au sujet.
+
+### Identification de persona
+
+Générer des réponses à partir de plusieurs snapshots anonymisés et tester si des évaluateurs peuvent identifier le bon sujet au-dessus du hasard.
+
+### Comparaison par âge
+
+Pour une même personne, tester si les réactions générées à partir de `John@20` et `John@50` reflètent les différences biographiques documentées.
+
+## B3. Métriques
+
+- accuracy top-1 ;
+- préférence pairwise ;
+- score moyen de fidélité ;
+- accord inter-évaluateurs ;
+- calibration ;
+- ablation de mécanismes.
+
+---
+
+# C. Protocole McCormick — natal chart / numérologie
+
+## C1. Hypothèse
+
+> Un modèle utilisant une carte du ciel anonymisée ou une signature numérologique peut prédire certains aspects d’un profil de personnalité au-delà d’un baseline approprié.
+
+## C2. H0 / H1
+
+- **H0** : aucune amélioration au-delà du hasard ou du baseline sans ces features.
+- **H1** : amélioration reproductible et statistiquement significative.
+
+## C3. Contrôles
+
+- anonymisation stricte ;
+- aucune fuite biographique ;
+- randomisation des candidats ;
+- holdout final ;
+- baseline aléatoire ;
+- baseline démographique lorsque pertinente ;
+- modèle identique sans features astrologiques/numérologiques ;
+- ablations par famille de features.
+
+## C4. Matching K-choix
+
+Pour chaque carte ou signature :
+
+1. sélectionner K profils candidats ;
+2. inclure le profil correct ;
+3. mélanger l’ordre ;
+4. produire classement + confiance ;
+5. répéter sur plusieurs ensembles de candidats.
+
+Performance attendue au hasard : `1/K`.
+
+## C5. Statistiques
+
+- test binomial pour top-1 ;
+- permutation test ;
+- bootstrap pour intervalles de confiance ;
+- Brier/log-loss pour calibration ;
+- correction multi-tests si plusieurs variantes sont explorées.
+
+---
+
+# D. Validation des transformations biographiques
+
+Lorsqu’un passage entre deux snapshots attribue un changement à un événement :
+
+- vérifier que l’événement est documenté ;
+- distinguer fait biographique et interprétation causale ;
+- permettre plusieurs hypothèses causales ;
+- tester l’ablation de la transformation ;
+- documenter le niveau de confiance.
+
+---
+
+# E. Traçabilité
+
+Chaque essai doit enregistrer :
+
+```text
+snapshot_id
+runtime_pack_id si utilisé
+engine_version
+activation_rules_version
+projection_version
+stimulus_hash
+seed si pertinent
+renderer_version
+hypothesis_layers_enabled
+output
+metrics
+```
+
+---
+
+# F. Critère général de réussite
+
+Le projet est renforcé lorsque :
+
+- le moteur est reproductible ;
+- les snapshots produisent des différences évaluables et cohérentes ;
+- les mécanismes explicatifs survivent aux ablations ;
+- les hypothèses symboliques montrent, si elles sont conservées, une valeur prédictive au-delà de contrôles adaptés.
+
+Une absence d’effet dans la partie astrologique ou numérologique n’invalide pas nécessairement l’architecture générale du graphe psycho-causal ; elle invalide ou affaiblit la couche testée.
+
+
+================================================================================================
+FILE: experiments/mccormick_protocol.md
+================================================================================================
+
+# Protocole McCormick — natal chart / numérologie
+
+## Statut
+
+Sous-protocole expérimental de `docs/validation_protocol.md`.
+
+Son objectif est uniquement de tester la valeur prédictive des couches **carte natale / numérologie**. Il ne sert pas à valider à lui seul l’architecture générale du Soul Graph.
+
+---
+
+## 1. Hypothèse
+
+> Des features dérivées d’une carte du ciel anonymisée ou d’une signature numérologique permettent de prédire certains aspects d’un profil de personnalité au-delà d’un baseline approprié.
+
+- **H0** : pas d’amélioration reproductible au-delà du hasard ou du baseline sans ces features.
+- **H1** : amélioration reproductible et statistiquement significative.
+
+---
+
+## 2. Données
+
+Pour chaque sujet :
+
+- `subject_id` anonymisé ;
+- features natal chart et/ou numérologiques ;
+- profil biographique indépendant ;
+- snapshot ou projection de personnalité construit sans fuite des features testées ;
+- période de vie explicitée lorsque nécessaire.
+
+Les noms, lieux révélateurs, biographies et indices directs doivent être retirés de l’entrée de matching.
+
+---
+
+## 3. Matching K-choix
+
+Pour chaque entrée :
+
+1. choisir une carte/signature anonymisée ;
+2. sélectionner K profils candidats, dont le vrai ;
+3. randomiser l’ordre ;
+4. demander un classement et un score de confiance ;
+5. répéter sur plusieurs tirages de candidats.
+
+Baseline aléatoire top-1 :
+
+```text
+1 / K
+```
+
+---
+
+## 4. Contrôles
+
+Comparer au minimum :
+
+- hasard ;
+- modèle sans features natal chart / numérologie ;
+- heuristique simple ;
+- ablations par famille de features ;
+- variantes standard vs inversée si la numérologie est testée.
+
+Prévoir un holdout final non utilisé pendant la conception des règles.
+
+---
+
+## 5. Métriques
+
+- top-1 accuracy ;
+- top-k accuracy ;
+- Brier score ou log-loss pour la confiance ;
+- permutation test ;
+- test binomial ;
+- intervalle de confiance bootstrap ;
+- taille d’effet par rapport au baseline.
+
+---
+
+## 6. Interprétation
+
+Une performance supérieure au hasard ne démontre pas automatiquement une causalité astrologique ou métaphysique. Elle indique seulement qu’un ensemble de features et une méthode de mapping possèdent un signal prédictif dans le protocole utilisé.
+
+Inversement, un résultat nul affaiblit cette couche hypothétique sans invalider nécessairement le modèle général du graphe psycho-causal.
+
+---
+
+## 7. Reproductibilité
+
+Journaliser :
+
+```text
+dataset_version
+feature_extractor_version
+mapping_version
+model_version
+prompt_version si applicable
+seed
+candidate_set
+input_hash
+prediction
+confidence
+```
+
+Les sorties détaillées utilisent `experiments/results_template.csv` ou un format versionné équivalent.
+
+
+================================================================================================
+FILE: README.md
+================================================================================================
+
+# EL — Artificial Soul Engine / Âme Artificielle
+
+**EL** est un projet expérimental visant à représenter une personnalité humaine comme un **graphe psycho-causal sémantique** et à calculer des réactions cohérentes à partir d’un état déterminé de cette personnalité.
+
+Le projet ne prétend pas créer une âme réelle ni démontrer qu’un système artificiel ressent des émotions. Il cherche à **reproduire fonctionnellement certains mécanismes** : croyances, associations, valeurs, souvenirs, dispositions, réévaluation intellectuelle, états affectifs et réactions.
+
+## Architecture en une phrase
+
+```text
+Soul Basis
+  -> Soul Snapshot immuable
+  -> stimulus
+  -> Activation Graph transitoire
+  -> interprétation / affect / intention
+  -> réaction
+```
+
+Un Soul Snapshot peut représenter la même personne à un âge précis. Le moteur **ne modifie pas automatiquement le snapshot** pendant la conversation. Les changements biographiques sont décrits explicitement dans un nouveau snapshot.
+
+## Concepts principaux
+
+- **Soul Basis** : ontologie commune des mécanismes possibles — métaphore du « blanc ».
+- **Soul Graph** : graphe sémantique de mécanismes psycho-causaux.
+- **Soul Snapshot** : représentation immuable d’un sujet pendant une période.
+- **Biographical Transformation** : explication structurée du passage entre snapshots.
+- **Activation Graph** : état temporaire calculé pour un stimulus.
+- **TraitVector** : projection dérivée du graphe, utile pour comparaison et UI mais non constitutive de l’âme.
+- **Charte 1→9** : topologie de lecture, non moteur causal linéaire.
+- **Numérologie / natal chart** : sources d’hypothèses de dispositions, à distinguer des observations et à tester.
+
+## Âme, intellect, personnalité
+
+Dans le vocabulaire du projet :
+
+- l’**âme** représente l’organisation profonde des dispositions ;
+- l’**intellect** représente perception, catégorisation, raisonnement et réévaluation ;
+- la **personnalité** est leur manifestation observable en interaction avec l’histoire et le contexte.
+
+## Kristal v5
+
+L’intégration proposée utilise Kristal comme couche de représentation et de provenance des Soul Snapshots. Le projet prévoit un profil applicatif `kristal.v5:soul-graph` pour typer les nœuds, relations et qualificateurs psycho-causaux.
+
+Kristal stocke et rend le graphe inspectable. Le **Soul Causal Engine** exécute la propagation d’activation. Les deux responsabilités restent séparées.
+
+Voir :
+
+- `docs/definition_operationnelle.md`
+- `docs/soul_graph_schema.md`
+- `docs/engine_spec.md`
+- `docs/snapshots_biographiques.md`
+- `docs/kristal_integration.md`
+- `docs/validation_protocol.md`
+
+## Couches symboliques
+
+Le projet conserve la charte 1→9, les chakras, la numérologie pythagoricienne inversée et les branes comme couches de lecture ou générateurs d’hypothèses. Elles ne sont pas présentées comme des validations scientifiques par définition.
+
+## Sécurité
+
+La sécurité de l’application est une **couche externe** au modèle de personnalité. Une règle de sécurité peut limiter une sortie, mais elle ne doit pas être confondue avec la compassion, la morale ou la causalité interne du personnage simulé.
+
+## Statut du code
+
+Le moteur Soul Graph est maintenant implémenté dans `src/` comme référence minimale : snapshots immuables, propagation causale bornée, inhibition, affect dérivé, transformations biographiques explicites, projections de traits, propositions symboliques et adaptateur Kristal.
+
+Les anciens utilitaires de `TraitVector` et d'interpolation 1→9 sont conservés comme projections/compatibilité. `src/ethics.py` est déprécié au profit de `src/safety.py`, qui est externe à la personnalité.
+
+Voir `docs/code_reference.md` et `examples/john_doe_snapshots.py`.

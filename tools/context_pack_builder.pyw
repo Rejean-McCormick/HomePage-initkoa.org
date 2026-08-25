@@ -36,6 +36,7 @@ REPOS = [
     ("Orgo", MYCODE / "Orgo" / "Orgo"),
     ("Omni-Wiki-Rejean-King-Klown", MYCODE / "OmniWiki" / "Omni-Wiki-Rejean-King-Klown"),
     ("MediKristal", MYCODE / "MediKristal" / "MediKristal"),
+    ("Ame-Artificielle", MYCODE / "AmeArtificielle" / "Ame-Artificielle"),
     ("Kristal_Farms", MYCODE / "Kristal_Farms" / "kristal-farms-docs"),
     ("kristal-framework", MYCODE / "Kristal" / "kristal-framework"),
     ("Konnaxion_Capsule_Manager", MYCODE / "Konnaxion" / "Konnaxion_Capsule_Manager"),
