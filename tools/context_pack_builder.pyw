@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import os
 import queue
 import re
@@ -19,6 +20,7 @@ from urllib.parse import urlparse
 MYCODE = Path(r"C:\mycode")
 INITKOA_REPO = MYCODE / "HomePage" / "HomePage"
 OUTPUT_DIR = INITKOA_REPO / "public" / "context-packs"
+MANIFEST_PATH = OUTPUT_DIR / "index.json"
 TOOL_TARGET = INITKOA_REPO / "tools" / "context_pack_builder.pyw"
 
 REPOS = [
@@ -227,6 +229,103 @@ def make_pack(label: str, repo: Path):
     return {"label": label, "remote": remote_name, "output": output_path, "files": len(file_entries), "changed": True, "hash": content_hash}
 
 
+
+def pack_slug_from_filename(filename: str) -> str:
+    name = re.sub(r"\.txt$", "", filename, flags=re.IGNORECASE)
+    name = re.sub(r"-context-pack(?:--.*)?$", "", name, flags=re.IGNORECASE)
+    return name.lower()
+
+
+def read_pack_header(path: Path) -> dict[str, str]:
+    header: dict[str, str] = {}
+    try:
+        with path.open("r", encoding="utf-8", errors="replace") as handle:
+            for _ in range(40):
+                line = handle.readline()
+                if not line:
+                    break
+                stripped = line.strip()
+                if not stripped or stripped.startswith("#") or stripped.startswith("="):
+                    continue
+                if ":" not in stripped:
+                    continue
+                key, value = stripped.split(":", 1)
+                key = key.strip()
+                if key in {
+                    "repository",
+                    "source_commit",
+                    "generated_at",
+                    "files",
+                    "content_sha256",
+                }:
+                    header[key] = value.strip()
+    except OSError:
+        pass
+    return header
+
+
+def write_manifest(log=None) -> bool:
+    """Generate public/context-packs/index.json from the actual published .txt files."""
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    packs = []
+
+    for pack_path in sorted(OUTPUT_DIR.glob("*.txt"), key=lambda p: p.name.lower()):
+        header = read_pack_header(pack_path)
+        slug = pack_slug_from_filename(pack_path.name)
+        file_count = None
+        try:
+            if header.get("files"):
+                file_count = int(header["files"])
+        except ValueError:
+            file_count = None
+
+        full_sha256 = hashlib.sha256(pack_path.read_bytes()).hexdigest()
+        category = "general" if slug in {"grammatical-framework", "senior-architect"} else "system"
+
+        packs.append(
+            {
+                "slug": slug,
+                "file": pack_path.name,
+                "repository": header.get("repository"),
+                "sourceCommit": header.get("source_commit"),
+                "generatedAt": header.get("generated_at"),
+                "fileCount": file_count,
+                "sha256": full_sha256,
+                "category": category,
+            }
+        )
+
+    core = {"schemaVersion": 1, "packs": packs}
+
+    if MANIFEST_PATH.exists():
+        try:
+            existing = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+            if {
+                "schemaVersion": existing.get("schemaVersion"),
+                "packs": existing.get("packs"),
+            } == core:
+                if log:
+                    log("Manifest : identique.")
+                return False
+        except (OSError, json.JSONDecodeError, TypeError):
+            pass
+
+    payload = {
+        "schemaVersion": 1,
+        "generatedAt": datetime.now().astimezone().isoformat(timespec="seconds"),
+        "packs": packs,
+    }
+    temp_path = MANIFEST_PATH.with_suffix(".json.tmp")
+    temp_path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    temp_path.replace(MANIFEST_PATH)
+    if log:
+        log(f"Manifest : {len(packs)} pack(s) -> {MANIFEST_PATH.name}")
+    return True
+
 def install_self_into_initkoa():
     source = Path(__file__).resolve()
     TOOL_TARGET.parent.mkdir(parents=True, exist_ok=True)
@@ -257,6 +356,7 @@ def build_all(log):
         except Exception as exc:
             results.append({"label": label, "path": repo, "error": str(exc), "files": 0, "changed": False})
             log(f"    ERREUR : {exc}")
+    write_manifest(log)
     return results
 
 
