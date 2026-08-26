@@ -127,87 +127,9 @@ export const AI_SUPPORTING_RESOURCES = Object.freeze([
   },
 ]);
 
-export const CONTEXT_PACK_FILES = Object.freeze([
-  {
-    fileName:
-      "context-packs/koa-digital-ecosystem-context-pack--architecture-and-contracts--v1.0.txt",
-    title: "kOA Digital Ecosystem — Architecture and Contracts",
-    path:
-      "/context-packs/koa-digital-ecosystem-context-pack--architecture-and-contracts--v1.0.txt",
-    type: "text/plain",
-    purpose:
-      "Architecture and contract reference for the broader kOA digital ecosystem.",
-  },
-  {
-    fileName:
-      "context-packs/konnaxion-context-pack--platform-specification--v14.0.txt",
-    title: "Konnaxion — Platform Specification",
-    path:
-      "/context-packs/konnaxion-context-pack--platform-specification--v14.0.txt",
-    type: "text/plain",
-    purpose:
-      "Platform specification for Konnaxion modules, governance flows, and civic coordination mechanics.",
-  },
-  {
-    fileName:
-      "context-packs/kristal-context-pack--contracts-schemas-query--v5.0.txt",
-    title: "Kristal — Contracts, Schemas, and Query",
-    path:
-      "/context-packs/kristal-context-pack--contracts-schemas-query--v5.0.txt",
-    type: "text/plain",
-    purpose:
-      "Current Kristal reference pack for contracts, schemas, query patterns, trust, and provenance.",
-  },
-  {
-    fileName:
-      "context-packs/orgo-context-pack--case-task-workflow-platform--v3.0.txt",
-    title: "Orgo — Case, Task, and Workflow Platform",
-    path:
-      "/context-packs/orgo-context-pack--case-task-workflow-platform--v3.0.txt",
-    type: "text/plain",
-    purpose: "Workflow and case/task coordination reference for Orgo.",
-  },
-  {
-    fileName:
-      "context-packs/sentient-context-pack--reconciliation-architecture--v1.0.txt",
-    title: "Sentient — Reconciliation Architecture",
-    path:
-      "/context-packs/sentient-context-pack--reconciliation-architecture--v1.0.txt",
-    type: "text/plain",
-    purpose:
-      "Reference pack for reconciliation architecture and sense-making systems.",
-  },
-  {
-    fileName:
-      "context-packs/semantik-architect-context-pack--engine-and-gf-integration--v2.5.txt",
-    title: "Semantik Architect — Engine and GF Integration",
-    path:
-      "/context-packs/semantik-architect-context-pack--engine-and-gf-integration--v2.5.txt",
-    type: "text/plain",
-    purpose:
-      "Technical reference for semantic engine architecture and Grammatical Framework integration.",
-  },
-  {
-    fileName:
-      "context-packs/grammatical-framework-context-pack--rgl-router-and-reference--v1.0.txt",
-    title: "Grammatical Framework — RGL Router and Reference",
-    path:
-      "/context-packs/grammatical-framework-context-pack--rgl-router-and-reference--v1.0.txt",
-    type: "text/plain",
-    purpose:
-      "Large reference bundle for Grammatical Framework, RGL routing, and language-resource integration.",
-  },
-  {
-    fileName:
-      "context-packs/senior-architect-context-pack--systems-patterns-and-resilience--v1.0.txt",
-    title: "Senior Architect — Systems Patterns and Resilience",
-    path:
-      "/context-packs/senior-architect-context-pack--systems-patterns-and-resilience--v1.0.txt",
-    type: "text/plain",
-    purpose:
-      "Systems architecture patterns, resilience principles, and implementation guidance.",
-  },
-]);
+// Context packs are discovered from the builder-generated manifest at build time.
+// This keeps /llms.txt aligned with the actual files published under public/context-packs.
+export const CONTEXT_PACK_MANIFEST_RELATIVE_PATH = "context-packs/index.json";
 
 // Backward-compatible named export expected by some callers.
 export const GENERATED_MD_STATE_FILE_NAME = ARTIFACT_NAMES.generatedMdState;

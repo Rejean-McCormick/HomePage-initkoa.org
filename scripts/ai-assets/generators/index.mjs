@@ -1,8 +1,11 @@
 // scripts/ai-assets/generators/index.mjs
 
+import fs from "node:fs";
+import path from "node:path";
+
 import {
   AI_SUPPORTING_RESOURCES,
-  CONTEXT_PACK_FILES,
+  CONTEXT_PACK_MANIFEST_RELATIVE_PATH,
 } from "../constants.mjs";
 
 function getPages(state) {
@@ -206,6 +209,92 @@ function pushConfiguredResources(lines, resources, baseUrl) {
   }
 }
 
+function contextPackSlugFromFilename(fileName) {
+  return String(fileName || "")
+    .replace(/\.txt$/i, "")
+    .replace(/-context-pack(?:--.*)?$/i, "")
+    .toLowerCase();
+}
+
+function titleFromSlug(slug) {
+  return String(slug || "")
+    .split("-")
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
+function readContextPackManifest(config) {
+  const publicDir = config?.publicDir || path.join(process.cwd(), "public");
+  const relativeManifest =
+    CONTEXT_PACK_MANIFEST_RELATIVE_PATH || "context-packs/index.json";
+  const manifestPath = path.join(publicDir, relativeManifest);
+
+  try {
+    if (!fs.existsSync(manifestPath)) return null;
+    const parsed = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+    if (!Array.isArray(parsed?.packs)) return null;
+
+    return parsed.packs.filter(
+      (pack) => typeof pack?.file === "string" && pack.file.toLowerCase().endsWith(".txt")
+    );
+  } catch {
+    return null;
+  }
+}
+
+function scanContextPackDirectory(config) {
+  const publicDir = config?.publicDir || path.join(process.cwd(), "public");
+  const directory = path.join(publicDir, "context-packs");
+
+  try {
+    if (!fs.existsSync(directory)) return [];
+    return fs
+      .readdirSync(directory, { withFileTypes: true })
+      .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith(".txt"))
+      .map((entry) => ({ file: entry.name }));
+  } catch {
+    return [];
+  }
+}
+
+function discoverContextPackResources(config) {
+  const discovered = readContextPackManifest(config) ?? scanContextPackDirectory(config);
+
+  return discovered
+    .map((pack) => {
+      const file = String(pack?.file || "").trim();
+      if (!file) return null;
+
+      const slug = String(pack?.slug || contextPackSlugFromFilename(file)).trim();
+      const repository = String(pack?.repository || "").trim();
+      const repositoryName = repository ? repository.split("/").pop() : "";
+      const fallbackName = repositoryName || titleFromSlug(slug) || file;
+      const rawFileCount = pack?.fileCount;
+      const fileCount =
+        rawFileCount != null && rawFileCount !== "" && Number.isFinite(Number(rawFileCount))
+          ? Number(rawFileCount)
+          : null;
+
+      const details = [
+        repository ? `Source: ${repository}.` : "",
+        fileCount != null ? `Files: ${fileCount}.` : "",
+      ]
+        .filter(Boolean)
+        .join(" ");
+
+      return {
+        fileName: `context-packs/${file}`,
+        title: String(pack?.title || `${fallbackName} Context Pack`).trim(),
+        path: `/context-packs/${file}`,
+        type: "text/plain",
+        purpose: details || "AI-ready context pack published by initkoa.org.",
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.title.localeCompare(b.title, "en", { sensitivity: "base" }));
+}
+
 export function selectLlmsPages(state) {
   const config = getConfig(state);
   const pages = getPages(state);
@@ -371,7 +460,7 @@ export function buildLlmsTxt(state) {
     "Context packs are linked here as external/static reference bundles. Their contents are not duplicated into this compact entrypoint or the generated route corpus."
   );
   lines.push("");
-  pushConfiguredResources(lines, CONTEXT_PACK_FILES, config.baseUrl);
+  pushConfiguredResources(lines, discoverContextPackResources(config), config.baseUrl);
 
   lines.push("");
   lines.push("## Important pages");
