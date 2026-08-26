@@ -43,7 +43,6 @@ REPOS = [
     ("Konductor", MYCODE / "Konductor" / "Konductor"),
     ("LevelUpDiag-Koa-Linux", MYCODE / "kOA-Linux" / "LevelUpDiag-Koali"),
     ("K-Port", MYCODE / "K-Port" / "K-Port"),
-    ("initkoa-docs", MYCODE / "HomePage" / "docs-initkoa-org"),
     ("Freeze-Vote-Rebuild_Operational-Peace-Framework", MYCODE / "FreezeVoteRebuild" / "Freeze-Vote-Rebuild_Operational-Peace-Framework"),
     ("Book-Civilizational_Coherence", MYCODE / "Books" / "Civilisational_Coherence"),
     ("konnaxion-ashoka-systems-change", MYCODE / "Ashoka"),
@@ -54,6 +53,13 @@ REPOS = [
 ]
 
 COMMIT_MESSAGE = "Update context packs"
+
+# Packs intentionally retired from this builder. They are removed from public/context-packs
+# before the manifest is regenerated so stale files cannot remain published indefinitely.
+RETIRED_PACK_FILES = {
+    "initkoa-docs-context-pack.txt",
+}
+
 CREATE_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 
@@ -608,6 +614,23 @@ def write_manifest(log=None) -> bool:
         log(f"Manifest : {len(packs)} pack(s) -> {MANIFEST_PATH.name}")
     return True
 
+def cleanup_retired_packs(log=None) -> int:
+    """Delete context packs that are no longer managed/published by this builder."""
+    removed = 0
+    for file_name in sorted(RETIRED_PACK_FILES):
+        path = OUTPUT_DIR / file_name
+        if not path.exists():
+            continue
+        try:
+            path.unlink()
+            removed += 1
+            if log:
+                log(f"Pack retiré : {file_name}")
+        except OSError as exc:
+            raise RuntimeError(f"Impossible de retirer le pack obsolète {path}: {exc}") from exc
+    return removed
+
+
 def install_self_into_initkoa():
     source = Path(__file__).resolve()
     TOOL_TARGET.parent.mkdir(parents=True, exist_ok=True)
@@ -644,6 +667,7 @@ def build_all(log):
         except Exception as exc:
             results.append({"label": label, "path": repo, "error": str(exc), "files": 0, "changed": False})
             log(f"    ERREUR : {exc}")
+    cleanup_retired_packs(log)
     write_manifest(log)
     return results
 
@@ -656,6 +680,10 @@ def sync_initkoa(log, pull_first=True):
     if pull_first:
         log("Git : pull --rebase --autostash...")
         git(INITKOA_REPO, "pull", "--rebase", "--autostash")
+
+    # Keep the published directory and manifest coherent even when the user runs Sync only.
+    cleanup_retired_packs(log)
+    write_manifest(log)
 
     relative_output = OUTPUT_DIR.relative_to(INITKOA_REPO).as_posix()
     relative_tool = TOOL_TARGET.relative_to(INITKOA_REPO).as_posix()
