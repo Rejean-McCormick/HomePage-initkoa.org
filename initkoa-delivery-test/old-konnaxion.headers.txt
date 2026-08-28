@@ -1,0 +1,55 @@
+HTTP/1.1 308 Permanent Redirect
+Date: Fri, 28 Aug 2026 14:47:13 GMT
+Content-Type: text/plain
+Transfer-Encoding: chunked
+Connection: keep-alive
+access-control-allow-origin: *
+Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
+content-security-policy: default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' blob: data: https:; connect-src 'self' https://www.google-analytics.com
+location: /context-packs/konnaxion-context-pack.txt
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+refresh: 0;url=/context-packs/konnaxion-context-pack.txt
+Server: cloudflare
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-robots-tag: noindex, follow, noarchive
+x-vercel-id: yul1::c8jp8-1787928433157-0e0b901ec5ea
+cf-cache-status: DYNAMIC
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=kS3RgzfO%2BijQH%2Buvsi3SueIIWNKxuSLWQm6bKIg%2BISZOcO8Ua563MrEyUZhG3iZh5zk7%2BpoZrxDsOEEMM9v9f0AOe2qVXfTBf2zKBHA3Jmzz2SXnRDp%2FFXz6vTB3sg%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+CF-RAY: a3241c230800a261-YUL
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 200 OK
+Date: Fri, 28 Aug 2026 14:47:13 GMT
+Content-Type: text/plain; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+access-control-allow-origin: *
+Age: 0
+Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
+content-disposition: inline; filename="konnaxion-context-pack.txt"
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+content-security-policy: default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' blob: data: https:; connect-src 'self' https://www.google-analytics.com
+etag: W/"ba4ed2cb58764a0c78987453157580c3"
+last-modified: Fri, 28 Aug 2026 14:47:13 GMT
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+Server: cloudflare
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-matched-path: /context-packs/konnaxion-context-pack.txt
+x-robots-tag: noindex, follow, noarchive
+x-vercel-cache: MISS
+x-vercel-id: yul1::nvvcf-1787928433219-3562e2208fe5
+cf-cache-status: DYNAMIC
+vary: accept-encoding
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=mc%2FbQyaPERUudSQ2nl1JwkTFTNPSSbIs3P5smRpvU7EOyCv0xc2vzVnysLlm3JMcWdO7rOvb8AqRe8HvNlHVY42TIyxssHKLgFR43ldYBjYDQRRy2gA9Fq9EkOqyTg%3D%3D"}]}
+CF-RAY: a3241c23787da261-YUL
+alt-svc: h3=":443"; ma=86400
+

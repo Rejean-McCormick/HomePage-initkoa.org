@@ -19,14 +19,17 @@ Build guard:
 - npm run context-packs:validate
 
 Public build behavior:
-- committed Markdown only
-- clean Markdown working trees required
+- default repositories: committed Markdown only
+- curated repositories: committed files selected by policy globs
+- clean selected source state required
 - policy exclusions/classification applied before packaging
-- exact duplicate Markdown removed by SHA-256
+- exact duplicate source content removed by SHA-256
 - corpus metrics and policyVersion written into each pack and index.json
 - index.json and sitemap.xml generated from the published pack set
 - /llms.txt discovers Context Packs from index.json only
 - historical public Context Pack URLs redirect permanently to stable URLs
+- kOA-Linux uses its native AI layer instead of concatenating the full Markdown corpus:
+  docs/AI_CONTEXT.md + ai-navigation contract + declared canonical source contracts + generated AI contexts/indexes
 - two legacy general packs are explicitly exempt from builder-format checks until migrated
 
 Generated outputs (never edit manually):

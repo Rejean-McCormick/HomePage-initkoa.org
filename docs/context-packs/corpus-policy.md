@@ -19,8 +19,9 @@ A public Context Pack must be reproducible from committed source material and mu
 Default rules:
 
 ```txt
-source selection        = committed Markdown only
-working tree Markdown   = clean before public build
+default selection       = committed Markdown only
+curated selection       = committed files matching repository policy globs
+working source state    = clean before public build
 exact duplicates        = removed by SHA-256 of normalized file content
 canonical               = included
 reference               = included unless a repository rule marks it on-demand
@@ -28,6 +29,8 @@ proposal                = excluded from the public pack by default
 historical              = excluded from the public pack by default
 plain non-Git wiki      = ignored for public builds
 ```
+
+Repositories that already publish a dedicated AI navigation/context layer SHOULD use `selectionMode: curated` instead of recompiling their complete Markdown corpus. Curated mode remains policy-driven and fail-closed: required patterns must resolve to committed files, and selected tracked files must be clean.
 
 ## Authority classes
 
@@ -47,24 +50,68 @@ Repository rules may classify a path and independently decide whether that path 
 
 ## Selection order
 
-For each repository and its Git-backed wiki, the builder must:
+For each repository, the builder must:
 
-1. refuse a public build when tracked or untracked Markdown changes make the source working tree dirty;
-2. enumerate committed Markdown files only;
-3. apply global exclusion rules;
-4. apply repository-specific classification/include rules;
-5. normalize file text to UTF-8/LF;
-6. remove exact duplicate content using SHA-256, keeping the first deterministic path;
-7. build the pack from the remaining files;
-8. record corpus metrics and the policy version in the pack header and manifest.
+1. resolve the repository selection mode from `tools/context_pack_policy.json`;
+2. in `markdown` mode, refuse a public build when Markdown state is dirty and enumerate committed Markdown only;
+3. in `curated` mode, resolve `includePatterns`, verify every `requiredPatterns` entry has at least one committed match, and refuse the build when a selected tracked source differs from `HEAD`;
+4. include a Git-backed wiki only when the repository policy allows it;
+5. apply global exclusion rules and repository-specific authority/include rules;
+6. order curated sources using `readFirst` before deterministic path ordering;
+7. normalize text to UTF-8/LF;
+8. remove exact duplicate content using SHA-256, keeping the first deterministic source;
+9. build the pack from the remaining files;
+10. record corpus metrics, selection mode, selected-source cleanliness, and policy version in the pack header and manifest.
 
-Untracked Markdown is never included in a public Context Pack. A dirty working tree is still treated as an error because it means the local source state and the committed source state differ.
+`working_tree_markdown` remains in the pack header for compatibility with the site validator. Curated packs additionally emit `working_tree_selected`; for curated mode both fields represent cleanliness of the selected committed source set rather than the whole Markdown tree.
+
+Untracked files are never included in a public Context Pack because the source enumeration is Git-committed-only. Dirty selected source state is an error because the local bytes and the committed source identity would otherwise diverge.
 
 ## Wikis
 
 A GitHub wiki may be folded into its repository Context Pack under the stable `wiki/` prefix when the local wiki directory is a Git repository.
 
 A plain local wiki directory has no commit identity and therefore is not included in a public build. It may be used by other local tooling, but it is not a public Context Pack source.
+
+
+## AI-native curated repositories
+
+A repository that already owns a generated AI context/navigation layer should expose that layer directly rather than forcing the public Context Pack builder to concatenate the entire documentation tree.
+
+The current kOA-Linux policy uses:
+
+```txt
+selectionMode = curated
+includeWiki   = false
+
+read first:
+  docs/AI_CONTEXT.md
+  docs/contracts/ai-navigation.contract.json
+  docs/generated/ai-context/koa-navigation.json
+  docs/generated/ai-context/*.json
+
+canonical source-contract globs declared by ai-navigation:
+  docs/contracts/*.contract.json
+  docs/contracts/components/*.component.json
+  docs/contracts/subsystems/*.subsystem.json
+  docs/contracts/profiles/*.profile.json
+  docs/contracts/integrations/*.integration.json
+  docs/contracts/toolchains/*.toolchain.json
+
+structured discovery/context:
+  docs/generated/authority-manifest.json
+  docs/generated/document-index.json
+  docs/generated/component-catalog.json
+  docs/generated/subsystem-catalog.json
+  docs/generated/profile-catalog.json
+  docs/generated/requirements-index.json
+  docs/generated/assertion-index.json
+  docs/generated/traceability.json
+```
+
+This preserves kOA-Linux's own contract-first AI architecture. `AI_CONTEXT.md` is the visible read-first entrypoint, `ai-navigation.contract.json` owns navigation rules, its declared source-contract globs provide the canonical structured authority needed for follow-up work, generated AI context files provide scoped packages, and generated indexes are discovery projections rather than independent authority. The initkoa Context Pack is therefore a transport wrapper around the repository's AI-native layer, not a second full documentation compilation.
+
+Curated generated files should normally be classified as `reference`; source contracts can remain `canonical`. The policy must not relabel generated indexes as canonical authority.
 
 ## Exact deduplication
 
@@ -111,7 +158,7 @@ Examples currently covered include:
 
 ```txt
 Konnaxion      .kx_deploy_backups/**                         -> historical, excluded
-kOA-Linux      _pipeline-plan-diag_*/**                      -> historical, excluded
+kOA-Linux      AI-native curated selection                  -> AI_CONTEXT + generated AI/index layer
 Kristal Farms  archive/**                                    -> historical, excluded
 Orgo           Architecture upgrade(to do)/**                -> proposal, excluded
 UCKK Moodle    string_inventory/**                           -> reference/on-demand, excluded

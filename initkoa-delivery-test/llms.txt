@@ -1,0 +1,452 @@
+# initkoa.org
+
+> Public documentation for the kOA INITIATIVE by Réjean McCormick: civic utilities for learning, coordination, and governable decision-making (offline-first, auditable).
+
+## Purpose
+
+This is the primary AI entrypoint for the site. It gives agents a compact orientation, points to supporting machine-readable artifacts, lists context packs as external references, and exposes important page-level Markdown mirrors.
+
+Use this file first. Use auxiliary files only when deeper crawling, full context, structured route discovery, or domain-specific context packs are needed.
+
+## Metadata
+
+- Generated: 2026-08-28T14:22:35.650Z
+- Site title: kOA INITIATIVE
+- Base URL: https://initkoa.org
+- Pages included in generated corpus: 164
+
+## Supporting machine-readable artifacts
+
+- [Full LLM context](https://initkoa.org/llms-full.txt)
+  - Full aggregated AI context bundle. Use when /llms.txt is not enough. Type: text/plain.
+- [AI corpus](https://initkoa.org/ai-corpus.txt)
+  - Plain-text corpus extracted from public app routes. Type: text/plain.
+- [AI sitemap](https://initkoa.org/ai-sitemap.json)
+  - JSON route inventory with source paths and Markdown mirror URLs. Type: application/json.
+- [Markdown manifest](https://initkoa.org/md-manifest.json)
+  - JSON index of HTML routes, Markdown mirrors, summaries, sources, and character counts. Type: application/json.
+- [Markdown sitemap](https://initkoa.org/md-sitemap.xml)
+  - XML sitemap dedicated to Markdown mirror URLs. Type: application/xml.
+
+## Context packs
+
+Context packs are linked here as external/static reference bundles. Their contents are not duplicated into this compact entrypoint or the generated route corpus.
+For questions about a specific kOA system, project, architecture, implementation, or repository, prefer the corresponding Context Pack as the primary technical reference.
+
+- [Context Pack catalog](https://initkoa.org/context-packs/index.json)
+  - Authoritative machine-readable catalog of published Context Packs. Type: application/json.
+- [Context Pack sitemap](https://initkoa.org/context-packs/sitemap.xml)
+  - Crawler discovery surface for current stable Context Pack URLs. Type: application/xml.
+- [Ame-Artificielle Context Pack](https://initkoa.org/context-packs/ame-artificielle-context-pack.txt)
+  - Source: Rejean-McCormick/Ame-Artificielle. Files: 32. Type: text/plain.
+- [Book-Civilizational_Coherence Context Pack](https://initkoa.org/context-packs/book-civilizational-coherence-context-pack.txt)
+  - Source: Rejean-McCormick/Book-Civilizational_Coherence. Files: 130. Type: text/plain.
+- [Freeze-Vote-Rebuild_Operational-Peace-Framework Context Pack](https://initkoa.org/context-packs/freeze-vote-rebuild-operational-peace-framework-context-pack.txt)
+  - Source: Rejean-McCormick/Freeze-Vote-Rebuild_Operational-Peace-Framework. Files: 74. Type: text/plain.
+- [Grammatical Framework Context Pack](https://initkoa.org/context-packs/grammatical-framework-context-pack--rgl-router-and-reference--v1.0.txt)
+  - AI-ready context pack published by initkoa.org. Type: text/plain.
+- [K-Port Context Pack](https://initkoa.org/context-packs/k-port-context-pack.txt)
+  - Source: Rejean-McCormick/K-Port. Files: 13. Type: text/plain.
+- [kOA_Digital_Ecosystem Context Pack](https://initkoa.org/context-packs/koa-digital-ecosystem-context-pack.txt)
+  - Source: Rejean-McCormick/kOA_Digital_Ecosystem. Files: 100. Type: text/plain.
+- [kOA-Linux Context Pack](https://initkoa.org/context-packs/koa-linux-context-pack.txt)
+  - Source: Rejean-McCormick/kOA-Linux. Files: 56. Type: text/plain.
+- [Konductor Context Pack](https://initkoa.org/context-packs/konductor-context-pack.txt)
+  - Source: Rejean-McCormick/Konductor. Files: 4. Type: text/plain.
+- [Konnaxion Context Pack](https://initkoa.org/context-packs/konnaxion-context-pack.txt)
+  - Source: Rejean-McCormick/Konnaxion. Files: 109. Type: text/plain.
+- [Konnaxion_Capsule_Manager Context Pack](https://initkoa.org/context-packs/konnaxion-capsule-manager-context-pack.txt)
+  - Source: Rejean-McCormick/Konnaxion_Capsule_Manager. Files: 24. Type: text/plain.
+- [konnaxion-ashoka-systems-change-dossier Context Pack](https://initkoa.org/context-packs/konnaxion-ashoka-systems-change-dossier-context-pack.txt)
+  - Source: Rejean-McCormick/konnaxion-ashoka-systems-change-dossier. Files: 10. Type: text/plain.
+- [Kristal_Farms Context Pack](https://initkoa.org/context-packs/kristal-farms-context-pack.txt)
+  - Source: Rejean-McCormick/Kristal_Farms. Files: 159. Type: text/plain.
+- [kristal-framework Context Pack](https://initkoa.org/context-packs/kristal-framework-context-pack.txt)
+  - Source: Rejean-McCormick/kristal-framework. Files: 72. Type: text/plain.
+- [LevelUpDiag-Koa-Linux Context Pack](https://initkoa.org/context-packs/levelupdiag-koa-linux-context-pack.txt)
+  - Source: Rejean-McCormick/LevelUpDiag-Koa-Linux. Files: 21. Type: text/plain.
+- [MediKristal Context Pack](https://initkoa.org/context-packs/medikristal-context-pack.txt)
+  - Source: Rejean-McCormick/MediKristal. Files: 22. Type: text/plain.
+- [Omni-Wiki-Rejean-King-Klown Context Pack](https://initkoa.org/context-packs/omni-wiki-rejean-king-klown-context-pack.txt)
+  - Source: Rejean-McCormick/Omni-Wiki-Rejean-King-Klown. Files: 96. Type: text/plain.
+- [Orgo Context Pack](https://initkoa.org/context-packs/orgo-context-pack.txt)
+  - Source: Rejean-McCormick/Orgo. Files: 48. Type: text/plain.
+- [partners-for-public-good_pressure-test-koali Context Pack](https://initkoa.org/context-packs/partners-for-public-good-pressure-test-koali-context-pack.txt)
+  - Source: Rejean-McCormick/partners-for-public-good_pressure-test-koali. Files: 7. Type: text/plain.
+- [Projet_ORPHEE-Walk_Straight Context Pack](https://initkoa.org/context-packs/projet-orphee-walk-straight-context-pack.txt)
+  - Source: Rejean-McCormick/Projet_ORPHEE-Walk_Straight. Files: 24. Type: text/plain.
+- [science-silk-road-koali Context Pack](https://initkoa.org/context-packs/science-silk-road-koali-context-pack.txt)
+  - Source: Rejean-McCormick/science-silk-road-koali. Files: 21. Type: text/plain.
+- [SemantiK_Architect Context Pack](https://initkoa.org/context-packs/semantik-architect-context-pack.txt)
+  - Source: Rejean-McCormick/SemantiK_Architect. Files: 67. Type: text/plain.
+- [SemantiK-Architect-GF-Zone-Auditor Context Pack](https://initkoa.org/context-packs/semantik-architect-gf-zone-auditor-context-pack.txt)
+  - Source: Rejean-McCormick/SemantiK-Architect-GF-Zone-Auditor. Files: 12. Type: text/plain.
+- [Senior Architect Context Pack](https://initkoa.org/context-packs/senior-architect-context-pack--systems-patterns-and-resilience--v1.0.txt)
+  - AI-ready context pack published by initkoa.org. Type: text/plain.
+- [SenTient Context Pack](https://initkoa.org/context-packs/sentient-context-pack.txt)
+  - Source: Rejean-McCormick/SenTient. Files: 16. Type: text/plain.
+- [UCKK_Assets Context Pack](https://initkoa.org/context-packs/uckk-assets-context-pack.txt)
+  - Source: Rejean-McCormick/UCKK_Assets. Files: 42. Type: text/plain.
+- [UCKK-Moodle Context Pack](https://initkoa.org/context-packs/uckk-moodle-context-pack.txt)
+  - Source: Rejean-McCormick/UCKK-Moodle. Files: 57. Type: text/plain.
+- [VotingMachine Context Pack](https://initkoa.org/context-packs/votingmachine-context-pack.txt)
+  - Source: Rejean-McCormick/VotingMachine. Files: 13. Type: text/plain.
+- [XKaliber Context Pack](https://initkoa.org/context-packs/xkaliber-context-pack.txt)
+  - Source: Rejean-McCormick/XKaliber. Files: 40. Type: text/plain.
+
+## Important pages
+
+### /
+
+- Route: /
+- HTML: https://initkoa.org
+- Markdown mirror: https://initkoa.org/index.html.md
+- Source: app/page.tsx
+
+Civic utilities for a fragmented world kOA Shared infrastructure for turning knowledge into coordinated action. kOA is a knowledge-to-action initiative for civic life, institutional coordination, and collaborative empowe…
+
+### /about
+
+- Route: /about
+- HTML: https://initkoa.org/about
+- Markdown mirror: https://initkoa.org/about/index.html.md
+- Source: app/about/page.js
+
+Réjean McCormick Socio-technical architect building civic utilities : shared infrastructure that helps people learn, coordinate, and govern together—without depending on fragile platforms or opaque systems. Start here: T…
+
+### /why
+
+- Route: /why
+- HTML: https://initkoa.org/why
+- Markdown mirror: https://initkoa.org/why/index.html.md
+- Source: app/why/page.tsx
+
+kOA / The Diagnosis Why this exists We live in a paradox: information is abundant , yet our ability to turn it into coordinated action stays weak. kOA is an attempt to close the loop: knowledge → deliberation → decisions…
+
+### /diagnosis
+
+- Route: /diagnosis
+- HTML: https://initkoa.org/diagnosis
+- Markdown mirror: https://initkoa.org/diagnosis/index.html.md
+- Source: app/diagnosis/page.js
+
+Radical Lucidity Global Context & Systemic Diagnosis We cannot fix what we refuse to see. Before proposing solutions, we practice Radical Lucidity : naming failures clearly, without denial, ideology, or optimism bias. Th…
+
+### /infrastructures
+
+- Route: /infrastructures
+- HTML: https://initkoa.org/infrastructures
+- Markdown mirror: https://initkoa.org/infrastructures/index.html.md
+- Source: app/infrastructures/page.tsx
+
+Infrastructures The foundation layer of the ecosystem: resilient systems that make learning, coordination, and governance feasible in the real world. One part is physical (where intelligence can run efficiently). One par…
+
+### /principles
+
+- Route: /principles
+- HTML: https://initkoa.org/principles
+- Markdown mirror: https://initkoa.org/principles/index.html.md
+- Source: app/principles/page.js
+
+Principles These principles guide how the kOA ecosystem is designed, governed, and communicated. The key idea is clarity + separation : civic rules must be legible and contestable, technical systems must be verifiable, a…
+
+### /principles/map
+
+- Route: /principles/map
+- HTML: https://initkoa.org/principles/map
+- Markdown mirror: https://initkoa.org/principles/map/index.html.md
+- Source: app/principles/map/page.js
+
+Principles A small set of design commitments that guide the kOA ecosystem. Two domains are intentionally separated. Core axioms 1. Radical Lucidity Face reality as it is. Prefer evidence, clarity, and honest diagnosis ov…
+
+### /principles/glossary
+
+- Route: /principles/glossary
+- HTML: https://initkoa.org/principles/glossary
+- Markdown mirror: https://initkoa.org/principles/glossary/index.html.md
+- Source: app/principles/glossary/page.js
+
+Glossary Definitions for shared terms used throughout the Principles hub. Where a term is labeled “optional,” it is explicitly separated from civic authority and technical requirements. Back to Principles Map
+
+### /principles/logos
+
+- Route: /principles/logos
+- HTML: https://initkoa.org/principles/logos
+- Markdown mirror: https://initkoa.org/principles/logos/index.html.md
+- Source: app/principles/logos/page.tsx
+
+Operational Metaphysics The Power of the Word Language is not merely a tool for description; it is an instrument of creation. From the vibration of the voice to the structure of political myths, we analyze how the Word s…
+
+### /principles/civic-principles-ethics
+
+- Route: /principles/civic-principles-ethics
+- HTML: https://initkoa.org/principles/civic-principles-ethics
+- Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/index.html.md
+- Source: app/principles/civic-principles-ethics/page.js
+
+Civic Principles & Ethics A practical domain for civic life: how power is made legitimate, how rights are protected, how duties are defined, and how institutions stay accountable. Principles The core civic values: legiti…
+
+### /principles/civic-principles-ethics/rights-and-duties
+
+- Route: /principles/civic-principles-ethics/rights-and-duties
+- HTML: https://initkoa.org/principles/civic-principles-ethics/rights-and-duties
+- Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/rights-and-duties/index.html.md
+- Source: app/principles/civic-principles-ethics/rights-and-duties/page.js
+
+Rights & Duties Rights protect dignity and freedom. Duties protect the commons and ensure that liberty does not become domination. Core rights Core duties Balancing rule When rights conflict, prefer solutions that preser…
+
+### /initiatives
+
+- Route: /initiatives
+- HTML: https://initkoa.org/initiatives
+- Markdown mirror: https://initkoa.org/initiatives/index.html.md
+- Source: app/initiatives/page.tsx
+
+Initiatives The kOA Initiative is organized as three layers of action: Theory (the diagnosis and guiding principles), Governance (rules and institutions), and Technology (tools that make coordination concrete, verifiable…
+
+### /initiatives/civic-governance
+
+- Route: /initiatives/civic-governance
+- HTML: https://initkoa.org/initiatives/civic-governance
+- Markdown mirror: https://initkoa.org/initiatives/civic-governance/index.html.md
+- Source: app/initiatives/civic-governance/page.tsx
+
+Civic Governance The core initiative of kOA is to provide a "Government in a Box" — a complete, deployable stack for managing communities. The Constitution The rules engine. Read the Constitution Modules Overview Start w…
+
+### /initiatives/civic-governance/constitution
+
+- Route: /initiatives/civic-governance/constitution
+- HTML: https://initkoa.org/initiatives/civic-governance/constitution
+- Markdown mirror: https://initkoa.org/initiatives/civic-governance/constitution/index.html.md
+- Source: app/initiatives/civic-governance/constitution/page.tsx
+
+The Civic Constitution If kOA is an operating system, the Constitution is the kernel : the rules that bind power. It exists to prevent capture—so the system serves the public, not the operators. Non-domination Auditabili…
+
+### /initiatives/civic-governance/constitution/rights
+
+- Route: /initiatives/civic-governance/constitution/rights
+- HTML: https://initkoa.org/initiatives/civic-governance/constitution/rights
+- Markdown mirror: https://initkoa.org/initiatives/civic-governance/constitution/rights/index.html.md
+- Source: app/initiatives/civic-governance/constitution/rights/page.tsx
+
+The Civic Bill of Rights In kOA, rights are not marketing promises. They are design constraints : enforced through governance rules, audit trails, and system defaults that make violations visible, contestable, and correc…
+
+### /initiatives/civic-governance/constitution/ekoh
+
+- Route: /initiatives/civic-governance/constitution/ekoh
+- HTML: https://initkoa.org/initiatives/civic-governance/constitution/ekoh
+- Markdown mirror: https://initkoa.org/initiatives/civic-governance/constitution/ekoh/index.html.md
+- Source: app/initiatives/civic-governance/constitution/ekoh/page.tsx
+
+EkoH Democracy decides values . EkoH helps communities consult competence —by domain—without sliding into technocracy. It works by showing multiple transparent “readings” of the same vote, so differences are visible and…
+
+### /initiatives/civic-governance/modules
+
+- Route: /initiatives/civic-governance/modules
+- HTML: https://initkoa.org/initiatives/civic-governance/modules
+- Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/index.html.md
+- Source: app/initiatives/civic-governance/modules/page.tsx
+
+Civic Modules The Civic Governance framework is organized into modules that map to core civic functions. Each module is designed to be auditable , contestable , and implementable without relying on opaque authority. Comp…
+
+### Economy Module: The Economy of Circulation
+
+- Route: /initiatives/civic-governance/modules/economy
+- HTML: https://initkoa.org/initiatives/civic-governance/modules/economy
+- Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/economy/index.html.md
+- Source: app/initiatives/civic-governance/modules/economy/page.mdx
+
+'Moving from an economy of extraction to an economy of circulation through shared civic infrastructure and low-friction coordination.', > “A healthy economy is one where money and matter circulate among those who create—…
+
+### Education Module — Verified Competence
+
+- Route: /initiatives/civic-governance/modules/education
+- HTML: https://initkoa.org/initiatives/civic-governance/modules/education
+- Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/education/index.html.md
+- Source: app/initiatives/civic-governance/modules/education/page.mdx
+
+'Replace prestige credentials with a portable competence portfolio: modular learning, mastery validation, and auditable proof of skills.', The traditional academic model is optimized for **prestige signals** and long cyc…
+
+### Justice Module: Procedural Fairness
+
+- Route: /initiatives/civic-governance/modules/justice
+- HTML: https://initkoa.org/initiatives/civic-governance/modules/justice
+- Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/justice/index.html.md
+- Source: app/initiatives/civic-governance/modules/justice/page.mdx
+
+'A justice workflow designed for speed, transparency, and recourse—using tools for assistance without unaccountable authority.', Most justice systems fail in predictable ways: 1. **Delay:** backlogs and procedural fricti…
+
+### Summary
+
+- Route: /initiatives/ukraine-peace-plan/summary
+- HTML: https://initkoa.org/initiatives/ukraine-peace-plan/summary
+- Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/summary/index.html.md
+- Source: app/initiatives/ukraine-peace-plan/summary/page.mdx
+
+- Ukraine Peace & Reconstruction Plan (Home) (/initiatives/ukraine-peace-plan)
+
+### /platforms
+
+- Route: /platforms
+- HTML: https://initkoa.org/platforms
+- Markdown mirror: https://initkoa.org/platforms/index.html.md
+- Source: app/platforms/page.tsx
+
+Platforms kOA platforms are civic utilities: systems that help communities and organizations move from knowledge to deliberation to execution , while staying auditable , contestable , and offline-capable where needed. Wa…
+
+### /platforms/konnaxion
+
+- Route: /platforms/konnaxion
+- HTML: https://initkoa.org/platforms/konnaxion
+- Markdown mirror: https://initkoa.org/platforms/konnaxion/index.html.md
+- Source: app/platforms/konnaxion/page.tsx
+
+Konnaxion Learn • Deliberate • Decide • Build • Distribute • Preserve Konnaxion is the public coordination spine of the kOA ecosystem. It brings learning, structured deliberation, collective decision interfaces, builder…
+
+### /platforms/konnaxion/modules
+
+- Route: /platforms/konnaxion/modules
+- HTML: https://initkoa.org/platforms/konnaxion/modules
+- Markdown mirror: https://initkoa.org/platforms/konnaxion/modules/index.html.md
+- Source: app/platforms/konnaxion/modules/page.tsx
+
+Konnaxion / Modules Konnaxion modules Four civic utilities that share one principle: focus on outcomes, keep legitimacy visible, and make the system governable (auditable, contestable, portable). Cross-cutting layer Kint…
+
+### /platforms/konnaxion/technical
+
+- Route: /platforms/konnaxion/technical
+- HTML: https://initkoa.org/platforms/konnaxion/technical
+- Markdown mirror: https://initkoa.org/platforms/konnaxion/technical/index.html.md
+- Source: app/platforms/konnaxion/technical/page.tsx
+
+Konnaxion / Technical Technical foundations of Konnaxion This section is the entry point for the technical side of Konnaxion: the architecture, service boundaries, integration rules, and operating assumptions that make t…
+
+### /platforms/konnaxion/kollective-intelligence
+
+- Route: /platforms/konnaxion/kollective-intelligence
+- HTML: https://initkoa.org/platforms/konnaxion/kollective-intelligence
+- Markdown mirror: https://initkoa.org/platforms/konnaxion/kollective-intelligence/index.html.md
+- Source: app/platforms/konnaxion/kollective-intelligence/page.tsx
+
+Kollective Intelligence Kollective Intelligence is Konnaxion’s decision interface layer . It protects legitimacy by keeping the baseline visible, while also enabling transparent Smart Vote readings that help communities…
+
+### Smart Vote
+
+- Route: /platforms/konnaxion/kollective-intelligence/smart-vote
+- HTML: https://initkoa.org/platforms/konnaxion/kollective-intelligence/smart-vote
+- Markdown mirror: https://initkoa.org/platforms/konnaxion/kollective-intelligence/smart-vote/index.html.md
+- Source: app/platforms/konnaxion/kollective-intelligence/smart-vote/page.mdx
+
+"Weighted voting + decision readings (lenses) powered by EkoH snapshots: transparent outcomes, reproducible tallies, and cross-module targeting." **Smart Vote** — the decision engine under **Kollective Intelligence**. It…
+
+### Orgo — Execution & Accountability
+
+- Route: /platforms/orgo
+- HTML: https://initkoa.org/platforms/orgo
+- Markdown mirror: https://initkoa.org/platforms/orgo/index.html.md
+- Source: app/platforms/orgo/page.mdx
+
+"Orgo turns signals, reviews, approvals, and operational decisions into accountable work with routing, escalation, audit trails, and offline-capable execution.", "Orgo turns signals, reviews, approvals, and operational d…
+
+### Workflow: from signal to closure
+
+- Route: /platforms/orgo/workflow
+- HTML: https://initkoa.org/platforms/orgo/workflow
+- Markdown mirror: https://initkoa.org/platforms/orgo/workflow/index.html.md
+- Source: app/platforms/orgo/workflow/page.mdx
+
+Inbox, Filter, Route, Timer, CheckCircle2, RefreshCcw, Users, ArrowRight "A plain-language view of Orgo’s execution loop: convert signals into Cases and Tasks, route by function, enforce time, close with outcomes, and le…
+
+### Core guarantees
+
+- Route: /platforms/orgo/guarantees
+- HTML: https://initkoa.org/platforms/orgo/guarantees
+- Markdown mirror: https://initkoa.org/platforms/orgo/guarantees/index.html.md
+- Source: app/platforms/orgo/guarantees/page.mdx
+
+ShieldCheck, Route, Timer, CheckCircle2, ScrollText, WifiOff, Blocks, ArrowRight, "The non-negotiable operating guarantees of Orgo: accountable ownership, routing by function, bounded response time, traceable closure, au…
+
+### /technology
+
+- Route: /technology
+- HTML: https://initkoa.org/technology
+- Markdown mirror: https://initkoa.org/technology/index.html.md
+- Source: app/technology/page.tsx
+
+Technology This stack is organized around capabilities —what the system lets communities and organizations do—rather than internal technical mechanisms. The focus is: portable knowledge , legitimate decisions , and relia…
+
+### /technology/kristal
+
+- Route: /technology/kristal
+- HTML: https://initkoa.org/technology/kristal
+- Markdown mirror: https://initkoa.org/technology/kristal/index.html.md
+- Source: app/technology/kristal/page.tsx
+
+Technology / Kristal Kristal A Kristal is a portable, verifiable epistemic artifact. It lets knowledge travel across systems while keeping provenance, assertion status, certainty, authority, scope, and reader policy expl…
+
+### What a Kristal does
+
+- Route: /technology/kristal/overview
+- HTML: https://initkoa.org/technology/kristal/overview
+- Markdown mirror: https://initkoa.org/technology/kristal/overview/index.html.md
+- Source: app/technology/kristal/overview/page.mdx
+
+"Kristal is the portable, verifiable epistemic artifact layer of the kOA ecosystem: a way to publish, audit, distribute, query, and read structured knowledge with explicit provenance, certainty, authority, and scope.", A…
+
+### Trust, Provenance & Authority
+
+- Route: /technology/kristal/trust-and-provenance
+- HTML: https://initkoa.org/technology/kristal/trust-and-provenance
+- Markdown mirror: https://initkoa.org/technology/kristal/trust-and-provenance/index.html.md
+- Source: app/technology/kristal/trust-and-provenance/page.mdx
+
+"How Kristals stay verifiable and accountable: provenance, evidence, signatures, scoped validation, authority channels, reader policies, and preserved disagreement.", A Kristal is designed to be **verifiable without aski…
+
+### /technology/ariane
+
+- Route: /technology/ariane
+- HTML: https://initkoa.org/technology/ariane
+- Markdown mirror: https://initkoa.org/technology/ariane/index.html.md
+- Source: app/technology/ariane/page.tsx
+
+Ariane Semantic infrastructure for treating user interfaces as data. Ariane defines a universal graph model of software UIs—screens, controls, and the actions that connect them—so that external systems (such as AI agents…
+
+### Glossary
+
+- Route: /technology/ariane/concepts/glossary
+- HTML: https://initkoa.org/technology/ariane/concepts/Glossary
+- Markdown mirror: https://initkoa.org/technology/ariane/concepts/Glossary/index.html.md
+- Source: app/technology/ariane/concepts/Glossary/page.mdx
+
+This glossary defines key terms used throughout the Ariane documentation. **Action** An interaction performed on the UI, such as clicking a button, selecting a menu item, pressing a key, or setting a value in an input. I…
+
+### SenTient
+
+- Route: /technology/sentient
+- HTML: https://initkoa.org/technology/sentient
+- Markdown mirror: https://initkoa.org/technology/sentient/index.html.md
+- Source: app/technology/sentient/page.mdx
+
+**Version:** Draft architecture note **Status:** Conceptual / experimental — not production-ready > SenTient is an architectural direction and working specification, not a released production system. References to pipeli…
+
+### /infrastructures/kristal-farms
+
+- Route: /infrastructures/kristal-farms
+- HTML: https://initkoa.org/infrastructures/kristal-farms
+- Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/index.html.md
+- Source: app/infrastructures/kristal-farms/page.tsx
+
+Kristal Farms Compute for the world. Heat for the village. Kristal Farms is an infrastructure pattern: place modular compute fiber, and treat waste heat as a local public resource—heating buildings and supporting greenho…
+
+### /research
+
+- Route: /research
+- HTML: https://initkoa.org/research
+- Markdown mirror: https://initkoa.org/research/index.html.md
+- Source: app/research/page.js
+
+Working Theory Research & Theory The research layer of kOA: models, arguments, and design constraints behind a governable knowledge-to-action ecosystem—built to be auditable, domain-bounded, and usable in real institutio…
+
+## Additional pages
+
+125 additional page(s) are omitted from this compact entrypoint. Use llms-full.txt, md-manifest.json, or ai-sitemap.json for exhaustive discovery.

@@ -1,0 +1,30 @@
+HTTP/1.1 200 OK
+Date: Fri, 28 Aug 2026 14:47:11 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+access-control-allow-origin: *
+Age: 0
+Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
+content-disposition: inline; filename="index.json"
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+content-security-policy: default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' blob: data: https:; connect-src 'self' https://www.google-analytics.com
+etag: W/"4ae7946b818c346f7d9b318f4067b791"
+last-modified: Fri, 28 Aug 2026 14:47:11 GMT
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+Server: cloudflare
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-matched-path: /context-packs/index.json
+x-robots-tag: noindex, follow, noarchive
+x-vercel-cache: MISS
+x-vercel-id: yul1::j6msv-1787928431495-93debae447d4
+cf-cache-status: DYNAMIC
+vary: accept-encoding
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=zonvU0G3Y7gxwjoz7P3duw5Z0%2Fzil2vBgF5OzJ6R3l7m1HVllHDtjl%2FYgRIAh%2BG3i4mABgIsb%2FlAHQh9EwL%2FSpi7rgBvHX4YjwyI6Xf%2BIxO1bGFmGIMtpeD5zwq2zA%3D%3D"}]}
+CF-RAY: a3241c18be49fbd3-YUL
+alt-svc: h3=":443"; ma=86400
+

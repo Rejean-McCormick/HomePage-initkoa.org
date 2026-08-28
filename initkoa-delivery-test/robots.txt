@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /private
+Disallow: /admin
+Disallow: /api
+
+Sitemap: https://initkoa.org/sitemap.xml
+Sitemap: https://initkoa.org/context-packs/sitemap.xml

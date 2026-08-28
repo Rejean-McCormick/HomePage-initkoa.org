@@ -1,0 +1,30 @@
+HTTP/1.1 200 OK
+Date: Fri, 28 Aug 2026 14:47:12 GMT
+Content-Type: text/plain; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+access-control-allow-origin: *
+Age: 0
+Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
+content-disposition: inline; filename="koa-linux-context-pack.txt"
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+content-security-policy: default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' blob: data: https:; connect-src 'self' https://www.google-analytics.com
+etag: W/"ed72f835652c096488efc8e401714be9"
+last-modified: Fri, 28 Aug 2026 14:47:12 GMT
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+Server: cloudflare
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-matched-path: /context-packs/koa-linux-context-pack.txt
+x-robots-tag: noindex, follow, noarchive
+x-vercel-cache: MISS
+x-vercel-id: yul1::l6hgl-1787928432258-d727e78fe092
+cf-cache-status: DYNAMIC
+vary: accept-encoding
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=V%2BnlJRPRqhBPjkX3rH9mv4y63vwQj9GqEHLCz0bdj6T3R5z54Lq2qKbpCHayspbu9%2B%2BpH9M%2B7A4RIWv3poZennuE%2Fg3EhT368psyVygkeaVuc928PKOXkOTJk1UIMw%3D%3D"}]}
+CF-RAY: a3241c1d8e3adf5a-YYZ
+alt-svc: h3=":443"; ma=86400
+
