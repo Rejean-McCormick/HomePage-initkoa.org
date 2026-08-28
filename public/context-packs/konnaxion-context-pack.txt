@@ -2,7 +2,7 @@
 
 repository: Rejean-McCormick/Konnaxion
 source_path: C:\mycode\Konnaxion\Konnaxion
-source_commit: 9ab4fe0355184fae51c325c536b81ca633b8efaa
+source_commit: 60f4806e669ade724e6dcf2a77351cdddc2d0e32
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
@@ -10,17 +10,17 @@ wiki_source_path: C:\mycode\Konnaxion\Konnaxion.wiki
 wiki_source_commit: acca199c8f4667ff03ac3e953f4bc45a9763ebf8
 wiki_working_tree_markdown: clean
 policy_version: 2026-08-28.2
-repo_files: 155
+repo_files: 156
 wiki_files: 16
-source_files: 171
-included_files: 109
+source_files: 172
+included_files: 110
 excluded_files: 62
 duplicate_files: 0
-content_bytes: 1632251
-authority_counts: {"canonical":109}
-generated_at: 2026-08-28T10:21:55-04:00
-files: 109
-content_sha256: 17deea2f17ec63c68119f08ed0a2d577c497d2d9bc4b8e35f0ec489e01647e1e
+content_bytes: 1648482
+authority_counts: {"canonical":110}
+generated_at: 2026-08-28T14:17:51-04:00
+files: 110
+content_sha256: b409701051c477c390a679777c5310ee736b0251db18eba601c4873fcb421461
 
 ================================================================================================
 FILE INDEX
@@ -34,107 +34,108 @@ FILE INDEX
 006. [canonical] docs/Konnaxion_UserWorkflow_Documentation_v0_1.md
 007. [canonical] docs/README.md
 008. [canonical] docs/status/2026-08-27-technical-maturity-assessment.md
-009. [canonical] docs/status/README.md
-010. [canonical] docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
-011. [canonical] docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
-012. [canonical] docs/Technical-Reference/DEV_DOCKER_CHEATSHEET.md
-013. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference (Custom Tables).md
-014. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference.md
-015. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Documentation Index.md
-016. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Full-Stack Technical Specification.md
-017. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Insights UI Reference.md
-018. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Site Navigation Map.md
-019. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Full-Stack Technical Specification.md
-020. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Functional Code-Name Inventory (Services & Hooks).md
-021. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Global Parameter Reference.md
-022. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module Config Parameters.md
-023. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module UI Spec (Reporting & Analytics Frontend).md
-024. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Site Navigation Map (Top-Level Routes).md
-025. [canonical] docs/Technical-Reference/DocV14/Konnaxion  v14 - Documentation INDEX.docx.md
-026. [canonical] docs/Technical-Reference/EkoH Smart Vote/EkoH - System Overview.md
-027. [canonical] docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Data Model.md
-028. [canonical] docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Technical Specification.md
-029. [canonical] docs/Technical-Reference/EkoH Smart Vote/ekoh-module-file-architecture.md
-030. [canonical] docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-canonical-db-schema-v1-1.md
-031. [canonical] docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-definitive-module-documentation-set-v1-0.md
-032. [canonical] docs/Technical-Reference/EkoH Smart Vote/ekoh-system-overview-smart-vote-ecosystem.md
-033. [canonical] docs/Technical-Reference/EkoH Smart Vote/konnaxion-smart-vote-weighted-voting-system-structure-and-logic-internal-white-paper.md
-034. [canonical] docs/Technical-Reference/EkoH Smart Vote/Smart Vote - Reading Contract.md
-035. [canonical] docs/Technical-Reference/EkoH Smart Vote/smart-vote-consultation-simulations.md
-036. [canonical] docs/Technical-Reference/EkoH Smart Vote/smart-vote-empower-ux-naming-guidelines.md
-037. [canonical] docs/Technical-Reference/EkoH Smart Vote/smart-vote-system-in-konnaxion-technical-specification.md
-038. [canonical] docs/Technical-Reference/GLOSSARY.md
-039. [canonical] docs/Technical-Reference/HowToNest-wrap-shell.md
-040. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos-kintsugi-upgrade-plan-v1.md
-041. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/00_KINTSUGI_START_HERE.md
-042. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/01_ETHIKOS_KINTSUGI_EXECUTION_STRATEGY.md
-043. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/02_SOURCE_OF_TRUTH_AND_DRIFT_CONTROL.md
-044. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/03_BOUNDARIES_AND_OWNERSHIP_CONTRACTS.md
-045. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/04_CANONICAL_NAMING_AND_VARIABLES.md
-046. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/05_CURRENT_STATE_BASELINE.md
-047. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/06_ROUTE_BY_ROUTE_ETHIKOS_UPGRADE_PLAN.md
-048. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/07_API_AND_SERVICE_CONTRACTS.md
-049. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/08_DATA_MODEL_AND_MIGRATION_PLAN.md
-050. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/09_SMART_VOTE_EKOH_READING_CONTRACT.md
-051. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/10_FIRST_PASS_INTEGRATION_MATRIX.md
-052. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/11_MIMIC_VS_ANNEX_RULEBOOK.md
-053. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/12_CANONICAL_OBJECTS_AND_EVENTS.md
-054. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/13_PAYLOAD_SHAPES_AND_SERIALIZER_CONTRACTS.md
-055. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/14_FRONTEND_ALIGNMENT_CONTRACT.md
-056. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/15_BACKEND_ALIGNMENT_CONTRACT.md
-057. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/16_TEST_AND_SMOKE_CONTRACT.md
-058. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/17_KNOWN_BUGS_AND_NON_KINTSUGI_ITEMS.md
-059. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/18_ADR_REGISTER.md
-060. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/19_OSS_CODE_READING_PLAN.md
-061. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/20_AI_GENERATION_GUARDRAILS.md
-062. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/21_KIALO_STYLE_ARGUMENT_MAPPING_CONTRACT.md
-063. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/22_IMPLEMENTATION_BACKLOG_TEMPLATE.md
-064. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/23_WAVE1_IMPLEMENTATION_BACKLOG.md
-065. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/24_WAVE1_SLICE_REGISTER.md
-066. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/25_WAVE1_QA_CHECKLIST.md
-067. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/27_EKOH_RATING_VISIBILITY_AND_ACCESS_CONTRACT.md
-068. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kintsugi-upgrade-v1.md.md
-069. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kompendio-v1.md.md
-070. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/Konnaxion-kintsugi-and-kompendio-open-source-integration-map-v1.md
-071. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kintsugi-upgrade-plan-v1.md
-072. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kompendio-upgrade-plan-v1.md
-073. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/SmartVote-EkoH-kintsugi-upgrade-v1.md
-074. [canonical] docs/Technical-Reference/Konnaxion_Frontend_Deployment_Runbook.md
-075. [canonical] docs/Technical-Reference/namecheap-vps.md
-076. [canonical] docs/Technical-Reference/sub-modules_description/CertifiKation (Skills & Certification) — sub‑module under KonnectED.md
-077. [canonical] docs/Technical-Reference/sub-modules_description/EkoH (Reputation & Expertise) — first sub‑module under Kollective Intelligence.md
-078. [canonical] docs/Technical-Reference/sub-modules_description/Knowledge (Collaborative Learning Library) — sub‑module under KonnectED.md
-079. [canonical] docs/Technical-Reference/sub-modules_description/Konservation (Creative Content & Cultural Preservation) — sub‑module under Kreative.md
-080. [canonical] docs/Technical-Reference/sub-modules_description/Konstruct (Project Collaboration Spaces) — first sub‑module under keenKonnect.md
-081. [canonical] docs/Technical-Reference/sub-modules_description/Konsultations (Public Consultations & Feedback) — sub‑module under ethiKos.md
-082. [canonical] docs/Technical-Reference/sub-modules_description/Kontact (Collaboration & Networking) — sub‑module under Kreative.md
-083. [canonical] docs/Technical-Reference/sub-modules_description/Korum (Structured Debates) — sub‑module under ethiKos.md
-084. [canonical] docs/Technical-Reference/sub-modules_description/Smart Vote (Weighted Voting System) — second sub‑module under Kollective Intelligence.md
-085. [canonical] docs/Technical-Reference/sub-modules_description/Stockage (Secure Repository & Versioned Storage) — second sub‑module under keenKonnect.md
-086. [canonical] docs/Technical-Reference/UpdateBackendAndMigrateAndDocker.md
-087. [canonical] frontend/README.md
-088. [canonical] INSPECTION_REPORT.md
-089. [canonical] README.md
-090. [canonical] README_PUSH.md
-091. [canonical] README_WALKTHROUGH.md
-092. [canonical] seed-data/ethikos/canada_quebec_public_debates_2026_inventory.md
-093. [canonical] VALIDATION_REPORT.md
-094. [canonical] wiki/CertifiKation.md
-095. [canonical] wiki/EkoH.md
-096. [canonical] wiki/Glossary.md
-097. [canonical] wiki/Home.md
-098. [canonical] wiki/Implementation-Alignment.md
-099. [canonical] wiki/Knowledge.md
-100. [canonical] wiki/Konnaxion-Technical-Architecture-&-Services.md
-101. [canonical] wiki/Konservation.md
-102. [canonical] wiki/Konstruct.md
-103. [canonical] wiki/Konsultations.md
-104. [canonical] wiki/Kontact.md
-105. [canonical] wiki/Kontrol.md
-106. [canonical] wiki/Korum.md
-107. [canonical] wiki/Smart-Vote.md
-108. [canonical] wiki/Stockage.md
-109. [canonical] wiki/TeamBuilder.md
+009. [canonical] docs/status/2026-08-28-technical-maturity-assessment.md
+010. [canonical] docs/status/README.md
+011. [canonical] docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
+012. [canonical] docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
+013. [canonical] docs/Technical-Reference/DEV_DOCKER_CHEATSHEET.md
+014. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference (Custom Tables).md
+015. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference.md
+016. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Documentation Index.md
+017. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Full-Stack Technical Specification.md
+018. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Insights UI Reference.md
+019. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Site Navigation Map.md
+020. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Full-Stack Technical Specification.md
+021. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Functional Code-Name Inventory (Services & Hooks).md
+022. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Global Parameter Reference.md
+023. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module Config Parameters.md
+024. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module UI Spec (Reporting & Analytics Frontend).md
+025. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Site Navigation Map (Top-Level Routes).md
+026. [canonical] docs/Technical-Reference/DocV14/Konnaxion  v14 - Documentation INDEX.docx.md
+027. [canonical] docs/Technical-Reference/EkoH Smart Vote/EkoH - System Overview.md
+028. [canonical] docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Data Model.md
+029. [canonical] docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Technical Specification.md
+030. [canonical] docs/Technical-Reference/EkoH Smart Vote/ekoh-module-file-architecture.md
+031. [canonical] docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-canonical-db-schema-v1-1.md
+032. [canonical] docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-definitive-module-documentation-set-v1-0.md
+033. [canonical] docs/Technical-Reference/EkoH Smart Vote/ekoh-system-overview-smart-vote-ecosystem.md
+034. [canonical] docs/Technical-Reference/EkoH Smart Vote/konnaxion-smart-vote-weighted-voting-system-structure-and-logic-internal-white-paper.md
+035. [canonical] docs/Technical-Reference/EkoH Smart Vote/Smart Vote - Reading Contract.md
+036. [canonical] docs/Technical-Reference/EkoH Smart Vote/smart-vote-consultation-simulations.md
+037. [canonical] docs/Technical-Reference/EkoH Smart Vote/smart-vote-empower-ux-naming-guidelines.md
+038. [canonical] docs/Technical-Reference/EkoH Smart Vote/smart-vote-system-in-konnaxion-technical-specification.md
+039. [canonical] docs/Technical-Reference/GLOSSARY.md
+040. [canonical] docs/Technical-Reference/HowToNest-wrap-shell.md
+041. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos-kintsugi-upgrade-plan-v1.md
+042. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/00_KINTSUGI_START_HERE.md
+043. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/01_ETHIKOS_KINTSUGI_EXECUTION_STRATEGY.md
+044. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/02_SOURCE_OF_TRUTH_AND_DRIFT_CONTROL.md
+045. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/03_BOUNDARIES_AND_OWNERSHIP_CONTRACTS.md
+046. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/04_CANONICAL_NAMING_AND_VARIABLES.md
+047. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/05_CURRENT_STATE_BASELINE.md
+048. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/06_ROUTE_BY_ROUTE_ETHIKOS_UPGRADE_PLAN.md
+049. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/07_API_AND_SERVICE_CONTRACTS.md
+050. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/08_DATA_MODEL_AND_MIGRATION_PLAN.md
+051. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/09_SMART_VOTE_EKOH_READING_CONTRACT.md
+052. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/10_FIRST_PASS_INTEGRATION_MATRIX.md
+053. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/11_MIMIC_VS_ANNEX_RULEBOOK.md
+054. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/12_CANONICAL_OBJECTS_AND_EVENTS.md
+055. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/13_PAYLOAD_SHAPES_AND_SERIALIZER_CONTRACTS.md
+056. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/14_FRONTEND_ALIGNMENT_CONTRACT.md
+057. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/15_BACKEND_ALIGNMENT_CONTRACT.md
+058. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/16_TEST_AND_SMOKE_CONTRACT.md
+059. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/17_KNOWN_BUGS_AND_NON_KINTSUGI_ITEMS.md
+060. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/18_ADR_REGISTER.md
+061. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/19_OSS_CODE_READING_PLAN.md
+062. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/20_AI_GENERATION_GUARDRAILS.md
+063. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/21_KIALO_STYLE_ARGUMENT_MAPPING_CONTRACT.md
+064. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/22_IMPLEMENTATION_BACKLOG_TEMPLATE.md
+065. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/23_WAVE1_IMPLEMENTATION_BACKLOG.md
+066. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/24_WAVE1_SLICE_REGISTER.md
+067. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/25_WAVE1_QA_CHECKLIST.md
+068. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/27_EKOH_RATING_VISIBILITY_AND_ACCESS_CONTRACT.md
+069. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kintsugi-upgrade-v1.md.md
+070. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kompendio-v1.md.md
+071. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/Konnaxion-kintsugi-and-kompendio-open-source-integration-map-v1.md
+072. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kintsugi-upgrade-plan-v1.md
+073. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kompendio-upgrade-plan-v1.md
+074. [canonical] docs/Technical-Reference/Kintsugi_Kompendio/SmartVote-EkoH-kintsugi-upgrade-v1.md
+075. [canonical] docs/Technical-Reference/Konnaxion_Frontend_Deployment_Runbook.md
+076. [canonical] docs/Technical-Reference/namecheap-vps.md
+077. [canonical] docs/Technical-Reference/sub-modules_description/CertifiKation (Skills & Certification) — sub‑module under KonnectED.md
+078. [canonical] docs/Technical-Reference/sub-modules_description/EkoH (Reputation & Expertise) — first sub‑module under Kollective Intelligence.md
+079. [canonical] docs/Technical-Reference/sub-modules_description/Knowledge (Collaborative Learning Library) — sub‑module under KonnectED.md
+080. [canonical] docs/Technical-Reference/sub-modules_description/Konservation (Creative Content & Cultural Preservation) — sub‑module under Kreative.md
+081. [canonical] docs/Technical-Reference/sub-modules_description/Konstruct (Project Collaboration Spaces) — first sub‑module under keenKonnect.md
+082. [canonical] docs/Technical-Reference/sub-modules_description/Konsultations (Public Consultations & Feedback) — sub‑module under ethiKos.md
+083. [canonical] docs/Technical-Reference/sub-modules_description/Kontact (Collaboration & Networking) — sub‑module under Kreative.md
+084. [canonical] docs/Technical-Reference/sub-modules_description/Korum (Structured Debates) — sub‑module under ethiKos.md
+085. [canonical] docs/Technical-Reference/sub-modules_description/Smart Vote (Weighted Voting System) — second sub‑module under Kollective Intelligence.md
+086. [canonical] docs/Technical-Reference/sub-modules_description/Stockage (Secure Repository & Versioned Storage) — second sub‑module under keenKonnect.md
+087. [canonical] docs/Technical-Reference/UpdateBackendAndMigrateAndDocker.md
+088. [canonical] frontend/README.md
+089. [canonical] INSPECTION_REPORT.md
+090. [canonical] README.md
+091. [canonical] README_PUSH.md
+092. [canonical] README_WALKTHROUGH.md
+093. [canonical] seed-data/ethikos/canada_quebec_public_debates_2026_inventory.md
+094. [canonical] VALIDATION_REPORT.md
+095. [canonical] wiki/CertifiKation.md
+096. [canonical] wiki/EkoH.md
+097. [canonical] wiki/Glossary.md
+098. [canonical] wiki/Home.md
+099. [canonical] wiki/Implementation-Alignment.md
+100. [canonical] wiki/Knowledge.md
+101. [canonical] wiki/Konnaxion-Technical-Architecture-&-Services.md
+102. [canonical] wiki/Konservation.md
+103. [canonical] wiki/Konstruct.md
+104. [canonical] wiki/Konsultations.md
+105. [canonical] wiki/Kontact.md
+106. [canonical] wiki/Kontrol.md
+107. [canonical] wiki/Korum.md
+108. [canonical] wiki/Smart-Vote.md
+109. [canonical] wiki/Stockage.md
+110. [canonical] wiki/TeamBuilder.md
 
 
 ================================================================================================
@@ -3307,29 +3308,478 @@ Suggested short description:
 
 
 ================================================================================================
+FILE: docs/status/2026-08-28-technical-maturity-assessment.md
+AUTHORITY: canonical
+================================================================================================
+
+# Konnaxion Technical Maturity Assessment
+
+**Assessment date:** 2026-08-28  
+**Previous assessment:** 2026-08-27  
+**Current status:** Advanced Functional Beta — Integration and Release Hardening  
+**Estimated engineering maturity:** ~85%  
+**Estimated Release Candidate readiness:** ~68–72%
+
+> This assessment is a technical maturity checkpoint. It is not a Release Candidate declaration. Percentages are engineering estimates based on validated implementation and qualification evidence, not mathematical completion metrics.
+
+## Executive summary
+
+Konnaxion has materially advanced since the 2026-08-27 assessment.
+
+The strongest change is not additional feature breadth but **qualification depth**. During the latest campaign, the backend was validated against a fresh unique PostgreSQL test database, the principal ethiKos → EkoH → Smart Vote workflow passed strict browser automation, authenticated write paths passed, broad frontend route coverage reached 112 of 114 routes, and production/security configuration was inspected and hardened.
+
+The platform is therefore no longer best described simply as a broad functional beta with uneven evidence. Its core deliberation and advisory path now has substantial end-to-end evidence, and backend correctness is considerably stronger than in the previous assessment.
+
+The most accurate current classification is:
+
+**Advanced Functional Beta — Integration and Release Hardening**
+
+Konnaxion is still **not a Release Candidate**. The remaining gap is increasingly concentrated in release engineering and platform-wide qualification rather than the core ethiKos/EkoH/Smart Vote product path.
+
+## Maturity by area
+
+| Area | Estimated maturity |
+|---|---:|
+| Product architecture | 88–92% |
+| Backend implementation | 88–92% |
+| Frontend implementation | 82–87% |
+| ethiKos | 92–95% |
+| EkoH | 92–95% |
+| Smart Vote | 90–94% |
+| TeamBuilder | 70–75% |
+| Kontrol | 65–72% |
+| KonnectED | 62–68% |
+| keenKonnect | 58–65% |
+| Kreative | 45–55% |
+| Automated testing | 78–84% |
+| End-to-end user workflows | 85–90% |
+| Application security maturity | 78–84% |
+| Deployment and packaging | 72–78% |
+| CI and release qualification | 52–60% |
+| Backup / restore qualification | 45–55% |
+| Overall engineering maturity | ~85% |
+| RC readiness | ~68–72% |
+
+## Qualification evidence completed
+
+### 1. Backend full-suite qualification
+
+A clean backend campaign was completed against a fresh unique PostgreSQL test database.
+
+**Validated result:**
+
+- **137 tests passed**
+- **0 failures**
+- fresh schema creation succeeded
+- Django system checks passed
+- migrations are viable on a fresh database
+- previous TeamBuilder routing and backend test defects were corrected
+- no backend rerun is currently required unless backend code changes
+
+This closes the previous blocker to reach zero backend test failures for the currently collected backend suite.
+
+### 2. Backend routing normalization
+
+The TeamBuilder REST routing was normalized around the canonical API router.
+
+Validated changes included:
+
+- TeamBuilder resources registered in `backend/config/api_router.py`;
+- redundant TeamBuilder include removed from `config/urls.py`;
+- local TeamBuilder router removed from the canonical path;
+- reverse names aligned to the central `api:*` namespace;
+- Django checks remained clean after routing normalization.
+
+### 3. Frontend type safety
+
+TypeScript qualification is green.
+
+Validated multiple times:
+
+```text
+pnpm run typecheck
+tsc --noEmit
+```
+
+**Result: PASS**
+
+The latest final qualification run again produced `[PASS] Typecheck`.
+
+### 4. Frontend production build
+
+A complete production build had previously passed with:
+
+- Next.js 15.3.1;
+- successful optimized production build;
+- **115 / 115 static pages generated**.
+
+During the final 2026-08-28 post-hardening rerun, the build was blocked before compilation by a Windows filesystem error:
+
+```text
+EPERM: operation not permitted, open '.next\trace'
+```
+
+This is currently classified as a **local build-artifact/process locking issue**, not a demonstrated product regression.
+
+However, because the build did not complete after the latest production-configuration overlay, a fresh post-overlay production-build pass remains desirable before pre-RC.
+
+### 5. Broad frontend route smoke
+
+A broad real-browser route campaign validated:
+
+- **112 passed**
+- **2 timed out**
+- **114 total routes**
+- pass rate: **98.25%**
+
+The only unresolved route-smoke boundaries were:
+
+```text
+/konnected/community-discussions/moderation
+/teambuilder/create
+```
+
+The rest of the surveyed route surface rendered successfully.
+
+### 6. Strict public ethiKos → EkoH → Smart Vote workflow
+
+The principal public Wave 1 workflow is formally green.
+
+Validated browser path:
+
+```text
+Canada deliberation
+→ narrative
+→ Réjean EkoH drawer
+→ King Klown / Trump emergent question
+→ DEMO FICTION source disclosure
+→ conflict disclosure
+→ recusal
+→ Smart Vote readings
+```
+
+Verified Smart Vote assertions included:
+
+- baseline: **7 source stances**
+- advisory: **6 participants**
+- declared recusals: **1**
+- King Klown advisory status: **Recused**
+- King Klown advisory weight: **0.00×**
+
+Final strict result:
+
+```text
+1 passed (57.6s)
+Wave 1 exit code: 0
+```
+
+A prior 90-second global timeout was demonstrated to be a harness budget issue rather than a failed product assertion.
+
+### 7. Authenticated ethiKos write workflow
+
+The authenticated workflow is green.
+
+An initial failure was traced to a stale test assumption: the seeded consultation existed and was open, but pagination placed it outside page 1. The product API returned the seeded topic correctly, and the test was corrected to search before asserting visibility.
+
+Final authenticated result:
+
+```text
+Running 2 tests using 1 worker
+2 passed (25.9s)
+Authenticated workflow exit code: 0
+```
+
+This validates both authentication and authenticated write-flow integration for the tested ethiKos path.
+
+### 8. Breadcrumb defect correction
+
+A real frontend defect was identified and corrected in the ethiKos insights path.
+
+The header generated duplicate breadcrumb React keys because a synthetic ethiKos root and the current Overview page resolved to the same normalized path.
+
+The correction normalized paths, deduplicated semantically, retained the current/last breadcrumb, and avoided an index-key workaround.
+
+Validation after the correction showed:
+
+- typecheck PASS;
+- duplicate key count: 0;
+- page errors: 0.
+
+A subsequent styled-components hydration mismatch disappeared after clearing `.next` and restarting the frontend, and was classified as stale Turbopack/HMR state rather than a remaining product defect.
+
+### 9. Production/security configuration qualification
+
+A dedicated read-only production/security gate was executed without Docker, migrations, restore operations, or secret disclosure.
+
+The initial inspection produced:
+
+```text
+PASS: 40
+WARN: 6
+FAIL: 4
+```
+
+The four failures were:
+
+- missing production `FRONTEND_BASE_URL`;
+- production hostname absent from `ALLOWED_HOSTS`;
+- frontend base resolving to localhost;
+- OpenAPI advertising `konnaxion.local`.
+
+These findings were aligned with project deployment documentation and corrected.
+
+The subsequent production/security rerun validated:
+
+- `DEBUG=False`;
+- `ALLOWED_HOSTS` contains `konnaxion.com`;
+- `ALLOWED_HOSTS` contains `www.konnaxion.com`;
+- `FRONTEND_BASE_URL=https://konnaxion.com`;
+- OpenAPI advertises `https://konnaxion.com`;
+- `SECURE_SSL_REDIRECT=True`;
+- secure session cookie;
+- secure CSRF cookie;
+- HttpOnly session cookie;
+- HttpOnly CSRF cookie;
+- `X_FRAME_OPTIONS=DENY`;
+- `SECURE_CONTENT_TYPE_NOSNIFF=True`;
+- HSTS enabled;
+- `manage.py check --deploy` PASS.
+
+The final production/security subprocess reported:
+
+```text
+Django production failures: 0
+[PASS] Django production/security gate
+```
+
+### 10. Flower exposure hardening
+
+The production deployment configuration previously exposed Flower through port 5555.
+
+The deployment alignment removed the public exposure.
+
+Validated:
+
+```text
+[PASS] Traefik does not expose Flower :5555
+[PASS] Compose does not publish 5555:5555
+```
+
+### 11. Backup / restore surface inspection
+
+Konnaxion contains real PostgreSQL maintenance scripts for backup, backup listing, restore and backup removal.
+
+The backup implementation was verified to use `pg_dump + gzip`.
+
+The restore implementation was correctly identified as destructive:
+
+```text
+drop database
+→ create database
+→ restore
+```
+
+This is useful operational infrastructure, but **existence of scripts is not equivalent to restore qualification**.
+
+A real restore drill against an isolated disposable database is still required before stronger release-readiness claims can be made.
+
+## Remaining warnings and technical debt
+
+### OpenAPI / drf-spectacular
+
+`manage.py check --deploy` passes, but currently emits **23 drf-spectacular issues**.
+
+They include unresolved serializer type hints, duplicate schema component names, duplicate operation IDs, APIViews where serializers cannot be inferred, and an untyped path parameter.
+
+These do not currently fail Django deployment checks, but they reduce OpenAPI quality and should be cleaned up before a polished public API contract is declared stable.
+
+### Next.js API fallback
+
+The latest final gate still detected `localhost:8000` inside `frontend/next.config.ts`.
+
+Therefore the production API fallback cleanup is **not yet fully closed** and remains an explicit release-hardening item.
+
+### Frontend lint gate
+
+The production Next configuration still allows ESLint failures to be ignored during build.
+
+This is **release-tooling debt**, not a demonstrated runtime defect. Before RC, lint should become a reliable mandatory gate.
+
+### Jest
+
+The Jest gate remains tooling-degraded because the current configuration path previously encountered malformed or incompatible TypeScript configuration parsing before meaningful tests executed.
+
+This is not evidence of a product defect, but it means the frontend unit-test gate is not currently release-grade.
+
+### Playwright component tests
+
+The component-test gate previously reported no tests found and a reporter/output configuration collision.
+
+Component testing therefore remains incomplete as a release gate.
+
+### Test orchestration scripts
+
+Inspection of the existing frontend scripts showed that the aggregate qualification tooling is not yet trustworthy as a single release command.
+
+Known issues include:
+
+- `50-all.ps1` chaining currently broken/degraded gates;
+- `40-backend-tests.ps1` assuming a backend path inconsistent with the actual repository layout.
+
+The tests themselves can be run successfully, but the release orchestration should be repaired before RC.
+
+### PowerShell interactive block behavior
+
+Several manually pasted PowerShell scripts produced `else: The term 'else' is not recognized` because an interactive shell executed the preceding `if` block before the separately pasted `else`.
+
+This does **not** invalidate the underlying test commands or PASS results.
+
+## Module interpretation
+
+### ethiKos — 92–95%
+
+ethiKos now has backend models/APIs/migrations, real seeded workflow data, public deliberation workflow, source and conflict disclosures, recusal behavior, authenticated write-path coverage, and strict Playwright E2E validation.
+
+### EkoH — 92–95%
+
+EkoH remains one of the most mature functional areas, with strict workflow integration, contextual expertise presentation, advisory participation, and recusal-aware downstream reading behavior.
+
+### Smart Vote — 90–94%
+
+Smart Vote has strong integration evidence across baseline readings, advisory readings, weighting, recusal, source stance counts and participant counts.
+
+### TeamBuilder — 70–75%
+
+TeamBuilder benefited from backend routing normalization and participates in the full backend green test suite. However, `/teambuilder/create` remains one of the two broad route-smoke timeouts.
+
+### KonnectED — 62–68%
+
+KonnectED is implemented across multiple routes and backend models, but `/konnected/community-discussions/moderation` remains the other unresolved route-smoke timeout.
+
+### Kontrol / keenKonnect / Kreative
+
+These remain implemented but less deeply qualified than the ethiKos/EkoH/Smart Vote core. The maturity limitation is primarily **evidence depth**, not necessarily absence of code.
+
+## Progress against the previous pre-RC blockers
+
+The 2026-08-27 assessment listed ten major requirements.
+
+### 1. Define exact Version 1 release scope
+
+**Still open.**
+
+### 2. Complete or explicitly defer unfinished product surfaces
+
+**Still open.**
+
+### 3. Reach zero backend test failures
+
+**Completed for the currently collected backend suite.**
+
+Validated: **137 passed, 0 failed**.
+
+### 4. Make typecheck, lint, and production build mandatory
+
+**Partially completed.**
+
+- typecheck: green;
+- production build: previously green, latest rerun blocked by `.next\trace` EPERM;
+- lint: not yet a mandatory reliable release gate.
+
+### 5. Expand automated testing to poorly covered modules
+
+**Improved, still open.**
+
+### 6. Convert major Playwright workflows into mandatory release gates
+
+**Substantially improved.**
+
+The public strict Wave 1 and authenticated workflow are now strong candidates for mandatory release gates.
+
+### 7. Test clean installation and migration paths
+
+**Partially completed.**
+
+Fresh backend test schema creation and migrations are validated, but a complete clean deployment/install procedure is not yet qualified.
+
+### 8. Test backup and restore
+
+**Not completed.**
+
+Scripts exist and were inspected, but no isolated end-to-end restore drill has been completed.
+
+### 9. Qualify deployment reproducibility
+
+**Partially completed.**
+
+Production settings and deployment configuration are more consistent and security-checked, but full reproducible deployment remains unproven.
+
+### 10. Establish a versioned and repeatable release process
+
+**Still open.**
+
+## Main blockers before pre-RC
+
+1. define the exact Version 1 release scope;
+2. explicitly complete or defer secondary product surfaces;
+3. rerun the production frontend build after clearing the local `.next` lock;
+4. remove or explicitly constrain the remaining `localhost:8000` production fallback;
+5. repair Jest and Playwright component-test gates;
+6. make lint a reliable mandatory release gate;
+7. repair the aggregate release/test orchestration scripts;
+8. resolve or disposition the two remaining route-smoke timeouts;
+9. execute backup → isolated restore → application validation;
+10. qualify deployment reproducibility from a clean target;
+11. reduce OpenAPI/drf-spectacular schema warnings;
+12. establish the versioned repeatable release process.
+
+## Release interpretation
+
+Konnaxion has crossed an important threshold.
+
+The core product path is no longer merely implemented; it is now backed by meaningful automated integration evidence.
+
+The remaining release gap is concentrated in breadth of platform qualification, release automation, deployment reproducibility, backup/restore evidence, tooling cleanup and final scope control.
+
+Current estimate:
+
+> **Engineering maturity: ~85%**  
+> **Release Candidate readiness: ~68–72%**
+
+## Recommended public status
+
+**Advanced Functional Beta — Integration and Release Hardening**
+
+Suggested short description:
+
+> Konnaxion has reached an advanced functional beta with substantially strengthened integration evidence. The backend test suite passes on a fresh database, the principal ethiKos → EkoH → Smart Vote workflow is validated end to end, authenticated write paths are green, and production/security configuration has been hardened. Remaining work is concentrated in release automation, secondary-surface qualification, reproducible deployment, backup/restore drills, OpenAPI cleanup, and final release-scope control. This is not yet a Release Candidate.
+
+
+================================================================================================
 FILE: docs/status/README.md
 AUTHORITY: canonical
 ================================================================================================
 
-# Status
+# Konnaxion Status
 
-This directory contains dated technical maturity assessments and release-readiness checkpoints for Konnaxion.
+**Current status:** Advanced Functional Beta — Integration and Release Hardening  
+**Engineering maturity:** ~85%  
+**Release Candidate readiness:** ~68–72%  
+**Assessment date:** 2026-08-28
 
-These reports are intended to distinguish:
+Konnaxion now has a fully green backend test suite on a fresh database, validated public and authenticated ethiKos → EkoH → Smart Vote workflows, strengthened production/security configuration, and broad frontend route coverage.
 
-- implementation maturity;
-- product maturity;
-- qualification maturity;
-- Release Candidate readiness.
+Remaining work is concentrated in release automation, secondary-surface qualification, reproducible deployment, backup/restore drills, OpenAPI cleanup, and final Version 1 scope control.
 
-A maturity assessment is not itself a release declaration.
+This is not yet a Release Candidate.
 
 ## Current assessment
 
-- [2026-08-27 — Technical Maturity Assessment](./2026-08-27-technical-maturity-assessment.md)
-- Status: **Advanced Functional Beta**
-- Estimated engineering maturity: **~75%**
-- Estimated RC readiness: **~55–60%**
+[2026-08-28 Technical Maturity Assessment](./2026-08-28-technical-maturity-assessment.md)
+
+## Previous assessment
+
+[2026-08-27 Technical Maturity Assessment](./2026-08-27-technical-maturity-assessment.md)
 
 
 ================================================================================================

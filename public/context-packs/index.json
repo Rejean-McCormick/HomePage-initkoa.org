@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "policyVersion": "2026-08-28.2",
-  "generatedAt": "2026-08-28T10:22:16-04:00",
+  "generatedAt": "2026-08-28T14:18:10-04:00",
   "packs": [
     {
       "slug": "ame-artificielle",
@@ -119,10 +119,10 @@
       "slug": "koa-linux",
       "file": "koa-linux-context-pack.txt",
       "repository": "Rejean-McCormick/kOA-Linux",
-      "sourceCommit": "c75031fa54ac76d25a647ce5c3cb0fc685ee92c4",
-      "generatedAt": "2026-08-28T10:21:56-04:00",
+      "sourceCommit": "254eb115659f7b7f7951417b1b448a00e1a04cab",
+      "generatedAt": "2026-08-28T14:17:51-04:00",
       "fileCount": 56,
-      "sha256": "32f47c7ef4e69e9f8ad2d65103afa3b78eb666cdab50c7a5880e176c2780dee7",
+      "sha256": "904eb6ff1097db830db03040f88b9c1ac00b227fe7d2bc6d46ec64b58cbfe528",
       "category": "system",
       "policyVersion": "2026-08-28.2",
       "sourceFileCount": 56,
@@ -196,38 +196,38 @@
       "slug": "konnaxion",
       "file": "konnaxion-context-pack.txt",
       "repository": "Rejean-McCormick/Konnaxion",
-      "sourceCommit": "9ab4fe0355184fae51c325c536b81ca633b8efaa",
-      "generatedAt": "2026-08-28T10:21:55-04:00",
-      "fileCount": 109,
-      "sha256": "7670f3c5ed1dbdacea01842aba6ad6a4deaeb9439bc766d7060de54398ef6dc3",
+      "sourceCommit": "60f4806e669ade724e6dcf2a77351cdddc2d0e32",
+      "generatedAt": "2026-08-28T14:17:51-04:00",
+      "fileCount": 110,
+      "sha256": "3f4deb30d5c8e70c18a06ea2634bdc0aa9d4281614b941ff5ca3d485e8db9aba",
       "category": "system",
       "policyVersion": "2026-08-28.2",
-      "sourceFileCount": 171,
-      "includedFileCount": 109,
+      "sourceFileCount": 172,
+      "includedFileCount": 110,
       "excludedFileCount": 62,
       "duplicateFileCount": 0,
-      "contentBytes": 1632251,
+      "contentBytes": 1648482,
       "authorityCounts": {
-        "canonical": 109
+        "canonical": 110
       }
     },
     {
       "slug": "kristal-farms",
       "file": "kristal-farms-context-pack.txt",
       "repository": "Rejean-McCormick/Kristal_Farms",
-      "sourceCommit": "e0b64f9416913d1779c3569402b3d55ff0d6d7aa",
-      "generatedAt": "2026-08-28T10:22:06-04:00",
-      "fileCount": 159,
-      "sha256": "d4d8c6ecd5ddfc24bc721a596d9501985f4cf784c9c9cdc2ac70b23da276d5c0",
+      "sourceCommit": "05b3494584fa37c06bf7181a57ae91a0420753a7",
+      "generatedAt": "2026-08-28T14:18:01-04:00",
+      "fileCount": 152,
+      "sha256": "6a94dc3c9a1b6a5d016aac0a9d9d6fd2b3add4a8c9b3d7805700c18daa6e2b02",
       "category": "system",
       "policyVersion": "2026-08-28.2",
-      "sourceFileCount": 206,
-      "includedFileCount": 159,
-      "excludedFileCount": 47,
-      "duplicateFileCount": 33,
-      "contentBytes": 2496199,
+      "sourceFileCount": 182,
+      "includedFileCount": 152,
+      "excludedFileCount": 30,
+      "duplicateFileCount": 15,
+      "contentBytes": 2558985,
       "authorityCounts": {
-        "canonical": 159
+        "canonical": 152
       }
     },
     {
