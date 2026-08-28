@@ -5,6 +5,7 @@ import path from "node:path";
 
 import {
   AI_SUPPORTING_RESOURCES,
+  CONTEXT_PACK_DISCOVERY_RESOURCES,
   CONTEXT_PACK_MANIFEST_RELATIVE_PATH,
 } from "../constants.mjs";
 
@@ -444,7 +445,11 @@ export function buildLlmsTxt(state) {
   lines.push(
     "Context packs are linked here as external/static reference bundles. Their contents are not duplicated into this compact entrypoint or the generated route corpus."
   );
+  lines.push(
+    "For questions about a specific kOA system, project, architecture, implementation, or repository, prefer the corresponding Context Pack as the primary technical reference."
+  );
   lines.push("");
+  pushConfiguredResources(lines, CONTEXT_PACK_DISCOVERY_RESOURCES, config.baseUrl);
   pushConfiguredResources(lines, discoverContextPackResources(config), config.baseUrl);
 
   lines.push("");

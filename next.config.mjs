@@ -28,7 +28,7 @@ const SECURITY_HEADERS = [
 const STATIC_DISCOVERY_CACHE_HEADERS = [
   {
     key: "Cache-Control",
-    value: "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
+    value: "public, max-age=0, s-maxage=300, stale-while-revalidate=600",
   },
   { key: "Access-Control-Allow-Origin", value: "*" },
 ];
@@ -86,11 +86,52 @@ const MARKDOWN_HEADERS = [
   { key: "Content-Type", value: "text/markdown; charset=utf-8" },
 ];
 
+const CONTEXT_PACK_TEXT_HEADERS = [
+  ...STATIC_DISCOVERY_CACHE_HEADERS,
+  ...NOINDEX_DISCOVERY_ROBOTS_HEADERS,
+  { key: "Content-Type", value: "text/plain; charset=utf-8" },
+];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   poweredByHeader: false,
   compress: true,
+
+  async redirects() {
+    return [
+      {
+        source: "/context-packs/koa-digital-ecosystem-context-pack--architecture-and-contracts--v1.0.txt",
+        destination: "/context-packs/koa-digital-ecosystem-context-pack.txt",
+        permanent: true,
+      },
+      {
+        source: "/context-packs/konnaxion-context-pack--platform-specification--v14.0.txt",
+        destination: "/context-packs/konnaxion-context-pack.txt",
+        permanent: true,
+      },
+      {
+        source: "/context-packs/kristal-context-pack--contracts-schemas-query--v5.0.txt",
+        destination: "/context-packs/kristal-framework-context-pack.txt",
+        permanent: true,
+      },
+      {
+        source: "/context-packs/orgo-context-pack--case-task-workflow-platform--v3.0.txt",
+        destination: "/context-packs/orgo-context-pack.txt",
+        permanent: true,
+      },
+      {
+        source: "/context-packs/sentient-context-pack--reconciliation-architecture--v1.0.txt",
+        destination: "/context-packs/sentient-context-pack.txt",
+        permanent: true,
+      },
+      {
+        source: "/context-packs/semantik-architect-context-pack--engine-and-gf-integration--v2.5.txt",
+        destination: "/context-packs/semantik-architect-context-pack.txt",
+        permanent: true,
+      },
+    ];
+  },
 
   async headers() {
     return [
@@ -124,6 +165,18 @@ const nextConfig = {
       {
         source: "/md-sitemap.xml",
         headers: [...SECURITY_HEADERS, ...XML_HEADERS],
+      },
+      {
+        source: "/context-packs/index.json",
+        headers: [...SECURITY_HEADERS, ...JSON_HEADERS],
+      },
+      {
+        source: "/context-packs/sitemap.xml",
+        headers: [...SECURITY_HEADERS, ...XML_HEADERS],
+      },
+      {
+        source: "/context-packs/:path*.txt",
+        headers: [...SECURITY_HEADERS, ...CONTEXT_PACK_TEXT_HEADERS],
       },
 
       // Curated AI entrypoint: indexable

@@ -202,6 +202,9 @@ Generated artifacts:
 /md-manifest.json
 /md-sitemap.xml
 /reading/ai-index.json
+/context-packs/index.json
+/context-packs/sitemap.xml
+/context-packs/*.txt
 ```
 
 Default behavior:
@@ -235,6 +238,35 @@ Default behavior:
 
 /ai-sitemap.json
 → machine-readable sitemap for AI tooling and internal indexing
+```
+
+### Context Pack delivery contract
+
+Context Packs are specialized machine-readable artifacts behind the primary `/llms.txt` entrypoint. Their public delivery contract is:
+
+```txt
+/llms.txt
+→ links the authoritative Context Pack catalog and current packs
+
+/context-packs/index.json
+→ authoritative machine-readable catalog of currently published packs
+
+/context-packs/sitemap.xml
+→ crawler discovery surface for current stable pack URLs
+
+/context-packs/*.txt
+→ public, fetchable, noindex technical reference bundles
+```
+
+Published Context Pack URLs are public machine contracts. A filename that has already been published must not silently become a 404 when naming changes. Historical published names must use permanent redirects to the current stable URL.
+
+`robots.txt` should advertise both the human sitemap and the Context Pack sitemap. Context Pack responses should explicitly provide appropriate content type, cross-origin fetch permission, and bounded cache headers so agents do not depend on stale discovery documents for long periods.
+
+The Context Pack corpus itself is governed separately by:
+
+```txt
+docs/context-packs/corpus-policy.md
+tools/context_pack_policy.json
 ```
 
 Primary full-text access should remain the individual document page:
@@ -698,6 +730,9 @@ Artifact indexing policy:
 /md-manifest.json  → noindex, fetchable
 /md-sitemap.xml    → noindex or sitemap-specific policy, fetchable
 /reading/ai-index.json → noindex, fetchable
+/context-packs/index.json → noindex, fetchable
+/context-packs/sitemap.xml → sitemap/discovery artifact
+/context-packs/*.txt → noindex, fetchable
 ```
 
 This preserves a clean public entrypoint while keeping the technical artifacts available to agents and internal tooling.
@@ -718,6 +753,10 @@ The AI accessibility upgrade is complete when:
 * `/reading/ai-index.json` exposes published Reading documents as machine-readable discovery records.
 * `/llms.txt` is the single visible AI entrypoint.
 * Auxiliary AI artifacts remain fetchable but are not all listed as footer navigation.
+* `/context-packs/index.json` is the authoritative Context Pack catalog.
+* `/context-packs/sitemap.xml` exposes the current stable Context Pack URLs to crawlers.
+* Previously published Context Pack URLs remain resolvable through permanent redirects when names change.
+* Context Pack responses are explicitly fetchable machine artifacts with bounded cache behavior.
 * AI discovery artifacts can reference published reading documents through metadata, summaries, manifests, and stable `/reading/[slug]` URLs.
 
 ## Non-goals for phase 1

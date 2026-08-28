@@ -487,6 +487,9 @@ The canonical layers are:
 /ai-corpus.txt               = auxiliary corpus/discovery text
 /md-manifest.json            = machine-readable Markdown mirror manifest
 /md-sitemap.xml              = machine-readable Markdown mirror sitemap
+/context-packs/index.json    = authoritative Context Pack catalog
+/context-packs/sitemap.xml   = Context Pack crawler sitemap
+/context-packs/*.txt         = specialized machine-readable reference bundles
 /index.html.md and mirrors   = Markdown mirrors of public pages
 ```
 
@@ -525,6 +528,9 @@ Canonical auxiliary artifacts include:
 /md-sitemap.xml
 /ai-sitemap.json
 /reading/ai-index.json
+/context-packs/index.json
+/context-packs/sitemap.xml
+/context-packs/*.txt
 ```
 
 These artifacts may remain public and fetchable.
@@ -538,6 +544,38 @@ They should not all be displayed as separate visible footer links.
 Auxiliary artifacts must not redefine the canonical source of truth.
 
 The DB-backed Reading page remains the full-text source for public documents.
+
+## Canonical Context Pack Delivery Policy
+
+Context Packs are auxiliary machine artifacts specialized by repository/system. They remain behind `/llms.txt`; they do not become a second visible AI entrypoint.
+
+Canonical delivery surfaces are:
+
+```txt
+/context-packs/index.json    = authoritative current-pack catalog
+/context-packs/sitemap.xml   = crawler discovery surface
+/context-packs/*.txt         = stable fetchable pack resources
+```
+
+Rules:
+
+* `/llms.txt` should link the catalog and relevant packs.
+* `index.json` is the source of truth for the current published set.
+* `sitemap.xml` must be generated from that same published set.
+* a previously published pack URL must not silently become a 404 after a rename; use a permanent redirect to the stable replacement;
+* Context Pack machine responses must have explicit content type, CORS, indexing, and bounded cache behavior;
+* missing or invalid catalog state must fail closed rather than trigger an implicit directory scan.
+
+## Canonical Context Pack Corpus Policy
+
+Context Pack corpus selection is governed by:
+
+```txt
+docs/context-packs/corpus-policy.md
+tools/context_pack_policy.json
+```
+
+Context Packs must not redefine source authority or expose draft, proposal, backup, private, or historical material as current canonical material. Public packs must be reproducible from committed source material, record their policy version and corpus metrics, and pass the build validator before publication.
 
 ---
 
@@ -583,6 +621,9 @@ Recommended behavior:
 /md-manifest.json  = noindex, fetchable
 /ai-sitemap.json   = noindex, fetchable
 /md-sitemap.xml    = sitemap/discovery artifact
+/context-packs/index.json  = noindex, fetchable
+/context-packs/sitemap.xml = sitemap/discovery artifact
+/context-packs/*.txt       = noindex, fetchable
 ```
 
 The goal is not to hide auxiliary artifacts.
@@ -800,7 +841,10 @@ draft/archived documents = not public by default
 document body = server-rendered
 AI entrypoint = /llms.txt
 AI artifacts = discovery/context/metadata layers
-auxiliary AI artifacts = llms-full, ai-corpus, manifests, sitemaps, mirrors
+auxiliary AI artifacts = llms-full, ai-corpus, manifests, sitemaps, mirrors, context packs
+Context Pack catalog = /context-packs/index.json
+Context Pack sitemap = /context-packs/sitemap.xml
+Context Pack corpus policy = docs/context-packs/corpus-policy.md + tools/context_pack_policy.json
 full text = /reading/[slug]
 document_chunks = internal AI/search retrieval layer
 vector search = future phase

@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import fnmatch
 import queue
 import re
 import shutil
@@ -21,7 +22,10 @@ MYCODE = Path(r"C:\mycode")
 INITKOA_REPO = MYCODE / "HomePage" / "HomePage"
 OUTPUT_DIR = INITKOA_REPO / "public" / "context-packs"
 MANIFEST_PATH = OUTPUT_DIR / "index.json"
+SITEMAP_PATH = OUTPUT_DIR / "sitemap.xml"
+CONTEXT_PACK_BASE_URL = "https://initkoa.org/context-packs"
 TOOL_TARGET = INITKOA_REPO / "tools" / "context_pack_builder.pyw"
+POLICY_TARGET = INITKOA_REPO / "tools" / "context_pack_policy.json"
 
 REPOS = [
     ("Konnaxion", MYCODE / "Konnaxion" / "Konnaxion"),
@@ -358,13 +362,22 @@ def current_commit(repo: Path) -> str:
 
 
 def markdown_dirty(repo: Path) -> bool:
-    result = git(repo, "status", "--porcelain", "--untracked-files=normal", "--", "*.md", check=False)
+    result = git(
+        repo,
+        "status",
+        "--porcelain",
+        "--untracked-files=normal",
+        "--",
+        ":(glob)**/*.md",
+        check=False,
+    )
     return bool(result.stdout.strip())
 
 
 def git_markdown_files(repo: Path) -> list[Path]:
+    """Return committed Markdown only for public Context Pack builds."""
     result = subprocess.run(
-        ["git", "-C", str(repo), "ls-files", "-z", "--cached", "--others", "--exclude-standard", "--", "*.md"],
+        ["git", "-C", str(repo), "ls-files", "-z", "--cached", "--", ":(glob)**/*.md"],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         creationflags=CREATE_NO_WINDOW,
@@ -385,6 +398,63 @@ def markdown_files_in_folder(folder: Path) -> list[Path]:
         return git_markdown_files(folder)
     files = [p for p in folder.rglob("*.md") if p.is_file() and ".git" not in p.parts]
     return sorted(files, key=lambda p: (p.relative_to(folder).as_posix().lower(), p.relative_to(folder).as_posix()))
+
+
+def load_context_pack_policy() -> dict:
+    if not POLICY_TARGET.exists():
+        raise FileNotFoundError(f"Politique Context Pack absente : {POLICY_TARGET}")
+    try:
+        policy = json.loads(POLICY_TARGET.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"Politique Context Pack invalide : {exc}") from exc
+    if policy.get("schemaVersion") != 1:
+        raise RuntimeError(f"schemaVersion de politique non supportée : {policy.get('schemaVersion')}")
+    if not str(policy.get("policyVersion") or "").strip():
+        raise RuntimeError("policyVersion manquante dans context_pack_policy.json")
+    return policy
+
+
+def _policy_repo_entry(policy: dict, label: str, remote_name: str) -> dict:
+    repositories = policy.get("repositories") or {}
+    wanted = {label.casefold(), remote_name.casefold(), remote_name.split("/")[-1].casefold()}
+    merged: dict = {}
+    merged_rules: list[dict] = []
+    for key, value in repositories.items():
+        if str(key).casefold() not in wanted or not isinstance(value, dict):
+            continue
+        merged.update({k: v for k, v in value.items() if k != "rules"})
+        if isinstance(value.get("rules"), list):
+            merged_rules.extend(x for x in value["rules"] if isinstance(x, dict))
+    if merged_rules:
+        merged["rules"] = merged_rules
+    return merged
+
+
+def _matches_policy_pattern(rel: str, pattern: str) -> bool:
+    rel_norm = rel.replace("\\", "/").casefold()
+    pattern_norm = str(pattern or "").replace("\\", "/").casefold()
+    return bool(pattern_norm) and fnmatch.fnmatchcase(rel_norm, pattern_norm)
+
+
+def classify_policy_path(policy: dict, repo_policy: dict, rel: str) -> tuple[str, bool, str]:
+    for pattern in policy.get("globalExclusions") or []:
+        if _matches_policy_pattern(rel, pattern):
+            return "historical", False, f"global:{pattern}"
+
+    authority = "canonical"
+    included_authorities = set(policy.get("publicBuild", {}).get("includedAuthorities") or ["canonical", "reference"] )
+    include = authority in included_authorities
+    reason = "default"
+
+    for rule in repo_policy.get("rules") or []:
+        pattern = rule.get("pattern")
+        if not pattern or not _matches_policy_pattern(rel, pattern):
+            continue
+        authority = str(rule.get("authority") or authority).strip().lower() or authority
+        include = bool(rule.get("include")) if "include" in rule else authority in included_authorities
+        reason = f"repo:{pattern}"
+
+    return authority, include, reason
 
 
 def slugify(value: str) -> str:
@@ -420,45 +490,87 @@ def existing_pack_hash(path: Path):
     return None
 
 
-def make_pack(label: str, repo: Path):
+def make_pack(label: str, repo: Path, policy: dict | None = None):
     if not repo.exists():
         raise FileNotFoundError(f"Dossier absent : {repo}")
     if not is_git_repo(repo):
         raise RuntimeError(f"Ce dossier n'est pas un repo Git : {repo}")
 
-    repo_markdown_files = git_markdown_files(repo)
-    wiki_path = existing_wiki_path_for_repo(repo) or wiki_path_for_repo(repo)
-    wiki_markdown_files = markdown_files_in_folder(wiki_path)
+    policy = policy or load_context_pack_policy()
+    policy_version = str(policy["policyVersion"])
+    build_policy = policy.get("publicBuild") or {}
+    require_clean = bool(build_policy.get("requireCleanMarkdown", True))
 
     remote_name = github_repo_from_remote(repo, label)
+    repo_policy = _policy_repo_entry(policy, label, remote_name)
     commit = current_commit(repo)
     dirty = markdown_dirty(repo)
+    if require_clean and dirty:
+        raise RuntimeError("Working tree Markdown dirty : commit/stash requis avant un build public.")
 
+    repo_markdown_files = git_markdown_files(repo)
+    wiki_path = existing_wiki_path_for_repo(repo) or wiki_path_for_repo(repo)
     wiki_is_git = is_git_repo(wiki_path)
-    wiki_commit = current_commit(wiki_path) if wiki_is_git else ("local-unversioned" if wiki_path.exists() else "none")
     wiki_dirty = markdown_dirty(wiki_path) if wiki_is_git else False
+    if require_clean and wiki_dirty:
+        raise RuntimeError(f"Wiki Markdown dirty : {wiki_path}")
 
-    file_entries = []
+    warnings: list[str] = []
+    if wiki_path.exists() and not wiki_is_git:
+        plain_mode = str(build_policy.get("plainWikiMode") or "ignore").lower()
+        if plain_mode == "error":
+            raise RuntimeError(f"Wiki local non-Git interdit pour un build public : {wiki_path}")
+        wiki_markdown_files: list[Path] = []
+        warnings.append(f"Wiki non-Git ignoré : {wiki_path}")
+    else:
+        wiki_markdown_files = git_markdown_files(wiki_path) if wiki_is_git else []
+
+    wiki_commit = current_commit(wiki_path) if wiki_is_git else ("ignored-non-git" if wiki_path.exists() else "none")
+
+    candidates: list[tuple[str, Path, str]] = []
+    for path in repo_markdown_files:
+        candidates.append((path.relative_to(repo).as_posix(), path, "repo"))
+    for path in wiki_markdown_files:
+        candidates.append((f"wiki/{path.relative_to(wiki_path).as_posix()}", path, "wiki"))
+    candidates.sort(key=lambda item: (item[0].casefold(), item[0]))
+
+    source_file_count = len(candidates)
+    file_entries: list[tuple[str, str, str]] = []
+    excluded_records: list[tuple[str, str, str]] = []
+    duplicate_records: list[tuple[str, str]] = []
     hash_material = bytearray()
+    seen_content: dict[str, str] = {}
+    authority_counts: dict[str, int] = {}
+    content_bytes = 0
 
-    def add_file(pack_rel: str, path: Path):
+    for pack_rel, path, _source_kind in candidates:
+        authority, include, reason = classify_policy_path(policy, repo_policy, pack_rel)
+        if not include:
+            excluded_records.append((pack_rel, authority, reason))
+            continue
+
         content = read_markdown(path)
-        file_entries.append((pack_rel, content))
+        content_hash = hashlib.sha256(content.encode("utf-8")).hexdigest()
+        if content_hash in seen_content:
+            duplicate_records.append((pack_rel, seen_content[content_hash]))
+            continue
+        seen_content[content_hash] = pack_rel
+
+        file_entries.append((pack_rel, content, authority))
+        authority_counts[authority] = authority_counts.get(authority, 0) + 1
+        encoded = content.encode("utf-8")
+        content_bytes += len(encoded)
         hash_material.extend(pack_rel.encode("utf-8"))
         hash_material.extend(b"\0")
-        hash_material.extend(content.encode("utf-8"))
+        hash_material.extend(authority.encode("utf-8"))
         hash_material.extend(b"\0")
-
-    for path in repo_markdown_files:
-        add_file(path.relative_to(repo).as_posix(), path)
-
-    # The wiki is a sibling Git repository on GitHub. It is folded into the
-    # same Context Pack under a stable prefix instead of creating a second pack.
-    for path in wiki_markdown_files:
-        add_file(f"wiki/{path.relative_to(wiki_path).as_posix()}", path)
+        hash_material.extend(encoded)
+        hash_material.extend(b"\0")
 
     content_hash = hashlib.sha256(bytes(hash_material)).hexdigest()
     output_path = OUTPUT_DIR / f"{slugify(remote_name)}-context-pack.txt"
+    excluded_file_count = len(excluded_records) + len(duplicate_records)
+    duplicate_file_count = len(duplicate_records)
 
     result_base = {
         "label": label,
@@ -469,9 +581,19 @@ def make_pack(label: str, repo: Path):
         "wiki_files": len(wiki_markdown_files),
         "wiki_path": wiki_path,
         "hash": content_hash,
+        "source_file_count": source_file_count,
+        "excluded_file_count": excluded_file_count,
+        "duplicate_file_count": duplicate_file_count,
+        "content_bytes": content_bytes,
+        "authority_counts": authority_counts,
+        "warnings": warnings,
     }
 
-    if existing_pack_hash(output_path) == content_hash:
+    existing_header = read_pack_header(output_path) if output_path.exists() else {}
+    if (
+        existing_header.get("content_sha256") == content_hash
+        and existing_header.get("policy_version") == policy_version
+    ):
         return {**result_base, "changed": False}
 
     generated_at = datetime.now().astimezone().isoformat(timespec="seconds")
@@ -484,9 +606,16 @@ def make_pack(label: str, repo: Path):
         f"working_tree_markdown: {'dirty' if dirty else 'clean'}",
         f"wiki_source_path: {wiki_path if wiki_path.exists() else 'none'}",
         f"wiki_source_commit: {wiki_commit}",
-        f"wiki_working_tree_markdown: {'dirty' if wiki_dirty else ('clean' if wiki_is_git else 'not-git')}",
+        f"wiki_working_tree_markdown: {'dirty' if wiki_dirty else ('clean' if wiki_is_git else ('not-git' if wiki_path.exists() else 'none'))}",
+        f"policy_version: {policy_version}",
         f"repo_files: {len(repo_markdown_files)}",
         f"wiki_files: {len(wiki_markdown_files)}",
+        f"source_files: {source_file_count}",
+        f"included_files: {len(file_entries)}",
+        f"excluded_files: {excluded_file_count}",
+        f"duplicate_files: {duplicate_file_count}",
+        f"content_bytes: {content_bytes}",
+        f"authority_counts: {json.dumps(authority_counts, ensure_ascii=False, sort_keys=True, separators=(',', ':'))}",
         f"generated_at: {generated_at}",
         f"files: {len(file_entries)}",
         f"content_sha256: {content_hash}",
@@ -499,22 +628,37 @@ def make_pack(label: str, repo: Path):
 
     if file_entries:
         width = len(str(len(file_entries)))
-        for index, (rel, _) in enumerate(file_entries, 1):
-            lines.append(f"{index:0{width}d}. {rel}")
+        for index, (rel, _, authority) in enumerate(file_entries, 1):
+            lines.append(f"{index:0{width}d}. [{authority}] {rel}")
     else:
         lines.append("(aucun fichier Markdown)")
 
+    if excluded_records or duplicate_records:
+        lines.extend(["", "", "=" * 96, "EXCLUDED FILES", "=" * 96, ""] )
+        for rel, authority, reason in excluded_records:
+            lines.append(f"- [{authority}] {rel} ({reason})")
+        for rel, kept in duplicate_records:
+            lines.append(f"- [duplicate] {rel} (same content as {kept})")
+
     lines.extend(["", ""])
-    for rel, content in file_entries:
-        lines.extend(["=" * 96, f"FILE: {rel}", "=" * 96, "", content.rstrip("\n"), "", ""])
+    for rel, content, authority in file_entries:
+        lines.extend(["=" * 96, f"FILE: {rel}", f"AUTHORITY: {authority}", "=" * 96, "", content.rstrip("\n"), "", ""])
 
     final_text = "\n".join(lines).rstrip() + "\n"
+    pack_bytes = len(final_text.encode("utf-8"))
+    warning_bytes = int(build_policy.get("warningBytes") or 0)
+    max_bytes = int(build_policy.get("maxBytes") or 0)
+    if max_bytes and pack_bytes > max_bytes:
+        raise RuntimeError(f"Pack trop volumineux : {pack_bytes} octets > maxBytes={max_bytes}")
+    if warning_bytes and pack_bytes > warning_bytes:
+        warnings.append(f"Pack volumineux : {pack_bytes} octets > warningBytes={warning_bytes}")
+
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     temp_path = output_path.with_suffix(output_path.suffix + ".tmp")
     temp_path.write_text(final_text, encoding="utf-8", newline="\n")
     temp_path.replace(output_path)
 
-    return {**result_base, "changed": True}
+    return {**result_base, "pack_bytes": pack_bytes, "warnings": warnings, "changed": True}
 
 
 
@@ -545,6 +689,13 @@ def read_pack_header(path: Path) -> dict[str, str]:
                     "generated_at",
                     "files",
                     "content_sha256",
+                    "policy_version",
+                    "source_files",
+                    "included_files",
+                    "excluded_files",
+                    "duplicate_files",
+                    "content_bytes",
+                    "authority_counts",
                 }:
                     header[key] = value.strip()
     except OSError:
@@ -552,23 +703,32 @@ def read_pack_header(path: Path) -> dict[str, str]:
     return header
 
 
-def write_manifest(log=None) -> bool:
+def _header_int(header: dict[str, str], key: str) -> int | None:
+    try:
+        value = header.get(key)
+        return int(value) if value not in {None, ""} else None
+    except (TypeError, ValueError):
+        return None
+
+
+def write_manifest(log=None, policy: dict | None = None) -> bool:
     """Generate public/context-packs/index.json from the actual published .txt files."""
+    policy = policy or load_context_pack_policy()
+    policy_version = str(policy["policyVersion"])
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     packs = []
 
     for pack_path in sorted(OUTPUT_DIR.glob("*.txt"), key=lambda p: p.name.lower()):
         header = read_pack_header(pack_path)
         slug = pack_slug_from_filename(pack_path.name)
-        file_count = None
-        try:
-            if header.get("files"):
-                file_count = int(header["files"])
-        except ValueError:
-            file_count = None
-
         full_sha256 = hashlib.sha256(pack_path.read_bytes()).hexdigest()
         category = "general" if slug in {"grammatical-framework", "senior-architect"} else "system"
+        try:
+            authority_counts = json.loads(header.get("authority_counts") or "{}")
+            if not isinstance(authority_counts, dict):
+                authority_counts = {}
+        except json.JSONDecodeError:
+            authority_counts = {}
 
         packs.append(
             {
@@ -577,19 +737,27 @@ def write_manifest(log=None) -> bool:
                 "repository": header.get("repository"),
                 "sourceCommit": header.get("source_commit"),
                 "generatedAt": header.get("generated_at"),
-                "fileCount": file_count,
+                "fileCount": _header_int(header, "files"),
                 "sha256": full_sha256,
                 "category": category,
+                "policyVersion": header.get("policy_version"),
+                "sourceFileCount": _header_int(header, "source_files"),
+                "includedFileCount": _header_int(header, "included_files"),
+                "excludedFileCount": _header_int(header, "excluded_files"),
+                "duplicateFileCount": _header_int(header, "duplicate_files"),
+                "contentBytes": _header_int(header, "content_bytes"),
+                "authorityCounts": authority_counts,
             }
         )
 
-    core = {"schemaVersion": 1, "packs": packs}
+    core = {"schemaVersion": 2, "policyVersion": policy_version, "packs": packs}
 
     if MANIFEST_PATH.exists():
         try:
             existing = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
             if {
                 "schemaVersion": existing.get("schemaVersion"),
+                "policyVersion": existing.get("policyVersion"),
                 "packs": existing.get("packs"),
             } == core:
                 if log:
@@ -599,7 +767,8 @@ def write_manifest(log=None) -> bool:
             pass
 
     payload = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
+        "policyVersion": policy_version,
         "generatedAt": datetime.now().astimezone().isoformat(timespec="seconds"),
         "packs": packs,
     }
@@ -613,6 +782,38 @@ def write_manifest(log=None) -> bool:
     if log:
         log(f"Manifest : {len(packs)} pack(s) -> {MANIFEST_PATH.name}")
     return True
+
+
+def write_context_pack_sitemap(log=None) -> bool:
+    if not MANIFEST_PATH.exists():
+        raise RuntimeError(f"Manifest absent : {MANIFEST_PATH}")
+    manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+    files = [str(pack.get("file") or "").strip() for pack in manifest.get("packs") or []]
+    files = sorted(file for file in files if file.lower().endswith(".txt"))
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
+    for file_name in files:
+        # Builder filenames are URL-safe slugs; keep them stable and human-readable.
+        lines.extend([
+            "  <url>",
+            f"    <loc>{CONTEXT_PACK_BASE_URL}/{file_name}</loc>",
+            "  </url>",
+        ])
+    lines.append("</urlset>")
+    content = "\n".join(lines) + "\n"
+    if SITEMAP_PATH.exists() and SITEMAP_PATH.read_text(encoding="utf-8") == content:
+        if log:
+            log("Sitemap Context Packs : identique.")
+        return False
+    temp = SITEMAP_PATH.with_suffix(".xml.tmp")
+    temp.write_text(content, encoding="utf-8", newline="\n")
+    temp.replace(SITEMAP_PATH)
+    if log:
+        log(f"Sitemap Context Packs : {len(files)} URL(s) -> {SITEMAP_PATH.name}")
+    return True
+
 
 def cleanup_retired_packs(log=None) -> int:
     """Delete context packs that are no longer managed/published by this builder."""
@@ -646,10 +847,33 @@ def install_self_into_initkoa():
     return True
 
 
+def install_policy_into_initkoa():
+    source = Path(__file__).resolve().with_name("context_pack_policy.json")
+    if not source.exists():
+        if POLICY_TARGET.exists():
+            return False
+        raise FileNotFoundError(f"Politique Context Pack absente à côté du builder : {source}")
+    POLICY_TARGET.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        if source == POLICY_TARGET.resolve():
+            return False
+    except OSError:
+        pass
+    source_bytes = source.read_bytes()
+    if POLICY_TARGET.exists() and POLICY_TARGET.read_bytes() == source_bytes:
+        return False
+    POLICY_TARGET.write_bytes(source_bytes)
+    return True
+
+
 def build_all(log):
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     if install_self_into_initkoa():
         log(f"Builder copié dans : {TOOL_TARGET}")
+    if install_policy_into_initkoa():
+        log(f"Politique copiée dans : {POLICY_TARGET}")
+    policy = load_context_pack_policy()
+    log(f"Politique corpus : {policy['policyVersion']}")
 
     # Optional GitHub wikis are materialized once, beside each repository.
     # Existing local wiki directories are deliberately never pulled or overwritten.
@@ -660,15 +884,18 @@ def build_all(log):
     for index, (label, repo) in enumerate(active, 1):
         log(f"[{index}/{len(active)}] {label}")
         try:
-            result = make_pack(label, repo)
+            result = make_pack(label, repo, policy)
             results.append(result)
             marker = "MODIFIÉ" if result["changed"] else "identique"
             log(f"    {result['files']} .md -> {result['output'].name} [{marker}]")
+            for warning in result.get("warnings") or []:
+                log(f"    AVERTISSEMENT : {warning}")
         except Exception as exc:
             results.append({"label": label, "path": repo, "error": str(exc), "files": 0, "changed": False})
             log(f"    ERREUR : {exc}")
     cleanup_retired_packs(log)
-    write_manifest(log)
+    write_manifest(log, policy)
+    write_context_pack_sitemap(log)
     return results
 
 
@@ -677,20 +904,24 @@ def sync_initkoa(log, pull_first=True):
         raise RuntimeError(f"Repo initkoa introuvable ou non Git : {INITKOA_REPO}")
 
     install_self_into_initkoa()
+    install_policy_into_initkoa()
+    policy = load_context_pack_policy()
     if pull_first:
         log("Git : pull --rebase --autostash...")
         git(INITKOA_REPO, "pull", "--rebase", "--autostash")
 
     # Keep the published directory and manifest coherent even when the user runs Sync only.
     cleanup_retired_packs(log)
-    write_manifest(log)
+    write_manifest(log, policy)
+    write_context_pack_sitemap(log)
 
     relative_output = OUTPUT_DIR.relative_to(INITKOA_REPO).as_posix()
     relative_tool = TOOL_TARGET.relative_to(INITKOA_REPO).as_posix()
+    relative_policy = POLICY_TARGET.relative_to(INITKOA_REPO).as_posix()
 
-    log("Git : staging des Context Packs et du builder...")
-    git(INITKOA_REPO, "add", "--", relative_output, relative_tool)
-    diff = git(INITKOA_REPO, "diff", "--cached", "--quiet", "--", relative_output, relative_tool, check=False)
+    log("Git : staging des Context Packs, du builder et de la politique...")
+    git(INITKOA_REPO, "add", "--", relative_output, relative_tool, relative_policy)
+    diff = git(INITKOA_REPO, "diff", "--cached", "--quiet", "--", relative_output, relative_tool, relative_policy, check=False)
 
     if diff.returncode == 0:
         log("Git : aucun changement à committer.")
@@ -698,7 +929,7 @@ def sync_initkoa(log, pull_first=True):
         stamp = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M")
         message = f"{COMMIT_MESSAGE} ({stamp})"
         log(f"Git : commit « {message} »")
-        git(INITKOA_REPO, "commit", "--only", "-m", message, "--", relative_output, relative_tool)
+        git(INITKOA_REPO, "commit", "--only", "-m", message, "--", relative_output, relative_tool, relative_policy)
     else:
         raise CommandError("Impossible de déterminer les changements Git.")
 

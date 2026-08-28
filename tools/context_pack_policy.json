@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": "2026-08-28.1",
+  "publicBuild": {
+    "committedOnly": true,
+    "requireCleanMarkdown": true,
+    "plainWikiMode": "ignore",
+    "includedAuthorities": [
+      "canonical",
+      "reference"
+    ],
+    "warningBytes": 2000000,
+    "maxBytes": 12000000
+  },
+  "globalExclusions": [
+    ".kx_deploy_backups/**",
+    "_pipeline-plan-diag_*/**",
+    "_diagnostics/**",
+    "tmp/**",
+    ".tmp/**"
+  ],
+  "repositories": {
+    "Konnaxion": {
+      "rules": [
+        {
+          "pattern": ".kx_deploy_backups/**",
+          "authority": "historical",
+          "include": false
+        }
+      ]
+    },
+    "kOA-Linux": {
+      "rules": [
+        {
+          "pattern": "_pipeline-plan-diag_*/**",
+          "authority": "historical",
+          "include": false
+        }
+      ]
+    },
+    "Kristal_Farms": {
+      "rules": [
+        {
+          "pattern": "archive/**",
+          "authority": "historical",
+          "include": false
+        }
+      ]
+    },
+    "Orgo": {
+      "rules": [
+        {
+          "pattern": "Docs/Technical-Reference/Architecture upgrade(to do)/**",
+          "authority": "proposal",
+          "include": false
+        }
+      ]
+    },
+    "UCKK-Moodle": {
+      "rules": [
+        {
+          "pattern": "string_inventory/**",
+          "authority": "reference",
+          "include": false
+        }
+      ]
+    }
+  },
+  "legacyExemptFiles": [
+    "grammatical-framework-context-pack--rgl-router-and-reference--v1.0.txt",
+    "senior-architect-context-pack--systems-patterns-and-resilience--v1.0.txt"
+  ]
+}

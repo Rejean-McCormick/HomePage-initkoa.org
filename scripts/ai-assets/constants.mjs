@@ -130,6 +130,24 @@ export const AI_SUPPORTING_RESOURCES = Object.freeze([
 // Context packs are discovered from the builder-generated manifest at build time.
 // This keeps /llms.txt aligned with the actual files published under public/context-packs.
 export const CONTEXT_PACK_MANIFEST_RELATIVE_PATH = "context-packs/index.json";
+export const CONTEXT_PACK_SITEMAP_RELATIVE_PATH = "context-packs/sitemap.xml";
+
+export const CONTEXT_PACK_DISCOVERY_RESOURCES = Object.freeze([
+  {
+    fileName: CONTEXT_PACK_MANIFEST_RELATIVE_PATH,
+    title: "Context Pack catalog",
+    path: `/${CONTEXT_PACK_MANIFEST_RELATIVE_PATH}`,
+    type: "application/json",
+    purpose: "Authoritative machine-readable catalog of published Context Packs.",
+  },
+  {
+    fileName: CONTEXT_PACK_SITEMAP_RELATIVE_PATH,
+    title: "Context Pack sitemap",
+    path: `/${CONTEXT_PACK_SITEMAP_RELATIVE_PATH}`,
+    type: "application/xml",
+    purpose: "Crawler discovery surface for current stable Context Pack URLs.",
+  },
+]);
 
 // Backward-compatible named export expected by some callers.
 export const GENERATED_MD_STATE_FILE_NAME = ARTIFACT_NAMES.generatedMdState;
