@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "policyVersion": "2026-08-28.1",
+  "policyVersion": "2026-08-28.2",
   "publicBuild": {
     "committedOnly": true,
     "requireCleanMarkdown": true,
@@ -30,11 +30,71 @@
       ]
     },
     "kOA-Linux": {
+      "selectionMode": "curated",
+      "includeWiki": false,
+      "includePatterns": [
+        "docs/AI_CONTEXT.md",
+        "docs/contracts/ai-navigation.contract.json",
+        "docs/contracts/*.contract.json",
+        "docs/contracts/components/*.component.json",
+        "docs/contracts/subsystems/*.subsystem.json",
+        "docs/contracts/profiles/*.profile.json",
+        "docs/contracts/integrations/*.integration.json",
+        "docs/contracts/toolchains/*.toolchain.json",
+        "docs/generated/ai-context/*.json",
+        "docs/generated/authority-manifest.json",
+        "docs/generated/document-index.json",
+        "docs/generated/component-catalog.json",
+        "docs/generated/subsystem-catalog.json",
+        "docs/generated/profile-catalog.json",
+        "docs/generated/requirements-index.json",
+        "docs/generated/assertion-index.json",
+        "docs/generated/traceability.json"
+      ],
+      "requiredPatterns": [
+        "docs/AI_CONTEXT.md",
+        "docs/contracts/ai-navigation.contract.json",
+        "docs/generated/ai-context/*.json",
+        "docs/generated/document-index.json",
+        "docs/generated/component-catalog.json",
+        "docs/generated/subsystem-catalog.json",
+        "docs/generated/profile-catalog.json",
+        "docs/generated/requirements-index.json",
+        "docs/generated/assertion-index.json",
+        "docs/generated/traceability.json",
+        "docs/generated/ai-context/koa-navigation.json",
+        "docs/generated/authority-manifest.json",
+        "docs/contracts/*.contract.json",
+        "docs/contracts/components/*.component.json",
+        "docs/contracts/subsystems/*.subsystem.json",
+        "docs/contracts/profiles/*.profile.json",
+        "docs/contracts/integrations/*.integration.json",
+        "docs/contracts/toolchains/*.toolchain.json"
+      ],
+      "readFirst": [
+        "docs/AI_CONTEXT.md",
+        "docs/contracts/ai-navigation.contract.json",
+        "docs/generated/ai-context/koa-navigation.json",
+        "docs/generated/ai-context/*.json",
+        "docs/generated/authority-manifest.json",
+        "docs/generated/document-index.json",
+        "docs/generated/component-catalog.json",
+        "docs/generated/subsystem-catalog.json",
+        "docs/generated/profile-catalog.json",
+        "docs/generated/requirements-index.json",
+        "docs/generated/assertion-index.json",
+        "docs/generated/traceability.json"
+      ],
       "rules": [
         {
-          "pattern": "_pipeline-plan-diag_*/**",
-          "authority": "historical",
-          "include": false
+          "pattern": "docs/AI_CONTEXT.md",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "docs/generated/**",
+          "authority": "reference",
+          "include": true
         }
       ]
     },

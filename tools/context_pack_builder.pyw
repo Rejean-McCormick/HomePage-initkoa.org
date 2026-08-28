@@ -374,20 +374,39 @@ def markdown_dirty(repo: Path) -> bool:
     return bool(result.stdout.strip())
 
 
-def git_markdown_files(repo: Path) -> list[Path]:
-    """Return committed Markdown only for public Context Pack builds."""
+def git_tracked_files(repo: Path, patterns: list[str] | None = None) -> list[Path]:
+    """Return committed files, optionally restricted by policy globs."""
     result = subprocess.run(
-        ["git", "-C", str(repo), "ls-files", "-z", "--cached", "--", ":(glob)**/*.md"],
+        ["git", "-C", str(repo), "ls-files", "-z", "--cached"],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         creationflags=CREATE_NO_WINDOW,
     )
     if result.returncode != 0:
         err = result.stderr.decode("utf-8", errors="replace").strip()
-        raise CommandError(f"Impossible de lister les Markdown dans {repo}\n{err}")
+        raise CommandError(f"Impossible de lister les fichiers suivis dans {repo}\n{err}")
     raw_paths = [x.decode("utf-8", errors="surrogateescape") for x in result.stdout.split(b"\0") if x]
     relative_paths = sorted(set(raw_paths), key=lambda s: (s.lower(), s))
+    if patterns:
+        relative_paths = [
+            rel for rel in relative_paths
+            if any(_matches_policy_pattern(rel, pattern) for pattern in patterns)
+        ]
     return [repo / Path(rel) for rel in relative_paths if (repo / Path(rel)).is_file()]
+
+
+def git_markdown_files(repo: Path) -> list[Path]:
+    """Return committed Markdown only for default public Context Pack builds."""
+    return [path for path in git_tracked_files(repo) if path.suffix.casefold() == ".md"]
+
+
+def selected_files_dirty(repo: Path, files: list[Path]) -> bool:
+    """Return True when any selected committed source file differs from HEAD."""
+    if not files:
+        return False
+    relative = [path.relative_to(repo).as_posix() for path in files]
+    result = git(repo, "status", "--porcelain", "--untracked-files=no", "--", *relative, check=False)
+    return bool(result.stdout.strip())
 
 
 def markdown_files_in_folder(folder: Path) -> list[Path]:
@@ -462,7 +481,7 @@ def slugify(value: str) -> str:
     return re.sub(r"[^A-Za-z0-9]+", "-", repo_name).strip("-").lower() or "context"
 
 
-def read_markdown(path: Path) -> str:
+def read_source_text(path: Path) -> str:
     raw = path.read_bytes()
     if raw.startswith(b"\xef\xbb\xbf"):
         text = raw.decode("utf-8-sig")
@@ -503,36 +522,77 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
 
     remote_name = github_repo_from_remote(repo, label)
     repo_policy = _policy_repo_entry(policy, label, remote_name)
+    selection_mode = str(repo_policy.get("selectionMode") or "markdown").strip().lower()
+    if selection_mode not in {"markdown", "curated"}:
+        raise RuntimeError(f"selectionMode non supporté pour {label} : {selection_mode}")
+
     commit = current_commit(repo)
-    dirty = markdown_dirty(repo)
+    warnings: list[str] = []
+
+    if selection_mode == "curated":
+        include_patterns = [str(x) for x in repo_policy.get("includePatterns") or [] if str(x).strip()]
+        if not include_patterns:
+            raise RuntimeError(f"includePatterns requis pour selectionMode=curated ({label})")
+        repo_source_files = git_tracked_files(repo, include_patterns)
+        required_patterns = [str(x) for x in repo_policy.get("requiredPatterns") or [] if str(x).strip()]
+        selected_rels = [path.relative_to(repo).as_posix() for path in repo_source_files]
+        missing_required = [
+            pattern for pattern in required_patterns
+            if not any(_matches_policy_pattern(rel, pattern) for rel in selected_rels)
+        ]
+        if missing_required:
+            raise RuntimeError("Sources curated requises absentes : " + ", ".join(missing_required))
+        dirty = selected_files_dirty(repo, repo_source_files)
+    else:
+        repo_source_files = git_markdown_files(repo)
+        dirty = markdown_dirty(repo)
+
     if require_clean and dirty:
+        if selection_mode == "curated":
+            raise RuntimeError("Working tree curated dirty : commit/stash requis avant un build public.")
         raise RuntimeError("Working tree Markdown dirty : commit/stash requis avant un build public.")
 
-    repo_markdown_files = git_markdown_files(repo)
     wiki_path = existing_wiki_path_for_repo(repo) or wiki_path_for_repo(repo)
+    include_wiki = bool(repo_policy.get("includeWiki", True)) and selection_mode != "curated"
     wiki_is_git = is_git_repo(wiki_path)
-    wiki_dirty = markdown_dirty(wiki_path) if wiki_is_git else False
+    wiki_dirty = markdown_dirty(wiki_path) if (include_wiki and wiki_is_git) else False
     if require_clean and wiki_dirty:
         raise RuntimeError(f"Wiki Markdown dirty : {wiki_path}")
 
-    warnings: list[str] = []
-    if wiki_path.exists() and not wiki_is_git:
+    if include_wiki and wiki_path.exists() and not wiki_is_git:
         plain_mode = str(build_policy.get("plainWikiMode") or "ignore").lower()
         if plain_mode == "error":
             raise RuntimeError(f"Wiki local non-Git interdit pour un build public : {wiki_path}")
-        wiki_markdown_files: list[Path] = []
+        wiki_source_files: list[Path] = []
         warnings.append(f"Wiki non-Git ignoré : {wiki_path}")
+    elif include_wiki:
+        wiki_source_files = git_markdown_files(wiki_path) if wiki_is_git else []
     else:
-        wiki_markdown_files = git_markdown_files(wiki_path) if wiki_is_git else []
+        wiki_source_files = []
 
-    wiki_commit = current_commit(wiki_path) if wiki_is_git else ("ignored-non-git" if wiki_path.exists() else "none")
+    wiki_commit = current_commit(wiki_path) if (include_wiki and wiki_is_git) else (
+        "excluded-by-policy" if wiki_path.exists() and not include_wiki else
+        ("ignored-non-git" if wiki_path.exists() else "none")
+    )
 
     candidates: list[tuple[str, Path, str]] = []
-    for path in repo_markdown_files:
+    for path in repo_source_files:
         candidates.append((path.relative_to(repo).as_posix(), path, "repo"))
-    for path in wiki_markdown_files:
+    for path in wiki_source_files:
         candidates.append((f"wiki/{path.relative_to(wiki_path).as_posix()}", path, "wiki"))
-    candidates.sort(key=lambda item: (item[0].casefold(), item[0]))
+
+    read_first = [str(x) for x in repo_policy.get("readFirst") or [] if str(x).strip()]
+
+    def candidate_sort_key(item: tuple[str, Path, str]):
+        rel = item[0]
+        priority = len(read_first)
+        for index, pattern in enumerate(read_first):
+            if _matches_policy_pattern(rel, pattern):
+                priority = index
+                break
+        return (priority, rel.casefold(), rel)
+
+    candidates.sort(key=candidate_sort_key)
 
     source_file_count = len(candidates)
     file_entries: list[tuple[str, str, str]] = []
@@ -549,7 +609,7 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
             excluded_records.append((pack_rel, authority, reason))
             continue
 
-        content = read_markdown(path)
+        content = read_source_text(path)
         content_hash = hashlib.sha256(content.encode("utf-8")).hexdigest()
         if content_hash in seen_content:
             duplicate_records.append((pack_rel, seen_content[content_hash]))
@@ -577,8 +637,8 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         "remote": remote_name,
         "output": output_path,
         "files": len(file_entries),
-        "repo_files": len(repo_markdown_files),
-        "wiki_files": len(wiki_markdown_files),
+        "repo_files": len(repo_source_files),
+        "wiki_files": len(wiki_source_files),
         "wiki_path": wiki_path,
         "hash": content_hash,
         "source_file_count": source_file_count,
@@ -586,6 +646,7 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         "duplicate_file_count": duplicate_file_count,
         "content_bytes": content_bytes,
         "authority_counts": authority_counts,
+        "selection_mode": selection_mode,
         "warnings": warnings,
     }
 
@@ -593,6 +654,7 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
     if (
         existing_header.get("content_sha256") == content_hash
         and existing_header.get("policy_version") == policy_version
+        and existing_header.get("selection_mode", "markdown") == selection_mode
     ):
         return {**result_base, "changed": False}
 
@@ -603,13 +665,15 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         f"repository: {remote_name}",
         f"source_path: {repo}",
         f"source_commit: {commit}",
-        f"working_tree_markdown: {'dirty' if dirty else 'clean'}",
+        f"working_tree_markdown: {'dirty' if dirty else 'clean'}",  # compatibility field used by site validator
+        f"working_tree_selected: {'dirty' if dirty else 'clean'}",
+        f"selection_mode: {selection_mode}",
         f"wiki_source_path: {wiki_path if wiki_path.exists() else 'none'}",
         f"wiki_source_commit: {wiki_commit}",
-        f"wiki_working_tree_markdown: {'dirty' if wiki_dirty else ('clean' if wiki_is_git else ('not-git' if wiki_path.exists() else 'none'))}",
+        f"wiki_working_tree_markdown: {'dirty' if wiki_dirty else ('clean' if include_wiki and wiki_is_git else ('excluded' if not include_wiki and wiki_path.exists() else ('not-git' if wiki_path.exists() else 'none')))}",
         f"policy_version: {policy_version}",
-        f"repo_files: {len(repo_markdown_files)}",
-        f"wiki_files: {len(wiki_markdown_files)}",
+        f"repo_files: {len(repo_source_files)}",
+        f"wiki_files: {len(wiki_source_files)}",
         f"source_files: {source_file_count}",
         f"included_files: {len(file_entries)}",
         f"excluded_files: {excluded_file_count}",
@@ -631,7 +695,7 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         for index, (rel, _, authority) in enumerate(file_entries, 1):
             lines.append(f"{index:0{width}d}. [{authority}] {rel}")
     else:
-        lines.append("(aucun fichier Markdown)")
+        lines.append("(aucun fichier sélectionné)")
 
     if excluded_records or duplicate_records:
         lines.extend(["", "", "=" * 96, "EXCLUDED FILES", "=" * 96, ""] )
@@ -887,7 +951,7 @@ def build_all(log):
             result = make_pack(label, repo, policy)
             results.append(result)
             marker = "MODIFIÉ" if result["changed"] else "identique"
-            log(f"    {result['files']} .md -> {result['output'].name} [{marker}]")
+            log(f"    {result['files']} fichier(s) [{result.get('selection_mode', 'markdown')}] -> {result['output'].name} [{marker}]")
             for warning in result.get("warnings") or []:
                 log(f"    AVERTISSEMENT : {warning}")
         except Exception as exc:
