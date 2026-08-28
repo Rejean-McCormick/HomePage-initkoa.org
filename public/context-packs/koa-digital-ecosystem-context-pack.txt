@@ -7,120 +7,128 @@ working_tree_markdown: clean
 wiki_source_path: C:\mycode\kOA\kOA_Digital_Ecosystem.wiki
 wiki_source_commit: 830fb28abe030d070752041488d19a185057d6c1
 wiki_working_tree_markdown: clean
+policy_version: 2026-08-28.1
 repo_files: 71
 wiki_files: 29
-generated_at: 2026-08-25T11:30:58-04:00
+source_files: 100
+included_files: 100
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 603988
+authority_counts: {"canonical":100}
+generated_at: 2026-08-28T09:43:17-04:00
 files: 100
-content_sha256: c77a030cff73ef4a4cb5453c9072ffadc5fd188f1011f0888c545bf8f9a458e8
+content_sha256: 507df196185eca255ba82dd5badbacb990437f65b4f382e09018e3ab2d2610ec
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-001. docs_layer-model/00_README.md
-002. docs_layer-model/01_LAYER_MODEL.md
-003. docs_layer-model/02_LAYER_INDEX.md
-004. docs_layer-model/03_LAYER_TEMPLATE.md
-005. docs_layer-model/layers/00_separation_of_functions.md
-006. docs_layer-model/layers/01_orientation_mandate.md
-007. docs_layer-model/layers/02_semantics_meaning.md
-008. docs_layer-model/layers/03_provenance_ingestion.md
-009. docs_layer-model/layers/04_structured_knowledge.md
-010. docs_layer-model/layers/05_validation_canon.md
-011. docs_layer-model/layers/06_deliberation.md
-012. docs_layer-model/layers/07_decision_legitimacy.md
-013. docs_layer-model/layers/08_execution.md
-014. docs_layer-model/layers/09_memory_learning.md
-015. docs_layer-model/layers/10_resilience_autonomy.md
-016. docs_layer-model/layers/11_learning_interface.md
-017. docs_layer-model/layers/12_narrative_adoption.md
-018. docs_layer-model/layers/13_deployment_translation.md
-019. docs_technical/00-overview/faq.md
-020. docs_technical/00-overview/glossary.md
-021. docs_technical/00-overview/scope.md
-022. docs_technical/00-overview/system-at-a-glance.md
-023. docs_technical/10-system/architecture.md
-024. docs_technical/10-system/components.md
-025. docs_technical/10-system/determinism.md
-026. docs_technical/10-system/failure-modes.md
-027. docs_technical/10-system/lifecycle.md
-028. docs_technical/10-system/trust-boundaries.md
-029. docs_technical/20-nodes/binah-blueprint.md
-030. docs_technical/20-nodes/chesed-konnaxion.md
-031. docs_technical/20-nodes/chokmah-inputs.md
-032. docs_technical/20-nodes/daat-kristal-bridge.md
-033. docs_technical/20-nodes/gevurah-orgo.md
-034. docs_technical/20-nodes/hod-architect-render.md
-035. docs_technical/20-nodes/index.md
-036. docs_technical/20-nodes/keter-mandate.md
-037. docs_technical/20-nodes/malkuth-runtime.md
-038. docs_technical/20-nodes/netzach-architect-strategy.md
-039. docs_technical/20-nodes/tiferet-sentient.md
-040. docs_technical/20-nodes/yesod-compiler.md
-041. docs_technical/30-artifacts/build-record.md
-042. docs_technical/30-artifacts/index.md
-043. docs_technical/30-artifacts/konnaxion-state.md
-044. docs_technical/30-artifacts/mandate-bundle.md
-045. docs_technical/30-artifacts/orgo-case.md
-046. docs_technical/30-artifacts/orgo-task.md
-047. docs_technical/30-artifacts/release-record.md
-048. docs_technical/40-integration/kristal-v4/conformance.md
-049. docs_technical/40-integration/kristal-v4/contract-pointers.md
-050. docs_technical/40-integration/kristal-v4/index.md
-051. docs_technical/40-integration/kristal-v4/koa-profile.md
-052. docs_technical/40-integration/kristal-v4/legacy-compat.md
-053. docs_technical/40-integration/kristal-v4/pinned-dependency.md
-054. docs_technical/50-operations/incident-response.md
-055. docs_technical/50-operations/key-management.md
-056. docs_technical/50-operations/pipeline.md
-057. docs_technical/50-operations/releases.md
-058. docs_technical/50-operations/rollback.md
-059. docs_technical/60-guides/implementers.md
-060. docs_technical/60-guides/integrators.md
-061. docs_technical/60-guides/testing.md
-062. docs_technical/60-guides/tooling.md
-063. docs_technical/90-reference/adr/adr-0001-truth-boundary.md
-064. docs_technical/90-reference/adr/adr-0002-determinism-policy.md
-065. docs_technical/90-reference/adr/adr-0003-konnaxion-activation-rollback.md
-066. docs_technical/90-reference/adr/adr-0004-architect-split.md
-067. docs_technical/90-reference/adr/adr-0005-compatibility-versioning.md
-068. docs_technical/90-reference/adr/index.md
-069. docs_technical/90-reference/terminology.md
-070. docs_technical/index.md
-071. README.md
-072. wiki/_Footer.md
-073. wiki/_Sidebar.md
-074. wiki/Artifacts-Kristal.md
-075. wiki/Artifacts-Operational.md
-076. wiki/Artifacts.md
-077. wiki/Components-Architect.md
-078. wiki/Components-Binah.md
-079. wiki/Components-Chokmah.md
-080. wiki/Components-Konnaxion-and-Malkuth.md
-081. wiki/Components-Kristal-and-Daat.md
-082. wiki/Components-Orgo.md
-083. wiki/Components-SenTient.md
-084. wiki/Components-SwarmCraft.md
-085. wiki/Components.md
-086. wiki/FAQ.md
-087. wiki/Glossary.md
-088. wiki/Home.md
-089. wiki/Integration-External-systems.md
-090. wiki/Integration-Kristal-v4.md
-091. wiki/Integration.md
-092. wiki/Lifecycle.md
-093. wiki/Non-goals.md
-094. wiki/Operations-Builds.md
-095. wiki/Operations-Incident-response.md
-096. wiki/Operations-Observability.md
-097. wiki/Operations-Releases.md
-098. wiki/Operations-Rollbacks.md
-099. wiki/Operations.md
-100. wiki/Principles-and-invariants.md
+001. [canonical] docs_layer-model/00_README.md
+002. [canonical] docs_layer-model/01_LAYER_MODEL.md
+003. [canonical] docs_layer-model/02_LAYER_INDEX.md
+004. [canonical] docs_layer-model/03_LAYER_TEMPLATE.md
+005. [canonical] docs_layer-model/layers/00_separation_of_functions.md
+006. [canonical] docs_layer-model/layers/01_orientation_mandate.md
+007. [canonical] docs_layer-model/layers/02_semantics_meaning.md
+008. [canonical] docs_layer-model/layers/03_provenance_ingestion.md
+009. [canonical] docs_layer-model/layers/04_structured_knowledge.md
+010. [canonical] docs_layer-model/layers/05_validation_canon.md
+011. [canonical] docs_layer-model/layers/06_deliberation.md
+012. [canonical] docs_layer-model/layers/07_decision_legitimacy.md
+013. [canonical] docs_layer-model/layers/08_execution.md
+014. [canonical] docs_layer-model/layers/09_memory_learning.md
+015. [canonical] docs_layer-model/layers/10_resilience_autonomy.md
+016. [canonical] docs_layer-model/layers/11_learning_interface.md
+017. [canonical] docs_layer-model/layers/12_narrative_adoption.md
+018. [canonical] docs_layer-model/layers/13_deployment_translation.md
+019. [canonical] docs_technical/00-overview/faq.md
+020. [canonical] docs_technical/00-overview/glossary.md
+021. [canonical] docs_technical/00-overview/scope.md
+022. [canonical] docs_technical/00-overview/system-at-a-glance.md
+023. [canonical] docs_technical/10-system/architecture.md
+024. [canonical] docs_technical/10-system/components.md
+025. [canonical] docs_technical/10-system/determinism.md
+026. [canonical] docs_technical/10-system/failure-modes.md
+027. [canonical] docs_technical/10-system/lifecycle.md
+028. [canonical] docs_technical/10-system/trust-boundaries.md
+029. [canonical] docs_technical/20-nodes/binah-blueprint.md
+030. [canonical] docs_technical/20-nodes/chesed-konnaxion.md
+031. [canonical] docs_technical/20-nodes/chokmah-inputs.md
+032. [canonical] docs_technical/20-nodes/daat-kristal-bridge.md
+033. [canonical] docs_technical/20-nodes/gevurah-orgo.md
+034. [canonical] docs_technical/20-nodes/hod-architect-render.md
+035. [canonical] docs_technical/20-nodes/index.md
+036. [canonical] docs_technical/20-nodes/keter-mandate.md
+037. [canonical] docs_technical/20-nodes/malkuth-runtime.md
+038. [canonical] docs_technical/20-nodes/netzach-architect-strategy.md
+039. [canonical] docs_technical/20-nodes/tiferet-sentient.md
+040. [canonical] docs_technical/20-nodes/yesod-compiler.md
+041. [canonical] docs_technical/30-artifacts/build-record.md
+042. [canonical] docs_technical/30-artifacts/index.md
+043. [canonical] docs_technical/30-artifacts/konnaxion-state.md
+044. [canonical] docs_technical/30-artifacts/mandate-bundle.md
+045. [canonical] docs_technical/30-artifacts/orgo-case.md
+046. [canonical] docs_technical/30-artifacts/orgo-task.md
+047. [canonical] docs_technical/30-artifacts/release-record.md
+048. [canonical] docs_technical/40-integration/kristal-v4/conformance.md
+049. [canonical] docs_technical/40-integration/kristal-v4/contract-pointers.md
+050. [canonical] docs_technical/40-integration/kristal-v4/index.md
+051. [canonical] docs_technical/40-integration/kristal-v4/koa-profile.md
+052. [canonical] docs_technical/40-integration/kristal-v4/legacy-compat.md
+053. [canonical] docs_technical/40-integration/kristal-v4/pinned-dependency.md
+054. [canonical] docs_technical/50-operations/incident-response.md
+055. [canonical] docs_technical/50-operations/key-management.md
+056. [canonical] docs_technical/50-operations/pipeline.md
+057. [canonical] docs_technical/50-operations/releases.md
+058. [canonical] docs_technical/50-operations/rollback.md
+059. [canonical] docs_technical/60-guides/implementers.md
+060. [canonical] docs_technical/60-guides/integrators.md
+061. [canonical] docs_technical/60-guides/testing.md
+062. [canonical] docs_technical/60-guides/tooling.md
+063. [canonical] docs_technical/90-reference/adr/adr-0001-truth-boundary.md
+064. [canonical] docs_technical/90-reference/adr/adr-0002-determinism-policy.md
+065. [canonical] docs_technical/90-reference/adr/adr-0003-konnaxion-activation-rollback.md
+066. [canonical] docs_technical/90-reference/adr/adr-0004-architect-split.md
+067. [canonical] docs_technical/90-reference/adr/adr-0005-compatibility-versioning.md
+068. [canonical] docs_technical/90-reference/adr/index.md
+069. [canonical] docs_technical/90-reference/terminology.md
+070. [canonical] docs_technical/index.md
+071. [canonical] README.md
+072. [canonical] wiki/_Footer.md
+073. [canonical] wiki/_Sidebar.md
+074. [canonical] wiki/Artifacts-Kristal.md
+075. [canonical] wiki/Artifacts-Operational.md
+076. [canonical] wiki/Artifacts.md
+077. [canonical] wiki/Components-Architect.md
+078. [canonical] wiki/Components-Binah.md
+079. [canonical] wiki/Components-Chokmah.md
+080. [canonical] wiki/Components-Konnaxion-and-Malkuth.md
+081. [canonical] wiki/Components-Kristal-and-Daat.md
+082. [canonical] wiki/Components-Orgo.md
+083. [canonical] wiki/Components-SenTient.md
+084. [canonical] wiki/Components-SwarmCraft.md
+085. [canonical] wiki/Components.md
+086. [canonical] wiki/FAQ.md
+087. [canonical] wiki/Glossary.md
+088. [canonical] wiki/Home.md
+089. [canonical] wiki/Integration-External-systems.md
+090. [canonical] wiki/Integration-Kristal-v4.md
+091. [canonical] wiki/Integration.md
+092. [canonical] wiki/Lifecycle.md
+093. [canonical] wiki/Non-goals.md
+094. [canonical] wiki/Operations-Builds.md
+095. [canonical] wiki/Operations-Incident-response.md
+096. [canonical] wiki/Operations-Observability.md
+097. [canonical] wiki/Operations-Releases.md
+098. [canonical] wiki/Operations-Rollbacks.md
+099. [canonical] wiki/Operations.md
+100. [canonical] wiki/Principles-and-invariants.md
 
 
 ================================================================================================
 FILE: docs_layer-model/00_README.md
+AUTHORITY: canonical
 ================================================================================================
 
 Content for:
@@ -390,6 +398,7 @@ This keeps the file focused on defining the layer model while respecting the exi
 
 ================================================================================================
 FILE: docs_layer-model/01_LAYER_MODEL.md
+AUTHORITY: canonical
 ================================================================================================
 
 # kOA Layer Model
@@ -1306,6 +1315,7 @@ In short:
 
 ================================================================================================
 FILE: docs_layer-model/02_LAYER_INDEX.md
+AUTHORITY: canonical
 ================================================================================================
 
 # kOA Layer Index
@@ -1611,6 +1621,7 @@ Layer documentation must explain the architecture without redefining technical s
 
 ================================================================================================
 FILE: docs_layer-model/03_LAYER_TEMPLATE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer Template
@@ -2107,6 +2118,7 @@ This layer does not:
 
 ================================================================================================
 FILE: docs_layer-model/layers/00_separation_of_functions.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 00 — Separation of Functions
@@ -2376,6 +2388,7 @@ Separation of Functions is the layer that keeps kOA’s movement, school, infras
 
 ================================================================================================
 FILE: docs_layer-model/layers/01_orientation_mandate.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 01 — Orientation / Mandate
@@ -2596,6 +2609,7 @@ Its role is to define the policy surface that downstream layers must respect.
 
 ================================================================================================
 FILE: docs_layer-model/layers/02_semantics_meaning.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 02 — Semantics / Meaning
@@ -3093,6 +3107,7 @@ The Semantics / Meaning layer is where kOA makes terms, concepts, relationships,
 
 ================================================================================================
 FILE: docs_layer-model/layers/03_provenance_ingestion.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 03 — Provenance / Ingestion
@@ -3436,6 +3451,7 @@ Provenance / Ingestion preserves exactly what kOA received, where it came from, 
 
 ================================================================================================
 FILE: docs_layer-model/layers/04_structured_knowledge.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 04 — Structured Knowledge
@@ -3835,6 +3851,7 @@ If the technical folder is still named `docs/`, replace `technical-docs/` with `
 
 ================================================================================================
 FILE: docs_layer-model/layers/05_validation_canon.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 05 — Validation / Canon
@@ -4111,6 +4128,7 @@ Validation / Canon is the layer where structured knowledge is tested, gated, ver
 
 ================================================================================================
 FILE: docs_layer-model/layers/06_deliberation.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 06 — Deliberation
@@ -4656,6 +4674,7 @@ Without it, kOA would risk becoming either a knowledge repository with no public
 
 ================================================================================================
 FILE: docs_layer-model/layers/07_decision_legitimacy.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 07 — Decision / Legitimacy
@@ -5138,6 +5157,7 @@ In short:
 
 ================================================================================================
 FILE: docs_layer-model/layers/08_execution.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 08 — Execution
@@ -5647,6 +5667,7 @@ Decision → Tasks → Responsibility → Follow-through → Closure → Memory
 
 ================================================================================================
 FILE: docs_layer-model/layers/09_memory_learning.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 09 — Memory / Learning
@@ -5974,6 +5995,7 @@ For technical partners:
 
 ================================================================================================
 FILE: docs_layer-model/layers/10_resilience_autonomy.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 10 — Resilience / Autonomy
@@ -6377,6 +6399,7 @@ Resilience / Autonomy is the layer that allows kOA to keep knowledge, decisions,
 
 ================================================================================================
 FILE: docs_layer-model/layers/11_learning_interface.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 11 — Learning / Interface
@@ -6734,6 +6757,7 @@ Integrity requirements:
 
 ================================================================================================
 FILE: docs_layer-model/layers/12_narrative_adoption.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 12 — Narrative / Adoption
@@ -7403,6 +7427,7 @@ The Narrative / Adoption layer is where kOA turns complex architecture into publ
 
 ================================================================================================
 FILE: docs_layer-model/layers/13_deployment_translation.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 13 — Deployment / Translation
@@ -7918,6 +7943,7 @@ Deployment / Translation opens the correct door into kOA for each audience, so t
 
 ================================================================================================
 FILE: docs_technical/00-overview/faq.md
+AUTHORITY: canonical
 ================================================================================================
 
 # FAQ
@@ -7985,6 +8011,7 @@ No by default. Distribution/activation and runtime use should be compatible with
 
 ================================================================================================
 FILE: docs_technical/00-overview/glossary.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Glossary
@@ -8160,6 +8187,7 @@ Rules for evolving schemas/policies without breaking verification, reproducibili
 
 ================================================================================================
 FILE: docs_technical/00-overview/scope.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Documentation Scope
@@ -8241,6 +8269,7 @@ Changes to Kristal contracts must happen in the pinned Kristal source; then kOA 
 
 ================================================================================================
 FILE: docs_technical/00-overview/system-at-a-glance.md
+AUTHORITY: canonical
 ================================================================================================
 
 # System at a Glance
@@ -8304,6 +8333,7 @@ This repo does **not** re-specify Kristal artifact formats/schemas.
 
 ================================================================================================
 FILE: docs_technical/10-system/architecture.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Architecture
@@ -8444,6 +8474,7 @@ Tenant-scoped policies and trust roots must be enforced at verification and publ
 
 ================================================================================================
 FILE: docs_technical/10-system/components.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Components
@@ -8644,6 +8675,7 @@ Konnaxion is treated as two facets.
 
 ================================================================================================
 FILE: docs_technical/10-system/determinism.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Determinism (kOA system)
@@ -8778,6 +8810,7 @@ kOA conformance includes (minimum):
 
 ================================================================================================
 FILE: docs_technical/10-system/failure-modes.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Failure Modes
@@ -9016,6 +9049,7 @@ This page defines the kOA system-level failure taxonomy, how failures propagate 
 
 ================================================================================================
 FILE: docs_technical/10-system/lifecycle.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Lifecycle (kOA end-to-end)
@@ -9362,6 +9396,7 @@ Each stage specifies: **Owner**, **Inputs**, **Outputs**, **Gate**, **Observabil
 
 ================================================================================================
 FILE: docs_technical/10-system/trust-boundaries.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Trust Boundaries
@@ -9504,6 +9539,7 @@ Rollback must be deterministic given the same verified inputs and triggers, and 
 
 ================================================================================================
 FILE: docs_technical/20-nodes/binah-blueprint.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Binah — Blueprint
@@ -9603,6 +9639,7 @@ Binah must refuse to emit a Blueprint if any of the following are true:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/chesed-konnaxion.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Chesed: Konnaxion
@@ -9694,6 +9731,7 @@ Konnaxion must expose:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/chokmah-inputs.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Chokmah — Inputs (Ingest + Provenance Boundary)
@@ -9870,6 +9908,7 @@ Chokmah SHOULD emit:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/daat-kristal-bridge.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Da’at: Kristal Bridge
@@ -9963,6 +10002,7 @@ This node is the *integration surface*, not the Kristal spec.
 
 ================================================================================================
 FILE: docs_technical/20-nodes/gevurah-orgo.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Gevurah — Orgo (Governance + Control Plane)
@@ -10180,6 +10220,7 @@ Orgo SHOULD:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/hod-architect-render.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Hod: Architect-Render (Deterministic Articulation)
@@ -10345,6 +10386,7 @@ A conformant Architect-Render MUST provide tests for:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Nodes
@@ -10428,6 +10470,7 @@ Node pages must **not** inline Kristal schemas or field lists.
 
 ================================================================================================
 FILE: docs_technical/20-nodes/keter-mandate.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Keter: Mandate (Governance Source)
@@ -10539,6 +10582,7 @@ Keter MUST emit:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/malkuth-runtime.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 10 — Malkuth: Runtime (Offline Serving + Execution Substrate)
@@ -10751,6 +10795,7 @@ The primary goal is not maximum performance; it is **repeatability, safety, and 
 
 ================================================================================================
 FILE: docs_technical/20-nodes/netzach-architect-strategy.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 07 — Netzach: Architect-Strategy (Planning / Work Orchestration)
@@ -10935,6 +10980,7 @@ Architect-Strategy proposes; Orgo decides and enforces.
 
 ================================================================================================
 FILE: docs_technical/20-nodes/tiferet-sentient.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Tiferet — SenTient (Resolution Engine)
@@ -11127,6 +11173,7 @@ Minimum test suite:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/yesod-compiler.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Yesod — Compiler (Build Executor)
@@ -11272,6 +11319,7 @@ Yesod MUST emit trace spans/events that include:
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/build-record.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Build Record (kOA)
@@ -11441,6 +11489,7 @@ A list of stage executions, each with:
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 # kOA Artifacts
@@ -11505,6 +11554,7 @@ Naming rules:
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/konnaxion-state.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Konnaxion State (kOA-native Operational Artifact)
@@ -11670,6 +11720,7 @@ This is a kOA-native contract. Changes require:
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/mandate-bundle.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Mandate Bundle
@@ -11736,6 +11787,7 @@ A Mandate Bundle typically includes:
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/orgo-case.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo Case
@@ -11890,6 +11942,7 @@ This doc is normative; the schema is the executable contract.
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/orgo-task.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo Task
@@ -12130,6 +12183,7 @@ Orgo Task commonly references:
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/release-record.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Release Record (kOA-native artifact)
@@ -12248,6 +12302,7 @@ A Release Record does not mutate canonical truth. It is an operational governanc
 
 ================================================================================================
 FILE: docs_technical/40-integration/kristal-v4/conformance.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal v4 Conformance (kOA)
@@ -12407,6 +12462,7 @@ kOA SHOULD maintain a kOA-native **conformance report** per release:
 
 ================================================================================================
 FILE: docs_technical/40-integration/kristal-v4/contract-pointers.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal v4 — Contract Pointers (kOA integration)
@@ -12563,6 +12619,7 @@ See:
 
 ================================================================================================
 FILE: docs_technical/40-integration/kristal-v4/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal v4 Integration (kOA)
@@ -12615,6 +12672,7 @@ kOA MUST:
 
 ================================================================================================
 FILE: docs_technical/40-integration/kristal-v4/koa-profile.md
+AUTHORITY: canonical
 ================================================================================================
 
 # kOA Profile for Kristal v4 (Pinned)
@@ -12775,6 +12833,7 @@ kOA deployments MUST gate releases on:
 
 ================================================================================================
 FILE: docs_technical/40-integration/kristal-v4/legacy-compat.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Legacy Compatibility (kOA ↔ Kristal v4)
@@ -12890,6 +12949,7 @@ Legacy acceptance expands the input surface. Therefore:
 
 ================================================================================================
 FILE: docs_technical/40-integration/kristal-v4/pinned-dependency.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal v4 — Pinned Dependency
@@ -12969,6 +13029,7 @@ kOA SHOULD add a CI check that fails if:
 
 ================================================================================================
 FILE: docs_technical/50-operations/incident-response.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Incident Response
@@ -13198,6 +13259,7 @@ Before declaring resolved:
 
 ================================================================================================
 FILE: docs_technical/50-operations/key-management.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Key Management
@@ -13355,6 +13417,7 @@ Key compromise response SHOULD:
 
 ================================================================================================
 FILE: docs_technical/50-operations/pipeline.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Pipeline Operations (Orgo)
@@ -13532,6 +13595,7 @@ Every metric/event MUST reference:
 
 ================================================================================================
 FILE: docs_technical/50-operations/releases.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Releases
@@ -13646,6 +13710,7 @@ are defined in the pinned Kristal v4 specification referenced in:
 
 ================================================================================================
 FILE: docs_technical/50-operations/rollback.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Rollback
@@ -13911,6 +13976,7 @@ Rollback tasks must reference:
 
 ================================================================================================
 FILE: docs_technical/60-guides/implementers.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Implementers Guide (kOA)
@@ -14090,6 +14156,7 @@ Minimum tests (see `../40-integration/kristal-v4/conformance.md`):
 
 ================================================================================================
 FILE: docs_technical/60-guides/integrators.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Integrator Guide (kOA)
@@ -14256,6 +14323,7 @@ If you are migrating from earlier Kristal conventions:
 
 ================================================================================================
 FILE: docs_technical/60-guides/testing.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Testing (kOA)
@@ -14411,6 +14479,7 @@ When a test fails, capture:
 
 ================================================================================================
 FILE: docs_technical/60-guides/tooling.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Tooling
@@ -14526,6 +14595,7 @@ Recommended:
 
 ================================================================================================
 FILE: docs_technical/90-reference/adr/adr-0001-truth-boundary.md
+AUTHORITY: canonical
 ================================================================================================
 
 # ADR-0001: Truth Boundary (kOA)
@@ -14598,6 +14668,7 @@ kOA integrates with Kristal as the canonical truth compiler. Kristal v4 defines 
 
 ================================================================================================
 FILE: docs_technical/90-reference/adr/adr-0002-determinism-policy.md
+AUTHORITY: canonical
 ================================================================================================
 
 # ADR-0002: Determinism Policy (kOA)
@@ -14715,6 +14786,7 @@ A conformance suite must include:
 
 ================================================================================================
 FILE: docs_technical/90-reference/adr/adr-0003-konnaxion-activation-rollback.md
+AUTHORITY: canonical
 ================================================================================================
 
 # ADR-0003: Konnaxion Activation and Rollback
@@ -14893,6 +14965,7 @@ A conformant Konnaxion-Distribution implementation MUST provide tests for:
 
 ================================================================================================
 FILE: docs_technical/90-reference/adr/adr-0004-architect-split.md
+AUTHORITY: canonical
 ================================================================================================
 
 # ADR-0004: Architect split (Strategy vs Render)
@@ -14981,6 +15054,7 @@ Split the Architect role into two components:
 
 ================================================================================================
 FILE: docs_technical/90-reference/adr/adr-0005-compatibility-versioning.md
+AUTHORITY: canonical
 ================================================================================================
 
 # ADR-0005: Compatibility & Versioning Policy (kOA)
@@ -15094,6 +15168,7 @@ Any tolerance for legacy spellings of Kristal-related fields must follow:
 
 ================================================================================================
 FILE: docs_technical/90-reference/adr/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 # ADR Index (kOA)
@@ -15137,6 +15212,7 @@ Create an ADR when you change:
 
 ================================================================================================
 FILE: docs_technical/90-reference/terminology.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Terminology (kOA)
@@ -15269,6 +15345,7 @@ A defined period where older spellings/aliases may be accepted on input, but can
 
 ================================================================================================
 FILE: docs_technical/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 # kOA Digital Ecosystem Documentation
@@ -15321,6 +15398,7 @@ See: `40-integration/kristal-v4/`
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 ÿþ#   k O A   D i g i t a l   E c o s y s t e m 
@@ -15624,6 +15702,7 @@ FILE: README.md
 
 ================================================================================================
 FILE: wiki/_Footer.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -15646,6 +15725,7 @@ FILE: wiki/_Footer.md
 
 ================================================================================================
 FILE: wiki/_Sidebar.md
+AUTHORITY: canonical
 ================================================================================================
 
 * [Home](Home)
@@ -15686,6 +15766,7 @@ FILE: wiki/_Sidebar.md
 
 ================================================================================================
 FILE: wiki/Artifacts-Kristal.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal Artifacts
@@ -15757,6 +15838,7 @@ Use these kOA integration docs as the single pointer set:
 
 ================================================================================================
 FILE: wiki/Artifacts-Operational.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Operational Artifacts (kOA-native)
@@ -15884,6 +15966,7 @@ Konnaxion updates this record on verify/activate attempts (success or fail), rol
 
 ================================================================================================
 FILE: wiki/Artifacts.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Artifacts
@@ -15952,6 +16035,7 @@ Each **kOA-native** artifact should have:
 
 ================================================================================================
 FILE: wiki/Components-Architect.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Architect (Articulation Plane)
@@ -16059,6 +16143,7 @@ Architect-Render should emit, at minimum:
 
 ================================================================================================
 FILE: wiki/Components-Binah.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Binah — Blueprint
@@ -16177,6 +16262,7 @@ Binah must refuse to emit a Blueprint if any of the following are true:
 
 ================================================================================================
 FILE: wiki/Components-Chokmah.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Chokmah (Inputs)
@@ -16329,6 +16415,7 @@ Chokmah should emit:
 
 ================================================================================================
 FILE: wiki/Components-Konnaxion-and-Malkuth.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Components — Konnaxion & Malkuth
@@ -16445,6 +16532,7 @@ flowchart LR
 
 ================================================================================================
 FILE: wiki/Components-Kristal-and-Daat.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal & Daat
@@ -16568,6 +16656,7 @@ No. Kristal produces truth and packs. Runtime systems consume verified packs to 
 
 ================================================================================================
 FILE: wiki/Components-Orgo.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo (Control Plane)
@@ -16694,6 +16783,7 @@ Recommended traces: correlate build IDs across stage jobs and downstream distrib
 
 ================================================================================================
 FILE: wiki/Components-SenTient.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Components — SenTient (Resolution Plane)
@@ -16817,6 +16907,7 @@ Minimum tests typically cover:
 
 ================================================================================================
 FILE: wiki/Components-SwarmCraft.md
+AUTHORITY: canonical
 ================================================================================================
 
 # SwarmCraft
@@ -16960,6 +17051,7 @@ SwarmCraft can run health checks and rollout-related tasks, but it does not deci
 
 ================================================================================================
 FILE: wiki/Components.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Components
@@ -17016,6 +17108,7 @@ kOA components exchange **typed artifacts**, not implicit state. The main pipeli
 
 ================================================================================================
 FILE: wiki/FAQ.md
+AUTHORITY: canonical
 ================================================================================================
 
 # FAQ
@@ -17089,6 +17182,7 @@ No by default. Distribution/activation and runtime use are designed to be compat
 
 ================================================================================================
 FILE: wiki/Glossary.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Glossary
@@ -17225,6 +17319,7 @@ Runtime-side checks (integrity/compatibility/policy) that must pass before activ
 
 ================================================================================================
 FILE: wiki/Home.md
+AUTHORITY: canonical
 ================================================================================================
 
 # kOA Digital Ecosystem
@@ -17327,6 +17422,7 @@ See: [Non-goals](Non-goals)
 
 ================================================================================================
 FILE: wiki/Integration-External-systems.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Integration — External systems
@@ -17509,6 +17605,7 @@ Before connecting an external system, confirm:
 
 ================================================================================================
 FILE: wiki/Integration-Kristal-v4.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal v4 integration
@@ -17604,6 +17701,7 @@ A conformant kOA↔Kristal integration should ensure:
 
 ================================================================================================
 FILE: wiki/Integration.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Integration
@@ -17672,6 +17770,7 @@ Integrations should emit:
 
 ================================================================================================
 FILE: wiki/Lifecycle.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Lifecycle (kOA end-to-end)
@@ -17978,6 +18077,7 @@ Each stage specifies: **Owner**, **Inputs**, **Outputs**, **Gate**, **Observabil
 
 ================================================================================================
 FILE: wiki/Non-goals.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Non-goals
@@ -18030,6 +18130,7 @@ This page defines what kOA (and this wiki) intentionally does **not** try to be.
 
 ================================================================================================
 FILE: wiki/Operations-Builds.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Operations — Builds
@@ -18171,6 +18272,7 @@ A failed build produces:
 
 ================================================================================================
 FILE: wiki/Operations-Incident-response.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Operations — Incident response
@@ -18374,6 +18476,7 @@ Before declaring resolved:
 
 ================================================================================================
 FILE: wiki/Operations-Observability.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Observability
@@ -18482,6 +18585,7 @@ Emit, per target: activation attempt events, preflight outcomes (pass/fail + rea
 
 ================================================================================================
 FILE: wiki/Operations-Releases.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Operations — Releases
@@ -18658,6 +18762,7 @@ See: [Artifacts — Operational](Artifacts-Operational)
 
 ================================================================================================
 FILE: wiki/Operations-Rollbacks.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Rollbacks
@@ -18860,6 +18965,7 @@ Rollback tasks must reference:
 
 ================================================================================================
 FILE: wiki/Operations.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Operations
@@ -18974,6 +19080,7 @@ When an incident is declared:
 
 ================================================================================================
 FILE: wiki/Principles-and-invariants.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Principles & invariants

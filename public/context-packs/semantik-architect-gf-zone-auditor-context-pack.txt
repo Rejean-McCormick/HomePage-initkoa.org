@@ -4,30 +4,43 @@ repository: Rejean-McCormick/SemantiK-Architect-GF-Zone-Auditor
 source_path: C:\mycode\SemantiK-Architect-GF-Zone-Auditor\SemantiK-Architect-GF-Zone-Auditor
 source_commit: 4afe1d65acdc252fe738450f3876c57cb29f0c0e
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:48-04:00
+wiki_source_path: none
+wiki_source_commit: none
+wiki_working_tree_markdown: none
+policy_version: 2026-08-28.1
+repo_files: 12
+wiki_files: 0
+source_files: 12
+included_files: 12
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 244568
+authority_counts: {"canonical":12}
+generated_at: 2026-08-28T09:43:01-04:00
 files: 12
-content_sha256: c4a14ab6c2cc0cfef23bae78be70c9b67440ac3aea3ca7dab74e8e539302773c
+content_sha256: 557f855cb54208884b9fbd2274a2a2dc836a73ff996ff241048978418a944e31
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. docs/00_main_design.md
-02. docs/01_scope_contract.md
-03. docs/02_analyzer_contract.md
-04. docs/03_report_contract.md
-05. docs/04_profiles.md
-06. docs/05_rulepacks.md
-07. docs/06_probe_spec.md
-08. docs/07_semantik_inventory.md
-09. docs/08_acceptance_contract.md
-10. docs/09_change_control.md
-11. docs/10_gui_contract.md
-12. README.md
+01. [canonical] docs/00_main_design.md
+02. [canonical] docs/01_scope_contract.md
+03. [canonical] docs/02_analyzer_contract.md
+04. [canonical] docs/03_report_contract.md
+05. [canonical] docs/04_profiles.md
+06. [canonical] docs/05_rulepacks.md
+07. [canonical] docs/06_probe_spec.md
+08. [canonical] docs/07_semantik_inventory.md
+09. [canonical] docs/08_acceptance_contract.md
+10. [canonical] docs/09_change_control.md
+11. [canonical] docs/10_gui_contract.md
+12. [canonical] README.md
 
 
 ================================================================================================
 FILE: docs/00_main_design.md
+AUTHORITY: canonical
 ================================================================================================
 
 # SemantiK Grammar Surface Auditor
@@ -434,6 +447,7 @@ Further expansion should happen only if it still stays inside the grammar surfac
 
 ================================================================================================
 FILE: docs/01_scope_contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Scope Contract
@@ -942,6 +956,7 @@ The SemantiK Grammar Surface Auditor owns **GF grammars, Wiki/bioframework reali
 
 ================================================================================================
 FILE: docs/02_analyzer_contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Analyzer Contract
@@ -1650,6 +1665,7 @@ An analyzer is a bounded, registered, source-kind-aware audit component that emi
 
 ================================================================================================
 FILE: docs/03_report_contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Report Contract
@@ -2759,6 +2775,7 @@ The report contract defines a stable, machine-readable audit result in which art
 
 ================================================================================================
 FILE: docs/04_profiles.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Profiles
@@ -3490,6 +3507,7 @@ Profiles are named, normative operating contracts that control selection, analyz
 
 ================================================================================================
 FILE: docs/05_rulepacks.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Rule Packs
@@ -4228,6 +4246,7 @@ A rule pack is the stable, documented source of truth for what a finding’s `ru
 
 ================================================================================================
 FILE: docs/06_probe_spec.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Probe Specification
@@ -4972,6 +4991,7 @@ A probe is an explicit, asset-defined, profile-governed verification unit that e
 
 ================================================================================================
 FILE: docs/07_semantik_inventory.md
+AUTHORITY: canonical
 ================================================================================================
 
 # SemantiK Inventory
@@ -5593,6 +5613,7 @@ The SemantiK inventory is the reviewed, explicit, profile-owned map of the Seman
 
 ================================================================================================
 FILE: docs/08_acceptance_contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Acceptance Contract
@@ -6113,6 +6134,7 @@ The acceptance contract defines the evidence, gates, fixtures, and decision rule
 
 ================================================================================================
 FILE: docs/09_change_control.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Change Control
@@ -6613,6 +6635,7 @@ Change in the SemantiK Grammar Surface Auditor is valid only when it is explicit
 
 ================================================================================================
 FILE: docs/10_gui_contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 # GUI Contract
@@ -7175,6 +7198,7 @@ The GUI contract defines a profile-first, inventory-backed, evidence-preserving 
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # SemantiK GF-Zone Auditor

@@ -6,34 +6,42 @@ source_commit: 114ad695213a83ad2c38aa09f3ff4b4a7d46d9cb
 working_tree_markdown: clean
 wiki_source_path: none
 wiki_source_commit: none
-wiki_working_tree_markdown: not-git
+wiki_working_tree_markdown: none
+policy_version: 2026-08-28.1
 repo_files: 13
 wiki_files: 0
-generated_at: 2026-08-28T07:34:10-04:00
+source_files: 13
+included_files: 13
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 221552
+authority_counts: {"canonical":13}
+generated_at: 2026-08-28T09:43:13-04:00
 files: 13
-content_sha256: 1afdfcfa0d8e795ea031fb4708166c7c6d74b4f7fcc131598109c27fbed84139
+content_sha256: ee3bcf994c8bedf4b7167fd0ffc15d55f51814927896eeaf9dce526cfee67cc4
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. docs/00-ekoh-expertise-claims-app-alignment.md
-02. docs/00-k-port-alignment.md
-03. docs/01-expertise-claims-concept-and-scope.md
-04. docs/01-k-port-concept-and-scope.md
-05. docs/02-expertise-claim-evidence-model.md
-06. docs/02-k-port-claim-evidence-model.md
-07. docs/03-expertise-claim-intake-form.md
-08. docs/03-k-port-intake-form.md
-09. docs/04-k-port-verification-and-ekoh-handoff.md
-10. docs/04-verification-and-scoring-handoff.md
-11. docs/05-governance-privacy-and-audit.md
-12. docs/05-k-port-governance-privacy-and-audit.md
-13. README.md
+01. [canonical] docs/00-ekoh-expertise-claims-app-alignment.md
+02. [canonical] docs/00-k-port-alignment.md
+03. [canonical] docs/01-expertise-claims-concept-and-scope.md
+04. [canonical] docs/01-k-port-concept-and-scope.md
+05. [canonical] docs/02-expertise-claim-evidence-model.md
+06. [canonical] docs/02-k-port-claim-evidence-model.md
+07. [canonical] docs/03-expertise-claim-intake-form.md
+08. [canonical] docs/03-k-port-intake-form.md
+09. [canonical] docs/04-k-port-verification-and-ekoh-handoff.md
+10. [canonical] docs/04-verification-and-scoring-handoff.md
+11. [canonical] docs/05-governance-privacy-and-audit.md
+12. [canonical] docs/05-k-port-governance-privacy-and-audit.md
+13. [canonical] README.md
 
 
 ================================================================================================
 FILE: docs/00-ekoh-expertise-claims-app-alignment.md
+AUTHORITY: canonical
 ================================================================================================
 
 # EkoH Expertise Claims App — Alignment Brief
@@ -523,6 +531,7 @@ The guiding principle is:
 
 ================================================================================================
 FILE: docs/00-k-port-alignment.md
+AUTHORITY: canonical
 ================================================================================================
 
 # K-Port — Architecture Alignment
@@ -789,6 +798,7 @@ A conforming K-Port implementation must satisfy all of the following:
 
 ================================================================================================
 FILE: docs/01-expertise-claims-concept-and-scope.md
+AUTHORITY: canonical
 ================================================================================================
 
 # EkoH Expertise Claims App — Concept and Scope
@@ -1369,6 +1379,7 @@ The guiding product statement is:
 
 ================================================================================================
 FILE: docs/01-k-port-concept-and-scope.md
+AUTHORITY: canonical
 ================================================================================================
 
 # K-Port — Concept and Scope
@@ -1966,6 +1977,7 @@ The guiding product statement is:
 
 ================================================================================================
 FILE: docs/02-expertise-claim-evidence-model.md
+AUTHORITY: canonical
 ================================================================================================
 
 # EkoH Expertise Claims App — Claim and Evidence Model
@@ -2739,6 +2751,7 @@ The guiding statement is:
 
 ================================================================================================
 FILE: docs/02-k-port-claim-evidence-model.md
+AUTHORITY: canonical
 ================================================================================================
 
 # K-Port — Claim and Evidence Model
@@ -3529,6 +3542,7 @@ The guiding statement is:
 
 ================================================================================================
 FILE: docs/03-expertise-claim-intake-form.md
+AUTHORITY: canonical
 ================================================================================================
 
 # EkoH Expertise Claims App — Intake Form
@@ -4404,6 +4418,7 @@ The guiding form principle is:
 
 ================================================================================================
 FILE: docs/03-k-port-intake-form.md
+AUTHORITY: canonical
 ================================================================================================
 
 # K-Port — Intake Form
@@ -5281,6 +5296,7 @@ The guiding form principle is:
 
 ================================================================================================
 FILE: docs/04-k-port-verification-and-ekoh-handoff.md
+AUTHORITY: canonical
 ================================================================================================
 
 # K-Port — Verification and EkoH Handoff
@@ -5950,6 +5966,7 @@ The guiding workflow statement is:
 
 ================================================================================================
 FILE: docs/04-verification-and-scoring-handoff.md
+AUTHORITY: canonical
 ================================================================================================
 
 # EkoH Expertise Claims App — Verification and Scoring Handoff
@@ -6617,6 +6634,7 @@ The guiding workflow statement is:
 
 ================================================================================================
 FILE: docs/05-governance-privacy-and-audit.md
+AUTHORITY: canonical
 ================================================================================================
 
 # EkoH Expertise Claims App — Governance, Privacy, and Audit
@@ -7322,6 +7340,7 @@ The guiding governance statement is:
 
 ================================================================================================
 FILE: docs/05-k-port-governance-privacy-and-audit.md
+AUTHORITY: canonical
 ================================================================================================
 
 # K-Port — Governance, Privacy, and Audit
@@ -8029,6 +8048,7 @@ The guiding governance statement is:
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # K-Port

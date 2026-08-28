@@ -2,41 +2,54 @@
 
 repository: Rejean-McCormick/LevelUpDiag-Koa-Linux
 source_path: C:\mycode\kOA-Linux\LevelUpDiag-Koali
-source_commit: eebd32b2a4812a78bc961d1082a8f093f8092dbb
+source_commit: 8d7253072968576fde6b20dc37fdc8b59618b70b
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:53-04:00
+wiki_source_path: none
+wiki_source_commit: none
+wiki_working_tree_markdown: none
+policy_version: 2026-08-28.1
+repo_files: 21
+wiki_files: 0
+source_files: 21
+included_files: 21
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 50378
+authority_counts: {"canonical":21}
+generated_at: 2026-08-28T09:43:12-04:00
 files: 21
-content_sha256: f6fc9818bb9841e54748b66312fcf81ef831e62df66effc135cc4d5405432fe6
+content_sha256: 69b9a740270fdfe4b26834972c838c5c1b2603d61336fe6d935876d74d63191a
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. CHANGELOG.md
-02. CONTRIBUTING.md
-03. docs/01-overview.md
-04. docs/02-architecture.md
-05. docs/03-levels-and-checks.md
-06. docs/04-configuration.md
-07. docs/05-execution-and-ordering.md
-08. docs/06-results-and-logs.md
-09. docs/07-koa-linux-integration.md
-10. docs/08-campaigns.md
-11. docs/09-failure-and-blocking-model.md
-12. docs/10-security.md
-13. docs/11-cli-and-gui.md
-14. docs/12-testing.md
-15. docs/13-removal-before-delivery.md
-16. docs/14-development.md
-17. docs/15-reference.md
-18. docs/16-file-architecture.md
-19. docs/README.md
-20. README.md
-21. SECURITY.md
+01. [canonical] CHANGELOG.md
+02. [canonical] CONTRIBUTING.md
+03. [canonical] docs/01-overview.md
+04. [canonical] docs/02-architecture.md
+05. [canonical] docs/03-levels-and-checks.md
+06. [canonical] docs/04-configuration.md
+07. [canonical] docs/05-execution-and-ordering.md
+08. [canonical] docs/06-results-and-logs.md
+09. [canonical] docs/07-koa-linux-integration.md
+10. [canonical] docs/08-campaigns.md
+11. [canonical] docs/09-failure-and-blocking-model.md
+12. [canonical] docs/10-security.md
+13. [canonical] docs/11-cli-and-gui.md
+14. [canonical] docs/12-testing.md
+15. [canonical] docs/13-removal-before-delivery.md
+16. [canonical] docs/14-development.md
+17. [canonical] docs/15-reference.md
+18. [canonical] docs/16-file-architecture.md
+19. [canonical] docs/README.md
+20. [canonical] README.md
+21. [canonical] SECURITY.md
 
 
 ================================================================================================
 FILE: CHANGELOG.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Changelog
@@ -65,6 +78,7 @@ All significant changes to LevelUpDiag-Koali must be recorded here.
 
 ================================================================================================
 FILE: CONTRIBUTING.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Contributing
@@ -129,6 +143,7 @@ Checks that touch kOA-Linux must also be tested against a test checkout or contr
 
 ================================================================================================
 FILE: docs/01-overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Overview
@@ -218,6 +233,7 @@ The system favors:
 
 ================================================================================================
 FILE: docs/02-architecture.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Architecture
@@ -337,6 +353,7 @@ The exact organization may evolve, but the path must remain centralized and conf
 
 ================================================================================================
 FILE: docs/03-levels-and-checks.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Levels and checks
@@ -446,6 +463,7 @@ The runner must report it clearly and never present it as a successful test.
 
 ================================================================================================
 FILE: docs/04-configuration.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Configuration
@@ -550,6 +568,7 @@ Avoid copying or displaying the full environment.
 
 ================================================================================================
 FILE: docs/05-execution-and-ordering.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Execution and ordering
@@ -676,6 +695,7 @@ A missing result is not a final result.
 
 ================================================================================================
 FILE: docs/06-results-and-logs.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Results and logs
@@ -816,6 +836,7 @@ The result tells the conclusion.
 
 ================================================================================================
 FILE: docs/07-koa-linux-integration.md
+AUTHORITY: canonical
 ================================================================================================
 
 # kOA-Linux integration
@@ -904,6 +925,7 @@ The issue must not be bypassed through an undocumented internal import.
 
 ================================================================================================
 FILE: docs/08-campaigns.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Campaigns
@@ -995,6 +1017,7 @@ Each campaign receives a run identifier or timestamp so its logs remain separate
 
 ================================================================================================
 FILE: docs/09-failure-and-blocking-model.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Failure and blocking model
@@ -1113,6 +1136,7 @@ By default:
 
 ================================================================================================
 FILE: docs/10-security.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Security
@@ -1198,6 +1222,7 @@ When a level inspects an archive or delivery directory, it must avoid executing 
 
 ================================================================================================
 FILE: docs/11-cli-and-gui.md
+AUTHORITY: canonical
 ================================================================================================
 
 # CLI and GUI
@@ -1279,6 +1304,7 @@ A level intended for automation should avoid depending on mandatory GUI interact
 
 ================================================================================================
 FILE: docs/12-testing.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Testing
@@ -1374,6 +1400,7 @@ Then build a clean delivery and verify that it passes.
 
 ================================================================================================
 FILE: docs/13-removal-before-delivery.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Removal before delivery
@@ -1453,6 +1480,7 @@ The remedy is to correct staging or packaging, then rerun the check.
 
 ================================================================================================
 FILE: docs/14-development.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Development
@@ -1558,6 +1586,7 @@ A change is complete when:
 
 ================================================================================================
 FILE: docs/15-reference.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Reference
@@ -1689,6 +1718,7 @@ N04-contracts/
 
 ================================================================================================
 FILE: docs/16-file-architecture.md
+AUTHORITY: canonical
 ================================================================================================
 
 # File Architecture
@@ -2325,6 +2355,7 @@ Structural compliance relies on documented paths and contracts, not on file fing
 
 ================================================================================================
 FILE: docs/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # LevelUpDiag-Koali Documentation
@@ -2364,6 +2395,7 @@ The system intentionally remains compact: it orchestrates independent levels, al
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # LevelUpDiag-Koali
@@ -2450,6 +2482,7 @@ LevelUpDiag-Koali is a specialized adaptation of LevelUpDiag designed to support
 
 ================================================================================================
 FILE: SECURITY.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Security

@@ -7,52 +7,60 @@ working_tree_markdown: clean
 wiki_source_path: C:\mycode\AmeArtificielle\Ame-Artificielle.wiki
 wiki_source_commit: d9ee3f9686d3a1c41bccaa3bba3c612f1c545821
 wiki_working_tree_markdown: clean
+policy_version: 2026-08-28.1
 repo_files: 18
 wiki_files: 14
-generated_at: 2026-08-25T11:30:48-04:00
+source_files: 32
+included_files: 32
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 95388
+authority_counts: {"canonical":32}
+generated_at: 2026-08-28T09:43:07-04:00
 files: 32
-content_sha256: a257fa681807ea44cba0b1b8996cd4cb2376e53ef5e2853b213f6e634445f65d
+content_sha256: dfd0dabebe64b268e3c17472437b58dda62bc2cffd708a28e0cc4f26c4e8a577
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. CODE_UPDATE_NOTES.md
-02. docs/branes_numerologie.md
-03. docs/code_reference.md
-04. docs/definition_operationnelle.md
-05. docs/engine_spec.md
-06. docs/interpolation_axis.md
-07. docs/kristal_integration.md
-08. docs/MIGRATION_SOUL_GRAPH.md
-09. docs/numerology_pipeline.md
-10. docs/philosophical_framework.md
-11. docs/README.md
-12. docs/snapshots_biographiques.md
-13. docs/soul_graph_schema.md
-14. docs/theoretical_alignment.md
-15. docs/traits_schema.md
-16. docs/validation_protocol.md
-17. experiments/mccormick_protocol.md
-18. README.md
-19. wiki/AME_ARTIFICIELLE.md
-20. wiki/AME_INTELLECT_PERSONNALITE.md
-21. wiki/BRANES_ET_COUCHE_DE_SENS.md
-22. wiki/CADRE_PHILOSOPHIQUE.md
-23. wiki/CARTE_DU_CIEL_ET_HYPOTHESE.md
-24. wiki/CHARTE_1_9_ET_CHAKRAS.md
-25. wiki/GLOSSAIRE.md
-26. wiki/GRAPHE_PSYCHO_CAUSAL.md
-27. wiki/Home.md
-28. wiki/IMPLEMENTATION.md
-29. wiki/KRISTAL_ET_AME_ARTIFICIELLE.md
-30. wiki/MECANISME_DE_REACTION.md
-31. wiki/NUMEROLOGIE_PYTHAGORICIENNE_INVERSEE.md
-32. wiki/SNAPSHOTS_ET_EVOLUTION.md
+01. [canonical] CODE_UPDATE_NOTES.md
+02. [canonical] docs/branes_numerologie.md
+03. [canonical] docs/code_reference.md
+04. [canonical] docs/definition_operationnelle.md
+05. [canonical] docs/engine_spec.md
+06. [canonical] docs/interpolation_axis.md
+07. [canonical] docs/kristal_integration.md
+08. [canonical] docs/MIGRATION_SOUL_GRAPH.md
+09. [canonical] docs/numerology_pipeline.md
+10. [canonical] docs/philosophical_framework.md
+11. [canonical] docs/README.md
+12. [canonical] docs/snapshots_biographiques.md
+13. [canonical] docs/soul_graph_schema.md
+14. [canonical] docs/theoretical_alignment.md
+15. [canonical] docs/traits_schema.md
+16. [canonical] docs/validation_protocol.md
+17. [canonical] experiments/mccormick_protocol.md
+18. [canonical] README.md
+19. [canonical] wiki/AME_ARTIFICIELLE.md
+20. [canonical] wiki/AME_INTELLECT_PERSONNALITE.md
+21. [canonical] wiki/BRANES_ET_COUCHE_DE_SENS.md
+22. [canonical] wiki/CADRE_PHILOSOPHIQUE.md
+23. [canonical] wiki/CARTE_DU_CIEL_ET_HYPOTHESE.md
+24. [canonical] wiki/CHARTE_1_9_ET_CHAKRAS.md
+25. [canonical] wiki/GLOSSAIRE.md
+26. [canonical] wiki/GRAPHE_PSYCHO_CAUSAL.md
+27. [canonical] wiki/Home.md
+28. [canonical] wiki/IMPLEMENTATION.md
+29. [canonical] wiki/KRISTAL_ET_AME_ARTIFICIELLE.md
+30. [canonical] wiki/MECANISME_DE_REACTION.md
+31. [canonical] wiki/NUMEROLOGIE_PYTHAGORICIENNE_INVERSEE.md
+32. [canonical] wiki/SNAPSHOTS_ET_EVOLUTION.md
 
 
 ================================================================================================
 FILE: CODE_UPDATE_NOTES.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Code update — Soul Graph runtime
@@ -109,6 +117,7 @@ Les tests couvrent notamment : immuabilité, déterminisme, inhibition, non-prop
 
 ================================================================================================
 FILE: docs/branes_numerologie.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Branes et numérologie — couche symbolique
@@ -172,6 +181,7 @@ Pas :
 
 ================================================================================================
 FILE: docs/code_reference.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Référence du code — implémentation Soul Graph
@@ -265,6 +275,7 @@ Les tests vérifient notamment l'immuabilité, le déterminisme, l'inhibition, l
 
 ================================================================================================
 FILE: docs/definition_operationnelle.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Définition opérationnelle — Âme Artificielle
@@ -449,6 +460,7 @@ Le texte est une représentation de cette structure.
 
 ================================================================================================
 FILE: docs/engine_spec.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Engine Spec — Soul Causal Engine
@@ -732,6 +744,7 @@ Les règles de sécurité n’utilisent pas la compassion ou d’autres traits d
 
 ================================================================================================
 FILE: docs/interpolation_axis.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Axe 1→9 — projection topologique
@@ -805,6 +818,7 @@ Ils peuvent partager la même échelle numérique sans partager la même signifi
 
 ================================================================================================
 FILE: docs/kristal_integration.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Intégration Kristal v5 — Soul Graph
@@ -966,6 +980,7 @@ La réaction textuelle peut rester non déterministe si un renderer génératif 
 
 ================================================================================================
 FILE: docs/MIGRATION_SOUL_GRAPH.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Migration vers Soul Graph — état de l’implémentation
@@ -1033,6 +1048,7 @@ Restent principalement à approfondir : résolution sémantique avancée du stim
 
 ================================================================================================
 FILE: docs/numerology_pipeline.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Numerology Pipeline — génération d’hypothèses
@@ -1128,6 +1144,7 @@ Elles doivent conserver :
 
 ================================================================================================
 FILE: docs/philosophical_framework.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Cadre philosophique — notes techniques
@@ -1193,6 +1210,7 @@ La cohérence philosophique d’un système n’établit pas son exactitude psyc
 
 ================================================================================================
 FILE: docs/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Documentation — Âme Artificielle
@@ -1226,6 +1244,7 @@ Les fichiers `src/` implémentent maintenant le noyau Soul Graph. Le renderer et
 
 ================================================================================================
 FILE: docs/snapshots_biographiques.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Snapshots biographiques
@@ -1341,6 +1360,7 @@ Il ne doit pas présenter le modèle comme une continuité réelle de la personn
 
 ================================================================================================
 FILE: docs/soul_graph_schema.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Soul Graph Schema — profil psycho-causal
@@ -1593,6 +1613,7 @@ Le `TraitVector` n’est donc pas source de vérité du snapshot.
 
 ================================================================================================
 FILE: docs/theoretical_alignment.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Alignement théorique et niveaux de preuve
@@ -1656,6 +1677,7 @@ Cette classification doit guider son statut dans Kristal et sa présentation au 
 
 ================================================================================================
 FILE: docs/traits_schema.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Traits Schema — projection dérivée
@@ -1774,6 +1796,7 @@ Les fonctions et fichiers existants qui attendent un TraitVector peuvent continu
 
 ================================================================================================
 FILE: docs/validation_protocol.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Validation Protocol — Âme Artificielle
@@ -1949,6 +1972,7 @@ Une absence d’effet dans la partie astrologique ou numérologique n’invalide
 
 ================================================================================================
 FILE: experiments/mccormick_protocol.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Protocole McCormick — natal chart / numérologie
@@ -2058,6 +2082,7 @@ Les sorties détaillées utilisent `experiments/results_template.csv` ou un form
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # EL — Artificial Soul Engine / Âme Artificielle
@@ -2132,6 +2157,7 @@ Voir `docs/code_reference.md` et `examples/john_doe_snapshots.py`.
 
 ================================================================================================
 FILE: wiki/AME_ARTIFICIELLE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Âme Artificielle
@@ -2268,6 +2294,7 @@ Elle n’est pas :
 
 ================================================================================================
 FILE: wiki/AME_INTELLECT_PERSONNALITE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Âme, Intellect et Personnalité
@@ -2382,6 +2409,7 @@ sensibilité au rejet
 
 ================================================================================================
 FILE: wiki/BRANES_ET_COUCHE_DE_SENS.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Branes et Couche de Sens
@@ -2456,6 +2484,7 @@ Le vocabulaire des branes doit donc être étiqueté comme symbolique ou interpr
 
 ================================================================================================
 FILE: wiki/CADRE_PHILOSOPHIQUE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Cadre Philosophique
@@ -2570,6 +2599,7 @@ Ces références donnent un horizon philosophique. Elles ne constituent pas des 
 
 ================================================================================================
 FILE: wiki/CARTE_DU_CIEL_ET_HYPOTHESE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Carte du Ciel et Hypothèse de Différenciation
@@ -2644,6 +2674,7 @@ mais :
 
 ================================================================================================
 FILE: wiki/CHARTE_1_9_ET_CHAKRAS.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Charte 1→9 et Chakras
@@ -2732,6 +2763,7 @@ Les deux systèmes peuvent partager les chiffres 1–9 sans avoir la même séma
 
 ================================================================================================
 FILE: wiki/GLOSSAIRE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Glossaire Canonique
@@ -2799,6 +2831,7 @@ Couche de représentation, identité, provenance, statut épistémique et distri
 
 ================================================================================================
 FILE: wiki/GRAPHE_PSYCHO_CAUSAL.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Graphe Psycho-Causal
@@ -2970,6 +3003,7 @@ Le système est donc une **approximation structurée** de mécanismes complexes.
 
 ================================================================================================
 FILE: wiki/Home.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Âme Artificielle
@@ -3053,6 +3087,7 @@ Un garde-fou de sécurité n’est pas une composante de l’âme. Il peut limit
 
 ================================================================================================
 FILE: wiki/IMPLEMENTATION.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Implémentation de référence
@@ -3086,6 +3121,7 @@ La carte du ciel n'a pas de calculateur normatif dans ce dépôt. Elle passe par
 
 ================================================================================================
 FILE: wiki/KRISTAL_ET_AME_ARTIFICIELLE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal et Âme Artificielle
@@ -3204,6 +3240,7 @@ Kristal fournit les données structurées. Le Soul Causal Engine construit les i
 
 ================================================================================================
 FILE: wiki/MECANISME_DE_REACTION.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Mécanisme de Réaction
@@ -3384,6 +3421,7 @@ Une personnalité simulée peut avoir une intention que l’application refuse d
 
 ================================================================================================
 FILE: wiki/NUMEROLOGIE_PYTHAGORICIENNE_INVERSEE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Numérologie Pythagoricienne Inversée
@@ -3498,6 +3536,7 @@ Même si les deux utilisent 1–9 :
 
 ================================================================================================
 FILE: wiki/SNAPSHOTS_ET_EVOLUTION.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Snapshots et Évolution

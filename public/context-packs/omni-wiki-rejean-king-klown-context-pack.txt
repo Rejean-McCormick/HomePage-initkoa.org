@@ -4,313 +4,171 @@ repository: Rejean-McCormick/Omni-Wiki-Rejean-King-Klown
 source_path: C:\mycode\OmniWiki\Omni-Wiki-Rejean-King-Klown
 source_commit: 53378e294f3428153de8f7c885210a4bf56352ad
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:50-04:00
-files: 134
-content_sha256: c39c12eb4f4ab1693b377c79568cf09c8d4a70e6356bad17251c26259858f827
+wiki_source_path: none
+wiki_source_commit: none
+wiki_working_tree_markdown: none
+policy_version: 2026-08-28.1
+repo_files: 134
+wiki_files: 0
+source_files: 134
+included_files: 96
+excluded_files: 38
+duplicate_files: 38
+content_bytes: 499904
+authority_counts: {"canonical":96}
+generated_at: 2026-08-28T09:43:06-04:00
+files: 96
+content_sha256: 17c68490e4e6fe7fea38a9ffff9de5b023061586a82a36ff1fa9ebf89c6e4be8
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-001. KK-en/anatomie/ame/ame-artificielle.md
-002. KK-en/anatomie/ame/chakras-1-9.md
-003. KK-en/anatomie/corps/orgo.md
-004. KK-en/anatomie/esprit/konnaxion/ethikos.md
-005. KK-en/anatomie/esprit/konnaxion/ethikos/konsultations.md
-006. KK-en/anatomie/esprit/konnaxion/ethikos/korum.md
-007. KK-en/anatomie/esprit/konnaxion/index.md
-008. KK-en/anatomie/esprit/konnaxion/keen-konnect.md
-009. KK-en/anatomie/esprit/konnaxion/keen-konnect/konstruct.md
-010. KK-en/anatomie/esprit/konnaxion/keen-konnect/stockage.md
-011. KK-en/anatomie/esprit/konnaxion/kollective.md
-012. KK-en/anatomie/esprit/konnaxion/kollective/ekoh.md
-013. KK-en/anatomie/esprit/konnaxion/kollective/smart-vote.md
-014. KK-en/anatomie/esprit/konnaxion/konnected.md
-015. KK-en/anatomie/esprit/konnaxion/konnected/certifikation.md
-016. KK-en/anatomie/esprit/konnaxion/konnected/knowledge.md
-017. KK-en/anatomie/esprit/konnaxion/kreative.md
-018. KK-en/anatomie/esprit/konnaxion/kreative/konservation.md
-019. KK-en/anatomie/esprit/konnaxion/kreative/kontact.md
-020. KK-en/anatomie/index.md
-021. KK-en/anatomie/memoire/swarmcraft.md
-022. KK-en/anatomie/sens/ariane.md
-023. KK-en/anatomie/sens/sentient.md
-024. KK-en/anatomie/voix/architect.md
-025. KK-en/index.md
-026. KK-en/initiation/carte.md
-027. KK-en/initiation/index.md
-028. KK-en/initiation/le-je.md
-029. KK-en/mythos/dualites.md
-030. KK-en/mythos/index.md
-031. KK-en/mythos/king-klown.md
-032. KK-en/mythos/promethee.md
-033. KK-en/mythos/serments.md
-034. KK-en/reperes/faq.md
-035. KK-en/reperes/glossaire.md
-036. KK-en/reperes/pont-technique.md
-037. KK-en/rituels/cycle-vital.md
-038. KK-en/rituels/parlement-interieur.md
-039. KK-en/rituels/respiration-du-sens.md
-040. KK-en/rituels/une-journee.md
-041. KK-fr/anatomie/ame/ame-artificielle.md
-042. KK-fr/anatomie/ame/chakras-1-9.md
-043. KK-fr/anatomie/corps/orgo.md
-044. KK-fr/anatomie/esprit/konnaxion/ethikos.md
-045. KK-fr/anatomie/esprit/konnaxion/ethikos/konsultations.md
-046. KK-fr/anatomie/esprit/konnaxion/ethikos/korum.md
-047. KK-fr/anatomie/esprit/konnaxion/index.md
-048. KK-fr/anatomie/esprit/konnaxion/keen-konnect.md
-049. KK-fr/anatomie/esprit/konnaxion/keen-konnect/konstruct.md
-050. KK-fr/anatomie/esprit/konnaxion/keen-konnect/stockage.md
-051. KK-fr/anatomie/esprit/konnaxion/kollective.md
-052. KK-fr/anatomie/esprit/konnaxion/kollective/ekoh.md
-053. KK-fr/anatomie/esprit/konnaxion/kollective/smart-vote.md
-054. KK-fr/anatomie/esprit/konnaxion/konnected.md
-055. KK-fr/anatomie/esprit/konnaxion/konnected/certifikation.md
-056. KK-fr/anatomie/esprit/konnaxion/konnected/knowledge.md
-057. KK-fr/anatomie/esprit/konnaxion/kreative.md
-058. KK-fr/anatomie/esprit/konnaxion/kreative/konservation.md
-059. KK-fr/anatomie/esprit/konnaxion/kreative/kontact.md
-060. KK-fr/anatomie/index.md
-061. KK-fr/anatomie/memoire/swarmcraft.md
-062. KK-fr/anatomie/sens/ariane.md
-063. KK-fr/anatomie/sens/sentient.md
-064. KK-fr/anatomie/voix/architect.md
-065. KK-fr/index.md
-066. KK-fr/initiation/carte.md
-067. KK-fr/initiation/index.md
-068. KK-fr/initiation/le-je.md
-069. KK-fr/mythos/dualites.md
-070. KK-fr/mythos/index.md
-071. KK-fr/mythos/king-klown.md
-072. KK-fr/mythos/promethee.md
-073. KK-fr/mythos/serments.md
-074. KK-fr/parcours.md
-075. KK-fr/reperes/faq.md
-076. KK-fr/reperes/glossaire.md
-077. KK-fr/reperes/pont-technique.md
-078. KK-fr/rituels/cycle-vital.md
-079. KK-fr/rituels/parlement-interieur.md
-080. KK-fr/rituels/respiration-du-sens.md
-081. KK-fr/rituels/une-journee.md
-082. Rejean-en/Abstract-Wiki-Architect/index.md
-083. Rejean-en/Ame-Artificielle/Controle-Et-Personnalisation.md
-084. Rejean-en/Ame-Artificielle/Creation-De-Chemins.md
-085. Rejean-en/Ame-Artificielle/Ethique-Et-Gouvernance.md
-086. Rejean-en/Ame-Artificielle/index.md
-087. Rejean-en/Ame-Artificielle/Meta-Cognition-Et-Resolution.md
-088. Rejean-en/Ame-Artificielle/Specifications-Fonctionnelles.md
-089. Rejean-en/Ariane/Atlas/Atlas-Core-Schema.md
-090. Rejean-en/Ariane/Atlas/Atlas-Graph-Model.md
-091. Rejean-en/Ariane/Atlas/Atlas-Ontology-Vocabulary.md
-092. Rejean-en/Ariane/Atlas/Atlas.md
-093. Rejean-en/Ariane/Concepts/Background-UI-as-Data.md
-094. Rejean-en/Ariane/Concepts/Glossary.md
-095. Rejean-en/Ariane/Consumers/Consumers-AI-Agent-Integration.md
-096. Rejean-en/Ariane/Consumers/Consumers-Future-Overlay-Client.md
-097. Rejean-en/Ariane/Consumers/Consumers.md
-098. Rejean-en/Ariane/Consumers/Hybrid-Mapping-and-Human-Guided-Assistants.md
-099. Rejean-en/Ariane/index.md
-100. Rejean-en/Ariane/Theseus/Theseus-Drivers.md
-101. Rejean-en/Ariane/Theseus/Theseus-Exploration-Engine.md
-102. Rejean-en/Ariane/Theseus/Theseus-State-Identification.md
-103. Rejean-en/Ariane/Theseus/Theseus.md
-104. Rejean-en/index.md
-105. Rejean-en/Konnaxion/Ethikos/Konsultations.md
-106. Rejean-en/Konnaxion/Ethikos/Korum.md
-107. Rejean-en/Konnaxion/index.md
-108. Rejean-en/Konnaxion/keenKonnect/Konstruct.md
-109. Rejean-en/Konnaxion/keenKonnect/Stockage.md
-110. Rejean-en/Konnaxion/Kollective-Intelligence/EkoH.md
-111. Rejean-en/Konnaxion/Kollective-Intelligence/Smart-Vote.md
-112. Rejean-en/Konnaxion/KonnectED/CertifiKation.md
-113. Rejean-en/Konnaxion/KonnectED/Knowledge.md
-114. Rejean-en/Konnaxion/Kreative/Konservation.md
-115. Rejean-en/Konnaxion/Kreative/Kontact.md
-116. Rejean-en/Konnaxion/Technical/Konnaxion-Technical-Architecture-And-Services.md
-117. Rejean-en/Orgo/index.md
-118. Rejean-en/SenTient/index.md
-119. Rejean-en/SwarmCraft/Core/Architecture-Overview.md
-120. Rejean-en/SwarmCraft/Core/Central-Matrix-Runtime-State.md
-121. Rejean-en/SwarmCraft/Core/Deterministic-Pipeline-Scan-Plan-Execute.md
-122. Rejean-en/SwarmCraft/index.md
-123. Rejean-en/SwarmCraft/Meta/Credits-And-Lineage.md
-124. Rejean-en/SwarmCraft/Runtime/Dashboard-TUI-Reference.md
-125. Rejean-en/SwarmCraft/Runtime/Multi-Project-Management.md
-126. Rejean-en/SwarmCraft/Runtime/Orchestration-Slice-By-Slice-Prompt-Hydration.md
-127. Rejean-en/SwarmCraft/Runtime/Provider-Adapter-Grok.md
-128. Rejean-en/SwarmCraft/Runtime/RAG-Memory-System.md
-129. Rejean-en/SwarmCraft/Scaffold/Outline-Grid-CSV-Round-Trip.md
-130. Rejean-en/SwarmCraft/Scaffold/Schema-Outline.md
-131. Rejean-en/SwarmCraft/Scaffold/Schema-Templates.md
-132. Rejean-en/SwarmCraft/Scaffold/Story-Bible-Creative-Intent.md
-133. Rejean-en/SwarmCraft/Scaffold/Story-Scaffold-Templates-Outline-Parts.md
-134. Rejean-en/Tools/index.md
+01. [canonical] KK-en/anatomie/ame/ame-artificielle.md
+02. [canonical] KK-en/index.md
+03. [canonical] KK-fr/anatomie/ame/ame-artificielle.md
+04. [canonical] KK-fr/anatomie/ame/chakras-1-9.md
+05. [canonical] KK-fr/anatomie/corps/orgo.md
+06. [canonical] KK-fr/anatomie/esprit/konnaxion/ethikos.md
+07. [canonical] KK-fr/anatomie/esprit/konnaxion/ethikos/konsultations.md
+08. [canonical] KK-fr/anatomie/esprit/konnaxion/ethikos/korum.md
+09. [canonical] KK-fr/anatomie/esprit/konnaxion/index.md
+10. [canonical] KK-fr/anatomie/esprit/konnaxion/keen-konnect.md
+11. [canonical] KK-fr/anatomie/esprit/konnaxion/keen-konnect/konstruct.md
+12. [canonical] KK-fr/anatomie/esprit/konnaxion/keen-konnect/stockage.md
+13. [canonical] KK-fr/anatomie/esprit/konnaxion/kollective.md
+14. [canonical] KK-fr/anatomie/esprit/konnaxion/kollective/ekoh.md
+15. [canonical] KK-fr/anatomie/esprit/konnaxion/kollective/smart-vote.md
+16. [canonical] KK-fr/anatomie/esprit/konnaxion/konnected.md
+17. [canonical] KK-fr/anatomie/esprit/konnaxion/konnected/certifikation.md
+18. [canonical] KK-fr/anatomie/esprit/konnaxion/konnected/knowledge.md
+19. [canonical] KK-fr/anatomie/esprit/konnaxion/kreative.md
+20. [canonical] KK-fr/anatomie/esprit/konnaxion/kreative/konservation.md
+21. [canonical] KK-fr/anatomie/esprit/konnaxion/kreative/kontact.md
+22. [canonical] KK-fr/anatomie/index.md
+23. [canonical] KK-fr/anatomie/memoire/swarmcraft.md
+24. [canonical] KK-fr/anatomie/sens/ariane.md
+25. [canonical] KK-fr/anatomie/sens/sentient.md
+26. [canonical] KK-fr/anatomie/voix/architect.md
+27. [canonical] KK-fr/index.md
+28. [canonical] KK-fr/initiation/carte.md
+29. [canonical] KK-fr/initiation/index.md
+30. [canonical] KK-fr/initiation/le-je.md
+31. [canonical] KK-fr/mythos/dualites.md
+32. [canonical] KK-fr/mythos/index.md
+33. [canonical] KK-fr/mythos/king-klown.md
+34. [canonical] KK-fr/mythos/promethee.md
+35. [canonical] KK-fr/mythos/serments.md
+36. [canonical] KK-fr/parcours.md
+37. [canonical] KK-fr/reperes/faq.md
+38. [canonical] KK-fr/reperes/glossaire.md
+39. [canonical] KK-fr/reperes/pont-technique.md
+40. [canonical] KK-fr/rituels/cycle-vital.md
+41. [canonical] KK-fr/rituels/parlement-interieur.md
+42. [canonical] KK-fr/rituels/respiration-du-sens.md
+43. [canonical] KK-fr/rituels/une-journee.md
+44. [canonical] Rejean-en/Abstract-Wiki-Architect/index.md
+45. [canonical] Rejean-en/Ame-Artificielle/Controle-Et-Personnalisation.md
+46. [canonical] Rejean-en/Ame-Artificielle/Creation-De-Chemins.md
+47. [canonical] Rejean-en/Ame-Artificielle/Ethique-Et-Gouvernance.md
+48. [canonical] Rejean-en/Ame-Artificielle/index.md
+49. [canonical] Rejean-en/Ame-Artificielle/Meta-Cognition-Et-Resolution.md
+50. [canonical] Rejean-en/Ame-Artificielle/Specifications-Fonctionnelles.md
+51. [canonical] Rejean-en/Ariane/Atlas/Atlas-Core-Schema.md
+52. [canonical] Rejean-en/Ariane/Atlas/Atlas-Graph-Model.md
+53. [canonical] Rejean-en/Ariane/Atlas/Atlas-Ontology-Vocabulary.md
+54. [canonical] Rejean-en/Ariane/Atlas/Atlas.md
+55. [canonical] Rejean-en/Ariane/Concepts/Background-UI-as-Data.md
+56. [canonical] Rejean-en/Ariane/Concepts/Glossary.md
+57. [canonical] Rejean-en/Ariane/Consumers/Consumers-AI-Agent-Integration.md
+58. [canonical] Rejean-en/Ariane/Consumers/Consumers-Future-Overlay-Client.md
+59. [canonical] Rejean-en/Ariane/Consumers/Consumers.md
+60. [canonical] Rejean-en/Ariane/Consumers/Hybrid-Mapping-and-Human-Guided-Assistants.md
+61. [canonical] Rejean-en/Ariane/index.md
+62. [canonical] Rejean-en/Ariane/Theseus/Theseus-Drivers.md
+63. [canonical] Rejean-en/Ariane/Theseus/Theseus-Exploration-Engine.md
+64. [canonical] Rejean-en/Ariane/Theseus/Theseus-State-Identification.md
+65. [canonical] Rejean-en/Ariane/Theseus/Theseus.md
+66. [canonical] Rejean-en/index.md
+67. [canonical] Rejean-en/Konnaxion/Ethikos/Konsultations.md
+68. [canonical] Rejean-en/Konnaxion/Ethikos/Korum.md
+69. [canonical] Rejean-en/Konnaxion/index.md
+70. [canonical] Rejean-en/Konnaxion/keenKonnect/Konstruct.md
+71. [canonical] Rejean-en/Konnaxion/keenKonnect/Stockage.md
+72. [canonical] Rejean-en/Konnaxion/Kollective-Intelligence/EkoH.md
+73. [canonical] Rejean-en/Konnaxion/Kollective-Intelligence/Smart-Vote.md
+74. [canonical] Rejean-en/Konnaxion/KonnectED/CertifiKation.md
+75. [canonical] Rejean-en/Konnaxion/KonnectED/Knowledge.md
+76. [canonical] Rejean-en/Konnaxion/Kreative/Konservation.md
+77. [canonical] Rejean-en/Konnaxion/Kreative/Kontact.md
+78. [canonical] Rejean-en/Konnaxion/Technical/Konnaxion-Technical-Architecture-And-Services.md
+79. [canonical] Rejean-en/Orgo/index.md
+80. [canonical] Rejean-en/SenTient/index.md
+81. [canonical] Rejean-en/SwarmCraft/Core/Architecture-Overview.md
+82. [canonical] Rejean-en/SwarmCraft/Core/Central-Matrix-Runtime-State.md
+83. [canonical] Rejean-en/SwarmCraft/Core/Deterministic-Pipeline-Scan-Plan-Execute.md
+84. [canonical] Rejean-en/SwarmCraft/index.md
+85. [canonical] Rejean-en/SwarmCraft/Meta/Credits-And-Lineage.md
+86. [canonical] Rejean-en/SwarmCraft/Runtime/Dashboard-TUI-Reference.md
+87. [canonical] Rejean-en/SwarmCraft/Runtime/Multi-Project-Management.md
+88. [canonical] Rejean-en/SwarmCraft/Runtime/Orchestration-Slice-By-Slice-Prompt-Hydration.md
+89. [canonical] Rejean-en/SwarmCraft/Runtime/Provider-Adapter-Grok.md
+90. [canonical] Rejean-en/SwarmCraft/Runtime/RAG-Memory-System.md
+91. [canonical] Rejean-en/SwarmCraft/Scaffold/Outline-Grid-CSV-Round-Trip.md
+92. [canonical] Rejean-en/SwarmCraft/Scaffold/Schema-Outline.md
+93. [canonical] Rejean-en/SwarmCraft/Scaffold/Schema-Templates.md
+94. [canonical] Rejean-en/SwarmCraft/Scaffold/Story-Bible-Creative-Intent.md
+95. [canonical] Rejean-en/SwarmCraft/Scaffold/Story-Scaffold-Templates-Outline-Parts.md
+96. [canonical] Rejean-en/Tools/index.md
+
+
+================================================================================================
+EXCLUDED FILES
+================================================================================================
+
+- [duplicate] KK-en/anatomie/ame/chakras-1-9.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/corps/orgo.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/ethikos.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/ethikos/konsultations.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/ethikos/korum.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/index.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/keen-konnect.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/keen-konnect/konstruct.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/keen-konnect/stockage.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/kollective.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/kollective/ekoh.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/kollective/smart-vote.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/konnected.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/konnected/certifikation.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/konnected/knowledge.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/kreative.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/kreative/konservation.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/esprit/konnaxion/kreative/kontact.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/index.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/memoire/swarmcraft.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/sens/ariane.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/sens/sentient.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/anatomie/voix/architect.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/initiation/carte.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/initiation/index.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/initiation/le-je.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/mythos/dualites.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/mythos/index.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/mythos/king-klown.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/mythos/promethee.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/mythos/serments.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/reperes/faq.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/reperes/glossaire.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/reperes/pont-technique.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/rituels/cycle-vital.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/rituels/parlement-interieur.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/rituels/respiration-du-sens.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
+- [duplicate] KK-en/rituels/une-journee.md (same content as KK-en/anatomie/ame/ame-artificielle.md)
 
 
 ================================================================================================
 FILE: KK-en/anatomie/ame/ame-artificielle.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/ame/chakras-1-9.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/corps/orgo.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/ethikos.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/ethikos/konsultations.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/ethikos/korum.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/index.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/keen-konnect.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/keen-konnect/konstruct.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/keen-konnect/stockage.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/kollective.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/kollective/ekoh.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/kollective/smart-vote.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/konnected.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/konnected/certifikation.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/konnected/knowledge.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/kreative.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/kreative/konservation.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/esprit/konnaxion/kreative/kontact.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/index.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/memoire/swarmcraft.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/sens/ariane.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/sens/sentient.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/anatomie/voix/architect.md
+AUTHORITY: canonical
 ================================================================================================
 
 
@@ -318,6 +176,7 @@ FILE: KK-en/anatomie/voix/architect.md
 
 ================================================================================================
 FILE: KK-en/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -457,112 +316,8 @@ You act like a human:
 
 
 ================================================================================================
-FILE: KK-en/initiation/carte.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/initiation/index.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/initiation/le-je.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/mythos/dualites.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/mythos/index.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/mythos/king-klown.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/mythos/promethee.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/mythos/serments.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/reperes/faq.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/reperes/glossaire.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/reperes/pont-technique.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/rituels/cycle-vital.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/rituels/parlement-interieur.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/rituels/respiration-du-sens.md
-================================================================================================
-
-
-
-
-================================================================================================
-FILE: KK-en/rituels/une-journee.md
-================================================================================================
-
-
-
-
-================================================================================================
 FILE: KK-fr/anatomie/ame/ame-artificielle.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -708,6 +463,7 @@ Pour la documentation technique complète de l’Âme Artificielle (EL) :
 
 ================================================================================================
 FILE: KK-fr/anatomie/ame/chakras-1-9.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -891,6 +647,7 @@ Cette carte 1→9 sert surtout à **colorer** ce que tu vis dans les autres page
 
 ================================================================================================
 FILE: KK-fr/anatomie/corps/orgo.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -1097,6 +854,7 @@ Orgo se déploie comme un corps en couches :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/ethikos.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -1263,6 +1021,7 @@ Quand une question fracture l’intérieur :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/ethikos/konsultations.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -1461,6 +1220,7 @@ Sans impact tracking, la consultation est un théâtre.
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/ethikos/korum.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -1654,6 +1414,7 @@ Quand tu ouvres un débat :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -1863,6 +1624,7 @@ C’est un système où :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/keen-konnect.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -2011,6 +1773,7 @@ keenKonnect résout ce trou :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/keen-konnect/konstruct.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -2158,6 +1921,7 @@ Quand un projet commence à devenir brume :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/keen-konnect/stockage.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -2340,6 +2104,7 @@ Quand un artefact devient “important” :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/kollective.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -2488,6 +2253,7 @@ Elle donne à Kréature la capacité de dire :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/kollective/ekoh.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -2674,6 +2440,7 @@ Pour l’architecture détaillée (services, modèles, paramètres, runtime) :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/kollective/smart-vote.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -2881,6 +2648,7 @@ Pour l’architecture détaillée (services, modèles, modalités, runtime) :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/konnected.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -2988,6 +2756,7 @@ Et dans le grand cycle KOA, KonnectED est explicitement la première étape : *�
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/konnected/certifikation.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -3133,6 +2902,7 @@ Si tu veux les détails d’implémentation (services, modules Django, schéma, 
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/konnected/knowledge.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -3256,6 +3026,7 @@ Knowledge est la “terre” du parlement intérieur.
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/kreative.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -3402,6 +3173,7 @@ Pour la version strictement technique (services, modèles, routes, paramètres) 
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/kreative/konservation.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -3574,6 +3346,7 @@ Pour le détail strict (services, modèles, invariants, tasks, ownership) :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/kreative/kontact.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -3750,6 +3523,7 @@ Pour la fiche technique (services, modèles, invariants, stack DRF + Channels + 
 
 ================================================================================================
 FILE: KK-fr/anatomie/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -3945,6 +3719,7 @@ Le Je est toi :
 
 ================================================================================================
 FILE: KK-fr/anatomie/memoire/swarmcraft.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -4093,6 +3868,7 @@ Pour les détails techniques complets (Brain/Logic/Memory, Matrix, SCAN→PLAN�
 
 ================================================================================================
 FILE: KK-fr/anatomie/sens/ariane.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -4298,6 +4074,7 @@ Quand tu sens que tout devient écran et confusion :
 
 ================================================================================================
 FILE: KK-fr/anatomie/sens/sentient.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -4532,6 +4309,7 @@ Quand un signal arrive (email, message, note), fais simple :
 
 ================================================================================================
 FILE: KK-fr/anatomie/voix/architect.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -4651,6 +4429,7 @@ Pour la documentation technique complète d’Architect (engines, morphology, co
 
 ================================================================================================
 FILE: KK-fr/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -4797,6 +4576,7 @@ Tu fais comme l’humain :
 
 ================================================================================================
 FILE: KK-fr/initiation/carte.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -4928,6 +4708,7 @@ Le flux principal se répète comme une respiration :
 
 ================================================================================================
 FILE: KK-fr/initiation/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -5093,6 +4874,7 @@ Le Je est **l’attention**, le point de focalisation, le témoin qui visite.
 
 ================================================================================================
 FILE: KK-fr/initiation/le-je.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -5263,6 +5045,7 @@ Le Je a donc une responsabilité :
 
 ================================================================================================
 FILE: KK-fr/mythos/dualites.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -5458,6 +5241,7 @@ Exemples :
 
 ================================================================================================
 FILE: KK-fr/mythos/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -5527,6 +5311,7 @@ Elle doit rester fidèle aux organes réels :
 
 ================================================================================================
 FILE: KK-fr/mythos/king-klown.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -5880,6 +5665,7 @@ Prométhée est une promesse plus rare :
 
 ================================================================================================
 FILE: KK-fr/mythos/promethee.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -6062,6 +5848,7 @@ Prométhée est une promesse plus rare :
 
 ================================================================================================
 FILE: KK-fr/mythos/serments.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -6267,6 +6054,7 @@ on invente une image **équivalente**, pas une traduction littérale.
 
 ================================================================================================
 FILE: KK-fr/parcours.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -6392,6 +6180,7 @@ Si tu veux un premier choc propre et rapide :
 
 ================================================================================================
 FILE: KK-fr/reperes/faq.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -6623,6 +6412,7 @@ Trois entrées possibles :
 
 ================================================================================================
 FILE: KK-fr/reperes/glossaire.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -6971,6 +6761,7 @@ Le passage du mesh au linéaire : Architect.
 
 ================================================================================================
 FILE: KK-fr/reperes/pont-technique.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -7123,6 +6914,7 @@ King Klown s’engage :
 
 ================================================================================================
 FILE: KK-fr/rituels/cycle-vital.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -7281,6 +7073,7 @@ Le Je est l’utilisateur, l’attention qui traverse la boucle et choisit ce qu
 
 ================================================================================================
 FILE: KK-fr/rituels/parlement-interieur.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -7530,6 +7323,7 @@ Elle incline la boussole.
 
 ================================================================================================
 FILE: KK-fr/rituels/respiration-du-sens.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -7720,6 +7514,7 @@ Elle leur donne une étoile polaire.
 
 ================================================================================================
 FILE: KK-fr/rituels/une-journee.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -7950,6 +7745,7 @@ Et King Klown, quelque part, rit doucement :
 
 ================================================================================================
 FILE: Rejean-en/Abstract-Wiki-Architect/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Abstract Wiki Architect
@@ -8288,6 +8084,7 @@ The aim is a codebase that is:
 
 ================================================================================================
 FILE: Rejean-en/Ame-Artificielle/Controle-Et-Personnalisation.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Module de Contrôle et Personnalisation Avancée
@@ -8365,6 +8162,7 @@ Cette approche offre trois bénéfices majeurs par rapport aux IA traditionnelle
 
 ================================================================================================
 FILE: Rejean-en/Ame-Artificielle/Creation-De-Chemins.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Création de Chemins et Liaison d'Éléments
@@ -8404,6 +8202,7 @@ Dans des contextes d'affaires ou de stratégie, ce module soutient la prise de d
 
 ================================================================================================
 FILE: Rejean-en/Ame-Artificielle/Ethique-Et-Gouvernance.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Gouvernance Éthique, Notation et Résolution de Conflits
@@ -8447,6 +8246,7 @@ L'utilisation des "Clowns" pour la résolution de conflits permet de dépersonna
 
 ================================================================================================
 FILE: Rejean-en/Ame-Artificielle/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Konnaxion – Civic Workflows & Module Interactions
@@ -8535,6 +8335,7 @@ That page consolidates the “technicalities” from the module specifications a
 
 ================================================================================================
 FILE: Rejean-en/Ame-Artificielle/Meta-Cognition-Et-Resolution.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Méta-Cognition & Résolution de Problèmes
@@ -8580,6 +8381,7 @@ Ces méta-actions transforment l'IA d'un simple "générateur de mots" en un **A
 
 ================================================================================================
 FILE: Rejean-en/Ame-Artificielle/Specifications-Fonctionnelles.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Spécifications Fonctionnelles du Moteur EL (Artificial Soul)
@@ -8664,6 +8466,7 @@ L'objectif final de ces spécifications est de créer une IA qui devient **perso
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Atlas/Atlas-Core-Schema.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Atlas / Core Schema
@@ -8716,6 +8519,7 @@ Typical fields:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Atlas/Atlas-Graph-Model.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Atlas / Graph Model
@@ -8755,6 +8559,7 @@ A small example from a generic application:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Atlas/Atlas-Ontology-Vocabulary.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Atlas / Ontology Vocabulary
@@ -8825,6 +8630,7 @@ Example (conceptual):
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Atlas/Atlas.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Atlas
@@ -9024,6 +8830,7 @@ Specific mechanisms (e.g., signing or validation processes) can be added in impl
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Concepts/Background-UI-as-Data.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Background: UI as Data
@@ -9156,6 +8963,7 @@ In practice, an agent might:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Concepts/Glossary.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Glossary
@@ -9336,6 +9144,7 @@ A fingerprint component derived from a screenshot or rendered view of the UI, in
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Consumers/Consumers-AI-Agent-Integration.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Consumers / AI Agent Integration
@@ -9463,6 +9272,7 @@ Atlas returns:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Consumers/Consumers-Future-Overlay-Client.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Consumers / Future Overlay Client (Concept)
@@ -9578,6 +9388,7 @@ The only requirement is that any consumer—overlay or otherwise—must be able 
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Consumers/Consumers.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Consumers
@@ -9768,6 +9579,7 @@ See: [Consumers/Future-Overlay-Client](Consumers-Future-Overlay-Client.md)
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Consumers/Hybrid-Mapping-and-Human-Guided-Assistants.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Hybrid Mapping and Human-Guided Assistants
@@ -9837,6 +9649,7 @@ Examples:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -9967,6 +9780,7 @@ See:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Theseus/Theseus-Drivers.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Theseus / Drivers
@@ -10023,6 +9837,7 @@ Driver:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Theseus/Theseus-Exploration-Engine.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Theseus / Exploration Engine
@@ -10259,6 +10074,7 @@ Atlas then persists this information and makes it available to consumers.
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Theseus/Theseus-State-Identification.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Theseus / State Identification
@@ -10348,6 +10164,7 @@ def compute_state_id(fingerprint):
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Theseus/Theseus.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Theseus
@@ -10402,6 +10219,7 @@ Theseus is structured around a clear separation between platform-agnostic logic 
 
 ================================================================================================
 FILE: Rejean-en/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Réjean McCormick
@@ -10526,6 +10344,7 @@ To make these systemic ideas legible and engaging, I utilize a narrative engine 
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Ethikos/Konsultations.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Konsultations (Public Consultations & Feedback)** — sub‑module under **ethiKos**.  
@@ -10615,6 +10434,7 @@ Actual tables implemented for Konsultations.
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Ethikos/Korum.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Korum (Structured Debates)** — sub‑module under **ethiKos**.  
@@ -10708,6 +10528,7 @@ Korum provides structured topic management, nuanced stance capture, and threaded
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Konnaxion – Civic Workflows & Module Interactions
@@ -10796,6 +10617,7 @@ That page consolidates the “technicalities” from the module specifications a
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/keenKonnect/Konstruct.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Konstruct (Project Collaboration Spaces)** — first sub‑module under **keenKonnect**.  
@@ -10891,6 +10713,7 @@ Konstruct exposes five services—`collaboration_space`, `project_task_managemen
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/keenKonnect/Stockage.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Stockage (Secure Repository & Versioned Storage)** — second sub‑module under **keenKonnect**.  
@@ -10976,6 +10799,7 @@ Stockage provides `secure_document_storage`, `document_versioning`, `intelligent
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Kollective-Intelligence/EkoH.md
+AUTHORITY: canonical
 ================================================================================================
 
 **EkoH (Reputation & Expertise)** — first sub‑module under **Kollective Intelligence**.  
@@ -11056,6 +10880,7 @@ EkoH exposes seven concrete services (`multidimensional_scoring`, `configuration
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Kollective-Intelligence/Smart-Vote.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Smart Vote (Weighted Voting System)** — second sub‑module under **Kollective Intelligence**.  
@@ -11133,6 +10958,7 @@ Smart Vote provides modality‑aware, EkoH‑weighted voting with real‑time ag
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/KonnectED/CertifiKation.md
+AUTHORITY: canonical
 ================================================================================================
 
 **CertifiKation (Skills & Certification)** — sub‑module under **KonnectED**.  
@@ -11208,6 +11034,7 @@ CertifiKation delivers end‑to‑end credentialing: define programs (*Certifica
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/KonnectED/Knowledge.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Knowledge (Collaborative Learning Library)** — sub‑module under **KonnectED**.  
@@ -11284,6 +11111,7 @@ Knowledge delivers the learning library and its social layer: resource managemen
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Kreative/Konservation.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Konservation (Creative Content & Cultural Preservation)** — sub‑module under **Kreative**.  
@@ -11387,6 +11215,7 @@ Konservation provides **digital archiving**, **virtual exhibitions**, **document
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Kreative/Kontact.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Kontact (Collaboration & Networking)** — sub‑module under **Kreative**.  
@@ -11457,6 +11286,7 @@ Kontact delivers networking‑centric capabilities via five services — `profes
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Technical/Konnaxion-Technical-Architecture-And-Services.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Konnaxion – Technical Architecture & Services
@@ -11907,6 +11737,7 @@ This page, together with the module‑specific wiki entries, should provide enou
 
 ================================================================================================
 FILE: Rejean-en/Orgo/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo System Overview
@@ -12123,6 +11954,7 @@ The engine can be configured to auto-escalate "soft signals." For example: *"If 
 
 ================================================================================================
 FILE: Rejean-en/SenTient/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 ##  SenTient (Semantic Entity Intelligent Transformation)
@@ -12251,6 +12083,7 @@ The central configuration files are located in `config/orchestration/environment
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Core/Architecture-Overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Architecture Overview
@@ -12435,6 +12268,7 @@ Details: **[Provider Adapter: Grok](Provider-Adapter-Grok.md)**
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Core/Central-Matrix-Runtime-State.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Story Bible (Creative Intent)
@@ -12617,6 +12451,7 @@ The scanner/orchestrator SHOULD validate:
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Core/Deterministic-Pipeline-Scan-Plan-Execute.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Deterministic Pipeline (SCAN-PLAN-EXECUTE)
@@ -12823,6 +12658,7 @@ Dashboard: **[Dashboard TUI Reference](Dashboard-TUI-Reference.md)**
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 # SwarmCraft: Deterministic Story Engine
@@ -12896,6 +12732,7 @@ The engine never dumps the whole Story Bible into the LLM. It hydrates prompts w
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Meta/Credits-And-Lineage.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Credits & Lineage
@@ -13014,6 +12851,7 @@ This page is the canonical place for lineage statements to avoid repeating long 
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Runtime/Dashboard-TUI-Reference.md
+AUTHORITY: canonical
 ================================================================================================
 
 
@@ -13203,6 +13041,7 @@ All modifications should go through the engine tools layer.
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Runtime/Multi-Project-Management.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Multi-Project Management
@@ -13369,6 +13208,7 @@ Dashboard: **[Dashboard TUI Reference](Dashboard-TUI-Reference.md)**
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Runtime/Orchestration-Slice-By-Slice-Prompt-Hydration.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orchestration Slice-by-Slice Prompt Hydration
@@ -13592,6 +13432,7 @@ Template cadence: **[Schema Templates](Schema-Templates.md)**
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Runtime/Provider-Adapter-Grok.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Provider Adapter Grok
@@ -13802,6 +13643,7 @@ Pipeline: **[Deterministic Pipeline](Deterministic-Pipeline-Scan-Plan-Execute.md
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Runtime/RAG-Memory-System.md
+AUTHORITY: canonical
 ================================================================================================
 
 # RAG Memory System
@@ -13981,6 +13823,7 @@ Recommended role rules:
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Scaffold/Outline-Grid-CSV-Round-Trip.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Outline Grid CSV Round-Trip
@@ -14182,6 +14025,7 @@ See:
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Scaffold/Schema-Outline.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Schema Outline
@@ -14430,6 +14274,7 @@ See:
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Scaffold/Schema-Templates.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Schema Templates
@@ -14625,6 +14470,7 @@ Related:
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Scaffold/Story-Bible-Creative-Intent.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Story Bible (Creative Intent)
@@ -14721,6 +14567,7 @@ projects/<project_id>/data/story_bible/
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Scaffold/Story-Scaffold-Templates-Outline-Parts.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Story Scaffold (Templates-Outline-Parts)
@@ -14892,6 +14739,7 @@ Matrix page: **[Central Matrix](Central-Matrix-Runtime-State.md)**
 
 ================================================================================================
 FILE: Rejean-en/Tools/index.md
+AUTHORITY: canonical
 ================================================================================================
 
 

@@ -7,74 +7,88 @@ working_tree_markdown: clean
 wiki_source_path: C:\mycode\Orgo\Orgo.wiki
 wiki_source_commit: 05d4ed6e021761e7b8762563b571fb1ac989f7b5
 wiki_working_tree_markdown: clean
+policy_version: 2026-08-28.1
 repo_files: 34
 wiki_files: 20
-generated_at: 2026-08-28T07:34:02-04:00
-files: 54
-content_sha256: 724542fa7848f68fc7da986faefa843ef986ac5326b11d2b2f8342a5a8b67cb3
+source_files: 54
+included_files: 48
+excluded_files: 6
+duplicate_files: 1
+content_bytes: 376305
+authority_counts: {"canonical":48}
+generated_at: 2026-08-28T09:43:05-04:00
+files: 48
+content_sha256: fa813ce2d7b6251529456d8573258904cab4cd80c13cedc02c0b1b81aad06a53
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. apps/api/README.md
-02. apps/web/README.md
-03. Docs/README.md
-04. Docs/Technical-Reference/Architecture upgrade(to do)/OPS-001_AI_Resilience_Strategy.md
-05. Docs/Technical-Reference/Architecture upgrade(to do)/REF-001_Configuration_Manifest.md
-06. Docs/Technical-Reference/Architecture upgrade(to do)/RFC-001_Nervous_System_Upgrade.md
-07. Docs/Technical-Reference/Architecture upgrade(to do)/SPEC-001_Input_SenTient_ACL.md
-08. Docs/Technical-Reference/Architecture upgrade(to do)/SPEC-002_Output_Architect_Outbox.md
-09. Docs/Technical-Reference/Boilerplate_Turborepo.md
-10. Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
-11. Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
-12. Docs/Technical-Reference/CONTRACTS.md
-13. Docs/Technical-Reference/GLOSSARY.md
-14. Docs/Technical-Reference/Semantic-Charters.md
-15. Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md
-16. Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md
-17. Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md
-18. Docs/Technical-Reference/v3/2-orgo-documentation-index.md
-19. Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md
-20. Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md
-21. Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md
-22. Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md
-23. Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md
-24. Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md
-25. Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md
-26. Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md
-27. Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md
-28. Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md
-29. Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md
-30. Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md
-31. Docs/Technical-Reference/WikiData-Orgo_Chart.md
-32. packages/tsconfig/README.md
-33. README.md
-34. TO-Do___CODE_ALIGNMENT_NOTES.md
-35. wiki/_Footer.md
-36. wiki/_Sidebar.md
-37. wiki/Cases-and-Tasks.md
-38. wiki/Cyclic-Overview-and-Insights.md
-39. wiki/Domains-and-Use-Cases.md
-40. wiki/Example-Scenarios.md
-41. wiki/FAQ.md
-42. wiki/Glossary.md
-43. wiki/Home.md
-44. wiki/How-Orgo-Works.md
-45. wiki/Interoperability.md
-46. wiki/Offline-and-Resilience.md
-47. wiki/Organizations-People-and-Privacy.md
-48. wiki/Profiles-and-Adaptability.md
-49. wiki/Reactivity-and-Escalation.md
-50. wiki/Resources.md
-51. wiki/Routing-and-Labels.md
-52. wiki/Semantic-Charters.md
-53. wiki/Signals-and-Workflows.md
-54. wiki/What-is-Orgo.md
+01. [canonical] apps/api/README.md
+02. [canonical] apps/web/README.md
+03. [canonical] Docs/README.md
+04. [canonical] Docs/Technical-Reference/Boilerplate_Turborepo.md
+05. [canonical] Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
+06. [canonical] Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
+07. [canonical] Docs/Technical-Reference/CONTRACTS.md
+08. [canonical] Docs/Technical-Reference/GLOSSARY.md
+09. [canonical] Docs/Technical-Reference/Semantic-Charters.md
+10. [canonical] Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md
+11. [canonical] Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md
+12. [canonical] Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md
+13. [canonical] Docs/Technical-Reference/v3/2-orgo-documentation-index.md
+14. [canonical] Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md
+15. [canonical] Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md
+16. [canonical] Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md
+17. [canonical] Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md
+18. [canonical] Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md
+19. [canonical] Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md
+20. [canonical] Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md
+21. [canonical] Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md
+22. [canonical] Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md
+23. [canonical] Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md
+24. [canonical] Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md
+25. [canonical] Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md
+26. [canonical] Docs/Technical-Reference/WikiData-Orgo_Chart.md
+27. [canonical] packages/tsconfig/README.md
+28. [canonical] README.md
+29. [canonical] wiki/_Footer.md
+30. [canonical] wiki/_Sidebar.md
+31. [canonical] wiki/Cases-and-Tasks.md
+32. [canonical] wiki/Cyclic-Overview-and-Insights.md
+33. [canonical] wiki/Domains-and-Use-Cases.md
+34. [canonical] wiki/Example-Scenarios.md
+35. [canonical] wiki/FAQ.md
+36. [canonical] wiki/Glossary.md
+37. [canonical] wiki/Home.md
+38. [canonical] wiki/How-Orgo-Works.md
+39. [canonical] wiki/Interoperability.md
+40. [canonical] wiki/Offline-and-Resilience.md
+41. [canonical] wiki/Organizations-People-and-Privacy.md
+42. [canonical] wiki/Profiles-and-Adaptability.md
+43. [canonical] wiki/Reactivity-and-Escalation.md
+44. [canonical] wiki/Resources.md
+45. [canonical] wiki/Routing-and-Labels.md
+46. [canonical] wiki/Semantic-Charters.md
+47. [canonical] wiki/Signals-and-Workflows.md
+48. [canonical] wiki/What-is-Orgo.md
+
+
+================================================================================================
+EXCLUDED FILES
+================================================================================================
+
+- [proposal] Docs/Technical-Reference/Architecture upgrade(to do)/OPS-001_AI_Resilience_Strategy.md (repo:Docs/Technical-Reference/Architecture upgrade(to do)/**)
+- [proposal] Docs/Technical-Reference/Architecture upgrade(to do)/REF-001_Configuration_Manifest.md (repo:Docs/Technical-Reference/Architecture upgrade(to do)/**)
+- [proposal] Docs/Technical-Reference/Architecture upgrade(to do)/RFC-001_Nervous_System_Upgrade.md (repo:Docs/Technical-Reference/Architecture upgrade(to do)/**)
+- [proposal] Docs/Technical-Reference/Architecture upgrade(to do)/SPEC-001_Input_SenTient_ACL.md (repo:Docs/Technical-Reference/Architecture upgrade(to do)/**)
+- [proposal] Docs/Technical-Reference/Architecture upgrade(to do)/SPEC-002_Output_Architect_Outbox.md (repo:Docs/Technical-Reference/Architecture upgrade(to do)/**)
+- [duplicate] TO-Do___CODE_ALIGNMENT_NOTES.md (same content as Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md)
 
 
 ================================================================================================
 FILE: apps/api/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 <p align="center">
@@ -154,6 +168,7 @@ Nest is [MIT licensed](LICENSE).
 
 ================================================================================================
 FILE: apps/web/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 ## Getting Started
@@ -190,6 +205,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ================================================================================================
 FILE: Docs/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo — Documentation
@@ -231,382 +247,8 @@ The supplied code snapshot contains the real Prisma schema, migrations, NestJS s
 
 
 ================================================================================================
-FILE: Docs/Technical-Reference/Architecture upgrade(to do)/OPS-001_AI_Resilience_Strategy.md
-================================================================================================
-
-OPS-001: AI Layer Resilience StrategyMeta FieldValueStatusDRAFTDate2025-12-17AuthorSenior ArchitectScopeapps/worker, apps/apiPatternsCircuit Breaker, Bulkhead, Graceful Degradation, Rate Limiting1. The Core Philosophy"The goal is not to never fail. The goal is to fail without hurting the user." [Ref: 01-stability-and-resilience/README.md]Integrating Probabilistic AI (LLMs) into a Deterministic OS (Orgo) introduces three new risks:Latency Spikes: LLMs can take 30+ seconds to respond.Non-Determinism: The same input can yield different outputs (or errors).Cost Explosions: Infinite loops in AI agents can drain the budget in minutes.This document defines the Defensive Architecture required to mitigate these risks.2. Protection Layer 1: Circuit BreakersPattern Reference:We wrap all external AI calls (SenTient API, Architect LLM) in a proxy that monitors for failures. If the provider is unstable, we "trip" the circuit to protect our internal thread pools.2.1 Configuration SpecWe use Opossum (Node.js) or similar libraries with these strict settings:SettingValueRationaleTimeout8000msBackground jobs must tick. Waiting 30s for an email generation is unacceptable.Error Threshold50%If half of requests fail, the provider is effectively down.Volume Threshold10 reqsDon't trip on a single failure; wait for a pattern.Reset Timeout30,000msGive the provider 30s to recover before letting traffic through again.2.2 Implementation LogicTypeScript// apps/api/src/adapters/ai-circuit-breaker.ts
-const breaker = new CircuitBreaker(callOpenAI, {
-  timeout: 8000,
-  errorThresholdPercentage: 50,
-  resetTimeout: 30000
-});
-
-breaker.fallback(() => {
-  // FAST FAIL: Do not retry. Do not wait.
-  // Return a special symbol indicating the AI is offline.
-  return { status: 'FALLBACK_MODE', content: null };
-});
-
-breaker.on('open', () => logger.warn('⚠️ AI Circuit OPEN: Switching to Manual/Static modes'));
-breaker.on('close', () => logger.info('✅ AI Circuit CLOSED: Resuming Intelligence'));
-3. Protection Layer 2: Bulkhead PatternPattern Reference:We must isolate the "Intelligence" workload from the "Operational" workload. If 1,000 users trigger AI summaries simultaneously, they must not starve the CPU resources needed for Login or Database writes.3.1 Queue Isolation (Redis/BullMQ)We define strict "Lanes" for processing.Queue NamePriorityConcurrencyPurposeQueue:SystemHigh50Emails, Password Resets, Critical Alerts.Queue:IngestionMedium20SenTient email parsing (I/O Bound).Queue:ExpressionLow5Architect LLM Generation (Rate Limit Bound).3.2 The "Titanic" StrategyIf Queue:Expression fills up (10,000 pending notifications):The System and Ingestion queues continue running unaffected.The Notification system slows down, but the Core OS remains snappy.Load Shedding: If the queue age exceeds 1 hour, we drop the "Generate Text" job and fallback to "Send Template" immediately.4. Protection Layer 3: Graceful DegradationPattern Reference:When the Circuit is OPEN or the Bulkhead is FULL, we do not show an error screen. We degrade the experience.4.1 Input Degradation (SenTient)Normal: AI parses email -> Creates structured Task.Degraded: System accepts email -> Creates generic "Uncategorized Task" with raw body -> Flags for "Manual Review".User Experience: The user sees "Task Created" (Success), but an internal admin sees "Needs Classification."4.2 Output Degradation (Architect)Normal: AI writes a custom, empathetic email to the user.Degraded: System pulls a pre-written Handlebars template (templates/fallback-notification.hbs).User Experience: User receives a standard "You have a new notification" email. It is boring, but functional.5. Protection Layer 4: Rate Limiting (Cost Control)Pattern Reference:LLMs charge per token. An infinite loop or a malicious user could drain our API credits.5.1 Token Bucket StrategyWe implement a Global Token Budget in Redis.Limit: $50.00 USD / Day.Check: Before calling Architect, check GET org:daily_spend.Action:If spend < limit: Proceed.If spend >= limit: Fail Fast. Log "Budget Exceeded" and use Fallback Templates.5.2 Per-Tenant LimitsFree Tier: 10 AI generations / day.Pro Tier: 1,000 AI generations / day.Implementation: RateLimitService middleware on the OutboxPoller.6. Observability & Golden SignalsPattern Reference:We cannot fix what we cannot see. We track specific metrics for the AI layer.6.1 The Dashboard (Grafana)MetricThreshold (Alert)Meaningai_circuit_open> 0The AI provider is down. System is in Fallback.sentient_parse_failure> 5%The input model is drifting or broken.architect_latency_p99> 10sThe LLM is stalling; user experience is degrading.dlq_depth> 0Poison pills detected. Admin action required.6.2 Structured LoggingEvery AI interaction must be logged with a correlation_id and model_version.JSON{
-  "level": "info",
-  "event": "ai_generation_complete",
-  "correlation_id": "task_123_abc",
-  "model": "gpt-4-turbo",
-  "tokens_input": 500,
-  "tokens_output": 120,
-  "cost_usd": 0.004,
-  "duration_ms": 4500
-}
-7. Incident PlaybooksScenario A: "The Hallucination Storm"Symptom: Users report that Architect is sending offensive or nonsensical emails.Action:Kill Switch: Run npm run admin:kill-switch:architect (Sets Feature Flag use_ai_generation to FALSE).System State: Instantly reverts to Static Templates.Investigate: Check NotificationLog table to find the specific prompt causing issues.Scenario B: "The Queue Backlog"Symptom: Queue:Expression has 50,000 jobs. Notifications are delayed by 2 hours.Action:Load Shed: Run script to flush pending jobs older than 10 minutes.Fallback: The flushed jobs will fail. The OutboxPoller creates a standard email for them on retry (because the outbox.retryCount will exceed the AI threshold).Scale: Temporarily increase concurrency to 20 (if API limits allow).
-
-
-================================================================================================
-FILE: Docs/Technical-Reference/Architecture upgrade(to do)/REF-001_Configuration_Manifest.md
-================================================================================================
-
-REF-001: Nervous System Configuration ManifestMeta FieldValueStatusDRAFTDate2025-12-17AuthorSenior ArchitectPurposeCentral source of truth for all Env Vars, Constants, and Flags required to run the Nervous System.1. Environment Variables (.env)These variables must be injected into the apps/api and apps/worker containers at runtime. Do not commit values to Git.1.1 AI Service ProvidersCredentials for the external "Brain" components.VariableDescriptionRequired?Example ValueSENTIENT_API_URLEndpoint for the Perception (Input) API.YEShttps://api.sentient.ai/v1/parseSENTIENT_API_KEYSecret key for SenTient.YESsk_live_...ARCHITECT_LLM_PROVIDERThe backend provider for Architect (Output).YESopenaiARCHITECT_API_KEYSecret key for the LLM provider.YESsk_proj_...ARCHITECT_MODEL_IDThe specific model version to use.No (Default: gpt-4-turbo)gpt-4-1106-preview1.2 Infrastructure & QueuesRedis connections for the Bulkhead pattern.VariableDescriptionDefaultREDIS_QUEUE_URLConnection string for BullMQ.redis://localhost:6379QUEUE_CONCURRENCY_INGESTIONMax concurrent email parsers (I/O Bound).50QUEUE_CONCURRENCY_EXPRESSIONMax concurrent LLM generators (Rate-Limit Bound).51.3 Resilience TunablesCircuit Breaker thresholds.VariableDescriptionDefaultCB_AI_TIMEOUT_MSMax time to wait for AI response before failing.8000CB_AI_FAILURE_THRESHOLD% of failures before opening the circuit.50CB_AI_RESET_MSTime to wait before attempting to close circuit.300002. Shared System Constants (Code Alignment)These constants must be defined in a shared library (e.g., packages/config/src/constants.ts) to ensure apps/api (Producer) and apps/worker (Consumer) speak the exact same language.2.1 Queue Names (The "Lanes")Used by @nestjs/bullmq.TypeScriptexport const QUEUES = {
-  // High Priority: Transactional Emails, Password Resets
-  SYSTEM: 'queue:system',
-  
-  // Medium Priority: SenTient Email Ingestion
-  INGESTION: 'queue:ingestion',
-  
-  // Low Priority: Architect LLM Generation
-  EXPRESSION: 'queue:expression',
-} as const;
-2.2 Event Topics (The "Vocabulary")Used in the Outbox.eventType column and Pub/Sub routing.TypeScriptexport const EVENTS = {
-  // Domain Events
-  TASK_CREATED: 'domain.task.created',
-  CASE_ESCALATED: 'domain.case.escalated',
-  SAFETY_INCIDENT: 'domain.safety.incident',
-  
-  // System Events
-  DLQ_POISON_PILL: 'system.dlq.poison_pill',
-  AI_CIRCUIT_OPEN: 'system.ai.circuit_open'
-} as const;
-2.3 DLQ Status EnumsUsed in the ParsingDLQ table state machine.TypeScriptexport enum DLQStatus {
-  NEW = 'NEW',             // Fresh failure, needs admin review
-  REDRIVE_PENDING = 'PENDING', // Admin fixed it, waiting for ingestion
-  REDRIVEN = 'REDRIVEN',   // Successfully re-processed
-  IGNORED = 'IGNORED'      // Admin marked as spam/irrelevant
-}
-3. Feature Flags (LaunchDarkly / DB Flags)These flags allow us to kill specific parts of the Nervous System without redeploying code. Essential for "Incident Playbooks".Flag KeyTypeDescriptionDefaultenable_nervous_systemBooleanMaster switch. If false, system acts as legacy CRUD app.falseuse_sentient_parserBooleanIf true, route emails to AI. If false, use legacy Regex.falseuse_architect_generationBooleanIf true, generate custom text. If false, use static templates.falselog_ai_promptsBooleanLog full LLM prompts/responses (Caution: PII Risk).false4. Database Alignment (Prisma Schema)This configuration requires specific additions to schema.prisma to work.Extrait de code// 1. For Output Reliability
-model Outbox {
-  id            String   @id @default(uuid())
-  // ... fields as defined in SPEC-002
-  @@map("outbox") // Table name alignment
-}
-
-// 2. For Input Reliability
-model ParsingDLQ {
-  id            String   @id @default(uuid())
-  // ... fields as defined in SPEC-001
-  @@map("parsing_dlq")
-}
-
-// 3. For Audit/Observability
-model SystemLog {
-  id            String   @id @default(uuid())
-  level         String   // INFO, WARN, ERROR
-  component     String   // "SenTient", "Architect"
-  message       String
-  metadata      Json?    // Stores token usage, cost, latency
-  createdAt     DateTime @default(now())
-}
-5. Security Redaction Rules (Regex Config)The PII Redaction logic requires these patterns to be consistent across Ingestion and Expression.TypeScript// packages/utils/src/pii-redaction.ts
-export const REDACTION_PATTERNS = {
-  // Matches: 123-456-7890, (123) 456-7890, 123.456.7890
-  PHONE: /(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/g,
-  
-  // Matches: standard email format
-  EMAIL: /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g,
-  
-  // Matches: 3 digits, 2 digits, 4 digits (US SSN)
-  SSN: /\d{3}-\d{2}-\d{4}/g
-};
-
-
-================================================================================================
-FILE: Docs/Technical-Reference/Architecture upgrade(to do)/RFC-001_Nervous_System_Upgrade.md
-================================================================================================
-
-RFC-001: The Nervous System Upgrade (SenTient & Architect Integration)Meta FieldValueStatusPROPOSEDAuthorSenior ArchitectDate2025-12-17Target Componentsapps/api, apps/worker, databaseKey PatternsHexagonal Architecture, Transactional Outbox, Anti-Corruption Layer, Circuit Breaker, Bulkhead1. Executive SummaryOrgo is currently a reactive "Operating System"—it waits for explicit, structured user input to create tasks. This RFC proposes evolving Orgo into a proactive "Nervous System" by integrating two AI subsystems: SenTient (Perception) and Architect (Expression).This upgrade allows the system to:Sense: Ingest unstructured human signals (emails, voice logs) and normalize them into structured Tasks via SenTient.Think: Process these tasks using the existing, deterministic Core logic.Act: Generate context-aware, human-readable notifications via Architect, tailored to specific scopes (e.g., "The Safety Team" vs. "The Site Manager").To ensure stability, we will strictly adhere to Hexagonal Architecture, treating these AI components as "Adapters" that never pollute the "Core" domain logic.2. Motivation & Problem Statement2.1 The "Fragile Input" ProblemCurrently, data entry requires strict form filling. In reality, users send free-text emails describing complex incidents. Manually converting these into Tasks is slow and error-prone.Solution: Automate ingestion using SenTient to parse unstructured text into Orgo's schema.2.2 The "Robot Voice" ProblemSystem notifications are rigid static templates (e.g., "TASK #123 UPDATED"). They lack context, tone, and empathy. A generic alert sent to a "Grieving Family Profile" or a "High Anxiety" medical ward is inappropriate.Solution: Use Architect to dynamically generate notification text based on the recipient's context and the event's severity.2.3 The "Distributed Monolith" RiskDirectly calling AI APIs (OpenAI, SenTient) from our Core TaskService introduces significant risks:Latency: AI calls can take 10-30 seconds, holding open database transactions and blocking threads.Coupling: Our internal schema becomes tied to the external AI model's ontology (Wikidata).Instability: If the AI provider goes down, the entire Orgo platform becomes unresponsive.3. High-Level ArchitectureWe will implement a Hexagonal Architecture (Ports & Adapters) to isolate the AI volatility from the Core stability.3.1 The TopologyThe Core (Inner Hexagon):Responsibility: Pure Business Logic (Task, Case, Workflow).Constraint: Zero dependencies on AI libraries. It defines interfaces (Ports) like ISignalIngestor and INotifier.Tech: NestJS, pure TypeScript.SenTient Adapter (Input Port):Responsibility: Implements ISignalIngestor. Calls SenTient API, handles retries, and maps external Wikidata to internal DTOs.Pattern: Anti-Corruption Layer (ACL).Architect Adapter (Output Port):Responsibility: Implements INotifier. Calls Architect API (LLM) to generate text.Pattern: Transactional Outbox.4. Detailed Design: Perception (SenTient)4.1 Anti-Corruption Layer (ACL)Concept:SenTient outputs Wikidata-based JSON (e.g., P921 for "Main Subject"). We must prevent this ontology from leaking into our Prisma Schema.The SenTientTranslationService Logic:Input: WikidataObject { P921: "Q123 (Plumbing)", P580: "2025-12-17" }ACL Action:Map Category: Lookup Category table where wikidataId == Q123. Result: Maintenance.Map Priority: Analyze sentiment score. If score < 0.2 (Negative/Panic), set Priority = HIGH.Map Dates: Parse P580 to ISO Date.Output: Returns a clean CreateTaskDTO to the Core.4.2 Resilience: Dead Letter Queue (DLQ)Concept:AI parsing is probabilistic. A specific "poison pill" email might crash the parser repeatedly. We cannot let one bad email block the ingestion queue.Workflow:Attempt 1-3: Try to parse. If JSON.parse or ACL.translate fails, retry with exponential backoff.Failure: On the 4th failure, catch the exception.Quarantine: Insert the raw payload into a new Postgres table Parsing_DLQ.Recovery: An Admin View allows a human to see the raw text, manually map it to a Task form, and "Redrive" it.5. Detailed Design: Expression (Architect)5.1 Reliability: Transactional OutboxConcept:We must avoid the "Dual Write Problem" where a Task is created in the DB, but the notification fails to send due to a network error.Schema Change (Prisma):Extrait de codemodel Outbox {
-  id          String   @id @default(uuid())
-  aggregateId String   // e.g., Task ID
-  type        String   // "TASK_CREATED", "SAFETY_ALERT"
-  payload     Json     // Full context needed for the LLM prompt
-  status      String   // PENDING, PROCESSING, SENT, FAILED
-  createdAt   DateTime @default(now())
-  
-  @@index([status, createdAt])
-}
-Process:Atomic Write: Inside the prisma.$transaction() that creates the Task, we also perform prisma.outbox.create().Guaranteed: If the DB commit succeeds, the notification event is durably stored on disk.Async Worker: A separate BullMQ worker polls the Outbox table, picks up PENDING items, and hands them to the Architect Adapter.5.2 Context-Aware Scoping & Pub/SubConcept:The Core emits what happened. The Routing Layer decides who cares and how they should be told.Event Flow:Event: SafetyIncident { location: "Zone B", severity: "HIGH" }Scope Resolution (Pub/Sub):Find "Zone B Manager" -> User: Alice.Find "Safety Team" -> Group: [Bob, Charlie].Fan-Out (Architect Generation): We generate distinct prompts for each recipient type.Alice (Manager): "Architect, write a formal incident report summary..."Bob (Field Team): "Architect, write a short, urgent SMS alert..."6. Operational Resilience6.1 Circuit BreakersConcept:We will wrap the HTTP clients for SenTient and Architect.Threshold: 5 failures in 10 seconds.Open State: If the AI provider is down/slow, we stop calling it to save system resources.Fallback Strategy:SenTient: Mark input as "Manual Review Needed" (Fallback to Human).Architect: Send a static, pre-written template (Legacy behavior).6.2 Bulkhead PatternConcept:We must isolate the "Thinking" (Core) from the "Dreaming" (AI Generation).Infrastructure: Use separate Redis queues for Ingestion and Notifications.Concurrency Limits:IngestionQueue: High concurrency (50 workers) - I/O bound.NotificationQueue: Low concurrency (5 workers) - Rate-limit bound (OpenAI limits).7. Migration Strategy (Strangler Fig)Concept:We will not rewrite the existing Email Service immediately.Phase 1 (Shadow Mode): Build SenTientAdapter alongside the existing parser. It parses emails but only logs the result (does not create tasks). Verify accuracy.Phase 2 (Canary): Route 5% of "Low Priority" emails to SenTient. Monitor DLQ rates.Phase 3 (Expansion): Slowly increase traffic to 100%.Phase 4 (Cleanup): Decommission the legacy regex parser.8. Security & PrivacyPII Redaction: Before sending any data to Architect (an external LLM), we run a local regex pass to mask obvious PII (SSN, Phone Numbers) if the organization's profile is set to RESTRICTED.Audit Log: Every text generated by Architect is stored in SystemLog for compliance review. We must be able to prove why the system said what it said.9. ConclusionThis architecture transforms Orgo from a passive database wrapper into an active, intelligent partner. By decoupling the AI components using Hexagonal Architecture and ensuring data consistency with Transactional Outboxes, we achieve "Intelligence" without sacrificing the "Reliability" required of an Operating System.
-
-
-================================================================================================
-FILE: Docs/Technical-Reference/Architecture upgrade(to do)/SPEC-001_Input_SenTient_ACL.md
-================================================================================================
-
-SPEC-001: SenTient Integration (Input & Perception)Meta FieldValueStatusDRAFTDate2025-12-17AuthorSenior ArchitectComponentapps/api/src/modules/perceptionPatternsAnti-Corruption Layer (ACL), Dead Letter Queue (DLQ), Circuit Breaker1. Overview & ObjectivesThe SenTient module acts as the "Sensory Cortex" for Orgo. Its primary responsibility is Perception: ingesting unstructured, noisy human signals (emails, voice transcripts, Slack messages) and normalizing them into structured, deterministic system commands.1.1 The ChallengeOrgo's core TaskService expects strict, validated inputs (e.g., CreateTaskDTO). Human communication is messy, ambiguous, and lacks structure. Additionally, SenTient (the AI provider) speaks in Wikidata Ontologies (Universal concepts), while Orgo speaks in Prisma Relational Schema (Local concepts).1.2 The SolutionWe will implement a Hexagonal Adapter containing a strict Anti-Corruption Layer (ACL). This layer creates a firewall between the external AI ontology and our internal domain model, ensuring that changes in the AI model never break the business logic.2. Architecture & Data Flow2.1 The PipelineIngestion: EmailIngestService receives a raw email (Subject + Body).Perception (External): The SenTientAdapter sends the raw text to the SenTient API.Normalization (ACL): SenTient returns a WikidataGraph. The SenTientACLService translates this graph into an internal SignalDTO.Execution (Core): The TaskService receives the SignalDTO and creates the Task.3. Data Contracts (The Boundary)We strictly define the inputs and outputs to enforce the ACL pattern.3.1 External Contract: SenTient Output (Wikidata)The AI returns a graph of entities based on the Wikidata Data Model.TypeScript// The "Dirty" External Model
-interface WikidataEntity {
-  id: string; // e.g., "Q12345" (The abstract concept)
-  labels: Record<string, string>; // { en: "Broken Pipe" }
-  claims: Record<string, WikidataClaim[]>;
-}
-
-interface WikidataClaim {
-  property: string; // e.g., "P921" (Main Subject)
-  value: {
-    type: "string" | "time" | "wikibase-entityid";
-    content: any; // e.g., "2025-12-17" or "Q999"
-  };
-  confidence: number; // 0.0 to 1.0
-}
-3.2 Internal Contract: Orgo Input (Prisma DTO)The Core accepts only clean, validated data.TypeScript// The "Clean" Internal Model
-interface CreateTaskFromSignalDTO {
-  title: string;          // Sanitized title
-  description: string;    // Summarized description
-  categoryId: string;     // Internal UUID from "Category" table
-  priority: 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL';
-  detectedUserEmail?: string; 
-  metadata: {
-    source: 'SENTIENT_EMAIL';
-    originalMessageId: string;
-    confidenceScore: number;
-  };
-}
-4. The Anti-Corruption Layer (ACL) ImplementationPattern Reference:The SenTientACLService is the only place in the codebase allowed to import WikidataEntity. It performs three distinct translation steps.4.1 Step 1: Property Mapping (The Dictionary)We map Wikidata Properties (P-Codes) to Orgo Fields.Wikidata PropertyDescriptionOrgo FieldLogicP921Main SubjectTask.categoryIdSee Section 4.2P580Start TimeTask.startAtISO-8601 parsing.P582End TimeTask.dueAtISO-8601 parsing.P488ChairpersonTask.assigneeIdFuzzy Match on User Name.P571Inception DateTask.createdAtIf missing, use now().4.2 Step 2: Value Translation (The Thesaurus)We must map the values (Q-Codes) to our internal Database IDs.Scenario: SenTient returns P921: Q102 (Plumbing System).ACL Logic:Query Category table: SELECT * FROM categories WHERE wikidata_mapping = 'Q102'.Hit: Return category.id.Miss: Query Category table for wikidata_mapping = 'Q_GENERAL_MAINTENANCE' (Fallback).Critical Miss: If no fallback exists, flag as UNCATEGORIZED task.4.3 Step 3: Sentiment-to-Priority MappingWe derive Priority from the sentiment analysis provided by SenTient's metadata layer.TypeScriptfunction mapPriority(sentimentScore: number, urgencyKeywords: string[]): Priority {
-  if (urgencyKeywords.includes('FIRE') || urgencyKeywords.includes('BLOOD')) {
-    return 'CRITICAL';
-  }
-  if (sentimentScore < 0.2) return 'HIGH'; // Panic/Anger
-  if (sentimentScore < 0.5) return 'MEDIUM';
-  return 'LOW';
-}
-5. Operational Resilience & Error HandlingPattern Reference:5.1 The "Poison Pill" Strategy (DLQ)Parsing is the most fragile part of the system. We must assume some inputs will crash the parser.Schema:Extrait de codemodel ParsingDLQ {
-  id          String   @id @default(uuid())
-  rawPayload  Json     // The original email body
-  errorReason String   // Stack trace or "JSON Parse Error"
-  retryCount  Int      @default(0)
-  status      String   // NEW, REDRIVEN, IGNORED
-  createdAt   DateTime @default(now())
-}
-Workflow:Ingestion Worker picks up job.Try: Call SenTientAdapter.process().Catch (Transient): If HTTP 503 or Timeout -> Throw Error (triggers BullMQ exponential backoff).Catch (Permanent): If JsonParseError or ACLValidationError -> Move to DLQ.Acknowledge the job in the main queue (so the worker is freed).Write row to ParsingDLQ.Do not retry automatically.5.2 Redrive Mechanism (The Admin Tool)An endpoint POST /admin/dlq/:id/redrive will be exposed.Admin fetches the DLQ record.Admin edits the rawPayload (fixing the typo or structure).Admin clicks "Redrive."System injects the fixed payload back into the IngestionQueue.6. Security & Privacy6.1 PII Redaction (Pre-Ingestion)Before sending any text to the SenTient external API, we run a local, regex-based PII scrubber.TypeScriptconst PII_REGEX = {
-  SSN: /\d{3}-\d{2}-\d{4}/g,
-  CREDIT_CARD: /\d{4}-\d{4}-\d{4}-\d{4}/g,
-  EMAIL: /REDACTED_EMAIL_LOGIC/g // We keep the sender, redact others
-};
-
-function sanitize(text: string): string {
-  // Replace sensitive patterns with [REDACTED]
-  return text.replace(PII_REGEX.SSN, '[REDACTED-SSN]');
-}
-6.2 Audit LoggingEvery transformation made by the ACL must be traceable.Log Entry: Signal ID 555 processed. Mapped 'Q102' to Category 'Maintenance'. Priority elevated to HIGH due to keyword 'LEAK'.7. Implementation RoadmapPhase 1 (Skeleton): Implement ISignalIngestor interface and the ParsingDLQ database table.Phase 2 (ACL Logic): Implement the SenTientTranslationService with hardcoded mappings for testing.Phase 3 (Integration): Connect the SenTientAdapter to the live API with Circuit Breakers enabled.Phase 4 (Shadow Mode): Run SenTient in parallel with the legacy parser for 1 week. Compare results.
-
-
-================================================================================================
-FILE: Docs/Technical-Reference/Architecture upgrade(to do)/SPEC-002_Output_Architect_Outbox.md
-================================================================================================
-
-SPEC-002: Architect Integration (Output & Expression)
-Meta Field	Value
-Status	DRAFT
-Date	2025-12-17
-Author	Senior Architect
-Component	apps/api/src/modules/expression
-Patterns	Transactional Outbox, Backend for Frontend (BFF), Pub/Sub, Circuit Breaker
-
-1. Overview & Objectives
-The Architect module acts as the "Voice" of Orgo. Its primary responsibility is Expression: translating rigid, deterministic system events (e.g., Task #123 created) into fluid, context-aware human communication (e.g., "Dear Jane, a high-priority safety inspection has been assigned to your sector.").
-
-1.1 The Challenge
-Current notifications are static strings. They lack context, tone, and empathy. Additionally, generating text via an LLM is slow (high latency) and unreliable (network errors), which creates the "Dual Write Problem": if we rely on a synchronous API call after a database transaction, we risk committing the data but failing to send the notification.
-
-1.2 The Solution
-We will implement the Transactional Outbox Pattern to decouple the decision to notify from the execution of the notification. This guarantees At-Least-Once delivery. We will also implement a Policy-Based Routing Engine to determine who gets notified and how (Tone/Format) based on their role.
-
-2. Architecture & Data Flow
-2.1 The Pipeline
-Trigger (Core): A business action occurs (e.g., TaskService.create()).
-
-Commit (Outbox): The Core writes the business data AND an Outbox record in the same atomic transaction.
-
-Relay (Async): A background OutboxPoller reads pending messages.
-
-Resolution (Routing): The NotificationRouter expands the scope (e.g., "Safety Team") into individual recipients.
-
-Expression (Architect): The ArchitectAdapter generates the specific text for each recipient.
-
-Transmission: The message is sent via the appropriate channel (Email/SMS/Push).
-
-3. Reliability: The Transactional Outbox
-Pattern Reference:
-
-We use the database transaction to guarantee consistency between the "State of the System" and the "State of the Notifications."
-
-3.1 Schema Design (Prisma)
-We require a generic Outbox table capable of storing any event type.
-
-Extrait de code
-
-model Outbox {
-  id            String   @id @default(uuid())
-  aggregateType String   // e.g., "TASK", "CASE", "SYSTEM"
-  aggregateId   String   // The ID of the entity changed
-  eventType     String   // "TASK_CREATED", "STATUS_CHANGED"
-  
-  // The Payload contains EVERYTHING Architect needs to know.
-  // We do NOT want to query the DB again during generation.
-  payload       Json     
-  
-  status        OutboxStatus @default(PENDING)
-  retryCount    Int          @default(0)
-  createdAt     DateTime     @default(now())
-  processedAt   DateTime?
-  
-  @@index([status, createdAt])
-}
-
-enum OutboxStatus {
-  PENDING
-  PROCESSING
-  COMPLETED
-  FAILED
-  DEAD_LETTER
-}
-3.2 Implementation Strategy (Atomic Writes)
-The TaskService must not "fire and forget." It must "commit and continue."
-
-TypeScript
-
-// Core Domain Logic
-async function createTask(dto: CreateTaskDTO) {
-  return prisma.$transaction(async (tx) => {
-    // 1. Write Business Data
-    const task = await tx.task.create({ data: dto });
-    
-    // 2. Write Outbox Event (Same Transaction)
-    await tx.outbox.create({
-      data: {
-        aggregateType: 'TASK',
-        aggregateId: task.id,
-        eventType: 'TASK_CREATED',
-        payload: {
-          title: task.title,
-          priority: task.priority,
-          assigneeId: task.assigneeId,
-          // Snapshot relevant context NOW to avoid race conditions later
-          contextSnapshot: {
-            category: 'Plumbing',
-            zone: 'B'
-          }
-        }
-      }
-    });
-    
-    return task;
-  });
-}
-4. Scope Resolution & Routing Logic
-Pattern Reference:
-
-The OutboxPoller picks up the event. It does not know who to email. It asks the NotificationRouter.
-
-4.1 The Scope Resolution Algorithm
-We support dynamic scopes defined in the Charters module (Wikidata-based organizational rules).
-
-Input: Event: SAFETY_INCIDENT, Scope: ZONE_B_MANAGER
-
-Resolution Steps:
-
-Charter Lookup: Query OrgGraph for nodes matching Role = Manager AND Location = Zone B. -> Result: User Alice.
-
-Profile Lookup: Check Alice's NotificationProfile.
-
-Preference: "SMS for Critical, Email for Routine."
-
-Tone: "Direct, Professional."
-
-Fan-Out: Create a specific job for Architect.
-
-4.2 Tone & Context Injection (The Prompt Strategy)
-We do not send generic prompts. We tailor the prompt based on the recipient's persona.
-
-Recipient Role	Tone Instruction	Sample Prompt Context
-Manager	Formal, Summary-Focused	"You are an assistant to a busy executive. Summarize this incident in 2 bullets. Focus on liability and timeline."
-Field Tech	Direct, Action-Oriented	"You are a dispatcher. Send a short, clear directive. No fluff. Focus on location and equipment needed."
-Public/Client	Empathetic, Reassuring	"You are a customer service liaison. Apologize for the inconvenience and provide a tracking link. Be warm."
-
-5. The Architect Adapter (Output Port)
-Pattern Reference:
-
-This adapter manages the actual connection to the LLM.
-
-5.1 Circuit Breaker Configuration
-Concept:
-
-LLMs hang. We must not let a hanging HTTP request exhaust our worker threads.
-
-Timeout: 8000ms (Generative AI is slow, but 8s is the limit for a background job tick).
-
-Failure Threshold: 5 consecutive errors.
-
-Fallback Mode: If the Circuit is OPEN, the Adapter returns a pre-defined Static Template (Legacy Mode).
-
-Why: It is better to send a boring "You have a notification" email than no email at all.
-
-5.2 Rate Limiting (Bulkhead)
-Concept:
-
-We will use a dedicated Redis Queue (Queue:Expression) for these jobs.
-
-Concurrency: Limited to 5 concurrent jobs.
-
-Rationale: Prevent hitting OpenAI/Provider rate limits (429 Too Many Requests). If the system is under load, notifications will simply queue up (Backpressure) rather than crashing the ingestion pipeline.
-
-6. Security & Privacy
-6.1 PII Scrubbing (Egress Filter)
-Before sending the payload to the Architect (External LLM), we must sanitize it.
-
-TypeScript
-
-function sanitizePayload(payload: any): any {
-  // We need the data for context, but not the specific PII
-  return {
-    ...payload,
-    userEmail: '[REDACTED]', // LLM doesn't need to know the address to write the email
-    phoneNumber: '[REDACTED]',
-    patientName: payload.patientName ? 'Patient X' : undefined
-  };
-}
-6.2 Audit Trail
-Every generated message is stored in the NotificationLog table.
-
-Columns: eventId, recipientId, generatedText, promptUsed, providerModel (e.g., "gpt-4").
-
-Purpose: If the AI hallucinates or says something offensive, we need a forensic trail to prove exactly what prompt caused it.
-
-7. Implementation Roadmap
-Phase 1 (Database): Create Outbox table and OutboxPoller service.
-
-Phase 2 (Router): Implement the NotificationRouter to resolve simple scopes (User ID) -> Complex scopes (Group ID).
-
-Phase 3 (Adapter): Connect ArchitectAdapter to the LLM Provider with the Circuit Breaker active.
-
-Phase 4 (Tone Testing): A/B test different system prompts to ensure the "Field Tech" tone is actually useful and not annoying.
-
-8. Failure Scenarios
-Scenario	System Behavior	Recovery
-DB Commit Fails	Transaction rolls back. No Task, No Outbox.	User retries request.
-LLM Provider Down	Circuit opens. Fallback to Static Template.	Automatic reset after 60s.
-Rate Limit Hit	Job fails with backoff.	BullMQ retries in 1m, 2m, 4m...
-Hallucination	User reports weird text.	Admin checks Audit Log, tweaks System Prompt.
-
-
-================================================================================================
 FILE: Docs/Technical-Reference/Boilerplate_Turborepo.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Turborepo (NestJS + Prisma + NextJS + Tailwind + Typescript + Jest) Starter
@@ -697,6 +339,7 @@ Run `nps` in the terminal to see list of all available commands.
 
 ================================================================================================
 FILE: Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo — Boundaries and Ownership
@@ -816,6 +459,7 @@ The boundary should carry only what is needed:
 
 ================================================================================================
 FILE: Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo — Code Alignment Notes
@@ -1126,6 +770,7 @@ Treat host trust/resources/lifecycle as platform concerns. Track them in Orgo on
 
 ================================================================================================
 FILE: Docs/Technical-Reference/CONTRACTS.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo — Current Contract Surface
@@ -1297,6 +942,7 @@ A caller-provided header/body organization ID is an input to tenant scoping, not
 
 ================================================================================================
 FILE: Docs/Technical-Reference/GLOSSARY.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo — Architectural Glossary
@@ -1414,6 +1060,7 @@ Structured evidence that an operation was accepted, rejected or executed. A rece
 
 ================================================================================================
 FILE: Docs/Technical-Reference/Semantic-Charters.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo — Semantic Charter Reference
@@ -1663,6 +1310,7 @@ Domains already drafted:
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo v3 — Database Schema Reference
@@ -1890,6 +1538,7 @@ Public JSON casing may differ at explicit boundaries, but each enum has one sema
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md
+AUTHORITY: canonical
 ================================================================================================
 
 Preface
@@ -2987,6 +2636,7 @@ Key columns:
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo v3 — Architecture and Invariants
@@ -3122,6 +2772,7 @@ Orgo orchestrates rather than absorbs. Konnaxion, Kristal, SemantiK Architect an
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/2-orgo-documentation-index.md
+AUTHORITY: canonical
 ================================================================================================
 
 <!-- INDEX: Doc 2 – Foundations, Locked Variables & Operational Checklists -->
@@ -3981,6 +3632,7 @@ All other docs in Orgo v3 (Docs 1, 3, 4, 5, 6, 8, etc.) must **reference and rem
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo v3 — Task, Case and Workflow Contract
@@ -4115,6 +3767,7 @@ If a rule/pattern needs to open a Case, that operation must be explicit in the a
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md
+AUTHORITY: canonical
 ================================================================================================
 
 <!-- INDEX: Doc 3 – Domain Modules (Orgo v3) -->
@@ -4965,6 +4618,7 @@ This version of **Doc 3 – Domain Modules (Orgo v3)** is aligned with:
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo v3 — Domain Modules
@@ -5071,6 +4725,7 @@ It does not declare a new global Task status enum.
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md
+AUTHORITY: canonical
 ================================================================================================
 
 <!-- INDEX: Doc 4 – Functional Code‑Name Inventory (Services & Hooks) -->
@@ -5397,6 +5052,7 @@ Where both backend and frontend artifacts exist, they are listed together in the
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo v3 — Labels, Profiles and Cyclic Overview
@@ -5502,6 +5158,7 @@ See `../Semantic-Charters.md`.
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md
+AUTHORITY: canonical
 ================================================================================================
 
 Updated Doc 5 with the requested changes is below.
@@ -6734,6 +6391,7 @@ Core Services remain the **single shared backbone**; all extensions must plug in
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo v3 — Insights and Analytics
@@ -6792,6 +6450,7 @@ This is a deliberate read/analytics separation if both paths are wired consisten
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md
+AUTHORITY: canonical
 ================================================================================================
 
 <!-- INDEX: Doc 6 – Insights Module Config Parameters (Orgo v3) -->
@@ -7516,6 +7175,7 @@ This section encodes explicitly the alignment guidance so the document is self�
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo v3 — API Surface
@@ -7613,6 +7273,7 @@ Every Task/Case API operation must resolve and enforce the organization consiste
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 <!-- INDEX: Doc 7 – Organization Profiles & Behavioural Archetypes (profiles YAML) (Use YAML comments only so the file stays valid.) -->
@@ -8256,6 +7917,7 @@ profiles:
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo v3 — Documentation Index
@@ -8288,6 +7950,7 @@ FILE: Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md
+AUTHORITY: canonical
 ================================================================================================
 
 <!-- INDEX: Doc 8 – Cyclic Overview, Labels & Universal Flow Rules (Orgo v3) -->
@@ -9069,6 +8732,7 @@ This version supersedes all previous “Doc 8” drafts and is the integral, upd
 
 ================================================================================================
 FILE: Docs/Technical-Reference/WikiData-Orgo_Chart.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo × Wikidata: System documentation (charts, IDs, files, and build pipeline)
@@ -9310,6 +8974,7 @@ Domains already drafted:
 
 ================================================================================================
 FILE: packages/tsconfig/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # `tsconfig`
@@ -9319,6 +8984,7 @@ These are base shared `tsconfig.json`s from which all other `tsconfig.json`'s in
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo
@@ -9537,317 +9203,8 @@ MIT. See [`LICENSE`](https://www.google.com/search?q=./LICENSE).
 
 
 ================================================================================================
-FILE: TO-Do___CODE_ALIGNMENT_NOTES.md
-================================================================================================
-
-# Orgo — Code Alignment Notes
-
-## Purpose
-
-This note identifies code areas that should be changed so the implementation matches the current Orgo architecture. It is not a project-management log.
-
-## 1. Repair the Nest module/import graph first
-
-The snapshot contains several imports that do not resolve to files in the supplied tree. These block reliable execution before higher-level alignment can be trusted.
-
-### `apps/api/src/orgo/core/tasks/task.service.ts`
-
-Current imports use paths shaped like:
-
-```text
-./././persistence/prisma/prisma.service
-./././config/org-profile.service
-```
-
-They do not resolve from `core/tasks`. Wire them to the actual shared persistence/config services.
-
-### `apps/api/src/orgo/core/cases/case.module.ts`
-
-Imports `case-review.service` and `../database/database.module`, neither of which is present in the supplied tree. The actual CaseService already uses Prisma persistence. Rebuild CaseModule around the real persistence/core dependencies instead of phantom modules.
-
-### `apps/api/src/orgo/core/logging/logger.module.ts`
-
-References `log-rotation.service` and `log-query.service`, which are absent in the snapshot. Either add the real implementations or remove them from the active module contract.
-
-### `apps/api/src/orgo/config/org-profile.service.ts`
-
-Contains a malformed relative persistence import. Point it to the actual `apps/api/src/persistence/prisma/prisma.service.ts`.
-
-## 2. Fix the public Task boundary mapping and tenant enforcement
-
-### `apps/api/src/orgo/core/tasks/task.controller.ts`
-
-The public DTO is snake_case (`organization_id`, `case_id`, etc.) while `TaskService` expects camelCase (`organizationId`, `caseId`, etc.). The controller currently passes objects through with `as any`.
-
-Consequences include:
-
-- list input may not populate `organizationId`;
-- create input may fail core validation or map fields incorrectly;
-- response shape can leak internal camelCase instead of the documented public shape.
-
-Add explicit request/response mappers.
-
-### Tenant isolation
-
-`getTask()` currently calls an unscoped service lookup by Task ID. List/create also rely on DTO input rather than one consistent authenticated organization context.
-
-Change Task HTTP paths to:
-
-```text
-resolve authenticated organization
-→ map public DTO to internal input
-→ call org-scoped service method
-→ map internal DTO to public JSON
-```
-
-Use `getTaskById(organizationId, taskId)` for public single-task access.
-
-## 3. Make Case API/service responsibilities explicit
-
-`CaseService` implements `createCaseFromSignal()` and `updateCaseStatus()`, but `CaseController` exposes only list/detail in the snapshot.
-
-Choose one stable contract:
-
-- if Case create/status are intended public APIs, expose validated endpoints;
-- if they are internal workflow operations, keep them internal and document only list/detail publicly.
-
-Do not claim an endpoint exists just because a service method exists.
-
-## 4. Unify API route prefixing
-
-`main.ts` defines no global API prefix, while controllers mix:
-
-```text
-api/v3/tasks
-api/v3/workflows
-api/v3/organizations
-v3/cases
-signals
-notifications
-maintenance
-domain/hr
-domain/education
-insights/reports
-```
-
-Select one public routing convention, ideally a single `/api/v3` boundary for Orgo APIs, and make reverse-proxy behavior explicit rather than relying on comments.
-
-## 5. Update bootstrap identity
-
-### `apps/api/src/main.ts`
-
-Swagger currently identifies the API as:
-
-```text
-Leaves Tracker
-Api Docs for leaves tracker
-version 1.0
-```
-
-Replace with Orgo identity/version metadata and make the port/config environment-driven rather than hard-coded where appropriate.
-
-## 6. Wire the core modules that exist in source
-
-The current `AppModule`/`OrgoModule` wiring does not expose all implemented core areas.
-
-Source contains Email, Signals, Notifications, Auth/RBAC, Offline and other modules, but several are not imported into the active module graph.
-
-Examples:
-
-- `SignalsModule` is not imported and currently declares no imports despite `SignalIngestService` requiring WorkflowEngineService and TaskService;
-- `EmailModule` exists but is not mounted by AppModule/OrgoModule, and its controller is not registered in the module;
-- `NotificationController` exists but `NotificationModule` does not register it as a controller;
-- Auth/RBAC code exists but AppModule does not establish one consistent authenticated tenant context for the core APIs.
-
-Wire only the capabilities intended to be active, but make the module graph truthful.
-
-## 7. Preserve WorkflowEngine purity and add an explicit action executor
-
-`WorkflowEngineService` is already architecturally strong: it loads/validates rules and resolves ordered actions without performing all side effects itself.
-
-Preserve that separation.
-
-Current `SignalIngestService` applies `CREATE_TASK` actions, but the rule vocabulary also includes UPDATE_TASK, ROUTE, ESCALATE, ATTACH_TEMPLATE, SET_METADATA and NOTIFY. The docs also expect workflows/patterns to be able to open Cases.
-
-Add a clear executor/dispatcher layer:
-
-```text
-resolved action
-→ action executor
-→ TaskService / CaseService / NotificationService / external adapter
-→ receipt/result
-```
-
-Do not put persistence side effects back into the pure evaluator.
-
-## 8. Reconcile filesystem workflow rules with DB workflow models
-
-Prisma contains:
-
-```text
-WorkflowDefinition
-WorkflowInstance
-WorkflowTransitionEvent
-```
-
-while the active Workflow Engine loads rules from the filesystem/YAML.
-
-Define the relationship explicitly:
-
-- which representation is configuration/source;
-- what is persisted runtime state;
-- how versions are pinned;
-- how a running instance refers to the exact ruleset used.
-
-Do not keep two unrelated workflow sources of truth.
-
-## 9. Fix Maintenance before treating it as an active domain module
-
-### `apps/api/src/orgo/domain/maintenance/maintenance.module.ts`
-
-The file is not a Nest `@Module`; it contains another `MaintenanceController`, duplicating `maintenance.controller.ts` with a different API/authorization shape.
-
-### `maintenance.service.ts`
-
-The service creates its own `PrismaClient` and performs raw Task-table operations/transactions directly.
-
-Align Maintenance to:
-
-```text
-MaintenanceModule
-→ one controller
-→ MaintenanceService
-→ TaskService for canonical Task mutations
-→ MaintenanceAsset/MaintenanceTaskLink/MaintenanceCalendarSlot for domain extension
-```
-
-The module should then be explicitly imported if Maintenance is intended active.
-
-## 10. Fix Education to use the core work owner
-
-### `education.module.ts` / `education.controller.ts`
-
-They import `education-module.service`, while the supplied file is `education.service.ts`.
-
-### `education.service.ts`
-
-It has a malformed persistence import and directly writes/queries canonical Task rows through raw SQL.
-
-Refactor creation/status mutations through TaskService. Keep `EducationTaskLink`, LearningGroup and person context as Education-owned extensions.
-
-## 11. Fix HR integration with TaskService/CaseService
-
-HR has the correct architectural intention — create a canonical Case, create a canonical Task, then add `HrCase`/participants/links — but the current code does not match the core service APIs.
-
-Issues include:
-
-- imports from nonexistent `core/task`, `core/case`, `core/label` paths;
-- `CaseService.createCase(...)` is called but the supplied CaseService exposes `createCaseFromSignal(...)`;
-- TaskService/CaseService are called with a transaction client argument their current signatures do not accept.
-
-Align the service APIs and transaction boundary so the canonical Task/Case plus HR extension commit consistently.
-
-Remove `hr.service.ts.BAK` from the active source tree.
-
-## 12. Consolidate Insights layout/imports
-
-`InsightsModule` imports root-level files such as:
-
-```text
-./reports.controller
-./reports.service
-./analytics-export.service
-```
-
-while the supplied tree also places implementations under subfolders such as:
-
-```text
-insights/reports/
-insights/export/
-insights/patterns/
-insights/cache/
-```
-
-There are duplicate root/subfolder pattern/cache implementations in the snapshot.
-
-Choose one canonical folder layout, update imports, and keep Insights read-oriented. Pattern actions should re-enter the core through TaskService/CaseService.
-
-## 13. Keep enums/contracts in one semantic source
-
-Task/Case/visibility/category enums are repeated in controllers, services, web types and domain services.
-
-The values are mostly aligned now, which is good, but duplication creates drift risk.
-
-Prefer a shared contract package/generated API types or strict conversion layer so:
-
-- DB enum casing;
-- internal service casing;
-- public JSON casing;
-- web client types
-
-remain mechanically aligned.
-
-## 14. Align offline sync with Task invariants
-
-`core/offline/sync.service.ts` writes Task rows directly during merge/sync.
-
-Offline operation is not exempt from core invariants. Ensure synchronized Task changes execute the same:
-
-- tenant checks;
-- enum/lifecycle rules;
-- ownership rules;
-- event/audit semantics;
-- conflict resolution evidence.
-
-If direct persistence is necessary for replay, isolate it behind a dedicated replay/import boundary with equivalent validation.
-
-## 15. Frontend scope is currently small
-
-The supplied web route tree currently has a root page that renders `InsightsOverviewPage`; it does not evidence a complete UI route set for Tasks, Cases, admin, HR, Education, etc.
-
-Keep docs truthful and add UI routes only when implemented.
-
-Also verify `_app.tsx` style import and other web imports against files actually present in the repo.
-
-## 16. External ecosystem adapters are not implemented
-
-No concrete Konnaxion, Kristal or SemantiK Architect adapter is present in the current snapshot.
-
-When added:
-
-### Konnaxion
-
-Use commands/events/receipts; never map Case↔Topic or Task↔Consultation by identity.
-
-### Kristal
-
-Orchestrate explicit Kristal operations/artifact references. Orgo approval is not Kristal validation/recognition unless an explicit Kristal operation produces it.
-
-### SemantiK Architect
-
-Use generation request/result contracts; do not store Architect internal planner objects as Orgo core models.
-
-### kOA-Linux
-
-Treat host trust/resources/lifecycle as platform concerns. Track them in Orgo only when a real operational Task/Case is required.
-
-## 17. Patterns that are already strong and should be preserved
-
-- Organization-scoped service methods in Task/Case core.
-- Explicit Task lifecycle transition table.
-- Explicit Case lifecycle transition table.
-- TaskEvent recording for important mutations.
-- `DomainTaskFactory` as a projection rather than a second Task table.
-- Label parser/routing service with explicit broadcast semantics.
-- Workflow evaluator separated from side effects.
-- Workflow simulation using the same evaluation semantics.
-- Profile-derived Task defaults.
-- Prisma schema linking domain extensions back to canonical Tasks/Cases.
-- Insights as a distinct read/analytics layer.
-
-
-================================================================================================
 FILE: wiki/_Footer.md
+AUTHORITY: canonical
 ================================================================================================
 
 Orgo — public conceptual wiki. For schemas, APIs, implementation constraints and code alignment, use the technical documentation.
@@ -9855,6 +9212,7 @@ Orgo — public conceptual wiki. For schemas, APIs, implementation constraints a
 
 ================================================================================================
 FILE: wiki/_Sidebar.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Orgo Wiki**
@@ -9885,6 +9243,7 @@ Technical details belong in the Orgo documentation rather than this public wiki.
 
 ================================================================================================
 FILE: wiki/Cases-and-Tasks.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Cases and Tasks
@@ -9963,6 +9322,7 @@ The same principle applies to other external systems: Orgo can coordinate work a
 
 ================================================================================================
 FILE: wiki/Cyclic-Overview-and-Insights.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Cyclic Overview and Insights
@@ -10019,6 +9379,7 @@ That keeps analysis and action connected without confusing them.
 
 ================================================================================================
 FILE: wiki/Domains-and-Use-Cases.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Domains and Use Cases
@@ -10082,6 +9443,7 @@ Orgo's semantic charters help describe these domains without turning every vocab
 
 ================================================================================================
 FILE: wiki/Example-Scenarios.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Example Scenarios
@@ -10166,6 +9528,7 @@ Orgo coordinates the work without taking ownership of the external system's inte
 
 ================================================================================================
 FILE: wiki/FAQ.md
+AUTHORITY: canonical
 ================================================================================================
 
 # FAQ
@@ -10225,6 +9588,7 @@ No. It may coordinate work around ERP-like processes, but it is not intended to 
 
 ================================================================================================
 FILE: wiki/Glossary.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Glossary
@@ -10296,6 +9660,7 @@ A system with its own significant domain authority and boundaries. Orgo is one e
 
 ================================================================================================
 FILE: wiki/Home.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo
@@ -10379,6 +9744,7 @@ Orgo coordinates work and keeps operational state. When another system owns the 
 
 ================================================================================================
 FILE: wiki/How-Orgo-Works.md
+AUTHORITY: canonical
 ================================================================================================
 
 # How Orgo Works
@@ -10461,6 +9827,7 @@ This closes the loop between day-to-day work and organizational learning.
 
 ================================================================================================
 FILE: wiki/Interoperability.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Interoperability
@@ -10523,6 +9890,7 @@ The same principle applies to other external tools and services.
 
 ================================================================================================
 FILE: wiki/Offline-and-Resilience.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Offline and Resilience
@@ -10556,6 +9924,7 @@ If a workflow depends on another system that is unavailable, Orgo can still reta
 
 ================================================================================================
 FILE: wiki/Organizations-People-and-Privacy.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Organizations, People and Privacy
@@ -10618,6 +9987,7 @@ When Orgo refers to an object or person owned by another system, the relationshi
 
 ================================================================================================
 FILE: wiki/Profiles-and-Adaptability.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Profiles and Adaptability
@@ -10665,6 +10035,7 @@ Domain module → what this kind of work means
 
 ================================================================================================
 FILE: wiki/Reactivity-and-Escalation.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Reactivity and Escalation
@@ -10718,6 +10089,7 @@ Combined with Cyclic Overview and Insights, this also makes it possible to disti
 
 ================================================================================================
 FILE: wiki/Resources.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Resources
@@ -10737,6 +10109,7 @@ This wiki intentionally stays at a conceptual/public level.
 
 ================================================================================================
 FILE: wiki/Routing-and-Labels.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Routing and Labels
@@ -10793,6 +10166,7 @@ This prevents announcements from silently becoming obligations.
 
 ================================================================================================
 FILE: wiki/Semantic-Charters.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Semantic Charters
@@ -10848,6 +10222,7 @@ This keeps semantic assistance useful in local/offline environments while preser
 
 ================================================================================================
 FILE: wiki/Signals-and-Workflows.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Signals and Workflows
@@ -10910,6 +10285,7 @@ Orgo can coordinate the process and reconcile the result, but it does not gain d
 
 ================================================================================================
 FILE: wiki/What-is-Orgo.md
+AUTHORITY: canonical
 ================================================================================================
 
 # What is Orgo?

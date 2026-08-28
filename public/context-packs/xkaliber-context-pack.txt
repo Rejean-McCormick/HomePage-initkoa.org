@@ -6,61 +6,69 @@ source_commit: c41cde7fb7e16d7bb228fa1ab0b338c095bcc3a5
 working_tree_markdown: clean
 wiki_source_path: none
 wiki_source_commit: none
-wiki_working_tree_markdown: not-git
+wiki_working_tree_markdown: none
+policy_version: 2026-08-28.1
 repo_files: 40
 wiki_files: 0
-generated_at: 2026-08-28T07:33:56-04:00
+source_files: 40
+included_files: 40
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 61150
+authority_counts: {"canonical":40}
+generated_at: 2026-08-28T09:42:59-04:00
 files: 40
-content_sha256: 6f1ee222ed4962f05197f3bb6bfc92823bc85e15fa17deff6d7fb4c320da4b48
+content_sha256: a94611ed93b34ed5786fe3dcd8a741665a9af8f205de0e57df7cdd16f3ca79f1
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. BRAND.md
-02. contracts/README.md
-03. CONTRIBUTING.md
-04. decisions/0001-name-and-positioning.md
-05. decisions/0002-technology-agnostic-start.md
-06. docs/architecture/data-boundaries.md
-07. docs/architecture/module-map.md
-08. docs/architecture/overview.md
-09. docs/architecture/ownership-and-boundaries.md
-10. docs/evaluation/adaptive-assessment-model.md
-11. docs/evaluation/caliber-profile.md
-12. docs/evaluation/fairness-checklist.md
-13. docs/evaluation/item-design-guidelines.md
-14. docs/evaluation/scoring-principles.md
-15. docs/governance/audit-log-requirements.md
-16. docs/governance/decision-use-policy.md
-17. docs/integration/certifikation-evidence.md
-18. docs/integration/ekoh-smartvote-signal.md
-19. docs/integration/konnaxion-map.md
-20. docs/integration/kport-ekoh-handoff.md
-21. docs/product/mvp-scope.md
-22. docs/product/user-personas.md
-23. docs/product/user-stories.md
-24. docs/README.md
-25. docs/ux/content-guidelines.md
-26. docs/ux/core-flows.md
-27. docs/ux/screen-inventory.md
-28. examples/sample-caliber-profile.md
-29. examples/sample-certifikation-seal.md
-30. examples/sample-competency-map.md
-31. examples/sample-session.md
-32. GOVERNANCE.md
-33. LICENSE.md
-34. PRODUCT_BRIEF.md
-35. PROJECT_BOARD.md
-36. README.md
-37. ROADMAP.md
-38. SECURITY_AND_PRIVACY.md
-39. tests/acceptance/acceptance-scenarios.md
-40. tests/acceptance/mvp-checklist.md
+01. [canonical] BRAND.md
+02. [canonical] contracts/README.md
+03. [canonical] CONTRIBUTING.md
+04. [canonical] decisions/0001-name-and-positioning.md
+05. [canonical] decisions/0002-technology-agnostic-start.md
+06. [canonical] docs/architecture/data-boundaries.md
+07. [canonical] docs/architecture/module-map.md
+08. [canonical] docs/architecture/overview.md
+09. [canonical] docs/architecture/ownership-and-boundaries.md
+10. [canonical] docs/evaluation/adaptive-assessment-model.md
+11. [canonical] docs/evaluation/caliber-profile.md
+12. [canonical] docs/evaluation/fairness-checklist.md
+13. [canonical] docs/evaluation/item-design-guidelines.md
+14. [canonical] docs/evaluation/scoring-principles.md
+15. [canonical] docs/governance/audit-log-requirements.md
+16. [canonical] docs/governance/decision-use-policy.md
+17. [canonical] docs/integration/certifikation-evidence.md
+18. [canonical] docs/integration/ekoh-smartvote-signal.md
+19. [canonical] docs/integration/konnaxion-map.md
+20. [canonical] docs/integration/kport-ekoh-handoff.md
+21. [canonical] docs/product/mvp-scope.md
+22. [canonical] docs/product/user-personas.md
+23. [canonical] docs/product/user-stories.md
+24. [canonical] docs/README.md
+25. [canonical] docs/ux/content-guidelines.md
+26. [canonical] docs/ux/core-flows.md
+27. [canonical] docs/ux/screen-inventory.md
+28. [canonical] examples/sample-caliber-profile.md
+29. [canonical] examples/sample-certifikation-seal.md
+30. [canonical] examples/sample-competency-map.md
+31. [canonical] examples/sample-session.md
+32. [canonical] GOVERNANCE.md
+33. [canonical] LICENSE.md
+34. [canonical] PRODUCT_BRIEF.md
+35. [canonical] PROJECT_BOARD.md
+36. [canonical] README.md
+37. [canonical] ROADMAP.md
+38. [canonical] SECURITY_AND_PRIVACY.md
+39. [canonical] tests/acceptance/acceptance-scenarios.md
+40. [canonical] tests/acceptance/mvp-checklist.md
 
 
 ================================================================================================
 FILE: BRAND.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Branding — XKaliber
@@ -139,6 +147,7 @@ Le **Sceau CertifiKation** est un artifact downstream de CertifiKation, pas un a
 
 ================================================================================================
 FILE: contracts/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Conceptual contracts
@@ -169,6 +178,7 @@ External adapters may map XKaliber evidence into those systems’ contracts, but
 
 ================================================================================================
 FILE: CONTRIBUTING.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Contribuer à XKaliber
@@ -199,6 +209,7 @@ FILE: CONTRIBUTING.md
 
 ================================================================================================
 FILE: decisions/0001-name-and-positioning.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Décision 0001 — Nom et positionnement
@@ -233,6 +244,7 @@ La métaphore doit rester fonctionnelle : XKaliber ne couronne pas, il situe la 
 
 ================================================================================================
 FILE: decisions/0002-technology-agnostic-start.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Décision 0002 — Départ agnostique technologiquement
@@ -271,6 +283,7 @@ Les choix techniques viendront après validation du modèle.
 
 ================================================================================================
 FILE: docs/architecture/data-boundaries.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Data boundaries
@@ -315,6 +328,7 @@ Examples:
 
 ================================================================================================
 FILE: docs/architecture/module-map.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Internal responsibility map
@@ -362,6 +376,7 @@ Map XKaliber outputs to explicit external boundaries such as KonnectED, CertifiK
 
 ================================================================================================
 FILE: docs/architecture/overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Architecture conceptuelle
@@ -424,6 +439,7 @@ XKaliber measurement
 
 ================================================================================================
 FILE: docs/architecture/ownership-and-boundaries.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Ownership and boundaries
@@ -498,6 +514,7 @@ Smart Vote reading/policy  → Smart Vote / relevant Konnaxion governance
 
 ================================================================================================
 FILE: docs/evaluation/adaptive-assessment-model.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Modèle d’évaluation adaptative
@@ -568,6 +585,7 @@ La sortie n’est pas seulement une note. Elle indique :
 
 ================================================================================================
 FILE: docs/evaluation/caliber-profile.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Caliber Profile
@@ -644,6 +662,7 @@ Recommendation: submit Assessment Evidence Package to CertifiKation for level-3 
 
 ================================================================================================
 FILE: docs/evaluation/fairness-checklist.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Liste de vérification — équité
@@ -677,6 +696,7 @@ FILE: docs/evaluation/fairness-checklist.md
 
 ================================================================================================
 FILE: docs/evaluation/item-design-guidelines.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Guide de conception des items et tâches
@@ -751,6 +771,7 @@ Un bon item :
 
 ================================================================================================
 FILE: docs/evaluation/scoring-principles.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Principes de score et d’interprétation
@@ -822,6 +843,7 @@ Dire plutôt :
 
 ================================================================================================
 FILE: docs/governance/audit-log-requirements.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Audit requirements
@@ -860,6 +882,7 @@ XKaliber may record that evidence was exported to CertifiKation or K-Port. It do
 
 ================================================================================================
 FILE: docs/governance/decision-use-policy.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Decision-use policy
@@ -903,6 +926,7 @@ Controls should include explanation, scope validation, human review where approp
 
 ================================================================================================
 FILE: docs/integration/certifikation-evidence.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber → CertifiKation evidence
@@ -953,6 +977,7 @@ K-Port may receive either a valid XKaliber evidence package or a CertifiKation a
 
 ================================================================================================
 FILE: docs/integration/ekoh-smartvote-signal.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Handoff vers K-Port, EkoH et SmartVote
@@ -1065,6 +1090,7 @@ Une correction, expiration ou révocation XKaliber / CertifiKation doit pouvoir 
 
 ================================================================================================
 FILE: docs/integration/konnaxion-map.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Integration in Konnaxion
@@ -1137,6 +1163,7 @@ EkoH     → XKaliber result rewrite      forbidden
 
 ================================================================================================
 FILE: docs/integration/kport-ekoh-handoff.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber evidence → K-Port → EkoH
@@ -1201,6 +1228,7 @@ K-Port/EkoH/Smart Vote do not receive raw responses, detailed timing, private ev
 
 ================================================================================================
 FILE: docs/product/mvp-scope.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Minimum functional scope
@@ -1240,6 +1268,7 @@ A first implementation is useful when it can run an explainable adaptive assessm
 
 ================================================================================================
 FILE: docs/product/user-personas.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Personas
@@ -1337,6 +1366,7 @@ Les signaux sont bornés par domaine et affichés avec leurs limites.
 
 ================================================================================================
 FILE: docs/product/user-stories.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — User stories
@@ -1402,6 +1432,7 @@ As the assessed person, I want to request review so an error, bias, or invalid a
 
 ================================================================================================
 FILE: docs/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Documentation
@@ -1428,6 +1459,7 @@ Le dossier documente l’état architectural du produit, pas un programme de mig
 
 ================================================================================================
 FILE: docs/ux/content-guidelines.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Guide de contenu UX
@@ -1469,6 +1501,7 @@ Meilleur :
 
 ================================================================================================
 FILE: docs/ux/core-flows.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Core flows
@@ -1518,6 +1551,7 @@ reputation dispute             → EkoH
 
 ================================================================================================
 FILE: docs/ux/screen-inventory.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Inventaire des écrans
@@ -1576,6 +1610,7 @@ FILE: docs/ux/screen-inventory.md
 
 ================================================================================================
 FILE: examples/sample-caliber-profile.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Exemple — Profil de Calibre
@@ -1621,6 +1656,7 @@ Soumettre le résultat à CertifiKation pour une attestation de niveau 3. Prévo
 
 ================================================================================================
 FILE: examples/sample-certifikation-seal.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Integration example — CertifiKation attestation
@@ -1643,6 +1679,7 @@ Usage: portfolio KonnectED; evidence candidate for K-Port under consent/policy
 
 ================================================================================================
 FILE: examples/sample-competency-map.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Exemple — carte de compétence
@@ -1689,6 +1726,7 @@ Certification possible au niveau 3 si :
 
 ================================================================================================
 FILE: examples/sample-session.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Exemple — session d’évaluation
@@ -1743,6 +1781,7 @@ Recommandation : soumettre à CertifiKation pour une attestation de niveau 3 ; f
 
 ================================================================================================
 FILE: GOVERNANCE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Gouvernance de l’évaluation
@@ -1813,6 +1852,7 @@ XKaliber ne doit pas être utilisé pour :
 
 ================================================================================================
 FILE: LICENSE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Licence
@@ -1829,6 +1869,7 @@ Ce dépôt de départ est fourni comme structure initiale de conception. Avant p
 
 ================================================================================================
 FILE: PRODUCT_BRIEF.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Product brief — XKaliber
@@ -1920,6 +1961,7 @@ XKaliber ne cherche pas à :
 
 ================================================================================================
 FILE: PROJECT_BOARD.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Project board initial
@@ -1977,6 +2019,7 @@ FILE: PROJECT_BOARD.md
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber
@@ -2108,6 +2151,7 @@ Start with:
 
 ================================================================================================
 FILE: ROADMAP.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Roadmap — XKaliber
@@ -2192,6 +2236,7 @@ Fonctions :
 
 ================================================================================================
 FILE: SECURITY_AND_PRIVACY.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Sécurité et confidentialité
@@ -2267,6 +2312,7 @@ Un `AssessmentEvidencePackage` contient le minimum nécessaire au consumer autor
 
 ================================================================================================
 FILE: tests/acceptance/acceptance-scenarios.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Acceptance scenarios
@@ -2302,6 +2348,7 @@ Given a corrected/contested/expired XKaliber profile, when downstream evidence e
 
 ================================================================================================
 FILE: tests/acceptance/mvp-checklist.md
+AUTHORITY: canonical
 ================================================================================================
 
 # XKaliber — Core acceptance checklist

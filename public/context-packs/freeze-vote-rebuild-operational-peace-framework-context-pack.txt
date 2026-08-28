@@ -4,93 +4,112 @@ repository: Rejean-McCormick/Freeze-Vote-Rebuild_Operational-Peace-Framework
 source_path: C:\mycode\FreezeVoteRebuild\Freeze-Vote-Rebuild_Operational-Peace-Framework
 source_commit: 2b044fa31b21200ba98c09af4fd3b22ad4a4bc3b
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:54-04:00
-files: 75
-content_sha256: d04a36f4309b7be292bcfdc2b77215c4c2e1e68f565d0b255d21f8be73ca0fac
+wiki_source_path: none
+wiki_source_commit: none
+wiki_working_tree_markdown: none
+policy_version: 2026-08-28.1
+repo_files: 75
+wiki_files: 0
+source_files: 75
+included_files: 74
+excluded_files: 1
+duplicate_files: 1
+content_bytes: 293065
+authority_counts: {"canonical":74}
+generated_at: 2026-08-28T09:43:14-04:00
+files: 74
+content_sha256: 0c7ea17045fc5cedc29fef2fb5fe8237cb1710d0541c44528533bffafb4fe605
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. cultural-bridge/00-start-here.md
-02. cultural-bridge/01-russian-literature.md
-03. cultural-bridge/02-ukrainian-language-worldwide.md
-04. cultural-bridge/03-guardrails.md
-05. cultural-bridge/04-funding-partnerships.md
-06. cultural-bridge/05-metrics.md
-07. cultural-bridge/06-risks.md
-08. fvr/00-start-here/00-welcome.md
-09. fvr/00-start-here/01-one-page-summary.md
-10. fvr/00-start-here/02-how-to-use-this-book.md
-11. fvr/00-start-here/03-glossary.md
-12. fvr/00-start-here/04-changelog-versioning.md
-13. fvr/01-proposal-at-a-glance/00-the-proposal-at-a-glance.md
-14. fvr/01-proposal-at-a-glance/01-theory-of-change.md
-15. fvr/01-proposal-at-a-glance/02-phased-timeline.md
-16. fvr/01-proposal-at-a-glance/03-core-principles-red-lines.md
-17. fvr/01-proposal-at-a-glance/04-what-this-is-not.md
-18. fvr/01-proposal-at-a-glance/05-deltas-between-versions.md
-19. fvr/02-freeze/00-freeze-overview.md
-20. fvr/02-freeze/01-ceasefire-architecture.md
-21. fvr/02-freeze/02-stabilization-force-concept.md
-22. fvr/02-freeze/03-verification-monitoring.md
-23. fvr/02-freeze/04-humanitarian-corridors-protected-infrastructure.md
-24. fvr/02-freeze/05-sanctions-aid-linkage-during-freeze.md
-25. fvr/03-vote/00-vote-overview.md
-26. fvr/03-vote/01-objective-legitimacy-criteria.md
-27. fvr/03-vote/02-electorate-definition.md
-28. fvr/03-vote/03-voting-system-design.md
-29. fvr/03-vote/04-integrity-observation.md
-30. fvr/03-vote/05-vote-to-border-mechanics.md
-31. fvr/03-vote/06-dispute-resolution.md
-32. fvr/04-rebuild/00-rebuild-overview.md
-33. fvr/04-rebuild/01-reconstruction-architecture.md
-34. fvr/04-rebuild/02-reconstruction-olympics.md
-35. fvr/04-rebuild/03-peace-build-campus-governance.md
-36. fvr/04-rebuild/04-economic-restart-plan.md
-37. fvr/04-rebuild/05-accountability-transparency.md
-38. fvr/05-governance-and-verification/00-governance-and-verification-overview.md
-39. fvr/05-governance-and-verification/01-status-neutral-governance-model.md
-40. fvr/05-governance-and-verification/02-verification-first-gates.md
-41. fvr/05-governance-and-verification/03-coordination-deconfliction-escalation.md
-42. fvr/05-governance-and-verification/04-data-governance-privacy-security.md
-43. fvr/06-legal-and-political-pathways/00-legal-and-political-overview.md
-44. fvr/06-legal-and-political-pathways/01-domestic-approvals-gate.md
-45. fvr/06-legal-and-political-pathways/02-international-legal-considerations.md
-46. fvr/06-legal-and-political-pathways/03-justice-accountability-options.md
-47. fvr/06-legal-and-political-pathways/04-treaty-structure-annexes.md
-48. fvr/07-stakeholder-playbooks/00-stakeholder-playbooks-overview.md
-49. fvr/07-stakeholder-playbooks/01-ukraine-playbook.md
-50. fvr/07-stakeholder-playbooks/02-russia-playbook.md
-51. fvr/07-stakeholder-playbooks/03-us-eu-playbook.md
-52. fvr/07-stakeholder-playbooks/04-un-osce-neutral-states-playbook.md
-53. fvr/07-stakeholder-playbooks/05-civil-society-displaced-persons-playbook.md
-54. fvr/08-risks-critiques-mitigations/00-risks-overview.md
-55. fvr/08-risks-critiques-mitigations/01-failure-modes.md
-56. fvr/08-risks-critiques-mitigations/02-risk-register.md
-57. fvr/08-risks-critiques-mitigations/03-common-critiques-and-responses.md
-58. fvr/08-risks-critiques-mitigations/04-ethical-considerations.md
-59. fvr/09-implementation-toolkit/00-toolkit-overview.md
-60. fvr/09-implementation-toolkit/01-operational-checklists-by-phase.md
-61. fvr/09-implementation-toolkit/02-templates.md
-62. fvr/09-implementation-toolkit/03-metrics-kpis.md
-63. fvr/09-implementation-toolkit/04-comms-toolkit.md
-64. fvr/10-background-and-essays/00-background-overview.md
-65. fvr/10-background-and-essays/01-origins-and-evolution.md
-66. fvr/10-background-and-essays/02-american-realism-essay.md
-67. fvr/10-background-and-essays/03-projet-du-pape-francois-variant.md
-68. fvr/10-background-and-essays/04-comparables-historical-analogs.md
-69. fvr/11-appendices/00-appendices-overview.md
-70. fvr/11-appendices/01-definitions.md
-71. fvr/11-appendices/02-maps-and-scenarios.md
-72. fvr/11-appendices/03-decision-log.md
-73. fvr/11-appendices/04-source-text-archive.md
-74. README.md
-75. SUMMARY.md
+01. [canonical] cultural-bridge/00-start-here.md
+02. [canonical] cultural-bridge/01-russian-literature.md
+03. [canonical] cultural-bridge/02-ukrainian-language-worldwide.md
+04. [canonical] cultural-bridge/03-guardrails.md
+05. [canonical] cultural-bridge/04-funding-partnerships.md
+06. [canonical] cultural-bridge/05-metrics.md
+07. [canonical] cultural-bridge/06-risks.md
+08. [canonical] fvr/00-start-here/00-welcome.md
+09. [canonical] fvr/00-start-here/01-one-page-summary.md
+10. [canonical] fvr/00-start-here/02-how-to-use-this-book.md
+11. [canonical] fvr/00-start-here/03-glossary.md
+12. [canonical] fvr/00-start-here/04-changelog-versioning.md
+13. [canonical] fvr/01-proposal-at-a-glance/00-the-proposal-at-a-glance.md
+14. [canonical] fvr/01-proposal-at-a-glance/01-theory-of-change.md
+15. [canonical] fvr/01-proposal-at-a-glance/02-phased-timeline.md
+16. [canonical] fvr/01-proposal-at-a-glance/03-core-principles-red-lines.md
+17. [canonical] fvr/01-proposal-at-a-glance/04-what-this-is-not.md
+18. [canonical] fvr/01-proposal-at-a-glance/05-deltas-between-versions.md
+19. [canonical] fvr/02-freeze/00-freeze-overview.md
+20. [canonical] fvr/02-freeze/01-ceasefire-architecture.md
+21. [canonical] fvr/02-freeze/02-stabilization-force-concept.md
+22. [canonical] fvr/02-freeze/03-verification-monitoring.md
+23. [canonical] fvr/02-freeze/04-humanitarian-corridors-protected-infrastructure.md
+24. [canonical] fvr/02-freeze/05-sanctions-aid-linkage-during-freeze.md
+25. [canonical] fvr/03-vote/00-vote-overview.md
+26. [canonical] fvr/03-vote/01-objective-legitimacy-criteria.md
+27. [canonical] fvr/03-vote/02-electorate-definition.md
+28. [canonical] fvr/03-vote/03-voting-system-design.md
+29. [canonical] fvr/03-vote/05-vote-to-border-mechanics.md
+30. [canonical] fvr/03-vote/06-dispute-resolution.md
+31. [canonical] fvr/04-rebuild/00-rebuild-overview.md
+32. [canonical] fvr/04-rebuild/01-reconstruction-architecture.md
+33. [canonical] fvr/04-rebuild/02-reconstruction-olympics.md
+34. [canonical] fvr/04-rebuild/03-peace-build-campus-governance.md
+35. [canonical] fvr/04-rebuild/04-economic-restart-plan.md
+36. [canonical] fvr/04-rebuild/05-accountability-transparency.md
+37. [canonical] fvr/05-governance-and-verification/00-governance-and-verification-overview.md
+38. [canonical] fvr/05-governance-and-verification/01-status-neutral-governance-model.md
+39. [canonical] fvr/05-governance-and-verification/02-verification-first-gates.md
+40. [canonical] fvr/05-governance-and-verification/03-coordination-deconfliction-escalation.md
+41. [canonical] fvr/05-governance-and-verification/04-data-governance-privacy-security.md
+42. [canonical] fvr/06-legal-and-political-pathways/00-legal-and-political-overview.md
+43. [canonical] fvr/06-legal-and-political-pathways/01-domestic-approvals-gate.md
+44. [canonical] fvr/06-legal-and-political-pathways/02-international-legal-considerations.md
+45. [canonical] fvr/06-legal-and-political-pathways/03-justice-accountability-options.md
+46. [canonical] fvr/06-legal-and-political-pathways/04-treaty-structure-annexes.md
+47. [canonical] fvr/07-stakeholder-playbooks/00-stakeholder-playbooks-overview.md
+48. [canonical] fvr/07-stakeholder-playbooks/01-ukraine-playbook.md
+49. [canonical] fvr/07-stakeholder-playbooks/02-russia-playbook.md
+50. [canonical] fvr/07-stakeholder-playbooks/03-us-eu-playbook.md
+51. [canonical] fvr/07-stakeholder-playbooks/04-un-osce-neutral-states-playbook.md
+52. [canonical] fvr/07-stakeholder-playbooks/05-civil-society-displaced-persons-playbook.md
+53. [canonical] fvr/08-risks-critiques-mitigations/00-risks-overview.md
+54. [canonical] fvr/08-risks-critiques-mitigations/01-failure-modes.md
+55. [canonical] fvr/08-risks-critiques-mitigations/02-risk-register.md
+56. [canonical] fvr/08-risks-critiques-mitigations/03-common-critiques-and-responses.md
+57. [canonical] fvr/08-risks-critiques-mitigations/04-ethical-considerations.md
+58. [canonical] fvr/09-implementation-toolkit/00-toolkit-overview.md
+59. [canonical] fvr/09-implementation-toolkit/01-operational-checklists-by-phase.md
+60. [canonical] fvr/09-implementation-toolkit/02-templates.md
+61. [canonical] fvr/09-implementation-toolkit/03-metrics-kpis.md
+62. [canonical] fvr/09-implementation-toolkit/04-comms-toolkit.md
+63. [canonical] fvr/10-background-and-essays/00-background-overview.md
+64. [canonical] fvr/10-background-and-essays/01-origins-and-evolution.md
+65. [canonical] fvr/10-background-and-essays/02-american-realism-essay.md
+66. [canonical] fvr/10-background-and-essays/03-projet-du-pape-francois-variant.md
+67. [canonical] fvr/10-background-and-essays/04-comparables-historical-analogs.md
+68. [canonical] fvr/11-appendices/00-appendices-overview.md
+69. [canonical] fvr/11-appendices/01-definitions.md
+70. [canonical] fvr/11-appendices/02-maps-and-scenarios.md
+71. [canonical] fvr/11-appendices/03-decision-log.md
+72. [canonical] fvr/11-appendices/04-source-text-archive.md
+73. [canonical] README.md
+74. [canonical] SUMMARY.md
+
+
+================================================================================================
+EXCLUDED FILES
+================================================================================================
+
+- [duplicate] fvr/03-vote/04-integrity-observation.md (same content as fvr/03-vote/03-voting-system-design.md)
 
 
 ================================================================================================
 FILE: cultural-bridge/00-start-here.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Cultural Bridge Track
@@ -145,6 +164,7 @@ Go to:
 
 ================================================================================================
 FILE: cultural-bridge/01-russian-literature.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Russian literature dignity program
@@ -246,6 +266,7 @@ See: `06-critique-risks-failsafes.md`.
 
 ================================================================================================
 FILE: cultural-bridge/02-ukrainian-language-worldwide.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Ukrainian language worldwide program
@@ -355,6 +376,7 @@ See: `06-critique-risks-failsafes.md`.
 
 ================================================================================================
 FILE: cultural-bridge/03-guardrails.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Governance, guardrails, and anti-propaganda rules
@@ -472,6 +494,7 @@ Pause or suspend funding if:
 
 ================================================================================================
 FILE: cultural-bridge/04-funding-partnerships.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Implementation, funding, and partnerships
@@ -605,6 +628,7 @@ Guardrail: events must remain non-partisan and within anti-propaganda rules.
 
 ================================================================================================
 FILE: cultural-bridge/05-metrics.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Metrics and evaluation
@@ -709,6 +733,7 @@ Annual public report should include:
 
 ================================================================================================
 FILE: cultural-bridge/06-risks.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Critiques, risks, and failsafes
@@ -825,6 +850,7 @@ Pause or suspend a program segment if:
 
 ================================================================================================
 FILE: fvr/00-start-here/00-welcome.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Welcome
@@ -857,6 +883,7 @@ If you are new to the proposal, go next to:
 
 ================================================================================================
 FILE: fvr/00-start-here/01-one-page-summary.md
+AUTHORITY: canonical
 ================================================================================================
 
 # One-page summary
@@ -940,6 +967,7 @@ Next: **Proposal at a glance** ([`01-proposal-at-a-glance/00-the-proposal-at-a-g
 
 ================================================================================================
 FILE: fvr/00-start-here/02-how-to-use-this-book.md
+AUTHORITY: canonical
 ================================================================================================
 
 # How to use this book
@@ -1004,6 +1032,7 @@ This GitBook is organized for two complementary reading modes:
 
 ================================================================================================
 FILE: fvr/00-start-here/03-glossary.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Glossary
@@ -1109,6 +1138,7 @@ If a term is missing or is used differently in a source draft, add it here and r
 
 ================================================================================================
 FILE: fvr/00-start-here/04-changelog-versioning.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Changelog & versioning
@@ -1192,6 +1222,7 @@ If you want stricter governance, add a short “editorial policy” section here
 
 ================================================================================================
 FILE: fvr/01-proposal-at-a-glance/00-the-proposal-at-a-glance.md
+AUTHORITY: canonical
 ================================================================================================
 
 # The proposal at a glance
@@ -1257,6 +1288,7 @@ The framework is structured to:
 
 ================================================================================================
 FILE: fvr/01-proposal-at-a-glance/01-theory-of-change.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Theory of change
@@ -1342,6 +1374,7 @@ Record answers and design choices in the **Decision log** ([`11-appendices/03-de
 
 ================================================================================================
 FILE: fvr/01-proposal-at-a-glance/02-phased-timeline.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Phased timeline
@@ -1461,6 +1494,7 @@ Use this book’s later chapters to define:
 
 ================================================================================================
 FILE: fvr/01-proposal-at-a-glance/03-core-principles-red-lines.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Core principles & red lines
@@ -1541,6 +1575,7 @@ Implementation detail lives in:
 
 ================================================================================================
 FILE: fvr/01-proposal-at-a-glance/04-what-this-is-not.md
+AUTHORITY: canonical
 ================================================================================================
 
 # What this is not
@@ -1588,6 +1623,7 @@ This chapter prevents category errors. Freeze–Vote–Rebuild is a **framework 
 
 ================================================================================================
 FILE: fvr/01-proposal-at-a-glance/05-deltas-between-versions.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Deltas between versions
@@ -1711,6 +1747,7 @@ While drafting, add a short footer block on pages that heavily draw from one inp
 
 ================================================================================================
 FILE: fvr/02-freeze/00-freeze-overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Freeze overview
@@ -1789,6 +1826,7 @@ A Freeze is “real” only if it ships with operational machinery:
 
 ================================================================================================
 FILE: fvr/02-freeze/01-ceasefire-architecture.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Ceasefire architecture
@@ -1879,6 +1917,7 @@ To avoid vague commitments, attach operational annexes:
 
 ================================================================================================
 FILE: fvr/02-freeze/02-stabilization-force-concept.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Stabilization force concept
@@ -1980,6 +2019,7 @@ Mitigations are treated in:
 
 ================================================================================================
 FILE: fvr/02-freeze/03-verification-monitoring.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Verification & monitoring
@@ -2097,6 +2137,7 @@ Gate definitions live in:
 
 ================================================================================================
 FILE: fvr/02-freeze/04-humanitarian-corridors-protected-infrastructure.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Humanitarian corridors & protected infrastructure
@@ -2201,6 +2242,7 @@ See:
 
 ================================================================================================
 FILE: fvr/02-freeze/05-sanctions-aid-linkage-during-freeze.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Sanctions/aid linkage during Freeze
@@ -2310,6 +2352,7 @@ When converting this template into a real policy package:
 
 ================================================================================================
 FILE: fvr/03-vote/00-vote-overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Vote overview
@@ -2390,6 +2433,7 @@ These are treated in:
 
 ================================================================================================
 FILE: fvr/03-vote/01-objective-legitimacy-criteria.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Objective & legitimacy criteria
@@ -2470,6 +2514,7 @@ All legitimacy criteria should be:
 
 ================================================================================================
 FILE: fvr/03-vote/02-electorate-definition.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Electorate definition
@@ -2572,117 +2617,7 @@ Track inclusion with metrics:
 
 ================================================================================================
 FILE: fvr/03-vote/03-voting-system-design.md
-================================================================================================
-
-# Integrity & observation
-
-The Vote phase must be credible under adversarial conditions. This chapter defines the integrity safeguards and observation architecture required to make outcomes defensible.
-
-## Objectives
-
-- Prevent or deter coercion, fraud, and manipulation.
-- Provide independent evidence about process integrity.
-- Detect anomalies early enough to correct them.
-- Create a record that can withstand post-result contestation.
-
-## Integrity threats (baseline assumptions)
-
-Design should assume:
-- intimidation and retaliation threats against voters and officials,
-- administrative manipulation (selective exclusion, “missing” registrants),
-- disinformation and fabricated incident claims,
-- cyber attacks on registration, reporting, or tabulation systems,
-- physical disruption of polling and transport.
-
-## Observation mission: requirements
-
-An observation mission must have:
-
-### 1) Independence
-- governance that prevents capture
-- funding and logistics that avoid single-party dependence
-
-### 2) Access
-- freedom to visit polling sites, counting sites, and registration centers
-- ability to interview stakeholders without intimidation
-- access to key documents and procedures (within privacy limits)
-
-### 3) Coverage and sampling plan
-- deployment coverage targets (e.g., % of sites covered)
-- statistically meaningful sampling where full coverage is impossible
-- explicit monitoring of high-risk areas and displaced voting sites
-
-### 4) Reporting authority
-- right to publish findings on a defined schedule
-- ability to flag urgent integrity concerns in real time
-- transparent methodology disclosures (what was observed, how, and limitations)
-
-### 5) Coordination with security and monitoring systems
-- channels to report threats and intimidation incidents
-- integration with Freeze monitoring when violence affects voting safety
-
-## Anti-coercion package (minimum)
-
-A credible anti-coercion design includes:
-- secret ballot protections (procedural and physical)
-- safeguards against “supervised voting” by coercers
-- protections for election workers and observers
-- rapid response for intimidation claims (hotline + investigation)
-- safe reporting mechanisms for vulnerable groups
-- rules for invalidating or re-running compromised precincts
-
-Track coercion with:
-- complaint volume and category breakdown
-- geographic clustering of threats
-- incident severity and recurrence
-- correlation with turnout anomalies (as a flag)
-
-## Audit and integrity checks (minimum)
-
-Even with observers, you need auditability:
-
-- chain-of-custody documentation for ballots/records
-- reconciliation checks (issued vs returned vs counted)
-- risk-limiting audit or defined recount triggers
-- independent review of tabulation software (if used)
-- logs that are tamper-evident and time-stamped (where feasible)
-
-## Transparency: what should be published
-
-Publish, at minimum:
-- rulebook and procedures (version-locked)
-- observer mission methodology and reports
-- aggregate participation and turnout statistics
-- incident and complaint summaries (privacy-protected)
-- audit results and reconciliation summaries
-- final results with clear aggregation logic
-
-Keep restricted:
-- personally identifiable voter data
-- information that increases physical security risk
-- sensitive cyber defense details
-
-(See [`05-governance-and-verification/04-data-governance-privacy-security.md`](../05-governance-and-verification/04-data-governance-privacy-security.md).)
-
-## Integration with dispute resolution
-
-Integrity findings must have procedural consequences:
-- observer flags can trigger investigations
-- defined thresholds trigger recounts or reruns
-- timelines are enforced to prevent indefinite contestation
-
-See: [`03-vote/06-dispute-resolution.md`](06-dispute-resolution.md).
-
-## Links to related chapters
-
-- Voting system design: [`03-vote/03-voting-system-design.md`](03-voting-system-design.md)
-- Dispute resolution: [`03-vote/06-dispute-resolution.md`](06-dispute-resolution.md)
-- Freeze monitoring linkages (safety and access): [`02-freeze/03-verification-monitoring.md`](../02-freeze/03-verification-monitoring.md)
-- Governance and escalation: [`05-governance-and-verification/03-coordination-deconfliction-escalation.md`](../05-governance-and-verification/03-coordination-deconfliction-escalation.md)
-
-
-================================================================================================
-FILE: fvr/03-vote/04-integrity-observation.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Integrity & observation
@@ -2794,6 +2729,7 @@ See: [`03-vote/06-dispute-resolution.md`](06-dispute-resolution.md).
 
 ================================================================================================
 FILE: fvr/03-vote/05-vote-to-border-mechanics.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Vote-to-border mechanics (optional)
@@ -2908,6 +2844,7 @@ Consider excluding this module if:
 
 ================================================================================================
 FILE: fvr/03-vote/06-dispute-resolution.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Dispute resolution
@@ -3017,6 +2954,7 @@ Define a certification protocol:
 
 ================================================================================================
 FILE: fvr/04-rebuild/00-rebuild-overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Rebuild overview
@@ -3092,6 +3030,7 @@ Rebuild is not a single finish line. Success is measured by:
 
 ================================================================================================
 FILE: fvr/04-rebuild/01-reconstruction-architecture.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Reconstruction architecture
@@ -3198,6 +3137,7 @@ See:
 
 ================================================================================================
 FILE: fvr/04-rebuild/02-reconstruction-olympics.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Reconstruction Olympics
@@ -3305,6 +3245,7 @@ It also links to conditional disbursement gates:
 
 ================================================================================================
 FILE: fvr/04-rebuild/03-peace-build-campus-governance.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Peace-build campus governance (optional model)
@@ -3392,6 +3333,7 @@ If this model is adopted, include a short “why this helps” rationale and an 
 
 ================================================================================================
 FILE: fvr/04-rebuild/04-economic-restart-plan.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Economic restart plan
@@ -3503,6 +3445,7 @@ This chapter becomes stronger with:
 
 ================================================================================================
 FILE: fvr/04-rebuild/05-accountability-transparency.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Accountability & transparency
@@ -3618,6 +3561,7 @@ When turning this into a real implementation plan, add:
 
 ================================================================================================
 FILE: fvr/05-governance-and-verification/00-governance-and-verification-overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Governance & verification overview
@@ -3666,6 +3610,7 @@ The aim is to replace “trust” with a structured loop that is resilient to sp
 
 ================================================================================================
 FILE: fvr/05-governance-and-verification/01-status-neutral-governance-model.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Status-neutral governance model
@@ -3764,6 +3709,7 @@ When implementing, provide:
 
 ================================================================================================
 FILE: fvr/05-governance-and-verification/02-verification-first-gates.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Verification-first gates
@@ -3911,6 +3857,7 @@ When the book is populated with full content, this page should include:
 
 ================================================================================================
 FILE: fvr/05-governance-and-verification/03-coordination-deconfliction-escalation.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Coordination, deconfliction & escalation
@@ -4036,6 +3983,7 @@ When implementing, include:
 
 ================================================================================================
 FILE: fvr/05-governance-and-verification/04-data-governance-privacy-security.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Data governance, privacy & security
@@ -4173,6 +4121,7 @@ Define a secure “audit room” model if needed:
 
 ================================================================================================
 FILE: fvr/06-legal-and-political-pathways/00-legal-and-political-overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Legal & political overview
@@ -4215,6 +4164,7 @@ See: [`06-legal-and-political-pathways/01-domestic-approvals-gate.md`](01-domest
 
 ================================================================================================
 FILE: fvr/06-legal-and-political-pathways/01-domestic-approvals-gate.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Domestic approvals gate
@@ -4310,6 +4260,7 @@ If approvals fail:
 
 ================================================================================================
 FILE: fvr/06-legal-and-political-pathways/02-international-legal-considerations.md
+AUTHORITY: canonical
 ================================================================================================
 
 # International legal considerations
@@ -4408,6 +4359,7 @@ This links to:
 
 ================================================================================================
 FILE: fvr/06-legal-and-political-pathways/03-justice-accountability-options.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Justice & accountability options
@@ -4524,6 +4476,7 @@ When populating this chapter with full content, include:
 
 ================================================================================================
 FILE: fvr/06-legal-and-political-pathways/04-treaty-structure-annexes.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Treaty structure & annexes
@@ -4623,6 +4576,7 @@ When populating this chapter with full content, include:
 
 ================================================================================================
 FILE: fvr/07-stakeholder-playbooks/00-stakeholder-playbooks-overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Stakeholder playbooks overview
@@ -4672,6 +4626,7 @@ When these are populated with full content, they should:
 
 ================================================================================================
 FILE: fvr/07-stakeholder-playbooks/01-ukraine-playbook.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Ukraine playbook
@@ -4768,6 +4723,7 @@ See:
 
 ================================================================================================
 FILE: fvr/07-stakeholder-playbooks/02-russia-playbook.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Russia playbook
@@ -4858,6 +4814,7 @@ Fallback paths should include:
 
 ================================================================================================
 FILE: fvr/07-stakeholder-playbooks/03-us-eu-playbook.md
+AUTHORITY: canonical
 ================================================================================================
 
 # US/EU playbook
@@ -4965,6 +4922,7 @@ Plan in advance for:
 
 ================================================================================================
 FILE: fvr/07-stakeholder-playbooks/04-un-osce-neutral-states-playbook.md
+AUTHORITY: canonical
 ================================================================================================
 
 # UN/OSCE/neutral states playbook
@@ -5061,6 +5019,7 @@ Plan for:
 
 ================================================================================================
 FILE: fvr/07-stakeholder-playbooks/05-civil-society-displaced-persons-playbook.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Civil society & displaced persons playbook
@@ -5164,6 +5123,7 @@ Advocate for clear responses to:
 
 ================================================================================================
 FILE: fvr/08-risks-critiques-mitigations/00-risks-overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Risks overview
@@ -5206,6 +5166,7 @@ Risk handling is linked to:
 
 ================================================================================================
 FILE: fvr/08-risks-critiques-mitigations/01-failure-modes.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Failure modes
@@ -5342,6 +5303,7 @@ Translate these failure modes into a structured table with owners and triggers:
 
 ================================================================================================
 FILE: fvr/08-risks-critiques-mitigations/02-risk-register.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Risk register
@@ -5493,6 +5455,7 @@ For each risk, record:
 
 ================================================================================================
 FILE: fvr/08-risks-critiques-mitigations/03-common-critiques-and-responses.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Common critiques and responses
@@ -5604,6 +5567,7 @@ As content is populated, add:
 
 ================================================================================================
 FILE: fvr/08-risks-critiques-mitigations/04-ethical-considerations.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Ethical considerations
@@ -5699,6 +5663,7 @@ When this chapter is fully populated, add:
 
 ================================================================================================
 FILE: fvr/09-implementation-toolkit/00-toolkit-overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Toolkit overview
@@ -5738,6 +5703,7 @@ As content is populated, keep toolkit items:
 
 ================================================================================================
 FILE: fvr/09-implementation-toolkit/01-operational-checklists-by-phase.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Operational checklists by phase
@@ -5856,6 +5822,7 @@ These checklists translate Freeze–Vote–Rebuild into “what must exist” li
 
 ================================================================================================
 FILE: fvr/09-implementation-toolkit/02-templates.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Templates
@@ -6034,6 +6001,7 @@ As the book is populated with real content, keep these templates:
 
 ================================================================================================
 FILE: fvr/09-implementation-toolkit/03-metrics-kpis.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Metrics & KPIs
@@ -6149,6 +6117,7 @@ When implementing, define for each KPI:
 
 ================================================================================================
 FILE: fvr/09-implementation-toolkit/04-comms-toolkit.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Comms toolkit
@@ -6217,6 +6186,7 @@ For deeper critique responses, see:
 
 ================================================================================================
 FILE: fvr/10-background-and-essays/00-background-overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Background & essays overview
@@ -6258,6 +6228,7 @@ As these pages are populated from source drafts:
 
 ================================================================================================
 FILE: fvr/10-background-and-essays/01-origins-and-evolution.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Origins and evolution
@@ -6339,6 +6310,7 @@ When this GitBook is finalized, this page should include:
 
 ================================================================================================
 FILE: fvr/10-background-and-essays/02-american-realism-essay.md
+AUTHORITY: canonical
 ================================================================================================
 
 # American realism essay (McCormick-style off-ramp)
@@ -6440,6 +6412,7 @@ Freeze–Vote–Rebuild is not a promise that politics will become easy. It is a
 
 ================================================================================================
 FILE: fvr/10-background-and-essays/03-projet-du-pape-francois-variant.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Projet du Pape François (variant framing)
@@ -6510,6 +6483,7 @@ When incorporating text from the French draft:
 
 ================================================================================================
 FILE: fvr/10-background-and-essays/04-comparables-historical-analogs.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Comparables and historical analogs
@@ -6627,6 +6601,7 @@ When this chapter is populated with concrete cases:
 
 ================================================================================================
 FILE: fvr/11-appendices/00-appendices-overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Appendices overview
@@ -6656,6 +6631,7 @@ Appendices are used for:
 
 ================================================================================================
 FILE: fvr/11-appendices/01-definitions.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Definitions
@@ -6743,6 +6719,7 @@ A tracking dimension used to detect repeated incidents or patterns over time, us
 
 ================================================================================================
 FILE: fvr/11-appendices/02-maps-and-scenarios.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Maps and scenarios (appendix)
@@ -6814,6 +6791,7 @@ When this appendix is populated, keep two versions:
 
 ================================================================================================
 FILE: fvr/11-appendices/03-decision-log.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Decision log
@@ -6915,6 +6893,7 @@ For each decision, record:
 
 ================================================================================================
 FILE: fvr/11-appendices/04-source-text-archive.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Source text archive
@@ -6978,6 +6957,7 @@ When adding new sources, include:
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Peace Frameworks for Ukraine
@@ -7022,6 +7002,7 @@ See:
 
 ================================================================================================
 FILE: SUMMARY.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Summary

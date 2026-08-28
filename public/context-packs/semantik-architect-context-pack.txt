@@ -7,87 +7,95 @@ working_tree_markdown: clean
 wiki_source_path: C:\mycode\SemantiK_Architect\SemantiK_Architect.wiki
 wiki_source_commit: cbc326182d54c35df74b244751714d19aa2e7869
 wiki_working_tree_markdown: clean
+policy_version: 2026-08-28.1
 repo_files: 42
 wiki_files: 25
-generated_at: 2026-08-25T11:30:41-04:00
+source_files: 67
+included_files: 67
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 403932
+authority_counts: {"canonical":67}
+generated_at: 2026-08-28T09:43:01-04:00
 files: 67
-content_sha256: 8b3eb919ace6c0a5133eedd6f15cacc3e26fe5e5c3115ff5aa0a02bbbe130c80
+content_sha256: 74815547a71fb90a7d3f34e7ea3cd02dbe44ebe9cc262437d6495528265b0978
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. data/raw_wikidata/README.md
-02. data/reports/lexicon_coverage_report.md
-03. docs/Technical-Reference/00-SETUP_AND_DEPLOYMENT.md
-04. docs/Technical-Reference/01-ENGINE_ARCHITECTURE.md
-05. docs/Technical-Reference/02-BUILD_SYSTEM.md
-06. docs/Technical-Reference/03-LEXICON_ARCHITECTURE.md
-07. docs/Technical-Reference/04-API_REFERENCE.md
-08. docs/Technical-Reference/05-AI_SERVICES.md
-09. docs/Technical-Reference/06-ADDING_A_LANGUAGE.md
-10. docs/Technical-Reference/07-LINGUISTICS_REFERENCE.md
-11. docs/Technical-Reference/08-DECISION_LOG.md
-12. docs/Technical-Reference/09-AI_CONTEXT_DUMP.md
-13. docs/Technical-Reference/10-GLOSSARY.md
-14. docs/Technical-Reference/11-CONTRIBUTING.md
-15. docs/Technical-Reference/12-TOOLS_DASHBOARD_AND_API.md
-16. docs/Technical-Reference/12-WIKIMEDIA_ALIGNMENT.md
-17. docs/Technical-Reference/15-SCHEMA_ALIGNMENT_PROTOCOL.md
-18. docs/Technical-Reference/16-DEV_TOOLS_AND_LAUNCHER.md
-19. docs/Technical-Reference/17-TOOLS_AND_TESTS_INVENTORY.md
-20. docs/Technical-Reference/A-SIMPLE-language_integration_workflow_reference.md
-21. docs/Technical-Reference/Abstract_Wiki_Architect_Build_and_Launch_System.md
-22. docs/Technical-Reference/ADR 005 Dual-Path Input Validation (Strict_vs_Prototype).md
-23. docs/Technical-Reference/ADR 006 Human-in-the-Loop Grammar Generation and GF Codex.md
-24. docs/Technical-Reference/ADR-001-GF_VERSION_STRATEGY.md
-25. docs/Technical-Reference/CURRENT_RUNTIME_STATUS.md
-26. docs/Technical-Reference/DECISION_LOG.md
-27. docs/Technical-Reference/ENGINE_INTERNALS.md
-28. docs/Technical-Reference/everything_matrix_orchestration.md
-29. docs/Technical-Reference/everythingMatrixUpgrade.md
-30. docs/Technical-Reference/GF WordNet Structural Map.md
-31. docs/Technical-Reference/GF_ARCHITECTURE.md
-32. docs/Technical-Reference/GF_Concepts.md
-33. docs/Technical-Reference/REFERENCE_LINGUISTICS.md
-34. docs/Technical-Reference/RESEARCH_GF_MAPPING.md
-35. docs/Technical-Reference/RGL_DISCOVERY_STRATEGY.md
-36. docs/Technical-Reference/TechnicalStatus23dec2025.md
-37. docs/Technical-Reference/UPGRADE v2-0 Omni-Upgrade Architecture Specification.md
-38. docs/Technical-Reference/UPGRADE v2-0 Variable and Configuration Ledger.md
-39. docs/Technical-Reference/UPGRADE_v2.1_SPECIFICATION.md
-40. LICENSE_EXCLUSION_RATIONALE.md
-41. README.md
-42. RELEASE.md
-43. wiki/_Footer.md
-44. wiki/_Sidebar.md
-45. wiki/Add-a-Language-High-Level.md
-46. wiki/API-Overview.md
-47. wiki/Changelog.md
-48. wiki/Conceptual-Flow-Meaning-to-Text.md
-49. wiki/Context.md
-50. wiki/Correctness-and-Verifiability-Gold-Standards-UD-Export-Judge.md
-51. wiki/Decisions.md
-52. wiki/Glossary.md
-53. wiki/Grammar.md
-54. wiki/Home.md
-55. wiki/Improve-a-Language-High-Level.md
-56. wiki/Inputs-Frames.md
-57. wiki/Inputs-Ninai.md
-58. wiki/Language-Coverage-Strategy-Tiers.md
-59. wiki/Lexicon.md
-60. wiki/Outputs-Text.md
-61. wiki/Outputs-UD.md
-62. wiki/Positioning-Ninai-Udiron-GF-UD-No-WMF-AW-Affiliation.md
-63. wiki/Renderer.md
-64. wiki/Repo-Map.md
-65. wiki/Roadmap.md
-66. wiki/Setup.md
-67. wiki/What-SemantiK-Architect-Is.md
+01. [canonical] data/raw_wikidata/README.md
+02. [canonical] data/reports/lexicon_coverage_report.md
+03. [canonical] docs/Technical-Reference/00-SETUP_AND_DEPLOYMENT.md
+04. [canonical] docs/Technical-Reference/01-ENGINE_ARCHITECTURE.md
+05. [canonical] docs/Technical-Reference/02-BUILD_SYSTEM.md
+06. [canonical] docs/Technical-Reference/03-LEXICON_ARCHITECTURE.md
+07. [canonical] docs/Technical-Reference/04-API_REFERENCE.md
+08. [canonical] docs/Technical-Reference/05-AI_SERVICES.md
+09. [canonical] docs/Technical-Reference/06-ADDING_A_LANGUAGE.md
+10. [canonical] docs/Technical-Reference/07-LINGUISTICS_REFERENCE.md
+11. [canonical] docs/Technical-Reference/08-DECISION_LOG.md
+12. [canonical] docs/Technical-Reference/09-AI_CONTEXT_DUMP.md
+13. [canonical] docs/Technical-Reference/10-GLOSSARY.md
+14. [canonical] docs/Technical-Reference/11-CONTRIBUTING.md
+15. [canonical] docs/Technical-Reference/12-TOOLS_DASHBOARD_AND_API.md
+16. [canonical] docs/Technical-Reference/12-WIKIMEDIA_ALIGNMENT.md
+17. [canonical] docs/Technical-Reference/15-SCHEMA_ALIGNMENT_PROTOCOL.md
+18. [canonical] docs/Technical-Reference/16-DEV_TOOLS_AND_LAUNCHER.md
+19. [canonical] docs/Technical-Reference/17-TOOLS_AND_TESTS_INVENTORY.md
+20. [canonical] docs/Technical-Reference/A-SIMPLE-language_integration_workflow_reference.md
+21. [canonical] docs/Technical-Reference/Abstract_Wiki_Architect_Build_and_Launch_System.md
+22. [canonical] docs/Technical-Reference/ADR 005 Dual-Path Input Validation (Strict_vs_Prototype).md
+23. [canonical] docs/Technical-Reference/ADR 006 Human-in-the-Loop Grammar Generation and GF Codex.md
+24. [canonical] docs/Technical-Reference/ADR-001-GF_VERSION_STRATEGY.md
+25. [canonical] docs/Technical-Reference/CURRENT_RUNTIME_STATUS.md
+26. [canonical] docs/Technical-Reference/DECISION_LOG.md
+27. [canonical] docs/Technical-Reference/ENGINE_INTERNALS.md
+28. [canonical] docs/Technical-Reference/everything_matrix_orchestration.md
+29. [canonical] docs/Technical-Reference/everythingMatrixUpgrade.md
+30. [canonical] docs/Technical-Reference/GF WordNet Structural Map.md
+31. [canonical] docs/Technical-Reference/GF_ARCHITECTURE.md
+32. [canonical] docs/Technical-Reference/GF_Concepts.md
+33. [canonical] docs/Technical-Reference/REFERENCE_LINGUISTICS.md
+34. [canonical] docs/Technical-Reference/RESEARCH_GF_MAPPING.md
+35. [canonical] docs/Technical-Reference/RGL_DISCOVERY_STRATEGY.md
+36. [canonical] docs/Technical-Reference/TechnicalStatus23dec2025.md
+37. [canonical] docs/Technical-Reference/UPGRADE v2-0 Omni-Upgrade Architecture Specification.md
+38. [canonical] docs/Technical-Reference/UPGRADE v2-0 Variable and Configuration Ledger.md
+39. [canonical] docs/Technical-Reference/UPGRADE_v2.1_SPECIFICATION.md
+40. [canonical] LICENSE_EXCLUSION_RATIONALE.md
+41. [canonical] README.md
+42. [canonical] RELEASE.md
+43. [canonical] wiki/_Footer.md
+44. [canonical] wiki/_Sidebar.md
+45. [canonical] wiki/Add-a-Language-High-Level.md
+46. [canonical] wiki/API-Overview.md
+47. [canonical] wiki/Changelog.md
+48. [canonical] wiki/Conceptual-Flow-Meaning-to-Text.md
+49. [canonical] wiki/Context.md
+50. [canonical] wiki/Correctness-and-Verifiability-Gold-Standards-UD-Export-Judge.md
+51. [canonical] wiki/Decisions.md
+52. [canonical] wiki/Glossary.md
+53. [canonical] wiki/Grammar.md
+54. [canonical] wiki/Home.md
+55. [canonical] wiki/Improve-a-Language-High-Level.md
+56. [canonical] wiki/Inputs-Frames.md
+57. [canonical] wiki/Inputs-Ninai.md
+58. [canonical] wiki/Language-Coverage-Strategy-Tiers.md
+59. [canonical] wiki/Lexicon.md
+60. [canonical] wiki/Outputs-Text.md
+61. [canonical] wiki/Outputs-UD.md
+62. [canonical] wiki/Positioning-Ninai-Udiron-GF-UD-No-WMF-AW-Affiliation.md
+63. [canonical] wiki/Renderer.md
+64. [canonical] wiki/Repo-Map.md
+65. [canonical] wiki/Roadmap.md
+66. [canonical] wiki/Setup.md
+67. [canonical] wiki/What-SemantiK-Architect-Is.md
 
 
 ================================================================================================
 FILE: data/raw_wikidata/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # data/raw_wikidata/
@@ -147,6 +155,7 @@ command or filtering pipeline instead of the file itself.
 
 ================================================================================================
 FILE: data/reports/lexicon_coverage_report.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Lexicon Coverage Report
@@ -178,6 +187,7 @@ FILE: data/reports/lexicon_coverage_report.md
 
 ================================================================================================
 FILE: docs/Technical-Reference/00-SETUP_AND_DEPLOYMENT.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 🛠️ Setup & Deployment Guide
@@ -663,6 +673,7 @@ python -m uvicorn app.adapters.api.main:create_app --factory --host 0.0.0.0 --po
 
 ================================================================================================
 FILE: docs/Technical-Reference/01-ENGINE_ARCHITECTURE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 🏛️ Engine Architecture & Internals
@@ -1162,6 +1173,7 @@ It is best understood as a **planner-first, construction-centered, backend-flexi
 
 ================================================================================================
 FILE: docs/Technical-Reference/02-BUILD_SYSTEM.md
+AUTHORITY: canonical
 ================================================================================================
 
 
@@ -1383,6 +1395,7 @@ python3 -c "import pgf; print(pgf.readPGF('semantik_architect.pgf').languages.ke
 
 ================================================================================================
 FILE: docs/Technical-Reference/03-LEXICON_ARCHITECTURE.md
+AUTHORITY: canonical
 ================================================================================================
 
 Here is the updated **`docs/03-LEXICON_ARCHITECTURE.md`**.
@@ -1579,6 +1592,7 @@ If the API returns `422 Unprocessable Entity`:
 
 ================================================================================================
 FILE: docs/Technical-Reference/04-API_REFERENCE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 🔌 API Reference & Semantic Frames
@@ -2103,6 +2117,7 @@ The authoritative public generation contract is:
 
 ================================================================================================
 FILE: docs/Technical-Reference/05-AI_SERVICES.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 🧠 AI Services & Autonomous Agents
@@ -2262,6 +2277,7 @@ The `client.py` module implements a robust **Exponential Backoff** strategy to h
 
 ================================================================================================
 FILE: docs/Technical-Reference/06-ADDING_A_LANGUAGE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 🌍 Adding a New Language
@@ -2479,6 +2495,7 @@ curl -X POST "http://localhost:8000/api/v1/generate/ha" \
 
 ================================================================================================
 FILE: docs/Technical-Reference/07-LINGUISTICS_REFERENCE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 🎓 Linguistics Reference & Theory
@@ -2618,6 +2635,7 @@ This document confirms that the SemantiK Architect v2.0 is a **Hybrid Neuro-Symb
 
 ================================================================================================
 FILE: docs/Technical-Reference/08-DECISION_LOG.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 📜 Decision Log & Architecture Records
@@ -2772,6 +2790,7 @@ Together, these choices create a system that is **scalable (300+ languages), int
 
 ================================================================================================
 FILE: docs/Technical-Reference/09-AI_CONTEXT_DUMP.md
+AUTHORITY: canonical
 ================================================================================================
 
 # SYSTEM CONTEXT: SemantiK Architect v2.0 ("Omni-Upgrade")
@@ -2865,6 +2884,7 @@ FILE: docs/Technical-Reference/09-AI_CONTEXT_DUMP.md
 
 ================================================================================================
 FILE: docs/Technical-Reference/10-GLOSSARY.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 📖 Project Glossary & Terminology
@@ -2948,6 +2968,7 @@ This document defines the specialized terminology used across the project. It br
 
 ================================================================================================
 FILE: docs/Technical-Reference/11-CONTRIBUTING.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 🤝 Contributing to SemantiK Architect v2.0
@@ -3055,6 +3076,7 @@ If this doesn't happen, check that your Docker volumes are correctly mounted to 
 
 ================================================================================================
 FILE: docs/Technical-Reference/12-TOOLS_DASHBOARD_AND_API.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 🧰 Tools Dashboard & API
@@ -3773,6 +3795,7 @@ This keeps the page safe, scalable, and understandable even as the tool inventor
 
 ================================================================================================
 FILE: docs/Technical-Reference/12-WIKIMEDIA_ALIGNMENT.md
+AUTHORITY: canonical
 ================================================================================================
 
 
@@ -3890,6 +3913,7 @@ We invite the community to review `docs/01-ENGINE_ARCHITECTURE.md` for a deep di
 
 ================================================================================================
 FILE: docs/Technical-Reference/15-SCHEMA_ALIGNMENT_PROTOCOL.md
+AUTHORITY: canonical
 ================================================================================================
 
 Here is the updated **`docs/15-SCHEMA_ALIGNMENT_PROTOCOL.md`**.
@@ -4021,6 +4045,7 @@ To automate this, we will eventually implement an **Abstract Generator** script 
 
 ================================================================================================
 FILE: docs/Technical-Reference/16-DEV_TOOLS_AND_LAUNCHER.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 🛠️ Developer Tools & Unified Launch System
@@ -4141,6 +4166,7 @@ The developer interfaces above rely on the following infrastructure:
 
 ================================================================================================
 FILE: docs/Technical-Reference/17-TOOLS_AND_TESTS_INVENTORY.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 📚 The Complete Tools & Tests Inventory (Final)
@@ -4751,6 +4777,7 @@ The system must fail EN/FR acceptance when:
 
 ================================================================================================
 FILE: docs/Technical-Reference/A-SIMPLE-language_integration_workflow_reference.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Language Integration Workflow**
@@ -4871,6 +4898,7 @@ For stronger acceptance on core constructions, add regression and judge coverage
 
 ================================================================================================
 FILE: docs/Technical-Reference/Abstract_Wiki_Architect_Build_and_Launch_System.md
+AUTHORITY: canonical
 ================================================================================================
 
 
@@ -4988,6 +5016,7 @@ Once Level 2 finishes successfully, Level 1 spawns these persistent processes in
 
 ================================================================================================
 FILE: docs/Technical-Reference/ADR 005 Dual-Path Input Validation (Strict_vs_Prototype).md
+AUTHORITY: canonical
 ================================================================================================
 
 # ADR 005: Dual-Path Input Validation (Strict vs. Prototype)
@@ -5089,6 +5118,7 @@ To support the Prototype Path, we define a recursive schema that mimics the *str
 
 ================================================================================================
 FILE: docs/Technical-Reference/ADR 006 Human-in-the-Loop Grammar Generation and GF Codex.md
+AUTHORITY: canonical
 ================================================================================================
 
 # ADR 006: Human-in-the-Loop (HITL) Grammar Generation & GF Codex
@@ -5152,6 +5182,7 @@ To ensure high-quality code on the first attempt, requests to the LLM will no lo
 
 ================================================================================================
 FILE: docs/Technical-Reference/ADR-001-GF_VERSION_STRATEGY.md
+AUTHORITY: canonical
 ================================================================================================
 
 # GF Architecture & Developer Guide
@@ -5399,6 +5430,7 @@ If you must do a manual clean, focus on compiled artifacts (`*.gfo`, `*.pgf`) an
 
 ================================================================================================
 FILE: docs/Technical-Reference/CURRENT_RUNTIME_STATUS.md
+AUTHORITY: canonical
 ================================================================================================
 
 # CURRENT RUNTIME STATUS
@@ -5733,6 +5765,7 @@ Conflict rule:
 
 ================================================================================================
 FILE: docs/Technical-Reference/DECISION_LOG.md
+AUTHORITY: canonical
 ================================================================================================
 
 # DESIGN_DECISIONS.md  
@@ -6060,6 +6093,7 @@ Together, these choices are intended to make SemantiK Architect:
 
 ================================================================================================
 FILE: docs/Technical-Reference/ENGINE_INTERNALS.md
+AUTHORITY: canonical
 ================================================================================================
 
 Here is the formal documentation for the **SemantiK Architect: Multilingual Engine V2**.
@@ -6195,6 +6229,7 @@ C:\MyCode\SemantiK_Architect\Semantik_architect\
 
 ================================================================================================
 FILE: docs/Technical-Reference/everything_matrix_orchestration.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Everything Matrix Orchestration
@@ -6472,6 +6507,7 @@ python tools/everything_matrix/build_index.py --verbose
 
 ================================================================================================
 FILE: docs/Technical-Reference/everythingMatrixUpgrade.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 🧠 The Everything Matrix v2.1: Health & Decision Specification
@@ -6632,6 +6668,7 @@ The Worker (`app/workers/worker.py`) checks `verdict.runnable` before initializa
 
 ================================================================================================
 FILE: docs/Technical-Reference/GF WordNet Structural Map.md
+AUTHORITY: canonical
 ================================================================================================
 
 
@@ -6743,6 +6780,7 @@ The `WordNet.gf` file contains two types of IDs in the comments:
 
 ================================================================================================
 FILE: docs/Technical-Reference/GF_ARCHITECTURE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # GF Architecture & Developer Guide
@@ -6970,6 +7008,7 @@ If you must do a manual clean, focus on compiled artifacts (`*.gfo`, `*.pgf`) an
 
 ================================================================================================
 FILE: docs/Technical-Reference/GF_Concepts.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Grammatical Framework (GF): Core Concepts & Compilation
@@ -7061,6 +7100,7 @@ EOF
 
 ================================================================================================
 FILE: docs/Technical-Reference/REFERENCE_LINGUISTICS.md
+AUTHORITY: canonical
 ================================================================================================
 
 # THEORY_NOTES.md
@@ -7867,6 +7907,7 @@ so the system can evolve without losing its conceptual center.
 
 ================================================================================================
 FILE: docs/Technical-Reference/RESEARCH_GF_MAPPING.md
+AUTHORITY: canonical
 ================================================================================================
 
 # GF Integration Design
@@ -8766,6 +8807,7 @@ The main design correction relative to the older draft is explicit:
 
 ================================================================================================
 FILE: docs/Technical-Reference/RGL_DISCOVERY_STRATEGY.md
+AUTHORITY: canonical
 ================================================================================================
 
 
@@ -8945,6 +8987,7 @@ Expected layout:
 
 ================================================================================================
 FILE: docs/Technical-Reference/TechnicalStatus23dec2025.md
+AUTHORITY: canonical
 ================================================================================================
 
 ### 📋 Technical Reality Check: SemantiK Architect (v2.0)
@@ -9033,6 +9076,7 @@ You have built a **Ferrari Engine** (GF/Python) inside a **Professional Garage**
 
 ================================================================================================
 FILE: docs/Technical-Reference/UPGRADE v2-0 Omni-Upgrade Architecture Specification.md
+AUTHORITY: canonical
 ================================================================================================
 
 Here is the **Exhaustive v2.0 "Omni-Upgrade" Architecture Specification**.
@@ -9349,6 +9393,7 @@ To execute this "Omni-Upgrade" without breaking the build, follow this strict or
 
 ================================================================================================
 FILE: docs/Technical-Reference/UPGRADE v2-0 Variable and Configuration Ledger.md
+AUTHORITY: canonical
 ================================================================================================
 
 Here is the final, **Exhaustive v2.0 Variable & Configuration Ledger**.
@@ -9597,6 +9642,7 @@ Paths to the validation datasets ingested from Udiron.
 
 ================================================================================================
 FILE: docs/Technical-Reference/UPGRADE_v2.1_SPECIFICATION.md
+AUTHORITY: canonical
 ================================================================================================
 
 # SemantiK Architect: v2.1 Upgrade Specification
@@ -9775,6 +9821,7 @@ python3 -m uvicorn app.main:app --reload
 
 ================================================================================================
 FILE: LICENSE_EXCLUSION_RATIONALE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Exclusion Rationale (WMF / Denny Vrandečić)
@@ -9825,6 +9872,7 @@ If you believe you are incorrectly categorized as an Excluded Party, or you want
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Semantik Architect
@@ -10175,6 +10223,7 @@ Current repository direction:
 
 ================================================================================================
 FILE: RELEASE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # RGL releases
@@ -10191,6 +10240,7 @@ Releases are Git tagged `YYYYMMDD`, and for each release a binary package (as `.
 
 ================================================================================================
 FILE: wiki/_Footer.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -10205,6 +10255,7 @@ FILE: wiki/_Footer.md
 
 ================================================================================================
 FILE: wiki/_Sidebar.md
+AUTHORITY: canonical
 ================================================================================================
 
 # SemantiK Architect
@@ -10247,6 +10298,7 @@ FILE: wiki/_Sidebar.md
 
 ================================================================================================
 FILE: wiki/Add-a-Language-High-Level.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 15. Add a Language (High Level)
@@ -10337,6 +10389,7 @@ A new language is “added” when:
 
 ================================================================================================
 FILE: wiki/API-Overview.md
+AUTHORITY: canonical
 ================================================================================================
 
 # API Overview
@@ -10397,6 +10450,7 @@ Tools are executed via an **allowlisted registry** (no arbitrary command executi
 
 ================================================================================================
 FILE: wiki/Changelog.md
+AUTHORITY: canonical
 ================================================================================================
 
 ## 22. Changelog
@@ -10430,6 +10484,7 @@ FILE: wiki/Changelog.md
 
 ================================================================================================
 FILE: wiki/Conceptual-Flow-Meaning-to-Text.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 4. Conceptual Flow: Meaning → Text
@@ -10476,6 +10531,7 @@ SemantiK Architect is **generation-first**: it does not “interpret” text. It
 
 ================================================================================================
 FILE: wiki/Context.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Context
@@ -10531,6 +10587,7 @@ The docs describe future upgrades toward more powerful discourse models for anap
 
 ================================================================================================
 FILE: wiki/Correctness-and-Verifiability-Gold-Standards-UD-Export-Judge.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 10. Correctness & Verifiability (Gold Standards, UD Export, Judge)
@@ -10573,6 +10630,7 @@ The purpose of this page in the wiki is to make one idea clear: **SemantiK Archi
 
 ================================================================================================
 FILE: wiki/Decisions.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 20. Decisions
@@ -10635,6 +10693,7 @@ This keeps SemantiK Architect understandable without turning the wiki into low-l
 
 ================================================================================================
 FILE: wiki/Glossary.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Glossary (SemantiK Architect)
@@ -10731,6 +10790,7 @@ FILE: wiki/Glossary.md
 
 ================================================================================================
 FILE: wiki/Grammar.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Grammar
@@ -10814,6 +10874,7 @@ It is **not** a build guide or an API reference.
 
 ================================================================================================
 FILE: wiki/Home.md
+AUTHORITY: canonical
 ================================================================================================
 
 # SemantiK Architect
@@ -10886,6 +10947,7 @@ If you’re here to implement or integrate quickly, start at: [[API Overview|API
 
 ================================================================================================
 FILE: wiki/Improve-a-Language-High-Level.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Improve a Language (High Level)
@@ -11020,6 +11082,7 @@ Tier 3 gets you coverage fast, Tier 2 improves naturalness, and QA makes it dura
 
 ================================================================================================
 FILE: wiki/Inputs-Frames.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Inputs: Frames
@@ -11083,6 +11146,7 @@ See also:
 
 ================================================================================================
 FILE: wiki/Inputs-Ninai.md
+AUTHORITY: canonical
 ================================================================================================
 
 ## 12. Inputs: Ninai
@@ -11114,6 +11178,7 @@ SemantiK Architect uses Ninai as its **interoperability input**: a way to accept
 
 ================================================================================================
 FILE: wiki/Language-Coverage-Strategy-Tiers.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 9. Language Coverage Strategy (Tiers)
@@ -11152,6 +11217,7 @@ This is also the meaning of “Hybrid Factory”: combining expert grammars (Tie
 
 ================================================================================================
 FILE: wiki/Lexicon.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 5. Lexicon
@@ -11189,6 +11255,7 @@ SemantiK Architect treats Lexicon coverage as a measurable readiness signal (“
 
 ================================================================================================
 FILE: wiki/Outputs-Text.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Outputs: Text
@@ -11227,6 +11294,7 @@ Text is the “publishable” output; UD/CoNLL-U is an **optional companion outp
 
 ================================================================================================
 FILE: wiki/Outputs-UD.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 14. Outputs: UD
@@ -11258,6 +11326,7 @@ SemantiK Architect can optionally output **Universal Dependencies (UD)** as a **
 
 ================================================================================================
 FILE: wiki/Positioning-Ninai-Udiron-GF-UD-No-WMF-AW-Affiliation.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Positioning: Ninai, Udiron, GF, UD (No WMF/AW Affiliation)
@@ -11310,6 +11379,7 @@ SemantiK Architect’s unique responsibility is the **end-to-end orchestration**
 
 ================================================================================================
 FILE: wiki/Renderer.md
+AUTHORITY: canonical
 ================================================================================================
 
 ## 7. Renderer
@@ -11347,6 +11417,7 @@ Separating the Renderer makes SemantiK Architect easier to scale:
 
 ================================================================================================
 FILE: wiki/Repo-Map.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Repo Map
@@ -11406,6 +11477,7 @@ This map lists the **main repo areas you’ll touch most**, grouped by purpose (
 
 ================================================================================================
 FILE: wiki/Roadmap.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Roadmap — SemantiK Architect
@@ -11453,6 +11525,7 @@ FILE: wiki/Roadmap.md
 
 ================================================================================================
 FILE: wiki/Setup.md
+AUTHORITY: canonical
 ================================================================================================
 
 ## 17. Setup
@@ -11514,6 +11587,7 @@ The docs include two end-to-end checks:
 
 ================================================================================================
 FILE: wiki/What-SemantiK-Architect-Is.md
+AUTHORITY: canonical
 ================================================================================================
 
 ## 2. What SemantiK Architect Is

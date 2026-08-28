@@ -1,36 +1,64 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-28T07:34:16-04:00",
+  "schemaVersion": 2,
+  "policyVersion": "2026-08-28.1",
+  "generatedAt": "2026-08-28T09:46:48-04:00",
   "packs": [
     {
       "slug": "ame-artificielle",
       "file": "ame-artificielle-context-pack.txt",
       "repository": "Rejean-McCormick/Ame-Artificielle",
       "sourceCommit": "43b8d27236ecfe19ab4d811bbee9aa1987db662a",
-      "generatedAt": "2026-08-25T11:30:48-04:00",
+      "generatedAt": "2026-08-28T09:43:07-04:00",
       "fileCount": 32,
-      "sha256": "ab13a167ae0fddd003cf751ea328e33c0eef4c843ac686899f7fcb1d305bc2aa",
-      "category": "system"
+      "sha256": "d6fd1f5a8434ba41ebe21dff288b25123914fee920eef630d114511ac84a9a70",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 32,
+      "includedFileCount": 32,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 95388,
+      "authorityCounts": {
+        "canonical": 32
+      }
     },
     {
       "slug": "book-civilizational-coherence",
       "file": "book-civilizational-coherence-context-pack.txt",
       "repository": "Rejean-McCormick/Book-Civilizational_Coherence",
       "sourceCommit": "0402d6e74ed3e5feb217d20c496c78c93a2fcb9e",
-      "generatedAt": "2026-08-25T09:32:54-04:00",
-      "fileCount": 132,
-      "sha256": "f75a6925d7499f93ffdbd9ee279853db7b14f0021a0d1783cac250f3d9438d12",
-      "category": "system"
+      "generatedAt": "2026-08-28T09:43:15-04:00",
+      "fileCount": 130,
+      "sha256": "695e3330f731b627847969b48cc2e1459ebf1be7b169ca83db716e3c5cd7fab2",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 132,
+      "includedFileCount": 130,
+      "excludedFileCount": 2,
+      "duplicateFileCount": 2,
+      "contentBytes": 3560355,
+      "authorityCounts": {
+        "canonical": 130
+      }
     },
     {
       "slug": "freeze-vote-rebuild-operational-peace-framework",
       "file": "freeze-vote-rebuild-operational-peace-framework-context-pack.txt",
       "repository": "Rejean-McCormick/Freeze-Vote-Rebuild_Operational-Peace-Framework",
       "sourceCommit": "2b044fa31b21200ba98c09af4fd3b22ad4a4bc3b",
-      "generatedAt": "2026-08-25T09:32:54-04:00",
-      "fileCount": 75,
-      "sha256": "3bd1060f7d4adae9a8ed3e622c43588b88686b37cfcb922fb8b4f5623331ed16",
-      "category": "system"
+      "generatedAt": "2026-08-28T09:43:14-04:00",
+      "fileCount": 74,
+      "sha256": "40a594be54d37be7561bc3ee0c2dc86c6d4084c957f8d6aaec3f6f16b30d4095",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 75,
+      "includedFileCount": 74,
+      "excludedFileCount": 1,
+      "duplicateFileCount": 1,
+      "contentBytes": 293065,
+      "authorityCounts": {
+        "canonical": 74
+      }
     },
     {
       "slug": "grammatical-framework",
@@ -40,187 +68,356 @@
       "generatedAt": "2026-03-01T15:30:58.042826",
       "fileCount": null,
       "sha256": "e9d9aa07ca4a6a7c43731c2dd2c89064588213249c48f9b69bab07d05d798551",
-      "category": "general"
+      "category": "general",
+      "policyVersion": null,
+      "sourceFileCount": null,
+      "includedFileCount": null,
+      "excludedFileCount": null,
+      "duplicateFileCount": null,
+      "contentBytes": null,
+      "authorityCounts": {}
     },
     {
       "slug": "k-port",
       "file": "k-port-context-pack.txt",
       "repository": "Rejean-McCormick/K-Port",
       "sourceCommit": "114ad695213a83ad2c38aa09f3ff4b4a7d46d9cb",
-      "generatedAt": "2026-08-28T07:34:10-04:00",
+      "generatedAt": "2026-08-28T09:43:13-04:00",
       "fileCount": 13,
-      "sha256": "7fa2f7ac86017a7420854877e586f9a705a3caa67a66daca7d3e3ca00b6531b8",
-      "category": "system"
+      "sha256": "a56e5c3dfb2323d573e57c13c92e28cae9460f68be2f5c7bd83f019a047ad10f",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 13,
+      "includedFileCount": 13,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 221552,
+      "authorityCounts": {
+        "canonical": 13
+      }
     },
     {
       "slug": "koa-digital-ecosystem",
       "file": "koa-digital-ecosystem-context-pack.txt",
       "repository": "Rejean-McCormick/kOA_Digital_Ecosystem",
       "sourceCommit": "0ea910d8eeb38b962f0de8e7deefc3327cd770e6",
-      "generatedAt": "2026-08-25T11:30:58-04:00",
+      "generatedAt": "2026-08-28T09:43:17-04:00",
       "fileCount": 100,
-      "sha256": "c0827b9e2ce72141fa7b1df341e94df7406132d58311442a4d1948b7bac34c88",
-      "category": "system"
+      "sha256": "7331d7781a753a4216dbfe5ccd52674119d8fc01e86bd1521c7072cd7bcf4daf",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 100,
+      "includedFileCount": 100,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 603988,
+      "authorityCounts": {
+        "canonical": 100
+      }
     },
     {
       "slug": "koa-linux",
       "file": "koa-linux-context-pack.txt",
       "repository": "Rejean-McCormick/kOA-Linux",
-      "sourceCommit": "705600db272ef7e3efed4975cda319ea5bb8a8e6",
-      "generatedAt": "2026-08-28T07:33:55-04:00",
-      "fileCount": 438,
-      "sha256": "38e3daf26265d3db99240da1309ad25cea4fc8d9054a93174289dd956ed95e37",
-      "category": "system"
+      "sourceCommit": "35432427fd6053fddef26f0f5055e2870f63bc3b",
+      "generatedAt": "2026-08-28T09:46:30-04:00",
+      "fileCount": 427,
+      "sha256": "d7dcd193d05ef1dd0a36d6169669b4889ddeb17c572bc6ea7e14d07b1f8b82f6",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 438,
+      "includedFileCount": 427,
+      "excludedFileCount": 11,
+      "duplicateFileCount": 0,
+      "contentBytes": 9513835,
+      "authorityCounts": {
+        "canonical": 427
+      }
     },
     {
       "slug": "konductor",
       "file": "konductor-context-pack.txt",
       "repository": "Rejean-McCormick/Konductor",
       "sourceCommit": "7de42a605bccb05fa01ba743ca67759131d61630",
-      "generatedAt": "2026-08-25T09:32:52-04:00",
+      "generatedAt": "2026-08-28T09:43:11-04:00",
       "fileCount": 4,
-      "sha256": "5d480bf47f644a38bab7031c2ee9934156b7bf40654fb61bc41848e24a9a641a",
-      "category": "system"
+      "sha256": "d24334973c3c26fed28f6e5cbfa4e6c4428a9c0ff4fa9fe7b1cdc82cca43ae1b",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 4,
+      "includedFileCount": 4,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 162232,
+      "authorityCounts": {
+        "canonical": 4
+      }
     },
     {
       "slug": "konnaxion-ashoka-systems-change-dossier",
       "file": "konnaxion-ashoka-systems-change-dossier-context-pack.txt",
       "repository": "Rejean-McCormick/konnaxion-ashoka-systems-change-dossier",
       "sourceCommit": "1f31769e0f5f484bb7a439382b895d28d9595a9d",
-      "generatedAt": "2026-08-25T09:32:55-04:00",
+      "generatedAt": "2026-08-28T09:43:15-04:00",
       "fileCount": 10,
-      "sha256": "ac863a302e6cf8946864f34014fef0d0bb0412d6413327089fd4caf7fac42a10",
-      "category": "system"
+      "sha256": "36e243eedd333e00a93239fad0994e79a411203273b67a2262ea9c305f86f387",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 10,
+      "includedFileCount": 10,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 31152,
+      "authorityCounts": {
+        "canonical": 10
+      }
     },
     {
       "slug": "konnaxion-capsule-manager",
       "file": "konnaxion-capsule-manager-context-pack.txt",
       "repository": "Rejean-McCormick/Konnaxion_Capsule_Manager",
       "sourceCommit": "453bbb50e3bca6eae3a12af0271acd330de8ff73",
-      "generatedAt": "2026-08-25T09:32:52-04:00",
+      "generatedAt": "2026-08-28T09:43:10-04:00",
       "fileCount": 24,
-      "sha256": "e1ccb5903d8bbac54eda771b11c2ffb6108f6fb46934a5bb6cc075c51295f4a2",
-      "category": "system"
+      "sha256": "1513f06b1de12754ebb8efe55ad74539907582173aade30e91b087a80bac99fb",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 24,
+      "includedFileCount": 24,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 689464,
+      "authorityCounts": {
+        "canonical": 24
+      }
     },
     {
       "slug": "konnaxion",
       "file": "konnaxion-context-pack.txt",
       "repository": "Rejean-McCormick/Konnaxion",
       "sourceCommit": "6ff7449e08a6e334b41102a6394468f0e57caa94",
-      "generatedAt": "2026-08-28T07:33:53-04:00",
-      "fileCount": 171,
-      "sha256": "d65ec355459ec2b86ab777f0d1894da638909dd629e7246f092f140f7fd9b9e1",
-      "category": "system"
+      "generatedAt": "2026-08-28T09:42:58-04:00",
+      "fileCount": 109,
+      "sha256": "341cbfc01dcbd18b64307be593331d04937b6bf0e0685bd3a2f1e305649fa605",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 171,
+      "includedFileCount": 109,
+      "excludedFileCount": 62,
+      "duplicateFileCount": 0,
+      "contentBytes": 1632251,
+      "authorityCounts": {
+        "canonical": 109
+      }
     },
     {
       "slug": "kristal-farms",
       "file": "kristal-farms-context-pack.txt",
       "repository": "Rejean-McCormick/Kristal_Farms",
       "sourceCommit": "e0b64f9416913d1779c3569402b3d55ff0d6d7aa",
-      "generatedAt": "2026-08-25T11:30:49-04:00",
-      "fileCount": 206,
-      "sha256": "f6bd492d131b5fc3c82599954f90046ca50bab2f8af52ca2066ac4c80293d4c1",
-      "category": "system"
+      "generatedAt": "2026-08-28T09:43:08-04:00",
+      "fileCount": 159,
+      "sha256": "16e68df0621aad5a4b02060dd881aa2980e095e3d0ae8bfab64eb32b5852992f",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 206,
+      "includedFileCount": 159,
+      "excludedFileCount": 47,
+      "duplicateFileCount": 33,
+      "contentBytes": 2496199,
+      "authorityCounts": {
+        "canonical": 159
+      }
     },
     {
       "slug": "kristal-framework",
       "file": "kristal-framework-context-pack.txt",
       "repository": "Rejean-McCormick/kristal-framework",
       "sourceCommit": "bad7346b387ad61fa141ecba0031c5859c6b15d0",
-      "generatedAt": "2026-08-25T11:30:50-04:00",
+      "generatedAt": "2026-08-28T09:43:09-04:00",
       "fileCount": 72,
-      "sha256": "4ecc0e215c30e69bf7c5756dcf78b140f45d83f8428155f211b3cbcaf99020fd",
-      "category": "system"
+      "sha256": "db87d0c1d4f3eaf859f2a66a1cd99fdd4640290838e84a6420132076df17ef05",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 72,
+      "includedFileCount": 72,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 955443,
+      "authorityCounts": {
+        "canonical": 72
+      }
     },
     {
       "slug": "levelupdiag-koa-linux",
       "file": "levelupdiag-koa-linux-context-pack.txt",
       "repository": "Rejean-McCormick/LevelUpDiag-Koa-Linux",
-      "sourceCommit": "eebd32b2a4812a78bc961d1082a8f093f8092dbb",
-      "generatedAt": "2026-08-25T09:32:53-04:00",
+      "sourceCommit": "8d7253072968576fde6b20dc37fdc8b59618b70b",
+      "generatedAt": "2026-08-28T09:43:12-04:00",
       "fileCount": 21,
-      "sha256": "6d828ca0ed594c6ada3066450b854cbdb179fdd861a9de9910489db25006a9fb",
-      "category": "system"
+      "sha256": "900dc624ed892c4035a4b21d941f87a7d363e4561ae3f5a8db47ab03f42e85f2",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 21,
+      "includedFileCount": 21,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 50378,
+      "authorityCounts": {
+        "canonical": 21
+      }
     },
     {
       "slug": "medikristal",
       "file": "medikristal-context-pack.txt",
       "repository": "Rejean-McCormick/MediKristal",
       "sourceCommit": "245f5a3007d538aea65e0fba0020ee8178079353",
-      "generatedAt": "2026-08-25T11:30:47-04:00",
+      "generatedAt": "2026-08-28T09:43:06-04:00",
       "fileCount": 22,
-      "sha256": "72444416bbcd87cff261ba49c200b102ef77b02ae369ff8f58421c4ad58e4d3b",
-      "category": "system"
+      "sha256": "bfb995736107c998a087c569d7aea6a3280715bf1c9f08781755a1214df9f6d4",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 22,
+      "includedFileCount": 22,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 90031,
+      "authorityCounts": {
+        "canonical": 22
+      }
     },
     {
       "slug": "omni-wiki-rejean-king-klown",
       "file": "omni-wiki-rejean-king-klown-context-pack.txt",
       "repository": "Rejean-McCormick/Omni-Wiki-Rejean-King-Klown",
       "sourceCommit": "53378e294f3428153de8f7c885210a4bf56352ad",
-      "generatedAt": "2026-08-25T09:32:50-04:00",
-      "fileCount": 134,
-      "sha256": "3f6eea3fdf7312bb263fdfafad9ad0a5e26869ae05608974fa2022bd694c8277",
-      "category": "system"
+      "generatedAt": "2026-08-28T09:43:06-04:00",
+      "fileCount": 96,
+      "sha256": "ef8b0480e65bd13461d411741dfeaa406af22645ccbf78cc948b5a0146b66727",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 134,
+      "includedFileCount": 96,
+      "excludedFileCount": 38,
+      "duplicateFileCount": 38,
+      "contentBytes": 499904,
+      "authorityCounts": {
+        "canonical": 96
+      }
     },
     {
       "slug": "orgo",
       "file": "orgo-context-pack.txt",
       "repository": "Rejean-McCormick/Orgo",
       "sourceCommit": "2b13ac5c28e04aff107ade9bf76d476467c56ad0",
-      "generatedAt": "2026-08-28T07:34:02-04:00",
-      "fileCount": 54,
-      "sha256": "db6f299c9cb6be1d8b948d9b5496885e3fee53aafc5ad7c9cf31f8517caf2f15",
-      "category": "system"
+      "generatedAt": "2026-08-28T09:43:05-04:00",
+      "fileCount": 48,
+      "sha256": "346ed6321ee339ccaf61f3ac24ed6b25e9e1fa70cfe922e413f5052a56b30ec6",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 54,
+      "includedFileCount": 48,
+      "excludedFileCount": 6,
+      "duplicateFileCount": 1,
+      "contentBytes": 376305,
+      "authorityCounts": {
+        "canonical": 48
+      }
     },
     {
       "slug": "partners-for-public-good-pressure-test-koali",
       "file": "partners-for-public-good-pressure-test-koali-context-pack.txt",
       "repository": "Rejean-McCormick/partners-for-public-good_pressure-test-koali",
       "sourceCommit": "edfc5e843aa5e92179925c07182854d1d1f5d485",
-      "generatedAt": "2026-08-25T09:32:49-04:00",
+      "generatedAt": "2026-08-28T09:43:03-04:00",
       "fileCount": 7,
-      "sha256": "b3bfb860ae25f6266ae799a8bd04c7a0d13692020facd602d70bf21df0b1ffbf",
-      "category": "system"
+      "sha256": "29e869c40fcd3812eebbdad195834629edbf9d3da1b23e9a8ef08dc7476d7398",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 7,
+      "includedFileCount": 7,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 44777,
+      "authorityCounts": {
+        "canonical": 7
+      }
     },
     {
       "slug": "projet-orphee-walk-straight",
       "file": "projet-orphee-walk-straight-context-pack.txt",
       "repository": "Rejean-McCormick/Projet_ORPHEE-Walk_Straight",
       "sourceCommit": "2e36d3ef8e197fd39849256defe5ca63f15db5df",
-      "generatedAt": "2026-08-25T09:32:50-04:00",
+      "generatedAt": "2026-08-28T09:43:04-04:00",
       "fileCount": 24,
-      "sha256": "8d67fb74d817e0a3babc2a1c285a4f3651ce644ec9c8924d460e8debec84e7eb",
-      "category": "system"
+      "sha256": "7c61c279b0434c783c26684267cb9a334b50957d268cbcb0a5407f25315402a3",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 24,
+      "includedFileCount": 24,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 641197,
+      "authorityCounts": {
+        "canonical": 24
+      }
     },
     {
       "slug": "science-silk-road-koali",
       "file": "science-silk-road-koali-context-pack.txt",
       "repository": "Rejean-McCormick/science-silk-road-koali",
       "sourceCommit": "26a3d32da3292b0964e288357dd4ed44a77a99d4",
-      "generatedAt": "2026-08-25T09:32:49-04:00",
+      "generatedAt": "2026-08-28T09:43:02-04:00",
       "fileCount": 21,
-      "sha256": "001cf31f6bf6163fc91ee57d561bdb6908c66d2d87e2b7dcfa8bf7c6fde384f3",
-      "category": "system"
+      "sha256": "006a4e9ef96c6d893f360240020ed35b6f69f3f495fdf0cbacc0c1e4776a6c5b",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 21,
+      "includedFileCount": 21,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 113899,
+      "authorityCounts": {
+        "canonical": 21
+      }
     },
     {
       "slug": "semantik-architect",
       "file": "semantik-architect-context-pack.txt",
       "repository": "Rejean-McCormick/SemantiK_Architect",
       "sourceCommit": "cf1cf76cc2a95c50b933d49e1afaff7c28117ffd",
-      "generatedAt": "2026-08-25T11:30:41-04:00",
+      "generatedAt": "2026-08-28T09:43:01-04:00",
       "fileCount": 67,
-      "sha256": "a5eb985abd394547512637ce5d751375a57ddac79b4ed075e950f1f652723a54",
-      "category": "system"
+      "sha256": "4d7926fc31a15f65cb0e9aea2f95a4a51abbab29bdc16849c45a7a7b80cb6820",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 67,
+      "includedFileCount": 67,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 403932,
+      "authorityCounts": {
+        "canonical": 67
+      }
     },
     {
       "slug": "semantik-architect-gf-zone-auditor",
       "file": "semantik-architect-gf-zone-auditor-context-pack.txt",
       "repository": "Rejean-McCormick/SemantiK-Architect-GF-Zone-Auditor",
       "sourceCommit": "4afe1d65acdc252fe738450f3876c57cb29f0c0e",
-      "generatedAt": "2026-08-25T09:32:48-04:00",
+      "generatedAt": "2026-08-28T09:43:01-04:00",
       "fileCount": 12,
-      "sha256": "66203b3006445763e03c30773d5ccb259a377ad41e6716f6290f245d0a0984a6",
-      "category": "system"
+      "sha256": "354870b805a56b44aef908ee775315ce1509648e7a34d026312fc32c0e449d56",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 12,
+      "includedFileCount": 12,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 244568,
+      "authorityCounts": {
+        "canonical": 12
+      }
     },
     {
       "slug": "senior-architect",
@@ -230,57 +427,109 @@
       "generatedAt": "2026-02-26T13:15:29.082520",
       "fileCount": null,
       "sha256": "1d26158126b759a1709b4e0c04e158a01c87c8394e289d7f1c86873389b6db11",
-      "category": "general"
+      "category": "general",
+      "policyVersion": null,
+      "sourceFileCount": null,
+      "includedFileCount": null,
+      "excludedFileCount": null,
+      "duplicateFileCount": null,
+      "contentBytes": null,
+      "authorityCounts": {}
     },
     {
       "slug": "sentient",
       "file": "sentient-context-pack.txt",
       "repository": "Rejean-McCormick/SenTient",
       "sourceCommit": "537705b2048b89e4ec20872a089784959da10b85",
-      "generatedAt": "2026-08-25T11:30:59-04:00",
+      "generatedAt": "2026-08-28T09:46:47-04:00",
       "fileCount": 16,
-      "sha256": "dea438513879a2981fe9583749cdf8bba8e8e811dd806d1d45773d11cf73f48a",
-      "category": "system"
+      "sha256": "d2e3dae0edc0595836d1c34be75f655d6a0fdd5e1f7e988074d2f2eaee18b623",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 16,
+      "includedFileCount": 16,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 58065,
+      "authorityCounts": {
+        "canonical": 16
+      }
     },
     {
       "slug": "uckk-assets",
       "file": "uckk-assets-context-pack.txt",
       "repository": "Rejean-McCormick/UCKK_Assets",
       "sourceCommit": "9270a20224eadfcb9561121a5b844c9c06adcde9",
-      "generatedAt": "2026-08-25T09:32:55-04:00",
-      "fileCount": 46,
-      "sha256": "8a3dc04fa5fafa0b241a4b8a9b3820207d842846d41712016f8d2e79127ade97",
-      "category": "system"
+      "generatedAt": "2026-08-28T09:43:16-04:00",
+      "fileCount": 42,
+      "sha256": "7940ad1d693e5805ff052c835c7ffb260b441e459fcbdd15e275765983b39fb7",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 46,
+      "includedFileCount": 42,
+      "excludedFileCount": 4,
+      "duplicateFileCount": 4,
+      "contentBytes": 1521218,
+      "authorityCounts": {
+        "canonical": 42
+      }
     },
     {
       "slug": "uckk-moodle",
       "file": "uckk-moodle-context-pack.txt",
       "repository": "Rejean-McCormick/UCKK-Moodle",
       "sourceCommit": "094ebff9abac8d407a5362898775eef902d2ccd1",
-      "generatedAt": "2026-08-25T09:32:48-04:00",
-      "fileCount": 59,
-      "sha256": "21971c94e5266c78266567edef006d36a076417a4636394e08daf627ae8d48ad",
-      "category": "system"
+      "generatedAt": "2026-08-28T09:43:00-04:00",
+      "fileCount": 57,
+      "sha256": "2a52c0deef91ceea1321e92bd2a3b9b8fd1afd3e1bc8c72298149aefea4c4cc3",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 59,
+      "includedFileCount": 57,
+      "excludedFileCount": 2,
+      "duplicateFileCount": 1,
+      "contentBytes": 1634483,
+      "authorityCounts": {
+        "canonical": 57
+      }
     },
     {
       "slug": "votingmachine",
       "file": "votingmachine-context-pack.txt",
       "repository": "Rejean-McCormick/VotingMachine",
       "sourceCommit": "8aa367410822d2013ce0df377fad651aa26bd23e",
-      "generatedAt": "2026-08-25T09:32:56-04:00",
+      "generatedAt": "2026-08-28T09:43:18-04:00",
       "fileCount": 13,
-      "sha256": "640e0a2368d4d7335c94f41bd599a8d6b1e6c70750ba51e341b017340adf19af",
-      "category": "system"
+      "sha256": "bfca5e499a0e63cb8cf4f4875a39e8f994851f6030865e9f0b2161126ab65dd8",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 13,
+      "includedFileCount": 13,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 232627,
+      "authorityCounts": {
+        "canonical": 13
+      }
     },
     {
       "slug": "xkaliber",
       "file": "xkaliber-context-pack.txt",
       "repository": "Rejean-McCormick/XKaliber",
       "sourceCommit": "c41cde7fb7e16d7bb228fa1ab0b338c095bcc3a5",
-      "generatedAt": "2026-08-28T07:33:56-04:00",
+      "generatedAt": "2026-08-28T09:42:59-04:00",
       "fileCount": 40,
-      "sha256": "71e3b251ca61a3fa6eb1500dc21042068d455c6c2b131d098b435658cf72ae57",
-      "category": "system"
+      "sha256": "87a5d9839fb8f975204e9e8de0d663aa99093f55808ed62359268baf577ee7e7",
+      "category": "system",
+      "policyVersion": "2026-08-28.1",
+      "sourceFileCount": 40,
+      "includedFileCount": 40,
+      "excludedFileCount": 0,
+      "duplicateFileCount": 0,
+      "contentBytes": 61150,
+      "authorityCounts": {
+        "canonical": 40
+      }
     }
   ]
 }

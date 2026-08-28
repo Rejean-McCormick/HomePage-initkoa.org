@@ -4,42 +4,55 @@ repository: Rejean-McCormick/Konnaxion_Capsule_Manager
 source_path: C:\mycode\Konnaxion\Konnaxion_Capsule_Manager
 source_commit: 453bbb50e3bca6eae3a12af0271acd330de8ff73
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:52-04:00
+wiki_source_path: none
+wiki_source_commit: none
+wiki_working_tree_markdown: none
+policy_version: 2026-08-28.1
+repo_files: 24
+wiki_files: 0
+source_files: 24
+included_files: 24
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 689464
+authority_counts: {"canonical":24}
+generated_at: 2026-08-28T09:43:10-04:00
 files: 24
-content_sha256: 23eda3b3dfa845808dbe044dfbb93712fa9ae11b108509f5c73f4a846215bda1
+content_sha256: 08bb8a651a6b0fd30aee074b70cd0e1a727641bd5fe263f70b76163ef00fd89e
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. docs/DOC-00_Konnaxion_Canonical_Variables.md
-02. docs/DOC-01_Konnaxion_Product_Vision.md
-03. docs/DOC-02_Konnaxion_Capsule_Architecture.md
-04. docs/DOC-03_Konnaxion_Capsule_Format.md
-05. docs/DOC-04_Konnaxion_Manager_Architecture.md
-06. docs/DOC-05_Konnaxion_Agent_Security_Model.md
-07. docs/DOC-06_Konnaxion_Network_Profiles.md
-08. docs/DOC-07_Konnaxion_Security_Gate.md
-09. docs/DOC-08_Konnaxion_Runtime_Docker_Compose.md
-10. docs/DOC-09_Konnaxion_Backup_Restore_Rollback.md
-11. docs/DOC-10_Konnaxion_Builder_CLI.md
-12. docs/DOC-11_Konnaxion_Box_Appliance_Image.md
-13. docs/DOC-12_Konnaxion_Install_Runbook.md
-14. docs/DOC-13_Konnaxion_Threat_Model.md
-15. docs/DOC-14_Konnaxion_Operator_Guide.md
-16. docs/DOC-15_Konnaxion_Developer_Guide.md
-17. docs/DOC-16_Konnaxion_Manager_GUI_Technical_Contract.md
-18. docs/DOC-17_Konnaxion_GUI_Action_Coverage_Contract.md
-19. docs/DOC-17A_Konnaxion_GUI_Action_Payload_Contract.md
-20. docs/DOC-17B_Konnaxion_GUI_Action_UI_Test_Contract.md
-21. docs/DOC-18_Konnaxion_GUI_Target_Modes.md
-22. docs/DOC-19_Konnaxion_GUI_Page_Split_Droplet_Payload_Contract.md
-23. docs/DOC-20_Konnaxion_Package_Types_and_Artifact_Lifecycle.md
-24. README.md
+01. [canonical] docs/DOC-00_Konnaxion_Canonical_Variables.md
+02. [canonical] docs/DOC-01_Konnaxion_Product_Vision.md
+03. [canonical] docs/DOC-02_Konnaxion_Capsule_Architecture.md
+04. [canonical] docs/DOC-03_Konnaxion_Capsule_Format.md
+05. [canonical] docs/DOC-04_Konnaxion_Manager_Architecture.md
+06. [canonical] docs/DOC-05_Konnaxion_Agent_Security_Model.md
+07. [canonical] docs/DOC-06_Konnaxion_Network_Profiles.md
+08. [canonical] docs/DOC-07_Konnaxion_Security_Gate.md
+09. [canonical] docs/DOC-08_Konnaxion_Runtime_Docker_Compose.md
+10. [canonical] docs/DOC-09_Konnaxion_Backup_Restore_Rollback.md
+11. [canonical] docs/DOC-10_Konnaxion_Builder_CLI.md
+12. [canonical] docs/DOC-11_Konnaxion_Box_Appliance_Image.md
+13. [canonical] docs/DOC-12_Konnaxion_Install_Runbook.md
+14. [canonical] docs/DOC-13_Konnaxion_Threat_Model.md
+15. [canonical] docs/DOC-14_Konnaxion_Operator_Guide.md
+16. [canonical] docs/DOC-15_Konnaxion_Developer_Guide.md
+17. [canonical] docs/DOC-16_Konnaxion_Manager_GUI_Technical_Contract.md
+18. [canonical] docs/DOC-17_Konnaxion_GUI_Action_Coverage_Contract.md
+19. [canonical] docs/DOC-17A_Konnaxion_GUI_Action_Payload_Contract.md
+20. [canonical] docs/DOC-17B_Konnaxion_GUI_Action_UI_Test_Contract.md
+21. [canonical] docs/DOC-18_Konnaxion_GUI_Target_Modes.md
+22. [canonical] docs/DOC-19_Konnaxion_GUI_Page_Split_Droplet_Payload_Contract.md
+23. [canonical] docs/DOC-20_Konnaxion_Package_Types_and_Artifact_Lifecycle.md
+24. [canonical] README.md
 
 
 ================================================================================================
 FILE: docs/DOC-00_Konnaxion_Canonical_Variables.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -881,6 +894,7 @@ kx
 
 ================================================================================================
 FILE: docs/DOC-01_Konnaxion_Product_Vision.md
+AUTHORITY: canonical
 ================================================================================================
 
 # DOC-01_Konnaxion_Product_Vision.md
@@ -1579,6 +1593,7 @@ et les responsabilités du Manager, de l’Agent et du runtime Docker.
 
 ================================================================================================
 FILE: docs/DOC-02_Konnaxion_Capsule_Architecture.md
+AUTHORITY: canonical
 ================================================================================================
 
 # DOC-02 — Konnaxion Capsule Architecture
@@ -2494,6 +2509,7 @@ This gives Konnaxion a path toward local demos, intranet installations, temporar
 
 ================================================================================================
 FILE: docs/DOC-03_Konnaxion_Capsule_Format.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -4069,6 +4085,7 @@ Konnaxion Instance
 
 ================================================================================================
 FILE: docs/DOC-04_Konnaxion_Manager_Architecture.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -5377,6 +5394,7 @@ The Manager must make the safe path easy and the unsafe path impossible by defau
 
 ================================================================================================
 FILE: docs/DOC-05_Konnaxion_Agent_Security_Model.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -6755,6 +6773,7 @@ If a configuration is convenient but unsafe, the Agent must reject it.
 
 ================================================================================================
 FILE: docs/DOC-06_Konnaxion_Network_Profiles.md
+AUTHORITY: canonical
 ================================================================================================
 
 doc_id: DOC-06
@@ -9097,6 +9116,7 @@ If a profile requires exposing an internal service directly, the profile is inva
 
 ================================================================================================
 FILE: docs/DOC-07_Konnaxion_Security_Gate.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -10002,6 +10022,7 @@ blocked before launch.
 
 ================================================================================================
 FILE: docs/DOC-08_Konnaxion_Runtime_Docker_Compose.md
+AUTHORITY: canonical
 ================================================================================================
 
 # DOC-08 — Konnaxion Runtime Docker Compose
@@ -11735,6 +11756,7 @@ This replaces the legacy hybrid VPS model for future Konnaxion Capsule and Konna
 
 ================================================================================================
 FILE: docs/DOC-09_Konnaxion_Backup_Restore_Rollback.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -13256,6 +13278,7 @@ Konnaxion Agent must enforce safety rules and block dangerous restores.
 
 ================================================================================================
 FILE: docs/DOC-10_Konnaxion_Builder_CLI.md
+AUTHORITY: canonical
 ================================================================================================
 
 doc_id: DOC-10
@@ -15343,6 +15366,7 @@ uv run kx-builder capsule verify C:\mycode\Konnaxion\runtime\capsules\konnaxion-
 
 ================================================================================================
 FILE: docs/DOC-11_Konnaxion_Box_Appliance_Image.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -16883,6 +16907,7 @@ Le plus logique après DOC-11 est **DOC-05**, parce que la Konnaxion Box dépend
 
 ================================================================================================
 FILE: docs/DOC-12_Konnaxion_Install_Runbook.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -18726,6 +18751,7 @@ Everything else is handled by the **Konnaxion Capsule Manager** and **Konnaxion 
 
 ================================================================================================
 FILE: docs/DOC-13_Konnaxion_Threat_Model.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -20024,6 +20050,7 @@ This is the security foundation for Konnaxion Capsule, Konnaxion Capsule Manager
 
 ================================================================================================
 FILE: docs/DOC-14_Konnaxion_Operator_Guide.md
+AUTHORITY: canonical
 ================================================================================================
 
 ---
@@ -21783,6 +21810,7 @@ The unsafe path must be blocked by default.
 
 ================================================================================================
 FILE: docs/DOC-15_Konnaxion_Developer_Guide.md
+AUTHORITY: canonical
 ================================================================================================
 
 doc_id: DOC-15
@@ -22904,6 +22932,7 @@ If a change makes Konnaxion harder to package, harder to secure, harder to run o
 
 ================================================================================================
 FILE: docs/DOC-16_Konnaxion_Manager_GUI_Technical_Contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 ````markdown
@@ -24727,6 +24756,7 @@ Full pytest passes.
 
 ================================================================================================
 FILE: docs/DOC-17_Konnaxion_GUI_Action_Coverage_Contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 doc_id: DOC-17
@@ -25400,6 +25430,7 @@ button/form
 
 ================================================================================================
 FILE: docs/DOC-17A_Konnaxion_GUI_Action_Payload_Contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 doc_id: DOC-17A
@@ -26442,6 +26473,7 @@ pytest passes
 
 ================================================================================================
 FILE: docs/DOC-17B_Konnaxion_GUI_Action_UI_Test_Contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 doc_id: DOC-17B
@@ -27220,6 +27252,7 @@ No action coverage is lost.
 
 ================================================================================================
 FILE: docs/DOC-18_Konnaxion_GUI_Target_Modes.md
+AUTHORITY: canonical
 ================================================================================================
 
 doc_id: DOC-18
@@ -28568,6 +28601,7 @@ The selected target mode must determine the allowed profile, exposure options, p
 
 ================================================================================================
 FILE: docs/DOC-19_Konnaxion_GUI_Page_Split_Droplet_Payload_Contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Konnaxion Manager GUI Shared Variable Contract
@@ -29414,6 +29448,7 @@ env.mjs
 
 ================================================================================================
 FILE: docs/DOC-20_Konnaxion_Package_Types_and_Artifact_Lifecycle.md
+AUTHORITY: canonical
 ================================================================================================
 
 doc_id: DOC-20
@@ -30672,6 +30707,7 @@ The Agent must generate secrets and deployment-specific configuration on the tar
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Konnaxion Capsule Manager

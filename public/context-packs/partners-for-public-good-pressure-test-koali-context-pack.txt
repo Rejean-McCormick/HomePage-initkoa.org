@@ -4,25 +4,38 @@ repository: Rejean-McCormick/partners-for-public-good_pressure-test-koali
 source_path: C:\mycode\PPG
 source_commit: edfc5e843aa5e92179925c07182854d1d1f5d485
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:49-04:00
+wiki_source_path: none
+wiki_source_commit: none
+wiki_working_tree_markdown: none
+policy_version: 2026-08-28.1
+repo_files: 7
+wiki_files: 0
+source_files: 7
+included_files: 7
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 44777
+authority_counts: {"canonical":7}
+generated_at: 2026-08-28T09:43:03-04:00
 files: 7
-content_sha256: f865ae6ed0102157b249f944f6b049baca0291160b5fe0075a45c10f93addd02
+content_sha256: 86560b2ffbcd7541ff1736b993f4ecd21435aabbd8ed1a4f9e73c9745f4684ed
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-1. CLAIMS_UNDER_TEST.md
-2. PRESSURE_TEST.md
-3. QUESTIONS.md
-4. README.md
-5. SCOPE.md
-6. SOURCES.md
-7. WHY_PPG.md
+1. [canonical] CLAIMS_UNDER_TEST.md
+2. [canonical] PRESSURE_TEST.md
+3. [canonical] QUESTIONS.md
+4. [canonical] README.md
+5. [canonical] SCOPE.md
+6. [canonical] SOURCES.md
+7. [canonical] WHY_PPG.md
 
 
 ================================================================================================
 FILE: CLAIMS_UNDER_TEST.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Claims Under Test
@@ -238,6 +251,7 @@ That is progress.
 
 ================================================================================================
 FILE: PRESSURE_TEST.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Proposed Pressure Test
@@ -495,6 +509,7 @@ The only bad outcome is a test incapable of producing "reject."
 
 ================================================================================================
 FILE: QUESTIONS.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Hard Questions for Koali
@@ -562,6 +577,7 @@ A serious answer to that question would probably improve Koali more than a gener
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Partners for Public Good: Pressure-Test Koali
@@ -778,6 +794,7 @@ A useful outcome is not agreement. It is knowing which claims survive and which 
 
 ================================================================================================
 FILE: SCOPE.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Scope of the Public Call
@@ -881,6 +898,7 @@ When a pressure-test workflow uses one of them, its own canonical repository rem
 
 ================================================================================================
 FILE: SOURCES.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Sources and Source Policy
@@ -1025,6 +1043,7 @@ The pressure-test result should preserve those distinctions.
 
 ================================================================================================
 FILE: WHY_PPG.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Why Partners for Public Good

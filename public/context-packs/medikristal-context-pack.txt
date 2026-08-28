@@ -7,42 +7,50 @@ working_tree_markdown: clean
 wiki_source_path: C:\mycode\MediKristal\MediKristal.wiki
 wiki_source_commit: 93fba2ff54b0d2066bc5f3ba8afecf16ec10590c
 wiki_working_tree_markdown: clean
+policy_version: 2026-08-28.1
 repo_files: 3
 wiki_files: 19
-generated_at: 2026-08-25T11:30:47-04:00
+source_files: 22
+included_files: 22
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 90031
+authority_counts: {"canonical":22}
+generated_at: 2026-08-28T09:43:06-04:00
 files: 22
-content_sha256: 98a509378796ee5dd5822c38a396feed7668afcc10f584e372a1d3e62dabb7dc
+content_sha256: 3230a1b645d3e4f9671d71024b5023bc4ced70d73bf18727d664db4735fb4d73
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. docs/Foundational_Document-Medikristal_Architecture.md
-02. docs/MediKristal_Information_Sources.md
-03. README.md
-04. wiki/_Footer.md
-05. wiki/_Sidebar.md
-06. wiki/AI-and-MediKristal.md
-07. wiki/Clinical-Epistemic-States.md
-08. wiki/Distribution-through-UCKK.md
-09. wiki/Glossary.md
-10. wiki/Governance-and-Smart-Vote.md
-11. wiki/Home.md
-12. wiki/Kristal-Lifecycle-in-MediKristal.md
-13. wiki/Medical-Source-Orchestration.md
-14. wiki/MediKristal-on-kOA-Linux.md
-15. wiki/Multilingual-Model.md
-16. wiki/Protocols-and-Clinical-Logic.md
-17. wiki/README-INSTALL.md
-18. wiki/Related-Systems-and-Links.md
-19. wiki/Roadmap.md
-20. wiki/Semantic-Medical-Graph.md
-21. wiki/Trust-Provenance-and-Versioning.md
-22. wiki/What-MediKristal-Is.md
+01. [canonical] docs/Foundational_Document-Medikristal_Architecture.md
+02. [canonical] docs/MediKristal_Information_Sources.md
+03. [canonical] README.md
+04. [canonical] wiki/_Footer.md
+05. [canonical] wiki/_Sidebar.md
+06. [canonical] wiki/AI-and-MediKristal.md
+07. [canonical] wiki/Clinical-Epistemic-States.md
+08. [canonical] wiki/Distribution-through-UCKK.md
+09. [canonical] wiki/Glossary.md
+10. [canonical] wiki/Governance-and-Smart-Vote.md
+11. [canonical] wiki/Home.md
+12. [canonical] wiki/Kristal-Lifecycle-in-MediKristal.md
+13. [canonical] wiki/Medical-Source-Orchestration.md
+14. [canonical] wiki/MediKristal-on-kOA-Linux.md
+15. [canonical] wiki/Multilingual-Model.md
+16. [canonical] wiki/Protocols-and-Clinical-Logic.md
+17. [canonical] wiki/README-INSTALL.md
+18. [canonical] wiki/Related-Systems-and-Links.md
+19. [canonical] wiki/Roadmap.md
+20. [canonical] wiki/Semantic-Medical-Graph.md
+21. [canonical] wiki/Trust-Provenance-and-Versioning.md
+22. [canonical] wiki/What-MediKristal-Is.md
 
 
 ================================================================================================
 FILE: docs/Foundational_Document-Medikristal_Architecture.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Foundational Document — Medikristal Architecture
@@ -914,6 +922,7 @@ This is useful, bounded, and safer than immediately recommending treatments.
 
 ================================================================================================
 FILE: docs/MediKristal_Information_Sources.md
+AUTHORITY: canonical
 ================================================================================================
 
 # MediKristal Information Sources
@@ -1280,6 +1289,7 @@ Logic: JSON rules first, then CQL/FHIR Clinical Reasoning
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 ÿþ#   M e d i K r i s t a l 
@@ -1389,6 +1399,7 @@ FILE: README.md
 
 ================================================================================================
 FILE: wiki/_Footer.md
+AUTHORITY: canonical
 ================================================================================================
 
 MediKristal — early foundational architecture. Research and prototyping only; not validated for direct clinical use. · [kOA-Linux Wiki](https://github.com/Rejean-McCormick/kOA-Linux/wiki) · [MediKristal repository](https://github.com/Rejean-McCormick/MediKristal)
@@ -1396,6 +1407,7 @@ MediKristal — early foundational architecture. Research and prototyping only; 
 
 ================================================================================================
 FILE: wiki/_Sidebar.md
+AUTHORITY: canonical
 ================================================================================================
 
 ## MediKristal Wiki
@@ -1429,6 +1441,7 @@ FILE: wiki/_Sidebar.md
 
 ================================================================================================
 FILE: wiki/AI-and-MediKristal.md
+AUTHORITY: canonical
 ================================================================================================
 
 # AI and MediKristal
@@ -1531,6 +1544,7 @@ AI may summarize arguments or help professionals inspect evidence, but it is not
 
 ================================================================================================
 FILE: wiki/Clinical-Epistemic-States.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Clinical Epistemic States
@@ -1612,6 +1626,7 @@ A proposed mapping, translation, or protocol can be compiled and tested before i
 
 ================================================================================================
 FILE: wiki/Distribution-through-UCKK.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Distribution through UCKK
@@ -1719,6 +1734,7 @@ Distribution expands access; it must not erase the governance that made the info
 
 ================================================================================================
 FILE: wiki/Glossary.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Glossary
@@ -1795,6 +1811,7 @@ External online learning/publication environment in the wider kOA ecosystem. Med
 
 ================================================================================================
 FILE: wiki/Governance-and-Smart-Vote.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Governance and Smart Vote
@@ -1933,6 +1950,7 @@ Smart Vote belongs to the wider kOA/Konnaxion collective-intelligence architectu
 
 ================================================================================================
 FILE: wiki/Home.md
+AUTHORITY: canonical
 ================================================================================================
 
 # MediKristal
@@ -2116,6 +2134,7 @@ source
 
 ================================================================================================
 FILE: wiki/Kristal-Lifecycle-in-MediKristal.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal Lifecycle in MediKristal
@@ -2214,6 +2233,7 @@ This supports:
 
 ================================================================================================
 FILE: wiki/Medical-Source-Orchestration.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Medical Source Orchestration
@@ -2353,6 +2373,7 @@ The objective is not maximum database volume. It is a coherent, traceable medica
 
 ================================================================================================
 FILE: wiki/MediKristal-on-kOA-Linux.md
+AUTHORITY: canonical
 ================================================================================================
 
 # MediKristal on kOA-Linux
@@ -2460,6 +2481,7 @@ kOA-Linux provides the operating conditions needed to make that kind of historic
 
 ================================================================================================
 FILE: wiki/Multilingual-Model.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Multilingual Model
@@ -2543,6 +2565,7 @@ The system should reject unsupported linguistic constructions rather than silent
 
 ================================================================================================
 FILE: wiki/Protocols-and-Clinical-Logic.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Protocols and Clinical Logic
@@ -2637,6 +2660,7 @@ validated information / protocol output
 
 ================================================================================================
 FILE: wiki/README-INSTALL.md
+AUTHORITY: canonical
 ================================================================================================
 
 # MediKristal Wiki v0.2
@@ -2666,6 +2690,7 @@ Pages:
 
 ================================================================================================
 FILE: wiki/Related-Systems-and-Links.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Related Systems and Links
@@ -2728,6 +2753,7 @@ MediKristal should preserve this boundary explicitly.
 
 ================================================================================================
 FILE: wiki/Roadmap.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Roadmap
@@ -2870,6 +2896,7 @@ A stronger early milestone is:
 
 ================================================================================================
 FILE: wiki/Semantic-Medical-Graph.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Semantic Medical Graph
@@ -3007,6 +3034,7 @@ result
 
 ================================================================================================
 FILE: wiki/Trust-Provenance-and-Versioning.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Trust, Provenance, and Versioning
@@ -3089,6 +3117,7 @@ See:
 
 ================================================================================================
 FILE: wiki/What-MediKristal-Is.md
+AUTHORITY: canonical
 ================================================================================================
 
 # What MediKristal Is

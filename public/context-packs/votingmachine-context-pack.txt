@@ -4,31 +4,44 @@ repository: Rejean-McCormick/VotingMachine
 source_path: C:\mycode\VotingMachine\VotingMachine
 source_commit: 8aa367410822d2013ce0df377fad651aa26bd23e
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:56-04:00
+wiki_source_path: none
+wiki_source_commit: none
+wiki_working_tree_markdown: none
+policy_version: 2026-08-28.1
+repo_files: 13
+wiki_files: 0
+source_files: 13
+included_files: 13
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 232627
+authority_counts: {"canonical":13}
+generated_at: 2026-08-28T09:43:18-04:00
 files: 13
-content_sha256: 45a54042d31a0cf6efc4087147777737b690fce56a9884262a85e5703d1932f8
+content_sha256: c84b8c2ab3d8af29f72ac4076b704b40c3628ee1ce8e00316e6a81bb4e662034
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. CONTRIBUTING.md
-02. docs/Annex A — Variable Canonical Reference Table.md
-03. docs/Annex B — Canonical Test Pack.md
-04. docs/Annex C — Glossary & Definitions.md
-05. docs/Doc 1 — Database Specification (Entities, Fields, Relationships).md
-06. docs/Doc 2 — Common Variables Specification (Core, Operational Defaults, Advanced Controls).md
-07. docs/Doc 3 — Technical Platform & Release Policy.md
-08. docs/Doc 4 — Algorithm Specification (Steps, Allocation, Gates & Edge Cases).md
-09. docs/Doc 5 — Processing Pipeline Specification (State Machine & Functions).md
-10. docs/Doc 6 — Test Specifications (Allocation, Gates, Frontier & Determinism).md
-11. docs/Doc 7 — Reporting Specification (Structure, Templates & Visual Rules).md
-12. README.md
-13. SECURITY.md
+01. [canonical] CONTRIBUTING.md
+02. [canonical] docs/Annex A — Variable Canonical Reference Table.md
+03. [canonical] docs/Annex B — Canonical Test Pack.md
+04. [canonical] docs/Annex C — Glossary & Definitions.md
+05. [canonical] docs/Doc 1 — Database Specification (Entities, Fields, Relationships).md
+06. [canonical] docs/Doc 2 — Common Variables Specification (Core, Operational Defaults, Advanced Controls).md
+07. [canonical] docs/Doc 3 — Technical Platform & Release Policy.md
+08. [canonical] docs/Doc 4 — Algorithm Specification (Steps, Allocation, Gates & Edge Cases).md
+09. [canonical] docs/Doc 5 — Processing Pipeline Specification (State Machine & Functions).md
+10. [canonical] docs/Doc 6 — Test Specifications (Allocation, Gates, Frontier & Determinism).md
+11. [canonical] docs/Doc 7 — Reporting Specification (Structure, Templates & Visual Rules).md
+12. [canonical] README.md
+13. [canonical] SECURITY.md
 
 
 ================================================================================================
 FILE: CONTRIBUTING.md
+AUTHORITY: canonical
 ================================================================================================
 
 ````markdown
@@ -209,6 +222,7 @@ cmp -s artifacts/a/run_record.json artifacts/b/run_record.json
 
 ================================================================================================
 FILE: docs/Annex A — Variable Canonical Reference Table.md
+AUTHORITY: canonical
 ================================================================================================
 
 # **Annex A — VM-VAR Registry (Updated)**
@@ -560,6 +574,7 @@ Ship a JSON file (e.g., `annex-a.vars.json`) containing **all variables** (Inclu
 
 ================================================================================================
 FILE: docs/Annex B — Canonical Test Pack.md
+AUTHORITY: canonical
 ================================================================================================
 
 # **Annex B — Canonical Test Pack (Updated)**
@@ -1478,6 +1493,7 @@ That’s the full Annex B generated across three passes. If you want, I can save
 
 ================================================================================================
 FILE: docs/Annex C — Glossary & Definitions.md
+AUTHORITY: canonical
 ================================================================================================
 
 # **Annex C — Glossary & Definitions (Updated)**
@@ -1635,6 +1651,7 @@ Canonical, one-page definitions for recurring terms and tokens used across Docs 
 
 ================================================================================================
 FILE: docs/Doc 1 — Database Specification (Entities, Fields, Relationships).md
+AUTHORITY: canonical
 ================================================================================================
 
 # **Doc 1A — Database Definition: Entities & IDs (Updated, Normative)**
@@ -2584,6 +2601,7 @@ Error codes align with Doc 1B §6.
 
 ================================================================================================
 FILE: docs/Doc 2 — Common Variables Specification (Core, Operational Defaults, Advanced Controls).md
+AUTHORITY: canonical
 ================================================================================================
 
 # **Doc 2A — Common Variables: Core (Updated, Normative)**
@@ -2978,6 +2996,7 @@ A controlled switch for sanctioned micro-variants (use sparingly).
 
 ================================================================================================
 FILE: docs/Doc 3 — Technical Platform & Release Policy.md
+AUTHORITY: canonical
 ================================================================================================
 
 # **Doc 3A — Tech Platform & Determinism (Updated)**
@@ -3385,6 +3404,7 @@ Spec & Annex updates:
 
 ================================================================================================
 FILE: docs/Doc 4 — Algorithm Specification (Steps, Allocation, Gates & Edge Cases).md
+AUTHORITY: canonical
 ================================================================================================
 
 # **Doc 4A — Algorithm: Step Order, Tabulation & Global Flow (Updated, Normative)**
@@ -3986,6 +4006,7 @@ emit\_unit\_label(unit\_id, label)
 
 ================================================================================================
 FILE: docs/Doc 5 — Processing Pipeline Specification (State Machine & Functions).md
+AUTHORITY: canonical
 ================================================================================================
 
 # **Doc 5A — Pipeline: State Machine & Data Exchange (Updated, Normative)**
@@ -4672,6 +4693,7 @@ Explores a fixed, documented set of scenario deltas (implementation-defined), e.
 
 ================================================================================================
 FILE: docs/Doc 6 — Test Specifications (Allocation, Gates, Frontier & Determinism).md
+AUTHORITY: canonical
 ================================================================================================
 
 # **Doc 6A — Test Harness & Allocation Correctness (Updated, Normative)**
@@ -5270,6 +5292,7 @@ For every **passing** case (non-schema-failure):
 
 ================================================================================================
 FILE: docs/Doc 7 — Reporting Specification (Structure, Templates & Visual Rules).md
+AUTHORITY: canonical
 ================================================================================================
 
 # **Doc 7A — Reporting: Structure & Visual Rules (Updated)**
@@ -5829,6 +5852,7 @@ Numeric/text formatting exactly per Doc 7A §5. Timezone must be UTC.
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 ````markdown
@@ -6068,6 +6092,7 @@ Use `pre-commit` if installed (`.pre-commit-config.yaml` provides fast local gat
 
 ================================================================================================
 FILE: SECURITY.md
+AUTHORITY: canonical
 ================================================================================================
 
 ````markdown

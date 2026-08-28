@@ -7,92 +7,100 @@ working_tree_markdown: clean
 wiki_source_path: C:\mycode\Kristal\kristal-framework.wiki
 wiki_source_commit: 917d33f25ede7ed795dc8fa9cce0df6ccdb02861
 wiki_working_tree_markdown: clean
+policy_version: 2026-08-28.1
 repo_files: 41
 wiki_files: 31
-generated_at: 2026-08-25T11:30:50-04:00
+source_files: 72
+included_files: 72
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 955443
+authority_counts: {"canonical":72}
+generated_at: 2026-08-28T09:43:09-04:00
 files: 72
-content_sha256: dab44e2196b1b70ae6d23869ed08b4299fb8f7dc577bde5f16d0961ab4400acd
+content_sha256: 53b88f3a5bcc13688bca33aa3a3b34972d47b3b48b59f98adcefc9df2f36f50c
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. docs/Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md
-02. docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md
-03. docs/Technical-Reference/kristal-docs-v5/00-overview/plural-validation-and-federated-authority.md
-04. docs/Technical-Reference/kristal-docs-v5/00-overview/sharding-and-federation.md
-05. docs/Technical-Reference/kristal-docs-v5/00-overview/validation-certainty-and-authority.md
-06. docs/Technical-Reference/kristal-docs-v5/00-overview/vision-and-scope.md
-07. docs/Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md
-08. docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md
-09. docs/Technical-Reference/kristal-docs-v5/01-core-spec/authority-recognition.md
-10. docs/Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md
-11. docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md
-12. docs/Technical-Reference/kristal-docs-v5/01-core-spec/signatures-trust.md
-13. docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md
-14. docs/Technical-Reference/kristal-docs-v5/03-reproducibility/allowed-runtime-pack-policies.md
-15. docs/Technical-Reference/kristal-docs-v5/03-reproducibility/deterministic-build-rules.md
-16. docs/Technical-Reference/kristal-docs-v5/03-reproducibility/reproducibility-acceptance-tests.md
-17. docs/Technical-Reference/kristal-docs-v5/03-reproducibility/subset-recipes.md
-18. docs/Technical-Reference/kristal-docs-v5/04-query/query-contract.md
-19. docs/Technical-Reference/kristal-docs-v5/04-query/reader-policy-profiles.md
-20. docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-jsonld-export.md
-21. docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-provenance-nanopub-provo.md
-22. docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-query-tpf-pagination.md
-23. docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-integrity-rdfc.md
-24. docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-wdqs-export.md
-25. docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-transparency-log.md
-26. docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shacl.md
-27. docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shex.md
-28. docs/Technical-Reference/kristal-docs-v5/06-integration/architect-rendering-contract.md
-29. docs/Technical-Reference/kristal-docs-v5/06-integration/konnaxion-distribution-contract.md
-30. docs/Technical-Reference/kristal-docs-v5/06-integration/orgo-workflow-contract.md
-31. docs/Technical-Reference/kristal-docs-v5/06-integration/sentient-resolution-contract.md
-32. docs/Technical-Reference/kristal-docs-v5/07-security/downgrade-rollback-policy.md
-33. docs/Technical-Reference/kristal-docs-v5/07-security/key-management-and-trust-roots.md
-34. docs/Technical-Reference/kristal-docs-v5/07-security/multi-tenancy-boundaries.md
-35. docs/Technical-Reference/kristal-docs-v5/08-ops/failure-paths-and-resilience.md
-36. docs/Technical-Reference/kristal-docs-v5/08-ops/logging-and-correlation-ids.md
-37. docs/Technical-Reference/kristal-docs-v5/08-ops/operational-guidance-template.md
-38. docs/Technical-Reference/kristal-docs-v5/08-ops/release-strategies.md
-39. docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md
-40. docs/Technical-Reference/kristal-docs-v5/09-test-vectors/rdfc/README.md
-41. README.md
-42. wiki/_Footer.md
-43. wiki/_Sidebar.md
-44. wiki/Artifact-Authority-Registry.md
-45. wiki/Artifact-Exchange.md
-46. wiki/Artifact-Federation-Manifest.md
-47. wiki/Artifact-Runtime-Pack.md
-48. wiki/Artifact-Shard-Manifest.md
-49. wiki/Artifact-Validation-Report.md
-50. wiki/Artifacts.md
-51. wiki/Concepts-and-Mental-Model.md
-52. wiki/FAQ.md
-53. wiki/Getting-Started.md
-54. wiki/Glossary.md
-55. wiki/Home.md
-56. wiki/Identity-and-Determinism.md
-57. wiki/Operations-Compatibility.md
-58. wiki/Operations-Observability-and-Troubleshooting.md
-59. wiki/Operations-Release-Strategy.md
-60. wiki/Operations.md
-61. wiki/Query-Basics.md
-62. wiki/Query-Pagination-and-Capabilities.md
-63. wiki/Query.md
-64. wiki/Quickstart.md
-65. wiki/Trust-Authority-and-Signatures.md
-66. wiki/What-is-Kristal.md
-67. wiki/Workflow-Activate-Rollback-Downgrade.md
-68. wiki/Workflow-Build-and-Validate.md
-69. wiki/Workflow-Federation-and-Curation.md
-70. wiki/Workflow-Publish-and-Distribute.md
-71. wiki/Workflow-Subsets-Recipes.md
-72. wiki/Workflows.md
+01. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md
+02. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md
+03. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/plural-validation-and-federated-authority.md
+04. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/sharding-and-federation.md
+05. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/validation-certainty-and-authority.md
+06. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/vision-and-scope.md
+07. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md
+08. [canonical] docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md
+09. [canonical] docs/Technical-Reference/kristal-docs-v5/01-core-spec/authority-recognition.md
+10. [canonical] docs/Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md
+11. [canonical] docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md
+12. [canonical] docs/Technical-Reference/kristal-docs-v5/01-core-spec/signatures-trust.md
+13. [canonical] docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md
+14. [canonical] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/allowed-runtime-pack-policies.md
+15. [canonical] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/deterministic-build-rules.md
+16. [canonical] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/reproducibility-acceptance-tests.md
+17. [canonical] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/subset-recipes.md
+18. [canonical] docs/Technical-Reference/kristal-docs-v5/04-query/query-contract.md
+19. [canonical] docs/Technical-Reference/kristal-docs-v5/04-query/reader-policy-profiles.md
+20. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-jsonld-export.md
+21. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-provenance-nanopub-provo.md
+22. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-query-tpf-pagination.md
+23. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-integrity-rdfc.md
+24. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-wdqs-export.md
+25. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-transparency-log.md
+26. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shacl.md
+27. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shex.md
+28. [canonical] docs/Technical-Reference/kristal-docs-v5/06-integration/architect-rendering-contract.md
+29. [canonical] docs/Technical-Reference/kristal-docs-v5/06-integration/konnaxion-distribution-contract.md
+30. [canonical] docs/Technical-Reference/kristal-docs-v5/06-integration/orgo-workflow-contract.md
+31. [canonical] docs/Technical-Reference/kristal-docs-v5/06-integration/sentient-resolution-contract.md
+32. [canonical] docs/Technical-Reference/kristal-docs-v5/07-security/downgrade-rollback-policy.md
+33. [canonical] docs/Technical-Reference/kristal-docs-v5/07-security/key-management-and-trust-roots.md
+34. [canonical] docs/Technical-Reference/kristal-docs-v5/07-security/multi-tenancy-boundaries.md
+35. [canonical] docs/Technical-Reference/kristal-docs-v5/08-ops/failure-paths-and-resilience.md
+36. [canonical] docs/Technical-Reference/kristal-docs-v5/08-ops/logging-and-correlation-ids.md
+37. [canonical] docs/Technical-Reference/kristal-docs-v5/08-ops/operational-guidance-template.md
+38. [canonical] docs/Technical-Reference/kristal-docs-v5/08-ops/release-strategies.md
+39. [canonical] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md
+40. [canonical] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/rdfc/README.md
+41. [canonical] README.md
+42. [canonical] wiki/_Footer.md
+43. [canonical] wiki/_Sidebar.md
+44. [canonical] wiki/Artifact-Authority-Registry.md
+45. [canonical] wiki/Artifact-Exchange.md
+46. [canonical] wiki/Artifact-Federation-Manifest.md
+47. [canonical] wiki/Artifact-Runtime-Pack.md
+48. [canonical] wiki/Artifact-Shard-Manifest.md
+49. [canonical] wiki/Artifact-Validation-Report.md
+50. [canonical] wiki/Artifacts.md
+51. [canonical] wiki/Concepts-and-Mental-Model.md
+52. [canonical] wiki/FAQ.md
+53. [canonical] wiki/Getting-Started.md
+54. [canonical] wiki/Glossary.md
+55. [canonical] wiki/Home.md
+56. [canonical] wiki/Identity-and-Determinism.md
+57. [canonical] wiki/Operations-Compatibility.md
+58. [canonical] wiki/Operations-Observability-and-Troubleshooting.md
+59. [canonical] wiki/Operations-Release-Strategy.md
+60. [canonical] wiki/Operations.md
+61. [canonical] wiki/Query-Basics.md
+62. [canonical] wiki/Query-Pagination-and-Capabilities.md
+63. [canonical] wiki/Query.md
+64. [canonical] wiki/Quickstart.md
+65. [canonical] wiki/Trust-Authority-and-Signatures.md
+66. [canonical] wiki/What-is-Kristal.md
+67. [canonical] wiki/Workflow-Activate-Rollback-Downgrade.md
+68. [canonical] wiki/Workflow-Build-and-Validate.md
+69. [canonical] wiki/Workflow-Federation-and-Curation.md
+70. [canonical] wiki/Workflow-Publish-and-Distribute.md
+71. [canonical] wiki/Workflow-Subsets-Recipes.md
+72. [canonical] wiki/Workflows.md
 
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Conformance and Alignment (Kristal v5)
@@ -1360,6 +1368,7 @@ The final invariant is:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristals in the Ecosystem: Konnaxion × Orgo × Architect × SenTient
@@ -1821,6 +1830,7 @@ Orgo and Konnaxion remain operational advantages: they provide workflow, distrib
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/plural-validation-and-federated-authority.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Plural Validation and Federated Authority
@@ -2810,6 +2820,7 @@ This document defines the shared conceptual and normative boundary:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/sharding-and-federation.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Sharding and Federation
@@ -3695,6 +3706,7 @@ The core Kristal v5 rule is:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/validation-certainty-and-authority.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Validation, Certainty, and Authority
@@ -4931,6 +4943,7 @@ The following decisions remain open:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/vision-and-scope.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Vision and scope (Kristal v5)
@@ -5210,6 +5223,7 @@ Operational patterns such as circuit breakers, DLQs, CQRS framing, canary/blue-g
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md
+AUTHORITY: canonical
 ================================================================================================
 
 # What is Kristal v5?
@@ -5983,6 +5997,7 @@ Kristal v5 exists to make those answers explicit, portable, queryable, and usabl
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Assertion Status and Certainty
@@ -6939,6 +6954,7 @@ Integrity protects artifacts, not ideology.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/authority-recognition.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Authority Recognition
@@ -8490,6 +8506,7 @@ Recognition is not universal truth.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 01-core-spec/ids-canonicalization-hashing.md
@@ -9011,6 +9028,7 @@ This document defines only the stable identity, canonicalization, and hashing ru
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal v5 Core Specification
@@ -10376,6 +10394,7 @@ It is a structured, portable, verifiable artifact system for knowledge whose sta
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/signatures-trust.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 01-core-spec/signatures-trust.md
@@ -11006,6 +11025,7 @@ The following profile decisions remain open:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Structured Epistemic State
@@ -12270,6 +12290,7 @@ Integrity protects artifacts.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/03-reproducibility/allowed-runtime-pack-policies.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Allowed Runtime Pack Policies (Kristal v5)
@@ -12834,6 +12855,7 @@ The purpose is not to guarantee that all data is final, universally true, or max
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/03-reproducibility/deterministic-build-rules.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Deterministic build rules (Kristal v5)
@@ -13434,6 +13456,7 @@ revoked
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/03-reproducibility/reproducibility-acceptance-tests.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Reproducibility Acceptance Tests (Kristal v4)
@@ -13702,6 +13725,7 @@ Failure of any mandatory test blocks release of v3 artifacts.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/03-reproducibility/subset-recipes.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Subset recipes (Kristal v5 reproducibility)
@@ -14717,6 +14741,7 @@ The following example is non-normative.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/04-query/query-contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Query Contract
@@ -15454,6 +15479,7 @@ Test fixtures SHOULD include at least:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/04-query/reader-policy-profiles.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Reader Policy Profiles
@@ -16933,6 +16959,7 @@ The following decisions remain open:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-jsonld-export.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 05-profiles/profile-jsonld-export.md
@@ -17805,6 +17832,7 @@ Authority, validation, certainty, and reader visibility remain explicit metadata
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-provenance-nanopub-provo.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Profile: Provenance Packaging (Nanopublication + PROV-O)
@@ -18555,6 +18583,7 @@ The following profile decisions remain open:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-query-tpf-pagination.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Profile: Query — TPF-like Pagination (Kristal v5)
@@ -19135,6 +19164,7 @@ It guarantees that paginated query behavior is stable, explicit, inspectable, an
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-integrity-rdfc.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Profile: RDF Integrity (RDFC) (Kristal v5)
@@ -19511,6 +19541,7 @@ All epistemic status remains governed by Kristal v5 validation, certainty, autho
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-wdqs-export.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Profile: RDF WDQS Export (Kristal v5)
@@ -20325,6 +20356,7 @@ The RDF export is a deterministic projection of selected Kristal artifacts under
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-transparency-log.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Profile: Transparency Log (Kristal v5)
@@ -21211,6 +21243,7 @@ Transparency logs make Kristal ecosystems more inspectable, accountable, and res
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shacl.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Profile: Validation Reporting (SHACL)
@@ -21679,6 +21712,7 @@ sh:Info      -> INFO
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shex.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Profile: Validation ShEx
@@ -22329,6 +22363,7 @@ Those questions remain governed by Kristal v5 validation decisions, certainty me
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/06-integration/architect-rendering-contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Architect rendering contract
@@ -23090,6 +23125,7 @@ The core invariant is:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/06-integration/konnaxion-distribution-contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Konnaxion distribution contract (Kristal v5 integration)
@@ -23942,6 +23978,7 @@ Federation-related distribution tests SHOULD verify that Konnaxion:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/06-integration/orgo-workflow-contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Orgo Workflow Contract
@@ -24930,6 +24967,7 @@ Orgo’s responsibility is not to erase those states. Orgo’s responsibility is
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/06-integration/sentient-resolution-contract.md
+AUTHORITY: canonical
 ================================================================================================
 
 # 06-integration/sentient-resolution-contract.md
@@ -25441,6 +25479,7 @@ SenTient satisfies this contract if it:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/07-security/downgrade-rollback-policy.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Downgrade and Rollback Policy (Kristal v5)
@@ -26349,6 +26388,7 @@ The following profile decisions remain open:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/07-security/key-management-and-trust-roots.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Key Management and Trust Roots (Kristal v5)
@@ -27080,6 +27120,7 @@ Integrity protects artifacts. Authority is plural. Recognition is scoped. Certai
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/07-security/multi-tenancy-boundaries.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Multi-tenancy Boundaries (Global Content IDs + Tenant Access Control Layering)
@@ -27661,6 +27702,7 @@ This preserves reproducibility without weakening tenant isolation.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/08-ops/failure-paths-and-resilience.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Failure Paths and Resilience
@@ -28431,6 +28473,7 @@ If some metadata is unavailable:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/08-ops/logging-and-correlation-ids.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Logging and correlation IDs (non-normative)
@@ -29291,6 +29334,7 @@ Those are defined by their respective Kristal v5 specifications, profiles, opera
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/08-ops/operational-guidance-template.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Operational guidance template
@@ -30071,6 +30115,7 @@ YYYY-MM-DD:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/08-ops/release-strategies.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Release Strategies for Kristal Runtime Packs (Blue/Green, Canary)
@@ -30829,6 +30874,7 @@ Release strategy does not decide what is universally true. It decides which immu
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # JCS Test Vectors (Kristal v5)
@@ -31199,6 +31245,7 @@ This preserves deterministic identity while allowing Kristal v5 to separate arti
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/09-test-vectors/rdfc/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # RDFC Test Vectors and Fixtures
@@ -31906,6 +31953,7 @@ To finalize:
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal docs (v5)
@@ -32287,6 +32335,7 @@ Major-version changes are required for changes that alter:
 
 ================================================================================================
 FILE: wiki/_Footer.md
+AUTHORITY: canonical
 ================================================================================================
 
 _Last updated:_ 2026-06-12 · _Kristal Framework Wiki_
@@ -32302,6 +32351,7 @@ _Last updated:_ 2026-06-12 · _Kristal Framework Wiki_
 
 ================================================================================================
 FILE: wiki/_Sidebar.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal Wiki
@@ -32352,6 +32402,7 @@ FILE: wiki/_Sidebar.md
 
 ================================================================================================
 FILE: wiki/Artifact-Authority-Registry.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Artifact: Authority Registry
@@ -32451,6 +32502,7 @@ A consumer typically:
 
 ================================================================================================
 FILE: wiki/Artifact-Exchange.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Artifact: Exchange
@@ -32548,6 +32600,7 @@ Reference status is scoped. It does not imply universal truth or universal agree
 
 ================================================================================================
 FILE: wiki/Artifact-Federation-Manifest.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Artifact: Federation Manifest
@@ -32622,6 +32675,7 @@ Reader policies decide which material is visible.
 
 ================================================================================================
 FILE: wiki/Artifact-Runtime-Pack.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Artifact: Runtime Pack
@@ -32708,6 +32762,7 @@ A pack may exist and verify technically, but still be unavailable under a deploy
 
 ================================================================================================
 FILE: wiki/Artifact-Shard-Manifest.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Artifact: Shard Manifest
@@ -32777,6 +32832,7 @@ Consumers typically:
 
 ================================================================================================
 FILE: wiki/Artifact-Validation-Report.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Artifact: Validation Report
@@ -32867,6 +32923,7 @@ Validation Reports make it possible to show readers:
 
 ================================================================================================
 FILE: wiki/Artifacts.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Artifacts
@@ -32971,6 +33028,7 @@ Reader Policy -> visible/queryable/renderable subset
 
 ================================================================================================
 FILE: wiki/Concepts-and-Mental-Model.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Concepts & Mental Model
@@ -33090,6 +33148,7 @@ They do not erase uncertainty, disagreement, fiction, mythology, or scoped valid
 
 ================================================================================================
 FILE: wiki/FAQ.md
+AUTHORITY: canonical
 ================================================================================================
 
 # FAQ
@@ -33141,6 +33200,7 @@ Use the technical docs in the main repository:
 
 ================================================================================================
 FILE: wiki/Getting-Started.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Getting Started
@@ -33232,6 +33292,7 @@ Use the main repository technical docs:
 
 ================================================================================================
 FILE: wiki/Glossary.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Glossary
@@ -33318,6 +33379,7 @@ A compiled artifact that may be used for review, research, staging, or collabora
 
 ================================================================================================
 FILE: wiki/Home.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Kristal Framework — Wiki
@@ -33409,6 +33471,7 @@ For exact fields, schemas, conformance requirements, test vectors, and examples,
 
 ================================================================================================
 FILE: wiki/Identity-and-Determinism.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Identity and Determinism
@@ -33516,6 +33579,7 @@ The following should not change content identity unless a profile explicitly mak
 
 ================================================================================================
 FILE: wiki/Operations-Compatibility.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Operations: Compatibility
@@ -33604,6 +33668,7 @@ Treat these as breaking unless explicitly version-gated:
 
 ================================================================================================
 FILE: wiki/Operations-Observability-and-Troubleshooting.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Operations: Observability & Troubleshooting
@@ -33713,6 +33778,7 @@ Check Runtime Pack materialization and query contract. The pack may not have pre
 
 ================================================================================================
 FILE: wiki/Operations-Release-Strategy.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Operations: Release Strategy
@@ -33795,6 +33861,7 @@ A release is not operationally safe unless the prior known-good activation targe
 
 ================================================================================================
 FILE: wiki/Operations.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Operations
@@ -33852,6 +33919,7 @@ Operations should not:
 
 ================================================================================================
 FILE: wiki/Query-Basics.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Query Basics
@@ -33921,6 +33989,7 @@ Results should keep visible:
 
 ================================================================================================
 FILE: wiki/Query-Pagination-and-Capabilities.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Query: Pagination & Capabilities
@@ -33986,6 +34055,7 @@ At minimum, returned results should preserve labels needed to understand:
 
 ================================================================================================
 FILE: wiki/Query.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Query
@@ -34062,6 +34132,7 @@ The query contract declares:
 
 ================================================================================================
 FILE: wiki/Quickstart.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Quickstart
@@ -34191,6 +34262,7 @@ Reader policy determines visibility, not artifact existence.
 
 ================================================================================================
 FILE: wiki/Trust-Authority-and-Signatures.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Trust, Authority & Signatures
@@ -34286,6 +34358,7 @@ Reader policy controls visibility.
 
 ================================================================================================
 FILE: wiki/What-is-Kristal.md
+AUTHORITY: canonical
 ================================================================================================
 
 # What is Kristal?
@@ -34383,6 +34456,7 @@ A validated-only policy does not mean “universal truth.” It means visible as
 
 ================================================================================================
 FILE: wiki/Workflow-Activate-Rollback-Downgrade.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Workflow: Activate, Rollback & Downgrade
@@ -34468,6 +34542,7 @@ Reader policy still applies.
 
 ================================================================================================
 FILE: wiki/Workflow-Build-and-Validate.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Workflow: Build & Validate
@@ -34570,6 +34645,7 @@ Common outputs:
 
 ================================================================================================
 FILE: wiki/Workflow-Federation-and-Curation.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Workflow: Federation & Curation
@@ -34662,6 +34738,7 @@ For example:
 
 ================================================================================================
 FILE: wiki/Workflow-Publish-and-Distribute.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Workflow: Publish & Distribute
@@ -34752,6 +34829,7 @@ Konnaxion distribution flows may manage:
 
 ================================================================================================
 FILE: wiki/Workflow-Subsets-Recipes.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Workflow: Subsets & Recipes
@@ -34826,6 +34904,7 @@ Subsets may produce:
 
 ================================================================================================
 FILE: wiki/Workflows.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Workflows

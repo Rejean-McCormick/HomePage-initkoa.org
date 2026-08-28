@@ -5,38 +5,46 @@ source_path: C:\mycode\SenTient\SenTient
 source_commit: 537705b2048b89e4ec20872a089784959da10b85
 working_tree_markdown: clean
 wiki_source_path: C:\mycode\SenTient\SenTient.wiki
-wiki_source_commit: a0d371deec63e53c14e776c42e7366b1992b3578
-wiki_working_tree_markdown: dirty
+wiki_source_commit: 5d74048f2f27c685c9e76c3770c902d72d4660c0
+wiki_working_tree_markdown: clean
+policy_version: 2026-08-28.1
 repo_files: 15
 wiki_files: 1
-generated_at: 2026-08-25T11:30:59-04:00
+source_files: 16
+included_files: 16
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 58065
+authority_counts: {"canonical":16}
+generated_at: 2026-08-28T09:46:47-04:00
 files: 16
-content_sha256: 5a01d80ed6cf4476ceaaca1199d8923a83884e439b75e2241d03566cd73941bb
+content_sha256: 1affb183e5fd8a8ea37abef57e0cd710d90bbabd676f9eb9b6052c61ba3eaaf8
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. Docs/00_ARCHITECTURE_BLUEPRINT.md
-02. Docs/01_INGESTION_LAYER.md
-03. Docs/02_SEMANTIC_LAYER.md
-04. Docs/03_CORE_LAYER.md
-05. Docs/04_DATA_DICTIONARY.md
-06. Docs/05_WIRING_AND_CONFIG.md
-07. Docs/06_API_AND_FRONTEND.md
-08. Docs/07_QA_AND_VALIDATION.md
-09. Docs/Acknowledgements/falcon2_0.md
-10. Docs/Acknowledgements/OpenRefine.md
-11. Docs/Acknowledgements/OpenTapioca.md
-12. opentapioca/README.md
-13. README.md
-14. solr/duplicate.md
-15. webapp/extensions/database/README.md
-16. wiki/Home.md
+01. [canonical] Docs/00_ARCHITECTURE_BLUEPRINT.md
+02. [canonical] Docs/01_INGESTION_LAYER.md
+03. [canonical] Docs/02_SEMANTIC_LAYER.md
+04. [canonical] Docs/03_CORE_LAYER.md
+05. [canonical] Docs/04_DATA_DICTIONARY.md
+06. [canonical] Docs/05_WIRING_AND_CONFIG.md
+07. [canonical] Docs/06_API_AND_FRONTEND.md
+08. [canonical] Docs/07_QA_AND_VALIDATION.md
+09. [canonical] Docs/Acknowledgements/falcon2_0.md
+10. [canonical] Docs/Acknowledgements/OpenRefine.md
+11. [canonical] Docs/Acknowledgements/OpenTapioca.md
+12. [canonical] opentapioca/README.md
+13. [canonical] README.md
+14. [canonical] solr/duplicate.md
+15. [canonical] webapp/extensions/database/README.md
+16. [canonical] wiki/Home.md
 
 
 ================================================================================================
 FILE: Docs/00_ARCHITECTURE_BLUEPRINT.md
+AUTHORITY: canonical
 ================================================================================================
 
 # SenTient Architecture Blueprint
@@ -104,6 +112,7 @@ graph TD
 
 ================================================================================================
 FILE: Docs/01_INGESTION_LAYER.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 1: Ingestion & Fast Tagging (The Sieve)
@@ -184,6 +193,7 @@ Content-Type: text/plain
 
 ================================================================================================
 FILE: Docs/02_SEMANTIC_LAYER.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Layer 2: The Semantic Linguist (Falcon 2.0)
@@ -290,6 +300,7 @@ The Java Orchestrator talks to the Python Layer via REST.
 
 ================================================================================================
 FILE: Docs/03_CORE_LAYER.md
+AUTHORITY: canonical
 ================================================================================================
 
 Here is the updated documentation for **Layer 3: The Core Orchestrator**.
@@ -378,6 +389,7 @@ public class Recon {
 
 ================================================================================================
 FILE: Docs/04_DATA_DICTIONARY.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Data Dictionary & Type Mapping
@@ -508,6 +520,7 @@ Metadata for debugging distributed transactions.
 
 ================================================================================================
 FILE: Docs/05_WIRING_AND_CONFIG.md
+AUTHORITY: canonical
 ================================================================================================
 
 # Wiring & Configuration Strategy
@@ -586,6 +599,7 @@ SENTIENT_HOME/
 
 ================================================================================================
 FILE: Docs/06_API_AND_FRONTEND.md
+AUTHORITY: canonical
 ================================================================================================
 
 # API & Frontend Integration
@@ -616,6 +630,7 @@ X-Requested-With: XMLHttpRequest
 
 ================================================================================================
 FILE: Docs/07_QA_AND_VALIDATION.md
+AUTHORITY: canonical
 ================================================================================================
 
 # QA, Validation & Benchmarking
@@ -700,6 +715,7 @@ python evaluation/evaluate_falcon_api.py --dataset datasets/lcquad2_test.json --
 
 ================================================================================================
 FILE: Docs/Acknowledgements/falcon2_0.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Subject:** An Architectural Appreciation: What Sentry Learned from OpenRefine’s Source Code
@@ -765,6 +781,7 @@ RM
 
 ================================================================================================
 FILE: Docs/Acknowledgements/OpenRefine.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Subject: A Tribute to OpenRefine’s Architecture: Lessons Learned for the Next Generation of Data Tools**
@@ -810,6 +827,7 @@ RM
 
 ================================================================================================
 FILE: Docs/Acknowledgements/OpenTapioca.md
+AUTHORITY: canonical
 ================================================================================================
 
 **Subject: Appreciation & Technical Analysis: The Architectural Pillars of OpenTapioca we are adopting for Sentry**
@@ -860,6 +878,7 @@ RM
 
 ================================================================================================
 FILE: opentapioca/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 OpenTapioca
@@ -882,6 +901,7 @@ OpenTapioca is released under the Apache-2.0 license.
 
 ================================================================================================
 FILE: README.md
+AUTHORITY: canonical
 ================================================================================================
 
 ÿþ#   S e n T i e n t   ( S e m a n t i c   E n t i t y   I n t e l l i g e n t   T r a n s f o r m a t i o n ) 
@@ -1113,6 +1133,7 @@ FILE: README.md
 
 ================================================================================================
 FILE: solr/duplicate.md
+AUTHORITY: canonical
 ================================================================================================
 
 copied out or repo, into apache server.
@@ -1122,6 +1143,7 @@ copied out or repo, into apache server.
 
 ================================================================================================
 FILE: webapp/extensions/database/README.md
+AUTHORITY: canonical
 ================================================================================================
 
 This project is an OpenRefine extension for importing database data using JDBC.
@@ -1137,6 +1159,7 @@ For exporting to a database, other code can be found under folder `OpenRefine/ma
 
 ================================================================================================
 FILE: wiki/Home.md
+AUTHORITY: canonical
 ================================================================================================
 
 # SenTient
