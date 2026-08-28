@@ -243,23 +243,8 @@ function readContextPackManifest(config) {
   }
 }
 
-function scanContextPackDirectory(config) {
-  const publicDir = config?.publicDir || path.join(process.cwd(), "public");
-  const directory = path.join(publicDir, "context-packs");
-
-  try {
-    if (!fs.existsSync(directory)) return [];
-    return fs
-      .readdirSync(directory, { withFileTypes: true })
-      .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith(".txt"))
-      .map((entry) => ({ file: entry.name }));
-  } catch {
-    return [];
-  }
-}
-
 function discoverContextPackResources(config) {
-  const discovered = readContextPackManifest(config) ?? scanContextPackDirectory(config);
+  const discovered = readContextPackManifest(config) ?? [];
 
   return discovered
     .map((pack) => {

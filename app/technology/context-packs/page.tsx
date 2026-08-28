@@ -135,11 +135,6 @@ const PRESENTATION: Record<string, PackPresentation> = {
     scope: 'Verified intake layer',
     description: 'Reference bundle for K-Port, the EkoH intake layer for verified inputs and associated documentation.',
   },
-  'initkoa-docs': {
-    title: 'initkOA Docs Context Pack',
-    scope: 'Public documentation',
-    description: 'Reference bundle generated from the initkOA documentation repository.',
-  },
   'freeze-vote-rebuild-operational-peace-framework': {
     title: 'Freeze · Vote · Rebuild Context Pack',
     scope: 'Operational peace framework',
@@ -243,11 +238,7 @@ function discoverContextPacks(): ContextPack[] {
   const directory = path.join(process.cwd(), 'public', 'context-packs');
   if (!fs.existsSync(directory)) return [];
 
-  const manifest = readManifest(directory);
-  const discovered: ManifestPack[] = manifest ?? fs
-    .readdirSync(directory, { withFileTypes: true })
-    .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith('.txt'))
-    .map((entry) => ({ file: entry.name }));
+  const discovered: ManifestPack[] = readManifest(directory) ?? [];
 
   return discovered
     .map((entry) => {
@@ -295,9 +286,9 @@ export default function ContextPacksPage() {
         </p>
 
         <p className="mt-4 text-lg text-slate-600 max-w-3xl leading-relaxed">
-          The catalog below is generated from the files currently published in
-          <code className="mx-1">public/context-packs</code>. New packs appear automatically after
-          the builder updates the directory and the site is rebuilt.
+          The catalog below is generated from
+          <code className="mx-1">public/context-packs/index.json</code>, the canonical manifest. New
+          packs appear automatically after the builder updates the manifest and the site is rebuilt.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
