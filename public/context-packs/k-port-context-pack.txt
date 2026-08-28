@@ -2,23 +2,34 @@
 
 repository: Rejean-McCormick/K-Port
 source_path: C:\mycode\K-Port\K-Port
-source_commit: 07a5f3630fbb9b5e85720f06751a6ec44d2602da
+source_commit: 114ad695213a83ad2c38aa09f3ff4b4a7d46d9cb
 working_tree_markdown: clean
-generated_at: 2026-08-25T09:32:53-04:00
-files: 7
-content_sha256: dc1c7b6d2846ca74b722c9f059eacd2e34ed1419026b9472bb73a6b0a9bcb072
+wiki_source_path: none
+wiki_source_commit: none
+wiki_working_tree_markdown: not-git
+repo_files: 13
+wiki_files: 0
+generated_at: 2026-08-28T07:34:10-04:00
+files: 13
+content_sha256: 1afdfcfa0d8e795ea031fb4708166c7c6d74b4f7fcc131598109c27fbed84139
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-1. docs/00-ekoh-expertise-claims-app-alignment.md
-2. docs/01-expertise-claims-concept-and-scope.md
-3. docs/02-expertise-claim-evidence-model.md
-4. docs/03-expertise-claim-intake-form.md
-5. docs/04-verification-and-scoring-handoff.md
-6. docs/05-governance-privacy-and-audit.md
-7. README.md
+01. docs/00-ekoh-expertise-claims-app-alignment.md
+02. docs/00-k-port-alignment.md
+03. docs/01-expertise-claims-concept-and-scope.md
+04. docs/01-k-port-concept-and-scope.md
+05. docs/02-expertise-claim-evidence-model.md
+06. docs/02-k-port-claim-evidence-model.md
+07. docs/03-expertise-claim-intake-form.md
+08. docs/03-k-port-intake-form.md
+09. docs/04-k-port-verification-and-ekoh-handoff.md
+10. docs/04-verification-and-scoring-handoff.md
+11. docs/05-governance-privacy-and-audit.md
+12. docs/05-k-port-governance-privacy-and-audit.md
+13. README.md
 
 
 ================================================================================================
@@ -508,6 +519,272 @@ It should centralize raw claims and evidence inside the EkoH environment while p
 The guiding principle is:
 
 > Konnaxion produces evidence. EkoH owns reputation.
+
+
+================================================================================================
+FILE: docs/00-k-port-alignment.md
+================================================================================================
+
+# K-Port — Architecture Alignment
+
+**Document ID:** `00-k-port-alignment.md`  
+**Scope:** K-Port position, ownership, boundaries and integration contracts  
+**Category:** application + evidence gateway inside EkoH/Konnaxion
+
+## 1. Purpose
+
+K-Port is the canonical controlled boundary through which evidence intended to affect EkoH reputation is submitted, normalized, qualified and handed to EkoH.
+
+It exists to prevent three failures:
+
+1. evidence producers writing directly into reputation state;
+2. K-Port reinterpreting or overwriting source-authoritative facts;
+3. EkoH reputation being derived from evidence without traceable provenance, scope and review.
+
+## 2. Architectural classification
+
+```text
+kOA Digital Ecosystem
+└── Konnaxion                         ecosystem system / platform
+    └── EkoH                          internal domain/module
+        └── K-Port                    application + evidence gateway
+```
+
+K-Port is **not**:
+
+- an ecosystem system peer of Konnaxion;
+- a general Konnaxion platform layer;
+- an independent reputation system;
+- Smart Vote;
+- XKaliber;
+- CertifiKation;
+- an EkoH scoring engine.
+
+A separate K-Port repository is a repository/deployment choice, not an authority boundary that promotes K-Port to an ecosystem system.
+
+## 3. Owner matrix
+
+| State / decision | Authoritative owner |
+|---|---|
+| XKaliber observed competency and assessment result | XKaliber |
+| CertifiKation seal/status | CertifiKation/XKaliber contract |
+| Korum deliberation facts | Korum |
+| Konsultations consultation/ballot facts | Konsultations |
+| Smart Vote reading | Smart Vote |
+| K-Port claim/evidence intake | K-Port |
+| K-Port evidence qualification/admissibility | K-Port |
+| K-Port → EkoH scoring handoff | K-Port |
+| EkoH domain taxonomy/context | EkoH |
+| EkoH expertise/ethics reputation state | EkoH |
+| EkoH score history | EkoH |
+
+The same datum may be referenced by several components, but it has only one logical authoritative owner.
+
+## 4. Core boundary
+
+```text
+source fact
+≠ evidence copy/reference
+≠ K-Port qualification
+≠ K-Port admissibility
+≠ EkoH score impact
+≠ Smart Vote reading
+```
+
+K-Port may preserve or reference a source fact. It may not silently mutate the semantics of that source fact.
+
+Example:
+
+```text
+XKaliber confirmed_level = 4
+```
+
+K-Port may attach:
+
+```text
+admissible_for_ekoh = true
+mapped_domains = [...]
+qualification_reason = ...
+```
+
+It must not replace the source fact with a different `confirmed_level`.
+
+## 5. Input classes
+
+### 5.1 User/external evidence
+
+A user may claim experience, credentials, impact, recognition, publications, licenses, project work or other merit and attach supporting evidence.
+
+For these inputs, K-Port owns the review state but not the external institution's underlying truth. Evidence existence, authenticity, identity binding, relevance and freshness are evaluated according to K-Port/EkoH policy.
+
+### 5.2 Source-authoritative internal evidence
+
+Trusted Konnaxion producers may expose structured evidence. The current primary example is XKaliber / CertifiKation inside KonnectED.
+
+K-Port verifies the transport/integrity/provenance/status/scope necessary for admissibility, while respecting the source's own semantic authority.
+
+```text
+XKaliber measures
+→ CertifiKation attests when applicable
+→ K-Port qualifies/routes
+→ EkoH scores
+```
+
+## 6. Smart Vote and circularity
+
+Smart Vote is a derived-reading system. Its readings may consume EkoH context. A Smart Vote reading therefore must not be treated as canonical evidence to increase the EkoH context that helped produce the reading.
+
+Forbidden default loop:
+
+```text
+EkoH context
+→ Smart Vote weighting/reading
+→ K-Port evidence
+→ higher EkoH context
+```
+
+If participation or civic conduct is admissible evidence, K-Port references the authoritative source-domain fact directly (for example Korum/Konsultations), not the Smart Vote derived reading.
+
+## 7. K-Port-owned objects
+
+The conceptual K-Port surface is:
+
+```text
+ExpertiseClaim
+├── ClaimDomain
+├── ClaimEvidence
+├── ClaimMetric
+├── ClaimValidation
+└── ScoringHandoff
+```
+
+### `ExpertiseClaim`
+
+A structured business-domain claim submitted to K-Port. It is not a Kristal Claim-IR object or assertion.
+
+### `ClaimEvidence`
+
+A stored evidence item or reference, including provenance, source status, visibility and integrity/audit material when available.
+
+### `ClaimDomain`
+
+A K-Port mapping into EkoH's domain catalogue. The source can propose a domain; K-Port may confirm/correct the mapping under policy.
+
+### `ClaimValidation`
+
+A K-Port review result. The word `validation` is local to this application unless an explicit external validation contract is referenced.
+
+### `ScoringHandoff`
+
+The traceable package K-Port sends to EkoH. It records what K-Port qualified and why. It does not own the resulting EkoH score.
+
+## 8. Status separation
+
+K-Port must keep these dimensions distinct:
+
+```text
+source_status
+claim_review_status
+admissibility_status
+handoff_status
+EkoH_processing/status reference
+```
+
+Examples:
+
+- a source record can be `active` while K-Port marks it `not_admissible` for a specific EkoH domain;
+- a claim can be `verified` while EkoH produces `no_score_change`;
+- an evidence source can later become `revoked`, which requires K-Port to update admissibility and request EkoH re-evaluation without directly editing EkoH scores.
+
+## 9. K-Port → EkoH contract
+
+K-Port sends an explicit handoff/candidate, not an internal-table mutation.
+
+The handoff should carry:
+
+- subject identity reference;
+- K-Port claim and evidence references;
+- source producer/type/id/version;
+- source status and integrity/audit references;
+- K-Port review and admissibility state;
+- confirmed domain mapping;
+- evidence reliability/quality metadata;
+- consent/visibility constraints;
+- reviewer/decision references;
+- correlation/idempotency identifier;
+- contract version and timestamp.
+
+EkoH remains free to accept, reject, defer or assign no reputation impact under its own scoring policy.
+
+EkoH returns a receipt/result reference. K-Port retains the reference for traceability but does not mirror EkoH's authoritative score as a writable local field.
+
+## 10. Revocation and correction
+
+A source correction or revocation flows in the same direction as the original evidence:
+
+```text
+source correction/revocation
+→ K-Port updates source/admissibility state
+→ K-Port emits re-evaluation handoff
+→ EkoH owns any reputation correction
+```
+
+K-Port must not correct EkoH reputation directly.
+
+## 11. Privacy boundary
+
+K-Port handles potentially sensitive evidence. It must separate:
+
+- source evidence;
+- K-Port review notes;
+- public claim summary;
+- EkoH scoring handoff;
+- public EkoH profile/score explanation.
+
+A score or public summary does not imply that raw evidence is public.
+
+K-Port should minimize copied sensitive data and prefer stable references when the source can remain authoritative and retrievable under policy.
+
+## 12. Cross-system terminology
+
+The following terms are intentionally scoped:
+
+```text
+K-Port ExpertiseClaim
+≠ Kristal assertion
+≠ Kristal Claim-IR
+
+K-Port verified
+≠ universal truth
+≠ Kristal validation
+≠ institutional recognition
+
+K-Port admissible
+≠ EkoH score increase
+
+EkoH reputation signal
+≠ Smart Vote ballot
+≠ Smart Vote reading
+```
+
+## 13. Conformance rules
+
+A conforming K-Port implementation must satisfy all of the following:
+
+1. K-Port is implemented as an application/gateway inside the EkoH/Konnaxion boundary.
+2. Source-authoritative facts retain their source owner and provenance.
+3. K-Port qualification/admissibility is separate from source validity.
+4. K-Port never assigns or directly writes EkoH reputation as its own authority.
+5. EkoH scoring is invoked through an explicit handoff/interface.
+6. Smart Vote derived readings do not feed back as canonical EkoH expertise evidence.
+7. Claim/evidence/review/admissibility/handoff states remain separable.
+8. Revocation/correction is traceable and results in EkoH re-evaluation, not direct K-Port score mutation.
+9. Privacy and consent constraints travel with evidence and handoff references.
+10. Retries of a scoring handoff are idempotent or explicitly reconciled.
+
+## 14. Canonical statement
+
+> **Source systems own facts. K-Port qualifies evidence. EkoH owns reputation. Smart Vote derives readings without becoming an evidence feedback loop.**
 
 
 ================================================================================================
@@ -1088,6 +1365,603 @@ That remains EkoH’s responsibility.
 The guiding product statement is:
 
 > The Expertise Claims App collects proof. EkoH assigns reputation.
+
+
+================================================================================================
+FILE: docs/01-k-port-concept-and-scope.md
+================================================================================================
+
+# K-Port — Concept and Scope
+
+**Document ID:** `01-k-port-concept-and-scope.md`  
+**Scope:** Product concept, purpose, boundaries, and terminology  
+**Status:** Current product/architecture specification  
+**Intended audience:** Product, governance, architecture, UX, and development teams  
+
+---
+
+## 1. Purpose
+
+This document defines the concept and scope of the **K-Port**.
+
+The app exists to let users submit structured evidence about their expertise, merit, experience, impact, recognition, and trustworthiness.
+
+It does not calculate reputation by itself.  
+It does not replace EkoH.  
+It does not allow users to self-award expertise.
+
+Its purpose is to collect, organize, verify, and route expertise-related claims into the EkoH scoring environment.
+
+---
+
+## Architectural position
+
+K-Port is an **application + evidence gateway inside the EkoH boundary of Konnaxion**. It is not a peer ecosystem system and it is not a second reputation authority.
+
+```text
+Konnaxion
+└── EkoH
+    └── K-Port
+```
+
+The product may be developed in its own repository while remaining inside this architectural boundary.
+
+## 2. Product concept
+
+K-Port is a centralized EkoH intake layer for mark-of-merit evidence.
+
+It lets a user say:
+
+> “Here is something I have done, learned, earned, built, published, taught, proven, or been recognized for. Here is the evidence. Please evaluate it as part of my EkoH profile.”
+
+The app transforms unstructured proof into structured claims that EkoH can understand.
+
+A claim may support:
+
+- domain expertise;
+- practical experience;
+- measurable impact;
+- peer recognition;
+- knowledge dissemination;
+- ethical trustworthiness.
+
+---
+
+## 3. Core idea
+
+The app is based on a simple distinction:
+
+```text
+Evidence is submitted by the user.
+Validity is assessed by verification.
+Scores are produced by EkoH.
+```
+
+The user can submit evidence.  
+The system can organize and verify it.  
+Reviewers or automated services can assess it.  
+EkoH decides how it affects expertise and ethics scores.
+
+---
+
+## 4. Problem being solved
+
+EkoH already centralizes user expertise scores, ethics scores, score history, privacy, and scoring configuration.
+
+However, there is a missing upstream product layer:
+
+```text
+Where does a user submit the evidence that justifies an EkoH score?
+```
+
+Without this app, Konnaxion may have evidence scattered across modules, external links, uploads, projects, and user profiles.
+
+K-Port solves this by creating a single EkoH-centered place where users can submit claims and proof before scoring.
+
+---
+
+## 5. What is an expertise claim?
+
+> **Terminology boundary:** `ExpertiseClaim` is a K-Port business-domain intake record. It is not a Kristal assertion or Claim-IR object, and K-Port `verified` status does not imply universal truth or external epistemic validation.
+
+
+An **expertise claim** is a structured user-submitted statement that may support a user’s EkoH profile.
+
+Examples:
+
+- “I have a certification in solar energy systems.”
+- “I worked for eight years as a civil engineer.”
+- “I created an open-source water-filtration prototype.”
+- “My project reduced energy use by 22%.”
+- “I published a peer-reviewed article.”
+- “I mentored 40 learners in this subject.”
+- “A recognized expert endorsed my contribution.”
+- “I have verified my professional identity.”
+- “I have a strong conduct history in community deliberation.”
+
+A claim is not automatically true.  
+A claim is not automatically scored.  
+A claim becomes useful only when supported by evidence and verification.
+
+---
+
+## 6. What is a mark-of-merit claim?
+
+A **mark-of-merit claim** is an expertise claim that maps to one of EkoH’s recognized merit dimensions.
+
+Recommended canonical dimensions:
+
+| Merit dimension | Meaning |
+|---|---|
+| Theoretical knowledge and qualifications | Formal and structured knowledge, such as degrees, certifications, licenses, research, or patents |
+| Practical experience | Hands-on work, professional roles, field work, applied projects, or direct practice |
+| Measurable impact | Quantified outcomes, real-world results, adoption, beneficiaries, savings, or public-good effects |
+| Peer recognition | Endorsements, reviews, citations, expert validation, or community recognition |
+| Knowledge dissemination | Teaching, mentoring, tutorials, documentation, publications, or open educational resources |
+| Ethical integrity | Conduct, transparency, honesty, respect, responsibility, and alignment with platform values |
+
+These dimensions should define the top-level structure of the app.
+
+---
+
+## 7. What is evidence?
+
+**Evidence** is the proof or support attached to a claim.
+
+Evidence may be internal to Konnaxion or external.
+
+Examples of evidence include:
+
+- uploaded certificate;
+- certificate ID;
+- institutional verification link;
+- degree record;
+- license number;
+- publication DOI;
+- patent reference;
+- project link;
+- project report;
+- code repository;
+- portfolio item;
+- tutorial;
+- documentation;
+- impact report;
+- endorsement;
+- expert review;
+- peer validation;
+- moderation or conduct record;
+- identity verification;
+- external professional profile.
+
+Evidence should be treated according to its reliability.
+
+A public link is not the same as institutional verification.  
+A self-attested statement is not the same as expert validation.  
+A peer endorsement from a trusted domain expert is not the same as a generic popularity signal.
+
+---
+
+## 8. Claim versus score
+
+The app must preserve the difference between a claim and a score.
+
+| Concept | Meaning |
+|---|---|
+| Claim | A submitted statement about expertise, merit, impact, recognition, or ethics |
+| Evidence | Proof attached to the claim |
+| Verification | Process that evaluates whether the claim and evidence are credible |
+| Score signal | A verified input that can be used by EkoH scoring |
+| Score | The current EkoH result after scoring |
+| Audit trail | The record explaining how and why the score changed |
+
+A claim is upstream of scoring.  
+A score is downstream of verification.
+
+---
+
+## 9. Who uses the app?
+
+### 9.1 Claimant
+
+The person submitting a claim.
+
+The claimant may submit:
+
+- their own credentials;
+- their own experience;
+- their own project evidence;
+- their own impact metrics;
+- their own publications;
+- evidence of peer recognition;
+- ethics or transparency-related evidence.
+
+### 9.2 Peer validator
+
+A Konnaxion user who can validate or endorse a claim.
+
+Peer validators may be ordinary peers, domain experts, mentors, project collaborators, reviewers, or trusted community members.
+
+Their validation should carry different weight depending on their own credibility and relevance to the domain.
+
+### 9.3 Expert reviewer
+
+A reviewer with domain-specific expertise.
+
+Expert reviewers may validate the substance of a claim, not just the presence of evidence.
+
+### 9.4 Admin or governance reviewer
+
+A trusted reviewer responsible for policy, abuse prevention, disputes, and edge cases.
+
+### 9.5 EkoH scoring process
+
+The scoring process consumes verified claims and translates them into score changes.
+
+The app should prepare structured inputs for this process, but should not become the scoring engine itself.
+
+---
+
+## 10. In scope
+
+The app should support the following product capabilities.
+
+### 10.1 Claim submission
+
+Users can create and submit claims.
+
+Each claim should include:
+
+- title;
+- description;
+- merit dimension;
+- evidence type;
+- relevant expertise domain or domains;
+- evidence attachments or references;
+- optional impact metrics;
+- optional peer validators;
+- privacy preference;
+- conflict-of-interest declaration where needed.
+
+### 10.2 Domain mapping
+
+Claims should be mapped to one or more expertise domains.
+
+A claim may be:
+
+- fully relevant to one domain;
+- partly relevant to several domains;
+- reviewed or corrected by a human or AI-assisted classifier.
+
+### 10.3 Evidence attachment
+
+Users should be able to attach or reference proof.
+
+Evidence may include:
+
+- file uploads;
+- external URLs;
+- internal Konnaxion objects;
+- certificate IDs;
+- publication identifiers;
+- portfolio items;
+- institutional references.
+
+### 10.4 Verification workflow
+
+The app should support review states such as:
+
+- draft;
+- submitted;
+- under review;
+- needs more evidence;
+- verified;
+- partially verified;
+- rejected;
+- disputed;
+- expired;
+- revoked;
+- archived.
+
+### 10.5 Peer and expert validation
+
+The app should allow claims to be validated by people other than the claimant.
+
+Validation should include:
+
+- decision;
+- confidence;
+- comment or rationale;
+- validator identity;
+- validator domain relevance;
+- conflict-of-interest disclosure.
+
+### 10.6 Impact capture
+
+For measurable impact claims, the app should support structured metrics.
+
+Examples:
+
+- people helped;
+- funds raised;
+- emissions reduced;
+- energy saved;
+- learners reached;
+- citations;
+- downloads;
+- adoption rate;
+- hours contributed;
+- implementation count.
+
+### 10.7 Privacy and visibility
+
+The app should let users control how claim-related information is exposed.
+
+It should distinguish between:
+
+- private evidence;
+- reviewer-visible evidence;
+- public claim summary;
+- public score explanation.
+
+### 10.8 Score handoff
+
+Verified claims should be handed off to the EkoH scoring process.
+
+The app should preserve enough information for EkoH to explain:
+
+- what changed;
+- why it changed;
+- which evidence was used;
+- which domains were affected;
+- who or what verified the claim.
+
+---
+
+## 11. Out of scope
+
+The app should not do the following.
+
+### 11.1 It should not replace EkoH scores
+
+The app does not replace:
+
+- `user_expertise_score`;
+- `user_ethics_score`;
+- `score_history`;
+- `context_analysis_log`;
+- `score_configuration`;
+- `confidentiality_setting`.
+
+### 11.2 It should not create a parallel reputation system
+
+The app is not a second scoring engine.
+
+It is an intake, evidence qualification, and verification layer. For source-authoritative evidence such as XKaliber / CertifiKation results, verification means checking provenance, status, identity binding, scope, consent and EkoH mapping—not repeating the competency assessment.
+
+### 11.3 It should not let users assign scores to themselves
+
+Users submit evidence, not scores.
+
+A self-assessed level may be collected as context, but it should not be trusted as the final score.
+
+### 11.4 It should not treat all evidence equally
+
+Different evidence has different trust levels.
+
+The app should distinguish self-attested, peer-validated, expert-reviewed, and institution-verified evidence.
+
+### 11.5 It should not decentralize reputation authority
+
+Other Konnaxion domains/applications may provide evidence, but EkoH should remain the central authority for expertise and ethics scores.
+
+### 11.6 It should not expose private evidence by default
+
+Some evidence may be sensitive.
+
+Public transparency should not override privacy, safety, or consent.
+
+---
+
+## 12. Product boundaries
+
+The app sits between user activity and EkoH scoring.
+
+```text
+User / external proof ───────────────┐
+                                       │
+XKaliber / CertifiKation evidence ─────┼─→ K-Port
+Other Konnaxion activity / evidence ───┘      ↓
+                                  evidence qualification
+                                  and verification
+                                         ↓
+                                  EkoH scoring process
+                                         ↓
+                              EkoH expertise and ethics profile
+```
+
+It does not replace the activity source.  
+It does not replace verification.  
+It does not replace scoring.  
+It connects them.
+
+---
+
+## 13. Relationship with Konnaxion evidence producers
+
+K-Port may reference evidence from other Konnaxion domains/applications while remaining inside the EkoH architectural boundary.
+
+Examples:
+
+| Source | Possible claim evidence |
+|---|---|
+| XKaliber | Caliber Profiles, confirmed competency levels, assessment confidence and audit references |
+| CertifiKation | Attested competency seals, validity and status |
+| KonnectED | Learning paths, portfolios, and references to competency evidence |
+| keenKonnect | Projects, project roles, resources, reviews, practical outputs |
+| Ethikos | Debate contributions, arguments, deliberative conduct |
+| Smart Vote | Derived readings are not canonical EkoH evidence; use authoritative source-domain participation facts instead |
+| User profile | Identity, professional background, transparency signals |
+| External systems | Degrees, publications, patents, licenses, repositories, institutional records |
+
+The listed domains/applications may expose evidence, but their derived outputs are not interchangeable.  
+XKaliber remains authoritative for its assessment results.  
+Korum/Konsultations remain authoritative for their own source participation facts.  
+Smart Vote readings are derived and must not be fed back as canonical evidence for EkoH reputation.  
+K-Port is the canonical EkoH evidence gateway and determines evidence admissibility.  
+EkoH remains the scoring and reputation authority.
+
+---
+
+## 14. Claim lifecycle
+
+A typical claim should move through a lifecycle.
+
+```text
+Draft
+  ↓
+Submitted
+  ↓
+Under review
+  ↓
+Verified / Partially verified / Rejected
+  ↓
+Eligible for EkoH handoff, handed off, or closed
+  ↓
+Audited, disputed, expired, revoked, or archived if needed
+```
+
+Not every claim will affect a score.
+
+Reasons include:
+
+- insufficient evidence;
+- wrong domain mapping;
+- duplicate claim;
+- expired credential;
+- unverifiable external source;
+- conflict of interest;
+- low relevance;
+- rejection by reviewers;
+- abuse or manipulation risk.
+
+---
+
+## 15. Basic user stories
+
+### Claimant
+
+As a user, I want to submit proof of my expertise so that EkoH can consider it in my domain profile.
+
+As a user, I want to attach evidence to a claim so that reviewers can verify it.
+
+As a user, I want to choose which domain my claim belongs to so that it affects the right expertise area.
+
+As a user, I want to see the status of my claim so that I know whether it is pending, accepted, rejected, or needs more evidence.
+
+As a user, I want to control privacy so that sensitive documents are not publicly exposed.
+
+### Reviewer
+
+As a reviewer, I want to see the claim, evidence, domain mapping, and context so that I can make a fair validation decision.
+
+As a reviewer, I want to request more evidence when a claim is incomplete.
+
+As a reviewer, I want to approve, partially approve, reject, or dispute a claim.
+
+### EkoH system
+
+As EkoH, I need verified claims to become structured scoring signals.
+
+As EkoH, I need claim-to-score traceability.
+
+As EkoH, I need to record why a score changed.
+
+---
+
+## 16. Minimum viable product scope
+
+A first version should include only the essentials:
+
+- create claim;
+- select merit dimension;
+- select one or more expertise domains;
+- attach evidence by file or URL;
+- submit claim;
+- review claim;
+- set claim status;
+- record reviewer notes;
+- hand verified claim to EkoH scoring;
+- record score-change reason;
+- respect privacy level.
+
+The MVP should avoid overloading the first version with advanced automation.
+
+AI-assisted classification, external registry integrations, blockchain verification, weighted validator scoring, and complex appeals can be added later.
+
+---
+
+## 17. Later-phase capabilities
+
+Future versions may include:
+
+- AI-assisted domain mapping;
+- automatic duplicate detection;
+- automatic certificate verification;
+- external registry checks;
+- ORCID / DOI / patent lookups;
+- GitHub or portfolio import;
+- weighted peer validation;
+- claim expiration reminders;
+- appeal workflow;
+- conflict-of-interest graph;
+- impact metric verification;
+- anomaly and gaming detection;
+- public evidence profile;
+- reviewer reputation tracking.
+
+---
+
+## 18. Success criteria
+
+The app succeeds if:
+
+- users can submit expertise evidence in a structured way;
+- EkoH receives clean, reviewable scoring inputs;
+- scores remain centralized in EkoH;
+- claims can be traced to evidence;
+- evidence can be reviewed and challenged;
+- privacy is respected;
+- reviewers understand what they are validating;
+- users do not self-award scores;
+- other Konnaxion domains/applications remain evidence sources, not scoring authorities.
+
+---
+
+## 19. Summary
+
+The K-Port is a product layer for collecting and organizing proof of expertise.
+
+It should answer:
+
+```text
+What is the user claiming?
+What evidence supports it?
+Which domain does it affect?
+Who or what verified it?
+Should it become an EkoH scoring signal?
+```
+
+It should not answer alone:
+
+```text
+What is the user’s final reputation score?
+```
+
+That remains EkoH’s responsibility.
+
+The guiding product statement is:
+
+> K-Port collects proof. EkoH assigns reputation.
 
 
 ================================================================================================
@@ -1841,6 +2715,796 @@ Domain
 Metric
 Validation
 Score application
+```
+
+The most important object is the claim.
+
+The most important rule is that a claim does not equal a score.
+
+The model should help EkoH answer:
+
+```text
+What was claimed?
+What evidence supports it?
+Which domain does it affect?
+Who or what verified it?
+Did it change a score?
+Can we audit the change later?
+```
+
+The guiding statement is:
+
+> Structured claims make expertise auditable before it becomes influence.
+
+
+================================================================================================
+FILE: docs/02-k-port-claim-evidence-model.md
+================================================================================================
+
+# K-Port — Claim and Evidence Model
+
+**Document ID:** `02-k-port-claim-evidence-model.md`  
+**Scope:** Conceptual data model for expertise claims, evidence, domains, metrics, validation, and score handoff  
+**Status:** Current product/architecture specification  
+**Intended audience:** Product, architecture, UX, governance, and development teams  
+
+---
+
+## 1. Purpose
+
+This document describes the conceptual model for the **K-Port**.
+
+It defines the main objects the app should understand, without going too deep into implementation details.
+
+The goal is to create a shared language for K-Port-owned intake and qualification state:
+
+- expertise claims;
+- mark-of-merit evidence;
+- domain mapping;
+- impact metrics;
+- peer or expert validation;
+- verification status;
+- scoring handoff to EkoH.
+
+This document should guide product design, UX, and future database/API design.
+
+---
+
+## 2. Model principle
+
+The model should follow this principle:
+
+```text
+Claims are not scores.
+Evidence is not automatically valid.
+Validation turns claims into score signals.
+EkoH remains the scoring authority.
+```
+
+K-Port should collect and organize evidence.
+
+EkoH should decide how verified evidence affects:
+
+- user expertise scores;
+- ethics scores;
+- score history;
+- contextual analysis logs;
+- privacy-controlled profile display.
+
+---
+
+## 3. High-level model
+
+Recommended conceptual structure:
+
+```text
+ExpertiseClaim
+├── ClaimDomain
+├── ClaimEvidence
+├── ClaimMetric
+├── ClaimValidation
+└── ScoringHandoff
+```
+
+Each object has a distinct purpose.
+
+| Object | Purpose |
+|---|---|
+| `ExpertiseClaim` | The main user-submitted statement of expertise or merit |
+| `ClaimDomain` | Links the claim to one or more EkoH expertise domains |
+| `ClaimEvidence` | Stores or references proof supporting the claim |
+| `ClaimMetric` | Captures measurable impact attached to the claim |
+| `ClaimValidation` | Records peer, expert, admin, or automated validation |
+| `ScoringHandoff` | Carries qualified evidence to EkoH for an independent scoring decision |
+
+---
+
+## 4. ExpertiseClaim
+
+An **ExpertiseClaim** is the central object.
+
+It represents a user’s structured statement that they have expertise, merit, experience, recognition, impact, or ethical credibility relevant to EkoH.
+
+Examples:
+
+- “I completed this certification.”
+- “I worked in this domain for five years.”
+- “I built this project.”
+- “I published this paper.”
+- “I mentored learners in this field.”
+- “I received expert validation.”
+- “This project produced measurable public benefit.”
+- “This conduct record supports my ethical trustworthiness.”
+
+### 4.1 Core information
+
+A claim should capture:
+
+| Field concept | Meaning |
+|---|---|
+| Claim owner | The user submitting the claim |
+| Title | Short human-readable name |
+| Description | Explanation of the claim |
+| Merit dimension | Which EkoH merit dimension it supports |
+| Evidence type | What kind of evidence is being submitted |
+| Claim status | Draft, submitted, under review, verified, rejected, etc. |
+| Source | Internal Konnaxion source or external source |
+| Privacy preference | Public, pseudonym, or anonymous |
+| Review notes | Explanation from reviewers or the system |
+| Dates | When the experience, credential, or activity happened |
+
+### 4.2 What a claim should not contain
+
+A claim should not directly contain the user’s final EkoH score.
+
+A claim may include context such as:
+
+- user self-assessed level;
+- claimed role;
+- claimed duration;
+- claimed impact;
+- claimed domain.
+
+But these are not final scoring results.
+
+They are inputs for review.
+
+---
+
+## 5. Merit dimension
+
+Each claim should map to one main EkoH merit dimension.
+
+Recommended dimensions:
+
+| Merit dimension | Description |
+|---|---|
+| Theoretical knowledge and qualifications | Formal or structured knowledge |
+| Practical experience | Applied work, hands-on practice, professional contribution |
+| Measurable impact | Quantified real-world outcomes |
+| Peer recognition | Endorsement, review, citation, validation, or community recognition |
+| Knowledge dissemination | Teaching, mentoring, publishing, documenting, or educating |
+| Ethical integrity | Trustworthiness, transparency, conduct, and alignment with platform values |
+
+The merit dimension answers:
+
+```text
+What kind of merit does this claim support?
+```
+
+---
+
+## 6. Evidence type
+
+The evidence type explains the form of proof attached to the claim.
+
+Examples:
+
+| Evidence type | Typical merit dimension |
+|---|---|
+| Degree | Theoretical knowledge and qualifications |
+| Certification | Theoretical knowledge and qualifications |
+| Professional license | Theoretical knowledge and qualifications |
+| Course completion | Theoretical knowledge and qualifications |
+| Publication | Theoretical knowledge / knowledge dissemination |
+| Patent | Theoretical knowledge / practical experience / impact |
+| Project | Practical experience |
+| Professional experience | Practical experience |
+| Portfolio item | Practical experience / knowledge dissemination |
+| Challenge result | Practical experience / peer recognition |
+| Competition award | Peer recognition / practical experience |
+| Peer endorsement | Peer recognition |
+| Expert review | Peer recognition |
+| Community validation | Peer recognition |
+| Teaching | Knowledge dissemination |
+| Mentoring | Knowledge dissemination |
+| Tutorial | Knowledge dissemination |
+| Documentation | Knowledge dissemination |
+| Open resource | Knowledge dissemination |
+| Impact report | Measurable impact |
+| Conduct record | Ethical integrity |
+| Identity verification | Ethical integrity |
+| External profile | Supporting evidence |
+| Other | Used only when no existing type fits |
+
+Evidence type answers:
+
+```text
+What kind of proof is this?
+```
+
+---
+
+## 7. ClaimDomain
+
+A **ClaimDomain** links a claim to one or more EkoH expertise domains.
+
+This is needed because a claim may apply to more than one domain.
+
+Example:
+
+A solar irrigation project may map to:
+
+- environmental sciences;
+- engineering;
+- agriculture;
+- community development.
+
+A publication on AI ethics may map to:
+
+- information and communication technologies;
+- philosophy and ethics;
+- law or policy.
+
+### 7.1 Domain mapping concepts
+
+A ClaimDomain should capture:
+
+| Field concept | Meaning |
+|---|---|
+| Claim | The parent expertise claim |
+| Expertise category | The EkoH domain affected |
+| Relevance weight | How strongly the claim applies to the domain |
+| Mapping method | User-selected, reviewer-selected, AI-assisted, imported |
+| Rationale | Why this domain applies |
+
+### 7.2 Why not only one domain?
+
+Expertise is often interdisciplinary.
+
+A single-domain model would force inaccurate classification.
+
+The app should support multiple domains, while still allowing review and correction.
+
+---
+
+## 8. ClaimEvidence
+
+A **ClaimEvidence** object represents a proof item attached to a claim.
+
+A claim may have one evidence item or many.
+
+Examples:
+
+- uploaded PDF certificate;
+- public URL;
+- DOI;
+- patent number;
+- GitHub repository;
+- portfolio item;
+- internal Konnaxion resource;
+- institution verification link;
+- expert letter;
+- impact report;
+- badge;
+- registry entry.
+
+### 8.1 Evidence concepts
+
+A ClaimEvidence item should capture:
+
+| Field concept | Meaning |
+|---|---|
+| Parent claim | The claim this evidence supports |
+| Evidence kind | File, URL, certificate ID, DOI, badge, registry, internal object, etc. |
+| Title | Human-readable evidence name |
+| Description | Optional explanation |
+| Location | File reference, URL, or internal object reference |
+| Issuer | Organization, person, or system that produced it |
+| Date issued | When the evidence was created or awarded |
+| Expiry date | For credentials that expire |
+| Verification status | Whether the evidence has been checked |
+| Metadata | Flexible details specific to that evidence type |
+| Content hash | Optional tamper-detection reference |
+
+### 8.2 Evidence reliability
+
+Evidence should have a reliability level.
+
+Examples:
+
+| Reliability level | Meaning |
+|---|---|
+| Self-attested | User claims it, no external confirmation yet |
+| Peer-validated | Confirmed by another user |
+| Expert-validated | Confirmed by a relevant domain expert |
+| Admin-reviewed | Confirmed by a governance/admin reviewer |
+| Institution-verified | Confirmed by the issuing institution |
+| Registry-verified | Confirmed through an official registry |
+| API-verified | Confirmed through integration with an external service |
+| Blockchain-verified | Confirmed through a tamper-resistant credential record |
+| Imported from Konnaxion | Comes from an internal Konnaxion object |
+| Source-authoritative | Produced by a trusted module that is authoritative for the underlying measurement, such as XKaliber / CertifiKation |
+
+Reliability should influence how much confidence EkoH places in the evidence.
+
+---
+
+## 9. ClaimMetric
+
+A **ClaimMetric** captures measurable impact.
+
+This object supports the EkoH merit dimension called measurable impact.
+
+Examples:
+
+- people reached;
+- beneficiaries helped;
+- learners trained;
+- patients treated;
+- funds raised;
+- energy saved;
+- emissions reduced;
+- water saved;
+- downloads;
+- citations;
+- adoption count;
+- implementation count;
+- hours contributed;
+- revenue generated;
+- cost reduced.
+
+### 9.1 Metric concepts
+
+A ClaimMetric should capture:
+
+| Field concept | Meaning |
+|---|---|
+| Parent claim | The claim this metric supports |
+| Metric name | What is being measured |
+| Metric value | Numeric value |
+| Unit | People, dollars, kg CO2, hours, downloads, etc. |
+| Measurement period | When the result was measured |
+| Source | Where the metric came from |
+| Verification status | Whether the metric has been checked |
+| Notes | Extra explanation |
+
+### 9.2 Why metrics should be structured
+
+Impact should not only be free text.
+
+Structured metrics make it possible to:
+
+- compare claims more fairly;
+- verify impact;
+- explain score changes;
+- avoid vague inflated claims;
+- support domain-specific scoring rules.
+
+---
+
+## 10. ClaimValidation
+
+A **ClaimValidation** records a review, endorsement, or verification decision.
+
+Validation may come from:
+
+- peer validators;
+- domain experts;
+- mentors;
+- project collaborators;
+- admins;
+- automated checks;
+- external registries;
+- institution verification.
+
+### 10.1 Validation concepts
+
+A ClaimValidation should capture:
+
+| Field concept | Meaning |
+|---|---|
+| Parent claim | The claim being validated |
+| Validator | Person, system, registry, or institution validating it |
+| Validator role | Peer, expert, admin, automated system, institution |
+| Decision | Approved, rejected, partially approved, needs more evidence |
+| Confidence | How confident the validator is |
+| Comment | Explanation or rationale |
+| Domain relevance | Whether the validator is relevant to the claimed domain |
+| Conflict declaration | Whether the validator has a conflict of interest |
+| Validation date | When validation happened |
+
+### 10.2 Validation is not always binary
+
+A claim may be partially valid.
+
+Examples:
+
+- the credential is real, but not relevant to the claimed domain;
+- the project happened, but the claimed impact is exaggerated;
+- the publication exists, but the user’s role was minor;
+- the work is valid, but outdated;
+- the evidence is real, but confidence is low.
+
+The app should support partial verification.
+
+---
+
+## 11. ScoringHandoff
+
+A **ScoringHandoff** records the evidence package that K-Port submits to EkoH for scoring consideration.
+
+It answers:
+
+```text
+What qualified evidence did K-Port send to EkoH, for which subject/domains, under which provenance, consent and review state?
+```
+
+It deliberately does **not** represent the score mutation itself. EkoH owns score calculation, score state and score history.
+
+### 11.1 Scoring handoff concepts
+
+A `ScoringHandoff` should capture:
+
+| Field concept | Meaning |
+|---|---|
+| Subject | User/person the evidence concerns |
+| Source claim | K-Port claim used as input |
+| Evidence references | Qualified evidence included in the handoff |
+| Source references | Producer/type/id/version/status for source-authoritative evidence |
+| Domain mappings | Confirmed EkoH domains and relevance |
+| Admissibility result | K-Port decision and reason |
+| Qualification metadata | Evidence reliability/confidence/review metadata in K-Port scope |
+| Consent/visibility | Constraints EkoH must preserve |
+| Correlation/idempotency ID | Stable identifier for retries/reconciliation |
+| Handoff version/time | Contract version and issuance time |
+| EkoH receipt/reference | Optional downstream processing reference returned by EkoH |
+
+K-Port must not treat `previous_score`, `new_score` or a local writable score field as authoritative fields of this object. Those belong to EkoH and may only be referenced through an EkoH-owned receipt/history record.
+
+### 11.2 Why this matters
+
+Separating the handoff from the score mutation preserves ownership:
+
+```text
+K-Port qualification
+→ ScoringHandoff
+→ EkoH scoring decision
+→ EkoH score/history
+```
+
+A verified claim can therefore produce no score change without creating a contradiction in K-Port state.
+
+---
+
+## 12. Claim status model
+
+K-Port must not collapse source status, claim review, admissibility and EkoH processing into a single status field.
+
+```text
+source_status ≠ claim_review_status ≠ admissibility_status ≠ handoff_status ≠ EkoH score state
+```
+
+The app should support a clear claim lifecycle.
+
+| Status | Meaning |
+|---|---|
+| Draft | User started the claim but has not submitted it |
+| Submitted | User submitted the claim for review |
+| Under review | Claim is actively being reviewed |
+| Needs more evidence | Reviewers need additional proof |
+| Verified | Claim is accepted |
+| Partially verified | Claim is accepted only in part |
+| Rejected | Claim is not accepted |
+| Disputed | Claim is under challenge or appeal |
+| Expired | Claim is no longer current |
+| Revoked | Previously accepted claim was invalidated |
+| Archived | Claim is inactive but preserved |
+
+The status should apply to the claim overall.
+
+Evidence items, metrics, and validations may also have their own verification states.
+
+---
+
+## 13. Relationship between claim status and score impact
+
+Not every claim affects a score.
+
+Recommended relationship:
+
+| Claim status | Score impact |
+|---|---|
+| Draft | No score impact |
+| Submitted | No score impact |
+| Under review | No score impact |
+| Needs more evidence | No score impact |
+| Verified | May be eligible for EkoH handoff under policy |
+| Partially verified | Eligible for limited scoring |
+| Rejected | No score impact |
+| Disputed | Score impact paused or reviewed |
+| Expired | Score may decay or be removed |
+| Revoked | Score impact should be reversed or corrected |
+| Archived | No new score impact |
+
+This prevents unverified claims from inflating EkoH reputation.
+
+---
+
+## 14. Privacy model
+
+Claims and evidence should support privacy controls.
+
+Recommended visibility levels:
+
+| Visibility | Meaning |
+|---|---|
+| Private | Visible only to the claimant and authorized reviewers |
+| Reviewer-visible | Visible to validation/review roles |
+| Pseudonymous | Publicly visible without direct identity exposure |
+| Public | Publicly visible with the user’s identity |
+| Score-summary only | Claim details hidden, but score explanation may reference a generalized reason |
+
+The app should distinguish:
+
+- evidence privacy;
+- claim summary privacy;
+- score explanation privacy;
+- validator comment privacy.
+
+A user may allow their score to be public while keeping sensitive proof private.
+
+---
+
+## 15. Internal versus external references
+
+The app should support both internal Konnaxion references and external references.
+
+### 15.1 Internal references
+
+Examples:
+
+- XKaliber Caliber Profile or assessment result;
+- CertifiKation seal;
+- Konnaxion project;
+- KonnectED portfolio item;
+- KnowledgeResource;
+- Ethikos contribution;
+- Empower vote;
+- project review;
+- moderation/conduct record.
+
+An internal reference should identify the source module and object. For source-authoritative evidence, it should also preserve version, status, validity and an audit or integrity reference.
+
+For XKaliber / CertifiKation evidence, fields such as confirmed level and assessment confidence are **source facts**, not values that K-Port recalculates. K-Port may add separate admissibility, mapping and evidence-reliability metadata without overwriting the source facts.
+
+Conceptually:
+
+```text
+source_producer
+source_type
+source_id
+source_version
+source_status
+source_verified_at
+source_valid_until
+source_audit_reference
+```
+
+### 15.2 External references
+
+Examples:
+
+- university degree;
+- professional license;
+- DOI;
+- patent;
+- GitHub repository;
+- ORCID;
+- open badge;
+- institutional registry;
+- external portfolio.
+
+An external reference should identify the source, URL or ID, issuer, and verification method.
+
+---
+
+## 16. Trust and anti-gaming attributes
+
+The model should support anti-gaming review without making the first version too complex.
+
+Useful concepts include:
+
+| Concept | Purpose |
+|---|---|
+| Duplicate detection | Prevent the same evidence from being submitted many times |
+| Conflict of interest | Identify biased validators or reviewers |
+| Evidence reliability | Distinguish weak and strong proof |
+| Validator relevance | Ensure validators are credible in the relevant domain |
+| Claim freshness | Reduce reliance on outdated evidence |
+| Revocation | Correct claims that become invalid |
+| Dispute state | Allow challenge and review |
+| Source metadata | Preserve context for future audits |
+| Reviewer notes | Explain decisions |
+
+These should support trust without turning the app into a heavy compliance system at MVP stage.
+
+---
+
+## 17. Minimal conceptual model for MVP
+
+The MVP should include:
+
+```text
+ExpertiseClaim
+├── ClaimDomain
+└── ClaimEvidence
+```
+
+Recommended MVP capabilities:
+
+- create claim;
+- select merit dimension;
+- select evidence type;
+- map to one or more domains;
+- attach evidence by file or URL;
+- submit for review;
+- change claim status;
+- add reviewer note;
+- mark verified or rejected;
+- ingest source-authoritative Konnaxion evidence, including XKaliber / CertifiKation;
+- hand admissible verified evidence to EkoH scoring.
+
+This is enough to close the central claim/evidence gap.
+
+---
+
+## 18. Full conceptual model for later phases
+
+Later phases can add:
+
+```text
+ExpertiseClaim
+├── ClaimDomain
+├── ClaimEvidence
+├── ClaimMetric
+├── ClaimValidation
+├── ScoringHandoff
+├── ClaimDispute
+├── ClaimAppeal
+├── ClaimImportSource
+└── ClaimRevisionHistory
+```
+
+Do not start with all of this unless needed.
+
+The first priority is centralizing claims and evidence.
+
+---
+
+## 19. Example claim
+
+```text
+Claim title:
+Solar irrigation prototype deployed in rural community
+
+Merit dimension:
+Practical experience
+
+Evidence type:
+Project
+
+Domains:
+- Environmental science
+- Engineering
+- Agriculture
+
+Evidence:
+- project report PDF
+- deployment photos
+- repository link
+- community partner letter
+
+Metrics:
+- 42 households served
+- 18,000 liters/month estimated water savings
+- 6-month deployment period
+
+Validation:
+- reviewed by project partner
+- reviewed by domain expert
+
+Score handoff:
+- verified claim becomes an EkoH scoring signal for relevant domains
+```
+
+This example shows how one claim can connect several domains, evidence types, and impact metrics.
+
+---
+
+## 20. Example credential claim
+
+```text
+Claim title:
+Professional certification in data protection
+
+Merit dimension:
+Theoretical knowledge and qualifications
+
+Evidence type:
+Certification
+
+Domains:
+- Law
+- Information and communication technologies
+- Ethics / governance
+
+Evidence:
+- certificate PDF
+- certificate ID
+- issuer verification URL
+
+Validation:
+- registry verified
+
+Score handoff:
+- verified claim becomes a scoring signal in the mapped domains
+```
+
+---
+
+## 21. Example peer recognition claim
+
+```text
+Claim title:
+Expert endorsement for open-source accessibility toolkit
+
+Merit dimension:
+Peer recognition
+
+Evidence type:
+Expert review
+
+Domains:
+- Software engineering
+- Accessibility
+- Education technology
+
+Evidence:
+- endorsement note
+- link to toolkit
+- reviewer profile
+
+Validation:
+- reviewer’s own EkoH domain relevance considered
+
+Score handoff:
+- verified endorsement contributes to domain-specific peer recognition
+```
+
+---
+
+## 22. Summary
+
+K-Port should use a clean model:
+
+```text
+Claim
+Evidence
+Domain
+Metric
+Validation
+Scoring handoff
 ```
 
 The most important object is the claim.
@@ -2736,6 +4400,1552 @@ the score the user wants
 The guiding form principle is:
 
 > Users submit proof. EkoH evaluates merit.
+
+
+================================================================================================
+FILE: docs/03-k-port-intake-form.md
+================================================================================================
+
+# K-Port — Intake Form
+
+**Document ID:** `03-k-port-intake-form.md`  
+**Scope:** User-facing intake form for submitting expertise and mark-of-merit claims  
+**Status:** Current product/architecture specification  
+**Intended audience:** Product, UX, governance, architecture, and development teams  
+
+---
+
+## 1. Purpose
+
+This document describes the user-facing intake form for the **K-Port**.
+
+The form is the bridge between:
+
+```text
+user evidence
+```
+
+and
+
+```text
+EkoH expertise and ethics scoring
+```
+
+The form should help users submit structured, reviewable claims without letting them directly assign themselves EkoH scores.
+
+The purpose of the form is to collect:
+
+- what the user is claiming;
+- which EkoH merit dimension the claim supports;
+- which expertise domain or domains are involved;
+- what evidence supports the claim;
+- whether there is measurable impact;
+- who can validate it;
+- how private the claim should be;
+- whether there are conflicts of interest.
+
+---
+
+## 2. Design principle
+
+The form collects **claims and evidence, never requested EkoH score values or voting weight**. A user may describe confidence or impact as evidence context, but K-Port and EkoH retain their separate qualification/scoring responsibilities.
+
+The form should be simple for users but structured enough for EkoH.
+
+Recommended principle:
+
+```text
+Ask users for proof, not scores.
+```
+
+The user should never be asked:
+
+```text
+What EkoH score should this give you?
+```
+
+Instead, the form should ask:
+
+```text
+What did you do, earn, build, teach, publish, prove, or receive recognition for?
+What evidence supports it?
+Which domain does it belong to?
+Who can verify it?
+```
+
+---
+
+## 3. Form outcome
+
+A submitted form should create one central EkoH expertise claim.
+
+Conceptually:
+
+```text
+ExpertiseClaim
+├── selected merit dimension
+├── selected evidence type
+├── one or more expertise domains
+├── one or more evidence items
+├── optional impact metrics
+├── optional validators
+├── privacy settings
+└── review status
+```
+
+The form should produce a reviewable claim, not an immediate score change.
+
+---
+
+## 4. Recommended form flow
+
+A clear first version can use seven steps:
+
+```text
+1. Claim type
+2. Claim details
+3. Expertise domains
+4. Evidence
+5. Impact
+6. Validation
+7. Privacy and submission
+```
+
+The form may be implemented as a wizard, a single page with sections, or a hybrid.
+
+For users, a wizard may be clearer.
+
+For reviewers and power users, a single-page expert mode may be useful later.
+
+---
+
+## 5. Step 1 — Claim type
+
+This step helps the user classify the claim.
+
+### 5.1 User prompt
+
+```text
+What kind of merit are you submitting?
+```
+
+### 5.2 Merit dimension selector
+
+The user selects one primary merit dimension.
+
+| Option | User-facing explanation |
+|---|---|
+| Theoretical knowledge and qualifications | I have formal knowledge, credentials, research, patents, or training |
+| Practical experience | I have hands-on experience, work history, or project participation |
+| Measurable impact | I can show real-world results or quantified outcomes |
+| Peer recognition | Others have endorsed, reviewed, cited, or recognized my work |
+| Knowledge dissemination | I have taught, mentored, published, documented, or shared knowledge |
+| Ethical integrity | I have trust, transparency, conduct, or responsibility signals |
+
+### 5.3 Evidence type selector
+
+After selecting a merit dimension, the user selects an evidence type.
+
+Examples:
+
+| Merit dimension | Suggested evidence types |
+|---|---|
+| Theoretical knowledge and qualifications | Degree, certification, license, course completion, publication, patent |
+| Practical experience | Project, professional experience, portfolio item, field work, implementation |
+| Measurable impact | Impact report, adoption data, beneficiary count, environmental metric, financial metric |
+| Peer recognition | Peer endorsement, expert review, citation, award, community validation |
+| Knowledge dissemination | Teaching, mentoring, tutorial, documentation, open resource, curriculum |
+| Ethical integrity | Identity verification, conduct record, transparency declaration, moderation history |
+
+The user should also have an `Other` option, but it should require an explanation.
+
+---
+
+## 6. Step 2 — Claim details
+
+This step captures the human-readable claim.
+
+### 6.1 User prompt
+
+```text
+Describe what you are submitting.
+```
+
+### 6.2 Recommended fields
+
+| Field | Required | Notes |
+|---|---:|---|
+| Claim title | Yes | Short title, easy to scan |
+| Description | Yes | Explain what the user did, earned, built, taught, or proved |
+| Role | Conditional | Useful for projects, employment, publications, and team work |
+| Organization / issuer | Conditional | School, employer, institution, project, publisher, certifier |
+| Start date | Conditional | For experience, projects, mentoring, teaching, or long-term work |
+| End date | Conditional | Optional if ongoing |
+| Issue date | Conditional | For credentials, certifications, licenses, awards |
+| Expiry date | Conditional | For expiring credentials |
+| External reference | Optional | DOI, certificate ID, patent number, license number, ORCID, repository, badge ID |
+| Source URL | Optional | Public proof link |
+| Notes | Optional | Extra context |
+
+### 6.3 Suggested help text
+
+```text
+Describe the claim clearly enough that another person can understand what you are asking EkoH to consider.
+```
+
+### 6.4 Avoided field
+
+Do not include:
+
+```text
+Requested EkoH score
+```
+
+A self-assessed level may be allowed only as context.
+
+If included, label it carefully:
+
+```text
+Self-assessed level, for context only
+```
+
+---
+
+## 7. Step 3 — Expertise domains
+
+This step maps the claim to EkoH expertise categories.
+
+### 7.1 User prompt
+
+```text
+Which expertise domain or domains does this claim belong to?
+```
+
+### 7.2 Domain selector
+
+The selector should use EkoH’s canonical expertise category catalogue.
+
+The user should be able to:
+
+- search domains;
+- browse domain hierarchy;
+- select more than one domain;
+- mark the main domain;
+- optionally add relevance weights;
+- let AI or reviewers suggest corrections later.
+
+### 7.3 Recommended fields
+
+| Field | Required | Notes |
+|---|---:|---|
+| Primary domain | Yes | Main domain affected by the claim |
+| Additional domains | Optional | For interdisciplinary claims |
+| Relevance | Optional | Simple values such as High / Medium / Low are enough for MVP |
+| Domain rationale | Optional | Why this domain applies |
+
+### 7.4 User-facing guidance
+
+```text
+Choose the field where this evidence best demonstrates expertise. If it applies to multiple fields, add them in order of relevance.
+```
+
+### 7.5 Reviewer note
+
+Domain mapping should be reviewable.
+
+A reviewer or AI-assisted classifier may later:
+
+- confirm the user’s selection;
+- add a missing domain;
+- remove a weak domain;
+- adjust relevance;
+- request clarification.
+
+---
+
+## 8. Step 4 — Evidence
+
+This is the most important section.
+
+### 8.1 User prompt
+
+```text
+Add proof that supports your claim.
+```
+
+### 8.2 Evidence input types
+
+The form should support:
+
+| Evidence input | Description |
+|---|---|
+| File upload | PDF, image, document, certificate, report |
+| URL | Public webpage, project page, profile, registry, repository |
+| Identifier | DOI, patent number, certificate ID, badge ID, license number |
+| Internal Konnaxion reference | XKaliber result, CertifiKation seal, project, portfolio item, resource, debate contribution, Empower signal |
+| Text explanation | Used only as supporting context, not as primary proof |
+
+### 8.3 Recommended fields per evidence item
+
+| Field | Required | Notes |
+|---|---:|---|
+| Evidence title | Yes | Human-readable label |
+| Evidence kind | Yes | File, URL, certificate ID, DOI, internal reference, etc. |
+| Evidence location / value | Yes | Upload, link, ID, or reference |
+| Description | Optional | Explain why this evidence matters |
+| Issuer / source | Conditional | Institution, person, project, platform, registry |
+| Date issued | Conditional | Useful for credentials and awards |
+| Expiry date | Conditional | Useful for licenses and certifications |
+| Visibility | Yes | Private, reviewer-visible, public summary, public |
+| Verification method | Optional | Self-attested, peer, expert, institution, registry, API, source-authoritative |
+| Notes | Optional | Extra details |
+
+### 8.4 Multiple evidence items
+
+The form should allow multiple evidence items per claim.
+
+Example:
+
+```text
+Claim: Open-source water filter prototype
+
+Evidence:
+- project report PDF
+- public repository
+- deployment photos
+- partner organization letter
+- impact report
+```
+
+### 8.5 Evidence reliability reminder
+
+The form should inform users:
+
+```text
+Stronger evidence can make review easier. Official, verifiable, or third-party evidence is stronger than self-attested evidence.
+```
+
+---
+
+## 9. Step 5 — Impact
+
+This step is optional for most claims but important for measurable impact.
+
+### 9.1 User prompt
+
+```text
+Did this claim produce measurable results?
+```
+
+### 9.2 Recommended fields
+
+| Field | Required | Notes |
+|---|---:|---|
+| Impact metric | Conditional | What was measured |
+| Value | Conditional | Numeric value |
+| Unit | Conditional | People, dollars, kg CO2, hours, downloads, citations, etc. |
+| Time period | Optional | When the impact occurred |
+| Source | Optional | Where the number comes from |
+| Evidence link | Optional | Report or proof supporting the metric |
+| Notes | Optional | Context or explanation |
+
+### 9.3 Example metric options
+
+| Metric | Example unit |
+|---|---|
+| People helped | people |
+| Learners trained | people |
+| Patients treated | people |
+| Funds raised | CAD / USD / EUR |
+| Emissions reduced | kg CO2e |
+| Energy saved | kWh |
+| Water saved | liters |
+| Downloads | count |
+| Citations | count |
+| Implementations | count |
+| Hours contributed | hours |
+| Cost reduced | currency |
+
+### 9.4 User-facing guidance
+
+```text
+Use measurable results only when you can explain where the number comes from.
+```
+
+The form should discourage vague inflation such as:
+
+```text
+Changed thousands of lives
+```
+
+unless supported by evidence.
+
+---
+
+## 10. Step 6 — Validation
+
+This step lets the user request peer or expert validation.
+
+### 10.1 User prompt
+
+```text
+Who can help validate this claim?
+```
+
+### 10.2 Validator types
+
+Possible validator roles:
+
+| Validator type | Description |
+|---|---|
+| Peer | Someone familiar with the work |
+| Expert | Someone with relevant domain expertise |
+| Mentor | Someone who supervised or trained the user |
+| Collaborator | Someone who worked on the project |
+| Institution | Organization that issued or can confirm the evidence |
+| Admin / reviewer | Konnaxion governance or review role |
+| Automated verification | Registry, API, or external check |
+
+### 10.3 Recommended fields
+
+| Field | Required | Notes |
+|---|---:|---|
+| Validator name | Conditional | For invited people |
+| Validator email or Konnaxion ID | Conditional | Needed for invitation |
+| Validator role | Yes | Peer, expert, mentor, collaborator, institution, etc. |
+| Relationship to claimant | Yes | How they know the claim |
+| Relevant domain | Optional | Domain where they can validate |
+| Conflict of interest | Yes | User declares whether there is a possible conflict |
+| Message to validator | Optional | Short explanation or request |
+
+### 10.4 Validation warning
+
+The form should clarify:
+
+```text
+Validation from someone with relevant expertise may carry more weight than generic support.
+```
+
+This keeps peer recognition distinct from popularity.
+
+---
+
+## 11. Step 7 — Privacy and submission
+
+This final step lets the user review, choose visibility, and submit.
+
+### 11.1 User prompt
+
+```text
+Review your claim before submitting it.
+```
+
+### 11.2 Privacy selector
+
+Recommended options:
+
+| Privacy option | Meaning |
+|---|---|
+| Private | Visible only to you and authorized reviewers |
+| Reviewer-visible | Visible to people reviewing or validating the claim |
+| Pseudonymous public summary | Claim may be summarized publicly without exposing your identity |
+| Public summary | Claim summary may be publicly linked to your profile |
+| Public evidence | Evidence itself may be publicly visible |
+
+### 11.3 Submission checklist
+
+Before submission, the form should ask the user to confirm:
+
+- the information is accurate to the best of their knowledge;
+- they have the right to share the evidence;
+- private or sensitive data has been handled carefully;
+- conflicts of interest have been disclosed;
+- they understand the claim may be reviewed, rejected, disputed, or expire;
+- they understand submission does not guarantee a score increase.
+
+### 11.4 Final button
+
+Recommended button labels:
+
+```text
+Submit claim for review
+```
+
+or
+
+```text
+Submit evidence to K-Port
+```
+
+Avoid:
+
+```text
+Increase my score
+```
+
+---
+
+## 12. Conditional form behavior
+
+The form should adapt to the selected merit dimension and evidence type.
+
+### 12.1 Degree or certification
+
+Show:
+
+- issuer;
+- issue date;
+- expiry date;
+- certificate ID;
+- verification URL;
+- upload certificate;
+- domain mapping.
+
+### 12.2 XKaliber / CertifiKation evidence reference
+
+When the user selects an internal XKaliber or CertifiKation record, the form should prefer a structured import rather than a manual re-entry.
+
+Show or preserve:
+
+- source module;
+- source object ID;
+- domain and competency;
+- confirmed level;
+- assessment confidence;
+- evaluation / issue date;
+- validity or expiry;
+- active / disputed / corrected / revoked status;
+- consent and visibility;
+- audit or provenance reference.
+
+The user may explain why the evidence is relevant, but should not be able to edit the source-authoritative XKaliber level or confidence.
+
+### 12.3 Project
+
+Show:
+
+- project name;
+- role;
+- start and end dates;
+- collaborators;
+- project URL;
+- internal Konnaxion project link if available;
+- project resources;
+- impact metrics;
+- validator invitation.
+
+### 12.4 Publication
+
+Show:
+
+- title;
+- publisher;
+- publication date;
+- DOI or URL;
+- author role;
+- citations if available;
+- domain mapping.
+
+### 12.5 Patent
+
+Show:
+
+- patent title;
+- patent number;
+- issuing jurisdiction;
+- issue date;
+- inventor role;
+- URL or registry reference;
+- domain mapping.
+
+### 12.6 Peer recognition
+
+Show:
+
+- endorser or reviewer;
+- relationship;
+- domain relevance;
+- endorsement text;
+- conflict-of-interest declaration;
+- evidence of recognition.
+
+### 12.7 Knowledge dissemination
+
+Show:
+
+- teaching / mentoring / tutorial / documentation type;
+- audience;
+- dates;
+- number of learners or users reached;
+- resource link;
+- feedback or validation.
+
+### 12.8 Ethical integrity
+
+Show:
+
+- conduct or transparency signal;
+- identity verification evidence;
+- conflict-of-interest statement;
+- moderation context where appropriate;
+- reviewer visibility controls.
+
+---
+
+## 13. Draft and autosave behavior
+
+The form should support drafts.
+
+A user should be able to:
+
+- start a claim;
+- save it as draft;
+- return later;
+- add more evidence;
+- delete a draft;
+- submit only when ready.
+
+Drafts should not affect EkoH scores.
+
+---
+
+## 14. Review screen
+
+Before submission, the user should see a summary:
+
+```text
+Claim title
+Merit dimension
+Evidence type
+Domains selected
+Evidence added
+Impact metrics
+Validators requested
+Privacy setting
+Declarations
+```
+
+The review screen should include warnings for missing important information.
+
+Examples:
+
+```text
+You selected “certification” but did not provide an issuer.
+```
+
+```text
+You added an impact metric but did not provide a source.
+```
+
+```text
+You selected multiple domains but did not indicate which one is primary.
+```
+
+---
+
+## 15. Reviewer-facing summary
+
+The form should produce a claim summary that is easy to review.
+
+Recommended reviewer summary:
+
+```text
+Claim
+- Title
+- Claimant
+- Merit dimension
+- Evidence type
+- Description
+
+Domains
+- Primary domain
+- Additional domains
+- Rationale
+
+Evidence
+- Files
+- URLs
+- IDs
+- Internal references
+
+Impact
+- Metrics
+- Sources
+
+Validation
+- Requested validators
+- Existing endorsements
+- Conflict declarations
+
+Privacy
+- Claim visibility
+- Evidence visibility
+
+Review
+- Status
+- Notes
+- Decision
+```
+
+---
+
+## 16. Status messages for users
+
+The user should see clear claim status labels.
+
+| Status | User-facing message |
+|---|---|
+| Draft | This claim has not been submitted yet |
+| Submitted | Your claim is waiting for review |
+| Under review | Your claim is being evaluated |
+| Needs more evidence | More proof is required before review can continue |
+| Verified | Your claim has been accepted |
+| Partially verified | Part of your claim has been accepted |
+| Rejected | Your claim was not accepted |
+| Disputed | Your claim is being challenged or appealed |
+| Expired | This claim is no longer current |
+| Revoked | This claim was previously accepted but is no longer valid |
+| Archived | This claim is inactive but preserved |
+
+---
+
+## 17. Form validation rules
+
+Basic validation rules should include:
+
+- title is required;
+- description is required;
+- merit dimension is required;
+- evidence type is required;
+- at least one domain is required;
+- at least one evidence item is required for submission;
+- issue date cannot be in the future unless the evidence type allows it;
+- expiry date cannot be before issue date;
+- metric values must be numeric;
+- URLs must be valid;
+- uploaded files must use allowed formats;
+- privacy selection is required;
+- conflict-of-interest declaration is required when validators are added.
+
+The form should allow drafts to be incomplete.
+
+Only submitted claims require full validation.
+
+---
+
+## 18. Suggested MVP form
+
+For the first version, keep the form small.
+
+### MVP fields
+
+| Section | Fields |
+|---|---|
+| Claim type | Merit dimension, evidence type |
+| Details | Title, description, issuer/organization, dates |
+| Domains | Primary domain, additional domains |
+| Evidence | File or URL, evidence title, source |
+| Privacy | Claim visibility, evidence visibility |
+| Submission | Accuracy declaration, submit button |
+
+### MVP optional fields
+
+| Section | Fields |
+|---|---|
+| Impact | Metric name, value, unit |
+| Validation | Validator name, email/Konnaxion ID, relationship |
+| Context | Notes, external reference |
+
+The MVP should prioritize creating clean reviewable claims.
+
+---
+
+## 19. Later-form enhancements
+
+Later versions may add:
+
+- AI-assisted domain suggestions;
+- credential auto-verification;
+- ORCID / DOI lookup;
+- GitHub import;
+- LinkedIn or professional profile import;
+- badge import;
+- internal Konnaxion object picker;
+- claim templates by evidence type;
+- validator invitation workflow;
+- reviewer assignment;
+- duplicate evidence detection;
+- impact metric recommendations;
+- expiry reminders;
+- appeal form;
+- public profile preview.
+
+---
+
+## 20. Tone and UX guidelines
+
+The form should feel supportive but serious.
+
+Preferred language:
+
+```text
+Submit evidence
+```
+
+```text
+Support your claim
+```
+
+```text
+Request validation
+```
+
+```text
+Choose domain
+```
+
+```text
+Submit for review
+```
+
+Avoid language that implies guaranteed reward:
+
+```text
+Boost your score
+```
+
+```text
+Claim influence
+```
+
+```text
+Get more voting power
+```
+
+```text
+Upgrade your reputation
+```
+
+The form should communicate that EkoH values evidence, fairness, transparency, and review.
+
+---
+
+## 21. Accessibility and usability
+
+The form should be usable by people with different backgrounds.
+
+Important requirements:
+
+- plain-language explanations;
+- examples for each evidence type;
+- ability to save draft;
+- ability to upload or link evidence;
+- mobile-friendly layout;
+- clear error messages;
+- privacy explanations;
+- no assumption of formal academic credentials;
+- support for practical, community, indigenous, self-taught, and nontraditional expertise paths.
+
+The form should not privilege only degrees or formal titles.
+
+It should support multiple ways of proving expertise.
+
+---
+
+## 22. Summary
+
+The intake form is the first user-facing bridge into the EkoH claim layer.
+
+It should collect:
+
+```text
+what is claimed
+what kind of merit it supports
+which domain it belongs to
+what evidence supports it
+what impact it had
+who can validate it
+how private it should be
+```
+
+It should not collect:
+
+```text
+the score the user wants
+```
+
+The guiding form principle is:
+
+> Users submit proof. EkoH evaluates merit.
+
+
+================================================================================================
+FILE: docs/04-k-port-verification-and-ekoh-handoff.md
+================================================================================================
+
+# K-Port — Verification and EkoH Handoff
+
+**Document ID:** `04-k-port-verification-and-ekoh-handoff.md`  
+**Scope:** Verification workflow and handoff from expertise claims to EkoH scoring  
+**Status:** Current product/architecture specification  
+**Intended audience:** Product, governance, architecture, UX, and development teams  
+
+---
+
+## 1. Purpose
+
+This document describes what happens after a user submits an expertise or mark-of-merit claim.
+
+It explains how the claim should move through verification and how verified claim signals should be handed off to EkoH scoring.
+
+K-Port should not calculate final reputation by itself.
+
+Its role is to prepare structured, verified inputs for EkoH and to act as the **canonical evidence gateway** for EkoH-bound expertise evidence, including source-authoritative XKaliber / CertifiKation results.
+
+---
+
+## 2. Core principle
+
+The workflow should follow this principle:
+
+```text
+Submission does not equal verification.
+Source verification does not equal re-assessment.
+Verification does not equal automatic score increase.
+Scoring remains an EkoH responsibility.
+```
+
+A claim may be valid but minor.  
+A claim may be real but irrelevant to the selected domain.  
+A claim may be relevant but weakly evidenced.  
+A claim may be strong enough to affect one domain but not another.
+
+The verification and scoring handoff must preserve these distinctions.
+
+---
+
+## 3. High-level flow
+
+Recommended flow:
+
+```text
+User-submitted claim OR source-authoritative module evidence
+        ↓
+K-Port intake / import
+        ↓
+Evidence is verified at the appropriate boundary
+        ↓
+Domain mapping is confirmed or corrected
+        ↓
+Evidence is accepted, partially accepted, rejected, expired, revoked, or disputed
+        ↓
+Admissible signal is handed to EkoH scoring
+        ↓
+EkoH updates score tables where appropriate
+        ↓
+Score change is recorded in audit history
+        ↓
+User is notified of outcome
+```
+
+The app should make this flow understandable to both users and reviewers.
+
+---
+
+## 4. Verification goals
+
+Verification should answer five questions:
+
+```text
+1. Is the evidence real?
+2. Does the evidence support the claim?
+3. Is the claim mapped to the correct expertise domain?
+4. How strong or reliable is the evidence?
+5. Should this claim become a scoring signal?
+```
+
+Verification should not simply answer:
+
+```text
+Should the user get points?
+```
+
+That decision belongs to the EkoH scoring process.
+
+---
+
+## 5. Claim lifecycle
+
+A claim should move through explicit states.
+
+| Status | Meaning |
+|---|---|
+| Draft | User has started the claim but has not submitted it |
+| Submitted | Claim is ready for review |
+| Under review | Reviewer, validator, or system is evaluating the claim |
+| Needs more evidence | Claim cannot proceed without additional proof |
+| Verified | Claim is accepted as valid evidence |
+| Partially verified | Claim is valid only in part, or only for some domains |
+| Rejected | Claim is not accepted |
+| Disputed | Claim is being challenged or appealed |
+| Expired | Claim is no longer current |
+| Revoked | Previously accepted claim has been invalidated |
+| Archived | Claim is inactive but preserved |
+
+Only verified or partially verified claims should be eligible for score handoff.
+
+---
+
+## 6. Review types
+
+The system should support several verification methods.
+
+| Review type | Use case |
+|---|---|
+| Self-attestation | User provides claim and evidence without external confirmation |
+| Peer validation | Another user confirms the claim or contribution |
+| Expert validation | A domain-relevant expert reviews the claim |
+| Admin review | Governance or moderation role reviews the claim |
+| Institution verification | Issuing institution confirms the evidence |
+| Registry verification | Public or official registry confirms the record |
+| API verification | External service confirms a credential, publication, identity, or record |
+| AI-assisted review | AI helps classify, summarize, or flag evidence |
+| Imported Konnaxion evidence | Evidence comes from an existing Konnaxion object |
+| Source-authoritative verification | Trusted source module proves provenance, status and integrity of a measurement it owns, such as XKaliber / CertifiKation |
+
+These methods may be combined.
+
+Example:
+
+```text
+A certificate may be user-submitted, registry-verified, and then admin-reviewed.
+```
+
+---
+
+## 6A. Source-authoritative evidence: XKaliber / CertifiKation
+
+XKaliber is authoritative for the competency performance it measures. CertifiKation is authoritative for the seal it issues from a confirmed result. When K-Port receives this evidence, it should not reproduce the assessment workflow.
+
+K-Port should verify:
+
+- provenance and integrity of the source record;
+- the stable source ID and version;
+- binding to the correct Konnaxion user;
+- active, expired, disputed, corrected or revoked status;
+- evaluation and validity dates;
+- domain / competency scope;
+- consent and visibility constraints;
+- duplication or supersession;
+- mapping into the canonical EkoH domain catalogue.
+
+K-Port should preserve as source-authoritative facts:
+
+- confirmed competency level;
+- XKaliber assessment confidence or margin;
+- assessment rule / item-set version references;
+- source correction and revocation state.
+
+K-Port may add its own **evidence reliability**, **EkoH domain relevance**, **admissibility status**, and review notes. These must be stored separately from the source assessment result.
+
+If the user contests the measured competency, the dispute routes back to XKaliber / CertifiKation. If the dispute concerns K-Port mapping or admissibility, it stays in K-Port. If it concerns reputation impact, it routes to EkoH.
+
+---
+
+## 7. Verification decisions
+
+A reviewer or verification process should be able to make nuanced decisions.
+
+| Decision | Meaning |
+|---|---|
+| Approve | Evidence supports the claim |
+| Partially approve | Evidence supports part of the claim |
+| Reject | Evidence does not support the claim |
+| Request more evidence | Claim is plausible but insufficiently supported |
+| Correct domain | Claim is valid but mapped to the wrong domain |
+| Mark duplicate | Claim repeats an existing verified claim |
+| Mark expired | Claim was once valid but is no longer current |
+| Escalate | Claim needs expert, admin, or governance review |
+| Flag concern | Claim may involve fraud, conflict of interest, manipulation, or abuse |
+
+The system should avoid forcing every review into a simple yes/no result.
+
+---
+
+## 8. Domain verification
+
+A claim’s domain mapping must be reviewable.
+
+A reviewer may:
+
+- confirm the selected domain;
+- add a missing domain;
+- remove an irrelevant domain;
+- adjust domain relevance;
+- mark the claim as interdisciplinary;
+- request clarification;
+- reject domain relevance while still accepting the evidence.
+
+Example:
+
+```text
+A publication on AI ethics may affect both ICT and ethics/policy domains.
+```
+
+Example:
+
+```text
+A generic management certificate may not strongly affect a technical engineering domain.
+```
+
+The handoff to EkoH should include the final verified domain mapping, not only the user’s original selection.
+
+---
+
+## 9. Evidence verification
+
+Evidence should be checked for both existence and relevance.
+
+A reviewer should ask:
+
+```text
+Does this evidence exist?
+Is it authentic?
+Is it connected to the claimant?
+Does it support the described claim?
+Is it current?
+Is it complete?
+Is it strong enough for the claimed merit dimension?
+```
+
+Examples:
+
+| Evidence | Verification concern |
+|---|---|
+| Certificate PDF | Is it issued by a legitimate institution? Is the claimant named? Is it expired? |
+| Publication | Is the claimant an author? What role did they have? Is the DOI valid? |
+| Project link | Did the user contribute? What role did they play? |
+| Impact report | Are the numbers sourced and plausible? |
+| Peer endorsement | Is the validator credible and free of conflict? |
+| Portfolio item | Is it original work? Is it relevant to the selected domain? |
+
+---
+
+## 10. Impact verification
+
+Measurable impact claims require extra care.
+
+A reviewer should check:
+
+- the metric name;
+- the numeric value;
+- the unit;
+- the measurement period;
+- the source of the number;
+- whether the metric can be independently confirmed;
+- whether the claimant’s contribution caused or contributed to the impact;
+- whether the impact is relevant to the selected domain.
+
+Example:
+
+```text
+“Reduced emissions by 10,000 kg CO2e” should include the calculation source, measurement period, and project context.
+```
+
+Impact claims may be accepted at different confidence levels.
+
+---
+
+## 11. Peer and expert validation
+
+Peer recognition is an important mark of merit, but not all validation should carry equal weight.
+
+The validation process should consider:
+
+- validator identity;
+- validator expertise domain;
+- validator relationship to the claimant;
+- possible conflict of interest;
+- quality of the validator’s comment;
+- whether the validator reviewed the evidence;
+- whether the validator has relevant EkoH credibility.
+
+A peer endorsement should not be treated the same as expert validation unless the peer has relevant domain standing.
+
+---
+
+## 12. AI-assisted review
+
+AI may support verification, but should not be treated as the final authority for sensitive or high-impact decisions.
+
+AI can help with:
+
+- summarizing evidence;
+- detecting missing fields;
+- suggesting expertise domains;
+- identifying duplicate claims;
+- flagging suspicious patterns;
+- extracting dates, issuers, or identifiers;
+- comparing claim text to evidence text;
+- producing reviewer summaries.
+
+AI should not silently approve claims.
+
+AI-assisted decisions should be explainable and reviewable.
+
+---
+
+## 13. Score handoff eligibility
+
+A claim should be eligible for scoring only when:
+
+- it has been submitted;
+- it has at least one evidence item;
+- it has at least one confirmed domain;
+- it has a verification result;
+- its verification status is `verified` or `partially_verified`;
+- it has not been revoked;
+- it is not currently disputed in a way that blocks scoring;
+- privacy and consent requirements are respected.
+
+Rejected, draft, and incomplete claims should not affect EkoH scores.
+
+---
+
+## 14. Handoff package
+
+A handoff is a versioned boundary object/command, not a direct mutation of EkoH internal tables. Retries must be idempotent or explicitly reconciled, and EkoH should return a processing receipt/reference that K-Port can retain for audit correlation.
+
+When a claim is ready for EkoH scoring, the app should pass a structured handoff package.
+
+Conceptually, the package should include:
+
+| Handoff element | Purpose |
+|---|---|
+| Claim ID | Traceability |
+| User ID | User whose EkoH profile may be affected |
+| Merit dimension | What kind of merit is involved |
+| Evidence type | What kind of proof supports the claim |
+| Verified domains | Which expertise categories are affected |
+| Domain relevance | Relative strength per domain |
+| Verification status | Verified or partially verified |
+| Verification method | Peer, expert, admin, institution, registry, source-authoritative, AI-assisted, etc. |
+| Source authority | Which module or issuer is authoritative for the underlying result, if applicable |
+| Source object ID / version | Stable trace to the originating evidence object |
+| Source status / validity | Active, expired, disputed, corrected, revoked, and validity window |
+| Evidence reliability | How trustworthy the proof is as an EkoH input |
+| Impact metrics | Structured measurable outcomes, if any |
+| Reviewer notes | Explanation for human audit |
+| Confidence level | How strongly the system trusts the claim |
+| Privacy constraints | What can be shown or referenced |
+| Source references | Evidence IDs, URLs, internal object references |
+| Date context | When the claim occurred, was issued, expires, or was verified |
+
+This package lets EkoH score the claim without losing context.
+
+---
+
+## 15. Relationship to existing EkoH score objects
+
+Verified claims should feed existing EkoH score and audit objects.
+
+| Existing EkoH object | Relationship |
+|---|---|
+| `expertise_category` | Defines the domains affected by the claim |
+| `user_expertise_score` | May be updated after scoring |
+| `user_ethics_score` | May be updated if the claim affects trust or ethics |
+| `score_configuration` | Provides scoring parameters |
+| `context_analysis_log` | Stores explainable contextual or AI-assisted adjustments |
+| `score_history` | Records score changes |
+| `confidentiality_setting` | Controls public identity and visibility |
+
+K-Port should hand off structured evidence signals through an explicit EkoH scoring/domain interface. It should not write these EkoH-owned objects as if they were K-Port state.
+
+It should not replace them.
+
+---
+
+## 16. Scoring responsibilities
+
+K-Port should be responsible for:
+
+- collecting claims;
+- ingesting evidence from internal and external sources;
+- preserving source-authoritative facts without re-scoring them;
+- collecting domain mappings;
+- collecting metrics;
+- collecting validation results;
+- preserving review states;
+- preparing scoring handoff data;
+- preserving traceability;
+- preventing EkoH-bound evidence from bypassing the canonical K-Port gateway.
+
+EkoH scoring should be responsible for:
+
+- deciding score impact;
+- applying scoring parameters;
+- updating user expertise scores;
+- updating ethics scores if relevant;
+- applying domain relevance;
+- applying evidence reliability;
+- applying confidence and quality considerations;
+- recording score history;
+- recording contextual analysis.
+
+---
+
+## 17. EkoH processing outcomes
+
+After handoff, EkoH may decide to:
+
+| Outcome | Meaning |
+|---|---|
+| Increase a domain score | Claim strengthens expertise in one or more domains |
+| No score change | Claim is valid but too weak, duplicate, stale, or already reflected |
+| Limited score change | Claim has partial relevance or partial verification |
+| Ethics score update | Claim affects trust, transparency, or ethical standing |
+| Score decay prevention | Claim confirms current expertise and prevents outdated decay |
+| Score correction | Claim corrects an earlier underestimation |
+| Score reversal | Revoked or disputed evidence causes a previous increase to be corrected |
+| Review escalation | Scoring cannot proceed without further governance review |
+
+Verification should not promise a score increase.
+
+---
+
+## 18. User notification after review
+
+Users should receive clear status updates.
+
+Examples:
+
+### Verified claim
+
+```text
+Your claim has been verified and sent to EkoH for scoring consideration.
+```
+
+### Partially verified claim
+
+```text
+Part of your claim was verified. It may be considered for limited scoring in the confirmed domains.
+```
+
+### Needs more evidence
+
+```text
+More evidence is required before this claim can be reviewed further.
+```
+
+### Rejected claim
+
+```text
+This claim was not accepted based on the available evidence.
+```
+
+### Sent to scoring
+
+```text
+Your verified claim has been handed off to EkoH scoring. This does not guarantee a score increase.
+```
+
+### Score updated
+
+```text
+EkoH has updated your profile based on this verified claim.
+```
+
+---
+
+## 19. Reviewer explanation
+
+Every review decision should include a short explanation.
+
+The explanation should cover:
+
+- what was accepted or rejected;
+- which evidence was considered;
+- which domains were confirmed;
+- whether more evidence is needed;
+- whether the claim was handed to scoring;
+- any privacy or governance constraints.
+
+Reviewer explanations are important for user trust and future audits.
+
+---
+
+## 20. Audit trail
+
+The system should preserve traceability from claim to score update.
+
+A complete audit path should answer:
+
+```text
+Who submitted the claim?
+What was claimed?
+What evidence supported it?
+Which domains were affected?
+Who or what validated it?
+What decision was made?
+Was it sent to scoring?
+Did the score change?
+Why did the score change?
+Was the claim later disputed, expired, or revoked?
+```
+
+The audit trail should support both internal governance and user-facing explanations.
+
+---
+
+## 21. Disputes and appeals
+
+The workflow should allow a claim decision to be disputed.
+
+Disputes may come from:
+
+- the claimant;
+- a reviewer;
+- another user;
+- a governance actor;
+- an automated integrity check;
+- an external revocation or correction.
+
+Dispute reasons may include:
+
+- false evidence;
+- wrong domain mapping;
+- conflict of interest;
+- plagiarism;
+- exaggerated impact;
+- duplicate claim;
+- outdated credential;
+- revoked license;
+- reviewer error.
+
+A disputed claim may temporarily pause scoring impact depending on severity.
+
+---
+
+## 22. Expiration and revocation
+
+Some claims should not remain valid forever.
+
+Examples:
+
+- expired professional license;
+- outdated certification;
+- revoked credential;
+- retracted publication;
+- project impact later disproven;
+- expert endorsement withdrawn;
+- conduct record later contradicted.
+
+The system should support:
+
+- expiry dates;
+- review reminders;
+- revocation state;
+- score correction;
+- audit explanation.
+
+Expired or revoked claims may require EkoH score updates.
+
+---
+
+## 23. Anti-gaming review
+
+Verification should help prevent manipulation.
+
+Reviewers and automated checks should watch for:
+
+- fake credentials;
+- duplicated uploads;
+- circular peer endorsements;
+- mass low-quality claims;
+- inflated impact metrics;
+- misleading domain mapping;
+- validators with conflicts of interest;
+- copied or plagiarized work;
+- unverifiable external links;
+- attempts to use popularity as expertise;
+- claims submitted only to inflate influence.
+
+Suspicious claims should be flagged for escalation.
+
+---
+
+## 24. MVP workflow
+
+The first version should use a simple workflow:
+
+```text
+Draft
+  ↓
+Submitted
+  ↓
+Under review
+  ↓
+Verified / Rejected / Needs more evidence
+  ↓
+Sent to EkoH scoring if verified
+  ↓
+Score history updated if scoring changes occur
+```
+
+MVP review should include:
+
+- reviewer decision;
+- reviewer note;
+- confirmed domain;
+- evidence review status;
+- basic confidence level;
+- scoring handoff flag.
+
+This is enough to make claims reviewable and auditable.
+
+---
+
+## 25. Later-phase workflow features
+
+Later versions may add:
+
+- AI-assisted evidence extraction;
+- automated duplicate detection;
+- registry verification;
+- certificate validation APIs;
+- weighted validator reputation;
+- claim expiration monitoring;
+- appeals workflow;
+- conflict-of-interest graph;
+- public claim profile;
+- score impact preview for reviewers;
+- revocation automation;
+- integrity event integration;
+- governance dashboards.
+
+These should come after the central claim and handoff flow is stable.
+
+---
+
+## 26. Summary
+
+The verification and scoring handoff process should protect the integrity of EkoH.
+
+The app should make sure that:
+
+```text
+unverified claims do not become influence
+```
+
+and that:
+
+```text
+verified claims remain traceable after they affect a score
+```
+
+The guiding workflow statement is:
+
+> K-Port verifies proof. EkoH decides score impact.
 
 
 ================================================================================================
@@ -4111,227 +7321,906 @@ The guiding governance statement is:
 
 
 ================================================================================================
+FILE: docs/05-k-port-governance-privacy-and-audit.md
+================================================================================================
+
+# K-Port — Governance, Privacy, and Audit
+
+**Document ID:** `05-k-port-governance-privacy-and-audit.md`  
+**Scope:** Governance rules, privacy expectations, auditability, dispute handling, and trust controls for the K-Port  
+**Status:** Current product/architecture specification  
+**Intended audience:** Governance, product, architecture, UX, privacy, moderation, and development teams  
+
+---
+
+## 1. Purpose
+
+This document describes the governance, privacy, and audit expectations for the **K-Port**.
+
+K-Port handles sensitive evidence that may influence EkoH reputation and expertise/ethics context. Downstream systems such as Smart Vote may consume governed EkoH context, but K-Port itself does not assign voting influence.
+
+Because of that, it must be designed around:
+
+- fairness;
+- transparency;
+- privacy;
+- traceability;
+- anti-gaming;
+- appealability;
+- accountable score changes.
+
+The app should strengthen trust in EkoH, not simply collect more data.
+
+---
+
+## 2. Core governance principle
+
+The governing principle is:
+
+```text
+No claim or evidence-producer output should influence EkoH reputation without passing through K-Port with traceable provenance, appropriate qualification, and accountability.
+```
+
+A user may submit a claim.  
+A validator may support it.  
+A reviewer may approve it.  
+EkoH may convert it into a score signal.  
+
+Every step should be explainable.
+
+K-Port must also prevent circular reputation amplification: a Smart Vote derived reading must not be reintroduced as canonical K-Port evidence for the EkoH context that helped produce that reading.
+
+---
+
+## 3. Why governance matters
+
+Expertise claims can affect:
+
+- a user’s domain reputation;
+- their visibility as an expert;
+- downstream contextual readings that may consume governed EkoH context;
+- trust in their recommendations;
+- credibility of Konnaxion outcomes;
+- public perception of fairness.
+
+Poor governance could create:
+
+- fake expertise;
+- unfair score inflation;
+- popularity contests;
+- hidden bias;
+- privacy leaks;
+- manipulation by organized groups;
+- distrust in EkoH.
+
+The claim layer must therefore be treated as a trust-sensitive system.
+
+---
+
+## 4. Governance goals
+
+The app should support the following goals.
+
+| Goal | Meaning |
+|---|---|
+| Evidence-based merit | Claims must be supported by proof |
+| Domain relevance | Claims must affect only relevant domains |
+| Fair review | Similar claims should be treated consistently |
+| Privacy protection | Sensitive evidence should not be exposed unnecessarily |
+| Traceability | Score-impacting claims must be auditable |
+| Anti-gaming | Manipulation and fraud should be detectable |
+| Appealability | Users should be able to challenge decisions |
+| Revocability | Invalidated claims should be correctable |
+| Proportionality | Minor claims should not produce exaggerated influence |
+| Inclusion | Nontraditional expertise should be recognized when evidenced |
+
+---
+
+## 5. Privacy model
+
+The app should separate several privacy layers.
+
+A user may want their expertise recognized without making all supporting documents public.
+
+### 5.1 Privacy layers
+
+| Layer | Description |
+|---|---|
+| Claim metadata | Title, merit dimension, domain, status |
+| Claim description | User’s explanation of the claim |
+| Evidence | Files, URLs, IDs, certificates, reports, references |
+| Review notes | Reviewer comments and internal assessments |
+| Validator comments | Peer or expert validation statements |
+| Score explanation | Public or private reason why a score changed |
+| Identity link | Whether the claim is tied publicly to the user’s real identity |
+
+These layers should not all have the same visibility by default.
+
+---
+
+## 6. Recommended visibility levels
+
+The app should support visibility choices that align with EkoH privacy expectations.
+
+| Visibility level | Meaning |
+|---|---|
+| Private | Visible only to the claimant and authorized reviewers |
+| Reviewer-visible | Visible to reviewers and validators involved in the claim |
+| Pseudonymous | Publicly visible without direct real-identity exposure |
+| Public summary | Claim summary may be publicly associated with the user |
+| Public evidence | Evidence itself may be publicly visible |
+| Score explanation only | The score impact may be summarized without exposing full evidence |
+
+A common and safe default is:
+
+```text
+Claim summary: private until verified
+Evidence: reviewer-visible only
+Score explanation: summarized, privacy-aware
+```
+
+---
+
+## 7. Sensitive evidence
+
+Some evidence may be especially sensitive.
+
+Examples:
+
+- identity documents;
+- diplomas with personal information;
+- employment records;
+- professional licenses;
+- medical or legal documents;
+- letters of recommendation;
+- moderation history;
+- conflict-of-interest declarations;
+- private project reports;
+- validator comments;
+- internal review notes.
+
+The app should avoid exposing sensitive evidence publicly unless the user explicitly chooses to do so and the platform permits it.
+
+---
+
+## 8. Consent and user control
+
+Users should understand what they are submitting.
+
+Before submission, the app should ask the user to confirm:
+
+- the information is accurate to the best of their knowledge;
+- they have the right to submit the evidence;
+- the evidence does not expose another person without permission;
+- they understand the claim may be reviewed;
+- they understand submission does not guarantee a score increase;
+- they understand verified claims may affect their EkoH profile;
+- they understand false claims may be rejected, revoked, or affect trust.
+
+The app should make privacy choices clear before submission.
+
+---
+
+## 9. Reviewer access
+
+Reviewer access should follow the principle of least privilege.
+
+Reviewers should see only what they need to evaluate the claim.
+
+Recommended access distinctions:
+
+| Role | Access |
+|---|---|
+| Claimant | Own claims, own evidence, public/review outcomes |
+| Peer validator | Claim summary and selected evidence needed for validation |
+| Expert reviewer | Claim, domains, evidence, metrics, validation context |
+| Admin reviewer | Full claim context, governance notes, dispute information |
+| Public user | Only public or privacy-safe summaries |
+| K-Port evidence process | Source records, provenance, admissibility, mapping, status and required audit references |
+| EkoH scoring process | Structured admissible signals and required audit references; no need for raw assessment data |
+
+Private evidence should not be exposed to unrelated users.
+
+---
+
+## 10. Audit model
+
+Every score-impacting claim should be auditable.
+
+The audit trail should answer:
+
+```text
+Who submitted the claim?
+What was claimed?
+What evidence supported it?
+If evidence came from XKaliber / CertifiKation, what source object, version, status and audit reference produced it?
+Which domains were affected?
+Who validated or reviewed it?
+What decision was made?
+When was it made?
+Was the claim sent to scoring?
+Did EkoH update a score?
+What score changed?
+Why did it change?
+Was the claim later disputed, expired, or revoked?
+```
+
+The app should preserve this chain even if the public view hides sensitive details.
+
+---
+
+## 11. Public transparency versus private evidence
+
+Transparency does not mean exposing everything.
+
+A public explanation may say:
+
+```text
+This user's expertise in environmental engineering increased after a verified project contribution was reviewed and accepted.
+```
+
+It does not necessarily need to show:
+
+- the full project report;
+- private partner letters;
+- reviewer notes;
+- identity documents;
+- raw moderation data.
+
+The app should support privacy-aware transparency.
+
+---
+
+## 12. Reviewer accountability
+
+Review decisions should include:
+
+- reviewer identity or reviewer role;
+- decision;
+- date;
+- rationale;
+- domains confirmed or rejected;
+- evidence considered;
+- confidence level;
+- conflicts of interest, if any;
+- whether the claim was escalated.
+
+This prevents arbitrary or unexplained decisions.
+
+For public-facing views, reviewer identity may be hidden or generalized depending on governance policy.
+
+---
+
+## 13. Conflict of interest
+
+The app should track conflicts of interest.
+
+A conflict may exist when a validator or reviewer is:
+
+- a close friend;
+- a family member;
+- a business partner;
+- a project collaborator;
+- an employer or employee;
+- a competitor;
+- financially connected to the claimant;
+- involved in a dispute with the claimant.
+
+A conflict does not automatically invalidate validation, but it should be visible to reviewers and may reduce confidence.
+
+Validators should be asked:
+
+```text
+Do you have any relationship or conflict of interest that reviewers should know about?
+```
+
+---
+
+## 14. Anti-gaming concerns
+
+The app should help detect and prevent manipulation.
+
+Potential abuse patterns include:
+
+| Pattern | Description |
+|---|---|
+| Fake credentials | User submits false or fabricated credentials |
+| Duplicate claims | Same evidence submitted repeatedly to inflate score |
+| Circular endorsements | Users endorse each other to inflate reputation |
+| Low-quality claim flooding | Many weak claims submitted to overwhelm review |
+| Domain stretching | Claim mapped to unrelated high-value domains |
+| Impact inflation | Metrics exaggerated or unsupported |
+| Validator bias | Validators with conflicts endorse claims |
+| Sockpuppet validation | Fake accounts validate claims |
+| Plagiarism | User claims someone else’s work |
+| Expired evidence | Outdated or revoked credentials presented as active |
+| Popularity substitution | Generic likes treated as expertise |
+
+The app should make these patterns easier to identify.
+
+---
+
+## 15. Anti-gaming controls
+
+Recommended controls:
+
+| Control | Purpose |
+|---|---|
+| Evidence hash | Detect duplicate file submissions |
+| Source metadata | Preserve where evidence came from |
+| Validator conflict declaration | Identify biased endorsements |
+| Domain relevance review | Prevent unrelated domain inflation |
+| Claim status workflow | Stop unverified claims from affecting scores |
+| Review notes | Preserve decision rationale |
+| Expiry dates | Prevent stale credentials from remaining active |
+| Revocation state | Correct claims later found invalid |
+| Duplicate detection | Avoid repeated credit for the same evidence |
+| Escalation path | Send suspicious claims to governance review |
+| Integrity flag | Mark claims requiring investigation |
+
+These controls can be introduced progressively.
+
+---
+
+## 16. Fairness and inclusion
+
+Governance should not privilege only formal credentials.
+
+EkoH should recognize multiple legitimate paths to expertise:
+
+- formal education;
+- professional practice;
+- community knowledge;
+- self-taught skill;
+- indigenous knowledge;
+- open-source contributions;
+- project impact;
+- mentoring;
+- public-good work;
+- peer-recognized contribution;
+- demonstrated problem-solving.
+
+The app should allow users without formal degrees to submit strong practical or impact evidence.
+
+Fairness means being rigorous about evidence while remaining open to different kinds of expertise.
+
+---
+
+## 17. Bias risks
+
+The app should be aware of possible bias.
+
+Examples:
+
+| Bias risk | Description |
+|---|---|
+| Credential bias | Overvaluing formal degrees over proven practical ability |
+| Institutional bias | Favoring well-known institutions over local or community work |
+| Language bias | Penalizing users who submit evidence in less common languages |
+| Network bias | Favoring users with access to prestigious validators |
+| Popularity bias | Mistaking visibility for expertise |
+| Geographic bias | Overvaluing evidence formats common in some countries |
+| Digital access bias | Penalizing users with limited online records |
+
+The review process should include guidance to reduce these biases.
+
+---
+
+## 18. Appeals and disputes
+
+Users should be able to challenge decisions.
+
+Appeals may apply when:
+
+- a claim was rejected;
+- a claim was only partially verified;
+- a domain mapping was changed;
+- a score impact was disputed;
+- evidence was misunderstood;
+- a reviewer had a conflict of interest;
+- new evidence is available.
+
+Disputes may also be raised by others if a verified claim appears false or misleading.
+
+---
+
+## 19. Appeal workflow
+
+A simple appeal workflow:
+
+```text
+Decision made
+        ↓
+User requests appeal
+        ↓
+User provides reason or new evidence
+        ↓
+Different reviewer or governance role reviews it
+        ↓
+Decision is upheld, modified, or reversed
+        ↓
+Audit trail is updated
+        ↓
+EkoH score is corrected if needed
+```
+
+Appeals should not erase the original decision.
+
+They should add a new decision layer to the audit trail.
+
+---
+
+## 20. Revocation
+
+A previously verified claim may need to be revoked.
+
+Reasons include:
+
+- credential revoked;
+- license expired or suspended;
+- evidence discovered to be false;
+- publication retracted;
+- project contribution misrepresented;
+- validator endorsement withdrawn;
+- conflict of interest discovered;
+- plagiarism confirmed;
+- impact claim disproven.
+
+Revocation should trigger a scoring review.
+
+If the revoked claim affected EkoH scores, the score history should record the correction.
+
+---
+
+## 21. Expiration and freshness
+
+Some claims naturally become stale.
+
+Examples:
+
+- cybersecurity certification;
+- medical license;
+- safety training;
+- regulatory qualification;
+- fast-changing technical skill;
+- professional registration;
+- continuing education requirement.
+
+Claims may need:
+
+- expiry date;
+- renewal evidence;
+- review reminder;
+- automatic status change to expired;
+- reduced score impact over time.
+
+Not all claims expire.
+
+A historical publication or patent may remain relevant, but its currentness should be considered differently than an active license.
+
+---
+
+## 22. Ethical integrity claims
+
+Ethical integrity should be handled carefully.
+
+Ethics-related signals may include:
+
+- verified identity;
+- transparency declarations;
+- conflict-of-interest disclosure;
+- constructive conduct;
+- moderation history;
+- absence of confirmed abuse;
+- corrective behavior after mistakes;
+- trustworthy participation patterns.
+
+Because ethics can affect a global trust multiplier, related claims and reviews should have strong governance safeguards.
+
+The app should avoid turning ethics into popularity or ideological agreement.
+
+Ethics should focus on conduct, honesty, responsibility, transparency, and respect for platform values.
+
+---
+
+## 23. Moderation and ethics
+
+Moderation data may affect ethical standing, but it is sensitive.
+
+The system should distinguish:
+
+- allegations;
+- reports;
+- confirmed violations;
+- severity;
+- recency;
+- pattern of behavior;
+- remediation;
+- appeal outcome.
+
+Unconfirmed reports should not automatically reduce trust.
+
+Severe confirmed violations may require stronger action.
+
+---
+
+## 24. Public profile display
+
+Verified claims may contribute to a public or semi-public EkoH profile.
+
+Possible display levels:
+
+| Display type | Example |
+|---|---|
+| Score only | “Expertise score in environmental science: high” |
+| Summary | “Verified project contribution in environmental engineering” |
+| Evidence label | “Institution-verified certification” |
+| Public claim | “Completed X certification at Y institution” |
+| Public evidence | Full certificate or proof visible publicly |
+
+Users should have privacy controls where appropriate.
+
+Some claim types may require public evidence to be useful, while others should remain private.
+
+---
+
+## 25. Audit retention
+
+The app should preserve audit records long enough to support trust, disputes, and score history.
+
+Retention policies should consider:
+
+- legal requirements;
+- user privacy;
+- governance needs;
+- score history integrity;
+- expired or revoked claims;
+- appeals;
+- public transparency.
+
+When evidence is deleted or hidden, the system may still need to preserve a minimal audit record showing that a decision occurred.
+
+---
+
+## 26. Data minimization
+
+The app should collect only what is needed.
+
+Avoid collecting excessive sensitive data when a less invasive proof is enough.
+
+Example:
+
+```text
+A certificate verification URL may be better than uploading a full diploma containing personal data.
+```
+
+Example:
+
+```text
+A verified professional license number may be enough without storing an identity document.
+```
+
+The app should prefer verifiable references over unnecessary copies of sensitive documents.
+
+---
+
+## 27. Reviewer guidance
+
+Reviewers should be trained or guided to evaluate claims consistently.
+
+Reviewer guidance should cover:
+
+- evidence quality;
+- domain relevance;
+- practical versus formal expertise;
+- impact metric evaluation;
+- conflicts of interest;
+- privacy rules;
+- bias reduction;
+- when to escalate;
+- when to request more evidence;
+- how to write clear review notes.
+
+The app should provide review checklists by evidence type.
+
+---
+
+## 28. Governance roles
+
+Recommended role concepts:
+
+| Role | Responsibility |
+|---|---|
+| Claimant | Submits claim and evidence |
+| Peer validator | Confirms or comments on a claim |
+| Expert reviewer | Reviews domain-specific validity |
+| Admin reviewer | Handles platform, policy, and governance decisions |
+| Privacy reviewer | Handles sensitive evidence or visibility questions |
+| Appeal reviewer | Reviews disputed decisions |
+| Integrity reviewer | Investigates manipulation, fraud, or abuse |
+| EkoH scoring process | Applies verified signals to score logic |
+
+These roles do not all need to exist in the MVP, but the model should allow them later.
+
+---
+
+## 29. MVP governance requirements
+
+The first version should include:
+
+- claim status workflow;
+- reviewer notes;
+- evidence visibility setting;
+- privacy choice;
+- conflict-of-interest declaration for validators;
+- basic appeal/dispute marker;
+- rejection reason;
+- verified / partially verified / rejected outcomes;
+- traceability to score handoff;
+- ability to revoke or archive a claim;
+- clear user-facing status messages.
+
+This is enough to prevent the claim layer from becoming an uncontrolled score-inflation mechanism.
+
+---
+
+## 30. Later governance enhancements
+
+Later versions may include:
+
+- weighted validator trust;
+- duplicate evidence detection;
+- circular endorsement detection;
+- public audit summaries;
+- automated credential verification;
+- institutional verification workflows;
+- integrity event integration;
+- reviewer performance metrics;
+- conflict graph;
+- expiry automation;
+- appeal panels;
+- public challenge mechanism;
+- privacy review queue;
+- audit dashboard.
+
+These should come after the core claim workflow is stable.
+
+---
+
+## 31. Success criteria
+
+The governance, privacy, and audit model succeeds if:
+
+- users understand what they are submitting;
+- private evidence is protected;
+- verified claims are traceable;
+- rejected claims have explanations;
+- score changes can be justified;
+- disputes can be handled;
+- revoked claims can be corrected;
+- validators disclose conflicts;
+- reviewers can make consistent decisions;
+- manipulation is harder;
+- nontraditional expertise can still be recognized.
+
+---
+
+## 32. Summary
+
+The K-Port should create trust before it creates influence.
+
+It must support:
+
+```text
+evidence
+review
+privacy
+audit
+appeal
+correction
+```
+
+A strong claim layer protects the legitimacy of EkoH.
+
+The guiding governance statement is:
+
+> Expertise becomes influence only when evidence, privacy, and accountability are respected.
+
+
+================================================================================================
 FILE: README.md
 ================================================================================================
 
-ÿþ#   K - P o r t 
- 
- * * K - P o r t * *   i s   t h e   c a n o n i c a l   E k o H   e v i d e n c e   g a t e w a y   f o r   v e r i f i a b l e   e x p e r t i s e   c l a i m s . 
- 
- I t   l e t s   u s e r s   s u b m i t   p r o o f   o f   e x p e r i e n c e ,   c r e d e n t i a l s ,   i m p a c t ,   p e e r   r e c o g n i t i o n ,   a n d   e t h i c a l   t r u s t   s i g n a l s ;   i t   a l s o   i n g e s t s   s o u r c e - a u t h o r i t a t i v e   e v i d e n c e   p r o d u c e d   b y   K o n n a x i o n   m o d u l e s   s u c h   a s   * * X K a l i b e r   /   C e r t i f i K a t i o n * * .   K - P o r t   n o r m a l i z e s   a n d   q u a l i f i e s   a d m i s s i b l e   e v i d e n c e   b e f o r e   r o u t i n g   i t   i n t o   E k o H  s   d o m a i n - b a s e d   r e p u t a t i o n   a n d   s c o r i n g   s y s t e m . 
- 
- - - - 
- 
- # #   P u r p o s e 
- 
- K - P o r t   c l o s e s   t h e   g a p   b e t w e e n   r a w   o r   m o d u l e - p r o d u c e d   e x p e r t i s e   e v i d e n c e   a n d   E k o H   r e p u t a t i o n   s c o r e s . 
- 
- I t   p r o v i d e s   a   s t r u c t u r e d   e n t r y   p o i n t   w h e r e   u s e r s   c a n   d e c l a r e ,   d o c u m e n t ,   a n d   s u p p o r t   t h e i r   e x p e r t i s e ,   a n d   w h e r e   t r u s t e d   K o n n a x i o n   m o d u l e s   c a n   s u b m i t   v e r i f i a b l e   e v i d e n c e   p a c k a g e s ,   b e f o r e   t h a t   i n f o r m a t i o n   i s   n o r m a l i z e d ,   v a l i d a t e d ,   a n d   t r a n s l a t e d   i n t o   E k o H   s c o r i n g   s i g n a l s . 
- 
- K - P o r t   d o e s   * * n o t * *   a s s i g n   r e p u t a t i o n   d i r e c t l y . 
- 
- I t   c o l l e c t s   p r o o f .     
- E k o H   e v a l u a t e s   m e r i t . 
- 
- - - - 
- 
- # #   C o r e   i d e a 
- 
- ` ` ` t e x t 
- U s e r   /   e x t e r n a l   e v i d e n c e    % % % % % % % % %%
-                                                                     %
- X K a l i b e r   /   C e r t i f i K a t i o n   e v i d e n c e   % %’!  K - P o r t 
- O t h e r   K o n n a x i o n   m o d u l e   e v i d e n c e    % %%            “!
-                                                               p r o v e n a n c e ,   s t a t u s , 
-                                                               s c o p e ,   c o n s e n t ,   m a p p i n g 
-                                                                             “!
-                                                               E k o H   s c o r i n g   h a n d o f f 
-                                                                             “!
-                                                   D o m a i n - b a s e d   e x p e r t i s e   a n d 
-                                                             e t h i c s   r e p u t a t i o n 
- ` ` ` 
- 
- K - P o r t   i s   n o t   a   s e p a r a t e   r e p u t a t i o n   s y s t e m .   I t   i s   a   c e n t r a l i z e d   c l a i m   a n d   e v i d e n c e   i n t a k e   l a y e r   i n s i d e   t h e   E k o H   e n v i r o n m e n t . 
- 
- - - - 
- 
- # #   W h a t   K - P o r t   c o l l e c t s 
- 
- K - P o r t   i s   d e s i g n e d   t o   c o l l e c t   s t r u c t u r e d   c l a i m s   r e l a t e d   t o : 
- 
- -   t h e o r e t i c a l   k n o w l e d g e   a n d   q u a l i f i c a t i o n s ; 
- -   p r a c t i c a l   e x p e r i e n c e ; 
- -   m e a s u r a b l e   i m p a c t ; 
- -   p e e r   r e c o g n i t i o n ; 
- -   k n o w l e d g e   d i s s e m i n a t i o n ; 
- -   e t h i c a l   i n t e g r i t y   a n d   t r u s t   s i g n a l s . 
- 
- E x a m p l e s   i n c l u d e : 
- 
- -   d e g r e e s   a n d   c e r t i f i c a t i o n s ; 
- -   X K a l i b e r   C a l i b e r   P r o f i l e s   a n d   C e r t i f i K a t i o n   s e a l s ; 
- -   p r o f e s s i o n a l   l i c e n s e s ; 
- -   p r o j e c t   c o n t r i b u t i o n s ; 
- -   p u b l i s h e d   w o r k ; 
- -   p a t e n t s ; 
- -   i m p a c t   r e p o r t s ; 
- -   p e e r   e n d o r s e m e n t s ; 
- -   e x p e r t   r e v i e w s ; 
- -   t e a c h i n g   o r   m e n t o r i n g   r e c o r d s ; 
- -   p u b l i c - i n t e r e s t   c o n t r i b u t i o n s ; 
- -   t r a n s p a r e n c y   a n d   c o n d u c t   s i g n a l s . 
- 
- - - - 
- 
- # #   W h a t   K - P o r t   d o e s   n o t   d o 
- 
- K - P o r t   d o e s   n o t : 
- 
- -   l e t   u s e r s   s e l f - a s s i g n   E k o H   s c o r e s ; 
- -   r e p l a c e   E k o H  s   ` u s e r _ e x p e r t i s e _ s c o r e ` ; 
- -   r e p l a c e   E k o H  s   ` u s e r _ e t h i c s _ s c o r e ` ; 
- -   c r e a t e   a   p a r a l l e l   r e p u t a t i o n   s y s t e m ; 
- -   t r e a t   a l l   e v i d e n c e   a s   e q u a l l y   r e l i a b l e ; 
- -   e x p o s e   p r i v a t e   e v i d e n c e   p u b l i c l y   b y   d e f a u l t ; 
- -   r e - r u n   o r   r e - s c o r e   a n   X K a l i b e r   c o m p e t e n c y   a s s e s s m e n t ; 
- -   a l l o w   a n   e v i d e n c e - p r o d u c i n g   m o d u l e   t o   b y p a s s   K - P o r t   a n d   w r i t e   r e p u t a t i o n   d i r e c t l y   i n t o   E k o H . 
- 
- U s e r s   s u b m i t   c l a i m s   a n d   p r o o f .     
- V e r i f i c a t i o n   d e t e r m i n e s   c r e d i b i l i t y .     
- E k o H   d e c i d e s   s c o r e   i m p a c t . 
- 
- - - - 
- 
- # #   S o u r c e - a u t h o r i t a t i v e   e v i d e n c e 
- 
- S o m e   e v i d e n c e   i s   a l r e a d y   t h e   o u t p u t   o f   a   t r u s t e d   K o n n a x i o n   p r o c e s s   r a t h e r   t h a n   a   s e l f - d e c l a r e d   c l a i m .   T h e   m a i n   e x a m p l e   i s   a n   * * X K a l i b e r   r e s u l t   o r   C e r t i f i K a t i o n   s e a l * * . 
- 
- F o r   t h i s   e v i d e n c e ,   K - P o r t   s h o u l d   v e r i f y : 
- 
- -   s o u r c e   p r o v e n a n c e   a n d   i n t e g r i t y ; 
- -   i d e n t i t y   b i n d i n g ; 
- -   a c t i v e   /   e x p i r e d   /   d i s p u t e d   /   c o r r e c t e d   /   r e v o k e d   s t a t u s ; 
- -   d o m a i n   a n d   c o m p e t e n c y   s c o p e ; 
- -   v a l i d i t y   p e r i o d ; 
- -   c o n s e n t   a n d   v i s i b i l i t y ; 
- -   d u p l i c a t e   o r   s u p e r s e d e d   e v i d e n c e ; 
- -   m a p p i n g   i n t o   E k o H  s   c a n o n i c a l   d o m a i n   c a t a l o g u e . 
- 
- K - P o r t   s h o u l d   * * n o t * *   r e c a l c u l a t e   t h e   X K a l i b e r   l e v e l ,   c o n f i d e n c e ,   o r   o b s e r v e d   p e r f o r m a n c e .   T h o s e   f i e l d s   r e m a i n   a u t h o r i t a t i v e   t o   X K a l i b e r   /   C e r t i f i K a t i o n .   K - P o r t   d e c i d e s   w h e t h e r   a n d   h o w   t h e   e v i d e n c e   i s   a d m i s s i b l e   f o r   E k o H ;   E k o H   d e c i d e s   t h e   r e p u t a t i o n   i m p a c t . 
- 
- T h e   a u t h o r i t y   c h a i n   i s : 
- 
- ` ` ` t e x t 
- X K a l i b e r   m e a s u r e s   c o m p e t e n c y 
- ’!  C e r t i f i K a t i o n   a t t e s t s   t h e   r e s u l t 
- ’!  K - P o r t   q u a l i f i e s   a n d   r o u t e s   t h e   e v i d e n c e 
- ’!  E k o H   c a l c u l a t e s   r e p u t a t i o n 
- ` ` ` 
- 
- - - - 
- 
- # #   E n v i r o n m e n t   a l i g n m e n t 
- 
- K - P o r t   a l i g n s   w i t h   t h e   e x i s t i n g   E k o H   /   S m a r t   V o t e   e n v i r o n m e n t . 
- 
- K e y   c o n c e p t s   i t   m u s t   r e s p e c t : 
- 
- |   E x i s t i n g   E k o H   c o n c e p t   |   R o l e   | 
- | - - - | - - - | 
- |   ` e x p e r t i s e _ c a t e g o r y `   |   C a n o n i c a l   e x p e r t i s e / d o m a i n   c a t a l o g u e   | 
- |   ` u s e r _ e x p e r t i s e _ s c o r e `   |   U s e r   e x p e r t i s e   s c o r e   p e r   d o m a i n   | 
- |   ` u s e r _ e t h i c s _ s c o r e `   |   E t h i c a l   s t a n d i n g   a n d   t r u s t   m u l t i p l i e r   | 
- |   ` s c o r e _ c o n f i g u r a t i o n `   |   S c o r i n g   p a r a m e t e r s   | 
- |   ` c o n t e x t _ a n a l y s i s _ l o g `   |   E x p l a i n a b l e   c o n t e x t u a l   o r   A I - a s s i s t e d   s c o r i n g   l o g s   | 
- |   ` c o n f i d e n t i a l i t y _ s e t t i n g `   |   P r i v a c y   l e v e l   f o r   p u b l i c   i d e n t i t y   a n d   s c o r e   d i s p l a y   | 
- |   ` s c o r e _ h i s t o r y `   |   A u d i t   t r a i l   o f   s c o r e   c h a n g e s   | 
- 
- K - P o r t   s h o u l d   f e e d   t h e s e   e x i s t i n g   E k o H   o b j e c t s   r a t h e r   t h a n   r e p l a c i n g   t h e m . 
- 
- - - - 
- 
- # #   C l a i m   l i f e c y c l e 
- 
- A   t y p i c a l   K - P o r t   c l a i m   f o l l o w s   t h i s   p a t h : 
- 
- ` ` ` t e x t 
- D r a f t 
-     “!
- S u b m i t t e d 
-     “!
- U n d e r   r e v i e w 
-     “!
- V e r i f i e d   /   P a r t i a l l y   v e r i f i e d   /   R e j e c t e d 
-     “!
- S c o r i n g   h a n d o f f   w h e n   e l i g i b l e 
-     “!
- A u d i t e d ,   e x p i r e d ,   d i s p u t e d ,   r e v o k e d ,   o r   a r c h i v e d   i f   n e e d e d 
- ` ` ` 
- 
- O n l y   v e r i f i e d   o r   p a r t i a l l y   v e r i f i e d   c l a i m s   s h o u l d   b e   e l i g i b l e   f o r   E k o H   s c o r i n g   c o n s i d e r a t i o n . 
- 
- - - - 
- 
- # #   M a i n   o b j e c t s 
- 
- A t   a   c o n c e p t u a l   l e v e l ,   K - P o r t   i s   o r g a n i z e d   a r o u n d : 
- 
- |   O b j e c t   |   P u r p o s e   | 
- | - - - | - - - | 
- |   ` E x p e r t i s e C l a i m `   |   M a i n   u s e r - s u b m i t t e d   c l a i m   | 
- |   ` C l a i m D o m a i n `   |   L i n k   b e t w e e n   a   c l a i m   a n d   o n e   o r   m o r e   e x p e r t i s e   d o m a i n s   | 
- |   ` C l a i m E v i d e n c e `   |   P r o o f   a t t a c h e d   t o   t h e   c l a i m   | 
- |   ` C l a i m M e t r i c `   |   S t r u c t u r e d   m e a s u r a b l e   i m p a c t   | 
- |   ` C l a i m V a l i d a t i o n `   |   P e e r ,   e x p e r t ,   a d m i n ,   i n s t i t u t i o n a l ,   o r   a u t o m a t e d   v a l i d a t i o n   | 
- |   ` S c o r e A p p l i c a t i o n `   |   T r a c e a b l e   l i n k   b e t w e e n   a   v e r i f i e d   c l a i m   a n d   a n   E k o H   s c o r e   u p d a t e   | 
- 
- T h e   f i r s t   i m p l e m e n t a t i o n   c a n   s t a r t   w i t h : 
- 
- ` ` ` t e x t 
- E x p e r t i s e C l a i m 
- C l a i m D o m a i n 
- C l a i m E v i d e n c e 
- ` ` ` 
- 
- A d d i t i o n a l   o b j e c t s   c a n   b e   a d d e d   a s   t h e   w o r k f l o w   m a t u r e s . 
- 
- - - - 
- 
- # #   P r o d u c t   d o c u m e n t a t i o n 
- 
- R e c o m m e n d e d   d o c u m e n t a t i o n   s e t : 
- 
- ` ` ` t e x t 
- d o c s / 
- % % %  e k o h - e x p e r t i s e - c l a i m s / 
-         % % %  0 0 - e k o h - e x p e r t i s e - c l a i m s - a p p - a l i g n m e n t . m d 
-         % % %  0 1 - e x p e r t i s e - c l a i m s - c o n c e p t - a n d - s c o p e . m d 
-         % % %  0 2 - e x p e r t i s e - c l a i m - e v i d e n c e - m o d e l . m d 
-         % % %  0 3 - e x p e r t i s e - c l a i m - i n t a k e - f o r m . m d 
-         % % %  0 4 - v e r i f i c a t i o n - a n d - s c o r i n g - h a n d o f f . m d 
-         % % %  0 5 - g o v e r n a n c e - p r i v a c y - a n d - a u d i t . m d 
- ` ` ` 
- 
- D o c u m e n t   p u r p o s e s : 
- 
- |   F i l e   |   P u r p o s e   | 
- | - - - | - - - | 
- |   ` 0 0 - e k o h - e x p e r t i s e - c l a i m s - a p p - a l i g n m e n t . m d `   |   E n v i r o n m e n t   a n d   s y s t e m   a l i g n m e n t   | 
- |   ` 0 1 - e x p e r t i s e - c l a i m s - c o n c e p t - a n d - s c o p e . m d `   |   P r o d u c t   d e f i n i t i o n   a n d   s c o p e   | 
- |   ` 0 2 - e x p e r t i s e - c l a i m - e v i d e n c e - m o d e l . m d `   |   C o n c e p t u a l   c l a i m / e v i d e n c e   m o d e l   | 
- |   ` 0 3 - e x p e r t i s e - c l a i m - i n t a k e - f o r m . m d `   |   U s e r - f a c i n g   i n t a k e   f o r m   | 
- |   ` 0 4 - v e r i f i c a t i o n - a n d - s c o r i n g - h a n d o f f . m d `   |   R e v i e w   w o r k f l o w   a n d   s c o r i n g   h a n d o f f   | 
- |   ` 0 5 - g o v e r n a n c e - p r i v a c y - a n d - a u d i t . m d `   |   T r u s t ,   p r i v a c y ,   d i s p u t e s ,   a n d   a u d i t a b i l i t y   | 
- 
- - - - 
- 
- # #   G u i d i n g   s t a t e m e n t 
- 
- >   K - P o r t   i s   t h e   c a n o n i c a l   e v i d e n c e   g a t e w a y   w h e r e   e x p e r t i s e   e n t e r s   E k o H   b e f o r e   i t   b e c o m e s   r e p u t a t i o n   o r   i n f l u e n c e . 
- 
- - - - 
- 
- # #   S t a t u s 
- 
- D r a f t   /   e a r l y   p r o d u c t   d e f i n i t i o n . 
- 
+# K-Port
+
+**K-Port** is the canonical evidence-intake and qualification application for EkoH inside Konnaxion.
+
+Architecturally, K-Port is an **application + evidence gateway inside the EkoH boundary**. It is not an ecosystem system peer of Konnaxion, and it is not an independent reputation engine.
+
+Its job is to receive user-submitted or source-produced evidence, preserve provenance and source authority, determine whether that evidence is admissible for EkoH, and prepare an explicit scoring handoff. **EkoH alone owns the resulting domain-bounded reputation state.**
+
+## Architectural position
+
+```text
+Konnaxion                         ecosystem system / platform
+└── EkoH                          internal domain/module; reputation owner
+    └── K-Port                    application + evidence gateway
+```
+
+The repository may be separate for product and delivery reasons; repository location does not make K-Port an independent architectural system.
+
+## Core ownership rule
+
+```text
+Source producer owns source facts
+→ K-Port owns evidence intake, qualification and admissibility
+→ EkoH owns reputation/scoring state
+```
+
+Examples:
+
+```text
+XKaliber measures competency
+→ CertifiKation attests a confirmed result when applicable
+→ K-Port verifies provenance/status/scope/consent and qualifies evidence
+→ EkoH calculates domain-bounded reputation impact
+```
+
+K-Port must never recalculate an XKaliber result, redefine a CertifiKation seal, or directly assign an EkoH score.
+
+## Inputs
+
+K-Port accepts two broad classes of input.
+
+### User or externally supplied evidence
+
+Examples include:
+
+- degrees and certifications;
+- professional licenses;
+- employment or project evidence;
+- publications and patents;
+- measurable impact reports;
+- peer or institutional attestations;
+- teaching and mentoring records;
+- public-interest contributions;
+- privacy-appropriate ethical or conduct evidence.
+
+These inputs require review because K-Port does not automatically trust a user assertion or an external URL merely because it exists.
+
+### Source-authoritative Konnaxion evidence
+
+Some evidence is already produced by another bounded process. The main current example is XKaliber / CertifiKation evidence inside KonnectED.
+
+For source-authoritative evidence K-Port verifies, at minimum:
+
+- source identity and provenance;
+- integrity or audit reference when available;
+- subject identity binding;
+- source version;
+- source status, including correction/revocation when applicable;
+- domain and competency scope;
+- validity period;
+- consent and visibility constraints;
+- duplicate/supersession state;
+- mapping to the canonical EkoH domain catalogue.
+
+K-Port adds its own **admissibility decision** without overwriting source facts.
+
+## Smart Vote boundary
+
+Smart Vote owns derived readings over source participation and contextual lenses. A Smart Vote reading is therefore **not a canonical expertise fact** and must not be fed back into K-Port as a shortcut for increasing EkoH reputation.
+
+When civic participation is relevant as evidence, K-Port references the source-owned event or artifact from its authoritative domain (for example a Korum or Konsultations source record) and evaluates that evidence under explicit policy.
+
+```text
+source participation fact
+→ optional K-Port qualification
+→ EkoH context/reputation
+→ optional Smart Vote reading
+
+Smart Vote reading
+↛ K-Port evidence shortcut
+```
+
+This prevents circular reputation amplification.
+
+## What K-Port owns
+
+K-Port owns the state required to operate its evidence gateway, including:
+
+- expertise/merit claim intake;
+- evidence references and evidence metadata;
+- provenance records held by the gateway;
+- EkoH domain mapping proposed/confirmed for the evidence;
+- review and qualification state;
+- admissibility decisions;
+- consent/visibility metadata relevant to the handoff;
+- scoring handoff records;
+- audit references for its own decisions.
+
+## What K-Port does not own
+
+K-Port does not own:
+
+- XKaliber assessment results;
+- CertifiKation seal semantics or source status;
+- Korum deliberation state;
+- Konsultations ballot/consultation state;
+- Smart Vote readings;
+- EkoH expertise scores;
+- EkoH ethics scores;
+- EkoH scoring policy;
+- EkoH score history;
+- global Konnaxion identity or authorization state.
+
+Possessing evidence does not transfer ownership of the source fact.
+
+## Claim terminology
+
+`ExpertiseClaim` is a **K-Port business-domain intake object**. It is not a Kristal assertion, Claim-IR object, validation result, or epistemic status.
+
+Likewise, `verified` in the K-Port claim lifecycle means that K-Port's evidence-review requirements were satisfied for its own scope. It does not imply Kristal validation, universal truth, institutional recognition, or authorization outside K-Port/EkoH.
+
+## Claim lifecycle
+
+```text
+Draft
+→ Submitted
+→ Under review
+→ Needs more evidence | Verified | Partially verified | Rejected
+→ Eligible for EkoH handoff when policy permits
+→ Handoff receipt / no-impact / further review
+→ Disputed | Expired | Revoked | Archived when applicable
+```
+
+Claim review status, source evidence status, K-Port admissibility, and EkoH score state are separate axes and must not be collapsed into one field.
+
+## Core conceptual objects
+
+| Object | Owner | Purpose |
+|---|---|---|
+| `ExpertiseClaim` | K-Port | User/business-domain claim submitted for evidence review |
+| `ClaimDomain` | K-Port | Mapping between the claim/evidence and one or more EkoH domains |
+| `ClaimEvidence` | K-Port | Evidence reference plus provenance/visibility metadata |
+| `ClaimMetric` | K-Port | Structured measurable impact claimed by the submitter/source |
+| `ClaimValidation` | K-Port | Review/qualification result in K-Port's scope |
+| `ScoringHandoff` | K-Port | Immutable/traceable package sent to EkoH for scoring consideration |
+| EkoH score/history objects | EkoH | Reputation state and the authoritative record of score changes |
+
+`ScoringHandoff` is the K-Port-owned boundary object: K-Port prepares evidence for scoring; **EkoH applies scoring**.
+
+## Handoff contract
+
+A K-Port → EkoH handoff should identify at least:
+
+- subject/user reference;
+- K-Port claim/evidence IDs;
+- source producer/type/id/version when applicable;
+- source status and integrity/audit references;
+- K-Port admissibility outcome and reason;
+- confirmed EkoH domain mappings;
+- evidence reliability/qualification metadata;
+- consent and visibility constraints;
+- reviewer/decision references appropriate to policy;
+- idempotency/correlation identifier;
+- handoff timestamp/version.
+
+EkoH returns or exposes a receipt/reference to its own processing. K-Port may retain that reference for traceability, but the resulting score and score history remain EkoH-owned.
+
+## Guiding statement
+
+> **K-Port collects and qualifies proof. EkoH evaluates reputation. Source systems keep ownership of their facts.**
+
+## Documentation
+
+- `docs/00-k-port-alignment.md` — architectural position, ownership, boundaries and integration rules.
+- `docs/01-k-port-concept-and-scope.md` — product concept and scope.
+- `docs/02-k-port-claim-evidence-model.md` — claim/evidence/admissibility model.
+- `docs/03-k-port-intake-form.md` — intake UX and validation requirements.
+- `docs/04-k-port-verification-and-ekoh-handoff.md` — qualification workflow and EkoH handoff.
+- `docs/05-k-port-governance-privacy-and-audit.md` — privacy, governance, disputes and auditability.
+
+## Repository status
+
+This package currently contains product/architecture documentation and contracts-by-description; it does not contain a K-Port application implementation.

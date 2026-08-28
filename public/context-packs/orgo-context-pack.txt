@@ -2,16 +2,16 @@
 
 repository: Rejean-McCormick/Orgo
 source_path: C:\mycode\Orgo\Orgo
-source_commit: c0db2675a17d18479f3dec3e3e306eeda5dea2be
+source_commit: 2b13ac5c28e04aff107ade9bf76d476467c56ad0
 working_tree_markdown: clean
 wiki_source_path: C:\mycode\Orgo\Orgo.wiki
-wiki_source_commit: 9f893517eaab19be58516978e9ab0ac92a07ee6a
+wiki_source_commit: 05d4ed6e021761e7b8762563b571fb1ac989f7b5
 wiki_working_tree_markdown: clean
-repo_files: 19
-wiki_files: 1
-generated_at: 2026-08-25T11:30:45-04:00
-files: 20
-content_sha256: 15404d1c3deaa819febadc75a0ec3c294d51a2aac6d80feedcc08f2083dcc82a
+repo_files: 34
+wiki_files: 20
+generated_at: 2026-08-28T07:34:02-04:00
+files: 54
+content_sha256: 724542fa7848f68fc7da986faefa843ef986ac5326b11d2b2f8342a5a8b67cb3
 
 ================================================================================================
 FILE INDEX
@@ -19,24 +19,58 @@ FILE INDEX
 
 01. apps/api/README.md
 02. apps/web/README.md
-03. Docs/Technical-Reference/Architecture upgrade(to do)/OPS-001_AI_Resilience_Strategy.md
-04. Docs/Technical-Reference/Architecture upgrade(to do)/REF-001_Configuration_Manifest.md
-05. Docs/Technical-Reference/Architecture upgrade(to do)/RFC-001_Nervous_System_Upgrade.md
-06. Docs/Technical-Reference/Architecture upgrade(to do)/SPEC-001_Input_SenTient_ACL.md
-07. Docs/Technical-Reference/Architecture upgrade(to do)/SPEC-002_Output_Architect_Outbox.md
-08. Docs/Technical-Reference/Boilerplate_Turborepo.md
-09. Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md
-10. Docs/Technical-Reference/v3/2-orgo-documentation-index.md
-11. Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md
-12. Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md
-13. Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md
-14. Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md
-15. Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md
-16. Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md
-17. Docs/Technical-Reference/WikiData-Orgo_Chart.md
-18. packages/tsconfig/README.md
-19. README.md
-20. wiki/Home.md
+03. Docs/README.md
+04. Docs/Technical-Reference/Architecture upgrade(to do)/OPS-001_AI_Resilience_Strategy.md
+05. Docs/Technical-Reference/Architecture upgrade(to do)/REF-001_Configuration_Manifest.md
+06. Docs/Technical-Reference/Architecture upgrade(to do)/RFC-001_Nervous_System_Upgrade.md
+07. Docs/Technical-Reference/Architecture upgrade(to do)/SPEC-001_Input_SenTient_ACL.md
+08. Docs/Technical-Reference/Architecture upgrade(to do)/SPEC-002_Output_Architect_Outbox.md
+09. Docs/Technical-Reference/Boilerplate_Turborepo.md
+10. Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
+11. Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
+12. Docs/Technical-Reference/CONTRACTS.md
+13. Docs/Technical-Reference/GLOSSARY.md
+14. Docs/Technical-Reference/Semantic-Charters.md
+15. Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md
+16. Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md
+17. Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md
+18. Docs/Technical-Reference/v3/2-orgo-documentation-index.md
+19. Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md
+20. Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md
+21. Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md
+22. Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md
+23. Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md
+24. Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md
+25. Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md
+26. Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md
+27. Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md
+28. Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md
+29. Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md
+30. Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md
+31. Docs/Technical-Reference/WikiData-Orgo_Chart.md
+32. packages/tsconfig/README.md
+33. README.md
+34. TO-Do___CODE_ALIGNMENT_NOTES.md
+35. wiki/_Footer.md
+36. wiki/_Sidebar.md
+37. wiki/Cases-and-Tasks.md
+38. wiki/Cyclic-Overview-and-Insights.md
+39. wiki/Domains-and-Use-Cases.md
+40. wiki/Example-Scenarios.md
+41. wiki/FAQ.md
+42. wiki/Glossary.md
+43. wiki/Home.md
+44. wiki/How-Orgo-Works.md
+45. wiki/Interoperability.md
+46. wiki/Offline-and-Resilience.md
+47. wiki/Organizations-People-and-Privacy.md
+48. wiki/Profiles-and-Adaptability.md
+49. wiki/Reactivity-and-Escalation.md
+50. wiki/Resources.md
+51. wiki/Routing-and-Labels.md
+52. wiki/Semantic-Charters.md
+53. wiki/Signals-and-Workflows.md
+54. wiki/What-is-Orgo.md
 
 
 ================================================================================================
@@ -152,6 +186,48 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+================================================================================================
+FILE: Docs/README.md
+================================================================================================
+
+# Orgo — Documentation
+
+## Scope
+
+Orgo is an **ecosystem system** in the kOA Digital Ecosystem. It is a multi-tenant workflow and coordination system that turns signals into governed operational work through Organizations, Cases, Tasks, labels, profiles, workflows, audit and insights.
+
+Orgo owns **workflow state**. It does not absorb the business state of Konnaxion, the epistemic state of Kristal, the linguistic runtime of SemantiK Architect, or the host/platform state of kOA-Linux.
+
+## Canonical reading order
+
+1. `Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md`
+2. `Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md`
+3. `Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md`
+4. `Technical-Reference/v3/4-Orgo v3 - Domain Modules.md`
+5. `Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md`
+6. `Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md`
+7. `Technical-Reference/v3/7-Orgo v3 - API Surface.md`
+8. `Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md`
+9. `Technical-Reference/GLOSSARY.md`
+10. `Technical-Reference/CODE_ALIGNMENT_NOTES.md`
+
+## Core invariants
+
+- `Organization` is the tenant boundary.
+- `Task` is the canonical unit of work.
+- `Case` is the durable container for related work/context.
+- Domain modules refine the Task/Case engine; they do not create competing core lifecycles.
+- Canonical labels drive routing/classification but do not replace domain state.
+- Broadcast labels are informational by default unless an explicit workflow creates work.
+- Insights are read/analysis projections; actionable patterns re-enter the core as Cases/Tasks.
+- External systems are orchestrated through explicit contracts; Orgo does not write their internal stores.
+- Workflow state is not epistemic, civic, linguistic or platform state.
+
+## Current code reference
+
+The supplied code snapshot contains the real Prisma schema, migrations, NestJS services/controllers, domain modules, charters and web application. The physical schema and executable code are the implementation reference; this documentation defines the aligned architecture those surfaces should implement.
 
 
 ================================================================================================
@@ -617,6 +693,1199 @@ The app should be running at `http://localhost` with reverse proxy configured.
 
 ## Other available commands
 Run `nps` in the terminal to see list of all available commands.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
+================================================================================================
+
+# Orgo — Boundaries and Ownership
+
+## 1. Orgo owns operational workflow state
+
+Orgo owns:
+
+- organizations and organization profiles;
+- Orgo user/person/RBAC state;
+- Cases;
+- Tasks;
+- assignments/comments/events;
+- labels/routing rules;
+- workflow definitions/executions/transitions within Orgo;
+- escalation/SLA state;
+- notifications/audit/security events in the Orgo scope;
+- offline/sync state in the Orgo scope;
+- domain-extension records that are explicitly part of Orgo;
+- insights/read models derived from Orgo operational state.
+
+## 2. Task/Case ownership
+
+`Task` is the shared work backbone. `Case` is the shared durable context/work container.
+
+Domain modules must not create a second competing Task/Case lifecycle. Domain tables may extend a Task/Case through explicit foreign keys/links.
+
+Examples already present in the physical schema:
+
+- `maintenance_task_links` → canonical Task;
+- `hr_cases` → canonical Case;
+- `hr_case_task_links` → canonical Task;
+- `education_task_links` → canonical Task.
+
+## 3. Insights ownership
+
+Insights owns analytical projections and reporting outputs. It does not own operational Tasks/Cases.
+
+When a pattern requires action:
+
+```text
+insight/pattern
+→ explicit core Case/Task creation
+→ normal Orgo lifecycle
+```
+
+## 4. Orgo ↔ Konnaxion
+
+There is no implemented Konnaxion adapter in the current Orgo snapshot.
+
+No implicit identity is allowed:
+
+```text
+Orgo Case ≠ Konnaxion Topic
+Orgo Task ≠ Konnaxion Consultation
+Orgo label ≠ Konnaxion taxonomy
+Orgo workflow status ≠ civic decision status
+```
+
+Future interaction pattern:
+
+```text
+Orgo workflow
+→ command/job/proposal/artifact ref
+→ Konnaxion validates/authorizes
+→ Konnaxion mutates its own state
+→ receipt/event/result
+→ Orgo reconciles its Task/Case
+```
+
+If Konnaxion requests governed work, Orgo creates/updates its own Tasks/Cases; Konnaxion does not write the Orgo database.
+
+## 5. Orgo ↔ Kristal
+
+There is no implemented Kristal adapter in the current Orgo snapshot.
+
+Orgo may eventually orchestrate Kristal operations and keep artifact references/receipts, but:
+
+```text
+Task.status ≠ Kristal assertion_status
+Case.status ≠ Kristal validation_status
+Orgo approval ≠ Kristal validation
+Orgo approval ≠ Kristal authority recognition
+```
+
+A workflow approval becomes a Kristal epistemic decision only through an explicit Kristal operation/artifact.
+
+## 6. Orgo ↔ SemantiK Architect
+
+No SemantiK Architect adapter is implemented in the current Orgo snapshot.
+
+A future boundary should pass semantic generation requests/results without making Architect the owner of Orgo Tasks/Cases and without encoding Architect internal planner objects in the Orgo core.
+
+## 7. Orgo ↔ kOA-Linux
+
+When Orgo is hosted/integrated by kOA-Linux:
+
+- Orgo keeps Task/Case/workflow/domain authority;
+- kOA-Linux owns host resources, trust, privilege mediation, local service lifecycle, artifact admission/activation and recovery in its platform scope.
+
+Host/platform state must not be represented as ordinary Orgo business state unless a real use case requires an Orgo Task to track that operation.
+
+## 8. External system rule
+
+Orgo may orchestrate an external system but does not absorb it.
+
+The boundary should carry only what is needed:
+
+- external object/artifact reference;
+- intended operation;
+- organization/tenant mapping when required;
+- actor/authorization context;
+- correlation/idempotency identity;
+- result/error/receipt;
+- provenance/audit references.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
+================================================================================================
+
+# Orgo — Code Alignment Notes
+
+## Purpose
+
+This note identifies code areas that should be changed so the implementation matches the current Orgo architecture. It is not a project-management log.
+
+## 1. Repair the Nest module/import graph first
+
+The snapshot contains several imports that do not resolve to files in the supplied tree. These block reliable execution before higher-level alignment can be trusted.
+
+### `apps/api/src/orgo/core/tasks/task.service.ts`
+
+Current imports use paths shaped like:
+
+```text
+./././persistence/prisma/prisma.service
+./././config/org-profile.service
+```
+
+They do not resolve from `core/tasks`. Wire them to the actual shared persistence/config services.
+
+### `apps/api/src/orgo/core/cases/case.module.ts`
+
+Imports `case-review.service` and `../database/database.module`, neither of which is present in the supplied tree. The actual CaseService already uses Prisma persistence. Rebuild CaseModule around the real persistence/core dependencies instead of phantom modules.
+
+### `apps/api/src/orgo/core/logging/logger.module.ts`
+
+References `log-rotation.service` and `log-query.service`, which are absent in the snapshot. Either add the real implementations or remove them from the active module contract.
+
+### `apps/api/src/orgo/config/org-profile.service.ts`
+
+Contains a malformed relative persistence import. Point it to the actual `apps/api/src/persistence/prisma/prisma.service.ts`.
+
+## 2. Fix the public Task boundary mapping and tenant enforcement
+
+### `apps/api/src/orgo/core/tasks/task.controller.ts`
+
+The public DTO is snake_case (`organization_id`, `case_id`, etc.) while `TaskService` expects camelCase (`organizationId`, `caseId`, etc.). The controller currently passes objects through with `as any`.
+
+Consequences include:
+
+- list input may not populate `organizationId`;
+- create input may fail core validation or map fields incorrectly;
+- response shape can leak internal camelCase instead of the documented public shape.
+
+Add explicit request/response mappers.
+
+### Tenant isolation
+
+`getTask()` currently calls an unscoped service lookup by Task ID. List/create also rely on DTO input rather than one consistent authenticated organization context.
+
+Change Task HTTP paths to:
+
+```text
+resolve authenticated organization
+→ map public DTO to internal input
+→ call org-scoped service method
+→ map internal DTO to public JSON
+```
+
+Use `getTaskById(organizationId, taskId)` for public single-task access.
+
+## 3. Make Case API/service responsibilities explicit
+
+`CaseService` implements `createCaseFromSignal()` and `updateCaseStatus()`, but `CaseController` exposes only list/detail in the snapshot.
+
+Choose one stable contract:
+
+- if Case create/status are intended public APIs, expose validated endpoints;
+- if they are internal workflow operations, keep them internal and document only list/detail publicly.
+
+Do not claim an endpoint exists just because a service method exists.
+
+## 4. Unify API route prefixing
+
+`main.ts` defines no global API prefix, while controllers mix:
+
+```text
+api/v3/tasks
+api/v3/workflows
+api/v3/organizations
+v3/cases
+signals
+notifications
+maintenance
+domain/hr
+domain/education
+insights/reports
+```
+
+Select one public routing convention, ideally a single `/api/v3` boundary for Orgo APIs, and make reverse-proxy behavior explicit rather than relying on comments.
+
+## 5. Update bootstrap identity
+
+### `apps/api/src/main.ts`
+
+Swagger currently identifies the API as:
+
+```text
+Leaves Tracker
+Api Docs for leaves tracker
+version 1.0
+```
+
+Replace with Orgo identity/version metadata and make the port/config environment-driven rather than hard-coded where appropriate.
+
+## 6. Wire the core modules that exist in source
+
+The current `AppModule`/`OrgoModule` wiring does not expose all implemented core areas.
+
+Source contains Email, Signals, Notifications, Auth/RBAC, Offline and other modules, but several are not imported into the active module graph.
+
+Examples:
+
+- `SignalsModule` is not imported and currently declares no imports despite `SignalIngestService` requiring WorkflowEngineService and TaskService;
+- `EmailModule` exists but is not mounted by AppModule/OrgoModule, and its controller is not registered in the module;
+- `NotificationController` exists but `NotificationModule` does not register it as a controller;
+- Auth/RBAC code exists but AppModule does not establish one consistent authenticated tenant context for the core APIs.
+
+Wire only the capabilities intended to be active, but make the module graph truthful.
+
+## 7. Preserve WorkflowEngine purity and add an explicit action executor
+
+`WorkflowEngineService` is already architecturally strong: it loads/validates rules and resolves ordered actions without performing all side effects itself.
+
+Preserve that separation.
+
+Current `SignalIngestService` applies `CREATE_TASK` actions, but the rule vocabulary also includes UPDATE_TASK, ROUTE, ESCALATE, ATTACH_TEMPLATE, SET_METADATA and NOTIFY. The docs also expect workflows/patterns to be able to open Cases.
+
+Add a clear executor/dispatcher layer:
+
+```text
+resolved action
+→ action executor
+→ TaskService / CaseService / NotificationService / external adapter
+→ receipt/result
+```
+
+Do not put persistence side effects back into the pure evaluator.
+
+## 8. Reconcile filesystem workflow rules with DB workflow models
+
+Prisma contains:
+
+```text
+WorkflowDefinition
+WorkflowInstance
+WorkflowTransitionEvent
+```
+
+while the active Workflow Engine loads rules from the filesystem/YAML.
+
+Define the relationship explicitly:
+
+- which representation is configuration/source;
+- what is persisted runtime state;
+- how versions are pinned;
+- how a running instance refers to the exact ruleset used.
+
+Do not keep two unrelated workflow sources of truth.
+
+## 9. Fix Maintenance before treating it as an active domain module
+
+### `apps/api/src/orgo/domain/maintenance/maintenance.module.ts`
+
+The file is not a Nest `@Module`; it contains another `MaintenanceController`, duplicating `maintenance.controller.ts` with a different API/authorization shape.
+
+### `maintenance.service.ts`
+
+The service creates its own `PrismaClient` and performs raw Task-table operations/transactions directly.
+
+Align Maintenance to:
+
+```text
+MaintenanceModule
+→ one controller
+→ MaintenanceService
+→ TaskService for canonical Task mutations
+→ MaintenanceAsset/MaintenanceTaskLink/MaintenanceCalendarSlot for domain extension
+```
+
+The module should then be explicitly imported if Maintenance is intended active.
+
+## 10. Fix Education to use the core work owner
+
+### `education.module.ts` / `education.controller.ts`
+
+They import `education-module.service`, while the supplied file is `education.service.ts`.
+
+### `education.service.ts`
+
+It has a malformed persistence import and directly writes/queries canonical Task rows through raw SQL.
+
+Refactor creation/status mutations through TaskService. Keep `EducationTaskLink`, LearningGroup and person context as Education-owned extensions.
+
+## 11. Fix HR integration with TaskService/CaseService
+
+HR has the correct architectural intention — create a canonical Case, create a canonical Task, then add `HrCase`/participants/links — but the current code does not match the core service APIs.
+
+Issues include:
+
+- imports from nonexistent `core/task`, `core/case`, `core/label` paths;
+- `CaseService.createCase(...)` is called but the supplied CaseService exposes `createCaseFromSignal(...)`;
+- TaskService/CaseService are called with a transaction client argument their current signatures do not accept.
+
+Align the service APIs and transaction boundary so the canonical Task/Case plus HR extension commit consistently.
+
+Remove `hr.service.ts.BAK` from the active source tree.
+
+## 12. Consolidate Insights layout/imports
+
+`InsightsModule` imports root-level files such as:
+
+```text
+./reports.controller
+./reports.service
+./analytics-export.service
+```
+
+while the supplied tree also places implementations under subfolders such as:
+
+```text
+insights/reports/
+insights/export/
+insights/patterns/
+insights/cache/
+```
+
+There are duplicate root/subfolder pattern/cache implementations in the snapshot.
+
+Choose one canonical folder layout, update imports, and keep Insights read-oriented. Pattern actions should re-enter the core through TaskService/CaseService.
+
+## 13. Keep enums/contracts in one semantic source
+
+Task/Case/visibility/category enums are repeated in controllers, services, web types and domain services.
+
+The values are mostly aligned now, which is good, but duplication creates drift risk.
+
+Prefer a shared contract package/generated API types or strict conversion layer so:
+
+- DB enum casing;
+- internal service casing;
+- public JSON casing;
+- web client types
+
+remain mechanically aligned.
+
+## 14. Align offline sync with Task invariants
+
+`core/offline/sync.service.ts` writes Task rows directly during merge/sync.
+
+Offline operation is not exempt from core invariants. Ensure synchronized Task changes execute the same:
+
+- tenant checks;
+- enum/lifecycle rules;
+- ownership rules;
+- event/audit semantics;
+- conflict resolution evidence.
+
+If direct persistence is necessary for replay, isolate it behind a dedicated replay/import boundary with equivalent validation.
+
+## 15. Frontend scope is currently small
+
+The supplied web route tree currently has a root page that renders `InsightsOverviewPage`; it does not evidence a complete UI route set for Tasks, Cases, admin, HR, Education, etc.
+
+Keep docs truthful and add UI routes only when implemented.
+
+Also verify `_app.tsx` style import and other web imports against files actually present in the repo.
+
+## 16. External ecosystem adapters are not implemented
+
+No concrete Konnaxion, Kristal or SemantiK Architect adapter is present in the current snapshot.
+
+When added:
+
+### Konnaxion
+
+Use commands/events/receipts; never map Case↔Topic or Task↔Consultation by identity.
+
+### Kristal
+
+Orchestrate explicit Kristal operations/artifact references. Orgo approval is not Kristal validation/recognition unless an explicit Kristal operation produces it.
+
+### SemantiK Architect
+
+Use generation request/result contracts; do not store Architect internal planner objects as Orgo core models.
+
+### kOA-Linux
+
+Treat host trust/resources/lifecycle as platform concerns. Track them in Orgo only when a real operational Task/Case is required.
+
+## 17. Patterns that are already strong and should be preserved
+
+- Organization-scoped service methods in Task/Case core.
+- Explicit Task lifecycle transition table.
+- Explicit Case lifecycle transition table.
+- TaskEvent recording for important mutations.
+- `DomainTaskFactory` as a projection rather than a second Task table.
+- Label parser/routing service with explicit broadcast semantics.
+- Workflow evaluator separated from side effects.
+- Workflow simulation using the same evaluation semantics.
+- Profile-derived Task defaults.
+- Prisma schema linking domain extensions back to canonical Tasks/Cases.
+- Insights as a distinct read/analytics layer.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/CONTRACTS.md
+================================================================================================
+
+# Orgo — Current Contract Surface
+
+## 1. Public Task JSON boundary
+
+The intended public JSON contract uses snake_case:
+
+```text
+task_id
+organization_id
+case_id
+source
+type
+category
+subtype
+label
+title
+description
+status
+priority
+severity
+visibility
+assignee_role
+created_by_user_id
+requester_person_id
+owner_role_id
+owner_user_id
+due_at
+reactivity_time
+reactivity_deadline_at
+escalation_level
+closed_at
+metadata
+created_at
+updated_at
+```
+
+Canonical Task enums:
+
+```text
+status     PENDING | IN_PROGRESS | ON_HOLD | COMPLETED | FAILED | ESCALATED | CANCELLED
+priority   LOW | MEDIUM | HIGH | CRITICAL
+severity   MINOR | MODERATE | MAJOR | CRITICAL
+visibility PUBLIC | INTERNAL | RESTRICTED | ANONYMISED
+source     email | api | manual | sync
+category   request | incident | update | report | distribution
+```
+
+Lower-case JSON representations may be accepted at selected boundaries and normalized explicitly. The stored/core enum remains unambiguous.
+
+## 2. Task lifecycle
+
+Allowed transitions implemented by the core service:
+
+```text
+PENDING     → IN_PROGRESS | CANCELLED
+IN_PROGRESS → ON_HOLD | COMPLETED | FAILED | ESCALATED
+ON_HOLD     → IN_PROGRESS | CANCELLED
+ESCALATED   → IN_PROGRESS | COMPLETED | FAILED
+COMPLETED   → terminal
+FAILED      → terminal
+CANCELLED   → terminal
+```
+
+`closed_at` is set when entering a terminal state.
+
+## 3. Case boundary
+
+Canonical Case status:
+
+```text
+open | in_progress | resolved | archived
+```
+
+Canonical Case source:
+
+```text
+email | api | manual | sync
+```
+
+Canonical Case severity uses the Task severity vocabulary, represented lower-case at the public JSON boundary.
+
+Implemented lifecycle:
+
+```text
+open        → in_progress | resolved | archived
+in_progress → resolved | archived
+resolved    → in_progress | archived
+archived    → terminal
+```
+
+## 4. Labels
+
+Canonical shape:
+
+```text
+<BASE>.<CATEGORY><SUBCATEGORY>[.<HORIZONTAL_ROLE>]
+```
+
+Constraints implemented in the label routing service:
+
+- base: positive integer;
+- category digit: 1–9;
+- subcategory digit: 1–5;
+- optional role: dot-separated alphanumeric segments;
+- reserved broadcast bases: `10`, `100`, `1000`.
+
+Task categories remain:
+
+```text
+request | incident | update | report | distribution
+```
+
+## 5. Workflow rule contract
+
+Current Workflow Engine recognizes event sources:
+
+```text
+EMAIL | API | SYSTEM | TIMER
+```
+
+and action types:
+
+```text
+CREATE_TASK
+UPDATE_TASK
+ROUTE
+ESCALATE
+ATTACH_TEMPLATE
+SET_METADATA
+NOTIFY
+```
+
+The Workflow Engine itself is intentionally evaluation-oriented: it resolves ordered actions. Callers/executors perform side effects through the correct owner services.
+
+## 6. Standard service result
+
+Core services use the result envelope:
+
+```json
+{
+  "ok": true,
+  "data": {},
+  "error": null
+}
+```
+
+Failure:
+
+```json
+{
+  "ok": false,
+  "data": null,
+  "error": {
+    "code": "STABLE_ERROR_CODE",
+    "message": "Human-readable explanation",
+    "details": {}
+  }
+}
+```
+
+## 7. Tenant boundary
+
+Any Task/Case mutation or sensitive lookup must resolve an organization explicitly and enforce it in the service query.
+
+A caller-provided header/body organization ID is an input to tenant scoping, not proof of authorization by itself.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/GLOSSARY.md
+================================================================================================
+
+# Orgo — Architectural Glossary
+
+## Orgo
+
+**Orgo** is an ecosystem system and workflow/control platform. In a kOA-Linux deployment it may be called an integrated subsystem from the host scope, without transferring Orgo's internal authority.
+
+## Module
+
+`module` is not a sufficient architecture category by itself.
+
+Within Orgo, prefer:
+
+- **core service/module** — Task, Case, Workflow, Labels, Config, Logging, Email, Signals, Notifications, Offline Sync;
+- **domain module** — Maintenance, HR, Education and other adapters around the core;
+- **application/web surface** — UI/API presentation;
+- **external ecosystem system** — Konnaxion, Kristal, SemantiK Architect, kOA-Linux.
+
+## Organization
+
+The tenant/operational boundary. Orgo work belongs to an organization unless a contract explicitly defines global configuration.
+
+`organization_id` is an isolation key, not a generic universal scope shared with every external system.
+
+## User vs Person
+
+- **User account** — login/actor identity in Orgo.
+- **Person profile** — human subject the work may concern, whether or not that person logs in.
+
+These identities are not interchangeable.
+
+## Signal
+
+An incoming fact/request/envelope that may lead to work. Examples include API input, email, UI input, offline synchronization or system/timer events.
+
+A signal is not automatically a Task or Case until the Orgo workflow/core accepts and maps it.
+
+## Task
+
+The canonical unit of work.
+
+A Task owns its Orgo lifecycle, classification, assignment, SLA/escalation and audit state. Domain-specific data belongs in typed domain extensions or metadata; it must not redefine the canonical Task lifecycle.
+
+## Case
+
+A durable container for related Tasks, context and treatment over time.
+
+A Case is not identical to an external domain object. Example:
+
+```text
+Orgo Case ≠ Konnaxion Topic
+```
+
+## Workflow
+
+The Orgo rule/process layer that evaluates signals/state and resolves actions. Workflow execution determines operational actions; it does not become the owner of an external system's domain state.
+
+## Domain module
+
+A domain-specific adapter/refinement over the common Task/Case core.
+
+A domain module may own additional domain tables (for example HR case details or maintenance asset links) while preserving the canonical Orgo Task/Case records as the work backbone.
+
+## DomainTask
+
+A domain-centric **projection** of a canonical Task. It is not a second Task table or independent lifecycle.
+
+## Label
+
+The canonical routing/classification string:
+
+```text
+<BASE>.<CATEGORY><SUBCATEGORY>[.<HORIZONTAL_ROLE>]
+```
+
+Example:
+
+```text
+100.94.Operations.Safety
+```
+
+The label informs routing and classification. It does not replace explicit authorization or ownership.
+
+## Broadcast label
+
+A label using a reserved broadcast base such as `10`, `100` or `1000`. It is informational by default. A mandatory Task is created only if an explicit workflow rule says so.
+
+## Organization profile
+
+A versioned behavioral configuration for an organization, covering defaults such as reactivity, transparency, pattern sensitivity, retention and automation.
+
+A profile tunes the core; it does not create a new Task/Case schema.
+
+## Cyclic overview
+
+Recurring review/pattern-detection behavior that analyses operational state. A detected pattern becomes governed work only through explicit Case/Task creation.
+
+## Insight / report
+
+A derived analytical/read model. It does not become the authoritative owner of the operational Task/Case records it summarizes.
+
+## Charter
+
+A semantic reference/configuration layer describing domain concepts and selected Wikidata mappings/refinements. It does not create a parallel operational ontology or lifecycle.
+
+## External artifact reference
+
+A reference to an artifact owned by another system. Orgo may store the reference/correlation/receipt needed for workflow without copying the external artifact's entire schema into the core Task/Case model.
+
+## Receipt
+
+Structured evidence that an operation was accepted, rejected or executed. A receipt supports workflow reconciliation; it is not the external system's authoritative state.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/Semantic-Charters.md
+================================================================================================
+
+# Orgo — Semantic Charter Reference
+
+## Scope
+
+Orgo charters provide a semantic vocabulary/reference layer using selected Wikidata QIDs/properties plus Orgo refinements. They **do not replace** the canonical Task/Case/workflow model, do not create a second lifecycle, and do not give external Wikidata state write authority over Orgo.
+
+Charter composition is a classification/semantic concern; operational work still enters the Orgo core through explicit signals, Cases, Tasks and workflow rules.
+
+---
+
+## 1) Goal and constraints
+
+**Goal:** Orgo represents organisational knowledge (tasks, roles, cases, processes, resources) as a graph using **Wikidata-compatible identifiers** so data can stay interoperable.
+
+**Constraints:**
+
+* Orgo must run in a **closed/offline bubble** (no heavy external LLM dependency).
+* Orgo must stay usable for **any organisation**, by composing reusable “families” + small domain specialisations.
+
+---
+
+## 2) What we reuse from Wikidata (and what we don’t)
+
+### Reused “as-is”
+
+* **QIDs (`Q…`)** for concepts/items (roles, objects, concepts, places, etc.).
+* **Property IDs (`P…`)** when a property is universal enough and matches Orgo’s meaning.
+
+### Not reused “as-is”
+
+* Wikidata’s full statement graph is **not imported**. Orgo creates its own relations between filtered Q-items, focused on organisational workflows.
+
+### Licensing note (data vs software)
+
+* Wikidata data is published under **CC0 (“No rights reserved”)**, including official access channels and dumps.
+* Wikibase (the software behind Wikidata) is **GPL-licensed** (software licensing is separate from data licensing).
+
+---
+
+## 3) Identifier spaces in Orgo
+
+### 3.1 QIDs (concepts)
+
+* **`Q####`**: Concepts/items aligned with Wikidata QIDs.
+* Orgo maintains a **filtered subset** of Wikidata items (QIDs) relevant to organisations.
+
+### 3.2 P (public/universal properties)
+
+* **`P####`**: Properties identical to Wikidata property IDs when the meaning is universal and compatible.
+
+### 3.3 R (Orgo workflow refinements of P)
+
+R are generic Orgo workflow relations that refine a base Wikidata property.
+
+**Rule:**
+
+* If `based_on` is `P####`, then `id` must be `R####NNN` (3-digit sequence).
+
+Example:
+
+* `R710001` (default responsible for) based on `P710`
+* `R710002` (assigned to) based on `P710`
+
+### 3.4 S (Orgo-specific properties)
+
+S are Orgo properties that **do not exist as a Wikidata P**, but where we still want numeric alignment with the closest `P####` *when possible*.
+
+**Rules:**
+
+1. If `based_on` is `P####`, then `id` must be `S####NNN` (3-digit sequence).
+
+   * Example: if based on `P1552`, first specialisation is `S1552001`.
+2. If `based_on` is `null`, use the reserved Orgo-only range:
+
+   * `S0000NNN` (3-digit sequence).
+
+---
+
+## 4) Charter architecture (3 levels)
+
+All charts are JSON files in a flat folder.
+
+### Level 1: global base
+
+* `/charters/general.json`
+  Contains:
+* universal **P** (reused Wikidata properties)
+* universal Orgo workflow **R** (derived from P)
+* universal Orgo-only **S** (no `P` match) like visibility/editability.
+
+### Level 2: families (each refines `general.json`)
+
+* `/charters/care.json`
+* `/charters/programs.json`
+* `/charters/operations.json`
+* `/charters/groups.json`
+* `/charters/incidents.json`
+
+These add **family-specific S** (and rarely P/R if needed).
+
+### Level 3: domains (each refines exactly one family)
+
+Examples we established:
+
+* `/charters/care_hospital.json`
+* `/charters/care_school.json`
+* `/charters/care_social_services.json`
+* `/charters/programs_government.json`
+* `/charters/programs_humanitarian.json`
+* `/charters/operations_manufacturing.json`
+* `/charters/operations_transport_logistics.json`
+* `/charters/operations_facilities.json`
+* `/charters/groups_sports.json`
+* `/charters/groups_associations.json`
+* `/charters/incidents_sst.json`
+* `/charters/incidents_it_helpdesk.json`
+
+**Principle:** create a Level-3 file only when the domain introduces **new relation types**, not just different wording.
+
+---
+
+## 5) JSON file standard (schema)
+
+Every charter file follows the same top-level structure:
+
+```json
+{
+  "P": [
+    { "id": "P####", "label_en": "...", "wikidata_label_en": "..." }
+  ],
+  "R": [
+    { "id": "R####NNN", "based_on": "P####", "label_en": "..." }
+  ],
+  "S": [
+    { "id": "S####NNN", "based_on": "P####", "label_en": "..." },
+    { "id": "S0000NNN", "based_on": null,  "label_en": "..." }
+  ]
+}
+```
+
+**Field rules:**
+
+* `id`: required
+* `label_en`: required (Orgo label)
+* `wikidata_label_en`: optional (only meaningful for P)
+* `based_on`: required for R/S; `P####` or `null`
+
+---
+
+## 6) Composition/inheritance rules
+
+Orgo loads charts in this order:
+
+1. `general.json`
+2. one family chart (`care.json`, `operations.json`, etc.)
+3. optional domain chart (`care_hospital.json`, etc.)
+
+Merge behavior:
+
+* Same `id` must not be defined twice.
+* If two charts need similar semantics, they must create distinct IDs (`…001`, `…002`, …).
+* Domain charts should prefer **S** that align to the closest `P####` (`S####NNN`) rather than `S0000NNN`.
+
+---
+
+## 7) Building Orgo’s QID subset from Wikidata (offline-friendly)
+
+### 7.1 Input
+
+* Wikidata dumps / exports (CC0).
+
+### 7.2 Filtering concept
+
+Orgo stores only the Q-items needed for organisational reasoning, using filters such as:
+
+* “organisation/role/task/process/resource” relevance
+* removal of irrelevant domains (celebrities, astronomy, etc.)
+* optional domain packs (hospital, government) that add more Q-items
+
+### 7.3 Update process (repeatable)
+
+1. Download/refresh dump snapshot.
+2. Run Orgo filters to produce:
+
+   * `qitems_core` subset
+   * optional domain subsets (e.g., hospital pack)
+3. Rebuild Orgo indexes (labels, aliases, search keys).
+4. Leave Orgo’s **relations graph** intact (Orgo relations are authored separately).
+
+---
+
+## 8) From user input to QIDs (without heavy LLM)
+
+Orgo needs a local “lexicon layer” to map text → QIDs.
+
+Recommended offline approach (lightweight):
+
+* tokenization + normalization (casefolding, accents)
+* dictionary/alias tables (Orgo curated)
+* string similarity (Levenshtein, trigram)
+* BM25-style retrieval over labels/aliases
+* optional lightweight embeddings (local) if needed, but not required
+
+Output:
+
+* candidate QIDs with confidence scores
+* user-facing disambiguation when multiple close QIDs
+
+---
+
+## 9) Charter/reference charts
+
+Core/base:
+
+* `/charters/general.json`
+
+Families:
+
+* `/charters/care.json`
+* `/charters/programs.json`
+* `/charters/operations.json`
+* `/charters/groups.json`
+* `/charters/incidents.json`
+
+Domains already drafted:
+
+* `/charters/care_hospital.json`
+* `/charters/care_school.json`
+* `/charters/care_social_services.json`
+
+(Other domain paths are part of the target architecture; their content follows the same standard.)
+
+---
+
+## 10) Naming/numbering summary (the “hard rules”)
+
+* **P**: `P####` (Wikidata property IDs)
+* **R**: `R####NNN` where `####` = base P number, `NNN` = 001..999
+* **S**:
+
+  * `S####NNN` if based on `P####`
+  * `S0000NNN` if `based_on = null`
+* Domain/family/general are **file-level**, not encoded in the ID.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md
+================================================================================================
+
+# Orgo v3 — Database Schema Reference
+
+## Authority
+
+`apps/api/prisma/schema.prisma` and the applied migrations are the physical schema authority.
+
+This document records ownership and the major table/model families rather than duplicating every column.
+
+## 1. Multi-tenancy and identity
+
+Core models:
+
+```text
+Organization
+OrganizationProfile
+UserAccount
+PersonProfile
+Role
+Permission
+RolePermission
+UserRoleAssignment
+LoginSession
+ApiToken
+```
+
+`Organization` is the tenant root. Operational records that belong to an organization carry `organization_id`.
+
+User and Person remain distinct:
+
+```text
+UserAccount = login/actor
+PersonProfile = human subject
+```
+
+## 2. Communication/email
+
+```text
+EmailAccountConfig
+RoleInbox
+EmailThread
+EmailMessage
+EmailAttachment
+EmailIngestionBatch
+EmailProcessingEvent
+```
+
+Email state can generate/link operational work but does not replace Task/Case state.
+
+## 3. Task core
+
+### `Task`
+
+Key fields:
+
+- `id`;
+- `organization_id`;
+- optional `case_id`;
+- `external_reference`;
+- `type`, `category`, `subtype`, `label`;
+- `title`, `description`;
+- `status`, `priority`, `severity`, `visibility`, `source`;
+- creator/requester/owner/assignee references;
+- SLA/deadline/escalation fields;
+- `metadata`;
+- timestamps.
+
+Related models:
+
+```text
+TaskAssignment
+TaskEvent
+TaskComment
+```
+
+These tables provide assignment history, lifecycle/audit events and comments without creating a second Task lifecycle.
+
+## 4. Workflow/routing
+
+```text
+RoutingRule
+WorkflowDefinition
+WorkflowInstance
+WorkflowTransitionEvent
+EscalationPolicy
+EscalationInstance
+EscalationEvent
+```
+
+The DB workflow tables are operational state. Filesystem/YAML workflow rules used by the current engine must be reconciled with these models rather than treated as an unrelated second source of workflow truth.
+
+## 5. Configuration
+
+```text
+ParameterOverride
+FeatureFlag
+LabelDefinition
+EntityLabel
+OrganizationProfile
+```
+
+Profiles/config tune behavior; they do not redefine core enums.
+
+## 6. Notification, audit, security
+
+```text
+NotificationTemplate
+Notification
+ActivityLog
+SecurityEvent
+SystemMetricSnapshot
+```
+
+Audit/log state observes operations; it does not become owner of the work object observed.
+
+## 7. Case core
+
+### `Case`
+
+Key fields:
+
+- `id`;
+- `organization_id`;
+- `source_type`, `source_reference`;
+- `label`;
+- `title`, `description`;
+- `status`, `severity`;
+- `reactivity_time`;
+- origin vertical/role;
+- tags/location/metadata;
+- timestamps.
+
+Tasks link to a Case through `tasks.case_id`.
+
+## 8. Maintenance extension
+
+```text
+MaintenanceAsset
+MaintenanceTaskLink
+MaintenanceCalendarSlot
+```
+
+The maintenance domain extends canonical Tasks by linking assets/schedule state. The extension must not create a separate canonical Task lifecycle.
+
+## 9. HR extension
+
+```text
+HrCase
+HrCaseParticipant
+HrCaseTaskLink
+WellbeingCheckin
+```
+
+`HrCase.case_id` links the HR domain record to the canonical Case. HR work links back to canonical Tasks.
+
+## 10. Education/groups extension
+
+```text
+LearningGroup
+LearningGroupMembership
+EducationTaskLink
+```
+
+Education context links to canonical Tasks through `EducationTaskLink`.
+
+## 11. Offline/sync
+
+```text
+OfflineNode
+SyncSession
+SyncConflict
+EmailArchiveImportBatch
+ImportedMessageMapping
+```
+
+Offline synchronization must preserve the same tenant, lifecycle, enum and audit invariants as online mutations.
+
+## 12. Insights star schema
+
+```text
+DimDate
+DimOrganization
+DimTask
+DimCase
+DimPerson
+DimLearningGroup
+FactTask
+FactCase
+FactWellbeingCheckin
+```
+
+These are analytical projections. They are not the write authority for operational Task/Case state.
+
+## 13. Core enums
+
+Physical enums include:
+
+```text
+OrganizationStatus
+TaskStatus
+TaskPriority
+TaskSeverity
+Visibility
+TaskSource
+TaskCategory
+CaseStatus
+CommentVisibility
+WorkflowInstanceStatus
+NotificationChannel
+NotificationStatus
+TaskEventType
+TaskEventOrigin
+HrCaseStatus
+HrCaseConfidentialityLevel
+HrCaseParticipantRole
+MaintenanceCalendarSlotStatus
+SyncDirection
+SyncStatus
+SyncResolutionStrategy
+```
+
+Public JSON casing may differ at explicit boundaries, but each enum has one semantic vocabulary.
 
 
 ================================================================================================
@@ -1717,6 +2986,141 @@ Key columns:
 
 
 ================================================================================================
+FILE: Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md
+================================================================================================
+
+# Orgo v3 — Architecture and Invariants
+
+## 1. Identity
+
+Orgo is a multi-tenant workflow and coordination system.
+
+Its job is to turn incoming signals and existing operational state into structured, auditable work.
+
+```text
+signals
+  ↓
+classification / routing / workflow evaluation
+  ↓
+Cases + Tasks
+  ↓
+assign / execute / escalate / review
+  ↓
+events / receipts / insights
+```
+
+## 2. Core architecture
+
+```text
+                         Orgo
+                          │
+        ┌─────────────────┼──────────────────┐
+        │                 │                  │
+    Backbone           Core work          Insights
+ organization          Task / Case        read models
+ identity/RBAC         Workflow           patterns
+ profiles              Labels             exports
+        │                 │                  │
+        └────────── domain adapters ─────────┘
+                   Maintenance / HR / Education
+```
+
+## 3. Multi-tenancy
+
+Every operational access is scoped to an Organization.
+
+Tenant rules:
+
+- organization identity is resolved before sensitive access;
+- data queries include organization scope;
+- cross-organization IDs do not bypass scope;
+- a body/header organization ID is validated against authentication/authorization context;
+- analytics and exports preserve organization isolation.
+
+## 4. Task is the unit of work
+
+Task is defined once and reused everywhere.
+
+Domain modules may add domain metadata or extension rows but they do not create competing status/priority/severity/visibility systems for work.
+
+## 5. Case is durable context
+
+Case groups related work over time.
+
+A Case can hold several Tasks and domain extensions. It can reference an external subject/object without becoming that external object's owner.
+
+## 6. Signals become work through explicit evaluation
+
+A signal may be:
+
+- email;
+- API/UI input;
+- system/timer event;
+- offline/sync input;
+- external integration event.
+
+The signal itself is not yet a Task or Case. Workflow/routing rules determine what work is created.
+
+## 7. Workflow Engine
+
+The current core Workflow Engine is best treated as a deterministic rule evaluator:
+
+```text
+WorkflowContext
+→ matching rules
+→ ordered ResolvedWorkflowActions
+```
+
+The engine should not directly absorb every side effect. Side-effect executors call TaskService, CaseService, NotificationService or external adapters as appropriate.
+
+This separation makes simulation meaningful: `simulate` uses the same evaluation rules but applies no side effects.
+
+## 8. Labels
+
+Labels combine a vertical base, category/subcategory and optional horizontal role.
+
+They support routing/classification but do not replace authorization.
+
+Broadcast bases `10`, `100`, `1000` are informational by default.
+
+## 9. Profiles
+
+Organization profiles tune defaults such as:
+
+- reactivity/SLA;
+- transparency;
+- pattern sensitivity;
+- retention;
+- automation/review cadence.
+
+Profile defaults flow into Tasks/Cases through core services. They do not fork the schema.
+
+## 10. Domain modules
+
+Domain modules are thin around the core in the architectural sense:
+
+```text
+domain request
+→ domain validation/context
+→ TaskService / CaseService
+→ canonical Task/Case
+→ domain extension/link rows
+```
+
+A domain module may be substantial in business logic; "thin" means it does not own a parallel work engine.
+
+## 11. Insights
+
+Insights is read/analysis oriented.
+
+Pattern detection becomes operational only by creating governed Cases/Tasks through core services.
+
+## 12. External systems
+
+Orgo orchestrates rather than absorbs. Konnaxion, Kristal, SemantiK Architect and kOA-Linux remain external owners of their domains.
+
+
+================================================================================================
 FILE: Docs/Technical-Reference/v3/2-orgo-documentation-index.md
 ================================================================================================
 
@@ -2576,6 +3980,140 @@ All other docs in Orgo v3 (Docs 1, 3, 4, 5, 6, 8, etc.) must **reference and rem
 
 
 ================================================================================================
+FILE: Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md
+================================================================================================
+
+# Orgo v3 — Task, Case and Workflow Contract
+
+## 1. Task contract
+
+Task classification:
+
+```text
+type      domain-level type, e.g. maintenance | hr_case | education_support
+category  request | incident | update | report | distribution
+subtype   domain-specific optional refinement
+label     canonical routing/classification label
+```
+
+Core lifecycle:
+
+```text
+PENDING
+  ├─→ IN_PROGRESS
+  │     ├─→ ON_HOLD ─→ IN_PROGRESS
+  │     ├─→ COMPLETED
+  │     ├─→ FAILED
+  │     └─→ ESCALATED ─→ IN_PROGRESS | COMPLETED | FAILED
+  └─→ CANCELLED
+
+ON_HOLD ─→ CANCELLED
+```
+
+Terminal states:
+
+```text
+COMPLETED | FAILED | CANCELLED
+```
+
+## 2. Task creation
+
+The core service owns:
+
+- initial status;
+- enum normalization;
+- profile-derived SLA/defaults;
+- timestamps;
+- event recording;
+- organization scoping.
+
+Domain/API callers provide intention and domain context, not derived core state.
+
+## 3. Task mutation
+
+All paths that change Task lifecycle, owner, assignment, deadline or core classification should execute the same invariants and emit the appropriate TaskEvent/audit evidence.
+
+Offline sync and domain modules are not exemptions.
+
+## 4. Case contract
+
+Case lifecycle:
+
+```text
+open
+  ├─→ in_progress
+  ├─→ resolved
+  └─→ archived
+
+in_progress
+  ├─→ resolved
+  └─→ archived
+
+resolved
+  ├─→ in_progress
+  └─→ archived
+
+archived → terminal
+```
+
+Case is organization-scoped and can contain Tasks.
+
+## 5. Case creation
+
+The current core service exposes an internal `createCaseFromSignal(...)` path. Case creation normalizes source/severity, applies profile defaults and persists through the core owner.
+
+Public HTTP exposure is separate from the existence of the service operation.
+
+## 6. Task events
+
+Important Task transitions create Task events. Event history records facts about Task evolution and supports reconciliation/audit.
+
+An event does not mutate the Task by itself; the mutation is committed by the Task owner service.
+
+## 7. Workflow context
+
+Canonical evaluation input includes:
+
+- `organizationId`;
+- source `EMAIL | API | SYSTEM | TIMER`;
+- optional type/category/severity/label;
+- title/description;
+- email fields where applicable;
+- metadata/payload.
+
+## 8. Workflow actions
+
+Current rule vocabulary:
+
+```text
+CREATE_TASK
+UPDATE_TASK
+ROUTE
+ESCALATE
+ATTACH_TEMPLATE
+SET_METADATA
+NOTIFY
+```
+
+The evaluator resolves actions. A dispatcher/executor is responsible for applying them through the correct service.
+
+## 9. Simulation
+
+Simulation uses the same rule evaluation semantics but produces no state mutation.
+
+```text
+same rules + same context
+→ same resolved actions
+```
+
+subject to the same pinned configuration/ruleset.
+
+## 10. Cases from workflow/patterns
+
+If a rule/pattern needs to open a Case, that operation must be explicit in the action/executor contract and performed through CaseService. It must not be hidden inside arbitrary metadata or direct SQL.
+
+
+================================================================================================
 FILE: Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md
 ================================================================================================
 
@@ -3426,6 +4964,112 @@ This version of **Doc 3 – Domain Modules (Orgo v3)** is aligned with:
 
 
 ================================================================================================
+FILE: Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md
+================================================================================================
+
+# Orgo v3 — Domain Modules
+
+## 1. Purpose
+
+Domain modules adapt specialized work to the common Orgo Task/Case engine.
+
+Implemented domain families in the current snapshot include Maintenance, HR and Education.
+
+## 2. Invariant
+
+```text
+domain work object
+≠ independent Task lifecycle
+```
+
+A domain module may own domain-specific extension tables, validation and projections. The canonical unit of work remains `Task`; durable shared context remains `Case` when used.
+
+## 3. DomainTask
+
+`DomainTaskFactory` defines a domain-centric projection of canonical Task data.
+
+Mappings include:
+
+```text
+domain     = Task.type
+category   = Task.category
+subtype    = Task.subtype
+label      = Task.label
+status     = Task.status
+priority   = Task.priority
+severity   = Task.severity
+visibility = Task.visibility
+case_id    = Task.caseId
+```
+
+This projection is a view, not a second table.
+
+## 4. Maintenance
+
+Schema extension:
+
+- `MaintenanceAsset`;
+- `MaintenanceTaskLink`;
+- `MaintenanceCalendarSlot`.
+
+Correct architectural flow:
+
+```text
+maintenance request
+→ TaskService creates canonical Task(type=maintenance)
+→ maintenance link/asset/calendar extension
+→ Task lifecycle remains core-owned
+```
+
+Maintenance-specific completion/reassignment APIs must delegate core Task status/ownership changes rather than update Task rows through a parallel state machine.
+
+## 5. HR
+
+HR is structurally close to the desired pattern:
+
+```text
+HR report
+→ canonical Case
+→ canonical primary Task(type=hr_case)
+→ HrCase extension
+→ participants + task links
+```
+
+`HrCase.status` is a domain-specific case-handling status and is distinct from canonical `Case.status`; their relationship must be explicit.
+
+Confidentiality and participants remain HR domain concerns while Task/Case workflow fields remain core concerns.
+
+## 6. Education
+
+Education context links through `EducationTaskLink` to canonical Tasks.
+
+Correct flow:
+
+```text
+education incident/support request
+→ TaskService
+→ canonical Task(type=education_support)
+→ EducationTaskLink + learning-group/person context
+```
+
+Education code must not insert/update the canonical Task table through a second raw-SQL lifecycle.
+
+## 7. Future domain modules
+
+A new domain module declares:
+
+- domain `Task.type`;
+- allowed categories/subtypes;
+- default/allowed labels;
+- domain metadata/schema;
+- extension tables if needed;
+- hooks/adapters around core services;
+- authorization and visibility requirements.
+
+It does not declare a new global Task status enum.
+
+
+================================================================================================
 FILE: Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md
 ================================================================================================
 
@@ -3749,6 +5393,111 @@ Where both backend and frontend artifacts exist, they are listed together in the
      * A new background job or Airflow DAG,
 
      must add a corresponding row to this inventory as part of the pull request. Code review should block merges until the inventory remains consistent with the implementation and with the canonical schemas/enums in Docs 1–2.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md
+================================================================================================
+
+# Orgo v3 — Labels, Profiles and Cyclic Overview
+
+## 1. Label format
+
+```text
+<BASE>.<CATEGORY><SUBCATEGORY>[.<HORIZONTAL_ROLE>]
+```
+
+Examples:
+
+```text
+100.94.Operations.Safety
+101.11.Ops.Maintenance
+```
+
+## 2. Axes
+
+### Base
+
+Vertical/routing scope.
+
+Representative individual hierarchy bases may include `1`, `2`, `11`, `101`, `1001` according to configured organizational conventions.
+
+Reserved broadcasts:
+
+```text
+10   top-management broadcast
+100  department-head broadcast
+1000 staff/operational broadcast
+```
+
+### Category digit
+
+`1..9`, information category.
+
+### Subcategory digit
+
+`1..5`, operational intent/classification.
+
+### Horizontal role
+
+Optional extensible role path such as:
+
+```text
+Ops.Maintenance
+HR.CaseManagement
+Education.Support
+IT.Support
+```
+
+## 3. Broadcast semantics
+
+Broadcast is informational by default.
+
+```text
+broadcast label
+≠ mandatory Task
+```
+
+A workflow must explicitly create/assign work when action is required.
+
+## 4. Label vs tags
+
+Task/Case has one canonical routing label. Additional classifications can use label/entity tagging structures or domain metadata.
+
+Do not overload the canonical label with every taxonomy concept.
+
+## 5. Organization profiles
+
+Profiles tune behavior without changing core schemas.
+
+Current profile surfaces include:
+
+- reactivity;
+- transparency;
+- pattern sensitivity;
+- retention;
+- automation/review defaults.
+
+Core Task/Case services apply profile defaults. The profile does not directly write Tasks outside core mutation paths.
+
+## 6. Cyclic overview
+
+Cyclic overview is recurring analysis/review of Cases, Tasks and organizational patterns.
+
+Correct operational feedback:
+
+```text
+analytics/pattern
+→ threshold/rule
+→ explicit Case/Task creation
+→ normal routing/lifecycle
+```
+
+## 7. Charters
+
+Semantic charters can classify domain concepts and relationships. They are orthogonal to Task/Case lifecycle.
+
+See `../Semantic-Charters.md`.
 
 
 ================================================================================================
@@ -4984,6 +6733,64 @@ Core Services remain the **single shared backbone**; all extensions must plug in
 
 
 ================================================================================================
+FILE: Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md
+================================================================================================
+
+# Orgo v3 — Insights and Analytics
+
+## 1. Role
+
+Insights is Orgo's analytical/read-model layer.
+
+It provides reports, exports, cacheable dashboards and pattern detection over operational state.
+
+## 2. Physical analytics model
+
+The Prisma schema includes dimensions/facts such as:
+
+```text
+DimDate
+DimOrganization
+DimTask
+DimCase
+DimPerson
+DimLearningGroup
+FactTask
+FactCase
+FactWellbeingCheckin
+```
+
+## 3. Read-only principle
+
+Reports and dashboards do not directly become operational owners.
+
+A report may show SLA breaches, volume or profile score without changing the underlying Task/Case simply because it computed a metric.
+
+## 4. Pattern detection
+
+Pattern detection can produce an operational proposal:
+
+```text
+pattern detected
+→ proposed work
+→ CaseService / TaskService
+→ canonical work object
+```
+
+Pattern code must not create an alternative Case/Task persistence path.
+
+## 5. Current web surface
+
+The current Next.js web entrypoint routes `/` to `InsightsOverviewPage`. The supplied snapshot does not contain a mature route tree for all Orgo functions; documentation must not present unimplemented pages as active routes.
+
+## 6. Data warehouse connection
+
+The current `AppModule` configures a TypeORM datasource for Insights using `INSIGHTS_WAREHOUSE_URL` with `DATABASE_URL` fallback, while operational core persistence is Prisma-based.
+
+This is a deliberate read/analytics separation if both paths are wired consistently.
+
+
+================================================================================================
 FILE: Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md
 ================================================================================================
 
@@ -5708,6 +7515,103 @@ This section encodes explicitly the alignment guidance so the document is self�
 
 
 ================================================================================================
+FILE: Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md
+================================================================================================
+
+# Orgo v3 — API Surface
+
+## 1. Routing note
+
+The current NestJS application has no global `api` prefix in `main.ts`. Controller decorators therefore matter directly. Some controllers already include `api/v3`, while others use shorter paths and assume reverse-proxy mapping.
+
+The code should converge on one routing convention; see `CODE_ALIGNMENT_NOTES.md`.
+
+## 2. Core routes represented in current controllers
+
+### Organizations
+
+```text
+GET    /api/v3/organizations
+GET    /api/v3/organizations/:id
+POST   /api/v3/organizations
+PATCH  /api/v3/organizations/:id
+```
+
+### Tasks
+
+```text
+GET    /api/v3/tasks
+GET    /api/v3/tasks/:id
+POST   /api/v3/tasks
+PATCH  /api/v3/tasks/:id/status
+```
+
+### Cases
+
+Controller path in code:
+
+```text
+GET /v3/cases
+GET /v3/cases/:caseId
+```
+
+Comments expect external reverse-proxy paths under `/api/v3/cases`. Case creation/status mutation exist at service level but are not exposed by the current CaseController.
+
+### Workflow
+
+```text
+POST /api/v3/workflows/:workflowId/execute
+```
+
+Supports execute/simulate behavior.
+
+### Configuration
+
+The snapshot contains controllers for `/api/v3/config` plus additional Orgo config/profile/feature-flag routes. These should be normalized to one public convention.
+
+### Domain APIs
+
+Controllers exist for:
+
+```text
+/domain/hr/*
+/domain/education/*
+/maintenance/*
+```
+
+Their current module wiring is not fully aligned; treat these as code surfaces requiring the fixes in `CODE_ALIGNMENT_NOTES.md` before describing them as stable production contracts.
+
+### Insights
+
+Controller implementation exists under the reporting slice for endpoints such as:
+
+```text
+/insights/reports/tasks/volume
+/insights/reports/tasks/sla-breaches
+/insights/reports/profiles/score
+```
+
+The current module import paths need alignment.
+
+## 3. Present but not fully wired core surfaces
+
+The snapshot also contains code for:
+
+- signals;
+- email;
+- notifications;
+- RBAC/auth;
+- offline sync;
+- health.
+
+Their existence in source does not mean the current `AppModule` exposes every controller. Module wiring must be corrected explicitly.
+
+## 4. Tenant rule
+
+Every Task/Case API operation must resolve and enforce the organization consistently. Public API DTO casing and internal service casing must be explicitly mapped rather than passed through `as any`.
+
+
+================================================================================================
 FILE: Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md
 ================================================================================================
 
@@ -6348,6 +8252,38 @@ profiles:
           window_days: 90
         cross_departmental_trends: false
         high_risk_indicators: false
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md
+================================================================================================
+
+# Orgo v3 — Documentation Index
+
+## Core
+
+- `1-Orgo v3 - Database Schema Reference.md` — physical ownership/model families.
+- `2-Orgo v3 - Architecture and Invariants.md` — Orgo identity and global invariants.
+- `3-Orgo v3 - Task Case and Workflow Contract.md` — core lifecycle and workflow semantics.
+- `4-Orgo v3 - Domain Modules.md` — Maintenance/HR/Education adapters.
+- `5-Orgo v3 - Labels Profiles and Cyclic Overview.md` — routing and behavioral configuration.
+- `6-Orgo v3 - Insights and Analytics.md` — read/analytics layer.
+- `7-Orgo v3 - API Surface.md` — current controller/API boundary.
+
+## Cross-cutting
+
+- `../GLOSSARY.md`
+- `../BOUNDARIES_AND_OWNERSHIP.md`
+- `../CONTRACTS.md`
+- `../CODE_ALIGNMENT_NOTES.md`
+- `../GENERALinstructionsForAI.txt`
+- `../Semantic-Charters.md`
+
+## Operational/reference assets
+
+- `../HowToStartAndEnter.txt`
+- `../Glossary-Letters.txt`
+- `../eliteUserList_clean.csv`
 
 
 ================================================================================================
@@ -7601,209 +9537,1440 @@ MIT. See [`LICENSE`](https://www.google.com/search?q=./LICENSE).
 
 
 ================================================================================================
+FILE: TO-Do___CODE_ALIGNMENT_NOTES.md
+================================================================================================
+
+# Orgo — Code Alignment Notes
+
+## Purpose
+
+This note identifies code areas that should be changed so the implementation matches the current Orgo architecture. It is not a project-management log.
+
+## 1. Repair the Nest module/import graph first
+
+The snapshot contains several imports that do not resolve to files in the supplied tree. These block reliable execution before higher-level alignment can be trusted.
+
+### `apps/api/src/orgo/core/tasks/task.service.ts`
+
+Current imports use paths shaped like:
+
+```text
+./././persistence/prisma/prisma.service
+./././config/org-profile.service
+```
+
+They do not resolve from `core/tasks`. Wire them to the actual shared persistence/config services.
+
+### `apps/api/src/orgo/core/cases/case.module.ts`
+
+Imports `case-review.service` and `../database/database.module`, neither of which is present in the supplied tree. The actual CaseService already uses Prisma persistence. Rebuild CaseModule around the real persistence/core dependencies instead of phantom modules.
+
+### `apps/api/src/orgo/core/logging/logger.module.ts`
+
+References `log-rotation.service` and `log-query.service`, which are absent in the snapshot. Either add the real implementations or remove them from the active module contract.
+
+### `apps/api/src/orgo/config/org-profile.service.ts`
+
+Contains a malformed relative persistence import. Point it to the actual `apps/api/src/persistence/prisma/prisma.service.ts`.
+
+## 2. Fix the public Task boundary mapping and tenant enforcement
+
+### `apps/api/src/orgo/core/tasks/task.controller.ts`
+
+The public DTO is snake_case (`organization_id`, `case_id`, etc.) while `TaskService` expects camelCase (`organizationId`, `caseId`, etc.). The controller currently passes objects through with `as any`.
+
+Consequences include:
+
+- list input may not populate `organizationId`;
+- create input may fail core validation or map fields incorrectly;
+- response shape can leak internal camelCase instead of the documented public shape.
+
+Add explicit request/response mappers.
+
+### Tenant isolation
+
+`getTask()` currently calls an unscoped service lookup by Task ID. List/create also rely on DTO input rather than one consistent authenticated organization context.
+
+Change Task HTTP paths to:
+
+```text
+resolve authenticated organization
+→ map public DTO to internal input
+→ call org-scoped service method
+→ map internal DTO to public JSON
+```
+
+Use `getTaskById(organizationId, taskId)` for public single-task access.
+
+## 3. Make Case API/service responsibilities explicit
+
+`CaseService` implements `createCaseFromSignal()` and `updateCaseStatus()`, but `CaseController` exposes only list/detail in the snapshot.
+
+Choose one stable contract:
+
+- if Case create/status are intended public APIs, expose validated endpoints;
+- if they are internal workflow operations, keep them internal and document only list/detail publicly.
+
+Do not claim an endpoint exists just because a service method exists.
+
+## 4. Unify API route prefixing
+
+`main.ts` defines no global API prefix, while controllers mix:
+
+```text
+api/v3/tasks
+api/v3/workflows
+api/v3/organizations
+v3/cases
+signals
+notifications
+maintenance
+domain/hr
+domain/education
+insights/reports
+```
+
+Select one public routing convention, ideally a single `/api/v3` boundary for Orgo APIs, and make reverse-proxy behavior explicit rather than relying on comments.
+
+## 5. Update bootstrap identity
+
+### `apps/api/src/main.ts`
+
+Swagger currently identifies the API as:
+
+```text
+Leaves Tracker
+Api Docs for leaves tracker
+version 1.0
+```
+
+Replace with Orgo identity/version metadata and make the port/config environment-driven rather than hard-coded where appropriate.
+
+## 6. Wire the core modules that exist in source
+
+The current `AppModule`/`OrgoModule` wiring does not expose all implemented core areas.
+
+Source contains Email, Signals, Notifications, Auth/RBAC, Offline and other modules, but several are not imported into the active module graph.
+
+Examples:
+
+- `SignalsModule` is not imported and currently declares no imports despite `SignalIngestService` requiring WorkflowEngineService and TaskService;
+- `EmailModule` exists but is not mounted by AppModule/OrgoModule, and its controller is not registered in the module;
+- `NotificationController` exists but `NotificationModule` does not register it as a controller;
+- Auth/RBAC code exists but AppModule does not establish one consistent authenticated tenant context for the core APIs.
+
+Wire only the capabilities intended to be active, but make the module graph truthful.
+
+## 7. Preserve WorkflowEngine purity and add an explicit action executor
+
+`WorkflowEngineService` is already architecturally strong: it loads/validates rules and resolves ordered actions without performing all side effects itself.
+
+Preserve that separation.
+
+Current `SignalIngestService` applies `CREATE_TASK` actions, but the rule vocabulary also includes UPDATE_TASK, ROUTE, ESCALATE, ATTACH_TEMPLATE, SET_METADATA and NOTIFY. The docs also expect workflows/patterns to be able to open Cases.
+
+Add a clear executor/dispatcher layer:
+
+```text
+resolved action
+→ action executor
+→ TaskService / CaseService / NotificationService / external adapter
+→ receipt/result
+```
+
+Do not put persistence side effects back into the pure evaluator.
+
+## 8. Reconcile filesystem workflow rules with DB workflow models
+
+Prisma contains:
+
+```text
+WorkflowDefinition
+WorkflowInstance
+WorkflowTransitionEvent
+```
+
+while the active Workflow Engine loads rules from the filesystem/YAML.
+
+Define the relationship explicitly:
+
+- which representation is configuration/source;
+- what is persisted runtime state;
+- how versions are pinned;
+- how a running instance refers to the exact ruleset used.
+
+Do not keep two unrelated workflow sources of truth.
+
+## 9. Fix Maintenance before treating it as an active domain module
+
+### `apps/api/src/orgo/domain/maintenance/maintenance.module.ts`
+
+The file is not a Nest `@Module`; it contains another `MaintenanceController`, duplicating `maintenance.controller.ts` with a different API/authorization shape.
+
+### `maintenance.service.ts`
+
+The service creates its own `PrismaClient` and performs raw Task-table operations/transactions directly.
+
+Align Maintenance to:
+
+```text
+MaintenanceModule
+→ one controller
+→ MaintenanceService
+→ TaskService for canonical Task mutations
+→ MaintenanceAsset/MaintenanceTaskLink/MaintenanceCalendarSlot for domain extension
+```
+
+The module should then be explicitly imported if Maintenance is intended active.
+
+## 10. Fix Education to use the core work owner
+
+### `education.module.ts` / `education.controller.ts`
+
+They import `education-module.service`, while the supplied file is `education.service.ts`.
+
+### `education.service.ts`
+
+It has a malformed persistence import and directly writes/queries canonical Task rows through raw SQL.
+
+Refactor creation/status mutations through TaskService. Keep `EducationTaskLink`, LearningGroup and person context as Education-owned extensions.
+
+## 11. Fix HR integration with TaskService/CaseService
+
+HR has the correct architectural intention — create a canonical Case, create a canonical Task, then add `HrCase`/participants/links — but the current code does not match the core service APIs.
+
+Issues include:
+
+- imports from nonexistent `core/task`, `core/case`, `core/label` paths;
+- `CaseService.createCase(...)` is called but the supplied CaseService exposes `createCaseFromSignal(...)`;
+- TaskService/CaseService are called with a transaction client argument their current signatures do not accept.
+
+Align the service APIs and transaction boundary so the canonical Task/Case plus HR extension commit consistently.
+
+Remove `hr.service.ts.BAK` from the active source tree.
+
+## 12. Consolidate Insights layout/imports
+
+`InsightsModule` imports root-level files such as:
+
+```text
+./reports.controller
+./reports.service
+./analytics-export.service
+```
+
+while the supplied tree also places implementations under subfolders such as:
+
+```text
+insights/reports/
+insights/export/
+insights/patterns/
+insights/cache/
+```
+
+There are duplicate root/subfolder pattern/cache implementations in the snapshot.
+
+Choose one canonical folder layout, update imports, and keep Insights read-oriented. Pattern actions should re-enter the core through TaskService/CaseService.
+
+## 13. Keep enums/contracts in one semantic source
+
+Task/Case/visibility/category enums are repeated in controllers, services, web types and domain services.
+
+The values are mostly aligned now, which is good, but duplication creates drift risk.
+
+Prefer a shared contract package/generated API types or strict conversion layer so:
+
+- DB enum casing;
+- internal service casing;
+- public JSON casing;
+- web client types
+
+remain mechanically aligned.
+
+## 14. Align offline sync with Task invariants
+
+`core/offline/sync.service.ts` writes Task rows directly during merge/sync.
+
+Offline operation is not exempt from core invariants. Ensure synchronized Task changes execute the same:
+
+- tenant checks;
+- enum/lifecycle rules;
+- ownership rules;
+- event/audit semantics;
+- conflict resolution evidence.
+
+If direct persistence is necessary for replay, isolate it behind a dedicated replay/import boundary with equivalent validation.
+
+## 15. Frontend scope is currently small
+
+The supplied web route tree currently has a root page that renders `InsightsOverviewPage`; it does not evidence a complete UI route set for Tasks, Cases, admin, HR, Education, etc.
+
+Keep docs truthful and add UI routes only when implemented.
+
+Also verify `_app.tsx` style import and other web imports against files actually present in the repo.
+
+## 16. External ecosystem adapters are not implemented
+
+No concrete Konnaxion, Kristal or SemantiK Architect adapter is present in the current snapshot.
+
+When added:
+
+### Konnaxion
+
+Use commands/events/receipts; never map Case↔Topic or Task↔Consultation by identity.
+
+### Kristal
+
+Orchestrate explicit Kristal operations/artifact references. Orgo approval is not Kristal validation/recognition unless an explicit Kristal operation produces it.
+
+### SemantiK Architect
+
+Use generation request/result contracts; do not store Architect internal planner objects as Orgo core models.
+
+### kOA-Linux
+
+Treat host trust/resources/lifecycle as platform concerns. Track them in Orgo only when a real operational Task/Case is required.
+
+## 17. Patterns that are already strong and should be preserved
+
+- Organization-scoped service methods in Task/Case core.
+- Explicit Task lifecycle transition table.
+- Explicit Case lifecycle transition table.
+- TaskEvent recording for important mutations.
+- `DomainTaskFactory` as a projection rather than a second Task table.
+- Label parser/routing service with explicit broadcast semantics.
+- Workflow evaluator separated from side effects.
+- Workflow simulation using the same evaluation semantics.
+- Profile-derived Task defaults.
+- Prisma schema linking domain extensions back to canonical Tasks/Cases.
+- Insights as a distinct read/analytics layer.
+
+
+================================================================================================
+FILE: wiki/_Footer.md
+================================================================================================
+
+Orgo — public conceptual wiki. For schemas, APIs, implementation constraints and code alignment, use the technical documentation.
+
+
+================================================================================================
+FILE: wiki/_Sidebar.md
+================================================================================================
+
+**Orgo Wiki**
+
+- [[Home]]
+- [[What is Orgo|What-is-Orgo]]
+- [[How Orgo Works|How-Orgo-Works]]
+- [[Cases and Tasks|Cases-and-Tasks]]
+- [[Signals and Workflows|Signals-and-Workflows]]
+- [[Routing and Labels|Routing-and-Labels]]
+- [[Profiles and Adaptability|Profiles-and-Adaptability]]
+- [[Reactivity and Escalation|Reactivity-and-Escalation]]
+- [[Domains and Use Cases|Domains-and-Use-Cases]]
+- [[Cyclic Overview and Insights|Cyclic-Overview-and-Insights]]
+- [[Organizations, People and Privacy|Organizations-People-and-Privacy]]
+- [[Offline and Resilience|Offline-and-Resilience]]
+- [[Interoperability]]
+- [[Semantic Charters|Semantic-Charters]]
+- [[Example Scenarios|Example-Scenarios]]
+- [[Glossary]]
+- [[FAQ]]
+- [[Resources]]
+
+---
+
+Technical details belong in the Orgo documentation rather than this public wiki.
+
+
+================================================================================================
+FILE: wiki/Cases-and-Tasks.md
+================================================================================================
+
+# Cases and Tasks
+
+Cases and Tasks are the two most important work objects in Orgo.
+
+## Task: the unit of work
+
+A **Task** represents something that should be done or tracked operationally.
+
+Examples:
+
+- inspect a reported leak;
+- contact a person about a request;
+- review a document;
+- follow up on a support incident;
+- prepare a report;
+- distribute information to a defined audience.
+
+Every Task uses the same core lifecycle:
+
+```text
+Pending
+   ↓
+In progress
+   ├── On hold → In progress
+   ├── Completed
+   ├── Failed
+   └── Escalated
+
+Pending / On hold can also be cancelled when appropriate.
+```
+
+The exact wording shown by a user interface can be friendlier, but the underlying states remain consistent.
+
+## Case: durable context
+
+A **Case** represents a situation that may need multiple actions or continued attention.
+
+Examples:
+
+- a building problem with several repair steps;
+- a sensitive HR matter;
+- a student-support situation;
+- a recurring operational issue;
+- a request that spans several teams.
+
+A Case can remain open while multiple Tasks are created, completed or escalated around it.
+
+## Why both are needed
+
+Without Cases, long-running situations become disconnected lists of tasks.
+
+Without Tasks, a Case can become a passive folder with no clear action.
+
+Orgo keeps the distinction explicit:
+
+```text
+Case = why / context / continuing situation
+Task = what needs to happen
+```
+
+## A Case is not the outside world
+
+A Case may refer to something owned by another system, but it does not become that thing.
+
+For example:
+
+```text
+Orgo Case ≠ Konnaxion Topic
+Orgo Task ≠ Konnaxion Consultation
+```
+
+The same principle applies to other external systems: Orgo can coordinate work around an external object without copying its entire meaning into the Task/Case model.
+
+
+================================================================================================
+FILE: wiki/Cyclic-Overview-and-Insights.md
+================================================================================================
+
+# Cyclic Overview and Insights
+
+Orgo is designed not only to track individual tasks, but also to help an organization **see its own operational patterns over time**.
+
+## Insights
+
+The Insights layer summarizes and analyzes operational state.
+
+It can support views such as:
+
+- work volume;
+- unresolved or escalating work;
+- reactivity/SLA pressure;
+- recurring categories;
+- organizational or profile-level patterns.
+
+These are **read models**: they help people understand what is happening without becoming a second source of operational truth.
+
+## Cyclic Overview
+
+A **Cyclic Overview** is a recurring review of operational activity.
+
+The exact cadence depends on the Organization Profile, but the principle is stable:
+
+```text
+do work
+→ observe outcomes
+→ review patterns
+→ decide whether action is needed
+→ create governed work
+```
+
+The public idea is broader than a dashboard. It is a feedback loop between execution and organizational learning.
+
+## Patterns become work explicitly
+
+Suppose the same type of incident repeatedly occurs in the same place.
+
+Insights may detect the pattern, but it should not silently mutate operational state.
+
+Instead:
+
+```text
+pattern detected
+→ proposed follow-up
+→ explicit Case / Task
+→ normal routing and accountability
+```
+
+That keeps analysis and action connected without confusing them.
+
+
+================================================================================================
+FILE: wiki/Domains-and-Use-Cases.md
+================================================================================================
+
+# Domains and Use Cases
+
+Orgo is not limited to one industry or department. Domain modules add specialized context while keeping the shared Task/Case backbone.
+
+The current Orgo model includes examples for **Maintenance, HR and Education**, and the charter system also defines reusable semantic families for care, programs, operations, groups and incidents.
+
+## Maintenance
+
+A maintenance request can add context such as:
+
+- asset;
+- location;
+- repair information;
+- calendar or maintenance slot.
+
+But the actual work remains a canonical Orgo Task.
+
+```text
+maintenance request
+→ Orgo Task
+→ maintenance-specific context
+→ normal Task lifecycle
+```
+
+## HR
+
+A sensitive HR situation can use a Case for durable context and Tasks for the actions that follow.
+
+```text
+report
+→ Case
+→ primary Task
+→ HR-specific participants and context
+```
+
+This is useful because confidentiality and subject participation can remain domain-specific while assignment and work progression continue to use the shared Orgo engine.
+
+## Education
+
+Education-support or incident work can be linked to learning groups, people and education-specific context while remaining a canonical Task.
+
+## Why domain modules are not separate workflow engines
+
+The goal is not to make every domain identical. It is to avoid rebuilding basic operational concepts every time.
+
+A domain can have rich business rules and additional data without redefining:
+
+- what a Task is;
+- the Task lifecycle;
+- how Cases contain work;
+- how core routing and events operate.
+
+## Beyond the built-in examples
+
+The same pattern can support other organizational settings when their specialized data and rules can be layered around the common work backbone.
+
+Orgo's semantic charters help describe these domains without turning every vocabulary difference into a new core schema.
+
+
+================================================================================================
+FILE: wiki/Example-Scenarios.md
+================================================================================================
+
+# Example Scenarios
+
+These examples illustrate the Orgo model without defining new domain contracts.
+
+## 1. Facilities issue
+
+A staff member reports water leaking near an entrance.
+
+```text
+report arrives
+→ Signal
+→ workflow evaluates severity and routing
+→ Case: recurring/continuing facilities situation when needed
+→ Task: inspect the leak
+→ maintenance context links the relevant asset/location
+→ Task is assigned and tracked
+→ later incidents can appear in Insights as a pattern
+```
+
+The maintenance information is specialized, but the work still uses the common Orgo Task lifecycle.
+
+## 2. Sensitive HR report
+
+A report concerns a person and requires restricted handling.
+
+```text
+report
+→ Signal
+→ HR workflow
+→ Case for durable confidential context
+→ primary Task for the next required action
+→ HR participants/context attached
+→ visibility and authorization rules apply
+```
+
+The Person concerned by the Case does not need to be an Orgo User.
+
+## 3. Education support
+
+A student-support concern is submitted.
+
+```text
+support signal
+→ workflow
+→ Task
+→ education context links the relevant person/group
+→ assignment and follow-up
+```
+
+Education-specific context stays in the domain layer while work progression remains canonical Orgo Task state.
+
+## 4. Repeated incident becomes organizational work
+
+Several similar incidents occur over time.
+
+```text
+individual Tasks/Cases
+→ Insights detects a recurring pattern
+→ pattern is reviewed
+→ explicit follow-up Case/Task is created
+→ normal routing and accountability
+```
+
+Insights does not silently rewrite operational state.
+
+## 5. Coordinating an external system
+
+An Orgo workflow needs an operation performed by another system.
+
+```text
+Orgo Task
+→ explicit request to external system
+→ external system validates and acts in its own domain
+→ result / receipt returns
+→ Orgo reconciles the Task
+```
+
+Orgo coordinates the work without taking ownership of the external system's internal data.
+
+
+================================================================================================
+FILE: wiki/FAQ.md
+================================================================================================
+
+# FAQ
+
+## Is Orgo a ticketing system?
+
+It can handle work that resembles tickets, but its model is broader. Orgo separates Signals, Cases and Tasks, adds workflow evaluation, organization profiles, routing labels and cyclic review, and supports multiple domain modules on the same core.
+
+## Is a Case just a large Task?
+
+No. A Case is durable context for a situation. A Task is a unit of work. A Case may contain many Tasks over time.
+
+## Does every Signal create a Task?
+
+No. A Signal is evaluated first. A workflow may ignore it, update existing work, create a Case, create one or more Tasks, route information or perform another declared action.
+
+## Can each department define its own Task statuses?
+
+Not as a separate core lifecycle. Domain modules add context while reusing the canonical Orgo Task lifecycle.
+
+## What are Labels for?
+
+Labels help classify and route work. They are not a replacement for authorization and should not be overloaded with every possible taxonomy concept.
+
+## What is a broadcast label?
+
+It is an informational routing form. Broadcasting something does not automatically create mandatory work. A workflow must explicitly create a Task when action is required.
+
+## How does Orgo adapt to different organizations?
+
+Through Organization Profiles and domain modules. Profiles tune behavior; domain modules add specialized context.
+
+## What is Reactivity Time?
+
+It is Orgo's way of expressing how quickly work is expected to receive attention or response. The actual defaults can vary by Organization Profile.
+
+## Does Orgo use AI to decide everything?
+
+The architecture does not depend on a heavy external LLM as its core workflow engine. Workflow rules, labels, profiles and semantic charters are designed to remain explicit and compatible with local/offline operation.
+
+## Is Insights allowed to change Tasks automatically?
+
+Insights is primarily analytical. When a detected pattern should create operational work, that should happen explicitly through the normal Case/Task core rather than by silently rewriting operational state.
+
+## Is Orgo part of kOA-Linux?
+
+Orgo is an ecosystem system in its own right. In a kOA-Linux deployment it can be integrated as a subsystem from the host's point of view, while Orgo remains authoritative for its own workflow state.
+
+## Does Orgo own Konnaxion or Kristal data when it coordinates them?
+
+No. Orgo may track work, external references and results, but the external system remains authoritative for its own domain.
+
+## Is Orgo an ERP?
+
+No. It may coordinate work around ERP-like processes, but it is not intended to become the authoritative accounting, payroll or inventory system simply because those processes create Tasks.
+
+
+================================================================================================
+FILE: wiki/Glossary.md
+================================================================================================
+
+# Glossary
+
+This page uses public-facing definitions. The technical documentation contains the exact contracts and schemas.
+
+## Organization
+
+The tenant and operational boundary in Orgo. Cases, Tasks, profiles and permissions belong to an Organization.
+
+## Signal
+
+An input that may require work: an email, form, API call, event, offline input or similar trigger.
+
+A Signal is not automatically a Task.
+
+## Case
+
+A durable container for a situation, its context and related work over time.
+
+## Task
+
+The canonical unit of work in Orgo.
+
+## Workflow
+
+Rules that evaluate signals or operational context and determine what actions should follow.
+
+## Label
+
+A compact routing/classification address used to help place work in the right operational context.
+
+## Profile
+
+Organization-specific behavioral configuration, including defaults for reactivity, transparency, retention, pattern sensitivity and automation.
+
+## Domain module
+
+A specialized layer for a domain such as Maintenance, HR or Education that adds context while reusing the common Task/Case engine.
+
+## Insight
+
+A derived analytical view over operational activity.
+
+## Cyclic Overview
+
+A recurring review loop that turns operational history into organizational learning and, when appropriate, new governed work.
+
+## User
+
+An authenticated Orgo actor/account.
+
+## Person
+
+A human subject/profile represented in Orgo, whether or not the person has a User account.
+
+## Charter
+
+A semantic vocabulary/reference layer that helps Orgo reuse and refine common concepts across domains.
+
+## Receipt
+
+Structured evidence that an external or internal operation was accepted, rejected or executed. It helps Orgo reconcile workflow without replacing the authoritative state it refers to.
+
+## Ecosystem system
+
+A system with its own significant domain authority and boundaries. Orgo is one ecosystem system in the kOA Digital Ecosystem.
+
+
+================================================================================================
 FILE: wiki/Home.md
 ================================================================================================
 
-# Orgo System Overview
+# Orgo
 
-This document provides a conceptual and technical map of the Orgo platform. It details how the system functions as a multi-tenant "nervous system" for organizations, distinct from standard ticketing systems or CRMs.
+**Orgo is a coordination system for turning messy signals into clear, accountable work.**
 
-**Reference:** [[Orgo Overview Presentation](https://administrative-efficienc-0u6vhrh.gamma.site/)](https://administrative-efficienc-0u6vhrh.gamma.site/)
+Organizations rarely receive work in a neat format. A request may begin as an email, a form, a conversation, a report, a recurring issue or a system event. Orgo gives these signals a common operational language so they can be understood, routed, acted on and reviewed without forcing every organization into the same workflow.
 
------
+A useful way to think about Orgo is as an **operational nervous system**:
 
-## Conceptual Model
-
-Orgo is designed to solve the "messy signal" problem. Organizations receive inputs from dozens of channels (emails, chats, forms, sensors), often losing context or failing to spot patterns.
-
-Orgo standardizes this flow:
-
-1.  **Listen:** Ingest signals from any source.
-2.  **Structure:** Convert signals into **Cases** (situations) and **Tasks** (actions).
-3.  **Route:** Assign work using a universal labeling syntax.
-4.  **Track:** Monitor execution against "Reactivity Time" (not just deadlines).
-5.  **Learn:** Feed data into an **Insights** layer for cyclic review and pattern detection.
-
-Instead of hard-coding workflows for every department, Orgo provides a shared schema engine. A "Hospital" and a "Basketball Team" run on the same code, differentiated only by their **Profile** configuration.
-
------
-
-## Core Entities
-
-The system is strictly multi-tenant.
-
-  * **Organization:** The top-level tenant (e.g., "Acme Corp" or "Local Shelter"). It owns all data, configuration, and policies.
-  * **User:** An authenticated account (staff, volunteer, admin) capable of logging in and performing work.
-  * **Person:** A profile representing a human subject (student, patient, employee). A Person is often the *subject* of a Case but may never log in.
-
------
-
-## The Workflow Pipeline: Signals → Cases → Tasks
-
-### 1\. Signals
-
-Inputs enter the system via the **Gateway**.
-
-  * **Email:** Parsed via IMAP/SMTP (stripping signatures, normalizing threads).
-  * **API:** Direct POST requests from external tools.
-  * **Offline:** Batched imports from local nodes (supporting the "Offline Bubble" requirement).
-
-### 2\. The Engine
-
-The Workflow Engine evaluates the Signal against **Flow Rules**. It determines:
-
-  * Does this require a new **Case**?
-  * Does this spawn specific **Tasks**?
-  * What is the **Label** (routing address)?
-  * What is the **Severity** and **Reactivity Time**?
-
-### 3\. Objects
-
-  * **Case:** A container for a specific situation (e.g., "Water Leak in Sector 7" or "Harassment Complaint \#99"). It holds the narrative, location, tags, and aggregate status.
-  * **Task:** An atomic unit of work linked to a Case. It follows a strict state machine (`pending` → `in_progress` → `completed`).
-
------
-
-## Routing System: The Label
-
-Orgo uses a deterministic labeling system to route information. A label is a single string that encodes **Scope**, **Topic**, **Intent**, and **Role**.
-
-**Format:** `<BASE>.<CATEGORY><SUBCATEGORY>.<HORIZONTAL_ROLE>`
-
-### The Base (Vertical Scope)
-
-Defines *who* needs to see this.
-
-  * `1` - CEO / Executive
-  * `11` - Department Head
-  * `101` - Team Lead
-  * `1001` - Staff / Operative
-  * *(Broadcast variants: `10`, `100`, `1000`)*
-
-### The Taxonomy (Decimal)
-
-  * **Category (1st digit):** The domain (e.g., `9` = Crisis, `5` = Training, `1` = Ops).
-  * **Subcategory (2nd digit):** The intent (e.g., `1` = Request, `4` = Report, `5` = Broadcast).
-
-### Example
-
-> **`1001.91.Operations.Safety`**
->
->   * **1001:** Staff level.
->   * **9:** Crisis/Emergency category.
->   * **1:** Request (Action required).
->   * **Operations.Safety:** The functional team responsible.
-
------
-
-## Profiles & Configuration
-
-Orgo avoids custom code for every client by using **Profiles**. A Profile is a bundle of YAML configuration parameters that dictates system behavior.
-
-**Configurable Knobs:**
-
-  * **Reactivity Windows:** Does "High Priority" mean 1 hour (Hospital) or 3 days (Volunteer Group)?
-  * **Privacy:** Default visibility (Open-by-default vs. Need-to-know).
-  * **Escalation:** How quickly does an ignored task jump to the next vertical level?
-  * **Retention:** Log storage duration.
-
-**Standard Profiles:**
-
-1.  **Friend Group:** Low automation, high privacy, slow reactivity.
-2.  **Retail Ops:** High automation, open visibility, fast reactivity.
-3.  **Crisis Response:** Maximum reactivity, strict hierarchy, aggressive escalation.
-
------
-
-## Technical Architecture
-
-The codebase is organized into four distinct layers.
-
-### 1\. Core Services
-
-The monolithic engine that powers the platform.
-
-  * `TaskHandler`: Enforces state machines and SLA tracking.
-  * `WorkflowEngine`: Matches signals to rules.
-  * `Notifier`: Handles outbound communication (Email, Push).
-  * `Logger`: Centralized, normalized audit logging.
-
-### 2\. Domain Modules
-
-Thin adapters that define domain-specific logic without owning separate databases.
-
-  * **Maintenance:** Defines assets, locations, and repair workflows.
-  * **Care/HR:** Defines personnel, privacy rules, and intake flows.
-  * **Groups:** Defines classes, rosters, and schedules.
-
-### 3\. Insights Module
-
-The analytical brain. It uses a Star Schema (`fact_cases`, `dim_time`, `dim_location`) to answer questions like "Which department creates the most critical alerts?"
-
-### 4\. Infrastructure
-
-Handles the "plumbing": Database connections (Postgres/SQLite), offline synchronization logic, and Docker containerization.
-
------
-
-## Data Contracts
-
-Orgo enforces strict JSON schemas for its primary objects to ensure interoperability between modules.
-
-**The Case Contract (Simplified):**
-
-```jsonc
-{
-  "case_id": "uuid",
-  "label": "1001.91.Operations.Safety",
-  "status": "open",
-  "severity": "high",
-  "reactivity_time": "PT1H", // ISO 8601 Duration
-  "origin_role": "Operations.Safety",
-  "location": { "site": "Main", "area": "Lobby" },
-  "metadata": { "incident_type": "slip_fall" }
-}
+```text
+something happens
+      ↓
+Orgo receives the signal
+      ↓
+context is organized into a Case when needed
+      ↓
+action becomes one or more Tasks
+      ↓
+work is routed, tracked and escalated
+      ↓
+patterns become visible through Insights
+      ↓
+new work can be created when action is needed
 ```
 
-**The Task Contract (Simplified):**
+Orgo is multi-tenant: each **Organization** has its own work, people, policies and behavioral profile.
 
-```jsonc
-{
-  "task_id": "uuid",
-  "case_id": "uuid",
-  "type": "maintenance", // Domain
-  "subtype": "cleaning", // Specifics
-  "status": "pending",
-  "owner_role_id": "uuid", // Who is responsible
-  "due_at": "2025-12-12T14:00:00Z"
-}
+## What makes Orgo different
+
+Orgo is built around a few shared ideas rather than a separate workflow engine for every department:
+
+- **Task** is the common unit of work.
+- **Case** keeps durable context around related work.
+- **Signals** are inputs, not automatically work items.
+- **Workflows** evaluate what should happen.
+- **Labels** help route and classify work.
+- **Profiles** adapt Orgo to different organizations without changing the core model.
+- **Insights** help organizations notice recurring patterns and review how work is actually flowing.
+- **Domain modules** add specialized context while reusing the same Task/Case backbone.
+
+This lets a maintenance team, a school, a care organization, an association or an internal operations team use the same underlying coordination model while keeping their own vocabulary and rules.
+
+## Start here
+
+- [[What is Orgo|What-is-Orgo]]
+- [[How Orgo Works|How-Orgo-Works]]
+- [[Cases and Tasks|Cases-and-Tasks]]
+- [[Signals and Workflows|Signals-and-Workflows]]
+- [[Routing and Labels|Routing-and-Labels]]
+- [[Profiles and Adaptability|Profiles-and-Adaptability]]
+- [[Reactivity and Escalation|Reactivity-and-Escalation]]
+- [[Domains and Use Cases|Domains-and-Use-Cases]]
+- [[Cyclic Overview and Insights|Cyclic-Overview-and-Insights]]
+- [[Organizations, People and Privacy|Organizations-People-and-Privacy]]
+- [[Interoperability]]
+- [[Semantic Charters|Semantic-Charters]]
+- [[Glossary]]
+- [[Example Scenarios|Example-Scenarios]]
+- [[FAQ]]
+
+## What Orgo is not
+
+Orgo is not meant to replace every business system around it.
+
+It is not, by itself:
+
+- a payroll system;
+- an accounting ERP;
+- a casual chat application;
+- a domain database for every external system;
+- a knowledge-truth engine;
+- a civic decision system.
+
+Orgo coordinates work and keeps operational state. When another system owns the underlying domain, Orgo tracks and orchestrates the work around it rather than silently taking ownership of that system's data.
+
+---
+
+**Technical implementation details live in the Orgo documentation.** This wiki focuses on the public-facing concepts and how Orgo is meant to be understood and used.
+
+
+================================================================================================
+FILE: wiki/How-Orgo-Works.md
+================================================================================================
+
+# How Orgo Works
+
+Orgo follows a simple operational loop:
+
+```text
+Listen → Understand → Organize → Route → Act → Review → Learn
 ```
 
------
+## 1. Listen
 
-## Cyclic Review System
+A **Signal** enters Orgo.
 
-Orgo is not just for "doing work"; it is for **improving operations**. The system enforces a **Cyclic Overview** process driven by the Insights module.
+A signal may be a request, report, message, form submission, API call, system event, offline input or scheduled trigger.
 
-1.  **Weekly Loop:** Review all `critical` and `unresolved` items. Immediate tactical fixes.
-2.  **Monthly Loop:** Review trends by Department and Location. Detect resource imbalances.
-3.  **Yearly Loop:** Strategic review. Input for next year's Profile configuration.
+A signal is only an input. Orgo does not assume every signal deserves a new Task.
 
-**Pattern Detection:**
-The engine can be configured to auto-escalate "soft signals." For example: *"If 5 tasks of subtype 'leak' occur in 'Building A' within 30 days, auto-create a Case titled 'Infrastructure Audit: Building A'."*
+## 2. Understand
 
------
+Orgo evaluates the signal in the context of the Organization:
 
-## Status and Scope
+- What kind of situation is this?
+- Does it belong to an existing Case?
+- Does it require action?
+- Which workflow rules apply?
+- How urgent is it?
+- Who or what area should receive it?
 
-**What Orgo IS:**
+## 3. Organize
 
-  * A unified Case & Task routing platform.
-  * A pattern detection engine.
-  * A structured communication tool using Wikidata standards for interoperability.
+If durable context is needed, Orgo can use a **Case**.
 
-**What Orgo is NOT:**
+If action is required, Orgo creates one or more **Tasks**.
 
-  * An ERP (It does not do payroll or inventory accounting).
-  * A Chat App (It is for structured work, not casual conversation).
-  * A Kanban Toy (It enforces rigorous routing rules).
+```text
+Case = the situation / continuing context
+Task = a concrete unit of work
+```
+
+A Case may contain many Tasks over time.
+
+## 4. Route
+
+A Task can be classified and routed using an Orgo **Label**, organization roles and workflow rules.
+
+Routing is deterministic enough to be understood and reviewed. It is not meant to be a mysterious recommendation layer.
+
+## 5. Act
+
+The Task follows the common Orgo lifecycle. It can be assigned, started, paused, escalated, completed, failed or cancelled according to the core rules.
+
+Domain-specific information remains attached without replacing this common lifecycle.
+
+## 6. Review
+
+Orgo keeps the operational history needed to understand what happened:
+
+- task events;
+- assignments;
+- comments;
+- workflow transitions;
+- audit/security information where applicable.
+
+## 7. Learn
+
+The **Insights** layer can detect trends, recurring issues and operational pressure.
+
+A pattern is not automatically an instruction. When action is required, Orgo brings it back into the governed workflow:
+
+```text
+pattern
+→ explicit work proposal
+→ Case / Task
+→ normal routing and lifecycle
+```
+
+This closes the loop between day-to-day work and organizational learning.
+
+
+================================================================================================
+FILE: wiki/Interoperability.md
+================================================================================================
+
+# Interoperability
+
+Orgo is designed to coordinate work **with** other systems rather than absorb them.
+
+This matters in the wider kOA Digital Ecosystem, where different systems have different responsibilities.
+
+## The basic rule
+
+```text
+Orgo owns workflow state.
+The other system owns its own domain state.
+```
+
+An Orgo Task can request an operation, track its progress and record a receipt without becoming the source of truth for the external object.
+
+## Konnaxion
+
+Konnaxion owns its civic/public domain.
+
+A future integration may allow Orgo to coordinate work related to a consultation, deliberation or civic process, but:
+
+```text
+Orgo Case ≠ Konnaxion Topic
+Orgo Task ≠ Konnaxion Consultation
+```
+
+## Kristal
+
+Kristal owns epistemic artifacts and their semantics.
+
+Orgo may coordinate review or other work around a Kristal operation, but completing an Orgo Task does not automatically mean a Kristal assertion has been validated or recognized.
+
+## SemantiK Architect
+
+SemantiK Architect owns language-generation planning and realization.
+
+Orgo can request generated output as part of a workflow, but generated language is not the same thing as Orgo workflow state.
+
+## kOA-Linux
+
+When Orgo runs within kOA-Linux, Orgo keeps ownership of its Cases, Tasks and workflows. kOA-Linux owns the local platform boundary: host resources, service lifecycle, privilege mediation, recovery and other operating-system responsibilities.
+
+## Why this separation matters
+
+It prevents one integration from turning into a shared database where nobody knows which system is authoritative.
+
+A healthy integration looks more like:
+
+```text
+Orgo requests
+→ external system validates and acts
+→ result / event / receipt returns
+→ Orgo reconciles its own workflow
+```
+
+The same principle applies to other external tools and services.
+
+
+================================================================================================
+FILE: wiki/Offline-and-Resilience.md
+================================================================================================
+
+# Offline and Resilience
+
+Orgo is designed with **offline and local operation** in mind.
+
+That does not mean every external integration is magically available without a network. It means Orgo's own operational model can distinguish local work from synchronization and can represent offline/sync inputs explicitly.
+
+## Offline signals
+
+Offline or synchronized input is treated as a Signal, then processed through normal Orgo rules.
+
+```text
+local/offline input
+→ synchronization or ingestion
+→ organization scope
+→ workflow evaluation
+→ Case / Task when appropriate
+```
+
+Offline sync is not a shortcut around the normal Task/Case lifecycle.
+
+## Resilience through explicit state
+
+Because Tasks, Cases, assignments and events are explicit, an organization can reason about what is pending, what has been completed and what still needs reconciliation after connectivity returns.
+
+## External systems
+
+If a workflow depends on another system that is unavailable, Orgo can still retain its own workflow context. The external operation remains incomplete until the external owner actually accepts or performs it.
+
+
+================================================================================================
+FILE: wiki/Organizations-People-and-Privacy.md
+================================================================================================
+
+# Organizations, People and Privacy
+
+Orgo is multi-tenant. The **Organization** is the primary operational boundary.
+
+## Organization
+
+An Organization has its own:
+
+- Cases and Tasks;
+- profile and configuration;
+- roles and permissions;
+- people and user accounts;
+- workflows and operational history;
+- analytical views.
+
+One organization's identifiers must not become a shortcut into another organization's data.
+
+## User and Person are different
+
+Orgo distinguishes a **User account** from a **Person profile**.
+
+### User
+
+A User is an actor who can authenticate and perform actions in Orgo.
+
+### Person
+
+A Person is a human subject represented in operational context.
+
+A Person might be:
+
+- an employee;
+- a student;
+- a patient or care recipient;
+- a volunteer;
+- a requester;
+- another person involved in a Case.
+
+That person may never log in to Orgo.
+
+```text
+User = actor/account
+Person = subject/profile
+```
+
+This distinction is especially important in HR, care and education contexts.
+
+## Visibility and authorization
+
+Orgo can classify work by visibility and route it through labels, but those mechanisms are not substitutes for authorization.
+
+Sensitive work should remain organization-scoped and role/permission-aware.
+
+## External identities
+
+When Orgo refers to an object or person owned by another system, the relationship should remain explicit. Orgo stores only the references and operational context it actually needs.
+
+
+================================================================================================
+FILE: wiki/Profiles-and-Adaptability.md
+================================================================================================
+
+# Profiles and Adaptability
+
+Orgo is designed to serve organizations with very different operating rhythms without forking the core system for each one.
+
+The main mechanism is the **Organization Profile**.
+
+## What a Profile changes
+
+A Profile can tune defaults such as:
+
+- expected reactivity;
+- transparency and visibility defaults;
+- escalation behavior;
+- sensitivity to recurring patterns;
+- retention behavior;
+- automation and review cadence.
+
+A fast-response environment can therefore behave differently from a volunteer association while both still use the same Task and Case model.
+
+## What a Profile does not change
+
+A Profile does not create a new Orgo schema or a separate Task lifecycle.
+
+```text
+same core model
++ different profile
+= different operating behavior
+```
+
+This is one reason Orgo can be adapted across domains without becoming a collection of unrelated applications.
+
+## Profiles and domain modules
+
+Profiles tune organizational behavior. Domain modules add specialized context.
+
+They solve different problems:
+
+```text
+Profile       → how this Organization operates
+Domain module → what this kind of work means
+```
+
+
+================================================================================================
+FILE: wiki/Reactivity-and-Escalation.md
+================================================================================================
+
+# Reactivity and Escalation
+
+Orgo distinguishes **reactivity** from a simple final deadline.
+
+A deadline answers:
+
+> When should this work be finished?
+
+Reactivity asks an earlier question:
+
+> How quickly should this work receive attention?
+
+That distinction matters in organizations where silence itself is a problem.
+
+## Reactivity
+
+A Task can carry an expected reactivity window derived from its context and the Organization Profile.
+
+Examples of the idea:
+
+- a critical operational incident may require attention very quickly;
+- a routine internal request may tolerate a longer response window;
+- a volunteer organization may deliberately use slower defaults than an emergency-oriented operation.
+
+The important point is not one universal number. The Organization defines what “responsive” means for its own context.
+
+## Escalation
+
+When work is not receiving the expected attention, Orgo can raise its operational visibility or routing level according to explicit rules.
+
+Conceptually:
+
+```text
+Task created
+→ expected reactivity window
+→ no sufficient response
+→ escalation rule applies
+→ Task remains governed work with a visible escalation state
+```
+
+Escalation does not create a second Task lifecycle. It is part of the common operational model.
+
+## Why this is useful
+
+Organizations often discover problems only after a final due date has been missed. Reactivity gives them a way to notice much earlier that work has stalled.
+
+Combined with Cyclic Overview and Insights, this also makes it possible to distinguish an isolated delay from a recurring organizational pattern.
+
+
+================================================================================================
+FILE: wiki/Resources.md
+================================================================================================
+
+# Resources
+
+## Public overview presentation
+
+The existing Orgo wiki referenced this public presentation:
+
+https://administrative-efficienc-0u6vhrh.gamma.site/
+
+## Technical documentation
+
+The Orgo technical documentation contains the detailed architecture, database schema, Task/Case contracts, APIs, domain-module contracts and implementation alignment notes.
+
+This wiki intentionally stays at a conceptual/public level.
+
+
+================================================================================================
+FILE: wiki/Routing-and-Labels.md
+================================================================================================
+
+# Routing and Labels
+
+Orgo uses **Labels** as a compact routing and classification language.
+
+A label can express three things:
+
+1. a vertical or organizational scope;
+2. a category and subcategory;
+3. an optional horizontal role.
+
+The general form is:
+
+```text
+<BASE>.<CATEGORY><SUBCATEGORY>[.<HORIZONTAL_ROLE>]
+```
+
+Example:
+
+```text
+100.94.Operations.Safety
+```
+
+The precise codes are configured and documented technically, but public users mainly need to understand the idea: **a label is an address for operational context**.
+
+## Labels are not permissions
+
+A label can help determine where work belongs, but it does not replace authorization.
+
+Seeing a routing label does not automatically grant access to the underlying Case or Task.
+
+## One canonical routing label
+
+Orgo keeps one canonical routing label on the work object rather than trying to encode every possible taxonomy dimension into one string.
+
+Additional classification can live in metadata, tags or domain-specific structures.
+
+## Broadcast labels
+
+Some label bases represent broadcasts.
+
+A broadcast is informational by default:
+
+```text
+broadcast
+≠ mandatory Task
+```
+
+If the information requires action, a workflow must explicitly create or assign that work.
+
+This prevents announcements from silently becoming obligations.
+
+
+================================================================================================
+FILE: wiki/Semantic-Charters.md
+================================================================================================
+
+# Semantic Charters
+
+Orgo's **Semantic Charters** provide a reusable vocabulary layer for describing organizational concepts across different domains.
+
+They are not another workflow engine and they do not replace Cases, Tasks or labels.
+
+## Why Charters exist
+
+Different organizations often use different words for similar concepts. Orgo's charter model helps keep domain vocabulary interoperable without forcing every organization into exactly the same terminology.
+
+The charter system can align selected concepts with **Wikidata-compatible identifiers** while keeping Orgo's own organizational relationships focused on workflow needs.
+
+## Three levels
+
+The current charter model is layered:
+
+```text
+General
+   ↓
+Family
+   ↓
+Domain specialization
+```
+
+Examples of families include:
+
+- care;
+- programs;
+- operations;
+- groups;
+- incidents.
+
+Domain specializations can refine these families for contexts such as hospitals, schools, social services, manufacturing, transport/logistics, facilities, sports groups, associations or IT help desks.
+
+## What gets reused
+
+Orgo can reuse selected public identifiers for concepts and properties where they already fit.
+
+It can also define its own refinements when organizational workflow needs a more precise relation.
+
+The public principle is:
+
+> **Reuse shared meaning where it fits; specialize only where Orgo needs a clearer operational relation.**
+
+## Offline-friendly by design
+
+The charter concept is compatible with a filtered local subset of public semantic data. Orgo does not need to import the entire Wikidata graph just to use common identifiers.
+
+This keeps semantic assistance useful in local/offline environments while preserving Orgo's own workflow model.
+
+
+================================================================================================
+FILE: wiki/Signals-and-Workflows.md
+================================================================================================
+
+# Signals and Workflows
+
+A major Orgo principle is that **an incoming signal is not automatically a task**.
+
+## Signals
+
+A Signal is something Orgo receives that may require interpretation or action.
+
+Examples include:
+
+- a message or email;
+- an API request;
+- a form submission;
+- a system-generated event;
+- a timer;
+- an offline/synchronized input.
+
+Signals can carry structured context, but they do not decide their own operational outcome.
+
+## Workflows
+
+A **Workflow** evaluates a signal or existing operational context and determines which actions should follow.
+
+Conceptually:
+
+```text
+Signal + Organization context
+        ↓
+Workflow rules
+        ↓
+resolved actions
+        ↓
+Tasks / Cases / routing / notification / metadata changes
+```
+
+Typical actions can include creating work, updating work, routing it, escalating it, attaching metadata or notifying someone.
+
+## Why evaluation and execution are separate
+
+Orgo distinguishes **deciding what should happen** from **performing the side effect**.
+
+That matters because it allows a workflow to be simulated:
+
+```text
+same input + same rules
+→ same resolved actions
+→ no mutation in simulation mode
+```
+
+This makes workflows easier to inspect, test and explain.
+
+## Workflows do not own everything they touch
+
+If a workflow eventually calls another system, that system still decides whether the requested operation is valid in its own domain.
+
+Orgo can coordinate the process and reconcile the result, but it does not gain direct write access to another system's internal data.
+
+
+================================================================================================
+FILE: wiki/What-is-Orgo.md
+================================================================================================
+
+# What is Orgo?
+
+Orgo is a **multi-tenant workflow and coordination system**.
+
+Its purpose is simple to state: take the many things that happen around an organization and turn the ones that require attention into structured, traceable work.
+
+## The problem Orgo addresses
+
+Organizations receive signals from many places:
+
+- email;
+- forms and APIs;
+- staff or community reports;
+- operational systems;
+- periodic reviews;
+- offline synchronization;
+- timers and recurring checks.
+
+Without a common structure, the result is usually fragmentation: different teams invent different status labels, important context is lost between tools, and recurring problems are hard to see.
+
+Orgo standardizes the operational layer without forcing every domain to become identical.
+
+## One backbone, many domains
+
+Orgo uses the same shared work backbone across domains:
+
+```text
+Organization
+   ├── Cases
+   │    └── Tasks
+   ├── Workflows
+   ├── Labels
+   ├── Profile
+   └── Insights
+```
+
+A maintenance task and an education-support task can therefore share the same basic operational lifecycle while keeping very different domain-specific details.
+
+## Orgo owns workflow state
+
+This is an important boundary.
+
+Orgo is authoritative for things such as:
+
+- whether an Orgo Task is pending, in progress or completed;
+- who is assigned to that Task;
+- which Case groups related work;
+- the routing label attached to the work;
+- escalation and reactivity state;
+- Orgo workflow execution and audit information.
+
+Orgo does **not** become the owner of another system's internal state simply because a Task refers to it.
+
+For example, if Orgo coordinates work related to a Konnaxion consultation or a Kristal artifact, the Task can reference that external object while the external system remains authoritative for its own domain.
+
+## A coordination system, not a department-specific app
+
+Orgo is designed to remain useful across different organizational settings. Specialized domain modules can add context for Maintenance, HR, Education and other areas, but they reuse the same core work model.
+
+That is the central design idea:
+
+> **Different domains, shared operational grammar.**
