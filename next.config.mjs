@@ -37,6 +37,7 @@ const STATIC_DISCOVERY_CACHE_HEADERS = [
  * HTML canonicals stay indexable by default.
  * Non-HTML discovery surfaces are split into:
  * - indexable AI entrypoint: llms.txt
+ * - indexable Context Pack text resources
  * - noindex auxiliary artifacts and mirrors
  */
 const INDEXABLE_DISCOVERY_ROBOTS_HEADERS = [
@@ -44,6 +45,10 @@ const INDEXABLE_DISCOVERY_ROBOTS_HEADERS = [
     key: "X-Robots-Tag",
     value: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
   },
+];
+
+const INDEXABLE_CONTEXT_PACK_ROBOTS_HEADERS = [
+  { key: "X-Robots-Tag", value: "index, follow, noarchive" },
 ];
 
 const NOINDEX_DISCOVERY_ROBOTS_HEADERS = [
@@ -88,7 +93,7 @@ const MARKDOWN_HEADERS = [
 
 const CONTEXT_PACK_TEXT_HEADERS = [
   ...STATIC_DISCOVERY_CACHE_HEADERS,
-  ...NOINDEX_DISCOVERY_ROBOTS_HEADERS,
+  ...INDEXABLE_CONTEXT_PACK_ROBOTS_HEADERS,
   { key: "Content-Type", value: "text/plain; charset=utf-8" },
 ];
 

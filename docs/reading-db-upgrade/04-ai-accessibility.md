@@ -255,7 +255,7 @@ Context Packs are specialized machine-readable artifacts behind the primary `/ll
 → crawler discovery surface for current stable pack URLs
 
 /context-packs/*.txt
-→ public, fetchable, noindex technical reference bundles
+→ public, fetchable, indexable technical reference bundles with noarchive
 ```
 
 Published Context Pack URLs are public machine contracts. A filename that has already been published must not silently become a 404 when naming changes. Historical published names must use permanent redirects to the current stable URL.
@@ -732,10 +732,10 @@ Artifact indexing policy:
 /reading/ai-index.json → noindex, fetchable
 /context-packs/index.json → noindex, fetchable
 /context-packs/sitemap.xml → sitemap/discovery artifact
-/context-packs/*.txt → noindex, fetchable
+/context-packs/*.txt → indexable, fetchable, noarchive
 ```
 
-This preserves a clean public entrypoint while keeping the technical artifacts available to agents and internal tooling.
+This preserves `/llms.txt` as the primary AI entrypoint while allowing stable Context Pack resources to be indexed directly as an additional discovery path. `noarchive` avoids search-engine archive copies of the technical bundles.
 
 ## Acceptance criteria
 

@@ -610,7 +610,7 @@ This keeps the public interface clean while preserving machine access.
 
 `/llms.txt` may be indexable.
 
-Auxiliary AI artifacts should usually be fetchable but not treated as primary search landing pages.
+Auxiliary AI artifacts should usually be fetchable but not treated as primary search landing pages. Stable Context Pack text resources are the explicit exception: they may be indexed as technical discovery targets while `/llms.txt` remains the primary AI entrypoint.
 
 Recommended behavior:
 
@@ -623,12 +623,12 @@ Recommended behavior:
 /md-sitemap.xml    = sitemap/discovery artifact
 /context-packs/index.json  = noindex, fetchable
 /context-packs/sitemap.xml = sitemap/discovery artifact
-/context-packs/*.txt       = noindex, fetchable
+/context-packs/*.txt       = indexable, fetchable, noarchive
 ```
 
 The goal is not to hide auxiliary artifacts.
 
-The goal is to prevent search engines from treating generated machine bundles as primary human pages.
+The goal is to prevent most generated machine bundles from becoming primary human landing pages while still allowing stable Context Packs to be directly discoverable. Context Pack text responses should use `X-Robots-Tag: index, follow, noarchive`.
 
 ---
 
