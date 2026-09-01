@@ -60,7 +60,7 @@ REPOS = [
 ]
 
 COMMIT_MESSAGE = "Update context packs"
-BUILDER_VERSION = "2026-09-01.10"
+BUILDER_VERSION = "2026-09-01.11"
 
 # Packs intentionally retired from this builder. They are removed from public/context-packs
 # before the manifest is regenerated so stale files cannot remain published indefinitely.
