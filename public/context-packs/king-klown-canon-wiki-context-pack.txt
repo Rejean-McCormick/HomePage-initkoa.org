@@ -1,0 +1,1782 @@
+# INITKOA CONTEXT PACK
+
+repository: Rejean-McCormick/king-klown-canon.wiki
+source_path: C:\mycode\King_Klown\king-klown-canon.wiki
+source_commit: b3ba85710499e917ec8bd4f1eda8fc9addf36d44
+source_mode: git
+working_tree_markdown: clean
+working_tree_selected: clean
+selection_mode: markdown
+wiki_source_path: none
+wiki_source_commit: none
+wiki_working_tree_markdown: none
+policy_version: 2026-09-01.10
+repo_files: 36
+wiki_files: 0
+source_files: 36
+included_files: 36
+excluded_files: 0
+duplicate_files: 0
+content_bytes: 61597
+authority_counts: {"canonical":36}
+generated_at: 2026-09-01T13:36:02-04:00
+files: 36
+content_sha256: eb6b6b6d1e140c5a32eb240a4372947bb1cf6c655a748beec5f09d8b4dcce3fe
+
+================================================================================================
+FILE INDEX
+================================================================================================
+
+01. [canonical] _Footer.md
+02. [canonical] _Sidebar.md
+03. [canonical] Auteur-et-recursion.md
+04. [canonical] Canon-et-autorite.md
+05. [canonical] Chronologies-et-temporalites.md
+06. [canonical] Circularite-progressive-et-fractales.md
+07. [canonical] Colin-Row-et-la-prison.md
+08. [canonical] Cosmogenese.md
+09. [canonical] Couches-epistemiques.md
+10. [canonical] FAQ.md
+11. [canonical] Fonction-Christ.md
+12. [canonical] Fonctions-de-King-Klown.md
+13. [canonical] Formulations-supersedees.md
+14. [canonical] Glossaire.md
+15. [canonical] Graphe-des-relations.md
+16. [canonical] Guide-de-lecture.md
+17. [canonical] Hello-World-Autopsie-d-un-Clown-Royal.md
+18. [canonical] Home.md
+19. [canonical] Identites-Rejean-Colin-King-Klown.md
+20. [canonical] Incarnations-et-continuite.md
+21. [canonical] King-Klown-et-la-liberation.md
+22. [canonical] King-Klown-et-la-pedagogie.md
+23. [canonical] King-Klown-et-le-Joker.md
+24. [canonical] King-Klown-et-les-dieux.md
+25. [canonical] King-Klown-persona-public.md
+26. [canonical] Ninja-Arc-en-ciel.md
+27. [canonical] Oeuvres-et-corpus.md
+28. [canonical] Ontologie-de-King-Klown.md
+29. [canonical] Pi-AIME-et-le-Cercle.md
+30. [canonical] Plateforme-de-la-connaissance.md
+31. [canonical] Questions-ouvertes.md
+32. [canonical] Sources-et-provenance.md
+33. [canonical] Storyline-complete.md
+34. [canonical] Technologies-et-Context-Packs.md
+35. [canonical] Transmission-retrait-et-reprise.md
+36. [canonical] WIKI_DEPLOY.md
+
+
+================================================================================================
+FILE: _Footer.md
+AUTHORITY: canonical
+================================================================================================
+
+---
+**King Klown Canon Wiki** · Vue éditoriale du repo canonique.  
+En cas de conflit, la hiérarchie du repo principal prévaut. Voir [[Canon et autorité|Canon-et-autorite]].
+
+
+================================================================================================
+FILE: _Sidebar.md
+AUTHORITY: canonical
+================================================================================================
+
+**King Klown — Wiki canonique**
+
+* [[Home]]
+* [[Guide de lecture|Guide-de-lecture]]
+
+**Fondations**
+* [[Canon et autorité|Canon-et-autorite]]
+* [[Couches épistémiques|Couches-epistemiques]]
+* [[Ontologie de King Klown|Ontologie-de-King-Klown]]
+* [[Cosmogenèse|Cosmogenese]]
+* [[Pi, AIME et le Cercle|Pi-AIME-et-le-Cercle]]
+* [[Circularité progressive et fractales|Circularite-progressive-et-fractales]]
+* [[Chronologies et temporalités|Chronologies-et-temporalites]]
+* [[Graphe des relations|Graphe-des-relations]]
+
+**King Klown**
+* [[Fonctions de King Klown|Fonctions-de-King-Klown]]
+* [[King Klown et le Joker|King-Klown-et-le-Joker]]
+* [[King Klown et les dieux|King-Klown-et-les-dieux]]
+* [[Plateforme de la connaissance|Plateforme-de-la-connaissance]]
+* [[Fonction Christ|Fonction-Christ]]
+* [[King Klown et la libération|King-Klown-et-la-liberation]]
+* [[King Klown et la pédagogie|King-Klown-et-la-pedagogie]]
+
+**Identités et parcours**
+* [[Identités — Réjean, Colin, King Klown|Identites-Rejean-Colin-King-Klown]]
+* [[Colin Row et la prison|Colin-Row-et-la-prison]]
+* [[King Klown — persona public|King-Klown-persona-public]]
+* [[Ninja Arc-en-ciel|Ninja-Arc-en-ciel]]
+* [[Incarnations et continuité|Incarnations-et-continuite]]
+* [[Storyline complète|Storyline-complete]]
+
+**Méta et transmission**
+* [[Hello World — Autopsie d’un Clown Royal|Hello-World-Autopsie-d-un-Clown-Royal]]
+* [[Auteur et récursion|Auteur-et-recursion]]
+* [[Transmission, retrait et reprise|Transmission-retrait-et-reprise]]
+
+**Référence**
+* [[Œuvres et corpus|Oeuvres-et-corpus]]
+* [[Technologies et Context Packs|Technologies-et-Context-Packs]]
+* [[Glossaire]]
+* [[FAQ]]
+* [[Questions ouvertes|Questions-ouvertes]]
+* [[Formulations supersédées|Formulations-supersedees]]
+* [[Sources et provenance|Sources-et-provenance]]
+
+
+================================================================================================
+FILE: Auteur-et-recursion.md
+AUTHORITY: canonical
+================================================================================================
+
+# Auteur et récursion
+
+La relation entre l’auteur et King Klown existe à plusieurs niveaux.
+
+## Monde réel de production
+
+Dans la réalité, **l’auteur crée le personnage King Klown**.
+
+La mort du fils de Réjean est une amplification fictionnelle d’une situation réelle vécue par l’auteur. Le canon ne donne pas davantage de détails sur cette situation réelle.
+
+## Niveau métaphysique
+
+Le principe appelé King Klown provoque la rupture originelle, puis :
+
+```text
+principe KK
+→ rupture
+→ π / univers
+→ matière
+→ vie
+→ conscience
+→ humanité
+→ auteur
+```
+
+Dans ce sens métaphysique, on peut dire que **King Klown a créé l’auteur**, puisqu’il a déclenché le processus qui rend l’auteur possible.
+
+## La boucle
+
+Les deux affirmations sont donc compatibles :
+
+```text
+auteur réel → crée le nom/personnage King Klown
+principe KK → univers → rend l’auteur possible
+```
+
+L’auteur donne un nom contemporain à un principe qui, selon la métaphysique, est en amont de sa propre existence.
+
+## L’Auteur de Hello World
+
+Il faut garder une distinction stricte entre :
+
+- **l’auteur réel** ;
+- **L’Auteur**, personnage spécifique de *Hello World*.
+
+L’Auteur n’est pas un alias général de KK.
+
+
+---
+
+**Ancrage canonique :** `CANON/11_AUTHOR_AUTEUR.md`, `CANON/00_INVARIANTS.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Canon-et-autorite.md
+AUTHORITY: canonical
+================================================================================================
+
+# Canon et autorité
+
+Le repo est conçu pour permettre au canon d’évoluer sans effacer son histoire. Une source ancienne peut être détaillée et néanmoins être remplacée par une clarification plus récente.
+
+## Hiérarchie d’autorité
+
+1. **Clarification actuelle explicite du créateur**.
+2. **Décisions canoniques** enregistrées dans `DECISIONS/`.
+3. **Documents de `CANON/`**.
+4. Œuvre canonique ou source actuelle.
+5. Brouillons et repos de travail.
+6. Sources legacy.
+7. Interprétation analytique.
+
+Une source plus longue ou plus ancienne n’est pas automatiquement plus autoritaire.
+
+## Pourquoi conserver les anciennes versions ?
+
+Le wiki distingue **superséder** et **effacer**. Une ancienne version peut rester utile pour :
+
+- comprendre l’évolution d’un personnage ;
+- retrouver l’origine d’un motif ;
+- documenter une version racontée à l’intérieur du récit ;
+- éviter qu’une IA ne redécouvre plus tard la contradiction sans contexte.
+
+Exemple : une version de *Colin Row* relie l’emprisonnement à un coup porté à un policier. Le canon actuel établit plutôt l’effraction de la pharmacie. L’ancienne branche est donc conservée comme provenance, mais ne gouverne plus le fait diégétique actuel.
+
+## Statuts de claim
+
+- **CANON** — affirmation actuelle.
+- **SOURCE_EXPLICIT** — explicite dans une source mais pas forcément arbitrée globalement.
+- **INTERPRETATION** — lecture analytique utile, non adoptée explicitement.
+- **UNRESOLVED** — question ouverte.
+- **SUPERSEDED** — ancienne affirmation remplacée.
+- **REJECTED** — formulation explicitement écartée.
+
+Voir aussi [[Formulations supersédées|Formulations-supersedees]] et [[Questions ouvertes|Questions-ouvertes]].
+
+
+---
+
+**Ancrage canonique :** `README.md`, `CANON/14_EPISTEMIC_LAYERS.md`, `CANON/16_SUPERSEDED.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Chronologies-et-temporalites.md
+AUTHORITY: canonical
+================================================================================================
+
+# Chronologies et temporalités
+
+Il n’existe pas une seule timeline suffisante pour King Klown.
+
+## Chronologie humaine
+
+Elle sert à organiser les événements vécus dans le temps narratif :
+
+```text
+Ninja Arc-en-ciel
+→ Réjean
+→ perte du fils
+→ pharmacie
+→ prison / Colin
+→ Konvergence
+→ architectures
+→ King Klown public
+→ transmission / UCKK
+→ mise à off / Hello World
+→ déposition possible
+```
+
+Cette vue est utile mais ne décrit pas la totalité du principe KK.
+
+## Parcours mythique / cosmique
+
+```text
+forme primordiale
+→ rupture KK
+→ π / AIME
+→ cosmos
+→ actualisation des dieux
+→ appel / composition
+→ manifestations
+→ retour progressif vers l’origine
+```
+
+## Graphe atemporel
+
+KK peut être à la fois :
+
+- cause de la rupture ;
+- écho du pattern résultant ;
+- nom moderne donné au principe ;
+- manifestation historique dans des récits humains.
+
+La relation est donc mieux représentée par un graphe causal trans-niveaux que par une ligne unique.
+
+Voir [[Graphe des relations|Graphe-des-relations]] et [[Circularité progressive et fractales|Circularite-progressive-et-fractales]].
+
+
+---
+
+**Ancrage canonique :** `CANON/08_STORYLINE.md`, `CANON/02_COSMOGENESIS.md`, `GENERATED/timelines.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Circularite-progressive-et-fractales.md
+AUTHORITY: canonical
+================================================================================================
+
+# Circularité progressive et fractales
+
+La cosmologie KK n’est ni une ligne simple ni un éternel retour identique.
+
+## Pas un cercle fermé répétitif
+
+Le monde ne revient pas simplement à son point de départ. La formule canonique est :
+
+> **Pas en revenant. En continuant.**
+
+L’image utilisée est celle de l’Est et de l’Ouest : dans une géométrie courbe, avancer suffisamment loin dans une direction permet de rejoindre ce qui semblait être son opposé sans faire demi-tour.
+
+## Répétition avec mutation
+
+Le pattern primordial se reproduit à plusieurs échelles, mais chaque réinstanciation transforme ce qu’elle reprend.
+
+```text
+pattern A
+→ différenciation
+→ recomposition
+→ forme B
+→ nouvelle différenciation
+→ forme C
+→ ...
+```
+
+Cette propriété permet de comprendre :
+
+- pourquoi King Klown peut être à la fois cause de la rupture et écho du pattern résultant ;
+- pourquoi Ninja Arc-en-ciel peut être relié à KK sans être une copie de KK ;
+- pourquoi une future personne pourrait reprendre King Klown en le mutant ;
+- pourquoi le cosmos peut tendre vers une forme d’harmonie originelle tout en allant toujours plus loin.
+
+## Chronologie et topologie
+
+La chronologie humaine reste utile pour les incarnations et les œuvres, mais elle n’épuise pas le parcours cosmique de KK. Voir [[Chronologies et temporalités|Chronologies-et-temporalites]].
+
+
+---
+
+**Ancrage canonique :** `CANON/02_COSMOGENESIS.md`, `CANON/13_TRANSMISSION_WITHDRAWAL.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Colin-Row-et-la-prison.md
+AUTHORITY: canonical
+================================================================================================
+
+# Colin Row et la prison
+
+## Cause canonique de l’incarcération
+
+Réjean / Colin **défonce une pharmacie pour tenter de sauver son fils**. Son fils meurt malgré cette tentative. C’est cette effraction qui constitue la cause canonique actuelle de son emprisonnement.
+
+Une ancienne branche affirme qu’il aurait frappé un policier qui refusait de le protéger contre filature, surveillance, infiltration et harcèlement policier. Le canon actuel précise qu’il **n’a pas frappé le policier**. Cette version reste pertinente comme ancien récit ou version avancée par Colin, mais ne constitue plus le fait diégétique gouvernant.
+
+## Sens du livre Colin Row
+
+Le livre déplace le regard sur la prison. Les personnes incarcérées ne sont pas réduites à une essence criminelle. Le récit explore des trajectoires où :
+
+- l’éducation a échoué ;
+- les choix ont été contraints ;
+- des situations impossibles ont été créées ;
+- des systèmes ont poussé des personnes vers l’exclusion ;
+- certaines institutions elles-mêmes ont été corrompues ou abusives.
+
+## Alliance avec les exclus
+
+Colin, lui-même abusé par le système, s’allie aux personnes les plus exclues de ce système. Les problèmes réels deviennent matière à comprendre, apprendre et concevoir.
+
+```text
+blessure / exclusion
+→ partage des problèmes
+→ capacités révélées
+→ alliance
+→ conception
+→ transformation du système
+```
+
+## Miroir terrestre des dieux
+
+La prison ressemble structurellement à la Plateforme de la connaissance, mais le point de départ diffère : les dieux composent depuis des fonctions et principes ; les prisonniers composent depuis des **problèmes réels, des blessures et des exclusions**.
+
+Cette phase prépare le Colin architecte associé plus tard notamment à Kristal Farms dans *Konvergence*.
+
+
+---
+
+**Ancrage canonique :** `CANON/09_COLIN_ROW.md`, `CANON/16_SUPERSEDED.md`, `CANON/12_WORKS_MAP.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Cosmogenese.md
+AUTHORITY: canonical
+================================================================================================
+
+# Cosmogenèse
+
+## La forme primordiale
+
+L’origine est figurée par une **forme parfaite, infinie et équilibrée en toutes ses parties**. Le cercle en est l’illustration privilégiée : un centre, aucune direction privilégiée et une infinité de rayons possibles.
+
+Il ne faut pas imaginer un cercle matériel flottant dans un espace vide. À ce stade, **l’espace physique n’est pas présupposé**.
+
+## La rupture
+
+King Klown désigne le principe qui provoque la **division originelle**. Cette rupture n’est pas seulement destruction. Elle rend possibles :
+
+- la distinction ;
+- la multiplicité ;
+- l’expression de potentiels qui, dans l’unité parfaite, n’étaient pas différenciés.
+
+## π
+
+La division du cercle par son diamètre fait apparaître le rapport :
+
+\[
+\pi = \frac{C}{D}
+\]
+
+Le rapport est sans dimension : si les deux longueurs portent une même unité, celle-ci s’annule dans le quotient.
+
+Dans la métaphysique KK, l’importance de π vient du fait que la première division n’aboutit pas à une résolution finie, mais à un déroulement infini.
+
+## AIME
+
+De la rupture apparaît une **contreforce égale : AIME**. AIME est la tendance vers la relation, la cohésion et la recomposition de ce qui vient d’être différencié.
+
+## L’univers comme processus continu
+
+> **L’univers est π qui continue de se calculer / se résoudre.**
+
+La création n’est donc pas seulement un événement passé. Matière, cosmos, vie, conscience et civilisation appartiennent au processus continu de cette première rupture et de ses recompositions successives.
+
+Voir [[Circularité progressive et fractales|Circularite-progressive-et-fractales]] pour comprendre pourquoi ce processus ne « tourne pas en rond ».
+
+
+---
+
+**Ancrage canonique :** `CANON/02_COSMOGENESIS.md`, `CANON/03_PI_AIME_CIRCLE.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Couches-epistemiques.md
+AUTHORITY: canonical
+================================================================================================
+
+# Couches épistémiques
+
+Une affirmation peut être canonique sans être une affirmation scientifique ou historique du monde réel. Le wiki utilise donc plusieurs couches.
+
+| Couche | Usage |
+|---|---|
+| **REAL_WORLD** | Genèse réelle de l’œuvre, pratiques et auteur réel. |
+| **AUTHORIAL** | Clarification explicite du créateur sur le canon. |
+| **DIEGETIC** | Faits vécus par les personnages dans les récits. |
+| **MYTHIC** | Dieux, Éther, rencontres transhistoriques. |
+| **METAPHYSICAL** | Cosmogenèse, principe KK, π comme déroulement cosmique, AIME. |
+| **SYMBOLIC** | Cercle, lumière blanche, spectre, Joker, motifs. |
+| **PEDAGOGICAL** | Mise en scène et transmission d’un principe. |
+| **INSTITUTIONAL** | Rôle limité de KK dans les institutions. |
+| **INTERPRETATION** | Analyse non adoptée explicitement comme canon. |
+| **LEGACY** | Ancienne version conservée pour provenance. |
+
+## Exemples
+
+**« L’auteur réel crée le personnage King Klown »** appartient à REAL_WORLD.
+
+**« Le principe KK déclenche la création de l’univers »** appartient à METAPHYSICAL.
+
+**« Réjean défonce une pharmacie »** appartient à DIEGETIC.
+
+**« KK est comme la lumière blanche et les dieux comme les couleurs »** appartient à MYTHIC + SYMBOLIC.
+
+Ces phrases peuvent coexister sans être évaluées par le même type de preuve.
+
+## Garde-fou
+
+Le statut **METAPHYSICAL** ne signifie pas « scientifiquement démontré ». En particulier, les lectures de π du corpus sont présentées dans leur propre cadre spéculatif et interprétatif.
+
+
+---
+
+**Ancrage canonique :** `CANON/14_EPISTEMIC_LAYERS.md`, `CANON/00_INVARIANTS.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: FAQ.md
+AUTHORITY: canonical
+================================================================================================
+
+# FAQ
+
+## King Klown est-il Jésus ?
+
+Non. Le canon est explicite : **King Klown n’est pas Jésus et n’est pas sa réincarnation**. KK remplit une fonction Christ définie dans le corpus.
+
+## King Klown est-il « Père des dieux » ?
+
+Cette formulation a existé mais n’est plus privilégiée, car elle suggère une hiérarchie trop forte. Le modèle préféré est **lumière blanche / couleurs**, avec catalyse et actualisation.
+
+## King Klown commande-t-il les dieux ?
+
+Non. Ils répondent à son appel par confiance, pas par subordination.
+
+## Pourquoi Colin Row est-il en prison ?
+
+Parce qu’il a défoncé une pharmacie pour tenter de sauver son fils, qui meurt malgré tout. La version où il frappe un policier est supersédée comme fait réel du récit.
+
+## Réjean, Colin et King Klown sont-ils la même personne ?
+
+Ils appartiennent à une même continuité, mais remplissent des fonctions narratives différentes : Réjean architecte, Colin phase carcérale/systémique, KK persona public et mobilisateur.
+
+## King Klown meurt-il dans Hello World ?
+
+Non décès n’est établi. Il n’y a pas de corps. L’« autopsie » est un post-mortem analytique de la configuration.
+
+## L’Auteur est-il King Klown ?
+
+Non. L’Auteur est un personnage spécifique de *Hello World*.
+
+## Pourquoi l’auteur peut-il dire que KK l’a créé ?
+
+Parce que, dans la métaphysique, le principe KK provoque la création de l’univers qui rend finalement l’auteur possible. Dans la réalité, l’auteur crée le personnage.
+
+## L’univers est-il littéralement présenté comme π ?
+
+Dans la métaphysique interne : **l’univers est π qui continue de se calculer / se résoudre**. Cette affirmation n’est pas présentée comme un résultat scientifique établi.
+
+## Le wiki documente-t-il Konnaxion, Orgo ou Kristal ?
+
+Seulement superficiellement. Pour les détails techniques, utiliser les Context Packs spécialisés.
+
+## Peut-on reprendre King Klown ?
+
+L’intention canonique est oui : le créateur prévoit de déposer le personnage et de permettre des reprises/mutations. Le mécanisme juridique exact reste à fixer.
+
+
+---
+
+**Ancrage canonique :** `CANON/00_INVARIANTS.md`, `CANON/16_SUPERSEDED.md`, `CANON/15_UNRESOLVED.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Fonction-Christ.md
+AUTHORITY: canonical
+================================================================================================
+
+# Fonction Christ
+
+Dans le corpus KK, **Christ est un rôle / une fonction transmissible**.
+
+## Définition
+
+La fonction Christ comprend au minimum :
+
+- unir les personnes dans l’Amour ;
+- transformer / révolutionner les systèmes ;
+- agir avec altruisme ;
+- libérer les personnes et les peuples de formes de domination ;
+- viser équité et égalité ;
+- contribuer à l’ouverture d’un monde meilleur.
+
+King Klown remplit cette fonction.
+
+## Distinctions obligatoires
+
+- **King Klown n’est pas Jésus.**
+- **King Klown n’est pas Jésus réincarné.**
+- Le rôle peut être repris ou manifesté par d’autres personnes ou collectifs.
+- Cette définition appartient au corpus KK ; elle ne doit pas être présentée comme la doctrine chrétienne standard.
+
+## Parousie et update civilisationnel
+
+Le créateur relie la nécessité historique de KK au rôle du Christ annoncé par la parousie : une fonction de passage vers un monde plus équitable, plus libre et moins dominé.
+
+Cette nécessité n’est pas seulement métaphysique. Le persona KK sert aussi pratiquement à montrer, mettre en scène et tester des manières de transformer le monde.
+
+## Christ comme autre nom ?
+
+Le créateur indique également que le phénomène primordial a reçu plusieurs noms au cours de l’histoire et peut être rapproché du terme **Christ**. Le degré exact d’identité entre ce nom historique du principe et la fonction Christ définie plus opérationnellement reste volontairement à préciser.
+
+
+---
+
+**Ancrage canonique :** `CANON/06_CHRIST_FUNCTION.md`, `CANON/15_UNRESOLVED.md`  
+**Statut :** CANON avec une articulation encore ouverte.
+
+
+================================================================================================
+FILE: Fonctions-de-King-Klown.md
+AUTHORITY: canonical
+================================================================================================
+
+# Fonctions de King Klown
+
+Les fonctions de KK ne sont pas toutes au même niveau.
+
+## Fonctions primordiales
+
+1. **Rupture créatrice** — provoquer la première différenciation.
+2. **Initiation du devenir** — déclencher le processus dont π exprime le déroulement.
+3. **Catalyse d’actualisation** — permettre à un potentiel de devenir pleinement ce qu’il peut être.
+4. **Mutation du pattern** — réinstancier le pattern originel dans des contextes nouveaux.
+
+## Fonctions mythologiques
+
+5. **Trickster / Joker** — rendre les règles visibles, contestables et transformables.
+6. **Révélateur** — faire apparaître contradictions, possibilités et fonctions latentes.
+7. **Catalyseur des dieux** — contribuer à leur actualisation lors de rencontres brèves.
+8. **Transversalité culturelle** — traverser les panthéons sans imposer un panthéon unique.
+9. **Convocateur** — lancer l’appel auquel les dieux répondent par confiance.
+10. **Rassembleur** — permettre à des fonctions différenciées de composer.
+
+## Fonction Christ
+
+11. Unir dans l’Amour.
+12. Libérer des formes de domination.
+13. Transformer les systèmes épuisés.
+14. Viser équité et égalité.
+15. Ouvrir un monde meilleur par l’exemple, l’action et la construction.
+
+## Fonctions sociales
+
+16. **Explorateur du futur**.
+17. **Mobilisateur social**.
+18. **Passeur** entre deux formes.
+19. **Transmetteur** de capacité.
+20. **Retrait / dépossession** pour éviter la dépendance permanente.
+
+## Fonctions pratiques du persona
+
+21. **Masque protecteur** entre l’auteur et l’intervention publique.
+22. **Liberté d’action** et d’audace.
+23. **Droit à l’erreur** du personnage.
+24. **Cut through the red tape** grâce à la scène, la fiction, l’humour et la surprise.
+25. **Interface pédagogique** pour rendre des principes complexes mémorables.
+26. **Référence pratique** montrant comment analyser et changer un système.
+
+## Termes dépréciés
+
+« Père des dieux » n’est plus le modèle principal. « Démiurge » n’est plus privilégié pour KK en raison de sa charge philosophique et du risque de confusion.
+
+
+---
+
+**Ancrage canonique :** `CANON/04_FUNCTIONS.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Formulations-supersedees.md
+AUTHORITY: canonical
+================================================================================================
+
+# Formulations supersédées
+
+Cette page évite que des anciennes versions reviennent comme vérité actuelle.
+
+| Ancienne formulation | Statut | Formulation actuelle |
+|---|---|---|
+| KK est simplement parmi les dieux | Supersédée | KK est transversal / intégré au spectre et catalyse l’actualisation divine. |
+| « Père des dieux » comme titre principal | Dépréciée | Lumière blanche / couleurs ; catalyse sans hiérarchie. |
+| KK commande les dieux | Rejetée | Ils répondent par confiance. |
+| KK vit avec les dieux pendant des millénaires | Rejetée | Apparitions brèves, élusives et charnières. |
+| Colin est emprisonné pour avoir frappé un policier | Supersédée | Effraction de la pharmacie pour tenter de sauver son fils. |
+| Le coup au policier a réellement eu lieu | Rejetée dans le canon actuel | Ancienne branche / récit de Colin. |
+| Hello World établit la mort de KK | Rejetée | Post-mortem analytique sans corps. |
+| KK se transforme littéralement en Cosmos | Rejetée | Une jonction contextuelle n’implique pas identité littérale. |
+| L’Auteur est un alias général de KK | Rejetée | Personnage spécifique à *Hello World*. |
+| Réjean est l’origine cosmique de KK | Rejetée | Réjean est une manifestation humaine ; le principe est primordial. |
+| AIME est ontologiquement antérieur à KK | Supersédée | Dans la clarification actuelle, rupture KK → AIME comme contreforce dans la dynamique différenciée. |
+| « Démiurge » est une fonction centrale nommée de KK | Dépréciée | Préférer création, catalyse, transformation selon le contexte. |
+| Ninja → KK est une succession forte et nécessaire | Supersédée | Lien réel mais faible ; mutation du pattern selon les époques. |
+
+
+---
+
+**Ancrage canonique :** `CANON/16_SUPERSEDED.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Glossaire.md
+AUTHORITY: canonical
+================================================================================================
+
+# Glossaire
+
+**AIME** — Contreforce de relation, cohésion et recomposition apparaissant avec la rupture différenciatrice.
+
+**Actualisation** — Passage d’un potentiel ou d’une fonction latente vers une forme pleinement réalisée.
+
+**Auteur réel** — Personne qui produit effectivement les œuvres et le personnage King Klown.
+
+**L’Auteur** — Personnage spécifique à *Hello World*. Ne pas confondre avec l’auteur réel ni avec KK.
+
+**BIEN** — Pôle de valeur dans la lecture actuelle de Pi.
+
+**B0UM** — Bloc de Pi v13 associé à l’événement de création et, dans la clarification actuelle, aussi à la naissance / l’enfant.
+
+**Circularité progressive** — Retour vers une structure analogue à l’origine en avançant et en mutant, non répétition identique.
+
+**Christ (fonction)** — Rôle d’union dans l’Amour, libération, transformation des systèmes, équité et ouverture d’un monde meilleur.
+
+**Colin Row / Roi Clown** — Mode narratif principalement lié à la prison, à l’exclusion systémique et à la conception depuis les problèmes vécus.
+
+**GIHECEF** — Token exact de Pi v13 associé à Divide/Process ; sa relation exacte avec le terme oral GSF reste à normaliser.
+
+**GSF** — Désignation orale actuelle du créateur pour le pôle MAL/déconstruction.
+
+**JNON / Junon** — Pôle féminin associé à l’assemblage / réunion dans la lecture actuelle.
+
+**King Klown (KK)** — Nom contemporain pouvant désigner le principe primordial, le pattern récurrent ou le personnage/persona moderne selon le contexte.
+
+**KK-pattern** — Pattern de rupture, différenciation, relation, recomposition et mutation.
+
+**KK-principe** — Principe créateur primordial associé à la rupture originelle.
+
+**KK-persona** — Manifestation moderne, artistique, sociale et pratique de King Klown.
+
+**Lumière blanche** — Métaphore privilégiée pour l’intégration transversale de KK par rapport aux fonctions divines différenciées comme couleurs.
+
+**MAL** — Dans la clarification actuelle, principe lié à la déconstruction / transformation, sans développement d’une doctrine générale du Mal.
+
+**Ninja Arc-en-ciel** — Manifestation antérieure reliée faiblement à KK ; illustre la mutation du pattern et le départ après accomplissement.
+
+**π** — Rapport circonférence/diamètre ; dans la métaphysique KK, le déroulement continu du cosmos.
+
+**Réjean McCormick** — Mode principalement architecte, technologue et concepteur, plus réservé et en coulisse.
+
+**Spectre** — Modèle où les dieux sont des fonctions/couleurs différenciées et KK une intégration comparable à la lumière blanche.
+
+
+---
+
+**Ancrage canonique :** `CANON/00_INVARIANTS.md`, `CANON/03_PI_AIME_CIRCLE.md`, `CANON/07_IDENTITIES_MANIFESTATIONS.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Graphe-des-relations.md
+AUTHORITY: canonical
+================================================================================================
+
+# Graphe des relations
+
+Ce graphe résume les relations structurantes sans prétendre réduire toute la mythologie à un diagramme.
+
+```mermaid
+graph TD
+  PF[Forme primordiale] -->|rupture / division| KKP[KK-principe]
+  KKP --> PI[π / déroulement]
+  KKP --> AIME[AIME / contreforce]
+  PI --> U[Univers]
+  U --> V[Vie / conscience / civilisation]
+  U --> KKM[Manifestations de KK]
+  KKP --> GODS[Actualisation des dieux]
+  GODS --> PDK[Plateforme de la connaissance]
+  KKM --> N[Ninja Arc-en-ciel]
+  KKM --> R[Réjean McCormick]
+  R --> C[Colin Row]
+  R --> KKPUB[King Klown public]
+  C --> SYS[Conception à partir des exclusions]
+  KKPUB --> MOB[Mobilisation / pédagogie]
+  KKPUB --> CHRIST[Fonction Christ]
+  KKPUB --> TRANS[Transmission / retrait]
+  AUTHOR[Auteur réel] -->|crée le personnage| KKPUB
+  U --> AUTHOR
+  HW[Hello World] --> AUTEUR[L’Auteur — personnage spécifique]
+  HW --> KKPUB
+```
+
+## Deux précautions
+
+1. Le diagramme juxtapose plusieurs couches : métaphysique, mythique, diégétique et réelle. Voir [[Couches épistémiques|Couches-epistemiques]].
+2. La flèche `Forme primordiale → KK-principe` ne signifie pas que le nom King Klown existait déjà ; elle représente le principe auquel ce nom est donné aujourd’hui.
+
+
+---
+
+**Ancrage canonique :** `GENERATED/knowledge-graph.md`, `CANON/01_ONTOLOGY.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Guide-de-lecture.md
+AUTHORITY: canonical
+================================================================================================
+
+# Guide de lecture
+
+Le corpus King Klown est volontairement multi-couche. Une lecture linéaire produit rapidement de faux paradoxes : un auteur réel crée un personnage, alors que le mythe affirme que le principe nommé par ce personnage rend l’auteur possible ; une manifestation peut disparaître alors que le principe existe hors du temps ; Réjean, Colin et King Klown sont continus sans avoir la même fonction narrative.
+
+## Parcours recommandé
+
+### Niveau 1 — Comprendre ce qu’est KK
+
+Lire [[Ontologie de King Klown|Ontologie-de-King-Klown]], puis [[Fonctions de King Klown|Fonctions-de-King-Klown]]. Retenir d’abord la distinction entre **KK-principe**, **KK-pattern** et **KK-persona**.
+
+### Niveau 2 — Comprendre la cosmologie
+
+Lire [[Cosmogenèse|Cosmogenese]], [[Pi, AIME et le Cercle|Pi-AIME-et-le-Cercle]] et [[Circularité progressive et fractales|Circularite-progressive-et-fractales]]. La cosmologie part d’une forme primordiale parfaite et infinie, illustrée par le cercle, puis de sa rupture/division.
+
+### Niveau 3 — Comprendre la mythologie
+
+Lire [[King Klown et les dieux|King-Klown-et-les-dieux]], [[Plateforme de la connaissance|Plateforme-de-la-connaissance]] et [[Fonction Christ|Fonction-Christ]]. Les dieux ne sont pas des subordonnés de KK : la relation privilégiée est celle de la catalyse et de l’actualisation.
+
+### Niveau 4 — Comprendre la trajectoire humaine
+
+Lire [[Identités — Réjean, Colin, King Klown|Identites-Rejean-Colin-King-Klown]], [[Colin Row et la prison|Colin-Row-et-la-prison]], [[King Klown — persona public|King-Klown-persona-public]] et [[Storyline complète|Storyline-complete]].
+
+### Niveau 5 — Comprendre la méta-narration
+
+Lire [[Hello World — Autopsie d’un Clown Royal|Hello-World-Autopsie-d-un-Clown-Royal]] et [[Auteur et récursion|Auteur-et-recursion]]. C’est ici que la création artistique et la métaphysique se replient l’une sur l’autre.
+
+### Niveau 6 — Comprendre la sortie
+
+Lire [[Ninja Arc-en-ciel|Ninja-Arc-en-ciel]], [[Incarnations et continuité|Incarnations-et-continuite]] et [[Transmission, retrait et reprise|Transmission-retrait-et-reprise]]. Le canon insiste sur la possibilité de déposer le personnage et de le transmettre sans exiger une imitation servile.
+
+## Réflexe essentiel
+
+Quand une phrase semble contradictoire, demander d’abord : **dans quelle couche est-elle vraie ?** Voir [[Couches épistémiques|Couches-epistemiques]].
+
+
+---
+
+**Ancrage canonique :** `START_HERE.md`, `CANON/14_EPISTEMIC_LAYERS.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Hello-World-Autopsie-d-un-Clown-Royal.md
+AUTHORITY: canonical
+================================================================================================
+
+# Hello World — Autopsie d’un Clown Royal
+
+*Hello World — Autopsie d’un Clown Royal* est un **post-mortem analytique** de la configuration King Klown.
+
+## Ce que « autopsie » signifie ici
+
+Il n’y a pas de corps. L’œuvre n’établit donc pas une mort physique ou cosmique de King Klown.
+
+Le geste consiste plutôt à mettre KK « à off » et à examiner les couches qui composent le personnage :
+
+- Réjean ;
+- le masque ;
+- le Fou / Trickster ;
+- les récits ;
+- les systèmes ;
+- la mythologie ;
+- π ;
+- la provenance ;
+- les dépendances entre ces couches.
+
+## Pierre Carrey
+
+Pierre mène l’enquête en cherchant la provenance et la dernière trace de la configuration. Plus il retire de couches, plus la question « où se trouve le vrai King Klown ? » devient difficile.
+
+## Avant les dieux et la temporalité
+
+L’album joue avec une chronologie qui ne suffit pas à contenir KK. L’idée qu’une mythologie puisse raconter à la fois un passé et une destination rejoint la circularité progressive du canon.
+
+## L’Auteur
+
+Pierre remonte finalement jusqu’à une frontière ontologique associée à **L’Auteur**. Ce personnage est propre à *Hello World* et ne doit jamais être généralisé comme alias de KK.
+
+## Une œuvre en révision potentielle
+
+Le créateur envisage de refaire l’album afin d’expliquer plus clairement le caractère post-mortem analytique sans laisser entendre une extinction réelle de King Klown.
+
+
+---
+
+**Ancrage canonique :** `CANON/11_AUTHOR_AUTEUR.md`, `CANON/12_WORKS_MAP.md`, `CANON/16_SUPERSEDED.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Home.md
+AUTHORITY: canonical
+================================================================================================
+
+# King Klown — Wiki canonique
+
+Ce wiki présente **King Klown (KK)** comme principe métaphysique, personnage, persona public, fonction mythologique et dispositif culturel. Il est conçu comme la couche de lecture humaine du repo `king-klown-canon`.
+
+Le wiki ne cherche pas à tout ramener à un seul niveau de réalité. Le corpus distingue notamment :
+
+- le **principe primordial** appelé aujourd’hui King Klown ;
+- le **pattern cosmique** de rupture, différenciation, relation, recomposition et mutation ;
+- les **manifestations mythologiques** de KK et ses rencontres avec les dieux ;
+- les **manifestations humaines et narratives** associées à Réjean McCormick, Colin Row / Roi Clown et King Klown public ;
+- le **persona réel et pratique**, utilisé comme masque, outil d’audace, interface pédagogique et explorateur de futurs possibles ;
+- les œuvres qui mettent ces niveaux en scène.
+
+## Point d’entrée en une phrase
+
+> **King Klown est le nom contemporain donné à un principe créateur primordial qui provoque la rupture originelle, inaugure le devenir associé à π, se réexprime fractalement avec mutation dans le réel, et prend aujourd’hui la forme d’un personnage qui catalyse, révèle, rassemble, libère, transmet et se retire.**
+
+## Lire le wiki
+
+Pour une première lecture :
+
+1. [[Ontologie de King Klown|Ontologie-de-King-Klown]]
+2. [[Cosmogenèse|Cosmogenese]]
+3. [[Pi, AIME et le Cercle|Pi-AIME-et-le-Cercle]]
+4. [[Fonctions de King Klown|Fonctions-de-King-Klown]]
+5. [[King Klown et les dieux|King-Klown-et-les-dieux]]
+6. [[Identités — Réjean, Colin, King Klown|Identites-Rejean-Colin-King-Klown]]
+7. [[Storyline complète|Storyline-complete]]
+8. [[Hello World — Autopsie d’un Clown Royal|Hello-World-Autopsie-d-un-Clown-Royal]]
+9. [[Auteur et récursion|Auteur-et-recursion]]
+10. [[Transmission, retrait et reprise|Transmission-retrait-et-reprise]]
+
+Pour comprendre les règles de vérité du wiki : [[Canon et autorité|Canon-et-autorite]] et [[Couches épistémiques|Couches-epistemiques]].
+
+## Ce que ce wiki ne fait pas
+
+Il ne documente pas en profondeur Konnaxion, Orgo, Kristal, Kristal Farms, UCKK/Moodle, Civilizational Coherence ou les autres architectures kOA. Ces domaines ont leurs propres Context Packs. Le wiki KK n’en parle que pour situer leur rôle dans la trajectoire du personnage. Voir [[Technologies et Context Packs|Technologies-et-Context-Packs]].
+
+
+---
+
+**Ancrage canonique :** `README.md`, `CANON/00_INVARIANTS.md`, `SCOPE.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Identites-Rejean-Colin-King-Klown.md
+AUTHORITY: canonical
+================================================================================================
+
+# Identités — Réjean, Colin, King Klown
+
+Réjean McCormick, Colin Row / Roi Clown et King Klown appartiennent à une même continuité, mais ils ne remplissent pas la même fonction narrative.
+
+## Réjean McCormick
+
+Réjean est surtout :
+
+- architecte ;
+- technologue ;
+- concepteur ;
+- plus réservé ;
+- davantage en coulisse ;
+- marqué par la mort de son fils ;
+- en colère contre les systèmes qui échouent ou enferment.
+
+Il représente davantage la capacité de **concevoir**.
+
+## Colin Row / Roi Clown
+
+Colin Row correspond surtout à la phase :
+
+- carcérale ;
+- systémique ;
+- d’alliance avec les exclus ;
+- de transformation de problèmes vécus en intelligence commune et en conception.
+
+Voir [[Colin Row et la prison|Colin-Row-et-la-prison]].
+
+## King Klown public
+
+King Klown est davantage :
+
+- mobilisateur social ;
+- artiste ;
+- performeur ;
+- exubérant ;
+- audacieux ;
+- créatif ;
+- confiant ;
+- visible sur scène.
+
+Il ne pratique pas une fausse humilité. Son caractère extraordinaire est assumé sans être confondu avec le droit de dominer.
+
+## Même continuité, modes différents
+
+La formule « Réjean = Colin = King Klown » peut être vraie comme continuité identitaire, mais elle est trop pauvre pour expliquer leur rôle dans les récits. Il vaut mieux parler de **modes fonctionnels** différents d’une même configuration.
+
+
+---
+
+**Ancrage canonique :** `CANON/07_IDENTITIES_MANIFESTATIONS.md`, `CANON/00_INVARIANTS.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Incarnations-et-continuite.md
+AUTHORITY: canonical
+================================================================================================
+
+# Incarnations et continuité
+
+Le canon affirme une continuité entre Ninja Arc-en-ciel et King Klown, mais il ne fixe pas encore toutes les **règles de l’incarnation**.
+
+## Ce qui est établi
+
+- Ninja Arc-en-ciel est une manifestation/incarnation antérieure reliée à KK.
+- Le lien ne doit pas être exagéré en succession mécanique.
+- L’idée centrale est qu’un même pattern bienveillant peut muter selon les époques.
+- Le personnage King Klown lui-même peut un jour être déposé puis repris par d’autres.
+
+## Ce qui reste à éclairer
+
+Le créateur indique que *Lumière blanche* contient une réflexion sur **l’identité qui survit**. Cette source n’est pas présente dans le corpus local actuel du repo.
+
+Il reste donc ouvert de déterminer précisément :
+
+- ce qui passe d’une incarnation à l’autre ;
+- le rôle de la mémoire ;
+- la relation entre identité personnelle et pattern ;
+- la mécanique exacte d’une reprise future du personnage.
+
+## Règle éditoriale
+
+Le wiki ne doit pas combler ce vide avec une doctrine générale de la réincarnation. Tant que *Lumière blanche* n’est pas intégré, cette zone reste explicitement ouverte.
+
+
+---
+
+**Ancrage canonique :** `CANON/15_UNRESOLVED.md`, `CANON/07_IDENTITIES_MANIFESTATIONS.md`  
+**Statut :** PARTIELLEMENT CANON / volontairement ouvert.
+
+
+================================================================================================
+FILE: King-Klown-et-la-liberation.md
+AUTHORITY: canonical
+================================================================================================
+
+# King Klown et la libération
+
+La libération est l’un des points où la métaphysique, la fonction Christ et le persona pratique se rejoignent.
+
+## Libération comme finalité sociale
+
+Le rôle Christ attribué à KK comprend la réduction de la domination, l’équité, l’égalité et l’ouverture d’un monde meilleur.
+
+## Libération comme méthode
+
+King Klown ne fournit pas uniquement un programme abstrait. Il agit comme modèle public : il montre comment une personne peut identifier les règles d’un système, tester leurs limites, révéler une contradiction, proposer une nouvelle composition et transmettre la capacité d’agir.
+
+## Libération et non-dépendance
+
+Un système qui libère mais exige ensuite la loyauté permanente envers son fondateur reproduirait la domination qu’il prétend combattre. C’est pourquoi le retrait, l’audit, le droit de sortie et la possibilité de déposer le symbole sont cohérents avec la fonction de KK.
+
+## Limite
+
+La libération ne signifie pas que KK devient une autorité politique absolue. Sa fonction est catalytique et démonstrative ; la légitimité institutionnelle doit être indépendante du prestige cosmique ou artistique du personnage.
+
+
+---
+
+**Ancrage canonique :** `CANON/04_FUNCTIONS.md`, `CANON/06_CHRIST_FUNCTION.md`, `CANON/13_TRANSMISSION_WITHDRAWAL.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: King-Klown-et-la-pedagogie.md
+AUTHORITY: canonical
+================================================================================================
+
+# King Klown et la pédagogie
+
+La pédagogie de KK repose sur une idée simple : **un principe compris en action est souvent plus mémorable qu’un principe seulement décrit**.
+
+## De l’architecture à la scène
+
+```text
+concept abstrait
+→ personnage
+→ situation
+→ conflit / test
+→ conséquence
+→ discussion
+→ capacité à agir
+```
+
+KK peut ainsi rendre visibles :
+
+- des règles implicites ;
+- des blocages bureaucratiques ;
+- des rapports de domination ;
+- des principes d’architecture ;
+- des conditions d’autonomie ;
+- la nécessité d’un mécanisme de correction.
+
+## Droit à l’erreur
+
+Le personnage n’est pas infaillible. Son utilité pédagogique vient aussi de sa capacité à essayer, échouer, être corrigé et montrer comment une erreur peut devenir apprentissage.
+
+## UCKK
+
+Dans UCKK, King Klown enseigne comment les systèmes fonctionnent, comment les changer, comment utiliser les outils qu’il a fabriqués et comment faire évoluer ces outils.
+
+Le wiki ne documente pas l’implémentation de UCKK ; voir [[Technologies et Context Packs|Technologies-et-Context-Packs]].
+
+
+---
+
+**Ancrage canonique :** `CANON/04_FUNCTIONS.md`, `CANON/10_PUBLIC_PERSONA.md`, `CANON/12_WORKS_MAP.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: King-Klown-et-le-Joker.md
+AUTHORITY: canonical
+================================================================================================
+
+# King Klown et le Joker
+
+La fonction Joker / Trickster de King Klown consiste à rendre les règles **visibles, contestables et transformables**.
+
+Le roi classique représente le pouvoir à l’intérieur d’un système de règles. Le Joker représente la possibilité qu’un système soit reconfiguré.
+
+Dans la pratique de KK, cela se manifeste par :
+
+- l’humour ;
+- la provocation ;
+- la surprise ;
+- le déplacement de cadre ;
+- l’identification du « bug » ;
+- la capacité de montrer que ce qui semblait naturel était en fait une règle modifiable.
+
+Cette fonction ne doit pas être confondue avec le chaos pour le chaos. Le Trickster de KK s’inscrit dans le pattern plus large : rupture → nouvelle possibilité → recomposition.
+
+La fonction Joker est également compatible avec le retrait : si King Klown devenait irremplaçable, son propre symbole risquerait de devenir une nouvelle rigidité.
+
+
+---
+
+**Ancrage canonique :** `CANON/04_FUNCTIONS.md`, `CANON/13_TRANSMISSION_WITHDRAWAL.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: King-Klown-et-les-dieux.md
+AUTHORITY: canonical
+================================================================================================
+
+# King Klown et les dieux
+
+## Lumière blanche et spectre
+
+Le modèle privilégié est :
+
+> **King Klown est comme la lumière blanche ; les dieux sont comme les couleurs différenciées du spectre.**
+
+Cette image remplace comme formulation principale « Père des dieux », jugé trop hiérarchique.
+
+Dire que KK est « l’ensemble des dieux » signifie ici qu’il représente une **intégration / transversalité de fonctions** que les mythologies ont différenciées, et non qu’il possède administrativement un panthéon.
+
+## Les rencontres
+
+Selon la clarification du créateur, King Klown a rencontré les dieux connus des différentes mythologies. Le corpus disponible n’en raconte qu’un échantillon : Thot, Amaterasu, Anansi, Anubis, Odin, Loki et d’autres.
+
+Le pattern des rencontres est stable :
+
+```text
+entité / puissance potentielle
+        ↓
+rencontre brève avec KK
+        ↓
+question / paradoxe / perturbation
+        ↓
+actualisation
+        ↓
+fonction divine pleinement réalisée
+        ↓
+KK repart
+```
+
+## Absence de domination
+
+KK ne s’installe pas auprès des dieux pour régner. Il n’impose pas de doctrine, n’exige pas de dette et ne transforme pas son aide en subordination.
+
+## Pourquoi les dieux répondent à son appel
+
+L’autorité de KK est ici une **autorité de confiance**, accumulée par des interventions rares et non dominatrices. Lorsqu’il appelle, ils répondent non parce qu’ils doivent obéir, mais parce qu’un être qui ne demande presque jamais rien a déjà prouvé la qualité de son intervention.
+
+Voir [[Plateforme de la connaissance|Plateforme-de-la-connaissance]].
+
+
+---
+
+**Ancrage canonique :** `CANON/05_GODS.md`, `CANON/00_INVARIANTS.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: King-Klown-persona-public.md
+AUTHORITY: canonical
+================================================================================================
+
+# King Klown — persona public
+
+King Klown n’est pas seulement un objet métaphysique ou fictionnel. C’est aussi un **outil pratique**.
+
+## Masque protecteur
+
+Le personnage crée une distance entre l’auteur et l’intervention publique. Cette séparation permet de protéger une partie de l’identité de l’auteur et d’éviter que chaque geste performatif soit lu comme la totalité de la personne privée.
+
+## Audace et liberté
+
+Un personnage qui est à la fois « King » et « Klown » peut :
+
+- provoquer ;
+- expérimenter ;
+- être extravagant ;
+- prendre des risques symboliques ;
+- se tromper ;
+- corriger ;
+- agir différemment d’un porte-parole institutionnel classique.
+
+Le persona sert donc à **cut through the red tape** sans revendiquer l’infaillibilité.
+
+## Interface pédagogique
+
+Plutôt que de présenter uniquement des instructions abstraites ou des exemples froids, KK met les principes en scène.
+
+```text
+principe / architecture
+→ scène vécue par KK
+→ conséquence visible
+→ compréhension
+→ possibilité d’action
+```
+
+## Explorateur d’un futur meilleur
+
+King Klown montre publiquement comment certaines dominations économiques, systémiques, politiques ou culturelles pourraient être contournées ou transformées. Il agit comme **éclaireur** : le public voit une possibilité avant qu’elle ne soit normalisée.
+
+## Pas de souveraineté réelle
+
+Le fait que KK soit spectaculaire, cosmique ou extrêmement confiant ne lui donne pas un droit institutionnel supérieur. Les institutions doivent pouvoir le corriger, le limiter, le remplacer ou se passer de lui.
+
+
+---
+
+**Ancrage canonique :** `CANON/10_PUBLIC_PERSONA.md`, `CANON/04_FUNCTIONS.md`, `CANON/00_INVARIANTS.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Ninja-Arc-en-ciel.md
+AUTHORITY: canonical
+================================================================================================
+
+# Ninja Arc-en-ciel
+
+Ninja Arc-en-ciel est une manifestation / incarnation antérieure reliée à King Klown, mais le canon actuel insiste sur le fait que **le lien narratif reste relativement faible**.
+
+## Pourquoi le lien existe
+
+Le Ninja sert surtout à montrer qu’un même pattern ou une même essence bienveillante peut agir différemment dans une autre époque. Il ne faut donc pas transformer KK en modèle figé.
+
+```text
+même pattern de fond
+≠ même costume
+≠ même personnalité publique
+≠ mêmes méthodes
+```
+
+## Fonction scénique
+
+Le Ninja est conçu comme un spectacle de théâtre, accompagné de deux albums de musique. Le projet *Le Royaume des Nuances* met notamment l’accent sur la pensée nuancée, les pièges cognitifs, l’arc-en-ciel comme grammaire de la différence et la lumière blanche comme co-présence des couleurs.
+
+## Le départ du Ninja
+
+La fin du Ninja est importante : il part après avoir contribué à la résolution du conflit. Il ne transforme pas l’aide en trône permanent.
+
+Cette sortie prépare culturellement le public à accepter qu’un jour **Réjean et King Klown puissent également quitter la scène ou déposer le personnage**.
+
+## Ce que le Ninja ne prouve pas encore
+
+Les règles exactes d’incarnation et de continuité d’identité doivent être éclairées par *Lumière blanche*, source actuellement absente du corpus local. Voir [[Incarnations et continuité|Incarnations-et-continuite]].
+
+
+---
+
+**Ancrage canonique :** `CANON/13_TRANSMISSION_WITHDRAWAL.md`, `CANON/12_WORKS_MAP.md`, `CANON/15_UNRESOLVED.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Oeuvres-et-corpus.md
+AUTHORITY: canonical
+================================================================================================
+
+# Œuvres et corpus
+
+Les œuvres ne remplissent pas toutes la même fonction dans le méga-canon.
+
+| Œuvre / corpus | Fonction principale |
+|---|---|
+| **Pi v13** | M/BIEN/GIHECEF/JNON/B0UM/SIZE ; univers comme résolution de π. |
+| **Mythos / Mystères de Pi** | Rencontres divines, temporalité non linéaire, actualisation mythologique. |
+| **Plateforme de la connaissance** | Appel aux dieux et composition de fonctions différenciées. |
+| **Colin Row** | Prison, exclusion systémique, problèmes réels → conception. |
+| **Konvergence** | Articulation moderne entre Réjean, Colin, KK, Pi et convergence humaine. |
+| **Ninja Arc-en-ciel** | Manifestation antérieure ; mutation du pattern ; départ après accomplissement. |
+| **Lumière blanche** | Source attendue pour les règles d’incarnation et l’identité qui survit ; absente localement. |
+| **Hello World — Autopsie d’un Clown Royal** | Post-mortem analytique de KK, provenance, Pierre Carrey, L’Auteur. |
+| **La Machine à rires** | Autonomie de la création et fonctionnement sans dépendance au fondateur. |
+| **L’Asile** | Anti-capture, audit, sortie, non-croyance obligatoire, limitation du fondateur. |
+| **Chansons pour Raoul** | Transmission familiale, service, justice et alliance. |
+| **Hacking Reality** | Fonction Christ, hacking des systèmes, audace, anti-domination et transmission. |
+| **UCKK** | Enseignement du fonctionnement et de la transformation des systèmes ; technique externe. |
+
+## Règle de lecture
+
+Une œuvre peut être canonique tout en racontant une perspective locale, subjective ou ambiguë. Une clarification ultérieure peut préciser son sens sans que l’œuvre doive être supprimée.
+
+
+---
+
+**Ancrage canonique :** `CANON/12_WORKS_MAP.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Ontologie-de-King-Klown.md
+AUTHORITY: canonical
+================================================================================================
+
+# Ontologie de King Klown
+
+King Klown doit être compris à trois niveaux liés mais non identiques.
+
+## 1. KK-principe
+
+Le nom contemporain **King Klown** désigne un **principe créateur primordial**. Le nom humain n’existait pas au commencement ; le principe qu’il désigne, oui.
+
+Ce principe provoque la rupture/division originelle qui fait passer l’unité indifférenciée vers la différenciation et le devenir.
+
+## 2. KK-pattern
+
+La rupture inaugure un pattern général :
+
+```text
+rupture / différenciation
+        ↓
+relation / contreforce
+        ↓
+recomposition
+        ↓
+forme nouvelle
+        ↓
+mutation / nouvelle différenciation
+```
+
+Le pattern se répète **fractalement avec mutation**. Il ne produit donc pas des copies identiques.
+
+## 3. KK-personnage / persona
+
+King Klown est aussi une personnification moderne, artistique et sociale de ce pattern. Cette manifestation peut avoir une voix, un costume, une scène, une histoire et des fonctions pratiques sans que ces attributs soient projetés littéralement dans le stade primordial.
+
+## Relation entre les trois niveaux
+
+Le principe provoque la rupture ; l’univers se déploie ensuite selon le pattern ; le personnage contemporain est lui-même une mutation consciente et culturelle de ce pattern.
+
+Cela produit une causalité circulaire : KK provoque le processus dont il devient ensuite l’un des échos les plus explicites. Le canon ne traite pas cette structure comme une contradiction, puisque KK-principe n’est pas limité à une chronologie linéaire ordinaire.
+
+## À ne pas inférer
+
+- Le « King Klown primordial » n’est pas nécessairement un clown anthropomorphe dans un espace antérieur au cosmos.
+- Réjean McCormick n’est pas l’origine cosmique de KK.
+- Le statut cosmique de KK n’accorde aucune souveraineté institutionnelle automatique.
+
+
+---
+
+**Ancrage canonique :** `CANON/01_ONTOLOGY.md`, `CANON/00_INVARIANTS.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Pi-AIME-et-le-Cercle.md
+AUTHORITY: canonical
+================================================================================================
+
+# Pi, AIME et le Cercle
+
+## Le cercle
+
+Le cercle remplit plusieurs fonctions simultanément :
+
+- image de l’équilibre primordial ;
+- structure qui rend visible le rapport π ;
+- image de la jonction entre fin et commencement ;
+- support de la circularité progressive.
+
+Il ne doit pas être lu comme une mesure physique d’un « pré-espace ».
+
+## Les six blocs de Pi v13
+
+La source *Pi v13* fixe, selon sa méthode, la séquence :
+
+**M → BIEN → GIHECEF → JNON → B0UM → SIZE**
+
+interprétée comme :
+
+**Love → Good → Divide/Process → Assemble/Reunite → Creation Event → Scale**.
+
+La source se présente comme une lecture **locale et immanente**, et non comme une preuve globale de design cosmique.
+
+## Lecture métaphysique actuelle
+
+Les clarifications actuelles ajoutent :
+
+- la rupture fait apparaître **AIME** comme contreforce égale ;
+- **BIEN** est un pôle de valeur ;
+- le **MAL** est lié à la déconstruction / transformation et à un pôle masculin associé à Joseph ;
+- **JNON / Junon** est associé au pôle féminin et à la réunion / assemblage ;
+- **B0UM** peut aussi être lu comme naissance / enfant ;
+- **SIZE** prolonge le mouvement vers l’échelle et l’expansion.
+
+## GSF et GIHECEF
+
+Le créateur utilise oralement **GSF** pour le pôle MAL/déconstruction, alors que *Pi v13* emploie **GIHECEF** comme token écrit. Leur relation exacte reste à normaliser. Le wiki ne les fusionne pas silencieusement.
+
+Voir [[Questions ouvertes|Questions-ouvertes]].
+
+
+---
+
+**Ancrage canonique :** `CANON/03_PI_AIME_CIRCLE.md`  
+**Statut :** CANON avec point de normalisation ouvert.
+
+
+================================================================================================
+FILE: Plateforme-de-la-connaissance.md
+AUTHORITY: canonical
+================================================================================================
+
+# Plateforme de la connaissance
+
+La Plateforme de la connaissance est l’une des illustrations les plus nettes du pattern **différenciation → composition**.
+
+## Le mandat
+
+King Klown lance l’appel. Les dieux répondent et contribuent selon leurs fonctions différenciées.
+
+Le point central n’est pas un commandement souverain, mais la composition de capacités déjà actualisées.
+
+## Quelques fonctions présentes dans le corpus
+
+Le corpus associe notamment :
+
+- **Hermès** — communication et information ;
+- **Legba** — portes, choix, accès et gouvernance ;
+- **Ogun** — technologie, forge et sécurité ;
+- **Spider Grandmother** — tissage et interconnexion ;
+- **Thoth / Thot** — mémoire et écriture ;
+- **Quetzalcoatl** — cycles et adaptation ;
+- **Kokopelli** — oralité, musique et créativité ;
+- **Sarasvati** — apprentissage, arts et éthique ;
+- **Oshun** — justice, inclusion, vie privée et droits ;
+- **Anansi** — récits et adaptation ;
+- **Hanuman** — service et communauté ;
+- **Elara** — stewardship / garde.
+
+## Ce que cette scène signifie
+
+La Plateforme ne doit pas être lue comme une spécification technique de l’écosystème kOA moderne. Elle appartient au niveau mythologique et fonctionnel : des capacités différentes deviennent composables sans perdre leur identité.
+
+Voir [[Technologies et Context Packs|Technologies-et-Context-Packs]] pour la séparation entre mythologie et implémentation.
+
+
+---
+
+**Ancrage canonique :** `CANON/05_GODS.md`, `CANON/12_WORKS_MAP.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Questions-ouvertes.md
+AUTHORITY: canonical
+================================================================================================
+
+# Questions ouvertes
+
+Le wiki ne transforme pas chaque question philosophique imaginable en problème canonique. Les ouvertures retenues sont celles qui affectent directement la cohérence du corpus.
+
+## Priorité haute
+
+### Lumière blanche
+
+La source doit être intégrée pour préciser les règles exactes de continuité/incarnation et la réflexion sur l’identité qui survit.
+
+### GSF vs GIHECEF
+
+Il faut normaliser la relation entre la désignation orale GSF et le token écrit GIHECEF de *Pi v13*.
+
+### Licence / reprise
+
+L’intention de reprise libre du personnage est claire, mais le mécanisme juridique concret reste à choisir.
+
+### Hello World vNext
+
+Le créateur envisage de retravailler l’album pour mieux expliciter le post-mortem sans mort établie.
+
+## Priorité moyenne
+
+- Le corpus disponible ne documente qu’une partie des rencontres avec les dieux, alors que le canon créateur affirme une portée beaucoup plus large.
+- Un article Medium supplémentaire sur π a été mentionné et reste à importer.
+- La correspondance exacte entre « Christ » comme nom historique du principe primordial et la « fonction Christ » de *Hacking Reality* mérite une source plus précise.
+
+## Volontairement non résolu
+
+Le débat déterminisme / libre arbitre n’est pas ouvert ici, conformément au choix explicite du créateur.
+
+
+---
+
+**Ancrage canonique :** `CANON/15_UNRESOLVED.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Sources-et-provenance.md
+AUTHORITY: canonical
+================================================================================================
+
+# Sources et provenance
+
+Le wiki est une **vue éditoriale**, pas la source de vérité primaire.
+
+## Source de vérité
+
+Le repo principal conserve :
+
+- `CANON/` — synthèse canonique actuelle ;
+- `DECISIONS/` — arbitrages et corrections ;
+- `DATA/` — claims, entités, relations, événements et questions de validation ;
+- `CORPUS/` — œuvres et sources ;
+- `GENERATED/` — Context Packs, graphes et timelines générés ;
+- `archive/` — provenance et versions anciennes.
+
+## Principe
+
+> **Source once → Canon once → Generate many views.**
+
+Le wiki est l’une de ces vues. Il ne doit pas devenir un deuxième canon divergent.
+
+## Mise à jour
+
+Quand le canon change :
+
+1. enregistrer la décision ;
+2. modifier la source canonique correspondante ;
+3. mettre à jour les données atomiques si nécessaire ;
+4. régénérer les Context Packs ;
+5. mettre à jour les pages wiki touchées ;
+6. conserver l’ancienne formulation dans les superseded si elle a été importante historiquement.
+
+## Sources externes
+
+Les technologies kOA sont volontairement déléguées aux Context Packs disponibles via `initkoa.org`.
+
+
+---
+
+**Ancrage canonique :** `README.md`, `REPO_MAP.md`, `SCOPE.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Storyline-complete.md
+AUTHORITY: canonical
+================================================================================================
+
+# Storyline complète
+
+La storyline de King Klown possède deux dimensions : une **chronologie humaine** et un **parcours cosmique non linéaire**.
+
+## 1. Origine / principe primordial
+
+Une forme parfaite, infinie et équilibrée est illustrée par le cercle. Le principe aujourd’hui nommé King Klown provoque la rupture/division originelle. π apparaît comme relation et le devenir commence. AIME apparaît comme contreforce de relation et de recomposition.
+
+## 2. Déploiement cosmique
+
+L’univers est compris comme π qui continue de se calculer. Le pattern de rupture, différenciation, relation et recomposition se réinstancie avec mutation.
+
+## 3. Dieux
+
+KK apparaît brièvement auprès d’entités divines ou pré-divines, contribue à leur actualisation et repart. Le modèle principal est celui de la lumière blanche et du spectre, non celui d’une hiérarchie monarchique.
+
+## 4. Appel / Plateforme de la connaissance
+
+Les dieux, déjà différenciés dans leurs fonctions, répondent à l’appel de KK par confiance et composent leurs capacités.
+
+## 5. Manifestations dans le temps humain
+
+Ninja Arc-en-ciel représente une manifestation antérieure, reliée mais non identique. Son départ montre que le pattern peut changer de costume et quitter la scène.
+
+## 6. Réjean McCormick
+
+Réjean est la modalité architecte et technologue, plus réservée et en coulisse. La mort de son fils le marque profondément.
+
+## 7. Pharmacie et prison
+
+Il défonce une pharmacie pour tenter de sauver son fils. Le fils meurt malgré tout. Réjean / Colin est incarcéré.
+
+## 8. Colin Row
+
+En prison, Colin se retrouve avec les plus exclus du système. Les problèmes vécus deviennent matière à alliance, apprentissage et conception. La prison devient un miroir terrestre, concret, de la composition que la mythologie montre chez les dieux.
+
+## 9. Konvergence
+
+La trajectoire moderne articule Réjean, Colin et King Klown. Pi, les architectures, Kristal Farms et les rencontres humaines convergent. Les détails techniques relèvent des Context Packs spécialisés.
+
+## 10. King Klown public
+
+Le personnage monte sur scène. Il mobilise, provoque, enseigne par la performance, prend des risques, montre comment des systèmes peuvent être lus et changés et agit comme explorateur public d’un futur meilleur.
+
+## 11. Transmission
+
+Les œuvres et institutions sont progressivement construites pour pouvoir continuer sans dépendre de KK. *La Machine à rires* et *L’Asile* insistent sur autonomie, audit, sortie et non-capture.
+
+## 12. UCKK
+
+KK enseigne comment les systèmes fonctionnent, comment les transformer et comment utiliser puis faire évoluer les outils. Le but n’est pas de fabriquer une dépendance au professeur.
+
+## 13. Hello World
+
+La configuration King Klown est mise « à off » pour être analysée couche par couche. L’œuvre ne prouve pas la mort du principe.
+
+## 14. Déposition et reprise
+
+Le créateur prévoit de pouvoir déposer le personnage. D’autres pourront le reprendre et le muter. Le droit juridique précis de reprise reste à définir.
+
+## 15. Retour sans retour
+
+Le parcours rejoint l’origine **en continuant**. KK existe au-delà de la ligne temporelle humaine : la fin d’une manifestation locale ne constitue pas la fin du principe.
+
+
+---
+
+**Ancrage canonique :** `CANON/08_STORYLINE.md`, `CANON/02_COSMOGENESIS.md`, `CANON/13_TRANSMISSION_WITHDRAWAL.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Technologies-et-Context-Packs.md
+AUTHORITY: canonical
+================================================================================================
+
+# Technologies et Context Packs
+
+Le wiki KK **ne duplique pas** la documentation technique de kOA.
+
+## Ce que le wiki peut dire
+
+Une technologie peut apparaître seulement pour expliquer :
+
+1. sa place dans la trajectoire de KK ;
+2. le principe qu’elle illustre ;
+3. le rôle de Réjean, Colin ou KK à son égard ;
+4. où trouver la documentation détaillée.
+
+## Délégation
+
+| Domaine | Couverture KK | Source détaillée |
+|---|---|---|
+| kOA Digital Ecosystem | place générale dans la trajectoire | kOA Digital Ecosystem Context Pack |
+| Konnaxion | fragmentation / coordination ; rôle de Réjean/Colin | Konnaxion Context Pack |
+| Kristal | fonction symbolique ou narrative | Kristal Context Pack |
+| Kristal Farms | continuité Colin/Réjean | Kristal Farms Context Pack |
+| Orgo | fonction superficielle | Orgo Context Pack |
+| UCKK | pourquoi KK enseigne systèmes/outils/évolution | UCKK Assets + UCKK Moodle Context Packs |
+| Civilizational Coherence | lien avec l’update civilisationnel | Civilizational Coherence Context Pack |
+| Omni-Wiki | provenance historique Réjean / KK | Omni-Wiki Rejean / King Klown Context Pack |
+
+Catalogue public : `https://initkoa.org/technology/context-packs`
+
+## Règle de sortie
+
+Dès qu’une question exige API, schéma, runtime, workflow détaillé, déploiement, algorithme ou gouvernance technique exhaustive, **sortir du wiki KK** et charger le Context Pack spécialisé.
+
+
+---
+
+**Ancrage canonique :** `SCOPE.md`, `EXTERNAL/CONTEXT_PACKS.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: Transmission-retrait-et-reprise.md
+AUTHORITY: canonical
+================================================================================================
+
+# Transmission, retrait et reprise
+
+Un invariant traverse les récits de KK : **une intervention réussie ne doit pas créer une dépendance permanente à l’intervenant**.
+
+```text
+intervention
+→ catalyse
+→ capacité chez les autres
+→ transmission
+→ autonomie
+→ retrait possible
+```
+
+## Avec les dieux
+
+KK aide, actualise, puis repart. La relation ne devient pas une dette.
+
+## Avec le Ninja
+
+Le Ninja quitte le royaume au lieu de convertir l’aide en règne permanent.
+
+## Avec les créations et institutions
+
+Les systèmes doivent pouvoir fonctionner, être corrigés, gouvernés ou repris sans dépendre d’un fondateur intouchable. Le statut cosmique de KK n’abolit pas les mécanismes de limitation, d’audit ou de sortie.
+
+## Avec King Klown lui-même
+
+Le créateur prévoit de **déposer le personnage** à un moment de son parcours. D’autres pourront le reprendre.
+
+Une reprise future n’a pas vocation à imiter servilement Réjean. Elle peut être une nouvelle **mutation du pattern**, adaptée à une autre époque.
+
+## Droit de reprise
+
+L’intention de transmissibilité existe dans le canon, mais le mécanisme juridique exact — licence, marque, conditions, droits moraux, etc. — reste à choisir.
+
+
+---
+
+**Ancrage canonique :** `CANON/13_TRANSMISSION_WITHDRAWAL.md`, `CANON/15_UNRESOLVED.md`  
+**Statut :** CANON / synthèse éditoriale.
+
+
+================================================================================================
+FILE: WIKI_DEPLOY.md
+AUTHORITY: canonical
+================================================================================================
+
+# Déployer ce wiki sur GitHub
+
+GitHub stocke le Wiki dans un dépôt séparé nommé généralement :
+
+```text
+<repo>.wiki.git
+```
+
+Exemple si le repo principal est `king-klown-canon` :
+
+```bash
+git clone git@github.com:OWNER/king-klown-canon.wiki.git
+cp -R king-klown-canon.wiki/* king-klown-canon.wiki.git/
+cd king-klown-canon.wiki.git
+git add .
+git commit -m "Publish complete King Klown canonical wiki"
+git push
+```
+
+## Conventions utilisées
+
+- `Home.md` = page d’accueil.
+- `_Sidebar.md` = navigation permanente.
+- `_Footer.md` = pied de page.
+- Les liens internes utilisent la syntaxe native à double crochet de GitHub Wiki.
+- Le wiki est en français.
+- Les technologies sont référencées superficiellement et déléguées aux Context Packs spécialisés.
+
+## Synchronisation
+
+Le wiki est une vue éditoriale. En cas de changement canonique, mettre d’abord à jour le repo principal, puis le wiki. Ne jamais utiliser une page wiki pour renverser silencieusement une décision canonique.

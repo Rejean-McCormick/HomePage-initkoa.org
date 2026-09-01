@@ -41,7 +41,10 @@ REPOS = [
     ("Omni-Wiki-Rejean-King-Klown", MYCODE / "OmniWiki" / "Omni-Wiki-Rejean-King-Klown"),
     ("MediKristal", MYCODE / "MediKristal" / "MediKristal"),
     ("Ame-Artificielle", MYCODE / "AmeArtificielle" / "Ame-Artificielle"),
-    ("Kristal_Farms", MYCODE / "Kristal_Farms" / "kristal-farms-docs"),
+    ("king-clown-canon", MYCODE / "King_Klown" / "king-clown-canon"),
+    ("king-klown-canon.wiki", MYCODE / "King_Klown" / "king-klown-canon.wiki"),
+    ("Kristal_Farms", MYCODE / "Kristal_Farms" / "kristal-farms"),
+    ("Kristal_Farms.wiki", MYCODE / "Kristal_Farms" / "Kristal_Farms.wiki"),
     ("kristal-framework", MYCODE / "Kristal" / "kristal-framework"),
     ("Konnaxion_Capsule_Manager", MYCODE / "Konnaxion" / "Konnaxion_Capsule_Manager"),
     ("Konductor", MYCODE / "Konductor" / "Konductor"),
@@ -57,6 +60,7 @@ REPOS = [
 ]
 
 COMMIT_MESSAGE = "Update context packs"
+BUILDER_VERSION = "2026-09-01.10"
 
 # Packs intentionally retired from this builder. They are removed from public/context-packs
 # before the manifest is regenerated so stale files cannot remain published indefinitely.
@@ -79,6 +83,7 @@ VERIFIED_WIKI_REMOTES = {
     str(MYCODE / "kOA" / "kOA_Digital_Ecosystem").casefold(): "https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem.wiki.git",
     str(MYCODE / "kOA-Linux" / "koa-linux").casefold(): "https://github.com/Rejean-McCormick/kOA-Linux.wiki.git",
     str(MYCODE / "Konnaxion" / "Konnaxion").casefold(): "https://github.com/Rejean-McCormick/Konnaxion.wiki.git",
+    str(MYCODE / "Kristal_Farms" / "kristal-farms").casefold(): "https://github.com/Rejean-McCormick/Kristal_Farms.wiki.git",
     str(MYCODE / "Kristal_Farms" / "kristal-farms-docs").casefold(): "https://github.com/Rejean-McCormick/Kristal_Farms.wiki.git",
     str(MYCODE / "Kristal" / "kristal-framework").casefold(): "https://github.com/Rejean-McCormick/kristal-framework.wiki.git",
     str(MYCODE / "MediKristal" / "MediKristal").casefold(): "https://github.com/Rejean-McCormick/MediKristal.wiki.git",
@@ -335,16 +340,37 @@ def included_repos():
     return [(label, repo) for label, repo in REPOS if not repo_is_excluded(repo)]
 
 
-def sync_all_wikis(log):
+# Some configured sources are container directories rather than Git repositories.
+# Keep this builder-level default so an older/stale policy cannot accidentally make
+# the King_Klown parent folder go through the Git guard again. The policy may still
+# state sourceMode=directory explicitly; both mechanisms intentionally agree.
+DIRECTORY_SOURCE_LABELS = set()
+
+
+def source_mode_for(label: str, repo_policy: dict | None = None) -> str:
+    repo_policy = repo_policy or {}
+    default = "directory" if label.casefold() in DIRECTORY_SOURCE_LABELS else "git"
+    return str(repo_policy.get("sourceMode") or default).strip().lower()
+
+
+def sync_all_wikis(log, policy: dict | None = None):
     results = []
     active = included_repos()
     excluded_count = len(REPOS) - len(active)
+    if policy is None:
+        policy = load_context_pack_policy()
     log("SYNC WIKIS (query Git en ligne; clone seulement si absent localement)")
     if excluded_count:
         log(f"Repos MA-Gustave exclus : {excluded_count}")
     for index, (label, repo) in enumerate(active, 1):
         log(f"[{index}/{len(active)}] {label}")
         try:
+            repo_policy = _policy_repo_entry(policy, label, label)
+            source_mode = source_mode_for(label, repo_policy)
+            if source_mode == "directory":
+                log("    Source locale non-Git : sync wiki automatique ignorée")
+                results.append({"label": label, "path": None, "status": "directory-source", "changed": False})
+                continue
             results.append(sync_wiki_for_repo(label, repo, log))
         except Exception as exc:
             # Wiki support is optional: never block Context Pack generation.
@@ -400,13 +426,104 @@ def git_markdown_files(repo: Path) -> list[Path]:
     return [path for path in git_tracked_files(repo) if path.suffix.casefold() == ".md"]
 
 
+def _looks_like_text_file(path: Path) -> bool:
+    """Best-effort binary guard for selectionMode=alltext.
+
+    Context packs are UTF-8 text artifacts, so binary Git assets cannot be embedded
+    meaningfully. We keep every tracked file that looks textual, including files
+    without an extension, and ignore obvious binary payloads.
+    """
+    try:
+        sample = path.read_bytes()[:65536]
+    except OSError:
+        return False
+    if not sample:
+        return True
+    if b"\x00" in sample:
+        return False
+    control = sum(1 for byte in sample if byte < 32 and byte not in {9, 10, 12, 13})
+    return control / len(sample) < 0.02
+
+
+def git_all_text_files(repo: Path) -> tuple[list[Path], list[Path]]:
+    """Return all committed text-like files and the binary files skipped."""
+    tracked = git_tracked_files(repo)
+    text_files: list[Path] = []
+    binary_files: list[Path] = []
+    for path in tracked:
+        (text_files if _looks_like_text_file(path) else binary_files).append(path)
+    return text_files, binary_files
+
+
+def directory_files(root: Path, patterns: list[str] | None = None) -> list[Path]:
+    """Return regular files from a plain local directory, excluding Git metadata.
+
+    This source mode is intentionally filesystem-based rather than Git-based. It is
+    used for container folders such as ``C:\\mycode\\King_Klown`` that are not
+    repositories themselves but contain useful material (and possibly nested repos).
+    Nested ``.git`` metadata is never embedded in Context Packs.
+    """
+    files: list[Path] = []
+    for current_root, dirnames, filenames in os.walk(root):
+        dirnames[:] = [name for name in dirnames if name.casefold() != ".git"]
+        current = Path(current_root)
+        for filename in filenames:
+            path = current / filename
+            if not path.is_file():
+                continue
+            rel = path.relative_to(root).as_posix()
+            if patterns and not any(_matches_policy_pattern(rel, pattern) for pattern in patterns):
+                continue
+            files.append(path)
+    return sorted(files, key=lambda path: (path.relative_to(root).as_posix().casefold(), path.relative_to(root).as_posix()))
+
+
+def directory_markdown_files(root: Path) -> list[Path]:
+    return [path for path in directory_files(root) if path.suffix.casefold() == ".md"]
+
+
+def directory_all_text_files(root: Path) -> tuple[list[Path], list[Path]]:
+    files = directory_files(root)
+    text_files: list[Path] = []
+    binary_files: list[Path] = []
+    for path in files:
+        (text_files if _looks_like_text_file(path) else binary_files).append(path)
+    return text_files, binary_files
+
+
+def _chunk_git_pathspecs(relative_paths: list[str], max_chars: int = 7000, max_items: int = 80):
+    """Yield pathspec chunks small enough for Windows CreateProcess command lines."""
+    chunk: list[str] = []
+    chars = 0
+    for rel in relative_paths:
+        cost = len(rel) + 3  # quoting/separator headroom
+        if chunk and (len(chunk) >= max_items or chars + cost > max_chars):
+            yield chunk
+            chunk = []
+            chars = 0
+        chunk.append(rel)
+        chars += cost
+    if chunk:
+        yield chunk
+
+
 def selected_files_dirty(repo: Path, files: list[Path]) -> bool:
-    """Return True when any selected committed source file differs from HEAD."""
+    """Return True when any selected committed source file differs from HEAD.
+
+    Do not pass hundreds of selected files in a single ``git status`` invocation:
+    on Windows that can raise WinError 206 once the command line becomes too long.
+    """
     if not files:
         return False
-    relative = [path.relative_to(repo).as_posix() for path in files]
-    result = git(repo, "status", "--porcelain", "--untracked-files=no", "--", *relative, check=False)
-    return bool(result.stdout.strip())
+    relative = sorted({path.relative_to(repo).as_posix() for path in files}, key=lambda s: (s.casefold(), s))
+    for chunk in _chunk_git_pathspecs(relative):
+        result = git(repo, "status", "--porcelain", "--untracked-files=no", "--", *chunk, check=False)
+        if result.returncode != 0:
+            details = (result.stderr or result.stdout or "").strip()
+            raise CommandError(f"Impossible de vérifier l'état Git des sources sélectionnées dans {repo}\n{details}")
+        if result.stdout.strip():
+            return True
+    return False
 
 
 def markdown_files_in_folder(folder: Path) -> list[Path]:
@@ -512,28 +629,45 @@ def existing_pack_hash(path: Path):
 def make_pack(label: str, repo: Path, policy: dict | None = None):
     if not repo.exists():
         raise FileNotFoundError(f"Dossier absent : {repo}")
-    if not is_git_repo(repo):
-        raise RuntimeError(f"Ce dossier n'est pas un repo Git : {repo}")
 
     policy = policy or load_context_pack_policy()
     policy_version = str(policy["policyVersion"])
     build_policy = policy.get("publicBuild") or {}
     require_clean = bool(build_policy.get("requireCleanMarkdown", True))
 
-    remote_name = github_repo_from_remote(repo, label)
+    # Policy lookup must happen before the Git guard because some configured
+    # sources are intentionally plain local directories rather than repositories.
+    preliminary_policy = _policy_repo_entry(policy, label, label)
+    source_mode = source_mode_for(label, preliminary_policy)
+    if source_mode not in {"git", "directory"}:
+        raise RuntimeError(f"sourceMode non supporté pour {label} : {source_mode}")
+
+    repo_is_git = is_git_repo(repo)
+    if source_mode == "git" and not repo_is_git:
+        raise RuntimeError(f"Ce dossier n'est pas un repo Git : {repo}")
+
+    remote_name = github_repo_from_remote(repo, label) if repo_is_git else label
     repo_policy = _policy_repo_entry(policy, label, remote_name)
+    source_mode = source_mode_for(label, repo_policy)
     selection_mode = str(repo_policy.get("selectionMode") or "markdown").strip().lower()
-    if selection_mode not in {"markdown", "curated"}:
+    if selection_mode not in {"markdown", "curated", "alltext"}:
         raise RuntimeError(f"selectionMode non supporté pour {label} : {selection_mode}")
 
-    commit = current_commit(repo)
+    commit = current_commit(repo) if repo_is_git else "local-directory"
     warnings: list[str] = []
+    if source_mode == "directory" and bool(build_policy.get("committedOnly", True)):
+        warnings.append("Source locale non-Git : committedOnly n'est pas applicable; état du filesystem utilisé.")
 
+    skipped_binary_files: list[Path] = []
     if selection_mode == "curated":
         include_patterns = [str(x) for x in repo_policy.get("includePatterns") or [] if str(x).strip()]
         if not include_patterns:
             raise RuntimeError(f"includePatterns requis pour selectionMode=curated ({label})")
-        repo_source_files = git_tracked_files(repo, include_patterns)
+        repo_source_files = (
+            git_tracked_files(repo, include_patterns)
+            if source_mode == "git"
+            else directory_files(repo, include_patterns)
+        )
         required_patterns = [str(x) for x in repo_policy.get("requiredPatterns") or [] if str(x).strip()]
         selected_rels = [path.relative_to(repo).as_posix() for path in repo_source_files]
         missing_required = [
@@ -542,18 +676,27 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         ]
         if missing_required:
             raise RuntimeError("Sources curated requises absentes : " + ", ".join(missing_required))
-        dirty = selected_files_dirty(repo, repo_source_files)
+        dirty = selected_files_dirty(repo, repo_source_files) if source_mode == "git" else False
+    elif selection_mode == "alltext":
+        repo_source_files, skipped_binary_files = (
+            git_all_text_files(repo) if source_mode == "git" else directory_all_text_files(repo)
+        )
+        dirty = selected_files_dirty(repo, repo_source_files) if source_mode == "git" else False
+        if skipped_binary_files:
+            warnings.append(f"Fichiers binaires ignorés : {len(skipped_binary_files)}")
     else:
-        repo_source_files = git_markdown_files(repo)
-        dirty = markdown_dirty(repo)
+        repo_source_files = git_markdown_files(repo) if source_mode == "git" else directory_markdown_files(repo)
+        dirty = markdown_dirty(repo) if source_mode == "git" else False
 
     if require_clean and dirty:
         if selection_mode == "curated":
             raise RuntimeError("Working tree curated dirty : commit/stash requis avant un build public.")
+        if selection_mode == "alltext":
+            raise RuntimeError("Working tree alltext dirty : commit/stash requis avant un build public.")
         raise RuntimeError("Working tree Markdown dirty : commit/stash requis avant un build public.")
 
     wiki_path = existing_wiki_path_for_repo(repo) or wiki_path_for_repo(repo)
-    include_wiki = bool(repo_policy.get("includeWiki", True)) and selection_mode != "curated"
+    include_wiki = bool(repo_policy.get("includeWiki", True)) and selection_mode == "markdown"
     wiki_is_git = is_git_repo(wiki_path)
     wiki_dirty = markdown_dirty(wiki_path) if (include_wiki and wiki_is_git) else False
     if require_clean and wiki_dirty:
@@ -597,6 +740,8 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
     source_file_count = len(candidates)
     file_entries: list[tuple[str, str, str]] = []
     excluded_records: list[tuple[str, str, str]] = []
+    for path in skipped_binary_files:
+        excluded_records.append((path.relative_to(repo).as_posix(), "binary", "alltext:binary-skipped"))
     duplicate_records: list[tuple[str, str]] = []
     hash_material = bytearray()
     seen_content: dict[str, str] = {}
@@ -647,6 +792,7 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         "content_bytes": content_bytes,
         "authority_counts": authority_counts,
         "selection_mode": selection_mode,
+        "source_mode": source_mode,
         "warnings": warnings,
     }
 
@@ -665,8 +811,9 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         f"repository: {remote_name}",
         f"source_path: {repo}",
         f"source_commit: {commit}",
-        f"working_tree_markdown: {'dirty' if dirty else 'clean'}",  # compatibility field used by site validator
-        f"working_tree_selected: {'dirty' if dirty else 'clean'}",
+        f"source_mode: {source_mode}",
+        f"working_tree_markdown: {'dirty' if dirty else ('not-applicable' if source_mode == 'directory' else 'clean')}",  # compatibility field used by site validator
+        f"working_tree_selected: {'dirty' if dirty else ('not-applicable' if source_mode == 'directory' else 'clean')}",
         f"selection_mode: {selection_mode}",
         f"wiki_source_path: {wiki_path if wiki_path.exists() else 'none'}",
         f"wiki_source_commit: {wiki_commit}",
@@ -937,11 +1084,14 @@ def build_all(log):
     if install_policy_into_initkoa():
         log(f"Politique copiée dans : {POLICY_TARGET}")
     policy = load_context_pack_policy()
+    log(f"Builder corpus : {BUILDER_VERSION} | {len(included_repos())} source(s) configurée(s)")
     log(f"Politique corpus : {policy['policyVersion']}")
+    if str(policy.get("policyVersion")) != BUILDER_VERSION:
+        log(f"AVERTISSEMENT : versions différentes (builder {BUILDER_VERSION} / policy {policy.get('policyVersion')}).")
 
     # Optional GitHub wikis are materialized once, beside each repository.
     # Existing local wiki directories are deliberately never pulled or overwritten.
-    sync_all_wikis(log)
+    sync_all_wikis(log, policy)
 
     results = []
     active = included_repos()
@@ -1002,24 +1152,47 @@ def sync_initkoa(log, pull_first=True):
     log("Git : sync terminé.")
 
 
+def active_policy_version_for_display() -> str:
+    try:
+        return str(load_context_pack_policy().get("policyVersion") or "?")
+    except Exception:
+        return "?"
+
+
 class ContextPackApp(Tk):
     def __init__(self):
         super().__init__()
-        self.title("INITKOA Context Pack Builder")
+        self.title(f"INITKOA Context Pack Builder v{BUILDER_VERSION} | policy {active_policy_version_for_display()}")
         self.geometry("1120x760")
         self.minsize(850, 560)
         self.work_queue = queue.Queue()
         self.is_working = False
-        self.status_var = StringVar(value="Prêt.")
+        self.status_var = StringVar(value=f"Prêt. — Builder {BUILDER_VERSION} | Policy {active_policy_version_for_display()}")
         self._build_ui()
         self.after(100, self._process_queue)
         self.after(250, self.refresh_repo_status)
+
+    def _refresh_window_title(self):
+        self.title(f"INITKOA Context Pack Builder v{BUILDER_VERSION} | policy {active_policy_version_for_display()}")
 
     def _build_ui(self):
         top = ttk.Frame(self, padding=12)
         top.pack(fill=X)
         ttk.Label(top, text="INITKOA Context Pack Builder", font=("Segoe UI", 15, "bold")).pack(side=LEFT)
+        ttk.Label(
+            top,
+            text=f"  VERSION {BUILDER_VERSION}   |   POLICY {active_policy_version_for_display()}",
+            font=("Segoe UI", 11, "bold"),
+        ).pack(side=LEFT, padx=(14, 0))
         ttk.Label(top, text=str(OUTPUT_DIR), font=("Segoe UI", 9)).pack(side=LEFT, padx=(18, 0))
+
+        source_info = ttk.Frame(self, padding=(12, 0, 12, 8))
+        source_info.pack(fill=X)
+        ttk.Label(
+            source_info,
+            text=f"PYW: {Path(__file__).resolve()}   |   POLICY: {POLICY_TARGET}",
+            font=("Consolas", 9),
+        ).pack(side=LEFT)
 
         buttons = ttk.Frame(self, padding=(12, 0, 12, 8))
         buttons.pack(fill=X)
@@ -1109,15 +1282,36 @@ class ContextPackApp(Tk):
     def refresh_repo_status(self):
         if self.is_working:
             return
+        self._refresh_window_title()
         for item in self.tree.get_children():
             self.tree.delete(item)
         active = included_repos()
+        try:
+            policy = load_context_pack_policy()
+        except Exception:
+            policy = {"repositories": {}}
         for label, repo in active:
             repo_display = label
+            repo_policy = _policy_repo_entry(policy, label, label)
+            source_mode = source_mode_for(label, repo_policy)
             wiki_path = existing_wiki_path_for_repo(repo) or wiki_path_for_repo(repo)
             wiki_count = "-"
             if not repo.exists():
                 md_count, status = "-", "ABSENT"
+            elif source_mode == "directory":
+                try:
+                    selection_mode = str(repo_policy.get("selectionMode") or "markdown").strip().lower()
+                    if selection_mode == "alltext":
+                        text_files, _ = directory_all_text_files(repo)
+                        md_count = str(len(text_files))
+                    elif selection_mode == "curated":
+                        patterns = [str(x) for x in repo_policy.get("includePatterns") or [] if str(x).strip()]
+                        md_count = str(len(directory_files(repo, patterns)))
+                    else:
+                        md_count = str(len(directory_markdown_files(repo)))
+                    status = "LOCAL"
+                except Exception:
+                    md_count, wiki_count, status = "?", "?", "ERREUR"
             elif not is_git_repo(repo):
                 md_count, status = "-", "PAS GIT"
             else:
@@ -1134,7 +1328,7 @@ class ContextPackApp(Tk):
             self.tree.insert("", END, values=(repo_display, str(repo), md_count, wiki_count, status))
         excluded_count = len(REPOS) - len(active)
         suffix = f"; {excluded_count} MA-Gustave exclu(s)" if excluded_count else ""
-        self.status_var.set(f"{len(active)} repos inclus{suffix}. Destination : {OUTPUT_DIR}")
+        self.status_var.set(f"Builder {BUILDER_VERSION} | Policy {active_policy_version_for_display()} — {len(active)} repos inclus{suffix}. Destination : {OUTPUT_DIR}")
 
     def build_only(self):
         def task():
@@ -1151,6 +1345,9 @@ class ContextPackApp(Tk):
         def task():
             self.log("=" * 72)
             self.log("BUILD ALL + SYNC")
+            self.log(f"PYW exécuté : {Path(__file__).resolve()}")
+            self.log(f"Policy chargée : {POLICY_TARGET}")
+            self.log(f"Version interface : builder {BUILDER_VERSION} | policy {active_policy_version_for_display()}")
             if not is_git_repo(INITKOA_REPO):
                 raise RuntimeError(f"Repo initkoa introuvable ou non Git : {INITKOA_REPO}")
             self.log("Git : pull --rebase --autostash...")
