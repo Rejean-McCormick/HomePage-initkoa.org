@@ -41,9 +41,7 @@ REPOS = [
     ("MediKristal", MYCODE / "MediKristal" / "MediKristal"),
     ("Ame-Artificielle", MYCODE / "AmeArtificielle" / "Ame-Artificielle"),
     ("king-clown-canon", MYCODE / "King_Klown" / "king-clown-canon"),
-    ("king-klown-canon.wiki", MYCODE / "King_Klown" / "king-klown-canon.wiki"),
     ("Kristal_Farms", MYCODE / "Kristal_Farms" / "kristal-farms"),
-    ("Kristal_Farms.wiki", MYCODE / "Kristal_Farms" / "Kristal_Farms.wiki"),
     ("kristal-framework", MYCODE / "Kristal" / "kristal-framework"),
     ("Konnaxion_Capsule_Manager", MYCODE / "Konnaxion" / "Konnaxion_Capsule_Manager"),
     ("Konductor", MYCODE / "Konductor" / "Konductor"),
@@ -58,12 +56,16 @@ REPOS = [
 ]
 
 COMMIT_MESSAGE = "Update context packs"
-BUILDER_VERSION = "2026-09-01.11"
+BUILDER_VERSION = "2026-09-10.13"
 
 # Packs intentionally retired from this builder. They are removed from public/context-packs
 # before the manifest is regenerated so stale files cannot remain published indefinitely.
 RETIRED_PACK_FILES = {
     "initkoa-docs-context-pack.txt",
+    # Standalone wiki packs were retired: their committed Markdown is now merged
+    # into the parent project pack, wiki first.
+    "king-klown-canon-wiki-context-pack.txt",
+    "kristal-farms-wiki-context-pack.txt",
 }
 
 # Compatibility aliases for required curated sources whose canonical filename
@@ -579,25 +581,68 @@ def _matches_policy_pattern(rel: str, pattern: str) -> bool:
     return bool(pattern_norm) and fnmatch.fnmatchcase(rel_norm, pattern_norm)
 
 
-def classify_policy_path(policy: dict, repo_policy: dict, rel: str) -> tuple[str, bool, str]:
+def classify_policy_path(policy: dict, repo_policy: dict, rel: str) -> tuple[str, bool, str, str]:
+    build_policy = policy.get("publicBuild") or {}
+
     for pattern in policy.get("globalExclusions") or []:
         if _matches_policy_pattern(rel, pattern):
-            return "historical", False, f"global:{pattern}"
+            return "historical", False, f"global:{pattern}", "knowledge"
 
-    authority = "canonical"
-    included_authorities = set(policy.get("publicBuild", {}).get("includedAuthorities") or ["canonical", "reference"] )
-    include = authority in included_authorities
+    # Conservative defaults: content is reference material unless a repository
+    # explicitly promotes it to canonical. This avoids accidental authority.
+    authority = str(
+        repo_policy.get("defaultAuthority")
+        or build_policy.get("defaultAuthority")
+        or "reference"
+    ).strip().lower() or "reference"
+    content_role = str(
+        repo_policy.get("defaultContentRole")
+        or build_policy.get("defaultContentRole")
+        or "knowledge"
+    ).strip().lower() or "knowledge"
+
+    rel_norm = rel.replace("\\", "/").casefold()
     reason = "default"
+    if rel_norm.startswith("wiki/"):
+        authority = str(
+            repo_policy.get("wikiAuthority")
+            or build_policy.get("wikiAuthority")
+            or authority
+        ).strip().lower() or authority
+        content_role = str(
+            repo_policy.get("wikiContentRole")
+            or build_policy.get("wikiContentRole")
+            or "navigation"
+        ).strip().lower() or "navigation"
+        reason = "wiki-default"
+
+    included_authorities = {
+        str(x).strip().lower()
+        for x in (build_policy.get("includedAuthorities") or ["canonical", "reference"])
+        if str(x).strip()
+    }
+    include = authority in included_authorities
 
     for rule in repo_policy.get("rules") or []:
         pattern = rule.get("pattern")
         if not pattern or not _matches_policy_pattern(rel, pattern):
             continue
-        authority = str(rule.get("authority") or authority).strip().lower() or authority
-        include = bool(rule.get("include")) if "include" in rule else authority in included_authorities
+
+        authority_changed = "authority" in rule and str(rule.get("authority") or "").strip()
+        if authority_changed:
+            authority = str(rule.get("authority")).strip().lower() or authority
+        if "contentRole" in rule and str(rule.get("contentRole") or "").strip():
+            content_role = str(rule.get("contentRole")).strip().lower() or content_role
+
+        # A role-only rule must not accidentally re-enable a file excluded by an
+        # earlier rule. Recompute inclusion only when authority changes.
+        if "include" in rule:
+            include = bool(rule.get("include"))
+        elif authority_changed:
+            include = authority in included_authorities
         reason = f"repo:{pattern}"
 
-    return authority, include, reason
+    return authority, include, reason, content_role
 
 
 def slugify(value: str) -> str:
@@ -711,7 +756,12 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         raise RuntimeError("Working tree Markdown dirty : commit/stash requis avant un build public.")
 
     wiki_path = existing_wiki_path_for_repo(repo) or wiki_path_for_repo(repo)
-    include_wiki = bool(repo_policy.get("includeWiki", True)) and selection_mode == "markdown"
+    # Unified project packs: committed wiki Markdown is merged before repository
+    # documentation for both normal Markdown and curated repositories. Curated
+    # selection still applies to the repo side only; the wiki remains the
+    # orientation/context layer. alltext stays unchanged unless explicitly
+    # supported later.
+    include_wiki = bool(repo_policy.get("includeWiki", True)) and selection_mode in {"markdown", "curated"}
     wiki_is_git = is_git_repo(wiki_path)
     wiki_dirty = markdown_dirty(wiki_path) if (include_wiki and wiki_is_git) else False
     if require_clean and wiki_dirty:
@@ -757,7 +807,8 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
     candidates.sort(key=candidate_sort_key)
 
     source_file_count = len(candidates)
-    file_entries: list[tuple[str, str, str]] = []
+    # rel, content, authority, content_role, content_sha256, content_bytes
+    file_entries: list[tuple[str, str, str, str, str, int]] = []
     excluded_records: list[tuple[str, str, str]] = []
     for path in skipped_binary_files:
         excluded_records.append((path.relative_to(repo).as_posix(), "binary", "alltext:binary-skipped"))
@@ -765,28 +816,33 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
     hash_material = bytearray()
     seen_content: dict[str, str] = {}
     authority_counts: dict[str, int] = {}
+    content_role_counts: dict[str, int] = {}
     content_bytes = 0
 
     for pack_rel, path, _source_kind in candidates:
-        authority, include, reason = classify_policy_path(policy, repo_policy, pack_rel)
+        authority, include, reason, content_role = classify_policy_path(policy, repo_policy, pack_rel)
         if not include:
             excluded_records.append((pack_rel, authority, reason))
             continue
 
         content = read_source_text(path)
-        content_hash = hashlib.sha256(content.encode("utf-8")).hexdigest()
-        if content_hash in seen_content:
-            duplicate_records.append((pack_rel, seen_content[content_hash]))
-            continue
-        seen_content[content_hash] = pack_rel
-
-        file_entries.append((pack_rel, content, authority))
-        authority_counts[authority] = authority_counts.get(authority, 0) + 1
         encoded = content.encode("utf-8")
-        content_bytes += len(encoded)
+        file_content_sha256 = hashlib.sha256(encoded).hexdigest()
+        if file_content_sha256 in seen_content:
+            duplicate_records.append((pack_rel, seen_content[file_content_sha256]))
+            continue
+        seen_content[file_content_sha256] = pack_rel
+
+        file_content_bytes = len(encoded)
+        file_entries.append((pack_rel, content, authority, content_role, file_content_sha256, file_content_bytes))
+        authority_counts[authority] = authority_counts.get(authority, 0) + 1
+        content_role_counts[content_role] = content_role_counts.get(content_role, 0) + 1
+        content_bytes += file_content_bytes
         hash_material.extend(pack_rel.encode("utf-8"))
         hash_material.extend(b"\0")
         hash_material.extend(authority.encode("utf-8"))
+        hash_material.extend(b"\0")
+        hash_material.extend(content_role.encode("utf-8"))
         hash_material.extend(b"\0")
         hash_material.extend(encoded)
         hash_material.extend(b"\0")
@@ -810,6 +866,7 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         "duplicate_file_count": duplicate_file_count,
         "content_bytes": content_bytes,
         "authority_counts": authority_counts,
+        "content_role_counts": content_role_counts,
         "selection_mode": selection_mode,
         "source_mode": source_mode,
         "warnings": warnings,
@@ -828,13 +885,11 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         "# INITKOA CONTEXT PACK",
         "",
         f"repository: {remote_name}",
-        f"source_path: {repo}",
         f"source_commit: {commit}",
         f"source_mode: {source_mode}",
         f"working_tree_markdown: {'dirty' if dirty else ('not-applicable' if source_mode == 'directory' else 'clean')}",  # compatibility field used by site validator
         f"working_tree_selected: {'dirty' if dirty else ('not-applicable' if source_mode == 'directory' else 'clean')}",
         f"selection_mode: {selection_mode}",
-        f"wiki_source_path: {wiki_path if wiki_path.exists() else 'none'}",
         f"wiki_source_commit: {wiki_commit}",
         f"wiki_working_tree_markdown: {'dirty' if wiki_dirty else ('clean' if include_wiki and wiki_is_git else ('excluded' if not include_wiki and wiki_path.exists() else ('not-git' if wiki_path.exists() else 'none')))}",
         f"policy_version: {policy_version}",
@@ -846,6 +901,7 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         f"duplicate_files: {duplicate_file_count}",
         f"content_bytes: {content_bytes}",
         f"authority_counts: {json.dumps(authority_counts, ensure_ascii=False, sort_keys=True, separators=(',', ':'))}",
+        f"content_role_counts: {json.dumps(content_role_counts, ensure_ascii=False, sort_keys=True, separators=(',', ':'))}",
         f"generated_at: {generated_at}",
         f"files: {len(file_entries)}",
         f"content_sha256: {content_hash}",
@@ -856,10 +912,22 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         "",
     ]
 
+    if bool(build_policy.get("publishLocalPaths", False)):
+        # Insert before the first separator so header parsing remains simple.
+        separator_index = lines.index("=" * 96)
+        lines[separator_index:separator_index] = [
+            f"source_path: {repo}",
+            f"wiki_source_path: {wiki_path if wiki_path.exists() else 'none'}",
+            "",
+        ]
+
     if file_entries:
         width = len(str(len(file_entries)))
-        for index, (rel, _, authority) in enumerate(file_entries, 1):
-            lines.append(f"{index:0{width}d}. [{authority}] {rel}")
+        for index, (rel, _, authority, content_role, file_sha256, file_bytes) in enumerate(file_entries, 1):
+            lines.append(
+                f"{index:0{width}d}. [{authority}] [{content_role}] {rel} "
+                f"| bytes={file_bytes} | sha256={file_sha256}"
+            )
     else:
         lines.append("(aucun fichier sélectionné)")
 
@@ -871,8 +939,20 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
             lines.append(f"- [duplicate] {rel} (same content as {kept})")
 
     lines.extend(["", ""])
-    for rel, content, authority in file_entries:
-        lines.extend(["=" * 96, f"FILE: {rel}", f"AUTHORITY: {authority}", "=" * 96, "", content.rstrip("\n"), "", ""])
+    for rel, content, authority, content_role, file_sha256, file_bytes in file_entries:
+        lines.extend([
+            "=" * 96,
+            f"FILE: {rel}",
+            f"AUTHORITY: {authority}",
+            f"CONTENT_ROLE: {content_role}",
+            f"CONTENT_SHA256: {file_sha256}",
+            f"CONTENT_BYTES: {file_bytes}",
+            "=" * 96,
+            "",
+            content.rstrip("\n"),
+            "",
+            "",
+        ])
 
     final_text = "\n".join(lines).rstrip() + "\n"
     pack_bytes = len(final_text.encode("utf-8"))
@@ -926,6 +1006,7 @@ def read_pack_header(path: Path) -> dict[str, str]:
                     "duplicate_files",
                     "content_bytes",
                     "authority_counts",
+                    "content_role_counts",
                 }:
                     header[key] = value.strip()
     except OSError:
@@ -959,6 +1040,12 @@ def write_manifest(log=None, policy: dict | None = None) -> bool:
                 authority_counts = {}
         except json.JSONDecodeError:
             authority_counts = {}
+        try:
+            content_role_counts = json.loads(header.get("content_role_counts") or "{}")
+            if not isinstance(content_role_counts, dict):
+                content_role_counts = {}
+        except json.JSONDecodeError:
+            content_role_counts = {}
 
         packs.append(
             {
@@ -977,6 +1064,7 @@ def write_manifest(log=None, policy: dict | None = None) -> bool:
                 "duplicateFileCount": _header_int(header, "duplicate_files"),
                 "contentBytes": _header_int(header, "content_bytes"),
                 "authorityCounts": authority_counts,
+                "contentRoleCounts": content_role_counts,
             }
         )
 

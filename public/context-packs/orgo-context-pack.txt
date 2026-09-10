@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Orgo
-source_path: C:\mycode\Orgo\Orgo
 source_commit: fba068aa8008771b72e41b39370564c5287d0a91
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: C:\mycode\Orgo\Orgo.wiki
 wiki_source_commit: 05d4ed6e021761e7b8762563b571fb1ac989f7b5
 wiki_working_tree_markdown: clean
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 48
 wiki_files: 20
 source_files: 68
@@ -18,78 +16,79 @@ included_files: 63
 excluded_files: 5
 duplicate_files: 0
 content_bytes: 499503
-authority_counts: {"canonical":63}
-generated_at: 2026-09-10T11:09:12-04:00
+authority_counts: {"reference":63}
+content_role_counts: {"knowledge":43,"navigation":20}
+generated_at: 2026-09-10T13:04:14-04:00
 files: 63
-content_sha256: 239caa6891ca755b2fb35c2e1828c64a426b4a72d608bf5ff98aff21a25557d2
+content_sha256: 6ae71f9e373f132de26800d7bbacdffdecd1d716e2af9c61265ab25458f201d8
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] wiki/_Footer.md
-02. [canonical] wiki/_Sidebar.md
-03. [canonical] wiki/Cases-and-Tasks.md
-04. [canonical] wiki/Cyclic-Overview-and-Insights.md
-05. [canonical] wiki/Domains-and-Use-Cases.md
-06. [canonical] wiki/Example-Scenarios.md
-07. [canonical] wiki/FAQ.md
-08. [canonical] wiki/Glossary.md
-09. [canonical] wiki/Home.md
-10. [canonical] wiki/How-Orgo-Works.md
-11. [canonical] wiki/Interoperability.md
-12. [canonical] wiki/Offline-and-Resilience.md
-13. [canonical] wiki/Organizations-People-and-Privacy.md
-14. [canonical] wiki/Profiles-and-Adaptability.md
-15. [canonical] wiki/Reactivity-and-Escalation.md
-16. [canonical] wiki/Resources.md
-17. [canonical] wiki/Routing-and-Labels.md
-18. [canonical] wiki/Semantic-Charters.md
-19. [canonical] wiki/Signals-and-Workflows.md
-20. [canonical] wiki/What-is-Orgo.md
-21. [canonical] apps/api/README.md
-22. [canonical] apps/web/README.md
-23. [canonical] CODE_SNAPSHOT_MANIFEST.md
-24. [canonical] Docs/README.md
-25. [canonical] Docs/status/2026-09-10-beta-status.md
-26. [canonical] Docs/Technical-Reference/API_IMPLEMENTED.md
-27. [canonical] Docs/Technical-Reference/ARCHITECTURE_TO_CODE.md
-28. [canonical] Docs/Technical-Reference/Boilerplate_Turborepo.md
-29. [canonical] Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
-30. [canonical] Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
-31. [canonical] Docs/Technical-Reference/COMPLETION_DECISIONS.md
-32. [canonical] Docs/Technical-Reference/CONTRACTS.md
-33. [canonical] Docs/Technical-Reference/GLOSSARY.md
-34. [canonical] Docs/Technical-Reference/IMPLEMENTATION_DECISIONS.md
-35. [canonical] Docs/Technical-Reference/IMPLEMENTATION_STATUS.md
-36. [canonical] Docs/Technical-Reference/INTEGRATION_BRIDGE.md
-37. [canonical] Docs/Technical-Reference/LOCAL_VALIDATION.md
-38. [canonical] Docs/Technical-Reference/Semantic-Charters.md
-39. [canonical] Docs/Technical-Reference/TARGET_ARCHITECTURE.md
-40. [canonical] Docs/Technical-Reference/UI_AND_KOALI_INTEGRATION.md
-41. [canonical] Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md
-42. [canonical] Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md
-43. [canonical] Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md
-44. [canonical] Docs/Technical-Reference/v3/2-orgo-documentation-index.md
-45. [canonical] Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md
-46. [canonical] Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md
-47. [canonical] Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md
-48. [canonical] Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md
-49. [canonical] Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md
-50. [canonical] Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md
-51. [canonical] Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md
-52. [canonical] Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md
-53. [canonical] Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md
-54. [canonical] Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md
-55. [canonical] Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md
-56. [canonical] Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md
-57. [canonical] Docs/Technical-Reference/WikiData-Orgo_Chart.md
-58. [canonical] legacy/README.md
-59. [canonical] packages/README.md
-60. [canonical] packages/tsconfig/README.md
-61. [canonical] README.md
-62. [canonical] validation/completion/STATUS.md
-63. [canonical] validation/README.md
+01. [reference] [navigation] wiki/_Footer.md | bytes=132 | sha256=e90fbdf30d0e41a7fd73ed879c7f504908e83a991cdaceda4f9b4d0659dbd610
+02. [reference] [navigation] wiki/_Sidebar.md | bytes=816 | sha256=af5033920ebe92dcefa584fd2b83c3200a3eddd7b862b4b35b57550be01f13e1
+03. [reference] [navigation] wiki/Cases-and-Tasks.md | bytes=1821 | sha256=d4bab76310f1a56b64a2979bb94121942a6365baf054664417d70bc0b1b28ea3
+04. [reference] [navigation] wiki/Cyclic-Overview-and-Insights.md | bytes=1346 | sha256=0b555879e54a05716cdc58617a5e13fb9e06b70c7822c3e3968953de78340eb6
+05. [reference] [navigation] wiki/Domains-and-Use-Cases.md | bytes=1834 | sha256=af81b62c49840b7466ce2efe9655741e9bf6ae0a4e3eb5fa805cca5e93488c90
+06. [reference] [navigation] wiki/Example-Scenarios.md | bytes=1998 | sha256=e1a3361e5ebaafed535afb3fd5c6b4a148f3b47717956740856e0dd2f984577e
+07. [reference] [navigation] wiki/FAQ.md | bytes=2701 | sha256=8a1d7816d54998c0bb8287131f71fd38907be402379e8b442da1dfe4af811f71
+08. [reference] [navigation] wiki/Glossary.md | bytes=1884 | sha256=766ecc95f91823a74f78b8f8e322a4e2c31ee21e50e7dbbcc44bd8024e617b8d
+09. [reference] [navigation] wiki/Home.md | bytes=3078 | sha256=0679834eec057ebe24d8024ba81fea233fdd4bc891b991df7908b24c1b49b4a3
+10. [reference] [navigation] wiki/How-Orgo-Works.md | bytes=1997 | sha256=c62d68c72889bf38b8c99331c54dca60cb3e16c17e34186c3b208f9451dfae5f
+11. [reference] [navigation] wiki/Interoperability.md | bytes=1828 | sha256=38e0b4b34248d60c19f9d0039c08808210a0964f0823a758bacfbf0ba6912c8e
+12. [reference] [navigation] wiki/Offline-and-Resilience.md | bytes=1115 | sha256=075d547307f7a76b9d5bc07a486dc750189b94509982e4b971f6f619a4934b84
+13. [reference] [navigation] wiki/Organizations-People-and-Privacy.md | bytes=1439 | sha256=23abd2ffe4dee17c9eab8be7989b8f9063e3951bfaadcdb35e3dd40ec30b5c96
+14. [reference] [navigation] wiki/Profiles-and-Adaptability.md | bytes=1147 | sha256=5d0b2f9a3d9c05cfd0d18a2e2ddc019b83a724864166420af5dde7fbd2b000b3
+15. [reference] [navigation] wiki/Reactivity-and-Escalation.md | bytes=1595 | sha256=30c2f0f75cedd3b2092b7f7ad1edd1412fb6e2051a33c240ec79f1aa6ca54ffd
+16. [reference] [navigation] wiki/Resources.md | bytes=423 | sha256=320daacdd6541ed07914f29644ecaa09a062d3feceeb7cdde2cbe45209ab5a22
+17. [reference] [navigation] wiki/Routing-and-Labels.md | bytes=1299 | sha256=2431441d5a285f0d5a0e27c122c512db75275e27c35eee4612acb51a9f594f8e
+18. [reference] [navigation] wiki/Semantic-Charters.md | bytes=1719 | sha256=6f0cafe14b8e2210388e9263ed20c36b6d5ee66a356ac9f8c18e487bc76e8189
+19. [reference] [navigation] wiki/Signals-and-Workflows.md | bytes=1550 | sha256=b8bfd927e0c739bd796ea032ec059143c50714993a0a641aa6f4bec5bc7e0ca4
+20. [reference] [navigation] wiki/What-is-Orgo.md | bytes=2201 | sha256=1398dcfbe5504f72984d6c9364ec0cf83bccc96838f120ec5062a732214dc3f6
+21. [reference] [knowledge] apps/api/README.md | bytes=206 | sha256=edd1819af6b8f652719c0a4f0b71905fe35b80e9bfd24ae5f9433b916b400c50
+22. [reference] [knowledge] apps/web/README.md | bytes=289 | sha256=e47c0bb330e89cd9c0e4a244509de0ac6967c7d20be5f54692738e2856fa3933
+23. [reference] [knowledge] CODE_SNAPSHOT_MANIFEST.md | bytes=15646 | sha256=3adeddce2bb6fc26e6bb2013744bed7c12bb464ac4c50f953d1cde7a7a28a728
+24. [reference] [knowledge] Docs/README.md | bytes=4316 | sha256=cde22c1b878242baf6d6111bc50491319a6d90e1dc3101d6b330c5c4e7f48208
+25. [reference] [knowledge] Docs/status/2026-09-10-beta-status.md | bytes=4381 | sha256=5b6cf02af37f3ead67ae17b025754834afe977721c6c97ed884dca3f687044a5
+26. [reference] [knowledge] Docs/Technical-Reference/API_IMPLEMENTED.md | bytes=8057 | sha256=d210e31589cc6f69f31c1b396322c6ec8cf33885c4f4aa53a8a58bc593169121
+27. [reference] [knowledge] Docs/Technical-Reference/ARCHITECTURE_TO_CODE.md | bytes=4304 | sha256=0c1a272d26262c0ccab0b8eaadc34347c0ec7bb48db9aecc0a39bd54b408f67a
+28. [reference] [knowledge] Docs/Technical-Reference/Boilerplate_Turborepo.md | bytes=2263 | sha256=adbb8be266bc9663242de812e2cd4f878f9d5011c3b52c5bd8c760d2fa026899
+29. [reference] [knowledge] Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md | bytes=5598 | sha256=c4205b4cd0f877ee5e731532564340460e2dbc62ca46e63a433176dcef348a0e
+30. [reference] [knowledge] Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md | bytes=19550 | sha256=19e1f2ab22b3857288043d92d0496c169eb673f4c1f5031d04ca324e4040071e
+31. [reference] [knowledge] Docs/Technical-Reference/COMPLETION_DECISIONS.md | bytes=9200 | sha256=4ef41a73829d18a5c7b99ccfbe74bb1e8b693b7843d1533d566fa492143030e6
+32. [reference] [knowledge] Docs/Technical-Reference/CONTRACTS.md | bytes=7155 | sha256=41d8aa0a6d96ad8a3cd973c8cec981b28ac062622c9898e1dad5fdb938edcebe
+33. [reference] [knowledge] Docs/Technical-Reference/GLOSSARY.md | bytes=5487 | sha256=5c8356720877b3bb21330e7d6811f80782c54a2064f811bd596250d1083dce25
+34. [reference] [knowledge] Docs/Technical-Reference/IMPLEMENTATION_DECISIONS.md | bytes=9038 | sha256=0fe33a3a2e70e8fc5bb05ad3745bf025e7ee39e2304785455eb20de796e220f3
+35. [reference] [knowledge] Docs/Technical-Reference/IMPLEMENTATION_STATUS.md | bytes=6763 | sha256=ce086cef2e1c743c027689741cf9b661bd13923c4f39127ecc392764838cba1c
+36. [reference] [knowledge] Docs/Technical-Reference/INTEGRATION_BRIDGE.md | bytes=4218 | sha256=0da629b20f824ea1745da1cf040cd397e8863e3449827fa8174ce887a6365762
+37. [reference] [knowledge] Docs/Technical-Reference/LOCAL_VALIDATION.md | bytes=5403 | sha256=2773d9d3298d4fc43b442cdf88d5b806ee8bca0fd7fbabcce2f8d53118e7acbc
+38. [reference] [knowledge] Docs/Technical-Reference/Semantic-Charters.md | bytes=7137 | sha256=ecb6cd50387aadf9821ba0a9faa2b111257038c0393a6a70814081f36c0ee7ca
+39. [reference] [knowledge] Docs/Technical-Reference/TARGET_ARCHITECTURE.md | bytes=17758 | sha256=ddb637b0e2b09ee3be3b9ba961bbaf1e5a47ad4192d49221f4d6ae68e9b2f453
+40. [reference] [knowledge] Docs/Technical-Reference/UI_AND_KOALI_INTEGRATION.md | bytes=11959 | sha256=dc142c599a095d89cd95f60640634fc9f855d5cd47b5293c6b0fd6971a0186ca
+41. [reference] [knowledge] Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md | bytes=5611 | sha256=216f9cc8d5b655953ccff79c7a6e6a3b38d76b8b1399ae4e4e738144f4480c2e
+42. [reference] [knowledge] Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md | bytes=47606 | sha256=1d5d33ee1859e5dbb0ab4349c8118de6358c23a8575400c3495382c382b29cbb
+43. [reference] [knowledge] Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md | bytes=8752 | sha256=32fb353b996b3127d47b1c506182aef0d9b7ea36179d2bbb880db4997570d0f8
+44. [reference] [knowledge] Docs/Technical-Reference/v3/2-orgo-documentation-index.md | bytes=31141 | sha256=4f9b300feae5109e99738b92e7eea956ab7f3af220f77ad0c3a7cce1c5b8d79b
+45. [reference] [knowledge] Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md | bytes=6078 | sha256=58731c133f3be8823076978de7ec658c33ad8d3fd63a45f200511aeaae775cf2
+46. [reference] [knowledge] Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md | bytes=28392 | sha256=153f921c269a3b6e2dd83fbbfcd2380f765edd3d23bfa9f2104f275b6732723d
+47. [reference] [knowledge] Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md | bytes=3091 | sha256=3218eca4e4b8dddca16a36b73ee7efdad46f77865605e396deb9f04381785daf
+48. [reference] [knowledge] Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md | bytes=46326 | sha256=162a126d2383a66547e8bcde7bccdd1db3ed56c27d98d8670a04b1d354a3d04e
+49. [reference] [knowledge] Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md | bytes=1931 | sha256=17f1b6c211135258ad1eb5b6d128e52855a45542b9bafa0221a492d9273a9281
+50. [reference] [knowledge] Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md | bytes=40973 | sha256=1f78e6f73f4c1aa21715d2f3b74c81c0fbfa5de1656649f53728c6b6d2e7d02d
+51. [reference] [knowledge] Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md | bytes=1969 | sha256=629c53ebcab194b0a908102faa7abb93c0a3bf0e91d9d2bc7475bb1f1715af37
+52. [reference] [knowledge] Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md | bytes=29951 | sha256=7183935cc369671486769060758e2baa7ff46b591147659bcfa89f0dc5250d3e
+53. [reference] [knowledge] Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md | bytes=3706 | sha256=85155be5e53283eb4c1bc983ad0c01a85cffc561d68032cbc5a8694b33f73d7b
+54. [reference] [knowledge] Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md | bytes=21619 | sha256=01ec9e77a8968bcd78a8fab691ce6f42ca3fd9e0d5d2fba5fd8acd138fdfa4e5
+55. [reference] [knowledge] Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md | bytes=1543 | sha256=5bc04cd7a75ca6980a603a7f44b857c474de2f5c82213c058d9546c5e0e976c7
+56. [reference] [knowledge] Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md | bytes=29606 | sha256=f144c92bf18d6fc23f730bd829d35ebbbf5fa54ce5878967ba4649fea2c61282
+57. [reference] [knowledge] Docs/Technical-Reference/WikiData-Orgo_Chart.md | bytes=6733 | sha256=61469f1577eb077a6a5ac0318980c39075d7e9bc65df07524185931cf653dd77
+58. [reference] [knowledge] legacy/README.md | bytes=252 | sha256=95c071ccbff8226ae71f49e8406dc307247e46eabd54619974767616a8dfdc44
+59. [reference] [knowledge] packages/README.md | bytes=229 | sha256=3194cfb55b18cd7fc9bec28fe853673f13e24090ce37e6eba1505be95d5767cb
+60. [reference] [knowledge] packages/tsconfig/README.md | bytes=106 | sha256=d39b75548339193750b127f369063e86a96897a6e5753bd3a73a233f2ac4f1f7
+61. [reference] [knowledge] README.md | bytes=2503 | sha256=a60f3bf4ad60e9aab52da73b6b684a886be5a6d398aaf6381c8e6a77acff3810
+62. [reference] [knowledge] validation/completion/STATUS.md | bytes=438 | sha256=f6c47d66c878ada27597ec5d566515a525c11e0ff281b50d93293687a463bcf3
+63. [reference] [knowledge] validation/README.md | bytes=296 | sha256=bbb8609f65d9da277774b5461f9b7abff436cdd80898360c74c0cc0a6ce385d3
 
 
 ================================================================================================
@@ -105,7 +104,10 @@ EXCLUDED FILES
 
 ================================================================================================
 FILE: wiki/_Footer.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: e90fbdf30d0e41a7fd73ed879c7f504908e83a991cdaceda4f9b4d0659dbd610
+CONTENT_BYTES: 132
 ================================================================================================
 
 Orgo — public conceptual wiki. For schemas, APIs, implementation constraints and code alignment, use the technical documentation.
@@ -113,7 +115,10 @@ Orgo — public conceptual wiki. For schemas, APIs, implementation constraints a
 
 ================================================================================================
 FILE: wiki/_Sidebar.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: af5033920ebe92dcefa584fd2b83c3200a3eddd7b862b4b35b57550be01f13e1
+CONTENT_BYTES: 816
 ================================================================================================
 
 **Orgo Wiki**
@@ -144,7 +149,10 @@ Technical details belong in the Orgo documentation rather than this public wiki.
 
 ================================================================================================
 FILE: wiki/Cases-and-Tasks.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: d4bab76310f1a56b64a2979bb94121942a6365baf054664417d70bc0b1b28ea3
+CONTENT_BYTES: 1821
 ================================================================================================
 
 # Cases and Tasks
@@ -223,7 +231,10 @@ The same principle applies to other external systems: Orgo can coordinate work a
 
 ================================================================================================
 FILE: wiki/Cyclic-Overview-and-Insights.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 0b555879e54a05716cdc58617a5e13fb9e06b70c7822c3e3968953de78340eb6
+CONTENT_BYTES: 1346
 ================================================================================================
 
 # Cyclic Overview and Insights
@@ -280,7 +291,10 @@ That keeps analysis and action connected without confusing them.
 
 ================================================================================================
 FILE: wiki/Domains-and-Use-Cases.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: af81b62c49840b7466ce2efe9655741e9bf6ae0a4e3eb5fa805cca5e93488c90
+CONTENT_BYTES: 1834
 ================================================================================================
 
 # Domains and Use Cases
@@ -344,7 +358,10 @@ Orgo's semantic charters help describe these domains without turning every vocab
 
 ================================================================================================
 FILE: wiki/Example-Scenarios.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: e1a3361e5ebaafed535afb3fd5c6b4a148f3b47717956740856e0dd2f984577e
+CONTENT_BYTES: 1998
 ================================================================================================
 
 # Example Scenarios
@@ -429,7 +446,10 @@ Orgo coordinates the work without taking ownership of the external system's inte
 
 ================================================================================================
 FILE: wiki/FAQ.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 8a1d7816d54998c0bb8287131f71fd38907be402379e8b442da1dfe4af811f71
+CONTENT_BYTES: 2701
 ================================================================================================
 
 # FAQ
@@ -489,7 +509,10 @@ No. It may coordinate work around ERP-like processes, but it is not intended to 
 
 ================================================================================================
 FILE: wiki/Glossary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 766ecc95f91823a74f78b8f8e322a4e2c31ee21e50e7dbbcc44bd8024e617b8d
+CONTENT_BYTES: 1884
 ================================================================================================
 
 # Glossary
@@ -561,7 +584,10 @@ A system with its own significant domain authority and boundaries. Orgo is one e
 
 ================================================================================================
 FILE: wiki/Home.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 0679834eec057ebe24d8024ba81fea233fdd4bc891b991df7908b24c1b49b4a3
+CONTENT_BYTES: 3078
 ================================================================================================
 
 # Orgo
@@ -645,7 +671,10 @@ Orgo coordinates work and keeps operational state. When another system owns the 
 
 ================================================================================================
 FILE: wiki/How-Orgo-Works.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: c62d68c72889bf38b8c99331c54dca60cb3e16c17e34186c3b208f9451dfae5f
+CONTENT_BYTES: 1997
 ================================================================================================
 
 # How Orgo Works
@@ -728,7 +757,10 @@ This closes the loop between day-to-day work and organizational learning.
 
 ================================================================================================
 FILE: wiki/Interoperability.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 38e0b4b34248d60c19f9d0039c08808210a0964f0823a758bacfbf0ba6912c8e
+CONTENT_BYTES: 1828
 ================================================================================================
 
 # Interoperability
@@ -791,7 +823,10 @@ The same principle applies to other external tools and services.
 
 ================================================================================================
 FILE: wiki/Offline-and-Resilience.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 075d547307f7a76b9d5bc07a486dc750189b94509982e4b971f6f619a4934b84
+CONTENT_BYTES: 1115
 ================================================================================================
 
 # Offline and Resilience
@@ -825,7 +860,10 @@ If a workflow depends on another system that is unavailable, Orgo can still reta
 
 ================================================================================================
 FILE: wiki/Organizations-People-and-Privacy.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 23abd2ffe4dee17c9eab8be7989b8f9063e3951bfaadcdb35e3dd40ec30b5c96
+CONTENT_BYTES: 1439
 ================================================================================================
 
 # Organizations, People and Privacy
@@ -888,7 +926,10 @@ When Orgo refers to an object or person owned by another system, the relationshi
 
 ================================================================================================
 FILE: wiki/Profiles-and-Adaptability.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 5d0b2f9a3d9c05cfd0d18a2e2ddc019b83a724864166420af5dde7fbd2b000b3
+CONTENT_BYTES: 1147
 ================================================================================================
 
 # Profiles and Adaptability
@@ -936,7 +977,10 @@ Domain module → what this kind of work means
 
 ================================================================================================
 FILE: wiki/Reactivity-and-Escalation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 30c2f0f75cedd3b2092b7f7ad1edd1412fb6e2051a33c240ec79f1aa6ca54ffd
+CONTENT_BYTES: 1595
 ================================================================================================
 
 # Reactivity and Escalation
@@ -990,7 +1034,10 @@ Combined with Cyclic Overview and Insights, this also makes it possible to disti
 
 ================================================================================================
 FILE: wiki/Resources.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 320daacdd6541ed07914f29644ecaa09a062d3feceeb7cdde2cbe45209ab5a22
+CONTENT_BYTES: 423
 ================================================================================================
 
 # Resources
@@ -1010,7 +1057,10 @@ This wiki intentionally stays at a conceptual/public level.
 
 ================================================================================================
 FILE: wiki/Routing-and-Labels.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 2431441d5a285f0d5a0e27c122c512db75275e27c35eee4612acb51a9f594f8e
+CONTENT_BYTES: 1299
 ================================================================================================
 
 # Routing and Labels
@@ -1067,7 +1117,10 @@ This prevents announcements from silently becoming obligations.
 
 ================================================================================================
 FILE: wiki/Semantic-Charters.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 6f0cafe14b8e2210388e9263ed20c36b6d5ee66a356ac9f8c18e487bc76e8189
+CONTENT_BYTES: 1719
 ================================================================================================
 
 # Semantic Charters
@@ -1123,7 +1176,10 @@ This keeps semantic assistance useful in local/offline environments while preser
 
 ================================================================================================
 FILE: wiki/Signals-and-Workflows.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b8bfd927e0c739bd796ea032ec059143c50714993a0a641aa6f4bec5bc7e0ca4
+CONTENT_BYTES: 1550
 ================================================================================================
 
 # Signals and Workflows
@@ -1186,7 +1242,10 @@ Orgo can coordinate the process and reconcile the result, but it does not gain d
 
 ================================================================================================
 FILE: wiki/What-is-Orgo.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 1398dcfbe5504f72984d6c9364ec0cf83bccc96838f120ec5062a732214dc3f6
+CONTENT_BYTES: 2201
 ================================================================================================
 
 # What is Orgo?
@@ -1255,7 +1314,10 @@ That is the central design idea:
 
 ================================================================================================
 FILE: apps/api/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: edd1819af6b8f652719c0a4f0b71905fe35b80e9bfd24ae5f9433b916b400c50
+CONTENT_BYTES: 206
 ================================================================================================
 
 # Orgo API and worker
@@ -1265,7 +1327,10 @@ See the root README for setup and `docs/Technical-Reference/API_IMPLEMENTED.md` 
 
 ================================================================================================
 FILE: apps/web/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e47c0bb330e89cd9c0e4a244509de0ac6967c7d20be5f54692738e2856fa3933
+CONTENT_BYTES: 289
 ================================================================================================
 
 # Orgo web
@@ -1275,7 +1340,10 @@ One owner-managed React application, served standalone by Next. Profiles compose
 
 ================================================================================================
 FILE: CODE_SNAPSHOT_MANIFEST.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3adeddce2bb6fc26e6bb2013744bed7c12bb464ac4c50f953d1cde7a7a28a728
+CONTENT_BYTES: 15646
 ================================================================================================
 
 > Historical inventory of the uploaded snapshot. Active sources have since changed; use DELIVERY_MANIFEST.json and IMPLEMENTATION_STATUS.md.
@@ -1539,7 +1607,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: Docs/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cde22c1b878242baf6d6111bc50491319a6d90e1dc3101d6b330c5c4e7f48208
+CONTENT_BYTES: 4316
 ================================================================================================
 
 > Current delivery: [Implementation status](Technical-Reference/IMPLEMENTATION_STATUS.md), [adopted decisions](Technical-Reference/IMPLEMENTATION_DECISIONS.md), [implemented API](Technical-Reference/API_IMPLEMENTED.md).
@@ -1597,7 +1668,10 @@ The active implementation and its remaining external-contract boundaries are rec
 
 ================================================================================================
 FILE: Docs/status/2026-09-10-beta-status.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5b6cf02af37f3ead67ae17b025754834afe977721c6c97ed884dca3f687044a5
+CONTENT_BYTES: 4381
 ================================================================================================
 
 # Orgo — Rapport de statut du 10 septembre 2026
@@ -1659,7 +1733,10 @@ Si une GitHub Release est créée, la marquer comme préversion et reprendre les
 
 ================================================================================================
 FILE: Docs/Technical-Reference/API_IMPLEMENTED.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d210e31589cc6f69f31c1b396322c6ec8cf33885c4f4aa53a8a58bc593169121
+CONTENT_BYTES: 8057
 ================================================================================================
 
 # Orgo — Implemented HTTP routes
@@ -1790,7 +1867,10 @@ Total: **114 routes**.
 
 ================================================================================================
 FILE: Docs/Technical-Reference/ARCHITECTURE_TO_CODE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0c1a272d26262c0ccab0b8eaadc34347c0ec7bb48db9aecc0a39bd54b408f67a
+CONTENT_BYTES: 4304
 ================================================================================================
 
 # Target architecture → active code → local acceptance
@@ -1832,7 +1912,10 @@ Paths are relative to `apps/api/src/orgo/` unless otherwise specified. This is a
 
 ================================================================================================
 FILE: Docs/Technical-Reference/Boilerplate_Turborepo.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: adbb8be266bc9663242de812e2cd4f878f9d5011c3b52c5bd8c760d2fa026899
+CONTENT_BYTES: 2263
 ================================================================================================
 
 # Turborepo (NestJS + Prisma + NextJS + Tailwind + Typescript + Jest) Starter
@@ -1923,7 +2006,10 @@ Run `nps` in the terminal to see list of all available commands.
 
 ================================================================================================
 FILE: Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c4205b4cd0f877ee5e731532564340460e2dbc62ca46e63a433176dcef348a0e
+CONTENT_BYTES: 5598
 ================================================================================================
 
 # Orgo — Boundaries and Ownership
@@ -2089,7 +2175,10 @@ The boundary should carry only what is needed:
 
 ================================================================================================
 FILE: Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 19e1f2ab22b3857288043d92d0496c169eb673f4c1f5031d04ca324e4040071e
+CONTENT_BYTES: 19550
 ================================================================================================
 
 # Orgo — Code Alignment Notes
@@ -2572,7 +2661,10 @@ Do not introduce Task, Case, Workflow or Notification network services, Event So
 
 ================================================================================================
 FILE: Docs/Technical-Reference/COMPLETION_DECISIONS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4ef41a73829d18a5c7b99ccfbe74bb1e8b693b7843d1533d566fa492143030e6
+CONTENT_BYTES: 9200
 ================================================================================================
 
 # Orgo — completion implementation decisions (2026-09-09)
@@ -2636,7 +2728,10 @@ The hosted entry exports `OrgoApp`, `orgoSurface` and a permission-filtered comm
 
 ================================================================================================
 FILE: Docs/Technical-Reference/CONTRACTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 41d8aa0a6d96ad8a3cd973c8cec981b28ac062622c9898e1dad5fdb938edcebe
+CONTENT_BYTES: 7155
 ================================================================================================
 
 # Orgo — Contract Surface
@@ -2940,7 +3035,10 @@ The active implementation and its remaining external-contract boundaries are rec
 
 ================================================================================================
 FILE: Docs/Technical-Reference/GLOSSARY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5c8356720877b3bb21330e7d6811f80782c54a2064f811bd596250d1083dce25
+CONTENT_BYTES: 5487
 ================================================================================================
 
 # Orgo — Architectural Glossary
@@ -3079,7 +3177,10 @@ A business fact emitted after an accepted Orgo state transition, such as `TaskAs
 
 ================================================================================================
 FILE: Docs/Technical-Reference/IMPLEMENTATION_DECISIONS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0fe33a3a2e70e8fc5bb05ad3745bf025e7ee39e2304785455eb20de796e220f3
+CONTENT_BYTES: 9038
 ================================================================================================
 
 # Orgo — Implementation decisions, 2026-09-09
@@ -3159,7 +3260,10 @@ For the 2026-09-09 completion delivery, `COMPLETION_DECISIONS.md` supersedes ear
 
 ================================================================================================
 FILE: Docs/Technical-Reference/IMPLEMENTATION_STATUS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ce086cef2e1c743c027689741cf9b661bd13923c4f39127ecc392764838cba1c
+CONTENT_BYTES: 6763
 ================================================================================================
 
 # Orgo — implementation ledger, completion delivery 2026-09-09
@@ -3216,7 +3320,10 @@ These are the actual integration/configuration and acceptance boundaries. No end
 
 ================================================================================================
 FILE: Docs/Technical-Reference/INTEGRATION_BRIDGE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0da629b20f824ea1745da1cf040cd397e8863e3449827fa8174ce887a6365762
+CONTENT_BYTES: 4218
 ================================================================================================
 
 # Orgo — Explicit integration bridge protocol
@@ -3273,7 +3380,10 @@ For notifications, `in_app` delivery is implemented; email uses configured `SMTP
 
 ================================================================================================
 FILE: Docs/Technical-Reference/LOCAL_VALIDATION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2773d9d3298d4fc43b442cdf88d5b806ee8bca0fd7fbabcce2f8d53118e7acbc
+CONTENT_BYTES: 5403
 ================================================================================================
 
 # Validation locale — à exécuter par le propriétaire
@@ -3341,7 +3451,10 @@ Les contrats natifs Kristal/Konnaxion/Architect/kOA et Koali/Capsule sont à fou
 
 ================================================================================================
 FILE: Docs/Technical-Reference/Semantic-Charters.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ecb6cd50387aadf9821ba0a9faa2b111257038c0393a6a70814081f36c0ee7ca
+CONTENT_BYTES: 7137
 ================================================================================================
 
 # Orgo — Semantic Charter Reference
@@ -3591,7 +3704,10 @@ Domains already drafted:
 
 ================================================================================================
 FILE: Docs/Technical-Reference/TARGET_ARCHITECTURE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ddb637b0e2b09ee3be3b9ba961bbaf1e5a47ad4192d49221f4d6ae68e9b2f453
+CONTENT_BYTES: 17758
 ================================================================================================
 
 # Orgo — Target Architecture
@@ -4228,7 +4344,10 @@ The active implementation and its remaining external-contract boundaries are rec
 
 ================================================================================================
 FILE: Docs/Technical-Reference/UI_AND_KOALI_INTEGRATION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dc142c599a095d89cd95f60640634fc9f855d5cd47b5293c6b0fd6971a0186ca
+CONTENT_BYTES: 11959
 ================================================================================================
 
 # Orgo — UI Architecture and Koali Integration
@@ -4626,7 +4745,10 @@ The current Orgo web snapshot is not yet this application. It contains useful ty
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 216f9cc8d5b655953ccff79c7a6e6a3b38d76b8b1399ae4e4e738144f4480c2e
+CONTENT_BYTES: 5611
 ================================================================================================
 
 # Orgo v3 — Database Schema Reference
@@ -4879,7 +5001,10 @@ A dedicated record or equivalent unique constraints are required where a stable 
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1d5d33ee1859e5dbb0ab4349c8118de6358c23a8575400c3495382c382b29cbb
+CONTENT_BYTES: 47606
 ================================================================================================
 
 > **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
@@ -5979,7 +6104,10 @@ Key columns:
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 32fb353b996b3127d47b1c506182aef0d9b7ea36179d2bbb880db4997570d0f8
+CONTENT_BYTES: 8752
 ================================================================================================
 
 # Orgo v3 — Architecture and Invariants
@@ -6242,7 +6370,10 @@ Do not introduce these as default Orgo architecture without a measured requireme
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/2-orgo-documentation-index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4f9b300feae5109e99738b92e7eea956ab7f3af220f77ad0c3a7cce1c5b8d79b
+CONTENT_BYTES: 31141
 ================================================================================================
 
 > **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
@@ -7104,7 +7235,10 @@ All other docs in Orgo v3 (Docs 1, 3, 4, 5, 6, 8, etc.) must **reference and rem
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 58731c133f3be8823076978de7ec658c33ad8d3fd63a45f200511aeaae775cf2
+CONTENT_BYTES: 6078
 ================================================================================================
 
 # Orgo v3 — Signal, Work and Workflow Contract
@@ -7368,7 +7502,10 @@ Retry-prone entry/effect paths require stable idempotency identity. Replaying th
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 153f921c269a3b6e2dd83fbbfcd2380f765edd3d23bfa9f2104f275b6732723d
+CONTENT_BYTES: 28392
 ================================================================================================
 
 > **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
@@ -8221,7 +8358,10 @@ This version of **Doc 3 – Domain Modules (Orgo v3)** is aligned with:
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3218eca4e4b8dddca16a36b73ee7efdad46f77865605e396deb9f04381785daf
+CONTENT_BYTES: 3091
 ================================================================================================
 
 # Orgo v3 — Domain Modules
@@ -8341,7 +8481,10 @@ When a domain operation must atomically create canonical Work and domain extensi
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 162a126d2383a66547e8bcde7bccdd1db3ed56c27d98d8670a04b1d354a3d04e
+CONTENT_BYTES: 46326
 ================================================================================================
 
 > **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
@@ -8670,7 +8813,10 @@ Where both backend and frontend artifacts exist, they are listed together in the
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 17f1b6c211135258ad1eb5b6d128e52855a45542b9bafa0221a492d9273a9281
+CONTENT_BYTES: 1931
 ================================================================================================
 
 # Orgo v3 — Labels, Profiles and Cyclic Overview
@@ -8776,7 +8922,10 @@ See `../Semantic-Charters.md`.
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1f78e6f73f4c1aa21715d2f3b74c81c0fbfa5de1656649f53728c6b6d2e7d02d
+CONTENT_BYTES: 40973
 ================================================================================================
 
 > **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
@@ -10011,7 +10160,10 @@ Core Services remain the **single shared backbone**; all extensions must plug in
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 629c53ebcab194b0a908102faa7abb93c0a3bf0e91d9d2bc7475bb1f1715af37
+CONTENT_BYTES: 1969
 ================================================================================================
 
 # Orgo v3 — Insights and Analytics
@@ -10082,7 +10234,10 @@ Insights may never mutate Work directly; actionable patterns re-enter through ex
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7183935cc369671486769060758e2baa7ff46b591147659bcfa89f0dc5250d3e
+CONTENT_BYTES: 29951
 ================================================================================================
 
 > **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
@@ -10809,7 +10964,10 @@ This section encodes explicitly the alignment guidance so the document is self�
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 85155be5e53283eb4c1bc983ad0c01a85cffc561d68032cbc5a8694b33f73d7b
+CONTENT_BYTES: 3706
 ================================================================================================
 
 # Orgo v3 — API Surface
@@ -10934,7 +11092,10 @@ Signal persistence, idempotency, outbox processing and integration-operation API
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 01ec9e77a8968bcd78a8fab691ce6f42ca3fd9e0d5d2fba5fd8acd138fdfa4e5
+CONTENT_BYTES: 21619
 ================================================================================================
 
 > **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
@@ -11580,7 +11741,10 @@ profiles:
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5bc04cd7a75ca6980a603a7f44b857c474de2f5c82213c058d9546c5e0e976c7
+CONTENT_BYTES: 1543
 ================================================================================================
 
 # Orgo v3 — Documentation Index
@@ -11623,7 +11787,10 @@ Files with parallel lower-case/older titles remain historical/reference material
 
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f144c92bf18d6fc23f730bd829d35ebbbf5fa54ce5878967ba4649fea2c61282
+CONTENT_BYTES: 29606
 ================================================================================================
 
 > **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
@@ -12407,7 +12574,10 @@ This version supersedes all previous “Doc 8” drafts and is the integral, upd
 
 ================================================================================================
 FILE: Docs/Technical-Reference/WikiData-Orgo_Chart.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 61469f1577eb077a6a5ac0318980c39075d7e9bc65df07524185931cf653dd77
+CONTENT_BYTES: 6733
 ================================================================================================
 
 # Orgo × Wikidata: System documentation (charts, IDs, files, and build pipeline)
@@ -12649,7 +12819,10 @@ Domains already drafted:
 
 ================================================================================================
 FILE: legacy/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 95c071ccbff8226ae71f49e8406dc307247e46eabd54619974767616a8dfdc44
+CONTENT_BYTES: 252
 ================================================================================================
 
 # Historical snapshot source
@@ -12659,7 +12832,10 @@ Original API and web source retained as reference, excluded from active compilat
 
 ================================================================================================
 FILE: packages/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3194cfb55b18cd7fc9bec28fe853673f13e24090ce37e6eba1505be95d5767cb
+CONTENT_BYTES: 229
 ================================================================================================
 
 # Historical starter packages
@@ -12669,7 +12845,10 @@ These packages are retained from the supplied snapshot. They are not members of 
 
 ================================================================================================
 FILE: packages/tsconfig/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d39b75548339193750b127f369063e86a96897a6e5753bd3a73a233f2ac4f1f7
+CONTENT_BYTES: 106
 ================================================================================================
 
 # `tsconfig`
@@ -12679,7 +12858,10 @@ These are base shared `tsconfig.json`s from which all other `tsconfig.json`'s in
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a60f3bf4ad60e9aab52da73b6b684a886be5a6d398aaf6381c8e6a77acff3810
+CONTENT_BYTES: 2503
 ================================================================================================
 
 # Orgo dependency security update
@@ -12758,7 +12940,10 @@ security have completed with no unexpected failures.
 
 ================================================================================================
 FILE: validation/completion/STATUS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f6c47d66c878ada27597ec5d566515a525c11e0ff281b50d93293687a463bcf3
+CONTENT_BYTES: 438
 ================================================================================================
 
 # Static checks for completion delivery
@@ -12770,7 +12955,10 @@ Final runtime, migrations against a database, tests, Docker/browser and provider
 
 ================================================================================================
 FILE: validation/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bbb8609f65d9da277774b5461f9b7abff436cdd80898360c74c0cc0a6ce385d3
+CONTENT_BYTES: 296
 ================================================================================================
 
 # Validation records

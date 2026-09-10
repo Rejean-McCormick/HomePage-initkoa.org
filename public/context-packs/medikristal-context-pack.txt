@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/MediKristal
-source_path: C:\mycode\MediKristal\MediKristal
 source_commit: 245f5a3007d538aea65e0fba0020ee8178079353
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: C:\mycode\MediKristal\MediKristal.wiki
 wiki_source_commit: 93fba2ff54b0d2066bc5f3ba8afecf16ec10590c
 wiki_working_tree_markdown: clean
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 3
 wiki_files: 19
 source_files: 22
@@ -18,42 +16,46 @@ included_files: 22
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 90031
-authority_counts: {"canonical":22}
-generated_at: 2026-09-10T11:09:14-04:00
+authority_counts: {"reference":22}
+content_role_counts: {"knowledge":3,"navigation":19}
+generated_at: 2026-09-10T13:04:15-04:00
 files: 22
-content_sha256: bfb5297740aff7ea7eed7f9848a87fb7a30cae41f6d363c435bac8ec422fd897
+content_sha256: da1b038bce6a98708dd00bb15eced196c99fa4a7003887d715fd8efc16dd13fa
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] wiki/_Footer.md
-02. [canonical] wiki/_Sidebar.md
-03. [canonical] wiki/AI-and-MediKristal.md
-04. [canonical] wiki/Clinical-Epistemic-States.md
-05. [canonical] wiki/Distribution-through-UCKK.md
-06. [canonical] wiki/Glossary.md
-07. [canonical] wiki/Governance-and-Smart-Vote.md
-08. [canonical] wiki/Home.md
-09. [canonical] wiki/Kristal-Lifecycle-in-MediKristal.md
-10. [canonical] wiki/Medical-Source-Orchestration.md
-11. [canonical] wiki/MediKristal-on-kOA-Linux.md
-12. [canonical] wiki/Multilingual-Model.md
-13. [canonical] wiki/Protocols-and-Clinical-Logic.md
-14. [canonical] wiki/README-INSTALL.md
-15. [canonical] wiki/Related-Systems-and-Links.md
-16. [canonical] wiki/Roadmap.md
-17. [canonical] wiki/Semantic-Medical-Graph.md
-18. [canonical] wiki/Trust-Provenance-and-Versioning.md
-19. [canonical] wiki/What-MediKristal-Is.md
-20. [canonical] docs/Foundational_Document-Medikristal_Architecture.md
-21. [canonical] docs/MediKristal_Information_Sources.md
-22. [canonical] README.md
+01. [reference] [navigation] wiki/_Footer.md | bytes=268 | sha256=3faf51bb8dbe8c38c3468c92b98e2509bdff57e760985569b7d566436d7a9d5c
+02. [reference] [navigation] wiki/_Sidebar.md | bytes=566 | sha256=b75ae01dae361be3afc8ebc0d291382342d378776e1e341fc590ee24ece850cb
+03. [reference] [navigation] wiki/AI-and-MediKristal.md | bytes=2560 | sha256=ec5ce025553c9fd99ae49da218cff82431b024b869c85ded0a231d6635c93a15
+04. [reference] [navigation] wiki/Clinical-Epistemic-States.md | bytes=1711 | sha256=bf9eed65f5df72714c76884c379f14e93bb1f5aeec2f3ecb1be6fcc14cde6781
+05. [reference] [navigation] wiki/Distribution-through-UCKK.md | bytes=3261 | sha256=344a0b93fb1a2740239459ea47b5f37a1556ea67fae331496d4c552933db659d
+06. [reference] [navigation] wiki/Glossary.md | bytes=3398 | sha256=db27d4a32d15510b7b96cab6f059e53a16c16448469436d0491e18e76f048ec3
+07. [reference] [navigation] wiki/Governance-and-Smart-Vote.md | bytes=4316 | sha256=f73a1ffd7565dd1a67287a208b37c5e8d442905e9381b9a121bad7220d9be7c1
+08. [reference] [navigation] wiki/Home.md | bytes=6132 | sha256=0c1be55cbbab21e6d3e66bbf2cdde02c96a55433ff91e0e6d4d6f99b6e321638
+09. [reference] [navigation] wiki/Kristal-Lifecycle-in-MediKristal.md | bytes=2947 | sha256=8dc7e2b952a407fd405be7e01b36e25f0736210004730c74f649566d69e72d52
+10. [reference] [navigation] wiki/Medical-Source-Orchestration.md | bytes=5287 | sha256=d6797d3de14d4b1d7bfd2728d4da8759fbd5f65ee44c1c36e8e451d2bb29a594
+11. [reference] [navigation] wiki/MediKristal-on-kOA-Linux.md | bytes=4733 | sha256=e539e0ff983f39f7e6e3e66e78ec29bc662cac858331b0c1175dd89f39389d6b
+12. [reference] [navigation] wiki/Multilingual-Model.md | bytes=2603 | sha256=fcb3c1af0242f79d945a02ea7e89451528bb8680d9c97190247773e09e4ba58b
+13. [reference] [navigation] wiki/Protocols-and-Clinical-Logic.md | bytes=2156 | sha256=35de56aa14d47ca8fe2e9cb99c66c4affabd2fbfbd79c74e541a0291aa02407d
+14. [reference] [navigation] wiki/README-INSTALL.md | bytes=608 | sha256=dbdcc28103ef71c1d91e6bf055171e8c5e7d16bbb6b0cff8874404f8f6074718
+15. [reference] [navigation] wiki/Related-Systems-and-Links.md | bytes=4171 | sha256=c82a38484022359643326a0b5b39b2d5593f2b7eee2a509f13422af01553f6de
+16. [reference] [navigation] wiki/Roadmap.md | bytes=2833 | sha256=72a3e3d2016a48f92f90974c4f52c5f8939f1919ace9b6f5cd3135c6ee3892e3
+17. [reference] [navigation] wiki/Semantic-Medical-Graph.md | bytes=2818 | sha256=661efa19e909e97b1e6d3db638d594ed60bdb66c00b81767abc2b97b8631fe4a
+18. [reference] [navigation] wiki/Trust-Provenance-and-Versioning.md | bytes=1732 | sha256=1eee1055476cbb540f929dbc99c6d41a82a616e15ccdc22a2afa5fe870b9c1b1
+19. [reference] [navigation] wiki/What-MediKristal-Is.md | bytes=3327 | sha256=463f9d9f7e6dfbeadfe09db46b1958b16976e31f5c00803102680e821cf2a569
+20. [reference] [knowledge] docs/Foundational_Document-Medikristal_Architecture.md | bytes=18703 | sha256=2fb16dff1a7defbdb0c1d86a7db7c51382cb0faf390116aa36357a5ea9adac1d
+21. [reference] [knowledge] docs/MediKristal_Information_Sources.md | bytes=13202 | sha256=2504c87b1f42d214c867d1faf2e95d238b113265a05c3dda8bb869eb3571e987
+22. [reference] [knowledge] README.md | bytes=2699 | sha256=262e8f7d15a5848e166b360ab1f8d21f79eba43c7f6303ab45bfab6c05cf7733
 
 
 ================================================================================================
 FILE: wiki/_Footer.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 3faf51bb8dbe8c38c3468c92b98e2509bdff57e760985569b7d566436d7a9d5c
+CONTENT_BYTES: 268
 ================================================================================================
 
 MediKristal — early foundational architecture. Research and prototyping only; not validated for direct clinical use. · [kOA-Linux Wiki](https://github.com/Rejean-McCormick/kOA-Linux/wiki) · [MediKristal repository](https://github.com/Rejean-McCormick/MediKristal)
@@ -61,7 +63,10 @@ MediKristal — early foundational architecture. Research and prototyping only; 
 
 ================================================================================================
 FILE: wiki/_Sidebar.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b75ae01dae361be3afc8ebc0d291382342d378776e1e341fc590ee24ece850cb
+CONTENT_BYTES: 566
 ================================================================================================
 
 ## MediKristal Wiki
@@ -95,7 +100,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/AI-and-MediKristal.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: ec5ce025553c9fd99ae49da218cff82431b024b869c85ded0a231d6635c93a15
+CONTENT_BYTES: 2560
 ================================================================================================
 
 # AI and MediKristal
@@ -198,7 +206,10 @@ AI may summarize arguments or help professionals inspect evidence, but it is not
 
 ================================================================================================
 FILE: wiki/Clinical-Epistemic-States.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: bf9eed65f5df72714c76884c379f14e93bb1f5aeec2f3ecb1be6fcc14cde6781
+CONTENT_BYTES: 1711
 ================================================================================================
 
 # Clinical Epistemic States
@@ -280,7 +291,10 @@ A proposed mapping, translation, or protocol can be compiled and tested before i
 
 ================================================================================================
 FILE: wiki/Distribution-through-UCKK.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 344a0b93fb1a2740239459ea47b5f37a1556ea67fae331496d4c552933db659d
+CONTENT_BYTES: 3261
 ================================================================================================
 
 # Distribution through UCKK
@@ -388,7 +402,10 @@ Distribution expands access; it must not erase the governance that made the info
 
 ================================================================================================
 FILE: wiki/Glossary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: db27d4a32d15510b7b96cab6f059e53a16c16448469436d0491e18e76f048ec3
+CONTENT_BYTES: 3398
 ================================================================================================
 
 # Glossary
@@ -465,7 +482,10 @@ External online learning/publication environment in the wider kOA ecosystem. Med
 
 ================================================================================================
 FILE: wiki/Governance-and-Smart-Vote.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: f73a1ffd7565dd1a67287a208b37c5e8d442905e9381b9a121bad7220d9be7c1
+CONTENT_BYTES: 4316
 ================================================================================================
 
 # Governance and Smart Vote
@@ -604,7 +624,10 @@ Smart Vote belongs to the wider kOA/Konnaxion collective-intelligence architectu
 
 ================================================================================================
 FILE: wiki/Home.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 0c1be55cbbab21e6d3e66bbf2cdde02c96a55433ff91e0e6d4d6f99b6e321638
+CONTENT_BYTES: 6132
 ================================================================================================
 
 # MediKristal
@@ -788,7 +811,10 @@ source
 
 ================================================================================================
 FILE: wiki/Kristal-Lifecycle-in-MediKristal.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 8dc7e2b952a407fd405be7e01b36e25f0736210004730c74f649566d69e72d52
+CONTENT_BYTES: 2947
 ================================================================================================
 
 # Kristal Lifecycle in MediKristal
@@ -887,7 +913,10 @@ This supports:
 
 ================================================================================================
 FILE: wiki/Medical-Source-Orchestration.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: d6797d3de14d4b1d7bfd2728d4da8759fbd5f65ee44c1c36e8e451d2bb29a594
+CONTENT_BYTES: 5287
 ================================================================================================
 
 # Medical Source Orchestration
@@ -1027,7 +1056,10 @@ The objective is not maximum database volume. It is a coherent, traceable medica
 
 ================================================================================================
 FILE: wiki/MediKristal-on-kOA-Linux.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: e539e0ff983f39f7e6e3e66e78ec29bc662cac858331b0c1175dd89f39389d6b
+CONTENT_BYTES: 4733
 ================================================================================================
 
 # MediKristal on kOA-Linux
@@ -1135,7 +1167,10 @@ kOA-Linux provides the operating conditions needed to make that kind of historic
 
 ================================================================================================
 FILE: wiki/Multilingual-Model.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: fcb3c1af0242f79d945a02ea7e89451528bb8680d9c97190247773e09e4ba58b
+CONTENT_BYTES: 2603
 ================================================================================================
 
 # Multilingual Model
@@ -1219,7 +1254,10 @@ The system should reject unsupported linguistic constructions rather than silent
 
 ================================================================================================
 FILE: wiki/Protocols-and-Clinical-Logic.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 35de56aa14d47ca8fe2e9cb99c66c4affabd2fbfbd79c74e541a0291aa02407d
+CONTENT_BYTES: 2156
 ================================================================================================
 
 # Protocols and Clinical Logic
@@ -1314,7 +1352,10 @@ validated information / protocol output
 
 ================================================================================================
 FILE: wiki/README-INSTALL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: dbdcc28103ef71c1d91e6bf055171e8c5e7d16bbb6b0cff8874404f8f6074718
+CONTENT_BYTES: 608
 ================================================================================================
 
 # MediKristal Wiki v0.2
@@ -1344,7 +1385,10 @@ Pages:
 
 ================================================================================================
 FILE: wiki/Related-Systems-and-Links.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: c82a38484022359643326a0b5b39b2d5593f2b7eee2a509f13422af01553f6de
+CONTENT_BYTES: 4171
 ================================================================================================
 
 # Related Systems and Links
@@ -1407,7 +1451,10 @@ MediKristal should preserve this boundary explicitly.
 
 ================================================================================================
 FILE: wiki/Roadmap.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 72a3e3d2016a48f92f90974c4f52c5f8939f1919ace9b6f5cd3135c6ee3892e3
+CONTENT_BYTES: 2833
 ================================================================================================
 
 # Roadmap
@@ -1550,7 +1597,10 @@ A stronger early milestone is:
 
 ================================================================================================
 FILE: wiki/Semantic-Medical-Graph.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 661efa19e909e97b1e6d3db638d594ed60bdb66c00b81767abc2b97b8631fe4a
+CONTENT_BYTES: 2818
 ================================================================================================
 
 # Semantic Medical Graph
@@ -1688,7 +1738,10 @@ result
 
 ================================================================================================
 FILE: wiki/Trust-Provenance-and-Versioning.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 1eee1055476cbb540f929dbc99c6d41a82a616e15ccdc22a2afa5fe870b9c1b1
+CONTENT_BYTES: 1732
 ================================================================================================
 
 # Trust, Provenance, and Versioning
@@ -1771,7 +1824,10 @@ See:
 
 ================================================================================================
 FILE: wiki/What-MediKristal-Is.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 463f9d9f7e6dfbeadfe09db46b1958b16976e31f5c00803102680e821cf2a569
+CONTENT_BYTES: 3327
 ================================================================================================
 
 # What MediKristal Is
@@ -1892,7 +1948,10 @@ That audit trail is part of the knowledge architecture, not an afterthought.
 
 ================================================================================================
 FILE: docs/Foundational_Document-Medikristal_Architecture.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2fb16dff1a7defbdb0c1d86a7db7c51382cb0faf390116aa36357a5ea9adac1d
+CONTENT_BYTES: 18703
 ================================================================================================
 
 # Foundational Document — Medikristal Architecture
@@ -2764,7 +2823,10 @@ This is useful, bounded, and safer than immediately recommending treatments.
 
 ================================================================================================
 FILE: docs/MediKristal_Information_Sources.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2504c87b1f42d214c867d1faf2e95d238b113265a05c3dda8bb869eb3571e987
+CONTENT_BYTES: 13202
 ================================================================================================
 
 # MediKristal Information Sources
@@ -3131,7 +3193,10 @@ Logic: JSON rules first, then CQL/FHIR Clinical Reasoning
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 262e8f7d15a5848e166b360ab1f8d21f79eba43c7f6303ab45bfab6c05cf7733
+CONTENT_BYTES: 2699
 ================================================================================================
 
 ÿþ#   M e d i K r i s t a l 

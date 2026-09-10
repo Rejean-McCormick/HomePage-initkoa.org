@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Projet_ORPHEE-Walk_Straight
-source_path: C:\mycode\Orphee\orphee-walk-straight
 source_commit: 2e36d3ef8e197fd39849256defe5ca63f15db5df
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 24
 wiki_files: 0
 source_files: 24
@@ -18,44 +16,48 @@ included_files: 24
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 641197
-authority_counts: {"canonical":24}
-generated_at: 2026-09-10T10:44:58-04:00
+authority_counts: {"reference":24}
+content_role_counts: {"knowledge":24}
+generated_at: 2026-09-10T13:04:13-04:00
 files: 24
-content_sha256: 7af2c349a10f61fbb931f2eb286b75eb4131b8933042e193a529749fed80402f
+content_sha256: 49ddf66315f4dbca706e82be7ed75816f4ffed1c6652a26906386b5ab6d83f36
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] 00_index-projet.md
-02. [canonical] 01_vision-et-positionnement.md
-03. [canonical] 02_probleme-et-justification-territoriale.md
-04. [canonical] 03_mission-cctt-et-hypothese-de-transfert.md
-05. [canonical] 04_architecture-generale-du-projet.md
-06. [canonical] 05_modele-pedagogique.md
-07. [canonical] 06_pilote-cohorte-hybride-locale.md
-08. [canonical] 07_terrains-specialises-de-transfert.md
-09. [canonical] 08_gouvernance-ethikos-konnaxion.md
-10. [canonical] 09_technologies-et-infrastructure.md
-11. [canonical] 10_production-contenus-et-procedures.md
-12. [canonical] 11_evaluation-portfolios-microcertifications.md
-13. [canonical] 12_partenaires-programmes-financement.md
-14. [canonical] 13_risques-ethique-acceptabilite.md
-15. [canonical] 14_feuille-de-route.md
-16. [canonical] annexes/a_inventaire-programmes-administratifs.md
-17. [canonical] annexes/b_cartographie-partenaires.md
-18. [canonical] annexes/c_grilles-evaluation.md
-19. [canonical] annexes/d_exemples-de-parcours-et-cours.md
-20. [canonical] annexes/e_note-intention-cegep-baie-comeau.md
-21. [canonical] annexes/f_pitch-1-page.md
-22. [canonical] annexes/g_glossaire-et-langage-institutionnel.md
-23. [canonical] annexes/h_sources-et-references.md
-24. [canonical] README.md
+01. [reference] [knowledge] 00_index-projet.md | bytes=15060 | sha256=c854dedd20d8c2dcf232c7b2691719342ca819595bb92452baa523ff8e997f1d
+02. [reference] [knowledge] 01_vision-et-positionnement.md | bytes=16729 | sha256=1b11c038755927a5e6bebcadfc032a3105ddc34c9362d50d41218b61b642b3b5
+03. [reference] [knowledge] 02_probleme-et-justification-territoriale.md | bytes=18868 | sha256=eb7084721dcb1762c4c310666bfd798df9e857608a83b990ff0e0198ff02f8f3
+04. [reference] [knowledge] 03_mission-cctt-et-hypothese-de-transfert.md | bytes=24147 | sha256=a6c0a3689b2d1573b04992af02f216566bd85fd975af15f6ab70696462ffcead
+05. [reference] [knowledge] 04_architecture-generale-du-projet.md | bytes=27877 | sha256=d454eeceef48469068682c7fb51de1701cda8fbe58ee0357da33734c6eddd56d
+06. [reference] [knowledge] 05_modele-pedagogique.md | bytes=29763 | sha256=e4c484eeeac39fc5719b5a9d855010091a6909160092b33f2c60e3eb7c97632e
+07. [reference] [knowledge] 06_pilote-cohorte-hybride-locale.md | bytes=24208 | sha256=36da9b6ba09dcf5df2776317ff55ece8474b5c992de00b5005296cee5b1dbee5
+08. [reference] [knowledge] 07_terrains-specialises-de-transfert.md | bytes=23655 | sha256=8797b59d5de6179a241f47a2f1c185003a2a69126288421c9b6d7c4249fd9d4a
+09. [reference] [knowledge] 08_gouvernance-ethikos-konnaxion.md | bytes=27025 | sha256=43a51a0bb780e4d95d82e25df395875f6cf6026c348864c1be6efb71142593d0
+10. [reference] [knowledge] 09_technologies-et-infrastructure.md | bytes=24283 | sha256=d0abd81e0ce3dd7369188810cdefea57111f1442c79b31135b8d639598f0737c
+11. [reference] [knowledge] 10_production-contenus-et-procedures.md | bytes=26426 | sha256=eab8242e4cd2cafd19f26ad99b46e32a93313a907caa9f2240d67cbaa1350d2d
+12. [reference] [knowledge] 11_evaluation-portfolios-microcertifications.md | bytes=28233 | sha256=4e7787519c5e529b3d6dfb3b31983b05d3ce9be16851f198da9b3da823fa9448
+13. [reference] [knowledge] 12_partenaires-programmes-financement.md | bytes=39810 | sha256=37ac6b8d9daf95dc030b6dbe5445447f3ecfc9d032e21a3af6ab4b6ebed8f612
+14. [reference] [knowledge] 13_risques-ethique-acceptabilite.md | bytes=30509 | sha256=a95ebefb82d9711134b8625aee24f25cb93cdc027a69f2eba144bcd88379dc36
+15. [reference] [knowledge] 14_feuille-de-route.md | bytes=27539 | sha256=7581ebcd90619307156ec1a9ac4b199e3f9ea17a6705f2a66481a77df68e6d5c
+16. [reference] [knowledge] annexes/a_inventaire-programmes-administratifs.md | bytes=49789 | sha256=60df842a2511f18d7a5cd31774ab3eeaa32c4ef418c89fdf2d9ad357489703af
+17. [reference] [knowledge] annexes/b_cartographie-partenaires.md | bytes=42822 | sha256=6ceb4ec9c5c7f02cb0e30ef10f469be72662adcd975f61709292eef55f74bcb4
+18. [reference] [knowledge] annexes/c_grilles-evaluation.md | bytes=28673 | sha256=fccdc2ac35dee17624af570f5fb68549bea3039c42ae8b1d0bb12c85ce823601
+19. [reference] [knowledge] annexes/d_exemples-de-parcours-et-cours.md | bytes=27204 | sha256=e52b16ba6be6e5222ada40884c9e412999c0158b4cc51afb77b28298877a3e6a
+20. [reference] [knowledge] annexes/e_note-intention-cegep-baie-comeau.md | bytes=20256 | sha256=4f8ac9c0810a7a026c084458a6c9299fb2fd176536359a79a6cada9bb2230a5d
+21. [reference] [knowledge] annexes/f_pitch-1-page.md | bytes=5983 | sha256=7bf92462aa4b95e2768a553f3012068d96da873be29198f23852021e315ed790
+22. [reference] [knowledge] annexes/g_glossaire-et-langage-institutionnel.md | bytes=21617 | sha256=b7f0b13453080df76ec157481a63c91f22e8878758e2353067a5cd82b67754f9
+23. [reference] [knowledge] annexes/h_sources-et-references.md | bytes=43690 | sha256=8c31963f810ae38bac37c909bd88ec56bdec5999a755c9c0f129b46f0bd4a7d2
+24. [reference] [knowledge] README.md | bytes=17031 | sha256=421c53077ea3b7ca3479a45d2c38965c3ae096672e1ae484afdde294702252cd
 
 
 ================================================================================================
 FILE: 00_index-projet.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c854dedd20d8c2dcf232c7b2691719342ca819595bb92452baa523ff8e997f1d
+CONTENT_BYTES: 15060
 ================================================================================================
 
 # Projet ORPHÉE: Walk Straight
@@ -500,7 +502,10 @@ Formule de contrôle :
 
 ================================================================================================
 FILE: 01_vision-et-positionnement.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1b11c038755927a5e6bebcadfc032a3105ddc34c9362d50d41218b61b642b3b5
+CONTENT_BYTES: 16729
 ================================================================================================
 
 # 01 — Vision et positionnement
@@ -1040,7 +1045,10 @@ Formule finale :
 
 ================================================================================================
 FILE: 02_probleme-et-justification-territoriale.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: eb7084721dcb1762c4c310666bfd798df9e857608a83b990ff0e0198ff02f8f3
+CONTENT_BYTES: 18868
 ================================================================================================
 
 # 02 — Problème et justification territoriale
@@ -1406,7 +1414,10 @@ Modifications principales :
 
 ================================================================================================
 FILE: 03_mission-cctt-et-hypothese-de-transfert.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a6c0a3689b2d1573b04992af02f216566bd85fd975af15f6ab70696462ffcead
+CONTENT_BYTES: 24147
 ================================================================================================
 
 # 03 — Mission CCTT et hypothèse de transfert
@@ -2085,7 +2096,10 @@ La mission CCTT n’est donc pas de créer un produit unique, mais de structurer
 
 ================================================================================================
 FILE: 04_architecture-generale-du-projet.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d454eeceef48469068682c7fb51de1701cda8fbe58ee0357da33734c6eddd56d
+CONTENT_BYTES: 27877
 ================================================================================================
 
 # 04 — Architecture générale du projet
@@ -2966,7 +2980,10 @@ Se souvenir.
 
 ================================================================================================
 FILE: 05_modele-pedagogique.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e4c484eeeac39fc5719b5a9d855010091a6909160092b33f2c60e3eb7c97632e
+CONTENT_BYTES: 29763
 ================================================================================================
 
 # orphee-walk-straight/05_modele-pedagogique.md
@@ -4097,7 +4114,10 @@ Version courte :
 
 ================================================================================================
 FILE: 06_pilote-cohorte-hybride-locale.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 36da9b6ba09dcf5df2776317ff55ece8474b5c992de00b5005296cee5b1dbee5
+CONTENT_BYTES: 24208
 ================================================================================================
 
 # 06 — Pilote : cohorte hybride locale
@@ -5094,7 +5114,10 @@ Ce pilote sert à documenter une méthode transférable vers des milieux où l�
 
 ================================================================================================
 FILE: 07_terrains-specialises-de-transfert.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8797b59d5de6179a241f47a2f1c185003a2a69126288421c9b6d7c4249fd9d4a
+CONTENT_BYTES: 23655
 ================================================================================================
 
 # 07 — Terrains spécialisés de transfert
@@ -6080,7 +6103,10 @@ Formule longue :
 
 ================================================================================================
 FILE: 08_gouvernance-ethikos-konnaxion.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 43a51a0bb780e4d95d82e25df395875f6cf6026c348864c1be6efb71142593d0
+CONTENT_BYTES: 27025
 ================================================================================================
 
 # 08 — Gouvernance Ethikos / Konnaxion
@@ -7115,7 +7141,10 @@ Formule stratégique :
 
 ================================================================================================
 FILE: 09_technologies-et-infrastructure.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d0abd81e0ce3dd7369188810cdefea57111f1442c79b31135b8d639598f0737c
+CONTENT_BYTES: 24283
 ================================================================================================
 
 # 09 — Technologies et infrastructure
@@ -8126,7 +8155,10 @@ L’objectif est de construire une infrastructure de formation capable de foncti
 
 ================================================================================================
 FILE: 10_production-contenus-et-procedures.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: eab8242e4cd2cafd19f26ad99b46e32a93313a907caa9f2240d67cbaa1350d2d
+CONTENT_BYTES: 26426
 ================================================================================================
 
 # Projet ORPHÉE: Walk Straight
@@ -9388,7 +9420,10 @@ Formule de contrôle :
 
 ================================================================================================
 FILE: 11_evaluation-portfolios-microcertifications.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4e7787519c5e529b3d6dfb3b31983b05d3ce9be16851f198da9b3da823fa9448
+CONTENT_BYTES: 28233
 ================================================================================================
 
 # 11 — Évaluation, portfolios et microcertifications
@@ -10266,7 +10301,10 @@ Formule finale :
 
 ================================================================================================
 FILE: 12_partenaires-programmes-financement.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 37ac6b8d9daf95dc030b6dbe5445447f3ecfc9d032e21a3af6ab4b6ebed8f612
+CONTENT_BYTES: 39810
 ================================================================================================
 
 # 12 — Partenaires, programmes et financement
@@ -11284,7 +11322,10 @@ Version courte :
 
 ================================================================================================
 FILE: 13_risques-ethique-acceptabilite.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a95ebefb82d9711134b8625aee24f25cb93cdc027a69f2eba144bcd88379dc36
+CONTENT_BYTES: 30509
 ================================================================================================
 
 # 13 — Risques, éthique et acceptabilité
@@ -12350,7 +12391,10 @@ Formule synthèse :
 
 ================================================================================================
 FILE: 14_feuille-de-route.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7581ebcd90619307156ec1a9ac4b199e3f9ea17a6705f2a66481a77df68e6d5c
+CONTENT_BYTES: 27539
 ================================================================================================
 
 # 14 — Feuille de route
@@ -13417,7 +13461,10 @@ Institutionnaliser seulement avec preuves.
 
 ================================================================================================
 FILE: annexes/a_inventaire-programmes-administratifs.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 60df842a2511f18d7a5cd31774ab3eeaa32c4ef418c89fdf2d9ad357489703af
+CONTENT_BYTES: 49789
 ================================================================================================
 
 # orphee-walk-straight/annexes/a_inventaire-programmes-administratifs.md
@@ -14161,7 +14208,10 @@ La trajectoire optimale est :
 
 ================================================================================================
 FILE: annexes/b_cartographie-partenaires.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6ceb4ec9c5c7f02cb0e30ef10f469be72662adcd975f61709292eef55f74bcb4
+CONTENT_BYTES: 42822
 ================================================================================================
 
 # Annexe B — Cartographie des partenaires
@@ -15859,7 +15909,10 @@ La stratégie partenariale optimale est :
 
 ================================================================================================
 FILE: annexes/c_grilles-evaluation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fccdc2ac35dee17624af570f5fb68549bea3039c42ae8b1d0bb12c85ce823601
+CONTENT_BYTES: 28673
 ================================================================================================
 
 # Annexe C — Grilles d’évaluation
@@ -16551,7 +16604,10 @@ Formule longue :
 
 ================================================================================================
 FILE: annexes/d_exemples-de-parcours-et-cours.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e52b16ba6be6e5222ada40884c9e412999c0158b4cc51afb77b28298877a3e6a
+CONTENT_BYTES: 27204
 ================================================================================================
 
 # Annexe D — Exemples de parcours et de cours
@@ -17747,7 +17803,10 @@ Formule stratégique :
 
 ================================================================================================
 FILE: annexes/e_note-intention-cegep-baie-comeau.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4f8ac9c0810a7a026c084458a6c9299fb2fd176536359a79a6cada9bb2230a5d
+CONTENT_BYTES: 20256
 ================================================================================================
 
 # Note d’intention — Cégep de Baie-Comeau
@@ -18376,7 +18435,10 @@ Cordialement,
 
 ================================================================================================
 FILE: annexes/f_pitch-1-page.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7bf92462aa4b95e2768a553f3012068d96da873be29198f23852021e315ed790
+CONTENT_BYTES: 5983
 ================================================================================================
 
 # Projet ORPHÉE: Walk Straight
@@ -18547,7 +18609,10 @@ La première demande est :
 
 ================================================================================================
 FILE: annexes/g_glossaire-et-langage-institutionnel.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b7f0b13453080df76ec157481a63c91f22e8878758e2353067a5cd82b67754f9
+CONTENT_BYTES: 21617
 ================================================================================================
 
 # Annexe G — Glossaire et langage institutionnel
@@ -19182,7 +19247,10 @@ Si ces distinctions sont respectées, le projet demeure compréhensible, crédib
 
 ================================================================================================
 FILE: annexes/h_sources-et-references.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8c31963f810ae38bac37c909bd88ec56bdec5999a755c9c0f129b46f0bd4a7d2
+CONTENT_BYTES: 43690
 ================================================================================================
 
 # Projet ORPHÉE: Walk Straight
@@ -20888,7 +20956,10 @@ Formule de contrôle :
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 421c53077ea3b7ca3479a45d2c38965c3ae096672e1ae484afdde294702252cd
+CONTENT_BYTES: 17031
 ================================================================================================
 
 ÿþ#   O R P H É E :   W a l k   S t r a i g h t 

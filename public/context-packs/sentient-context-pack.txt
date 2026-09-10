@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/SenTient
-source_path: C:\mycode\SenTient\SenTient
 source_commit: 537705b2048b89e4ec20872a089784959da10b85
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: C:\mycode\SenTient\SenTient.wiki
 wiki_source_commit: 5d74048f2f27c685c9e76c3770c902d72d4660c0
 wiki_working_tree_markdown: clean
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 15
 wiki_files: 1
 source_files: 16
@@ -18,36 +16,40 @@ included_files: 16
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 58065
-authority_counts: {"canonical":16}
-generated_at: 2026-09-10T11:09:24-04:00
+authority_counts: {"reference":16}
+content_role_counts: {"knowledge":15,"navigation":1}
+generated_at: 2026-09-10T13:04:25-04:00
 files: 16
-content_sha256: 28bed3e1fed452fe91861666c17f53b82fa4673b403ca51c78334addbb033b0c
+content_sha256: 6a206feb2186f25b86d7c3322f5ebc02937a77373ce328e3fb4957e93cd9437d
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] wiki/Home.md
-02. [canonical] Docs/00_ARCHITECTURE_BLUEPRINT.md
-03. [canonical] Docs/01_INGESTION_LAYER.md
-04. [canonical] Docs/02_SEMANTIC_LAYER.md
-05. [canonical] Docs/03_CORE_LAYER.md
-06. [canonical] Docs/04_DATA_DICTIONARY.md
-07. [canonical] Docs/05_WIRING_AND_CONFIG.md
-08. [canonical] Docs/06_API_AND_FRONTEND.md
-09. [canonical] Docs/07_QA_AND_VALIDATION.md
-10. [canonical] Docs/Acknowledgements/falcon2_0.md
-11. [canonical] Docs/Acknowledgements/OpenRefine.md
-12. [canonical] Docs/Acknowledgements/OpenTapioca.md
-13. [canonical] opentapioca/README.md
-14. [canonical] README.md
-15. [canonical] solr/duplicate.md
-16. [canonical] webapp/extensions/database/README.md
+01. [reference] [navigation] wiki/Home.md | bytes=6942 | sha256=29ff328e7a117d53bc2dde616d6904aba3303beb8233d47e2622b3fa0cd4dbbc
+02. [reference] [knowledge] Docs/00_ARCHITECTURE_BLUEPRINT.md | bytes=2412 | sha256=b309b2ddd2ef32313636c50aed67ffe6735d1702553b7d1f4c0b4ea73b3d2c55
+03. [reference] [knowledge] Docs/01_INGESTION_LAYER.md | bytes=3119 | sha256=ed9f0a3a01238c8c656ac03aacd88ca709c454b7a8ec2ee45edd1c81c425b391
+04. [reference] [knowledge] Docs/02_SEMANTIC_LAYER.md | bytes=3997 | sha256=e09542e17cb902f67069244e54d56a0f3ab5211c893c5a0bd2ab7f0ba97de574
+05. [reference] [knowledge] Docs/03_CORE_LAYER.md | bytes=4289 | sha256=fdfc8024dfc78124a80795081b453bcfcc4052b9312f8025778ebf8d9a05870b
+06. [reference] [knowledge] Docs/04_DATA_DICTIONARY.md | bytes=4597 | sha256=3ac844f1b6ac44e35649776d2ae3ca85f705416d8685718436b88d8309718ee3
+07. [reference] [knowledge] Docs/05_WIRING_AND_CONFIG.md | bytes=3150 | sha256=c4104d6df848d6021be7a7c971198443c849e05106064369fe7d4190aed10435
+08. [reference] [knowledge] Docs/06_API_AND_FRONTEND.md | bytes=706 | sha256=e20c5a1027f3befc0fb1e18dbac69aa72570efce604879aea86014d950ca72d6
+09. [reference] [knowledge] Docs/07_QA_AND_VALIDATION.md | bytes=3026 | sha256=d08319e483a0a330f85e9f517145b3d4e4de26157ed6e2e7593485f323ae8e07
+10. [reference] [knowledge] Docs/Acknowledgements/falcon2_0.md | bytes=5082 | sha256=725590f03d09c772d9a293b8388e80583c06d277e190827e87b45eba49fbe666
+11. [reference] [knowledge] Docs/Acknowledgements/OpenRefine.md | bytes=4007 | sha256=f2f2ad375955acd9be18e1898f0e47ec2b9b0210e997d4840bec5b6142d704b0
+12. [reference] [knowledge] Docs/Acknowledgements/OpenTapioca.md | bytes=4248 | sha256=294ad9e542b9f8b52ce3ec78e7474a8d5b07833a35ba76e7e310113e70069632
+13. [reference] [knowledge] opentapioca/README.md | bytes=1566 | sha256=e3e4f8af69ed1ea8516fbcc75209189bf1f4f076b599bc29b5bad07dfe258bc3
+14. [reference] [knowledge] README.md | bytes=9691 | sha256=1e6f809a50adc99a92d382e1374b90daf044f13dc0c12a919b781d87b14f5ca9
+15. [reference] [knowledge] solr/duplicate.md | bytes=191 | sha256=e8dbd4d2f4d339232661558ec915a783f85b8aaab0d3aa4f9881af339256876c
+16. [reference] [knowledge] webapp/extensions/database/README.md | bytes=1042 | sha256=dfe4cfea3c31eae133a87e36c8081194fb4f6438fe1a0bdbfebba3ee6f5f5933
 
 
 ================================================================================================
 FILE: wiki/Home.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 29ff328e7a117d53bc2dde616d6904aba3303beb8233d47e2622b3fa0cd4dbbc
+CONTENT_BYTES: 6942
 ================================================================================================
 
 # SenTient
@@ -210,7 +212,10 @@ This direction does not imply that the platform is currently production-ready.
 
 ================================================================================================
 FILE: Docs/00_ARCHITECTURE_BLUEPRINT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b309b2ddd2ef32313636c50aed67ffe6735d1702553b7d1f4c0b4ea73b3d2c55
+CONTENT_BYTES: 2412
 ================================================================================================
 
 # SenTient Architecture Blueprint
@@ -278,7 +283,10 @@ graph TD
 
 ================================================================================================
 FILE: Docs/01_INGESTION_LAYER.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ed9f0a3a01238c8c656ac03aacd88ca709c454b7a8ec2ee45edd1c81c425b391
+CONTENT_BYTES: 3119
 ================================================================================================
 
 # Layer 1: Ingestion & Fast Tagging (The Sieve)
@@ -359,7 +367,10 @@ Content-Type: text/plain
 
 ================================================================================================
 FILE: Docs/02_SEMANTIC_LAYER.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e09542e17cb902f67069244e54d56a0f3ab5211c893c5a0bd2ab7f0ba97de574
+CONTENT_BYTES: 3997
 ================================================================================================
 
 # Layer 2: The Semantic Linguist (Falcon 2.0)
@@ -466,7 +477,10 @@ The Java Orchestrator talks to the Python Layer via REST.
 
 ================================================================================================
 FILE: Docs/03_CORE_LAYER.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fdfc8024dfc78124a80795081b453bcfcc4052b9312f8025778ebf8d9a05870b
+CONTENT_BYTES: 4289
 ================================================================================================
 
 Here is the updated documentation for **Layer 3: The Core Orchestrator**.
@@ -555,7 +569,10 @@ public class Recon {
 
 ================================================================================================
 FILE: Docs/04_DATA_DICTIONARY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3ac844f1b6ac44e35649776d2ae3ca85f705416d8685718436b88d8309718ee3
+CONTENT_BYTES: 4597
 ================================================================================================
 
 # Data Dictionary & Type Mapping
@@ -686,7 +703,10 @@ Metadata for debugging distributed transactions.
 
 ================================================================================================
 FILE: Docs/05_WIRING_AND_CONFIG.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c4104d6df848d6021be7a7c971198443c849e05106064369fe7d4190aed10435
+CONTENT_BYTES: 3150
 ================================================================================================
 
 # Wiring & Configuration Strategy
@@ -765,7 +785,10 @@ SENTIENT_HOME/
 
 ================================================================================================
 FILE: Docs/06_API_AND_FRONTEND.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e20c5a1027f3befc0fb1e18dbac69aa72570efce604879aea86014d950ca72d6
+CONTENT_BYTES: 706
 ================================================================================================
 
 # API & Frontend Integration
@@ -796,7 +819,10 @@ X-Requested-With: XMLHttpRequest
 
 ================================================================================================
 FILE: Docs/07_QA_AND_VALIDATION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d08319e483a0a330f85e9f517145b3d4e4de26157ed6e2e7593485f323ae8e07
+CONTENT_BYTES: 3026
 ================================================================================================
 
 # QA, Validation & Benchmarking
@@ -881,7 +907,10 @@ python evaluation/evaluate_falcon_api.py --dataset datasets/lcquad2_test.json --
 
 ================================================================================================
 FILE: Docs/Acknowledgements/falcon2_0.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 725590f03d09c772d9a293b8388e80583c06d277e190827e87b45eba49fbe666
+CONTENT_BYTES: 5082
 ================================================================================================
 
 **Subject:** An Architectural Appreciation: What Sentry Learned from OpenRefine’s Source Code
@@ -947,7 +976,10 @@ RM
 
 ================================================================================================
 FILE: Docs/Acknowledgements/OpenRefine.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f2f2ad375955acd9be18e1898f0e47ec2b9b0210e997d4840bec5b6142d704b0
+CONTENT_BYTES: 4007
 ================================================================================================
 
 **Subject: A Tribute to OpenRefine’s Architecture: Lessons Learned for the Next Generation of Data Tools**
@@ -993,7 +1025,10 @@ RM
 
 ================================================================================================
 FILE: Docs/Acknowledgements/OpenTapioca.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 294ad9e542b9f8b52ce3ec78e7474a8d5b07833a35ba76e7e310113e70069632
+CONTENT_BYTES: 4248
 ================================================================================================
 
 **Subject: Appreciation & Technical Analysis: The Architectural Pillars of OpenTapioca we are adopting for Sentry**
@@ -1044,7 +1079,10 @@ RM
 
 ================================================================================================
 FILE: opentapioca/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e3e4f8af69ed1ea8516fbcc75209189bf1f4f076b599bc29b5bad07dfe258bc3
+CONTENT_BYTES: 1566
 ================================================================================================
 
 OpenTapioca
@@ -1067,7 +1105,10 @@ OpenTapioca is released under the Apache-2.0 license.
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1e6f809a50adc99a92d382e1374b90daf044f13dc0c12a919b781d87b14f5ca9
+CONTENT_BYTES: 9691
 ================================================================================================
 
 ÿþ#   S e n T i e n t   ( S e m a n t i c   E n t i t y   I n t e l l i g e n t   T r a n s f o r m a t i o n ) 
@@ -1299,7 +1340,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: solr/duplicate.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e8dbd4d2f4d339232661558ec915a783f85b8aaab0d3aa4f9881af339256876c
+CONTENT_BYTES: 191
 ================================================================================================
 
 copied out or repo, into apache server.
@@ -1309,7 +1353,10 @@ copied out or repo, into apache server.
 
 ================================================================================================
 FILE: webapp/extensions/database/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dfe4cfea3c31eae133a87e36c8081194fb4f6438fe1a0bdbfebba3ee6f5f5933
+CONTENT_BYTES: 1042
 ================================================================================================
 
 This project is an OpenRefine extension for importing database data using JDBC.

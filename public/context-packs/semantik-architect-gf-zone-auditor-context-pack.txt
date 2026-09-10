@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/SemantiK-Architect-GF-Zone-Auditor
-source_path: C:\mycode\SemantiK-Architect-GF-Zone-Auditor\SemantiK-Architect-GF-Zone-Auditor
 source_commit: 4afe1d65acdc252fe738450f3876c57cb29f0c0e
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 12
 wiki_files: 0
 source_files: 12
@@ -18,32 +16,36 @@ included_files: 12
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 244568
-authority_counts: {"canonical":12}
-generated_at: 2026-09-10T10:44:56-04:00
+authority_counts: {"reference":12}
+content_role_counts: {"knowledge":12}
+generated_at: 2026-09-10T13:04:11-04:00
 files: 12
-content_sha256: 557f855cb54208884b9fbd2274a2a2dc836a73ff996ff241048978418a944e31
+content_sha256: 65c4dbab531a5abc828c824ed4f03e22b842153ac8e6e16c7c42b6e00e03a9dc
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] docs/00_main_design.md
-02. [canonical] docs/01_scope_contract.md
-03. [canonical] docs/02_analyzer_contract.md
-04. [canonical] docs/03_report_contract.md
-05. [canonical] docs/04_profiles.md
-06. [canonical] docs/05_rulepacks.md
-07. [canonical] docs/06_probe_spec.md
-08. [canonical] docs/07_semantik_inventory.md
-09. [canonical] docs/08_acceptance_contract.md
-10. [canonical] docs/09_change_control.md
-11. [canonical] docs/10_gui_contract.md
-12. [canonical] README.md
+01. [reference] [knowledge] docs/00_main_design.md | bytes=32501 | sha256=c711e9bfd7fbecd0742880a3a0134a735b13fc912c59145358d7a5d7e29cd430
+02. [reference] [knowledge] docs/01_scope_contract.md | bytes=15245 | sha256=48f3a9b48c8156e4f78e4f7d72ff0db0ba7ba2add70d2bd213245f25856f3c64
+03. [reference] [knowledge] docs/02_analyzer_contract.md | bytes=16912 | sha256=e8446ced3000bbffa0260a5fded6266b2390a9ef5d4825ae6c83652c3c106cb5
+04. [reference] [knowledge] docs/03_report_contract.md | bytes=26005 | sha256=c6a81010bdaf964946a2f14f630af64233c4b601aa470c7697e891ca44008a2e
+05. [reference] [knowledge] docs/04_profiles.md | bytes=19771 | sha256=3717bf4df57b7987566ff7fd307672eb7b3ba34538c76bffe18f20aa1f123335
+06. [reference] [knowledge] docs/05_rulepacks.md | bytes=21190 | sha256=24456f5f31a45e8f9ca8d5304317f5030c9eb32d5f9e9701edc6cd84d957fd81
+07. [reference] [knowledge] docs/06_probe_spec.md | bytes=22349 | sha256=c78fa2cb2e31d135827265d9969e3c769bf326fd08519cdc732d907be3004461
+08. [reference] [knowledge] docs/07_semantik_inventory.md | bytes=17628 | sha256=f664d774efe502e482c26eaa132b51df358e8edc63ce146014df4db98f78af37
+09. [reference] [knowledge] docs/08_acceptance_contract.md | bytes=19318 | sha256=89ef63e7305725d2b5e7fe3db1df649401fb4d3fa90182a5ea1014b58950fbaa
+10. [reference] [knowledge] docs/09_change_control.md | bytes=19498 | sha256=94dd862dae55308fbc9e3e585f223eca38d3814d04e18ea8468f4b4e7dd92970
+11. [reference] [knowledge] docs/10_gui_contract.md | bytes=17935 | sha256=c84b37d357fb31fa061df7775b31c1a0873e1cc2e710b50463f90f88e2044fd1
+12. [reference] [knowledge] README.md | bytes=16216 | sha256=0e9aeb7a8abe4a9f60ae7ac2f53c19eb222d638ef0278cb285a32a046f1ed303
 
 
 ================================================================================================
 FILE: docs/00_main_design.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c711e9bfd7fbecd0742880a3a0134a735b13fc912c59145358d7a5d7e29cd430
+CONTENT_BYTES: 32501
 ================================================================================================
 
 # SemantiK Grammar Surface Auditor
@@ -450,7 +452,10 @@ Further expansion should happen only if it still stays inside the grammar surfac
 
 ================================================================================================
 FILE: docs/01_scope_contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 48f3a9b48c8156e4f78e4f7d72ff0db0ba7ba2add70d2bd213245f25856f3c64
+CONTENT_BYTES: 15245
 ================================================================================================
 
 # Scope Contract
@@ -959,7 +964,10 @@ The SemantiK Grammar Surface Auditor owns **GF grammars, Wiki/bioframework reali
 
 ================================================================================================
 FILE: docs/02_analyzer_contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e8446ced3000bbffa0260a5fded6266b2390a9ef5d4825ae6c83652c3c106cb5
+CONTENT_BYTES: 16912
 ================================================================================================
 
 # Analyzer Contract
@@ -1668,7 +1676,10 @@ An analyzer is a bounded, registered, source-kind-aware audit component that emi
 
 ================================================================================================
 FILE: docs/03_report_contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c6a81010bdaf964946a2f14f630af64233c4b601aa470c7697e891ca44008a2e
+CONTENT_BYTES: 26005
 ================================================================================================
 
 # Report Contract
@@ -2778,7 +2789,10 @@ The report contract defines a stable, machine-readable audit result in which art
 
 ================================================================================================
 FILE: docs/04_profiles.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3717bf4df57b7987566ff7fd307672eb7b3ba34538c76bffe18f20aa1f123335
+CONTENT_BYTES: 19771
 ================================================================================================
 
 # Profiles
@@ -3510,7 +3524,10 @@ Profiles are named, normative operating contracts that control selection, analyz
 
 ================================================================================================
 FILE: docs/05_rulepacks.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 24456f5f31a45e8f9ca8d5304317f5030c9eb32d5f9e9701edc6cd84d957fd81
+CONTENT_BYTES: 21190
 ================================================================================================
 
 # Rule Packs
@@ -4249,7 +4266,10 @@ A rule pack is the stable, documented source of truth for what a finding’s `ru
 
 ================================================================================================
 FILE: docs/06_probe_spec.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c78fa2cb2e31d135827265d9969e3c769bf326fd08519cdc732d907be3004461
+CONTENT_BYTES: 22349
 ================================================================================================
 
 # Probe Specification
@@ -4994,7 +5014,10 @@ A probe is an explicit, asset-defined, profile-governed verification unit that e
 
 ================================================================================================
 FILE: docs/07_semantik_inventory.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f664d774efe502e482c26eaa132b51df358e8edc63ce146014df4db98f78af37
+CONTENT_BYTES: 17628
 ================================================================================================
 
 # SemantiK Inventory
@@ -5616,7 +5639,10 @@ The SemantiK inventory is the reviewed, explicit, profile-owned map of the Seman
 
 ================================================================================================
 FILE: docs/08_acceptance_contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 89ef63e7305725d2b5e7fe3db1df649401fb4d3fa90182a5ea1014b58950fbaa
+CONTENT_BYTES: 19318
 ================================================================================================
 
 # Acceptance Contract
@@ -6137,7 +6163,10 @@ The acceptance contract defines the evidence, gates, fixtures, and decision rule
 
 ================================================================================================
 FILE: docs/09_change_control.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 94dd862dae55308fbc9e3e585f223eca38d3814d04e18ea8468f4b4e7dd92970
+CONTENT_BYTES: 19498
 ================================================================================================
 
 # Change Control
@@ -6638,7 +6667,10 @@ Change in the SemantiK Grammar Surface Auditor is valid only when it is explicit
 
 ================================================================================================
 FILE: docs/10_gui_contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c84b37d357fb31fa061df7775b31c1a0873e1cc2e710b50463f90f88e2044fd1
+CONTENT_BYTES: 17935
 ================================================================================================
 
 # GUI Contract
@@ -7201,7 +7233,10 @@ The GUI contract defines a profile-first, inventory-backed, evidence-preserving 
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0e9aeb7a8abe4a9f60ae7ac2f53c19eb222d638ef0278cb285a32a046f1ed303
+CONTENT_BYTES: 16216
 ================================================================================================
 
 # SemantiK GF-Zone Auditor

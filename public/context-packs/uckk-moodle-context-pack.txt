@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/UCKK-Moodle
-source_path: C:\mycode\UCKK\uckk-moodle
 source_commit: 094ebff9abac8d407a5362898775eef902d2ccd1
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 59
 wiki_files: 0
 source_files: 59
@@ -18,72 +16,73 @@ included_files: 57
 excluded_files: 2
 duplicate_files: 1
 content_bytes: 1634483
-authority_counts: {"canonical":57}
-generated_at: 2026-09-10T10:44:55-04:00
+authority_counts: {"reference":57}
+content_role_counts: {"knowledge":57}
+generated_at: 2026-09-10T13:04:10-04:00
 files: 57
-content_sha256: 84c49f76e1c426dbd746e1355f245b550a18a61b7a0915d5c6e84222f0d4c9e4
+content_sha256: 790873b953f8ea675d45d413bf5a235b67567dc0b31d2c557409a2abb05da7be
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] docs/00_master_execution_doctrine.md
-02. [canonical] docs/01_domain_boundaries_and_glossary.md
-03. [canonical] docs/02_distribution_architecture.md
-04. [canonical] docs/03_plugin_specifications.md
-05. [canonical] docs/04_data_model_and_storage.md
-06. [canonical] docs/05_roles_permissions_and_security.md
-07. [canonical] docs/06_pedagogy_courses_competencies_badges.md
-08. [canonical] docs/07_challenges_and_assemblies.md
-09. [canonical] docs/08_integrity_archives_and_privacy.md
-10. [canonical] docs/09_integrations_reporting_delivery.md
-11. [canonical] docs/10_konnaxion_smart_vote_integration_contract.md
-12. [canonical] docs/11_cross_doc_alignment_registry.md
-13. [canonical] docs/12_faculty_pages_atlas_public_contract.md
-14. [canonical] docs/13_faculty_json_authoring_guide.md
-15. [canonical] docs/14_atlas_moodle_sync_reference.md
-16. [canonical] docs/DOC_mediatheque_explorateur.md
-17. [canonical] docs/json_preset_reference.md
-18. [canonical] docs/README_import_uckkarchive_media.md
-19. [canonical] docs/refactor_public_pages_contract.md
-20. [canonical] docs/TODO_refactor_explorateur_cours_public_UCKK.md
-21. [canonical] docs/uckk-style-system-officiel.md
-22. [canonical] docs/UCKK_Moodle_Source_Runtime_Sync.md
-23. [canonical] docs/UCKK_Notes_Operationnelles_Conversation_2026-06-01.md
-24. [canonical] docs/uckk_ops_console_documentation.md
-25. [canonical] docs/UCKK_Ops_Console_Runbook.md
-26. [canonical] docs/UCKK_Server_Access_Runbook.md
-27. [canonical] mod/uckkarchive/docs/00_index.md
-28. [canonical] mod/uckkarchive/docs/01_architecture_decision.md
-29. [canonical] mod/uckkarchive/docs/02_domain_boundaries.md
-30. [canonical] mod/uckkarchive/docs/03_file_architecture.md
-31. [canonical] mod/uckkarchive/docs/04_data_model.md
-32. [canonical] mod/uckkarchive/docs/05_media_library.md
-33. [canonical] mod/uckkarchive/docs/06_file_api_and_storage.md
-34. [canonical] mod/uckkarchive/docs/07_permissions_and_roles.md
-35. [canonical] mod/uckkarchive/docs/08_archive_workflows.md
-36. [canonical] mod/uckkarchive/docs/09_media_workflows.md
-37. [canonical] mod/uckkarchive/docs/10_provenance_versioning_validation.md
-38. [canonical] mod/uckkarchive/docs/11_privacy_retention_redaction.md
-39. [canonical] mod/uckkarchive/docs/12_backup_restore.md
-40. [canonical] mod/uckkarchive/docs/13_services_and_ajax_api.md
-41. [canonical] mod/uckkarchive/docs/14_events_and_audit.md
-42. [canonical] mod/uckkarchive/docs/15_ui_templates_and_amd.md
-43. [canonical] mod/uckkarchive/docs/16_integration_with_courses.md
-44. [canonical] mod/uckkarchive/docs/17_integration_with_challenges.md
-45. [canonical] mod/uckkarchive/docs/18_integration_with_assemblies.md
-46. [canonical] mod/uckkarchive/docs/19_integration_with_integrity.md
-47. [canonical] mod/uckkarchive/docs/20_reporting_and_exports.md
-48. [canonical] mod/uckkarchive/docs/21_testing_strategy.md
-49. [canonical] mod/uckkarchive/docs/22_installation.md
-50. [canonical] mod/uckkarchive/docs/23_upgrade.md
-51. [canonical] mod/uckkarchive/docs/24_release_spec.md
-52. [canonical] mod/uckkarchive/docs/26_operations_app_runtime_contract.md
-53. [canonical] mod/uckkarchive/docs/_alignment_variables.md
-54. [canonical] mod/uckkarchive/README.md
-55. [canonical] README.md
-56. [canonical] release/acceptance-checklist.md
-57. [canonical] UCKK_Ops_Console_Runbook.md
+01. [reference] [knowledge] docs/00_master_execution_doctrine.md | bytes=52805 | sha256=1078b5446cfeb7c5ed955660d6388997a0c58da6a85bd5ffb701c1e3979378ab
+02. [reference] [knowledge] docs/01_domain_boundaries_and_glossary.md | bytes=18895 | sha256=9815995299924c512d7fca86b24f99dde017a595a09ffde560a8216a8723efee
+03. [reference] [knowledge] docs/02_distribution_architecture.md | bytes=25811 | sha256=073fa1224881542621639d180cab892126fd3927160dc0afd07938cac2a082ab
+04. [reference] [knowledge] docs/03_plugin_specifications.md | bytes=66657 | sha256=873127a6e19afbae501a91a3e6ed0032bc78f970d5fc99f1b89626d90717d116
+05. [reference] [knowledge] docs/04_data_model_and_storage.md | bytes=48380 | sha256=b40f484787580f345a3d49e9264ef09960f31f3d11c3f3694244d4d7f44f080e
+06. [reference] [knowledge] docs/05_roles_permissions_and_security.md | bytes=48509 | sha256=c500955a9ea5f31efd001c304b902ac9cad24c4ba32e38561128d191cf130d8b
+07. [reference] [knowledge] docs/06_pedagogy_courses_competencies_badges.md | bytes=30805 | sha256=6e96f9741ec513b821ff1a5e6df2cb2f9e78ea71e5ae35aef6184f22c76b7714
+08. [reference] [knowledge] docs/07_challenges_and_assemblies.md | bytes=30061 | sha256=501632fbdc3d579bbb87ff180fa0c1743e83b0149a9c61f7ec185476f8e8ca90
+09. [reference] [knowledge] docs/08_integrity_archives_and_privacy.md | bytes=49095 | sha256=f5a7cbe9ebd8018c0ac4335491a036e4f0f677780df5d1c639f79af60a4ffbe7
+10. [reference] [knowledge] docs/09_integrations_reporting_delivery.md | bytes=67672 | sha256=9aab3e9a2bc609b99221559af7e1721294da6f716c2fca599710e51b74d96b8a
+11. [reference] [knowledge] docs/10_konnaxion_smart_vote_integration_contract.md | bytes=31215 | sha256=a225c829371fe4083b7b86aecc3512319fad0326d3583d5180e9d7dd19ca163b
+12. [reference] [knowledge] docs/11_cross_doc_alignment_registry.md | bytes=35293 | sha256=4ae1adcbd78f6858eacb969b536fa7baa4d489054693d680c4841656f0163350
+13. [reference] [knowledge] docs/12_faculty_pages_atlas_public_contract.md | bytes=68506 | sha256=279b2698f8bd54ceebf9d343acd301503fdbb7c892f34722ff2e64c808d6e79a
+14. [reference] [knowledge] docs/13_faculty_json_authoring_guide.md | bytes=57174 | sha256=771c9744ea9b92814a2cf1b1e46f8c62690fea0357bfcc8516bcd7e400fad69e
+15. [reference] [knowledge] docs/14_atlas_moodle_sync_reference.md | bytes=48126 | sha256=b64a06f3578145f341859c14d489d0731fd33cb8e8f632b41ce92327c2e73fc4
+16. [reference] [knowledge] docs/DOC_mediatheque_explorateur.md | bytes=23899 | sha256=66cb110d1766d9b9431fdd77d207b4ad712821fb2b44438b5b28f7d8a583483a
+17. [reference] [knowledge] docs/json_preset_reference.md | bytes=39375 | sha256=99eadf867b4aaebf103b21e6af9be697f9d05272bfb97af19c3374b4a01e6ece
+18. [reference] [knowledge] docs/README_import_uckkarchive_media.md | bytes=3391 | sha256=0ec3b13eb2f72907458ebf5d8a406151b855603ece3f7d58c18d9f27991c7053
+19. [reference] [knowledge] docs/refactor_public_pages_contract.md | bytes=41535 | sha256=bb91672b06678ff940de388dcdfe47f8c7cb1097888fb2cf2feeef9f40579b8c
+20. [reference] [knowledge] docs/TODO_refactor_explorateur_cours_public_UCKK.md | bytes=10589 | sha256=3c08e032fe23359a2ba1431cb784d020e876a175cde01951e078d6dd1d52cc42
+21. [reference] [knowledge] docs/uckk-style-system-officiel.md | bytes=21737 | sha256=6fc95095c489db740b02098e76faebc39311f37d7d2858cd7cb646a38a3e7328
+22. [reference] [knowledge] docs/UCKK_Moodle_Source_Runtime_Sync.md | bytes=11501 | sha256=e8e5c2df5132d027935c8a45a255851035d044ee3fbb23a3cb0f50a16b579de8
+23. [reference] [knowledge] docs/UCKK_Notes_Operationnelles_Conversation_2026-06-01.md | bytes=7721 | sha256=0cc11b9afef8b019e56f4cd8249a11075d49321b2f7d9f59f59489d82a0161ea
+24. [reference] [knowledge] docs/uckk_ops_console_documentation.md | bytes=16699 | sha256=4d2602cc2987d5289aa623f851ef83c23c56bb7fe9daf318d410a4691de2ffcb
+25. [reference] [knowledge] docs/UCKK_Ops_Console_Runbook.md | bytes=1859 | sha256=ae080d24c52aa8227817ef621d71cf4d9c44f4e0ae842efd752494cae694cdbe
+26. [reference] [knowledge] docs/UCKK_Server_Access_Runbook.md | bytes=7863 | sha256=d36b782080dc1db8185caaa27f9fa78e1467b286f04c97de28baa9c1b63bc61e
+27. [reference] [knowledge] mod/uckkarchive/docs/00_index.md | bytes=21399 | sha256=e32ab9c6d969a05a05034f21886fbe7c1f4de712f534275d3ea560a768f61438
+28. [reference] [knowledge] mod/uckkarchive/docs/01_architecture_decision.md | bytes=20246 | sha256=1d2f6551a10d09e9f0a34ddd723e7c2ad39a75824f971ca4b96ac3246453e1ac
+29. [reference] [knowledge] mod/uckkarchive/docs/02_domain_boundaries.md | bytes=19942 | sha256=1de279e95e3bbfbfa9041030c0466e2b943fd71962638500bf5003ef24967811
+30. [reference] [knowledge] mod/uckkarchive/docs/03_file_architecture.md | bytes=28778 | sha256=c21d2f7b5ec5a8f3644bf604243a72f37e89f966161ea4e41712036768ba6d97
+31. [reference] [knowledge] mod/uckkarchive/docs/04_data_model.md | bytes=39262 | sha256=3f849aafbad92aa64bbe47d48b65af96e6b2a4d5093246d26947f5083fea2a67
+32. [reference] [knowledge] mod/uckkarchive/docs/05_media_library.md | bytes=24331 | sha256=f38c6ed92adfed0e7868e1960db43c23597de0fdf6ec321cfe2bb5052b7bc285
+33. [reference] [knowledge] mod/uckkarchive/docs/06_file_api_and_storage.md | bytes=25045 | sha256=159d24abf8eafd621f45c44d303e2766cfc735e8a1804e83488916367bab9be9
+34. [reference] [knowledge] mod/uckkarchive/docs/07_permissions_and_roles.md | bytes=27231 | sha256=72049f6a72772c34e25ac13977c651dfdcd2dcfeab582ed1f83736b3af035fe6
+35. [reference] [knowledge] mod/uckkarchive/docs/08_archive_workflows.md | bytes=25484 | sha256=271940dfcaff4434ac9b56a5dde3683c299e3538a63ae7f1a27e117c2bc37ac2
+36. [reference] [knowledge] mod/uckkarchive/docs/09_media_workflows.md | bytes=29864 | sha256=93a97ad36d67d8f1588b13b1424107f96414c3e6749414c38d42e5f4b26d4ff8
+37. [reference] [knowledge] mod/uckkarchive/docs/10_provenance_versioning_validation.md | bytes=30016 | sha256=0414b0b3970c6df3c64f6d71e342d7e9772e7bbec855dd118761c9d0586cc2c6
+38. [reference] [knowledge] mod/uckkarchive/docs/11_privacy_retention_redaction.md | bytes=31290 | sha256=1f8d5a33745e40624a0392efc22105cc7b8b013593798e5c68b3052ff8e1d963
+39. [reference] [knowledge] mod/uckkarchive/docs/12_backup_restore.md | bytes=31306 | sha256=534dcd9ef61100283d9eb8758f72c32e0ee295f0d425f9b780141481a751a221
+40. [reference] [knowledge] mod/uckkarchive/docs/13_services_and_ajax_api.md | bytes=34090 | sha256=0dc1e4b9468278c4f9450f02e54c6ccb4f9081899dee516ea658d3c30b3fa7c9
+41. [reference] [knowledge] mod/uckkarchive/docs/14_events_and_audit.md | bytes=29315 | sha256=3e6142996c6fd016f68ec169b6f6cb4631de5f678c2666606cb18f13690d7c01
+42. [reference] [knowledge] mod/uckkarchive/docs/15_ui_templates_and_amd.md | bytes=26730 | sha256=da6b04ee0984a9f430e24528f2adccfd31ddb153b894cd0e4eb5e44b1279ec35
+43. [reference] [knowledge] mod/uckkarchive/docs/16_integration_with_courses.md | bytes=27817 | sha256=06dded72508521f5a977fcea53dfa33dff3aa7d102a532cc9c2780a5d15438e8
+44. [reference] [knowledge] mod/uckkarchive/docs/17_integration_with_challenges.md | bytes=20833 | sha256=a2405e65fe9bbcd14ad4360c6b571fa47860124c134b32261c7695f30efe160b
+45. [reference] [knowledge] mod/uckkarchive/docs/18_integration_with_assemblies.md | bytes=22670 | sha256=2e77d08028b7f295724a8dbba70e4b66c8f3d1369730f618137f9a897d4a8ab8
+46. [reference] [knowledge] mod/uckkarchive/docs/19_integration_with_integrity.md | bytes=22041 | sha256=a790c21cbff517f62157c16000b6aa388c126dfd000864f052edb947e039a6ac
+47. [reference] [knowledge] mod/uckkarchive/docs/20_reporting_and_exports.md | bytes=28398 | sha256=918600e4310f70586ed15b2bad1c14d22baa359600fe673f9fe3422daf658b5c
+48. [reference] [knowledge] mod/uckkarchive/docs/21_testing_strategy.md | bytes=24825 | sha256=85602745cf4cb2462de2f35121beaf900b0a1cf17dc14f54eb3dd5209c82feb2
+49. [reference] [knowledge] mod/uckkarchive/docs/22_installation.md | bytes=27476 | sha256=0db8832e13aaafeb58ae9302fb13942613fb33af0d43305519bb726679a5dae3
+50. [reference] [knowledge] mod/uckkarchive/docs/23_upgrade.md | bytes=31466 | sha256=4456607af4b2a464a9766d5ff36b173d108adefec586087547cd142c9c444695
+51. [reference] [knowledge] mod/uckkarchive/docs/24_release_spec.md | bytes=28753 | sha256=b84c4e1c9480be88a982b72983e596f70da3cdf121661c4b67e54f5ef91e3f00
+52. [reference] [knowledge] mod/uckkarchive/docs/26_operations_app_runtime_contract.md | bytes=16882 | sha256=80c6b5a910c1065a2714c823bf6d5ff0c377d92d836a7609933c0b586baba461
+53. [reference] [knowledge] mod/uckkarchive/docs/_alignment_variables.md | bytes=26378 | sha256=1e0f66fab706b44261ac6c67c33aaddfdec69637012a622b61765aecbdb3ce63
+54. [reference] [knowledge] mod/uckkarchive/README.md | bytes=12171 | sha256=ffaedd3b7d9527f91ca6c53e784441f1356d3dde810a84e8734d37eb16b4e3bd
+55. [reference] [knowledge] README.md | bytes=10526 | sha256=416a91b9cd64058f4a934927ff0fd53c4c2265dfcdbf1075908d6336057296c8
+56. [reference] [knowledge] release/acceptance-checklist.md | bytes=21513 | sha256=d5c06a749c93b75d26f5a4132597d7072106f354164ca6d5cd088147909dba03
+57. [reference] [knowledge] UCKK_Ops_Console_Runbook.md | bytes=3232 | sha256=6d7c60aa7c28558b5c5197abbee2c1c069f9ceebe0e94f16bfd39c1442814103
 
 
 ================================================================================================
@@ -96,7 +95,10 @@ EXCLUDED FILES
 
 ================================================================================================
 FILE: docs/00_master_execution_doctrine.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1078b5446cfeb7c5ed955660d6388997a0c58da6a85bd5ffb701c1e3979378ab
+CONTENT_BYTES: 52805
 ================================================================================================
 
 # 00 — UCKK-Moodle Master Execution Doctrine
@@ -847,7 +849,10 @@ A Moodle browser installation attempt must not be used as the first diagnostic s
 
 ================================================================================================
 FILE: docs/01_domain_boundaries_and_glossary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9815995299924c512d7fca86b24f99dde017a595a09ffde560a8216a8723efee
+CONTENT_BYTES: 18895
 ================================================================================================
 
 # 01 — Domain Boundaries and Glossary
@@ -1241,7 +1246,10 @@ The domain layer is done when:
 
 ================================================================================================
 FILE: docs/02_distribution_architecture.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 073fa1224881542621639d180cab892126fd3927160dc0afd07938cac2a082ab
+CONTENT_BYTES: 25811
 ================================================================================================
 
 # 02 — Distribution Architecture
@@ -2064,7 +2072,10 @@ The distribution is not considered runnable until priorities 1–4 pass.
 
 ================================================================================================
 FILE: docs/03_plugin_specifications.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 873127a6e19afbae501a91a3e6ed0032bc78f970d5fc99f1b89626d90717d116
+CONTENT_BYTES: 66657
 ================================================================================================
 
 Updated `03_plugin_specifications.md` content below, based on the attached plugin specification and the Konnaxion alignment instructions.  
@@ -3620,7 +3631,10 @@ This version aligns `DOC_03` with the shared UCKK-Moodle operating-mode rule: st
 
 ================================================================================================
 FILE: docs/04_data_model_and_storage.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b40f484787580f345a3d49e9264ef09960f31f3d11c3f3694244d4d7f44f080e
+CONTENT_BYTES: 48380
 ================================================================================================
 
 # 04 — Data Model and Storage
@@ -4634,7 +4648,10 @@ Use this checklist before trying to start Moodle with the generated package:
 
 ================================================================================================
 FILE: docs/05_roles_permissions_and_security.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c500955a9ea5f31efd001c304b902ac9cad24c4ba32e38561128d191cf130d8b
+CONTENT_BYTES: 48509
 ================================================================================================
 
 # 05 — Roles, Permissions and Security
@@ -5658,7 +5675,10 @@ The standalone-core definition of done uses the implemented capabilities in sect
 
 ================================================================================================
 FILE: docs/06_pedagogy_courses_competencies_badges.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6e96f9741ec513b821ff1a5e6df2cb2f9e78ea71e5ae35aef6184f22c76b7714
+CONTENT_BYTES: 30805
 ================================================================================================
 
 # 06 — Pedagogy, Courses, Competencies and Badges
@@ -6424,7 +6444,10 @@ Optional Konnaxion-connected definition of done:
 
 ================================================================================================
 FILE: docs/07_challenges_and_assemblies.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 501632fbdc3d579bbb87ff180fa0c1743e83b0149a9c61f7ec185476f8e8ca90
+CONTENT_BYTES: 30061
 ================================================================================================
 
 # 07 — Challenges and Assemblies
@@ -7609,7 +7632,10 @@ AMD JavaScript passes only when:
 
 ================================================================================================
 FILE: docs/08_integrity_archives_and_privacy.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f5a7cbe9ebd8018c0ac4335491a036e4f0f677780df5d1c639f79af60a4ffbe7
+CONTENT_BYTES: 49095
 ================================================================================================
 
 # 08 — Integrity, Archives and Privacy
@@ -8796,7 +8822,10 @@ This revision keeps the real blocker intact: executable PHP or Moodle page-contr
 
 ================================================================================================
 FILE: docs/09_integrations_reporting_delivery.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9aab3e9a2bc609b99221559af7e1721294da6f716c2fca599710e51b74d96b8a
+CONTENT_BYTES: 67672
 ================================================================================================
 
 # 09 — Integrations, Reporting and Delivery
@@ -10785,7 +10814,10 @@ Konnaxion may compute Smart Vote readings. UCKK-Moodle Assemblées decide. Archi
 
 ================================================================================================
 FILE: docs/10_konnaxion_smart_vote_integration_contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a225c829371fe4083b7b86aecc3512319fad0326d3583d5180e9d7dd19ca163b
+CONTENT_BYTES: 31215
 ================================================================================================
 
 # 10 — Konnaxion Smart Vote Integration Contract
@@ -11626,7 +11658,10 @@ UCKK-Moodle is self-standing. Konnaxion is an optional connected-mode integratio
 
 ================================================================================================
 FILE: docs/11_cross_doc_alignment_registry.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4ae1adcbd78f6858eacb969b536fa7baa4d489054693d680c4841656f0163350
+CONTENT_BYTES: 35293
 ================================================================================================
 
 # 11 — Cross-Document Alignment Registry
@@ -12305,7 +12340,10 @@ UCKK-Moodle is self-standing. Konnaxion is an optional connected-mode integratio
 
 ================================================================================================
 FILE: docs/12_faculty_pages_atlas_public_contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 279b2698f8bd54ceebf9d343acd301503fdbb7c892f34722ff2e64c808d6e79a
+CONTENT_BYTES: 68506
 ================================================================================================
 
 # DOC_12 — UCKK Faculty Pages, Atlas JSON, Moodle Sync and Public Site Contract
@@ -15141,7 +15179,10 @@ L’IA ne renomme rien.
 
 ================================================================================================
 FILE: docs/13_faculty_json_authoring_guide.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 771c9744ea9b92814a2cf1b1e46f8c62690fea0357bfcc8516bcd7e400fad69e
+CONTENT_BYTES: 57174
 ================================================================================================
 
 # DOC_13 — UCKK Faculty JSON Authoring Guide
@@ -17347,7 +17388,10 @@ L’humain demeure responsable.
 
 ================================================================================================
 FILE: docs/14_atlas_moodle_sync_reference.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b64a06f3578145f341859c14d489d0731fd33cb8e8f632b41ce92327c2e73fc4
+CONTENT_BYTES: 48126
 ================================================================================================
 
 # DOC_14 — UCKK Atlas → Moodle Sync Reference
@@ -19265,7 +19309,10 @@ La limite institutionnelle doit rester claire, courte et secondaire.
 
 ================================================================================================
 FILE: docs/DOC_mediatheque_explorateur.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 66cb110d1766d9b9431fdd77d207b4ad712821fb2b44438b5b28f7d8a583483a
+CONTENT_BYTES: 23899
 ================================================================================================
 
 # 25 — Médiathèque publique et Explorateur Médiathèque
@@ -20079,7 +20126,10 @@ Ne jamais autoriser par JavaScript ou Mustache.
 
 ================================================================================================
 FILE: docs/json_preset_reference.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 99eadf867b4aaebf103b21e6af9be697f9d05272bfb97af19c3374b4a01e6ece
+CONTENT_BYTES: 39375
 ================================================================================================
 
 # UCKK Seed JSON Preset Reference
@@ -21381,7 +21431,10 @@ docs/JSON preset format for UCKK academic registry.txt
 
 ================================================================================================
 FILE: docs/README_import_uckkarchive_media.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0ec3b13eb2f72907458ebf5d8a406151b855603ece3f7d58c18d9f27991c7053
+CONTENT_BYTES: 3391
 ================================================================================================
 
 # Import UCKK Archive Media Inventory — paquet v2
@@ -21497,7 +21550,10 @@ Le `.doc` legacy n’est pas activé par défaut.
 
 ================================================================================================
 FILE: docs/refactor_public_pages_contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bb91672b06678ff940de388dcdfe47f8c7cb1097888fb2cf2feeef9f40579b8c
+CONTENT_BYTES: 41535
 ================================================================================================
 
 # Refactor public pages — contrat d’exécution
@@ -23049,7 +23105,10 @@ L’IA est présentée comme outil de production et d’augmentation du travail 
 
 ================================================================================================
 FILE: docs/TODO_refactor_explorateur_cours_public_UCKK.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3c08e032fe23359a2ba1431cb784d020e876a175cde01951e078d6dd1d52cc42
+CONTENT_BYTES: 10589
 ================================================================================================
 
 # TODO — Refactor propre de l’explorateur de cours public UCKK
@@ -23623,7 +23682,10 @@ Objectif : éliminer les écarts entre rendu initial et rendu filtré.
 
 ================================================================================================
 FILE: docs/uckk-style-system-officiel.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6fc95095c489db740b02098e76faebc39311f37d7d2858cd7cb646a38a3e7328
+CONTENT_BYTES: 21737
 ================================================================================================
 
 # UCKK — Documentation officielle du système de styles public
@@ -24542,7 +24604,10 @@ maintenable
 
 ================================================================================================
 FILE: docs/UCKK_Moodle_Source_Runtime_Sync.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e8e5c2df5132d027935c8a45a255851035d044ee3fbb23a3cb0f50a16b579de8
+CONTENT_BYTES: 11501
 ================================================================================================
 
 # UCKK Moodle — source unique, runtime Moodle et synchronisation
@@ -25099,7 +25164,10 @@ Aucune junction UCKK active dans le runtime.
 
 ================================================================================================
 FILE: docs/UCKK_Notes_Operationnelles_Conversation_2026-06-01.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0cc11b9afef8b019e56f4cd8249a11075d49321b2f7d9f59f59489d82a0161ea
+CONTENT_BYTES: 7721
 ================================================================================================
 
 # UCKK — Notes opérationnelles apprises pendant l’intervention
@@ -25488,7 +25556,10 @@ But de la vérification : confirmer que les noms publics de catégories sont ceu
 
 ================================================================================================
 FILE: docs/uckk_ops_console_documentation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4d2602cc2987d5289aa623f851ef83c23c56bb7fe9daf318d410a4691de2ffcb
+CONTENT_BYTES: 16699
 ================================================================================================
 
 # UCKK Ops Console — Documentation opérationnelle
@@ -26308,7 +26379,10 @@ NeedsServerSmoke = false
 
 ================================================================================================
 FILE: docs/UCKK_Ops_Console_Runbook.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ae080d24c52aa8227817ef621d71cf4d9c44f4e0ae842efd752494cae694cdbe
+CONTENT_BYTES: 1859
 ================================================================================================
 
 # UCKK Ops Console — Runbook
@@ -26380,7 +26454,10 @@ Apply categories serveur
 
 ================================================================================================
 FILE: docs/UCKK_Server_Access_Runbook.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d36b782080dc1db8185caaa27f9fa78e1467b286f04c97de28baa9c1b63bc61e
+CONTENT_BYTES: 7863
 ================================================================================================
 
 # UCKK Moodle — Server Access and Deployment Runbook
@@ -26716,7 +26793,10 @@ http://57.129.115.159/course/view.php?id=<courseid>
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/00_index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e32ab9c6d969a05a05034f21886fbe7c1f4de712f534275d3ea560a768f61438
+CONTENT_BYTES: 21399
 ================================================================================================
 
 # 00 — Documentation Index
@@ -27684,7 +27764,10 @@ This documentation set defines the final target behavior for implementation. Cod
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/01_architecture_decision.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1d2f6551a10d09e9f0a34ddd723e7c2ad39a75824f971ca4b96ac3246453e1ac
+CONTENT_BYTES: 20246
 ================================================================================================
 
 # 01 — Architecture Decision
@@ -28705,7 +28788,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/02_domain_boundaries.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1de279e95e3bbfbfa9041030c0466e2b943fd71962638500bf5003ef24967811
+CONTENT_BYTES: 19942
 ================================================================================================
 
 # 02 — Domain Boundaries
@@ -29820,7 +29906,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/03_file_architecture.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c21d2f7b5ec5a8f3644bf604243a72f37e89f966161ea4e41712036768ba6d97
+CONTENT_BYTES: 28778
 ================================================================================================
 
 # 03 — File Architecture
@@ -30869,7 +30958,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/04_data_model.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3f849aafbad92aa64bbe47d48b65af96e6b2a4d5093246d26947f5083fea2a67
+CONTENT_BYTES: 39262
 ================================================================================================
 
 # 04 — Data Model
@@ -32583,7 +32675,10 @@ All final implementation must conform to this data model.
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/05_media_library.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f38c6ed92adfed0e7868e1960db43c23597de0fdf6ec321cfe2bb5052b7bc285
+CONTENT_BYTES: 24331
 ================================================================================================
 
 # 05 — Media Library
@@ -33998,7 +34093,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/06_file_api_and_storage.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 159d24abf8eafd621f45c44d303e2766cfc735e8a1804e83488916367bab9be9
+CONTENT_BYTES: 25045
 ================================================================================================
 
 # 06 — File API and Storage
@@ -35204,7 +35302,10 @@ Code, tests, services, UI, backup/restore, privacy, content advisory governance,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/07_permissions_and_roles.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 72049f6a72772c34e25ac13977c651dfdcd2dcfeab582ed1f83736b3af035fe6
+CONTENT_BYTES: 27231
 ================================================================================================
 
 # 07 — Permissions and Roles
@@ -36570,7 +36671,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/08_archive_workflows.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 271940dfcaff4434ac9b56a5dde3683c299e3538a63ae7f1a27e117c2bc37ac2
+CONTENT_BYTES: 25484
 ================================================================================================
 
 # 08 — Archive Workflows
@@ -37884,7 +37988,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/09_media_workflows.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 93a97ad36d67d8f1588b13b1424107f96414c3e6749414c38d42e5f4b26d4ff8
+CONTENT_BYTES: 29864
 ================================================================================================
 
 # 09 — Media Workflows
@@ -39343,7 +39450,10 @@ Code, tests, services, UI, backup/restore, privacy, content advisory governance,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/10_provenance_versioning_validation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0414b0b3970c6df3c64f6d71e342d7e9772e7bbec855dd118761c9d0586cc2c6
+CONTENT_BYTES: 30016
 ================================================================================================
 
 # 10 — Provenance, Versioning and Validation
@@ -40982,7 +41092,10 @@ This document defines the final target behavior for provenance, versioning, vali
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/11_privacy_retention_redaction.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1f8d5a33745e40624a0392efc22105cc7b8b013593798e5c68b3052ff8e1d963
+CONTENT_BYTES: 31290
 ================================================================================================
 
 # 11 — Privacy, Retention, and Redaction
@@ -42561,7 +42674,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/12_backup_restore.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 534dcd9ef61100283d9eb8758f72c32e0ee295f0d425f9b780141481a751a221
+CONTENT_BYTES: 31306
 ================================================================================================
 
 # 12 — Backup and Restore
@@ -44460,7 +44576,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/13_services_and_ajax_api.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0dc1e4b9468278c4f9450f02e54c6ccb4f9081899dee516ea658d3c30b3fa7c9
+CONTENT_BYTES: 34090
 ================================================================================================
 
 # 13 — Services and AJAX API
@@ -47001,7 +47120,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/14_events_and_audit.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3e6142996c6fd016f68ec169b6f6cb4631de5f678c2666606cb18f13690d7c01
+CONTENT_BYTES: 29315
 ================================================================================================
 
 # 14 — Events and Audit
@@ -48537,7 +48659,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/15_ui_templates_and_amd.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: da6b04ee0984a9f430e24528f2adccfd31ddb153b894cd0e4eb5e44b1279ec35
+CONTENT_BYTES: 26730
 ================================================================================================
 
 # 15 — UI, Templates and AMD
@@ -50141,7 +50266,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/16_integration_with_courses.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 06dded72508521f5a977fcea53dfa33dff3aa7d102a532cc9c2780a5d15438e8
+CONTENT_BYTES: 27817
 ================================================================================================
 
 # 16 — Integration with Courses
@@ -51595,7 +51723,10 @@ Code, tests, services, UI, backup/restore, privacy, content advisory governance,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/17_integration_with_challenges.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a2405e65fe9bbcd14ad4360c6b571fa47860124c134b32261c7695f30efe160b
+CONTENT_BYTES: 20833
 ================================================================================================
 
 # 17 — Integration with Challenges
@@ -52611,7 +52742,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/18_integration_with_assemblies.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2e77d08028b7f295724a8dbba70e4b66c8f3d1369730f618137f9a897d4a8ab8
+CONTENT_BYTES: 22670
 ================================================================================================
 
 # 18 — Integration with Assemblies
@@ -53701,7 +53835,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/19_integration_with_integrity.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a790c21cbff517f62157c16000b6aa388c126dfd000864f052edb947e039a6ac
+CONTENT_BYTES: 22041
 ================================================================================================
 
 # 19 — Integration with Integrity
@@ -54767,7 +54904,10 @@ Code, tests, services, UI, backup/restore, privacy, content advisory governance,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/20_reporting_and_exports.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 918600e4310f70586ed15b2bad1c14d22baa359600fe673f9fe3422daf658b5c
+CONTENT_BYTES: 28398
 ================================================================================================
 
 # 20 — Reporting and Exports
@@ -56282,7 +56422,10 @@ This document defines the final target behavior for reporting boundaries, archiv
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/21_testing_strategy.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 85602745cf4cb2462de2f35121beaf900b0a1cf17dc14f54eb3dd5209c82feb2
+CONTENT_BYTES: 24825
 ================================================================================================
 
 # 21 — Testing Strategy
@@ -57564,7 +57707,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/22_installation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0db8832e13aaafeb58ae9302fb13942613fb33af0d43305519bb726679a5dae3
+CONTENT_BYTES: 27476
 ================================================================================================
 
 # 22 — Installation
@@ -59059,7 +59205,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/23_upgrade.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4456607af4b2a464a9766d5ff36b173d108adefec586087547cd142c9c444695
+CONTENT_BYTES: 31466
 ================================================================================================
 
 # 23 — Upgrade
@@ -60643,7 +60792,10 @@ Code, tests, services, UI, backup/restore, privacy, content advisory governance,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/24_release_spec.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b84c4e1c9480be88a982b72983e596f70da3cdf121661c4b67e54f5ef91e3f00
+CONTENT_BYTES: 28753
 ================================================================================================
 
 # 24 — Release Specification
@@ -62110,7 +62262,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/26_operations_app_runtime_contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 80c6b5a910c1065a2714c823bf6d5ff0c377d92d836a7609933c0b586baba461
+CONTENT_BYTES: 16882
 ================================================================================================
 
 # 26 — Operations App Runtime Contract
@@ -62863,7 +63018,10 @@ Elle ne doit jamais cacher une attente interactive, un mode dangereux ou une dif
 
 ================================================================================================
 FILE: mod/uckkarchive/docs/_alignment_variables.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1e0f66fab706b44261ac6c67c33aaddfdec69637012a622b61765aecbdb3ce63
+CONTENT_BYTES: 26378
 ================================================================================================
 
 # UCKK Archive — Shared Documentation Variables
@@ -64168,7 +64326,10 @@ This document defines the final target behavior for implementation. Code, tests,
 
 ================================================================================================
 FILE: mod/uckkarchive/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ffaedd3b7d9527f91ca6c53e784441f1356d3dde810a84e8734d37eb16b4e3bd
+CONTENT_BYTES: 12171
 ================================================================================================
 
 # UCKK Archive
@@ -64805,7 +64966,10 @@ Strengthen it with documentation, file-area normalization, and an optional media
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 416a91b9cd64058f4a934927ff0fd53c4c2265dfcdbf1075908d6336057296c8
+CONTENT_BYTES: 10526
 ================================================================================================
 
 ÿþ#   U C K K      U n i v e r s - C i t é   K i n g   K l o w n 
@@ -65071,7 +65235,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: release/acceptance-checklist.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d5c06a749c93b75d26f5a4132597d7072106f354164ca6d5cd088147909dba03
+CONTENT_BYTES: 21513
 ================================================================================================
 
 # Release Acceptance Checklist
@@ -65656,7 +65823,10 @@ Reviewer notes:
 
 ================================================================================================
 FILE: UCKK_Ops_Console_Runbook.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6d7c60aa7c28558b5c5197abbee2c1c069f9ceebe0e94f16bfd39c1442814103
+CONTENT_BYTES: 3232
 ================================================================================================
 
 # UCKK Ops Console — Runbook

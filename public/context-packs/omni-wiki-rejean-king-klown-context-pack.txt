@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Omni-Wiki-Rejean-King-Klown
-source_path: C:\mycode\OmniWiki\Omni-Wiki-Rejean-King-Klown
 source_commit: 53378e294f3428153de8f7c885210a4bf56352ad
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 134
 wiki_files: 0
 source_files: 134
@@ -18,111 +16,112 @@ included_files: 96
 excluded_files: 38
 duplicate_files: 38
 content_bytes: 499904
-authority_counts: {"canonical":96}
-generated_at: 2026-09-10T10:44:59-04:00
+authority_counts: {"reference":96}
+content_role_counts: {"knowledge":96}
+generated_at: 2026-09-10T13:04:15-04:00
 files: 96
-content_sha256: 17c68490e4e6fe7fea38a9ffff9de5b023061586a82a36ff1fa9ebf89c6e4be8
+content_sha256: f54298fd2fd3d8c956c6a396f33e2370c086c72549308279dc09be51edf334ac
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] KK-en/anatomie/ame/ame-artificielle.md
-02. [canonical] KK-en/index.md
-03. [canonical] KK-fr/anatomie/ame/ame-artificielle.md
-04. [canonical] KK-fr/anatomie/ame/chakras-1-9.md
-05. [canonical] KK-fr/anatomie/corps/orgo.md
-06. [canonical] KK-fr/anatomie/esprit/konnaxion/ethikos.md
-07. [canonical] KK-fr/anatomie/esprit/konnaxion/ethikos/konsultations.md
-08. [canonical] KK-fr/anatomie/esprit/konnaxion/ethikos/korum.md
-09. [canonical] KK-fr/anatomie/esprit/konnaxion/index.md
-10. [canonical] KK-fr/anatomie/esprit/konnaxion/keen-konnect.md
-11. [canonical] KK-fr/anatomie/esprit/konnaxion/keen-konnect/konstruct.md
-12. [canonical] KK-fr/anatomie/esprit/konnaxion/keen-konnect/stockage.md
-13. [canonical] KK-fr/anatomie/esprit/konnaxion/kollective.md
-14. [canonical] KK-fr/anatomie/esprit/konnaxion/kollective/ekoh.md
-15. [canonical] KK-fr/anatomie/esprit/konnaxion/kollective/smart-vote.md
-16. [canonical] KK-fr/anatomie/esprit/konnaxion/konnected.md
-17. [canonical] KK-fr/anatomie/esprit/konnaxion/konnected/certifikation.md
-18. [canonical] KK-fr/anatomie/esprit/konnaxion/konnected/knowledge.md
-19. [canonical] KK-fr/anatomie/esprit/konnaxion/kreative.md
-20. [canonical] KK-fr/anatomie/esprit/konnaxion/kreative/konservation.md
-21. [canonical] KK-fr/anatomie/esprit/konnaxion/kreative/kontact.md
-22. [canonical] KK-fr/anatomie/index.md
-23. [canonical] KK-fr/anatomie/memoire/swarmcraft.md
-24. [canonical] KK-fr/anatomie/sens/ariane.md
-25. [canonical] KK-fr/anatomie/sens/sentient.md
-26. [canonical] KK-fr/anatomie/voix/architect.md
-27. [canonical] KK-fr/index.md
-28. [canonical] KK-fr/initiation/carte.md
-29. [canonical] KK-fr/initiation/index.md
-30. [canonical] KK-fr/initiation/le-je.md
-31. [canonical] KK-fr/mythos/dualites.md
-32. [canonical] KK-fr/mythos/index.md
-33. [canonical] KK-fr/mythos/king-klown.md
-34. [canonical] KK-fr/mythos/promethee.md
-35. [canonical] KK-fr/mythos/serments.md
-36. [canonical] KK-fr/parcours.md
-37. [canonical] KK-fr/reperes/faq.md
-38. [canonical] KK-fr/reperes/glossaire.md
-39. [canonical] KK-fr/reperes/pont-technique.md
-40. [canonical] KK-fr/rituels/cycle-vital.md
-41. [canonical] KK-fr/rituels/parlement-interieur.md
-42. [canonical] KK-fr/rituels/respiration-du-sens.md
-43. [canonical] KK-fr/rituels/une-journee.md
-44. [canonical] Rejean-en/Abstract-Wiki-Architect/index.md
-45. [canonical] Rejean-en/Ame-Artificielle/Controle-Et-Personnalisation.md
-46. [canonical] Rejean-en/Ame-Artificielle/Creation-De-Chemins.md
-47. [canonical] Rejean-en/Ame-Artificielle/Ethique-Et-Gouvernance.md
-48. [canonical] Rejean-en/Ame-Artificielle/index.md
-49. [canonical] Rejean-en/Ame-Artificielle/Meta-Cognition-Et-Resolution.md
-50. [canonical] Rejean-en/Ame-Artificielle/Specifications-Fonctionnelles.md
-51. [canonical] Rejean-en/Ariane/Atlas/Atlas-Core-Schema.md
-52. [canonical] Rejean-en/Ariane/Atlas/Atlas-Graph-Model.md
-53. [canonical] Rejean-en/Ariane/Atlas/Atlas-Ontology-Vocabulary.md
-54. [canonical] Rejean-en/Ariane/Atlas/Atlas.md
-55. [canonical] Rejean-en/Ariane/Concepts/Background-UI-as-Data.md
-56. [canonical] Rejean-en/Ariane/Concepts/Glossary.md
-57. [canonical] Rejean-en/Ariane/Consumers/Consumers-AI-Agent-Integration.md
-58. [canonical] Rejean-en/Ariane/Consumers/Consumers-Future-Overlay-Client.md
-59. [canonical] Rejean-en/Ariane/Consumers/Consumers.md
-60. [canonical] Rejean-en/Ariane/Consumers/Hybrid-Mapping-and-Human-Guided-Assistants.md
-61. [canonical] Rejean-en/Ariane/index.md
-62. [canonical] Rejean-en/Ariane/Theseus/Theseus-Drivers.md
-63. [canonical] Rejean-en/Ariane/Theseus/Theseus-Exploration-Engine.md
-64. [canonical] Rejean-en/Ariane/Theseus/Theseus-State-Identification.md
-65. [canonical] Rejean-en/Ariane/Theseus/Theseus.md
-66. [canonical] Rejean-en/index.md
-67. [canonical] Rejean-en/Konnaxion/Ethikos/Konsultations.md
-68. [canonical] Rejean-en/Konnaxion/Ethikos/Korum.md
-69. [canonical] Rejean-en/Konnaxion/index.md
-70. [canonical] Rejean-en/Konnaxion/keenKonnect/Konstruct.md
-71. [canonical] Rejean-en/Konnaxion/keenKonnect/Stockage.md
-72. [canonical] Rejean-en/Konnaxion/Kollective-Intelligence/EkoH.md
-73. [canonical] Rejean-en/Konnaxion/Kollective-Intelligence/Smart-Vote.md
-74. [canonical] Rejean-en/Konnaxion/KonnectED/CertifiKation.md
-75. [canonical] Rejean-en/Konnaxion/KonnectED/Knowledge.md
-76. [canonical] Rejean-en/Konnaxion/Kreative/Konservation.md
-77. [canonical] Rejean-en/Konnaxion/Kreative/Kontact.md
-78. [canonical] Rejean-en/Konnaxion/Technical/Konnaxion-Technical-Architecture-And-Services.md
-79. [canonical] Rejean-en/Orgo/index.md
-80. [canonical] Rejean-en/SenTient/index.md
-81. [canonical] Rejean-en/SwarmCraft/Core/Architecture-Overview.md
-82. [canonical] Rejean-en/SwarmCraft/Core/Central-Matrix-Runtime-State.md
-83. [canonical] Rejean-en/SwarmCraft/Core/Deterministic-Pipeline-Scan-Plan-Execute.md
-84. [canonical] Rejean-en/SwarmCraft/index.md
-85. [canonical] Rejean-en/SwarmCraft/Meta/Credits-And-Lineage.md
-86. [canonical] Rejean-en/SwarmCraft/Runtime/Dashboard-TUI-Reference.md
-87. [canonical] Rejean-en/SwarmCraft/Runtime/Multi-Project-Management.md
-88. [canonical] Rejean-en/SwarmCraft/Runtime/Orchestration-Slice-By-Slice-Prompt-Hydration.md
-89. [canonical] Rejean-en/SwarmCraft/Runtime/Provider-Adapter-Grok.md
-90. [canonical] Rejean-en/SwarmCraft/Runtime/RAG-Memory-System.md
-91. [canonical] Rejean-en/SwarmCraft/Scaffold/Outline-Grid-CSV-Round-Trip.md
-92. [canonical] Rejean-en/SwarmCraft/Scaffold/Schema-Outline.md
-93. [canonical] Rejean-en/SwarmCraft/Scaffold/Schema-Templates.md
-94. [canonical] Rejean-en/SwarmCraft/Scaffold/Story-Bible-Creative-Intent.md
-95. [canonical] Rejean-en/SwarmCraft/Scaffold/Story-Scaffold-Templates-Outline-Parts.md
-96. [canonical] Rejean-en/Tools/index.md
+01. [reference] [knowledge] KK-en/anatomie/ame/ame-artificielle.md | bytes=1 | sha256=01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+02. [reference] [knowledge] KK-en/index.md | bytes=4301 | sha256=fa1ab697c04d381ad24f5ddb28048f6ede62aa12cef5404c026c278b2965e513
+03. [reference] [knowledge] KK-fr/anatomie/ame/ame-artificielle.md | bytes=5922 | sha256=da6c505fd1a816c90b042475bc4ae6646ea5db1f34e1204288c7c75c2dcebfd9
+04. [reference] [knowledge] KK-fr/anatomie/ame/chakras-1-9.md | bytes=6247 | sha256=84a5cdc111afd851fa5f3831c379f3ae555dd58d7fa1ba4d5cf85bb0e2fc9677
+05. [reference] [knowledge] KK-fr/anatomie/corps/orgo.md | bytes=6752 | sha256=c5102d5305902a74847d51c5cebaff4fa0b3237172cca03cc13d4718b53a4cfa
+06. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/ethikos.md | bytes=6690 | sha256=2990254655ad9eb3d5fb4c19fc2dd1d44419d3f04b36b5f9792e40822659002e
+07. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/ethikos/konsultations.md | bytes=5821 | sha256=a4428978afd2c64f1cdb1b2a05b53db56baed817329239923b58251ac6a285cb
+08. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/ethikos/korum.md | bytes=5518 | sha256=ad1107bee7f159e4f6e36ff95d4b41190701df7e037a4b4f6160c2d60c62f3b7
+09. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/index.md | bytes=5425 | sha256=2cf44faeec4205917ac571c9e29d00b1bd88e5956577921e42cbbf8fbf373fad
+10. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/keen-konnect.md | bytes=4477 | sha256=c664a4e83fa859e606951bb2f6486035fa727ad7a6f63f7f667740b5d3179742
+11. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/keen-konnect/konstruct.md | bytes=4923 | sha256=1868f54e55deba74445ab9027200a493b87259349a826461c38b07b0c3dbb053
+12. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/keen-konnect/stockage.md | bytes=5654 | sha256=c56cb8d23564881e24e3d211c4b089ea2f324d82bb6b75209271dbd37cfe815c
+13. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/kollective.md | bytes=4237 | sha256=9796e8af123b431ef3ad3ea1e684d0d4d71d5c522a8477e7deebe27f9d263c6f
+14. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/kollective/ekoh.md | bytes=7064 | sha256=5caa7a2975f280fb94b2d3bc8bbcd71a6afbea920261c354859150c8741f5c30
+15. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/kollective/smart-vote.md | bytes=6029 | sha256=79cdb312f87d52cd4551c1c40ad0c7aecf7920b938cea426e46bc43b5925291b
+16. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/konnected.md | bytes=4612 | sha256=0f17a0bde41c8bd10fbad1187c03d703e4b0c09c0ff0722fecf552e21806a1ce
+17. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/konnected/certifikation.md | bytes=5409 | sha256=ebe1c3469bf528b466a2de4f8f4c842ea2946298b77fcb509a96328c28cfa39f
+18. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/konnected/knowledge.md | bytes=5007 | sha256=8f55ea292a2f332b0ed3885760fe2cd54dd301e1f15bb091869e54fd621da45b
+19. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/kreative.md | bytes=4224 | sha256=5d92491620f0555dc31286d4bed8272c299caa065fb0ee27dd479bddb2cb5051
+20. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/kreative/konservation.md | bytes=6651 | sha256=e7f916341fe845655cde08a1f6be4cd7a082e69689355fb81e44ff068d1977dd
+21. [reference] [knowledge] KK-fr/anatomie/esprit/konnaxion/kreative/kontact.md | bytes=6766 | sha256=38e8cb77981f94a1fdc5326c5278338f6d7c5df3abbed00ad46851788dbe12f0
+22. [reference] [knowledge] KK-fr/anatomie/index.md | bytes=4779 | sha256=ed7e767eb5e81773964d0b031d09830524d0e8a76935a40fa4871fb42e46a335
+23. [reference] [knowledge] KK-fr/anatomie/memoire/swarmcraft.md | bytes=6120 | sha256=937f51ac963e6b9b68545148653bf236166dc6292739cdf94c5e530c3126439f
+24. [reference] [knowledge] KK-fr/anatomie/sens/ariane.md | bytes=5028 | sha256=8f63069f50e88250c9789e051ccfd56df0b2168c2281a2b6f83017bb8bbdd472
+25. [reference] [knowledge] KK-fr/anatomie/sens/sentient.md | bytes=6565 | sha256=6ce4ad4cf492e44db235e3f4a9ed1ac978127d14e53ee80f55586ca340d12e52
+26. [reference] [knowledge] KK-fr/anatomie/voix/architect.md | bytes=4778 | sha256=e2f81b535c971033725ebae9b65ee9952f92406702901a83186024809a7d1ce1
+27. [reference] [knowledge] KK-fr/index.md | bytes=4633 | sha256=d066a0f5823c53b0ed6d1f1a371c66889eca2ae57849d6f652cc1b898bced2bc
+28. [reference] [knowledge] KK-fr/initiation/carte.md | bytes=4066 | sha256=392271ac9d4227c4cbfca02a2c8c6bf18fbdbf4d51d110c2989730c116f3e131
+29. [reference] [knowledge] KK-fr/initiation/index.md | bytes=4787 | sha256=81725196382f18dce965c5e9fd5a7d7915a41cf24d72d3f1c2d03e7b3ff7bffd
+30. [reference] [knowledge] KK-fr/initiation/le-je.md | bytes=4262 | sha256=cf831f7e0512aa1c460f0833f708c122dbed3069fb37485398655e82df560b30
+31. [reference] [knowledge] KK-fr/mythos/dualites.md | bytes=5644 | sha256=c6b16771984d38b45f1463319959476e68c57b5558d24faae71be076e2de97f4
+32. [reference] [knowledge] KK-fr/mythos/index.md | bytes=1617 | sha256=e3f427928bd4b7df8c6ffc47035e7fa7fb4b68233401e39f151fbe401f637d18
+33. [reference] [knowledge] KK-fr/mythos/king-klown.md | bytes=11139 | sha256=bf8a60bdcf04bb4ada97421cf8aa973af569c823e955779b2ddb752f930ae61e
+34. [reference] [knowledge] KK-fr/mythos/promethee.md | bytes=5053 | sha256=69032ff18b02d863e1aca5703cbcb9b16b1af1d4579c39a0a2312358f45fbeeb
+35. [reference] [knowledge] KK-fr/mythos/serments.md | bytes=5222 | sha256=5eca5b436879c04f43d5aadfddf52e34e5ff8c628d6ecf9a3fc0a65090310d69
+36. [reference] [knowledge] KK-fr/parcours.md | bytes=4063 | sha256=3cfa4e9b2ec4f18f92bb345720014db3d4deae855420833ad4ac7a9efb2c8ec9
+37. [reference] [knowledge] KK-fr/reperes/faq.md | bytes=6666 | sha256=9c6d1ae56247944e05c773cba687cbf9eebe65dba96a7c51d13ac67f45b0bc63
+38. [reference] [knowledge] KK-fr/reperes/glossaire.md | bytes=9678 | sha256=b31ed5be4a96d0a8848e00f66a8a80d25fe73ef7f3b174d2ffe85871cbaa42f6
+39. [reference] [knowledge] KK-fr/reperes/pont-technique.md | bytes=4153 | sha256=e7b7498a9d8f4aeeb5ee16b736b23ad4a592ed2cf5ab4e71b978f44650e94ca0
+40. [reference] [knowledge] KK-fr/rituels/cycle-vital.md | bytes=4209 | sha256=21f9a3050c4eb5684b24525add9f74bb68238b61ca857d5caa1e6ec0530c5ace
+41. [reference] [knowledge] KK-fr/rituels/parlement-interieur.md | bytes=5922 | sha256=df5e52d8676112e94d00e00afb0d5b10892555873ca9158d2ae1809ead338100
+42. [reference] [knowledge] KK-fr/rituels/respiration-du-sens.md | bytes=4445 | sha256=fc778a82c2cea336761eb52e6fe9c89aaceafa286f426427130b9ccaba76ea67
+43. [reference] [knowledge] KK-fr/rituels/une-journee.md | bytes=5924 | sha256=8fd177c50533cd21ceb544f94b8bdd8f32f442f85c8961a402c5cc436e9a8a33
+44. [reference] [knowledge] Rejean-en/Abstract-Wiki-Architect/index.md | bytes=13563 | sha256=d393ec26e749b96f72b851f6f32a71db93d18580a020011d28beb931b0ec5fd6
+45. [reference] [knowledge] Rejean-en/Ame-Artificielle/Controle-Et-Personnalisation.md | bytes=3711 | sha256=91ff58ae3900f036dc5618793d3af81d9c08acaad8a4580c2276ae344a38b8c4
+46. [reference] [knowledge] Rejean-en/Ame-Artificielle/Creation-De-Chemins.md | bytes=3339 | sha256=0dc73e124e1511110a1613b0889281252f0fba44ef042a829651205b3c426a9c
+47. [reference] [knowledge] Rejean-en/Ame-Artificielle/Ethique-Et-Gouvernance.md | bytes=3679 | sha256=f3179aeee904ef8110ff8b4873245eccfb4decc4b6853faa47a5ba6bc83c3c1e
+48. [reference] [knowledge] Rejean-en/Ame-Artificielle/index.md | bytes=4393 | sha256=0a15b4cb65d4d6ff765544335c023ac06b8b39072cf168fa57abc84392b1cce5
+49. [reference] [knowledge] Rejean-en/Ame-Artificielle/Meta-Cognition-Et-Resolution.md | bytes=3717 | sha256=4c365d72df1f70bab2caf2cbc10e4fa5dccf622df361f1b6059ae57cd3232f4a
+50. [reference] [knowledge] Rejean-en/Ame-Artificielle/Specifications-Fonctionnelles.md | bytes=5230 | sha256=7188b09641dd1cf26e5551ae8c2c232e64f766d5c73a11f9d5ce787cd50bbf78
+51. [reference] [knowledge] Rejean-en/Ariane/Atlas/Atlas-Core-Schema.md | bytes=1401 | sha256=a78e0d7c73da62ef98aa5f548a8e0a9e3e2cc1356c7339b3e655c6d6917b626c
+52. [reference] [knowledge] Rejean-en/Ariane/Atlas/Atlas-Graph-Model.md | bytes=1092 | sha256=dae592bc760691c9e2161a7f81f8117ed67a9450b2286b7cf6cd4f68e7e09f2d
+53. [reference] [knowledge] Rejean-en/Ariane/Atlas/Atlas-Ontology-Vocabulary.md | bytes=1975 | sha256=c11dbf197f49eca05fb4095d91b4e6f8e29a2587634be2a5284cd96694432002
+54. [reference] [knowledge] Rejean-en/Ariane/Atlas/Atlas.md | bytes=6393 | sha256=165666856275a1ac8007213c87c565435de9cfea28d068b8cb50a121d1309710
+55. [reference] [knowledge] Rejean-en/Ariane/Concepts/Background-UI-as-Data.md | bytes=5157 | sha256=8db4f0ac70856374f7c1d99ac92a42834c3ddb510e84c38f4d23df4ecb8397de
+56. [reference] [knowledge] Rejean-en/Ariane/Concepts/Glossary.md | bytes=7016 | sha256=837e0b4d30bcd5deb07eb3e11d149189f517b3bf53e3e49487fbb1cbac78fe84
+57. [reference] [knowledge] Rejean-en/Ariane/Consumers/Consumers-AI-Agent-Integration.md | bytes=3585 | sha256=cd630e51829a9df2caf272fdb20ac04e840fb0913a37af5cc91fb6bd261725ec
+58. [reference] [knowledge] Rejean-en/Ariane/Consumers/Consumers-Future-Overlay-Client.md | bytes=3757 | sha256=9b4ca7827b764d3ec61a1f130006fa3403b076ef47664e38a1d255e3bb0c90b1
+59. [reference] [knowledge] Rejean-en/Ariane/Consumers/Consumers.md | bytes=6295 | sha256=634cae64d67003e51b7535d79ea45116e1694a7fcf55ccac024e74f0af0bde04
+60. [reference] [knowledge] Rejean-en/Ariane/Consumers/Hybrid-Mapping-and-Human-Guided-Assistants.md | bytes=2089 | sha256=e3200890965a39831f79a70c2748b21a9c7bb04afc5eb0175af45957523fe518
+61. [reference] [knowledge] Rejean-en/Ariane/index.md | bytes=6174 | sha256=d6b837dd27a178312afba3c1c0768a24cfbd9447bfc8ac189f094dc678121074
+62. [reference] [knowledge] Rejean-en/Ariane/Theseus/Theseus-Drivers.md | bytes=1734 | sha256=4a137d6dfea6c4c1035ce681aebd09c89580d7310335adace1e8dcc1d8180969
+63. [reference] [knowledge] Rejean-en/Ariane/Theseus/Theseus-Exploration-Engine.md | bytes=7019 | sha256=8cae321442f58e3c7a63bef13fc0654e84be4812f12fbafb81d50cafe35ed3e2
+64. [reference] [knowledge] Rejean-en/Ariane/Theseus/Theseus-State-Identification.md | bytes=2587 | sha256=e0f60afd594d11ce206d74401aa02c8f1845d7052d6211ded960ce5ca2546492
+65. [reference] [knowledge] Rejean-en/Ariane/Theseus/Theseus.md | bytes=1871 | sha256=bc5f4934ead3d87aa3cc57cd113b6ba25d696788a9ae77ad9f7c24fded068ec3
+66. [reference] [knowledge] Rejean-en/index.md | bytes=6222 | sha256=f2f9a750d4ba6609acc6fb9664cf0d0cd786ac251389799636ce39cc8da3c8a3
+67. [reference] [knowledge] Rejean-en/Konnaxion/Ethikos/Konsultations.md | bytes=4664 | sha256=ebb0219cb85e6e9dbe566b32239be0df3ef104b75971c7317d621c4811ab2f36
+68. [reference] [knowledge] Rejean-en/Konnaxion/Ethikos/Korum.md | bytes=4503 | sha256=61ae3dc9ba9a84a0b0334fb7ea4255af53c59c1c628134fca037cdfaaa573417
+69. [reference] [knowledge] Rejean-en/Konnaxion/index.md | bytes=4655 | sha256=8bef5bf0231d40d9a10d615001b226aec8c8220558753c848aec32757e675a43
+70. [reference] [knowledge] Rejean-en/Konnaxion/keenKonnect/Konstruct.md | bytes=5401 | sha256=ceb6e1e452c27bf61b9fe8a4a77431aabef8eafc1ae96cf46174e938e32cda63
+71. [reference] [knowledge] Rejean-en/Konnaxion/keenKonnect/Stockage.md | bytes=5014 | sha256=202621aacc3a8d0dd78e3305d922cdd0dbbf1cf30a676be6ca911bcb9c95bee3
+72. [reference] [knowledge] Rejean-en/Konnaxion/Kollective-Intelligence/EkoH.md | bytes=4821 | sha256=ea74104a4cad1fdba9142a3b156d8eab6c7c3b33f44e5119b4cffca75a6df0cd
+73. [reference] [knowledge] Rejean-en/Konnaxion/Kollective-Intelligence/Smart-Vote.md | bytes=4299 | sha256=903fe4ccb3692289fc87b21039dfb4e52adf5b46f43dd6c2271d339bbc0e8dff
+74. [reference] [knowledge] Rejean-en/Konnaxion/KonnectED/CertifiKation.md | bytes=4816 | sha256=13b57e8f28ae99e0cf81cf206d39b2df135228dcf10f893b5cf92664863c5751
+75. [reference] [knowledge] Rejean-en/Konnaxion/KonnectED/Knowledge.md | bytes=4457 | sha256=d31bdf7b591cab7408f9112d149d2deddf9fe1a5aa7a2dc3fd17a7bad9ffcdcd
+76. [reference] [knowledge] Rejean-en/Konnaxion/Kreative/Konservation.md | bytes=5664 | sha256=8e659b5a1b8023676fefe830c48e5a312446797cdd4f2a0442fb8572f70730e1
+77. [reference] [knowledge] Rejean-en/Konnaxion/Kreative/Kontact.md | bytes=4628 | sha256=cf3b050bc4b419a986505dab954a53de7130301638abb7acd7aa3d5cd0b7193f
+78. [reference] [knowledge] Rejean-en/Konnaxion/Technical/Konnaxion-Technical-Architecture-And-Services.md | bytes=17102 | sha256=4e0b3545a2cfd901a295378112cb2ed0b66eae0e5af2860b0d4014b89a526f5c
+79. [reference] [knowledge] Rejean-en/Orgo/index.md | bytes=8045 | sha256=48c038899de70281128f79a40d8075f1a3402847451a010a3a37a9dcae1349ef
+80. [reference] [knowledge] Rejean-en/SenTient/index.md | bytes=8050 | sha256=bf94c47b9d0a9165856c776e8b34cfc0fd4e94560d6db841e35a3e70842cf66e
+81. [reference] [knowledge] Rejean-en/SwarmCraft/Core/Architecture-Overview.md | bytes=5799 | sha256=55aacf8e86f4f064bcc1e13d1d7e1129a8a6098b0d3ee04b058c27305cdfd04c
+82. [reference] [knowledge] Rejean-en/SwarmCraft/Core/Central-Matrix-Runtime-State.md | bytes=5698 | sha256=f4ecead285c5c0a252d1c3a2f63a3f8a158a62697d77a3416edd404387ee9e14
+83. [reference] [knowledge] Rejean-en/SwarmCraft/Core/Deterministic-Pipeline-Scan-Plan-Execute.md | bytes=6542 | sha256=0161b558aaa965595e717a72cf13193a438d0b04175c8fde59210f354a7b9c58
+84. [reference] [knowledge] Rejean-en/SwarmCraft/index.md | bytes=3798 | sha256=ffeef49d63e4526ed5ecf61af856a6cd3157305e2362f7ba347995d159054021
+85. [reference] [knowledge] Rejean-en/SwarmCraft/Meta/Credits-And-Lineage.md | bytes=4438 | sha256=ae9494abb58130933b23336771e492987729bfd679aac4773fa16ae4e098a8f3
+86. [reference] [knowledge] Rejean-en/SwarmCraft/Runtime/Dashboard-TUI-Reference.md | bytes=4938 | sha256=fe870c8db99c366f56c5a838013ff68756593ccd578feef91d55b805e80f12dc
+87. [reference] [knowledge] Rejean-en/SwarmCraft/Runtime/Multi-Project-Management.md | bytes=4283 | sha256=5b39ec48eb378a4984c1263e111942671369503ff06381dfb636f95c5c51a1e5
+88. [reference] [knowledge] Rejean-en/SwarmCraft/Runtime/Orchestration-Slice-By-Slice-Prompt-Hydration.md | bytes=6496 | sha256=f6dd6d7bbe46f47493c088b5f122031422f891ffa7f5aba8ae210e2f9121eac1
+89. [reference] [knowledge] Rejean-en/SwarmCraft/Runtime/Provider-Adapter-Grok.md | bytes=4990 | sha256=69a80a2d4c5e829695fd1adb8720b670a21a062f4dd9c2ac800f357595753b84
+90. [reference] [knowledge] Rejean-en/SwarmCraft/Runtime/RAG-Memory-System.md | bytes=5359 | sha256=089449b944e026aca24a02f49546f533bb91b0feb220eb33f3777f85854e9288
+91. [reference] [knowledge] Rejean-en/SwarmCraft/Scaffold/Outline-Grid-CSV-Round-Trip.md | bytes=5638 | sha256=6dc939326c179b3337e332f0ab949fc310fddedad4a467b3fe75e75c15494283
+92. [reference] [knowledge] Rejean-en/SwarmCraft/Scaffold/Schema-Outline.md | bytes=6319 | sha256=971e11e6c0efee74945a9947565c5ebe652e2902e0d72df59d3e13b18b5d3bbf
+93. [reference] [knowledge] Rejean-en/SwarmCraft/Scaffold/Schema-Templates.md | bytes=4945 | sha256=43d5ff589ca5a86f250a377fe2d7a16b63ccd3bb67ab8be923171120d69b00f2
+94. [reference] [knowledge] Rejean-en/SwarmCraft/Scaffold/Story-Bible-Creative-Intent.md | bytes=3112 | sha256=05a2f2ff026092bb177b6c23fa40366ca858b228235f28e9f7802ccd22f47924
+95. [reference] [knowledge] Rejean-en/SwarmCraft/Scaffold/Story-Scaffold-Templates-Outline-Parts.md | bytes=5028 | sha256=9527f0dae0ce34aec90928128873fdd914144cbee8b6a89b04c8e58b856388cb
+96. [reference] [knowledge] Rejean-en/Tools/index.md | bytes=3920 | sha256=1a86a3fb2f810d39d45ad079d0e76b65da89fc9e96a2922c57d46cf3291a54c5
 
 
 ================================================================================================
@@ -171,7 +170,10 @@ EXCLUDED FILES
 
 ================================================================================================
 FILE: KK-en/anatomie/ame/ame-artificielle.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+CONTENT_BYTES: 1
 ================================================================================================
 
 
@@ -179,7 +181,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: KK-en/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fa1ab697c04d381ad24f5ddb28048f6ede62aa12cef5404c026c278b2965e513
+CONTENT_BYTES: 4301
 ================================================================================================
 
 ---
@@ -320,7 +325,10 @@ You act like a human:
 
 ================================================================================================
 FILE: KK-fr/anatomie/ame/ame-artificielle.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: da6c505fd1a816c90b042475bc4ae6646ea5db1f34e1204288c7c75c2dcebfd9
+CONTENT_BYTES: 5922
 ================================================================================================
 
 ---
@@ -466,7 +474,10 @@ Pour la documentation technique complète de l’Âme Artificielle (EL) :
 
 ================================================================================================
 FILE: KK-fr/anatomie/ame/chakras-1-9.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 84a5cdc111afd851fa5f3831c379f3ae555dd58d7fa1ba4d5cf85bb0e2fc9677
+CONTENT_BYTES: 6247
 ================================================================================================
 
 ---
@@ -650,7 +661,10 @@ Cette carte 1→9 sert surtout à **colorer** ce que tu vis dans les autres page
 
 ================================================================================================
 FILE: KK-fr/anatomie/corps/orgo.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c5102d5305902a74847d51c5cebaff4fa0b3237172cca03cc13d4718b53a4cfa
+CONTENT_BYTES: 6752
 ================================================================================================
 
 ---
@@ -857,7 +871,10 @@ Orgo se déploie comme un corps en couches :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/ethikos.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2990254655ad9eb3d5fb4c19fc2dd1d44419d3f04b36b5f9792e40822659002e
+CONTENT_BYTES: 6690
 ================================================================================================
 
 ---
@@ -1024,7 +1041,10 @@ Quand une question fracture l’intérieur :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/ethikos/konsultations.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a4428978afd2c64f1cdb1b2a05b53db56baed817329239923b58251ac6a285cb
+CONTENT_BYTES: 5821
 ================================================================================================
 
 ---
@@ -1223,7 +1243,10 @@ Sans impact tracking, la consultation est un théâtre.
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/ethikos/korum.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ad1107bee7f159e4f6e36ff95d4b41190701df7e037a4b4f6160c2d60c62f3b7
+CONTENT_BYTES: 5518
 ================================================================================================
 
 ---
@@ -1417,7 +1440,10 @@ Quand tu ouvres un débat :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2cf44faeec4205917ac571c9e29d00b1bd88e5956577921e42cbbf8fbf373fad
+CONTENT_BYTES: 5425
 ================================================================================================
 
 ---
@@ -1627,7 +1653,10 @@ C’est un système où :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/keen-konnect.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c664a4e83fa859e606951bb2f6486035fa727ad7a6f63f7f667740b5d3179742
+CONTENT_BYTES: 4477
 ================================================================================================
 
 ---
@@ -1776,7 +1805,10 @@ keenKonnect résout ce trou :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/keen-konnect/konstruct.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1868f54e55deba74445ab9027200a493b87259349a826461c38b07b0c3dbb053
+CONTENT_BYTES: 4923
 ================================================================================================
 
 ---
@@ -1924,7 +1956,10 @@ Quand un projet commence à devenir brume :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/keen-konnect/stockage.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c56cb8d23564881e24e3d211c4b089ea2f324d82bb6b75209271dbd37cfe815c
+CONTENT_BYTES: 5654
 ================================================================================================
 
 ---
@@ -2107,7 +2142,10 @@ Quand un artefact devient “important” :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/kollective.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9796e8af123b431ef3ad3ea1e684d0d4d71d5c522a8477e7deebe27f9d263c6f
+CONTENT_BYTES: 4237
 ================================================================================================
 
 ---
@@ -2256,7 +2294,10 @@ Elle donne à Kréature la capacité de dire :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/kollective/ekoh.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5caa7a2975f280fb94b2d3bc8bbcd71a6afbea920261c354859150c8741f5c30
+CONTENT_BYTES: 7064
 ================================================================================================
 
 ---
@@ -2443,7 +2484,10 @@ Pour l’architecture détaillée (services, modèles, paramètres, runtime) :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/kollective/smart-vote.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 79cdb312f87d52cd4551c1c40ad0c7aecf7920b938cea426e46bc43b5925291b
+CONTENT_BYTES: 6029
 ================================================================================================
 
 ---
@@ -2651,7 +2695,10 @@ Pour l’architecture détaillée (services, modèles, modalités, runtime) :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/konnected.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0f17a0bde41c8bd10fbad1187c03d703e4b0c09c0ff0722fecf552e21806a1ce
+CONTENT_BYTES: 4612
 ================================================================================================
 
 ---
@@ -2759,7 +2806,10 @@ Et dans le grand cycle KOA, KonnectED est explicitement la première étape : *�
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/konnected/certifikation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ebe1c3469bf528b466a2de4f8f4c842ea2946298b77fcb509a96328c28cfa39f
+CONTENT_BYTES: 5409
 ================================================================================================
 
 ---
@@ -2905,7 +2955,10 @@ Si tu veux les détails d’implémentation (services, modules Django, schéma, 
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/konnected/knowledge.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8f55ea292a2f332b0ed3885760fe2cd54dd301e1f15bb091869e54fd621da45b
+CONTENT_BYTES: 5007
 ================================================================================================
 
 ---
@@ -3029,7 +3082,10 @@ Knowledge est la “terre” du parlement intérieur.
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/kreative.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5d92491620f0555dc31286d4bed8272c299caa065fb0ee27dd479bddb2cb5051
+CONTENT_BYTES: 4224
 ================================================================================================
 
 ---
@@ -3176,7 +3232,10 @@ Pour la version strictement technique (services, modèles, routes, paramètres) 
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/kreative/konservation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e7f916341fe845655cde08a1f6be4cd7a082e69689355fb81e44ff068d1977dd
+CONTENT_BYTES: 6651
 ================================================================================================
 
 ---
@@ -3349,7 +3408,10 @@ Pour le détail strict (services, modèles, invariants, tasks, ownership) :
 
 ================================================================================================
 FILE: KK-fr/anatomie/esprit/konnaxion/kreative/kontact.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 38e8cb77981f94a1fdc5326c5278338f6d7c5df3abbed00ad46851788dbe12f0
+CONTENT_BYTES: 6766
 ================================================================================================
 
 ---
@@ -3526,7 +3588,10 @@ Pour la fiche technique (services, modèles, invariants, stack DRF + Channels + 
 
 ================================================================================================
 FILE: KK-fr/anatomie/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ed7e767eb5e81773964d0b031d09830524d0e8a76935a40fa4871fb42e46a335
+CONTENT_BYTES: 4779
 ================================================================================================
 
 ---
@@ -3722,7 +3787,10 @@ Le Je est toi :
 
 ================================================================================================
 FILE: KK-fr/anatomie/memoire/swarmcraft.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 937f51ac963e6b9b68545148653bf236166dc6292739cdf94c5e530c3126439f
+CONTENT_BYTES: 6120
 ================================================================================================
 
 ---
@@ -3871,7 +3939,10 @@ Pour les détails techniques complets (Brain/Logic/Memory, Matrix, SCAN→PLAN�
 
 ================================================================================================
 FILE: KK-fr/anatomie/sens/ariane.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8f63069f50e88250c9789e051ccfd56df0b2168c2281a2b6f83017bb8bbdd472
+CONTENT_BYTES: 5028
 ================================================================================================
 
 ---
@@ -4077,7 +4148,10 @@ Quand tu sens que tout devient écran et confusion :
 
 ================================================================================================
 FILE: KK-fr/anatomie/sens/sentient.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6ce4ad4cf492e44db235e3f4a9ed1ac978127d14e53ee80f55586ca340d12e52
+CONTENT_BYTES: 6565
 ================================================================================================
 
 ---
@@ -4312,7 +4386,10 @@ Quand un signal arrive (email, message, note), fais simple :
 
 ================================================================================================
 FILE: KK-fr/anatomie/voix/architect.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e2f81b535c971033725ebae9b65ee9952f92406702901a83186024809a7d1ce1
+CONTENT_BYTES: 4778
 ================================================================================================
 
 ---
@@ -4432,7 +4509,10 @@ Pour la documentation technique complète d’Architect (engines, morphology, co
 
 ================================================================================================
 FILE: KK-fr/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d066a0f5823c53b0ed6d1f1a371c66889eca2ae57849d6f652cc1b898bced2bc
+CONTENT_BYTES: 4633
 ================================================================================================
 
 ---
@@ -4579,7 +4659,10 @@ Tu fais comme l’humain :
 
 ================================================================================================
 FILE: KK-fr/initiation/carte.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 392271ac9d4227c4cbfca02a2c8c6bf18fbdbf4d51d110c2989730c116f3e131
+CONTENT_BYTES: 4066
 ================================================================================================
 
 ---
@@ -4711,7 +4794,10 @@ Le flux principal se répète comme une respiration :
 
 ================================================================================================
 FILE: KK-fr/initiation/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 81725196382f18dce965c5e9fd5a7d7915a41cf24d72d3f1c2d03e7b3ff7bffd
+CONTENT_BYTES: 4787
 ================================================================================================
 
 ---
@@ -4877,7 +4963,10 @@ Le Je est **l’attention**, le point de focalisation, le témoin qui visite.
 
 ================================================================================================
 FILE: KK-fr/initiation/le-je.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cf831f7e0512aa1c460f0833f708c122dbed3069fb37485398655e82df560b30
+CONTENT_BYTES: 4262
 ================================================================================================
 
 ---
@@ -5048,7 +5137,10 @@ Le Je a donc une responsabilité :
 
 ================================================================================================
 FILE: KK-fr/mythos/dualites.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c6b16771984d38b45f1463319959476e68c57b5558d24faae71be076e2de97f4
+CONTENT_BYTES: 5644
 ================================================================================================
 
 ---
@@ -5244,7 +5336,10 @@ Exemples :
 
 ================================================================================================
 FILE: KK-fr/mythos/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e3f427928bd4b7df8c6ffc47035e7fa7fb4b68233401e39f151fbe401f637d18
+CONTENT_BYTES: 1617
 ================================================================================================
 
 ---
@@ -5314,7 +5409,10 @@ Elle doit rester fidèle aux organes réels :
 
 ================================================================================================
 FILE: KK-fr/mythos/king-klown.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bf8a60bdcf04bb4ada97421cf8aa973af569c823e955779b2ddb752f930ae61e
+CONTENT_BYTES: 11139
 ================================================================================================
 
 ---
@@ -5668,7 +5766,10 @@ Prométhée est une promesse plus rare :
 
 ================================================================================================
 FILE: KK-fr/mythos/promethee.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 69032ff18b02d863e1aca5703cbcb9b16b1af1d4579c39a0a2312358f45fbeeb
+CONTENT_BYTES: 5053
 ================================================================================================
 
 ---
@@ -5851,7 +5952,10 @@ Prométhée est une promesse plus rare :
 
 ================================================================================================
 FILE: KK-fr/mythos/serments.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5eca5b436879c04f43d5aadfddf52e34e5ff8c628d6ecf9a3fc0a65090310d69
+CONTENT_BYTES: 5222
 ================================================================================================
 
 ---
@@ -6057,7 +6161,10 @@ on invente une image **équivalente**, pas une traduction littérale.
 
 ================================================================================================
 FILE: KK-fr/parcours.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3cfa4e9b2ec4f18f92bb345720014db3d4deae855420833ad4ac7a9efb2c8ec9
+CONTENT_BYTES: 4063
 ================================================================================================
 
 ---
@@ -6183,7 +6290,10 @@ Si tu veux un premier choc propre et rapide :
 
 ================================================================================================
 FILE: KK-fr/reperes/faq.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9c6d1ae56247944e05c773cba687cbf9eebe65dba96a7c51d13ac67f45b0bc63
+CONTENT_BYTES: 6666
 ================================================================================================
 
 ---
@@ -6415,7 +6525,10 @@ Trois entrées possibles :
 
 ================================================================================================
 FILE: KK-fr/reperes/glossaire.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b31ed5be4a96d0a8848e00f66a8a80d25fe73ef7f3b174d2ffe85871cbaa42f6
+CONTENT_BYTES: 9678
 ================================================================================================
 
 ---
@@ -6764,7 +6877,10 @@ Le passage du mesh au linéaire : Architect.
 
 ================================================================================================
 FILE: KK-fr/reperes/pont-technique.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e7b7498a9d8f4aeeb5ee16b736b23ad4a592ed2cf5ab4e71b978f44650e94ca0
+CONTENT_BYTES: 4153
 ================================================================================================
 
 ---
@@ -6917,7 +7033,10 @@ King Klown s’engage :
 
 ================================================================================================
 FILE: KK-fr/rituels/cycle-vital.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 21f9a3050c4eb5684b24525add9f74bb68238b61ca857d5caa1e6ec0530c5ace
+CONTENT_BYTES: 4209
 ================================================================================================
 
 ---
@@ -7076,7 +7195,10 @@ Le Je est l’utilisateur, l’attention qui traverse la boucle et choisit ce qu
 
 ================================================================================================
 FILE: KK-fr/rituels/parlement-interieur.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: df5e52d8676112e94d00e00afb0d5b10892555873ca9158d2ae1809ead338100
+CONTENT_BYTES: 5922
 ================================================================================================
 
 ---
@@ -7326,7 +7448,10 @@ Elle incline la boussole.
 
 ================================================================================================
 FILE: KK-fr/rituels/respiration-du-sens.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fc778a82c2cea336761eb52e6fe9c89aaceafa286f426427130b9ccaba76ea67
+CONTENT_BYTES: 4445
 ================================================================================================
 
 ---
@@ -7517,7 +7642,10 @@ Elle leur donne une étoile polaire.
 
 ================================================================================================
 FILE: KK-fr/rituels/une-journee.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8fd177c50533cd21ceb544f94b8bdd8f32f442f85c8961a402c5cc436e9a8a33
+CONTENT_BYTES: 5924
 ================================================================================================
 
 ---
@@ -7748,7 +7876,10 @@ Et King Klown, quelque part, rit doucement :
 
 ================================================================================================
 FILE: Rejean-en/Abstract-Wiki-Architect/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d393ec26e749b96f72b851f6f32a71db93d18580a020011d28beb931b0ec5fd6
+CONTENT_BYTES: 13563
 ================================================================================================
 
 # Abstract Wiki Architect
@@ -8087,7 +8218,10 @@ The aim is a codebase that is:
 
 ================================================================================================
 FILE: Rejean-en/Ame-Artificielle/Controle-Et-Personnalisation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 91ff58ae3900f036dc5618793d3af81d9c08acaad8a4580c2276ae344a38b8c4
+CONTENT_BYTES: 3711
 ================================================================================================
 
 # Module de Contrôle et Personnalisation Avancée
@@ -8165,7 +8299,10 @@ Cette approche offre trois bénéfices majeurs par rapport aux IA traditionnelle
 
 ================================================================================================
 FILE: Rejean-en/Ame-Artificielle/Creation-De-Chemins.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0dc73e124e1511110a1613b0889281252f0fba44ef042a829651205b3c426a9c
+CONTENT_BYTES: 3339
 ================================================================================================
 
 # Création de Chemins et Liaison d'Éléments
@@ -8205,7 +8342,10 @@ Dans des contextes d'affaires ou de stratégie, ce module soutient la prise de d
 
 ================================================================================================
 FILE: Rejean-en/Ame-Artificielle/Ethique-Et-Gouvernance.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f3179aeee904ef8110ff8b4873245eccfb4decc4b6853faa47a5ba6bc83c3c1e
+CONTENT_BYTES: 3679
 ================================================================================================
 
 # Gouvernance Éthique, Notation et Résolution de Conflits
@@ -8249,7 +8389,10 @@ L'utilisation des "Clowns" pour la résolution de conflits permet de dépersonna
 
 ================================================================================================
 FILE: Rejean-en/Ame-Artificielle/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0a15b4cb65d4d6ff765544335c023ac06b8b39072cf168fa57abc84392b1cce5
+CONTENT_BYTES: 4393
 ================================================================================================
 
 # Konnaxion – Civic Workflows & Module Interactions
@@ -8338,7 +8481,10 @@ That page consolidates the “technicalities” from the module specifications a
 
 ================================================================================================
 FILE: Rejean-en/Ame-Artificielle/Meta-Cognition-Et-Resolution.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4c365d72df1f70bab2caf2cbc10e4fa5dccf622df361f1b6059ae57cd3232f4a
+CONTENT_BYTES: 3717
 ================================================================================================
 
 # Méta-Cognition & Résolution de Problèmes
@@ -8384,7 +8530,10 @@ Ces méta-actions transforment l'IA d'un simple "générateur de mots" en un **A
 
 ================================================================================================
 FILE: Rejean-en/Ame-Artificielle/Specifications-Fonctionnelles.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7188b09641dd1cf26e5551ae8c2c232e64f766d5c73a11f9d5ce787cd50bbf78
+CONTENT_BYTES: 5230
 ================================================================================================
 
 # Spécifications Fonctionnelles du Moteur EL (Artificial Soul)
@@ -8469,7 +8618,10 @@ L'objectif final de ces spécifications est de créer une IA qui devient **perso
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Atlas/Atlas-Core-Schema.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a78e0d7c73da62ef98aa5f548a8e0a9e3e2cc1356c7339b3e655c6d6917b626c
+CONTENT_BYTES: 1401
 ================================================================================================
 
 # Atlas / Core Schema
@@ -8522,7 +8674,10 @@ Typical fields:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Atlas/Atlas-Graph-Model.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dae592bc760691c9e2161a7f81f8117ed67a9450b2286b7cf6cd4f68e7e09f2d
+CONTENT_BYTES: 1092
 ================================================================================================
 
 # Atlas / Graph Model
@@ -8562,7 +8717,10 @@ A small example from a generic application:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Atlas/Atlas-Ontology-Vocabulary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c11dbf197f49eca05fb4095d91b4e6f8e29a2587634be2a5284cd96694432002
+CONTENT_BYTES: 1975
 ================================================================================================
 
 # Atlas / Ontology Vocabulary
@@ -8633,7 +8791,10 @@ Example (conceptual):
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Atlas/Atlas.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 165666856275a1ac8007213c87c565435de9cfea28d068b8cb50a121d1309710
+CONTENT_BYTES: 6393
 ================================================================================================
 
 # Atlas
@@ -8833,7 +8994,10 @@ Specific mechanisms (e.g., signing or validation processes) can be added in impl
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Concepts/Background-UI-as-Data.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8db4f0ac70856374f7c1d99ac92a42834c3ddb510e84c38f4d23df4ecb8397de
+CONTENT_BYTES: 5157
 ================================================================================================
 
 # Background: UI as Data
@@ -8966,7 +9130,10 @@ In practice, an agent might:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Concepts/Glossary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 837e0b4d30bcd5deb07eb3e11d149189f517b3bf53e3e49487fbb1cbac78fe84
+CONTENT_BYTES: 7016
 ================================================================================================
 
 # Glossary
@@ -9147,7 +9314,10 @@ A fingerprint component derived from a screenshot or rendered view of the UI, in
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Consumers/Consumers-AI-Agent-Integration.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cd630e51829a9df2caf272fdb20ac04e840fb0913a37af5cc91fb6bd261725ec
+CONTENT_BYTES: 3585
 ================================================================================================
 
 # Consumers / AI Agent Integration
@@ -9275,7 +9445,10 @@ Atlas returns:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Consumers/Consumers-Future-Overlay-Client.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9b4ca7827b764d3ec61a1f130006fa3403b076ef47664e38a1d255e3bb0c90b1
+CONTENT_BYTES: 3757
 ================================================================================================
 
 # Consumers / Future Overlay Client (Concept)
@@ -9391,7 +9564,10 @@ The only requirement is that any consumer—overlay or otherwise—must be able 
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Consumers/Consumers.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 634cae64d67003e51b7535d79ea45116e1694a7fcf55ccac024e74f0af0bde04
+CONTENT_BYTES: 6295
 ================================================================================================
 
 # Consumers
@@ -9582,7 +9758,10 @@ See: [Consumers/Future-Overlay-Client](Consumers-Future-Overlay-Client.md)
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Consumers/Hybrid-Mapping-and-Human-Guided-Assistants.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e3200890965a39831f79a70c2748b21a9c7bb04afc5eb0175af45957523fe518
+CONTENT_BYTES: 2089
 ================================================================================================
 
 # Hybrid Mapping and Human-Guided Assistants
@@ -9652,7 +9831,10 @@ Examples:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d6b837dd27a178312afba3c1c0768a24cfbd9447bfc8ac189f094dc678121074
+CONTENT_BYTES: 6174
 ================================================================================================
 
 ---
@@ -9783,7 +9965,10 @@ See:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Theseus/Theseus-Drivers.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4a137d6dfea6c4c1035ce681aebd09c89580d7310335adace1e8dcc1d8180969
+CONTENT_BYTES: 1734
 ================================================================================================
 
 # Theseus / Drivers
@@ -9840,7 +10025,10 @@ Driver:
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Theseus/Theseus-Exploration-Engine.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8cae321442f58e3c7a63bef13fc0654e84be4812f12fbafb81d50cafe35ed3e2
+CONTENT_BYTES: 7019
 ================================================================================================
 
 # Theseus / Exploration Engine
@@ -10077,7 +10265,10 @@ Atlas then persists this information and makes it available to consumers.
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Theseus/Theseus-State-Identification.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e0f60afd594d11ce206d74401aa02c8f1845d7052d6211ded960ce5ca2546492
+CONTENT_BYTES: 2587
 ================================================================================================
 
 # Theseus / State Identification
@@ -10167,7 +10358,10 @@ def compute_state_id(fingerprint):
 
 ================================================================================================
 FILE: Rejean-en/Ariane/Theseus/Theseus.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bc5f4934ead3d87aa3cc57cd113b6ba25d696788a9ae77ad9f7c24fded068ec3
+CONTENT_BYTES: 1871
 ================================================================================================
 
 # Theseus
@@ -10222,7 +10416,10 @@ Theseus is structured around a clear separation between platform-agnostic logic 
 
 ================================================================================================
 FILE: Rejean-en/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f2f9a750d4ba6609acc6fb9664cf0d0cd786ac251389799636ce39cc8da3c8a3
+CONTENT_BYTES: 6222
 ================================================================================================
 
 # Réjean McCormick
@@ -10347,7 +10544,10 @@ To make these systemic ideas legible and engaging, I utilize a narrative engine 
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Ethikos/Konsultations.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ebb0219cb85e6e9dbe566b32239be0df3ef104b75971c7317d621c4811ab2f36
+CONTENT_BYTES: 4664
 ================================================================================================
 
 **Konsultations (Public Consultations & Feedback)** — sub‑module under **ethiKos**.  
@@ -10437,7 +10637,10 @@ Actual tables implemented for Konsultations.
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Ethikos/Korum.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 61ae3dc9ba9a84a0b0334fb7ea4255af53c59c1c628134fca037cdfaaa573417
+CONTENT_BYTES: 4503
 ================================================================================================
 
 **Korum (Structured Debates)** — sub‑module under **ethiKos**.  
@@ -10531,7 +10734,10 @@ Korum provides structured topic management, nuanced stance capture, and threaded
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8bef5bf0231d40d9a10d615001b226aec8c8220558753c848aec32757e675a43
+CONTENT_BYTES: 4655
 ================================================================================================
 
 # Konnaxion – Civic Workflows & Module Interactions
@@ -10620,7 +10826,10 @@ That page consolidates the “technicalities” from the module specifications a
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/keenKonnect/Konstruct.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ceb6e1e452c27bf61b9fe8a4a77431aabef8eafc1ae96cf46174e938e32cda63
+CONTENT_BYTES: 5401
 ================================================================================================
 
 **Konstruct (Project Collaboration Spaces)** — first sub‑module under **keenKonnect**.  
@@ -10716,7 +10925,10 @@ Konstruct exposes five services—`collaboration_space`, `project_task_managemen
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/keenKonnect/Stockage.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 202621aacc3a8d0dd78e3305d922cdd0dbbf1cf30a676be6ca911bcb9c95bee3
+CONTENT_BYTES: 5014
 ================================================================================================
 
 **Stockage (Secure Repository & Versioned Storage)** — second sub‑module under **keenKonnect**.  
@@ -10802,7 +11014,10 @@ Stockage provides `secure_document_storage`, `document_versioning`, `intelligent
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Kollective-Intelligence/EkoH.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ea74104a4cad1fdba9142a3b156d8eab6c7c3b33f44e5119b4cffca75a6df0cd
+CONTENT_BYTES: 4821
 ================================================================================================
 
 **EkoH (Reputation & Expertise)** — first sub‑module under **Kollective Intelligence**.  
@@ -10883,7 +11098,10 @@ EkoH exposes seven concrete services (`multidimensional_scoring`, `configuration
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Kollective-Intelligence/Smart-Vote.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 903fe4ccb3692289fc87b21039dfb4e52adf5b46f43dd6c2271d339bbc0e8dff
+CONTENT_BYTES: 4299
 ================================================================================================
 
 **Smart Vote (Weighted Voting System)** — second sub‑module under **Kollective Intelligence**.  
@@ -10961,7 +11179,10 @@ Smart Vote provides modality‑aware, EkoH‑weighted voting with real‑time ag
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/KonnectED/CertifiKation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 13b57e8f28ae99e0cf81cf206d39b2df135228dcf10f893b5cf92664863c5751
+CONTENT_BYTES: 4816
 ================================================================================================
 
 **CertifiKation (Skills & Certification)** — sub‑module under **KonnectED**.  
@@ -11037,7 +11258,10 @@ CertifiKation delivers end‑to‑end credentialing: define programs (*Certifica
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/KonnectED/Knowledge.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d31bdf7b591cab7408f9112d149d2deddf9fe1a5aa7a2dc3fd17a7bad9ffcdcd
+CONTENT_BYTES: 4457
 ================================================================================================
 
 **Knowledge (Collaborative Learning Library)** — sub‑module under **KonnectED**.  
@@ -11114,7 +11338,10 @@ Knowledge delivers the learning library and its social layer: resource managemen
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Kreative/Konservation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8e659b5a1b8023676fefe830c48e5a312446797cdd4f2a0442fb8572f70730e1
+CONTENT_BYTES: 5664
 ================================================================================================
 
 **Konservation (Creative Content & Cultural Preservation)** — sub‑module under **Kreative**.  
@@ -11218,7 +11445,10 @@ Konservation provides **digital archiving**, **virtual exhibitions**, **document
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Kreative/Kontact.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cf3b050bc4b419a986505dab954a53de7130301638abb7acd7aa3d5cd0b7193f
+CONTENT_BYTES: 4628
 ================================================================================================
 
 **Kontact (Collaboration & Networking)** — sub‑module under **Kreative**.  
@@ -11289,7 +11519,10 @@ Kontact delivers networking‑centric capabilities via five services — `profes
 
 ================================================================================================
 FILE: Rejean-en/Konnaxion/Technical/Konnaxion-Technical-Architecture-And-Services.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4e0b3545a2cfd901a295378112cb2ed0b66eae0e5af2860b0d4014b89a526f5c
+CONTENT_BYTES: 17102
 ================================================================================================
 
 # Konnaxion – Technical Architecture & Services
@@ -11740,7 +11973,10 @@ This page, together with the module‑specific wiki entries, should provide enou
 
 ================================================================================================
 FILE: Rejean-en/Orgo/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 48c038899de70281128f79a40d8075f1a3402847451a010a3a37a9dcae1349ef
+CONTENT_BYTES: 8045
 ================================================================================================
 
 # Orgo System Overview
@@ -11957,7 +12193,10 @@ The engine can be configured to auto-escalate "soft signals." For example: *"If 
 
 ================================================================================================
 FILE: Rejean-en/SenTient/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bf94c47b9d0a9165856c776e8b34cfc0fd4e94560d6db841e35a3e70842cf66e
+CONTENT_BYTES: 8050
 ================================================================================================
 
 ##  SenTient (Semantic Entity Intelligent Transformation)
@@ -12086,7 +12325,10 @@ The central configuration files are located in `config/orchestration/environment
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Core/Architecture-Overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 55aacf8e86f4f064bcc1e13d1d7e1129a8a6098b0d3ee04b058c27305cdfd04c
+CONTENT_BYTES: 5799
 ================================================================================================
 
 # Architecture Overview
@@ -12271,7 +12513,10 @@ Details: **[Provider Adapter: Grok](Provider-Adapter-Grok.md)**
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Core/Central-Matrix-Runtime-State.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f4ecead285c5c0a252d1c3a2f63a3f8a158a62697d77a3416edd404387ee9e14
+CONTENT_BYTES: 5698
 ================================================================================================
 
 # Story Bible (Creative Intent)
@@ -12454,7 +12699,10 @@ The scanner/orchestrator SHOULD validate:
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Core/Deterministic-Pipeline-Scan-Plan-Execute.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0161b558aaa965595e717a72cf13193a438d0b04175c8fde59210f354a7b9c58
+CONTENT_BYTES: 6542
 ================================================================================================
 
 # Deterministic Pipeline (SCAN-PLAN-EXECUTE)
@@ -12661,7 +12909,10 @@ Dashboard: **[Dashboard TUI Reference](Dashboard-TUI-Reference.md)**
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ffeef49d63e4526ed5ecf61af856a6cd3157305e2362f7ba347995d159054021
+CONTENT_BYTES: 3798
 ================================================================================================
 
 # SwarmCraft: Deterministic Story Engine
@@ -12735,7 +12986,10 @@ The engine never dumps the whole Story Bible into the LLM. It hydrates prompts w
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Meta/Credits-And-Lineage.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ae9494abb58130933b23336771e492987729bfd679aac4773fa16ae4e098a8f3
+CONTENT_BYTES: 4438
 ================================================================================================
 
 # Credits & Lineage
@@ -12854,7 +13108,10 @@ This page is the canonical place for lineage statements to avoid repeating long 
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Runtime/Dashboard-TUI-Reference.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fe870c8db99c366f56c5a838013ff68756593ccd578feef91d55b805e80f12dc
+CONTENT_BYTES: 4938
 ================================================================================================
 
 
@@ -13044,7 +13301,10 @@ All modifications should go through the engine tools layer.
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Runtime/Multi-Project-Management.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5b39ec48eb378a4984c1263e111942671369503ff06381dfb636f95c5c51a1e5
+CONTENT_BYTES: 4283
 ================================================================================================
 
 # Multi-Project Management
@@ -13211,7 +13471,10 @@ Dashboard: **[Dashboard TUI Reference](Dashboard-TUI-Reference.md)**
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Runtime/Orchestration-Slice-By-Slice-Prompt-Hydration.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f6dd6d7bbe46f47493c088b5f122031422f891ffa7f5aba8ae210e2f9121eac1
+CONTENT_BYTES: 6496
 ================================================================================================
 
 # Orchestration Slice-by-Slice Prompt Hydration
@@ -13435,7 +13698,10 @@ Template cadence: **[Schema Templates](Schema-Templates.md)**
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Runtime/Provider-Adapter-Grok.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 69a80a2d4c5e829695fd1adb8720b670a21a062f4dd9c2ac800f357595753b84
+CONTENT_BYTES: 4990
 ================================================================================================
 
 # Provider Adapter Grok
@@ -13646,7 +13912,10 @@ Pipeline: **[Deterministic Pipeline](Deterministic-Pipeline-Scan-Plan-Execute.md
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Runtime/RAG-Memory-System.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 089449b944e026aca24a02f49546f533bb91b0feb220eb33f3777f85854e9288
+CONTENT_BYTES: 5359
 ================================================================================================
 
 # RAG Memory System
@@ -13826,7 +14095,10 @@ Recommended role rules:
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Scaffold/Outline-Grid-CSV-Round-Trip.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6dc939326c179b3337e332f0ab949fc310fddedad4a467b3fe75e75c15494283
+CONTENT_BYTES: 5638
 ================================================================================================
 
 # Outline Grid CSV Round-Trip
@@ -14028,7 +14300,10 @@ See:
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Scaffold/Schema-Outline.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 971e11e6c0efee74945a9947565c5ebe652e2902e0d72df59d3e13b18b5d3bbf
+CONTENT_BYTES: 6319
 ================================================================================================
 
 # Schema Outline
@@ -14277,7 +14552,10 @@ See:
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Scaffold/Schema-Templates.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 43d5ff589ca5a86f250a377fe2d7a16b63ccd3bb67ab8be923171120d69b00f2
+CONTENT_BYTES: 4945
 ================================================================================================
 
 # Schema Templates
@@ -14473,7 +14751,10 @@ Related:
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Scaffold/Story-Bible-Creative-Intent.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 05a2f2ff026092bb177b6c23fa40366ca858b228235f28e9f7802ccd22f47924
+CONTENT_BYTES: 3112
 ================================================================================================
 
 # Story Bible (Creative Intent)
@@ -14570,7 +14851,10 @@ projects/<project_id>/data/story_bible/
 
 ================================================================================================
 FILE: Rejean-en/SwarmCraft/Scaffold/Story-Scaffold-Templates-Outline-Parts.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9527f0dae0ce34aec90928128873fdd914144cbee8b6a89b04c8e58b856388cb
+CONTENT_BYTES: 5028
 ================================================================================================
 
 # Story Scaffold (Templates-Outline-Parts)
@@ -14742,7 +15026,10 @@ Matrix page: **[Central Matrix](Central-Matrix-Runtime-State.md)**
 
 ================================================================================================
 FILE: Rejean-en/Tools/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1a86a3fb2f810d39d45ad079d0e76b65da89fc9e96a2922c57d46cf3291a54c5
+CONTENT_BYTES: 3920
 ================================================================================================
 
 

@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/VotingMachine
-source_path: C:\mycode\VotingMachine\VotingMachine
 source_commit: 8aa367410822d2013ce0df377fad651aa26bd23e
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 13
 wiki_files: 0
 source_files: 13
@@ -18,33 +16,37 @@ included_files: 13
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 232627
-authority_counts: {"canonical":13}
-generated_at: 2026-09-10T10:45:11-04:00
+authority_counts: {"reference":13}
+content_role_counts: {"knowledge":13}
+generated_at: 2026-09-10T13:04:25-04:00
 files: 13
-content_sha256: c84b8c2ab3d8af29f72ac4076b704b40c3628ee1ce8e00316e6a81bb4e662034
+content_sha256: 99dd62272f8ee3cc492d943c6ce335dfdf4cf8b6b0cea62d03271d66d25f1836
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] CONTRIBUTING.md
-02. [canonical] docs/Annex A — Variable Canonical Reference Table.md
-03. [canonical] docs/Annex B — Canonical Test Pack.md
-04. [canonical] docs/Annex C — Glossary & Definitions.md
-05. [canonical] docs/Doc 1 — Database Specification (Entities, Fields, Relationships).md
-06. [canonical] docs/Doc 2 — Common Variables Specification (Core, Operational Defaults, Advanced Controls).md
-07. [canonical] docs/Doc 3 — Technical Platform & Release Policy.md
-08. [canonical] docs/Doc 4 — Algorithm Specification (Steps, Allocation, Gates & Edge Cases).md
-09. [canonical] docs/Doc 5 — Processing Pipeline Specification (State Machine & Functions).md
-10. [canonical] docs/Doc 6 — Test Specifications (Allocation, Gates, Frontier & Determinism).md
-11. [canonical] docs/Doc 7 — Reporting Specification (Structure, Templates & Visual Rules).md
-12. [canonical] README.md
-13. [canonical] SECURITY.md
+01. [reference] [knowledge] CONTRIBUTING.md | bytes=6615 | sha256=064a1ba53c8b538bbb550df1bd243b9ea3dfdd42a308b76daebd0b321593ce9a
+02. [reference] [knowledge] docs/Annex A — Variable Canonical Reference Table.md | bytes=17441 | sha256=04109f935e1821f355a5c3702821fc7a26ce0c45bef56f1d7f0babc646837cb0
+03. [reference] [knowledge] docs/Annex B — Canonical Test Pack.md | bytes=33811 | sha256=2ef261a67724a9535dd0a054e713c58713284f418c47dd22feed38a0923a3adc
+04. [reference] [knowledge] docs/Annex C — Glossary & Definitions.md | bytes=7878 | sha256=9b59f176e44f17d57641b53288eed4c497abb77c2d6be509f0d42b7c9d5c931c
+05. [reference] [knowledge] docs/Doc 1 — Database Specification (Entities, Fields, Relationships).md | bytes=30045 | sha256=588612c0d960132b1e3909eabb297f43edeae5b91cd5d906d1dfa66ba044f023
+06. [reference] [knowledge] docs/Doc 2 — Common Variables Specification (Core, Operational Defaults, Advanced Controls).md | bytes=18810 | sha256=8876349e09f4e913b8e6b359140bbbde797c2ec0eae06f3e075dbcf9942b08ad
+07. [reference] [knowledge] docs/Doc 3 — Technical Platform & Release Policy.md | bytes=13349 | sha256=70a65613deda315434fad00eefa6c55816873c6a5a7cae823416c8efca207e3e
+08. [reference] [knowledge] docs/Doc 4 — Algorithm Specification (Steps, Allocation, Gates & Edge Cases).md | bytes=23626 | sha256=a6ddb363639ea9864da29a1a2f17682a219365c875de2a7336eeeffb05a5aadc
+09. [reference] [knowledge] docs/Doc 5 — Processing Pipeline Specification (State Machine & Functions).md | bytes=25745 | sha256=708baf42eb7fcbd29b0395eb54a5c06526b4de1bf424d8b6054326ed0cfbc664
+10. [reference] [knowledge] docs/Doc 6 — Test Specifications (Allocation, Gates, Frontier & Determinism).md | bytes=22600 | sha256=9c8965c209ebfec0040ccdc48138c846d3bd279c4ac8bb0f8b7bed2e78d20bd3
+11. [reference] [knowledge] docs/Doc 7 — Reporting Specification (Structure, Templates & Visual Rules).md | bytes=18218 | sha256=7446e59096b30369962d4ae02eb7525807454508d455985ce313f0f6bcc04028
+12. [reference] [knowledge] README.md | bytes=7781 | sha256=d12eb1e7df35b82e6e76c9e01dc98516c5047ed79faafab51738820d00d4c5cd
+13. [reference] [knowledge] SECURITY.md | bytes=6708 | sha256=cd7353ea42a1038e648ad4eb8aa7b4e29215ea8b29afea33cac558e90e9daa73
 
 
 ================================================================================================
 FILE: CONTRIBUTING.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 064a1ba53c8b538bbb550df1bd243b9ea3dfdd42a308b76daebd0b321593ce9a
+CONTENT_BYTES: 6615
 ================================================================================================
 
 ````markdown
@@ -225,7 +227,10 @@ cmp -s artifacts/a/run_record.json artifacts/b/run_record.json
 
 ================================================================================================
 FILE: docs/Annex A — Variable Canonical Reference Table.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 04109f935e1821f355a5c3702821fc7a26ce0c45bef56f1d7f0babc646837cb0
+CONTENT_BYTES: 17441
 ================================================================================================
 
 # **Annex A — VM-VAR Registry (Updated)**
@@ -577,7 +582,10 @@ Ship a JSON file (e.g., `annex-a.vars.json`) containing **all variables** (Inclu
 
 ================================================================================================
 FILE: docs/Annex B — Canonical Test Pack.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2ef261a67724a9535dd0a054e713c58713284f418c47dd22feed38a0923a3adc
+CONTENT_BYTES: 33811
 ================================================================================================
 
 # **Annex B — Canonical Test Pack (Updated)**
@@ -1496,7 +1504,10 @@ That’s the full Annex B generated across three passes. If you want, I can save
 
 ================================================================================================
 FILE: docs/Annex C — Glossary & Definitions.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9b59f176e44f17d57641b53288eed4c497abb77c2d6be509f0d42b7c9d5c931c
+CONTENT_BYTES: 7878
 ================================================================================================
 
 # **Annex C — Glossary & Definitions (Updated)**
@@ -1654,7 +1665,10 @@ Canonical, one-page definitions for recurring terms and tokens used across Docs 
 
 ================================================================================================
 FILE: docs/Doc 1 — Database Specification (Entities, Fields, Relationships).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 588612c0d960132b1e3909eabb297f43edeae5b91cd5d906d1dfa66ba044f023
+CONTENT_BYTES: 30045
 ================================================================================================
 
 # **Doc 1A — Database Definition: Entities & IDs (Updated, Normative)**
@@ -2604,7 +2618,10 @@ Error codes align with Doc 1B §6.
 
 ================================================================================================
 FILE: docs/Doc 2 — Common Variables Specification (Core, Operational Defaults, Advanced Controls).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8876349e09f4e913b8e6b359140bbbde797c2ec0eae06f3e075dbcf9942b08ad
+CONTENT_BYTES: 18810
 ================================================================================================
 
 # **Doc 2A — Common Variables: Core (Updated, Normative)**
@@ -2999,7 +3016,10 @@ A controlled switch for sanctioned micro-variants (use sparingly).
 
 ================================================================================================
 FILE: docs/Doc 3 — Technical Platform & Release Policy.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 70a65613deda315434fad00eefa6c55816873c6a5a7cae823416c8efca207e3e
+CONTENT_BYTES: 13349
 ================================================================================================
 
 # **Doc 3A — Tech Platform & Determinism (Updated)**
@@ -3407,7 +3427,10 @@ Spec & Annex updates:
 
 ================================================================================================
 FILE: docs/Doc 4 — Algorithm Specification (Steps, Allocation, Gates & Edge Cases).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a6ddb363639ea9864da29a1a2f17682a219365c875de2a7336eeeffb05a5aadc
+CONTENT_BYTES: 23626
 ================================================================================================
 
 # **Doc 4A — Algorithm: Step Order, Tabulation & Global Flow (Updated, Normative)**
@@ -4009,7 +4032,10 @@ emit\_unit\_label(unit\_id, label)
 
 ================================================================================================
 FILE: docs/Doc 5 — Processing Pipeline Specification (State Machine & Functions).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 708baf42eb7fcbd29b0395eb54a5c06526b4de1bf424d8b6054326ed0cfbc664
+CONTENT_BYTES: 25745
 ================================================================================================
 
 # **Doc 5A — Pipeline: State Machine & Data Exchange (Updated, Normative)**
@@ -4696,7 +4722,10 @@ Explores a fixed, documented set of scenario deltas (implementation-defined), e.
 
 ================================================================================================
 FILE: docs/Doc 6 — Test Specifications (Allocation, Gates, Frontier & Determinism).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9c8965c209ebfec0040ccdc48138c846d3bd279c4ac8bb0f8b7bed2e78d20bd3
+CONTENT_BYTES: 22600
 ================================================================================================
 
 # **Doc 6A — Test Harness & Allocation Correctness (Updated, Normative)**
@@ -5295,7 +5324,10 @@ For every **passing** case (non-schema-failure):
 
 ================================================================================================
 FILE: docs/Doc 7 — Reporting Specification (Structure, Templates & Visual Rules).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7446e59096b30369962d4ae02eb7525807454508d455985ce313f0f6bcc04028
+CONTENT_BYTES: 18218
 ================================================================================================
 
 # **Doc 7A — Reporting: Structure & Visual Rules (Updated)**
@@ -5855,7 +5887,10 @@ Numeric/text formatting exactly per Doc 7A §5. Timezone must be UTC.
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d12eb1e7df35b82e6e76c9e01dc98516c5047ed79faafab51738820d00d4c5cd
+CONTENT_BYTES: 7781
 ================================================================================================
 
 ````markdown
@@ -6095,7 +6130,10 @@ Use `pre-commit` if installed (`.pre-commit-config.yaml` provides fast local gat
 
 ================================================================================================
 FILE: SECURITY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cd7353ea42a1038e648ad4eb8aa7b4e29215ea8b29afea33cac558e90e9daa73
+CONTENT_BYTES: 6708
 ================================================================================================
 
 ````markdown

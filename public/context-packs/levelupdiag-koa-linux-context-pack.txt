@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/LevelUpDiag-Koa-Linux
-source_path: C:\mycode\kOA-Linux\LevelUpDiag-Koali
 source_commit: bfdb935861ab83bb4f4bf6d210c81db93acee888
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 8
 wiki_files: 0
 source_files: 8
@@ -18,28 +16,32 @@ included_files: 8
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 20309
-authority_counts: {"canonical":8}
-generated_at: 2026-09-10T10:45:06-04:00
+authority_counts: {"reference":8}
+content_role_counts: {"knowledge":8}
+generated_at: 2026-09-10T13:04:20-04:00
 files: 8
-content_sha256: b22001d6f26e57e8ca02998fd1a9e9a941191887c3a100ed3b6c1babb1c90560
+content_sha256: 3f08f2acdbb292bfd016a25d8c1a26eb1ae8020f2fee1567c27615a9a03cb0b5
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-1. [canonical] docs/ARCHITECTURE.md
-2. [canonical] docs/KOALI_SEQUENCE.md
-3. [canonical] docs/MIGRATION_FROM_V1.md
-4. [canonical] docs/README.md
-5. [canonical] docs/RESULT_MODEL.md
-6. [canonical] docs/SECURITY_MODEL.md
-7. [canonical] docs/UI_MODULARITY.md
-8. [canonical] README.md
+1. [reference] [knowledge] docs/ARCHITECTURE.md | bytes=2201 | sha256=f27974dcaa1d83065f1e3e528ea626a91ad4051207b7f70bd9b16d6461903a22
+2. [reference] [knowledge] docs/KOALI_SEQUENCE.md | bytes=1860 | sha256=5250504654d0e3f25bd6e2295cfd353ec2db095b205a90ab3bec2f9baa12967a
+3. [reference] [knowledge] docs/MIGRATION_FROM_V1.md | bytes=939 | sha256=f322541d47fea81a45bb2b11fc1371d289f7dbc129adf130c6f7c44ad575365c
+4. [reference] [knowledge] docs/README.md | bytes=505 | sha256=b398a84dc066940915d535c8e2d9ee1925c2c69431ca9b06e29ec11ffecde331
+5. [reference] [knowledge] docs/RESULT_MODEL.md | bytes=1641 | sha256=9b4497138697abd4c398361e4f7a6f9f94bc975f585f5b465c58981c2d813de7
+6. [reference] [knowledge] docs/SECURITY_MODEL.md | bytes=797 | sha256=b8cf498f59c451104f4d8bdc5dba9524477b95100313ce214bca861732f806a3
+7. [reference] [knowledge] docs/UI_MODULARITY.md | bytes=2668 | sha256=0ef0d3068065a42f96b6383ec9182a0cb2ff211553eea07aa23642baaf04910b
+8. [reference] [knowledge] README.md | bytes=9698 | sha256=c511f8fbb9d5799ab14aea2c53f791f36b13ca943ff09d5d5801dbf7363a80c1
 
 
 ================================================================================================
 FILE: docs/ARCHITECTURE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f27974dcaa1d83065f1e3e528ea626a91ad4051207b7f70bd9b16d6461903a22
+CONTENT_BYTES: 2201
 ================================================================================================
 
 # Architecture — Debug-first policy
@@ -76,7 +78,10 @@ The check is intentionally configuration-driven so LevelUpDiag does not hard-cod
 
 ================================================================================================
 FILE: docs/KOALI_SEQUENCE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5250504654d0e3f25bd6e2295cfd353ec2db095b205a90ab3bec2f9baa12967a
+CONTENT_BYTES: 1860
 ================================================================================================
 
 # Koali sequence — LevelUpDiag 2.2
@@ -123,7 +128,10 @@ Use `validation` and `release` against the unchanged canonical `sovereign-linux-
 
 ================================================================================================
 FILE: docs/MIGRATION_FROM_V1.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f322541d47fea81a45bb2b11fc1371d289f7dbc129adf130c6f7c44ad575365c
+CONTENT_BYTES: 939
 ================================================================================================
 
 # Migration notes — v2.1 debug-first policy
@@ -146,7 +154,10 @@ Historical campaign names remain available for compatibility, but new automation
 
 ================================================================================================
 FILE: docs/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b398a84dc066940915d535c8e2d9ee1925c2c69431ca9b06e29ec11ffecde331
+CONTENT_BYTES: 505
 ================================================================================================
 
 # LevelUpDiag-Koali documentation
@@ -161,7 +172,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: docs/RESULT_MODEL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9b4497138697abd4c398361e4f7a6f9f94bc975f585f5b465c58981c2d813de7
+CONTENT_BYTES: 1641
 ================================================================================================
 
 # Result model
@@ -199,7 +213,10 @@ An explicitly configured UI product with `required: false` can be absent and sti
 
 ================================================================================================
 FILE: docs/SECURITY_MODEL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b8cf498f59c451104f4d8bdc5dba9524477b95100313ce214bca861732f806a3
+CONTENT_BYTES: 797
 ================================================================================================
 
 # Security model
@@ -224,7 +241,10 @@ This keeps release provenance strict without making Git formalities part of ordi
 
 ================================================================================================
 FILE: docs/UI_MODULARITY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0ef0d3068065a42f96b6383ec9182a0cb2ff211553eea07aa23642baaf04910b
+CONTENT_BYTES: 2668
 ================================================================================================
 
 # Modular product UI diagnostics
@@ -292,7 +312,10 @@ The check is read-only. It reads only explicit marker paths and explicit scan fi
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c511f8fbb9d5799ab14aea2c53f791f36b13ca943ff09d5d5801dbf7363a80c1
+CONTENT_BYTES: 9698
 ================================================================================================
 
 # LevelUpDiag-Koali v2.3

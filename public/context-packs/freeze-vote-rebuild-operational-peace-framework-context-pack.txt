@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Freeze-Vote-Rebuild_Operational-Peace-Framework
-source_path: C:\mycode\FreezeVoteRebuild\Freeze-Vote-Rebuild_Operational-Peace-Framework
 source_commit: 2b044fa31b21200ba98c09af4fd3b22ad4a4bc3b
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 75
 wiki_files: 0
 source_files: 75
@@ -18,89 +16,90 @@ included_files: 74
 excluded_files: 1
 duplicate_files: 1
 content_bytes: 293065
-authority_counts: {"canonical":74}
-generated_at: 2026-09-10T10:45:06-04:00
+authority_counts: {"reference":74}
+content_role_counts: {"knowledge":74}
+generated_at: 2026-09-10T13:04:21-04:00
 files: 74
-content_sha256: 0c7ea17045fc5cedc29fef2fb5fe8237cb1710d0541c44528533bffafb4fe605
+content_sha256: 5f31b3d3f2b65f2eefcfb48d6d705ce2b0876c6ac9c6bb5295c551c419c22656
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] cultural-bridge/00-start-here.md
-02. [canonical] cultural-bridge/01-russian-literature.md
-03. [canonical] cultural-bridge/02-ukrainian-language-worldwide.md
-04. [canonical] cultural-bridge/03-guardrails.md
-05. [canonical] cultural-bridge/04-funding-partnerships.md
-06. [canonical] cultural-bridge/05-metrics.md
-07. [canonical] cultural-bridge/06-risks.md
-08. [canonical] fvr/00-start-here/00-welcome.md
-09. [canonical] fvr/00-start-here/01-one-page-summary.md
-10. [canonical] fvr/00-start-here/02-how-to-use-this-book.md
-11. [canonical] fvr/00-start-here/03-glossary.md
-12. [canonical] fvr/00-start-here/04-changelog-versioning.md
-13. [canonical] fvr/01-proposal-at-a-glance/00-the-proposal-at-a-glance.md
-14. [canonical] fvr/01-proposal-at-a-glance/01-theory-of-change.md
-15. [canonical] fvr/01-proposal-at-a-glance/02-phased-timeline.md
-16. [canonical] fvr/01-proposal-at-a-glance/03-core-principles-red-lines.md
-17. [canonical] fvr/01-proposal-at-a-glance/04-what-this-is-not.md
-18. [canonical] fvr/01-proposal-at-a-glance/05-deltas-between-versions.md
-19. [canonical] fvr/02-freeze/00-freeze-overview.md
-20. [canonical] fvr/02-freeze/01-ceasefire-architecture.md
-21. [canonical] fvr/02-freeze/02-stabilization-force-concept.md
-22. [canonical] fvr/02-freeze/03-verification-monitoring.md
-23. [canonical] fvr/02-freeze/04-humanitarian-corridors-protected-infrastructure.md
-24. [canonical] fvr/02-freeze/05-sanctions-aid-linkage-during-freeze.md
-25. [canonical] fvr/03-vote/00-vote-overview.md
-26. [canonical] fvr/03-vote/01-objective-legitimacy-criteria.md
-27. [canonical] fvr/03-vote/02-electorate-definition.md
-28. [canonical] fvr/03-vote/03-voting-system-design.md
-29. [canonical] fvr/03-vote/05-vote-to-border-mechanics.md
-30. [canonical] fvr/03-vote/06-dispute-resolution.md
-31. [canonical] fvr/04-rebuild/00-rebuild-overview.md
-32. [canonical] fvr/04-rebuild/01-reconstruction-architecture.md
-33. [canonical] fvr/04-rebuild/02-reconstruction-olympics.md
-34. [canonical] fvr/04-rebuild/03-peace-build-campus-governance.md
-35. [canonical] fvr/04-rebuild/04-economic-restart-plan.md
-36. [canonical] fvr/04-rebuild/05-accountability-transparency.md
-37. [canonical] fvr/05-governance-and-verification/00-governance-and-verification-overview.md
-38. [canonical] fvr/05-governance-and-verification/01-status-neutral-governance-model.md
-39. [canonical] fvr/05-governance-and-verification/02-verification-first-gates.md
-40. [canonical] fvr/05-governance-and-verification/03-coordination-deconfliction-escalation.md
-41. [canonical] fvr/05-governance-and-verification/04-data-governance-privacy-security.md
-42. [canonical] fvr/06-legal-and-political-pathways/00-legal-and-political-overview.md
-43. [canonical] fvr/06-legal-and-political-pathways/01-domestic-approvals-gate.md
-44. [canonical] fvr/06-legal-and-political-pathways/02-international-legal-considerations.md
-45. [canonical] fvr/06-legal-and-political-pathways/03-justice-accountability-options.md
-46. [canonical] fvr/06-legal-and-political-pathways/04-treaty-structure-annexes.md
-47. [canonical] fvr/07-stakeholder-playbooks/00-stakeholder-playbooks-overview.md
-48. [canonical] fvr/07-stakeholder-playbooks/01-ukraine-playbook.md
-49. [canonical] fvr/07-stakeholder-playbooks/02-russia-playbook.md
-50. [canonical] fvr/07-stakeholder-playbooks/03-us-eu-playbook.md
-51. [canonical] fvr/07-stakeholder-playbooks/04-un-osce-neutral-states-playbook.md
-52. [canonical] fvr/07-stakeholder-playbooks/05-civil-society-displaced-persons-playbook.md
-53. [canonical] fvr/08-risks-critiques-mitigations/00-risks-overview.md
-54. [canonical] fvr/08-risks-critiques-mitigations/01-failure-modes.md
-55. [canonical] fvr/08-risks-critiques-mitigations/02-risk-register.md
-56. [canonical] fvr/08-risks-critiques-mitigations/03-common-critiques-and-responses.md
-57. [canonical] fvr/08-risks-critiques-mitigations/04-ethical-considerations.md
-58. [canonical] fvr/09-implementation-toolkit/00-toolkit-overview.md
-59. [canonical] fvr/09-implementation-toolkit/01-operational-checklists-by-phase.md
-60. [canonical] fvr/09-implementation-toolkit/02-templates.md
-61. [canonical] fvr/09-implementation-toolkit/03-metrics-kpis.md
-62. [canonical] fvr/09-implementation-toolkit/04-comms-toolkit.md
-63. [canonical] fvr/10-background-and-essays/00-background-overview.md
-64. [canonical] fvr/10-background-and-essays/01-origins-and-evolution.md
-65. [canonical] fvr/10-background-and-essays/02-american-realism-essay.md
-66. [canonical] fvr/10-background-and-essays/03-projet-du-pape-francois-variant.md
-67. [canonical] fvr/10-background-and-essays/04-comparables-historical-analogs.md
-68. [canonical] fvr/11-appendices/00-appendices-overview.md
-69. [canonical] fvr/11-appendices/01-definitions.md
-70. [canonical] fvr/11-appendices/02-maps-and-scenarios.md
-71. [canonical] fvr/11-appendices/03-decision-log.md
-72. [canonical] fvr/11-appendices/04-source-text-archive.md
-73. [canonical] README.md
-74. [canonical] SUMMARY.md
+01. [reference] [knowledge] cultural-bridge/00-start-here.md | bytes=2163 | sha256=e70a1c7ba10aad92cc61e18c938b3fe5fef48e22547c74cbd4cbf9cb09bcdf4d
+02. [reference] [knowledge] cultural-bridge/01-russian-literature.md | bytes=4439 | sha256=74e774bdd6e7e3e1f40ef7a6a0af07a192e8f2c9e60e5cc38a0a0bb19fb298ab
+03. [reference] [knowledge] cultural-bridge/02-ukrainian-language-worldwide.md | bytes=4232 | sha256=b6857d9dfdcf4739d44d5eca6ac39eecf1c6062a5854bb1cddb21dfd31a5bb8a
+04. [reference] [knowledge] cultural-bridge/03-guardrails.md | bytes=4108 | sha256=433d9dce17d118c892c07318d8300288e1a8429745d9e6212b3b34ec81bb50cb
+05. [reference] [knowledge] cultural-bridge/04-funding-partnerships.md | bytes=4422 | sha256=f9be4d5ef6adc1a073a2fb6f5425cbe2c9dc85d295b241697725cd1ac2cda33a
+06. [reference] [knowledge] cultural-bridge/05-metrics.md | bytes=3485 | sha256=d97a3a98ab8f57ed795c5bab5fb81736ec3f28e5979b476270959996051d9f0f
+07. [reference] [knowledge] cultural-bridge/06-risks.md | bytes=4093 | sha256=f3b33f0cf2925eb8f34cec6341575de8cc2efe019a990d237ea18052595f1ab0
+08. [reference] [knowledge] fvr/00-start-here/00-welcome.md | bytes=1399 | sha256=cd4677914ca748cbe02c4fcaee3c25287f41748549a0ae00c8e828924365b137
+09. [reference] [knowledge] fvr/00-start-here/01-one-page-summary.md | bytes=3690 | sha256=07ea025b220615610e908c8aa6c8e8896a2f268ff3340727fa25c85e5e68728c
+10. [reference] [knowledge] fvr/00-start-here/02-how-to-use-this-book.md | bytes=4150 | sha256=2cfb6b658f001696d630775f59c86d825e2d550cbe3c001c582dede1cd508cd8
+11. [reference] [knowledge] fvr/00-start-here/03-glossary.md | bytes=5307 | sha256=20c0459dfb36ed812596b03b0231371b577ea0c8365094583812ce5b66ff7151
+12. [reference] [knowledge] fvr/00-start-here/04-changelog-versioning.md | bytes=3135 | sha256=0b6975f1794951971f3d6e4ac3c964aece3fabd107ac216f9dcfd5ec2cabea3a
+13. [reference] [knowledge] fvr/01-proposal-at-a-glance/00-the-proposal-at-a-glance.md | bytes=2860 | sha256=2e316cb30d15428b3744350924ebfad166c9c76c665fb62c0a875c6948230b6c
+14. [reference] [knowledge] fvr/01-proposal-at-a-glance/01-theory-of-change.md | bytes=4041 | sha256=316691d7e58d3faabf9aa5506a9ae1e0302461faa3637be347e0fe467fee2c4a
+15. [reference] [knowledge] fvr/01-proposal-at-a-glance/02-phased-timeline.md | bytes=5026 | sha256=cb3968adacc4abf0ec23f3fa4f90ef9a88b23afe229fae9808852405ae103605
+16. [reference] [knowledge] fvr/01-proposal-at-a-glance/03-core-principles-red-lines.md | bytes=3916 | sha256=2cdcb83f595d97e04f9d2dcbf6cc78ca016ee79a0206c75640b5970ff8211b27
+17. [reference] [knowledge] fvr/01-proposal-at-a-glance/04-what-this-is-not.md | bytes=2206 | sha256=5ed5d5bdc0e1f6ccd88bc6aaca9794e0f5beb1ed305ca06bae862496159a720b
+18. [reference] [knowledge] fvr/01-proposal-at-a-glance/05-deltas-between-versions.md | bytes=6938 | sha256=31142efbe2f941ff3a510d7504e114a2736c1bddd73bf732ec83a021aa37141e
+19. [reference] [knowledge] fvr/02-freeze/00-freeze-overview.md | bytes=3452 | sha256=f80c192b9c88dad5d142776ae557b90124cfe903e80cb18f797431a87438a000
+20. [reference] [knowledge] fvr/02-freeze/01-ceasefire-architecture.md | bytes=3937 | sha256=84920bde713d5fa7357f2822a3e98f4c77036058984de4568a895e00487a9be0
+21. [reference] [knowledge] fvr/02-freeze/02-stabilization-force-concept.md | bytes=4041 | sha256=deed738ab7c6c3a2d923f071bd010ede95024b642f6ddb3a5b83378ccd153ed8
+22. [reference] [knowledge] fvr/02-freeze/03-verification-monitoring.md | bytes=4753 | sha256=02df82b2d0d162c210fb77ebf3a1dff94b668a6e52d06af489dc370c8e453341
+23. [reference] [knowledge] fvr/02-freeze/04-humanitarian-corridors-protected-infrastructure.md | bytes=4302 | sha256=c68199a7bd9f085c97ed8d2cac3ae09e36627920254465b2f43f9254c4183c25
+24. [reference] [knowledge] fvr/02-freeze/05-sanctions-aid-linkage-during-freeze.md | bytes=4570 | sha256=66303be123250bed32f0cdfdf49bd484f59f57c9c745fe18d6c2a4e7c861feba
+25. [reference] [knowledge] fvr/03-vote/00-vote-overview.md | bytes=3644 | sha256=b48b74afc0ab0df1341eb637438460575c99719227c5b563fb64815a6efb166a
+26. [reference] [knowledge] fvr/03-vote/01-objective-legitimacy-criteria.md | bytes=3614 | sha256=4a475394f6bfa1d55e06c499679e5a31b1f6df11d67f3f484cc8db1ea9f0b226
+27. [reference] [knowledge] fvr/03-vote/02-electorate-definition.md | bytes=4263 | sha256=3330ee26fdc386acdd62b78f912d273ac24f7e49b1380f5b8abfc8d7fbd06a00
+28. [reference] [knowledge] fvr/03-vote/03-voting-system-design.md | bytes=4309 | sha256=4f6782e605cb3bbc2477807df463cde6570880de0cc2aecf779219e65a69a094
+29. [reference] [knowledge] fvr/03-vote/05-vote-to-border-mechanics.md | bytes=4706 | sha256=5a9e414d1cf738372283554595c049d34818026f46f36c303d09986dc110dd9c
+30. [reference] [knowledge] fvr/03-vote/06-dispute-resolution.md | bytes=4742 | sha256=51b60793df3295ff7159a51c54489220042795f93fea0803f84224d52d56ad8a
+31. [reference] [knowledge] fvr/04-rebuild/00-rebuild-overview.md | bytes=3273 | sha256=36006310eeb4c6cbed6ff85d840e59d164224c8cb6c3143f0103a36d1f2c924c
+32. [reference] [knowledge] fvr/04-rebuild/01-reconstruction-architecture.md | bytes=4346 | sha256=cce17ee6566a4a1ccdcbc9ccf54283f32cfccdfc3036fa935683ae8a21a8fc85
+33. [reference] [knowledge] fvr/04-rebuild/02-reconstruction-olympics.md | bytes=4110 | sha256=f3d888b1b2dd6b4ee58fb9e3f706c4a98ff8f6b13ddcdb2e45c76d10d5bfb2f7
+34. [reference] [knowledge] fvr/04-rebuild/03-peace-build-campus-governance.md | bytes=3715 | sha256=02037f25400db93dd8cfcc2aa5fcb34e43dec6f53eb65862d41db8e0f51c79d4
+35. [reference] [knowledge] fvr/04-rebuild/04-economic-restart-plan.md | bytes=4135 | sha256=0bccee6aadff74fbba60189972a25be83903aac2604aa25f109bb66b8b959b33
+36. [reference] [knowledge] fvr/04-rebuild/05-accountability-transparency.md | bytes=3962 | sha256=5de973740736c185ebe979f39ff64ef1ec5715633d3c9706f0a19000553fbe1a
+37. [reference] [knowledge] fvr/05-governance-and-verification/00-governance-and-verification-overview.md | bytes=2138 | sha256=05f1674cb78da6725eaaedb3121822678fc435a4b08f4c3f3ce3a1376c3b6e41
+38. [reference] [knowledge] fvr/05-governance-and-verification/01-status-neutral-governance-model.md | bytes=4069 | sha256=843a6a3ec52a520182b9c327ce1cf552a391f89170b94fc346aea00c0d03d43b
+39. [reference] [knowledge] fvr/05-governance-and-verification/02-verification-first-gates.md | bytes=4913 | sha256=689a124c66c9e7e23e0f437dfaf826ae85ad614e5e0afef2d9c336e856ad955e
+40. [reference] [knowledge] fvr/05-governance-and-verification/03-coordination-deconfliction-escalation.md | bytes=4255 | sha256=2def6ead6fb9b11e6c1e10a4b3d191de002e5546c68646946f5ba5ec17229a88
+41. [reference] [knowledge] fvr/05-governance-and-verification/04-data-governance-privacy-security.md | bytes=4753 | sha256=faa0bf77b34358b13b8299479cb722df82b2e9808b907f873f9562fbd26a2c7d
+42. [reference] [knowledge] fvr/06-legal-and-political-pathways/00-legal-and-political-overview.md | bytes=1975 | sha256=07b88d16db3fa6a05a4ee44402cbef0d456f6536f3ccd4eb8dd1da3a8cfc164c
+43. [reference] [knowledge] fvr/06-legal-and-political-pathways/01-domestic-approvals-gate.md | bytes=4092 | sha256=a360cad2ff97274561bfd40e70b03c29f4266cf06e9b7679a5b9f95153626d4d
+44. [reference] [knowledge] fvr/06-legal-and-political-pathways/02-international-legal-considerations.md | bytes=4727 | sha256=412509d0097ee4be8b03e4afb9319e45c9397011b947ffa2998473fe699f54af
+45. [reference] [knowledge] fvr/06-legal-and-political-pathways/03-justice-accountability-options.md | bytes=4505 | sha256=230fa11683cd595af96b28a2c17e82dc03c6f20169b8e1f2473c08a92db13dc9
+46. [reference] [knowledge] fvr/06-legal-and-political-pathways/04-treaty-structure-annexes.md | bytes=3796 | sha256=a26a8db481b752e0242b6e8b0a49d8feb2970f8410e0a3b424e7c3bc247da017
+47. [reference] [knowledge] fvr/07-stakeholder-playbooks/00-stakeholder-playbooks-overview.md | bytes=1920 | sha256=ae97543081e5b2702e91a01dfcb6e0317c9cb8b8ef03e7ea655a508c1e3f0228
+48. [reference] [knowledge] fvr/07-stakeholder-playbooks/01-ukraine-playbook.md | bytes=4724 | sha256=0386b5df162bb509461b207d90ebba984bba81ff8c8f2b8cb6d5f61511bace12
+49. [reference] [knowledge] fvr/07-stakeholder-playbooks/02-russia-playbook.md | bytes=4551 | sha256=3e487f42c408e04ef2678dbdf1167025dee4f9551464023fd25d77f3cd3e1cd5
+50. [reference] [knowledge] fvr/07-stakeholder-playbooks/03-us-eu-playbook.md | bytes=5122 | sha256=293caf47d1c5f4cb621440f70712e01b1a827e9a7cb6bf12170e22327ebb35ae
+51. [reference] [knowledge] fvr/07-stakeholder-playbooks/04-un-osce-neutral-states-playbook.md | bytes=4375 | sha256=2524e4d5a9261c6d0f606fffe37405022d2f3196d6adf87663ff249df8f7d039
+52. [reference] [knowledge] fvr/07-stakeholder-playbooks/05-civil-society-displaced-persons-playbook.md | bytes=4972 | sha256=b48ca3c04f4b0fa8d3178b0c2ddb98fd71d416f428f30fd601c7c67d28fef7bd
+53. [reference] [knowledge] fvr/08-risks-critiques-mitigations/00-risks-overview.md | bytes=1916 | sha256=dd594bcb89f7cd28455dedbdd11440afe7ac06b500137cd55bbd91f4ddaea7ea
+54. [reference] [knowledge] fvr/08-risks-critiques-mitigations/01-failure-modes.md | bytes=5041 | sha256=0fa65be9039e41b079f4359179cb1a668992b5d177a456485841fd7fb38d1821
+55. [reference] [knowledge] fvr/08-risks-critiques-mitigations/02-risk-register.md | bytes=6692 | sha256=f0b86a94ac2a6a82ea1425775315afb96eecee0699e3e14da2aba634df238e07
+56. [reference] [knowledge] fvr/08-risks-critiques-mitigations/03-common-critiques-and-responses.md | bytes=6390 | sha256=f96c9017601a60fa73ec0312cbba9c6f1f39e9bb245ecd00e736c874d255d191
+57. [reference] [knowledge] fvr/08-risks-critiques-mitigations/04-ethical-considerations.md | bytes=4450 | sha256=45565b48ecf30e8002445d2506593da970173e4ce14b89f9843cc70312192bd2
+58. [reference] [knowledge] fvr/09-implementation-toolkit/00-toolkit-overview.md | bytes=1695 | sha256=cb4f8c795f4ed5509553a69efbf6fe95c14dac149e4529e70e3e5f3ec5100af7
+59. [reference] [knowledge] fvr/09-implementation-toolkit/01-operational-checklists-by-phase.md | bytes=4894 | sha256=f2cf9fa5ed281ebf043b3b8af55a4e1864935deb183a6c3a78e025c846522658
+60. [reference] [knowledge] fvr/09-implementation-toolkit/02-templates.md | bytes=4722 | sha256=97dbf21205d112afaa41315f26d4abf27e1953fdc2a531dcd7ebd88a75d79ae0
+61. [reference] [knowledge] fvr/09-implementation-toolkit/03-metrics-kpis.md | bytes=4388 | sha256=8d2012c3f0f3353c0b5fdad8f4ac90b6a52f64c2041a099e10b275f3e4e06ec1
+62. [reference] [knowledge] fvr/09-implementation-toolkit/04-comms-toolkit.md | bytes=3653 | sha256=57b339437a0ac1d405dac1db231297181f6d60eb2637f550516d135d61902670
+63. [reference] [knowledge] fvr/10-background-and-essays/00-background-overview.md | bytes=1374 | sha256=df44a0774145d4a10123f38900d96b992b5c5b142c3a6f0a5c000de1a3b169c9
+64. [reference] [knowledge] fvr/10-background-and-essays/01-origins-and-evolution.md | bytes=3175 | sha256=a7ca1a618b6df43af8a552b4ee22f921a0336f4be5bcb80301c0bcb4d0d2546e
+65. [reference] [knowledge] fvr/10-background-and-essays/02-american-realism-essay.md | bytes=4334 | sha256=39a63cbb84cd411d50ee6e188a8e6c46791674aed018047bbb7871d37431a130
+66. [reference] [knowledge] fvr/10-background-and-essays/03-projet-du-pape-francois-variant.md | bytes=3128 | sha256=4863ea96f61977af66c15d476217234d98123a5bbb1457a741c0ccfa0413fc0e
+67. [reference] [knowledge] fvr/10-background-and-essays/04-comparables-historical-analogs.md | bytes=5238 | sha256=0da7e12f521b227445f0905071c64c0d1233036fac5af7253bd312092a2531ba
+68. [reference] [knowledge] fvr/11-appendices/00-appendices-overview.md | bytes=949 | sha256=688a98549c3467913efef5a06e85c2a613b8c3bb964194783cbb4bff0a7ee49c
+69. [reference] [knowledge] fvr/11-appendices/01-definitions.md | bytes=4327 | sha256=3b51bea4e5e847a1782bb41fa0b2489144b28d2f1772569401e0a7ef21d942c1
+70. [reference] [knowledge] fvr/11-appendices/02-maps-and-scenarios.md | bytes=2997 | sha256=0f3de26e7e550232ecd10ce0f2d1e64783e497ff7c2eec44971df759103c1a5b
+71. [reference] [knowledge] fvr/11-appendices/03-decision-log.md | bytes=5526 | sha256=221b2791576b750ef641b179f3f5d3a6464baffddd268cdc3322c8c2ee322705
+72. [reference] [knowledge] fvr/11-appendices/04-source-text-archive.md | bytes=2646 | sha256=30a70919e1e7945bf980d9d0b01eb916847d8c2e04c5c74caf6ecb7f3aa8068f
+73. [reference] [knowledge] README.md | bytes=1522 | sha256=403a11127cb70af84876fbda80d71f6c91dab500eef2b70afc9f7e1b55b3c97f
+74. [reference] [knowledge] SUMMARY.md | bytes=5637 | sha256=c962f77678df9c8c07b016b1bedf6b9c98ae99530d945509335eb09fb3fd7b12
 
 
 ================================================================================================
@@ -112,7 +111,10 @@ EXCLUDED FILES
 
 ================================================================================================
 FILE: cultural-bridge/00-start-here.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e70a1c7ba10aad92cc61e18c938b3fe5fef48e22547c74cbd4cbf9cb09bcdf4d
+CONTENT_BYTES: 2163
 ================================================================================================
 
 # Cultural Bridge Track
@@ -167,7 +169,10 @@ Go to:
 
 ================================================================================================
 FILE: cultural-bridge/01-russian-literature.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 74e774bdd6e7e3e1f40ef7a6a0af07a192e8f2c9e60e5cc38a0a0bb19fb298ab
+CONTENT_BYTES: 4439
 ================================================================================================
 
 # Russian literature dignity program
@@ -269,7 +274,10 @@ See: `06-critique-risks-failsafes.md`.
 
 ================================================================================================
 FILE: cultural-bridge/02-ukrainian-language-worldwide.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b6857d9dfdcf4739d44d5eca6ac39eecf1c6062a5854bb1cddb21dfd31a5bb8a
+CONTENT_BYTES: 4232
 ================================================================================================
 
 # Ukrainian language worldwide program
@@ -379,7 +387,10 @@ See: `06-critique-risks-failsafes.md`.
 
 ================================================================================================
 FILE: cultural-bridge/03-guardrails.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 433d9dce17d118c892c07318d8300288e1a8429745d9e6212b3b34ec81bb50cb
+CONTENT_BYTES: 4108
 ================================================================================================
 
 # Governance, guardrails, and anti-propaganda rules
@@ -497,7 +508,10 @@ Pause or suspend funding if:
 
 ================================================================================================
 FILE: cultural-bridge/04-funding-partnerships.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f9be4d5ef6adc1a073a2fb6f5425cbe2c9dc85d295b241697725cd1ac2cda33a
+CONTENT_BYTES: 4422
 ================================================================================================
 
 # Implementation, funding, and partnerships
@@ -631,7 +645,10 @@ Guardrail: events must remain non-partisan and within anti-propaganda rules.
 
 ================================================================================================
 FILE: cultural-bridge/05-metrics.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d97a3a98ab8f57ed795c5bab5fb81736ec3f28e5979b476270959996051d9f0f
+CONTENT_BYTES: 3485
 ================================================================================================
 
 # Metrics and evaluation
@@ -736,7 +753,10 @@ Annual public report should include:
 
 ================================================================================================
 FILE: cultural-bridge/06-risks.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f3b33f0cf2925eb8f34cec6341575de8cc2efe019a990d237ea18052595f1ab0
+CONTENT_BYTES: 4093
 ================================================================================================
 
 # Critiques, risks, and failsafes
@@ -853,7 +873,10 @@ Pause or suspend a program segment if:
 
 ================================================================================================
 FILE: fvr/00-start-here/00-welcome.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cd4677914ca748cbe02c4fcaee3c25287f41748549a0ae00c8e828924365b137
+CONTENT_BYTES: 1399
 ================================================================================================
 
 # Welcome
@@ -886,7 +909,10 @@ If you are new to the proposal, go next to:
 
 ================================================================================================
 FILE: fvr/00-start-here/01-one-page-summary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 07ea025b220615610e908c8aa6c8e8896a2f268ff3340727fa25c85e5e68728c
+CONTENT_BYTES: 3690
 ================================================================================================
 
 # One-page summary
@@ -970,7 +996,10 @@ Next: **Proposal at a glance** ([`01-proposal-at-a-glance/00-the-proposal-at-a-g
 
 ================================================================================================
 FILE: fvr/00-start-here/02-how-to-use-this-book.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2cfb6b658f001696d630775f59c86d825e2d550cbe3c001c582dede1cd508cd8
+CONTENT_BYTES: 4150
 ================================================================================================
 
 # How to use this book
@@ -1035,7 +1064,10 @@ This GitBook is organized for two complementary reading modes:
 
 ================================================================================================
 FILE: fvr/00-start-here/03-glossary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 20c0459dfb36ed812596b03b0231371b577ea0c8365094583812ce5b66ff7151
+CONTENT_BYTES: 5307
 ================================================================================================
 
 # Glossary
@@ -1141,7 +1173,10 @@ If a term is missing or is used differently in a source draft, add it here and r
 
 ================================================================================================
 FILE: fvr/00-start-here/04-changelog-versioning.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0b6975f1794951971f3d6e4ac3c964aece3fabd107ac216f9dcfd5ec2cabea3a
+CONTENT_BYTES: 3135
 ================================================================================================
 
 # Changelog & versioning
@@ -1225,7 +1260,10 @@ If you want stricter governance, add a short “editorial policy” section here
 
 ================================================================================================
 FILE: fvr/01-proposal-at-a-glance/00-the-proposal-at-a-glance.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2e316cb30d15428b3744350924ebfad166c9c76c665fb62c0a875c6948230b6c
+CONTENT_BYTES: 2860
 ================================================================================================
 
 # The proposal at a glance
@@ -1291,7 +1329,10 @@ The framework is structured to:
 
 ================================================================================================
 FILE: fvr/01-proposal-at-a-glance/01-theory-of-change.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 316691d7e58d3faabf9aa5506a9ae1e0302461faa3637be347e0fe467fee2c4a
+CONTENT_BYTES: 4041
 ================================================================================================
 
 # Theory of change
@@ -1377,7 +1418,10 @@ Record answers and design choices in the **Decision log** ([`11-appendices/03-de
 
 ================================================================================================
 FILE: fvr/01-proposal-at-a-glance/02-phased-timeline.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cb3968adacc4abf0ec23f3fa4f90ef9a88b23afe229fae9808852405ae103605
+CONTENT_BYTES: 5026
 ================================================================================================
 
 # Phased timeline
@@ -1497,7 +1541,10 @@ Use this book’s later chapters to define:
 
 ================================================================================================
 FILE: fvr/01-proposal-at-a-glance/03-core-principles-red-lines.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2cdcb83f595d97e04f9d2dcbf6cc78ca016ee79a0206c75640b5970ff8211b27
+CONTENT_BYTES: 3916
 ================================================================================================
 
 # Core principles & red lines
@@ -1578,7 +1625,10 @@ Implementation detail lives in:
 
 ================================================================================================
 FILE: fvr/01-proposal-at-a-glance/04-what-this-is-not.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5ed5d5bdc0e1f6ccd88bc6aaca9794e0f5beb1ed305ca06bae862496159a720b
+CONTENT_BYTES: 2206
 ================================================================================================
 
 # What this is not
@@ -1626,7 +1676,10 @@ This chapter prevents category errors. Freeze–Vote–Rebuild is a **framework 
 
 ================================================================================================
 FILE: fvr/01-proposal-at-a-glance/05-deltas-between-versions.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 31142efbe2f941ff3a510d7504e114a2736c1bddd73bf732ec83a021aa37141e
+CONTENT_BYTES: 6938
 ================================================================================================
 
 # Deltas between versions
@@ -1750,7 +1803,10 @@ While drafting, add a short footer block on pages that heavily draw from one inp
 
 ================================================================================================
 FILE: fvr/02-freeze/00-freeze-overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f80c192b9c88dad5d142776ae557b90124cfe903e80cb18f797431a87438a000
+CONTENT_BYTES: 3452
 ================================================================================================
 
 # Freeze overview
@@ -1829,7 +1885,10 @@ A Freeze is “real” only if it ships with operational machinery:
 
 ================================================================================================
 FILE: fvr/02-freeze/01-ceasefire-architecture.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 84920bde713d5fa7357f2822a3e98f4c77036058984de4568a895e00487a9be0
+CONTENT_BYTES: 3937
 ================================================================================================
 
 # Ceasefire architecture
@@ -1920,7 +1979,10 @@ To avoid vague commitments, attach operational annexes:
 
 ================================================================================================
 FILE: fvr/02-freeze/02-stabilization-force-concept.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: deed738ab7c6c3a2d923f071bd010ede95024b642f6ddb3a5b83378ccd153ed8
+CONTENT_BYTES: 4041
 ================================================================================================
 
 # Stabilization force concept
@@ -2022,7 +2084,10 @@ Mitigations are treated in:
 
 ================================================================================================
 FILE: fvr/02-freeze/03-verification-monitoring.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 02df82b2d0d162c210fb77ebf3a1dff94b668a6e52d06af489dc370c8e453341
+CONTENT_BYTES: 4753
 ================================================================================================
 
 # Verification & monitoring
@@ -2140,7 +2205,10 @@ Gate definitions live in:
 
 ================================================================================================
 FILE: fvr/02-freeze/04-humanitarian-corridors-protected-infrastructure.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c68199a7bd9f085c97ed8d2cac3ae09e36627920254465b2f43f9254c4183c25
+CONTENT_BYTES: 4302
 ================================================================================================
 
 # Humanitarian corridors & protected infrastructure
@@ -2245,7 +2313,10 @@ See:
 
 ================================================================================================
 FILE: fvr/02-freeze/05-sanctions-aid-linkage-during-freeze.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 66303be123250bed32f0cdfdf49bd484f59f57c9c745fe18d6c2a4e7c861feba
+CONTENT_BYTES: 4570
 ================================================================================================
 
 # Sanctions/aid linkage during Freeze
@@ -2355,7 +2426,10 @@ When converting this template into a real policy package:
 
 ================================================================================================
 FILE: fvr/03-vote/00-vote-overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b48b74afc0ab0df1341eb637438460575c99719227c5b563fb64815a6efb166a
+CONTENT_BYTES: 3644
 ================================================================================================
 
 # Vote overview
@@ -2436,7 +2510,10 @@ These are treated in:
 
 ================================================================================================
 FILE: fvr/03-vote/01-objective-legitimacy-criteria.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4a475394f6bfa1d55e06c499679e5a31b1f6df11d67f3f484cc8db1ea9f0b226
+CONTENT_BYTES: 3614
 ================================================================================================
 
 # Objective & legitimacy criteria
@@ -2517,7 +2594,10 @@ All legitimacy criteria should be:
 
 ================================================================================================
 FILE: fvr/03-vote/02-electorate-definition.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3330ee26fdc386acdd62b78f912d273ac24f7e49b1380f5b8abfc8d7fbd06a00
+CONTENT_BYTES: 4263
 ================================================================================================
 
 # Electorate definition
@@ -2620,7 +2700,10 @@ Track inclusion with metrics:
 
 ================================================================================================
 FILE: fvr/03-vote/03-voting-system-design.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4f6782e605cb3bbc2477807df463cde6570880de0cc2aecf779219e65a69a094
+CONTENT_BYTES: 4309
 ================================================================================================
 
 # Integrity & observation
@@ -2732,7 +2815,10 @@ See: [`03-vote/06-dispute-resolution.md`](06-dispute-resolution.md).
 
 ================================================================================================
 FILE: fvr/03-vote/05-vote-to-border-mechanics.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5a9e414d1cf738372283554595c049d34818026f46f36c303d09986dc110dd9c
+CONTENT_BYTES: 4706
 ================================================================================================
 
 # Vote-to-border mechanics (optional)
@@ -2847,7 +2933,10 @@ Consider excluding this module if:
 
 ================================================================================================
 FILE: fvr/03-vote/06-dispute-resolution.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 51b60793df3295ff7159a51c54489220042795f93fea0803f84224d52d56ad8a
+CONTENT_BYTES: 4742
 ================================================================================================
 
 # Dispute resolution
@@ -2957,7 +3046,10 @@ Define a certification protocol:
 
 ================================================================================================
 FILE: fvr/04-rebuild/00-rebuild-overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 36006310eeb4c6cbed6ff85d840e59d164224c8cb6c3143f0103a36d1f2c924c
+CONTENT_BYTES: 3273
 ================================================================================================
 
 # Rebuild overview
@@ -3033,7 +3125,10 @@ Rebuild is not a single finish line. Success is measured by:
 
 ================================================================================================
 FILE: fvr/04-rebuild/01-reconstruction-architecture.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cce17ee6566a4a1ccdcbc9ccf54283f32cfccdfc3036fa935683ae8a21a8fc85
+CONTENT_BYTES: 4346
 ================================================================================================
 
 # Reconstruction architecture
@@ -3140,7 +3235,10 @@ See:
 
 ================================================================================================
 FILE: fvr/04-rebuild/02-reconstruction-olympics.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f3d888b1b2dd6b4ee58fb9e3f706c4a98ff8f6b13ddcdb2e45c76d10d5bfb2f7
+CONTENT_BYTES: 4110
 ================================================================================================
 
 # Reconstruction Olympics
@@ -3248,7 +3346,10 @@ It also links to conditional disbursement gates:
 
 ================================================================================================
 FILE: fvr/04-rebuild/03-peace-build-campus-governance.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 02037f25400db93dd8cfcc2aa5fcb34e43dec6f53eb65862d41db8e0f51c79d4
+CONTENT_BYTES: 3715
 ================================================================================================
 
 # Peace-build campus governance (optional model)
@@ -3336,7 +3437,10 @@ If this model is adopted, include a short “why this helps” rationale and an 
 
 ================================================================================================
 FILE: fvr/04-rebuild/04-economic-restart-plan.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0bccee6aadff74fbba60189972a25be83903aac2604aa25f109bb66b8b959b33
+CONTENT_BYTES: 4135
 ================================================================================================
 
 # Economic restart plan
@@ -3448,7 +3552,10 @@ This chapter becomes stronger with:
 
 ================================================================================================
 FILE: fvr/04-rebuild/05-accountability-transparency.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5de973740736c185ebe979f39ff64ef1ec5715633d3c9706f0a19000553fbe1a
+CONTENT_BYTES: 3962
 ================================================================================================
 
 # Accountability & transparency
@@ -3564,7 +3671,10 @@ When turning this into a real implementation plan, add:
 
 ================================================================================================
 FILE: fvr/05-governance-and-verification/00-governance-and-verification-overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 05f1674cb78da6725eaaedb3121822678fc435a4b08f4c3f3ce3a1376c3b6e41
+CONTENT_BYTES: 2138
 ================================================================================================
 
 # Governance & verification overview
@@ -3613,7 +3723,10 @@ The aim is to replace “trust” with a structured loop that is resilient to sp
 
 ================================================================================================
 FILE: fvr/05-governance-and-verification/01-status-neutral-governance-model.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 843a6a3ec52a520182b9c327ce1cf552a391f89170b94fc346aea00c0d03d43b
+CONTENT_BYTES: 4069
 ================================================================================================
 
 # Status-neutral governance model
@@ -3712,7 +3825,10 @@ When implementing, provide:
 
 ================================================================================================
 FILE: fvr/05-governance-and-verification/02-verification-first-gates.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 689a124c66c9e7e23e0f437dfaf826ae85ad614e5e0afef2d9c336e856ad955e
+CONTENT_BYTES: 4913
 ================================================================================================
 
 # Verification-first gates
@@ -3860,7 +3976,10 @@ When the book is populated with full content, this page should include:
 
 ================================================================================================
 FILE: fvr/05-governance-and-verification/03-coordination-deconfliction-escalation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2def6ead6fb9b11e6c1e10a4b3d191de002e5546c68646946f5ba5ec17229a88
+CONTENT_BYTES: 4255
 ================================================================================================
 
 # Coordination, deconfliction & escalation
@@ -3986,7 +4105,10 @@ When implementing, include:
 
 ================================================================================================
 FILE: fvr/05-governance-and-verification/04-data-governance-privacy-security.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: faa0bf77b34358b13b8299479cb722df82b2e9808b907f873f9562fbd26a2c7d
+CONTENT_BYTES: 4753
 ================================================================================================
 
 # Data governance, privacy & security
@@ -4124,7 +4246,10 @@ Define a secure “audit room” model if needed:
 
 ================================================================================================
 FILE: fvr/06-legal-and-political-pathways/00-legal-and-political-overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 07b88d16db3fa6a05a4ee44402cbef0d456f6536f3ccd4eb8dd1da3a8cfc164c
+CONTENT_BYTES: 1975
 ================================================================================================
 
 # Legal & political overview
@@ -4167,7 +4292,10 @@ See: [`06-legal-and-political-pathways/01-domestic-approvals-gate.md`](01-domest
 
 ================================================================================================
 FILE: fvr/06-legal-and-political-pathways/01-domestic-approvals-gate.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a360cad2ff97274561bfd40e70b03c29f4266cf06e9b7679a5b9f95153626d4d
+CONTENT_BYTES: 4092
 ================================================================================================
 
 # Domestic approvals gate
@@ -4263,7 +4391,10 @@ If approvals fail:
 
 ================================================================================================
 FILE: fvr/06-legal-and-political-pathways/02-international-legal-considerations.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 412509d0097ee4be8b03e4afb9319e45c9397011b947ffa2998473fe699f54af
+CONTENT_BYTES: 4727
 ================================================================================================
 
 # International legal considerations
@@ -4362,7 +4493,10 @@ This links to:
 
 ================================================================================================
 FILE: fvr/06-legal-and-political-pathways/03-justice-accountability-options.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 230fa11683cd595af96b28a2c17e82dc03c6f20169b8e1f2473c08a92db13dc9
+CONTENT_BYTES: 4505
 ================================================================================================
 
 # Justice & accountability options
@@ -4479,7 +4613,10 @@ When populating this chapter with full content, include:
 
 ================================================================================================
 FILE: fvr/06-legal-and-political-pathways/04-treaty-structure-annexes.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a26a8db481b752e0242b6e8b0a49d8feb2970f8410e0a3b424e7c3bc247da017
+CONTENT_BYTES: 3796
 ================================================================================================
 
 # Treaty structure & annexes
@@ -4579,7 +4716,10 @@ When populating this chapter with full content, include:
 
 ================================================================================================
 FILE: fvr/07-stakeholder-playbooks/00-stakeholder-playbooks-overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ae97543081e5b2702e91a01dfcb6e0317c9cb8b8ef03e7ea655a508c1e3f0228
+CONTENT_BYTES: 1920
 ================================================================================================
 
 # Stakeholder playbooks overview
@@ -4629,7 +4769,10 @@ When these are populated with full content, they should:
 
 ================================================================================================
 FILE: fvr/07-stakeholder-playbooks/01-ukraine-playbook.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0386b5df162bb509461b207d90ebba984bba81ff8c8f2b8cb6d5f61511bace12
+CONTENT_BYTES: 4724
 ================================================================================================
 
 # Ukraine playbook
@@ -4726,7 +4869,10 @@ See:
 
 ================================================================================================
 FILE: fvr/07-stakeholder-playbooks/02-russia-playbook.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3e487f42c408e04ef2678dbdf1167025dee4f9551464023fd25d77f3cd3e1cd5
+CONTENT_BYTES: 4551
 ================================================================================================
 
 # Russia playbook
@@ -4817,7 +4963,10 @@ Fallback paths should include:
 
 ================================================================================================
 FILE: fvr/07-stakeholder-playbooks/03-us-eu-playbook.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 293caf47d1c5f4cb621440f70712e01b1a827e9a7cb6bf12170e22327ebb35ae
+CONTENT_BYTES: 5122
 ================================================================================================
 
 # US/EU playbook
@@ -4925,7 +5074,10 @@ Plan in advance for:
 
 ================================================================================================
 FILE: fvr/07-stakeholder-playbooks/04-un-osce-neutral-states-playbook.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2524e4d5a9261c6d0f606fffe37405022d2f3196d6adf87663ff249df8f7d039
+CONTENT_BYTES: 4375
 ================================================================================================
 
 # UN/OSCE/neutral states playbook
@@ -5022,7 +5174,10 @@ Plan for:
 
 ================================================================================================
 FILE: fvr/07-stakeholder-playbooks/05-civil-society-displaced-persons-playbook.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b48ca3c04f4b0fa8d3178b0c2ddb98fd71d416f428f30fd601c7c67d28fef7bd
+CONTENT_BYTES: 4972
 ================================================================================================
 
 # Civil society & displaced persons playbook
@@ -5126,7 +5281,10 @@ Advocate for clear responses to:
 
 ================================================================================================
 FILE: fvr/08-risks-critiques-mitigations/00-risks-overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dd594bcb89f7cd28455dedbdd11440afe7ac06b500137cd55bbd91f4ddaea7ea
+CONTENT_BYTES: 1916
 ================================================================================================
 
 # Risks overview
@@ -5169,7 +5327,10 @@ Risk handling is linked to:
 
 ================================================================================================
 FILE: fvr/08-risks-critiques-mitigations/01-failure-modes.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0fa65be9039e41b079f4359179cb1a668992b5d177a456485841fd7fb38d1821
+CONTENT_BYTES: 5041
 ================================================================================================
 
 # Failure modes
@@ -5306,7 +5467,10 @@ Translate these failure modes into a structured table with owners and triggers:
 
 ================================================================================================
 FILE: fvr/08-risks-critiques-mitigations/02-risk-register.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f0b86a94ac2a6a82ea1425775315afb96eecee0699e3e14da2aba634df238e07
+CONTENT_BYTES: 6692
 ================================================================================================
 
 # Risk register
@@ -5458,7 +5622,10 @@ For each risk, record:
 
 ================================================================================================
 FILE: fvr/08-risks-critiques-mitigations/03-common-critiques-and-responses.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f96c9017601a60fa73ec0312cbba9c6f1f39e9bb245ecd00e736c874d255d191
+CONTENT_BYTES: 6390
 ================================================================================================
 
 # Common critiques and responses
@@ -5570,7 +5737,10 @@ As content is populated, add:
 
 ================================================================================================
 FILE: fvr/08-risks-critiques-mitigations/04-ethical-considerations.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 45565b48ecf30e8002445d2506593da970173e4ce14b89f9843cc70312192bd2
+CONTENT_BYTES: 4450
 ================================================================================================
 
 # Ethical considerations
@@ -5666,7 +5836,10 @@ When this chapter is fully populated, add:
 
 ================================================================================================
 FILE: fvr/09-implementation-toolkit/00-toolkit-overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cb4f8c795f4ed5509553a69efbf6fe95c14dac149e4529e70e3e5f3ec5100af7
+CONTENT_BYTES: 1695
 ================================================================================================
 
 # Toolkit overview
@@ -5706,7 +5879,10 @@ As content is populated, keep toolkit items:
 
 ================================================================================================
 FILE: fvr/09-implementation-toolkit/01-operational-checklists-by-phase.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f2cf9fa5ed281ebf043b3b8af55a4e1864935deb183a6c3a78e025c846522658
+CONTENT_BYTES: 4894
 ================================================================================================
 
 # Operational checklists by phase
@@ -5825,7 +6001,10 @@ These checklists translate Freeze–Vote–Rebuild into “what must exist” li
 
 ================================================================================================
 FILE: fvr/09-implementation-toolkit/02-templates.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 97dbf21205d112afaa41315f26d4abf27e1953fdc2a531dcd7ebd88a75d79ae0
+CONTENT_BYTES: 4722
 ================================================================================================
 
 # Templates
@@ -6004,7 +6183,10 @@ As the book is populated with real content, keep these templates:
 
 ================================================================================================
 FILE: fvr/09-implementation-toolkit/03-metrics-kpis.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8d2012c3f0f3353c0b5fdad8f4ac90b6a52f64c2041a099e10b275f3e4e06ec1
+CONTENT_BYTES: 4388
 ================================================================================================
 
 # Metrics & KPIs
@@ -6120,7 +6302,10 @@ When implementing, define for each KPI:
 
 ================================================================================================
 FILE: fvr/09-implementation-toolkit/04-comms-toolkit.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 57b339437a0ac1d405dac1db231297181f6d60eb2637f550516d135d61902670
+CONTENT_BYTES: 3653
 ================================================================================================
 
 # Comms toolkit
@@ -6189,7 +6374,10 @@ For deeper critique responses, see:
 
 ================================================================================================
 FILE: fvr/10-background-and-essays/00-background-overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: df44a0774145d4a10123f38900d96b992b5c5b142c3a6f0a5c000de1a3b169c9
+CONTENT_BYTES: 1374
 ================================================================================================
 
 # Background & essays overview
@@ -6231,7 +6419,10 @@ As these pages are populated from source drafts:
 
 ================================================================================================
 FILE: fvr/10-background-and-essays/01-origins-and-evolution.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a7ca1a618b6df43af8a552b4ee22f921a0336f4be5bcb80301c0bcb4d0d2546e
+CONTENT_BYTES: 3175
 ================================================================================================
 
 # Origins and evolution
@@ -6313,7 +6504,10 @@ When this GitBook is finalized, this page should include:
 
 ================================================================================================
 FILE: fvr/10-background-and-essays/02-american-realism-essay.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 39a63cbb84cd411d50ee6e188a8e6c46791674aed018047bbb7871d37431a130
+CONTENT_BYTES: 4334
 ================================================================================================
 
 # American realism essay (McCormick-style off-ramp)
@@ -6415,7 +6609,10 @@ Freeze–Vote–Rebuild is not a promise that politics will become easy. It is a
 
 ================================================================================================
 FILE: fvr/10-background-and-essays/03-projet-du-pape-francois-variant.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4863ea96f61977af66c15d476217234d98123a5bbb1457a741c0ccfa0413fc0e
+CONTENT_BYTES: 3128
 ================================================================================================
 
 # Projet du Pape François (variant framing)
@@ -6486,7 +6683,10 @@ When incorporating text from the French draft:
 
 ================================================================================================
 FILE: fvr/10-background-and-essays/04-comparables-historical-analogs.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0da7e12f521b227445f0905071c64c0d1233036fac5af7253bd312092a2531ba
+CONTENT_BYTES: 5238
 ================================================================================================
 
 # Comparables and historical analogs
@@ -6604,7 +6804,10 @@ When this chapter is populated with concrete cases:
 
 ================================================================================================
 FILE: fvr/11-appendices/00-appendices-overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 688a98549c3467913efef5a06e85c2a613b8c3bb964194783cbb4bff0a7ee49c
+CONTENT_BYTES: 949
 ================================================================================================
 
 # Appendices overview
@@ -6634,7 +6837,10 @@ Appendices are used for:
 
 ================================================================================================
 FILE: fvr/11-appendices/01-definitions.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3b51bea4e5e847a1782bb41fa0b2489144b28d2f1772569401e0a7ef21d942c1
+CONTENT_BYTES: 4327
 ================================================================================================
 
 # Definitions
@@ -6722,7 +6928,10 @@ A tracking dimension used to detect repeated incidents or patterns over time, us
 
 ================================================================================================
 FILE: fvr/11-appendices/02-maps-and-scenarios.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0f3de26e7e550232ecd10ce0f2d1e64783e497ff7c2eec44971df759103c1a5b
+CONTENT_BYTES: 2997
 ================================================================================================
 
 # Maps and scenarios (appendix)
@@ -6794,7 +7003,10 @@ When this appendix is populated, keep two versions:
 
 ================================================================================================
 FILE: fvr/11-appendices/03-decision-log.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 221b2791576b750ef641b179f3f5d3a6464baffddd268cdc3322c8c2ee322705
+CONTENT_BYTES: 5526
 ================================================================================================
 
 # Decision log
@@ -6896,7 +7108,10 @@ For each decision, record:
 
 ================================================================================================
 FILE: fvr/11-appendices/04-source-text-archive.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 30a70919e1e7945bf980d9d0b01eb916847d8c2e04c5c74caf6ecb7f3aa8068f
+CONTENT_BYTES: 2646
 ================================================================================================
 
 # Source text archive
@@ -6960,7 +7175,10 @@ When adding new sources, include:
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 403a11127cb70af84876fbda80d71f6c91dab500eef2b70afc9f7e1b55b3c97f
+CONTENT_BYTES: 1522
 ================================================================================================
 
 # Peace Frameworks for Ukraine
@@ -7005,7 +7223,10 @@ See:
 
 ================================================================================================
 FILE: SUMMARY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c962f77678df9c8c07b016b1bedf6b9c98ae99530d945509335eb09fb3fd7b12
+CONTENT_BYTES: 5637
 ================================================================================================
 
 # Summary

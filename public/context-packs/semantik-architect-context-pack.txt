@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/SemantiK_Architect
-source_path: C:\mycode\SemantiK_Architect\SemantiK_Architect
 source_commit: cf1cf76cc2a95c50b933d49e1afaff7c28117ffd
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: C:\mycode\SemantiK_Architect\SemantiK_Architect.wiki
 wiki_source_commit: cbc326182d54c35df74b244751714d19aa2e7869
 wiki_working_tree_markdown: clean
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 42
 wiki_files: 25
 source_files: 67
@@ -18,87 +16,91 @@ included_files: 67
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 403932
-authority_counts: {"canonical":67}
-generated_at: 2026-09-10T11:09:08-04:00
+authority_counts: {"reference":67}
+content_role_counts: {"knowledge":42,"navigation":25}
+generated_at: 2026-09-10T13:04:11-04:00
 files: 67
-content_sha256: b0ba8c855a20018e797ab6bf71a0e141f9d4513200110c56c4fe7eb0bdd57fb0
+content_sha256: bf84f1ad2bd52825309b6dff457b75401dbd5208cd7ec5fd88f22d3442363c8e
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] wiki/_Footer.md
-02. [canonical] wiki/_Sidebar.md
-03. [canonical] wiki/Add-a-Language-High-Level.md
-04. [canonical] wiki/API-Overview.md
-05. [canonical] wiki/Changelog.md
-06. [canonical] wiki/Conceptual-Flow-Meaning-to-Text.md
-07. [canonical] wiki/Context.md
-08. [canonical] wiki/Correctness-and-Verifiability-Gold-Standards-UD-Export-Judge.md
-09. [canonical] wiki/Decisions.md
-10. [canonical] wiki/Glossary.md
-11. [canonical] wiki/Grammar.md
-12. [canonical] wiki/Home.md
-13. [canonical] wiki/Improve-a-Language-High-Level.md
-14. [canonical] wiki/Inputs-Frames.md
-15. [canonical] wiki/Inputs-Ninai.md
-16. [canonical] wiki/Language-Coverage-Strategy-Tiers.md
-17. [canonical] wiki/Lexicon.md
-18. [canonical] wiki/Outputs-Text.md
-19. [canonical] wiki/Outputs-UD.md
-20. [canonical] wiki/Positioning-Ninai-Udiron-GF-UD-No-WMF-AW-Affiliation.md
-21. [canonical] wiki/Renderer.md
-22. [canonical] wiki/Repo-Map.md
-23. [canonical] wiki/Roadmap.md
-24. [canonical] wiki/Setup.md
-25. [canonical] wiki/What-SemantiK-Architect-Is.md
-26. [canonical] data/raw_wikidata/README.md
-27. [canonical] data/reports/lexicon_coverage_report.md
-28. [canonical] docs/Technical-Reference/00-SETUP_AND_DEPLOYMENT.md
-29. [canonical] docs/Technical-Reference/01-ENGINE_ARCHITECTURE.md
-30. [canonical] docs/Technical-Reference/02-BUILD_SYSTEM.md
-31. [canonical] docs/Technical-Reference/03-LEXICON_ARCHITECTURE.md
-32. [canonical] docs/Technical-Reference/04-API_REFERENCE.md
-33. [canonical] docs/Technical-Reference/05-AI_SERVICES.md
-34. [canonical] docs/Technical-Reference/06-ADDING_A_LANGUAGE.md
-35. [canonical] docs/Technical-Reference/07-LINGUISTICS_REFERENCE.md
-36. [canonical] docs/Technical-Reference/08-DECISION_LOG.md
-37. [canonical] docs/Technical-Reference/09-AI_CONTEXT_DUMP.md
-38. [canonical] docs/Technical-Reference/10-GLOSSARY.md
-39. [canonical] docs/Technical-Reference/11-CONTRIBUTING.md
-40. [canonical] docs/Technical-Reference/12-TOOLS_DASHBOARD_AND_API.md
-41. [canonical] docs/Technical-Reference/12-WIKIMEDIA_ALIGNMENT.md
-42. [canonical] docs/Technical-Reference/15-SCHEMA_ALIGNMENT_PROTOCOL.md
-43. [canonical] docs/Technical-Reference/16-DEV_TOOLS_AND_LAUNCHER.md
-44. [canonical] docs/Technical-Reference/17-TOOLS_AND_TESTS_INVENTORY.md
-45. [canonical] docs/Technical-Reference/A-SIMPLE-language_integration_workflow_reference.md
-46. [canonical] docs/Technical-Reference/Abstract_Wiki_Architect_Build_and_Launch_System.md
-47. [canonical] docs/Technical-Reference/ADR 005 Dual-Path Input Validation (Strict_vs_Prototype).md
-48. [canonical] docs/Technical-Reference/ADR 006 Human-in-the-Loop Grammar Generation and GF Codex.md
-49. [canonical] docs/Technical-Reference/ADR-001-GF_VERSION_STRATEGY.md
-50. [canonical] docs/Technical-Reference/CURRENT_RUNTIME_STATUS.md
-51. [canonical] docs/Technical-Reference/DECISION_LOG.md
-52. [canonical] docs/Technical-Reference/ENGINE_INTERNALS.md
-53. [canonical] docs/Technical-Reference/everything_matrix_orchestration.md
-54. [canonical] docs/Technical-Reference/everythingMatrixUpgrade.md
-55. [canonical] docs/Technical-Reference/GF WordNet Structural Map.md
-56. [canonical] docs/Technical-Reference/GF_ARCHITECTURE.md
-57. [canonical] docs/Technical-Reference/GF_Concepts.md
-58. [canonical] docs/Technical-Reference/REFERENCE_LINGUISTICS.md
-59. [canonical] docs/Technical-Reference/RESEARCH_GF_MAPPING.md
-60. [canonical] docs/Technical-Reference/RGL_DISCOVERY_STRATEGY.md
-61. [canonical] docs/Technical-Reference/TechnicalStatus23dec2025.md
-62. [canonical] docs/Technical-Reference/UPGRADE v2-0 Omni-Upgrade Architecture Specification.md
-63. [canonical] docs/Technical-Reference/UPGRADE v2-0 Variable and Configuration Ledger.md
-64. [canonical] docs/Technical-Reference/UPGRADE_v2.1_SPECIFICATION.md
-65. [canonical] LICENSE_EXCLUSION_RATIONALE.md
-66. [canonical] README.md
-67. [canonical] RELEASE.md
+01. [reference] [navigation] wiki/_Footer.md | bytes=267 | sha256=6393d670aaed7c8fe1b6a7caf54ff6b8d0e2fdb4e5a20d288b02684da33109cf
+02. [reference] [navigation] wiki/_Sidebar.md | bytes=1035 | sha256=76b6cb73b2a55f1d0747a204525d62faab72babeb56684bce8da8d442baaef85
+03. [reference] [navigation] wiki/Add-a-Language-High-Level.md | bytes=3826 | sha256=ac05585c7caf28b5f2e978379caa39cf30f7aa00256ec2a8c7955b67ed174064
+04. [reference] [navigation] wiki/API-Overview.md | bytes=2275 | sha256=e161a286f53d2a1a8a2aea8c462d3bb4554a3ee853b61c375a39a08a4e375286
+05. [reference] [navigation] wiki/Changelog.md | bytes=1973 | sha256=faf9abec1521092ff6cfdb5cec7bc250142067733c1c285e63fa84bd3eb38245
+06. [reference] [navigation] wiki/Conceptual-Flow-Meaning-to-Text.md | bytes=2456 | sha256=b584eb543da5bcb0216ea520f937fd0cba9410d384abaa78d42ec6d7b31310a9
+07. [reference] [navigation] wiki/Context.md | bytes=2462 | sha256=b43ca7a23af89688ad77573eac023612be4546a836dc1b92862d1f627fd4b193
+08. [reference] [navigation] wiki/Correctness-and-Verifiability-Gold-Standards-UD-Export-Judge.md | bytes=2639 | sha256=17c7a2601aaed1482f76128bd9797c84655dfd2d96633778fb6b3235a38c07bd
+09. [reference] [navigation] wiki/Decisions.md | bytes=2718 | sha256=9cc35f8c8294ca251148436b3f56a4438f91580c047a4d0594c0acdd82f38f12
+10. [reference] [navigation] wiki/Glossary.md | bytes=5599 | sha256=484745566f66e08a76ae0d4060f0e02a367b10996863b294aa7927fe88307403
+11. [reference] [navigation] wiki/Grammar.md | bytes=3167 | sha256=d06b24c10f0943488dee118bc721e6f7e05112ca03602208b78a205be595aaa4
+12. [reference] [navigation] wiki/Home.md | bytes=3567 | sha256=2d8f622c87e1d03b67492b5505007dde746ba652ed18610ebee763157403e4fe
+13. [reference] [navigation] wiki/Improve-a-Language-High-Level.md | bytes=5474 | sha256=0647d1388d6e6c3aeac503a21c7fb2b3258abc622ffe2f26dbe0dd6ce8f3bdc7
+14. [reference] [navigation] wiki/Inputs-Frames.md | bytes=1783 | sha256=776f70ee6a76ab8edf7bd2ba26631addf2c7974f761e989d08da1b41eac6b9b4
+15. [reference] [navigation] wiki/Inputs-Ninai.md | bytes=1754 | sha256=bfba15dabfe14fc6aad44a8c20af8842808b4067249e73ea8672588b4c146b29
+16. [reference] [navigation] wiki/Language-Coverage-Strategy-Tiers.md | bytes=1723 | sha256=03ef5d2f259614646500810b5b347d496391d5f7e5dae8d64b55ae9d4e075063
+17. [reference] [navigation] wiki/Lexicon.md | bytes=2119 | sha256=d6e599c1a18ad28ed4753f6eeae7a525d87c9949a0f14a3e8f7b2a4394bd12b3
+18. [reference] [navigation] wiki/Outputs-Text.md | bytes=1788 | sha256=2f71e2a6c8dbc9671ff1b4f6ab1d8084356f77655976ce04e6332d644b6ba231
+19. [reference] [navigation] wiki/Outputs-UD.md | bytes=1636 | sha256=e95fa0ad10717147ef8decfd0edec3f507c44525794e17804c7cce1177489abf
+20. [reference] [navigation] wiki/Positioning-Ninai-Udiron-GF-UD-No-WMF-AW-Affiliation.md | bytes=3332 | sha256=44ae0cf3d25948a06346f991b26ab1e66f2fb32e45c7f117757f4d2cc32833a0
+21. [reference] [navigation] wiki/Renderer.md | bytes=1591 | sha256=ac680e013da4d0ed88ab013fc9dbb34e13db1f181db160dcc73c7fd00868b06a
+22. [reference] [navigation] wiki/Repo-Map.md | bytes=3148 | sha256=912e3383db600ee0ea36fd61c02e0681d2b5f8ebe725bf650cb66c0445861379
+23. [reference] [navigation] wiki/Roadmap.md | bytes=2588 | sha256=bcffae98554b68e72ba6089fd2a4f94b35546bfe7f7e75e7282bdc2b106b9bad
+24. [reference] [navigation] wiki/Setup.md | bytes=2736 | sha256=524dbcfdf2691d5601a4fc1727d7ed3525b532b7d584735428a2840b6ac49323
+25. [reference] [navigation] wiki/What-SemantiK-Architect-Is.md | bytes=2078 | sha256=87322206668f233d39f5dab3aadec45f4aee720b81a1ddfc56b3d299a155216b
+26. [reference] [knowledge] data/raw_wikidata/README.md | bytes=1511 | sha256=e0b8e962a227a6db71b7be9fed1961b6c660d7672118c5d65d4ddb4bbb904bc5
+27. [reference] [knowledge] data/reports/lexicon_coverage_report.md | bytes=591 | sha256=4d83847cc10e65a82f99b66b5d1f339d5dedc859f6ce44fc8c0d6b06c3c88aa9
+28. [reference] [knowledge] docs/Technical-Reference/00-SETUP_AND_DEPLOYMENT.md | bytes=10257 | sha256=d6251a1b2846a1784636c11c9f36a32bbd80add20c39fb6ae6f8326fa85b7de5
+29. [reference] [knowledge] docs/Technical-Reference/01-ENGINE_ARCHITECTURE.md | bytes=15325 | sha256=3686215728cdefa5d034a5ef462136fa67996e5125a91f09e861135d75e7e73c
+30. [reference] [knowledge] docs/Technical-Reference/02-BUILD_SYSTEM.md | bytes=7508 | sha256=a58cea9ca07ff41936bde886cba6b3a6710657ae34e22c0d95c6b07cb3edb956
+31. [reference] [knowledge] docs/Technical-Reference/03-LEXICON_ARCHITECTURE.md | bytes=6501 | sha256=71b52df65b3dff70ce2b6d95f1f9578ac373d149f51d405cf2c3b64956f47442
+32. [reference] [knowledge] docs/Technical-Reference/04-API_REFERENCE.md | bytes=15891 | sha256=202b1b01a3d8359f8fe08add08f173ade29f2397c34c32988633d50878953b1a
+33. [reference] [knowledge] docs/Technical-Reference/05-AI_SERVICES.md | bytes=7271 | sha256=4ecab865e8ab87bfe5087abadfebbac7cfaa9b5adba58b787a09c169fbb0133a
+34. [reference] [knowledge] docs/Technical-Reference/06-ADDING_A_LANGUAGE.md | bytes=6347 | sha256=50cbc21623f059cefde9b27b00f204e74b3ecf8bc88da3e9cadeec6c85e8d3cf
+35. [reference] [knowledge] docs/Technical-Reference/07-LINGUISTICS_REFERENCE.md | bytes=5676 | sha256=4cb3a3f652a330d99858916213da60eaebcb254c18c0e4f3c9925dbbb8de4057
+36. [reference] [knowledge] docs/Technical-Reference/08-DECISION_LOG.md | bytes=5879 | sha256=1e99ced208b6d132ca57702cdd225bacdbae7f4a9163da6c57f0b77b9befc12b
+37. [reference] [knowledge] docs/Technical-Reference/09-AI_CONTEXT_DUMP.md | bytes=4517 | sha256=3d8339a474ec44cce1369137180df4442e705d33ea49c845916bfef16a7f5a97
+38. [reference] [knowledge] docs/Technical-Reference/10-GLOSSARY.md | bytes=3925 | sha256=ab57013ca79adad73b4555113cd157eada976ea7051d330b3b71ae57dfb50c99
+39. [reference] [knowledge] docs/Technical-Reference/11-CONTRIBUTING.md | bytes=4140 | sha256=cfb9c5e11619ebfca6dd4cce2bffab6b67ccf5e3982b410ee0378a773e4f3459
+40. [reference] [knowledge] docs/Technical-Reference/12-TOOLS_DASHBOARD_AND_API.md | bytes=14854 | sha256=ee22536e766d10c8b86fb2474fb373f02817bcf8e11b3615ea14f09b4063bcfd
+41. [reference] [knowledge] docs/Technical-Reference/12-WIKIMEDIA_ALIGNMENT.md | bytes=5144 | sha256=b9f16d02648618a644a27ea68749d3c3962e51cf297dee759258330a43dcf1f0
+42. [reference] [knowledge] docs/Technical-Reference/15-SCHEMA_ALIGNMENT_PROTOCOL.md | bytes=4648 | sha256=e51434098626f157e829cdd1e3b15df7c8e90840b03a65bcca82641590b96bd2
+43. [reference] [knowledge] docs/Technical-Reference/16-DEV_TOOLS_AND_LAUNCHER.md | bytes=5433 | sha256=62e1dac74d4143f7e91f13f0225793961f3e7ce0645137e57d487be759209c88
+44. [reference] [knowledge] docs/Technical-Reference/17-TOOLS_AND_TESTS_INVENTORY.md | bytes=36448 | sha256=2d2fc021339e9b90c3dbf3e7c213c347bef9477f388440975c5503a5bfcbd958
+45. [reference] [knowledge] docs/Technical-Reference/A-SIMPLE-language_integration_workflow_reference.md | bytes=6962 | sha256=f0868cd30c1b8d87447c6297e4805cfaefd3b9e47908eb8525a92dc0ff67832e
+46. [reference] [knowledge] docs/Technical-Reference/Abstract_Wiki_Architect_Build_and_Launch_System.md | bytes=4746 | sha256=838853ba8de6bc9ff9a34493339e3a341671965e6b0072c27d3ed4aa43ff6240
+47. [reference] [knowledge] docs/Technical-Reference/ADR 005 Dual-Path Input Validation (Strict_vs_Prototype).md | bytes=4024 | sha256=17db741749771ac53c66d918a576006685cf95455e5283a2070144d76c4830e3
+48. [reference] [knowledge] docs/Technical-Reference/ADR 006 Human-in-the-Loop Grammar Generation and GF Codex.md | bytes=4611 | sha256=a67e2a631589aed58eae8ebf4459881d8a4a4a12f697c618871f8009cb57b456
+49. [reference] [knowledge] docs/Technical-Reference/ADR-001-GF_VERSION_STRATEGY.md | bytes=11016 | sha256=47cb5f33ea2beaa5a92629758c38a5da5f70fb1edc50fd714eaeca480ff2a775
+50. [reference] [knowledge] docs/Technical-Reference/CURRENT_RUNTIME_STATUS.md | bytes=11235 | sha256=12acfc3b826a52b806764685c8cbae65c5083af0645cb8e24d4323825afd79a3
+51. [reference] [knowledge] docs/Technical-Reference/DECISION_LOG.md | bytes=10573 | sha256=b70415d137d9fac9af90087c4e3119c3ca447575a79b91a674a1c423e9ea77ea
+52. [reference] [knowledge] docs/Technical-Reference/ENGINE_INTERNALS.md | bytes=5763 | sha256=5a0155fe6407fc56c1f0f6051bd8a64a5a564f68ec9ceda08a82e020dd246c6a
+53. [reference] [knowledge] docs/Technical-Reference/everything_matrix_orchestration.md | bytes=6890 | sha256=ec1537c6b48f048e05d0602d9c9acec2e68183d6bb2ab034797f045e9cdbcfce
+54. [reference] [knowledge] docs/Technical-Reference/everythingMatrixUpgrade.md | bytes=5920 | sha256=34bccb6bc842f1e1ff50e0937a58cbbf3126a453e2359706cce3a82b8a92b532
+55. [reference] [knowledge] docs/Technical-Reference/GF WordNet Structural Map.md | bytes=4120 | sha256=7cd5997caba0a642e82f6914a66261e3409b96cc51de6c72dad52d4c18b1916a
+56. [reference] [knowledge] docs/Technical-Reference/GF_ARCHITECTURE.md | bytes=9027 | sha256=87c07e5535680442a5c7c0985b0f210d62209bd30ca9a02c23d365403638b897
+57. [reference] [knowledge] docs/Technical-Reference/GF_Concepts.md | bytes=4206 | sha256=5c3f39f7a6d9c75076160bbc559836509593d34a289f31a34e8f155734395e69
+58. [reference] [knowledge] docs/Technical-Reference/REFERENCE_LINGUISTICS.md | bytes=22112 | sha256=cf275afe945a1361d45ce90f554a1aec39ae88f23c07023fe02f86a04be7757b
+59. [reference] [knowledge] docs/Technical-Reference/RESEARCH_GF_MAPPING.md | bytes=20383 | sha256=1ab4ea3c2f0b00f560ceba0708bcabe92731851f9ea1b8028e911fccd90e4e4b
+60. [reference] [knowledge] docs/Technical-Reference/RGL_DISCOVERY_STRATEGY.md | bytes=5434 | sha256=1078edb280aa1a40efcfef84ebb6bcc61628a4277f95d0736c62be1c8de0862e
+61. [reference] [knowledge] docs/Technical-Reference/TechnicalStatus23dec2025.md | bytes=3719 | sha256=dea99839f0ba5c37ba139fa875bf36b3557e09073aad5e1da7a446fc172addb1
+62. [reference] [knowledge] docs/Technical-Reference/UPGRADE v2-0 Omni-Upgrade Architecture Specification.md | bytes=10216 | sha256=dc4a59ad519aada16e16b8d2ce728d1dd9ad3457765fdcf197357b5541159d01
+63. [reference] [knowledge] docs/Technical-Reference/UPGRADE v2-0 Variable and Configuration Ledger.md | bytes=8642 | sha256=a76dcdb9011ccc287f003387b8363393397835b9274c1914e6395b6c90aa1500
+64. [reference] [knowledge] docs/Technical-Reference/UPGRADE_v2.1_SPECIFICATION.md | bytes=6600 | sha256=ab574b1922e657556c99acaa6dae55d6fc0102da767d1ce42c00746e0c7dffeb
+65. [reference] [knowledge] LICENSE_EXCLUSION_RATIONALE.md | bytes=2240 | sha256=5bcd71b8cf1f7e8675abbe609949ab20326befe6e9d72bbf0e3fca1b9f068ab7
+66. [reference] [knowledge] README.md | bytes=9378 | sha256=dd17124d79552018a8fff1a578230e367a5f44d89e357d70fb14bbbdda26cdd5
+67. [reference] [knowledge] RELEASE.md | bytes=515 | sha256=b2927c0425c3b7c20c18e8610524934ec9d34f41f01830347b26412879dc5cf2
 
 
 ================================================================================================
 FILE: wiki/_Footer.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 6393d670aaed7c8fe1b6a7caf54ff6b8d0e2fdb4e5a20d288b02684da33109cf
+CONTENT_BYTES: 267
 ================================================================================================
 
 ---
@@ -113,7 +115,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/_Sidebar.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 76b6cb73b2a55f1d0747a204525d62faab72babeb56684bce8da8d442baaef85
+CONTENT_BYTES: 1035
 ================================================================================================
 
 # SemantiK Architect
@@ -156,7 +161,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/Add-a-Language-High-Level.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: ac05585c7caf28b5f2e978379caa39cf30f7aa00256ec2a8c7955b67ed174064
+CONTENT_BYTES: 3826
 ================================================================================================
 
 # 15. Add a Language (High Level)
@@ -247,7 +255,10 @@ A new language is “added” when:
 
 ================================================================================================
 FILE: wiki/API-Overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: e161a286f53d2a1a8a2aea8c462d3bb4554a3ee853b61c375a39a08a4e375286
+CONTENT_BYTES: 2275
 ================================================================================================
 
 # API Overview
@@ -308,7 +319,10 @@ Tools are executed via an **allowlisted registry** (no arbitrary command executi
 
 ================================================================================================
 FILE: wiki/Changelog.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: faf9abec1521092ff6cfdb5cec7bc250142067733c1c285e63fa84bd3eb38245
+CONTENT_BYTES: 1973
 ================================================================================================
 
 ## 22. Changelog
@@ -342,7 +356,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/Conceptual-Flow-Meaning-to-Text.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b584eb543da5bcb0216ea520f937fd0cba9410d384abaa78d42ec6d7b31310a9
+CONTENT_BYTES: 2456
 ================================================================================================
 
 # 4. Conceptual Flow: Meaning → Text
@@ -389,7 +406,10 @@ SemantiK Architect is **generation-first**: it does not “interpret” text. It
 
 ================================================================================================
 FILE: wiki/Context.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b43ca7a23af89688ad77573eac023612be4546a836dc1b92862d1f627fd4b193
+CONTENT_BYTES: 2462
 ================================================================================================
 
 # Context
@@ -445,7 +465,10 @@ The docs describe future upgrades toward more powerful discourse models for anap
 
 ================================================================================================
 FILE: wiki/Correctness-and-Verifiability-Gold-Standards-UD-Export-Judge.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 17c7a2601aaed1482f76128bd9797c84655dfd2d96633778fb6b3235a38c07bd
+CONTENT_BYTES: 2639
 ================================================================================================
 
 # 10. Correctness & Verifiability (Gold Standards, UD Export, Judge)
@@ -488,7 +511,10 @@ The purpose of this page in the wiki is to make one idea clear: **SemantiK Archi
 
 ================================================================================================
 FILE: wiki/Decisions.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 9cc35f8c8294ca251148436b3f56a4438f91580c047a4d0594c0acdd82f38f12
+CONTENT_BYTES: 2718
 ================================================================================================
 
 # 20. Decisions
@@ -551,7 +577,10 @@ This keeps SemantiK Architect understandable without turning the wiki into low-l
 
 ================================================================================================
 FILE: wiki/Glossary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 484745566f66e08a76ae0d4060f0e02a367b10996863b294aa7927fe88307403
+CONTENT_BYTES: 5599
 ================================================================================================
 
 # Glossary (SemantiK Architect)
@@ -648,7 +677,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/Grammar.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: d06b24c10f0943488dee118bc721e6f7e05112ca03602208b78a205be595aaa4
+CONTENT_BYTES: 3167
 ================================================================================================
 
 # Grammar
@@ -732,7 +764,10 @@ It is **not** a build guide or an API reference.
 
 ================================================================================================
 FILE: wiki/Home.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 2d8f622c87e1d03b67492b5505007dde746ba652ed18610ebee763157403e4fe
+CONTENT_BYTES: 3567
 ================================================================================================
 
 # SemantiK Architect
@@ -805,7 +840,10 @@ If you’re here to implement or integrate quickly, start at: [[API Overview|API
 
 ================================================================================================
 FILE: wiki/Improve-a-Language-High-Level.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 0647d1388d6e6c3aeac503a21c7fb2b3258abc622ffe2f26dbe0dd6ce8f3bdc7
+CONTENT_BYTES: 5474
 ================================================================================================
 
 # Improve a Language (High Level)
@@ -940,7 +978,10 @@ Tier 3 gets you coverage fast, Tier 2 improves naturalness, and QA makes it dura
 
 ================================================================================================
 FILE: wiki/Inputs-Frames.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 776f70ee6a76ab8edf7bd2ba26631addf2c7974f761e989d08da1b41eac6b9b4
+CONTENT_BYTES: 1783
 ================================================================================================
 
 # Inputs: Frames
@@ -1004,7 +1045,10 @@ See also:
 
 ================================================================================================
 FILE: wiki/Inputs-Ninai.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: bfba15dabfe14fc6aad44a8c20af8842808b4067249e73ea8672588b4c146b29
+CONTENT_BYTES: 1754
 ================================================================================================
 
 ## 12. Inputs: Ninai
@@ -1036,7 +1080,10 @@ SemantiK Architect uses Ninai as its **interoperability input**: a way to accept
 
 ================================================================================================
 FILE: wiki/Language-Coverage-Strategy-Tiers.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 03ef5d2f259614646500810b5b347d496391d5f7e5dae8d64b55ae9d4e075063
+CONTENT_BYTES: 1723
 ================================================================================================
 
 # 9. Language Coverage Strategy (Tiers)
@@ -1075,7 +1122,10 @@ This is also the meaning of “Hybrid Factory”: combining expert grammars (Tie
 
 ================================================================================================
 FILE: wiki/Lexicon.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: d6e599c1a18ad28ed4753f6eeae7a525d87c9949a0f14a3e8f7b2a4394bd12b3
+CONTENT_BYTES: 2119
 ================================================================================================
 
 # 5. Lexicon
@@ -1113,7 +1163,10 @@ SemantiK Architect treats Lexicon coverage as a measurable readiness signal (“
 
 ================================================================================================
 FILE: wiki/Outputs-Text.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 2f71e2a6c8dbc9671ff1b4f6ab1d8084356f77655976ce04e6332d644b6ba231
+CONTENT_BYTES: 1788
 ================================================================================================
 
 # Outputs: Text
@@ -1152,7 +1205,10 @@ Text is the “publishable” output; UD/CoNLL-U is an **optional companion outp
 
 ================================================================================================
 FILE: wiki/Outputs-UD.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: e95fa0ad10717147ef8decfd0edec3f507c44525794e17804c7cce1177489abf
+CONTENT_BYTES: 1636
 ================================================================================================
 
 # 14. Outputs: UD
@@ -1184,7 +1240,10 @@ SemantiK Architect can optionally output **Universal Dependencies (UD)** as a **
 
 ================================================================================================
 FILE: wiki/Positioning-Ninai-Udiron-GF-UD-No-WMF-AW-Affiliation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 44ae0cf3d25948a06346f991b26ab1e66f2fb32e45c7f117757f4d2cc32833a0
+CONTENT_BYTES: 3332
 ================================================================================================
 
 # Positioning: Ninai, Udiron, GF, UD (No WMF/AW Affiliation)
@@ -1237,7 +1296,10 @@ SemantiK Architect’s unique responsibility is the **end-to-end orchestration**
 
 ================================================================================================
 FILE: wiki/Renderer.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: ac680e013da4d0ed88ab013fc9dbb34e13db1f181db160dcc73c7fd00868b06a
+CONTENT_BYTES: 1591
 ================================================================================================
 
 ## 7. Renderer
@@ -1275,7 +1337,10 @@ Separating the Renderer makes SemantiK Architect easier to scale:
 
 ================================================================================================
 FILE: wiki/Repo-Map.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 912e3383db600ee0ea36fd61c02e0681d2b5f8ebe725bf650cb66c0445861379
+CONTENT_BYTES: 3148
 ================================================================================================
 
 # Repo Map
@@ -1335,7 +1400,10 @@ This map lists the **main repo areas you’ll touch most**, grouped by purpose (
 
 ================================================================================================
 FILE: wiki/Roadmap.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: bcffae98554b68e72ba6089fd2a4f94b35546bfe7f7e75e7282bdc2b106b9bad
+CONTENT_BYTES: 2588
 ================================================================================================
 
 # Roadmap — SemantiK Architect
@@ -1383,7 +1451,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/Setup.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 524dbcfdf2691d5601a4fc1727d7ed3525b532b7d584735428a2840b6ac49323
+CONTENT_BYTES: 2736
 ================================================================================================
 
 ## 17. Setup
@@ -1445,7 +1516,10 @@ The docs include two end-to-end checks:
 
 ================================================================================================
 FILE: wiki/What-SemantiK-Architect-Is.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 87322206668f233d39f5dab3aadec45f4aee720b81a1ddfc56b3d299a155216b
+CONTENT_BYTES: 2078
 ================================================================================================
 
 ## 2. What SemantiK Architect Is
@@ -1492,7 +1566,10 @@ The system is organized as four layers, so each concern stays clear and replacea
 
 ================================================================================================
 FILE: data/raw_wikidata/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e0b8e962a227a6db71b7be9fed1961b6c660d7672118c5d65d4ddb4bbb904bc5
+CONTENT_BYTES: 1511
 ================================================================================================
 
 # data/raw_wikidata/
@@ -1552,7 +1629,10 @@ command or filtering pipeline instead of the file itself.
 
 ================================================================================================
 FILE: data/reports/lexicon_coverage_report.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4d83847cc10e65a82f99b66b5d1f339d5dedc859f6ce44fc8c0d6b06c3c88aa9
+CONTENT_BYTES: 591
 ================================================================================================
 
 # Lexicon Coverage Report
@@ -1584,7 +1664,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: docs/Technical-Reference/00-SETUP_AND_DEPLOYMENT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d6251a1b2846a1784636c11c9f36a32bbd80add20c39fb6ae6f8326fa85b7de5
+CONTENT_BYTES: 10257
 ================================================================================================
 
 # 🛠️ Setup & Deployment Guide
@@ -2070,7 +2153,10 @@ python -m uvicorn app.adapters.api.main:create_app --factory --host 0.0.0.0 --po
 
 ================================================================================================
 FILE: docs/Technical-Reference/01-ENGINE_ARCHITECTURE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3686215728cdefa5d034a5ef462136fa67996e5125a91f09e861135d75e7e73c
+CONTENT_BYTES: 15325
 ================================================================================================
 
 # 🏛️ Engine Architecture & Internals
@@ -2570,7 +2656,10 @@ It is best understood as a **planner-first, construction-centered, backend-flexi
 
 ================================================================================================
 FILE: docs/Technical-Reference/02-BUILD_SYSTEM.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a58cea9ca07ff41936bde886cba6b3a6710657ae34e22c0d95c6b07cb3edb956
+CONTENT_BYTES: 7508
 ================================================================================================
 
 
@@ -2792,7 +2881,10 @@ python3 -c "import pgf; print(pgf.readPGF('semantik_architect.pgf').languages.ke
 
 ================================================================================================
 FILE: docs/Technical-Reference/03-LEXICON_ARCHITECTURE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 71b52df65b3dff70ce2b6d95f1f9578ac373d149f51d405cf2c3b64956f47442
+CONTENT_BYTES: 6501
 ================================================================================================
 
 Here is the updated **`docs/03-LEXICON_ARCHITECTURE.md`**.
@@ -2989,7 +3081,10 @@ If the API returns `422 Unprocessable Entity`:
 
 ================================================================================================
 FILE: docs/Technical-Reference/04-API_REFERENCE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 202b1b01a3d8359f8fe08add08f173ade29f2397c34c32988633d50878953b1a
+CONTENT_BYTES: 15891
 ================================================================================================
 
 # 🔌 API Reference & Semantic Frames
@@ -3514,7 +3609,10 @@ The authoritative public generation contract is:
 
 ================================================================================================
 FILE: docs/Technical-Reference/05-AI_SERVICES.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4ecab865e8ab87bfe5087abadfebbac7cfaa9b5adba58b787a09c169fbb0133a
+CONTENT_BYTES: 7271
 ================================================================================================
 
 # 🧠 AI Services & Autonomous Agents
@@ -3674,7 +3772,10 @@ The `client.py` module implements a robust **Exponential Backoff** strategy to h
 
 ================================================================================================
 FILE: docs/Technical-Reference/06-ADDING_A_LANGUAGE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 50cbc21623f059cefde9b27b00f204e74b3ecf8bc88da3e9cadeec6c85e8d3cf
+CONTENT_BYTES: 6347
 ================================================================================================
 
 # 🌍 Adding a New Language
@@ -3892,7 +3993,10 @@ curl -X POST "http://localhost:8000/api/v1/generate/ha" \
 
 ================================================================================================
 FILE: docs/Technical-Reference/07-LINGUISTICS_REFERENCE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4cb3a3f652a330d99858916213da60eaebcb254c18c0e4f3c9925dbbb8de4057
+CONTENT_BYTES: 5676
 ================================================================================================
 
 # 🎓 Linguistics Reference & Theory
@@ -4032,7 +4136,10 @@ This document confirms that the SemantiK Architect v2.0 is a **Hybrid Neuro-Symb
 
 ================================================================================================
 FILE: docs/Technical-Reference/08-DECISION_LOG.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1e99ced208b6d132ca57702cdd225bacdbae7f4a9163da6c57f0b77b9befc12b
+CONTENT_BYTES: 5879
 ================================================================================================
 
 # 📜 Decision Log & Architecture Records
@@ -4187,7 +4294,10 @@ Together, these choices create a system that is **scalable (300+ languages), int
 
 ================================================================================================
 FILE: docs/Technical-Reference/09-AI_CONTEXT_DUMP.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3d8339a474ec44cce1369137180df4442e705d33ea49c845916bfef16a7f5a97
+CONTENT_BYTES: 4517
 ================================================================================================
 
 # SYSTEM CONTEXT: SemantiK Architect v2.0 ("Omni-Upgrade")
@@ -4281,7 +4391,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: docs/Technical-Reference/10-GLOSSARY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ab57013ca79adad73b4555113cd157eada976ea7051d330b3b71ae57dfb50c99
+CONTENT_BYTES: 3925
 ================================================================================================
 
 # 📖 Project Glossary & Terminology
@@ -4365,7 +4478,10 @@ This document defines the specialized terminology used across the project. It br
 
 ================================================================================================
 FILE: docs/Technical-Reference/11-CONTRIBUTING.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cfb9c5e11619ebfca6dd4cce2bffab6b67ccf5e3982b410ee0378a773e4f3459
+CONTENT_BYTES: 4140
 ================================================================================================
 
 # 🤝 Contributing to SemantiK Architect v2.0
@@ -4473,7 +4589,10 @@ If this doesn't happen, check that your Docker volumes are correctly mounted to 
 
 ================================================================================================
 FILE: docs/Technical-Reference/12-TOOLS_DASHBOARD_AND_API.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ee22536e766d10c8b86fb2474fb373f02817bcf8e11b3615ea14f09b4063bcfd
+CONTENT_BYTES: 14854
 ================================================================================================
 
 # 🧰 Tools Dashboard & API
@@ -5192,7 +5311,10 @@ This keeps the page safe, scalable, and understandable even as the tool inventor
 
 ================================================================================================
 FILE: docs/Technical-Reference/12-WIKIMEDIA_ALIGNMENT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b9f16d02648618a644a27ea68749d3c3962e51cf297dee759258330a43dcf1f0
+CONTENT_BYTES: 5144
 ================================================================================================
 
 
@@ -5310,7 +5432,10 @@ We invite the community to review `docs/01-ENGINE_ARCHITECTURE.md` for a deep di
 
 ================================================================================================
 FILE: docs/Technical-Reference/15-SCHEMA_ALIGNMENT_PROTOCOL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e51434098626f157e829cdd1e3b15df7c8e90840b03a65bcca82641590b96bd2
+CONTENT_BYTES: 4648
 ================================================================================================
 
 Here is the updated **`docs/15-SCHEMA_ALIGNMENT_PROTOCOL.md`**.
@@ -5442,7 +5567,10 @@ To automate this, we will eventually implement an **Abstract Generator** script 
 
 ================================================================================================
 FILE: docs/Technical-Reference/16-DEV_TOOLS_AND_LAUNCHER.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 62e1dac74d4143f7e91f13f0225793961f3e7ce0645137e57d487be759209c88
+CONTENT_BYTES: 5433
 ================================================================================================
 
 # 🛠️ Developer Tools & Unified Launch System
@@ -5563,7 +5691,10 @@ The developer interfaces above rely on the following infrastructure:
 
 ================================================================================================
 FILE: docs/Technical-Reference/17-TOOLS_AND_TESTS_INVENTORY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2d2fc021339e9b90c3dbf3e7c213c347bef9477f388440975c5503a5bfcbd958
+CONTENT_BYTES: 36448
 ================================================================================================
 
 # 📚 The Complete Tools & Tests Inventory (Final)
@@ -6174,7 +6305,10 @@ The system must fail EN/FR acceptance when:
 
 ================================================================================================
 FILE: docs/Technical-Reference/A-SIMPLE-language_integration_workflow_reference.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f0868cd30c1b8d87447c6297e4805cfaefd3b9e47908eb8525a92dc0ff67832e
+CONTENT_BYTES: 6962
 ================================================================================================
 
 **Language Integration Workflow**
@@ -6295,7 +6429,10 @@ For stronger acceptance on core constructions, add regression and judge coverage
 
 ================================================================================================
 FILE: docs/Technical-Reference/Abstract_Wiki_Architect_Build_and_Launch_System.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 838853ba8de6bc9ff9a34493339e3a341671965e6b0072c27d3ed4aa43ff6240
+CONTENT_BYTES: 4746
 ================================================================================================
 
 
@@ -6413,7 +6550,10 @@ Once Level 2 finishes successfully, Level 1 spawns these persistent processes in
 
 ================================================================================================
 FILE: docs/Technical-Reference/ADR 005 Dual-Path Input Validation (Strict_vs_Prototype).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 17db741749771ac53c66d918a576006685cf95455e5283a2070144d76c4830e3
+CONTENT_BYTES: 4024
 ================================================================================================
 
 # ADR 005: Dual-Path Input Validation (Strict vs. Prototype)
@@ -6515,7 +6655,10 @@ To support the Prototype Path, we define a recursive schema that mimics the *str
 
 ================================================================================================
 FILE: docs/Technical-Reference/ADR 006 Human-in-the-Loop Grammar Generation and GF Codex.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a67e2a631589aed58eae8ebf4459881d8a4a4a12f697c618871f8009cb57b456
+CONTENT_BYTES: 4611
 ================================================================================================
 
 # ADR 006: Human-in-the-Loop (HITL) Grammar Generation & GF Codex
@@ -6579,7 +6722,10 @@ To ensure high-quality code on the first attempt, requests to the LLM will no lo
 
 ================================================================================================
 FILE: docs/Technical-Reference/ADR-001-GF_VERSION_STRATEGY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 47cb5f33ea2beaa5a92629758c38a5da5f70fb1edc50fd714eaeca480ff2a775
+CONTENT_BYTES: 11016
 ================================================================================================
 
 # GF Architecture & Developer Guide
@@ -6827,7 +6973,10 @@ If you must do a manual clean, focus on compiled artifacts (`*.gfo`, `*.pgf`) an
 
 ================================================================================================
 FILE: docs/Technical-Reference/CURRENT_RUNTIME_STATUS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 12acfc3b826a52b806764685c8cbae65c5083af0645cb8e24d4323825afd79a3
+CONTENT_BYTES: 11235
 ================================================================================================
 
 # CURRENT RUNTIME STATUS
@@ -7162,7 +7311,10 @@ Conflict rule:
 
 ================================================================================================
 FILE: docs/Technical-Reference/DECISION_LOG.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b70415d137d9fac9af90087c4e3119c3ca447575a79b91a674a1c423e9ea77ea
+CONTENT_BYTES: 10573
 ================================================================================================
 
 # DESIGN_DECISIONS.md  
@@ -7490,7 +7642,10 @@ Together, these choices are intended to make SemantiK Architect:
 
 ================================================================================================
 FILE: docs/Technical-Reference/ENGINE_INTERNALS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5a0155fe6407fc56c1f0f6051bd8a64a5a564f68ec9ceda08a82e020dd246c6a
+CONTENT_BYTES: 5763
 ================================================================================================
 
 Here is the formal documentation for the **SemantiK Architect: Multilingual Engine V2**.
@@ -7626,7 +7781,10 @@ C:\MyCode\SemantiK_Architect\Semantik_architect\
 
 ================================================================================================
 FILE: docs/Technical-Reference/everything_matrix_orchestration.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ec1537c6b48f048e05d0602d9c9acec2e68183d6bb2ab034797f045e9cdbcfce
+CONTENT_BYTES: 6890
 ================================================================================================
 
 # Everything Matrix Orchestration
@@ -7904,7 +8062,10 @@ python tools/everything_matrix/build_index.py --verbose
 
 ================================================================================================
 FILE: docs/Technical-Reference/everythingMatrixUpgrade.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 34bccb6bc842f1e1ff50e0937a58cbbf3126a453e2359706cce3a82b8a92b532
+CONTENT_BYTES: 5920
 ================================================================================================
 
 # 🧠 The Everything Matrix v2.1: Health & Decision Specification
@@ -8065,7 +8226,10 @@ The Worker (`app/workers/worker.py`) checks `verdict.runnable` before initializa
 
 ================================================================================================
 FILE: docs/Technical-Reference/GF WordNet Structural Map.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7cd5997caba0a642e82f6914a66261e3409b96cc51de6c72dad52d4c18b1916a
+CONTENT_BYTES: 4120
 ================================================================================================
 
 
@@ -8177,7 +8341,10 @@ The `WordNet.gf` file contains two types of IDs in the comments:
 
 ================================================================================================
 FILE: docs/Technical-Reference/GF_ARCHITECTURE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 87c07e5535680442a5c7c0985b0f210d62209bd30ca9a02c23d365403638b897
+CONTENT_BYTES: 9027
 ================================================================================================
 
 # GF Architecture & Developer Guide
@@ -8405,7 +8572,10 @@ If you must do a manual clean, focus on compiled artifacts (`*.gfo`, `*.pgf`) an
 
 ================================================================================================
 FILE: docs/Technical-Reference/GF_Concepts.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5c3f39f7a6d9c75076160bbc559836509593d34a289f31a34e8f155734395e69
+CONTENT_BYTES: 4206
 ================================================================================================
 
 # Grammatical Framework (GF): Core Concepts & Compilation
@@ -8497,7 +8667,10 @@ EOF
 
 ================================================================================================
 FILE: docs/Technical-Reference/REFERENCE_LINGUISTICS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cf275afe945a1361d45ce90f554a1aec39ae88f23c07023fe02f86a04be7757b
+CONTENT_BYTES: 22112
 ================================================================================================
 
 # THEORY_NOTES.md
@@ -9304,7 +9477,10 @@ so the system can evolve without losing its conceptual center.
 
 ================================================================================================
 FILE: docs/Technical-Reference/RESEARCH_GF_MAPPING.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1ab4ea3c2f0b00f560ceba0708bcabe92731851f9ea1b8028e911fccd90e4e4b
+CONTENT_BYTES: 20383
 ================================================================================================
 
 # GF Integration Design
@@ -10204,7 +10380,10 @@ The main design correction relative to the older draft is explicit:
 
 ================================================================================================
 FILE: docs/Technical-Reference/RGL_DISCOVERY_STRATEGY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1078edb280aa1a40efcfef84ebb6bcc61628a4277f95d0736c62be1c8de0862e
+CONTENT_BYTES: 5434
 ================================================================================================
 
 
@@ -10384,7 +10563,10 @@ Expected layout:
 
 ================================================================================================
 FILE: docs/Technical-Reference/TechnicalStatus23dec2025.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dea99839f0ba5c37ba139fa875bf36b3557e09073aad5e1da7a446fc172addb1
+CONTENT_BYTES: 3719
 ================================================================================================
 
 ### 📋 Technical Reality Check: SemantiK Architect (v2.0)
@@ -10473,7 +10655,10 @@ You have built a **Ferrari Engine** (GF/Python) inside a **Professional Garage**
 
 ================================================================================================
 FILE: docs/Technical-Reference/UPGRADE v2-0 Omni-Upgrade Architecture Specification.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dc4a59ad519aada16e16b8d2ce728d1dd9ad3457765fdcf197357b5541159d01
+CONTENT_BYTES: 10216
 ================================================================================================
 
 Here is the **Exhaustive v2.0 "Omni-Upgrade" Architecture Specification**.
@@ -10790,7 +10975,10 @@ To execute this "Omni-Upgrade" without breaking the build, follow this strict or
 
 ================================================================================================
 FILE: docs/Technical-Reference/UPGRADE v2-0 Variable and Configuration Ledger.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a76dcdb9011ccc287f003387b8363393397835b9274c1914e6395b6c90aa1500
+CONTENT_BYTES: 8642
 ================================================================================================
 
 Here is the final, **Exhaustive v2.0 Variable & Configuration Ledger**.
@@ -11039,7 +11227,10 @@ Paths to the validation datasets ingested from Udiron.
 
 ================================================================================================
 FILE: docs/Technical-Reference/UPGRADE_v2.1_SPECIFICATION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ab574b1922e657556c99acaa6dae55d6fc0102da767d1ce42c00746e0c7dffeb
+CONTENT_BYTES: 6600
 ================================================================================================
 
 # SemantiK Architect: v2.1 Upgrade Specification
@@ -11218,7 +11409,10 @@ python3 -m uvicorn app.main:app --reload
 
 ================================================================================================
 FILE: LICENSE_EXCLUSION_RATIONALE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5bcd71b8cf1f7e8675abbe609949ab20326befe6e9d72bbf0e3fca1b9f068ab7
+CONTENT_BYTES: 2240
 ================================================================================================
 
 # Exclusion Rationale (WMF / Denny Vrandečić)
@@ -11269,7 +11463,10 @@ If you believe you are incorrectly categorized as an Excluded Party, or you want
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dd17124d79552018a8fff1a578230e367a5f44d89e357d70fb14bbbdda26cdd5
+CONTENT_BYTES: 9378
 ================================================================================================
 
 # Semantik Architect
@@ -11620,7 +11817,10 @@ Current repository direction:
 
 ================================================================================================
 FILE: RELEASE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b2927c0425c3b7c20c18e8610524934ec9d34f41f01830347b26412879dc5cf2
+CONTENT_BYTES: 515
 ================================================================================================
 
 # RGL releases

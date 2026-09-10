@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/partners-for-public-good_pressure-test-koali
-source_path: C:\mycode\PPG
 source_commit: edfc5e843aa5e92179925c07182854d1d1f5d485
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 7
 wiki_files: 0
 source_files: 7
@@ -18,27 +16,31 @@ included_files: 7
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 44777
-authority_counts: {"canonical":7}
-generated_at: 2026-09-10T10:44:57-04:00
+authority_counts: {"reference":7}
+content_role_counts: {"knowledge":7}
+generated_at: 2026-09-10T13:04:13-04:00
 files: 7
-content_sha256: 86560b2ffbcd7541ff1736b993f4ecd21435aabbd8ed1a4f9e73c9745f4684ed
+content_sha256: 4cb88d92048197ad7d26b562a4539646b3aee5aacd78c7f91aa6cb443b4f0060
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-1. [canonical] CLAIMS_UNDER_TEST.md
-2. [canonical] PRESSURE_TEST.md
-3. [canonical] QUESTIONS.md
-4. [canonical] README.md
-5. [canonical] SCOPE.md
-6. [canonical] SOURCES.md
-7. [canonical] WHY_PPG.md
+1. [reference] [knowledge] CLAIMS_UNDER_TEST.md | bytes=8843 | sha256=b797fdffde735183c6b4312d69e17af794c7ccc81b733b7433dd584c54d3a982
+2. [reference] [knowledge] PRESSURE_TEST.md | bytes=6921 | sha256=be3171a38cb1da6815b0ae9307a95fa68f88aca778dd87b2f97f72d4d8699c85
+3. [reference] [knowledge] QUESTIONS.md | bytes=2749 | sha256=0c0227acd2c475311e5d59b9c662e0c702586595b15fc3df63a170506ca5653e
+4. [reference] [knowledge] README.md | bytes=9233 | sha256=2bc9a3d0a18bcae99591be4230ddcb1a05dd87283cb83f38cbdd43b3c2a64272
+5. [reference] [knowledge] SCOPE.md | bytes=4400 | sha256=4ca391381086d114181a3f8879e851fbe90c007c09e6ff8963bb828021b469c3
+6. [reference] [knowledge] SOURCES.md | bytes=6970 | sha256=6be1bc9587292c8a18f150cd50ac8c04e40e5bbeb3551458979b950cb3018649
+7. [reference] [knowledge] WHY_PPG.md | bytes=5661 | sha256=bf0f7c42bbd6cc482ca2275cc573ad51b0d31e2d981e934b22aed31b5242351a
 
 
 ================================================================================================
 FILE: CLAIMS_UNDER_TEST.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b797fdffde735183c6b4312d69e17af794c7ccc81b733b7433dd584c54d3a982
+CONTENT_BYTES: 8843
 ================================================================================================
 
 # Claims Under Test
@@ -254,7 +256,10 @@ That is progress.
 
 ================================================================================================
 FILE: PRESSURE_TEST.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: be3171a38cb1da6815b0ae9307a95fa68f88aca778dd87b2f97f72d4d8699c85
+CONTENT_BYTES: 6921
 ================================================================================================
 
 # Proposed Pressure Test
@@ -512,7 +517,10 @@ The only bad outcome is a test incapable of producing "reject."
 
 ================================================================================================
 FILE: QUESTIONS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0c0227acd2c475311e5d59b9c662e0c702586595b15fc3df63a170506ca5653e
+CONTENT_BYTES: 2749
 ================================================================================================
 
 # Hard Questions for Koali
@@ -580,7 +588,10 @@ A serious answer to that question would probably improve Koali more than a gener
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2bc9a3d0a18bcae99591be4230ddcb1a05dd87283cb83f38cbdd43b3c2a64272
+CONTENT_BYTES: 9233
 ================================================================================================
 
 # Partners for Public Good: Pressure-Test Koali
@@ -797,7 +808,10 @@ A useful outcome is not agreement. It is knowing which claims survive and which 
 
 ================================================================================================
 FILE: SCOPE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4ca391381086d114181a3f8879e851fbe90c007c09e6ff8963bb828021b469c3
+CONTENT_BYTES: 4400
 ================================================================================================
 
 # Scope of the Public Call
@@ -901,7 +915,10 @@ When a pressure-test workflow uses one of them, its own canonical repository rem
 
 ================================================================================================
 FILE: SOURCES.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6be1bc9587292c8a18f150cd50ac8c04e40e5bbeb3551458979b950cb3018649
+CONTENT_BYTES: 6970
 ================================================================================================
 
 # Sources and Source Policy
@@ -1046,7 +1063,10 @@ The pressure-test result should preserve those distinctions.
 
 ================================================================================================
 FILE: WHY_PPG.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bf0f7c42bbd6cc482ca2275cc573ad51b0d31e2d981e934b22aed31b5242351a
+CONTENT_BYTES: 5661
 ================================================================================================
 
 # Why Partners for Public Good

@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/kristal-framework
-source_path: C:\mycode\Kristal\kristal-framework
 source_commit: bad7346b387ad61fa141ecba0031c5859c6b15d0
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: C:\mycode\Kristal\kristal-framework.wiki
 wiki_source_commit: 917d33f25ede7ed795dc8fa9cce0df6ccdb02861
 wiki_working_tree_markdown: clean
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 41
 wiki_files: 31
 source_files: 72
@@ -18,92 +16,96 @@ included_files: 72
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 955443
-authority_counts: {"canonical":72}
-generated_at: 2026-09-10T11:09:18-04:00
+authority_counts: {"reference":72}
+content_role_counts: {"knowledge":41,"navigation":31}
+generated_at: 2026-09-10T13:04:18-04:00
 files: 72
-content_sha256: adc60b27effdbcf50e12349252daf6409635a73678c42da4fba0df47af3be8c7
+content_sha256: efc0a03029e01223bad6889ce457603030a224ec3e205e0ee23082ce54a59646
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] wiki/_Footer.md
-02. [canonical] wiki/_Sidebar.md
-03. [canonical] wiki/Artifact-Authority-Registry.md
-04. [canonical] wiki/Artifact-Exchange.md
-05. [canonical] wiki/Artifact-Federation-Manifest.md
-06. [canonical] wiki/Artifact-Runtime-Pack.md
-07. [canonical] wiki/Artifact-Shard-Manifest.md
-08. [canonical] wiki/Artifact-Validation-Report.md
-09. [canonical] wiki/Artifacts.md
-10. [canonical] wiki/Concepts-and-Mental-Model.md
-11. [canonical] wiki/FAQ.md
-12. [canonical] wiki/Getting-Started.md
-13. [canonical] wiki/Glossary.md
-14. [canonical] wiki/Home.md
-15. [canonical] wiki/Identity-and-Determinism.md
-16. [canonical] wiki/Operations-Compatibility.md
-17. [canonical] wiki/Operations-Observability-and-Troubleshooting.md
-18. [canonical] wiki/Operations-Release-Strategy.md
-19. [canonical] wiki/Operations.md
-20. [canonical] wiki/Query-Basics.md
-21. [canonical] wiki/Query-Pagination-and-Capabilities.md
-22. [canonical] wiki/Query.md
-23. [canonical] wiki/Quickstart.md
-24. [canonical] wiki/Trust-Authority-and-Signatures.md
-25. [canonical] wiki/What-is-Kristal.md
-26. [canonical] wiki/Workflow-Activate-Rollback-Downgrade.md
-27. [canonical] wiki/Workflow-Build-and-Validate.md
-28. [canonical] wiki/Workflow-Federation-and-Curation.md
-29. [canonical] wiki/Workflow-Publish-and-Distribute.md
-30. [canonical] wiki/Workflow-Subsets-Recipes.md
-31. [canonical] wiki/Workflows.md
-32. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md
-33. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md
-34. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/plural-validation-and-federated-authority.md
-35. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/sharding-and-federation.md
-36. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/validation-certainty-and-authority.md
-37. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/vision-and-scope.md
-38. [canonical] docs/Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md
-39. [canonical] docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md
-40. [canonical] docs/Technical-Reference/kristal-docs-v5/01-core-spec/authority-recognition.md
-41. [canonical] docs/Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md
-42. [canonical] docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md
-43. [canonical] docs/Technical-Reference/kristal-docs-v5/01-core-spec/signatures-trust.md
-44. [canonical] docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md
-45. [canonical] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/allowed-runtime-pack-policies.md
-46. [canonical] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/deterministic-build-rules.md
-47. [canonical] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/reproducibility-acceptance-tests.md
-48. [canonical] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/subset-recipes.md
-49. [canonical] docs/Technical-Reference/kristal-docs-v5/04-query/query-contract.md
-50. [canonical] docs/Technical-Reference/kristal-docs-v5/04-query/reader-policy-profiles.md
-51. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-jsonld-export.md
-52. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-provenance-nanopub-provo.md
-53. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-query-tpf-pagination.md
-54. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-integrity-rdfc.md
-55. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-wdqs-export.md
-56. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-transparency-log.md
-57. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shacl.md
-58. [canonical] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shex.md
-59. [canonical] docs/Technical-Reference/kristal-docs-v5/06-integration/architect-rendering-contract.md
-60. [canonical] docs/Technical-Reference/kristal-docs-v5/06-integration/konnaxion-distribution-contract.md
-61. [canonical] docs/Technical-Reference/kristal-docs-v5/06-integration/orgo-workflow-contract.md
-62. [canonical] docs/Technical-Reference/kristal-docs-v5/06-integration/sentient-resolution-contract.md
-63. [canonical] docs/Technical-Reference/kristal-docs-v5/07-security/downgrade-rollback-policy.md
-64. [canonical] docs/Technical-Reference/kristal-docs-v5/07-security/key-management-and-trust-roots.md
-65. [canonical] docs/Technical-Reference/kristal-docs-v5/07-security/multi-tenancy-boundaries.md
-66. [canonical] docs/Technical-Reference/kristal-docs-v5/08-ops/failure-paths-and-resilience.md
-67. [canonical] docs/Technical-Reference/kristal-docs-v5/08-ops/logging-and-correlation-ids.md
-68. [canonical] docs/Technical-Reference/kristal-docs-v5/08-ops/operational-guidance-template.md
-69. [canonical] docs/Technical-Reference/kristal-docs-v5/08-ops/release-strategies.md
-70. [canonical] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md
-71. [canonical] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/rdfc/README.md
-72. [canonical] README.md
+01. [reference] [navigation] wiki/_Footer.md | bytes=528 | sha256=4aece1f040dc031123bac9f77fedfab280f272a1f5c1ac5eef5469be4592df86
+02. [reference] [navigation] wiki/_Sidebar.md | bytes=931 | sha256=8be56032c3ac91bffea8759b5fdcca0dbd61b678c93784995348acdf6ac454b8
+03. [reference] [navigation] wiki/Artifact-Authority-Registry.md | bytes=2198 | sha256=7271f2319ebd9aed6d50939a73d3bda1a17e7f41b3bdaf3898e72bcb67fa7078
+04. [reference] [navigation] wiki/Artifact-Exchange.md | bytes=2310 | sha256=df5f41eff341b3075139660ac4c9839676831a914a9824a5b5ac67b46e6e4115
+05. [reference] [navigation] wiki/Artifact-Federation-Manifest.md | bytes=2046 | sha256=b29b4c7bdebf1725121bf252d755affa1a6ff56c0ad15f2003d87b03e70f32b9
+06. [reference] [navigation] wiki/Artifact-Runtime-Pack.md | bytes=2050 | sha256=9645808b79a441febceb92bda68a6da4f97359fa5f2a7bb886b07b90b3ba3d84
+07. [reference] [navigation] wiki/Artifact-Shard-Manifest.md | bytes=1845 | sha256=7a134e12b874cd28b710d9983e6ce46f0c9d76268b3baf5a0d764ca8cbb6085a
+08. [reference] [navigation] wiki/Artifact-Validation-Report.md | bytes=1798 | sha256=5881905d31d810b1e135cbebb5041b8987f2110de06094b179669f64e35152b0
+09. [reference] [navigation] wiki/Artifacts.md | bytes=2908 | sha256=3167a9d023331b772198258ea022a5f4227a4d095e5301e5165a34af69142007
+10. [reference] [navigation] wiki/Concepts-and-Mental-Model.md | bytes=3294 | sha256=9b6ba0eb70a3e02fcc55f99276d1548e841532b8775040275f1d1396a9186f1f
+11. [reference] [navigation] wiki/FAQ.md | bytes=3055 | sha256=a790145fe65c3b2428bb7da739cacf7a987e1f568ede94747cded822c25b366d
+12. [reference] [navigation] wiki/Getting-Started.md | bytes=2582 | sha256=b9c1450ab4dccad7867aad6686abaf5e7c90d06f584be535369624110d050b81
+13. [reference] [navigation] wiki/Glossary.md | bytes=3885 | sha256=298c513428027508f515f02a461b68cd7704f5cc6aa130ef88334706c6fad82b
+14. [reference] [navigation] wiki/Home.md | bytes=2711 | sha256=d5fccddd4745dcd5a4461b8c6ae792f2de234fd7b3e0e1baffd669d6dd510cf7
+15. [reference] [navigation] wiki/Identity-and-Determinism.md | bytes=2893 | sha256=10bd3ae7550edbc62d5c0171e715465d2715ff8e22516b414aae0eec93ae23f6
+16. [reference] [navigation] wiki/Operations-Compatibility.md | bytes=2191 | sha256=ef3829b4e0ecf3cc6e279bd40cae44d1504313a302015ce37802e3b3630da65b
+17. [reference] [navigation] wiki/Operations-Observability-and-Troubleshooting.md | bytes=2278 | sha256=7f3132e064c93378951c28db3f83e39ce21ebe2877f151fc5ee36d412d4be866
+18. [reference] [navigation] wiki/Operations-Release-Strategy.md | bytes=1293 | sha256=69c4140d70be730d86f8fa56375f821ac0a47f387bebcc7828cbcac2e17371fe
+19. [reference] [navigation] wiki/Operations.md | bytes=1255 | sha256=0886acf10e26a9ff816bd60d232b9056ccb83cea7f539109704ce3f5556daecc
+20. [reference] [navigation] wiki/Query-Basics.md | bytes=1439 | sha256=c831174f66853b7014a0114232d9a18c644af2ed2cbc0935fa982a144705bbe3
+21. [reference] [navigation] wiki/Query-Pagination-and-Capabilities.md | bytes=1331 | sha256=80b51aeed48ceb708314ea2a0a798148ac196a6b072424fc62441b53083ef72c
+22. [reference] [navigation] wiki/Query.md | bytes=1355 | sha256=24696827935e62e165d614f75265571eed738f9b01b248bf7d950cda5fa672ac
+23. [reference] [navigation] wiki/Quickstart.md | bytes=2452 | sha256=78b3a91021469bd26ffb41d8a5a5ea6c07226845c70b5daa2455cba7ce55fb56
+24. [reference] [navigation] wiki/Trust-Authority-and-Signatures.md | bytes=2144 | sha256=03b1aa4019e41884ecafbd30ff714e0ca1a9a41fe5d440a0520f028770673170
+25. [reference] [navigation] wiki/What-is-Kristal.md | bytes=2607 | sha256=aab0fc4d3cde2e3e289b0f2bf45c518e5052e932544e65f809046b570a4dc04e
+26. [reference] [navigation] wiki/Workflow-Activate-Rollback-Downgrade.md | bytes=1663 | sha256=6caba852de43d56b09ea6dfe56dbede271467748db29cab3740598a774cf4434
+27. [reference] [navigation] wiki/Workflow-Build-and-Validate.md | bytes=2084 | sha256=a14f238d13c98ef1187aadc38efbdab30ce7db1f1ffc526576d04916b2e3850b
+28. [reference] [navigation] wiki/Workflow-Federation-and-Curation.md | bytes=1749 | sha256=e71fee57d5523bee0049c4b86b084c9db68483f2416c555a4632528ff9ed0313
+29. [reference] [navigation] wiki/Workflow-Publish-and-Distribute.md | bytes=1772 | sha256=b48a409981714d4f7caf23dcc385c0741de09cc319aeb15b010552c5a97b8f92
+30. [reference] [navigation] wiki/Workflow-Subsets-Recipes.md | bytes=1166 | sha256=02c617261ccd96e1e33cee525ebb6d2291f2c48f3d5b4ef44cc9bf90875d1a09
+31. [reference] [navigation] wiki/Workflows.md | bytes=804 | sha256=a7e012eab49b4fc647ea0f9792cde36df7f21d576da02152350b60f186c9cd1d
+32. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md | bytes=31478 | sha256=868c13e4207b3b98925576b28e0d2ec730dd6b86ec11fc74ab11d06356e302e9
+33. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md | bytes=20791 | sha256=13405e3a454d01fb573eef646aa3a830d273754fad1ef2728db7ea7c918a5fcc
+34. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/plural-validation-and-federated-authority.md | bytes=23543 | sha256=23abec00a9c0080b2cb06b4aa01d2b55721d528ae191a76e4c2e3e2737ac34fd
+35. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/sharding-and-federation.md | bytes=22714 | sha256=a8a6448250795810e93102c3452cfd407a774ebe3636db195d186f6628c81285
+36. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/validation-certainty-and-authority.md | bytes=31234 | sha256=880b957e3131f873e310cf5ae6ee174f7388803317c8e615fb47ddc5d1778961
+37. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/vision-and-scope.md | bytes=14352 | sha256=f089bd8040b44255f4e87c19a4f7670221c15bcc51019c33680b3afd5b7b5277
+38. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md | bytes=19322 | sha256=768f6ba8e631a6939eb815a7004a409b1bf8256b5a010c8b2cdec2130074a51c
+39. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md | bytes=23605 | sha256=a1ba7150fb191072f180a466981814dfce0febc6bd18172f3559507b61f9ba3b
+40. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/authority-recognition.md | bytes=31949 | sha256=8866a6734bfb8104e708b923e7bc304a96dcd86c876d505b293b1c64e21cc6c0
+41. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md | bytes=18295 | sha256=3ddb4d61f65626b20ecfeab50e87fe4654d537db8b7e88b7639e2b2f56220f82
+42. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md | bytes=37172 | sha256=bc72aa851ab76e87267909e56fd211bece9f57c48050f280597f9a1cfd93b9d1
+43. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/signatures-trust.md | bytes=24824 | sha256=addfef32fe4a4dc333765d5a7c3873374b95dbddf24148399d21c30300d22915
+44. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md | bytes=26224 | sha256=1b5a8cee5441750d8be4ea61bb51f591e9aecf9f43ccf6a94a1650c12d62d848
+45. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/allowed-runtime-pack-policies.md | bytes=17660 | sha256=fb6ecb79f8a14959bf01a78d83272b6d6a08e677223b83868d0e38d942dea738
+46. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/deterministic-build-rules.md | bytes=24855 | sha256=8e1f51617806527401409df40b583ad305d2950c11224ff80d3afe796e4a3003
+47. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/reproducibility-acceptance-tests.md | bytes=7664 | sha256=e6c1606ec47ad0dc859c7040c3c63dc5adf3d0994ebeb1747c3abd91701b934f
+48. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/subset-recipes.md | bytes=24844 | sha256=f000a72fcd813af5dc07c5f0e34f36a777b4fb97fd35147cf6eaaf4d3624be53
+49. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/04-query/query-contract.md | bytes=23100 | sha256=b5d6dd1ebf797b4413a0342133e3f1d686190e277856536e6355cc5179ca93dc
+50. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/04-query/reader-policy-profiles.md | bytes=35065 | sha256=842d34e26275c883facef1587d986f824fefeada8af6027647c7781cc321a54c
+51. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-jsonld-export.md | bytes=21737 | sha256=98c5c181f1efc9a0eec0977779b6654486069c5a5255a65f2983c96a7b9f2002
+52. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-provenance-nanopub-provo.md | bytes=21643 | sha256=70557871cac751431e2e52f50094818686e8b276740db4295af07a035133f9ee
+53. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-query-tpf-pagination.md | bytes=17536 | sha256=e2b5b38c9a202b9c758d5cf431e5e51b4ce091d2d465ac6da8a3091cea98cccb
+54. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-integrity-rdfc.md | bytes=15351 | sha256=de464e3adc45e57a7b2cb97c71f5ef37f740e44933837cbe4572c63cff92162d
+55. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-wdqs-export.md | bytes=21797 | sha256=074f5c4f0ed246458a81cc09c3c28e2208c3f2c6c4652b203b631fe294d49d31
+56. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-transparency-log.md | bytes=23075 | sha256=298c5502f2112184f7daf167dfa1b27cdc0608188526c44588265c068ee29272
+57. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shacl.md | bytes=15436 | sha256=bfefe3b21fe67baecdc4986c1246326e505d502202ce319bb87eec7c957ef360
+58. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shex.md | bytes=16461 | sha256=d9b2ba5015229c3ff7835467c07c5a0771189da6fa9ad8139301cf4ff8385b53
+59. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/architect-rendering-contract.md | bytes=19872 | sha256=a62dcc49161e9e26695f92fcad7aaa6b2f9a463e9e83601c49a89cbd6906ffae
+60. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/konnaxion-distribution-contract.md | bytes=26896 | sha256=40db942447b0fd6fb8fa4eaa01164e256c4fc0a8e3b9c4c7073331075d77c579
+61. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/orgo-workflow-contract.md | bytes=26071 | sha256=4e731d48dfc6b7baa487cbcdd9ed343edbca11b98e097ad82fbd4da881456395
+62. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/sentient-resolution-contract.md | bytes=14245 | sha256=16f8a698aa307c314ca70b0fcf7da8cbe350d778258bcb31993c8f58babc2fab
+63. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/downgrade-rollback-policy.md | bytes=31834 | sha256=68bfd17416322c560d63057dee3270e0c3855ec0df07df3fca03d1f644ee5c32
+64. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/key-management-and-trust-roots.md | bytes=24199 | sha256=dc7c0c24e986d3bdb37f442258bb284958dbdb18ca1d522641c7095b21b538ab
+65. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/multi-tenancy-boundaries.md | bytes=21462 | sha256=e43224762570b0a87f8ebd47e2dedd31e820ae5bd94a9bbbab99f4faeb1e4b1f
+66. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/failure-paths-and-resilience.md | bytes=20490 | sha256=daa1c41d09989163a88476fdaec26548c878731a6d878547b4b6b29afcfff07a
+67. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/logging-and-correlation-ids.md | bytes=21269 | sha256=5fa31a29c003bee8eb15e1fd9f1fbd6ec2ad8a39d083322613fa16a0af8b4c3d
+68. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/operational-guidance-template.md | bytes=11284 | sha256=87c1554362da757293d3100a9db4ba179706a90a719ddb3d00279d25699cc0fc
+69. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/release-strategies.md | bytes=21035 | sha256=5e1131a07dac092e88890eb0e409cd586f665c73757efd9fcc2baf73f95c3189
+70. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md | bytes=11847 | sha256=e42d124fe179ed79b4c11e09f0097a693f0f05199477964479994394ded82cfd
+71. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/rdfc/README.md | bytes=16859 | sha256=2a42c4fba2781e85270288f39fec5cd5704c0bf0fc0b06667aa3049ef739b2dd
+72. [reference] [knowledge] README.md | bytes=13736 | sha256=538b0fd843696298c6559d8fc09b7c44ef6ae0bedf6ccd93db2c4a99293e187f
 
 
 ================================================================================================
 FILE: wiki/_Footer.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 4aece1f040dc031123bac9f77fedfab280f272a1f5c1ac5eef5469be4592df86
+CONTENT_BYTES: 528
 ================================================================================================
 
 _Last updated:_ 2026-06-12 · _Kristal Framework Wiki_
@@ -119,7 +121,10 @@ _Last updated:_ 2026-06-12 · _Kristal Framework Wiki_
 
 ================================================================================================
 FILE: wiki/_Sidebar.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 8be56032c3ac91bffea8759b5fdcca0dbd61b678c93784995348acdf6ac454b8
+CONTENT_BYTES: 931
 ================================================================================================
 
 # Kristal Wiki
@@ -170,7 +175,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/Artifact-Authority-Registry.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 7271f2319ebd9aed6d50939a73d3bda1a17e7f41b3bdaf3898e72bcb67fa7078
+CONTENT_BYTES: 2198
 ================================================================================================
 
 # Artifact: Authority Registry
@@ -270,7 +278,10 @@ A consumer typically:
 
 ================================================================================================
 FILE: wiki/Artifact-Exchange.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: df5f41eff341b3075139660ac4c9839676831a914a9824a5b5ac67b46e6e4115
+CONTENT_BYTES: 2310
 ================================================================================================
 
 # Artifact: Exchange
@@ -368,7 +379,10 @@ Reference status is scoped. It does not imply universal truth or universal agree
 
 ================================================================================================
 FILE: wiki/Artifact-Federation-Manifest.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b29b4c7bdebf1725121bf252d755affa1a6ff56c0ad15f2003d87b03e70f32b9
+CONTENT_BYTES: 2046
 ================================================================================================
 
 # Artifact: Federation Manifest
@@ -443,7 +457,10 @@ Reader policies decide which material is visible.
 
 ================================================================================================
 FILE: wiki/Artifact-Runtime-Pack.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 9645808b79a441febceb92bda68a6da4f97359fa5f2a7bb886b07b90b3ba3d84
+CONTENT_BYTES: 2050
 ================================================================================================
 
 # Artifact: Runtime Pack
@@ -530,7 +547,10 @@ A pack may exist and verify technically, but still be unavailable under a deploy
 
 ================================================================================================
 FILE: wiki/Artifact-Shard-Manifest.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 7a134e12b874cd28b710d9983e6ce46f0c9d76268b3baf5a0d764ca8cbb6085a
+CONTENT_BYTES: 1845
 ================================================================================================
 
 # Artifact: Shard Manifest
@@ -600,7 +620,10 @@ Consumers typically:
 
 ================================================================================================
 FILE: wiki/Artifact-Validation-Report.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 5881905d31d810b1e135cbebb5041b8987f2110de06094b179669f64e35152b0
+CONTENT_BYTES: 1798
 ================================================================================================
 
 # Artifact: Validation Report
@@ -691,7 +714,10 @@ Validation Reports make it possible to show readers:
 
 ================================================================================================
 FILE: wiki/Artifacts.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 3167a9d023331b772198258ea022a5f4227a4d095e5301e5165a34af69142007
+CONTENT_BYTES: 2908
 ================================================================================================
 
 # Artifacts
@@ -796,7 +822,10 @@ Reader Policy -> visible/queryable/renderable subset
 
 ================================================================================================
 FILE: wiki/Concepts-and-Mental-Model.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 9b6ba0eb70a3e02fcc55f99276d1548e841532b8775040275f1d1396a9186f1f
+CONTENT_BYTES: 3294
 ================================================================================================
 
 # Concepts & Mental Model
@@ -916,7 +945,10 @@ They do not erase uncertainty, disagreement, fiction, mythology, or scoped valid
 
 ================================================================================================
 FILE: wiki/FAQ.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: a790145fe65c3b2428bb7da739cacf7a987e1f568ede94747cded822c25b366d
+CONTENT_BYTES: 3055
 ================================================================================================
 
 # FAQ
@@ -968,7 +1000,10 @@ Use the technical docs in the main repository:
 
 ================================================================================================
 FILE: wiki/Getting-Started.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b9c1450ab4dccad7867aad6686abaf5e7c90d06f584be535369624110d050b81
+CONTENT_BYTES: 2582
 ================================================================================================
 
 # Getting Started
@@ -1060,7 +1095,10 @@ Use the main repository technical docs:
 
 ================================================================================================
 FILE: wiki/Glossary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 298c513428027508f515f02a461b68cd7704f5cc6aa130ef88334706c6fad82b
+CONTENT_BYTES: 3885
 ================================================================================================
 
 # Glossary
@@ -1147,7 +1185,10 @@ A compiled artifact that may be used for review, research, staging, or collabora
 
 ================================================================================================
 FILE: wiki/Home.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: d5fccddd4745dcd5a4461b8c6ae792f2de234fd7b3e0e1baffd669d6dd510cf7
+CONTENT_BYTES: 2711
 ================================================================================================
 
 # Kristal Framework — Wiki
@@ -1239,7 +1280,10 @@ For exact fields, schemas, conformance requirements, test vectors, and examples,
 
 ================================================================================================
 FILE: wiki/Identity-and-Determinism.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 10bd3ae7550edbc62d5c0171e715465d2715ff8e22516b414aae0eec93ae23f6
+CONTENT_BYTES: 2893
 ================================================================================================
 
 # Identity and Determinism
@@ -1347,7 +1391,10 @@ The following should not change content identity unless a profile explicitly mak
 
 ================================================================================================
 FILE: wiki/Operations-Compatibility.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: ef3829b4e0ecf3cc6e279bd40cae44d1504313a302015ce37802e3b3630da65b
+CONTENT_BYTES: 2191
 ================================================================================================
 
 # Operations: Compatibility
@@ -1436,7 +1483,10 @@ Treat these as breaking unless explicitly version-gated:
 
 ================================================================================================
 FILE: wiki/Operations-Observability-and-Troubleshooting.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 7f3132e064c93378951c28db3f83e39ce21ebe2877f151fc5ee36d412d4be866
+CONTENT_BYTES: 2278
 ================================================================================================
 
 # Operations: Observability & Troubleshooting
@@ -1546,7 +1596,10 @@ Check Runtime Pack materialization and query contract. The pack may not have pre
 
 ================================================================================================
 FILE: wiki/Operations-Release-Strategy.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 69c4140d70be730d86f8fa56375f821ac0a47f387bebcc7828cbcac2e17371fe
+CONTENT_BYTES: 1293
 ================================================================================================
 
 # Operations: Release Strategy
@@ -1629,7 +1682,10 @@ A release is not operationally safe unless the prior known-good activation targe
 
 ================================================================================================
 FILE: wiki/Operations.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 0886acf10e26a9ff816bd60d232b9056ccb83cea7f539109704ce3f5556daecc
+CONTENT_BYTES: 1255
 ================================================================================================
 
 # Operations
@@ -1687,7 +1743,10 @@ Operations should not:
 
 ================================================================================================
 FILE: wiki/Query-Basics.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: c831174f66853b7014a0114232d9a18c644af2ed2cbc0935fa982a144705bbe3
+CONTENT_BYTES: 1439
 ================================================================================================
 
 # Query Basics
@@ -1757,7 +1816,10 @@ Results should keep visible:
 
 ================================================================================================
 FILE: wiki/Query-Pagination-and-Capabilities.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 80b51aeed48ceb708314ea2a0a798148ac196a6b072424fc62441b53083ef72c
+CONTENT_BYTES: 1331
 ================================================================================================
 
 # Query: Pagination & Capabilities
@@ -1823,7 +1885,10 @@ At minimum, returned results should preserve labels needed to understand:
 
 ================================================================================================
 FILE: wiki/Query.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 24696827935e62e165d614f75265571eed738f9b01b248bf7d950cda5fa672ac
+CONTENT_BYTES: 1355
 ================================================================================================
 
 # Query
@@ -1900,7 +1965,10 @@ The query contract declares:
 
 ================================================================================================
 FILE: wiki/Quickstart.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 78b3a91021469bd26ffb41d8a5a5ea6c07226845c70b5daa2455cba7ce55fb56
+CONTENT_BYTES: 2452
 ================================================================================================
 
 # Quickstart
@@ -2030,7 +2098,10 @@ Reader policy determines visibility, not artifact existence.
 
 ================================================================================================
 FILE: wiki/Trust-Authority-and-Signatures.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 03b1aa4019e41884ecafbd30ff714e0ca1a9a41fe5d440a0520f028770673170
+CONTENT_BYTES: 2144
 ================================================================================================
 
 # Trust, Authority & Signatures
@@ -2126,7 +2197,10 @@ Reader policy controls visibility.
 
 ================================================================================================
 FILE: wiki/What-is-Kristal.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: aab0fc4d3cde2e3e289b0f2bf45c518e5052e932544e65f809046b570a4dc04e
+CONTENT_BYTES: 2607
 ================================================================================================
 
 # What is Kristal?
@@ -2224,7 +2298,10 @@ A validated-only policy does not mean “universal truth.” It means visible as
 
 ================================================================================================
 FILE: wiki/Workflow-Activate-Rollback-Downgrade.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 6caba852de43d56b09ea6dfe56dbede271467748db29cab3740598a774cf4434
+CONTENT_BYTES: 1663
 ================================================================================================
 
 # Workflow: Activate, Rollback & Downgrade
@@ -2310,7 +2387,10 @@ Reader policy still applies.
 
 ================================================================================================
 FILE: wiki/Workflow-Build-and-Validate.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: a14f238d13c98ef1187aadc38efbdab30ce7db1f1ffc526576d04916b2e3850b
+CONTENT_BYTES: 2084
 ================================================================================================
 
 # Workflow: Build & Validate
@@ -2413,7 +2493,10 @@ Common outputs:
 
 ================================================================================================
 FILE: wiki/Workflow-Federation-and-Curation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: e71fee57d5523bee0049c4b86b084c9db68483f2416c555a4632528ff9ed0313
+CONTENT_BYTES: 1749
 ================================================================================================
 
 # Workflow: Federation & Curation
@@ -2506,7 +2589,10 @@ For example:
 
 ================================================================================================
 FILE: wiki/Workflow-Publish-and-Distribute.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b48a409981714d4f7caf23dcc385c0741de09cc319aeb15b010552c5a97b8f92
+CONTENT_BYTES: 1772
 ================================================================================================
 
 # Workflow: Publish & Distribute
@@ -2597,7 +2683,10 @@ Konnaxion distribution flows may manage:
 
 ================================================================================================
 FILE: wiki/Workflow-Subsets-Recipes.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 02c617261ccd96e1e33cee525ebb6d2291f2c48f3d5b4ef44cc9bf90875d1a09
+CONTENT_BYTES: 1166
 ================================================================================================
 
 # Workflow: Subsets & Recipes
@@ -2672,7 +2761,10 @@ Subsets may produce:
 
 ================================================================================================
 FILE: wiki/Workflows.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: a7e012eab49b4fc647ea0f9792cde36df7f21d576da02152350b60f186c9cd1d
+CONTENT_BYTES: 804
 ================================================================================================
 
 # Workflows
@@ -2718,7 +2810,10 @@ No workflow should confuse these layers.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 868c13e4207b3b98925576b28e0d2ec730dd6b86ec11fc74ab11d06356e302e9
+CONTENT_BYTES: 31478
 ================================================================================================
 
 # Conformance and Alignment (Kristal v5)
@@ -3986,7 +4081,10 @@ The final invariant is:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 13405e3a454d01fb573eef646aa3a830d273754fad1ef2728db7ea7c918a5fcc
+CONTENT_BYTES: 20791
 ================================================================================================
 
 # Kristals in the Ecosystem: Konnaxion × Orgo × Architect × SenTient
@@ -4448,7 +4546,10 @@ Orgo and Konnaxion remain operational advantages: they provide workflow, distrib
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/plural-validation-and-federated-authority.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 23abec00a9c0080b2cb06b4aa01d2b55721d528ae191a76e4c2e3e2737ac34fd
+CONTENT_BYTES: 23543
 ================================================================================================
 
 # Plural Validation and Federated Authority
@@ -5438,7 +5539,10 @@ This document defines the shared conceptual and normative boundary:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/sharding-and-federation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a8a6448250795810e93102c3452cfd407a774ebe3636db195d186f6628c81285
+CONTENT_BYTES: 22714
 ================================================================================================
 
 # Sharding and Federation
@@ -6324,7 +6428,10 @@ The core Kristal v5 rule is:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/validation-certainty-and-authority.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 880b957e3131f873e310cf5ae6ee174f7388803317c8e615fb47ddc5d1778961
+CONTENT_BYTES: 31234
 ================================================================================================
 
 # Validation, Certainty, and Authority
@@ -7561,7 +7668,10 @@ The following decisions remain open:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/vision-and-scope.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f089bd8040b44255f4e87c19a4f7670221c15bcc51019c33680b3afd5b7b5277
+CONTENT_BYTES: 14352
 ================================================================================================
 
 # Vision and scope (Kristal v5)
@@ -7841,7 +7951,10 @@ Operational patterns such as circuit breakers, DLQs, CQRS framing, canary/blue-g
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 768f6ba8e631a6939eb815a7004a409b1bf8256b5a010c8b2cdec2130074a51c
+CONTENT_BYTES: 19322
 ================================================================================================
 
 # What is Kristal v5?
@@ -8615,7 +8728,10 @@ Kristal v5 exists to make those answers explicit, portable, queryable, and usabl
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a1ba7150fb191072f180a466981814dfce0febc6bd18172f3559507b61f9ba3b
+CONTENT_BYTES: 23605
 ================================================================================================
 
 # Assertion Status and Certainty
@@ -9572,7 +9688,10 @@ Integrity protects artifacts, not ideology.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/authority-recognition.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8866a6734bfb8104e708b923e7bc304a96dcd86c876d505b293b1c64e21cc6c0
+CONTENT_BYTES: 31949
 ================================================================================================
 
 # Authority Recognition
@@ -11124,7 +11243,10 @@ Recognition is not universal truth.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3ddb4d61f65626b20ecfeab50e87fe4654d537db8b7e88b7639e2b2f56220f82
+CONTENT_BYTES: 18295
 ================================================================================================
 
 # 01-core-spec/ids-canonicalization-hashing.md
@@ -11646,7 +11768,10 @@ This document defines only the stable identity, canonicalization, and hashing ru
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bc72aa851ab76e87267909e56fd211bece9f57c48050f280597f9a1cfd93b9d1
+CONTENT_BYTES: 37172
 ================================================================================================
 
 # Kristal v5 Core Specification
@@ -13012,7 +13137,10 @@ It is a structured, portable, verifiable artifact system for knowledge whose sta
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/signatures-trust.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: addfef32fe4a4dc333765d5a7c3873374b95dbddf24148399d21c30300d22915
+CONTENT_BYTES: 24824
 ================================================================================================
 
 # 01-core-spec/signatures-trust.md
@@ -13643,7 +13771,10 @@ The following profile decisions remain open:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1b5a8cee5441750d8be4ea61bb51f591e9aecf9f43ccf6a94a1650c12d62d848
+CONTENT_BYTES: 26224
 ================================================================================================
 
 # Structured Epistemic State
@@ -14908,7 +15039,10 @@ Integrity protects artifacts.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/03-reproducibility/allowed-runtime-pack-policies.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fb6ecb79f8a14959bf01a78d83272b6d6a08e677223b83868d0e38d942dea738
+CONTENT_BYTES: 17660
 ================================================================================================
 
 # Allowed Runtime Pack Policies (Kristal v5)
@@ -15473,7 +15607,10 @@ The purpose is not to guarantee that all data is final, universally true, or max
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/03-reproducibility/deterministic-build-rules.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8e1f51617806527401409df40b583ad305d2950c11224ff80d3afe796e4a3003
+CONTENT_BYTES: 24855
 ================================================================================================
 
 # Deterministic build rules (Kristal v5)
@@ -16074,7 +16211,10 @@ revoked
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/03-reproducibility/reproducibility-acceptance-tests.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e6c1606ec47ad0dc859c7040c3c63dc5adf3d0994ebeb1747c3abd91701b934f
+CONTENT_BYTES: 7664
 ================================================================================================
 
 # Reproducibility Acceptance Tests (Kristal v4)
@@ -16343,7 +16483,10 @@ Failure of any mandatory test blocks release of v3 artifacts.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/03-reproducibility/subset-recipes.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f000a72fcd813af5dc07c5f0e34f36a777b4fb97fd35147cf6eaaf4d3624be53
+CONTENT_BYTES: 24844
 ================================================================================================
 
 # Subset recipes (Kristal v5 reproducibility)
@@ -17359,7 +17502,10 @@ The following example is non-normative.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/04-query/query-contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b5d6dd1ebf797b4413a0342133e3f1d686190e277856536e6355cc5179ca93dc
+CONTENT_BYTES: 23100
 ================================================================================================
 
 # Query Contract
@@ -18097,7 +18243,10 @@ Test fixtures SHOULD include at least:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/04-query/reader-policy-profiles.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 842d34e26275c883facef1587d986f824fefeada8af6027647c7781cc321a54c
+CONTENT_BYTES: 35065
 ================================================================================================
 
 # Reader Policy Profiles
@@ -19577,7 +19726,10 @@ The following decisions remain open:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-jsonld-export.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 98c5c181f1efc9a0eec0977779b6654486069c5a5255a65f2983c96a7b9f2002
+CONTENT_BYTES: 21737
 ================================================================================================
 
 # 05-profiles/profile-jsonld-export.md
@@ -20450,7 +20602,10 @@ Authority, validation, certainty, and reader visibility remain explicit metadata
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-provenance-nanopub-provo.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 70557871cac751431e2e52f50094818686e8b276740db4295af07a035133f9ee
+CONTENT_BYTES: 21643
 ================================================================================================
 
 # Profile: Provenance Packaging (Nanopublication + PROV-O)
@@ -21201,7 +21356,10 @@ The following profile decisions remain open:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-query-tpf-pagination.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e2b5b38c9a202b9c758d5cf431e5e51b4ce091d2d465ac6da8a3091cea98cccb
+CONTENT_BYTES: 17536
 ================================================================================================
 
 # Profile: Query — TPF-like Pagination (Kristal v5)
@@ -21782,7 +21940,10 @@ It guarantees that paginated query behavior is stable, explicit, inspectable, an
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-integrity-rdfc.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: de464e3adc45e57a7b2cb97c71f5ef37f740e44933837cbe4572c63cff92162d
+CONTENT_BYTES: 15351
 ================================================================================================
 
 # Profile: RDF Integrity (RDFC) (Kristal v5)
@@ -22159,7 +22320,10 @@ All epistemic status remains governed by Kristal v5 validation, certainty, autho
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-wdqs-export.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 074f5c4f0ed246458a81cc09c3c28e2208c3f2c6c4652b203b631fe294d49d31
+CONTENT_BYTES: 21797
 ================================================================================================
 
 # Profile: RDF WDQS Export (Kristal v5)
@@ -22974,7 +23138,10 @@ The RDF export is a deterministic projection of selected Kristal artifacts under
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-transparency-log.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 298c5502f2112184f7daf167dfa1b27cdc0608188526c44588265c068ee29272
+CONTENT_BYTES: 23075
 ================================================================================================
 
 # Profile: Transparency Log (Kristal v5)
@@ -23861,7 +24028,10 @@ Transparency logs make Kristal ecosystems more inspectable, accountable, and res
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shacl.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bfefe3b21fe67baecdc4986c1246326e505d502202ce319bb87eec7c957ef360
+CONTENT_BYTES: 15436
 ================================================================================================
 
 # Profile: Validation Reporting (SHACL)
@@ -24330,7 +24500,10 @@ sh:Info      -> INFO
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shex.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d9b2ba5015229c3ff7835467c07c5a0771189da6fa9ad8139301cf4ff8385b53
+CONTENT_BYTES: 16461
 ================================================================================================
 
 # Profile: Validation ShEx
@@ -24981,7 +25154,10 @@ Those questions remain governed by Kristal v5 validation decisions, certainty me
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/06-integration/architect-rendering-contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a62dcc49161e9e26695f92fcad7aaa6b2f9a463e9e83601c49a89cbd6906ffae
+CONTENT_BYTES: 19872
 ================================================================================================
 
 # Architect rendering contract
@@ -25743,7 +25919,10 @@ The core invariant is:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/06-integration/konnaxion-distribution-contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 40db942447b0fd6fb8fa4eaa01164e256c4fc0a8e3b9c4c7073331075d77c579
+CONTENT_BYTES: 26896
 ================================================================================================
 
 # Konnaxion distribution contract (Kristal v5 integration)
@@ -26596,7 +26775,10 @@ Federation-related distribution tests SHOULD verify that Konnaxion:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/06-integration/orgo-workflow-contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4e731d48dfc6b7baa487cbcdd9ed343edbca11b98e097ad82fbd4da881456395
+CONTENT_BYTES: 26071
 ================================================================================================
 
 # Orgo Workflow Contract
@@ -27585,7 +27767,10 @@ Orgo’s responsibility is not to erase those states. Orgo’s responsibility is
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/06-integration/sentient-resolution-contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 16f8a698aa307c314ca70b0fcf7da8cbe350d778258bcb31993c8f58babc2fab
+CONTENT_BYTES: 14245
 ================================================================================================
 
 # 06-integration/sentient-resolution-contract.md
@@ -28097,7 +28282,10 @@ SenTient satisfies this contract if it:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/07-security/downgrade-rollback-policy.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 68bfd17416322c560d63057dee3270e0c3855ec0df07df3fca03d1f644ee5c32
+CONTENT_BYTES: 31834
 ================================================================================================
 
 # Downgrade and Rollback Policy (Kristal v5)
@@ -29006,7 +29194,10 @@ The following profile decisions remain open:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/07-security/key-management-and-trust-roots.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dc7c0c24e986d3bdb37f442258bb284958dbdb18ca1d522641c7095b21b538ab
+CONTENT_BYTES: 24199
 ================================================================================================
 
 # Key Management and Trust Roots (Kristal v5)
@@ -29738,7 +29929,10 @@ Integrity protects artifacts. Authority is plural. Recognition is scoped. Certai
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/07-security/multi-tenancy-boundaries.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e43224762570b0a87f8ebd47e2dedd31e820ae5bd94a9bbbab99f4faeb1e4b1f
+CONTENT_BYTES: 21462
 ================================================================================================
 
 # Multi-tenancy Boundaries (Global Content IDs + Tenant Access Control Layering)
@@ -30320,7 +30514,10 @@ This preserves reproducibility without weakening tenant isolation.
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/08-ops/failure-paths-and-resilience.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: daa1c41d09989163a88476fdaec26548c878731a6d878547b4b6b29afcfff07a
+CONTENT_BYTES: 20490
 ================================================================================================
 
 # Failure Paths and Resilience
@@ -31091,7 +31288,10 @@ If some metadata is unavailable:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/08-ops/logging-and-correlation-ids.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5fa31a29c003bee8eb15e1fd9f1fbd6ec2ad8a39d083322613fa16a0af8b4c3d
+CONTENT_BYTES: 21269
 ================================================================================================
 
 # Logging and correlation IDs (non-normative)
@@ -31952,7 +32152,10 @@ Those are defined by their respective Kristal v5 specifications, profiles, opera
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/08-ops/operational-guidance-template.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 87c1554362da757293d3100a9db4ba179706a90a719ddb3d00279d25699cc0fc
+CONTENT_BYTES: 11284
 ================================================================================================
 
 # Operational guidance template
@@ -32733,7 +32936,10 @@ YYYY-MM-DD:
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/08-ops/release-strategies.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5e1131a07dac092e88890eb0e409cd586f665c73757efd9fcc2baf73f95c3189
+CONTENT_BYTES: 21035
 ================================================================================================
 
 # Release Strategies for Kristal Runtime Packs (Blue/Green, Canary)
@@ -33492,7 +33698,10 @@ Release strategy does not decide what is universally true. It decides which immu
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e42d124fe179ed79b4c11e09f0097a693f0f05199477964479994394ded82cfd
+CONTENT_BYTES: 11847
 ================================================================================================
 
 # JCS Test Vectors (Kristal v5)
@@ -33863,7 +34072,10 @@ This preserves deterministic identity while allowing Kristal v5 to separate arti
 
 ================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/09-test-vectors/rdfc/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2a42c4fba2781e85270288f39fec5cd5704c0bf0fc0b06667aa3049ef739b2dd
+CONTENT_BYTES: 16859
 ================================================================================================
 
 # RDFC Test Vectors and Fixtures
@@ -34571,7 +34783,10 @@ To finalize:
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 538b0fd843696298c6559d8fc09b7c44ef6ae0bedf6ccd93db2c4a99293e187f
+CONTENT_BYTES: 13736
 ================================================================================================
 
 # Kristal docs (v5)

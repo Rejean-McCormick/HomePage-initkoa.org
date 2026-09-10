@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/konnaxion-ashoka-systems-change-dossier
-source_path: C:\mycode\Ashoka
 source_commit: 1f31769e0f5f484bb7a439382b895d28d9595a9d
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 10
 wiki_files: 0
 source_files: 10
@@ -18,30 +16,34 @@ included_files: 10
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 31152
-authority_counts: {"canonical":10}
-generated_at: 2026-09-10T10:45:08-04:00
+authority_counts: {"reference":10}
+content_role_counts: {"knowledge":10}
+generated_at: 2026-09-10T13:04:22-04:00
 files: 10
-content_sha256: 7cd33bee54b895c67de4f7257d0b8e3bad672708d1811e6fd277a42507918b98
+content_sha256: ac9fabf65e7d349ff0c7e6640c01fd1add2b65b496fcaac9bbd476c0d99ada5d
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] ASHOKA_CRITERIA_MAP.md
-02. [canonical] EPISTEMIC_INTEGRITY.md
-03. [canonical] EVIDENCE_AND_LIMITS.md
-04. [canonical] FOUNDER_CASE.md
-05. [canonical] LINKS.md
-06. [canonical] PILOT_AND_PROOF.md
-07. [canonical] PUBLIC_REQUEST_TO_ASHOKA.md
-08. [canonical] PUBLIC_REVIEW_PRECEDENTS.md
-09. [canonical] README.md
-10. [canonical] SYSTEMS_CHANGE_CASE.md
+01. [reference] [knowledge] ASHOKA_CRITERIA_MAP.md | bytes=2494 | sha256=2c530c32d39577ce4d4c21796499ca9059ff39828856dcbeec74e8504c40991e
+02. [reference] [knowledge] EPISTEMIC_INTEGRITY.md | bytes=2038 | sha256=707a4ae51853237d55c04ca6da38ad70c09f351a626155f6d4775bf8bcb2bf81
+03. [reference] [knowledge] EVIDENCE_AND_LIMITS.md | bytes=2187 | sha256=703faf5e245be47c1991d23971c0336edf65500a3135149d7d7cbefa9e952550
+04. [reference] [knowledge] FOUNDER_CASE.md | bytes=3046 | sha256=7f462fedcada2a16dff11b9ef55d1ae856e13cc0b9df4b980a0d0530cbda86c9
+05. [reference] [knowledge] LINKS.md | bytes=1175 | sha256=bc3e0f6807189be32507966e1a6a6ebfd3c37d1c8ba9f36c87054705388a142e
+06. [reference] [knowledge] PILOT_AND_PROOF.md | bytes=1644 | sha256=e356e281915f0d97ae75faaad3fdc7edd2e30b5cd4aaf06dd51b96e88b3f53eb
+07. [reference] [knowledge] PUBLIC_REQUEST_TO_ASHOKA.md | bytes=8030 | sha256=b2979eaad31192ad6badbd3f886c304d3516839e2db9c34b69b803ac0b2458b0
+08. [reference] [knowledge] PUBLIC_REVIEW_PRECEDENTS.md | bytes=2045 | sha256=af31c68c12dd7ff6c717bc5f160196f3d63744b20cdc218182a806a77293c809
+09. [reference] [knowledge] README.md | bytes=5580 | sha256=f3a49998d12c8943967f7edd205f3008b38c058ba9164db27508704b19c4981d
+10. [reference] [knowledge] SYSTEMS_CHANGE_CASE.md | bytes=2913 | sha256=3c3b0eb00574ed1524b225febca195074d4a559b163f9eae2413c4dcbce4cd5c
 
 
 ================================================================================================
 FILE: ASHOKA_CRITERIA_MAP.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2c530c32d39577ce4d4c21796499ca9059ff39828856dcbeec74e8504c40991e
+CONTENT_BYTES: 2494
 ================================================================================================
 
 # Ashoka Criteria Map
@@ -151,7 +153,10 @@ That is the level at which the proposition should be challenged.
 
 ================================================================================================
 FILE: EPISTEMIC_INTEGRITY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 707a4ae51853237d55c04ca6da38ad70c09f351a626155f6d4775bf8bcb2bf81
+CONTENT_BYTES: 2038
 ================================================================================================
 
 # Epistemic Integrity, Provenance & Attribution
@@ -248,7 +253,10 @@ A public good may spread freely while preserving honest lineage.
 
 ================================================================================================
 FILE: EVIDENCE_AND_LIMITS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 703faf5e245be47c1991d23971c0336edf65500a3135149d7d7cbefa9e952550
+CONTENT_BYTES: 2187
 ================================================================================================
 
 # Evidence, Maturity & Limits
@@ -337,7 +345,10 @@ It requires independent use.
 
 ================================================================================================
 FILE: FOUNDER_CASE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7f462fedcada2a16dff11b9ef55d1ae856e13cc0b9df4b980a0d0530cbda86c9
+CONTENT_BYTES: 3046
 ================================================================================================
 
 # The Entrepreneur / Founder Case
@@ -455,7 +466,10 @@ The next stage must therefore prove:
 
 ================================================================================================
 FILE: LINKS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bc3e0f6807189be32507966e1a6a6ebfd3c37d1c8ba9f36c87054705388a142e
+CONTENT_BYTES: 1175
 ================================================================================================
 
 # Canonical Links
@@ -496,7 +510,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: PILOT_AND_PROOF.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e356e281915f0d97ae75faaad3fdc7edd2e30b5cd4aaf06dd51b96e88b3f53eb
+CONTENT_BYTES: 1644
 ================================================================================================
 
 # Pilot & Independent Proof
@@ -582,7 +599,10 @@ real contribution
 
 ================================================================================================
 FILE: PUBLIC_REQUEST_TO_ASHOKA.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b2979eaad31192ad6badbd3f886c304d3516839e2db9c34b69b803ac0b2458b0
+CONTENT_BYTES: 8030
 ================================================================================================
 
 # Public Request for Support — Addressed to Ashoka
@@ -806,7 +826,10 @@ https://github.com/Rejean-McCormick
 
 ================================================================================================
 FILE: PUBLIC_REVIEW_PRECEDENTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: af31c68c12dd7ff6c717bc5f160196f3d63744b20cdc218182a806a77293c809
+CONTENT_BYTES: 2045
 ================================================================================================
 
 # Public Review Precedents
@@ -897,7 +920,10 @@ The common rule is:
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f3a49998d12c8943967f7edd205f3008b38c058ba9164db27508704b19c4981d
+CONTENT_BYTES: 5580
 ================================================================================================
 
 # Konnaxion — Systems Change & Public Support Dossier
@@ -1053,7 +1079,10 @@ That is the work for which I am asking support.
 
 ================================================================================================
 FILE: SYSTEMS_CHANGE_CASE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3c3b0eb00574ed1524b225febca195074d4a559b163f9eae2413c4dcbce4cd5c
+CONTENT_BYTES: 2913
 ================================================================================================
 
 # The Systems-Change Case

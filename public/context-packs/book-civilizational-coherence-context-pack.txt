@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Book-Civilizational_Coherence
-source_path: C:\mycode\Books\Civilisational_Coherence
 source_commit: 9c3f25ea6e1f74d6b4f66445a8a645a258f18cd5
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 144
 wiki_files: 0
 source_files: 144
@@ -18,154 +16,155 @@ included_files: 139
 excluded_files: 5
 duplicate_files: 5
 content_bytes: 3594231
-authority_counts: {"canonical":139}
-generated_at: 2026-09-10T10:45:07-04:00
+authority_counts: {"reference":139}
+content_role_counts: {"knowledge":139}
+generated_at: 2026-09-10T13:04:22-04:00
 files: 139
-content_sha256: 53aa47116f2bbbf6859ba96d600965949ead87949b026d3a96ff770546160671
+content_sha256: 59a4f6b4c545117e2da309281c9edd6160bd811fff1dbba7d0dda5a920944ad6
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-001. [canonical] architecture/ARCHITECTURAL_GENESIS_AND_GENERALIZATION_METHOD.md
-002. [canonical] architecture/CENTRALITY_AND_ARTICULATION_HUB.md
-003. [canonical] architecture/CORPUS_GENESIS_AND_CONVERGENCE.md
-004. [canonical] architecture/ECOSYSTEM_SOURCE_REGISTRY.md
-005. [canonical] architecture/IMPLEMENTATION_SOURCE_POLICY.md
-006. [canonical] architecture/KINTSUGI_ARTICULATION_MODEL.md
-007. [canonical] architecture/MODULE_INDEX.md
-008. [canonical] architecture/open-good/OPEN_GOOD.md
-009. [canonical] architecture/RIGHTS_AND_REPLICATION_MATRIX.md
-010. [canonical] book-definition/CHANGELOG_V2.md
-011. [canonical] book-definition/chapter_briefs/ch01.md
-012. [canonical] book-definition/chapter_briefs/ch02.md
-013. [canonical] book-definition/chapter_briefs/ch03.md
-014. [canonical] book-definition/chapter_briefs/ch04.md
-015. [canonical] book-definition/chapter_briefs/ch05.md
-016. [canonical] book-definition/chapter_briefs/ch06.md
-017. [canonical] book-definition/chapter_briefs/ch07.md
-018. [canonical] book-definition/chapter_briefs/ch08.md
-019. [canonical] book-definition/chapter_briefs/ch09.md
-020. [canonical] book-definition/chapter_briefs/ch10.md
-021. [canonical] book-definition/chapter_briefs/ch11.md
-022. [canonical] book-definition/chapter_briefs/ch12.md
-023. [canonical] book-definition/chapter_briefs/ch13.md
-024. [canonical] book-definition/chapter_briefs/ch14.md
-025. [canonical] book-definition/chapter_briefs/ch15.md
-026. [canonical] book-definition/chapter_briefs/ch16.md
-027. [canonical] book-definition/chapter_briefs/ch17.md
-028. [canonical] book-definition/chapter_briefs/ch18.md
-029. [canonical] book-definition/chapter_briefs/ch19.md
-030. [canonical] book-definition/chapter_briefs/ch20.md
-031. [canonical] book-definition/chapter_briefs/ch21.md
-032. [canonical] book-definition/chapter_briefs/ch22.md
-033. [canonical] book-definition/chapter_briefs/ch23.md
-034. [canonical] book-definition/chapter_briefs/ch24.md
-035. [canonical] book-definition/chapter_briefs/ch25.md
-036. [canonical] book-definition/chapters/ch01.md
-037. [canonical] book-definition/chapters/ch02.md
-038. [canonical] book-definition/chapters/ch03.md
-039. [canonical] book-definition/chapters/ch04.md
-040. [canonical] book-definition/chapters/ch05.md
-041. [canonical] book-definition/chapters/ch06.md
-042. [canonical] book-definition/chapters/ch07.md
-043. [canonical] book-definition/chapters/ch08.md
-044. [canonical] book-definition/chapters/ch09.md
-045. [canonical] book-definition/chapters/ch10.md
-046. [canonical] book-definition/chapters/ch11.md
-047. [canonical] book-definition/chapters/ch12.md
-048. [canonical] book-definition/chapters/ch13.md
-049. [canonical] book-definition/chapters/ch14.md
-050. [canonical] book-definition/chapters/ch15.md
-051. [canonical] book-definition/chapters/ch16.md
-052. [canonical] book-definition/chapters/ch17.md
-053. [canonical] book-definition/chapters/ch18.md
-054. [canonical] book-definition/chapters/ch19.md
-055. [canonical] book-definition/chapters/ch20.md
-056. [canonical] book-definition/chapters/ch21.md
-057. [canonical] book-definition/chapters/ch22.md
-058. [canonical] book-definition/chapters/ch23.md
-059. [canonical] book-definition/chapters/ch24.md
-060. [canonical] book-definition/chapters/ch25.md
-061. [canonical] book-definition/conclusion/00_CONCLUSION_SPEC.md
-062. [canonical] book-definition/core/00_AI_AUTHOR_OPERATING_MANUAL.md
-063. [canonical] book-definition/core/00_CANONICAL_STATE.md
-064. [canonical] book-definition/core/01_BOOK_CHARTER.md
-065. [canonical] book-definition/core/02_EDITORIAL_CONTRACT.md
-066. [canonical] book-definition/core/03_EPISTEMIC_PROTOCOL.md
-067. [canonical] book-definition/core/04_STYLE_GUIDE.md
-068. [canonical] book-definition/core/05_CANONICAL_CONCEPTS.md
-069. [canonical] book-definition/core/06_CANONICAL_FORMULAS.md
-070. [canonical] book-definition/core/07_KOA_IMPLEMENTATION_BOUNDARIES.md
-071. [canonical] book-definition/core/08_NARRATIVE_COHERENCE_AND_SURREAL.md
-072. [canonical] book-definition/core/09_CASE_REGISTRY.md
-073. [canonical] book-definition/core/10_CONTINUITY_MAP.md
-074. [canonical] book-definition/core/11_LENGTH_AND_COMPRESSION_POLICY.md
-075. [canonical] book-definition/core/12_AI_WRITING_PROTOCOL.md
-076. [canonical] book-definition/core/13_NAMING_AND_TERMINOLOGY.md
-077. [canonical] book-definition/core/14_SOURCE_AND_VERSION_POLICY.md
-078. [canonical] book-definition/core/15_WHOLE_BOOK_VALIDATION_CHECKLIST.md
-079. [canonical] book-definition/core/16_PROMPT_TEMPLATE_WRITE_CHAPTER.md
-080. [canonical] book-definition/core/17_CANONICAL_INVARIANTS.md
-081. [canonical] book-definition/core/18_DECISION_AND_IDEA_STATUS_REGISTRY.md
-082. [canonical] book-definition/core/19_TRACEABILITY_MATRIX.md
-083. [canonical] book-definition/core/20_CLAIM_LEDGER.md
-084. [canonical] book-definition/core/21_RISK_REGISTER.md
-085. [canonical] book-definition/core/22_CENTRALITY_AND_ARTICULATION_HUB.md
-086. [canonical] book-definition/intro/00_INTRODUCTION_SOURCE_SPEC.md
-087. [canonical] book-definition/intro/01_CURRENT_ALIGNMENT_PATCH.md
-088. [canonical] book-definition/intro/02_INTRODUCTION_BRIEF.md
-089. [canonical] book-definition/MANIFEST.md
-090. [canonical] book-definition/meta/VALIDATION_REPORT_V1.md
-091. [canonical] book-definition/parts/part_1.md
-092. [canonical] book-definition/parts/part_2.md
-093. [canonical] book-definition/parts/part_3.md
-094. [canonical] book-definition/parts/part_4.md
-095. [canonical] book-definition/parts/part_5.md
-096. [canonical] book-definition/parts/part_6.md
-097. [canonical] book-definition/README.md
-098. [canonical] book-definition/series/00_COMPANION_BOOK_STRATEGY.md
-099. [canonical] book-definition/VALIDATION_REPORT.md
-100. [canonical] narrative/fiction/CIVCOHE_ALIGNMENT.md
-101. [canonical] narrative/fiction/external/F0018_colin_row.md
-102. [canonical] narrative/fiction/FICTION_REGISTRY.md
-103. [canonical] narrative/fiction/FICTION_WORK_TEMPLATE.md
-104. [canonical] narrative/fiction/HARMONIZATION_UPDATE_2026-08-17.md
-105. [canonical] narrative/fiction/INGEST_NOTES_2026-08-17.md
-106. [canonical] narrative/fiction/README.md
-107. [canonical] narrative/fiction/SOURCE_MANIFEST.md
-108. [canonical] narrative/fiction/sources/F0001_lile_revasseur/King Klown et l'asile v2 (7)(3).md
-109. [canonical] narrative/fiction/sources/F0002_king_klown_kronicles/King Klown Kronicles v3.docx.md
-110. [canonical] narrative/fiction/sources/F0003_konvergence/Konvergence book v4.md
-111. [canonical] narrative/fiction/sources/F0009_la_machine_a_rires/La Machine #U00e0 rires #U2014 Paroles compil#U00e9es.md
-112. [canonical] narrative/fiction/sources/F0009_la_machine_a_rires/La Machine #U00e0 rires #U2014 Pr#U00e9sentation compl#U00e8te de l#U2019album.md
-113. [canonical] narrative/fiction/sources/F0010_last_laughing_engine/The Last Laughing Engine #U2014 Paroles et styles compil#U00e9s.md
-114. [canonical] narrative/fiction/sources/F0016_hacking_reality/Hacking Reality_ practical guide for the next Christ_26-05-2026_17_15_42 (1)(2).md
-115. [canonical] narrative/fiction/sources/F0017_plateforme_connaissance/Livre Plateforme de la connaissance v2.docx (1).md
-116. [canonical] narrative/fiction/VALIDATION_REPORT.md
-117. [canonical] narrative/README.md
-118. [canonical] practice/CIVIC_RESILIENCE_DRILLS.md
-119. [canonical] practice/CORPUS_AUTONOMY.md
-120. [canonical] practice/EPISTEMIC_RESILIENCE_DRILLS.md
-121. [canonical] practice/FOUNDER_FALLIBILITY.md
-122. [canonical] practice/PATTERN_REGISTRY.md
-123. [canonical] practice/README.md
-124. [canonical] README.md
-125. [canonical] research/SOURCE_LEDGER.md
-126. [canonical] RIGHTS.md
-127. [canonical] scenarios/crisis/SCN-CRISIS-001-hostage-response.md
-128. [canonical] scenarios/culture/SCN-CULTURE-001-fictional-universe-remix.md
-129. [canonical] scenarios/education/SCN-EDU-001-nain-remote-multilingual-school.md
-130. [canonical] scenarios/governance/SCN-GOV-001-tattoo-policy-resistance-drill.md
-131. [canonical] scenarios/healthcare/SCN-HEALTH-001-multilingual-hospital.md
-132. [canonical] scenarios/INDEX.md
-133. [canonical] scenarios/knowledge/SCN-KNOW-001-unknown-contributor-kristall.md
-134. [canonical] scenarios/knowledge/SCN-KNOW-002-flat-earth-kristal.md
-135. [canonical] scenarios/legacy/LEGACY_SCENARIO_MIGRATION.md
-136. [canonical] scenarios/PATTERN_LIBRARY.md
-137. [canonical] scenarios/README.md
-138. [canonical] scenarios/SCENARIO_SCHEMA.md
-139. [canonical] validation/implementation/IMPLEMENTATION_STATUS_MATRIX.md
+001. [reference] [knowledge] architecture/ARCHITECTURAL_GENESIS_AND_GENERALIZATION_METHOD.md | bytes=8386 | sha256=e299e05fe0b78c4f242bae8175755f467fba3bf5d050742a02ca7d0306b186d6
+002. [reference] [knowledge] architecture/CENTRALITY_AND_ARTICULATION_HUB.md | bytes=3696 | sha256=cba89531d7f32ff8bcd63be950e4639e03a5976be63a1c6417127002f5dc7f2b
+003. [reference] [knowledge] architecture/CORPUS_GENESIS_AND_CONVERGENCE.md | bytes=3688 | sha256=f0dbd41f4120e403455240a8deca48856999239c1ac6aee33b5b355b5760b25a
+004. [reference] [knowledge] architecture/ECOSYSTEM_SOURCE_REGISTRY.md | bytes=5128 | sha256=2dbdbd7ae8385cb55b0fae474003713a0f9ff1bfc41ec64a330586b80e25c5af
+005. [reference] [knowledge] architecture/IMPLEMENTATION_SOURCE_POLICY.md | bytes=2395 | sha256=c1c2074fc8ee6387385e8528206b0c3707d900edc699f61630201a217f00524c
+006. [reference] [knowledge] architecture/KINTSUGI_ARTICULATION_MODEL.md | bytes=2175 | sha256=f32543c6ac934f16675775edeea594f867b67bf718ce4011de327366bb25f1cb
+007. [reference] [knowledge] architecture/MODULE_INDEX.md | bytes=3934 | sha256=5d59967a46e794d166040c50698e163d86ad4be9ac806735e14e0408e6ec7c45
+008. [reference] [knowledge] architecture/open-good/OPEN_GOOD.md | bytes=3120 | sha256=a9de21c80c95898519071f4843505b8f895dd025ce8fb9bc3fec52ecf47f23ae
+009. [reference] [knowledge] architecture/RIGHTS_AND_REPLICATION_MATRIX.md | bytes=2870 | sha256=3e470ec7f826e07c0ac9b2f2551710902d9db49fb26e3dc007d00b4d05ab576e
+010. [reference] [knowledge] book-definition/CHANGELOG_V2.md | bytes=3811 | sha256=b9518ba34f1c56472b43283efcda7bb3ae825730693626088e5958ba097a6090
+011. [reference] [knowledge] book-definition/chapter_briefs/ch01.md | bytes=2311 | sha256=8883b091acda09b099629815751a40963b46444938c0b49a3f79b9d137532931
+012. [reference] [knowledge] book-definition/chapter_briefs/ch02.md | bytes=2534 | sha256=b8e10e41028e53998568abe74951ec56180efcb6d2fa7d301dc28dbb54d0905f
+013. [reference] [knowledge] book-definition/chapter_briefs/ch03.md | bytes=2013 | sha256=54f97a1988a8ee984acd4e896d81c69c783afa49b817da058f9b7be15199051d
+014. [reference] [knowledge] book-definition/chapter_briefs/ch04.md | bytes=2567 | sha256=1cf8f795ea31eb78c71e7dc7e2413826cc5ca23fc8dbab42cf57b7bb863a064e
+015. [reference] [knowledge] book-definition/chapter_briefs/ch05.md | bytes=2062 | sha256=9b92454593fc85be27dc23099f5e4784e5ab6eefb4f08d47e41dfef7fd31552f
+016. [reference] [knowledge] book-definition/chapter_briefs/ch06.md | bytes=2217 | sha256=3213042cb0f8af12892b668399439fef3c12f074ea87db00e11b8332d751ab21
+017. [reference] [knowledge] book-definition/chapter_briefs/ch07.md | bytes=2165 | sha256=071a5bd68956a6fe3ba8a94e65d69347f8df121dd8ce8719f4cbcb64ccc7e075
+018. [reference] [knowledge] book-definition/chapter_briefs/ch08.md | bytes=2556 | sha256=743d82a546fcbc0ee12ee0badddfff2de6dda3821cea7675056d1628f6c902ed
+019. [reference] [knowledge] book-definition/chapter_briefs/ch09.md | bytes=2103 | sha256=b3bcfa3c75fee21e1694410b1ac0d824494283ecf462194cd88b4d9dc497fed0
+020. [reference] [knowledge] book-definition/chapter_briefs/ch10.md | bytes=2179 | sha256=c86cefd96b79ea91cbb35f26e390d015049c449d93932c9af199fec3012cdbc6
+021. [reference] [knowledge] book-definition/chapter_briefs/ch11.md | bytes=2183 | sha256=3e2b9eb60f020e3f716975793420f402553a23c52ebaea86afcdad51221a9941
+022. [reference] [knowledge] book-definition/chapter_briefs/ch12.md | bytes=2253 | sha256=3070c4335e9e0f0315ca9da41b37467114e910d13abdbf23e6abecbf4848acd1
+023. [reference] [knowledge] book-definition/chapter_briefs/ch13.md | bytes=2221 | sha256=20f9bba0c0d6439ffd260cf03fe59e89001f41ca03eb04f4d87402a8577922ed
+024. [reference] [knowledge] book-definition/chapter_briefs/ch14.md | bytes=2529 | sha256=af4ed7bd564001df1f4e51f731d56feb70c024a9133647c49571df89dbd3fdf0
+025. [reference] [knowledge] book-definition/chapter_briefs/ch15.md | bytes=2186 | sha256=b2a44eb5372386f0d6d9611d5a23ab81aeeab3c1db496b68deb53b693d5a44bd
+026. [reference] [knowledge] book-definition/chapter_briefs/ch16.md | bytes=2242 | sha256=079de9debe51e0a0703f59de8ec1ecc2172a5fa933353ee622bbc483027331a4
+027. [reference] [knowledge] book-definition/chapter_briefs/ch17.md | bytes=2329 | sha256=972cb5fd22f05e9a447264a09d9e7a2a0d3220323f96ea8cc931c271a22ad138
+028. [reference] [knowledge] book-definition/chapter_briefs/ch18.md | bytes=2130 | sha256=41d87eb7f7e964b40102541d7d3ae5e496445e3fb977c4b244144a1bd7dedcfd
+029. [reference] [knowledge] book-definition/chapter_briefs/ch19.md | bytes=2539 | sha256=1ba728cbe8cfbdc1b88e366860179751fe20de877faf6763ba27c7ae967cb4e0
+030. [reference] [knowledge] book-definition/chapter_briefs/ch20.md | bytes=2118 | sha256=44b57ecf009c65c117d61f0653ab0f6f3587ac0d2448cede4e783d5efd34e593
+031. [reference] [knowledge] book-definition/chapter_briefs/ch21.md | bytes=2226 | sha256=47d8172005843a77fc5785ff37ac6927e2b7e13cc1cee5edbc1359a73d37dc1f
+032. [reference] [knowledge] book-definition/chapter_briefs/ch22.md | bytes=2140 | sha256=c1d259872431192e6cc0ca9c5fbee8da1cc8f1a2ac352c271428ba87df967ff1
+033. [reference] [knowledge] book-definition/chapter_briefs/ch23.md | bytes=2560 | sha256=907cd1c52e54f8167fd0a30aa471493a8b3914bd5d72427b87ad90dd3daabc1a
+034. [reference] [knowledge] book-definition/chapter_briefs/ch24.md | bytes=2105 | sha256=3c4832c1a69178cbf9161773f33958f64f8521f52f699a562f502726ee50f137
+035. [reference] [knowledge] book-definition/chapter_briefs/ch25.md | bytes=2500 | sha256=704ce0a79fadd1e060685d46d4af5438c4490f946fac301c4a0d013e99efb214
+036. [reference] [knowledge] book-definition/chapters/ch01.md | bytes=23914 | sha256=31552741bf990d60aaabbd64cd3f1822c3b129ee5df8ede4f17552ec4717536a
+037. [reference] [knowledge] book-definition/chapters/ch02.md | bytes=29177 | sha256=8c6eca2769744d8cbaefa89b9e8333fc7cfbfcb3736a58dabc9b881d30e5fe24
+038. [reference] [knowledge] book-definition/chapters/ch03.md | bytes=29324 | sha256=e4a9873798853a00967ccbe4b77a47881a3f6d73c9616fc217968c272cca171a
+039. [reference] [knowledge] book-definition/chapters/ch04.md | bytes=34817 | sha256=04b90f94fd225f4b31ba44ced5392260fc413727a0e02f920817309003c69d5e
+040. [reference] [knowledge] book-definition/chapters/ch05.md | bytes=32989 | sha256=76c6cc890bf54eafd711d4965e870d9bcbf61761355eeac81333dce28d0b8558
+041. [reference] [knowledge] book-definition/chapters/ch06.md | bytes=37125 | sha256=e6fa084f8a8d208367915f532f97dbf44d8df3c8df78652e38b8666a0651a918
+042. [reference] [knowledge] book-definition/chapters/ch07.md | bytes=38938 | sha256=d2ee705e3d97d956c4d512473622bc959fa16f4da98f466f10cc666a562b851a
+043. [reference] [knowledge] book-definition/chapters/ch08.md | bytes=50359 | sha256=dccc6b679dc5aef81a28966e4faaaaad546e8e8d5dea003369b5cde86b79a848
+044. [reference] [knowledge] book-definition/chapters/ch09.md | bytes=39712 | sha256=5f163d943524d0d69af2060350f804896f241281d0bac90fa5383d5221bcae2a
+045. [reference] [knowledge] book-definition/chapters/ch10.md | bytes=41204 | sha256=b5e88c89b49b6fe758b046f9cbe60e865b567d36d94f368f62fda29e0be996ff
+046. [reference] [knowledge] book-definition/chapters/ch11.md | bytes=45144 | sha256=e71e60a270a3dd75c6e804ea1c12090d29f8da501954b25cc1a8db18a78ff0f8
+047. [reference] [knowledge] book-definition/chapters/ch12.md | bytes=51581 | sha256=c682e6d65aebd3ca6d963022bf1e15df96b307a969bf0c6b5960c8aff33f743e
+048. [reference] [knowledge] book-definition/chapters/ch13.md | bytes=50970 | sha256=e4f812aeb93dde070f4843163c73727aefb72cbf1800aba169e637db481278cd
+049. [reference] [knowledge] book-definition/chapters/ch14.md | bytes=49284 | sha256=9f2d3f3939c3cb3365b974d6f8bebdaa5f73ecec5a4e8988ef919497d58d8fa0
+050. [reference] [knowledge] book-definition/chapters/ch15.md | bytes=61517 | sha256=226bbde513ee9cefd7c8f123cc6a60cac826f653868159a09ce3d5a1539d3b7d
+051. [reference] [knowledge] book-definition/chapters/ch16.md | bytes=70658 | sha256=b3ba73862fe55ec3a1c61389c3a53dc8c90f7eafa19e30de464e5c11d987baa3
+052. [reference] [knowledge] book-definition/chapters/ch17.md | bytes=66391 | sha256=28c9199a0dc8b6997cd1f83b271deda188c752f22129bd14e0f73ef873cd01c0
+053. [reference] [knowledge] book-definition/chapters/ch18.md | bytes=66023 | sha256=46b65fee9e0d4099da46a82d4a53f0166e34953ea8a9c2cdc59dc586e42ff8d5
+054. [reference] [knowledge] book-definition/chapters/ch19.md | bytes=71934 | sha256=cd6fc6f8f814f1f87a263259ebee083a9c2d53735090035bc7640490250f1866
+055. [reference] [knowledge] book-definition/chapters/ch20.md | bytes=67810 | sha256=7295a3131d181e37a1ae2750024ac71a7d081e0c94fb87ecb2ebc4f820894be9
+056. [reference] [knowledge] book-definition/chapters/ch21.md | bytes=87595 | sha256=6befe1f7969f31f14f54e0843049a0b46d2d9b193fbbff2a0fd9d9f7247ec30d
+057. [reference] [knowledge] book-definition/chapters/ch22.md | bytes=78244 | sha256=12752749c37993dd8680f16eb024bca94e824f82352ee4401b2fde1fba32bacc
+058. [reference] [knowledge] book-definition/chapters/ch23.md | bytes=87782 | sha256=2d9bd77d47c63faa4ccccfc37e4a795232da53285e28d3a402d7acca100df8db
+059. [reference] [knowledge] book-definition/chapters/ch24.md | bytes=93687 | sha256=2fa4384d98e2c0747b1b5c014d9278844990ed59f251214be2f11efb736241b5
+060. [reference] [knowledge] book-definition/chapters/ch25.md | bytes=121181 | sha256=4e0ce55ccb82f1a9fb55df29d9a9e6ba6d7e8f0f1e078310f62a857b24df7e00
+061. [reference] [knowledge] book-definition/conclusion/00_CONCLUSION_SPEC.md | bytes=4907 | sha256=549f7328d26ed3d77351a79943fd156b8bef81ab678704b7fe2e85be5f2dca80
+062. [reference] [knowledge] book-definition/core/00_AI_AUTHOR_OPERATING_MANUAL.md | bytes=9742 | sha256=7a1bd64c39bb001a39024eb81c78099b3728b35c07fcbf4bdd0f64f8c0c30d0f
+063. [reference] [knowledge] book-definition/core/00_CANONICAL_STATE.md | bytes=16441 | sha256=7636c15417d5418b8add09b863bc788524c4ee37672a1238ae620b7facd7bca1
+064. [reference] [knowledge] book-definition/core/01_BOOK_CHARTER.md | bytes=7187 | sha256=0a56dfbad4f2d0eeda027573d45a6ecd4834e1dd86279ee4a60e5fc6b3904512
+065. [reference] [knowledge] book-definition/core/02_EDITORIAL_CONTRACT.md | bytes=6693 | sha256=e59841a322c7b3cdb5a595b66ffa5b91b033492397a0ff5658199d2725040ba3
+066. [reference] [knowledge] book-definition/core/03_EPISTEMIC_PROTOCOL.md | bytes=4747 | sha256=918cb2fe221cb772d3532cdf267350e7eeed8e55edaedb81486e2e43c15ef74e
+067. [reference] [knowledge] book-definition/core/04_STYLE_GUIDE.md | bytes=3215 | sha256=36e5d033d94311bb876e7329faf83c829f0822d2a53241622b296385cf9d8c1f
+068. [reference] [knowledge] book-definition/core/05_CANONICAL_CONCEPTS.md | bytes=14348 | sha256=729aea41725873aa937db514c21465d11f1144f1690fd104b1036dec2bdb174c
+069. [reference] [knowledge] book-definition/core/06_CANONICAL_FORMULAS.md | bytes=5668 | sha256=19875cd7509f6c5e0c8f20e85e7161539b6a3145cae02ae0b85830bad82687e9
+070. [reference] [knowledge] book-definition/core/07_KOA_IMPLEMENTATION_BOUNDARIES.md | bytes=9125 | sha256=8ee76f352ffffaf68ac71a269c29ee7bb86c7f2f6702667bebec1191d7a15700
+071. [reference] [knowledge] book-definition/core/08_NARRATIVE_COHERENCE_AND_SURREAL.md | bytes=11630 | sha256=72dbfb79903dfb77a3e2d4e415a5b33b6ac7d36cdf2bb6d34dba663ec7e53012
+072. [reference] [knowledge] book-definition/core/09_CASE_REGISTRY.md | bytes=4931 | sha256=7a72e8132094c1fe07df2cb63bbecab76195fc7c76bff2b5bd90da03fbcc7ef1
+073. [reference] [knowledge] book-definition/core/10_CONTINUITY_MAP.md | bytes=5299 | sha256=afd4a7cd35adf73e3c868bcd22b4faeb1de23b094473d224b83c85570f83de67
+074. [reference] [knowledge] book-definition/core/11_LENGTH_AND_COMPRESSION_POLICY.md | bytes=2971 | sha256=aff13c519642baa583b999628a3c0ca2d8f2c1fce85a2329bbfa41a7f8213d85
+075. [reference] [knowledge] book-definition/core/12_AI_WRITING_PROTOCOL.md | bytes=3522 | sha256=3da2bc3036e56e8bf308917840676d4d176ae10d428b1aba8431e1923b3e7aa0
+076. [reference] [knowledge] book-definition/core/13_NAMING_AND_TERMINOLOGY.md | bytes=3582 | sha256=2d6a59a474c05b5f157668ba618db0254b782a3fa8062cf7a9092f7af8363d9c
+077. [reference] [knowledge] book-definition/core/14_SOURCE_AND_VERSION_POLICY.md | bytes=4728 | sha256=8616ba074991525547105fa661c1e00b4697882df74df9ddccdd06e591820e1c
+078. [reference] [knowledge] book-definition/core/15_WHOLE_BOOK_VALIDATION_CHECKLIST.md | bytes=5126 | sha256=bf8a8a24b90c31deb69bfd9305c66c3519c78e15bedb187e164be310e9ec672e
+079. [reference] [knowledge] book-definition/core/16_PROMPT_TEMPLATE_WRITE_CHAPTER.md | bytes=1796 | sha256=876d29d01cc764e5a68cb3454c7ef3bd81fa46cbda10b56bbd7697c44073d292
+080. [reference] [knowledge] book-definition/core/17_CANONICAL_INVARIANTS.md | bytes=5894 | sha256=d30b088b6b7027ffe0f6d66c4a40de98944983c2c0bcfac891723862c27b6594
+081. [reference] [knowledge] book-definition/core/18_DECISION_AND_IDEA_STATUS_REGISTRY.md | bytes=8449 | sha256=be739f85405db0dd926026803743998f53dc78b96345c6fb24e748611ea271d9
+082. [reference] [knowledge] book-definition/core/19_TRACEABILITY_MATRIX.md | bytes=5879 | sha256=82aa02a6439deb1d403eb00b8c3437c1e8a8cc31a76f66d7b4be5b522e1da0ae
+083. [reference] [knowledge] book-definition/core/20_CLAIM_LEDGER.md | bytes=7010 | sha256=05855cbba87078a1a3dcd76c3fe1344c5204d84083e2de61e9dd1ede79b0e6bf
+084. [reference] [knowledge] book-definition/core/21_RISK_REGISTER.md | bytes=6625 | sha256=c12cfafaff4be35db79f2a01ef3a29add97d322fcb38ce15b21197d2595b4f54
+085. [reference] [knowledge] book-definition/core/22_CENTRALITY_AND_ARTICULATION_HUB.md | bytes=9825 | sha256=de5f7b659ad47f9485b463b8fc16644206a71529fff0a8b76b7d4881176ea211
+086. [reference] [knowledge] book-definition/intro/00_INTRODUCTION_SOURCE_SPEC.md | bytes=64530 | sha256=a99f1b5c2d266aee935231589e854f66ee6007820c0634422b8b265a405ebb10
+087. [reference] [knowledge] book-definition/intro/01_CURRENT_ALIGNMENT_PATCH.md | bytes=2630 | sha256=adf77f8da3ded9f5622fb1fbf07dc7e529ba3a440176e7dd66366a6526332587
+088. [reference] [knowledge] book-definition/intro/02_INTRODUCTION_BRIEF.md | bytes=2463 | sha256=bf3a10738cf0a817db73672ce63c45ee75c11d64859edf182b07b1b4829b447e
+089. [reference] [knowledge] book-definition/MANIFEST.md | bytes=4296 | sha256=350c63c6a3d8675fc9e3564da002c693550e896f11b045571f332411b018519d
+090. [reference] [knowledge] book-definition/meta/VALIDATION_REPORT_V1.md | bytes=1769 | sha256=e36a8ed50f267be559cb3596b1c1c10d8534a25337084b9e44e7ffab8355c531
+091. [reference] [knowledge] book-definition/parts/part_1.md | bytes=1632 | sha256=6b6c0c2d0fa911204d014351a61c2fa2a066761fb046f6ef9857ff1b0864a20d
+092. [reference] [knowledge] book-definition/parts/part_2.md | bytes=1494 | sha256=bd77ac2146258325a56002ae75f826f859192dc3f4cfd98950f1d708a033f7fb
+093. [reference] [knowledge] book-definition/parts/part_3.md | bytes=1483 | sha256=4466a92aab4a9b4ae5144d7660c003fc9ec671e7e755aa990def461fd99671ce
+094. [reference] [knowledge] book-definition/parts/part_4.md | bytes=1543 | sha256=e859cb28cb2084e12ff314fed0bfa535c83cec3d547639ffe98442c86cf7a9c9
+095. [reference] [knowledge] book-definition/parts/part_5.md | bytes=1726 | sha256=fbd6b35cd390d9048f97395237b49a716ce27bb637b48a43be9d92eaef97527a
+096. [reference] [knowledge] book-definition/parts/part_6.md | bytes=1455 | sha256=48cd0a8c512805ae4120fe03cac97a7165f9819d2ff0728f2dd0d1a42070a390
+097. [reference] [knowledge] book-definition/README.md | bytes=4975 | sha256=972d42b5bdec49dbe3b8a5ad86d6499f8e92e2f409947b9e691c1d7d44fb21c9
+098. [reference] [knowledge] book-definition/series/00_COMPANION_BOOK_STRATEGY.md | bytes=1637 | sha256=0e7b3497e422a7de4058a73601d8c460fb2b6892b3613252af2a56618e8f20e8
+099. [reference] [knowledge] book-definition/VALIDATION_REPORT.md | bytes=4318 | sha256=def2f97c3886f1742e1ca1f0360429db3f86cbd0e4042412014a2cdb0d4ca103
+100. [reference] [knowledge] narrative/fiction/CIVCOHE_ALIGNMENT.md | bytes=8130 | sha256=dac9fc3bc9d905fb98312cdfbf447f1a17ac47abd6d8a0434ff22393f413b4e1
+101. [reference] [knowledge] narrative/fiction/external/F0018_colin_row.md | bytes=3491 | sha256=b431b81e1430f9ba6f43fea49b5ec08d6862c3f0a4b3a7e8e54e909a5139c258
+102. [reference] [knowledge] narrative/fiction/FICTION_REGISTRY.md | bytes=24173 | sha256=a4a36373ae6af2ec684f000d1a828892b6f67332256f4b744e0b2be882fb9b19
+103. [reference] [knowledge] narrative/fiction/FICTION_WORK_TEMPLATE.md | bytes=1067 | sha256=51325b940e2c68323c2671e8a5e983835e395e250795facb79488ff3b27b6f26
+104. [reference] [knowledge] narrative/fiction/HARMONIZATION_UPDATE_2026-08-17.md | bytes=1340 | sha256=b331983e97ff864d08a268a258382531ba21d80daa9a33cc9a5c946d85116b62
+105. [reference] [knowledge] narrative/fiction/INGEST_NOTES_2026-08-17.md | bytes=748 | sha256=2dfcae86a46eda99927efa10a21d4c688665687189101dbf04aa780108762fa2
+106. [reference] [knowledge] narrative/fiction/README.md | bytes=2652 | sha256=bde1148224b85af4d6477a430e0cb1a50e5a0b7de45ff2a893a115404092dc39
+107. [reference] [knowledge] narrative/fiction/SOURCE_MANIFEST.md | bytes=13189 | sha256=df00fd748f8da4f2cecbfb85f230edb69bfbfc9834427b3034a044a2a736bb35
+108. [reference] [knowledge] narrative/fiction/sources/F0001_lile_revasseur/King Klown et l'asile v2 (7)(3).md | bytes=883296 | sha256=41bd05c6ac69806f212ed5b989a0c3d341e0362ec3d5bf1b4fde0f09d89341ba
+109. [reference] [knowledge] narrative/fiction/sources/F0002_king_klown_kronicles/King Klown Kronicles v3.docx.md | bytes=270545 | sha256=829a0a4a49cc76b454c0ba5cd713137f89261008f277dab676510a885b5c2001
+110. [reference] [knowledge] narrative/fiction/sources/F0003_konvergence/Konvergence book v4.md | bytes=149711 | sha256=f23593d0ae248205b05a8ab5ed7f2dfab53babca1722a76d7d83560d003cee52
+111. [reference] [knowledge] narrative/fiction/sources/F0009_la_machine_a_rires/La Machine #U00e0 rires #U2014 Paroles compil#U00e9es.md | bytes=40851 | sha256=1c75eed3cc29f55dc1f0acf8e0c7b6631c5d4ba9032498bc29571b8b5511370b
+112. [reference] [knowledge] narrative/fiction/sources/F0009_la_machine_a_rires/La Machine #U00e0 rires #U2014 Pr#U00e9sentation compl#U00e8te de l#U2019album.md | bytes=27242 | sha256=d682a0f918614e638a80533f4e3f3c684815b088788b2a69a45366e61df701d0
+113. [reference] [knowledge] narrative/fiction/sources/F0010_last_laughing_engine/The Last Laughing Engine #U2014 Paroles et styles compil#U00e9s.md | bytes=57090 | sha256=1fbb21f3f3437c8a4101a9699350e0577589fcd054da2d5cf9a41da23406e022
+114. [reference] [knowledge] narrative/fiction/sources/F0016_hacking_reality/Hacking Reality_ practical guide for the next Christ_26-05-2026_17_15_42 (1)(2).md | bytes=101082 | sha256=1271f1c16bb0267326bd26828584d8c0acd47af27787fbe053f9c03cf33037da
+115. [reference] [knowledge] narrative/fiction/sources/F0017_plateforme_connaissance/Livre Plateforme de la connaissance v2.docx (1).md | bytes=132576 | sha256=9fc350810599604bca08bb5b5af50694f75a7f5190212c3c70acbe4d6a37a35e
+116. [reference] [knowledge] narrative/fiction/VALIDATION_REPORT.md | bytes=839 | sha256=cbc1fe123143572d0639cbe4bea777da68a6b18d67132c407aa9d8cd0b800c7b
+117. [reference] [knowledge] narrative/README.md | bytes=1095 | sha256=30d88a3b0a4858081e75e65dbea1f31e17ea76ea51771ef7ce9e493ac866c069
+118. [reference] [knowledge] practice/CIVIC_RESILIENCE_DRILLS.md | bytes=2553 | sha256=ea0f5814e9c8b15f9c312141a37ad4a17eae4d6db22006787eddc61ee8542235
+119. [reference] [knowledge] practice/CORPUS_AUTONOMY.md | bytes=2038 | sha256=536a9c03a8f80f649ad5989177b41be57079a089642544b4a5ba203528d6d319
+120. [reference] [knowledge] practice/EPISTEMIC_RESILIENCE_DRILLS.md | bytes=2570 | sha256=ae7827faa814b19e827613caf3453b2050f2f107250fd7c4f1bf4571cb282a07
+121. [reference] [knowledge] practice/FOUNDER_FALLIBILITY.md | bytes=2089 | sha256=7bf2c356172b599897285a1a7e54940e030b2e4bbbc98b1e93bc0db79205cb0c
+122. [reference] [knowledge] practice/PATTERN_REGISTRY.md | bytes=1044 | sha256=8a82f7ad5bbffb9416e287a5cdb026757a63fe5d1fe372839d81967e39ef6fa6
+123. [reference] [knowledge] practice/README.md | bytes=1698 | sha256=310d069f70a3f7c71d017c5f3d2fa008645d66c3cd51f173868f3b5d59c9f88f
+124. [reference] [knowledge] README.md | bytes=22280 | sha256=cd0be7ac36f84bcddc0797c237374b0c639095716f671029d082ccaaee91fb72
+125. [reference] [knowledge] research/SOURCE_LEDGER.md | bytes=4021 | sha256=364046699e850c57b316a9fce089c5a8065095fe123e093bdea07156a50ac29d
+126. [reference] [knowledge] RIGHTS.md | bytes=1796 | sha256=96f2db8be74269b1c0d278b186f1b5dad4a5d6d7fb04b77b10ca84c52caad83a
+127. [reference] [knowledge] scenarios/crisis/SCN-CRISIS-001-hostage-response.md | bytes=3065 | sha256=d21cde45d2a402b3b713957659336246b618fc406ee372500308e3efd471e80d
+128. [reference] [knowledge] scenarios/culture/SCN-CULTURE-001-fictional-universe-remix.md | bytes=2355 | sha256=eeab27a9e05332adb999818470794206443fd245ccce5b097983ab13e733897f
+129. [reference] [knowledge] scenarios/education/SCN-EDU-001-nain-remote-multilingual-school.md | bytes=3040 | sha256=c0fc5581db6c71bf30a7112d797d1fd0ebc52dda73c25c625cc0ff2c55a0afbe
+130. [reference] [knowledge] scenarios/governance/SCN-GOV-001-tattoo-policy-resistance-drill.md | bytes=6872 | sha256=38ee5b3392e6405f49dd797cd79b59c19c87849c66f1079149d88d6b5d0873c8
+131. [reference] [knowledge] scenarios/healthcare/SCN-HEALTH-001-multilingual-hospital.md | bytes=2825 | sha256=c2a45607e1835cd989f666a9c94d675890e6dabc4fb75473d3d845bc8a2bfb93
+132. [reference] [knowledge] scenarios/INDEX.md | bytes=1693 | sha256=ca28e902cf366119a998614a80dd65b8bb130deeab48eb43f2f7d03b07bc4d9b
+133. [reference] [knowledge] scenarios/knowledge/SCN-KNOW-001-unknown-contributor-kristall.md | bytes=2495 | sha256=959d2c5fe34d622d1b0fc77afe452eb352851b43bee98c7d464c237ef5f5bb8c
+134. [reference] [knowledge] scenarios/knowledge/SCN-KNOW-002-flat-earth-kristal.md | bytes=6483 | sha256=d1533b86f1e09f574d3eefd7e02da26db54bc980dce5da45957b7c254cd6bafa
+135. [reference] [knowledge] scenarios/legacy/LEGACY_SCENARIO_MIGRATION.md | bytes=1840 | sha256=d90c30bcd8a02b112b13d8d7ec2d295f4e657d4c83f2e1cd1ccd9dc36bf5e988
+136. [reference] [knowledge] scenarios/PATTERN_LIBRARY.md | bytes=5993 | sha256=914ce5822f1462968b17547cd8249b25b13ad9b8276a1f0c38c785df401a7e50
+137. [reference] [knowledge] scenarios/README.md | bytes=3229 | sha256=613968ce1144f13e1d44e67eede8a8834a65ae34bff54517ac6979293785f833
+138. [reference] [knowledge] scenarios/SCENARIO_SCHEMA.md | bytes=2107 | sha256=6cc0cf5cad00dddc80df6112fde244b2d53916c174d74f79f9e9a5704e9f14c4
+139. [reference] [knowledge] validation/implementation/IMPLEMENTATION_STATUS_MATRIX.md | bytes=4206 | sha256=4f3594a62ac897aa45bb1df36791c0504d73a8f0a6e96aba4f5ad1160e0b0763
 
 
 ================================================================================================
@@ -181,7 +180,10 @@ EXCLUDED FILES
 
 ================================================================================================
 FILE: architecture/ARCHITECTURAL_GENESIS_AND_GENERALIZATION_METHOD.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e299e05fe0b78c4f242bae8175755f467fba3bf5d050742a02ca7d0306b186d6
+CONTENT_BYTES: 8386
 ================================================================================================
 
 ---
@@ -414,7 +416,10 @@ RetrospectiveCorrespondence \neq DirectCausalDerivation
 
 ================================================================================================
 FILE: architecture/CENTRALITY_AND_ARTICULATION_HUB.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cba89531d7f32ff8bcd63be950e4639e03a5976be63a1c6417127002f5dc7f2b
+CONTENT_BYTES: 3696
 ================================================================================================
 
 ---
@@ -527,7 +532,10 @@ The principle must remain valid with another symbol or no symbol at all.
 
 ================================================================================================
 FILE: architecture/CORPUS_GENESIS_AND_CONVERGENCE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f0dbd41f4120e403455240a8deca48856999239c1ac6aee33b5b355b5760b25a
+CONTENT_BYTES: 3688
 ================================================================================================
 
 ---
@@ -655,7 +663,10 @@ The two histories should not be collapsed.
 
 ================================================================================================
 FILE: architecture/ECOSYSTEM_SOURCE_REGISTRY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2dbdbd7ae8385cb55b0fae474003713a0f9ff1bfc41ec64a330586b80e25c5af
+CONTENT_BYTES: 5128
 ================================================================================================
 
 ---
@@ -759,7 +770,10 @@ Treat these as **supplied architecture sources** until mapped to a live reposito
 
 ================================================================================================
 FILE: architecture/IMPLEMENTATION_SOURCE_POLICY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c1c2074fc8ee6387385e8528206b0c3707d900edc699f61630201a217f00524c
+CONTENT_BYTES: 2395
 ================================================================================================
 
 ---
@@ -866,7 +880,10 @@ They do not verify implementation and do not count as independent evidence for t
 
 ================================================================================================
 FILE: architecture/KINTSUGI_ARTICULATION_MODEL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f32543c6ac934f16675775edeea594f867b67bf718ce4011de327366bb25f1cb
+CONTENT_BYTES: 2175
 ================================================================================================
 
 ---
@@ -924,7 +941,10 @@ Kintsugi is a concrete architecture for Chapters 4, 8, 17 and 19. It can illustr
 
 ================================================================================================
 FILE: architecture/MODULE_INDEX.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5d59967a46e794d166040c50698e163d86ad4be9ac806735e14e0408e6ec7c45
+CONTENT_BYTES: 3934
 ================================================================================================
 
 ---
@@ -1019,7 +1039,10 @@ This method is **author-reported project history / design discipline**, not impl
 
 ================================================================================================
 FILE: architecture/open-good/OPEN_GOOD.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a9de21c80c95898519071f4843505b8f895dd025ce8fb9bc3fec52ecf47f23ae
+CONTENT_BYTES: 3120
 ================================================================================================
 
 ---
@@ -1144,7 +1167,10 @@ OpenGoodSuccess \rightarrow IndependentCapability
 
 ================================================================================================
 FILE: architecture/RIGHTS_AND_REPLICATION_MATRIX.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3e470ec7f826e07c0ac9b2f2551710902d9db49fb26e3dc007d00b4d05ab576e
+CONTENT_BYTES: 2870
 ================================================================================================
 
 ---
@@ -1213,7 +1239,10 @@ The legal documents should eventually be made congruent with the intended open-g
 
 ================================================================================================
 FILE: book-definition/CHANGELOG_V2.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b9518ba34f1c56472b43283efcda7bb3ae825730693626088e5958ba097a6090
+CONTENT_BYTES: 3811
 ================================================================================================
 
 # Changelog — V1 → V2
@@ -1279,7 +1308,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch01.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8883b091acda09b099629815751a40963b46444938c0b49a3f79b9d137532931
+CONTENT_BYTES: 2311
 ================================================================================================
 
 # Chapter 1 Brief — Distributed Intelligence Is Not Collective Agency
@@ -1341,7 +1373,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch02.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b8e10e41028e53998568abe74951ec56180efcb6d2fa7d301dc28dbb54d0905f
+CONTENT_BYTES: 2534
 ================================================================================================
 
 # Chapter 2 Brief — Civilizational Coherence
@@ -1408,7 +1443,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch03.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 54f97a1988a8ee984acd4e896d81c69c783afa49b817da058f9b7be15199051d
+CONTENT_BYTES: 2013
 ================================================================================================
 
 # Chapter 3 Brief — The Losses Between Knowledge and Action
@@ -1469,7 +1507,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch04.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1cf8f795ea31eb78c71e7dc7e2413826cc5ca23fc8dbab42cf57b7bb863a064e
+CONTENT_BYTES: 2567
 ================================================================================================
 
 # Chapter 4 Brief — Interfaces Matter More Than Nodes
@@ -1534,7 +1575,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch05.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9b92454593fc85be27dc23099f5e4784e5ab6eefb4f08d47e41dfef7fd31552f
+CONTENT_BYTES: 2062
 ================================================================================================
 
 # Chapter 5 Brief — Why Systems Reproduce Themselves
@@ -1595,7 +1639,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch06.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3213042cb0f8af12892b668399439fef3c12f074ea87db00e11b8332d751ab21
+CONTENT_BYTES: 2217
 ================================================================================================
 
 # Chapter 6 Brief — Competition and Collaboration as Infrastructural Regimes
@@ -1656,7 +1703,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch07.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 071a5bd68956a6fe3ba8a94e65d69347f8df121dd8ce8719f4cbcb64ccc7e075
+CONTENT_BYTES: 2165
 ================================================================================================
 
 # Chapter 7 Brief — Expertise, Credibility and Epistemic Mobility
@@ -1718,7 +1768,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch08.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 743d82a546fcbc0ee12ee0badddfff2de6dda3821cea7675056d1628f6c902ed
+CONTENT_BYTES: 2556
 ================================================================================================
 
 # Chapter 8 Brief — Power, Capture and Non-Domination
@@ -1783,7 +1836,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch09.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b3bcfa3c75fee21e1694410b1ac0d824494283ecf462194cd88b4d9dc497fed0
+CONTENT_BYTES: 2103
 ================================================================================================
 
 # Chapter 9 Brief — From Information to Cumulative Knowledge
@@ -1846,7 +1902,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch10.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c86cefd96b79ea91cbb35f26e390d015049c449d93932c9af199fec3012cdbc6
+CONTENT_BYTES: 2179
 ================================================================================================
 
 # Chapter 10 Brief — Portable Knowledge
@@ -1909,7 +1968,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch11.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3e2b9eb60f020e3f716975793420f402553a23c52ebaea86afcdad51221a9941
+CONTENT_BYTES: 2183
 ================================================================================================
 
 # Chapter 11 Brief — Pluralism Without Epistemic Collapse
@@ -1972,7 +2034,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch12.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3070c4335e9e0f0315ca9da41b37467114e910d13abdbf23e6abecbf4848acd1
+CONTENT_BYTES: 2253
 ================================================================================================
 
 # Chapter 12 Brief — Semantic Coherence Across Languages and Institutions
@@ -2036,7 +2101,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch13.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 20f9bba0c0d6439ffd260cf03fe59e89001f41ca03eb04f4d87402a8577922ed
+CONTENT_BYTES: 2221
 ================================================================================================
 
 # Chapter 13 Brief — Collective Judgment Without Collective Uniformity
@@ -2100,7 +2168,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch14.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: af4ed7bd564001df1f4e51f731d56feb70c024a9133647c49571df89dbd3fdf0
+CONTENT_BYTES: 2529
 ================================================================================================
 
 # Chapter 14 Brief — Attention as a Coordination Resource
@@ -2166,7 +2237,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch15.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b2a44eb5372386f0d6d9611d5a23ab81aeeab3c1db496b68deb53b693d5a44bd
+CONTENT_BYTES: 2186
 ================================================================================================
 
 # Chapter 15 Brief — Expert Advice and Democratic Authority
@@ -2228,7 +2302,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch16.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 079de9debe51e0a0703f59de8ec1ecc2172a5fa933353ee622bbc483027331a4
+CONTENT_BYTES: 2242
 ================================================================================================
 
 # Chapter 16 Brief — From Decision to Execution
@@ -2291,7 +2368,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch17.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 972cb5fd22f05e9a447264a09d9e7a2a0d3220323f96ea8cc931c271a22ad138
+CONTENT_BYTES: 2329
 ================================================================================================
 
 # Chapter 17 Brief — Replication Before Federation
@@ -2354,7 +2434,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch18.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 41d87eb7f7e964b40102541d7d3ae5e496445e3fb977c4b244144a1bd7dedcfd
+CONTENT_BYTES: 2130
 ================================================================================================
 
 # Chapter 18 Brief — Divergence, Forks and Evolution
@@ -2417,7 +2500,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch19.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1ba728cbe8cfbdc1b88e366860179751fe20de877faf6763ba27c7ae967cb4e0
+CONTENT_BYTES: 2539
 ================================================================================================
 
 # Chapter 19 Brief — Multi-Scale Institutions
@@ -2483,7 +2569,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch20.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 44b57ecf009c65c117d61f0653ab0f6f3587ac0d2448cede4e783d5efd34e593
+CONTENT_BYTES: 2118
 ================================================================================================
 
 # Chapter 20 Brief — Selective Permeability
@@ -2544,7 +2633,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch21.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 47d8172005843a77fc5785ff37ac6927e2b7e13cc1cee5edbc1359a73d37dc1f
+CONTENT_BYTES: 2226
 ================================================================================================
 
 # Chapter 21 Brief — Determinism, Offline Operation and Optional AI
@@ -2606,7 +2698,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch22.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c1d259872431192e6cc0ca9c5fbee8da1cc8f1a2ac352c271428ba87df967ff1
+CONTENT_BYTES: 2140
 ================================================================================================
 
 # Chapter 22 Brief — When Action Becomes Cumulative
@@ -2668,7 +2763,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch23.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 907cd1c52e54f8167fd0a30aa471493a8b3914bd5d72427b87ad90dd3daabc1a
+CONTENT_BYTES: 2560
 ================================================================================================
 
 # Chapter 23 Brief — Reproducing Human Mastery
@@ -2730,7 +2828,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch24.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3c4832c1a69178cbf9161773f33958f64f8521f52f699a562f502726ee50f137
+CONTENT_BYTES: 2105
 ================================================================================================
 
 # Chapter 24 Brief — Measuring Civilizational Coherence
@@ -2792,7 +2893,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapter_briefs/ch25.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 704ce0a79fadd1e060685d46d4af5438c4490f946fac301c4a0d013e99efb214
+CONTENT_BYTES: 2500
 ================================================================================================
 
 # Chapter 25 Brief — Falsifiability and Failure
@@ -2857,7 +2961,10 @@ Do not reproduce the detailed specification bullet-by-bullet. Convert it into 5�
 
 ================================================================================================
 FILE: book-definition/chapters/ch01.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 31552741bf990d60aaabbd64cd3f1822c3b129ee5df8ede4f17552ec4717536a
+CONTENT_BYTES: 23914
 ================================================================================================
 
 # Chapter 1 — Distributed Intelligence Is Not Collective Agency
@@ -3833,7 +3940,10 @@ Cette discipline de portée est importante : **le chapitre 1 doit créer le prob
 
 ================================================================================================
 FILE: book-definition/chapters/ch02.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8c6eca2769744d8cbaefa89b9e8333fc7cfbfcb3736a58dabc9b881d30e5fe24
+CONTENT_BYTES: 29177
 ================================================================================================
 
 > **Current alignment note — relational centrality: a center may increase useful relations among parts without acquiring sovereignty; `CenterOfCommunion ≠ CenterOfDomination`. Religious examples, if used, are bounded interpretive analogies only.**
@@ -5061,7 +5171,10 @@ Le chapitre 2 doit donc accomplir une chose extrêmement précisément : **faire
 
 ================================================================================================
 FILE: book-definition/chapters/ch03.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e4a9873798853a00967ccbe4b77a47881a3f6d73c9616fc217968c272cca171a
+CONTENT_BYTES: 29324
 ================================================================================================
 
 # Chapter 3 — The Losses Between Knowledge and Action
@@ -6448,7 +6561,10 @@ Le chapitre 3 doit essentiellement faire apparaître une nouvelle façon de rega
 
 ================================================================================================
 FILE: book-definition/chapters/ch04.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 04b90f94fd225f4b31ba44ced5392260fc413727a0e02f920817309003c69d5e
+CONTENT_BYTES: 34817
 ================================================================================================
 
 > **Current alignment note — architectural generalization: the kOA laboratory seeks shared primitives across domains, but `SharedCore ≠ IdenticalDomainLogic`; preserve domain-specific constraints and treat the project method as author-reported, not empirical proof.**
@@ -8105,7 +8221,10 @@ Le chapitre 4 doit fermer la première partie sur une idée très simple malgré
 
 ================================================================================================
 FILE: book-definition/chapters/ch05.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 76c6cc890bf54eafd711d4965e870d9bcbf61761355eeac81333dce28d0b8558
+CONTENT_BYTES: 32989
 ================================================================================================
 
 # Chapter 5 — Why Systems Reproduce Themselves
@@ -9845,7 +9964,10 @@ Le chapitre 5 doit produire un changement mental simple : **les institutions ne 
 
 ================================================================================================
 FILE: book-definition/chapters/ch06.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e6fa084f8a8d208367915f532f97dbf44d8df3c8df78652e38b8666a0651a918
+CONTENT_BYTES: 37125
 ================================================================================================
 
 # Chapter 6 — Competition and Collaboration as Infrastructural Regimes
@@ -11671,7 +11793,10 @@ Le chapitre 6 doit laisser une idée très nette : **la collaboration devient ci
 
 ================================================================================================
 FILE: book-definition/chapters/ch07.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d2ee705e3d97d956c4d512473622bc959fa16f4da98f466f10cc666a562b851a
+CONTENT_BYTES: 38938
 ================================================================================================
 
 # Chapter 7 — Expertise, Credibility and Epistemic Mobility
@@ -13763,7 +13888,10 @@ Le chapitre 7 doit laisser une distinction particulièrement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch08.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dccc6b679dc5aef81a28966e4faaaaad546e8e8d5dea003369b5cde86b79a848
+CONTENT_BYTES: 50359
 ================================================================================================
 
 > **Current alignment note — symbolic gravity can be useful but must remain non-compulsory. A relational or symbolic center becomes a domination risk when participation, truth or legitimacy depends on loyalty to the symbol.**
@@ -16440,7 +16568,10 @@ Le chapitre 8 doit fermer la partie II avec une proposition fondamentale :
 
 ================================================================================================
 FILE: book-definition/chapters/ch09.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5f163d943524d0d69af2060350f804896f241281d0bac90fa5383d5221bcae2a
+CONTENT_BYTES: 39712
 ================================================================================================
 
 # Chapter 9 — From Information to Cumulative Knowledge
@@ -18716,7 +18847,10 @@ Le chapitre 9 doit laisser une idée extrêmement simple malgré toute la profon
 
 ================================================================================================
 FILE: book-definition/chapters/ch10.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b5e88c89b49b6fe758b046f9cbe60e865b567d36d94f368f62fda29e0be996ff
+CONTENT_BYTES: 41204
 ================================================================================================
 
 # Chapter 10 — Portable Knowledge
@@ -21246,7 +21380,10 @@ Le chapitre 10 doit laisser une idée fondamentale très nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch11.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e71e60a270a3dd75c6e804ea1c12090d29f8da501954b25cc1a8db18a78ff0f8
+CONTENT_BYTES: 45144
 ================================================================================================
 
 # Chapter 11 — Pluralism Without Epistemic Collapse
@@ -23957,7 +24094,10 @@ Le chapitre 11 doit laisser une distinction fondamentale :
 
 ================================================================================================
 FILE: book-definition/chapters/ch12.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c682e6d65aebd3ca6d963022bf1e15df96b307a969bf0c6b5960c8aff33f743e
+CONTENT_BYTES: 51581
 ================================================================================================
 
 # Chapter 12 — Semantic Coherence Across Languages and Institutions
@@ -26763,7 +26903,10 @@ Le chapitre 12 doit laisser une idée particulièrement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch13.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e4f812aeb93dde070f4843163c73727aefb72cbf1800aba169e637db481278cd
+CONTENT_BYTES: 50970
 ================================================================================================
 
 # Chapter 13 — Collective Judgment Without Collective Uniformity
@@ -29747,7 +29890,10 @@ Le chapitre 13 doit laisser une idée particulièrement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch14.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9f2d3f3939c3cb3365b974d6f8bebdaa5f73ecec5a4e8988ef919497d58d8fa0
+CONTENT_BYTES: 49284
 ================================================================================================
 
 > **Current alignment note — relational centrality can improve discovery among people, knowledge, groups and tasks; this remains an empirical/design hypothesis and does not justify opaque attention monopoly.**
@@ -32786,7 +32932,10 @@ Le chapitre 14 doit laisser une idée particulièrement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch15.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 226bbde513ee9cefd7c8f123cc6a60cac826f653868159a09ce3d5a1539d3b7d
+CONTENT_BYTES: 61517
 ================================================================================================
 
 # Chapter 15 — Expert Advice and Democratic Authority
@@ -36475,7 +36624,10 @@ Le chapitre 15 doit laisser une distinction très nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch16.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b3ba73862fe55ec3a1c61389c3a53dc8c90f7eafa19e30de464e5c11d987baa3
+CONTENT_BYTES: 70658
 ================================================================================================
 
 # Chapter 16 — From Decision to Execution
@@ -41070,7 +41222,10 @@ Le chapitre 16 doit laisser une idée extrêmement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch17.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 28c9199a0dc8b6997cd1f83b271deda188c752f22129bd14e0f73ef873cd01c0
+CONTENT_BYTES: 66391
 ================================================================================================
 
 # Chapter 17 — Replication Before Federation
@@ -45099,7 +45254,10 @@ Le chapitre 17 doit laisser une idée particulièrement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch18.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 46b65fee9e0d4099da46a82d4a53f0166e34953ea8a9c2cdc59dc586e42ff8d5
+CONTENT_BYTES: 66023
 ================================================================================================
 
 # Chapter 18 — Divergence, Forks and Evolution
@@ -49540,7 +49698,10 @@ Le chapitre 18 doit laisser une proposition extrêmement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch19.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cd6fc6f8f814f1f87a263259ebee083a9c2d53735090035bc7640490250f1866
+CONTENT_BYTES: 71934
 ================================================================================================
 
 # Chapter 19 — Multi-Scale Institutions
@@ -54145,7 +54306,10 @@ Le chapitre 19 doit finalement laisser une idée extrêmement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch20.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7295a3131d181e37a1ae2750024ac71a7d081e0c94fb87ecb2ebc4f820894be9
+CONTENT_BYTES: 67810
 ================================================================================================
 
 # Chapter 20 — Selective Permeability
@@ -58656,7 +58820,10 @@ Le chapitre 20 doit laisser une idée extrêmement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch21.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6befe1f7969f31f14f54e0843049a0b46d2d9b193fbbff2a0fd9d9f7247ec30d
+CONTENT_BYTES: 87595
 ================================================================================================
 
 # Chapter 21 — Determinism, Offline Operation and Optional AI
@@ -64475,7 +64642,10 @@ Le chapitre 21 doit laisser une proposition particulièrement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch22.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 12752749c37993dd8680f16eb024bca94e824f82352ee4401b2fde1fba32bacc
+CONTENT_BYTES: 78244
 ================================================================================================
 
 # Chapter 22 — When Action Becomes Cumulative
@@ -69835,7 +70005,10 @@ Le chapitre 22 doit laisser une idée particulièrement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch23.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2d9bd77d47c63faa4ccccfc37e4a795232da53285e28d3a402d7acca100df8db
+CONTENT_BYTES: 87782
 ================================================================================================
 
 > **Current alignment note — reusable institutional primitives may lower the cost of reproducing mastery channels across domains, but domain-specific curricula, authority and safety constraints must remain explicit.**
@@ -75497,7 +75670,10 @@ Le chapitre 23 doit finalement laisser une idée extrêmement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch24.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2fa4384d98e2c0747b1b5c014d9278844990ed59f251214be2f11efb736241b5
+CONTENT_BYTES: 93687
 ================================================================================================
 
 # Chapter 24 — Measuring Civilizational Coherence
@@ -82229,7 +82405,10 @@ Le chapitre 24 doit finalement laisser une idée extrêmement nette :
 
 ================================================================================================
 FILE: book-definition/chapters/ch25.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4e0ce55ccb82f1a9fb55df29d9a9e6ba6d7e8f0f1e078310f62a857b24df7e00
+CONTENT_BYTES: 121181
 ================================================================================================
 
 > **Current alignment note — recursive human–AI refinement and internal architectural coherence are not external validation. Test cross-domain generalizations against domain failures, implementation and evidence.**
@@ -90938,7 +91117,10 @@ Ce qui ouvre directement :
 
 ================================================================================================
 FILE: book-definition/conclusion/00_CONCLUSION_SPEC.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 549f7328d26ed3d77351a79943fd156b8bef81ab678704b7fe2e85be5f2dca80
+CONTENT_BYTES: 4907
 ================================================================================================
 
 # Conclusion — A Civilization That Becomes Better at Becoming Better
@@ -91139,7 +91321,10 @@ Conditional final proposition:
 
 ================================================================================================
 FILE: book-definition/core/00_AI_AUTHOR_OPERATING_MANUAL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7a1bd64c39bb001a39024eb81c78099b3728b35c07fcbf4bdd0f64f8c0c30d0f
+CONTENT_BYTES: 9742
 ================================================================================================
 
 # AI Author Operating Manual
@@ -91428,7 +91613,10 @@ When using religious or historical analogies for centrality, explicitly label th
 
 ================================================================================================
 FILE: book-definition/core/00_CANONICAL_STATE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7636c15417d5418b8add09b863bc788524c4ee37672a1238ae620b7facd7bca1
+CONTENT_BYTES: 16441
 ================================================================================================
 
 # Canonical State — Version 2
@@ -91943,7 +92131,10 @@ Future book-level conceptual changes must update the canonical state first.
 
 ================================================================================================
 FILE: book-definition/core/01_BOOK_CHARTER.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0a56dfbad4f2d0eeda027573d45a6ecd4834e1dd86279ee4a60e5fc6b3904512
+CONTENT_BYTES: 7187
 ================================================================================================
 
 # Book Charter
@@ -92123,7 +92314,10 @@ This leads to the conclusion:
 
 ================================================================================================
 FILE: book-definition/core/02_EDITORIAL_CONTRACT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e59841a322c7b3cdb5a595b66ffa5b91b033492397a0ff5658199d2725040ba3
+CONTENT_BYTES: 6693
 ================================================================================================
 
 # Editorial Contract
@@ -92385,7 +92579,10 @@ Religious analogies, including Christ as a symbol associated with sharing, servi
 
 ================================================================================================
 FILE: book-definition/core/03_EPISTEMIC_PROTOCOL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 918cb2fe221cb772d3532cdf267350e7eeed8e55edaedb81486e2e43c15ef74e
+CONTENT_BYTES: 4747
 ================================================================================================
 
 # Epistemic Protocol
@@ -92583,7 +92780,10 @@ Treat Konnaxion/Kintsugi descriptions as implementation/documentation claims tha
 
 ================================================================================================
 FILE: book-definition/core/04_STYLE_GUIDE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 36e5d033d94311bb876e7329faf83c829f0822d2a53241622b296385cf9d8c1f
+CONTENT_BYTES: 3215
 ================================================================================================
 
 # Style Guide
@@ -92747,7 +92947,10 @@ A reader may accept the diagnosis, accept some design principles and reject kOA.
 
 ================================================================================================
 FILE: book-definition/core/05_CANONICAL_CONCEPTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 729aea41725873aa937db514c21465d11f1144f1690fd104b1036dec2bdb174c
+CONTENT_BYTES: 14348
 ================================================================================================
 
 # Canonical Concept Registry
@@ -93044,7 +93247,10 @@ Generalization \neq ForcedUniformity
 
 ================================================================================================
 FILE: book-definition/core/06_CANONICAL_FORMULAS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 19875cd7509f6c5e0c8f20e85e7161539b6a3145cae02ae0b85830bad82687e9
+CONTENT_BYTES: 5668
 ================================================================================================
 
 # Canonical Formula and Relation Register
@@ -93368,7 +93574,10 @@ MaximumUsefulCentrality + MinimumTerminalDependency
 
 ================================================================================================
 FILE: book-definition/core/07_KOA_IMPLEMENTATION_BOUNDARIES.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8ee76f352ffffaf68ac71a269c29ee7bb86c7f2f6702667bebec1191d7a15700
+CONTENT_BYTES: 9125
 ================================================================================================
 
 # kOA Implementation Boundaries and Architecture Map
@@ -93734,7 +93943,10 @@ Blockchain-like approaches may be explored but are not canonical.
 
 ================================================================================================
 FILE: book-definition/core/08_NARRATIVE_COHERENCE_AND_SURREAL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 72dbfb79903dfb77a3e2d4e415a5b33b6ac7d36cdf2bb6d34dba663ec7e53012
+CONTENT_BYTES: 11630
 ================================================================================================
 
 # Narrative Coherence, Legibility and the Surreal — Conceptual Erratum
@@ -94230,7 +94442,10 @@ They can reinforce one another only if they remain distinguishable, inspectable 
 
 ================================================================================================
 FILE: book-definition/core/09_CASE_REGISTRY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7a72e8132094c1fe07df2cb63bbecab76195fc7c76bff2b5bd90da03fbcc7ef1
+CONTENT_BYTES: 4931
 ================================================================================================
 
 # Case, Example and Analogy Registry
@@ -94480,7 +94695,10 @@ Never let a hypothetical stress test silently become evidence.
 
 ================================================================================================
 FILE: book-definition/core/10_CONTINUITY_MAP.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: afd4a7cd35adf73e3c868bcd22b4faeb1de23b094473d224b83c85570f83de67
+CONTENT_BYTES: 5299
 ================================================================================================
 
 # Continuity and Dependency Map
@@ -94595,7 +94813,10 @@ When a thread returns:
 
 ================================================================================================
 FILE: book-definition/core/11_LENGTH_AND_COMPRESSION_POLICY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: aff13c519642baa583b999628a3c0ca2d8f2c1fce85a2329bbfa41a7f8213d85
+CONTENT_BYTES: 2971
 ================================================================================================
 
 # Manuscript Length and Compression Policy
@@ -94719,7 +94940,10 @@ RichStructure + SimpleInterface
 
 ================================================================================================
 FILE: book-definition/core/12_AI_WRITING_PROTOCOL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3da2bc3036e56e8bf308917840676d4d176ae10d428b1aba8431e1923b3e7aa0
+CONTENT_BYTES: 3522
 ================================================================================================
 
 # AI Chapter Writing and Validation Protocol
@@ -94895,7 +95119,10 @@ If chapter collapses, theory is underdeveloped.
 
 ================================================================================================
 FILE: book-definition/core/13_NAMING_AND_TERMINOLOGY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2d6a59a474c05b5f157668ba618db0254b782a3fa8062cf7a9092f7af8363d9c
+CONTENT_BYTES: 3582
 ================================================================================================
 
 # Naming, Terminology and Normalization
@@ -95052,7 +95279,10 @@ This keeps theory independent of one artistic implementation.
 
 ================================================================================================
 FILE: book-definition/core/14_SOURCE_AND_VERSION_POLICY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8616ba074991525547105fa661c1e00b4697882df74df9ddccdd06e591820e1c
+CONTENT_BYTES: 4728
 ================================================================================================
 
 # Source and Version Policy
@@ -95162,7 +95392,10 @@ Rights are independent of provenance. A stored or linked file does not automatic
 
 ================================================================================================
 FILE: book-definition/core/15_WHOLE_BOOK_VALIDATION_CHECKLIST.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bf8a8a24b90c31deb69bfd9305c66c3519c78e15bedb187e164be310e9ec672e
+CONTENT_BYTES: 5126
 ================================================================================================
 
 # Whole-Book Validation Checklist
@@ -95298,7 +95531,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: book-definition/core/16_PROMPT_TEMPLATE_WRITE_CHAPTER.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 876d29d01cc764e5a68cb3454c7ef3bd81fa46cbda10b56bbd7697c44073d292
+CONTENT_BYTES: 1796
 ================================================================================================
 
 # Prompt Template — Write or Revise a Chapter
@@ -95354,7 +95590,10 @@ Before finalizing run:
 
 ================================================================================================
 FILE: book-definition/core/17_CANONICAL_INVARIANTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d30b088b6b7027ffe0f6d66c4a40de98944983c2c0bcfac891723862c27b6594
+CONTENT_BYTES: 5894
 ================================================================================================
 
 # Canonical Invariants
@@ -95566,7 +95805,10 @@ If a manuscript sentence collapses either side of an invariant, the writer must 
 
 ================================================================================================
 FILE: book-definition/core/18_DECISION_AND_IDEA_STATUS_REGISTRY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: be739f85405db0dd926026803743998f53dc78b96345c6fb24e748611ea271d9
+CONTENT_BYTES: 8449
 ================================================================================================
 
 # Decision and Idea Status Registry
@@ -95657,7 +95899,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: book-definition/core/19_TRACEABILITY_MATRIX.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 82aa02a6439deb1d403eb00b8c3437c1e8a8cc31a76f66d7b4be5b522e1da0ae
+CONTENT_BYTES: 5879
 ================================================================================================
 
 # Theory → Requirement → Implementation → Test Traceability Matrix
@@ -95697,7 +95942,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: book-definition/core/20_CLAIM_LEDGER.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 05855cbba87078a1a3dcd76c3fe1344c5204d84083e2de61e9dd1ede79b0e6bf
+CONTENT_BYTES: 7010
 ================================================================================================
 
 # Claim Ledger
@@ -95755,7 +96003,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: book-definition/core/21_RISK_REGISTER.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c12cfafaff4be35db79f2a01ef3a29add97d322fcb38ce15b21197d2595b4f54
+CONTENT_BYTES: 6625
 ================================================================================================
 
 # Risk Register
@@ -95803,7 +96054,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: book-definition/core/22_CENTRALITY_AND_ARTICULATION_HUB.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: de5f7b659ad47f9485b463b8fc16644206a71529fff0a8b76b7d4881176ea211
+CONTENT_BYTES: 9825
 ================================================================================================
 
 # Centrality and the Articulation Hub
@@ -96068,7 +96322,10 @@ This distinction governs Chapters 2, 4, 8, 14 and 17–20 in particular.
 
 ================================================================================================
 FILE: book-definition/intro/00_INTRODUCTION_SOURCE_SPEC.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a99f1b5c2d266aee935231589e854f66ee6007820c0634422b8b265a405ebb10
+CONTENT_BYTES: 64530
 ================================================================================================
 
 # Introduction — **The Civilizational Coordination Paradox**
@@ -100112,7 +100369,10 @@ Et la thèse formelle complète, une fois le terrain préparé :
 
 ================================================================================================
 FILE: book-definition/intro/01_CURRENT_ALIGNMENT_PATCH.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: adf77f8da3ded9f5622fb1fbf07dc7e529ba3a440176e7dd66366a6526332587
+CONTENT_BYTES: 2630
 ================================================================================================
 
 # Introduction — Current Alignment Patch
@@ -100189,7 +100449,10 @@ The question is not whether a center exists, but what it centralizes, what remai
 
 ================================================================================================
 FILE: book-definition/intro/02_INTRODUCTION_BRIEF.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bf3a10738cf0a817db73672ce63c45ee75c11d64859edf182b07b1b4829b447e
+CONTENT_BYTES: 2463
 ================================================================================================
 
 # Introduction Brief — The Civilizational Coordination Paradox
@@ -100274,7 +100537,10 @@ Do not expand this into a second framework. It is enough to clarify that:
 
 ================================================================================================
 FILE: book-definition/MANIFEST.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 350c63c6a3d8675fc9e3564da002c693550e896f11b045571f332411b018519d
+CONTENT_BYTES: 4296
 ================================================================================================
 
 # Documentation Manifest — V2
@@ -100405,7 +100671,10 @@ Total Markdown words: **230,281**
 
 ================================================================================================
 FILE: book-definition/meta/VALIDATION_REPORT_V1.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e36a8ed50f267be559cb3596b1c1c10d8534a25337084b9e44e7ffab8355c531
+CONTENT_BYTES: 1769
 ================================================================================================
 
 # Validation Report
@@ -100452,7 +100721,10 @@ The pack intentionally preserves the detailed research layer instead of forcing 
 
 ================================================================================================
 FILE: book-definition/parts/part_1.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6b6c0c2d0fa911204d014351a61c2fa2a066761fb046f6ef9857ff1b0864a20d
+CONTENT_BYTES: 1632
 ================================================================================================
 
 # PART I — DISTRIBUTED INTELLIGENCE AND COHERENCE
@@ -100497,7 +100769,10 @@ The detailed chapter specs are research stores. Preserve the transformation abov
 
 ================================================================================================
 FILE: book-definition/parts/part_2.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bd77ac2146258325a56002ae75f826f859192dc3f4cfd98950f1d708a033f7fb
+CONTENT_BYTES: 1494
 ================================================================================================
 
 # PART II — POWER, INCENTIVES AND SYSTEM DYNAMICS
@@ -100540,7 +100815,10 @@ The detailed chapter specs are research stores. Preserve the transformation abov
 
 ================================================================================================
 FILE: book-definition/parts/part_3.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4466a92aab4a9b4ae5144d7660c003fc9ec671e7e755aa990def461fd99671ce
+CONTENT_BYTES: 1483
 ================================================================================================
 
 # PART III — KNOWLEDGE, MEMORY AND MEANING
@@ -100583,7 +100861,10 @@ The detailed chapter specs are research stores. Preserve the transformation abov
 
 ================================================================================================
 FILE: book-definition/parts/part_4.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e859cb28cb2084e12ff314fed0bfa535c83cec3d547639ffe98442c86cf7a9c9
+CONTENT_BYTES: 1543
 ================================================================================================
 
 # PART IV — FROM KNOWLEDGE TO COLLECTIVE ACTION
@@ -100626,7 +100907,10 @@ The detailed chapter specs are research stores. Preserve the transformation abov
 
 ================================================================================================
 FILE: book-definition/parts/part_5.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fbd6b35cd390d9048f97395237b49a716ce27bb637b48a43be9d92eaef97527a
+CONTENT_BYTES: 1726
 ================================================================================================
 
 # PART V — FEDERATION, SOVEREIGNTY AND RESILIENCE
@@ -100670,7 +100954,10 @@ The detailed chapter specs are research stores. Preserve the transformation abov
 
 ================================================================================================
 FILE: book-definition/parts/part_6.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 48cd0a8c512805ae4120fe03cac97a7165f9819d2ff0728f2dd0d1a42070a390
+CONTENT_BYTES: 1455
 ================================================================================================
 
 # PART VI — CUMULATIVE COLLECTIVE AGENCY
@@ -100713,7 +101000,10 @@ The detailed chapter specs are research stores. Preserve the transformation abov
 
 ================================================================================================
 FILE: book-definition/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 972d42b5bdec49dbe3b8a5ad86d6499f8e92e2f409947b9e691c1d7d44fb21c9
+CONTENT_BYTES: 4975
 ================================================================================================
 
 # Civilizational Coherence — Book Definition Pack V2
@@ -100863,7 +101153,10 @@ V2 applies the book's own thesis to its documentation: the goal is not more stor
 
 ================================================================================================
 FILE: book-definition/series/00_COMPANION_BOOK_STRATEGY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0e7b3497e422a7de4058a73601d8c460fb2b6892b3613252af2a56618e8f20e8
+CONTENT_BYTES: 1637
 ================================================================================================
 
 # Optional Companion-Book Strategy
@@ -100925,7 +101218,10 @@ A companion should deepen a mechanism already established in the flagship. It sh
 
 ================================================================================================
 FILE: book-definition/VALIDATION_REPORT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: def2f97c3886f1742e1ca1f0360429db3f86cbd0e4042412014a2cdb0d4ca103
+CONTENT_BYTES: 4318
 ================================================================================================
 
 # Validation Report — V2
@@ -101029,7 +101325,10 @@ Validation scope added after the V2 pack:
 
 ================================================================================================
 FILE: narrative/fiction/CIVCOHE_ALIGNMENT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dac9fc3bc9d905fb98312cdfbf447f1a17ac47abd6d8a0434ff22393f413b4e1
+CONTENT_BYTES: 8130
 ================================================================================================
 
 ---
@@ -101140,7 +101439,10 @@ Then return to current architecture and evidence. No chapter should depend on ac
 
 ================================================================================================
 FILE: narrative/fiction/external/F0018_colin_row.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b431b81e1430f9ba6f43fea49b5ec08d6862c3f0a4b3a7e8e54e909a5139c258
+CONTENT_BYTES: 3491
 ================================================================================================
 
 ---
@@ -101213,7 +101515,10 @@ There is intentionally no `narrative/fiction/sources/F0018_colin_row/` directory
 
 ================================================================================================
 FILE: narrative/fiction/FICTION_REGISTRY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a4a36373ae6af2ec684f000d1a828892b6f67332256f4b744e0b2be882fb9b19
+CONTENT_BYTES: 24173
 ================================================================================================
 
 ---
@@ -101531,7 +101836,10 @@ Possession of a project file does not by itself establish publication, reproduct
 
 ================================================================================================
 FILE: narrative/fiction/FICTION_WORK_TEMPLATE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 51325b940e2c68323c2671e8a5e983835e395e250795facb79488ff3b27b6f26
+CONTENT_BYTES: 1067
 ================================================================================================
 
 ---
@@ -101590,7 +101898,10 @@ Record exact file/version and precise locator. Keep quotation rights separate fr
 
 ================================================================================================
 FILE: narrative/fiction/HARMONIZATION_UPDATE_2026-08-17.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b331983e97ff864d08a268a258382531ba21d80daa9a33cc9a5c946d85116b62
+CONTENT_BYTES: 1340
 ================================================================================================
 
 # Fiction harmonization update — 2026-08-17
@@ -101620,7 +101931,10 @@ Older narrative works may contain earlier names, speculative architectures or my
 
 ================================================================================================
 FILE: narrative/fiction/INGEST_NOTES_2026-08-17.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2dfcae86a46eda99927efa10a21d4c688665687189101dbf04aa780108762fa2
+CONTENT_BYTES: 748
 ================================================================================================
 
 # Fiction-source ingest — 2026-08-17
@@ -101639,7 +101953,10 @@ See `HARMONIZATION_UPDATE_2026-08-17.md` for the later CivCohe(5) integration.
 
 ================================================================================================
 FILE: narrative/fiction/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bde1148224b85af4d6477a430e0cb1a50e5a0b7de45ff2a893a115404092dc39
+CONTENT_BYTES: 2652
 ================================================================================================
 
 ---
@@ -101703,7 +102020,10 @@ Source ingestion is not a rights determination. The repository records these as 
 
 ================================================================================================
 FILE: narrative/fiction/SOURCE_MANIFEST.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: df00fd748f8da4f2cecbfb85f230edb69bfbfc9834427b3034a044a2a736bb35
+CONTENT_BYTES: 13189
 ================================================================================================
 
 ---
@@ -101785,7 +102105,10 @@ The external package is a provenance target, not a nested dependency. CivCohe sh
 
 ================================================================================================
 FILE: narrative/fiction/sources/F0001_lile_revasseur/King Klown et l'asile v2 (7)(3).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 41bd05c6ac69806f212ed5b989a0c3d341e0362ec3d5bf1b4fde0f09d89341ba
+CONTENT_BYTES: 883296
 ================================================================================================
 
 # **L’île Rêvasseur,** *par Réjean McCormick*, mai 2026 Version provisoire
@@ -133855,7 +134178,10 @@ une question assez forte pour empêcher une volonté de devenir un ordre.
 
 ================================================================================================
 FILE: narrative/fiction/sources/F0002_king_klown_kronicles/King Klown Kronicles v3.docx.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 829a0a4a49cc76b454c0ba5cd713137f89261008f277dab676510a885b5c2001
+CONTENT_BYTES: 270545
 ================================================================================================
 
 ### **The Awakening of King Klown.**
@@ -140206,7 +140532,10 @@ And as the final images of the Ether Age faded, as the light of new civilization
 
 ================================================================================================
 FILE: narrative/fiction/sources/F0003_konvergence/Konvergence book v4.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f23593d0ae248205b05a8ab5ed7f2dfab53babca1722a76d7d83560d003cee52
+CONTENT_BYTES: 149711
 ================================================================================================
 
 
@@ -142998,7 +143327,10 @@ The night stretched around them, the wind whistling between the gravestones. Abo
 
 ================================================================================================
 FILE: narrative/fiction/sources/F0009_la_machine_a_rires/La Machine #U00e0 rires #U2014 Paroles compil#U00e9es.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1c75eed3cc29f55dc1f0acf8e0c7b6631c5d4ba9032498bc29571b8b5511370b
+CONTENT_BYTES: 40851
 ================================================================================================
 
 # La Machine à rires — Lyrics compilées
@@ -145100,7 +145432,10 @@ un passage.
 
 ================================================================================================
 FILE: narrative/fiction/sources/F0009_la_machine_a_rires/La Machine #U00e0 rires #U2014 Pr#U00e9sentation compl#U00e8te de l#U2019album.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d682a0f918614e638a80533f4e3f3c684815b088788b2a69a45366e61df701d0
+CONTENT_BYTES: 27242
 ================================================================================================
 
 # **La Machine à rires — Description complète de l’album**
@@ -145592,7 +145927,10 @@ C’est le bruit d’un pouvoir collectif qui apprend enfin à s’organiser.**
 
 ================================================================================================
 FILE: narrative/fiction/sources/F0010_last_laughing_engine/The Last Laughing Engine #U2014 Paroles et styles compil#U00e9s.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1fbb21f3f3437c8a4101a9699350e0577589fcd054da2d5cf9a41da23406e022
+CONTENT_BYTES: 57090
 ================================================================================================
 
 # The Last Laughing Engine
@@ -148443,7 +148781,10 @@ Melancholic cosmic cabaret ballad, acoustic machine requiem, pre-asylum lullaby,
 
 ================================================================================================
 FILE: narrative/fiction/sources/F0016_hacking_reality/Hacking Reality_ practical guide for the next Christ_26-05-2026_17_15_42 (1)(2).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1271f1c16bb0267326bd26828584d8c0acd47af27787fbe053f9c03cf33037da
+CONTENT_BYTES: 101082
 ================================================================================================
 
 Hacking Reality
@@ -150656,7 +150997,10 @@ Christ-like hacking is not a closed doctrine, nor a fixed method. \
 
 ================================================================================================
 FILE: narrative/fiction/sources/F0017_plateforme_connaissance/Livre Plateforme de la connaissance v2.docx (1).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9fc350810599604bca08bb5b5af50694f75a7f5190212c3c70acbe4d6a37a35e
+CONTENT_BYTES: 132576
 ================================================================================================
 
 ### 
@@ -152123,7 +152467,10 @@ Elle leva la main, et les fils qu’elle avait tissés s’étendirent à l’in
 
 ================================================================================================
 FILE: narrative/fiction/VALIDATION_REPORT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cbc1fe123143572d0639cbe4bea777da68a6b18d67132c407aa9d8cd0b800c7b
+CONTENT_BYTES: 839
 ================================================================================================
 
 # Fiction corpus validation report — 2026-08-17
@@ -152153,7 +152500,10 @@ The newer CivCohe authority structure is preserved. Fiction is contextual and ca
 
 ================================================================================================
 FILE: narrative/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 30d88a3b0a4858081e75e65dbea1f31e17ea76ea51771ef7ce9e493ac866c069
+CONTENT_BYTES: 1095
 ================================================================================================
 
 # Narrative Layer
@@ -152186,7 +152536,10 @@ See `fiction/README.md`, `fiction/FICTION_REGISTRY.md` and `fiction/CIVCOHE_ALIG
 
 ================================================================================================
 FILE: practice/CIVIC_RESILIENCE_DRILLS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ea0f5814e9c8b15f9c312141a37ad4a17eae4d6db22006787eddc61ee8542235
+CONTENT_BYTES: 2553
 ================================================================================================
 
 ---
@@ -152278,7 +152631,10 @@ A drill succeeds when participants can:
 
 ================================================================================================
 FILE: practice/CORPUS_AUTONOMY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 536a9c03a8f80f649ad5989177b41be57079a089642544b4a5ba203528d6d319
+CONTENT_BYTES: 2038
 ================================================================================================
 
 ---
@@ -152351,7 +152707,10 @@ See `README.md` → Independent Reproducibility.
 
 ================================================================================================
 FILE: practice/EPISTEMIC_RESILIENCE_DRILLS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ae7827faa814b19e827613caf3453b2050f2f107250fd7c4f1bf4571cb282a07
+CONTENT_BYTES: 2570
 ================================================================================================
 
 ---
@@ -152437,7 +152796,10 @@ The architecture should preserve:
 
 ================================================================================================
 FILE: practice/FOUNDER_FALLIBILITY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7bf2c356172b599897285a1a7e54940e030b2e4bbbc98b1e93bc0db79205cb0c
+CONTENT_BYTES: 2089
 ================================================================================================
 
 ---
@@ -152519,7 +152881,10 @@ See also:
 
 ================================================================================================
 FILE: practice/PATTERN_REGISTRY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8a82f7ad5bbffb9416e287a5cdb026757a63fe5d1fe372839d81967e39ef6fa6
+CONTENT_BYTES: 1044
 ================================================================================================
 
 ---
@@ -152557,7 +152922,10 @@ Do not merely correct an error. Preserve why it happened, how it was detected an
 
 ================================================================================================
 FILE: practice/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 310d069f70a3f7c71d017c5f3d2fa008645d66c3cd51f173868f3b5d59c9f88f
+CONTENT_BYTES: 1698
 ================================================================================================
 
 ---
@@ -152627,7 +152995,10 @@ A practice exercise is useful only if it produces better detection, correction, 
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cd0be7ac36f84bcddc0797c237374b0c639095716f671029d082ccaaee91fb72
+CONTENT_BYTES: 22280
 ================================================================================================
 
 # Civilizational Coherence
@@ -153445,7 +153816,10 @@ Or, in the language of the conclusion:
 
 ================================================================================================
 FILE: research/SOURCE_LEDGER.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 364046699e850c57b316a9fce089c5a8065095fe123e093bdea07156a50ac29d
+CONTENT_BYTES: 4021
 ================================================================================================
 
 ---
@@ -153536,7 +153910,10 @@ The provenance record is `narrative/fiction/SOURCE_MANIFEST.md`; the conceptual 
 
 ================================================================================================
 FILE: RIGHTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 96f2db8be74269b1c0d278b186f1b5dad4a5d6d7fb04b77b10ca84c52caad83a
+CONTENT_BYTES: 1796
 ================================================================================================
 
 # Rights and Licensing Status
@@ -153588,7 +153965,10 @@ SourcePossession \neq RightsGrant
 
 ================================================================================================
 FILE: scenarios/crisis/SCN-CRISIS-001-hostage-response.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d21cde45d2a402b3b713957659336246b618fc406ee372500308e3efd471e80d
+CONTENT_BYTES: 3065
 ================================================================================================
 
 ---
@@ -153672,7 +154052,10 @@ It does not prove authority adoption, operational security, improved hostage out
 
 ================================================================================================
 FILE: scenarios/culture/SCN-CULTURE-001-fictional-universe-remix.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: eeab27a9e05332adb999818470794206443fd245ccce5b097983ab13e733897f
+CONTENT_BYTES: 2355
 ================================================================================================
 
 ---
@@ -153744,7 +154127,10 @@ It does not prove rights-holder permission, that expert weighting produces bette
 
 ================================================================================================
 FILE: scenarios/education/SCN-EDU-001-nain-remote-multilingual-school.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c0fc5581db6c71bf30a7112d797d1fd0ebc52dda73c25c625cc0ff2c55a0afbe
+CONTENT_BYTES: 3040
 ================================================================================================
 
 ---
@@ -153823,7 +154209,10 @@ It does not prove complete Wikidata availability in every indigenous language, a
 
 ================================================================================================
 FILE: scenarios/governance/SCN-GOV-001-tattoo-policy-resistance-drill.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 38ee5b3392e6405f49dd797cd79b59c19c87849c66f1079149d88d6b5d0873c8
+CONTENT_BYTES: 6872
 ================================================================================================
 
 ---
@@ -154018,7 +154407,10 @@ It creates a testable practice hypothesis.
 
 ================================================================================================
 FILE: scenarios/healthcare/SCN-HEALTH-001-multilingual-hospital.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c2a45607e1835cd989f666a9c94d675890e6dabc4fb75473d3d845bc8a2bfb93
+CONTENT_BYTES: 2825
 ================================================================================================
 
 ---
@@ -154108,7 +154500,10 @@ It does not prove clinical efficacy, regulatory compliance, arbitrary dialogue s
 
 ================================================================================================
 FILE: scenarios/INDEX.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ca28e902cf366119a998614a80dd65b8bb130deeab48eb43f2f7d03b07bc4d9b
+CONTENT_BYTES: 1693
 ================================================================================================
 
 ---
@@ -154142,7 +154537,10 @@ status: governed-working-library
 
 ================================================================================================
 FILE: scenarios/knowledge/SCN-KNOW-001-unknown-contributor-kristall.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 959d2c5fe34d622d1b0fc77afe452eb352851b43bee98c7d464c237ef5f5bb8c
+CONTENT_BYTES: 2495
 ================================================================================================
 
 ---
@@ -154213,7 +154611,10 @@ It does not prove UNESCO adoption, scientific-community acceptance, solved gatek
 
 ================================================================================================
 FILE: scenarios/knowledge/SCN-KNOW-002-flat-earth-kristal.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d1533b86f1e09f574d3eefd7e02da26db54bc980dce5da45957b7c254cd6bafa
+CONTENT_BYTES: 6483
 ================================================================================================
 
 ---
@@ -154393,7 +154794,10 @@ A successful Flat-Earth drill does not prove that subtle political, scientific o
 
 ================================================================================================
 FILE: scenarios/legacy/LEGACY_SCENARIO_MIGRATION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d90c30bcd8a02b112b13d8d7ec2d295f4e657d4c83f2e1cd1ccd9dc36bf5e988
+CONTENT_BYTES: 1840
 ================================================================================================
 
 ---
@@ -154454,7 +154858,10 @@ The old files remain historical working material. This library is the current go
 
 ================================================================================================
 FILE: scenarios/PATTERN_LIBRARY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 914ce5822f1462968b17547cd8249b25b13ad9b8276a1f0c38c785df401a7e50
+CONTENT_BYTES: 5993
 ================================================================================================
 
 ---
@@ -154661,7 +155068,10 @@ ReusableCounterpower
 
 ================================================================================================
 FILE: scenarios/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 613968ce1144f13e1d44e67eede8a8834a65ae34bff54517ac6979293785f833
+CONTENT_BYTES: 3229
 ================================================================================================
 
 ---
@@ -154781,7 +155191,10 @@ These cases must preserve explicit safety boundaries and must not be interpreted
 
 ================================================================================================
 FILE: scenarios/SCENARIO_SCHEMA.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6cc0cf5cad00dddc80df6112fde244b2d53916c174d74f79f9e9a5704e9f14c4
+CONTENT_BYTES: 2107
 ================================================================================================
 
 ---
@@ -154858,7 +155271,10 @@ The drill metadata does not turn a simulated claim or policy into an endorsed po
 
 ================================================================================================
 FILE: validation/implementation/IMPLEMENTATION_STATUS_MATRIX.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4f3594a62ac897aa45bb1df36791c0504d73a8f0a6e96aba4f5ad1160e0b0763
+CONTENT_BYTES: 4206
 ================================================================================================
 
 ---

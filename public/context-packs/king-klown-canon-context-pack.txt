@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/king-klown-canon
-source_path: C:\mycode\King_Klown\king-clown-canon
 source_commit: 5afb23d2788c608df85e78f5c7899dffd90867d7
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: C:\mycode\King_Klown\king-klown-canon.wiki
 wiki_source_commit: b3ba85710499e917ec8bd4f1eda8fc9addf36d44
 wiki_working_tree_markdown: clean
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 114
 wiki_files: 36
 source_files: 150
@@ -18,170 +16,174 @@ included_files: 150
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 1604537
-authority_counts: {"canonical":150}
-generated_at: 2026-09-10T11:09:15-04:00
+authority_counts: {"reference":150}
+content_role_counts: {"knowledge":114,"navigation":36}
+generated_at: 2026-09-10T13:04:17-04:00
 files: 150
-content_sha256: d2d7fe19eaf2a7fe2b9eff02ec3a04b50f1fb4227d00e4744fde7322cf51ac88
+content_sha256: 5331d42426533bc4f21698771e3ff26ebcd4314ed548f9037a0fb1747fbf51b9
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-001. [canonical] wiki/_Footer.md
-002. [canonical] wiki/_Sidebar.md
-003. [canonical] wiki/Auteur-et-recursion.md
-004. [canonical] wiki/Canon-et-autorite.md
-005. [canonical] wiki/Chronologies-et-temporalites.md
-006. [canonical] wiki/Circularite-progressive-et-fractales.md
-007. [canonical] wiki/Colin-Row-et-la-prison.md
-008. [canonical] wiki/Cosmogenese.md
-009. [canonical] wiki/Couches-epistemiques.md
-010. [canonical] wiki/FAQ.md
-011. [canonical] wiki/Fonction-Christ.md
-012. [canonical] wiki/Fonctions-de-King-Klown.md
-013. [canonical] wiki/Formulations-supersedees.md
-014. [canonical] wiki/Glossaire.md
-015. [canonical] wiki/Graphe-des-relations.md
-016. [canonical] wiki/Guide-de-lecture.md
-017. [canonical] wiki/Hello-World-Autopsie-d-un-Clown-Royal.md
-018. [canonical] wiki/Home.md
-019. [canonical] wiki/Identites-Rejean-Colin-King-Klown.md
-020. [canonical] wiki/Incarnations-et-continuite.md
-021. [canonical] wiki/King-Klown-et-la-liberation.md
-022. [canonical] wiki/King-Klown-et-la-pedagogie.md
-023. [canonical] wiki/King-Klown-et-le-Joker.md
-024. [canonical] wiki/King-Klown-et-les-dieux.md
-025. [canonical] wiki/King-Klown-persona-public.md
-026. [canonical] wiki/Ninja-Arc-en-ciel.md
-027. [canonical] wiki/Oeuvres-et-corpus.md
-028. [canonical] wiki/Ontologie-de-King-Klown.md
-029. [canonical] wiki/Pi-AIME-et-le-Cercle.md
-030. [canonical] wiki/Plateforme-de-la-connaissance.md
-031. [canonical] wiki/Questions-ouvertes.md
-032. [canonical] wiki/Sources-et-provenance.md
-033. [canonical] wiki/Storyline-complete.md
-034. [canonical] wiki/Technologies-et-Context-Packs.md
-035. [canonical] wiki/Transmission-retrait-et-reprise.md
-036. [canonical] wiki/WIKI_DEPLOY.md
-037. [canonical] archive/README.md
-038. [canonical] CANON/00_INVARIANTS.md
-039. [canonical] CANON/01_ONTOLOGY.md
-040. [canonical] CANON/02_COSMOGENESIS.md
-041. [canonical] CANON/03_PI_AIME_CIRCLE.md
-042. [canonical] CANON/04_FUNCTIONS.md
-043. [canonical] CANON/05_GODS.md
-044. [canonical] CANON/06_CHRIST_FUNCTION.md
-045. [canonical] CANON/07_IDENTITIES_MANIFESTATIONS.md
-046. [canonical] CANON/08_STORYLINE.md
-047. [canonical] CANON/09_COLIN_ROW.md
-048. [canonical] CANON/10_PUBLIC_PERSONA.md
-049. [canonical] CANON/11_AUTHOR_AUTEUR.md
-050. [canonical] CANON/12_WORKS_MAP.md
-051. [canonical] CANON/13_TRANSMISSION_WITHDRAWAL.md
-052. [canonical] CANON/14_EPISTEMIC_LAYERS.md
-053. [canonical] CANON/15_UNRESOLVED.md
-054. [canonical] CANON/16_SUPERSEDED.md
-055. [canonical] CHANGELOG.md
-056. [canonical] CONTRIBUTING.md
-057. [canonical] CORPUS/asile/asile_v2_source.md
-058. [canonical] CORPUS/asile/README.md
-059. [canonical] CORPUS/colin-row/00_CANONICAL_STATE_source.md
-060. [canonical] CORPUS/colin-row/11_CANON_DECISIONS_V3_source.md
-061. [canonical] CORPUS/colin-row/README.md
-062. [canonical] CORPUS/creator-clarifications/2026-09-01.md
-063. [canonical] CORPUS/hacking-reality/selected_KK_extracts.md
-064. [canonical] CORPUS/hello-world/current-canon/01_CURRENT_CANON.md
-065. [canonical] CORPUS/hello-world/current-canon/02_ALBUM_THESIS.md
-066. [canonical] CORPUS/hello-world/current-canon/03_NARRATIVE_THREADS.md
-067. [canonical] CORPUS/hello-world/current-canon/04_VOICE_ARCHITECTURE.md
-068. [canonical] CORPUS/hello-world/current-canon/05_TRACK_ARCHITECTURE.md
-069. [canonical] CORPUS/hello-world/current-canon/06_LYRICAL_LANGUAGE.md
-070. [canonical] CORPUS/hello-world/current-canon/07_SONIC_LANGUAGE.md
-071. [canonical] CORPUS/hello-world/current-canon/08_MOTIFS_AND_RECURSION.md
-072. [canonical] CORPUS/hello-world/current-canon/09_COSMOLOGY_AND_TEMPORAL_GEOMETRY.md
-073. [canonical] CORPUS/hello-world/current-canon/10_AUTHOR_AND_FINAL_BOUNDARY.md
-074. [canonical] CORPUS/hello-world/current-canon/11_CONSTRUCTION_PRINCIPLES.md
-075. [canonical] CORPUS/hello-world/current-canon/12_CONSTRAINTS.md
-076. [canonical] CORPUS/hello-world/current-canon/13_RAG_INDEX.md
-077. [canonical] CORPUS/hello-world/current-canon/lyrics/01_LA_DERNIERE_TRACE_CONNUE.md
-078. [canonical] CORPUS/hello-world/current-canon/lyrics/02_SURFACE.md
-079. [canonical] CORPUS/hello-world/current-canon/lyrics/03_COUTURES.md
-080. [canonical] CORPUS/hello-world/current-canon/lyrics/04_LE_FOU.md
-081. [canonical] CORPUS/hello-world/current-canon/lyrics/05_NON_IDENTIQUE.md
-082. [canonical] CORPUS/hello-world/current-canon/lyrics/06_PROVENANCE.md
-083. [canonical] CORPUS/hello-world/current-canon/lyrics/07_REJEAN.md
-084. [canonical] CORPUS/hello-world/current-canon/lyrics/08_AVANT_LES_DIEUX.md
-085. [canonical] CORPUS/hello-world/current-canon/lyrics/09_LE_MANDAT.md
-086. [canonical] CORPUS/hello-world/current-canon/lyrics/10_SAUVE_SON_AME.md
-087. [canonical] CORPUS/hello-world/current-canon/lyrics/11_AUCUN_DOSSIER_ULTERIEUR.md
-088. [canonical] CORPUS/hello-world/current-canon/lyrics/12_HELLO_WORLD.md
-089. [canonical] CORPUS/hello-world/current-canon/README.md
-090. [canonical] CORPUS/hello-world/README.md
-091. [canonical] CORPUS/konvergence/README.md
-092. [canonical] CORPUS/machine-a-rires/description_complete_source.md
-093. [canonical] CORPUS/machine-a-rires/README.md
-094. [canonical] CORPUS/mythos-gods/Amaterasu Le spectre de la vérité 15709637d3f78094a23efd06bf22203d.md
-095. [canonical] CORPUS/mythos-gods/Anansi le fil effiloché 15709637d3f78029aa82c63013073d12.md
-096. [canonical] CORPUS/mythos-gods/Anubis les écailles réinventées 15709637d3f780a599eac93a04d5cb1e.md
-097. [canonical] CORPUS/mythos-gods/Aïda Éloïse et la Danse des Turbines 15f09637d3f780fbaae2f6d1336dfc64.md
-098. [canonical] CORPUS/mythos-gods/Coyote Le chant des oubliés 15709637d3f780e296d3dea4112daeac.md
-099. [canonical] CORPUS/mythos-gods/Dionysos Le calice débordant 15709637d3f780dfbecdfdf408b23e6e.md
-100. [canonical] CORPUS/mythos-gods/Elias, l’empathe bcfdd846c1b5402fa38977987a407457.md
-101. [canonical] CORPUS/mythos-gods/Gabriel Lajoie 16509637d3f78017994bc8efc65a1a44.md
-102. [canonical] CORPUS/mythos-gods/Kokopelli La mélodie du renouveau 15709637d3f780e5a18ff378c4db8c5d.md
-103. [canonical] CORPUS/mythos-gods/Legba le premier pas du voyageur 15709637d3f7806e98f7eb28cccf0075.md
-104. [canonical] CORPUS/mythos-gods/Loki La danse du chaos 15709637d3f7804f8d67c728c6949f3c.md
-105. [canonical] CORPUS/mythos-gods/Morrigan les cendres et la graine 15709637d3f7801bb44dca40b832f097.md
-106. [canonical] CORPUS/mythos-gods/Mythos King Klown 14d09637d3f780c894d4f4f3eeac5dc6.md
-107. [canonical] CORPUS/mythos-gods/Odin Les fissures du Père de tous 15709637d3f780788765f38c22fcb16f.md
-108. [canonical] CORPUS/mythos-gods/Pelé la flamme qui crée 15709637d3f780e1a82cfc24b8f90d2d.md
-109. [canonical] CORPUS/mythos-gods/Prométhée L'étincelle et l'ombre 15709637d3f78096a92cce1065ce67fa.md
-110. [canonical] CORPUS/mythos-gods/Quetzalcoatl la danse des ondulations 15709637d3f7803eb5d0c21802a717f2.md
-111. [canonical] CORPUS/mythos-gods/Raven le gardien des ombres et de la lumière 15709637d3f7808ea8ecf7b37ccf8702.md
-112. [canonical] CORPUS/mythos-gods/Sun Wukong L'étoile et la tempête 15709637d3f78003bec1d44377c69b80.md
-113. [canonical] CORPUS/mythos-gods/Tezcatlipoca le bord du miroir 15709637d3f7808a9b7fe2f8065ef12f.md
-114. [canonical] CORPUS/mythos-gods/Thot la rivière de la connaissance 15709637d3f780129b7bf7c0842529b8.md
-115. [canonical] CORPUS/ninja-arc-en-ciel/README.md
-116. [canonical] CORPUS/ninja-arc-en-ciel/source_lyrics.md
-117. [canonical] CORPUS/pi/Pi_v13.md
-118. [canonical] CORPUS/pi/README.md
-119. [canonical] CORPUS/platform-of-knowledge/platform-of-knowledge_source.md
-120. [canonical] CORPUS/raoul/README.md
-121. [canonical] CORPUS/README.md
-122. [canonical] DATA/README.md
-123. [canonical] DECISIONS/D-001-PRIMORDIAL-PRINCIPLE.md
-124. [canonical] DECISIONS/D-002-GODS-WHITE-LIGHT.md
-125. [canonical] DECISIONS/D-003-CHRIST-ROLE.md
-126. [canonical] DECISIONS/D-004-COLIN-INCARCERATION.md
-127. [canonical] DECISIONS/D-005-HELLO-WORLD-POSTMORTEM.md
-128. [canonical] DECISIONS/D-006-REJEAN-COLIN-KK-MODES.md
-129. [canonical] DECISIONS/D-007-NINJA-TRANSMISSION.md
-130. [canonical] DECISIONS/D-008-PUBLIC-PERSONA.md
-131. [canonical] DECISIONS/D-009-AUTHOR-RECURSION.md
-132. [canonical] DECISIONS/D-010-TECH-SCOPE.md
-133. [canonical] DECISIONS/D-011-DEMIURGE-TERM.md
-134. [canonical] DECISIONS/D-012-PI-MAL-GSF.md
-135. [canonical] DECISIONS/README.md
-136. [canonical] EXTERNAL/CONTEXT_PACKS.md
-137. [canonical] GENERATED/context-packs/KK_CORE.md
-138. [canonical] GENERATED/context-packs/KK_FULL.md
-139. [canonical] GENERATED/context-packs/KK_METAPHYSICS.md
-140. [canonical] GENERATED/context-packs/KK_STORYLINE.md
-141. [canonical] GENERATED/knowledge-graph.md
-142. [canonical] GENERATED/README.md
-143. [canonical] GENERATED/source-index.md
-144. [canonical] GENERATED/timelines.md
-145. [canonical] README.md
-146. [canonical] REPO_MAP.md
-147. [canonical] RIGHTS.md
-148. [canonical] SCOPE.md
-149. [canonical] START_HERE.md
-150. [canonical] tools/README.md
+001. [reference] [navigation] wiki/_Footer.md | bytes=179 | sha256=9d730c325180ff55d17df0fd013aac0198eb89734f7e474f1657669c4c9428c3
+002. [reference] [navigation] wiki/_Sidebar.md | bytes=1835 | sha256=19d0736c52da78f2a77a407de95e861f844ead4dc588ef3ca7bcb7d98763d8ce
+003. [reference] [navigation] wiki/Auteur-et-recursion.md | bytes=1382 | sha256=b6c42c2a354e9e86efe29368c0f039f6157085929d868c967ba253734ad2c5d4
+004. [reference] [navigation] wiki/Canon-et-autorite.md | bytes=1898 | sha256=39f7dcaa53beaa9c47cfecee410579dbcddf1bbc119e8ad127e06d7c31498cca
+005. [reference] [navigation] wiki/Chronologies-et-temporalites.md | bytes=1295 | sha256=7a73a78fbff09e1c5282413c1645c74f737663d06c6a06537ac049da3bf37548
+006. [reference] [navigation] wiki/Circularite-progressive-et-fractales.md | bytes=1544 | sha256=4c493e2459c8dd9af6979166deb7574b46fd4cd481aa476bc00a56683264962b
+007. [reference] [navigation] wiki/Colin-Row-et-la-prison.md | bytes=1991 | sha256=b2ee2d321b70c49a213e6f239b0b617f25713a8fe2ebb278db19459d5373f3bc
+008. [reference] [navigation] wiki/Cosmogenese.md | bytes=1881 | sha256=e4f8ed3fdefb377ff0a9ba9cc30d4e15b5b6039151a4f88787c11873f5e05750
+009. [reference] [navigation] wiki/Couches-epistemiques.md | bytes=1705 | sha256=97926c7175eec88dff0112646927f7153353c64931cd910da73c8ef1ff26b41e
+010. [reference] [navigation] wiki/FAQ.md | bytes=2291 | sha256=988bfc424af293f498fecbaa8ffc09260e4496db462c455100b3eb9fc0efe644
+011. [reference] [navigation] wiki/Fonction-Christ.md | bytes=1650 | sha256=432a9705f7b939f61ac7ccfe6fe9ec9d95fc2c41b6aec291f20ee474dcc2df65
+012. [reference] [navigation] wiki/Fonctions-de-King-Klown.md | bytes=2248 | sha256=7b063555f53e6c30ad0a7c847acf5201be3d9079d65b09cd8ab3efd5845b03b4
+013. [reference] [navigation] wiki/Formulations-supersedees.md | bytes=1853 | sha256=3a56561fc84856b29e712a54c8499335c10cd14ff4712ccbd3c0edc0e14113f5
+014. [reference] [navigation] wiki/Glossaire.md | bytes=2850 | sha256=bca4af6b35deaf2381e93e21ad2898de32c45a5bfa679794c784739e674a814c
+015. [reference] [navigation] wiki/Graphe-des-relations.md | bytes=1390 | sha256=9040dc11fd8ffb9a0fc3051f94659762f4b7fdee1bcbf9f9555dd7c8929a43f3
+016. [reference] [navigation] wiki/Guide-de-lecture.md | bytes=2588 | sha256=32e754f9feb1209c3fe49fdf73cb2b8926560c2f33d354deb5218ed3a84e8932
+017. [reference] [navigation] wiki/Hello-World-Autopsie-d-un-Clown-Royal.md | bytes=1618 | sha256=8bc0a23e70acecbcd42a5761b3d7d6b9abe3b91879822c65c67509dfe7c19757
+018. [reference] [navigation] wiki/Home.md | bytes=2558 | sha256=bbe8b500fa2e5d1982967af3e170a2d477a750ec331f9da15f53a3a5a909ab93
+019. [reference] [navigation] wiki/Identites-Rejean-Colin-King-Klown.md | bytes=1510 | sha256=efb1c99fa87243bc719f48933084440e798bda3f9b523ecc952403c13060acd1
+020. [reference] [navigation] wiki/Incarnations-et-continuite.md | bytes=1338 | sha256=950d3c7e849bb6ef2ccd502807b014589c657527c47f244e7f878bebc0e868ad
+021. [reference] [navigation] wiki/King-Klown-et-la-liberation.md | bytes=1389 | sha256=ff9a33db9b895333b4fb116a052f052464b0f0278977272b616ac144a276d9dc
+022. [reference] [navigation] wiki/King-Klown-et-la-pedagogie.md | bytes=1271 | sha256=2cbcdb13ccc77444e61166c20e22bc12ee1ac83927d4edf1abf1f3c2f043de3b
+023. [reference] [navigation] wiki/King-Klown-et-le-Joker.md | bytes=1057 | sha256=ac79504216ae82737f57f6d3c933932817a8e894858c6f49cb7b7cbc4cb3d175
+024. [reference] [navigation] wiki/King-Klown-et-les-dieux.md | bytes=1769 | sha256=c960e6f7480c481921c23b2247f8ee996b7149ea3696516f34e75fd2fcb968a5
+025. [reference] [navigation] wiki/King-Klown-persona-public.md | bytes=1777 | sha256=7feba4859ecce5743ea7efd2c9868d4b291e0a6dc78ae375321a0f6fef80f75a
+026. [reference] [navigation] wiki/Ninja-Arc-en-ciel.md | bytes=1631 | sha256=c65b10c05b9ca2a312af402d527236f670b8ced719fa71d29166ded03b58516d
+027. [reference] [navigation] wiki/Oeuvres-et-corpus.md | bytes=1806 | sha256=009d354eecc30be03c70a9aecd888f80ddb86b9349dd04944032842319414cf2
+028. [reference] [navigation] wiki/Ontologie-de-King-Klown.md | bytes=1984 | sha256=8ff775c17882ddf3a4692c7e057b08a26b4c07d8ed1bd41955ee4aa775ffa0d2
+029. [reference] [navigation] wiki/Pi-AIME-et-le-Cercle.md | bytes=1624 | sha256=c16d6ee9c3ccee64639ed4d8c883931515d178b695a286d1fd21e229afb9ebe0
+030. [reference] [navigation] wiki/Plateforme-de-la-connaissance.md | bytes=1588 | sha256=2506fd728ef1f49435f6b894697951e92d503159cace5d215b6f417b0382340a
+031. [reference] [navigation] wiki/Questions-ouvertes.md | bytes=1451 | sha256=e268b84003a5f1c6faddc5b65b139b60a45ed90b91d7737898ce0e632e8b745c
+032. [reference] [navigation] wiki/Sources-et-provenance.md | bytes=1248 | sha256=63ffbe50077e2fe6a348e536f0de89c77c8c410125ee6e70428da8808a8ef1b5
+033. [reference] [navigation] wiki/Storyline-complete.md | bytes=3468 | sha256=9e11611e046d60cfcc9f6e0de3ef8464a6d42712b837b3ac13416a8dde5f322e
+034. [reference] [navigation] wiki/Technologies-et-Context-Packs.md | bytes=1550 | sha256=4ded7f3b98573ef226a9a30f7b69a1decf4ceffa9e2c586223c32beadc498f58
+035. [reference] [navigation] wiki/Transmission-retrait-et-reprise.md | bytes=1377 | sha256=fac51a31507df73e9c3ce7cb85ccea577b5600caaa3c9c22938a96bd34e94870
+036. [reference] [navigation] wiki/WIKI_DEPLOY.md | bytes=1003 | sha256=fe6a1d459dbf41b80539a9e18b72b763862228a20270adaa7184f50da20b53cb
+037. [reference] [knowledge] archive/README.md | bytes=239 | sha256=5258ffd4c5d9e9d71c3c806e5b6562b56eef696cf8e65baf7b59e2f385d20c1d
+038. [reference] [knowledge] CANON/00_INVARIANTS.md | bytes=9223 | sha256=57aeca9eb82be33713b93b2aa52258438beb6c645e8ad96efa302ea6ee27d0f3
+039. [reference] [knowledge] CANON/01_ONTOLOGY.md | bytes=2135 | sha256=f658c078898d0784186b881ad1485b788773fdd7517f7457abe07b85c56fa11d
+040. [reference] [knowledge] CANON/02_COSMOGENESIS.md | bytes=2364 | sha256=748eeceb8dfa4cc6b6c60a5502577836646104846a4cbb0997d71ffeb873e24d
+041. [reference] [knowledge] CANON/03_PI_AIME_CIRCLE.md | bytes=1881 | sha256=7e0459deb17aad878e0ae9b537b27de92e9d55669a4cf57b2041e57fa4ea26cf
+042. [reference] [knowledge] CANON/04_FUNCTIONS.md | bytes=2957 | sha256=9ed12d1f96c85c3a2b6b8495168e65a698ea9f88e70ef763f149cb98464a9c95
+043. [reference] [knowledge] CANON/05_GODS.md | bytes=2136 | sha256=911f628fc395ceddcd4d8c9b0bff248ae2ce6297ca2bfda1cf627a2281d99ded
+044. [reference] [knowledge] CANON/06_CHRIST_FUNCTION.md | bytes=1742 | sha256=51669aa166a908fd43bcac971e407365ab7f6fa2c91830e3247c8f89df1821b9
+045. [reference] [knowledge] CANON/07_IDENTITIES_MANIFESTATIONS.md | bytes=2202 | sha256=2308f17eff7d9a336b684f390d2ab257c699bfc621823d32bfbf53bac5f61274
+046. [reference] [knowledge] CANON/08_STORYLINE.md | bytes=2345 | sha256=8dfe4de3945430ffdf5b4ba2d553ce5b4ec07e59cabbac39723011545183b560
+047. [reference] [knowledge] CANON/09_COLIN_ROW.md | bytes=2126 | sha256=4ef3480e77725754ddf11c0d6d73a3a2e82cf6886afe43fd594c279350537b3c
+048. [reference] [knowledge] CANON/10_PUBLIC_PERSONA.md | bytes=1930 | sha256=2fb2120d058372fb1c1896579beb1bb42de364090e358202cf5ccc7bcf29c65e
+049. [reference] [knowledge] CANON/11_AUTHOR_AUTEUR.md | bytes=1591 | sha256=dbbcbe9e1eb082f1f68c398de5e1a7bf5af57c8bbb19a6556b1cb9ea154c33fd
+050. [reference] [knowledge] CANON/12_WORKS_MAP.md | bytes=2171 | sha256=5a259d58f4eb6b4dd22dc6340f9c17d8fd20a6f39429039c27bfccbcf054551f
+051. [reference] [knowledge] CANON/13_TRANSMISSION_WITHDRAWAL.md | bytes=1191 | sha256=b01e5080f132fc4a99c9fbb9a73140d0a7f633f871f15985f09d5b00b9bd656c
+052. [reference] [knowledge] CANON/14_EPISTEMIC_LAYERS.md | bytes=1817 | sha256=d8576b83bd38d1f9d9317161aab416e62d519a7a6eb828f4b14f8b9f6961dda3
+053. [reference] [knowledge] CANON/15_UNRESOLVED.md | bytes=1540 | sha256=2b3ef0b346d33f4a129af1278faf854d86d959ece2a6d41179789c7f13ed934e
+054. [reference] [knowledge] CANON/16_SUPERSEDED.md | bytes=1904 | sha256=b900b41a67d6c71cbcdd5b7252d4b0130937f380e2062dff84cb63ae219664c2
+055. [reference] [knowledge] CHANGELOG.md | bytes=848 | sha256=d05c07bd49e4643b3796a241fe359ab92182e82feb663932617c74d76e037485
+056. [reference] [knowledge] CONTRIBUTING.md | bytes=910 | sha256=19b2ba39d781692f9bd674296a8bb6983f83c4844453fe0593b151481fe86a92
+057. [reference] [knowledge] CORPUS/asile/asile_v2_source.md | bytes=883114 | sha256=aded9450ce145e77f34e46c018a4f0e070ee39e9820269254bba26f6028d707e
+058. [reference] [knowledge] CORPUS/asile/README.md | bytes=165 | sha256=b8fdeb35fcfab93699a55b4ac21873187046ab38d6fe438d9bf49890a41a5e5d
+059. [reference] [knowledge] CORPUS/colin-row/00_CANONICAL_STATE_source.md | bytes=4891 | sha256=ef02bc1693535fe1fa010255baddaf8ab9bf0e74a52c97d41d1d275c081f00fe
+060. [reference] [knowledge] CORPUS/colin-row/11_CANON_DECISIONS_V3_source.md | bytes=1917 | sha256=19dc006fdb837cb259d9156c5bb38edeae39d6fce255e7282cd27b36a6a6796d
+061. [reference] [knowledge] CORPUS/colin-row/README.md | bytes=377 | sha256=e142619106407c830f0e1c8ccb8a8ebcc22b7033b3ea7b5376ddfb78e5f5fb11
+062. [reference] [knowledge] CORPUS/creator-clarifications/2026-09-01.md | bytes=3494 | sha256=3351560cc7e6f1f36b6b8291c40de8902a5704c5f49900d03808340ce5559884
+063. [reference] [knowledge] CORPUS/hacking-reality/selected_KK_extracts.md | bytes=10339 | sha256=6296d4e09fc7c8e9093112cf283151155079e21c99fe2f5747efce6dec9e1c45
+064. [reference] [knowledge] CORPUS/hello-world/current-canon/01_CURRENT_CANON.md | bytes=3561 | sha256=d4e0897835b99896622da0544971717c6f6cda0bf3c7172f4c9e0edec330d4a1
+065. [reference] [knowledge] CORPUS/hello-world/current-canon/02_ALBUM_THESIS.md | bytes=2626 | sha256=e049921879a7e2af3536a0d80b2e531b5f925e4de32a8f75327fcc3458e0ec5d
+066. [reference] [knowledge] CORPUS/hello-world/current-canon/03_NARRATIVE_THREADS.md | bytes=2635 | sha256=b8c02b454618be3e93b11f7b09b4f2e58c7d9d7654fd49f02f512ff7e89f371f
+067. [reference] [knowledge] CORPUS/hello-world/current-canon/04_VOICE_ARCHITECTURE.md | bytes=1889 | sha256=b7d8d472207ca2c459b01e2f154cfbf268fb1c338cce1c5b3cbc8f8366b18fbe
+068. [reference] [knowledge] CORPUS/hello-world/current-canon/05_TRACK_ARCHITECTURE.md | bytes=3097 | sha256=996444f866d60e790cb2cdee51aa1564c15cbab0ac9fc4a1a3caebf6b79067d9
+069. [reference] [knowledge] CORPUS/hello-world/current-canon/06_LYRICAL_LANGUAGE.md | bytes=2173 | sha256=f48177f429220d7ebcdcf8ef84ed3c6b24159ee8c797514e4906f21ef8d058d9
+070. [reference] [knowledge] CORPUS/hello-world/current-canon/07_SONIC_LANGUAGE.md | bytes=1338 | sha256=9303b7b3089a317941c05abfd43df65c492d8536b04f528032cc3a5457729a30
+071. [reference] [knowledge] CORPUS/hello-world/current-canon/08_MOTIFS_AND_RECURSION.md | bytes=1635 | sha256=835ca0f0fb68bf2583dd8aba835d8d91821f0c8415ccae1c43314a1a608d71bf
+072. [reference] [knowledge] CORPUS/hello-world/current-canon/09_COSMOLOGY_AND_TEMPORAL_GEOMETRY.md | bytes=2420 | sha256=5288438cbd7c485e6bb50990abf10071361836216d6eb41cc3e10e32a508c33e
+073. [reference] [knowledge] CORPUS/hello-world/current-canon/10_AUTHOR_AND_FINAL_BOUNDARY.md | bytes=2139 | sha256=d64c0d041f6b226231c9ea5663c949c08763a10f98045f3b297b7ee86bff2ae9
+074. [reference] [knowledge] CORPUS/hello-world/current-canon/11_CONSTRUCTION_PRINCIPLES.md | bytes=1722 | sha256=301a6ccee35d22c71b569d5ebda52ce7773715ba1d9ca03496f2da75600c4716
+075. [reference] [knowledge] CORPUS/hello-world/current-canon/12_CONSTRAINTS.md | bytes=1938 | sha256=0ab7cb8344ce24e04069e46399082df42be44bec3823ed2eb39a0464ec57145a
+076. [reference] [knowledge] CORPUS/hello-world/current-canon/13_RAG_INDEX.md | bytes=1203 | sha256=e61c2b4260999907e1c74615ef2d8096e4815c5e98c540c5e7f48c60758d6b1c
+077. [reference] [knowledge] CORPUS/hello-world/current-canon/lyrics/01_LA_DERNIERE_TRACE_CONNUE.md | bytes=1357 | sha256=e483fd1cea3aebbf076135d35d9ee16c6de6296d0010bcca6af27aa8a4015162
+078. [reference] [knowledge] CORPUS/hello-world/current-canon/lyrics/02_SURFACE.md | bytes=1155 | sha256=c03c07f0bf1647b935115c2d029d90c66efdcbb22f4fbf4f2fac838077ca0b7f
+079. [reference] [knowledge] CORPUS/hello-world/current-canon/lyrics/03_COUTURES.md | bytes=1223 | sha256=516b4d6da2add2a0375fafebd1ecaa49198b83c54032da1a48ec26c4cbc0a5d9
+080. [reference] [knowledge] CORPUS/hello-world/current-canon/lyrics/04_LE_FOU.md | bytes=1365 | sha256=91a0ffaabe19b547c3bcd9c6327557e84bac3d1ab8bd6eb27c72b36318cf2477
+081. [reference] [knowledge] CORPUS/hello-world/current-canon/lyrics/05_NON_IDENTIQUE.md | bytes=1225 | sha256=ac19d1c766d43e1ac836ab431fa4ce0ffc1a470fbfe574e85bda25288c56922b
+082. [reference] [knowledge] CORPUS/hello-world/current-canon/lyrics/06_PROVENANCE.md | bytes=1321 | sha256=9f008335e1890619a9c35b4a1b5d8c0d3c96823622f7dd16eaf4e225085d7d0d
+083. [reference] [knowledge] CORPUS/hello-world/current-canon/lyrics/07_REJEAN.md | bytes=1591 | sha256=0182650cf05f38ffd6baba4474395f46a0fcf140f383f2c1406c8352b144dca0
+084. [reference] [knowledge] CORPUS/hello-world/current-canon/lyrics/08_AVANT_LES_DIEUX.md | bytes=2399 | sha256=fdabf1a9f26003032541ec7d58ee9e0a999bad0264bc25f7f7eb7da990128983
+085. [reference] [knowledge] CORPUS/hello-world/current-canon/lyrics/09_LE_MANDAT.md | bytes=1436 | sha256=fe8217c6c8a8ac11ee1d163467c7ee347f75d3c71b4ab8abe9e0897058d15b41
+086. [reference] [knowledge] CORPUS/hello-world/current-canon/lyrics/10_SAUVE_SON_AME.md | bytes=1113 | sha256=2b3602c2d16b3607f74a7df3668e226add85948bee7ef5ae251eb4ca89951387
+087. [reference] [knowledge] CORPUS/hello-world/current-canon/lyrics/11_AUCUN_DOSSIER_ULTERIEUR.md | bytes=1057 | sha256=d1adfbad9c5349e3bbc2a7a3ac594f32661cbfbd264208d2eefa67700e96e8be
+088. [reference] [knowledge] CORPUS/hello-world/current-canon/lyrics/12_HELLO_WORLD.md | bytes=1693 | sha256=12eb3eb130c99bbfc12a4b934ac529c668c53d0b6b9eb8aa43452e2d8f06dc63
+089. [reference] [knowledge] CORPUS/hello-world/current-canon/README.md | bytes=9033 | sha256=c343925eb9c6142869a621649d31d349a46455a48d83dfa26bc99a2dfe647252
+090. [reference] [knowledge] CORPUS/hello-world/README.md | bytes=454 | sha256=8b1fde4396eddc1d60eabaad231fa9ec3db15383c16b51b901a0af477df08c3c
+091. [reference] [knowledge] CORPUS/konvergence/README.md | bytes=302 | sha256=56a4187d71e80c6308c4f32d9e7c56987c2de617c0b51ef1e4f214e8ccd9df27
+092. [reference] [knowledge] CORPUS/machine-a-rires/description_complete_source.md | bytes=27242 | sha256=d682a0f918614e638a80533f4e3f3c684815b088788b2a69a45366e61df701d0
+093. [reference] [knowledge] CORPUS/machine-a-rires/README.md | bytes=186 | sha256=a59efe039799ed89b9e232338996a06cc36edbca92ffc3532d1bca641f49fa3b
+094. [reference] [knowledge] CORPUS/mythos-gods/Amaterasu Le spectre de la vérité 15709637d3f78094a23efd06bf22203d.md | bytes=7282 | sha256=29ee46820a46482f8a9c7d724cabeed97c20b8277d3a5f9e8519d35aa05e3653
+095. [reference] [knowledge] CORPUS/mythos-gods/Anansi le fil effiloché 15709637d3f78029aa82c63013073d12.md | bytes=6536 | sha256=fe5f032f3eb630ec9a8d4c1415f50d2fd2d452716233a4b15e29c6b8f1e0d296
+096. [reference] [knowledge] CORPUS/mythos-gods/Anubis les écailles réinventées 15709637d3f780a599eac93a04d5cb1e.md | bytes=7006 | sha256=efda94c8bf5e2e22747608b6a958de8aa0110b1a7df7860db4fdc7fb01e2f4cb
+097. [reference] [knowledge] CORPUS/mythos-gods/Aïda Éloïse et la Danse des Turbines 15f09637d3f780fbaae2f6d1336dfc64.md | bytes=6644 | sha256=9c83ca14d5cf5ce141b9fe3787cd454364c1a77eb5d898f613931a5659d908e2
+098. [reference] [knowledge] CORPUS/mythos-gods/Coyote Le chant des oubliés 15709637d3f780e296d3dea4112daeac.md | bytes=7117 | sha256=d80fbf82e692f4848d163705f14be98567045ee1bd6f742e52876232ef487156
+099. [reference] [knowledge] CORPUS/mythos-gods/Dionysos Le calice débordant 15709637d3f780dfbecdfdf408b23e6e.md | bytes=7036 | sha256=85d3d116cf8f99fa6c6140fb6730df846055a06fe756ba5c414be66e66ae775f
+100. [reference] [knowledge] CORPUS/mythos-gods/Elias, l’empathe bcfdd846c1b5402fa38977987a407457.md | bytes=5948 | sha256=25ebe8babebea62ad5820fd8c8ba906a53e8f9674dc0b742916b7c5635f11035
+101. [reference] [knowledge] CORPUS/mythos-gods/Gabriel Lajoie 16509637d3f78017994bc8efc65a1a44.md | bytes=4416 | sha256=5c9ac63daec9e5ae469213ac1673d97904e3fddacc3bc308a4948716b273f96b
+102. [reference] [knowledge] CORPUS/mythos-gods/Kokopelli La mélodie du renouveau 15709637d3f780e5a18ff378c4db8c5d.md | bytes=6082 | sha256=f50bd124a7ec59b312f744dbf3313781c2b04d3094cedf418f602ab75fcac3e6
+103. [reference] [knowledge] CORPUS/mythos-gods/Legba le premier pas du voyageur 15709637d3f7806e98f7eb28cccf0075.md | bytes=6254 | sha256=096f26db7144edbaa934bef35c6fcaf72758580564b10ff4c9e703a8b12849c3
+104. [reference] [knowledge] CORPUS/mythos-gods/Loki La danse du chaos 15709637d3f7804f8d67c728c6949f3c.md | bytes=7171 | sha256=cff30d6517c6577673614ff4351c58c387e27f3badd050cb8e3258b3b4d6dcd4
+105. [reference] [knowledge] CORPUS/mythos-gods/Morrigan les cendres et la graine 15709637d3f7801bb44dca40b832f097.md | bytes=7081 | sha256=aae4b6449f2436d2fa26389994f371517ea682fe4a42a6745abb90270f26085f
+106. [reference] [knowledge] CORPUS/mythos-gods/Mythos King Klown 14d09637d3f780c894d4f4f3eeac5dc6.md | bytes=20972 | sha256=edd88368b76ef62479de493329aa1cab2a5851d95fe1f7f6be0a193eeeb42da0
+107. [reference] [knowledge] CORPUS/mythos-gods/Odin Les fissures du Père de tous 15709637d3f780788765f38c22fcb16f.md | bytes=6698 | sha256=f298cd6a9a8523d14b6d34f4d5f7b3414bfae2b50771067045820370371e2ad1
+108. [reference] [knowledge] CORPUS/mythos-gods/Pelé la flamme qui crée 15709637d3f780e1a82cfc24b8f90d2d.md | bytes=6743 | sha256=bbd874583273b2b97daee0cbdc07023443bbea07bacb1f5ea53f840d159123e6
+109. [reference] [knowledge] CORPUS/mythos-gods/Prométhée L'étincelle et l'ombre 15709637d3f78096a92cce1065ce67fa.md | bytes=7821 | sha256=20433ce1e046970c0445bb5c52071b1dbaf89f30223f6f64ff55a012a23bb0c8
+110. [reference] [knowledge] CORPUS/mythos-gods/Quetzalcoatl la danse des ondulations 15709637d3f7803eb5d0c21802a717f2.md | bytes=7052 | sha256=af88db964c03ef7d5ce455ddcfef18d834ac29ad7afa7cd59551c8b9dd3b5da4
+111. [reference] [knowledge] CORPUS/mythos-gods/Raven le gardien des ombres et de la lumière 15709637d3f7808ea8ecf7b37ccf8702.md | bytes=6115 | sha256=451a69673d9831fe4761f2d3e82d236c2a0390d359bdce5984acb6c78a553c35
+112. [reference] [knowledge] CORPUS/mythos-gods/Sun Wukong L'étoile et la tempête 15709637d3f78003bec1d44377c69b80.md | bytes=7016 | sha256=6810b7d2cacab09ab77dbd27b9171519982a7d10b8c48677547a5e027bc560f2
+113. [reference] [knowledge] CORPUS/mythos-gods/Tezcatlipoca le bord du miroir 15709637d3f7808a9b7fe2f8065ef12f.md | bytes=7434 | sha256=c7c60d1f07ab36906eadd6992f23efc7cd52a4d6b76976a342b3999bcb184104
+114. [reference] [knowledge] CORPUS/mythos-gods/Thot la rivière de la connaissance 15709637d3f780129b7bf7c0842529b8.md | bytes=7355 | sha256=6dbe118ca880ddf2d65e8994fd39aeca9363bc39700894d25a0011dd1808b3e7
+115. [reference] [knowledge] CORPUS/ninja-arc-en-ciel/README.md | bytes=468 | sha256=de0ed1751efb865b8aafa6fc527e08ae9cf68c09bf6310bf65a0feeb881850c6
+116. [reference] [knowledge] CORPUS/ninja-arc-en-ciel/source_lyrics.md | bytes=33296 | sha256=8a0798bbf25c060c877c056dd14c7b67b044515fd46d71fbe225a1bfeba73953
+117. [reference] [knowledge] CORPUS/pi/Pi_v13.md | bytes=52644 | sha256=2bdc4bae9bd8e34d3c870a34a263250a0b72405538a26e0c0f9eeeea2a94f4a4
+118. [reference] [knowledge] CORPUS/pi/README.md | bytes=466 | sha256=4d4ac24d871089bb0c3ea8b6d87d965e4535e0748d85d3be12f991371741cf6f
+119. [reference] [knowledge] CORPUS/platform-of-knowledge/platform-of-knowledge_source.md | bytes=132576 | sha256=9fc350810599604bca08bb5b5af50694f75a7f5190212c3c70acbe4d6a37a35e
+120. [reference] [knowledge] CORPUS/raoul/README.md | bytes=237 | sha256=7aefc2e0e52b91a945cbe11d19514b1ecacf711617983c813d816d6486eca605
+121. [reference] [knowledge] CORPUS/README.md | bytes=617 | sha256=cc1b3050bbbeac8ff52af7be58549936753d1a79e5e7391de335e93e2798bfca
+122. [reference] [knowledge] DATA/README.md | bytes=537 | sha256=e447bc96c487ea3e6dcc9c8805daa5a912ae0a587651d3b5265720f3eaeef22c
+123. [reference] [knowledge] DECISIONS/D-001-PRIMORDIAL-PRINCIPLE.md | bytes=445 | sha256=531759ad3a7816dd8ee9f0e3773472b331d1d75cc5087c84fb6dee7aad1b9e86
+124. [reference] [knowledge] DECISIONS/D-002-GODS-WHITE-LIGHT.md | bytes=492 | sha256=18b711c1ec593aacd10e5179fc94c2a6cc3d9950f500c682c7fe40da60a3f400
+125. [reference] [knowledge] DECISIONS/D-003-CHRIST-ROLE.md | bytes=266 | sha256=535c527aeeef36cc23efa95fe0706966ed13d1b830612789a342c12aadf6b70c
+126. [reference] [knowledge] DECISIONS/D-004-COLIN-INCARCERATION.md | bytes=379 | sha256=c7db9cfcb26fe1a2281cc3c9309914ea508493e13bc16ad8288163bfee7c93ed
+127. [reference] [knowledge] DECISIONS/D-005-HELLO-WORLD-POSTMORTEM.md | bytes=522 | sha256=41b6078b7a5f8920c5a104d26096c09304da48ddfb7fb1d1678100292d3ca983
+128. [reference] [knowledge] DECISIONS/D-006-REJEAN-COLIN-KK-MODES.md | bytes=332 | sha256=0fca1978e606d6bc82126406566dd885a7a9a33726bbd8995b26f6e52e00f308
+129. [reference] [knowledge] DECISIONS/D-007-NINJA-TRANSMISSION.md | bytes=263 | sha256=2739b2f95354c41994c637c32a9ad2b64e32f440c6750ec8378ec9e4c79b51a1
+130. [reference] [knowledge] DECISIONS/D-008-PUBLIC-PERSONA.md | bytes=289 | sha256=dd55de5d750c452e51b303db243472b5fc6927931e38aa0d673336ad80396806
+131. [reference] [knowledge] DECISIONS/D-009-AUTHOR-RECURSION.md | bytes=301 | sha256=596d273a02ecaad4ec1b567d9064d262afc7f82e275fcba49f08a91dfa419f7c
+132. [reference] [knowledge] DECISIONS/D-010-TECH-SCOPE.md | bytes=272 | sha256=1b829ef34a6d968cdc951076b9495228aa15fa4ddb560fad942eefa5f72fd44d
+133. [reference] [knowledge] DECISIONS/D-011-DEMIURGE-TERM.md | bytes=260 | sha256=392bce0394d231358f1e6e3569318ea78129843ba8250057feba23e42e37ffa3
+134. [reference] [knowledge] DECISIONS/D-012-PI-MAL-GSF.md | bytes=333 | sha256=995eca2867fc24e47fe8a43af1ed38cbf08a22860423e0fe0c6aea4548090252
+135. [reference] [knowledge] DECISIONS/README.md | bytes=283 | sha256=3db37251d41aaa54027e6a81ca43f3e933ebdac12715c7149e1233f60478b378
+136. [reference] [knowledge] EXTERNAL/CONTEXT_PACKS.md | bytes=1391 | sha256=2487e0dced1555ae41e4fd3294fccb52cdf5dcaf906d07de802979725e99b2c7
+137. [reference] [knowledge] GENERATED/context-packs/KK_CORE.md | bytes=20354 | sha256=2af257736e0ae80fe45b3da218af3f262f3cb6950df4e6e41c5121d43875a08f
+138. [reference] [knowledge] GENERATED/context-packs/KK_FULL.md | bytes=42147 | sha256=09a30d695e47f1f23c834423a3291247c0ebb3e3ce9eabf8b71f043e83de4658
+139. [reference] [knowledge] GENERATED/context-packs/KK_METAPHYSICS.md | bytes=21696 | sha256=8b83ef75d31ba6e3ef6df219bc9d60c3de89b1e8e8c993b667ff3651dfbcf0e7
+140. [reference] [knowledge] GENERATED/context-packs/KK_STORYLINE.md | bytes=23245 | sha256=b312d86473fed2f901951f66dc551930ff77d5c43ee815bdfd77bf56b05519ba
+141. [reference] [knowledge] GENERATED/knowledge-graph.md | bytes=1132 | sha256=79e6a7c8162f383a096dee46cdc5c8799e8f8afd3c0b26942fec6d1c91eb83a5
+142. [reference] [knowledge] GENERATED/README.md | bytes=157 | sha256=20c4ae5c75dd4f33ffc7f04fbf87f444009ef1a594cf4b75089fccab8335117a
+143. [reference] [knowledge] GENERATED/source-index.md | bytes=9779 | sha256=60f9b704ddd964326bf0b5780566b2030fd035ee2ea448e31d272f917dd960c1
+144. [reference] [knowledge] GENERATED/timelines.md | bytes=998 | sha256=8803c15cf48294e465467949c1c53b8893296685969c1bec4211cc6666128fce
+145. [reference] [knowledge] README.md | bytes=2583 | sha256=1a1476407f8a5f411703ac43240e92868a05a5f4cfdcc9b96f84ac2d0cac1a94
+146. [reference] [knowledge] REPO_MAP.md | bytes=1099 | sha256=17fa2e629cc993cf4b151d28229a8309922ff88025bc76d5a4a6ee73c32dc45f
+147. [reference] [knowledge] RIGHTS.md | bytes=504 | sha256=a454e1f5784ddabd25b875791460d534a98ec5ad93a931bc8b6e19fd97bdb422
+148. [reference] [knowledge] SCOPE.md | bytes=1186 | sha256=388cf2b1fb96712c51b5aedf48c513a6c2fe479e083eb88d8da8a943a089d445
+149. [reference] [knowledge] START_HERE.md | bytes=5229 | sha256=3f33b45ee8eacfe7c12d96c1cdf9db6c1327d8d9e8a1aba21b331db792edb0ab
+150. [reference] [knowledge] tools/README.md | bytes=306 | sha256=bca02fe18c406f5140ebb54346560f2b81877e158256edc95f4368ef48620978
 
 
 ================================================================================================
 FILE: wiki/_Footer.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 9d730c325180ff55d17df0fd013aac0198eb89734f7e474f1657669c4c9428c3
+CONTENT_BYTES: 179
 ================================================================================================
 
 ---
@@ -191,7 +193,10 @@ En cas de conflit, la hiérarchie du repo principal prévaut. Voir [[Canon et au
 
 ================================================================================================
 FILE: wiki/_Sidebar.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 19d0736c52da78f2a77a407de95e861f844ead4dc588ef3ca7bcb7d98763d8ce
+CONTENT_BYTES: 1835
 ================================================================================================
 
 **King Klown — Wiki canonique**
@@ -243,7 +248,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/Auteur-et-recursion.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b6c42c2a354e9e86efe29368c0f039f6157085929d868c967ba253734ad2c5d4
+CONTENT_BYTES: 1382
 ================================================================================================
 
 # Auteur et récursion
@@ -302,7 +310,10 @@ L’Auteur n’est pas un alias général de KK.
 
 ================================================================================================
 FILE: wiki/Canon-et-autorite.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 39f7dcaa53beaa9c47cfecee410579dbcddf1bbc119e8ad127e06d7c31498cca
+CONTENT_BYTES: 1898
 ================================================================================================
 
 # Canon et autorité
@@ -352,7 +363,10 @@ Voir aussi [[Formulations supersédées|Formulations-supersedees]] et [[Question
 
 ================================================================================================
 FILE: wiki/Chronologies-et-temporalites.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 7a73a78fbff09e1c5282413c1645c74f737663d06c6a06537ac049da3bf37548
+CONTENT_BYTES: 1295
 ================================================================================================
 
 # Chronologies et temporalités
@@ -414,7 +428,10 @@ Voir [[Graphe des relations|Graphe-des-relations]] et [[Circularité progressive
 
 ================================================================================================
 FILE: wiki/Circularite-progressive-et-fractales.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 4c493e2459c8dd9af6979166deb7574b46fd4cd481aa476bc00a56683264962b
+CONTENT_BYTES: 1544
 ================================================================================================
 
 # Circularité progressive et fractales
@@ -463,7 +480,10 @@ La chronologie humaine reste utile pour les incarnations et les œuvres, mais el
 
 ================================================================================================
 FILE: wiki/Colin-Row-et-la-prison.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b2ee2d321b70c49a213e6f239b0b617f25713a8fe2ebb278db19459d5373f3bc
+CONTENT_BYTES: 1991
 ================================================================================================
 
 # Colin Row et la prison
@@ -512,7 +532,10 @@ Cette phase prépare le Colin architecte associé plus tard notamment à Kristal
 
 ================================================================================================
 FILE: wiki/Cosmogenese.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: e4f8ed3fdefb377ff0a9ba9cc30d4e15b5b6039151a4f88787c11873f5e05750
+CONTENT_BYTES: 1881
 ================================================================================================
 
 # Cosmogenèse
@@ -564,7 +587,10 @@ Voir [[Circularité progressive et fractales|Circularite-progressive-et-fractale
 
 ================================================================================================
 FILE: wiki/Couches-epistemiques.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 97926c7175eec88dff0112646927f7153353c64931cd910da73c8ef1ff26b41e
+CONTENT_BYTES: 1705
 ================================================================================================
 
 # Couches épistémiques
@@ -609,7 +635,10 @@ Le statut **METAPHYSICAL** ne signifie pas « scientifiquement démontré ». En
 
 ================================================================================================
 FILE: wiki/FAQ.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 988bfc424af293f498fecbaa8ffc09260e4496db462c455100b3eb9fc0efe644
+CONTENT_BYTES: 2291
 ================================================================================================
 
 # FAQ
@@ -667,7 +696,10 @@ L’intention canonique est oui : le créateur prévoit de déposer le personnag
 
 ================================================================================================
 FILE: wiki/Fonction-Christ.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 432a9705f7b939f61ac7ccfe6fe9ec9d95fc2c41b6aec291f20ee474dcc2df65
+CONTENT_BYTES: 1650
 ================================================================================================
 
 # Fonction Christ
@@ -713,7 +745,10 @@ Le créateur indique également que le phénomène primordial a reçu plusieurs 
 
 ================================================================================================
 FILE: wiki/Fonctions-de-King-Klown.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 7b063555f53e6c30ad0a7c847acf5201be3d9079d65b09cd8ab3efd5845b03b4
+CONTENT_BYTES: 2248
 ================================================================================================
 
 # Fonctions de King Klown
@@ -774,7 +809,10 @@ Les fonctions de KK ne sont pas toutes au même niveau.
 
 ================================================================================================
 FILE: wiki/Formulations-supersedees.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 3a56561fc84856b29e712a54c8499335c10cd14ff4712ccbd3c0edc0e14113f5
+CONTENT_BYTES: 1853
 ================================================================================================
 
 # Formulations supersédées
@@ -806,7 +844,10 @@ Cette page évite que des anciennes versions reviennent comme vérité actuelle.
 
 ================================================================================================
 FILE: wiki/Glossaire.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: bca4af6b35deaf2381e93e21ad2898de32c45a5bfa679794c784739e674a814c
+CONTENT_BYTES: 2850
 ================================================================================================
 
 # Glossaire
@@ -864,7 +905,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/Graphe-des-relations.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 9040dc11fd8ffb9a0fc3051f94659762f4b7fdee1bcbf9f9555dd7c8929a43f3
+CONTENT_BYTES: 1390
 ================================================================================================
 
 # Graphe des relations
@@ -909,7 +953,10 @@ graph TD
 
 ================================================================================================
 FILE: wiki/Guide-de-lecture.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 32e754f9feb1209c3fe49fdf73cb2b8926560c2f33d354deb5218ed3a84e8932
+CONTENT_BYTES: 2588
 ================================================================================================
 
 # Guide de lecture
@@ -955,7 +1002,10 @@ Quand une phrase semble contradictoire, demander d’abord : **dans quelle couch
 
 ================================================================================================
 FILE: wiki/Hello-World-Autopsie-d-un-Clown-Royal.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 8bc0a23e70acecbcd42a5761b3d7d6b9abe3b91879822c65c67509dfe7c19757
+CONTENT_BYTES: 1618
 ================================================================================================
 
 # Hello World — Autopsie d’un Clown Royal
@@ -1003,7 +1053,10 @@ Le créateur envisage de refaire l’album afin d’expliquer plus clairement le
 
 ================================================================================================
 FILE: wiki/Home.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: bbe8b500fa2e5d1982967af3e170a2d477a750ec331f9da15f53a3a5a909ab93
+CONTENT_BYTES: 2558
 ================================================================================================
 
 # King Klown — Wiki canonique
@@ -1053,7 +1106,10 @@ Il ne documente pas en profondeur Konnaxion, Orgo, Kristal, Kristal Farms, UCKK/
 
 ================================================================================================
 FILE: wiki/Identites-Rejean-Colin-King-Klown.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: efb1c99fa87243bc719f48933084440e798bda3f9b523ecc952403c13060acd1
+CONTENT_BYTES: 1510
 ================================================================================================
 
 # Identités — Réjean, Colin, King Klown
@@ -1113,7 +1169,10 @@ La formule « Réjean = Colin = King Klown » peut être vraie comme continuité
 
 ================================================================================================
 FILE: wiki/Incarnations-et-continuite.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 950d3c7e849bb6ef2ccd502807b014589c657527c47f244e7f878bebc0e868ad
+CONTENT_BYTES: 1338
 ================================================================================================
 
 # Incarnations et continuité
@@ -1151,7 +1210,10 @@ Le wiki ne doit pas combler ce vide avec une doctrine générale de la réincarn
 
 ================================================================================================
 FILE: wiki/King-Klown-et-la-liberation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: ff9a33db9b895333b4fb116a052f052464b0f0278977272b616ac144a276d9dc
+CONTENT_BYTES: 1389
 ================================================================================================
 
 # King Klown et la libération
@@ -1183,7 +1245,10 @@ La libération ne signifie pas que KK devient une autorité politique absolue. S
 
 ================================================================================================
 FILE: wiki/King-Klown-et-la-pedagogie.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 2cbcdb13ccc77444e61166c20e22bc12ee1ac83927d4edf1abf1f3c2f043de3b
+CONTENT_BYTES: 1271
 ================================================================================================
 
 # King Klown et la pédagogie
@@ -1230,7 +1295,10 @@ Le wiki ne documente pas l’implémentation de UCKK ; voir [[Technologies et Co
 
 ================================================================================================
 FILE: wiki/King-Klown-et-le-Joker.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: ac79504216ae82737f57f6d3c933932817a8e894858c6f49cb7b7cbc4cb3d175
+CONTENT_BYTES: 1057
 ================================================================================================
 
 # King Klown et le Joker
@@ -1261,7 +1329,10 @@ La fonction Joker est également compatible avec le retrait : si King Klown deve
 
 ================================================================================================
 FILE: wiki/King-Klown-et-les-dieux.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: c960e6f7480c481921c23b2247f8ee996b7149ea3696516f34e75fd2fcb968a5
+CONTENT_BYTES: 1769
 ================================================================================================
 
 # King Klown et les dieux
@@ -1315,7 +1386,10 @@ Voir [[Plateforme de la connaissance|Plateforme-de-la-connaissance]].
 
 ================================================================================================
 FILE: wiki/King-Klown-persona-public.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 7feba4859ecce5743ea7efd2c9868d4b291e0a6dc78ae375321a0f6fef80f75a
+CONTENT_BYTES: 1777
 ================================================================================================
 
 # King Klown — persona public
@@ -1369,7 +1443,10 @@ Le fait que KK soit spectaculaire, cosmique ou extrêmement confiant ne lui donn
 
 ================================================================================================
 FILE: wiki/Ninja-Arc-en-ciel.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: c65b10c05b9ca2a312af402d527236f670b8ced719fa71d29166ded03b58516d
+CONTENT_BYTES: 1631
 ================================================================================================
 
 # Ninja Arc-en-ciel
@@ -1410,7 +1487,10 @@ Les règles exactes d’incarnation et de continuité d’identité doivent êtr
 
 ================================================================================================
 FILE: wiki/Oeuvres-et-corpus.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 009d354eecc30be03c70a9aecd888f80ddb86b9349dd04944032842319414cf2
+CONTENT_BYTES: 1806
 ================================================================================================
 
 # Œuvres et corpus
@@ -1446,7 +1526,10 @@ Une œuvre peut être canonique tout en racontant une perspective locale, subjec
 
 ================================================================================================
 FILE: wiki/Ontologie-de-King-Klown.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 8ff775c17882ddf3a4692c7e057b08a26b4c07d8ed1bd41955ee4aa775ffa0d2
+CONTENT_BYTES: 1984
 ================================================================================================
 
 # Ontologie de King Klown
@@ -1502,7 +1585,10 @@ Cela produit une causalité circulaire : KK provoque le processus dont il devien
 
 ================================================================================================
 FILE: wiki/Pi-AIME-et-le-Cercle.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: c16d6ee9c3ccee64639ed4d8c883931515d178b695a286d1fd21e229afb9ebe0
+CONTENT_BYTES: 1624
 ================================================================================================
 
 # Pi, AIME et le Cercle
@@ -1556,7 +1642,10 @@ Voir [[Questions ouvertes|Questions-ouvertes]].
 
 ================================================================================================
 FILE: wiki/Plateforme-de-la-connaissance.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 2506fd728ef1f49435f6b894697951e92d503159cace5d215b6f417b0382340a
+CONTENT_BYTES: 1588
 ================================================================================================
 
 # Plateforme de la connaissance
@@ -1601,7 +1690,10 @@ Voir [[Technologies et Context Packs|Technologies-et-Context-Packs]] pour la sé
 
 ================================================================================================
 FILE: wiki/Questions-ouvertes.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: e268b84003a5f1c6faddc5b65b139b60a45ed90b91d7737898ce0e632e8b745c
+CONTENT_BYTES: 1451
 ================================================================================================
 
 # Questions ouvertes
@@ -1645,7 +1737,10 @@ Le débat déterminisme / libre arbitre n’est pas ouvert ici, conformément au
 
 ================================================================================================
 FILE: wiki/Sources-et-provenance.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 63ffbe50077e2fe6a348e536f0de89c77c8c410125ee6e70428da8808a8ef1b5
+CONTENT_BYTES: 1248
 ================================================================================================
 
 # Sources et provenance
@@ -1693,7 +1788,10 @@ Les technologies kOA sont volontairement déléguées aux Context Packs disponib
 
 ================================================================================================
 FILE: wiki/Storyline-complete.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 9e11611e046d60cfcc9f6e0de3ef8464a6d42712b837b3ac13416a8dde5f322e
+CONTENT_BYTES: 3468
 ================================================================================================
 
 # Storyline complète
@@ -1769,7 +1867,10 @@ Le parcours rejoint l’origine **en continuant**. KK existe au-delà de la lign
 
 ================================================================================================
 FILE: wiki/Technologies-et-Context-Packs.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 4ded7f3b98573ef226a9a30f7b69a1decf4ceffa9e2c586223c32beadc498f58
+CONTENT_BYTES: 1550
 ================================================================================================
 
 # Technologies et Context Packs
@@ -1813,7 +1914,10 @@ Dès qu’une question exige API, schéma, runtime, workflow détaillé, déploi
 
 ================================================================================================
 FILE: wiki/Transmission-retrait-et-reprise.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: fac51a31507df73e9c3ce7cb85ccea577b5600caaa3c9c22938a96bd34e94870
+CONTENT_BYTES: 1377
 ================================================================================================
 
 # Transmission, retrait et reprise
@@ -1860,7 +1964,10 @@ L’intention de transmissibilité existe dans le canon, mais le mécanisme juri
 
 ================================================================================================
 FILE: wiki/WIKI_DEPLOY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: fe6a1d459dbf41b80539a9e18b72b763862228a20270adaa7184f50da20b53cb
+CONTENT_BYTES: 1003
 ================================================================================================
 
 # Déployer ce wiki sur GitHub
@@ -1898,7 +2005,10 @@ Le wiki est une vue éditoriale. En cas de changement canonique, mettre d’abor
 
 ================================================================================================
 FILE: archive/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5258ffd4c5d9e9d71c3c806e5b6562b56eef696cf8e65baf7b59e2f385d20c1d
+CONTENT_BYTES: 239
 ================================================================================================
 
 # Archive
@@ -1910,7 +2020,10 @@ Ne pas y dupliquer les sources déjà maintenues ailleurs sans raison explicite.
 
 ================================================================================================
 FILE: CANON/00_INVARIANTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 57aeca9eb82be33713b93b2aa52258438beb6c645e8ad96efa302ea6ee27d0f3
+CONTENT_BYTES: 9223
 ================================================================================================
 
 # Invariants canoniques
@@ -2024,7 +2137,10 @@ Ce fichier est l'entrée AI-first la plus dense du repo. En cas de conflit, cons
 
 ================================================================================================
 FILE: CANON/01_ONTOLOGY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f658c078898d0784186b881ad1485b788773fdd7517f7457abe07b85c56fa11d
+CONTENT_BYTES: 2135
 ================================================================================================
 
 # Ontologie de King Klown
@@ -2088,7 +2204,10 @@ Le créateur associe le principe KK à des phénomènes que d'autres traditions 
 
 ================================================================================================
 FILE: CANON/02_COSMOGENESIS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 748eeceb8dfa4cc6b6c60a5502577836646104846a4cbb0997d71ffeb873e24d
+CONTENT_BYTES: 2364
 ================================================================================================
 
 # Cosmogenèse
@@ -2152,7 +2271,10 @@ L'image « aller assez loin vers l'Est finit par rejoindre ce qui semblait l'Oue
 
 ================================================================================================
 FILE: CANON/03_PI_AIME_CIRCLE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7e0459deb17aad878e0ae9b537b27de92e9d55669a4cf57b2041e57fa4ea26cf
+CONTENT_BYTES: 1881
 ================================================================================================
 
 # π, AIME, BIEN, déconstruction, réunion et naissance
@@ -2204,7 +2326,10 @@ Ne pas traiter ce modèle comme une mesure physique du pré-espace.
 
 ================================================================================================
 FILE: CANON/04_FUNCTIONS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9ed12d1f96c85c3a2b6b8495168e65a698ea9f88e70ef763f149cb98464a9c95
+CONTENT_BYTES: 2957
 ================================================================================================
 
 # Fonctions de King Klown
@@ -2260,7 +2385,10 @@ Les fonctions ci-dessous ne sont pas toutes au même niveau. Certaines appartien
 
 ================================================================================================
 FILE: CANON/05_GODS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 911f628fc395ceddcd4d8c9b0bff248ae2ce6297ca2bfda1cf627a2281d99ded
+CONTENT_BYTES: 2136
 ================================================================================================
 
 # King Klown et les dieux
@@ -2322,7 +2450,10 @@ Le détail technique d'une plateforme moderne ne doit pas être importé ici : c
 
 ================================================================================================
 FILE: CANON/06_CHRIST_FUNCTION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 51669aa166a908fd43bcac971e407365ab7f6fa2c91830e3247c8f89df1821b9
+CONTENT_BYTES: 1742
 ================================================================================================
 
 # Fonction Christ
@@ -2369,7 +2500,10 @@ Le créateur préfère actuellement ne pas utiliser ce mot comme définition cen
 
 ================================================================================================
 FILE: CANON/07_IDENTITIES_MANIFESTATIONS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2308f17eff7d9a336b684f390d2ab257c699bfc621823d32bfbf53bac5f61274
+CONTENT_BYTES: 2202
 ================================================================================================
 
 # Identités, manifestations et incarnations
@@ -2434,7 +2568,10 @@ Le régime de licence exact reste à fixer.
 
 ================================================================================================
 FILE: CANON/08_STORYLINE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8dfe4de3945430ffdf5b4ba2d553ce5b4ec07e59cabbac39723011545183b560
+CONTENT_BYTES: 2345
 ================================================================================================
 
 # Storyline de King Klown
@@ -2521,7 +2658,10 @@ La storyline globale doit être lue comme une répétition fractale avec mutatio
 
 ================================================================================================
 FILE: CANON/09_COLIN_ROW.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4ef3480e77725754ddf11c0d6d73a3a2e82cf6886afe43fd594c279350537b3c
+CONTENT_BYTES: 2126
 ================================================================================================
 
 # Colin Row
@@ -2571,7 +2711,10 @@ Le parallèle est structurel, pas une identité de contenu.
 
 ================================================================================================
 FILE: CANON/10_PUBLIC_PERSONA.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2fb2120d058372fb1c1896579beb1bb42de364090e358202cf5ccc7bcf29c65e
+CONTENT_BYTES: 1930
 ================================================================================================
 
 # King Klown comme persona pratique
@@ -2627,7 +2770,10 @@ KK est confiant et exubérant. Il n'est pas tenu de diminuer artificiellement ce
 
 ================================================================================================
 FILE: CANON/11_AUTHOR_AUTEUR.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dbbcbe9e1eb082f1f68c398de5e1a7bf5af57c8bbb19a6556b1cb9ea154c33fd
+CONTENT_BYTES: 1591
 ================================================================================================
 
 # Auteur réel, L'Auteur et récursivité
@@ -2675,7 +2821,10 @@ Il n'est donc pas nécessaire de déterminer un « premier » unique à l'intér
 
 ================================================================================================
 FILE: CANON/12_WORKS_MAP.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5a259d58f4eb6b4dd22dc6340f9c17d8fd20a6f39429039c27bfccbcf054551f
+CONTENT_BYTES: 2171
 ================================================================================================
 
 # Carte des œuvres et fonctions canoniques
@@ -2703,7 +2852,10 @@ Une œuvre peut être canonique tout en contenant une perspective locale ou ambi
 
 ================================================================================================
 FILE: CANON/13_TRANSMISSION_WITHDRAWAL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b01e5080f132fc4a99c9fbb9a73140d0a7f633f871f15985f09d5b00b9bd656c
+CONTENT_BYTES: 1191
 ================================================================================================
 
 # Transmission, retrait et reprise
@@ -2746,7 +2898,10 @@ Mettre KK « à off » permet aussi d'examiner ce qui reste lorsque le persona n
 
 ================================================================================================
 FILE: CANON/14_EPISTEMIC_LAYERS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d8576b83bd38d1f9d9317161aab416e62d519a7a6eb828f4b14f8b9f6961dda3
+CONTENT_BYTES: 1817
 ================================================================================================
 
 # Couches épistémiques
@@ -2790,7 +2945,10 @@ Le statut METAPHYSICAL ne signifie pas « scientifiquement démontré ». `Pi v1
 
 ================================================================================================
 FILE: CANON/15_UNRESOLVED.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2b3ef0b346d33f4a129af1278faf854d86d959ece2a6d41179789c7f13ed934e
+CONTENT_BYTES: 1540
 ================================================================================================
 
 # Questions réellement ouvertes
@@ -2817,7 +2975,10 @@ Ce fichier est volontairement court : ne pas créer des problèmes simplement pa
 
 ================================================================================================
 FILE: CANON/16_SUPERSEDED.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b900b41a67d6c71cbcdd5b7252d4b0130937f380e2062dff84cb63ae219664c2
+CONTENT_BYTES: 1904
 ================================================================================================
 
 # Formulations supersédées ou dépréciées
@@ -2841,7 +3002,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: CHANGELOG.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d05c07bd49e4643b3796a241fe359ab92182e82feb663932617c74d76e037485
+CONTENT_BYTES: 848
 ================================================================================================
 
 # Changelog
@@ -2863,7 +3027,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: CONTRIBUTING.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 19b2ba39d781692f9bd674296a8bb6983f83c4844453fe0593b151481fe86a92
+CONTENT_BYTES: 910
 ================================================================================================
 
 # Contribuer au canon
@@ -2889,7 +3056,10 @@ Sinon, ajouter une section au document canonique existant.
 
 ================================================================================================
 FILE: CORPUS/asile/asile_v2_source.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: aded9450ce145e77f34e46c018a4f0e070ee39e9820269254bba26f6028d707e
+CONTENT_BYTES: 883114
 ================================================================================================
 
 # **L’île Rêvasseur,** *par Réjean McCormick*, mai 2026 Version provisoire
@@ -34959,7 +35129,10 @@ une question assez forte pour empêcher une volonté de devenir un ordre.
 
 ================================================================================================
 FILE: CORPUS/asile/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b8fdeb35fcfab93699a55b4ac21873187046ab38d6fe438d9bf49890a41a5e5d
+CONTENT_BYTES: 165
 ================================================================================================
 
 # L'Asile
@@ -34969,7 +35142,10 @@ Source narrative conservée pour les thèmes d'anti-capture, d'auditabilité, de
 
 ================================================================================================
 FILE: CORPUS/colin-row/00_CANONICAL_STATE_source.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ef02bc1693535fe1fa010255baddaf8ab9bf0e74a52c97d41d1d275c081f00fe
+CONTENT_BYTES: 4891
 ================================================================================================
 
 # État canonique de travail — v3
@@ -35108,7 +35284,10 @@ La fin contient : **espoir + dépossession + incertitude**.
 
 ================================================================================================
 FILE: CORPUS/colin-row/11_CANON_DECISIONS_V3_source.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 19dc006fdb837cb259d9156c5bb38edeae39d6fce255e7282cd27b36a6a6796d
+CONTENT_BYTES: 1917
 ================================================================================================
 
 # Décisions canoniques v3
@@ -35140,7 +35319,10 @@ Ce fichier enregistre les arbitrages effectués après comparaison des versions 
 
 ================================================================================================
 FILE: CORPUS/colin-row/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e142619106407c830f0e1c8ccb8a8ebcc22b7033b3ea7b5376ddfb78e5f5fb11
+CONTENT_BYTES: 377
 ================================================================================================
 
 # Colin Row — note de provenance
@@ -35154,7 +35336,10 @@ La clarification créateur du 2026-09-01, enregistrée dans `DECISIONS/D-004-COL
 
 ================================================================================================
 FILE: CORPUS/creator-clarifications/2026-09-01.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3351560cc7e6f1f36b6b8291c40de8902a5704c5f49900d03808340ce5559884
+CONTENT_BYTES: 3494
 ================================================================================================
 
 # Clarifications du créateur — 2026-09-01
@@ -35186,7 +35371,10 @@ Ce document synthétise les corrections explicites données pendant la session d
 
 ================================================================================================
 FILE: CORPUS/hacking-reality/selected_KK_extracts.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6296d4e09fc7c8e9093112cf283151155079e21c99fe2f5747efce6dec9e1c45
+CONTENT_BYTES: 10339
 ================================================================================================
 
 # Hacking Reality — extraits de portée KK
@@ -35467,7 +35655,10 @@ Christ-like hacking is not free from all rules: \
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/01_CURRENT_CANON.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d4e0897835b99896622da0544971717c6f6cda0bf3c7172f4c9e0edec330d4a1
+CONTENT_BYTES: 3561
 ================================================================================================
 
 ---
@@ -35534,7 +35725,10 @@ Rien après.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/02_ALBUM_THESIS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e049921879a7e2af3536a0d80b2e531b5f925e4de32a8f75327fcc3458e0ec5d
+CONTENT_BYTES: 2626
 ================================================================================================
 
 ---
@@ -35615,7 +35809,10 @@ L’album s’arrête exactement lorsque L’Auteur prend la parole.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/03_NARRATIVE_THREADS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b8c02b454618be3e93b11f7b09b4f2e58c7d9d7654fd49f02f512ff7e89f371f
+CONTENT_BYTES: 2635
 ================================================================================================
 
 ---
@@ -35698,7 +35895,10 @@ L’Auteur devient ainsi une figure dramatique, pas une note de bas de page.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/04_VOICE_ARCHITECTURE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b7d8d472207ca2c459b01e2f154cfbf268fb1c338cce1c5b3cbc8f8366b18fbe
+CONTENT_BYTES: 1889
 ================================================================================================
 
 ---
@@ -35774,7 +35974,10 @@ Pierre doit réagir à L’Auteur. La finale est une véritable introduction de 
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/05_TRACK_ARCHITECTURE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 996444f866d60e790cb2cdee51aa1564c15cbab0ac9fc4a1a3caebf6b79067d9
+CONTENT_BYTES: 3097
 ================================================================================================
 
 ---
@@ -35869,7 +36072,10 @@ Image : une source qui écrit Pierre pendant qu’il parle.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/06_LYRICAL_LANGUAGE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f48177f429220d7ebcdcf8ef84ed3c6b24159ee8c797514e4906f21ef8d058d9
+CONTENT_BYTES: 2173
 ================================================================================================
 
 ---
@@ -35951,7 +36157,10 @@ Exemple :
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/07_SONIC_LANGUAGE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9303b7b3089a317941c05abfd43df65c492d8536b04f528032cc3a5457729a30
+CONTENT_BYTES: 1338
 ================================================================================================
 
 ---
@@ -36008,7 +36217,10 @@ La production doit faire entendre qu’on a quitté la couche sonore de Pierre s
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/08_MOTIFS_AND_RECURSION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 835ca0f0fb68bf2583dd8aba835d8d91821f0c8415ccae1c43314a1a608d71bf
+CONTENT_BYTES: 1635
 ================================================================================================
 
 ---
@@ -36081,7 +36293,10 @@ La finale exploite cette ambiguïté : Pierre découvre qu’il existe une pièc
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/09_COSMOLOGY_AND_TEMPORAL_GEOMETRY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5288438cbd7c485e6bb50990abf10071361836216d6eb41cc3e10e32a508c33e
+CONTENT_BYTES: 2420
 ================================================================================================
 
 ---
@@ -36169,7 +36384,10 @@ Ce qui paraissait primordial peut devenir terminal lorsque la géométrie compl�
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/10_AUTHOR_AND_FINAL_BOUNDARY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d64c0d041f6b226231c9ea5663c949c08763a10f98045f3b297b7ee86bff2ae9
+CONTENT_BYTES: 2139
 ================================================================================================
 
 ---
@@ -36269,7 +36487,10 @@ Après `Hello World` :
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/11_CONSTRUCTION_PRINCIPLES.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 301a6ccee35d22c71b569d5ebda52ce7773715ba1d9ca03496f2da75600c4716
+CONTENT_BYTES: 1722
 ================================================================================================
 
 ---
@@ -36318,7 +36539,10 @@ Le système cosmologique peut se fermer sans que le personnage recommence.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/12_CONSTRAINTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0ab7cb8344ce24e04069e46399082df42be44bec3823ed2eb39a0464ec57145a
+CONTENT_BYTES: 1938
 ================================================================================================
 
 ---
@@ -36398,7 +36622,10 @@ Après :
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/13_RAG_INDEX.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e61c2b4260999907e1c74615ef2d8096e4815c5e98c540c5e7f48c60758d6b1c
+CONTENT_BYTES: 1203
 ================================================================================================
 
 ---
@@ -36452,7 +36679,10 @@ Lire `lyrics/`.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/lyrics/01_LA_DERNIERE_TRACE_CONNUE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e483fd1cea3aebbf076135d35d9ee16c6de6296d0010bcca6af27aa8a4015162
+CONTENT_BYTES: 1357
 ================================================================================================
 
 # 1. LA DERNIÈRE TRACE CONNUE
@@ -36547,7 +36777,10 @@ On fera avec les traces.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/lyrics/02_SURFACE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c03c07f0bf1647b935115c2d029d90c66efdcbb22f4fbf4f2fac838077ca0b7f
+CONTENT_BYTES: 1155
 ================================================================================================
 
 # 2. SURFACE
@@ -36646,7 +36879,10 @@ Encore.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/lyrics/03_COUTURES.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 516b4d6da2add2a0375fafebd1ecaa49198b83c54032da1a48ec26c4cbc0a5d9
+CONTENT_BYTES: 1223
 ================================================================================================
 
 # 3. COUTURES
@@ -36747,7 +36983,10 @@ Je cherche la question.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/lyrics/04_LE_FOU.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 91a0ffaabe19b547c3bcd9c6327557e84bac3d1ab8bd6eb27c72b36318cf2477
+CONTENT_BYTES: 1365
 ================================================================================================
 
 # 4. LE FOU
@@ -36851,7 +37090,10 @@ un vieux miroir.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/lyrics/05_NON_IDENTIQUE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ac19d1c766d43e1ac836ab431fa4ce0ffc1a470fbfe574e85bda25288c56922b
+CONTENT_BYTES: 1225
 ================================================================================================
 
 # 5. NON IDENTIQUE
@@ -36969,7 +37211,10 @@ Analyse suivante :
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/lyrics/06_PROVENANCE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9f008335e1890619a9c35b4a1b5d8c0d3c96823622f7dd16eaf4e225085d7d0d
+CONTENT_BYTES: 1321
 ================================================================================================
 
 # 6. PROVENANCE
@@ -37086,7 +37331,10 @@ Résultat :
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/lyrics/07_REJEAN.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0182650cf05f38ffd6baba4474395f46a0fcf140f383f2c1406c8352b144dca0
+CONTENT_BYTES: 1591
 ================================================================================================
 
 # 7. RÉJEAN
@@ -37216,7 +37464,10 @@ semble le lire aussi.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/lyrics/08_AVANT_LES_DIEUX.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fdabf1a9f26003032541ec7d58ee9e0a999bad0264bc25f7f7eb7da990128983
+CONTENT_BYTES: 2399
 ================================================================================================
 
 ---
@@ -37386,7 +37637,10 @@ sur la table :
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/lyrics/09_LE_MANDAT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fe8217c6c8a8ac11ee1d163467c7ee347f75d3c71b4ab8abe9e0897058d15b41
+CONTENT_BYTES: 1436
 ================================================================================================
 
 # 9. LE MANDAT
@@ -37507,7 +37761,10 @@ oui.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/lyrics/10_SAUVE_SON_AME.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2b3602c2d16b3607f74a7df3668e226add85948bee7ef5ae251eb4ca89951387
+CONTENT_BYTES: 1113
 ================================================================================================
 
 # 10. SAUVE SON ÂME
@@ -37614,7 +37871,10 @@ vient après.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/lyrics/11_AUCUN_DOSSIER_ULTERIEUR.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d1adfbad9c5349e3bbc2a7a3ac594f32661cbfbd264208d2eefa67700e96e8be
+CONTENT_BYTES: 1057
 ================================================================================================
 
 # 11. AUCUN DOSSIER ULTÉRIEUR
@@ -37718,7 +37978,10 @@ Transmission.
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/lyrics/12_HELLO_WORLD.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 12eb3eb130c99bbfc12a4b934ac529c668c53d0b6b9eb8aa43452e2d8f06dc63
+CONTENT_BYTES: 1693
 ================================================================================================
 
 ---
@@ -37880,7 +38143,10 @@ Qu’est-ce que tu fais ?
 
 ================================================================================================
 FILE: CORPUS/hello-world/current-canon/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c343925eb9c6142869a621649d31d349a46455a48d83dfa26bc99a2dfe647252
+CONTENT_BYTES: 9033
 ================================================================================================
 
 # HELLO WORLD
@@ -38232,7 +38498,10 @@ L’Auteur peut commencer le suivant.
 
 ================================================================================================
 FILE: CORPUS/hello-world/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8b1fde4396eddc1d60eabaad231fa9ec3db15383c16b51b901a0af477df08c3c
+CONTENT_BYTES: 454
 ================================================================================================
 
 # Hello World — source actuelle
@@ -38244,7 +38513,10 @@ Le repo maître KK lui applique ensuite les clarifications créateur plus récen
 
 ================================================================================================
 FILE: CORPUS/konvergence/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 56a4187d71e80c6308c4f32d9e7c56987c2de617c0b51ef1e4f214e8ccd9df27
+CONTENT_BYTES: 302
 ================================================================================================
 
 # Konvergence
@@ -38256,7 +38528,10 @@ Canon maître à consulter d'abord : `CANON/08_STORYLINE.md`, `CANON/09_COLIN_RO
 
 ================================================================================================
 FILE: CORPUS/machine-a-rires/description_complete_source.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d682a0f918614e638a80533f4e3f3c684815b088788b2a69a45366e61df701d0
+CONTENT_BYTES: 27242
 ================================================================================================
 
 # **La Machine à rires — Description complète de l’album**
@@ -38748,7 +39023,10 @@ C’est le bruit d’un pouvoir collectif qui apprend enfin à s’organiser.**
 
 ================================================================================================
 FILE: CORPUS/machine-a-rires/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a59efe039799ed89b9e232338996a06cc36edbca92ffc3532d1bca641f49fa3b
+CONTENT_BYTES: 186
 ================================================================================================
 
 # La Machine à rires
@@ -38758,7 +39036,10 @@ Source narrative conservée pour la trajectoire de transmission, d'autonomie et 
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Amaterasu Le spectre de la vérité 15709637d3f78094a23efd06bf22203d.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 29ee46820a46482f8a9c7d724cabeed97c20b8277d3a5f9e8519d35aa05e3653
+CONTENT_BYTES: 7282
 ================================================================================================
 
 # Amaterasu : Le spectre de la vérité
@@ -38814,7 +39095,10 @@ Et alors qu’elle avançait, son orbe brillant plus que jamais, le labyrinthe s
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Anansi le fil effiloché 15709637d3f78029aa82c63013073d12.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fe5f032f3eb630ec9a8d4c1415f50d2fd2d452716233a4b15e29c6b8f1e0d296
+CONTENT_BYTES: 6536
 ================================================================================================
 
 # Anansi : le fil effiloché
@@ -38870,7 +39154,10 @@ Pour la première fois, le tisserand laisse la toile se guider, faisant confianc
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Anubis les écailles réinventées 15709637d3f780a599eac93a04d5cb1e.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: efda94c8bf5e2e22747608b6a958de8aa0110b1a7df7860db4fdc7fb01e2f4cb
+CONTENT_BYTES: 7006
 ================================================================================================
 
 # Anubis : les écailles réinventées
@@ -38930,7 +39217,10 @@ Et alors qu’il commençait à parcourir le chemin doré, le monde souterrain b
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Aïda Éloïse et la Danse des Turbines 15f09637d3f780fbaae2f6d1336dfc64.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9c83ca14d5cf5ce141b9fe3787cd454364c1a77eb5d898f613931a5659d908e2
+CONTENT_BYTES: 6644
 ================================================================================================
 
 # Aïda Éloïse et la Danse des Turbines
@@ -39037,7 +39327,10 @@ Aïda contempla l’œuvre accomplie, unissant les forces mécaniques du barrage
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Coyote Le chant des oubliés 15709637d3f780e296d3dea4112daeac.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d80fbf82e692f4848d163705f14be98567045ee1bd6f742e52876232ef487156
+CONTENT_BYTES: 7117
 ================================================================================================
 
 # Coyote : Le chant des oubliés
@@ -39093,7 +39386,10 @@ Et alors que les premières notes de sa mélodie sauvage et indomptée remplissa
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Dionysos Le calice débordant 15709637d3f780dfbecdfdf408b23e6e.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 85d3d116cf8f99fa6c6140fb6730df846055a06fe756ba5c414be66e66ae775f
+CONTENT_BYTES: 7036
 ================================================================================================
 
 # Dionysos : Le calice débordant
@@ -39153,7 +39449,10 @@ Et tandis que la vigne prospérait autour de lui, Dionysos se laissait danser, s
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Elias, l’empathe bcfdd846c1b5402fa38977987a407457.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 25ebe8babebea62ad5820fd8c8ba906a53e8f9674dc0b742916b7c5635f11035
+CONTENT_BYTES: 5948
 ================================================================================================
 
 # Elias, l’empathe
@@ -39215,7 +39514,10 @@ Et dans cette hésitation, une graine d’incertitude et de possibilité s’év
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Gabriel Lajoie 16509637d3f78017994bc8efc65a1a44.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5c9ac63daec9e5ae469213ac1673d97904e3fddacc3bc308a4948716b273f96b
+CONTENT_BYTES: 4416
 ================================================================================================
 
 # Gabriel Lajoie
@@ -39252,7 +39554,10 @@ KinCity, avec sa vision à la fois poétique et pragmatique, devient une pierre 
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Kokopelli La mélodie du renouveau 15709637d3f780e5a18ff378c4db8c5d.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f50bd124a7ec59b312f744dbf3313781c2b04d3094cedf418f602ab75fcac3e6
+CONTENT_BYTES: 6082
 ================================================================================================
 
 # Kokopelli : La mélodie du renouveau
@@ -39302,7 +39607,10 @@ Kokopelli restait silencieux, la flûte encore chaude dans ses mains. Un sourire
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Legba le premier pas du voyageur 15709637d3f7806e98f7eb28cccf0075.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 096f26db7144edbaa934bef35c6fcaf72758580564b10ff4c9e703a8b12849c3
+CONTENT_BYTES: 6254
 ================================================================================================
 
 # Legba : le premier pas du voyageur
@@ -39356,7 +39664,10 @@ Alors que la porte se refermait derrière lui, le carrefour pulsait d'une vitali
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Loki La danse du chaos 15709637d3f7804f8d67c728c6949f3c.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cff30d6517c6577673614ff4351c58c387e27f3badd050cb8e3258b3b4d6dcd4
+CONTENT_BYTES: 7171
 ================================================================================================
 
 # Loki : La danse du chaos
@@ -39422,7 +39733,10 @@ Et ainsi, d'un pas aussi assuré qu'imprévisible, Loki quitta la galerie des gl
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Morrigan les cendres et la graine 15709637d3f7801bb44dca40b832f097.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: aae4b6449f2436d2fa26389994f371517ea682fe4a42a6745abb90270f26085f
+CONTENT_BYTES: 7081
 ================================================================================================
 
 # Morrigan : les cendres et la graine
@@ -39476,7 +39790,10 @@ Et alors que les premières graines de la vie osaient pousser à l’ombre de la
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Mythos King Klown 14d09637d3f780c894d4f4f3eeac5dc6.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: edd88368b76ef62479de493329aa1cab2a5851d95fe1f7f6be0a193eeeb42da0
+CONTENT_BYTES: 20972
 ================================================================================================
 
 # Mythos King Klown
@@ -39821,7 +40138,10 @@ Et au cœur de la ville, sous la Fontaine du Mandala, le hub central d’Orgo pu
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Odin Les fissures du Père de tous 15709637d3f780788765f38c22fcb16f.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f298cd6a9a8523d14b6d34f4d5f7b3414bfae2b50771067045820370371e2ad1
+CONTENT_BYTES: 6698
 ================================================================================================
 
 # Odin : Les fissures du Père de tous
@@ -39877,7 +40197,10 @@ Alors que la première goutte de pluie tombait du ciel cramoisi, Odin leva le re
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Pelé la flamme qui crée 15709637d3f780e1a82cfc24b8f90d2d.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bbd874583273b2b97daee0cbdc07023443bbea07bacb1f5ea53f840d159123e6
+CONTENT_BYTES: 6743
 ================================================================================================
 
 # Pelé : la flamme qui crée
@@ -39933,7 +40256,10 @@ Le volcan grondait sous ses pieds, non plus un rugissement mais un bourdonnement
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Prométhée L'étincelle et l'ombre 15709637d3f78096a92cce1065ce67fa.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 20433ce1e046970c0445bb5c52071b1dbaf89f30223f6f64ff55a012a23bb0c8
+CONTENT_BYTES: 7821
 ================================================================================================
 
 # Prométhée : L'étincelle et l'ombre
@@ -39993,7 +40319,10 @@ Et tandis que le cri de l’aigle résonnait là-haut, Prométhée ne sentait pl
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Quetzalcoatl la danse des ondulations 15709637d3f7803eb5d0c21802a717f2.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: af88db964c03ef7d5ce455ddcfef18d834ac29ad7afa7cd59551c8b9dd3b5da4
+CONTENT_BYTES: 7052
 ================================================================================================
 
 # Quetzalcoatl : la danse des ondulations
@@ -40057,7 +40386,10 @@ Et tandis que la pluie tombait et que la jungle s'agrandissait, Quetzalcoatl emb
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Raven le gardien des ombres et de la lumière 15709637d3f7808ea8ecf7b37ccf8702.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 451a69673d9831fe4761f2d3e82d236c2a0390d359bdce5984acb6c78a553c35
+CONTENT_BYTES: 6115
 ================================================================================================
 
 # Raven : le gardien des ombres et de la lumière
@@ -40103,7 +40435,10 @@ Raven se percha silencieusement pendant un moment, ses serres tenant l'éclat et
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Sun Wukong L'étoile et la tempête 15709637d3f78003bec1d44377c69b80.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6810b7d2cacab09ab77dbd27b9171519982a7d10b8c48677547a5e027bc560f2
+CONTENT_BYTES: 7016
 ================================================================================================
 
 # Sun Wukong : L'étoile et la tempête
@@ -40163,7 +40498,10 @@ Wukong se tenait sur son nuage, le regard fixé sur le ciel sans fin. L'horizon 
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Tezcatlipoca le bord du miroir 15709637d3f7808a9b7fe2f8065ef12f.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c7c60d1f07ab36906eadd6992f23efc7cd52a4d6b76976a342b3999bcb184104
+CONTENT_BYTES: 7434
 ================================================================================================
 
 # Tezcatlipoca : le bord du miroir
@@ -40225,7 +40563,10 @@ Et sur ce, il entra dans l’ombre, embrassant à la fois la lumière et l’obs
 
 ================================================================================================
 FILE: CORPUS/mythos-gods/Thot la rivière de la connaissance 15709637d3f780129b7bf7c0842529b8.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6dbe118ca880ddf2d65e8994fd39aeca9363bc39700894d25a0011dd1808b3e7
+CONTENT_BYTES: 7355
 ================================================================================================
 
 # Thot : la rivière de la connaissance
@@ -40283,7 +40624,10 @@ Et tandis que la bibliothèque prospérait avec une nouvelle énergie, Thot se l
 
 ================================================================================================
 FILE: CORPUS/ninja-arc-en-ciel/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: de0ed1751efb865b8aafa6fc527e08ae9cf68c09bf6310bf65a0feeb881850c6
+CONTENT_BYTES: 468
 ================================================================================================
 
 # Ninja Arc-en-ciel
@@ -40295,7 +40639,10 @@ Le créateur précise que le lien ontologique/narratif avec King Klown reste vol
 
 ================================================================================================
 FILE: CORPUS/ninja-arc-en-ciel/source_lyrics.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8a0798bbf25c060c877c056dd14c7b67b044515fd46d71fbe225a1bfeba73953
+CONTENT_BYTES: 33296
 ================================================================================================
 
 # Ninja Arc-en-ciel — source normalisée
@@ -41009,7 +41356,10 @@ Et dans le ciel sans frontières joue un arc-en-ciel triomphant,
 
 ================================================================================================
 FILE: CORPUS/pi/Pi_v13.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2bdc4bae9bd8e34d3c870a34a263250a0b72405538a26e0c0f9eeeea2a94f4a4
+CONTENT_BYTES: 52644
 ================================================================================================
 
 ## **Abstract**
@@ -41570,7 +41920,10 @@ In summary, exploring π as a metaphysical or divine principle opens a rich, spe
 
 ================================================================================================
 FILE: CORPUS/pi/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4d4ac24d871089bb0c3ea8b6d87d965e4535e0748d85d3be12f991371741cf6f
+CONTENT_BYTES: 466
 ================================================================================================
 
 # Pi
@@ -41584,7 +41937,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: CORPUS/platform-of-knowledge/platform-of-knowledge_source.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9fc350810599604bca08bb5b5af50694f75a7f5190212c3c70acbe4d6a37a35e
+CONTENT_BYTES: 132576
 ================================================================================================
 
 ### 
@@ -43051,7 +43407,10 @@ Elle leva la main, et les fils qu’elle avait tissés s’étendirent à l’in
 
 ================================================================================================
 FILE: CORPUS/raoul/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7aefc2e0e52b91a945cbe11d19514b1ecacf711617983c813d816d6486eca605
+CONTENT_BYTES: 237
 ================================================================================================
 
 # Chansons pour Raoul
@@ -43061,7 +43420,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: CORPUS/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cc1b3050bbbeac8ff52af7be58549936753d1a79e5e7391de335e93e2798bfca
+CONTENT_BYTES: 617
 ================================================================================================
 
 # Corpus
@@ -43078,7 +43440,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: DATA/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e447bc96c487ea3e6dcc9c8805daa5a912ae0a587651d3b5265720f3eaeef22c
+CONTENT_BYTES: 537
 ================================================================================================
 
 # DATA
@@ -43097,7 +43462,10 @@ Le Markdown de `CANON/` gouverne la formulation et le sens. JSON sert à l'index
 
 ================================================================================================
 FILE: DECISIONS/D-001-PRIMORDIAL-PRINCIPLE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 531759ad3a7816dd8ee9f0e3773472b331d1d75cc5087c84fb6dee7aad1b9e86
+CONTENT_BYTES: 445
 ================================================================================================
 
 # D-001 — King Klown comme principe primordial
@@ -43112,7 +43480,10 @@ Ne pas décrire KK uniquement comme un personnage apparu à l'intérieur d'un co
 
 ================================================================================================
 FILE: DECISIONS/D-002-GODS-WHITE-LIGHT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 18b711c1ec593aacd10e5179fc94c2a6cc3d9950f500c682c7fe40da60a3f400
+CONTENT_BYTES: 492
 ================================================================================================
 
 # D-002 — Dieux : lumière blanche, pas paternité hiérarchique
@@ -43126,7 +43497,10 @@ KK apparaît brièvement auprès des dieux, catalyse leur actualisation et repar
 
 ================================================================================================
 FILE: DECISIONS/D-003-CHRIST-ROLE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 535c527aeeef36cc23efa95fe0706966ed13d1b830612789a342c12aadf6b70c
+CONTENT_BYTES: 266
 ================================================================================================
 
 # D-003 — Christ comme rôle
@@ -43138,7 +43512,10 @@ Christ est un rôle/fonction : unir dans l'Amour, libérer, transformer les syst
 
 ================================================================================================
 FILE: DECISIONS/D-004-COLIN-INCARCERATION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c7db9cfcb26fe1a2281cc3c9309914ea508493e13bc16ad8288163bfee7c93ed
+CONTENT_BYTES: 379
 ================================================================================================
 
 # D-004 — Cause de l'incarcération de Colin
@@ -43152,7 +43529,10 @@ La branche du coup au policier est conservée uniquement comme ancienne version 
 
 ================================================================================================
 FILE: DECISIONS/D-005-HELLO-WORLD-POSTMORTEM.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 41b6078b7a5f8920c5a104d26096c09304da48ddfb7fb1d1678100292d3ca983
+CONTENT_BYTES: 522
 ================================================================================================
 
 # D-005 — Hello World : autopsie sans mort établie
@@ -43166,7 +43546,10 @@ Le canon source `01_CURRENT_CANON.zip` reste conservé comme état de travail hi
 
 ================================================================================================
 FILE: DECISIONS/D-006-REJEAN-COLIN-KK-MODES.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0fca1978e606d6bc82126406566dd885a7a9a33726bbd8995b26f6e52e00f308
+CONTENT_BYTES: 332
 ================================================================================================
 
 # D-006 — Réjean, Colin et KK : continuité, fonctions distinctes
@@ -43176,7 +43559,10 @@ Réjean = architecte/technologue réservé en coulisse. Colin = phase carcérale
 
 ================================================================================================
 FILE: DECISIONS/D-007-NINJA-TRANSMISSION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2739b2f95354c41994c637c32a9ad2b64e32f440c6750ec8378ec9e4c79b51a1
+CONTENT_BYTES: 263
 ================================================================================================
 
 # D-007 — Ninja Arc-en-ciel
@@ -43186,7 +43572,10 @@ Le lien avec KK est réel mais faible. Le Ninja montre qu'un même pattern bienv
 
 ================================================================================================
 FILE: DECISIONS/D-008-PUBLIC-PERSONA.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dd55de5d750c452e51b303db243472b5fc6927931e38aa0d673336ad80396806
+CONTENT_BYTES: 289
 ================================================================================================
 
 # D-008 — Persona pratique
@@ -43196,7 +43585,10 @@ KK protège la séparation auteur/persona, donne une plus grande liberté d'acti
 
 ================================================================================================
 FILE: DECISIONS/D-009-AUTHOR-RECURSION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 596d273a02ecaad4ec1b567d9064d262afc7f82e275fcba49f08a91dfa419f7c
+CONTENT_BYTES: 301
 ================================================================================================
 
 # D-009 — Auteur crée KK / KK crée l'auteur
@@ -43206,7 +43598,10 @@ Dans le réel de production, l'auteur crée le personnage. Dans la métaphysique
 
 ================================================================================================
 FILE: DECISIONS/D-010-TECH-SCOPE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1b829ef34a6d968cdc951076b9495228aa15fa4ddb560fad942eefa5f72fd44d
+CONTENT_BYTES: 272
 ================================================================================================
 
 # D-010 — Périmètre technologique
@@ -43216,7 +43611,10 @@ Le méga-repo KK ne duplique pas les systèmes kOA. Il couvre seulement leur rel
 
 ================================================================================================
 FILE: DECISIONS/D-011-DEMIURGE-TERM.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 392bce0394d231358f1e6e3569318ea78129843ba8250057feba23e42e37ffa3
+CONTENT_BYTES: 260
 ================================================================================================
 
 # D-011 — Terme « démiurge »
@@ -43226,7 +43624,10 @@ Le mot reste possible comme comparaison externe, mais n'est plus utilisé comme 
 
 ================================================================================================
 FILE: DECISIONS/D-012-PI-MAL-GSF.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 995eca2867fc24e47fe8a43af1ed38cbf08a22860423e0fe0c6aea4548090252
+CONTENT_BYTES: 333
 ================================================================================================
 
 # D-012 — Pi : MAL / GSF et GIHECEF
@@ -43236,7 +43637,10 @@ Le créateur précise oralement : MAL = GSF = déconstruction / pôle masculin a
 
 ================================================================================================
 FILE: DECISIONS/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3db37251d41aaa54027e6a81ca43f3e933ebdac12715c7149e1233f60478b378
+CONTENT_BYTES: 283
 ================================================================================================
 
 # DECISIONS
@@ -43248,7 +43652,10 @@ Règle : source ancienne conservée → décision explicite → canon mis à jou
 
 ================================================================================================
 FILE: EXTERNAL/CONTEXT_PACKS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2487e0dced1555ae41e4fd3294fccb52cdf5dcaf906d07de802979725e99b2c7
+CONTENT_BYTES: 1391
 ================================================================================================
 
 # Context Packs externes — délégation technique
@@ -43275,7 +43682,10 @@ Si une réponse exige API, schema, runtime, workflow détaillé, déploiement, a
 
 ================================================================================================
 FILE: GENERATED/context-packs/KK_CORE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2af257736e0ae80fe45b3da218af3f262f3cb6950df4e6e41c5121d43875a08f
+CONTENT_BYTES: 20354
 ================================================================================================
 
 # KK_CORE
@@ -43664,7 +44074,10 @@ Ce fichier est volontairement court : ne pas créer des problèmes simplement pa
 
 ================================================================================================
 FILE: GENERATED/context-packs/KK_FULL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 09a30d695e47f1f23c834423a3291247c0ebb3e3ce9eabf8b71f043e83de4658
+CONTENT_BYTES: 42147
 ================================================================================================
 
 # KK_FULL
@@ -44570,7 +44983,10 @@ Ce fichier est volontairement court : ne pas créer des problèmes simplement pa
 
 ================================================================================================
 FILE: GENERATED/context-packs/KK_METAPHYSICS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8b83ef75d31ba6e3ef6df219bc9d60c3de89b1e8e8c993b667ff3651dfbcf0e7
+CONTENT_BYTES: 21696
 ================================================================================================
 
 # KK_METAPHYSICS
@@ -45012,7 +45428,10 @@ Le statut METAPHYSICAL ne signifie pas « scientifiquement démontré ». `Pi v1
 
 ================================================================================================
 FILE: GENERATED/context-packs/KK_STORYLINE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b312d86473fed2f901951f66dc551930ff77d5c43ee815bdfd77bf56b05519ba
+CONTENT_BYTES: 23245
 ================================================================================================
 
 # KK_STORYLINE
@@ -45496,7 +45915,10 @@ Mettre KK « à off » permet aussi d'examiner ce qui reste lorsque le persona n
 
 ================================================================================================
 FILE: GENERATED/knowledge-graph.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 79e6a7c8162f383a096dee46cdc5c8799e8f8afd3c0b26942fec6d1c91eb83a5
+CONTENT_BYTES: 1132
 ================================================================================================
 
 # Knowledge graph — vue générée
@@ -45524,7 +45946,10 @@ graph TD
 
 ================================================================================================
 FILE: GENERATED/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 20c4ae5c75dd4f33ffc7f04fbf87f444009ef1a594cf4b75089fccab8335117a
+CONTENT_BYTES: 157
 ================================================================================================
 
 # Generated
@@ -45540,7 +45965,10 @@ python tools/build_all.py
 
 ================================================================================================
 FILE: GENERATED/source-index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 60f9b704ddd964326bf0b5780566b2030fd035ee2ea448e31d272f917dd960c1
+CONTENT_BYTES: 9779
 ================================================================================================
 
 # Source index — vue générée
@@ -45621,7 +46049,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: GENERATED/timelines.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8803c15cf48294e465467949c1c53b8893296685969c1bec4211cc6666128fce
+CONTENT_BYTES: 998
 ================================================================================================
 
 # Timelines — vues générées
@@ -45668,7 +46099,10 @@ Auteur réel → crée le personnage King Klown
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1a1476407f8a5f411703ac43240e92868a05a5f4cfdcc9b96f84ac2d0cac1a94
+CONTENT_BYTES: 2583
 ================================================================================================
 
 # King Klown — Mega Repo canonique
@@ -45727,7 +46161,10 @@ Ce repo est une reconstruction canonique optimisée à partir du corpus disponib
 
 ================================================================================================
 FILE: REPO_MAP.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 17fa2e629cc993cf4b151d28229a8309922ff88025bc76d5a4a6ee73c32dc45f
+CONTENT_BYTES: 1099
 ================================================================================================
 
 # Carte du repo
@@ -45756,7 +46193,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: RIGHTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a454e1f5784ddabd25b875791460d534a98ec5ad93a931bc8b6e19fd97bdb422
+CONTENT_BYTES: 504
 ================================================================================================
 
 # Droits et reprise du personnage
@@ -45768,7 +46208,10 @@ Le créateur a exprimé l'intention que King Klown puisse être **déposé puis 
 
 ================================================================================================
 FILE: SCOPE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 388cf2b1fb96712c51b5aedf48c513a6c2fe479e083eb88d8da8a943a089d445
+CONTENT_BYTES: 1186
 ================================================================================================
 
 # Scope Boundary
@@ -45810,7 +46253,10 @@ Une technologie peut apparaître dans ce repo seulement pour expliquer :
 
 ================================================================================================
 FILE: START_HERE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3f33b45ee8eacfe7c12d96c1cdf9db6c1327d8d9e8a1aba21b331db792edb0ab
+CONTENT_BYTES: 5229
 ================================================================================================
 
 # START HERE
@@ -45881,7 +46327,10 @@ Ce repo explique **pourquoi** Konnaxion, Orgo, Kristal, Kristal Farms, UCKK et d
 
 ================================================================================================
 FILE: tools/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bca02fe18c406f5140ebb54346560f2b81877e158256edc95f4368ef48620978
+CONTENT_BYTES: 306
 ================================================================================================
 
 # Tools

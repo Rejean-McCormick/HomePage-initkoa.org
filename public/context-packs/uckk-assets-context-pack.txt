@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/UCKK_Assets
-source_path: C:\mycode\UCKK\UCKK_Assets
 source_commit: 9270a20224eadfcb9561121a5b844c9c06adcde9
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 46
 wiki_files: 0
 source_files: 46
@@ -18,57 +16,58 @@ included_files: 42
 excluded_files: 4
 duplicate_files: 4
 content_bytes: 1521218
-authority_counts: {"canonical":42}
-generated_at: 2026-09-10T10:45:08-04:00
+authority_counts: {"reference":42}
+content_role_counts: {"knowledge":42}
+generated_at: 2026-09-10T13:04:23-04:00
 files: 42
-content_sha256: ed66c26d5504ce07622e54064dc7819324149ed8428f0f41db8f58acc3f13fc1
+content_sha256: 1aacb450305476a4599b2374bfc755df82061ff7c2ae93b9f362b8b129f6ec63
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] Auto_Format/uckk_docx_table_local_gui/README_SIMPLE.md
-02. [canonical] Branding_visuel/StyleVisuel.md
-03. [canonical] Cours/Standard UCKK des manuels pédagogiques.md
-04. [canonical] Cours/standard_numerotation_heading_guide.md
-05. [canonical] Cours/Tous_les_cours/des-savoirs-a-l-action/bibliographie-commentee.md
-06. [canonical] Cours/Tous_les_cours/des-savoirs-a-l-action/Cas_File.md
-07. [canonical] Cours/Tous_les_cours/des-savoirs-a-l-action/exercices-et-travaux.md
-08. [canonical] Cours/Tous_les_cours/des-savoirs-a-l-action/Guide - Du savoir à l’action v3.md
-09. [canonical] Cours/Tous_les_cours/des-savoirs-a-l-action/Guide - Du savoir à l’action v4.md
-10. [canonical] Cours/Tous_les_cours/des-savoirs-a-l-action/Outline_Manuel.md
-11. [canonical] README.md
-12. [canonical] UCKK_Canon_v4/00_index.md
-13. [canonical] UCKK_Canon_v4/01_glossaire.md
-14. [canonical] UCKK_Canon_v4/02_architecture-generale-kOA-UCKK-digital-ecosystem.md
-15. [canonical] UCKK_Canon_v4/03_nomenclature-UCKK.md
-16. [canonical] UCKK_Canon_v4/10_kOA-mouvement.md
-17. [canonical] UCKK_Canon_v4/11_kOA-principes-limites-strategie.md
-18. [canonical] UCKK_Canon_v4/20_UCKK-document-fondateur.md
-19. [canonical] UCKK_Canon_v4/21_UCKK-branding.md
-20. [canonical] UCKK_Canon_v4/22_UCKK-gouvernance-assemblees-inquisiteur.md
-21. [canonical] UCKK_Canon_v4/23_UCKK-defis-theatre-public.md
-22. [canonical] UCKK_Canon_v4/30_UCKK-catalogue-apprentissages-niveaux.md
-23. [canonical] UCKK_Canon_v4/31_UCKK-tronc-commun.md
-24. [canonical] UCKK_Canon_v4/32_voie-grand-jeu-social.md
-25. [canonical] UCKK_Canon_v4/33_voie-architecture-ecosysteme-digital-kOA.md
-26. [canonical] UCKK_Canon_v4/34_voie-metaphysique.md
-27. [canonical] UCKK_Canon_v4/35_voie-architecture-sociotechnique.md
-28. [canonical] UCKK_Canon_v4/36_voie-sciences-politiques.md
-29. [canonical] UCKK_Canon_v4/37_voie-economie.md
-30. [canonical] UCKK_Canon_v4/38_voie-ecologie.md
-31. [canonical] UCKK_Canon_v4/39_voie-linguistique-architecture-du-sens.md
-32. [canonical] UCKK_Canon_v4/40_voie-intelligence-artificielle-gouvernable.md
-33. [canonical] UCKK_Canon_v4/41_voie-intervention-sociale-systemes-humains.md
-34. [canonical] UCKK_Canon_v4/42_UCKK-liste-et-fiches-de-cours.md
-35. [canonical] UCKK_Canon_v4/50_kOA-digital-ecosystem-document-maitre.md
-36. [canonical] UCKK_Canon_v4/51_kOA-digital-ecosystem-architecture-et-modules.md
-37. [canonical] UCKK_Canon_v4/52_kOA-digital-ecosystem-gouvernance-audit-resilience.md
-38. [canonical] UCKK_Canon_v4/60_king-klown-narrative-public-partenaires.md
-39. [canonical] UCKK_Canon_v4/70_chaires-evolution-UCKK.md
-40. [canonical] UCKK_Canon_v4/71_UCKK-continuite-replication-modele-ouvert-univers-cite.md
-41. [canonical] UCKK_Canon_v4/erratum 99_journal-mise-a-jour-corpus-uckk-20260603.md
-42. [canonical] UCKK_Canon_v4/Omnia_humiliter_interroga-Note_de_posture_ethique.md
+01. [reference] [knowledge] Auto_Format/uckk_docx_table_local_gui/README_SIMPLE.md | bytes=1032 | sha256=f4493e80b1fca2d3f7c1d528828daaac443c0241397e4646c0d9ac523d45861f
+02. [reference] [knowledge] Branding_visuel/StyleVisuel.md | bytes=10156 | sha256=818445628d04ba1db22a0874f4f0c951a74e317d58f4562d3eb4b79b7b050a27
+03. [reference] [knowledge] Cours/Standard UCKK des manuels pédagogiques.md | bytes=14186 | sha256=78c12b77fa878c9052c1057b769ed3da67fd831c83b9f012518c0940c0f28a6a
+04. [reference] [knowledge] Cours/standard_numerotation_heading_guide.md | bytes=13073 | sha256=bf551f3487720cd487e8995fc9f1f33d84dd2f1773cfd1fcc88494de51f5a275
+05. [reference] [knowledge] Cours/Tous_les_cours/des-savoirs-a-l-action/bibliographie-commentee.md | bytes=12513 | sha256=352dd931e40706d036a30e4e09dd01db9b0048e8986ec3c362c2bd727b6ce630
+06. [reference] [knowledge] Cours/Tous_les_cours/des-savoirs-a-l-action/Cas_File.md | bytes=31752 | sha256=75e12c8da09a8fbfd30bd72eab50b15ebcb6437ae6b4903c27a56e53e99d70e0
+07. [reference] [knowledge] Cours/Tous_les_cours/des-savoirs-a-l-action/exercices-et-travaux.md | bytes=1 | sha256=01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+08. [reference] [knowledge] Cours/Tous_les_cours/des-savoirs-a-l-action/Guide - Du savoir à l’action v3.md | bytes=329733 | sha256=84f4fe1842c7d4a701f8a9f85730dc75fccb38e361f7e0841576dc8b7b6416a7
+09. [reference] [knowledge] Cours/Tous_les_cours/des-savoirs-a-l-action/Guide - Du savoir à l’action v4.md | bytes=346153 | sha256=70238ad8d5d092f8396e44c613b90e12dbc9148600665da1d0cc857522535593
+10. [reference] [knowledge] Cours/Tous_les_cours/des-savoirs-a-l-action/Outline_Manuel.md | bytes=30078 | sha256=8e4205f4e7bb2b8a0d1ad9879361097f982185d70566fccc2d532f482f3bccb8
+11. [reference] [knowledge] README.md | bytes=40284 | sha256=4574b1190744fa8b81a2332a4de2dfe32ded1262147014a3478802c7b58dd6fc
+12. [reference] [knowledge] UCKK_Canon_v4/00_index.md | bytes=11761 | sha256=ffc1da5cd672f63d6a4527d86569937c514cdbff1dc39810dbfc28b533d8adab
+13. [reference] [knowledge] UCKK_Canon_v4/01_glossaire.md | bytes=27836 | sha256=1daad16b2cc02aeed5997fca4d57e8181c8a753ffcbac54c2b40976329168e58
+14. [reference] [knowledge] UCKK_Canon_v4/02_architecture-generale-kOA-UCKK-digital-ecosystem.md | bytes=17980 | sha256=45337eb783504036aa4aa49450cfaf3d68088b249f379c0c5199bc111acdb700
+15. [reference] [knowledge] UCKK_Canon_v4/03_nomenclature-UCKK.md | bytes=29238 | sha256=87fff3bb155b421bc08e254b5213612af4fbf1b117fa16a4b4ffccba1db1ccb2
+16. [reference] [knowledge] UCKK_Canon_v4/10_kOA-mouvement.md | bytes=11073 | sha256=80d3e20387210e58c6c30a6607112c2ec99536752970bcbe52d20e8cd75663d6
+17. [reference] [knowledge] UCKK_Canon_v4/11_kOA-principes-limites-strategie.md | bytes=18487 | sha256=9b24605d55e72657c28c41d4b82dd5827b5e5fd309e6018e3a278432f9d4bf47
+18. [reference] [knowledge] UCKK_Canon_v4/20_UCKK-document-fondateur.md | bytes=26178 | sha256=b5d20e2e116db41d10a4ff9c38ba121e20da7776a654ec055700a92b90d71fcc
+19. [reference] [knowledge] UCKK_Canon_v4/21_UCKK-branding.md | bytes=14493 | sha256=6f5a4286bb99ea1ed23334bce2339a61bf7948338d2bfabbaff5891991344c0e
+20. [reference] [knowledge] UCKK_Canon_v4/22_UCKK-gouvernance-assemblees-inquisiteur.md | bytes=24231 | sha256=4ff90a39c70c063fcb11ca978da850848660790596988b193a6b9e5096475c52
+21. [reference] [knowledge] UCKK_Canon_v4/23_UCKK-defis-theatre-public.md | bytes=19316 | sha256=42888a62f12efd3ba5c14af2f522d1a00e94d73836fb34dd87337ec0b9feaa5b
+22. [reference] [knowledge] UCKK_Canon_v4/30_UCKK-catalogue-apprentissages-niveaux.md | bytes=22498 | sha256=adf01f50308aaaa3e8c9ab931ceaadacce5c27e0b1f6346dcb8c33215e07c3d1
+23. [reference] [knowledge] UCKK_Canon_v4/31_UCKK-tronc-commun.md | bytes=18834 | sha256=50a5299ad395d92e73bd0f2dfae6568630938ae2cf6bbd0359d7307ad04611d7
+24. [reference] [knowledge] UCKK_Canon_v4/32_voie-grand-jeu-social.md | bytes=24283 | sha256=ac8c5ce13725f551df1fe77b49f103b9b2af24e269657ecbaf3e92f0ef54d2a5
+25. [reference] [knowledge] UCKK_Canon_v4/33_voie-architecture-ecosysteme-digital-kOA.md | bytes=26558 | sha256=178bb2026dfd81773912b68460aa97b5adf760fa98e7d0f855be727c35022a65
+26. [reference] [knowledge] UCKK_Canon_v4/34_voie-metaphysique.md | bytes=19783 | sha256=9a886cfa1b77d16d6f4f88d7f93e4de2ba2acca9995887b6a5a951a323883ce0
+27. [reference] [knowledge] UCKK_Canon_v4/35_voie-architecture-sociotechnique.md | bytes=18606 | sha256=5f12e6398cd3f14348ec12a6fa6ac3c3b61720e78e4ef89af9baf6504ef643e3
+28. [reference] [knowledge] UCKK_Canon_v4/36_voie-sciences-politiques.md | bytes=19217 | sha256=0b3080bac4a8f181c78b6c964cea6526af0f30fed37f48a788a99fb0415d853d
+29. [reference] [knowledge] UCKK_Canon_v4/37_voie-economie.md | bytes=17778 | sha256=1cf42a114eb724d9a68185f34245368687f5e1e6bf8880a6dc9f701711b43001
+30. [reference] [knowledge] UCKK_Canon_v4/38_voie-ecologie.md | bytes=19932 | sha256=75179dfafa81651cdec2429b017829504e370da5105384018b4b71c28a329e89
+31. [reference] [knowledge] UCKK_Canon_v4/39_voie-linguistique-architecture-du-sens.md | bytes=27876 | sha256=4c7150948313c01c379f1d66495e8b36e5ff6459b55d9a82f37fcff3985b5556
+32. [reference] [knowledge] UCKK_Canon_v4/40_voie-intelligence-artificielle-gouvernable.md | bytes=25034 | sha256=7f47f89be569f06c18ae45d8e38bdd24606b6637e67b0cfc322e18be2a33e34a
+33. [reference] [knowledge] UCKK_Canon_v4/41_voie-intervention-sociale-systemes-humains.md | bytes=22166 | sha256=c96b102b1c5eda2c05353112fd03b72bd82cb30b4e88eaeddb3a8ee7c1ca4fb1
+34. [reference] [knowledge] UCKK_Canon_v4/42_UCKK-liste-et-fiches-de-cours.md | bytes=82990 | sha256=c7e723293aba5a6cd493fba825ff73bdcac484d1ee533e6bb63cce578302a09a
+35. [reference] [knowledge] UCKK_Canon_v4/50_kOA-digital-ecosystem-document-maitre.md | bytes=21307 | sha256=11c8eecf83d92894f0a23f081f5f1db1034cc1c8e0f5305f55f81e4eb440351c
+36. [reference] [knowledge] UCKK_Canon_v4/51_kOA-digital-ecosystem-architecture-et-modules.md | bytes=23359 | sha256=2cce093cd3d3a3ea02fa04ad13d60ecf9ac7196a8385dd2b0a8c3c4411b197ac
+37. [reference] [knowledge] UCKK_Canon_v4/52_kOA-digital-ecosystem-gouvernance-audit-resilience.md | bytes=23422 | sha256=16c602f3f30f1fb21bb8e752742b7d23e579e4f672386a8db00f9861140ddbb5
+38. [reference] [knowledge] UCKK_Canon_v4/60_king-klown-narrative-public-partenaires.md | bytes=28234 | sha256=7b40d3f13fcdd048903aeb0a5a041fcf698fcfcb48363bc6f523d7f52b3af67e
+39. [reference] [knowledge] UCKK_Canon_v4/70_chaires-evolution-UCKK.md | bytes=21023 | sha256=38446651ff35f79ab03e58ddf2e4cff8a98880cfd52eb136eb3767e6700c06a4
+40. [reference] [knowledge] UCKK_Canon_v4/71_UCKK-continuite-replication-modele-ouvert-univers-cite.md | bytes=23327 | sha256=f8d742a070ae5fe064a12b04852e73db02045c585339494f9c1c743429a9711a
+41. [reference] [knowledge] UCKK_Canon_v4/erratum 99_journal-mise-a-jour-corpus-uckk-20260603.md | bytes=925 | sha256=92e213a2e66d8ccb648cd241d988feb558dacad497ed73964afeb79706fc6463
+42. [reference] [knowledge] UCKK_Canon_v4/Omnia_humiliter_interroga-Note_de_posture_ethique.md | bytes=4512 | sha256=9dae3e9c6aa637ab99d345732b2c26e1ad8f539902b4086024db0f16b398d948
 
 
 ================================================================================================
@@ -83,7 +82,10 @@ EXCLUDED FILES
 
 ================================================================================================
 FILE: Auto_Format/uckk_docx_table_local_gui/README_SIMPLE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f4493e80b1fca2d3f7c1d528828daaac443c0241397e4646c0d9ac523d45861f
+CONTENT_BYTES: 1032
 ================================================================================================
 
 # UCKK DOCX Table Styler — version simple
@@ -144,7 +146,10 @@ L'application appliquera uniquement le style des tableaux.
 
 ================================================================================================
 FILE: Branding_visuel/StyleVisuel.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 818445628d04ba1db22a0874f4f0c951a74e317d58f4562d3eb4b79b7b050a27
+CONTENT_BYTES: 10156
 ================================================================================================
 
 # Définition stylistique pour IA
@@ -495,7 +500,10 @@ Chaque visuel doit ressembler à un **document officiel magnifié** : à la fois
 
 ================================================================================================
 FILE: Cours/Standard UCKK des manuels pédagogiques.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 78c12b77fa878c9052c1057b769ed3da67fd831c83b9f012518c0940c0f28a6a
+CONTENT_BYTES: 14186
 ================================================================================================
 
 # Standard UCKK des manuels pédagogiques
@@ -1025,7 +1033,10 @@ Phrase finale du standard :
 
 ================================================================================================
 FILE: Cours/standard_numerotation_heading_guide.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bf551f3487720cd487e8995fc9f1f33d84dd2f1773cfd1fcc88494de51f5a275
+CONTENT_BYTES: 13073
 ================================================================================================
 
 # Rapport de standardisation — Numérotation et niveaux de titres
@@ -1570,7 +1581,10 @@ Cette décision protège la lisibilité du livre, facilite la génération autom
 
 ================================================================================================
 FILE: Cours/Tous_les_cours/des-savoirs-a-l-action/bibliographie-commentee.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 352dd931e40706d036a30e4e09dd01db9b0048e8986ec3c362c2bd727b6ce630
+CONTENT_BYTES: 12513
 ================================================================================================
 
 # Bibliographie commentée
@@ -1698,7 +1712,10 @@ Ouvrage de référence sur la conception participative. Il soutient l’idée qu
 
 ================================================================================================
 FILE: Cours/Tous_les_cours/des-savoirs-a-l-action/Cas_File.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 75e12c8da09a8fbfd30bd72eab50b15ebcb6437ae6b4903c27a56e53e99d70e0
+CONTENT_BYTES: 31752
 ================================================================================================
 
 Voici le **cas filé complet**, distribué sur les **18 chapitres** du manuel.
@@ -2508,7 +2525,10 @@ C’est le bon cas filé pour UCKK : critique, polarisant, systémique, mémorab
 
 ================================================================================================
 FILE: Cours/Tous_les_cours/des-savoirs-a-l-action/exercices-et-travaux.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+CONTENT_BYTES: 1
 ================================================================================================
 
 
@@ -2516,7 +2536,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: Cours/Tous_les_cours/des-savoirs-a-l-action/Guide - Du savoir à l’action v3.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 84f4fe1842c7d4a701f8a9f85730dc75fccb38e361f7e0841576dc8b7b6416a7
+CONTENT_BYTES: 329733
 ================================================================================================
 
 # **01\. Introduction générale**
@@ -9234,7 +9257,10 @@ Si ce parcours a été accompli, alors le passage central du cours a bien eu lie
 
 ================================================================================================
 FILE: Cours/Tous_les_cours/des-savoirs-a-l-action/Guide - Du savoir à l’action v4.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 70238ad8d5d092f8396e44c613b90e12dbc9148600665da1d0cc857522535593
+CONTENT_BYTES: 346153
 ================================================================================================
 
 # **01\. Introduction générale**
@@ -16631,7 +16657,10 @@ Si ce parcours a été accompli, alors le passage central du cours a bien eu lie
 
 ================================================================================================
 FILE: Cours/Tous_les_cours/des-savoirs-a-l-action/Outline_Manuel.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8e4205f4e7bb2b8a0d1ad9879361097f982185d70566fccc2d532f482f3bccb8
+CONTENT_BYTES: 30078
 ================================================================================================
 
 Voici le **nouvel outline détaillé** du manuel *Des savoirs à l’action*, réaligné sur le standard UCKK :
@@ -17956,7 +17985,10 @@ Ce modèle rend le manuel plus stable, plus navigable et plus conforme à la sig
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4574b1190744fa8b81a2332a4de2dfe32ded1262147014a3478802c7b58dd6fc
+CONTENT_BYTES: 40284
 ================================================================================================
 
 ÿþ#   U C K K   C a n o n   C o u r s e s   A s s e t s 
@@ -19200,7 +19232,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: UCKK_Canon_v4/00_index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ffc1da5cd672f63d6a4527d86569937c514cdbff1dc39810dbfc28b533d8adab
+CONTENT_BYTES: 11761
 ================================================================================================
 
 # Index canonique UCKK
@@ -19567,7 +19602,10 @@ Formule de contrôle :
 
 ================================================================================================
 FILE: UCKK_Canon_v4/01_glossaire.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1daad16b2cc02aeed5997fca4d57e8181c8a753ffcbac54c2b40976329168e58
+CONTENT_BYTES: 27836
 ================================================================================================
 
 # Glossaire canonique UCKK
@@ -20382,7 +20420,10 @@ Il peut être enrichi, mais il doit rester court, stable et utile à la lecture 
 
 ================================================================================================
 FILE: UCKK_Canon_v4/02_architecture-generale-kOA-UCKK-digital-ecosystem.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 45337eb783504036aa4aa49450cfaf3d68088b249f379c0c5199bc111acdb700
+CONTENT_BYTES: 17980
 ================================================================================================
 
 # Architecture générale — kOA, UCKK et kOA Digital Ecosystem
@@ -20925,7 +20966,10 @@ Cette architecture permet de développer UCKK sans réduire kOA à une plateform
 
 ================================================================================================
 FILE: UCKK_Canon_v4/03_nomenclature-UCKK.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 87fff3bb155b421bc08e254b5213612af4fbf1b117fa16a4b4ffccba1db1ccb2
+CONTENT_BYTES: 29238
 ================================================================================================
 
 # Nomenclature UCKK
@@ -21578,7 +21622,10 @@ Cette nomenclature donne à l’UCKK une langue complète, cohérente et distinc
 
 ================================================================================================
 FILE: UCKK_Canon_v4/10_kOA-mouvement.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 80d3e20387210e58c6c30a6607112c2ec99536752970bcbe52d20e8cd75663d6
+CONTENT_BYTES: 11073
 ================================================================================================
 
 # kOA — Mouvement
@@ -21975,7 +22022,10 @@ La règle de cohérence est simple :
 
 ================================================================================================
 FILE: UCKK_Canon_v4/11_kOA-principes-limites-strategie.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9b24605d55e72657c28c41d4b82dd5827b5e5fd309e6018e3a278432f9d4bf47
+CONTENT_BYTES: 18487
 ================================================================================================
 
 # kOA — Principes, limites et stratégie
@@ -22666,7 +22716,10 @@ La règle de cohérence est simple :
 
 ================================================================================================
 FILE: UCKK_Canon_v4/20_UCKK-document-fondateur.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b5d20e2e116db41d10a4ff9c38ba121e20da7776a654ec055700a92b90d71fcc
+CONTENT_BYTES: 26178
 ================================================================================================
 
 # Document fondateur — Univers-Cité King Klown
@@ -23482,7 +23535,10 @@ Ce document est une reconstruction canonique à partir des documents internes d�
 
 ================================================================================================
 FILE: UCKK_Canon_v4/21_UCKK-branding.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6f5a4286bb99ea1ed23334bce2339a61bf7948338d2bfabbaff5891991344c0e
+CONTENT_BYTES: 14493
 ================================================================================================
 
 # UCKK — Branding
@@ -23952,7 +24008,10 @@ Ce document s’appuie sur les textes fournis dans la conversation, notamment :
 
 ================================================================================================
 FILE: UCKK_Canon_v4/22_UCKK-gouvernance-assemblees-inquisiteur.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4ff90a39c70c063fcb11ca978da850848660790596988b193a6b9e5096475c52
+CONTENT_BYTES: 24231
 ================================================================================================
 
 # Gouvernance, Assemblées et Inquisiteur — UCKK
@@ -24924,7 +24983,10 @@ Ce document consolide les éléments déjà établis dans les documents UCKK fou
 
 ================================================================================================
 FILE: UCKK_Canon_v4/23_UCKK-defis-theatre-public.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 42888a62f12efd3ba5c14af2f522d1a00e94d73836fb34dd87337ec0b9feaa5b
+CONTENT_BYTES: 19316
 ================================================================================================
 
 # UCKK — Défis de King Klown et théâtre public responsable
@@ -25704,7 +25766,10 @@ L’Univers-Cité relie le tout.
 
 ================================================================================================
 FILE: UCKK_Canon_v4/30_UCKK-catalogue-apprentissages-niveaux.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: adf01f50308aaaa3e8c9ab931ceaadacce5c27e0b1f6346dcb8c33215e07c3d1
+CONTENT_BYTES: 22498
 ================================================================================================
 
 # Catalogue des apprentissages et des Niveaux UCKK
@@ -26441,7 +26506,10 @@ Elle est une branche éducative émergente du mouvement kOA, dédiée à la comp
 
 ================================================================================================
 FILE: UCKK_Canon_v4/31_UCKK-tronc-commun.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 50a5299ad395d92e73bd0f2dfae6568630938ae2cf6bbd0359d7307ad04611d7
+CONTENT_BYTES: 18834
 ================================================================================================
 
 # UCKK — Tronc commun obligatoire
@@ -26935,7 +27003,10 @@ Ces cours forment la base commune de toutes les Voies UCKK.
 
 ================================================================================================
 FILE: UCKK_Canon_v4/32_voie-grand-jeu-social.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ac8c5ce13725f551df1fe77b49f103b9b2af24e269657ecbaf3e92f0ef54d2a5
+CONTENT_BYTES: 24283
 ================================================================================================
 
 # Voie du Grand Jeu social
@@ -27875,7 +27946,10 @@ Ce document consolide les éléments déjà établis dans les documents UCKK fou
 
 ================================================================================================
 FILE: UCKK_Canon_v4/33_voie-architecture-ecosysteme-digital-kOA.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 178bb2026dfd81773912b68460aa97b5adf760fa98e7d0f855be727c35022a65
+CONTENT_BYTES: 26558
 ================================================================================================
 
 ---
@@ -28647,7 +28721,10 @@ Après reconnaissance du Dossier de passage, l’Univers-Cité peut remettre le 
 
 ================================================================================================
 FILE: UCKK_Canon_v4/34_voie-metaphysique.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9a886cfa1b77d16d6f4f88d7f93e4de2ba2acca9995887b6a5a951a323883ce0
+CONTENT_BYTES: 19783
 ================================================================================================
 
 # Voie de Métaphysique — Niveau de Puissance opératoire
@@ -29294,7 +29371,10 @@ Sa règle de cohérence :
 
 ================================================================================================
 FILE: UCKK_Canon_v4/35_voie-architecture-sociotechnique.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5f12e6398cd3f14348ec12a6fa6ac3c3b61720e78e4ef89af9baf6504ef643e3
+CONTENT_BYTES: 18606
 ================================================================================================
 
 # Voie d’Architecture sociotechnique — Niveau de Puissance opératoire
@@ -29938,7 +30018,10 @@ Elle forme des personnes capables de lire le Grand Jeu et de bâtir des système
 
 ================================================================================================
 FILE: UCKK_Canon_v4/36_voie-sciences-politiques.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0b3080bac4a8f181c78b6c964cea6526af0f30fed37f48a788a99fb0415d853d
+CONTENT_BYTES: 19217
 ================================================================================================
 
 # Voie des Sciences politiques
@@ -30478,7 +30561,10 @@ Sources internes historiques et conceptuelles utilisées pour établir cette Voi
 
 ================================================================================================
 FILE: UCKK_Canon_v4/37_voie-economie.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1cf42a114eb724d9a68185f34245368687f5e1e6bf8880a6dc9f701711b43001
+CONTENT_BYTES: 17778
 ================================================================================================
 
 # Voie d’Économie — Niveau de Puissance opératoire
@@ -30979,7 +31065,10 @@ Il enseigne à comprendre où la valeur circule, où elle est capturée, où ell
 
 ================================================================================================
 FILE: UCKK_Canon_v4/38_voie-ecologie.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 75179dfafa81651cdec2429b017829504e370da5105384018b4b71c28a329e89
+CONTENT_BYTES: 19932
 ================================================================================================
 
 # Voie d’Écologie — Niveau de Puissance opératoire
@@ -31542,7 +31631,10 @@ Son titre symbolique est :
 
 ================================================================================================
 FILE: UCKK_Canon_v4/39_voie-linguistique-architecture-du-sens.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4c7150948313c01c379f1d66495e8b36e5ff6459b55d9a82f37fcff3985b5556
+CONTENT_BYTES: 27876
 ================================================================================================
 
 # Voie de Puissance opératoire — Linguistique et architecture du sens
@@ -32403,7 +32495,10 @@ L’Architecte du sens apprend à rendre ces structures visibles, discutables, v
 
 ================================================================================================
 FILE: UCKK_Canon_v4/40_voie-intelligence-artificielle-gouvernable.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7f47f89be569f06c18ae45d8e38bdd24606b6637e67b0cfc322e18be2a33e34a
+CONTENT_BYTES: 25034
 ================================================================================================
 
 # Voie de l’Intelligence artificielle gouvernable
@@ -33090,7 +33185,10 @@ Formule finale :
 
 ================================================================================================
 FILE: UCKK_Canon_v4/41_voie-intervention-sociale-systemes-humains.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c96b102b1c5eda2c05353112fd03b72bd82cb30b4e88eaeddb3a8ee7c1ca4fb1
+CONTENT_BYTES: 22166
 ================================================================================================
 
 # UCKK_Canon/41_voie-intervention-sociale-systemes-humains.md
@@ -33698,7 +33796,10 @@ Sa mission est de former des personnes capables de comprendre les systèmes sans
 
 ================================================================================================
 FILE: UCKK_Canon_v4/42_UCKK-liste-et-fiches-de-cours.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c7e723293aba5a6cd493fba825ff73bdcac484d1ee533e6bb63cce578302a09a
+CONTENT_BYTES: 82990
 ================================================================================================
 
 # Liste officielle et fiches de cours UCKK
@@ -36325,7 +36426,10 @@ Ce document consolide les éléments produits ou fournis dans la conversation au
 
 ================================================================================================
 FILE: UCKK_Canon_v4/50_kOA-digital-ecosystem-document-maitre.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 11c8eecf83d92894f0a23f081f5f1db1034cc1c8e0f5305f55f81e4eb440351c
+CONTENT_BYTES: 21307
 ================================================================================================
 
 # kOA Digital Ecosystem — Document maître
@@ -37249,7 +37353,10 @@ Son ambition est de produire une capacité collective plus forte : gouvernable, 
 
 ================================================================================================
 FILE: UCKK_Canon_v4/51_kOA-digital-ecosystem-architecture-et-modules.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2cce093cd3d3a3ea02fa04ad13d60ecf9ac7196a8385dd2b0a8c3c4411b197ac
+CONTENT_BYTES: 23359
 ================================================================================================
 
 # kOA Digital Ecosystem — Architecture et modules
@@ -38338,7 +38445,10 @@ Formule finale :
 
 ================================================================================================
 FILE: UCKK_Canon_v4/52_kOA-digital-ecosystem-gouvernance-audit-resilience.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 16c602f3f30f1fb21bb8e752742b7d23e579e4f672386a8db00f9861140ddbb5
+CONTENT_BYTES: 23422
 ================================================================================================
 
 # kOA Digital Ecosystem — Gouvernance, audit et résilience
@@ -39374,7 +39484,10 @@ Sa règle ultime :
 
 ================================================================================================
 FILE: UCKK_Canon_v4/60_king-klown-narrative-public-partenaires.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7b40d3f13fcdd048903aeb0a5a041fcf698fcfcb48363bc6f523d7f52b3af67e
+CONTENT_BYTES: 28234
 ================================================================================================
 
 # King Klown — Narrative, public et partenaires
@@ -40451,7 +40564,10 @@ L’Archiviste garde la mémoire.
 
 ================================================================================================
 FILE: UCKK_Canon_v4/70_chaires-evolution-UCKK.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 38446651ff35f79ab03e58ddf2e4cff8a98880cfd52eb136eb3767e6700c06a4
+CONTENT_BYTES: 21023
 ================================================================================================
 
 # Les 9 Chaires d’évolution UCKK
@@ -41032,7 +41148,10 @@ Les reconnaissances formelles demeurent des **Parchemins UCKK** remis après pas
 
 ================================================================================================
 FILE: UCKK_Canon_v4/71_UCKK-continuite-replication-modele-ouvert-univers-cite.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f8d742a070ae5fe064a12b04852e73db02045c585339494f9c1c743429a9711a
+CONTENT_BYTES: 23327
 ================================================================================================
 
 ---
@@ -42119,7 +42238,10 @@ C’est cette capacité de multiplication qui transforme UCKK d’un projet édu
 
 ================================================================================================
 FILE: UCKK_Canon_v4/erratum 99_journal-mise-a-jour-corpus-uckk-20260603.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 92e213a2e66d8ccb648cd241d988feb558dacad497ed73964afeb79706fc6463
+CONTENT_BYTES: 925
 ================================================================================================
 
 ## Erratum — définition publique de l’UCKK
@@ -42151,7 +42273,10 @@ Slogan : Comprendre le jeu. Jouer avec lucidité. Changer les règles.
 
 ================================================================================================
 FILE: UCKK_Canon_v4/Omnia_humiliter_interroga-Note_de_posture_ethique.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9dae3e9c6aa637ab99d345732b2c26e1ad8f539902b4086024db0f16b398d948
+CONTENT_BYTES: 4512
 ================================================================================================
 
 # Omnia humiliter interroga — Note de posture éthique

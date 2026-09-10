@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/kOA_Digital_Ecosystem
-source_path: C:\mycode\kOA\kOA_Digital_Ecosystem
 source_commit: 0ea910d8eeb38b962f0de8e7deefc3327cd770e6
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: C:\mycode\kOA\kOA_Digital_Ecosystem.wiki
 wiki_source_commit: 830fb28abe030d070752041488d19a185057d6c1
 wiki_working_tree_markdown: clean
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 71
 wiki_files: 29
 source_files: 100
@@ -18,120 +16,124 @@ included_files: 100
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 603988
-authority_counts: {"canonical":100}
-generated_at: 2026-09-10T11:09:23-04:00
+authority_counts: {"reference":100}
+content_role_counts: {"knowledge":71,"navigation":29}
+generated_at: 2026-09-10T13:04:24-04:00
 files: 100
-content_sha256: 49e7e09b5bf4022f31ed715486d0e9fd21b92f2837ab79668d88cebfce65af31
+content_sha256: 87d10257609f88f2179a1379bc95798c983120981bf3c2d94fc42c63d8212237
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-001. [canonical] wiki/_Footer.md
-002. [canonical] wiki/_Sidebar.md
-003. [canonical] wiki/Artifacts-Kristal.md
-004. [canonical] wiki/Artifacts-Operational.md
-005. [canonical] wiki/Artifacts.md
-006. [canonical] wiki/Components-Architect.md
-007. [canonical] wiki/Components-Binah.md
-008. [canonical] wiki/Components-Chokmah.md
-009. [canonical] wiki/Components-Konnaxion-and-Malkuth.md
-010. [canonical] wiki/Components-Kristal-and-Daat.md
-011. [canonical] wiki/Components-Orgo.md
-012. [canonical] wiki/Components-SenTient.md
-013. [canonical] wiki/Components-SwarmCraft.md
-014. [canonical] wiki/Components.md
-015. [canonical] wiki/FAQ.md
-016. [canonical] wiki/Glossary.md
-017. [canonical] wiki/Home.md
-018. [canonical] wiki/Integration-External-systems.md
-019. [canonical] wiki/Integration-Kristal-v4.md
-020. [canonical] wiki/Integration.md
-021. [canonical] wiki/Lifecycle.md
-022. [canonical] wiki/Non-goals.md
-023. [canonical] wiki/Operations-Builds.md
-024. [canonical] wiki/Operations-Incident-response.md
-025. [canonical] wiki/Operations-Observability.md
-026. [canonical] wiki/Operations-Releases.md
-027. [canonical] wiki/Operations-Rollbacks.md
-028. [canonical] wiki/Operations.md
-029. [canonical] wiki/Principles-and-invariants.md
-030. [canonical] docs_layer-model/00_README.md
-031. [canonical] docs_layer-model/01_LAYER_MODEL.md
-032. [canonical] docs_layer-model/02_LAYER_INDEX.md
-033. [canonical] docs_layer-model/03_LAYER_TEMPLATE.md
-034. [canonical] docs_layer-model/layers/00_separation_of_functions.md
-035. [canonical] docs_layer-model/layers/01_orientation_mandate.md
-036. [canonical] docs_layer-model/layers/02_semantics_meaning.md
-037. [canonical] docs_layer-model/layers/03_provenance_ingestion.md
-038. [canonical] docs_layer-model/layers/04_structured_knowledge.md
-039. [canonical] docs_layer-model/layers/05_validation_canon.md
-040. [canonical] docs_layer-model/layers/06_deliberation.md
-041. [canonical] docs_layer-model/layers/07_decision_legitimacy.md
-042. [canonical] docs_layer-model/layers/08_execution.md
-043. [canonical] docs_layer-model/layers/09_memory_learning.md
-044. [canonical] docs_layer-model/layers/10_resilience_autonomy.md
-045. [canonical] docs_layer-model/layers/11_learning_interface.md
-046. [canonical] docs_layer-model/layers/12_narrative_adoption.md
-047. [canonical] docs_layer-model/layers/13_deployment_translation.md
-048. [canonical] docs_technical/00-overview/faq.md
-049. [canonical] docs_technical/00-overview/glossary.md
-050. [canonical] docs_technical/00-overview/scope.md
-051. [canonical] docs_technical/00-overview/system-at-a-glance.md
-052. [canonical] docs_technical/10-system/architecture.md
-053. [canonical] docs_technical/10-system/components.md
-054. [canonical] docs_technical/10-system/determinism.md
-055. [canonical] docs_technical/10-system/failure-modes.md
-056. [canonical] docs_technical/10-system/lifecycle.md
-057. [canonical] docs_technical/10-system/trust-boundaries.md
-058. [canonical] docs_technical/20-nodes/binah-blueprint.md
-059. [canonical] docs_technical/20-nodes/chesed-konnaxion.md
-060. [canonical] docs_technical/20-nodes/chokmah-inputs.md
-061. [canonical] docs_technical/20-nodes/daat-kristal-bridge.md
-062. [canonical] docs_technical/20-nodes/gevurah-orgo.md
-063. [canonical] docs_technical/20-nodes/hod-architect-render.md
-064. [canonical] docs_technical/20-nodes/index.md
-065. [canonical] docs_technical/20-nodes/keter-mandate.md
-066. [canonical] docs_technical/20-nodes/malkuth-runtime.md
-067. [canonical] docs_technical/20-nodes/netzach-architect-strategy.md
-068. [canonical] docs_technical/20-nodes/tiferet-sentient.md
-069. [canonical] docs_technical/20-nodes/yesod-compiler.md
-070. [canonical] docs_technical/30-artifacts/build-record.md
-071. [canonical] docs_technical/30-artifacts/index.md
-072. [canonical] docs_technical/30-artifacts/konnaxion-state.md
-073. [canonical] docs_technical/30-artifacts/mandate-bundle.md
-074. [canonical] docs_technical/30-artifacts/orgo-case.md
-075. [canonical] docs_technical/30-artifacts/orgo-task.md
-076. [canonical] docs_technical/30-artifacts/release-record.md
-077. [canonical] docs_technical/40-integration/kristal-v4/conformance.md
-078. [canonical] docs_technical/40-integration/kristal-v4/contract-pointers.md
-079. [canonical] docs_technical/40-integration/kristal-v4/index.md
-080. [canonical] docs_technical/40-integration/kristal-v4/koa-profile.md
-081. [canonical] docs_technical/40-integration/kristal-v4/legacy-compat.md
-082. [canonical] docs_technical/40-integration/kristal-v4/pinned-dependency.md
-083. [canonical] docs_technical/50-operations/incident-response.md
-084. [canonical] docs_technical/50-operations/key-management.md
-085. [canonical] docs_technical/50-operations/pipeline.md
-086. [canonical] docs_technical/50-operations/releases.md
-087. [canonical] docs_technical/50-operations/rollback.md
-088. [canonical] docs_technical/60-guides/implementers.md
-089. [canonical] docs_technical/60-guides/integrators.md
-090. [canonical] docs_technical/60-guides/testing.md
-091. [canonical] docs_technical/60-guides/tooling.md
-092. [canonical] docs_technical/90-reference/adr/adr-0001-truth-boundary.md
-093. [canonical] docs_technical/90-reference/adr/adr-0002-determinism-policy.md
-094. [canonical] docs_technical/90-reference/adr/adr-0003-konnaxion-activation-rollback.md
-095. [canonical] docs_technical/90-reference/adr/adr-0004-architect-split.md
-096. [canonical] docs_technical/90-reference/adr/adr-0005-compatibility-versioning.md
-097. [canonical] docs_technical/90-reference/adr/index.md
-098. [canonical] docs_technical/90-reference/terminology.md
-099. [canonical] docs_technical/index.md
-100. [canonical] README.md
+001. [reference] [navigation] wiki/_Footer.md | bytes=812 | sha256=5f3ad57440e70f4bb84e442a2d66a6d64010e8829c6b3260602d7f7c3e142f4b
+002. [reference] [navigation] wiki/_Sidebar.md | bytes=981 | sha256=983d5f4ff741cdca2790ac24885ce6dae6b4f9d8bac642fed9b4023b619027f3
+003. [reference] [navigation] wiki/Artifacts-Kristal.md | bytes=3803 | sha256=b2edebb5817f0dffb9388cef01e60ed7d2d4e3819d18d1636e3ced0edb918369
+004. [reference] [navigation] wiki/Artifacts-Operational.md | bytes=5065 | sha256=f5b6df29934fb28746e11804ad6cac55574f7d835a720cbecc3b1719c9031086
+005. [reference] [navigation] wiki/Artifacts.md | bytes=2984 | sha256=6ad95a84d0cf74d8624efa2d064fcae8834ca02dcba4df969425fffce2c72fbf
+006. [reference] [navigation] wiki/Components-Architect.md | bytes=4416 | sha256=ceb15adc5b5f1f0bc92148e63de5e2774e2567ab1493622a764407ab7260b088
+007. [reference] [navigation] wiki/Components-Binah.md | bytes=4548 | sha256=bfd82af04a6dafb91a0c890658da1c921974d33f2a3d341d6e22515c2309afc4
+008. [reference] [navigation] wiki/Components-Chokmah.md | bytes=5431 | sha256=97d02563ae57fee433f75b13c7b313ed38f63881a953285e0e16218fa2924a29
+009. [reference] [navigation] wiki/Components-Konnaxion-and-Malkuth.md | bytes=5270 | sha256=d49d3c54204783d831dc9cc6863df5064df00817f042890c1fd250e43b76ccb3
+010. [reference] [navigation] wiki/Components-Kristal-and-Daat.md | bytes=4470 | sha256=fd1460139066f8ef2f1f20b2648aa9d248dfbf3f7ba3de29e71d192d80e39f4e
+011. [reference] [navigation] wiki/Components-Orgo.md | bytes=5426 | sha256=2e3041f9361a1bcf23127a139f098b785b961410805da2b17774164603dd8288
+012. [reference] [navigation] wiki/Components-SenTient.md | bytes=4472 | sha256=2dc21de607303bac3a8d3160cd358ec6c20d7cd50de54afe2ed07fa6f78020e1
+013. [reference] [navigation] wiki/Components-SwarmCraft.md | bytes=5075 | sha256=776f705c66c1b3e2b8ab1b8028f7bd9ed2777c1b8a3d880d0299cfbbc2235682
+014. [reference] [navigation] wiki/Components.md | bytes=4249 | sha256=afbc2e228e0a1258278ffac90400f281194fa81acd073e0ca4df4d6c9e9046a0
+015. [reference] [navigation] wiki/FAQ.md | bytes=3496 | sha256=2c7a3b1f9b5ef87aab0030953e16570cfc10e7bf5b5ecc9655e737fadad76e46
+016. [reference] [navigation] wiki/Glossary.md | bytes=5704 | sha256=b6f6bada5cd677f67ad1b815d775ce8d31fd91b03604b442023f65cda7fc2c5a
+017. [reference] [navigation] wiki/Home.md | bytes=3985 | sha256=e9b30cfe70cb1084ec0bf83b4d01de3c0c13e9901a2dc1cf8be5130ce77a1b40
+018. [reference] [navigation] wiki/Integration-External-systems.md | bytes=5837 | sha256=4415d4e912cf1b1044f342cd9346e2384214405475e3e6f6810424cdb8636ec5
+019. [reference] [navigation] wiki/Integration-Kristal-v4.md | bytes=3987 | sha256=20f1b79573b0dc2c02de6daeaee6ccfe2215a69a75d79bce4e500b1f6565e399
+020. [reference] [navigation] wiki/Integration.md | bytes=3382 | sha256=e8fd5a11d3c04611ca883a569eec61e4fb58a38577b03e8b6880246892e70077
+021. [reference] [navigation] wiki/Lifecycle.md | bytes=8489 | sha256=a0bd380b85585e61baf590ffb0540ced1b49a74b39be3a1afd39380472be0140
+022. [reference] [navigation] wiki/Non-goals.md | bytes=2346 | sha256=522f9d677705082d203fe04addf22be95e9c8b5f59ae421443f12fc63c8b4f6c
+023. [reference] [navigation] wiki/Operations-Builds.md | bytes=4668 | sha256=99cb6476de2837644b4b647cee7c1307f1b52a1917ce72081452b3db0c8f9f7d
+024. [reference] [navigation] wiki/Operations-Incident-response.md | bytes=9030 | sha256=d05e417e14ed43881220227abcaae3dc7cafac28a5173c3fa5efffcd112eeed4
+025. [reference] [navigation] wiki/Operations-Observability.md | bytes=5979 | sha256=7b4257b37bf869c0757321ca4b379ed9d0a5904b9634b95097a3096c5428c77a
+026. [reference] [navigation] wiki/Operations-Releases.md | bytes=6472 | sha256=b3a503247cfa7cd4febc0f8294a0f07f4ccccd871f9545814f0e08f1ee553b08
+027. [reference] [navigation] wiki/Operations-Rollbacks.md | bytes=6057 | sha256=cf98677c24b73cfcb5c01519f7816d0d05c08c893bcc28b28e6116abdbc2bc46
+028. [reference] [navigation] wiki/Operations.md | bytes=4152 | sha256=1d680411e0019d66477bc98e287318f8ebf1d664589a656fd964f201d97932f7
+029. [reference] [navigation] wiki/Principles-and-invariants.md | bytes=3189 | sha256=97dc92a4d0dfca742cf27e13a77334953a6dad13536804e23192180119808ffe
+030. [reference] [knowledge] docs_layer-model/00_README.md | bytes=5506 | sha256=815c7efb4be28fbb98a930d82a39d4d886e35b0a7dda8e4dfd93806052f46bc1
+031. [reference] [knowledge] docs_layer-model/01_LAYER_MODEL.md | bytes=17873 | sha256=a19059eb79f12948b17167802aff2908ac246ce447086b407e39af5bc5f7a4d0
+032. [reference] [knowledge] docs_layer-model/02_LAYER_INDEX.md | bytes=13320 | sha256=075428e57d42c75480c77a839ad26908b06414df4d91d00cbe4df262244daddd
+033. [reference] [knowledge] docs_layer-model/03_LAYER_TEMPLATE.md | bytes=8806 | sha256=bc1584c4c4ef486cdafbfc054f9c3a353bd4699117e021bf55c5ab8db1ce361c
+034. [reference] [knowledge] docs_layer-model/layers/00_separation_of_functions.md | bytes=8107 | sha256=7343afd22c2ea6319529204126604b53dc21c9fa5846de2db6b968ad9ef9e282
+035. [reference] [knowledge] docs_layer-model/layers/01_orientation_mandate.md | bytes=5649 | sha256=3265ac2a0c1454fbf501fa173f072b09b88325fcb9160d89b6ff869b508c867a
+036. [reference] [knowledge] docs_layer-model/layers/02_semantics_meaning.md | bytes=12471 | sha256=2f81bd4d14d7338d7f376aae309452b9bdfdbd17bee1e87f6465fb9cf992d814
+037. [reference] [knowledge] docs_layer-model/layers/03_provenance_ingestion.md | bytes=9618 | sha256=f32302dfee8911e1e7d5a62f1d0ee35cbcfd3f77e586c28a9dc3661d9893487c
+038. [reference] [knowledge] docs_layer-model/layers/04_structured_knowledge.md | bytes=11783 | sha256=45a78ec3478b51cad1e12a13d4ed7bad339879a7944c1d462b1d9a8ec19c1a97
+039. [reference] [knowledge] docs_layer-model/layers/05_validation_canon.md | bytes=7907 | sha256=b7b33aa7d641634428e77ec2effaf71e48b92935d593fb4b3fc5acd8a60e4a25
+040. [reference] [knowledge] docs_layer-model/layers/06_deliberation.md | bytes=11617 | sha256=1aa3dae5957cd82ce7be7efd97d736ecdacf30f2daef5ef38dae8d0d73ff0338
+041. [reference] [knowledge] docs_layer-model/layers/07_decision_legitimacy.md | bytes=10667 | sha256=110f1e6b300f02939800160921c7e260b57d39091a54c0a30744a494570dcd5c
+042. [reference] [knowledge] docs_layer-model/layers/08_execution.md | bytes=10497 | sha256=544d5b950b01d186b7dcde4de7a6b2767486802eeddc7f326663cac45134521d
+043. [reference] [knowledge] docs_layer-model/layers/09_memory_learning.md | bytes=8855 | sha256=bdac49397597ed842b41abb8208f8cf86ecb76f7a3ce40d4ea4304b1e2fb05c6
+044. [reference] [knowledge] docs_layer-model/layers/10_resilience_autonomy.md | bytes=10693 | sha256=f37587ef697758f4a0d0fe6951db840fa8d2419043f11190b0f554075b3b4856
+045. [reference] [knowledge] docs_layer-model/layers/11_learning_interface.md | bytes=9324 | sha256=b791d9ec27db0d2cadf7b74dfabca20f1ade2b6ff914c6b45a958054717f477e
+046. [reference] [knowledge] docs_layer-model/layers/12_narrative_adoption.md | bytes=15268 | sha256=a8f9b09170d1a1c588f4b3f87278dcab351ccb6a0787ac930c98bd0ae54d386d
+047. [reference] [knowledge] docs_layer-model/layers/13_deployment_translation.md | bytes=14475 | sha256=1ca0ea008b8e0486a18c14b0a8a6ce74f48cdac5ba196d3b73ee7504060af8f1
+048. [reference] [knowledge] docs_technical/00-overview/faq.md | bytes=3496 | sha256=2609c453ddc8a89b926a29f7716f65e3d2bc2866f8ed3a68f3ee108f21dc9748
+049. [reference] [knowledge] docs_technical/00-overview/glossary.md | bytes=8276 | sha256=97dc1ea00f423ea41eefa259e2e2ce99a5ab5e1c607c1816d153c8c805735dff
+050. [reference] [knowledge] docs_technical/00-overview/scope.md | bytes=3818 | sha256=53895b514f20d33e17354f906c2f78a09a0f5676c5a295b121aa652b4176093b
+051. [reference] [knowledge] docs_technical/00-overview/system-at-a-glance.md | bytes=2842 | sha256=bb12d067f6d51c458fdf3dfa6036b37130814a16642357d6c43fc9224ebee0dc
+052. [reference] [knowledge] docs_technical/10-system/architecture.md | bytes=5898 | sha256=b5ac08b8ffa2b727d3b0fe53dca2b9e6f8504831621f0c9b7925e1b4f0e29e9b
+053. [reference] [knowledge] docs_technical/10-system/components.md | bytes=6681 | sha256=1fb254c0a98b1e669b70ccc04da5e7f0cd04243b69c4d01a39f3445d774d97cc
+054. [reference] [knowledge] docs_technical/10-system/determinism.md | bytes=6747 | sha256=4075ec4087f338ee75553ec5a1ef548d8eb2cc93042b2353f13244e509eb8499
+055. [reference] [knowledge] docs_technical/10-system/failure-modes.md | bytes=7776 | sha256=aca7e979d2e639e40c669717cc110f5339ed2aa48415e227025cf65e101ec79b
+056. [reference] [knowledge] docs_technical/10-system/lifecycle.md | bytes=8491 | sha256=6334f49a0bc78d30fdd71478f4fb80db0e91f111a7a6480e924fc7c690399781
+057. [reference] [knowledge] docs_technical/10-system/trust-boundaries.md | bytes=5455 | sha256=2a59a0e3caf86dcfd9814577621a6d74ef9ac018de64fa957e8784efb1034385
+058. [reference] [knowledge] docs_technical/20-nodes/binah-blueprint.md | bytes=4452 | sha256=07c85296cbe486979d580517a805d411fcd5f8f08acf4784960b7ea315118462
+059. [reference] [knowledge] docs_technical/20-nodes/chesed-konnaxion.md | bytes=3656 | sha256=b59e0ab977d66c659588202c6e399e557cf47dda88f5bf2cde71d21db5ae0b41
+060. [reference] [knowledge] docs_technical/20-nodes/chokmah-inputs.md | bytes=6535 | sha256=aa44f685a4115b641fc7c7df3563699b1f0d0500a92685b0a56c508316ebc0c3
+061. [reference] [knowledge] docs_technical/20-nodes/daat-kristal-bridge.md | bytes=3898 | sha256=d81e7d298a5929762afaf3de6f59f9bf37c3c7229276eb9eb30551b508da0c0b
+062. [reference] [knowledge] docs_technical/20-nodes/gevurah-orgo.md | bytes=7902 | sha256=ba76111a4db68714dd0c63737270028118a4bc20e8e391984170dc36d4e2ecf5
+063. [reference] [knowledge] docs_technical/20-nodes/hod-architect-render.md | bytes=6867 | sha256=b02124d0d7c85a983d3b18401b5bb902f1bb0d28d59e3ebcf498d2d4cea6352e
+064. [reference] [knowledge] docs_technical/20-nodes/index.md | bytes=3097 | sha256=70a25dc0f56497573dff5cb9041282c59a58e15f1dd7f506478dea24b510a0e6
+065. [reference] [knowledge] docs_technical/20-nodes/keter-mandate.md | bytes=3741 | sha256=2c3fd3886bb9ac3e09b1f377d0669a9150761be8a7b6bb1de1573047dd53360b
+066. [reference] [knowledge] docs_technical/20-nodes/malkuth-runtime.md | bytes=7170 | sha256=b7df294af537ac05519d3e9615119696bb1f157e8eee15a15ea746b1b5476017
+067. [reference] [knowledge] docs_technical/20-nodes/netzach-architect-strategy.md | bytes=6538 | sha256=b3bef8707d8434a3e0d780c9ba322a27e493c0328e79bc208e8ae82dd10d3726
+068. [reference] [knowledge] docs_technical/20-nodes/tiferet-sentient.md | bytes=6323 | sha256=034af7974799cb89f0357ca352c7215342c77d300e6cd0fe0d7915a33cd1b4ab
+069. [reference] [knowledge] docs_technical/20-nodes/yesod-compiler.md | bytes=5655 | sha256=9293ce8c2228f92cd3c12097c4f694bcc91a5cfa9eefba0101f64337f466a332
+070. [reference] [knowledge] docs_technical/30-artifacts/build-record.md | bytes=5927 | sha256=708aeb464ca7806cb93382a5add9ebdf78253af93ac776a7e6d49250e2c21487
+071. [reference] [knowledge] docs_technical/30-artifacts/index.md | bytes=1826 | sha256=a03e8bc5320d53e52bd3973617182b0f4fc2e5c248ce1e3d6065ae97232579be
+072. [reference] [knowledge] docs_technical/30-artifacts/konnaxion-state.md | bytes=4680 | sha256=ba8b90f5b1d36cf852bbeddd86cee10f9a62bacd7b13aa7c63f8fefcd67b302c
+073. [reference] [knowledge] docs_technical/30-artifacts/mandate-bundle.md | bytes=2953 | sha256=ac72096ac5a192dd77c91e1f003f1a3a590702962df3ff8b78cc1dc8e1c6dfcc
+074. [reference] [knowledge] docs_technical/30-artifacts/orgo-case.md | bytes=4849 | sha256=f3cda66d6b7792db91b022b8ce8b2b3f42baeb8fef0c93bdd8b6f92ad3de93e7
+075. [reference] [knowledge] docs_technical/30-artifacts/orgo-task.md | bytes=7150 | sha256=0f1bf58334facc73b1898613adaa0e9ad05833948de7f809454765d2bd98223d
+076. [reference] [knowledge] docs_technical/30-artifacts/release-record.md | bytes=3679 | sha256=d10e2fb5a0601040d193f79891cf045e8fdfd070046031bb8ba0cc502846591c
+077. [reference] [knowledge] docs_technical/40-integration/kristal-v4/conformance.md | bytes=5118 | sha256=ff4564e3a8d4f6fd5ecf8ad7b5404f8140de609f34724b4d13b024cab8e441fd
+078. [reference] [knowledge] docs_technical/40-integration/kristal-v4/contract-pointers.md | bytes=5151 | sha256=ade3499f5eb4545ce5f75c6950283f5089e62f75fce81edae95c60ee9694d065
+079. [reference] [knowledge] docs_technical/40-integration/kristal-v4/index.md | bytes=2059 | sha256=d7d7c2735ca211628de226f84de21f2a04976f13bffbfd9b2dbe669ff3e376f9
+080. [reference] [knowledge] docs_technical/40-integration/kristal-v4/koa-profile.md | bytes=7118 | sha256=5c219c63d2681d4d9a79bb845aaad406ffa035ac037355276ef139b989c9ba63
+081. [reference] [knowledge] docs_technical/40-integration/kristal-v4/legacy-compat.md | bytes=4344 | sha256=23b0b062aba4efc740324a7b6e297250d45352d74d8e5a3497197d2e3bab1fe2
+082. [reference] [knowledge] docs_technical/40-integration/kristal-v4/pinned-dependency.md | bytes=2726 | sha256=12fbf5f5fea0e1c4b48a5f258877639ad8c5968ff74fa22dae9882c0c2e9db6b
+083. [reference] [knowledge] docs_technical/50-operations/incident-response.md | bytes=10186 | sha256=069c80a3d2b39c267277ec95ef0898fe85fbcd573847276cac5e2a9e38f2eb56
+084. [reference] [knowledge] docs_technical/50-operations/key-management.md | bytes=5425 | sha256=549931765d5602ac7288936e5ac14f562221c05d70cefd4aaaabbf3c3cc240eb
+085. [reference] [knowledge] docs_technical/50-operations/pipeline.md | bytes=4893 | sha256=5b4cc7a87fbaa3e03648fadfc6e8b78def3be9d57b3ddee03bb4cdde66cfa8d3
+086. [reference] [knowledge] docs_technical/50-operations/releases.md | bytes=3541 | sha256=9231e59dcef97aa74037adaed849bcd524465ff13b8deaeb01624850eac2a194
+087. [reference] [knowledge] docs_technical/50-operations/rollback.md | bytes=8789 | sha256=80526a1664da06a95be5478fbde9c09f50c789b76b1da668bdf3bcc63c8781b1
+088. [reference] [knowledge] docs_technical/60-guides/implementers.md | bytes=5796 | sha256=ff8fae13a7fb6387de10db86d204c1c1ae601497fc32e50d4c6a19d46a42d674
+089. [reference] [knowledge] docs_technical/60-guides/integrators.md | bytes=5365 | sha256=0938ef7575a087d190a4948001720c5b250751ba100ae2142b3bde315baa7766
+090. [reference] [knowledge] docs_technical/60-guides/testing.md | bytes=4754 | sha256=42cffdfd24d00b4a5233307bf1ec9b5898bf698bb865209a19929abe4206bbc9
+091. [reference] [knowledge] docs_technical/60-guides/tooling.md | bytes=3006 | sha256=b42efa5455d44955ad8e324b44bf95603c93e2ab90a57a025b731f1b73034605
+092. [reference] [knowledge] docs_technical/90-reference/adr/adr-0001-truth-boundary.md | bytes=2808 | sha256=8b5f126d606f8343ff3ae34feb92acad7461c318e23eba8124a7bb4445cdbe23
+093. [reference] [knowledge] docs_technical/90-reference/adr/adr-0002-determinism-policy.md | bytes=4790 | sha256=21dbf02275e596eaf1734c1bf30bd0e35681c5cb4c1f732cb93904002599a41d
+094. [reference] [knowledge] docs_technical/90-reference/adr/adr-0003-konnaxion-activation-rollback.md | bytes=6650 | sha256=432edf312971e1f38b75a32ed4907503d126545cf6d19ac08afff146b49c4a7a
+095. [reference] [knowledge] docs_technical/90-reference/adr/adr-0004-architect-split.md | bytes=2927 | sha256=33af0f6a845be7d71615a21a1320474da16fbf52f81218ed8df73cdeb4834f7e
+096. [reference] [knowledge] docs_technical/90-reference/adr/adr-0005-compatibility-versioning.md | bytes=3865 | sha256=28f6e89fb8bff902c6b01c917f4a33a0192cb739614787cba693ad06ba976313
+097. [reference] [knowledge] docs_technical/90-reference/adr/index.md | bytes=1177 | sha256=d902b03ababe39c55d1734675bf419291da5bf47caabbc20cb8a81b6608a15b2
+098. [reference] [knowledge] docs_technical/90-reference/terminology.md | bytes=4381 | sha256=bff1dbc6d8b2d5ad6892daafa00b50a8238a985a9c266b218510345fb41538d8
+099. [reference] [knowledge] docs_technical/index.md | bytes=2589 | sha256=6034c826804c389417fede25461b449b8ead2c1a5a934d4a024fb7662350b778
+100. [reference] [knowledge] README.md | bytes=13941 | sha256=49ae6a49f498ed72e2108a59f5ad808646530e15054f13f06114bd77aa5c23fd
 
 
 ================================================================================================
 FILE: wiki/_Footer.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 5f3ad57440e70f4bb84e442a2d66a6d64010e8829c6b3260602d7f7c3e142f4b
+CONTENT_BYTES: 812
 ================================================================================================
 
 ---
@@ -154,7 +156,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/_Sidebar.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 983d5f4ff741cdca2790ac24885ce6dae6b4f9d8bac642fed9b4023b619027f3
+CONTENT_BYTES: 981
 ================================================================================================
 
 * [Home](Home)
@@ -195,7 +200,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/Artifacts-Kristal.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b2edebb5817f0dffb9388cef01e60ed7d2d4e3819d18d1636e3ced0edb918369
+CONTENT_BYTES: 3803
 ================================================================================================
 
 # Kristal Artifacts
@@ -267,7 +275,10 @@ Use these kOA integration docs as the single pointer set:
 
 ================================================================================================
 FILE: wiki/Artifacts-Operational.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: f5b6df29934fb28746e11804ad6cac55574f7d835a720cbecc3b1719c9031086
+CONTENT_BYTES: 5065
 ================================================================================================
 
 # Operational Artifacts (kOA-native)
@@ -395,7 +406,10 @@ Konnaxion updates this record on verify/activate attempts (success or fail), rol
 
 ================================================================================================
 FILE: wiki/Artifacts.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 6ad95a84d0cf74d8624efa2d064fcae8834ca02dcba4df969425fffce2c72fbf
+CONTENT_BYTES: 2984
 ================================================================================================
 
 # Artifacts
@@ -464,7 +478,10 @@ Each **kOA-native** artifact should have:
 
 ================================================================================================
 FILE: wiki/Components-Architect.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: ceb15adc5b5f1f0bc92148e63de5e2774e2567ab1493622a764407ab7260b088
+CONTENT_BYTES: 4416
 ================================================================================================
 
 # Architect (Articulation Plane)
@@ -572,7 +589,10 @@ Architect-Render should emit, at minimum:
 
 ================================================================================================
 FILE: wiki/Components-Binah.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: bfd82af04a6dafb91a0c890658da1c921974d33f2a3d341d6e22515c2309afc4
+CONTENT_BYTES: 4548
 ================================================================================================
 
 # Binah — Blueprint
@@ -691,7 +711,10 @@ Binah must refuse to emit a Blueprint if any of the following are true:
 
 ================================================================================================
 FILE: wiki/Components-Chokmah.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 97d02563ae57fee433f75b13c7b313ed38f63881a953285e0e16218fa2924a29
+CONTENT_BYTES: 5431
 ================================================================================================
 
 # Chokmah (Inputs)
@@ -844,7 +867,10 @@ Chokmah should emit:
 
 ================================================================================================
 FILE: wiki/Components-Konnaxion-and-Malkuth.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: d49d3c54204783d831dc9cc6863df5064df00817f042890c1fd250e43b76ccb3
+CONTENT_BYTES: 5270
 ================================================================================================
 
 # Components — Konnaxion & Malkuth
@@ -961,7 +987,10 @@ flowchart LR
 
 ================================================================================================
 FILE: wiki/Components-Kristal-and-Daat.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: fd1460139066f8ef2f1f20b2648aa9d248dfbf3f7ba3de29e71d192d80e39f4e
+CONTENT_BYTES: 4470
 ================================================================================================
 
 # Kristal & Daat
@@ -1085,7 +1114,10 @@ No. Kristal produces truth and packs. Runtime systems consume verified packs to 
 
 ================================================================================================
 FILE: wiki/Components-Orgo.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 2e3041f9361a1bcf23127a139f098b785b961410805da2b17774164603dd8288
+CONTENT_BYTES: 5426
 ================================================================================================
 
 # Orgo (Control Plane)
@@ -1212,7 +1244,10 @@ Recommended traces: correlate build IDs across stage jobs and downstream distrib
 
 ================================================================================================
 FILE: wiki/Components-SenTient.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 2dc21de607303bac3a8d3160cd358ec6c20d7cd50de54afe2ed07fa6f78020e1
+CONTENT_BYTES: 4472
 ================================================================================================
 
 # Components — SenTient (Resolution Plane)
@@ -1336,7 +1371,10 @@ Minimum tests typically cover:
 
 ================================================================================================
 FILE: wiki/Components-SwarmCraft.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 776f705c66c1b3e2b8ab1b8028f7bd9ed2777c1b8a3d880d0299cfbbc2235682
+CONTENT_BYTES: 5075
 ================================================================================================
 
 # SwarmCraft
@@ -1480,7 +1518,10 @@ SwarmCraft can run health checks and rollout-related tasks, but it does not deci
 
 ================================================================================================
 FILE: wiki/Components.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: afbc2e228e0a1258278ffac90400f281194fa81acd073e0ca4df4d6c9e9046a0
+CONTENT_BYTES: 4249
 ================================================================================================
 
 # Components
@@ -1537,7 +1578,10 @@ kOA components exchange **typed artifacts**, not implicit state. The main pipeli
 
 ================================================================================================
 FILE: wiki/FAQ.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 2c7a3b1f9b5ef87aab0030953e16570cfc10e7bf5b5ecc9655e737fadad76e46
+CONTENT_BYTES: 3496
 ================================================================================================
 
 # FAQ
@@ -1611,7 +1655,10 @@ No by default. Distribution/activation and runtime use are designed to be compat
 
 ================================================================================================
 FILE: wiki/Glossary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b6f6bada5cd677f67ad1b815d775ce8d31fd91b03604b442023f65cda7fc2c5a
+CONTENT_BYTES: 5704
 ================================================================================================
 
 # Glossary
@@ -1748,7 +1795,10 @@ Runtime-side checks (integrity/compatibility/policy) that must pass before activ
 
 ================================================================================================
 FILE: wiki/Home.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: e9b30cfe70cb1084ec0bf83b4d01de3c0c13e9901a2dc1cf8be5130ce77a1b40
+CONTENT_BYTES: 3985
 ================================================================================================
 
 # kOA Digital Ecosystem
@@ -1851,7 +1901,10 @@ See: [Non-goals](Non-goals)
 
 ================================================================================================
 FILE: wiki/Integration-External-systems.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 4415d4e912cf1b1044f342cd9346e2384214405475e3e6f6810424cdb8636ec5
+CONTENT_BYTES: 5837
 ================================================================================================
 
 # Integration — External systems
@@ -2034,7 +2087,10 @@ Before connecting an external system, confirm:
 
 ================================================================================================
 FILE: wiki/Integration-Kristal-v4.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 20f1b79573b0dc2c02de6daeaee6ccfe2215a69a75d79bce4e500b1f6565e399
+CONTENT_BYTES: 3987
 ================================================================================================
 
 # Kristal v4 integration
@@ -2130,7 +2186,10 @@ A conformant kOA↔Kristal integration should ensure:
 
 ================================================================================================
 FILE: wiki/Integration.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: e8fd5a11d3c04611ca883a569eec61e4fb58a38577b03e8b6880246892e70077
+CONTENT_BYTES: 3382
 ================================================================================================
 
 # Integration
@@ -2199,7 +2258,10 @@ Integrations should emit:
 
 ================================================================================================
 FILE: wiki/Lifecycle.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: a0bd380b85585e61baf590ffb0540ced1b49a74b39be3a1afd39380472be0140
+CONTENT_BYTES: 8489
 ================================================================================================
 
 # Lifecycle (kOA end-to-end)
@@ -2506,7 +2568,10 @@ Each stage specifies: **Owner**, **Inputs**, **Outputs**, **Gate**, **Observabil
 
 ================================================================================================
 FILE: wiki/Non-goals.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 522f9d677705082d203fe04addf22be95e9c8b5f59ae421443f12fc63c8b4f6c
+CONTENT_BYTES: 2346
 ================================================================================================
 
 # Non-goals
@@ -2559,7 +2624,10 @@ This page defines what kOA (and this wiki) intentionally does **not** try to be.
 
 ================================================================================================
 FILE: wiki/Operations-Builds.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 99cb6476de2837644b4b647cee7c1307f1b52a1917ce72081452b3db0c8f9f7d
+CONTENT_BYTES: 4668
 ================================================================================================
 
 # Operations — Builds
@@ -2701,7 +2769,10 @@ A failed build produces:
 
 ================================================================================================
 FILE: wiki/Operations-Incident-response.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: d05e417e14ed43881220227abcaae3dc7cafac28a5173c3fa5efffcd112eeed4
+CONTENT_BYTES: 9030
 ================================================================================================
 
 # Operations — Incident response
@@ -2905,7 +2976,10 @@ Before declaring resolved:
 
 ================================================================================================
 FILE: wiki/Operations-Observability.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 7b4257b37bf869c0757321ca4b379ed9d0a5904b9634b95097a3096c5428c77a
+CONTENT_BYTES: 5979
 ================================================================================================
 
 # Observability
@@ -3014,7 +3088,10 @@ Emit, per target: activation attempt events, preflight outcomes (pass/fail + rea
 
 ================================================================================================
 FILE: wiki/Operations-Releases.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b3a503247cfa7cd4febc0f8294a0f07f4ccccd871f9545814f0e08f1ee553b08
+CONTENT_BYTES: 6472
 ================================================================================================
 
 # Operations — Releases
@@ -3191,7 +3268,10 @@ See: [Artifacts — Operational](Artifacts-Operational)
 
 ================================================================================================
 FILE: wiki/Operations-Rollbacks.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: cf98677c24b73cfcb5c01519f7816d0d05c08c893bcc28b28e6116abdbc2bc46
+CONTENT_BYTES: 6057
 ================================================================================================
 
 # Rollbacks
@@ -3394,7 +3474,10 @@ Rollback tasks must reference:
 
 ================================================================================================
 FILE: wiki/Operations.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 1d680411e0019d66477bc98e287318f8ebf1d664589a656fd964f201d97932f7
+CONTENT_BYTES: 4152
 ================================================================================================
 
 # Operations
@@ -3509,7 +3592,10 @@ When an incident is declared:
 
 ================================================================================================
 FILE: wiki/Principles-and-invariants.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 97dc92a4d0dfca742cf27e13a77334953a6dad13536804e23192180119808ffe
+CONTENT_BYTES: 3189
 ================================================================================================
 
 # Principles & invariants
@@ -3588,7 +3674,10 @@ If you’re reviewing a change, confirm:
 
 ================================================================================================
 FILE: docs_layer-model/00_README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 815c7efb4be28fbb98a930d82a39d4d886e35b0a7dda8e4dfd93806052f46bc1
+CONTENT_BYTES: 5506
 ================================================================================================
 
 Content for:
@@ -3858,7 +3947,10 @@ This keeps the file focused on defining the layer model while respecting the exi
 
 ================================================================================================
 FILE: docs_layer-model/01_LAYER_MODEL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a19059eb79f12948b17167802aff2908ac246ce447086b407e39af5bc5f7a4d0
+CONTENT_BYTES: 17873
 ================================================================================================
 
 # kOA Layer Model
@@ -4775,7 +4867,10 @@ In short:
 
 ================================================================================================
 FILE: docs_layer-model/02_LAYER_INDEX.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 075428e57d42c75480c77a839ad26908b06414df4d91d00cbe4df262244daddd
+CONTENT_BYTES: 13320
 ================================================================================================
 
 # kOA Layer Index
@@ -5081,7 +5176,10 @@ Layer documentation must explain the architecture without redefining technical s
 
 ================================================================================================
 FILE: docs_layer-model/03_LAYER_TEMPLATE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bc1584c4c4ef486cdafbfc054f9c3a353bd4699117e021bf55c5ab8db1ce361c
+CONTENT_BYTES: 8806
 ================================================================================================
 
 # Layer Template
@@ -5578,7 +5676,10 @@ This layer does not:
 
 ================================================================================================
 FILE: docs_layer-model/layers/00_separation_of_functions.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7343afd22c2ea6319529204126604b53dc21c9fa5846de2db6b968ad9ef9e282
+CONTENT_BYTES: 8107
 ================================================================================================
 
 # Layer 00 — Separation of Functions
@@ -5848,7 +5949,10 @@ Separation of Functions is the layer that keeps kOA’s movement, school, infras
 
 ================================================================================================
 FILE: docs_layer-model/layers/01_orientation_mandate.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3265ac2a0c1454fbf501fa173f072b09b88325fcb9160d89b6ff869b508c867a
+CONTENT_BYTES: 5649
 ================================================================================================
 
 # Layer 01 — Orientation / Mandate
@@ -6069,7 +6173,10 @@ Its role is to define the policy surface that downstream layers must respect.
 
 ================================================================================================
 FILE: docs_layer-model/layers/02_semantics_meaning.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2f81bd4d14d7338d7f376aae309452b9bdfdbd17bee1e87f6465fb9cf992d814
+CONTENT_BYTES: 12471
 ================================================================================================
 
 # Layer 02 — Semantics / Meaning
@@ -6567,7 +6674,10 @@ The Semantics / Meaning layer is where kOA makes terms, concepts, relationships,
 
 ================================================================================================
 FILE: docs_layer-model/layers/03_provenance_ingestion.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f32302dfee8911e1e7d5a62f1d0ee35cbcfd3f77e586c28a9dc3661d9893487c
+CONTENT_BYTES: 9618
 ================================================================================================
 
 # Layer 03 — Provenance / Ingestion
@@ -6911,7 +7021,10 @@ Provenance / Ingestion preserves exactly what kOA received, where it came from, 
 
 ================================================================================================
 FILE: docs_layer-model/layers/04_structured_knowledge.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 45a78ec3478b51cad1e12a13d4ed7bad339879a7944c1d462b1d9a8ec19c1a97
+CONTENT_BYTES: 11783
 ================================================================================================
 
 # Layer 04 — Structured Knowledge
@@ -7311,7 +7424,10 @@ If the technical folder is still named `docs/`, replace `technical-docs/` with `
 
 ================================================================================================
 FILE: docs_layer-model/layers/05_validation_canon.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b7b33aa7d641634428e77ec2effaf71e48b92935d593fb4b3fc5acd8a60e4a25
+CONTENT_BYTES: 7907
 ================================================================================================
 
 # Layer 05 — Validation / Canon
@@ -7588,7 +7704,10 @@ Validation / Canon is the layer where structured knowledge is tested, gated, ver
 
 ================================================================================================
 FILE: docs_layer-model/layers/06_deliberation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1aa3dae5957cd82ce7be7efd97d736ecdacf30f2daef5ef38dae8d0d73ff0338
+CONTENT_BYTES: 11617
 ================================================================================================
 
 # Layer 06 — Deliberation
@@ -8134,7 +8253,10 @@ Without it, kOA would risk becoming either a knowledge repository with no public
 
 ================================================================================================
 FILE: docs_layer-model/layers/07_decision_legitimacy.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 110f1e6b300f02939800160921c7e260b57d39091a54c0a30744a494570dcd5c
+CONTENT_BYTES: 10667
 ================================================================================================
 
 # Layer 07 — Decision / Legitimacy
@@ -8617,7 +8739,10 @@ In short:
 
 ================================================================================================
 FILE: docs_layer-model/layers/08_execution.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 544d5b950b01d186b7dcde4de7a6b2767486802eeddc7f326663cac45134521d
+CONTENT_BYTES: 10497
 ================================================================================================
 
 # Layer 08 — Execution
@@ -9127,7 +9252,10 @@ Decision → Tasks → Responsibility → Follow-through → Closure → Memory
 
 ================================================================================================
 FILE: docs_layer-model/layers/09_memory_learning.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bdac49397597ed842b41abb8208f8cf86ecb76f7a3ce40d4ea4304b1e2fb05c6
+CONTENT_BYTES: 8855
 ================================================================================================
 
 # Layer 09 — Memory / Learning
@@ -9455,7 +9583,10 @@ For technical partners:
 
 ================================================================================================
 FILE: docs_layer-model/layers/10_resilience_autonomy.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f37587ef697758f4a0d0fe6951db840fa8d2419043f11190b0f554075b3b4856
+CONTENT_BYTES: 10693
 ================================================================================================
 
 # Layer 10 — Resilience / Autonomy
@@ -9859,7 +9990,10 @@ Resilience / Autonomy is the layer that allows kOA to keep knowledge, decisions,
 
 ================================================================================================
 FILE: docs_layer-model/layers/11_learning_interface.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b791d9ec27db0d2cadf7b74dfabca20f1ade2b6ff914c6b45a958054717f477e
+CONTENT_BYTES: 9324
 ================================================================================================
 
 # Layer 11 — Learning / Interface
@@ -10217,7 +10351,10 @@ Integrity requirements:
 
 ================================================================================================
 FILE: docs_layer-model/layers/12_narrative_adoption.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a8f9b09170d1a1c588f4b3f87278dcab351ccb6a0787ac930c98bd0ae54d386d
+CONTENT_BYTES: 15268
 ================================================================================================
 
 # Layer 12 — Narrative / Adoption
@@ -10887,7 +11024,10 @@ The Narrative / Adoption layer is where kOA turns complex architecture into publ
 
 ================================================================================================
 FILE: docs_layer-model/layers/13_deployment_translation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1ca0ea008b8e0486a18c14b0a8a6ce74f48cdac5ba196d3b73ee7504060af8f1
+CONTENT_BYTES: 14475
 ================================================================================================
 
 # Layer 13 — Deployment / Translation
@@ -11403,7 +11543,10 @@ Deployment / Translation opens the correct door into kOA for each audience, so t
 
 ================================================================================================
 FILE: docs_technical/00-overview/faq.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2609c453ddc8a89b926a29f7716f65e3d2bc2866f8ed3a68f3ee108f21dc9748
+CONTENT_BYTES: 3496
 ================================================================================================
 
 # FAQ
@@ -11471,7 +11614,10 @@ No by default. Distribution/activation and runtime use should be compatible with
 
 ================================================================================================
 FILE: docs_technical/00-overview/glossary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 97dc1ea00f423ea41eefa259e2e2ce99a5ab5e1c607c1816d153c8c805735dff
+CONTENT_BYTES: 8276
 ================================================================================================
 
 # Glossary
@@ -11647,7 +11793,10 @@ Rules for evolving schemas/policies without breaking verification, reproducibili
 
 ================================================================================================
 FILE: docs_technical/00-overview/scope.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 53895b514f20d33e17354f906c2f78a09a0f5676c5a295b121aa652b4176093b
+CONTENT_BYTES: 3818
 ================================================================================================
 
 # Documentation Scope
@@ -11729,7 +11878,10 @@ Changes to Kristal contracts must happen in the pinned Kristal source; then kOA 
 
 ================================================================================================
 FILE: docs_technical/00-overview/system-at-a-glance.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bb12d067f6d51c458fdf3dfa6036b37130814a16642357d6c43fc9224ebee0dc
+CONTENT_BYTES: 2842
 ================================================================================================
 
 # System at a Glance
@@ -11793,7 +11945,10 @@ This repo does **not** re-specify Kristal artifact formats/schemas.
 
 ================================================================================================
 FILE: docs_technical/10-system/architecture.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b5ac08b8ffa2b727d3b0fe53dca2b9e6f8504831621f0c9b7925e1b4f0e29e9b
+CONTENT_BYTES: 5898
 ================================================================================================
 
 # Architecture
@@ -11934,7 +12089,10 @@ Tenant-scoped policies and trust roots must be enforced at verification and publ
 
 ================================================================================================
 FILE: docs_technical/10-system/components.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1fb254c0a98b1e669b70ccc04da5e7f0cd04243b69c4d01a39f3445d774d97cc
+CONTENT_BYTES: 6681
 ================================================================================================
 
 # Components
@@ -12135,7 +12293,10 @@ Konnaxion is treated as two facets.
 
 ================================================================================================
 FILE: docs_technical/10-system/determinism.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4075ec4087f338ee75553ec5a1ef548d8eb2cc93042b2353f13244e509eb8499
+CONTENT_BYTES: 6747
 ================================================================================================
 
 # Determinism (kOA system)
@@ -12270,7 +12431,10 @@ kOA conformance includes (minimum):
 
 ================================================================================================
 FILE: docs_technical/10-system/failure-modes.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: aca7e979d2e639e40c669717cc110f5339ed2aa48415e227025cf65e101ec79b
+CONTENT_BYTES: 7776
 ================================================================================================
 
 # Failure Modes
@@ -12509,7 +12673,10 @@ This page defines the kOA system-level failure taxonomy, how failures propagate 
 
 ================================================================================================
 FILE: docs_technical/10-system/lifecycle.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6334f49a0bc78d30fdd71478f4fb80db0e91f111a7a6480e924fc7c690399781
+CONTENT_BYTES: 8491
 ================================================================================================
 
 # Lifecycle (kOA end-to-end)
@@ -12856,7 +13023,10 @@ Each stage specifies: **Owner**, **Inputs**, **Outputs**, **Gate**, **Observabil
 
 ================================================================================================
 FILE: docs_technical/10-system/trust-boundaries.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2a59a0e3caf86dcfd9814577621a6d74ef9ac018de64fa957e8784efb1034385
+CONTENT_BYTES: 5455
 ================================================================================================
 
 # Trust Boundaries
@@ -12999,7 +13169,10 @@ Rollback must be deterministic given the same verified inputs and triggers, and 
 
 ================================================================================================
 FILE: docs_technical/20-nodes/binah-blueprint.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 07c85296cbe486979d580517a805d411fcd5f8f08acf4784960b7ea315118462
+CONTENT_BYTES: 4452
 ================================================================================================
 
 # Binah — Blueprint
@@ -13099,7 +13272,10 @@ Binah must refuse to emit a Blueprint if any of the following are true:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/chesed-konnaxion.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b59e0ab977d66c659588202c6e399e557cf47dda88f5bf2cde71d21db5ae0b41
+CONTENT_BYTES: 3656
 ================================================================================================
 
 # Chesed: Konnaxion
@@ -13191,7 +13367,10 @@ Konnaxion must expose:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/chokmah-inputs.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: aa44f685a4115b641fc7c7df3563699b1f0d0500a92685b0a56c508316ebc0c3
+CONTENT_BYTES: 6535
 ================================================================================================
 
 # Chokmah — Inputs (Ingest + Provenance Boundary)
@@ -13368,7 +13547,10 @@ Chokmah SHOULD emit:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/daat-kristal-bridge.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d81e7d298a5929762afaf3de6f59f9bf37c3c7229276eb9eb30551b508da0c0b
+CONTENT_BYTES: 3898
 ================================================================================================
 
 # Da’at: Kristal Bridge
@@ -13462,7 +13644,10 @@ This node is the *integration surface*, not the Kristal spec.
 
 ================================================================================================
 FILE: docs_technical/20-nodes/gevurah-orgo.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ba76111a4db68714dd0c63737270028118a4bc20e8e391984170dc36d4e2ecf5
+CONTENT_BYTES: 7902
 ================================================================================================
 
 # Gevurah — Orgo (Governance + Control Plane)
@@ -13680,7 +13865,10 @@ Orgo SHOULD:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/hod-architect-render.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b02124d0d7c85a983d3b18401b5bb902f1bb0d28d59e3ebcf498d2d4cea6352e
+CONTENT_BYTES: 6867
 ================================================================================================
 
 # Hod: Architect-Render (Deterministic Articulation)
@@ -13846,7 +14034,10 @@ A conformant Architect-Render MUST provide tests for:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 70a25dc0f56497573dff5cb9041282c59a58e15f1dd7f506478dea24b510a0e6
+CONTENT_BYTES: 3097
 ================================================================================================
 
 # Nodes
@@ -13930,7 +14121,10 @@ Node pages must **not** inline Kristal schemas or field lists.
 
 ================================================================================================
 FILE: docs_technical/20-nodes/keter-mandate.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2c3fd3886bb9ac3e09b1f377d0669a9150761be8a7b6bb1de1573047dd53360b
+CONTENT_BYTES: 3741
 ================================================================================================
 
 # Keter: Mandate (Governance Source)
@@ -14042,7 +14236,10 @@ Keter MUST emit:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/malkuth-runtime.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b7df294af537ac05519d3e9615119696bb1f157e8eee15a15ea746b1b5476017
+CONTENT_BYTES: 7170
 ================================================================================================
 
 # 10 — Malkuth: Runtime (Offline Serving + Execution Substrate)
@@ -14255,7 +14452,10 @@ The primary goal is not maximum performance; it is **repeatability, safety, and 
 
 ================================================================================================
 FILE: docs_technical/20-nodes/netzach-architect-strategy.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b3bef8707d8434a3e0d780c9ba322a27e493c0328e79bc208e8ae82dd10d3726
+CONTENT_BYTES: 6538
 ================================================================================================
 
 # 07 — Netzach: Architect-Strategy (Planning / Work Orchestration)
@@ -14440,7 +14640,10 @@ Architect-Strategy proposes; Orgo decides and enforces.
 
 ================================================================================================
 FILE: docs_technical/20-nodes/tiferet-sentient.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 034af7974799cb89f0357ca352c7215342c77d300e6cd0fe0d7915a33cd1b4ab
+CONTENT_BYTES: 6323
 ================================================================================================
 
 # Tiferet — SenTient (Resolution Engine)
@@ -14633,7 +14836,10 @@ Minimum test suite:
 
 ================================================================================================
 FILE: docs_technical/20-nodes/yesod-compiler.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9293ce8c2228f92cd3c12097c4f694bcc91a5cfa9eefba0101f64337f466a332
+CONTENT_BYTES: 5655
 ================================================================================================
 
 # Yesod — Compiler (Build Executor)
@@ -14779,7 +14985,10 @@ Yesod MUST emit trace spans/events that include:
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/build-record.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 708aeb464ca7806cb93382a5add9ebdf78253af93ac776a7e6d49250e2c21487
+CONTENT_BYTES: 5927
 ================================================================================================
 
 # Build Record (kOA)
@@ -14949,7 +15158,10 @@ A list of stage executions, each with:
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a03e8bc5320d53e52bd3973617182b0f4fc2e5c248ce1e3d6065ae97232579be
+CONTENT_BYTES: 1826
 ================================================================================================
 
 # kOA Artifacts
@@ -15014,7 +15226,10 @@ Naming rules:
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/konnaxion-state.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ba8b90f5b1d36cf852bbeddd86cee10f9a62bacd7b13aa7c63f8fefcd67b302c
+CONTENT_BYTES: 4680
 ================================================================================================
 
 # Konnaxion State (kOA-native Operational Artifact)
@@ -15180,7 +15395,10 @@ This is a kOA-native contract. Changes require:
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/mandate-bundle.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ac72096ac5a192dd77c91e1f003f1a3a590702962df3ff8b78cc1dc8e1c6dfcc
+CONTENT_BYTES: 2953
 ================================================================================================
 
 # Mandate Bundle
@@ -15247,7 +15465,10 @@ A Mandate Bundle typically includes:
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/orgo-case.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f3cda66d6b7792db91b022b8ce8b2b3f42baeb8fef0c93bdd8b6f92ad3de93e7
+CONTENT_BYTES: 4849
 ================================================================================================
 
 # Orgo Case
@@ -15402,7 +15623,10 @@ This doc is normative; the schema is the executable contract.
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/orgo-task.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0f1bf58334facc73b1898613adaa0e9ad05833948de7f809454765d2bd98223d
+CONTENT_BYTES: 7150
 ================================================================================================
 
 # Orgo Task
@@ -15643,7 +15867,10 @@ Orgo Task commonly references:
 
 ================================================================================================
 FILE: docs_technical/30-artifacts/release-record.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d10e2fb5a0601040d193f79891cf045e8fdfd070046031bb8ba0cc502846591c
+CONTENT_BYTES: 3679
 ================================================================================================
 
 # Release Record (kOA-native artifact)
@@ -15762,7 +15989,10 @@ A Release Record does not mutate canonical truth. It is an operational governanc
 
 ================================================================================================
 FILE: docs_technical/40-integration/kristal-v4/conformance.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ff4564e3a8d4f6fd5ecf8ad7b5404f8140de609f34724b4d13b024cab8e441fd
+CONTENT_BYTES: 5118
 ================================================================================================
 
 # Kristal v4 Conformance (kOA)
@@ -15922,7 +16152,10 @@ kOA SHOULD maintain a kOA-native **conformance report** per release:
 
 ================================================================================================
 FILE: docs_technical/40-integration/kristal-v4/contract-pointers.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ade3499f5eb4545ce5f75c6950283f5089e62f75fce81edae95c60ee9694d065
+CONTENT_BYTES: 5151
 ================================================================================================
 
 # Kristal v4 — Contract Pointers (kOA integration)
@@ -16079,7 +16312,10 @@ See:
 
 ================================================================================================
 FILE: docs_technical/40-integration/kristal-v4/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d7d7c2735ca211628de226f84de21f2a04976f13bffbfd9b2dbe669ff3e376f9
+CONTENT_BYTES: 2059
 ================================================================================================
 
 # Kristal v4 Integration (kOA)
@@ -16132,7 +16368,10 @@ kOA MUST:
 
 ================================================================================================
 FILE: docs_technical/40-integration/kristal-v4/koa-profile.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5c219c63d2681d4d9a79bb845aaad406ffa035ac037355276ef139b989c9ba63
+CONTENT_BYTES: 7118
 ================================================================================================
 
 # kOA Profile for Kristal v4 (Pinned)
@@ -16293,7 +16532,10 @@ kOA deployments MUST gate releases on:
 
 ================================================================================================
 FILE: docs_technical/40-integration/kristal-v4/legacy-compat.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 23b0b062aba4efc740324a7b6e297250d45352d74d8e5a3497197d2e3bab1fe2
+CONTENT_BYTES: 4344
 ================================================================================================
 
 # Legacy Compatibility (kOA ↔ Kristal v4)
@@ -16409,7 +16651,10 @@ Legacy acceptance expands the input surface. Therefore:
 
 ================================================================================================
 FILE: docs_technical/40-integration/kristal-v4/pinned-dependency.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 12fbf5f5fea0e1c4b48a5f258877639ad8c5968ff74fa22dae9882c0c2e9db6b
+CONTENT_BYTES: 2726
 ================================================================================================
 
 # Kristal v4 — Pinned Dependency
@@ -16489,7 +16734,10 @@ kOA SHOULD add a CI check that fails if:
 
 ================================================================================================
 FILE: docs_technical/50-operations/incident-response.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 069c80a3d2b39c267277ec95ef0898fe85fbcd573847276cac5e2a9e38f2eb56
+CONTENT_BYTES: 10186
 ================================================================================================
 
 # Incident Response
@@ -16719,7 +16967,10 @@ Before declaring resolved:
 
 ================================================================================================
 FILE: docs_technical/50-operations/key-management.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 549931765d5602ac7288936e5ac14f562221c05d70cefd4aaaabbf3c3cc240eb
+CONTENT_BYTES: 5425
 ================================================================================================
 
 # Key Management
@@ -16877,7 +17128,10 @@ Key compromise response SHOULD:
 
 ================================================================================================
 FILE: docs_technical/50-operations/pipeline.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5b4cc7a87fbaa3e03648fadfc6e8b78def3be9d57b3ddee03bb4cdde66cfa8d3
+CONTENT_BYTES: 4893
 ================================================================================================
 
 # Pipeline Operations (Orgo)
@@ -17055,7 +17309,10 @@ Every metric/event MUST reference:
 
 ================================================================================================
 FILE: docs_technical/50-operations/releases.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9231e59dcef97aa74037adaed849bcd524465ff13b8deaeb01624850eac2a194
+CONTENT_BYTES: 3541
 ================================================================================================
 
 # Releases
@@ -17170,7 +17427,10 @@ are defined in the pinned Kristal v4 specification referenced in:
 
 ================================================================================================
 FILE: docs_technical/50-operations/rollback.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 80526a1664da06a95be5478fbde9c09f50c789b76b1da668bdf3bcc63c8781b1
+CONTENT_BYTES: 8789
 ================================================================================================
 
 # Rollback
@@ -17436,7 +17696,10 @@ Rollback tasks must reference:
 
 ================================================================================================
 FILE: docs_technical/60-guides/implementers.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ff8fae13a7fb6387de10db86d204c1c1ae601497fc32e50d4c6a19d46a42d674
+CONTENT_BYTES: 5796
 ================================================================================================
 
 # Implementers Guide (kOA)
@@ -17616,7 +17879,10 @@ Minimum tests (see `../40-integration/kristal-v4/conformance.md`):
 
 ================================================================================================
 FILE: docs_technical/60-guides/integrators.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0938ef7575a087d190a4948001720c5b250751ba100ae2142b3bde315baa7766
+CONTENT_BYTES: 5365
 ================================================================================================
 
 # Integrator Guide (kOA)
@@ -17783,7 +18049,10 @@ If you are migrating from earlier Kristal conventions:
 
 ================================================================================================
 FILE: docs_technical/60-guides/testing.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 42cffdfd24d00b4a5233307bf1ec9b5898bf698bb865209a19929abe4206bbc9
+CONTENT_BYTES: 4754
 ================================================================================================
 
 # Testing (kOA)
@@ -17939,7 +18208,10 @@ When a test fails, capture:
 
 ================================================================================================
 FILE: docs_technical/60-guides/tooling.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b42efa5455d44955ad8e324b44bf95603c93e2ab90a57a025b731f1b73034605
+CONTENT_BYTES: 3006
 ================================================================================================
 
 # Tooling
@@ -18055,7 +18327,10 @@ Recommended:
 
 ================================================================================================
 FILE: docs_technical/90-reference/adr/adr-0001-truth-boundary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8b5f126d606f8343ff3ae34feb92acad7461c318e23eba8124a7bb4445cdbe23
+CONTENT_BYTES: 2808
 ================================================================================================
 
 # ADR-0001: Truth Boundary (kOA)
@@ -18128,7 +18403,10 @@ kOA integrates with Kristal as the canonical truth compiler. Kristal v4 defines 
 
 ================================================================================================
 FILE: docs_technical/90-reference/adr/adr-0002-determinism-policy.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 21dbf02275e596eaf1734c1bf30bd0e35681c5cb4c1f732cb93904002599a41d
+CONTENT_BYTES: 4790
 ================================================================================================
 
 # ADR-0002: Determinism Policy (kOA)
@@ -18246,7 +18524,10 @@ A conformance suite must include:
 
 ================================================================================================
 FILE: docs_technical/90-reference/adr/adr-0003-konnaxion-activation-rollback.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 432edf312971e1f38b75a32ed4907503d126545cf6d19ac08afff146b49c4a7a
+CONTENT_BYTES: 6650
 ================================================================================================
 
 # ADR-0003: Konnaxion Activation and Rollback
@@ -18425,7 +18706,10 @@ A conformant Konnaxion-Distribution implementation MUST provide tests for:
 
 ================================================================================================
 FILE: docs_technical/90-reference/adr/adr-0004-architect-split.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 33af0f6a845be7d71615a21a1320474da16fbf52f81218ed8df73cdeb4834f7e
+CONTENT_BYTES: 2927
 ================================================================================================
 
 # ADR-0004: Architect split (Strategy vs Render)
@@ -18514,7 +18798,10 @@ Split the Architect role into two components:
 
 ================================================================================================
 FILE: docs_technical/90-reference/adr/adr-0005-compatibility-versioning.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 28f6e89fb8bff902c6b01c917f4a33a0192cb739614787cba693ad06ba976313
+CONTENT_BYTES: 3865
 ================================================================================================
 
 # ADR-0005: Compatibility & Versioning Policy (kOA)
@@ -18628,7 +18915,10 @@ Any tolerance for legacy spellings of Kristal-related fields must follow:
 
 ================================================================================================
 FILE: docs_technical/90-reference/adr/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d902b03ababe39c55d1734675bf419291da5bf47caabbc20cb8a81b6608a15b2
+CONTENT_BYTES: 1177
 ================================================================================================
 
 # ADR Index (kOA)
@@ -18672,7 +18962,10 @@ Create an ADR when you change:
 
 ================================================================================================
 FILE: docs_technical/90-reference/terminology.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bff1dbc6d8b2d5ad6892daafa00b50a8238a985a9c266b218510345fb41538d8
+CONTENT_BYTES: 4381
 ================================================================================================
 
 # Terminology (kOA)
@@ -18805,7 +19098,10 @@ A defined period where older spellings/aliases may be accepted on input, but can
 
 ================================================================================================
 FILE: docs_technical/index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6034c826804c389417fede25461b449b8ead2c1a5a934d4a024fb7662350b778
+CONTENT_BYTES: 2589
 ================================================================================================
 
 # kOA Digital Ecosystem Documentation
@@ -18858,7 +19154,10 @@ See: `40-integration/kristal-v4/`
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 49ae6a49f498ed72e2108a59f5ad808646530e15054f13f06114bd77aa5c23fd
+CONTENT_BYTES: 13941
 ================================================================================================
 
 ÿþ#   k O A   D i g i t a l   E c o s y s t e m 

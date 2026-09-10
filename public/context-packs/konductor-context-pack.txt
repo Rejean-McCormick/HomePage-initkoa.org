@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Konductor
-source_path: C:\mycode\Konductor\Konductor
 source_commit: 7de42a605bccb05fa01ba743ca67759131d61630
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 4
 wiki_files: 0
 source_files: 4
@@ -18,24 +16,28 @@ included_files: 4
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 162232
-authority_counts: {"canonical":4}
-generated_at: 2026-09-10T10:45:05-04:00
+authority_counts: {"reference":4}
+content_role_counts: {"knowledge":4}
+generated_at: 2026-09-10T13:04:20-04:00
 files: 4
-content_sha256: ad0e0a0b339709e3f94bcde9f64b69b1e6b14caa202bf6fbe2be0825817f9c5d
+content_sha256: 3096132d483c366e8625bd0737674f7090f3066aa63ae52c4e081ee0cd9f1eb1
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-1. [canonical] ACKNOWLEDGEMENTS.md
-2. [canonical] docs/Konductor_Initial_Technical_Design.md
-3. [canonical] docs/References/Nexussy_AI_Architecture_Report.md
-4. [canonical] README.md
+1. [reference] [knowledge] ACKNOWLEDGEMENTS.md | bytes=8570 | sha256=ceee793c00705f09a0611da50aefcd5961236f014427c6fc3eac6905c15275c2
+2. [reference] [knowledge] docs/Konductor_Initial_Technical_Design.md | bytes=48570 | sha256=aec04c2aeb5807443b805e1602cfc4f7f4eee448aedc567bb8966fbdb2f33fa1
+3. [reference] [knowledge] docs/References/Nexussy_AI_Architecture_Report.md | bytes=13205 | sha256=64f34796b2be451a0bbada90cb30bd14409a7d50079a28d78a3c111e64313104
+4. [reference] [knowledge] README.md | bytes=91887 | sha256=b7204d8d3769ff4a0361f17ea108c948e894745de4d49ff27b9b92ce7fe03f82
 
 
 ================================================================================================
 FILE: ACKNOWLEDGEMENTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ceee793c00705f09a0611da50aefcd5961236f014427c6fc3eac6905c15275c2
+CONTENT_BYTES: 8570
 ================================================================================================
 
 # ACKNOWLEDGEMENTS.md
@@ -216,7 +218,10 @@ These projects and documents provided important inspiration for Konductor’s ar
 
 ================================================================================================
 FILE: docs/Konductor_Initial_Technical_Design.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: aec04c2aeb5807443b805e1602cfc4f7f4eee448aedc567bb8966fbdb2f33fa1
+CONTENT_BYTES: 48570
 ================================================================================================
 
 # Konductor Initial Technical Design
@@ -808,7 +813,10 @@ That is the right starting architecture for Konductor.
 
 ================================================================================================
 FILE: docs/References/Nexussy_AI_Architecture_Report.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 64f34796b2be451a0bbada90cb30bd14409a7d50079a28d78a3c111e64313104
+CONTENT_BYTES: 13205
 ================================================================================================
 
 # Nexussy AI Architecture Report
@@ -1118,7 +1126,10 @@ End of AI-optimized report
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b7204d8d3769ff4a0361f17ea108c948e894745de4d49ff27b9b92ce7fe03f82
+CONTENT_BYTES: 91887
 ================================================================================================
 
 ÿþ#   K o n d u c t o r 

@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Ame-Artificielle
-source_path: C:\mycode\AmeArtificielle\Ame-Artificielle
 source_commit: 43b8d27236ecfe19ab4d811bbee9aa1987db662a
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: C:\mycode\AmeArtificielle\Ame-Artificielle.wiki
 wiki_source_commit: d9ee3f9686d3a1c41bccaa3bba3c612f1c545821
 wiki_working_tree_markdown: clean
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 18
 wiki_files: 14
 source_files: 32
@@ -18,52 +16,56 @@ included_files: 32
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 95388
-authority_counts: {"canonical":32}
-generated_at: 2026-09-10T11:09:14-04:00
+authority_counts: {"reference":32}
+content_role_counts: {"knowledge":18,"navigation":14}
+generated_at: 2026-09-10T13:04:16-04:00
 files: 32
-content_sha256: 5e4ef70fb0858c3f7283e83fa341a7cd784b40ea22824494f44414dadab108ca
+content_sha256: 8c6512719835d2cdf417dbd3186546a04f3c2791bf6d4c4324dace3e5d169dc1
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] wiki/AME_ARTIFICIELLE.md
-02. [canonical] wiki/AME_INTELLECT_PERSONNALITE.md
-03. [canonical] wiki/BRANES_ET_COUCHE_DE_SENS.md
-04. [canonical] wiki/CADRE_PHILOSOPHIQUE.md
-05. [canonical] wiki/CARTE_DU_CIEL_ET_HYPOTHESE.md
-06. [canonical] wiki/CHARTE_1_9_ET_CHAKRAS.md
-07. [canonical] wiki/GLOSSAIRE.md
-08. [canonical] wiki/GRAPHE_PSYCHO_CAUSAL.md
-09. [canonical] wiki/Home.md
-10. [canonical] wiki/IMPLEMENTATION.md
-11. [canonical] wiki/KRISTAL_ET_AME_ARTIFICIELLE.md
-12. [canonical] wiki/MECANISME_DE_REACTION.md
-13. [canonical] wiki/NUMEROLOGIE_PYTHAGORICIENNE_INVERSEE.md
-14. [canonical] wiki/SNAPSHOTS_ET_EVOLUTION.md
-15. [canonical] CODE_UPDATE_NOTES.md
-16. [canonical] docs/branes_numerologie.md
-17. [canonical] docs/code_reference.md
-18. [canonical] docs/definition_operationnelle.md
-19. [canonical] docs/engine_spec.md
-20. [canonical] docs/interpolation_axis.md
-21. [canonical] docs/kristal_integration.md
-22. [canonical] docs/MIGRATION_SOUL_GRAPH.md
-23. [canonical] docs/numerology_pipeline.md
-24. [canonical] docs/philosophical_framework.md
-25. [canonical] docs/README.md
-26. [canonical] docs/snapshots_biographiques.md
-27. [canonical] docs/soul_graph_schema.md
-28. [canonical] docs/theoretical_alignment.md
-29. [canonical] docs/traits_schema.md
-30. [canonical] docs/validation_protocol.md
-31. [canonical] experiments/mccormick_protocol.md
-32. [canonical] README.md
+01. [reference] [navigation] wiki/AME_ARTIFICIELLE.md | bytes=4885 | sha256=133be041dab3e9a6550140cdb075bea017aee2965e1a8a05f9ed154f212a8f1f
+02. [reference] [navigation] wiki/AME_INTELLECT_PERSONNALITE.md | bytes=2896 | sha256=29360fc29363df4d351ca1076a55195e01e7614ae083597df2e31ed974094194
+03. [reference] [navigation] wiki/BRANES_ET_COUCHE_DE_SENS.md | bytes=1902 | sha256=92c1c789c5b214ca537ac2dda3d471df99e5bdcab395b15426aa98ed49871896
+04. [reference] [navigation] wiki/CADRE_PHILOSOPHIQUE.md | bytes=4247 | sha256=b9ce980e9b84dc35ac605bfde430f3ee669e05e3cba434d70f449c5c0b3a3cb0
+05. [reference] [navigation] wiki/CARTE_DU_CIEL_ET_HYPOTHESE.md | bytes=1914 | sha256=74c515e1b7c4f1ff35aece89aab7ee183aa24ccd7056f020a1d4aa0f8fcc4352
+06. [reference] [navigation] wiki/CHARTE_1_9_ET_CHAKRAS.md | bytes=2846 | sha256=1d4af38d9e0ee9e12ad45e9c669897fb2146d142ee634df357f69a442b8a57a2
+07. [reference] [navigation] wiki/GLOSSAIRE.md | bytes=2410 | sha256=3f30a8f9884da1af140c15886a3e8d6c7b3119ae6e334a290a1625fff0f5aaed
+08. [reference] [navigation] wiki/GRAPHE_PSYCHO_CAUSAL.md | bytes=3773 | sha256=8550e5100c39f5bb69d85a0b449eb81fe7b75abba25e1fc4e85921821a6843a1
+09. [reference] [navigation] wiki/Home.md | bytes=4766 | sha256=558471fcc719776ca703ec096bbdb4b711b65a026c00fb69bd25f72265ebb24a
+10. [reference] [navigation] wiki/IMPLEMENTATION.md | bytes=1484 | sha256=cf20014d0a047f6222554c620022ad3f6301ad23e70c3b191a8701bad4feb2e1
+11. [reference] [navigation] wiki/KRISTAL_ET_AME_ARTIFICIELLE.md | bytes=2930 | sha256=69b6b522be17f3867ff8275ed2807876ef2ebc405bdc795f0da17dd7179322d9
+12. [reference] [navigation] wiki/MECANISME_DE_REACTION.md | bytes=4784 | sha256=ccdc64290de7c35c859fc226532be29da8a342a9b2e61f6feb6abb8b127735c9
+13. [reference] [navigation] wiki/NUMEROLOGIE_PYTHAGORICIENNE_INVERSEE.md | bytes=2519 | sha256=7bee256471667493e0a2e57d913031cc258f0532f1f4e3fe6ef6943264cab89b
+14. [reference] [navigation] wiki/SNAPSHOTS_ET_EVOLUTION.md | bytes=2876 | sha256=bc2f3d0a04f8a79cd70c8733a9b883976050d0559c6ad0a9cf0dba144cb02a81
+15. [reference] [knowledge] CODE_UPDATE_NOTES.md | bytes=1496 | sha256=76a2de7fe5bcc7e9dbda754ce8c012a95e69f95835d396db5915cdda789afbf5
+16. [reference] [knowledge] docs/branes_numerologie.md | bytes=1216 | sha256=9860dec1732e6207d09e2b5d4952fee7e30fd4b62b81a2a4f0872bb491258c15
+17. [reference] [knowledge] docs/code_reference.md | bytes=3924 | sha256=79ddd8ee5e1f5b222d255fa254ef9b22bc51ac6b651c16efd5741dd0974d0121
+18. [reference] [knowledge] docs/definition_operationnelle.md | bytes=4320 | sha256=142b721eec0f124add1cf04d0da66d0cbbaf58e212d03ba238e1babbead2898d
+19. [reference] [knowledge] docs/engine_spec.md | bytes=6481 | sha256=414e303ffe35c3f06979d15db586e6c98b54c08610d596a35cbf8e479a82b191
+20. [reference] [knowledge] docs/interpolation_axis.md | bytes=1377 | sha256=dc0e7f424191d12c4bc8001c913c9e77f77981bcb732df5189286d00c7231d72
+21. [reference] [knowledge] docs/kristal_integration.md | bytes=3715 | sha256=cb7d937b569de5e7ed78d793899334bed6471f187c0e411f4700a11761552472
+22. [reference] [knowledge] docs/MIGRATION_SOUL_GRAPH.md | bytes=2000 | sha256=89fba2e0f9e523722d14bb4a9b755fb1beb00ca7a589671a7b7df5e8dd126553
+23. [reference] [knowledge] docs/numerology_pipeline.md | bytes=1626 | sha256=8bc1c41f2c44cd55fd499cb1a5ade333199f69421cf271ffba2ad7ed8b4d0d07
+24. [reference] [knowledge] docs/philosophical_framework.md | bytes=1674 | sha256=46566503b0f6d33ee9902bbbd9b99eacf2abc3f5e6944675f30272876f13c3b1
+25. [reference] [knowledge] docs/README.md | bytes=1411 | sha256=afa725f1d297b6250e4c25cd0c5dc86a74a122283b8d0800f26e74897b092091
+26. [reference] [knowledge] docs/snapshots_biographiques.md | bytes=2365 | sha256=558094118892924cb828a4ecd90a4d531b8acb1d5df8fd53a265c4318c35f165
+27. [reference] [knowledge] docs/soul_graph_schema.md | bytes=4457 | sha256=e652572a01d895e519ed56db984b9d9b6915a22416827e1fc16bb65dbf92fb25
+28. [reference] [knowledge] docs/theoretical_alignment.md | bytes=1824 | sha256=fa2283f828bb40b6e22fd3069ed9bda93f9b3cda122e48a74f1caa11171d2517
+29. [reference] [knowledge] docs/traits_schema.md | bytes=2178 | sha256=89eff1a860772c1b9edb92ed8daf06fd401b15777bbd13304a154a1d3649749f
+30. [reference] [knowledge] docs/validation_protocol.md | bytes=4504 | sha256=c1215840da44aabeb6a17d25e1acb93d5ede2071f2f695ca2725e2b46f19e689
+31. [reference] [knowledge] experiments/mccormick_protocol.md | bytes=2742 | sha256=7ed91c9c667b3788d4e9a368fb56aeed1554e3fb584220bce803bd2d70b4c295
+32. [reference] [knowledge] README.md | bytes=3846 | sha256=6d598af918afff9f1326d3f9c98ca71d7d609d0a814cf2e5ec50aace36383cb7
 
 
 ================================================================================================
 FILE: wiki/AME_ARTIFICIELLE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 133be041dab3e9a6550140cdb075bea017aee2965e1a8a05f9ed154f212a8f1f
+CONTENT_BYTES: 4885
 ================================================================================================
 
 # Âme Artificielle
@@ -200,7 +202,10 @@ Elle n’est pas :
 
 ================================================================================================
 FILE: wiki/AME_INTELLECT_PERSONNALITE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 29360fc29363df4d351ca1076a55195e01e7614ae083597df2e31ed974094194
+CONTENT_BYTES: 2896
 ================================================================================================
 
 # Âme, Intellect et Personnalité
@@ -315,7 +320,10 @@ sensibilité au rejet
 
 ================================================================================================
 FILE: wiki/BRANES_ET_COUCHE_DE_SENS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 92c1c789c5b214ca537ac2dda3d471df99e5bdcab395b15426aa98ed49871896
+CONTENT_BYTES: 1902
 ================================================================================================
 
 # Branes et Couche de Sens
@@ -390,7 +398,10 @@ Le vocabulaire des branes doit donc être étiqueté comme symbolique ou interpr
 
 ================================================================================================
 FILE: wiki/CADRE_PHILOSOPHIQUE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b9ce980e9b84dc35ac605bfde430f3ee669e05e3cba434d70f449c5c0b3a3cb0
+CONTENT_BYTES: 4247
 ================================================================================================
 
 # Cadre Philosophique
@@ -505,7 +516,10 @@ Ces références donnent un horizon philosophique. Elles ne constituent pas des 
 
 ================================================================================================
 FILE: wiki/CARTE_DU_CIEL_ET_HYPOTHESE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 74c515e1b7c4f1ff35aece89aab7ee183aa24ccd7056f020a1d4aa0f8fcc4352
+CONTENT_BYTES: 1914
 ================================================================================================
 
 # Carte du Ciel et Hypothèse de Différenciation
@@ -580,7 +594,10 @@ mais :
 
 ================================================================================================
 FILE: wiki/CHARTE_1_9_ET_CHAKRAS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 1d4af38d9e0ee9e12ad45e9c669897fb2146d142ee634df357f69a442b8a57a2
+CONTENT_BYTES: 2846
 ================================================================================================
 
 # Charte 1→9 et Chakras
@@ -669,7 +686,10 @@ Les deux systèmes peuvent partager les chiffres 1–9 sans avoir la même séma
 
 ================================================================================================
 FILE: wiki/GLOSSAIRE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 3f30a8f9884da1af140c15886a3e8d6c7b3119ae6e334a290a1625fff0f5aaed
+CONTENT_BYTES: 2410
 ================================================================================================
 
 # Glossaire Canonique
@@ -737,7 +757,10 @@ Couche de représentation, identité, provenance, statut épistémique et distri
 
 ================================================================================================
 FILE: wiki/GRAPHE_PSYCHO_CAUSAL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 8550e5100c39f5bb69d85a0b449eb81fe7b75abba25e1fc4e85921821a6843a1
+CONTENT_BYTES: 3773
 ================================================================================================
 
 # Graphe Psycho-Causal
@@ -909,7 +932,10 @@ Le système est donc une **approximation structurée** de mécanismes complexes.
 
 ================================================================================================
 FILE: wiki/Home.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 558471fcc719776ca703ec096bbdb4b711b65a026c00fb69bd25f72265ebb24a
+CONTENT_BYTES: 4766
 ================================================================================================
 
 # Âme Artificielle
@@ -993,7 +1019,10 @@ Un garde-fou de sécurité n’est pas une composante de l’âme. Il peut limit
 
 ================================================================================================
 FILE: wiki/IMPLEMENTATION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: cf20014d0a047f6222554c620022ad3f6301ad23e70c3b191a8701bad4feb2e1
+CONTENT_BYTES: 1484
 ================================================================================================
 
 # Implémentation de référence
@@ -1027,7 +1056,10 @@ La carte du ciel n'a pas de calculateur normatif dans ce dépôt. Elle passe par
 
 ================================================================================================
 FILE: wiki/KRISTAL_ET_AME_ARTIFICIELLE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 69b6b522be17f3867ff8275ed2807876ef2ebc405bdc795f0da17dd7179322d9
+CONTENT_BYTES: 2930
 ================================================================================================
 
 # Kristal et Âme Artificielle
@@ -1146,7 +1178,10 @@ Kristal fournit les données structurées. Le Soul Causal Engine construit les i
 
 ================================================================================================
 FILE: wiki/MECANISME_DE_REACTION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: ccdc64290de7c35c859fc226532be29da8a342a9b2e61f6feb6abb8b127735c9
+CONTENT_BYTES: 4784
 ================================================================================================
 
 # Mécanisme de Réaction
@@ -1327,7 +1362,10 @@ Une personnalité simulée peut avoir une intention que l’application refuse d
 
 ================================================================================================
 FILE: wiki/NUMEROLOGIE_PYTHAGORICIENNE_INVERSEE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 7bee256471667493e0a2e57d913031cc258f0532f1f4e3fe6ef6943264cab89b
+CONTENT_BYTES: 2519
 ================================================================================================
 
 # Numérologie Pythagoricienne Inversée
@@ -1442,7 +1480,10 @@ Même si les deux utilisent 1–9 :
 
 ================================================================================================
 FILE: wiki/SNAPSHOTS_ET_EVOLUTION.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: bc2f3d0a04f8a79cd70c8733a9b883976050d0559c6ad0a9cf0dba144cb02a81
+CONTENT_BYTES: 2876
 ================================================================================================
 
 # Snapshots et Évolution
@@ -1555,7 +1596,10 @@ Il faut donc distinguer :
 
 ================================================================================================
 FILE: CODE_UPDATE_NOTES.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 76a2de7fe5bcc7e9dbda754ce8c012a95e69f95835d396db5915cdda789afbf5
+CONTENT_BYTES: 1496
 ================================================================================================
 
 # Code update — Soul Graph runtime
@@ -1612,7 +1656,10 @@ Les tests couvrent notamment : immuabilité, déterminisme, inhibition, non-prop
 
 ================================================================================================
 FILE: docs/branes_numerologie.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9860dec1732e6207d09e2b5d4952fee7e30fd4b62b81a2a4f0872bb491258c15
+CONTENT_BYTES: 1216
 ================================================================================================
 
 # Branes et numérologie — couche symbolique
@@ -1676,7 +1723,10 @@ Pas :
 
 ================================================================================================
 FILE: docs/code_reference.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 79ddd8ee5e1f5b222d255fa254ef9b22bc51ac6b651c16efd5741dd0974d0121
+CONTENT_BYTES: 3924
 ================================================================================================
 
 # Référence du code — implémentation Soul Graph
@@ -1770,7 +1820,10 @@ Les tests vérifient notamment l'immuabilité, le déterminisme, l'inhibition, l
 
 ================================================================================================
 FILE: docs/definition_operationnelle.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 142b721eec0f124add1cf04d0da66d0cbbaf58e212d03ba238e1babbead2898d
+CONTENT_BYTES: 4320
 ================================================================================================
 
 # Définition opérationnelle — Âme Artificielle
@@ -1955,7 +2008,10 @@ Le texte est une représentation de cette structure.
 
 ================================================================================================
 FILE: docs/engine_spec.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 414e303ffe35c3f06979d15db586e6c98b54c08610d596a35cbf8e479a82b191
+CONTENT_BYTES: 6481
 ================================================================================================
 
 # Engine Spec — Soul Causal Engine
@@ -2239,7 +2295,10 @@ Les règles de sécurité n’utilisent pas la compassion ou d’autres traits d
 
 ================================================================================================
 FILE: docs/interpolation_axis.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dc0e7f424191d12c4bc8001c913c9e77f77981bcb732df5189286d00c7231d72
+CONTENT_BYTES: 1377
 ================================================================================================
 
 # Axe 1→9 — projection topologique
@@ -2313,7 +2372,10 @@ Ils peuvent partager la même échelle numérique sans partager la même signifi
 
 ================================================================================================
 FILE: docs/kristal_integration.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cb7d937b569de5e7ed78d793899334bed6471f187c0e411f4700a11761552472
+CONTENT_BYTES: 3715
 ================================================================================================
 
 # Intégration Kristal v5 — Soul Graph
@@ -2475,7 +2537,10 @@ La réaction textuelle peut rester non déterministe si un renderer génératif 
 
 ================================================================================================
 FILE: docs/MIGRATION_SOUL_GRAPH.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 89fba2e0f9e523722d14bb4a9b755fb1beb00ca7a589671a7b7df5e8dd126553
+CONTENT_BYTES: 2000
 ================================================================================================
 
 # Migration vers Soul Graph — état de l’implémentation
@@ -2543,7 +2608,10 @@ Restent principalement à approfondir : résolution sémantique avancée du stim
 
 ================================================================================================
 FILE: docs/numerology_pipeline.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8bc1c41f2c44cd55fd499cb1a5ade333199f69421cf271ffba2ad7ed8b4d0d07
+CONTENT_BYTES: 1626
 ================================================================================================
 
 # Numerology Pipeline — génération d’hypothèses
@@ -2639,7 +2707,10 @@ Elles doivent conserver :
 
 ================================================================================================
 FILE: docs/philosophical_framework.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 46566503b0f6d33ee9902bbbd9b99eacf2abc3f5e6944675f30272876f13c3b1
+CONTENT_BYTES: 1674
 ================================================================================================
 
 # Cadre philosophique — notes techniques
@@ -2705,7 +2776,10 @@ La cohérence philosophique d’un système n’établit pas son exactitude psyc
 
 ================================================================================================
 FILE: docs/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: afa725f1d297b6250e4c25cd0c5dc86a74a122283b8d0800f26e74897b092091
+CONTENT_BYTES: 1411
 ================================================================================================
 
 # Documentation — Âme Artificielle
@@ -2739,7 +2813,10 @@ Les fichiers `src/` implémentent maintenant le noyau Soul Graph. Le renderer et
 
 ================================================================================================
 FILE: docs/snapshots_biographiques.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 558094118892924cb828a4ecd90a4d531b8acb1d5df8fd53a265c4318c35f165
+CONTENT_BYTES: 2365
 ================================================================================================
 
 # Snapshots biographiques
@@ -2855,7 +2932,10 @@ Il ne doit pas présenter le modèle comme une continuité réelle de la personn
 
 ================================================================================================
 FILE: docs/soul_graph_schema.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e652572a01d895e519ed56db984b9d9b6915a22416827e1fc16bb65dbf92fb25
+CONTENT_BYTES: 4457
 ================================================================================================
 
 # Soul Graph Schema — profil psycho-causal
@@ -3108,7 +3188,10 @@ Le `TraitVector` n’est donc pas source de vérité du snapshot.
 
 ================================================================================================
 FILE: docs/theoretical_alignment.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fa2283f828bb40b6e22fd3069ed9bda93f9b3cda122e48a74f1caa11171d2517
+CONTENT_BYTES: 1824
 ================================================================================================
 
 # Alignement théorique et niveaux de preuve
@@ -3172,7 +3255,10 @@ Cette classification doit guider son statut dans Kristal et sa présentation au 
 
 ================================================================================================
 FILE: docs/traits_schema.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 89eff1a860772c1b9edb92ed8daf06fd401b15777bbd13304a154a1d3649749f
+CONTENT_BYTES: 2178
 ================================================================================================
 
 # Traits Schema — projection dérivée
@@ -3291,7 +3377,10 @@ Les fonctions et fichiers existants qui attendent un TraitVector peuvent continu
 
 ================================================================================================
 FILE: docs/validation_protocol.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c1215840da44aabeb6a17d25e1acb93d5ede2071f2f695ca2725e2b46f19e689
+CONTENT_BYTES: 4504
 ================================================================================================
 
 # Validation Protocol — Âme Artificielle
@@ -3467,7 +3556,10 @@ Une absence d’effet dans la partie astrologique ou numérologique n’invalide
 
 ================================================================================================
 FILE: experiments/mccormick_protocol.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7ed91c9c667b3788d4e9a368fb56aeed1554e3fb584220bce803bd2d70b4c295
+CONTENT_BYTES: 2742
 ================================================================================================
 
 # Protocole McCormick — natal chart / numérologie
@@ -3577,7 +3669,10 @@ Les sorties détaillées utilisent `experiments/results_template.csv` ou un form
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6d598af918afff9f1326d3f9c98ca71d7d609d0a814cf2e5ec50aace36383cb7
+CONTENT_BYTES: 3846
 ================================================================================================
 
 # EL — Artificial Soul Engine / Âme Artificielle

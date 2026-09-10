@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Konnaxion
-source_path: C:\mycode\Konnaxion\Konnaxion
 source_commit: a209a9976d5e4271889c63df40701ae3de2b78fd
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: C:\mycode\Konnaxion\Konnaxion.wiki
 wiki_source_commit: acca199c8f4667ff03ac3e953f4bc45a9763ebf8
 wiki_working_tree_markdown: clean
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 225
 wiki_files: 16
 source_files: 241
@@ -18,137 +16,138 @@ included_files: 122
 excluded_files: 119
 duplicate_files: 57
 content_bytes: 1748961
-authority_counts: {"canonical":122}
-generated_at: 2026-09-10T11:09:06-04:00
+authority_counts: {"reference":122}
+content_role_counts: {"knowledge":106,"navigation":16}
+generated_at: 2026-09-10T13:04:08-04:00
 files: 122
-content_sha256: 0bd3b06bfed5ad51e94d04489ddc9e3a1572931747b60fa64efab8d474b83354
+content_sha256: fab3f84271d081d0a42606278d3d4dd975445ed605152c7b70a87624cd0f9707
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-001. [canonical] wiki/CertifiKation.md
-002. [canonical] wiki/EkoH.md
-003. [canonical] wiki/Glossary.md
-004. [canonical] wiki/Home.md
-005. [canonical] wiki/Implementation-Alignment.md
-006. [canonical] wiki/Knowledge.md
-007. [canonical] wiki/Konnaxion-Technical-Architecture-&-Services.md
-008. [canonical] wiki/Konservation.md
-009. [canonical] wiki/Konstruct.md
-010. [canonical] wiki/Konsultations.md
-011. [canonical] wiki/Kontact.md
-012. [canonical] wiki/Kontrol.md
-013. [canonical] wiki/Korum.md
-014. [canonical] wiki/Smart-Vote.md
-015. [canonical] wiki/Stockage.md
-016. [canonical] wiki/TeamBuilder.md
-017. [canonical] _BUG_HARVEST_REVIEW/docs/Konnaxion_User_Workflows.md
-018. [canonical] _BUG_HARVEST_REVIEW/docs/status/2026-08-28-technical-maturity-assessment.md
-019. [canonical] _BUG_HARVEST_REVIEW/docs/status/ETHIKOS_EKOH_SMARTVOTE_DELIVERY_WORKFLOW.md
-020. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH - System Overview.md
-021. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Data Model.md
-022. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Technical Specification.md
-023. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-module-file-architecture.md
-024. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-canonical-db-schema-v1-1.md
-025. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-definitive-module-documentation-set-v1-0.md
-026. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-system-overview-smart-vote-ecosystem.md
-027. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/konnaxion-smart-vote-weighted-voting-system-structure-and-logic-internal-white-paper.md
-028. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/Smart Vote - Reading Contract.md
-029. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-consultation-simulations.md
-030. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-empower-ux-naming-guidelines.md
-031. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-system-in-konnaxion-technical-specification.md
-032. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos-kintsugi-upgrade-plan-v1.md
-033. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/00_KINTSUGI_START_HERE.md
-034. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/01_ETHIKOS_KINTSUGI_EXECUTION_STRATEGY.md
-035. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/02_SOURCE_OF_TRUTH_AND_DRIFT_CONTROL.md
-036. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/03_BOUNDARIES_AND_OWNERSHIP_CONTRACTS.md
-037. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/04_CANONICAL_NAMING_AND_VARIABLES.md
-038. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/05_CURRENT_STATE_BASELINE.md
-039. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/06_ROUTE_BY_ROUTE_ETHIKOS_UPGRADE_PLAN.md
-040. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/07_API_AND_SERVICE_CONTRACTS.md
-041. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/08_DATA_MODEL_AND_MIGRATION_PLAN.md
-042. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/09_SMART_VOTE_EKOH_READING_CONTRACT.md
-043. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/10_FIRST_PASS_INTEGRATION_MATRIX.md
-044. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/11_MIMIC_VS_ANNEX_RULEBOOK.md
-045. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/12_CANONICAL_OBJECTS_AND_EVENTS.md
-046. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/13_PAYLOAD_SHAPES_AND_SERIALIZER_CONTRACTS.md
-047. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/14_FRONTEND_ALIGNMENT_CONTRACT.md
-048. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/15_BACKEND_ALIGNMENT_CONTRACT.md
-049. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/16_TEST_AND_SMOKE_CONTRACT.md
-050. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/17_KNOWN_BUGS_AND_NON_KINTSUGI_ITEMS.md
-051. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/18_ADR_REGISTER.md
-052. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/19_OSS_CODE_READING_PLAN.md
-053. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/20_AI_GENERATION_GUARDRAILS.md
-054. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/21_KIALO_STYLE_ARGUMENT_MAPPING_CONTRACT.md
-055. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/22_IMPLEMENTATION_BACKLOG_TEMPLATE.md
-056. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/23_WAVE1_IMPLEMENTATION_BACKLOG.md
-057. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/24_WAVE1_SLICE_REGISTER.md
-058. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/25_WAVE1_QA_CHECKLIST.md
-059. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/27_EKOH_RATING_VISIBILITY_AND_ACCESS_CONTRACT.md
-060. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kintsugi-upgrade-v1.md.md
-061. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kompendio-v1.md.md
-062. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/Konnaxion-kintsugi-and-kompendio-open-source-integration-map-v1.md
-063. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kintsugi-upgrade-plan-v1.md
-064. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kompendio-upgrade-plan-v1.md
-065. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/SmartVote-EkoH-kintsugi-upgrade-v1.md
-066. [canonical] _BUG_HARVEST_REVIEW/LevelUpDiag/README.md
-067. [canonical] backend/konnaxion/ethikos_20260903_131935_Dump/00_START_HERE.instructions.md
-068. [canonical] backend/locale/README.md
-069. [canonical] backend/README.md
-070. [canonical] docs/demo-scenarios/ethikos/ETHIKOS_DEMO_IMPORTER.md
-071. [canonical] docs/demo-scenarios/ethikos/README.md
-072. [canonical] docs/KONNAXION_UPGRADE_TO_DO(credentialAnalyser).md
-073. [canonical] docs/Konnaxion_UserWorkflow_Documentation_v0_1.md
-074. [canonical] docs/README.md
-075. [canonical] docs/status/2026-08-27-technical-maturity-assessment.md
-076. [canonical] docs/status/2026-09-05-bug-harvest-mass-audit.md
-077. [canonical] docs/status/2026-09-05-technical-maturity-assessment.md
-078. [canonical] docs/status/2026-09-06-bug-harvest-real-findings.md
-079. [canonical] docs/status/2026-09-06-bug-harvest-wave2a-mass-update.md
-080. [canonical] docs/status/2026-09-06-bug-harvest-wave2b-mass-update.md
-081. [canonical] docs/status/2026-09-06-bug-harvest-wave2c.md
-082. [canonical] docs/status/2026-09-06-bug-harvest-wave2d.md
-083. [canonical] docs/status/2026-09-06-bug-harvest-wave2e-context-isolation.md
-084. [canonical] docs/status/2026-09-06-technical-status-report-aligned.md
-085. [canonical] docs/status/2026-09-06-technical-status-report-wave2-closed.md
-086. [canonical] docs/status/2026-09-08-technical-maturity-assessment.md
-087. [canonical] docs/status/README.md
-088. [canonical] docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
-089. [canonical] docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
-090. [canonical] docs/Technical-Reference/DEV_DOCKER_CHEATSHEET.md
-091. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference (Custom Tables).md
-092. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference.md
-093. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Documentation Index.md
-094. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Full-Stack Technical Specification.md
-095. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Insights UI Reference.md
-096. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Site Navigation Map.md
-097. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Full-Stack Technical Specification.md
-098. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Functional Code-Name Inventory (Services & Hooks).md
-099. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Global Parameter Reference.md
-100. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module Config Parameters.md
-101. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module UI Spec (Reporting & Analytics Frontend).md
-102. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Site Navigation Map (Top-Level Routes).md
-103. [canonical] docs/Technical-Reference/DocV14/Konnaxion  v14 - Documentation INDEX.docx.md
-104. [canonical] docs/Technical-Reference/GLOSSARY.md
-105. [canonical] docs/Technical-Reference/HowToNest-wrap-shell.md
-106. [canonical] docs/Technical-Reference/Konnaxion_Frontend_Deployment_Runbook.md
-107. [canonical] docs/Technical-Reference/namecheap-vps.md
-108. [canonical] docs/Technical-Reference/sub-modules_description/CertifiKation (Skills & Certification) — sub‑module under KonnectED.md
-109. [canonical] docs/Technical-Reference/sub-modules_description/EkoH (Reputation & Expertise) — first sub‑module under Kollective Intelligence.md
-110. [canonical] docs/Technical-Reference/sub-modules_description/Knowledge (Collaborative Learning Library) — sub‑module under KonnectED.md
-111. [canonical] docs/Technical-Reference/sub-modules_description/Konservation (Creative Content & Cultural Preservation) — sub‑module under Kreative.md
-112. [canonical] docs/Technical-Reference/sub-modules_description/Konstruct (Project Collaboration Spaces) — first sub‑module under keenKonnect.md
-113. [canonical] docs/Technical-Reference/sub-modules_description/Konsultations (Public Consultations & Feedback) — sub‑module under ethiKos.md
-114. [canonical] docs/Technical-Reference/sub-modules_description/Kontact (Collaboration & Networking) — sub‑module under Kreative.md
-115. [canonical] docs/Technical-Reference/sub-modules_description/Korum (Structured Debates) — sub‑module under ethiKos.md
-116. [canonical] docs/Technical-Reference/sub-modules_description/Smart Vote (Weighted Voting System) — second sub‑module under Kollective Intelligence.md
-117. [canonical] docs/Technical-Reference/sub-modules_description/Stockage (Secure Repository & Versioned Storage) — second sub‑module under keenKonnect.md
-118. [canonical] docs/Technical-Reference/UpdateBackendAndMigrateAndDocker.md
-119. [canonical] frontend/app/ethikos_20260903_132014_Dump/00_START_HERE.instructions.md
-120. [canonical] frontend/README.md
-121. [canonical] README.md
-122. [canonical] seed-data/ethikos/canada_quebec_public_debates_2026_inventory.md
+001. [reference] [navigation] wiki/CertifiKation.md | bytes=946 | sha256=7f05825c00c1637aca55b20a1670d0d4b4530c75c1a1071f46c193ae05f76aae
+002. [reference] [navigation] wiki/EkoH.md | bytes=2009 | sha256=c9f37ca75e07d970bda4917373446a07a62fca6c86b4b8a1696f8d53532ac4fe
+003. [reference] [navigation] wiki/Glossary.md | bytes=2392 | sha256=c85c403f9fc891452fcec07271de2c7afbec728ee4eab2bb684ff8787ea8472e
+004. [reference] [navigation] wiki/Home.md | bytes=2715 | sha256=e3627b808a1c4100126cfad965c60b2ceaac2d69292e3a48e0f4dda91e4f342d
+005. [reference] [navigation] wiki/Implementation-Alignment.md | bytes=3203 | sha256=a52f33bf48da3a4237e212118aca2bb4929b425e339ea35601bc989268dee2d6
+006. [reference] [navigation] wiki/Knowledge.md | bytes=945 | sha256=0730dd4e36baeb03c2a17b1810d1f0cbca7e75773c72c51ae52ef2d92d800cc3
+007. [reference] [navigation] wiki/Konnaxion-Technical-Architecture-&-Services.md | bytes=5349 | sha256=d3953c1429182faf510a7e18246d1a34dd98a251844ccdc5581e821b2e6188dc
+008. [reference] [navigation] wiki/Konservation.md | bytes=859 | sha256=64255b9c670da3b6dac86674870a18df208627a3598c79fe097f17df6bc0da0d
+009. [reference] [navigation] wiki/Konstruct.md | bytes=857 | sha256=73f1a81e467595ebcd040bb52fe41a8b6f097cfb9d17e35d9c0877d90757a129
+010. [reference] [navigation] wiki/Konsultations.md | bytes=1386 | sha256=9ddae0a14418c0b48891c1ec31c3d3cda976645abf09620843735e514d30b0db
+011. [reference] [navigation] wiki/Kontact.md | bytes=786 | sha256=69ebd975e5bc96d7e7d2a305b6943c0b51659b9256a38fb347ba609e2b6f0cee
+012. [reference] [navigation] wiki/Kontrol.md | bytes=671 | sha256=77c2df1b8dc7edc479b75b4fe682b6fe675bb7a7b34b7fd2fe3bb6c7b91901a1
+013. [reference] [navigation] wiki/Korum.md | bytes=1496 | sha256=0ede27c038b633ebaf4093b1808de075462b2fe6835c608ad025780af8fdac0e
+014. [reference] [navigation] wiki/Smart-Vote.md | bytes=1901 | sha256=a018384fb077e9c6fec23ba5127c9878dac8b6b05a195cf4c47afe866d410713
+015. [reference] [navigation] wiki/Stockage.md | bytes=1013 | sha256=b871781be7f0c120748524bf83997bf0ce327125428f76b2d1f7e3dac62235e0
+016. [reference] [navigation] wiki/TeamBuilder.md | bytes=705 | sha256=5844cb8450a89de3cf05913dadb8e2ef1a484a192adfa64b464d84413d59a3e0
+017. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Konnaxion_User_Workflows.md | bytes=2887 | sha256=a6ac49c9193a9a0dd0712b05480bc0ec9cf9a1fe93a3c7f68d309a8c6d87a039
+018. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/status/2026-08-28-technical-maturity-assessment.md | bytes=15898 | sha256=0cbdf32a387dff582bc1840193eedaa3ba2c370e2ab50cf873a97b2520185cfb
+019. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/status/ETHIKOS_EKOH_SMARTVOTE_DELIVERY_WORKFLOW.md | bytes=4901 | sha256=92f2989dd33424a24c7cdff95ef6b2a227748d473ee661e627a6ffd8fb3d4cc7
+020. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH - System Overview.md | bytes=1728 | sha256=bb1d5b7bc1eed33e8b0c04421076ee28a01dc3ac35dd71763b0c646a68add9d1
+021. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Data Model.md | bytes=1565 | sha256=7ee22efbcd42297f264ecb5fe0ce36d43e96b733cdb745ff81c3cab4be016298
+022. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Technical Specification.md | bytes=2286 | sha256=619b1bcab623d2d5fdd9df15732e1a8551e6558d0d1c8f072f531107eec2b6c6
+023. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-module-file-architecture.md | bytes=2865 | sha256=f721021486ac9291891d4e7acc46e026dae7ccd701930f1474be1299b8ffb002
+024. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-canonical-db-schema-v1-1.md | bytes=20054 | sha256=43020b08a0e55a0bced19874130139fc6c4a611cd81eb16f50e1aa013bf7adc2
+025. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-definitive-module-documentation-set-v1-0.md | bytes=68542 | sha256=8d07cfc6e0d73e842eaf1cb7c33590add0a9d5bcb633edc734a93bc1e40a0038
+026. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-system-overview-smart-vote-ecosystem.md | bytes=5295 | sha256=b1dafcb4ce3ecb9028f31595e55f37bcb25a08b5d768b5d2766e802e48c8b25b
+027. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/konnaxion-smart-vote-weighted-voting-system-structure-and-logic-internal-white-paper.md | bytes=8214 | sha256=507fcbee41c3ca3378444bec3ae5b7aff675b06acdaff9433f793f169f947dc9
+028. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/Smart Vote - Reading Contract.md | bytes=2187 | sha256=29a63181e2846021a683b3fb1e5af1e7d2befca975cc09df87c6bd0c2b749af2
+029. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-consultation-simulations.md | bytes=36173 | sha256=47a82d05bf25240f9bb17d253a6b38995da301827236a7e0ff46034f2a46fe8b
+030. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-empower-ux-naming-guidelines.md | bytes=3954 | sha256=24b01e6ba4a2cfbd9133e516a4c1e580993cd838ff84ee0140b944e18236f1a7
+031. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-system-in-konnaxion-technical-specification.md | bytes=6707 | sha256=dfaedc9eeb51777217b3d37c7c61cf9280e35f1e26bb165d4c78767b744e612c
+032. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos-kintsugi-upgrade-plan-v1.md | bytes=15374 | sha256=7a1638851b7c66cb13bbe1aba969c8b6977d60fe81386832bd09c112b1445d5a
+033. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/00_KINTSUGI_START_HERE.md | bytes=27130 | sha256=1039f75e4838cb5df7c7fbdc9cca3c3cccc7f87d09323d3aafc064b692c30c4f
+034. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/01_ETHIKOS_KINTSUGI_EXECUTION_STRATEGY.md | bytes=27913 | sha256=ac923db7e5d5c03f95b36ac6eb0b89e7e4e05f3cc1aab9dda1b4cf358d65aff9
+035. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/02_SOURCE_OF_TRUTH_AND_DRIFT_CONTROL.md | bytes=28486 | sha256=3118237094656ffce34d3fa8e90437de2ffa3421221b5cf7a6ef78ef4049a4eb
+036. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/03_BOUNDARIES_AND_OWNERSHIP_CONTRACTS.md | bytes=38639 | sha256=5d1c4984dca835a688f131c6c4baf4888b9f38ed5d0bdd6482431a075b2cb99a
+037. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/04_CANONICAL_NAMING_AND_VARIABLES.md | bytes=38416 | sha256=9d42166580537ff6684169fe12983e3aae2237133ef3ac5e0bd2707de1be3b99
+038. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/05_CURRENT_STATE_BASELINE.md | bytes=29320 | sha256=a6b7d6c6495a1b32203ee08bd44b5bbb4a2792e55d61e08f63e928796a8a3251
+039. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/06_ROUTE_BY_ROUTE_ETHIKOS_UPGRADE_PLAN.md | bytes=34246 | sha256=b451799a5f8ed8eb0ea1d5e8be4dbccf1bd611f2fa098e0ad0c31f7600950d89
+040. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/07_API_AND_SERVICE_CONTRACTS.md | bytes=41133 | sha256=092bfe82ef9f4bcbb31bb731fe298acbb79630835226a894738038b68ec78861
+041. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/08_DATA_MODEL_AND_MIGRATION_PLAN.md | bytes=47559 | sha256=b83853c2b000e3f8b8b1b5b5add01a3bc6f9ce45cede69b3bdeabf2f345e400a
+042. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/09_SMART_VOTE_EKOH_READING_CONTRACT.md | bytes=34332 | sha256=88d6a04ada7a672966a3839da4568f9d64fb265582cb134f5d4eb2bd229518ab
+043. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/10_FIRST_PASS_INTEGRATION_MATRIX.md | bytes=46751 | sha256=70020466ed2f9d8b1a4c1a675e05c90545ab9593bfe5e40de6cdac1b429d27c3
+044. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/11_MIMIC_VS_ANNEX_RULEBOOK.md | bytes=27995 | sha256=90d3fe2b3c4d349720e216199bb5369fa941bdfa3750d38e6b9277ff0cf7b1f1
+045. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/12_CANONICAL_OBJECTS_AND_EVENTS.md | bytes=53037 | sha256=b11753cb48def4c1fe0dd5f02e31fbdd71918e25c9309f7fe1fcd23268e29a93
+046. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/13_PAYLOAD_SHAPES_AND_SERIALIZER_CONTRACTS.md | bytes=41408 | sha256=143346d2169401863b9f611aac2e11f9871edb2c0ba48e4b4207381730d0ad0a
+047. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/14_FRONTEND_ALIGNMENT_CONTRACT.md | bytes=33303 | sha256=6d5b2e5f0266b6c9598a01a109a30206a438dd236438cfd1bf09e477cd6938ca
+048. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/15_BACKEND_ALIGNMENT_CONTRACT.md | bytes=43515 | sha256=0d8cb40757b0a194f95e3d93852291a1b15b34c91a3b98e30c2e7c8a0db682f6
+049. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/16_TEST_AND_SMOKE_CONTRACT.md | bytes=28262 | sha256=08158e3ee2a0fa1296a97ff5a8d440d379fb6cd1a499f3bfb46f52324ccf1185
+050. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/17_KNOWN_BUGS_AND_NON_KINTSUGI_ITEMS.md | bytes=23385 | sha256=0830745c08d03d93bad817386d6929de20f08462e8ddeb46e3bc792d374562c3
+051. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/18_ADR_REGISTER.md | bytes=33979 | sha256=390468f1e477900f215148a1fdb5ecd403564ac5699cb757a18067329e955968
+052. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/19_OSS_CODE_READING_PLAN.md | bytes=36614 | sha256=8d145766c927b6eb571a231d7d90aebb37f4fa2dc06cfb395b3c3f8bd328c392
+053. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/20_AI_GENERATION_GUARDRAILS.md | bytes=36195 | sha256=b7894326ff28ca723c2e2b251d76e0d823d6b267ee6b5d2ea091f5ef806bd4f8
+054. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/21_KIALO_STYLE_ARGUMENT_MAPPING_CONTRACT.md | bytes=37786 | sha256=c73b8f8fb2524ca9e6c7cd6ac2cbdf3e6e870db7a722fcd5e6ff280d7e8a5cd7
+055. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/22_IMPLEMENTATION_BACKLOG_TEMPLATE.md | bytes=43991 | sha256=77491d44f9b1a9b91b952c39c7abd9d3961cfed8d2e28b1e803947f2126d0208
+056. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/23_WAVE1_IMPLEMENTATION_BACKLOG.md | bytes=39133 | sha256=3980fbe85df409e89d98b3190fae8dc5038b04078e145ebeef4170a3b0f906f2
+057. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/24_WAVE1_SLICE_REGISTER.md | bytes=36049 | sha256=4c389f3135100a6fc2ff84d3a535052a3f61bdc9f4ef8ce5e0b30687bc3eead9
+058. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/25_WAVE1_QA_CHECKLIST.md | bytes=30121 | sha256=ec3cc9296943ce7ebfb4cffc17f92206d1dda4cea7340f52064ed910602e3020
+059. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/27_EKOH_RATING_VISIBILITY_AND_ACCESS_CONTRACT.md | bytes=9136 | sha256=c7df0e8bc0735da99e97b1b309b9703cb1e81c8d84b6e5e865fc920e0519c3ba
+060. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kintsugi-upgrade-v1.md.md | bytes=10084 | sha256=56dc6c857b13327770310f358b14b4b1b6a640db564a9a57e9869025877f84ed
+061. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kompendio-v1.md.md | bytes=16056 | sha256=1b375d93d2d1c8012a62ef2e539699505bed3201a197bc44f847be697efd3027
+062. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/Konnaxion-kintsugi-and-kompendio-open-source-integration-map-v1.md | bytes=4284 | sha256=6bf94a0e689fce381fbcf9f0842218247add1c2cb6cc0024fefbb7f7ab74ee46
+063. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kintsugi-upgrade-plan-v1.md | bytes=18352 | sha256=bebcd4a16c40907bb0c9816973e07f9718ee0e416b46248550479391f6ecda91
+064. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kompendio-upgrade-plan-v1.md | bytes=8254 | sha256=a0aa14b54d11363de282743f327ddfbb02d8ab37daea760f9a1df66fa6ae6621
+065. [reference] [knowledge] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/SmartVote-EkoH-kintsugi-upgrade-v1.md | bytes=7459 | sha256=1f436c903a7b029bddd7dff0d63794c2997732465e2167f1f613b3d2cc5adb2b
+066. [reference] [knowledge] _BUG_HARVEST_REVIEW/LevelUpDiag/README.md | bytes=3838 | sha256=4c5868fff56fa849545f3ee1a9d208e2717d3c7409e066ec07b09a518d6f825b
+067. [reference] [knowledge] backend/konnaxion/ethikos_20260903_131935_Dump/00_START_HERE.instructions.md | bytes=2624 | sha256=87a6cc1dccbc35fdf27fc36d62ed3ccd820c4e0abcc29cd54094ad403278b53d
+068. [reference] [knowledge] backend/locale/README.md | bytes=1627 | sha256=c0a3e3896516b0c5526551fc06b6a3c58cd5cf9e1b810b2e848d68f6cd89e72f
+069. [reference] [knowledge] backend/README.md | bytes=3630 | sha256=dac04f29e1863559e19c57765fa2230912e30176a7c9ce25f55ea8bbccf7c9f0
+070. [reference] [knowledge] docs/demo-scenarios/ethikos/ETHIKOS_DEMO_IMPORTER.md | bytes=20852 | sha256=9b3d3e879682659f09e21addd9858230dd0351f3eafae411dfaccdbeee11baaa
+071. [reference] [knowledge] docs/demo-scenarios/ethikos/README.md | bytes=1434 | sha256=14af8597e9102e540a89cb922767e2c14ff751dbbf508d606d8c500b5b981105
+072. [reference] [knowledge] docs/KONNAXION_UPGRADE_TO_DO(credentialAnalyser).md | bytes=16778 | sha256=c5f1ffb360552bbef12c4faa39e0dc8e5a93fd86746ee72aa1dc728aa4aa4008
+073. [reference] [knowledge] docs/Konnaxion_UserWorkflow_Documentation_v0_1.md | bytes=38519 | sha256=d112abc7fe7192defe4e74f0461937aef76997c3cce2d2de71ff21232d51fedc
+074. [reference] [knowledge] docs/README.md | bytes=1901 | sha256=afda7638e8f10ca93e5baa571a6937c2216b7a654057a0974fcbae0dc66f9b55
+075. [reference] [knowledge] docs/status/2026-08-27-technical-maturity-assessment.md | bytes=5821 | sha256=3980af330b06e0df63b8a651da3f35af7dc6f83a97ae53078fddb6d2572742e8
+076. [reference] [knowledge] docs/status/2026-09-05-bug-harvest-mass-audit.md | bytes=6784 | sha256=3db4745bf1e9ec8dd5ec500ad9b757049933383a0e8a4af03fd911ef1ed2511f
+077. [reference] [knowledge] docs/status/2026-09-05-technical-maturity-assessment.md | bytes=11017 | sha256=3a560acd67b239b8be733073baaa00c73f85053bcb56960af52245ef6b75f230
+078. [reference] [knowledge] docs/status/2026-09-06-bug-harvest-real-findings.md | bytes=1457 | sha256=4b67cc1693cade313e7411e978c5b99d56b3ec72c0a38c3afd4fd2b8962d4ede
+079. [reference] [knowledge] docs/status/2026-09-06-bug-harvest-wave2a-mass-update.md | bytes=2583 | sha256=dfac143cf63a689cb9fa007738787d5c69963cbe49c469ee460e7f9c20df7be3
+080. [reference] [knowledge] docs/status/2026-09-06-bug-harvest-wave2b-mass-update.md | bytes=2265 | sha256=f146b18d9395495d98176cf57e29be8aefbc60cba66402efb750f20ec425fcbd
+081. [reference] [knowledge] docs/status/2026-09-06-bug-harvest-wave2c.md | bytes=1421 | sha256=f5eacaeaa3b356ae53b5122b94528fd19c83a1a9034a63a8776b44691ee02a91
+082. [reference] [knowledge] docs/status/2026-09-06-bug-harvest-wave2d.md | bytes=1228 | sha256=cd53dacd26b812db5e42f7a9780c21169a889cdfdb1be2afa1743b42ad22d718
+083. [reference] [knowledge] docs/status/2026-09-06-bug-harvest-wave2e-context-isolation.md | bytes=1056 | sha256=5b810dc788b2627d9580cef88c0851a0f3ed058df82f9625c17ce01667f87785
+084. [reference] [knowledge] docs/status/2026-09-06-technical-status-report-aligned.md | bytes=16358 | sha256=9a7627210d1829e5cff0bfd050a15bdd28170050827ab72b84b168dcb229786b
+085. [reference] [knowledge] docs/status/2026-09-06-technical-status-report-wave2-closed.md | bytes=22414 | sha256=8fc597b65f67dc9c759a8901527e264c7c7c4769676bc489ba4eacd7943ab79b
+086. [reference] [knowledge] docs/status/2026-09-08-technical-maturity-assessment.md | bytes=15716 | sha256=5b5da75e2fad5c1775cd2e969c1ae252dd43625185a2d6a9fd5fb9ceffebfe29
+087. [reference] [knowledge] docs/status/README.md | bytes=1659 | sha256=26aa7b6a22545f9ee17797ece94223e584ce887eb2774d66ed5630d1e20875a4
+088. [reference] [knowledge] docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md | bytes=5750 | sha256=16e1687c8efe23b88ca49c28e76b67fef97b85847b659e562d687f3dba956182
+089. [reference] [knowledge] docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md | bytes=7070 | sha256=58cc85463fce8c19b3f14b019b3e2b15e1625480efaa123a98943f735ab87dca
+090. [reference] [knowledge] docs/Technical-Reference/DEV_DOCKER_CHEATSHEET.md | bytes=6250 | sha256=fa25e913da4b5fd029e462d7b0d0a45a29aa9458e92bd2ec9a289ef2a24fad2a
+091. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference (Custom Tables).md | bytes=20225 | sha256=d7cd538a5f97c104635848378fcb64c62d5a3f440a85c7a8481c393f1779cc37
+092. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference.md | bytes=4698 | sha256=7fc886985ca3a70c61f6e1f35dae3ec678b91f0070b8e7721dc66b137cb8bbb7
+093. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion v14 - Documentation Index.md | bytes=1422 | sha256=bf4fb4433c43b55442ae1aead746b69d4edd56178cd3e81afde7155d0b364983
+094. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion v14 - Full-Stack Technical Specification.md | bytes=12495 | sha256=d476204db3043cd1036c38e8b5761f321d04883410829471957f5bb1b9bcfdeb
+095. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion v14 - Insights UI Reference.md | bytes=25777 | sha256=e9fb72cb4bec884a301cc392bd12a7d417cb8df05d4081decf5cabef393883b3
+096. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion v14 - Site Navigation Map.md | bytes=4714 | sha256=08da5ac8ab74c81bb3eb990f9c67cc6c321a88640f79803678eb269049c6de37
+097. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion v14 – Full-Stack Technical Specification.md | bytes=15909 | sha256=9a67097a9f40e31cadaf4392f04e938e09d8740b2b7e3fb543a6dd8545f7a420
+098. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion v14 – Functional Code-Name Inventory (Services & Hooks).md | bytes=14248 | sha256=bf59813f623f7172292f2ff19988830446247a975d9dc5063a6a5de33cdb0fa8
+099. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion v14 – Global Parameter Reference.md | bytes=8119 | sha256=5e3fb000bd1692b5a7b587ba207ae42f890df2b2ec9d598aa4b91ebc4621d9a9
+100. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module Config Parameters.md | bytes=11014 | sha256=c3719b824a95ebe8edfdaad6cffbf1bfdb9f629462fd6a232aabc4721b43f474
+101. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module UI Spec (Reporting & Analytics Frontend).md | bytes=25784 | sha256=32a4a26f9b48de6c45354412ee62c19cf1ac1966f88345029461b0c40fae17c0
+102. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion v14 – Site Navigation Map (Top-Level Routes).md | bytes=8297 | sha256=c5982e1ba1b43a364aae1b596fe4e05dd2a770913d4d7084cd0a3f106a76869e
+103. [reference] [knowledge] docs/Technical-Reference/DocV14/Konnaxion  v14 - Documentation INDEX.docx.md | bytes=5319 | sha256=5c7fc4bf11461a75ccf4ce14fecbc98955943066ee352457e4ed3c8631c50e24
+104. [reference] [knowledge] docs/Technical-Reference/GLOSSARY.md | bytes=4438 | sha256=d1fac795507201143ad7354eb2f19d6c1b69b64641e3faef3b68541dcba53d1b
+105. [reference] [knowledge] docs/Technical-Reference/HowToNest-wrap-shell.md | bytes=12233 | sha256=de14a3778f86768bf11cf478b961df287529c349ac5d2302e2bdf82be19903d6
+106. [reference] [knowledge] docs/Technical-Reference/Konnaxion_Frontend_Deployment_Runbook.md | bytes=4310 | sha256=b7d9a4f6b166a2b623edd8281e1748c074c07d6367be8d8e71240d47abe5fe1c
+107. [reference] [knowledge] docs/Technical-Reference/namecheap-vps.md | bytes=6413 | sha256=a607b62c281c801fb28eeaf9a96b18a10276c341883c07c7b52330d7cee97861
+108. [reference] [knowledge] docs/Technical-Reference/sub-modules_description/CertifiKation (Skills & Certification) — sub‑module under KonnectED.md | bytes=4816 | sha256=13b57e8f28ae99e0cf81cf206d39b2df135228dcf10f893b5cf92664863c5751
+109. [reference] [knowledge] docs/Technical-Reference/sub-modules_description/EkoH (Reputation & Expertise) — first sub‑module under Kollective Intelligence.md | bytes=4821 | sha256=ea74104a4cad1fdba9142a3b156d8eab6c7c3b33f44e5119b4cffca75a6df0cd
+110. [reference] [knowledge] docs/Technical-Reference/sub-modules_description/Knowledge (Collaborative Learning Library) — sub‑module under KonnectED.md | bytes=4457 | sha256=d31bdf7b591cab7408f9112d149d2deddf9fe1a5aa7a2dc3fd17a7bad9ffcdcd
+111. [reference] [knowledge] docs/Technical-Reference/sub-modules_description/Konservation (Creative Content & Cultural Preservation) — sub‑module under Kreative.md | bytes=5664 | sha256=8e659b5a1b8023676fefe830c48e5a312446797cdd4f2a0442fb8572f70730e1
+112. [reference] [knowledge] docs/Technical-Reference/sub-modules_description/Konstruct (Project Collaboration Spaces) — first sub‑module under keenKonnect.md | bytes=5401 | sha256=ceb6e1e452c27bf61b9fe8a4a77431aabef8eafc1ae96cf46174e938e32cda63
+113. [reference] [knowledge] docs/Technical-Reference/sub-modules_description/Konsultations (Public Consultations & Feedback) — sub‑module under ethiKos.md | bytes=4664 | sha256=ebb0219cb85e6e9dbe566b32239be0df3ef104b75971c7317d621c4811ab2f36
+114. [reference] [knowledge] docs/Technical-Reference/sub-modules_description/Kontact (Collaboration & Networking) — sub‑module under Kreative.md | bytes=4628 | sha256=cf3b050bc4b419a986505dab954a53de7130301638abb7acd7aa3d5cd0b7193f
+115. [reference] [knowledge] docs/Technical-Reference/sub-modules_description/Korum (Structured Debates) — sub‑module under ethiKos.md | bytes=4503 | sha256=61ae3dc9ba9a84a0b0334fb7ea4255af53c59c1c628134fca037cdfaaa573417
+116. [reference] [knowledge] docs/Technical-Reference/sub-modules_description/Smart Vote (Weighted Voting System) — second sub‑module under Kollective Intelligence.md | bytes=4299 | sha256=903fe4ccb3692289fc87b21039dfb4e52adf5b46f43dd6c2271d339bbc0e8dff
+117. [reference] [knowledge] docs/Technical-Reference/sub-modules_description/Stockage (Secure Repository & Versioned Storage) — second sub‑module under keenKonnect.md | bytes=5014 | sha256=202621aacc3a8d0dd78e3305d922cdd0dbbf1cf30a676be6ca911bcb9c95bee3
+118. [reference] [knowledge] docs/Technical-Reference/UpdateBackendAndMigrateAndDocker.md | bytes=2015 | sha256=4b96c448ec8242bf561cf6832415a8efa51a5703013daa27218691ac50ad8726
+119. [reference] [knowledge] frontend/app/ethikos_20260903_132014_Dump/00_START_HERE.instructions.md | bytes=2792 | sha256=16682ce56457cf5a9a190d1045558de40e7218ece27bde2c2cb3f49c2a449bff
+120. [reference] [knowledge] frontend/README.md | bytes=6139 | sha256=98131c561b9e7650a5e3e7779b1a79478563fc5e74249ea7ac1a8d1331a0c9ce
+121. [reference] [knowledge] README.md | bytes=10017 | sha256=a90f1f2903709a31b4521234ab30e5c0ed38cb8cf397529ef62c0f7d164bf230
+122. [reference] [knowledge] seed-data/ethikos/canada_quebec_public_debates_2026_inventory.md | bytes=56078 | sha256=943f8cf9e1fdf2f9dadf41c53a71216854115f08716166b0672df6e6a52d6e3b
 
 
 ================================================================================================
@@ -278,7 +277,10 @@ EXCLUDED FILES
 
 ================================================================================================
 FILE: wiki/CertifiKation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 7f05825c00c1637aca55b20a1670d0d4b4530c75c1a1071f46c193ae05f76aae
+CONTENT_BYTES: 946
 ================================================================================================
 
 # CertifiKation — KonnectED Certification Capability
@@ -324,7 +326,10 @@ Certification state remains KonnectED-owned. An external attestation or interope
 
 ================================================================================================
 FILE: wiki/EkoH.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: c9f37ca75e07d970bda4917373446a07a62fca6c86b4b8a1696f8d53532ac4fe
+CONTENT_BYTES: 2009
 ================================================================================================
 
 # EkoH — Expertise, Ethics and Rating Access
@@ -386,7 +391,10 @@ K-Port is an **EkoH evidence application/gateway**. It can normalize/qualify evi
 
 ================================================================================================
 FILE: wiki/Glossary.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: c85c403f9fc891452fcec07271de2c7afbec728ee4eab2bb684ff8787ea8472e
+CONTENT_BYTES: 2392
 ================================================================================================
 
 # Konnaxion Glossary
@@ -477,7 +485,10 @@ A controlled boundary that validates, normalizes, qualifies or routes data. A ga
 
 ================================================================================================
 FILE: wiki/Home.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: e3627b808a1c4100126cfad965c60b2ceaac2d69292e3a48e0f4dda91e4f342d
+CONTENT_BYTES: 2715
 ================================================================================================
 
 # Konnaxion
@@ -561,7 +572,10 @@ No active Orgo, Kristal or SemantiK Architect adapter is present in the supplied
 
 ================================================================================================
 FILE: wiki/Implementation-Alignment.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: a52f33bf48da3a4237e212118aca2bb4929b425e339ea35601bc989268dee2d6
+CONTENT_BYTES: 3203
 ================================================================================================
 
 # Konnaxion — Implementation Alignment
@@ -639,7 +653,10 @@ No active Konnaxion adapter is present for Orgo, Kristal or SemantiK Architect i
 
 ================================================================================================
 FILE: wiki/Knowledge.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 0730dd4e36baeb03c2a17b1810d1f0cbca7e75773c72c51ae52ef2d92d800cc3
+CONTENT_BYTES: 945
 ================================================================================================
 
 # Knowledge — KonnectED Learning Resources
@@ -682,7 +699,10 @@ KonnectED owns the learning-resource/progress state. Search or recommendation su
 
 ================================================================================================
 FILE: wiki/Konnaxion-Technical-Architecture-&-Services.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: d3953c1429182faf510a7e18246d1a34dd98a251844ccdc5581e821b2e6188dc
+CONTENT_BYTES: 5349
 ================================================================================================
 
 # Konnaxion – Technical Architecture & Services
@@ -928,7 +948,10 @@ When Konnaxion is deployed under kOA-Linux, kOA-Linux owns host/platform respons
 
 ================================================================================================
 FILE: wiki/Konservation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 64255b9c670da3b6dac86674870a18df208627a3598c79fe097f17df6bc0da0d
+CONTENT_BYTES: 859
 ================================================================================================
 
 # Konservation — Kreative Preservation and Archives
@@ -972,7 +995,10 @@ Archive/catalogue/presentation metadata remains Kreative-owned. AI catalogue ass
 
 ================================================================================================
 FILE: wiki/Konstruct.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 73f1a81e467595ebcd040bb52fe41a8b6f097cfb9d17e35d9c0877d90757a129
+CONTENT_BYTES: 857
 ================================================================================================
 
 # Konstruct — keenKonnect Project Collaboration
@@ -1016,7 +1042,10 @@ keenKonnect can display or consume declared EkoH context, but EkoH does not beco
 
 ================================================================================================
 FILE: wiki/Konsultations.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 9ddae0a14418c0b48891c1ec31c3d3cda976645abf09620843735e514d30b0db
+CONTENT_BYTES: 1386
 ================================================================================================
 
 # Konsultations — Consultation and Formal Participation
@@ -1058,7 +1087,10 @@ No active Orgo adapter is implemented in the current Konnaxion snapshot. A futur
 
 ================================================================================================
 FILE: wiki/Kontact.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 69ebd975e5bc96d7e7d2a305b6943c0b51659b9256a38fb347ba609e2b6f0cee
+CONTENT_BYTES: 786
 ================================================================================================
 
 # Kontact — Networking and Opportunities Surface
@@ -1088,7 +1120,10 @@ If a dedicated backend capability is added later, its ownership must be declared
 
 ================================================================================================
 FILE: wiki/Kontrol.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 77c2df1b8dc7edc479b75b4fe682b6fe675bb7a7b34b7fd2fe3bb6c7b91901a1
+CONTENT_BYTES: 671
 ================================================================================================
 
 # Kontrol — Administration and Moderation
@@ -1127,7 +1162,10 @@ Kontrol may present and administrate multiple Konnaxion domains, but the existen
 
 ================================================================================================
 FILE: wiki/Korum.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 0ede27c038b633ebaf4093b1808de075462b2fe6835c608ad025780af8fdac0e
+CONTENT_BYTES: 1496
 ================================================================================================
 
 # Korum — Structured Deliberation
@@ -1177,7 +1215,10 @@ Korum source state can be an input to a Smart Vote reading. Smart Vote reads the
 
 ================================================================================================
 FILE: wiki/Smart-Vote.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: a018384fb077e9c6fec23ba5127c9878dac8b6b05a195cf4c47afe866d410713
+CONTENT_BYTES: 1901
 ================================================================================================
 
 # Smart Vote — Contextual Readings
@@ -1251,7 +1292,10 @@ The older ballot path still contains `Vote.weighted_value` and `VoteResult.sum_w
 
 ================================================================================================
 FILE: wiki/Stockage.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: b871781be7f0c120748524bf83997bf0ce327125428f76b2d1f7e3dac62235e0
+CONTENT_BYTES: 1013
 ================================================================================================
 
 # Stockage — keenKonnect Knowledge and Project Resources
@@ -1291,7 +1335,10 @@ Do not invent versioning/ACL persistence tables unless they exist in the code/sc
 
 ================================================================================================
 FILE: wiki/TeamBuilder.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 5844cb8450a89de3cf05913dadb8e2ef1a484a192adfa64b464d84413d59a3e0
+CONTENT_BYTES: 705
 ================================================================================================
 
 # TeamBuilder — Problem and Team Formation
@@ -1329,7 +1376,10 @@ A TeamBuilder `Problem`, `BuilderSession` or team is not an Orgo Case/Task by id
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Konnaxion_User_Workflows.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a6ac49c9193a9a0dd0712b05480bc0ec9cf9a1fe93a3c7f68d309a8c6d87a039
+CONTENT_BYTES: 2887
 ================================================================================================
 
 # Konnaxion — User Workflows
@@ -1461,7 +1511,10 @@ No concrete Orgo/Kristal/SemantiK Architect workflow is implemented in the curre
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/status/2026-08-28-technical-maturity-assessment.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0cbdf32a387dff582bc1840193eedaa3ba2c370e2ab50cf873a97b2520185cfb
+CONTENT_BYTES: 15898
 ================================================================================================
 
 # Konnaxion Technical Maturity Assessment
@@ -1909,7 +1962,10 @@ Suggested short description:
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/status/ETHIKOS_EKOH_SMARTVOTE_DELIVERY_WORKFLOW.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 92f2989dd33424a24c7cdff95ef6b2a227748d473ee661e627a6ffd8fb3d4cc7
+CONTENT_BYTES: 4901
 ================================================================================================
 
 # ethiKos / EkoH / Smart Vote — Delivery Workflow
@@ -2065,7 +2121,10 @@ Expected console summary is two passed tests because Playwright reports the auth
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH - System Overview.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bb1d5b7bc1eed33e8b0c04421076ee28a01dc3ac35dd71763b0c646a68add9d1
+CONTENT_BYTES: 1728
 ================================================================================================
 
 # EkoH — System Overview
@@ -2138,7 +2197,10 @@ EkoH supplies context. Smart Vote owns the reading. The source civic domain owns
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Data Model.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7ee22efbcd42297f264ecb5fe0ce36d43e96b733cdb745ff81c3cab4be016298
+CONTENT_BYTES: 1565
 ================================================================================================
 
 # EkoH and Smart Vote — Data Model
@@ -2212,7 +2274,10 @@ A reading is not currently represented by a dedicated persisted model in the ins
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Technical Specification.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 619b1bcab623d2d5fdd9df15732e1a8551e6558d0d1c8f072f531107eec2b6c6
+CONTENT_BYTES: 2286
 ================================================================================================
 
 # EkoH and Smart Vote — Technical Specification
@@ -2285,7 +2350,10 @@ See `../CODE_ALIGNMENT_NOTES.md` for exact paths.
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-module-file-architecture.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f721021486ac9291891d4e7acc46e026dae7ccd701930f1474be1299b8ffb002
+CONTENT_BYTES: 2865
 ================================================================================================
 
 F**ile architecture for the EkoH module alone** (everything lives under `modules/ekoh-smartvote/ekoh/`):
@@ -2350,7 +2418,10 @@ Key points:
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-canonical-db-schema-v1-1.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 43020b08a0e55a0bced19874130139fc6c4a611cd81eb16f50e1aa013bf7adc2
+CONTENT_BYTES: 20054
 ================================================================================================
 
 title: 01-db\_schema  
@@ -2775,7 +2846,10 @@ Once this DDL is executed, the EkoH \+ Smart Vote module is **schema-complete, i
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-definitive-module-documentation-set-v1-0.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8d07cfc6e0d73e842eaf1cb7c33590add0a9d5bcb633edc734a93bc1e40a0038
+CONTENT_BYTES: 68542
 ================================================================================================
 
 **`01-db_schema.md` — *Canonical Database Schema for EkoH & Smart Vote***  
@@ -4415,7 +4489,10 @@ for future stand-alone deployments.
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-system-overview-smart-vote-ecosystem.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b1dafcb4ce3ecb9028f31595e55f37bcb25a08b5d768b5d2766e802e48c8b25b
+CONTENT_BYTES: 5295
 ================================================================================================
 
 # EkoH System Overview
@@ -4580,7 +4657,10 @@ The profile is context. It is not a fixed global Smart Vote weight.
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/konnaxion-smart-vote-weighted-voting-system-structure-and-logic-internal-white-paper.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 507fcbee41c3ca3378444bec3ae5b7aff675b06acdaff9433f793f169f947dc9
+CONTENT_BYTES: 8214
 ================================================================================================
 
 # Konnaxion Smart Vote — Contextual Collective-Intelligence Readings
@@ -4794,7 +4874,10 @@ That is a more useful form of collective intelligence than either an unstructure
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/Smart Vote - Reading Contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 29a63181e2846021a683b3fb1e5af1e7d2befca975cc09df87c6bd0c2b749af2
+CONTENT_BYTES: 2187
 ================================================================================================
 
 # Smart Vote — Reading Contract
@@ -4886,7 +4969,10 @@ Participant-level details in a reading are filtered through EkoH rating access. 
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-consultation-simulations.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 47a82d05bf25240f9bb17d253a6b38995da301827236a7e0ff46034f2a46fe8b
+CONTENT_BYTES: 36173
 ================================================================================================
 
 # **Smart Vote Consultation Simulations**
@@ -5092,7 +5178,10 @@ Chaque barre est proportionnelle au **poids de vote** calculé : on multiplie la
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-empower-ux-naming-guidelines.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 24b01e6ba4a2cfbd9133e516a4c1e580993cd838ff84ee0140b944e18236f1a7
+CONTENT_BYTES: 3954
 ================================================================================================
 
 Unifying everything under Smart Vote and dropping the word “Like” is consistent with both your internal docs and the wiki.
@@ -5185,7 +5274,10 @@ If you want, next step I can outline exact string names (EN keys) and states for
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-system-in-konnaxion-technical-specification.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dfaedc9eeb51777217b3d37c7c61cf9280e35f1e26bb165d4c78767b744e612c
+CONTENT_BYTES: 6707
 ================================================================================================
 
 # Smart Vote in Konnaxion — Technical Specification
@@ -5415,7 +5507,10 @@ Until that endpoint exists, frontend pages must not fabricate a Smart Vote readi
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos-kintsugi-upgrade-plan-v1.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7a1638851b7c66cb13bbe1aba969c8b6977d60fe81386832bd09c112b1445d5a
+CONTENT_BYTES: 15374
 ================================================================================================
 
 # ethiKos — Unified Civic Deliberation & Decision Engine
@@ -5955,7 +6050,10 @@ That keeps strategy and architecture-legitimacy framing separate from operationa
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/00_KINTSUGI_START_HERE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1039f75e4838cb5df7c7fbdc9cca3c3cccc7f87d09323d3aafc064b692c30c4f
+CONTENT_BYTES: 27130
 ================================================================================================
 
 # 00 — Kintsugi Start Here
@@ -6808,7 +6906,10 @@ FINAL_BINDING_STATEMENT:
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/01_ETHIKOS_KINTSUGI_EXECUTION_STRATEGY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ac923db7e5d5c03f95b36ac6eb0b89e7e4e05f3cc1aab9dda1b4cf358d65aff9
+CONTENT_BYTES: 27913
 ================================================================================================
 
 # 01 — ethiKos Kintsugi Execution Strategy
@@ -7838,7 +7939,10 @@ Source basis: existing Kintsugi master draft, boundary contract, clean-slate pla
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/02_SOURCE_OF_TRUTH_AND_DRIFT_CONTROL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3118237094656ffce34d3fa8e90437de2ffa3421221b5cf7a6ef78ef4049a4eb
+CONTENT_BYTES: 28486
 ================================================================================================
 
 # 02 — Source of Truth and Drift Control
@@ -9086,7 +9190,10 @@ This document is the drift-control root for the ethiKos Kintsugi upgrade.
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/03_BOUNDARIES_AND_OWNERSHIP_CONTRACTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5d1c4984dca835a688f131c6c4baf4888b9f38ed5d0bdd6482431a075b2cb99a
+CONTENT_BYTES: 38639
 ================================================================================================
 
 # 03 — Boundaries and Ownership Contracts
@@ -10320,7 +10427,10 @@ EkoH owns both its rating ledger and disclosure decisions for that ledger. `Conf
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/04_CANONICAL_NAMING_AND_VARIABLES.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9d42166580537ff6684169fe12983e3aae2237133ef3ac5e0bd2707de1be3b99
+CONTENT_BYTES: 38416
 ================================================================================================
 
 # 04 — Canonical Naming and Variables
@@ -11649,7 +11759,10 @@ These names are canonical. Business-role names such as CEO or Supervisor are not
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/05_CURRENT_STATE_BASELINE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a6b7d6c6495a1b32203ee08bd44b5bbb4a2792e55d61e08f63e928796a8a3251
+CONTENT_BYTES: 29320
 ================================================================================================
 
 # 05 — Current State Baseline
@@ -12638,7 +12751,10 @@ That defect is a targeted runtime/UI bug, not a reason to redesign Ethikos archi
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/06_ROUTE_BY_ROUTE_ETHIKOS_UPGRADE_PLAN.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b451799a5f8ed8eb0ea1d5e8be4dbccf1bd611f2fa098e0ad0c31f7600950d89
+CONTENT_BYTES: 34246
 ================================================================================================
 
 # 06 — Route-by-Route ethiKos Upgrade Plan
@@ -14316,7 +14432,10 @@ Canonical final mapping:
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/07_API_AND_SERVICE_CONTRACTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 092bfe82ef9f4bcbb31bb731fe298acbb79630835226a894738038b68ec78861
+CONTENT_BYTES: 41133
 ================================================================================================
 
 # 07 — API and Service Contracts
@@ -16247,7 +16366,10 @@ If a new API or service path does not map clearly to Korum, Konsultations, Smart
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/08_DATA_MODEL_AND_MIGRATION_PLAN.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b83853c2b000e3f8b8b1b5b5add01a3bc6f9ce45cede69b3bdeabf2f345e400a
+CONTENT_BYTES: 47559
 ================================================================================================
 
 # 08 — Data Model and Migration Plan
@@ -18654,7 +18776,10 @@ V4.1 adds `RatingVisibilitySetting`, `RatingAccessScope`, `RatingScopeSubject`, 
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/09_SMART_VOTE_EKOH_READING_CONTRACT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 88d6a04ada7a672966a3839da4568f9d64fb265582cb134f5d4eb2bd229518ab
+CONTENT_BYTES: 34332
 ================================================================================================
 
 # 09 — Smart Vote + EkoH Reading Contract
@@ -20127,7 +20252,10 @@ EkoH rating visibility and Smart Vote contextual influence are different contrac
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/10_FIRST_PASS_INTEGRATION_MATRIX.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 70020466ed2f9d8b1a4c1a675e05c90545ab9593bfe5e40de6cdac1b429d27c3
+CONTENT_BYTES: 46751
 ================================================================================================
 
 # 10 — First-Pass Integration Matrix
@@ -21679,7 +21807,10 @@ FINAL_BINDING_STATEMENT:
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/11_MIMIC_VS_ANNEX_RULEBOOK.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 90d3fe2b3c4d349720e216199bb5369fa941bdfa3750d38e6b9277ff0cf7b1f1
+CONTENT_BYTES: 27995
 ================================================================================================
 
 # 11 — Mimic vs Annex Rulebook
@@ -22889,7 +23020,10 @@ Source basis: Kintsugi clean-slate scope, the existing Kintsugi master draft, th
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/12_CANONICAL_OBJECTS_AND_EVENTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b11753cb48def4c1fe0dd5f02e31fbdd71918e25c9309f7fe1fcd23268e29a93
+CONTENT_BYTES: 53037
 ================================================================================================
 
 # 12 — Canonical Objects and Events
@@ -24078,7 +24212,10 @@ This document is the canonical object and event registry for the ethiKos Kintsug
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/13_PAYLOAD_SHAPES_AND_SERIALIZER_CONTRACTS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 143346d2169401863b9f611aac2e11f9871edb2c0ba48e4b4207381730d0ad0a
+CONTENT_BYTES: 41408
 ================================================================================================
 
 # 13 — Payload Shapes and Serializer Contracts
@@ -26114,7 +26251,10 @@ Canonical fields added to the EkoH profile projection: `rating_visibility`, `rat
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/14_FRONTEND_ALIGNMENT_CONTRACT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6d5b2e5f0266b6c9598a01a109a30206a438dd236438cfd1bf09e477cd6938ca
+CONTENT_BYTES: 33303
 ================================================================================================
 
 # 14 — Frontend Alignment Contract
@@ -27532,7 +27672,10 @@ Canonical EkoH data access moves to `frontend/services/ekoh.ts`. Reusable displa
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/15_BACKEND_ALIGNMENT_CONTRACT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0d8cb40757b0a194f95e3d93852291a1b15b34c91a3b98e30c2e7c8a0db682f6
+CONTENT_BYTES: 43515
 ================================================================================================
 
 # 15 — Backend Alignment Contract
@@ -29225,7 +29368,10 @@ All backend consumers that disclose individual EkoH rating data MUST use `konnax
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/16_TEST_AND_SMOKE_CONTRACT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 08158e3ee2a0fa1296a97ff5a8d440d379fb6cd1a499f3bfb46f52324ccf1185
+CONTENT_BYTES: 28262
 ================================================================================================
 
 # 16 — Test and Smoke Contract
@@ -30328,7 +30474,10 @@ Tests MUST cover public, private, self, staff compatibility, direct scope grants
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/17_KNOWN_BUGS_AND_NON_KINTSUGI_ITEMS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0830745c08d03d93bad817386d6929de20f08462e8ddeb46e3bc792d374562c3
+CONTENT_BYTES: 23385
 ================================================================================================
 
 # 17 — Known Bugs and Non-Kintsugi Items
@@ -31164,7 +31313,10 @@ If an item does not clarify the Kintsugi architecture, route mapping, ownership 
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/18_ADR_REGISTER.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 390468f1e477900f215148a1fdb5ecd403564ac5699cb757a18067329e955968
+CONTENT_BYTES: 33979
 ================================================================================================
 
 # 18 — ADR Register
@@ -32263,7 +32415,10 @@ Any generated document or implementation plan that violates this register must b
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/19_OSS_CODE_READING_PLAN.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8d145766c927b6eb571a231d7d90aebb37f4fa2dc06cfb395b3c3f8bd328c392
+CONTENT_BYTES: 36614
 ================================================================================================
 
 # 19 — OSS Code Reading Plan
@@ -33662,7 +33817,10 @@ FINAL_CONTRACT:
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/20_AI_GENERATION_GUARDRAILS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b7894326ff28ca723c2e2b251d76e0d823d6b267ee6b5d2ea091f5ef806bd4f8
+CONTENT_BYTES: 36195
 ================================================================================================
 
 # 20 — AI Generation Guardrails
@@ -35239,7 +35397,10 @@ FINAL_BINDING_STATEMENT:
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/21_KIALO_STYLE_ARGUMENT_MAPPING_CONTRACT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c73b8f8fb2524ca9e6c7cd6ac2cbdf3e6e870db7a722fcd5e6ff280d7e8a5cd7
+CONTENT_BYTES: 37786
 ================================================================================================
 
 # 21 — Kialo-style Argument Mapping Contract
@@ -36789,7 +36950,10 @@ Source basis: the Kialo core corpus for discussion topology, roles, sources, vot
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/22_IMPLEMENTATION_BACKLOG_TEMPLATE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 77491d44f9b1a9b91b952c39c7abd9d3961cfed8d2e28b1e803947f2126d0208
+CONTENT_BYTES: 43991
 ================================================================================================
 
 # 22 — Implementation Backlog Template
@@ -38714,7 +38878,10 @@ This document is the canonical template for converting the ethiKos Kintsugi docu
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/23_WAVE1_IMPLEMENTATION_BACKLOG.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3980fbe85df409e89d98b3190fae8dc5038b04078e145ebeef4170a3b0f906f2
+CONTENT_BYTES: 39133
 ================================================================================================
 
 # 23 — Wave 1 Implementation Backlog
@@ -39985,7 +40152,10 @@ The implementation must land inside existing /ethikos/* and approved /api/* surf
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/24_WAVE1_SLICE_REGISTER.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4c389f3135100a6fc2ff84d3a535052a3f61bdc9f4ef8ce5e0b30687bc3eead9
+CONTENT_BYTES: 36049
 ================================================================================================
 
 # 24 — Wave 1 Slice Register
@@ -41338,7 +41508,10 @@ Kintsugi is the route-by-route strengthening of ethiKos.
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/25_WAVE1_QA_CHECKLIST.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ec3cc9296943ce7ebfb4cffc17f92206d1dda4cea7340f52064ed910602e3020
+CONTENT_BYTES: 30121
 ================================================================================================
 
 # 25 — Wave 1 QA Checklist
@@ -42320,7 +42493,10 @@ Any rejection trigger requires either:
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/27_EKOH_RATING_VISIBILITY_AND_ACCESS_CONTRACT.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c7df0e8bc0735da99e97b1b309b9703cb1e81c8d84b6e5e865fc920e0519c3ba
+CONTENT_BYTES: 9136
 ================================================================================================
 
 # 27 — EkoH Rating Visibility and Access Contract
@@ -42675,7 +42851,10 @@ This contract extends the existing Kintsugi ownership rules; it does not replace
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kintsugi-upgrade-v1.md.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 56dc6c857b13327770310f358b14b4b1b6a640db564a9a57e9869025877f84ed
+CONTENT_BYTES: 10084
 ================================================================================================
 
 # **keenKonnect — Kintsugi v1 (Hybrid)**
@@ -42955,7 +43134,10 @@ Kintsugi v1 stands on the shoulders of these open-source projects and the people
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kompendio-v1.md.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1b375d93d2d1c8012a62ef2e539699505bed3201a197bc44f847be697efd3027
+CONTENT_BYTES: 16056
 ================================================================================================
 
 # keenKonnect — Kompendio (v1)
@@ -43538,7 +43720,10 @@ Its core rule is simple:
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/Konnaxion-kintsugi-and-kompendio-open-source-integration-map-v1.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6bf94a0e689fce381fbcf9f0842218247add1c2cb6cc0024fefbb7f7ab74ee46
+CONTENT_BYTES: 4284
 ================================================================================================
 
 # **Konnaxion: Kintsugi \+ Kompendio Open-Source Integration Map**
@@ -43583,7 +43768,10 @@ This inventory is structured in two layers that sit **on top of Konnaxion**:
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kintsugi-upgrade-plan-v1.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bebcd4a16c40907bb0c9816973e07f9718ee0e416b46248550479391f6ecda91
+CONTENT_BYTES: 18352
 ================================================================================================
 
 # Konnaxion v14 — KonnectED Upgrade \- Kintsugi
@@ -44120,7 +44308,10 @@ KonnectED evolves into:
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kompendio-upgrade-plan-v1.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a0aa14b54d11363de282743f327ddfbb02d8ab37daea760f9a1df66fa6ae6621
+CONTENT_BYTES: 8254
 ================================================================================================
 
 # **KonnectED Upgrade  \- Kompendio (Plan v1)**
@@ -44334,7 +44525,10 @@ Kompendio KonnectED v1 is “done” when:
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/SmartVote-EkoH-kintsugi-upgrade-v1.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1f436c903a7b029bddd7dff0d63794c2997732465e2167f1f613b3d2cc5adb2b
+CONTENT_BYTES: 7459
 ================================================================================================
 
 # **SmartVote / EkoH — Kintsugi v1**
@@ -44530,7 +44724,10 @@ This is the SmartVote-focused analogue of the ethiKos pipeline stages.
 
 ================================================================================================
 FILE: _BUG_HARVEST_REVIEW/LevelUpDiag/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4c5868fff56fa849545f3ee1a9d208e2717d3c7409e066ec07b09a518d6f825b
+CONTENT_BYTES: 3838
 ================================================================================================
 
 # Konnaxion LevelUpDiag — Upgraded v3
@@ -44647,7 +44844,10 @@ Les noms LevelUpDiag v3 sont désormais les seules entrées d'installation/confi
 
 ================================================================================================
 FILE: backend/konnaxion/ethikos_20260903_131935_Dump/00_START_HERE.instructions.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 87a6cc1dccbc35fdf27fc36d62ed3ccd820c4e0abcc29cd54094ad403278b53d
+CONTENT_BYTES: 2624
 ================================================================================================
 
 # START HERE — Instructions for AI
@@ -44718,7 +44918,10 @@ Navigation rule:
 
 ================================================================================================
 FILE: backend/locale/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c0a3e3896516b0c5526551fc06b6a3c58cd5cf9e1b810b2e848d68f6cd89e72f
+CONTENT_BYTES: 1627
 ================================================================================================
 
 # Translations
@@ -44757,7 +44960,10 @@ The production image runs `compilemessages` automatically at build time, so as l
 
 ================================================================================================
 FILE: backend/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dac04f29e1863559e19c57765fa2230912e30176a7c9ce25f55ea8bbccf7c9f0
+CONTENT_BYTES: 3630
 ================================================================================================
 
 # Konnaxion
@@ -44861,7 +45067,10 @@ See detailed [cookiecutter-django Docker documentation](https://cookiecutter-dja
 
 ================================================================================================
 FILE: docs/demo-scenarios/ethikos/ETHIKOS_DEMO_IMPORTER.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9b3d3e879682659f09e21addd9858230dd0351f3eafae411dfaccdbeee11baaa
+CONTENT_BYTES: 20852
 ================================================================================================
 
 # ethiKos Demo Importer — Integrated Tool Documentation
@@ -46122,7 +46331,10 @@ The existing ethiKos app renders the imported data through normal routes.
 
 ================================================================================================
 FILE: docs/demo-scenarios/ethikos/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 14af8597e9102e540a89cb922767e2c14ff751dbbf508d606d8c500b5b981105
+CONTENT_BYTES: 1434
 ================================================================================================
 
 # ethiKos Demo Scenario JSON Pack
@@ -46153,7 +46365,10 @@ These files are ready-to-import demo scenario payloads for the ethiKos Demo Impo
 
 ================================================================================================
 FILE: docs/KONNAXION_UPGRADE_TO_DO(credentialAnalyser).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c5f1ffb360552bbef12c4faa39e0dc8e5a93fd86746ee72aa1dc728aa4aa4008
+CONTENT_BYTES: 16778
 ================================================================================================
 
 # Konnaxion — Upgrade To-To
@@ -46820,7 +47035,10 @@ No new application is required for this upgrade.
 
 ================================================================================================
 FILE: docs/Konnaxion_UserWorkflow_Documentation_v0_1.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d112abc7fe7192defe4e74f0461937aef76997c3cce2d2de71ff21232d51fedc
+CONTENT_BYTES: 38519
 ================================================================================================
 
 # Konnaxion — Documentation légère des User Workflows
@@ -48123,7 +48341,10 @@ Les prochaines versions peuvent ajouter des fiches workflow plus détaillées sa
 
 ================================================================================================
 FILE: docs/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: afda7638e8f10ca93e5baa571a6937c2216b7a654057a0974fcbae0dc66f9b55
+CONTENT_BYTES: 1901
 ================================================================================================
 
 # Konnaxion — Documentation
@@ -48166,7 +48387,10 @@ A stable source event or civic state may be interpreted through one or more expl
 
 ================================================================================================
 FILE: docs/status/2026-08-27-technical-maturity-assessment.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3980af330b06e0df63b8a651da3f35af7dc6f83a97ae53078fddb6d2572742e8
+CONTENT_BYTES: 5821
 ================================================================================================
 
 # Konnaxion Technical Maturity Assessment
@@ -48354,7 +48578,10 @@ Suggested short description:
 
 ================================================================================================
 FILE: docs/status/2026-09-05-bug-harvest-mass-audit.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3db4745bf1e9ec8dd5ec500ad9b757049933383a0e8a4af03fd911ef1ed2511f
+CONTENT_BYTES: 6784
 ================================================================================================
 
 # Konnaxion Bug Harvest — mass audit 2026-09-05
@@ -48471,7 +48698,10 @@ These were captured rather than mass-created as placeholder pages, because a rou
 
 ================================================================================================
 FILE: docs/status/2026-09-05-technical-maturity-assessment.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3a560acd67b239b8be733073baaa00c73f85053bcb56960af52245ef6b75f230
+CONTENT_BYTES: 11017
 ================================================================================================
 
 # Konnaxion Technical Maturity Assessment
@@ -48760,7 +48990,10 @@ It should **not** be described as a Release Candidate.
 
 ================================================================================================
 FILE: docs/status/2026-09-06-bug-harvest-real-findings.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4b67cc1693cade313e7411e978c5b99d56b3ec72c0a38c3afd4fd2b8962d4ede
+CONTENT_BYTES: 1457
 ================================================================================================
 
 # Konnaxion targeted bug harvest — real findings batch 2026-09-06
@@ -48800,7 +49033,10 @@ No ethiKos / EkoH / Smart Vote ownership or source-truth contract is changed.
 
 ================================================================================================
 FILE: docs/status/2026-09-06-bug-harvest-wave2a-mass-update.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dfac143cf63a689cb9fa007738787d5c69963cbe49c469ee460e7f9c20df7be3
+CONTENT_BYTES: 2583
 ================================================================================================
 
 # Konnaxion Bug Harvest Wave 2A — Mass Update
@@ -48854,7 +49090,10 @@ A UI is wired only where an existing backend contract matches the product semant
 
 ================================================================================================
 FILE: docs/status/2026-09-06-bug-harvest-wave2b-mass-update.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f146b18d9395495d98176cf57e29be8aefbc60cba66402efb750f20ec425fcbd
+CONTENT_BYTES: 2265
 ================================================================================================
 
 # Bug Harvest Wave 2B — mass update
@@ -48923,7 +49162,10 @@ The next evidence needed is one targeted Wave 2 rerun only.
 
 ================================================================================================
 FILE: docs/status/2026-09-06-bug-harvest-wave2c.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f5eacaeaa3b356ae53b5122b94528fd19c83a1a9034a63a8776b44691ee02a91
+CONTENT_BYTES: 1421
 ================================================================================================
 
 # Bug Harvest Wave 2C — 2026-09-06
@@ -48964,7 +49206,10 @@ Run only the Wave 2 targeted harvest. A successful pass must prove:
 
 ================================================================================================
 FILE: docs/status/2026-09-06-bug-harvest-wave2d.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cd53dacd26b812db5e42f7a9780c21169a889cdfdb1be2afa1743b42ad22d718
+CONTENT_BYTES: 1228
 ================================================================================================
 
 # Konnaxion Bug Harvest Wave 2D
@@ -49004,7 +49249,10 @@ The next Wave 2 run must reach:
 
 ================================================================================================
 FILE: docs/status/2026-09-06-bug-harvest-wave2e-context-isolation.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5b810dc788b2627d9580cef88c0851a0f3ed058df82f9625c17ce01667f87785
+CONTENT_BYTES: 1056
 ================================================================================================
 
 # Wave 2E — Playwright context isolation
@@ -49044,7 +49292,10 @@ blocks.
 
 ================================================================================================
 FILE: docs/status/2026-09-06-technical-status-report-aligned.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9a7627210d1829e5cff0bfd050a15bdd28170050827ab72b84b168dcb229786b
+CONTENT_BYTES: 16358
 ================================================================================================
 
 # Konnaxion Technical Status Report
@@ -49540,7 +49791,10 @@ Production promotion:      BLOCKED ON OPERATIONS
 
 ================================================================================================
 FILE: docs/status/2026-09-06-technical-status-report-wave2-closed.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8fc597b65f67dc9c759a8901527e264c7c7c4769676bc489ba4eacd7943ab79b
+CONTENT_BYTES: 22414
 ================================================================================================
 
 # Konnaxion Technical Status Report
@@ -50169,7 +50423,10 @@ Production promotion:            BLOCKED ON OPERATIONS
 
 ================================================================================================
 FILE: docs/status/2026-09-08-technical-maturity-assessment.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5b5da75e2fad5c1775cd2e969c1ae252dd43625185a2d6a9fd5fb9ceffebfe29
+CONTENT_BYTES: 15716
 ================================================================================================
 
 # Konnaxion Technical Maturity Assessment
@@ -50611,7 +50868,10 @@ Production promotion:                    BLOCKED ON OPERATIONS
 
 ================================================================================================
 FILE: docs/status/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 26aa7b6a22545f9ee17797ece94223e584ce887eb2774d66ed5630d1e20875a4
+CONTENT_BYTES: 1659
 ================================================================================================
 
 # Konnaxion Status
@@ -50646,7 +50906,10 @@ This is not yet approved for final public production deployment.
 
 ================================================================================================
 FILE: docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 16e1687c8efe23b88ca49c28e76b67fef97b85847b659e562d687f3dba956182
+CONTENT_BYTES: 5750
 ================================================================================================
 
 # Konnaxion — Boundaries and Ownership
@@ -50827,7 +51090,10 @@ K-Port is not a peer of Konnaxion. It is an EkoH evidence application/gateway. E
 
 ================================================================================================
 FILE: docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 58cc85463fce8c19b3f14b019b3e2b15e1625480efaa123a98943f735ab87dca
+CONTENT_BYTES: 7070
 ================================================================================================
 
 # Konnaxion — Code Alignment Notes
@@ -51032,7 +51298,10 @@ Preserve these patterns:
 
 ================================================================================================
 FILE: docs/Technical-Reference/DEV_DOCKER_CHEATSHEET.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fa25e913da4b5fd029e462d7b0d0a45a29aa9458e92bd2ec9a289ef2a24fad2a
+CONTENT_BYTES: 6250
 ================================================================================================
 
 Here is a compact cheat sheet tailored to your project (Docker + Django + migrations).
@@ -51260,7 +51529,10 @@ If you want, I can turn this into a `docs/DEV_DOCKER_CHEATSHEET.md` you can drop
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference (Custom Tables).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d7cd538a5f97c104635848378fcb64c62d5a3f440a85c7a8481c393f1779cc37
+CONTENT_BYTES: 20225
 ================================================================================================
 
 # **Konnaxion v14 – Custom Database Tables (Canonical List)**
@@ -51564,7 +51836,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7fc886985ca3a70c61f6e1f35dae3ec678b91f0070b8e7721dc66b137cb8bbb7
+CONTENT_BYTES: 4698
 ================================================================================================
 
 # Konnaxion v14 — Database Schema Reference
@@ -51717,7 +51992,10 @@ The current settings register EkoH and Smart Vote separately and use the `ekoh_s
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion v14 - Documentation Index.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bf4fb4433c43b55442ae1aead746b69d4edd56178cd3e81afde7155d0b364983
+CONTENT_BYTES: 1422
 ================================================================================================
 
 # Konnaxion v14 — Documentation Index
@@ -51759,7 +52037,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion v14 - Full-Stack Technical Specification.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d476204db3043cd1036c38e8b5761f321d04883410829471957f5bb1b9bcfdeb
+CONTENT_BYTES: 12495
 ================================================================================================
 
 # Konnaxion v14 — Full-Stack Technical Specification
@@ -52200,7 +52481,10 @@ The architecture above is the target Konnaxion contract. Known code areas that s
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion v14 - Insights UI Reference.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e9fb72cb4bec884a301cc392bd12a7d417cb8df05d4081decf5cabef393883b3
+CONTENT_BYTES: 25777
 ================================================================================================
 
 ### **Konnaxion v14 – Insights Module UI Spec (Reporting & Analytics Front-end)** *(fully updated, implementation-aligned)*
@@ -53079,7 +53363,10 @@ The frontend section has been updated to reflect the current implemented `/repor
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion v14 - Site Navigation Map.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 08da5ac8ab74c81bb3eb990f9c67cc6c321a88640f79803678eb269049c6de37
+CONTENT_BYTES: 4714
 ================================================================================================
 
 # Konnaxion v14 — Site Navigation Map
@@ -53240,7 +53527,10 @@ This list is generated from the current `frontend/app/**/page.tsx` paths in the 
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion v14 – Full-Stack Technical Specification.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9a67097a9f40e31cadaf4392f04e938e09d8740b2b7e3fb543a6dd8545f7a420
+CONTENT_BYTES: 15909
 ================================================================================================
 
 # Konnaxion Platform Technical Specification v14
@@ -53765,7 +54055,10 @@ This specification should be treated as the implementation-aligned baseline unti
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion v14 – Functional Code-Name Inventory (Services & Hooks).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bf59813f623f7172292f2ff19988830446247a975d9dc5063a6a5de33cdb0fa8
+CONTENT_BYTES: 14248
 ================================================================================================
 
 # **Inventory of platform-specific functionalities**
@@ -53878,7 +54171,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion v14 – Global Parameter Reference.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5e3fb000bd1692b5a7b587ba207ae42f890df2b2ec9d598aa4b91ebc4621d9a9
+CONTENT_BYTES: 8119
 ================================================================================================
 
 
@@ -54048,7 +54344,10 @@ Add these to `.envs/.local/.django`; production overrides live in `.envs/.produc
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module Config Parameters.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c3719b824a95ebe8edfdaad6cffbf1bfdb9f629462fd6a232aabc4721b43f474
+CONTENT_BYTES: 11014
 ================================================================================================
 
 # **Insights Module – Parameter Reference (Konnaxion v14)**
@@ -54128,7 +54427,10 @@ Every parameter for the Insights module – from environment variables to ETL sc
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module UI Spec (Reporting & Analytics Frontend).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 32a4a26f9b48de6c45354412ee62c19cf1ac1966f88345029461b0c40fae17c0
+CONTENT_BYTES: 25784
 ================================================================================================
 
 ### **Konnaxion v14 – Insights Module UI Spec (Reporting & Analytics Front-end)** *(fully updated, implementation-aligned)*
@@ -55007,7 +55309,10 @@ The frontend section has been updated to reflect the current implemented `/repor
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion v14 – Site Navigation Map (Top-Level Routes).md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c5982e1ba1b43a364aae1b596fe4e05dd2a770913d4d7084cd0a3f106a76869e
+CONTENT_BYTES: 8297
 ================================================================================================
 
 # Navigation Map
@@ -55181,7 +55486,10 @@ All names preserve the K-branding where still relevant and avoid duplicating boi
 
 ================================================================================================
 FILE: docs/Technical-Reference/DocV14/Konnaxion  v14 - Documentation INDEX.docx.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5c7fc4bf11461a75ccf4ce14fecbc98955943066ee352457e4ed3c8631c50e24
+CONTENT_BYTES: 5319
 ================================================================================================
 
 **Konnaxion v14 — Documentation Index**
@@ -55268,7 +55576,10 @@ This mapping removes ambiguity: each architectural, implementation, route, or re
 
 ================================================================================================
 FILE: docs/Technical-Reference/GLOSSARY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d1fac795507201143ad7354eb2f19d6c1b69b64641e3faef3b68541dcba53d1b
+CONTENT_BYTES: 4438
 ================================================================================================
 
 # Konnaxion — Architectural Glossary
@@ -55376,7 +55687,10 @@ Orgo, Kristal, SemantiK Architect and kOA-Linux are external ecosystem systems r
 
 ================================================================================================
 FILE: docs/Technical-Reference/HowToNest-wrap-shell.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: de14a3778f86768bf11cf478b961df287529c349ac5d2302e2bdf82be19903d6
+CONTENT_BYTES: 12233
 ================================================================================================
 
 # Layout shells — How to nest Konnaxion product domains
@@ -55880,7 +56194,10 @@ Pour chaque page du module :
 
 ================================================================================================
 FILE: docs/Technical-Reference/Konnaxion_Frontend_Deployment_Runbook.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b7d9a4f6b166a2b623edd8281e1748c074c07d6367be8d8e71240d47abe5fe1c
+CONTENT_BYTES: 4310
 ================================================================================================
 
 # Konnaxion Frontend Deployment Runbook
@@ -56020,7 +56337,10 @@ curl -I https://konnaxion.com/
 
 ================================================================================================
 FILE: docs/Technical-Reference/namecheap-vps.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a607b62c281c801fb28eeaf9a96b18a10276c341883c07c7b52330d7cee97861
+CONTENT_BYTES: 6413
 ================================================================================================
 
 # Konnaxion Deployment Guide — Namecheap VPS
@@ -56269,7 +56589,10 @@ The root response should be served by Next.js; `/api/` and `/admin/` should reso
 
 ================================================================================================
 FILE: docs/Technical-Reference/sub-modules_description/CertifiKation (Skills & Certification) — sub‑module under KonnectED.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 13b57e8f28ae99e0cf81cf206d39b2df135228dcf10f893b5cf92664863c5751
+CONTENT_BYTES: 4816
 ================================================================================================
 
 **CertifiKation (Skills & Certification)** — sub‑module under **KonnectED**.  
@@ -56345,7 +56668,10 @@ CertifiKation delivers end‑to‑end credentialing: define programs (*Certifica
 
 ================================================================================================
 FILE: docs/Technical-Reference/sub-modules_description/EkoH (Reputation & Expertise) — first sub‑module under Kollective Intelligence.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ea74104a4cad1fdba9142a3b156d8eab6c7c3b33f44e5119b4cffca75a6df0cd
+CONTENT_BYTES: 4821
 ================================================================================================
 
 **EkoH (Reputation & Expertise)** — first sub‑module under **Kollective Intelligence**.  
@@ -56426,7 +56752,10 @@ EkoH exposes seven concrete services (`multidimensional_scoring`, `configuration
 
 ================================================================================================
 FILE: docs/Technical-Reference/sub-modules_description/Knowledge (Collaborative Learning Library) — sub‑module under KonnectED.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d31bdf7b591cab7408f9112d149d2deddf9fe1a5aa7a2dc3fd17a7bad9ffcdcd
+CONTENT_BYTES: 4457
 ================================================================================================
 
 **Knowledge (Collaborative Learning Library)** — sub‑module under **KonnectED**.  
@@ -56503,7 +56832,10 @@ Knowledge delivers the learning library and its social layer: resource managemen
 
 ================================================================================================
 FILE: docs/Technical-Reference/sub-modules_description/Konservation (Creative Content & Cultural Preservation) — sub‑module under Kreative.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8e659b5a1b8023676fefe830c48e5a312446797cdd4f2a0442fb8572f70730e1
+CONTENT_BYTES: 5664
 ================================================================================================
 
 **Konservation (Creative Content & Cultural Preservation)** — sub‑module under **Kreative**.  
@@ -56607,7 +56939,10 @@ Konservation provides **digital archiving**, **virtual exhibitions**, **document
 
 ================================================================================================
 FILE: docs/Technical-Reference/sub-modules_description/Konstruct (Project Collaboration Spaces) — first sub‑module under keenKonnect.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ceb6e1e452c27bf61b9fe8a4a77431aabef8eafc1ae96cf46174e938e32cda63
+CONTENT_BYTES: 5401
 ================================================================================================
 
 **Konstruct (Project Collaboration Spaces)** — first sub‑module under **keenKonnect**.  
@@ -56703,7 +57038,10 @@ Konstruct exposes five services—`collaboration_space`, `project_task_managemen
 
 ================================================================================================
 FILE: docs/Technical-Reference/sub-modules_description/Konsultations (Public Consultations & Feedback) — sub‑module under ethiKos.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ebb0219cb85e6e9dbe566b32239be0df3ef104b75971c7317d621c4811ab2f36
+CONTENT_BYTES: 4664
 ================================================================================================
 
 **Konsultations (Public Consultations & Feedback)** — sub‑module under **ethiKos**.  
@@ -56793,7 +57131,10 @@ Actual tables implemented for Konsultations.
 
 ================================================================================================
 FILE: docs/Technical-Reference/sub-modules_description/Kontact (Collaboration & Networking) — sub‑module under Kreative.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: cf3b050bc4b419a986505dab954a53de7130301638abb7acd7aa3d5cd0b7193f
+CONTENT_BYTES: 4628
 ================================================================================================
 
 **Kontact (Collaboration & Networking)** — sub‑module under **Kreative**.  
@@ -56864,7 +57205,10 @@ Kontact delivers networking‑centric capabilities via five services — `profes
 
 ================================================================================================
 FILE: docs/Technical-Reference/sub-modules_description/Korum (Structured Debates) — sub‑module under ethiKos.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 61ae3dc9ba9a84a0b0334fb7ea4255af53c59c1c628134fca037cdfaaa573417
+CONTENT_BYTES: 4503
 ================================================================================================
 
 **Korum (Structured Debates)** — sub‑module under **ethiKos**.  
@@ -56958,7 +57302,10 @@ Korum provides structured topic management, nuanced stance capture, and threaded
 
 ================================================================================================
 FILE: docs/Technical-Reference/sub-modules_description/Smart Vote (Weighted Voting System) — second sub‑module under Kollective Intelligence.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 903fe4ccb3692289fc87b21039dfb4e52adf5b46f43dd6c2271d339bbc0e8dff
+CONTENT_BYTES: 4299
 ================================================================================================
 
 **Smart Vote (Weighted Voting System)** — second sub‑module under **Kollective Intelligence**.  
@@ -57036,7 +57383,10 @@ Smart Vote provides modality‑aware, EkoH‑weighted voting with real‑time ag
 
 ================================================================================================
 FILE: docs/Technical-Reference/sub-modules_description/Stockage (Secure Repository & Versioned Storage) — second sub‑module under keenKonnect.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 202621aacc3a8d0dd78e3305d922cdd0dbbf1cf30a676be6ca911bcb9c95bee3
+CONTENT_BYTES: 5014
 ================================================================================================
 
 **Stockage (Secure Repository & Versioned Storage)** — second sub‑module under **keenKonnect**.  
@@ -57122,7 +57472,10 @@ Stockage provides `secure_document_storage`, `document_versioning`, `intelligent
 
 ================================================================================================
 FILE: docs/Technical-Reference/UpdateBackendAndMigrateAndDocker.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4b96c448ec8242bf561cf6832415a8efa51a5703013daa27218691ac50ad8726
+CONTENT_BYTES: 2015
 ================================================================================================
 
 # Reference: Backend Update & Database Migration Workflow
@@ -57186,7 +57539,10 @@ If the database was reset or a new admin is required.
 
 ================================================================================================
 FILE: frontend/app/ethikos_20260903_132014_Dump/00_START_HERE.instructions.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 16682ce56457cf5a9a190d1045558de40e7218ece27bde2c2cb3f49c2a449bff
+CONTENT_BYTES: 2792
 ================================================================================================
 
 # START HERE — Instructions for AI
@@ -57260,7 +57616,10 @@ Navigation rule:
 
 ================================================================================================
 FILE: frontend/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 98131c561b9e7650a5e3e7779b1a79478563fc5e74249ea7ac1a8d1331a0c9ce
+CONTENT_BYTES: 6139
 ================================================================================================
 
 
@@ -57372,7 +57731,10 @@ MIT
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a90f1f2903709a31b4521234ab30e5c0ed38cb8cf397529ef62c0f7d164bf230
+CONTENT_BYTES: 10017
 ================================================================================================
 
 # Konnaxion
@@ -57659,7 +58021,10 @@ Modular civic-tech platform that connects people, knowledge, and projects across
 
 ================================================================================================
 FILE: seed-data/ethikos/canada_quebec_public_debates_2026_inventory.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 943f8cf9e1fdf2f9dadf41c53a71216854115f08716166b0672df6e6a52d6e3b
+CONTENT_BYTES: 56078
 ================================================================================================
 
 # Inventaire — Débats publics Québec–Canada 2026

@@ -1,10 +1,15 @@
 {
   "schemaVersion": 1,
-  "policyVersion": "2026-09-01.11",
+  "policyVersion": "2026-09-10.13",
   "publicBuild": {
     "committedOnly": true,
     "requireCleanMarkdown": true,
     "plainWikiMode": "ignore",
+    "defaultAuthority": "reference",
+    "defaultContentRole": "knowledge",
+    "wikiAuthority": "reference",
+    "wikiContentRole": "navigation",
+    "publishLocalPaths": false,
     "includedAuthorities": [
       "canonical",
       "reference"
@@ -31,7 +36,7 @@
     },
     "kOA-Linux": {
       "selectionMode": "curated",
-      "includeWiki": false,
+      "includeWiki": true,
       "includePatterns": [
         "docs/AI_CONTEXT.md",
         "docs/contracts/ai-navigation.contract.json",
@@ -87,20 +92,31 @@
       ],
       "rules": [
         {
+          "pattern": "docs/contracts/**",
+          "authority": "canonical",
+          "contentRole": "knowledge",
+          "include": true
+        },
+        {
           "pattern": "docs/AI_CONTEXT.md",
           "authority": "reference",
-          "include": true
+          "include": true,
+          "contentRole": "navigation"
         },
         {
           "pattern": "docs/generated/**",
           "authority": "reference",
-          "include": true
+          "include": true,
+          "contentRole": "generated"
         }
-      ]
+      ],
+      "defaultAuthority": "reference",
+      "wikiAuthority": "reference",
+      "wikiContentRole": "navigation"
     },
     "Kristal_Farms": {
       "selectionMode": "curated",
-      "includeWiki": false,
+      "includeWiki": true,
       "selectionProfile": "central-authority-c0-c2",
       "includePatterns": [
         "README.md",
@@ -268,8 +284,27 @@
           "pattern": "archive/**",
           "authority": "historical",
           "include": false
+        },
+        {
+          "pattern": "README.md",
+          "contentRole": "navigation"
+        },
+        {
+          "pattern": "AGENTS.md",
+          "contentRole": "instruction"
+        },
+        {
+          "pattern": "ORCHESTRATION.md",
+          "contentRole": "instruction"
+        },
+        {
+          "pattern": "docs/index.md",
+          "contentRole": "navigation"
         }
-      ]
+      ],
+      "defaultAuthority": "reference",
+      "wikiAuthority": "reference",
+      "wikiContentRole": "navigation"
     },
     "Orgo": {
       "rules": [
@@ -289,17 +324,9 @@
         }
       ]
     },
-    "Kristal_Farms.wiki": {
-      "selectionMode": "markdown",
-      "includeWiki": false
-    },
     "king-clown-canon": {
       "selectionMode": "markdown",
       "includeWiki": true
-    },
-    "king-klown-canon.wiki": {
-      "selectionMode": "markdown",
-      "includeWiki": false
     }
   },
   "legacyExemptFiles": [

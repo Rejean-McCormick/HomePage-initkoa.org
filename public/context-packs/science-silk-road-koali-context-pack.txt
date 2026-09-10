@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/science-silk-road-koali
-source_path: C:\mycode\Science_Silk_Road\science_silk_road
 source_commit: 1b9c2d6b1f813830d71edfced9e6897f634644e2
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: C:\mycode\Science_Silk_Road\science-silk-road-koali.wiki
 wiki_source_commit: ce36eea951aaf420b0f7c7aa83a43558c973d927
 wiki_working_tree_markdown: clean
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 29
 wiki_files: 21
 source_files: 50
@@ -18,70 +16,74 @@ included_files: 50
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 196281
-authority_counts: {"canonical":50}
-generated_at: 2026-09-10T11:09:10-04:00
+authority_counts: {"reference":50}
+content_role_counts: {"knowledge":29,"navigation":21}
+generated_at: 2026-09-10T13:04:12-04:00
 files: 50
-content_sha256: dcf5cfa1248953087a2a8361db6e410834754818d2af0e2335d42b2bf6d0de05
+content_sha256: 5e02fab2f0cb1a97f965f0100032accb5dd486fd6a2a57f3af4d9e45af2d9a86
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] wiki/_Footer.md
-02. [canonical] wiki/_Sidebar.md
-03. [canonical] wiki/Academic-Bridges.md
-04. [canonical] wiki/Articulation-and-Conversion-Loss.md
-05. [canonical] wiki/Author-and-Contact.md
-06. [canonical] wiki/Authority-Provenance-and-Semantics.md
-07. [canonical] wiki/Capability-and-Dependency.md
-08. [canonical] wiki/Claims-Evidence-and-Status.md
-09. [canonical] wiki/Composition-Centrality-and-Terminal-Dependency.md
-10. [canonical] wiki/Dialogue-with-Science-Silk-Road-Team.md
-11. [canonical] wiki/Home.md
-12. [canonical] wiki/Koali-as-Architecture.md
-13. [canonical] wiki/Koali-Components.md
-14. [canonical] wiki/Pressure-Test-and-Falsifiability.md
-15. [canonical] wiki/Research-Design.md
-16. [canonical] wiki/Research-Question-and-Propositions.md
-17. [canonical] wiki/Science-Silk-Road-as-Test-Environment.md
-18. [canonical] wiki/Source-and-Chronology.md
-19. [canonical] wiki/Start-Here.md
-20. [canonical] wiki/Submission-Materials.md
-21. [canonical] wiki/Transition-Integrity.md
-22. [canonical] CHANGELOG.md
-23. [canonical] docs/01-core-thesis.md
-24. [canonical] docs/02-theory-from-construction.md
-25. [canonical] docs/03-science-silk-road-fit.md
-26. [canonical] docs/04-capability-trajectories.md
-27. [canonical] docs/05-authority-provenance-transitions.md
-28. [canonical] docs/06-dialogue-han-cheng.md
-29. [canonical] docs/07-dialogue-anna-ahlers.md
-30. [canonical] docs/08-dialogue-hang-zhou.md
-31. [canonical] docs/09-research-design.md
-32. [canonical] docs/10-current-system-status.md
-33. [canonical] docs/11-conceptual-foundations.md
-34. [canonical] docs/12-articulation-architecture.md
-35. [canonical] docs/13-pressure-test-method.md
-36. [canonical] evidence/CHRONOLOGY_AND_PRIORITY.md
-37. [canonical] evidence/CLAIM_EVIDENCE_MATRIX.md
-38. [canonical] evidence/KOA_SOURCE_MAP.md
-39. [canonical] LINK_CHECK.md
-40. [canonical] MANIFEST.md
-41. [canonical] OUTREACH_EMAIL.md
-42. [canonical] README.md
-43. [canonical] references/ACADEMIC_BRIDGE.md
-44. [canonical] references/LINKS.md
-45. [canonical] references/SELECTED_BIBLIOGRAPHY.md
-46. [canonical] SUBMISSION_NOTE.md
-47. [canonical] submissions/300-word-pitch.md
-48. [canonical] submissions/750-word-research-proposal.md
-49. [canonical] submissions/article-3000-words.md
-50. [canonical] submissions/README.md
+01. [reference] [navigation] wiki/_Footer.md | bytes=152 | sha256=2fbca99b2f02fff3f13c22d779c4e1604b78bf68fd5f5f43ad61a1685d9aa129
+02. [reference] [navigation] wiki/_Sidebar.md | bytes=1174 | sha256=8091d5b3de659f6f5ea9c1f67029974a71eb039624da651286e03609284383a6
+03. [reference] [navigation] wiki/Academic-Bridges.md | bytes=6330 | sha256=118f9242d0f05595b9435f4a8fc73227d14a109256f17e43c907a0bf91059f25
+04. [reference] [navigation] wiki/Articulation-and-Conversion-Loss.md | bytes=2058 | sha256=2d48e1e33bf92ebd0e77f1697ca79cc5b6b59801fe44867e6b8acfcd43c7f0a1
+05. [reference] [navigation] wiki/Author-and-Contact.md | bytes=490 | sha256=4c4d5b28ece8d280d40015daacc92c36317b50dd29eb6bcdc540b25b1f3b2364
+06. [reference] [navigation] wiki/Authority-Provenance-and-Semantics.md | bytes=2271 | sha256=5b05c3b175458f4073957437beabca511c9bfd60eb64fdcf08840c5f7e902f11
+07. [reference] [navigation] wiki/Capability-and-Dependency.md | bytes=2141 | sha256=67445426b882ef630a03d0e4fe8ba2c17281cdd7c4a047148f91f80c9de48214
+08. [reference] [navigation] wiki/Claims-Evidence-and-Status.md | bytes=3097 | sha256=9594e7e7fb938f9df699c77a044e91d52a806f44514890d9239152f914993e01
+09. [reference] [navigation] wiki/Composition-Centrality-and-Terminal-Dependency.md | bytes=2425 | sha256=fcdefc50044631aa9966da287a8bd9413e2c4c06093f854a4597dd835cf3d103
+10. [reference] [navigation] wiki/Dialogue-with-Science-Silk-Road-Team.md | bytes=3648 | sha256=2311742348bbe6745987c346045a0f18fb50e1e8d3c635eb8373d627e1f691b6
+11. [reference] [navigation] wiki/Home.md | bytes=5528 | sha256=9779ffa0fd4577c0ba12582ff566b794c1d23cdb5e2a17cc2f851a17ae59d871
+12. [reference] [navigation] wiki/Koali-as-Architecture.md | bytes=2463 | sha256=aecb945fb6447b2e9a994b61e004f45abb0eb1bb9b40a56b9c18260c703e9203
+13. [reference] [navigation] wiki/Koali-Components.md | bytes=2350 | sha256=23ef3c27dc2d3d46a927b7292d88e402bb80a786a2872f88b5c9563f9aab24a2
+14. [reference] [navigation] wiki/Pressure-Test-and-Falsifiability.md | bytes=2522 | sha256=af0ef322bb5e91486cfe9ba858911bf1a7fef8e60cd409c5aa7b7e9a7a9ab5e7
+15. [reference] [navigation] wiki/Research-Design.md | bytes=2830 | sha256=1809e3756043f2beef9f1d21827f8407f9d08e9d0762374902d591bec004a914
+16. [reference] [navigation] wiki/Research-Question-and-Propositions.md | bytes=3832 | sha256=5c0bb0513ee4224a400a0b3f1578ddf5a9774865f9f6781c4a8368eafd8b1d2b
+17. [reference] [navigation] wiki/Science-Silk-Road-as-Test-Environment.md | bytes=2650 | sha256=1895aa9cfa8591b67d8a6428785b231bc52f3fae626c1f298477c1edd0b7e7ec
+18. [reference] [navigation] wiki/Source-and-Chronology.md | bytes=1900 | sha256=43fef306f3af1cfe7dc915daac0f3d32d8ccf1fc809a5ea4eb369c057bd1b5a2
+19. [reference] [navigation] wiki/Start-Here.md | bytes=2337 | sha256=8827a87e57b8f8f884bd42f4871887b50fc91faffeb91509f10f660ce28485b3
+20. [reference] [navigation] wiki/Submission-Materials.md | bytes=1446 | sha256=452a56747067c17f74555edb77b81b97a4d68a44ebca0be60dec56525bbad75b
+21. [reference] [navigation] wiki/Transition-Integrity.md | bytes=2465 | sha256=69b2dec767862e8747be585eb5a0b6bb8c7690b0886d72e249a502b13741c26c
+22. [reference] [knowledge] CHANGELOG.md | bytes=1582 | sha256=e1f245be7b033abafea27c0e0e7db6fb7c0f5984f5933cbd381a7055316de1ca
+23. [reference] [knowledge] docs/01-core-thesis.md | bytes=6370 | sha256=f134e95cb43a64c7cc498c9abe1b407f0aa15aa7075b69ed672ad9d16c2265c3
+24. [reference] [knowledge] docs/02-theory-from-construction.md | bytes=4028 | sha256=042eaaf93ba11b1f7e18109ddc9dfb4e11ce41b390d2a38656f09fc584729f43
+25. [reference] [knowledge] docs/03-science-silk-road-fit.md | bytes=5234 | sha256=5af25fdd072ed918d4357667f8bb4326888eaaadcfea4144d98ea144f79c3963
+26. [reference] [knowledge] docs/04-capability-trajectories.md | bytes=3502 | sha256=eba796c8a7568a53d1bc403e4d9921312c758baf76d89325f682fcfa8e9f0499
+27. [reference] [knowledge] docs/05-authority-provenance-transitions.md | bytes=3888 | sha256=3c718624d3c11aa7346f8f7e338762c378ce9c213adf44e121999ae14075c7bd
+28. [reference] [knowledge] docs/06-dialogue-han-cheng.md | bytes=3351 | sha256=e12d57d35e76543de2beab84a188e2100130b75792ec1e2a80ce02e2df916bac
+29. [reference] [knowledge] docs/07-dialogue-anna-ahlers.md | bytes=2649 | sha256=2e6d641ce52b1fedb41ae4d7bd72d2d59fc2ca4ad63d6e022cbec169403d898e
+30. [reference] [knowledge] docs/08-dialogue-hang-zhou.md | bytes=2485 | sha256=30206f014163c5c926ae012ff14b671dda2ba73195c6bc30cf2913006bc8fc5c
+31. [reference] [knowledge] docs/09-research-design.md | bytes=5575 | sha256=81ecf54022508c57602cf867f0155ed517b8c47ae4a0707a69e15ab846948060
+32. [reference] [knowledge] docs/10-current-system-status.md | bytes=3627 | sha256=6faf7d7862274dc97c36430c354b9e95e9d193478d1a547c81507f931ba021b6
+33. [reference] [knowledge] docs/11-conceptual-foundations.md | bytes=14366 | sha256=f24a8100acfe3a8bac408527bd16ab4f85dab487967f91e57bc982b9a6e19c10
+34. [reference] [knowledge] docs/12-articulation-architecture.md | bytes=5349 | sha256=97297c4e851137bb7b1d10eb38d3b272edea15f722675711536bed5f011d8a0a
+35. [reference] [knowledge] docs/13-pressure-test-method.md | bytes=3296 | sha256=e42432cd7412d95875b41ade629803b63fe2132e01ab3f96447040de25cbe713
+36. [reference] [knowledge] evidence/CHRONOLOGY_AND_PRIORITY.md | bytes=3785 | sha256=b85129528ceaa7269711861f14c9f05ccd8193f06db49a23f9ce5792302cbd51
+37. [reference] [knowledge] evidence/CLAIM_EVIDENCE_MATRIX.md | bytes=4235 | sha256=851ce48e9a04cd84c1b4fd2c55c849b3dfaa62c2db9ef9c224dab693eeff0b42
+38. [reference] [knowledge] evidence/KOA_SOURCE_MAP.md | bytes=4102 | sha256=b33408f0fd26fd36c91303836d672c284b5d77623e4d2b84b1ab185dc6bef302
+39. [reference] [knowledge] LINK_CHECK.md | bytes=133 | sha256=51b2b99982f6915846c7206a3e27758130c796d5b9dda02ccc7df42ba9443451
+40. [reference] [knowledge] MANIFEST.md | bytes=2057 | sha256=b59f5f6a6a9974631603d902a4c43a3a7c85caebe0d3bbf4210dda384fbf5f76
+41. [reference] [knowledge] OUTREACH_EMAIL.md | bytes=1902 | sha256=f01a58d57837209652541f731d2de7ace9c6803b60e2c742dd3a3593a516d766
+42. [reference] [knowledge] README.md | bytes=10356 | sha256=7854a5ba7f5f190dc06866f3282cc2f3ada7843d28424a2fe7060b38a08295e9
+43. [reference] [knowledge] references/ACADEMIC_BRIDGE.md | bytes=2850 | sha256=69df99bbd809cf6f716e26500bb6dc68974637eac9a40cb093a6fb1ee2521216
+44. [reference] [knowledge] references/LINKS.md | bytes=1870 | sha256=51e09ecec5befaa5ca8814843310ba3fd900278e51cc59961972cde7cd7a1a8a
+45. [reference] [knowledge] references/SELECTED_BIBLIOGRAPHY.md | bytes=5636 | sha256=7e85de36b24adb91d198c7a251cf0f343550f1c9c94f5473d1dc2166a669fcfc
+46. [reference] [knowledge] SUBMISSION_NOTE.md | bytes=4185 | sha256=b56fe4d57b079ed04f1103df17436f77e06221dc86b5437f8c739a8d95b8c632
+47. [reference] [knowledge] submissions/300-word-pitch.md | bytes=2492 | sha256=07f397f72c4b7695f4a06f0e2eeb9f8255fc190ee9dca1ad938df81244a69606
+48. [reference] [knowledge] submissions/750-word-research-proposal.md | bytes=5821 | sha256=05ab379fea7f1e9e24f3ac5baeb4cd00739603c02263cdad7773827255743f57
+49. [reference] [knowledge] submissions/article-3000-words.md | bytes=26600 | sha256=1c1a4f623624723e389b8933a3444b7818a93972e453840bd107a824ac2e9236
+50. [reference] [knowledge] submissions/README.md | bytes=846 | sha256=23246b152fb411e9dbc7128be164eec3516ea82f6a9136414cd0c7459ff251a9
 
 
 ================================================================================================
 FILE: wiki/_Footer.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 2fbca99b2f02fff3f13c22d779c4e1604b78bf68fd5f5f43ad61a1685d9aa129
+CONTENT_BYTES: 152
 ================================================================================================
 
 ---
@@ -90,7 +92,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/_Sidebar.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 8091d5b3de659f6f5ea9c1f67029974a71eb039624da651286e03609284383a6
+CONTENT_BYTES: 1174
 ================================================================================================
 
 ### Koali × Science Silk Road
@@ -129,7 +134,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: wiki/Academic-Bridges.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 118f9242d0f05595b9435f4a8fc73227d14a109256f17e43c907a0bf91059f25
+CONTENT_BYTES: 6330
 ================================================================================================
 
 # Academic Bridges
@@ -242,7 +250,10 @@ See [Dialogue with the Science Silk Road Team](Dialogue-with-Science-Silk-Road-T
 
 ================================================================================================
 FILE: wiki/Articulation-and-Conversion-Loss.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 2d48e1e33bf92ebd0e77f1697ca79cc5b6b59801fe44867e6b8acfcd43c7f0a1
+CONTENT_BYTES: 2058
 ================================================================================================
 
 # Articulation & Conversion Loss
@@ -312,7 +323,10 @@ This does not imply that interfaces always dominate outcomes. That is an empiric
 
 ================================================================================================
 FILE: wiki/Author-and-Contact.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 4c4d5b28ece8d280d40015daacc92c36317b50dd29eb6bcdc540b25b1f3b2364
+CONTENT_BYTES: 490
 ================================================================================================
 
 # Author & Contact
@@ -339,7 +353,10 @@ Québec, Canada
 
 ================================================================================================
 FILE: wiki/Authority-Provenance-and-Semantics.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 5b05c3b175458f4073957437beabca511c9bfd60eb64fdcf08840c5f7e902f11
+CONTENT_BYTES: 2271
 ================================================================================================
 
 # Authority, Provenance & Semantics
@@ -431,7 +448,10 @@ For each transnational interface ask:
 
 ================================================================================================
 FILE: wiki/Capability-and-Dependency.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 67445426b882ef630a03d0e4fe8ba2c17281cdd7c4a047148f91f80c9de48214
+CONTENT_BYTES: 2141
 ================================================================================================
 
 # Capability & Dependency
@@ -511,7 +531,10 @@ Interdependence with meaningful reconfiguration is analytically different from i
 
 ================================================================================================
 FILE: wiki/Claims-Evidence-and-Status.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 9594e7e7fb938f9df699c77a044e91d52a806f44514890d9239152f914993e01
+CONTENT_BYTES: 3097
 ================================================================================================
 
 # Claims, Evidence & Implementation Status
@@ -603,7 +626,10 @@ Record at minimum:
 
 ================================================================================================
 FILE: wiki/Composition-Centrality-and-Terminal-Dependency.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: fcdefc50044631aa9966da287a8bd9413e2c4c06093f854a4597dd835cf3d103
+CONTENT_BYTES: 2425
 ================================================================================================
 
 # Composition, Centrality & Terminal Dependency
@@ -680,7 +706,10 @@ A stronger test asks whether an independent institution can, where rights permit
 
 ================================================================================================
 FILE: wiki/Dialogue-with-Science-Silk-Road-Team.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 2311742348bbe6745987c346045a0f18fb50e1e8d3c635eb8373d627e1f691b6
+CONTENT_BYTES: 3648
 ================================================================================================
 
 # Dialogue with the Science Silk Road Team
@@ -795,7 +824,10 @@ The transition framework is strongest if it can connect these levels without fla
 
 ================================================================================================
 FILE: wiki/Home.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 9779ffa0fd4577c0ba12582ff566b794c1d23cdb5e2a17cc2f851a17ae59d871
+CONTENT_BYTES: 5528
 ================================================================================================
 
 # Koali × China’s Science Silk Road
@@ -945,7 +977,10 @@ The framework is intended to make specific mechanisms visible enough to be **obs
 
 ================================================================================================
 FILE: wiki/Koali-as-Architecture.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: aecb945fb6447b2e9a994b61e004f45abb0eb1bb9b40a56b9c18260c703e9203
+CONTENT_BYTES: 2463
 ================================================================================================
 
 # Koali as Architecture
@@ -1048,7 +1083,10 @@ These design constraints generate hypotheses. They do **not** validate the hypot
 
 ================================================================================================
 FILE: wiki/Koali-Components.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 23ef3c27dc2d3d46a927b7292d88e402bb80a786a2872f88b5c9563f9aab24a2
+CONTENT_BYTES: 2350
 ================================================================================================
 
 # Koali Components
@@ -1125,7 +1163,10 @@ The important property is not the module sequence itself. It is the **continuity
 
 ================================================================================================
 FILE: wiki/Pressure-Test-and-Falsifiability.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: af0ef322bb5e91486cfe9ba858911bf1a7fef8e60cd409c5aa7b7e9a7a9ab5e7
+CONTENT_BYTES: 2522
 ================================================================================================
 
 # Pressure Test & Falsifiability
@@ -1199,7 +1240,10 @@ Internal coherence ≠ external truth
 
 ================================================================================================
 FILE: wiki/Research-Design.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 1809e3756043f2beef9f1d21827f8407f9d08e9d0762374902d591bec004a914
+CONTENT_BYTES: 2830
 ================================================================================================
 
 # Research Design
@@ -1280,7 +1324,10 @@ The strongest evidence would show that transition-level variables explain meanin
 
 ================================================================================================
 FILE: wiki/Research-Question-and-Propositions.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 5c0bb0513ee4224a400a0b3f1578ddf5a9774865f9f6781c4a8368eafd8b1d2b
+CONTENT_BYTES: 3832
 ================================================================================================
 
 # Research Question & Propositions
@@ -1349,7 +1396,10 @@ See [Pressure Test & Falsifiability](Pressure-Test-and-Falsifiability).
 
 ================================================================================================
 FILE: wiki/Science-Silk-Road-as-Test-Environment.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 1895aa9cfa8591b67d8a6428785b231bc52f3fae626c1f298477c1edd0b7e7ec
+CONTENT_BYTES: 2650
 ================================================================================================
 
 # Science Silk Road as Test Environment
@@ -1428,7 +1478,10 @@ That separation is essential to the research design.
 
 ================================================================================================
 FILE: wiki/Source-and-Chronology.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 43fef306f3af1cfe7dc915daac0f3d32d8ccf1fc809a5ea4eb369c057bd1b5a2
+CONTENT_BYTES: 1900
 ================================================================================================
 
 # Source & Chronology
@@ -1496,7 +1549,10 @@ Use stronger chronology only where dated evidence supports it.
 
 ================================================================================================
 FILE: wiki/Start-Here.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 8827a87e57b8f8f884bd42f4871887b50fc91faffeb91509f10f660ce28485b3
+CONTENT_BYTES: 2337
 ================================================================================================
 
 # Start Here
@@ -1561,7 +1617,10 @@ It is an attempt to preserve continuity **between** heterogeneous capabilities w
 
 ================================================================================================
 FILE: wiki/Submission-Materials.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 452a56747067c17f74555edb77b81b97a4d68a44ebca0be60dec56525bbad75b
+CONTENT_BYTES: 1446
 ================================================================================================
 
 # Submission Materials
@@ -1623,7 +1682,10 @@ The Science Silk Road is the external empirical environment in which they can fa
 
 ================================================================================================
 FILE: wiki/Transition-Integrity.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: navigation
+CONTENT_SHA256: 69b2dec767862e8747be585eb5a0b6bb8c7690b0886d72e249a502b13741c26c
+CONTENT_BYTES: 2465
 ================================================================================================
 
 # Transition Integrity
@@ -1714,7 +1776,10 @@ This turns “transition integrity” into a process-tracing programme rather th
 
 ================================================================================================
 FILE: CHANGELOG.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e1f245be7b033abafea27c0e0e7db6fb7c0f5984f5933cbd381a7055316de1ca
+CONTENT_BYTES: 1582
 ================================================================================================
 
 # Changelog
@@ -1748,7 +1813,10 @@ Major conceptual revision of the Science Silk Road dossier.
 
 ================================================================================================
 FILE: docs/01-core-thesis.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f134e95cb43a64c7cc498c9abe1b407f0aa15aa7075b69ed672ad9d16c2265c3
+CONTENT_BYTES: 6370
 ================================================================================================
 
 # 01 — Core Thesis
@@ -1945,7 +2013,10 @@ This is the core research thesis. Koali supplies explicit distinctions and desig
 
 ================================================================================================
 FILE: docs/02-theory-from-construction.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 042eaaf93ba11b1f7e18109ddc9dfb4e11ce41b390d2a38656f09fc584729f43
+CONTENT_BYTES: 4028
 ================================================================================================
 
 # 02 — Theory from Construction
@@ -2047,7 +2118,10 @@ See [Pressure-Test Method](13-pressure-test-method.md).
 
 ================================================================================================
 FILE: docs/03-science-silk-road-fit.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5af25fdd072ed918d4357667f8bb4326888eaaadcfea4144d98ea144f79c3963
+CONTENT_BYTES: 5234
 ================================================================================================
 
 # 03 — Science Silk Road Fit
@@ -2194,7 +2268,10 @@ The Science Silk Road is therefore not an “application” of Koali. It is an *
 
 ================================================================================================
 FILE: docs/04-capability-trajectories.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: eba796c8a7568a53d1bc403e4d9921312c758baf76d89325f682fcfa8e9f0499
+CONTENT_BYTES: 3502
 ================================================================================================
 
 # 04 — Capability Trajectories
@@ -2311,7 +2388,10 @@ The strongest empirical test is therefore not simply whether a project produced 
 
 ================================================================================================
 FILE: docs/05-authority-provenance-transitions.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3c718624d3c11aa7346f8f7e338762c378ce9c213adf44e121999ae14075c7bd
+CONTENT_BYTES: 3888
 ================================================================================================
 
 # 05 — Authority, Provenance, Semantics, and Critical Transitions
@@ -2431,7 +2511,10 @@ The framework adds a question to knowledge-production research:
 
 ================================================================================================
 FILE: docs/06-dialogue-han-cheng.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e12d57d35e76543de2beab84a188e2100130b75792ec1e2a80ce02e2df916bac
+CONTENT_BYTES: 3351
 ================================================================================================
 
 # 06 — Dialogue with Han Cheng
@@ -2494,7 +2577,10 @@ The framework therefore studies multidimensional capability configurations rathe
 
 ================================================================================================
 FILE: docs/07-dialogue-anna-ahlers.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2e6d641ce52b1fedb41ae4d7bd72d2d59fc2ca4ad63d6e022cbec169403d898e
+CONTENT_BYTES: 2649
 ================================================================================================
 
 # 07 — Dialogue with Anna Lisa Ahlers
@@ -2559,7 +2645,10 @@ The research question is therefore not whether a center exists, but what it cent
 
 ================================================================================================
 FILE: docs/08-dialogue-hang-zhou.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 30206f014163c5c926ae012ff14b671dda2ba73195c6bc30cf2913006bc8fc5c
+CONTENT_BYTES: 2485
 ================================================================================================
 
 # 08 — Dialogue with Hang Zhou
@@ -2619,7 +2708,10 @@ A field design influenced by Zhou’s work would treat such events as natural te
 
 ================================================================================================
 FILE: docs/09-research-design.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 81ecf54022508c57602cf867f0155ed517b8c47ae4a0707a69e15ab846948060
+CONTENT_BYTES: 5575
 ================================================================================================
 
 # 09 — Proposed Research Design
@@ -2729,7 +2821,10 @@ The goal is not to validate Koali through external cases. It is to determine whi
 
 ================================================================================================
 FILE: docs/10-current-system-status.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6faf7d7862274dc97c36430c354b9e95e9d193478d1a547c81507f931ba021b6
+CONTENT_BYTES: 3627
 ================================================================================================
 
 # 10 — Current Koali System Status and Limits
@@ -2805,7 +2900,10 @@ That distinction strengthens the academic case.
 
 ================================================================================================
 FILE: docs/11-conceptual-foundations.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f24a8100acfe3a8bac408527bd16ab4f85dab487967f91e57bc982b9a6e19c10
+CONTENT_BYTES: 14366
 ================================================================================================
 
 # 11 — Conceptual Foundations and Public Design Lineage
@@ -3093,7 +3191,10 @@ This proposition is intentionally stronger than a description of today's infrast
 
 ================================================================================================
 FILE: docs/12-articulation-architecture.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 97297c4e851137bb7b1d10eb38d3b272edea15f722675711536bed5f011d8a0a
+CONTENT_BYTES: 5349
 ================================================================================================
 
 # 12 — Koali as an Articulation Architecture
@@ -3286,7 +3387,10 @@ That question is independently testable even if Koali itself is never used in a 
 
 ================================================================================================
 FILE: docs/13-pressure-test-method.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e42432cd7412d95875b41ade629803b63fe2132e01ab3f96447040de25cbe713
+CONTENT_BYTES: 3296
 ================================================================================================
 
 # 13 — Pressure-Test and Falsification Method
@@ -3387,7 +3491,10 @@ A case that contradicts Koali is not a nuisance. It is evidence needed to determ
 
 ================================================================================================
 FILE: evidence/CHRONOLOGY_AND_PRIORITY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b85129528ceaa7269711861f14c9f05ccd8193f06db49a23f9ce5792302cbd51
+CONTENT_BYTES: 3785
 ================================================================================================
 
 # Chronology and Priority Protocol
@@ -3467,7 +3574,10 @@ The potentially distinctive object is the **specific integrated articulation arc
 
 ================================================================================================
 FILE: evidence/CLAIM_EVIDENCE_MATRIX.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 851ce48e9a04cd84c1b4fd2c55c849b3dfaa62c2db9ef9c224dab693eeff0b42
+CONTENT_BYTES: 4235
 ================================================================================================
 
 # Claim–Evidence Matrix
@@ -3512,7 +3622,10 @@ The second statement is not supported by this dossier.
 
 ================================================================================================
 FILE: evidence/KOA_SOURCE_MAP.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b33408f0fd26fd36c91303836d672c284b5d77623e4d2b84b1ab185dc6bef302
+CONTENT_BYTES: 4102
 ================================================================================================
 
 # Koali Source Map
@@ -3632,7 +3745,10 @@ The dossier therefore uses conservative language such as **documented architectu
 
 ================================================================================================
 FILE: LINK_CHECK.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 51b2b99982f6915846c7206a3e27758130c796d5b9dda02ccc7df42ba9443451
+CONTENT_BYTES: 133
 ================================================================================================
 
 # Internal Link Check
@@ -3644,7 +3760,10 @@ Checked 28 internal relative Markdown links on 2026-09-02.
 
 ================================================================================================
 FILE: MANIFEST.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b59f5f6a6a9974631603d902a4c43a3a7c85caebe0d3bbf4210dda384fbf5f76
+CONTENT_BYTES: 2057
 ================================================================================================
 
 # Repository Manifest
@@ -3716,7 +3835,10 @@ Scenario coverage is not empirical proof. Internal coherence is not external val
 
 ================================================================================================
 FILE: OUTREACH_EMAIL.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f01a58d57837209652541f731d2de7ace9c6803b60e2c742dd3a3593a516d766
+CONTENT_BYTES: 1902
 ================================================================================================
 
 # Institutional Cover Note — Science Silk Road Research Dossier
@@ -3751,7 +3873,10 @@ rejean.mccormick@initkoa.org
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7854a5ba7f5f190dc06866f3282cc2f3ada7843d28424a2fe7060b38a08295e9
+CONTENT_BYTES: 10356
 ================================================================================================
 
 # Koali × China’s Science Silk Road
@@ -4005,7 +4130,10 @@ Science Silk Road cases should be able to **support, narrow, revise, or reject**
 
 ================================================================================================
 FILE: references/ACADEMIC_BRIDGE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 69df99bbd809cf6f716e26500bb6dc68974637eac9a40cb093a6fb1ee2521216
+CONTENT_BYTES: 2850
 ================================================================================================
 
 # Academic Bridge: Koali Concepts and Existing Literatures
@@ -4031,7 +4159,10 @@ This file positions the dossier’s concepts relative to established scholarship
 
 ================================================================================================
 FILE: references/LINKS.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 51e09ecec5befaa5ca8814843310ba3fd900278e51cc59961972cde7cd7a1a8a
+CONTENT_BYTES: 1870
 ================================================================================================
 
 # Relevant Links
@@ -4074,7 +4205,10 @@ AUTHORITY: canonical
 
 ================================================================================================
 FILE: references/SELECTED_BIBLIOGRAPHY.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7e85de36b24adb91d198c7a251cf0f343550f1c9c94f5473d1dc2166a669fcfc
+CONTENT_BYTES: 5636
 ================================================================================================
 
 # Selected Bibliography
@@ -4140,7 +4274,10 @@ These document the development and architecture of Koali. They are **not indepen
 
 ================================================================================================
 FILE: SUBMISSION_NOTE.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b56fe4d57b079ed04f1103df17436f77e06221dc86b5437f8c739a8d95b8c632
+CONTENT_BYTES: 4185
 ================================================================================================
 
 # Submission Note
@@ -4200,7 +4337,10 @@ rejean.mccormick@initkoa.org
 
 ================================================================================================
 FILE: submissions/300-word-pitch.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 07f397f72c4b7695f4a06f0e2eeb9f8255fc190ee9dca1ad938df81244a69606
+CONTENT_BYTES: 2492
 ================================================================================================
 
 # What Survives the Transfer?
@@ -4229,7 +4369,10 @@ Prepared for the Global China Pulse call on China’s Science Silk Road and the 
 
 ================================================================================================
 FILE: submissions/750-word-research-proposal.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 05ab379fea7f1e9e24f3ac5baeb4cd00739603c02263cdad7773827255743f57
+CONTENT_BYTES: 5821
 ================================================================================================
 
 # From Connection to Cumulative Capability
@@ -4274,7 +4417,10 @@ This contribution would complement the Science Silk Road project’s analysis of
 
 ================================================================================================
 FILE: submissions/article-3000-words.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1c1a4f623624723e389b8933a3444b7818a93972e453840bd107a824ac2e9236
+CONTENT_BYTES: 26600
 ================================================================================================
 
 # From Scientific Connections to Cumulative Capability
@@ -4463,7 +4609,10 @@ Contact: rejean.mccormick@initkoa.org · [initkoa.org](https://initkoa.org) · [
 
 ================================================================================================
 FILE: submissions/README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 23246b152fb411e9dbc7128be164eec3516ea82f6a9136414cd0c7459ff251a9
+CONTENT_BYTES: 846
 ================================================================================================
 
 # Submission Texts

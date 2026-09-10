@@ -1,16 +1,14 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Konnaxion_Capsule_Manager
-source_path: C:\mycode\Konnaxion\Konnaxion_Capsule_Manager
 source_commit: 9054fbb9c2f028b1030c7ba25ef45d9d4d16b4b2
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
-wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
-policy_version: 2026-09-01.11
+policy_version: 2026-09-10.13
 repo_files: 26
 wiki_files: 0
 source_files: 26
@@ -18,46 +16,50 @@ included_files: 26
 excluded_files: 0
 duplicate_files: 0
 content_bytes: 706157
-authority_counts: {"canonical":26}
-generated_at: 2026-09-10T11:11:49-04:00
+authority_counts: {"reference":26}
+content_role_counts: {"knowledge":26}
+generated_at: 2026-09-10T13:04:19-04:00
 files: 26
-content_sha256: 0ba801a6e9aa65028e2b6a915107d3e0f3e4c1b5a4853bd2300ea9e644f9c767
+content_sha256: fa167427feab1470736c8057a1748f9aac3142d3eb2a09e80eca6c0ed7d685ec
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] docs/DOC-00_Konnaxion_Canonical_Variables.md
-02. [canonical] docs/DOC-01_Konnaxion_Product_Vision.md
-03. [canonical] docs/DOC-02_Konnaxion_Capsule_Architecture.md
-04. [canonical] docs/DOC-03_Konnaxion_Capsule_Format.md
-05. [canonical] docs/DOC-04_Konnaxion_Manager_Architecture.md
-06. [canonical] docs/DOC-05_Konnaxion_Agent_Security_Model.md
-07. [canonical] docs/DOC-06_Konnaxion_Network_Profiles.md
-08. [canonical] docs/DOC-07_Konnaxion_Security_Gate.md
-09. [canonical] docs/DOC-08_Konnaxion_Runtime_Docker_Compose.md
-10. [canonical] docs/DOC-09_Konnaxion_Backup_Restore_Rollback.md
-11. [canonical] docs/DOC-10_Konnaxion_Builder_CLI.md
-12. [canonical] docs/DOC-11_Konnaxion_Box_Appliance_Image.md
-13. [canonical] docs/DOC-12_Konnaxion_Install_Runbook.md
-14. [canonical] docs/DOC-13_Konnaxion_Threat_Model.md
-15. [canonical] docs/DOC-14_Konnaxion_Operator_Guide.md
-16. [canonical] docs/DOC-15_Konnaxion_Developer_Guide.md
-17. [canonical] docs/DOC-16_Konnaxion_Manager_GUI_Technical_Contract.md
-18. [canonical] docs/DOC-17_Konnaxion_GUI_Action_Coverage_Contract.md
-19. [canonical] docs/DOC-17A_Konnaxion_GUI_Action_Payload_Contract.md
-20. [canonical] docs/DOC-17B_Konnaxion_GUI_Action_UI_Test_Contract.md
-21. [canonical] docs/DOC-18_Konnaxion_GUI_Target_Modes.md
-22. [canonical] docs/DOC-19_Konnaxion_GUI_Page_Split_Droplet_Payload_Contract.md
-23. [canonical] docs/DOC-20_Konnaxion_Package_Types_and_Artifact_Lifecycle.md
-24. [canonical] docs/DOC-22_SecurityDiag_Integration.md
-25. [canonical] docs/DOC-23_Capsule_Installed_Artifact_and_Composition_Contract.md
-26. [canonical] README.md
+01. [reference] [knowledge] docs/DOC-00_Konnaxion_Canonical_Variables.md | bytes=20887 | sha256=5931d3e737761ca6b0708978ef3eb8764b6214c1da87f6a552c3ca03e976df66
+02. [reference] [knowledge] docs/DOC-01_Konnaxion_Product_Vision.md | bytes=16442 | sha256=73a442a8662c432a2fa4ede02a100847764f171d20eecbd28090f95e8334cbb3
+03. [reference] [knowledge] docs/DOC-02_Konnaxion_Capsule_Architecture.md | bytes=20838 | sha256=ec7f2f524c76cb47e45d2313a62065c0709037df564423dec8a7b6ef924c8040
+04. [reference] [knowledge] docs/DOC-03_Konnaxion_Capsule_Format.md | bytes=35302 | sha256=f5b2634c1d3517296515524e7f7ff3a0b4e994e00bf9dccef31891ec319ab297
+05. [reference] [knowledge] docs/DOC-04_Konnaxion_Manager_Architecture.md | bytes=23172 | sha256=98b477b85903cfb8f072289acfea95f951332db5c44bd4f46db83e2d38342c19
+06. [reference] [knowledge] docs/DOC-05_Konnaxion_Agent_Security_Model.md | bytes=29941 | sha256=a32a77f3a197fa638debb551363e5f833227eab22cd8f7a8adc8c23f364c1b0c
+07. [reference] [knowledge] docs/DOC-06_Konnaxion_Network_Profiles.md | bytes=48379 | sha256=3629ebc4e880a46312236e03c43d61b9bad8cc0accac2393fe4298dffab03df9
+08. [reference] [knowledge] docs/DOC-07_Konnaxion_Security_Gate.md | bytes=19071 | sha256=d751f2c2947a8af18ef36125e3b1cc539ab3a182ed4dfd595895c6eb3e5c975a
+09. [reference] [knowledge] docs/DOC-08_Konnaxion_Runtime_Docker_Compose.md | bytes=41438 | sha256=81182fd86c03a49d26f90bd0fc95635b1a7a899c8a28d8a777e2bd587e0864b2
+10. [reference] [knowledge] docs/DOC-09_Konnaxion_Backup_Restore_Rollback.md | bytes=31725 | sha256=61b390afd59da3e4c12e328f7efc0e1886e143e2861c3468d3dd03f442d5ec46
+11. [reference] [knowledge] docs/DOC-10_Konnaxion_Builder_CLI.md | bytes=48385 | sha256=abad2df0bc7dfef67b5dc8fc1b9f0ad2a2c4cc67abc76c7337f4919199ee744c
+12. [reference] [knowledge] docs/DOC-11_Konnaxion_Box_Appliance_Image.md | bytes=36334 | sha256=149f630651e1239345bcb8f0f3af7104aa433842fd3b466dc42adb0670fad8a9
+13. [reference] [knowledge] docs/DOC-12_Konnaxion_Install_Runbook.md | bytes=36344 | sha256=dd8756fdaedcb63c683c16495edf32324dd7c0cd2aaa23158d6ba363da14d24f
+14. [reference] [knowledge] docs/DOC-13_Konnaxion_Threat_Model.md | bytes=31694 | sha256=019ac09c9625f43448bac0df63a890b8f7a59bafb8899bdfacbbee46de0244ed
+15. [reference] [knowledge] docs/DOC-14_Konnaxion_Operator_Guide.md | bytes=30044 | sha256=597ccb82ba63821d3afea0143b209e33cfb1b4dc0e5917ad553c3d71daeb774d
+16. [reference] [knowledge] docs/DOC-15_Konnaxion_Developer_Guide.md | bytes=23110 | sha256=727fa7e59e09f67fe4ab4c453e28586f7c90610582543e3f083b9b7cfb1f6b6c
+17. [reference] [knowledge] docs/DOC-16_Konnaxion_Manager_GUI_Technical_Contract.md | bytes=48068 | sha256=8e7785c59a59ce44f1c40f64ea9d2e06253d54d3878ff1eb0c669c7a4217f14d
+18. [reference] [knowledge] docs/DOC-17_Konnaxion_GUI_Action_Coverage_Contract.md | bytes=26791 | sha256=62a12d92349211df0508b888ce8042ac4f3cfd1f03993c856f6e88095a9d0df2
+19. [reference] [knowledge] docs/DOC-17A_Konnaxion_GUI_Action_Payload_Contract.md | bytes=22002 | sha256=6530d2d097b87e8617ecf1766ff758144b4114b67d5f4626679d635c51c2f445
+20. [reference] [knowledge] docs/DOC-17B_Konnaxion_GUI_Action_UI_Test_Contract.md | bytes=14113 | sha256=f66c6d0f3c80e59ae1ee20e9bb2737b43fb9ee4be347200cebaf07dddf04b74d
+21. [reference] [knowledge] docs/DOC-18_Konnaxion_GUI_Target_Modes.md | bytes=29493 | sha256=9642b502be6f219df0aba432029b49def5d029151630ad9cb67d8189c87bec19
+22. [reference] [knowledge] docs/DOC-19_Konnaxion_GUI_Page_Split_Droplet_Payload_Contract.md | bytes=21458 | sha256=3dbe5aa0d419acfc607555dcae509dcd4e0d5b002f6b172828ad68016add457f
+23. [reference] [knowledge] docs/DOC-20_Konnaxion_Package_Types_and_Artifact_Lifecycle.md | bytes=22051 | sha256=7f9bb8a4f2b393fb995f52a5116adbddf82f1806c6b2d2bbadacd48fbf288bbb
+24. [reference] [knowledge] docs/DOC-22_SecurityDiag_Integration.md | bytes=2566 | sha256=b316997c059e375f58e2ace0cef1d9b32e7320c71c6a524d1f6f0eaaa3f4b084
+25. [reference] [knowledge] docs/DOC-23_Capsule_Installed_Artifact_and_Composition_Contract.md | bytes=9253 | sha256=6386d267daa718d048f333023d6dd4e4a210afd020727d39be60ef09783d9f63
+26. [reference] [knowledge] README.md | bytes=17256 | sha256=67da322c4a3e085d1385613d9d801238b01583d33aadbf654dcbb52eb204246f
 
 
 ================================================================================================
 FILE: docs/DOC-00_Konnaxion_Canonical_Variables.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5931d3e737761ca6b0708978ef3eb8764b6214c1da87f6a552c3ca03e976df66
+CONTENT_BYTES: 20887
 ================================================================================================
 
 ---
@@ -922,7 +924,10 @@ kx
 
 ================================================================================================
 FILE: docs/DOC-01_Konnaxion_Product_Vision.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 73a442a8662c432a2fa4ede02a100847764f171d20eecbd28090f95e8334cbb3
+CONTENT_BYTES: 16442
 ================================================================================================
 
 # DOC-01_Konnaxion_Product_Vision.md
@@ -1621,7 +1626,10 @@ et les responsabilités du Manager, de l’Agent et du runtime Docker.
 
 ================================================================================================
 FILE: docs/DOC-02_Konnaxion_Capsule_Architecture.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: ec7f2f524c76cb47e45d2313a62065c0709037df564423dec8a7b6ef924c8040
+CONTENT_BYTES: 20838
 ================================================================================================
 
 # DOC-02 — Konnaxion Capsule Architecture
@@ -2569,7 +2577,10 @@ state.
 
 ================================================================================================
 FILE: docs/DOC-03_Konnaxion_Capsule_Format.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f5b2634c1d3517296515524e7f7ff3a0b4e994e00bf9dccef31891ec319ab297
+CONTENT_BYTES: 35302
 ================================================================================================
 
 ---
@@ -4145,7 +4156,10 @@ Konnaxion Instance
 
 ================================================================================================
 FILE: docs/DOC-04_Konnaxion_Manager_Architecture.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 98b477b85903cfb8f072289acfea95f951332db5c44bd4f46db83e2d38342c19
+CONTENT_BYTES: 23172
 ================================================================================================
 
 ---
@@ -5454,7 +5468,10 @@ The Manager must make the safe path easy and the unsafe path impossible by defau
 
 ================================================================================================
 FILE: docs/DOC-05_Konnaxion_Agent_Security_Model.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a32a77f3a197fa638debb551363e5f833227eab22cd8f7a8adc8c23f364c1b0c
+CONTENT_BYTES: 29941
 ================================================================================================
 
 ---
@@ -6833,7 +6850,10 @@ If a configuration is convenient but unsafe, the Agent must reject it.
 
 ================================================================================================
 FILE: docs/DOC-06_Konnaxion_Network_Profiles.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3629ebc4e880a46312236e03c43d61b9bad8cc0accac2393fe4298dffab03df9
+CONTENT_BYTES: 48379
 ================================================================================================
 
 doc_id: DOC-06
@@ -9176,7 +9196,10 @@ If a profile requires exposing an internal service directly, the profile is inva
 
 ================================================================================================
 FILE: docs/DOC-07_Konnaxion_Security_Gate.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d751f2c2947a8af18ef36125e3b1cc539ab3a182ed4dfd595895c6eb3e5c975a
+CONTENT_BYTES: 19071
 ================================================================================================
 
 ---
@@ -10082,7 +10105,10 @@ blocked before launch.
 
 ================================================================================================
 FILE: docs/DOC-08_Konnaxion_Runtime_Docker_Compose.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 81182fd86c03a49d26f90bd0fc95635b1a7a899c8a28d8a777e2bd587e0864b2
+CONTENT_BYTES: 41438
 ================================================================================================
 
 # DOC-08 — Konnaxion Runtime Docker Compose
@@ -11816,7 +11842,10 @@ This replaces the legacy hybrid VPS model for future Konnaxion Capsule and Konna
 
 ================================================================================================
 FILE: docs/DOC-09_Konnaxion_Backup_Restore_Rollback.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 61b390afd59da3e4c12e328f7efc0e1886e143e2861c3468d3dd03f442d5ec46
+CONTENT_BYTES: 31725
 ================================================================================================
 
 ---
@@ -13338,7 +13367,10 @@ Konnaxion Agent must enforce safety rules and block dangerous restores.
 
 ================================================================================================
 FILE: docs/DOC-10_Konnaxion_Builder_CLI.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: abad2df0bc7dfef67b5dc8fc1b9f0ad2a2c4cc67abc76c7337f4919199ee744c
+CONTENT_BYTES: 48385
 ================================================================================================
 
 doc_id: DOC-10
@@ -15426,7 +15458,10 @@ uv run kx-builder capsule verify C:\mycode\Konnaxion\runtime\capsules\konnaxion-
 
 ================================================================================================
 FILE: docs/DOC-11_Konnaxion_Box_Appliance_Image.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 149f630651e1239345bcb8f0f3af7104aa433842fd3b466dc42adb0670fad8a9
+CONTENT_BYTES: 36334
 ================================================================================================
 
 ---
@@ -16967,7 +17002,10 @@ Le plus logique après DOC-11 est **DOC-05**, parce que la Konnaxion Box dépend
 
 ================================================================================================
 FILE: docs/DOC-12_Konnaxion_Install_Runbook.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: dd8756fdaedcb63c683c16495edf32324dd7c0cd2aaa23158d6ba363da14d24f
+CONTENT_BYTES: 36344
 ================================================================================================
 
 ---
@@ -18811,7 +18849,10 @@ Everything else is handled by the **Konnaxion Capsule Manager** and **Konnaxion 
 
 ================================================================================================
 FILE: docs/DOC-13_Konnaxion_Threat_Model.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 019ac09c9625f43448bac0df63a890b8f7a59bafb8899bdfacbbee46de0244ed
+CONTENT_BYTES: 31694
 ================================================================================================
 
 ---
@@ -20110,7 +20151,10 @@ This is the security foundation for Konnaxion Capsule, Konnaxion Capsule Manager
 
 ================================================================================================
 FILE: docs/DOC-14_Konnaxion_Operator_Guide.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 597ccb82ba63821d3afea0143b209e33cfb1b4dc0e5917ad553c3d71daeb774d
+CONTENT_BYTES: 30044
 ================================================================================================
 
 ---
@@ -21883,7 +21927,10 @@ The unsafe path must be blocked by default.
 
 ================================================================================================
 FILE: docs/DOC-15_Konnaxion_Developer_Guide.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 727fa7e59e09f67fe4ab4c453e28586f7c90610582543e3f083b9b7cfb1f6b6c
+CONTENT_BYTES: 23110
 ================================================================================================
 
 doc_id: DOC-15
@@ -23005,7 +23052,10 @@ If a change makes Konnaxion harder to package, harder to secure, harder to run o
 
 ================================================================================================
 FILE: docs/DOC-16_Konnaxion_Manager_GUI_Technical_Contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 8e7785c59a59ce44f1c40f64ea9d2e06253d54d3878ff1eb0c669c7a4217f14d
+CONTENT_BYTES: 48068
 ================================================================================================
 
 ````markdown
@@ -24829,7 +24879,10 @@ Full pytest passes.
 
 ================================================================================================
 FILE: docs/DOC-17_Konnaxion_GUI_Action_Coverage_Contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 62a12d92349211df0508b888ce8042ac4f3cfd1f03993c856f6e88095a9d0df2
+CONTENT_BYTES: 26791
 ================================================================================================
 
 doc_id: DOC-17
@@ -25503,7 +25556,10 @@ button/form
 
 ================================================================================================
 FILE: docs/DOC-17A_Konnaxion_GUI_Action_Payload_Contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6530d2d097b87e8617ecf1766ff758144b4114b67d5f4626679d635c51c2f445
+CONTENT_BYTES: 22002
 ================================================================================================
 
 doc_id: DOC-17A
@@ -26546,7 +26602,10 @@ pytest passes
 
 ================================================================================================
 FILE: docs/DOC-17B_Konnaxion_GUI_Action_UI_Test_Contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f66c6d0f3c80e59ae1ee20e9bb2737b43fb9ee4be347200cebaf07dddf04b74d
+CONTENT_BYTES: 14113
 ================================================================================================
 
 doc_id: DOC-17B
@@ -27325,7 +27384,10 @@ No action coverage is lost.
 
 ================================================================================================
 FILE: docs/DOC-18_Konnaxion_GUI_Target_Modes.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9642b502be6f219df0aba432029b49def5d029151630ad9cb67d8189c87bec19
+CONTENT_BYTES: 29493
 ================================================================================================
 
 doc_id: DOC-18
@@ -28674,7 +28736,10 @@ The selected target mode must determine the allowed profile, exposure options, p
 
 ================================================================================================
 FILE: docs/DOC-19_Konnaxion_GUI_Page_Split_Droplet_Payload_Contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 3dbe5aa0d419acfc607555dcae509dcd4e0d5b002f6b172828ad68016add457f
+CONTENT_BYTES: 21458
 ================================================================================================
 
 # Konnaxion Manager GUI Shared Variable Contract
@@ -29521,7 +29586,10 @@ env.mjs
 
 ================================================================================================
 FILE: docs/DOC-20_Konnaxion_Package_Types_and_Artifact_Lifecycle.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 7f9bb8a4f2b393fb995f52a5116adbddf82f1806c6b2d2bbadacd48fbf288bbb
+CONTENT_BYTES: 22051
 ================================================================================================
 
 doc_id: DOC-20
@@ -30801,7 +30869,10 @@ admitted/discovered by Capsule; they are composed by kOA Spaces.
 
 ================================================================================================
 FILE: docs/DOC-22_SecurityDiag_Integration.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: b316997c059e375f58e2ace0cef1d9b32e7320c71c6a524d1f6f0eaaa3f4b084
+CONTENT_BYTES: 2566
 ================================================================================================
 
 ---
@@ -30879,7 +30950,10 @@ SecurityDiag technical gate PASS
 
 ================================================================================================
 FILE: docs/DOC-23_Capsule_Installed_Artifact_and_Composition_Contract.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 6386d267daa718d048f333023d6dd4e4a210afd020727d39be60ef09783d9f63
+CONTENT_BYTES: 9253
 ================================================================================================
 
 doc_id: DOC-23
@@ -31294,7 +31368,10 @@ command palette/inspector mechanics/responsive behavior
 
 ================================================================================================
 FILE: README.md
-AUTHORITY: canonical
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 67da322c4a3e085d1385613d9d801238b01583d33aadbf654dcbb52eb204246f
+CONTENT_BYTES: 17256
 ================================================================================================
 
 # Konnaxion Capsule Manager
