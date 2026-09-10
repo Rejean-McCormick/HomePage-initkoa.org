@@ -2,7 +2,7 @@
 
 repository: Rejean-McCormick/LevelUpDiag-Koa-Linux
 source_path: C:\mycode\kOA-Linux\LevelUpDiag-Koali
-source_commit: 8d7253072968576fde6b20dc37fdc8b59618b70b
+source_commit: bfdb935861ab83bb4f4bf6d210c81db93acee888
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -11,2349 +11,137 @@ wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
 policy_version: 2026-09-01.11
-repo_files: 21
+repo_files: 8
 wiki_files: 0
-source_files: 21
-included_files: 21
+source_files: 8
+included_files: 8
 excluded_files: 0
 duplicate_files: 0
-content_bytes: 50378
-authority_counts: {"canonical":21}
-generated_at: 2026-09-01T13:53:01-04:00
-files: 21
-content_sha256: 69b9a740270fdfe4b26834972c838c5c1b2603d61336fe6d935876d74d63191a
+content_bytes: 20309
+authority_counts: {"canonical":8}
+generated_at: 2026-09-10T10:45:06-04:00
+files: 8
+content_sha256: b22001d6f26e57e8ca02998fd1a9e9a941191887c3a100ed3b6c1babb1c90560
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] CHANGELOG.md
-02. [canonical] CONTRIBUTING.md
-03. [canonical] docs/01-overview.md
-04. [canonical] docs/02-architecture.md
-05. [canonical] docs/03-levels-and-checks.md
-06. [canonical] docs/04-configuration.md
-07. [canonical] docs/05-execution-and-ordering.md
-08. [canonical] docs/06-results-and-logs.md
-09. [canonical] docs/07-koa-linux-integration.md
-10. [canonical] docs/08-campaigns.md
-11. [canonical] docs/09-failure-and-blocking-model.md
-12. [canonical] docs/10-security.md
-13. [canonical] docs/11-cli-and-gui.md
-14. [canonical] docs/12-testing.md
-15. [canonical] docs/13-removal-before-delivery.md
-16. [canonical] docs/14-development.md
-17. [canonical] docs/15-reference.md
-18. [canonical] docs/16-file-architecture.md
-19. [canonical] docs/README.md
-20. [canonical] README.md
-21. [canonical] SECURITY.md
+1. [canonical] docs/ARCHITECTURE.md
+2. [canonical] docs/KOALI_SEQUENCE.md
+3. [canonical] docs/MIGRATION_FROM_V1.md
+4. [canonical] docs/README.md
+5. [canonical] docs/RESULT_MODEL.md
+6. [canonical] docs/SECURITY_MODEL.md
+7. [canonical] docs/UI_MODULARITY.md
+8. [canonical] README.md
 
 
 ================================================================================================
-FILE: CHANGELOG.md
+FILE: docs/ARCHITECTURE.md
 AUTHORITY: canonical
 ================================================================================================
 
-# Changelog
+# Architecture — Debug-first policy
 
-All significant changes to LevelUpDiag-Koali must be recorded here.
+LevelUpDiag-Koali separates **observation**, **conformance**, and **release provenance**.
 
-## Unreleased
+The tool code lives in this directory and generated evidence lives under `.levelupdiag/` in the target. Commands execute with `shell=false`, bounded/redacted output, explicit timeouts, and process isolation.
 
-### Documentation
+## DEBUG
 
-- defined LevelUpDiag-Koali as a standalone appendix;
-- simplified the model around Level, Run, Result, Finding, Artifact, and Campaign;
-- defined alignment and execution ordering;
-- defined the logging model;
-- defined the boundary with kOA-Linux;
-- defined the removal procedure before delivery.
+DEBUG is the default execution policy. It does not snapshot or compare Git state globally. Dependency verdicts do not suppress downstream diagnostic levels. A local `BLOCKED`, `FAIL`, `CONFIG_ERROR`, or repository formality remains evidence for that level while independent diagnostics continue.
 
-### Target architecture
+The default `debug` campaign excludes N02 Repository/Structure, N03 Documentation, and N11 Delivery.
 
-- keep a central level manifest;
-- keep a separate local configuration;
-- runner owns ordering, environment handling, and collection;
-- optional GUI;
-- normalized JSON and text reports.
+## VALIDATION
+
+VALIDATION includes formal conformance levels. Hard prerequisite states (`BLOCKED`, `ERROR`, `INFRA_ERROR`, `CONFIG_ERROR`) can block declared dependants. Git cleanliness is still not a global prerequisite.
+
+## RELEASE
+
+RELEASE enables tracked Git-state protection and strict dependency semantics. This is the only default mode where before/after Git tracked-state comparison is part of campaign integrity.
+
+## Dependency topology
+
+Repository conformance is no longer a functional prerequisite. N04 depends on N01 rather than N02; N05 depends on N01/N04; runtime gates depend on N01/N04/N05. This prevents repository formalities from entering a functional debug selection through transitive dependencies.
+
+
+## Modular product UI boundary
+
+LevelUpDiag is an observer of Koali product-UI modularity, not the owner of that architecture. N06 can consume an explicit local `ui_modularity` policy and test product availability, product-owned standalone markers, public integrated-contribution markers, and explicitly forbidden private cross-product UI dependency tokens.
+
+The check is intentionally configuration-driven so LevelUpDiag does not hard-code product frameworks or manifest names. Optional product absence is a valid state and reports `PASS` for the removal observation; required product absence can report `BLOCKED`. The core `stabilization` campaign does not select N06, so UI-product lifecycle remains outside core stabilization.
 
 
 ================================================================================================
-FILE: CONTRIBUTING.md
+FILE: docs/KOALI_SEQUENCE.md
 AUTHORITY: canonical
 ================================================================================================
 
-# Contributing
+# Koali sequence — LevelUpDiag 2.2
 
-Contributions to LevelUpDiag-Koali must preserve the simplicity of the system.
+## Phase 1: stabilize Koali core
 
-## General rules
-
-A change must have one clear responsibility:
-
-- add or fix a level;
-- evolve the runner;
-- improve log collection;
-- improve configuration;
-- improve the result model;
-- improve the GUI or CLI;
-- adapt to a public kOA-Linux command.
-
-Avoid introducing a new concept when a manifest field, shared helper, or new level is sufficient.
-
-## Adding a level
-
-A new level must:
-
-1. have a stable identifier;
-2. appear in `levelupdiag_manifest.json`;
-3. have a real executable file;
-4. use the shared configuration;
-5. write a normalized result;
-6. return a consistent exit code;
-7. never silently modify the target.
-
-See [`docs/03-levels-and-checks.md`](docs/03-levels-and-checks.md).
-
-## Modifying the core
-
-Shared helpers belong in `levelupdiag_core/`.
-
-A shared helper must remain generic across multiple levels. Logic specific to a single level stays in that level.
-
-## Documentation
-
-Any visible change to the manifest, configuration, verdicts, execution ordering, or logs must update the corresponding documentation.
-
-## Expected tests
-
-Before merge:
+Run `stabilization` first. It validates diagnostic integrity, the complete host/build environment, canonical contracts, and native component validations. Independent subsystems are intentionally deferred and must not be marked pinned or activable unless their real source authority has been integrated and verified.
 
 ```text
-configuration parsing
-manifest parsing
-level lookup
-runner behavior
-result serialization
-log placement
-failure mapping
-CLI behavior
+PREPARE DEVELOPMENT ENVIRONMENT
+→ LevelUpDiag stabilization
+→ build/verify native Koali components
+→ repeat until the environment is stable
 ```
 
-Checks that touch kOA-Linux must also be tested against a test checkout or controlled fixtures.
+Deferred during this phase:
+
+- Konnaxion: placeholder until real integration.
+- Ariane: integrate and test next.
+- Orgo: draft/not admitted.
+- Semantik Architect: deferred/not admitted.
+
+## Phase 2: core runtime
+
+When a bootable image exists, run `stabilization-runtime`. N08/N09/N10 remain diagnostic in DEBUG; final-profile blockers remain visible but do not redefine the core-stabilization scope.
+
+## Phase 3: subsystem integration
+
+Integrate each independent subsystem with real source pins, digests, license/documentation evidence, adapter tests, and activation evidence.
+
+For products that expose a UI, preserve the Koali modularity boundary during this phase:
+
+- standalone product operation remains product-owned;
+- integrated UI contributions are declared explicitly rather than copied into another product;
+- optional product removal is a supported state;
+- private cross-product UI imports are not used as a substitute for shared Koali UI primitives or public integration contracts.
+
+N06 can diagnose these properties only when their concrete markers and dependency scan inputs are configured locally. It does not define the UI contract itself.
+
+## Phase 4: final target
+
+Use `validation` and `release` against the unchanged canonical `sovereign-linux-node` target. No partial conformance is claimed.
 
 
 ================================================================================================
-FILE: docs/01-overview.md
+FILE: docs/MIGRATION_FROM_V1.md
 AUTHORITY: canonical
 ================================================================================================
 
-# Overview
+# Migration notes — v2.1 debug-first policy
 
-## Purpose
+Version 2.1 retains N00-N11 and the existing Koali validators but changes orchestration semantics.
 
-LevelUpDiag-Koali provides a consistent way to run a series of diagnostics and validations around a kOA-Linux checkout.
+Key changes:
 
-It mainly answers four questions:
+1. `debug` is the default campaign and mode.
+2. N02 Repository/Structure and N03 Documentation are removed from the primary debug campaign.
+3. N04-N10 no longer depend transitively on N02.
+4. DEBUG has no dependency-blocking verdict set: independent evidence continues to be collected.
+5. DEBUG does not snapshot or compare tracked Git state.
+6. VALIDATION keeps conformance checks and strict dependency semantics without global Git cleanliness enforcement.
+7. RELEASE keeps strict tracked-state protection and delivery/finalization checks.
+8. Campaign summaries separate diagnostic execution, testability, and conformance.
 
-1. which levels exist;
-2. in what order they must run;
-3. what the result of each one is;
-4. where to find the produced logs and artifacts.
-
-## Nature of the system
-
-LevelUpDiag-Koali is a development appendix.
-
-It can live in a workspace such as:
-
-```text
-workspace/
-├── koa-linux/
-└── LevelUpDiag-Koali/
-```
-
-It remains autonomous and can be deleted without preventing kOA-Linux from working.
-
-## What it does
-
-- loads configuration;
-- discovers levels through a manifest;
-- runs one level or a series of levels;
-- handles simple prerequisites;
-- applies timeouts;
-- captures output;
-- assigns a verdict;
-- produces reports;
-- displays state through the CLI or GUI.
-
-## What it does not do
-
-- it does not replace kOA-Linux tests;
-- it does not define kOA-Linux rules;
-- it does not create a new authority layer;
-- it must not become a product dependency;
-- it must not be required at runtime.
-
-## Main concepts
-
-### Level
-
-An executable diagnostic or validation unit.
-
-### Run
-
-A concrete execution of a Level at a given point in time.
-
-### Result
-
-The normalized outcome of a Run.
-
-### Finding
-
-A useful observation produced by a level.
-
-### Artifact
-
-An auxiliary file produced by a level: log, report, capture, or command output.
-
-### Campaign
-
-A set of Runs executed together against the same target and context.
-
-## Philosophy
-
-The system favors:
-
-- small levels;
-- readable responsibilities;
-- explicit results;
-- easy-to-find logs;
-- understandable orchestration;
-- minimal magic.
-
-
-================================================================================================
-FILE: docs/02-architecture.md
-AUTHORITY: canonical
-================================================================================================
-
-# Architecture
-
-## Overview
-
-```text
-levelupdiag_wrapper.pyw
-        │
-        ├──────────────┐
-        │              │
-        ▼              ▼
-configuration      manifest
-        │              │
-        └──────┬───────┘
-               ▼
-             runner
-               │
-        ┌──────┼──────┐
-        ▼      ▼      ▼
-      N00    N01    N02 ...
-        │      │      │
-        └──────┼──────┘
-               ▼
-      results + logs + artifacts
-```
-
-## Components
-
-### Configuration
-
-Configuration contains machine-specific or target-checkout-specific values:
-
-- target root;
-- available tools;
-- local commands;
-- working paths;
-- required environment variables;
-- control directory;
-- diagnostics directory.
-
-### Manifest
-
-The manifest is the level inventory.
-
-It describes their identity, file, ordering, and the properties needed by the runner.
-
-### Core
-
-`levelupdiag_core/` contains shared functions:
-
-```text
-config
-manifest
-commands
-runner
-results
-logs
-artifacts
-```
-
-The core must remain small enough to understand without an additional framework.
-
-### Levels
-
-Levels are the actual units of work.
-
-They may use `.pyw` when a graphical experience is useful or `.py` when console execution is preferable.
-
-### Wrapper
-
-The wrapper provides a visual interface to:
-
-- display levels;
-- launch a level;
-- follow status;
-- open reports or diagnostics directories.
-
-The wrapper must not contain level business logic.
-
-## Dependency direction
-
-```text
-wrapper
-   ↓
-core
-   ↓
-manifest/config
-   ↓
-levels
-   ↓
-public target commands
-```
-
-Levels may use the shared core.
-
-The core must not depend on any specific level.
-
-## Runtime data
-
-Local outputs are grouped under `.levelupdiag/`.
-
-Example:
-
-```text
-.levelupdiag/
-├── diagnostics/
-│   ├── N01-environment/
-│   ├── N02-services/
-│   └── ...
-├── runs/
-└── latest/
-```
-
-The exact organization may evolve, but the path must remain centralized and configurable.
-
-
-================================================================================================
-FILE: docs/03-levels-and-checks.md
-AUTHORITY: canonical
-================================================================================================
-
-# Levels and checks
-
-## Definition
-
-A Level is an autonomous diagnostic or validation unit.
-
-A good level answers one precise question, for example:
-
-```text
-Is the minimum environment available?
-Do the documentation validation scripts pass?
-Can components run their tests?
-Are required integrations available?
-Does the delivery still contain the appendix?
-```
-
-## Identity
-
-Historical LevelUpDiag identifiers use the form:
-
-```text
-N00
-N01
-N02
-...
-```
-
-This convention can be retained to stay simple and compatible with launchers.
-
-The number represents the primary order, not an authority hierarchy.
-
-## Minimal contract
-
-Each manifest entry should contain at least:
-
-```json
-{
-  "id": "N03",
-  "name": "Static Integrity",
-  "file": "levels/N03_static_integrity.pyw",
-  "enabled": true,
-  "required": true,
-  "depends_on": ["N01"],
-  "timeout_seconds": 180
-}
-```
-
-Optional fields must remain justified by a real need.
-
-## Level responsibilities
-
-A level must:
-
-1. load shared configuration;
-2. validate its own prerequisites;
-3. execute its diagnostic;
-4. produce useful findings;
-5. write a normalized result;
-6. return a consistent exit code.
-
-## Standalone level
-
-A level should be directly executable when that helps diagnosis:
-
-```text
-python levels/N03_static_integrity.py
-```
-
-or, for a graphical level:
-
-```text
-pythonw levels/N03_static_integrity.pyw
-```
-
-The runner remains the normal path for aligned execution.
-
-## Simple dependencies
-
-Use `depends_on` when a level cannot provide a useful result without another level.
-
-Example:
-
-```text
-N01 Environment
-   ↓
-N03 Static Integrity
-   ↓
-N04 Contracts
-```
-
-Do not create a dependency only to express a display preference.
-
-## Required vs optional
-
-`required: true` means the level is part of the expected campaign result.
-
-`required: false` means it may be absent or non-applicable without preventing the campaign from completing.
-
-## Placeholders
-
-A manifest entry without a real file is incomplete.
-
-The runner must report it clearly and never present it as a successful test.
-
-
-================================================================================================
-FILE: docs/04-configuration.md
-AUTHORITY: canonical
-================================================================================================
-
-# Configuration
-
-## Files
-
-LevelUpDiag uses two complementary files:
-
-```text
-levelupdiag.config.example.json
-levelupdiag.config.local.json
-```
-
-The `example` file is versioned and serves as a template.
-
-The `local` file contains machine-specific values and must not contain information intended for the repository.
-
-## Principles
-
-- local paths belong in local configuration;
-- secrets must not be versioned;
-- all levels go through the shared loader;
-- paths are resolved consistently;
-- an unknown or invalid required field must produce a clear error.
-
-## Koali target configuration
-
-Configuration can be simplified compared with the generic web model:
-
-```json
-{
-  "schema": "levelupdiag.koali.config.v1",
-  "app_name": "kOA-Linux",
-  "target_repo_root": "C:/mycode/kOA-Linux/koa-linux",
-  "control_dir": ".levelupdiag",
-  "artifacts_dir": ".levelupdiag/diagnostics",
-  "toolchain": {
-    "required": ["python"],
-    "optional": ["git", "cargo"]
-  },
-  "commands": {
-    "docs": "python docs/tools/validate_docs.py",
-    "contracts": "python ci/scripts/run-contracts.py",
-    "components": "python ci/scripts/run-components.py",
-    "security": "python ci/scripts/run-security.py",
-    "offline": "python ci/scripts/run-offline.py",
-    "system": "python ci/scripts/run-system-tests.py"
-  },
-  "env": {}
-}
-```
-
-Commands that do not exist in the target checkout must not be invented by configuration.
-
-## target_repo_root
-
-The kOA-Linux root is a central value.
-
-The runner must verify that it exists before launching target-related checks.
-
-## control_dir
-
-The local control directory contains state produced by LevelUpDiag-Koali.
-
-Recommended value:
-
-```text
-.levelupdiag
-```
-
-## artifacts_dir
-
-Directory for diagnostics and logs.
-
-Recommended value:
-
-```text
-.levelupdiag/diagnostics
-```
-
-## Toolchain
-
-Tools are split into:
-
-- `required`: absence blocks levels that depend on them;
-- `optional`: used when available.
-
-A level must report exactly which tool is missing.
-
-## Commands
-
-Commands are convenient aliases.
-
-A level may use a shared alias instead of duplicating the same command across several files.
-
-## Environment
-
-`env` contains only variables explicitly required for execution.
-
-Avoid copying or displaying the full environment.
-
-
-================================================================================================
-FILE: docs/05-execution-and-ordering.md
-AUTHORITY: canonical
-================================================================================================
-
-# Execution and ordering
-
-This document describes the core behavior of LevelUpDiag-Koali: align a series of levels and produce a readable execution flow.
-
-## Primary order
-
-Levels remain ordered by their identifier or by an explicit `order` field.
-
-Example:
-
-```text
-N00 Control Panel
-N01 Environment
-N02 Repository
-N03 Documentation
-N04 Contracts
-N05 Components
-N06 Integrations
-N07 Profiles
-N08 Security
-N09 Offline
-N10 System
-N11 Delivery
-```
-
-The exact list belongs to the manifest.
-
-## Dependencies
-
-Numeric order indicates the general progression.
-
-`depends_on` expresses mandatory dependencies.
-
-Example:
-
-```text
-N01 Environment
- ├─→ N03 Documentation
- ├─→ N04 Contracts
- └─→ N05 Components
-
-N04 Contracts
- └─→ N06 Integrations
-```
-
-## Execution plan
-
-Before execution, the runner builds a level list:
-
-1. filter disabled levels;
-2. verify files;
-3. verify dependencies;
-4. order levels;
-5. determine which levels are immediately executable;
-6. run levels;
-7. record each result;
-8. continue or block according to campaign policy.
-
-## Sequential execution
-
-This is the default mode.
-
-```text
-N01 → N02 → N03 → N04
-```
-
-It is the easiest mode to diagnose.
-
-## Parallel execution
-
-Parallelism may be used only for independent levels.
-
-```text
-       ┌→ N03
-N01 ───┼→ N04
-       └→ N05
-```
-
-The runner must never parallelize two levels when an explicit dependency exists.
-
-## Failed precondition
-
-If N04 depends on N03 and N03 is `BLOCKED`, N04 normally becomes `BLOCKED` with a dependency-related reason.
-
-A functional failure (`FAIL`) may either stop dependents or allow them to run if their result remains useful. This behavior must be declared at the campaign or level scope, not left implicit.
-
-## Timeout
-
-Each level may define a timeout.
-
-When it is exceeded:
-
-- the process is stopped;
-- the result records the timeout;
-- available output is preserved;
-- the runner continues according to campaign policy.
-
-## `.pyw` windows
-
-`.pyw` levels may be launched with windowed Python.
-
-For an automated campaign, prefer a non-interactive variant when the level provides one.
-
-## Campaign completion
-
-A campaign is complete when every expected level has reached a final state:
-
-```text
-PASS
-WARN
-FAIL
-SKIP
-BLOCKED
-PARTIAL
-ERROR
-INFRA_ERROR
-CONFIG_ERROR
-```
-
-A missing result is not a final result.
-
-
-================================================================================================
-FILE: docs/06-results-and-logs.md
-AUTHORITY: canonical
-================================================================================================
-
-# Results and logs
-
-## Purpose
-
-Each level must produce a result that can be understood without rereading its entire console output.
-
-The system still keeps detailed logs for diagnosis.
-
-## Verdicts
-
-LevelUpDiag verdicts are:
-
-```text
-PASS
-WARN
-FAIL
-SKIP
-BLOCKED
-PARTIAL
-ERROR
-INFRA_ERROR
-CONFIG_ERROR
-```
-
-Their detailed meaning is described in [09-failure-and-blocking-model.md](09-failure-and-blocking-model.md).
-
-## Minimal level report
-
-```json
-{
-  "schema": "levelupdiag.report.v1",
-  "standard": "LevelUpDiag",
-  "standard_version": "1.0",
-  "level": "N04",
-  "name": "Contracts",
-  "verdict": "PASS",
-  "findings": [],
-  "artifacts": []
-}
-```
-
-## Recommended Koali extension
-
-Without making the schema heavy, a result may add:
-
-```json
-{
-  "started_at": "2026-08-07T10:00:00-04:00",
-  "ended_at": "2026-08-07T10:00:12-04:00",
-  "duration_seconds": 12.0,
-  "exit_code": 0,
-  "command": "python ci/scripts/run-contracts.py",
-  "cwd": "C:/mycode/kOA-Linux/koa-linux",
-  "output_tail": "..."
-}
-```
-
-## Findings
-
-A finding is a structured observation.
-
-Example:
-
-```json
-{
-  "severity": "FAIL",
-  "code": "COMMAND_FAILED",
-  "message": "The contracts runner returned a non-zero exit code.",
-  "path": "ci/scripts/run-contracts.py"
-}
-```
-
-A finding should explain:
-
-- what happened;
-- where;
-- why it matters;
-- what to check next when relevant.
-
-## Logs
-
-Logs must be grouped by level and by run.
-
-Example:
-
-```text
-.levelupdiag/
-└── diagnostics/
-    └── N04-contracts/
-        └── 20260807_100000/
-            ├── result.json
-            ├── output.log
-            └── notes.txt
-```
-
-## output.log
-
-`output.log` contains the complete, or sufficiently complete, output of the external process.
-
-The main report may keep only an `output_tail` to remain readable.
-
-## latest
-
-A convenience projection may point to the latest result of each level:
-
-```text
-.levelupdiag/latest/N04/result.json
-```
-
-It does not replace run history.
-
-## Campaign report
-
-A campaign may write:
-
-```text
-.levelupdiag/runs/<run-id>/summary.json
-.levelupdiag/runs/<run-id>/summary.txt
-```
-
-The summary contains:
-
-- target;
-- start and end time;
-- expected levels;
-- verdict for each level;
-- counts of PASS/WARN/FAIL/BLOCKED/etc.;
-- paths to logs.
-
-## Principle
-
-Logs tell the details.
-
-The result tells the conclusion.
-
-
-================================================================================================
-FILE: docs/07-koa-linux-integration.md
-AUTHORITY: canonical
-================================================================================================
-
-# kOA-Linux integration
-
-## Principle
-
-LevelUpDiag-Koali is external to kOA-Linux.
-
-It knows the target checkout path through:
-
-```text
-target_repo_root
-```
-
-It then calls only public scripts or commands available in that checkout.
-
-## One-way dependency
-
-```text
-LevelUpDiag-Koali
-        ↓
-public commands
-        ↓
-kOA-Linux
-```
-
-kOA-Linux does not depend on LevelUpDiag-Koali.
-
-## Command examples
-
-Depending on what exists in the targeted kOA-Linux version:
-
-```text
-python docs/tools/validate_docs.py
-python ci/scripts/run-contracts.py
-python ci/scripts/run-components.py
-python ci/scripts/run-security.py
-python ci/scripts/run-offline.py
-python ci/scripts/run-system-tests.py
-```
-
-The manifest or configuration must reflect the commands actually available in the checkout being used.
-
-## Read-only by default
-
-Koali levels must treat the checkout as read-only.
-
-Any operation that modifies the checkout must be separated from ordinary campaigns and clearly reported.
-
-## Revision context
-
-When a Git checkout is available, reports may record:
-
-```text
-branch
-HEAD
-working tree clean/dirty
-```
-
-This information is used for diagnosis and execution-context identification.
-
-## Authority
-
-If LevelUpDiag-Koali and kOA-Linux disagree on a rule, the kOA-Linux rule takes precedence.
-
-LevelUpDiag-Koali is not responsible for automatically correcting that divergence.
-
-## Missing public interface
-
-When a level expects a command that does not exist in the target:
-
-```text
-BLOCKED
-```
-
-or:
-
-```text
-CONFIG_ERROR
-```
-
-depending on whether the problem comes from the target or configuration.
-
-The issue must not be bypassed through an undocumented internal import.
-
-
-================================================================================================
-FILE: docs/08-campaigns.md
-AUTHORITY: canonical
-================================================================================================
-
-# Campaigns
-
-## Definition
-
-A Campaign is simply a group of levels executed together.
-
-It does not create a new rules layer.
-
-It answers:
-
-```text
-which target?
-which levels?
-in what order?
-when?
-with what final result?
-```
-
-## Example
-
-```json
-{
-  "name": "merge-validation",
-  "target": "kOA-Linux",
-  "levels": ["N01", "N03", "N04", "N05"],
-  "stop_on_config_error": true
-}
-```
-
-## Useful types
-
-### developer-fast
-
-Fast feedback during development.
-
-Runs only a few short levels.
-
-### bundle-validation
-
-Validates one area or work bundle.
-
-### merge-validation
-
-Runs validations required before merge.
-
-### nightly
-
-Runs a broader series when execution time is less critical.
-
-### release-preparation
-
-Groups validations relevant before preparing a delivery.
-
-### delivery-check
-
-Specifically verifies that the appendix is not present in the deliverable.
-
-## Global result
-
-A campaign should not reduce every situation to a boolean.
-
-Recommended summary:
-
-```json
-{
-  "campaign": "merge-validation",
-  "status": "BLOCKED",
-  "counts": {
-    "PASS": 4,
-    "WARN": 0,
-    "FAIL": 0,
-    "BLOCKED": 1
-  }
-}
-```
-
-## Completeness
-
-The campaign must know the list of levels it was expected to run.
-
-A required level without a final result makes the campaign incomplete.
-
-## History
-
-Each campaign receives a run identifier or timestamp so its logs remain separate from previous campaigns.
-
-
-================================================================================================
-FILE: docs/09-failure-and-blocking-model.md
-AUTHORITY: canonical
-================================================================================================
-
-# Failure and blocking model
-
-Distinguishing between failure types is a central LevelUpDiag function.
-
-## PASS
-
-The level executed correctly and its expected condition is satisfied.
-
-## WARN
-
-The level found a non-blocking anomaly or risk.
-
-## FAIL
-
-The level was able to execute its diagnostic and the target does not satisfy the expected condition.
-
-Example:
-
-```text
-tests start correctly
-but 3 tests fail
-→ FAIL
-```
-
-## SKIP
-
-The level was intentionally not executed.
-
-It must have an explicit reason.
-
-## BLOCKED
-
-The level should be executed, but a prerequisite prevents obtaining a useful result.
-
-Examples:
-
-```text
-required tool missing
-required service unavailable
-dependent level blocked
-target checkout inaccessible
-```
-
-## PARTIAL
-
-The level obtained some information, but not enough to produce a complete PASS or FAIL result.
-
-## ERROR
-
-The level or its internal code encountered an error.
-
-Example:
-
-```text
-Python exception inside the level
-→ ERROR
-```
-
-## INFRA_ERROR
-
-The execution environment prevents the diagnostic from running.
-
-Examples:
-
-```text
-process cannot be launched
-infrastructure timeout
-interpreter missing
-system error
-```
-
-## CONFIG_ERROR
-
-The diagnostic configuration is inconsistent or invalid.
-
-Examples:
-
-```text
-invalid target_repo_root
-unknown level
-required command missing from config
-malformed manifest
-```
-
-## Summary
-
-```text
-FAIL
-= the target was tested and did not satisfy the test
-
-BLOCKED
-= the target could not be tested correctly
-
-ERROR
-= the check itself is broken
-
-INFRA_ERROR
-= the execution environment is broken
-
-CONFIG_ERROR
-= LevelUpDiag configuration is broken
-```
-
-## Aggregation
-
-By default:
-
-- a required `FAIL` makes the campaign fail;
-- a required `CONFIG_ERROR` makes the campaign fail;
-- a required `BLOCKED`, `PARTIAL`, or `INFRA_ERROR` makes the campaign blocked;
-- a required `SKIP` makes the campaign incomplete unless an explicit rule says otherwise;
-- `WARN` is not equivalent to `FAIL`.
-
-
-================================================================================================
-FILE: docs/10-security.md
-AUTHORITY: canonical
-================================================================================================
-
-# Security
-
-This document complements the root [`SECURITY.md`](../SECURITY.md) with implementation rules.
-
-## Command execution
-
-The runner should prefer:
-
-```python
-subprocess.run(
-    ["python", "script.py"],
-    shell=False,
-)
-```
-
-over executing a string through a shell.
-
-A string-form command should be reserved for cases where a shell is genuinely required and the command source is controlled.
-
-## Working directory
-
-Every Run must explicitly know its `cwd`.
-
-A kOA-Linux check normally uses:
-
-```text
-cwd = target_repo_root
-```
-
-## Timeout
-
-Every external command must have a reasonable timeout.
-
-A timeout must never produce PASS.
-
-## Paths
-
-Write functions must restrict destinations to:
-
-- `control_dir`;
-- `artifacts_dir`;
-- another explicitly authorized directory.
-
-Values containing `..` or resolving outside the expected root must be reviewed before writing.
-
-## Sensitive logs
-
-Before persistence, levels must avoid or mask values such as:
-
-```text
-password=
-secret=
-api_key=
-token=
-authorization:
-```
-
-This list may be adapted through configuration.
-
-## Environment variables
-
-Do not write the full environment to a log.
-
-Add only required variables to the subprocess environment in addition to the inherited environment.
-
-## kOA-Linux
-
-The kOA-Linux checkout is treated as read-only during a normal campaign.
-
-Levels must not:
-
-- apply patches;
-- modify manifests;
-- create commits;
-- automatically clean the worktree.
-
-## External artifacts
-
-When a level inspects an archive or delivery directory, it must avoid executing its contents.
-
-
-================================================================================================
-FILE: docs/11-cli-and-gui.md
-AUTHORITY: canonical
-================================================================================================
-
-# CLI and GUI
-
-LevelUpDiag-Koali has two surfaces: CLI scripts and a graphical wrapper.
-
-## CLI
-
-The main historical script is:
-
-```text
-scripts/run_level.py
-```
-
-It can list or launch a level.
-
-Examples:
-
-```text
-py scripts/run_level.py --list
-py scripts/run_level.py N04
-py scripts/run_level.py 4 --wait
-py scripts/run_level.py N04 --windowed
-```
-
-## Recommended Koali evolution
-
-Keep these usages and progressively add:
-
-```text
-py scripts/run_level.py --all
-py scripts/run_level.py --campaign merge-validation
-py scripts/run_level.py --from N03 --to N06
-```
-
-There is no need to build a large CLI while these commands cover the need.
-
-## print_manifest.py
-
-This script provides a quick view of the manifest.
-
-It should remain a simple diagnostic tool.
-
-## verify_repo.py
-
-This script verifies the LevelUpDiag-Koali repository structure:
-
-- main files are present;
-- manifest is readable;
-- referenced levels are present;
-- Python modules are compilable;
-- example configuration is readable.
-
-It verifies the functional consistency of the repository, not kOA-Linux content.
-
-## GUI
-
-The `.pyw` wrapper should allow users to:
-
-- view the ordered list;
-- view each level status;
-- launch a level;
-- launch a campaign;
-- open logs;
-- display the latest result.
-
-## Authority
-
-The GUI does not own verdict logic that differs from the CLI.
-
-Both go through the same shared functions.
-
-## Windowed mode
-
-A `.pyw` file can be launched through windowed Python.
-
-A level intended for automation should avoid depending on mandatory GUI interaction.
-
-
-================================================================================================
-FILE: docs/12-testing.md
-AUTHORITY: canonical
-================================================================================================
-
-# Testing
-
-## Purpose
-
-LevelUpDiag-Koali tests should primarily verify orchestration.
-
-The system under test is not kOA-Linux itself: Koali checks call kOA-Linux validators.
-
-## Unit tests
-
-Cover at least:
-
-```text
-load_config
-path resolution
-load_manifest
-normalize_level_id
-get_level
-level ordering
-dependency resolution
-verdict normalization
-result serialization
-artifact path helpers
-```
-
-## Runner tests
-
-Essential cases:
-
-1. PASS level;
-2. FAIL level;
-3. missing executable;
-4. missing level file;
-5. timeout;
-6. level exception;
-7. BLOCKED dependency;
-8. invalid config;
-9. large output;
-10. multiple levels executed in order.
-
-## Log tests
-
-Verify:
-
-- directory creation;
-- separation between two runs;
-- writing `result.json`;
-- writing process output;
-- `latest` directory behavior.
-
-## Manifest tests
-
-Verify:
-
-- unique identifiers;
-- existing files;
-- existing dependencies;
-- no simple cycle;
-- stable ordering.
-
-## GUI tests
-
-The GUI should mainly be tested for:
-
-- manifest loading;
-- level display;
-- correct launch behavior;
-- opening the correct directory;
-- reporting the correct verdict.
-
-Execution logic must remain testable without a graphical interface.
-
-## kOA integration tests
-
-Use a known checkout or fixture.
-
-Test at least:
-
-- missing target;
-- missing command;
-- PASS command;
-- FAIL command;
-- command BLOCKED by a missing tool.
-
-## Removal test
-
-Build a fake delivery containing a LevelUpDiag file and verify that the control level detects it.
-
-Then build a clean delivery and verify that it passes.
-
-
-================================================================================================
-FILE: docs/13-removal-before-delivery.md
-AUTHORITY: canonical
-================================================================================================
-
-# Removal before delivery
-
-## Rule
-
-LevelUpDiag-Koali is a development and validation tool.
-
-It must be removed before any kOA-Linux delivery.
-
-## What must be absent
-
-The final deliverable must not contain, in particular:
-
-```text
-LevelUpDiag-Koali/
-levelupdiag_core/
-.levelupdiag/
-levelupdiag_manifest.json
-levelupdiag.config.example.json
-levelupdiag.config.local.json
-levelupdiag_wrapper.pyw
-levelupdiag_wrapper_common.py
-START_LEVELUPDIAG.bat
-launchers/
-```
-
-The actual check list must match the names used by the final repository.
-
-## Dedicated level
-
-The Koali manifest should contain a final level such as:
-
-```text
-delivery.appendix.absent
-```
-
-or an equivalent Nxx identifier.
-
-Its only role is to verify that the appendix is absent from inspected artifacts.
-
-## What the check inspects
-
-Depending on delivery type:
-
-- staging directory;
-- archive;
-- package contents;
-- mounted or extracted image;
-- deliverable file inventory.
-
-## What may be retained outside delivery
-
-LevelUpDiag reports may be kept separately as development diagnostics.
-
-They must not be copied into the product merely because they were used to validate it.
-
-## Recommended procedure
-
-1. complete useful campaigns;
-2. export required reports outside staging;
-3. remove the appendix and `.levelupdiag/` from the build scope;
-4. rebuild or clean staging;
-5. run the absence check;
-6. only then continue the delivery process.
-
-## Failure
-
-Any residual presence produces:
-
-```text
-FAIL
-```
-
-The remedy is to correct staging or packaging, then rerun the check.
-
-
-================================================================================================
-FILE: docs/14-development.md
-AUTHORITY: canonical
-================================================================================================
-
-# Development
-
-## Purpose
-
-Evolve LevelUpDiag-Koali without turning it into a general-purpose framework.
-
-## Core organization
-
-Compact target structure:
-
-```text
-levelupdiag_core/
-├── __init__.py
-├── config.py
-├── manifest.py
-├── models.py
-├── planner.py
-├── runner.py
-├── commands.py
-├── results.py
-├── logs.py
-└── artifacts.py
-```
-
-These files should be created only when they provide a real separation of responsibility.
-
-## Adding a new level
-
-1. choose its identifier;
-2. define its responsibility;
-3. create its file;
-4. add the manifest entry;
-5. use `load_config()`;
-6. use shared helpers;
-7. write a result;
-8. test PASS, FAIL, and missing prerequisite;
-9. document the level if its behavior is not obvious.
-
-## Adding a dependency
-
-Add `depends_on` to the manifest.
-
-Avoid encoding dependencies through direct calls between level files.
-
-## Adding a kOA command
-
-The command must:
-
-- exist in the target checkout;
-- be usable from the target root;
-- have non-interactive behavior for automated campaigns;
-- produce a usable exit code.
-
-## Modifying a verdict
-
-Verdicts are a shared interface.
-
-A new value must have a genuinely distinct meaning and be understood by:
-
-```text
-runner
-reports
-wrapper
-tests
-documentation
-```
-
-## Adding result fields
-
-Prefer simple, useful fields.
-
-Reasonable examples:
-
-```text
-started_at
-ended_at
-duration_seconds
-exit_code
-command
-cwd
-output_tail
-```
-
-Avoid deep structures when levels do not need them.
-
-## Compatibility
-
-A manifest or report change must either remain compatible with older entries or explicitly change the schema identifier.
-
-## Definition of done
-
-A change is complete when:
-
-- it works through the CLI;
-- it works through the wrapper when applicable;
-- errors are classified correctly;
-- logs are readable;
-- associated tests pass;
-- documentation matches actual behavior.
-
-
-================================================================================================
-FILE: docs/15-reference.md
-AUTHORITY: canonical
-================================================================================================
-
-# Reference
-
-## Main files
-
-| File | Role |
-|---|---|
-| `levelupdiag_manifest.json` | Level inventory and ordering |
-| `levelupdiag.config.example.json` | Versioned configuration template |
-| `levelupdiag.config.local.json` | Local configuration |
-| `levelupdiag_wrapper.pyw` | Graphical interface |
-| `levelupdiag_wrapper_common.py` | Wrapper helpers |
-| `scripts/run_level.py` | CLI launcher |
-| `scripts/print_manifest.py` | Manifest display |
-| `scripts/verify_repo.py` | Repository structural verification |
-| `levelupdiag_core/` | Shared helpers |
-| `.levelupdiag/` | Local state and diagnostics |
-
-## Verdicts
-
-| Verdict | Meaning |
-|---|---|
-| `PASS` | condition satisfied |
-| `WARN` | non-blocking anomaly |
-| `FAIL` | target tested, condition not satisfied |
-| `SKIP` | execution intentionally omitted |
-| `BLOCKED` | missing prerequisite |
-| `PARTIAL` | incomplete result |
-| `ERROR` | level error |
-| `INFRA_ERROR` | environment problem |
-| `CONFIG_ERROR` | invalid configuration |
-
-## Main configuration fields
-
-| Field | Role |
-|---|---|
-| `schema` | format version |
-| `app_name` | target name |
-| `target_repo_root` | target checkout root |
-| `control_dir` | LevelUpDiag runtime state |
-| `artifacts_dir` | logs and diagnostics |
-| `toolchain` | required or optional tools |
-| `commands` | shared commands |
-| `env` | explicitly added variables |
-
-## Level fields
-
-Recommended base:
-
-```text
-id
-name
-file
-enabled
-required
-depends_on
-timeout_seconds
-```
-
-## Minimal result
-
-```text
-schema
-standard
-standard_version
-level
-name
-verdict
-findings
-artifacts
-```
-
-## Recommended exit codes
-
-For the runner:
-
-| Code | Meaning |
-|---|---|
-| `0` | successful launch or result |
-| `1` | negative level result |
-| `2` | unknown argument or level |
-| `3` | missing file or main prerequisite |
-| `4` | invalid configuration |
-| `5` | internal runner error |
-
-Individual levels may use different internal codes if their JSON report provides the canonical verdict.
-
-## Diagnostics layout
-
-```text
-.levelupdiag/
-├── diagnostics/
-│   └── <level>/
-│       └── <run>/
-│           ├── result.json
-│           └── output.log
-├── runs/
-│   └── <campaign>/
-│       ├── summary.json
-│       └── summary.txt
-└── latest/
-```
-
-## Naming conventions
-
-Levels:
-
-```text
-N00
-N01
-N02
-```
-
-Files:
-
-```text
-N01_environment.pyw
-N04_contracts.py
-```
-
-Diagnostics directories:
-
-```text
-N01-environment/
-N04-contracts/
-```
-
-
-================================================================================================
-FILE: docs/16-file-architecture.md
-AUTHORITY: canonical
-================================================================================================
-
-# File Architecture
-
-## Status
-
-This document defines the file architecture for the clean reconstruction of **LevelUpDiag-Koali**.
-
-It is normative for the repository structure.
-
-It complements the other documents without redefining their functional behavior. If there is any doubt about a file location or the creation of a new file, this document takes precedence over older examples.
-
-The architecture is frozen **by documentation**: no lockfile, hash, or fingerprint-validation mechanism is used.
-
-## Main rule
-
-A versioned source file must be created only if it belongs to the tree defined here.
-
-A new file, root directory, or unplanned subsystem requires an explicit decision and an update to this document before composition.
-
-Runtime files under `.levelupdiag/` are generated locally and are not part of the versioned source architecture.
-
-## Final tree
-
-```text
-LevelUpDiag-Koali/
-├── .gitignore
-├── README.md
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── SECURITY.md
-├── pyproject.toml
-│
-├── levelupdiag.config.example.json
-├── levelupdiag_manifest.json
-│
-├── levelupdiag_wrapper.pyw
-├── levelupdiag_wrapper_common.py
-├── START_LEVELUPDIAG.bat
-│
-├── levelupdiag_core/
-│   ├── __init__.py
-│   ├── config.py
-│   ├── manifest.py
-│   ├── models.py
-│   ├── planner.py
-│   ├── commands.py
-│   ├── runner.py
-│   ├── verdicts.py
-│   ├── reports.py
-│   ├── logs.py
-│   └── artifacts.py
-│
-├── levels/
-│   ├── N00_control_panel.pyw
-│   ├── N01_environment.pyw
-│   ├── N02_repository.pyw
-│   ├── N03_documentation.pyw
-│   ├── N04_contracts.pyw
-│   ├── N05_components.pyw
-│   ├── N06_integrations.pyw
-│   ├── N07_profiles.pyw
-│   ├── N08_security.pyw
-│   ├── N09_offline.pyw
-│   ├── N10_system.pyw
-│   └── N11_delivery.pyw
-│
-├── launchers/
-│   ├── N00-control-panel.bat
-│   ├── N01-environment.bat
-│   ├── N02-repository.bat
-│   ├── N03-documentation.bat
-│   ├── N04-contracts.bat
-│   ├── N05-components.bat
-│   ├── N06-integrations.bat
-│   ├── N07-profiles.bat
-│   ├── N08-security.bat
-│   ├── N09-offline.bat
-│   ├── N10-system.bat
-│   ├── N11-delivery.bat
-│   └── run_level.bat
-│
-├── scripts/
-│   ├── print_manifest.py
-│   ├── run_level.py
-│   └── verify_repo.py
-│
-├── schemas/
-│   └── levelupdiag.result.schema.json
-│
-├── tests/
-│   ├── test_config.py
-│   ├── test_manifest.py
-│   ├── test_planner.py
-│   ├── test_commands.py
-│   ├── test_runner.py
-│   ├── test_reports.py
-│   ├── test_logs.py
-│   └── test_delivery_level.py
-│
-└── docs/
-    ├── README.md
-    ├── 01-overview.md
-    ├── 02-architecture.md
-    ├── 03-levels-and-checks.md
-    ├── 04-configuration.md
-    ├── 05-execution-and-ordering.md
-    ├── 06-results-and-logs.md
-    ├── 07-koa-linux-integration.md
-    ├── 08-campaigns.md
-    ├── 09-failure-and-blocking-model.md
-    ├── 10-security.md
-    ├── 11-cli-and-gui.md
-    ├── 12-testing.md
-    ├── 13-removal-before-delivery.md
-    ├── 14-development.md
-    ├── 15-reference.md
-    ├── 16-file-architecture.md
-    └── AI_COMPOSER_CONTRACT.json
-```
-
-## Repository root
-
-### `.gitignore`
-
-Contains only exclusions required by the repository and local outputs.
-
-It must exclude at least:
-
-```text
-__pycache__/
-*.py[cod]
-.venv/
-.pytest_cache/
-.levelupdiag/
-*.log
-*.tmp
-```
-
-### `README.md`
-
-Human entry point.
-
-It does not contain the detailed specification of the internal architecture.
-
-### `CHANGELOG.md`
-
-History of functional, structural, and documentation changes.
-
-### `CONTRIBUTING.md`
-
-Contribution rules and the minimal definition of an acceptable change.
-
-### `SECURITY.md`
-
-Security rules specific to the appendix.
-
-### `pyproject.toml`
-
-Declares the Python project, supported Python version, and any development dependencies.
-
-Core runtime must remain based on the Python standard library unless an explicit decision says otherwise.
-
-### `levelupdiag.config.example.json`
-
-Versioned example configuration.
-
-No machine-specific value or real secret.
-
-### `levelupdiag_manifest.json`
-
-Canonical level inventory.
-
-It is the single versioned source for:
-
-- level identifier;
-- name;
-- file;
-- enabled state;
-- required or optional status;
-- dependencies;
-- timeout;
-- metadata required by the runner.
-
-Levels must not be discovered implicitly by scanning the directory.
-
-### `levelupdiag_wrapper.pyw`
-
-Main Tkinter application.
-
-It provides the view and delegates logic to the core.
-
-### `levelupdiag_wrapper_common.py`
-
-Helpers exclusively related to the wrapper and graphical launching.
-
-Any logic reusable by the CLI belongs in the core, not in this file.
-
-### `START_LEVELUPDIAG.bat`
-
-Convenient Windows entry point to the main wrapper.
-
-It contains no validation logic.
-
-## `levelupdiag_core/`
-
-The core is closed to **11 modules** in the target version.
-
-No additional subpackage is planned.
-
-### `__init__.py`
-
-Stable public core exports.
-
-### `config.py`
-
-Owns:
-
-- configuration loading;
-- example/local merge;
-- path resolution;
-- explicitly added environment values.
-
-It runs no checks.
-
-### `manifest.py`
-
-Owns:
-
-- manifest reading;
-- `LevelInfo` or equivalent construction;
-- identifier normalization;
-- level lookup.
-
-It does not plan execution.
-
-### `models.py`
-
-Contains only shared data structures:
-
-- `Finding`;
-- `Artifact`;
-- `StepResult`;
-- `LevelResult`;
-- `CampaignResult`.
-
-No I/O, subprocess, or Tkinter.
-
-### `planner.py`
-
-Owns:
-
-- selection;
-- ordering;
-- dependencies;
-- cycle detection;
-- dependency blocking.
-
-The plan remains deterministic and sequential by default.
-
-### `commands.py`
-
-Owns external process execution.
-
-It captures:
-
-- command;
-- cwd;
-- exit code;
-- timestamps;
-- duration;
-- useful output;
-- timeout or launch error.
-
-The normal execution path does not use `shell=True`.
-
-### `runner.py`
-
-Main orchestrator.
-
-It:
-
-- uses `planner.py`;
-- runs levels;
-- passes configuration;
-- applies dependencies;
-- aggregates a campaign;
-- delegates logs and reports to their owning modules.
-
-It contains no logic specific to N03, N04, N05, and so on.
-
-### `verdicts.py`
-
-Single source of verdicts:
-
-```text
-PASS
-WARN
-FAIL
-SKIP
-BLOCKED
-PARTIAL
-ERROR
-INFRA_ERROR
-CONFIG_ERROR
-```
-
-Contains only constants and aggregation/normalization helpers.
-
-### `reports.py`
-
-Reads and writes structured results.
-
-It does not execute commands.
-
-### `logs.py`
-
-Organizes and writes local logs.
-
-It writes only within configured runtime directories.
-
-### `artifacts.py`
-
-Helpers for artifact paths, safe names, and local opening of directories/files.
-
-It does not interpret artifact content as code.
-
-## `levels/`
-
-The directory contains exactly the levels defined in the target taxonomy.
-
-Each file is thin and specific to its responsibility.
-
-A level:
-
-- loads configuration;
-- verifies its local prerequisites;
-- calls core helpers;
-- launches a public command when needed;
-- produces a `LevelResult`;
-- never directly launches another level.
-
-### Frozen taxonomy
-
-| ID | File | Responsibility |
-|---|---|---|
-| N00 | `N00_control_panel.pyw` | lightweight self-check / appendix control |
-| N01 | `N01_environment.pyw` | environment, Python, paths, and tools |
-| N02 | `N02_repository.pyw` | target checkout and observable repository state |
-| N03 | `N03_documentation.pyw` | public documentation validation |
-| N04 | `N04_contracts.pyw` | contract validation |
-| N05 | `N05_components.pyw` | component validations |
-| N06 | `N06_integrations.pyw` | available integration validations |
-| N07 | `N07_profiles.pyw` | available profile validations |
-| N08 | `N08_security.pyw` | public security validations |
-| N09 | `N09_offline.pyw` | offline validations |
-| N10 | `N10_system.pyw` | system validations |
-| N11 | `N11_delivery.pyw` | appendix absence in delivery |
-
-This taxonomy must not be expanded, reduced, or renumbered without an explicit architecture change.
-
-## `launchers/`
-
-Launchers are extremely thin Windows wrappers.
-
-Each launcher calls `scripts/run_level.py` with the corresponding identifier.
-
-Conceptual example:
-
-```bat
-@echo off
-py "%~dp0..\scripts\run_level.py" N04 --windowed
-```
-
-They contain no check, configuration, or verdict logic.
-
-`run_level.bat` provides generic access to the CLI launcher.
-
-## `scripts/`
-
-### `print_manifest.py`
-
-Displays the manifest in readable form.
-
-No validation logic.
-
-### `run_level.py`
-
-Canonical CLI entry point to:
-
-- list levels;
-- run one level;
-- run all enabled levels;
-- run a simple campaign.
-
-The GUI and launchers must converge on the same core functions.
-
-### `verify_repo.py`
-
-Verifies the structural consistency of **LevelUpDiag-Koali itself**:
-
-- required files;
-- readable JSON;
-- coherent manifest;
-- level files present;
-- Python imports/compilation;
-- valid level dependencies.
-
-It does not become a general kOA-Linux validator.
-
-## `schemas/`
-
-The target version contains a single schema:
-
-```text
-levelupdiag.result.schema.json
-```
-
-It defines a level report.
-
-No registry or complex schema system is planned.
-
-## `tests/`
-
-The suite remains flat and directly mapped to the core.
-
-| Test | Covers |
-|---|---|
-| `test_config.py` | configuration |
-| `test_manifest.py` | manifest and LevelInfo |
-| `test_planner.py` | ordering and dependencies |
-| `test_commands.py` | subprocess, timeout, errors |
-| `test_runner.py` | orchestration and campaigns |
-| `test_reports.py` | serialization |
-| `test_logs.py` | log layout and writes |
-| `test_delivery_level.py` | N11 and residue detection |
-
-Do not create a framework-specific test tree while these eight files remain sufficient.
-
-## `docs/`
-
-Documentation is adjacent to code and must not create a second governance hierarchy.
-
-`AI_COMPOSER_CONTRACT.json` is the machine-readable complement intended for AI composition tools.
-
-`16-file-architecture.md` is the canonical human reference for paths.
-
-## Unversioned local runtime
-
-Local runtime is limited to:
-
-```text
-.levelupdiag/
-├── diagnostics/
-│   └── <level>/
-│       └── <run>/
-│           ├── result.json
-│           └── output.log
-├── runs/
-│   └── <campaign>/
-│       ├── summary.json
-│       └── summary.txt
-└── latest/
-```
-
-Internal temporary files may exist during a write, but they do not become public formats.
-
-`.levelupdiag/`:
-
-- is ignored by Git;
-- is not a source of authority;
-- may be deleted without affecting code;
-- is never included in a kOA-Linux delivery.
-
-## Directories forbidden without an explicit decision
-
-Do not create spontaneously:
-
-```text
-src/
-app/
-api/
-server/
-services/
-plugins/
-workers/
-agents/
-database/
-migrations/
-state/
-cache/
-vendor/
-generated/
-dist/
-build/
-packages/
-policies/
-catalogs/
-adapters/
-workflows/
-```
-
-This prohibition concerns the LevelUpDiag-Koali source architecture. An external tool may of course temporarily produce `build/` or `dist/`, but those directories do not become design components without an explicit decision.
-
-## Files and concepts explicitly outside the target architecture
-
-The clean reconstruction does not carry forward these historical elements:
-
-```text
-.smartignore
-GitSink.bat
-levelupdiag_core/http.py
-```
-
-The old frontend/backend/Playwright/UX-oriented taxonomies are not carried forward.
-
-No hash-validation file, fingerprint inventory, or architecture lockfile must be added.
-
-## Responsibility ownership
-
-Each responsibility has one owner:
-
-| Responsibility | Owner |
-|---|---|
-| configuration | `levelupdiag_core/config.py` |
-| level inventory | `levelupdiag_manifest.json` + `manifest.py` |
-| models | `models.py` |
-| ordering/dependencies | `planner.py` |
-| subprocess | `commands.py` |
-| orchestration | `runner.py` |
-| verdicts | `verdicts.py` |
-| serialization | `reports.py` |
-| logs | `logs.py` |
-| artifacts | `artifacts.py` |
-| graphical interface | `levelupdiag_wrapper*.py*` |
-| CLI | `scripts/run_level.py` |
-| appendix repository verification | `scripts/verify_repo.py` |
-| check-specific logic | `levels/Nxx_*.pyw` |
-
-Duplicating a responsibility across two owners is architectural drift.
-
-## Internal dependency rules
-
-Allowed dependencies:
-
-```text
-wrapper ───────→ core
-scripts ───────→ core
-levels ────────→ core
-runner ────────→ planner
-runner ────────→ commands
-runner ────────→ reports
-runner ────────→ logs
-core modules ──→ models/verdicts/config as needed
-```
-
-Forbidden dependencies:
-
-```text
-core → wrapper
-core → specific level
-level → another level
-kOA-Linux → LevelUpDiag-Koali
-reports → subprocess
-models → I/O
-verdicts → I/O
-```
-
-## File creation rule
-
-An AI system or developer must not solve a problem by creating a new module by default.
-
-Decision order:
-
-1. does the responsibility belong to an existing file?
-2. can it be added without breaking that file's cohesion?
-3. is it logic specific to a level?
-4. is it genuinely a new durable responsibility?
-
-Only the fourth case may justify an architecture evolution.
-
-Before creation, the change must update:
-
-```text
-docs/16-file-architecture.md
-docs/AI_COMPOSER_CONTRACT.json
-docs/README.md if documentation navigation changes
-```
-
-## Rename rule
-
-The following paths are stable repository interfaces:
-
-```text
-levelupdiag_manifest.json
-levelupdiag.config.example.json
-levelupdiag_wrapper.pyw
-levelupdiag_wrapper_common.py
-START_LEVELUPDIAG.bat
-levelupdiag_core/
-levels/
-launchers/
-scripts/
-schemas/
-tests/
-docs/
-```
-
-They must not be renamed during an ordinary reconstruction or refactor.
-
-## Deletion rule
-
-A file in the final tree may be deleted only if:
-
-1. its responsibility genuinely disappears;
-2. no other documentation requires it;
-3. the manifest and imports are adapted;
-4. this document is modified in the same change.
-
-## Structural compliance criterion
-
-A clean reconstruction is structurally compliant when:
-
-- every required file in the final tree exists;
-- no explicitly removed historical file is carried forward;
-- no unplanned new subsystem has been added;
-- every declared level has exactly its expected file;
-- responsibilities remain in their owning modules;
-- `.levelupdiag/` remains local and unversioned;
-- LevelUpDiag-Koali remains independent of kOA-Linux runtime code.
-
-Structural compliance relies on documented paths and contracts, not on file fingerprints.
+Historical campaign names remain available for compatibility, but new automation should use `debug`, `structure`, `validation`, or `release` explicitly.
 
 
 ================================================================================================
@@ -2361,39 +149,145 @@ FILE: docs/README.md
 AUTHORITY: canonical
 ================================================================================================
 
-# LevelUpDiag-Koali Documentation
+# LevelUpDiag-Koali documentation
 
-This documentation describes how the LevelUpDiag-Koali repository works.
+- `ARCHITECTURE.md` — DEBUG / VALIDATION / RELEASE separation and dependency topology.
+- `KOALI_SEQUENCE.md` — N00-N11 roles and DEBUG principal selection.
+- `RESULT_MODEL.md` — local verdicts and campaign aggregation.
+- `SECURITY_MODEL.md` — bounded execution and mode-scoped Git protection.
+- `MIGRATION_FROM_V1.md` — migration to the v2.1 debug-first model.
+- `UI_MODULARITY.md` — optional N06 diagnostics for standalone/integrated product UI boundaries.
 
-The system intentionally remains compact: it orchestrates independent levels, aligns their execution, and centralizes their results.
 
-## Read first
+================================================================================================
+FILE: docs/RESULT_MODEL.md
+AUTHORITY: canonical
+================================================================================================
 
-1. [Overview](01-overview.md)
-2. [Architecture](02-architecture.md)
-3. [Levels and checks](03-levels-and-checks.md)
-4. [Configuration](04-configuration.md)
-5. [Execution and ordering](05-execution-and-ordering.md)
-6. [Results and logs](06-results-and-logs.md)
+# Result model
 
-## kOA-Linux
+Level verdicts remain:
 
-- [Integration with kOA-Linux](07-koa-linux-integration.md)
-- [Campaigns](08-campaigns.md)
-- [Failure and blocking model](09-failure-and-blocking-model.md)
-- [Removal before delivery](13-removal-before-delivery.md)
+`PASS`, `WARN`, `FAIL`, `SKIP`, `BLOCKED`, `PARTIAL`, `ERROR`, `INFRA_ERROR`, `CONFIG_ERROR`.
 
-## Development and operation
+Their meaning is local to a level. `BLOCKED` means that level could not establish its intended evidence because a prerequisite was unavailable. It does not mean every independent diagnostic must stop.
 
-- [Security](10-security.md)
-- [CLI and GUI](11-cli-and-gui.md)
-- [Testing](12-testing.md)
-- [Development](14-development.md)
-- [Reference](15-reference.md)
+Campaign summaries add:
 
-## Architecture in one sentence
+- `diagnostic_mode`: `debug`, `validation`, or `release`;
+- `execution_verdict`: whether the diagnostic machinery completed without `ERROR`/`INFRA_ERROR`;
+- `testability`: `COMPLETE` or `PARTIAL`;
+- `conformance_verdict`: `NOT_EVALUATED` in DEBUG, otherwise the strict campaign verdict.
 
-> The manifest says what to run, the runner decides when to run it, each level produces a result, and LevelUpDiag-Koali gathers the logs.
+## DEBUG aggregation
+
+- any `ERROR`/`INFRA_ERROR` -> campaign `ERROR`;
+- any other non-PASS local verdict -> campaign `WARN`;
+- otherwise -> `PASS`.
+
+Thus target failures and missing prerequisites remain visible without turning routine development diagnosis into a global `BLOCKED` state.
+
+## VALIDATION / RELEASE aggregation
+
+Strict evidence semantics are preserved. `FAIL` remains failure, required unavailable evidence can block completion, and configuration/diagnostic errors are not accepted as success.
+
+
+## Optional product removal evidence
+
+An explicitly configured UI product with `required: false` can be absent and still produce a local `PASS` observation in the N06 UI-modularity diagnostic. This represents the intended independent-removal property, not a claim that the product was tested. A configured required product that is absent reports `BLOCKED`; missing configured markers on an available product report `FAIL`; invalid diagnostic configuration reports `CONFIG_ERROR`.
+
+
+================================================================================================
+FILE: docs/SECURITY_MODEL.md
+AUTHORITY: canonical
+================================================================================================
+
+# Security model
+
+LevelUpDiag-Koali remains read-oriented and bounded:
+
+- commands execute as argument arrays with `shell=false`;
+- stdout/stderr capture is bounded and redacted;
+- target mutation is disabled by default;
+- network use is disabled unless explicitly enabled;
+- referenced gate reports are accepted only from bounded paths inside the target repository;
+- worker timeouts remain explicit.
+
+Git tracked-state protection is now **mode-scoped**:
+
+- DEBUG: disabled; Git provenance is not a prerequisite for diagnosis;
+- VALIDATION: disabled globally; N02 can still observe repository state when selected;
+- RELEASE: enabled and tracked-state mutation during diagnostics is an error.
+
+This keeps release provenance strict without making Git formalities part of ordinary system debugging.
+
+
+================================================================================================
+FILE: docs/UI_MODULARITY.md
+AUTHORITY: canonical
+================================================================================================
+
+# Modular product UI diagnostics
+
+LevelUpDiag-Koali treats modular product UI behavior as an **integration diagnostic**, not as a definition of Koali user-interface architecture.
+
+## Authority boundary
+
+Koali canonical documentation and each product's admitted public contract define what counts as its standalone entry point, integrated contribution, commands, routes, surfaces, inspector declarations, or other UI assets. LevelUpDiag only evaluates explicit diagnostic configuration.
+
+It MUST NOT:
+
+- make kOA Spaces a mandatory runtime for a product UI;
+- make Konnaxion, Orgo, Kristal, or another product a mandatory UI dependency of another product;
+- invent a universal product-manifest filename;
+- copy product business semantics into diagnostic code;
+- treat an intentionally removed optional product as a Koali core failure.
+
+## Configuration
+
+The optional `ui_modularity` object is read from the normal LevelUpDiag configuration merge.
+
+```json
+{
+  "ui_modularity": {
+    "enabled": true,
+    "base_root": "..",
+    "products": [
+      {
+        "id": "product-id",
+        "root": "product-repository",
+        "required": false,
+        "standalone_markers": ["path/declared/by/product"],
+        "integration_markers": ["path/declared/by/integration-contract"],
+        "scan_files": ["package-or-source-file"],
+        "forbidden_private_ui_tokens": ["private-import-token"]
+      }
+    ]
+  }
+}
+```
+
+`base_root` is resolved relative to the LevelUpDiag tool root. Product roots can be absolute or relative to that base. Marker and scan paths are product-relative and cannot escape the configured product repository.
+
+## Verdicts
+
+- optional product absent: `PASS` — removal is accepted;
+- required product absent: `BLOCKED`;
+- available product with configured markers present: `PASS`;
+- configured marker missing: `FAIL`;
+- configured forbidden private UI token found: `FAIL`;
+- invalid paths or malformed configuration: `CONFIG_ERROR`;
+- unreadable configured scan input: `INFRA_ERROR`.
+
+A `PASS` for an absent optional product means only that the removal state is permitted. It is not positive functional evidence for that product.
+
+## Campaign placement
+
+The check runs from N06 Integrations. The default `stabilization` campaign remains N00/N01/N04/N05 and therefore does not depend on UI products. Broader `debug`, `validation`, and `release` selections can include N06 according to their existing policies.
+
+## Security and boundedness
+
+The check is read-only. It reads only explicit marker paths and explicit scan files. Each scan file is bounded to 512 KiB of text and only reports configured token/path metadata, not arbitrary source content.
 
 
 ================================================================================================
@@ -2401,135 +295,264 @@ FILE: README.md
 AUTHORITY: canonical
 ================================================================================================
 
-# LevelUpDiag-Koali
+# LevelUpDiag-Koali v2.3
 
-LevelUpDiag-Koali is a standalone diagnostic and validation appendix used alongside kOA-Linux during development.
+LevelUpDiag-Koali 2.3 is a **core-stabilization-first** diagnostic suite for kOA-Linux. The primary development objective is to stabilize the Koali environment and native core before independent subsystems are integrated.
 
-Its role is simple:
+Its primary rules are:
 
-1. load a local configuration;
-2. read a level manifest;
-3. run a series of `.py`, `.pyw`, or command-based checks;
-4. respect their order and simple dependencies;
-5. collect outputs and logs;
-6. normalize verdicts;
-7. provide a coherent view of the target state.
+> If a formality does not materially prevent observation or execution of the system, it must not block DEBUG.
+>
+> Missing independent subsystems must not be falsified as admitted dependencies merely to advance core stabilization.
 
-LevelUpDiag-Koali is not part of kOA-Linux. It is not required at runtime and must be removed before preparing a delivery.
+Repository cleanliness, frozen architecture conformance, documentation conformance, delivery residue, signatures, and release provenance remain available as validation/finalization evidence, but they are no longer prerequisites for the main debug path.
 
-## Principles
 
-- the manifest describes the levels;
-- each level remains independently executable;
-- the runner orchestrates without reimplementing check logic;
-- local paths and commands come from configuration;
-- results clearly distinguish a target failure from an environment problem;
-- logs are grouped by execution;
-- the GUI is a convenience facade, not an authority;
-- kOA-Linux remains the observed target and keeps its own rules.
 
-## Documentation structure
+## Koali core stabilization scope
 
-Detailed documentation starts in [`docs/README.md`](docs/README.md).
-
-The main documents are:
-
-- [`docs/01-overview.md`](docs/01-overview.md)
-- [`docs/02-architecture.md`](docs/02-architecture.md)
-- [`docs/03-levels-and-checks.md`](docs/03-levels-and-checks.md)
-- [`docs/04-configuration.md`](docs/04-configuration.md)
-- [`docs/05-execution-and-ordering.md`](docs/05-execution-and-ordering.md)
-- [`docs/06-results-and-logs.md`](docs/06-results-and-logs.md)
-- [`docs/07-koa-linux-integration.md`](docs/07-koa-linux-integration.md)
-- [`docs/08-campaigns.md`](docs/08-campaigns.md)
-- [`docs/09-failure-and-blocking-model.md`](docs/09-failure-and-blocking-model.md)
-- [`docs/10-security.md`](docs/10-security.md)
-- [`docs/11-cli-and-gui.md`](docs/11-cli-and-gui.md)
-- [`docs/12-testing.md`](docs/12-testing.md)
-- [`docs/13-removal-before-delivery.md`](docs/13-removal-before-delivery.md)
-- [`docs/14-development.md`](docs/14-development.md)
-- [`docs/15-reference.md`](docs/15-reference.md)
-
-## Mental model
+The default campaign is now `stabilization`:
 
 ```text
-local config
-     +
-manifest
-     ↓
-runner
-     ↓
-N00 → N01 → N02 → ...
-     ↓
-results
-     ↓
-logs + global report
+N00 Diagnostic Integrity
+N01 Environment
+N04 Contracts
+N05 Components
 ```
 
-A level may itself call a public kOA-Linux script, `pytest`, `cargo`, a system tool, or another authorized command.
+This scope deliberately defers independent subsystems while the Koali host/build/runtime environment is being stabilized:
 
-## Runtime directories
+```text
+Konnaxion          placeholder_until_integration
+Ariane             deferred_until_koali_integration_test
+Orgo               draft_not_admitted
+Semantik Architect deferred_not_admitted
+```
 
-By default, locally produced files are stored under:
+This does **not** weaken or rewrite the canonical `sovereign-linux-node` profile. Full-target VALIDATION and RELEASE remain strict and can still report those subsystem authorities as unresolved. The `stabilization-runtime` campaign adds N08/N09/N10 when a bootable image/runtime context becomes available, while retaining DEBUG non-blocking campaign semantics.
+
+## Repository layout
+
+The specialization remains a sibling of the kOA-Linux repository:
+
+```text
+C:\mycode\kOA-Linux\
+├── koa-linux\
+└── LevelUpDiag-Koali\
+```
+
+The default target is `../koa-linux`.
+
+Local developer utilities such as `GitSink.bat` are not a DEBUG gate. If an underlying kOA conformance validator reports a local utility or generated build residue, that individual level may report `FAIL/WARN`, but DEBUG continues collecting independent functional/runtime evidence.
+
+## Modes
+
+### DEBUG — default
+
+Use while developing, loading, testing, or diagnosing kOA-Linux.
+
+- no tracked-Git-state protection;
+- no dependency verdict blocks another level;
+- repository/documentation/release formalities are excluded from the default campaign;
+- `FAIL`, `BLOCKED`, `CONFIG_ERROR`, `SKIP`, and `PARTIAL` remain visible at their local level but make the campaign `WARN`, not globally `BLOCKED`;
+- `ERROR`/`INFRA_ERROR` still mean the diagnostic execution itself had a problem.
+
+### VALIDATION
+
+Use to check repository/documentation/conformance in addition to functional gates.
+Dependencies can be blocked by `BLOCKED`, `ERROR`, `INFRA_ERROR`, or `CONFIG_ERROR`, but a clean Git worktree is not imposed globally.
+
+### RELEASE
+
+Use for strict finalization. Tracked Git state is snapshotted before and after the campaign; mutation by diagnostics is an error.
+
+## Normal execution
+
+```bash
+python levelupdiag.py doctor
+python levelupdiag.py list
+python levelupdiag.py run stabilization
+```
+
+Explicit modes are supported:
+
+```bash
+python levelupdiag.py run N08,N09,N10 --mode debug
+python levelupdiag.py run validation --mode validation
+python levelupdiag.py run release --mode release
+```
+
+Windows launcher default:
+
+```bat
+RUN_LEVELUPDIAG.bat
+```
+
+Linux/macOS launcher default:
+
+```bash
+./RUN_LEVELUPDIAG.sh
+```
+
+Both now default to the `stabilization` campaign.
+
+## Console
+
+`LEVELUPDIAG_CONSOLE.pyw` exposes three policies:
+
+- **DEBUG — non bloquant**
+- **VALIDATION — conformité**
+- **RELEASE — strict**
+
+Presets:
+
+- **STABILISATION KOALI**: N00, N01, N04, N05
+- **RUNTIME CORE**: N00, N01, N04, N05, N08, N09, N10
+- **DEBUG COMPLET**: N00, N01, N04-N10
+- **STRUCTURE**: N00-N03
+- **VALIDATION**: N00-N10
+- **RELEASE**: N00-N11
+
+N02 Repository and N03 Documentation are intentionally absent from DEBUG PRINCIPAL.
+
+## Level sequence
+
+```text
+N00 Diagnostic Integrity
+N01 Environment
+N02 Repository / Structure
+N03 Documentation
+N04 Contracts
+N05 Components
+N06 Integrations
+N07 Profiles
+N08 Security Runtime
+N09 Offline Runtime
+N10 System Runtime
+N11 Delivery
+```
+
+All levels remain serial for stable evidence ordering.
+
+Functional levels no longer depend transitively on N02. Selecting `N08,N09,N10` adds functional prerequisites N00, N01, N04 and N05, but not repository/documentation formalities.
+
+## Campaigns
+
+- `stabilization` — primary pre-subsystem Koali core stabilization, mode DEBUG.
+- `stabilization-runtime` — core runtime qualification when image/QEMU context exists, mode DEBUG.
+- `debug` — broader development diagnosis including integration/profile/runtime levels, mode DEBUG.
+- `structure` — repository/documentation checks, mode VALIDATION.
+- `validation` — N00-N10, mode VALIDATION.
+- `release` — N00-N11, mode RELEASE.
+
+Compatibility aliases remain: `preflight`, `core`, `standard`, `delivery`, `full`.
+
+## Modular product UI diagnostics
+
+LevelUpDiag does **not** define the Koali UX, shell implementation, product manifest filename, or product framework. Those remain owned by Koali documentation and the individual products.
+
+N06 can optionally diagnose consequences of the Koali modular-UI contract when `ui_modularity.enabled` is set in local configuration. The diagnostic is read-only and configuration-driven:
+
+- an optional product repository may be absent and that absence is accepted as an independent-removal state;
+- a required product repository that is unavailable reports `BLOCKED`;
+- configured standalone markers can verify that a product retains its own runnable UI entry point or equivalent product-owned surface;
+- configured integration markers can verify that the product exposes its declared integrated contribution;
+- configured dependency scan files can reject explicit private cross-product UI dependency tokens;
+- LevelUpDiag does not invent or hard-code Orgo, Konnaxion, Kristal, Spaces, or other product UI file names.
+
+Example local policy:
+
+```json
+{
+  "ui_modularity": {
+    "enabled": true,
+    "base_root": "..",
+    "products": [
+      {
+        "id": "example-product",
+        "root": "example-product",
+        "required": false,
+        "standalone_markers": ["<product-owned standalone marker>"],
+        "integration_markers": ["<public Koali integration marker>"],
+        "scan_files": ["<dependency manifest or source file>"],
+        "forbidden_private_ui_tokens": ["<private cross-product UI import token>"]
+      }
+    ]
+  }
+}
+```
+
+The example deliberately uses placeholders: concrete marker paths belong to each product's admitted contract, not to LevelUpDiag. This check is outside the `stabilization` campaign and therefore cannot turn a missing optional UI product into a Koali core-stabilization prerequisite.
+
+## Result model
+
+A campaign summary now separates:
+
+```text
+verdict
+execution_verdict
+system testability
+conformance_verdict
+```
+
+In DEBUG, conformance is reported as `NOT_EVALUATED` by the campaign summary. Local level findings are still preserved exactly.
+
+Example:
+
+```text
+LevelUpDiag debug [DEBUG] - WARN
+Diagnostic execution: PASS
+System testability: PARTIAL
+Conformance: NOT_EVALUATED
+```
+
+That means the diagnostic completed and found unavailable/failed local checks; it does **not** mean the whole debug session is blocked.
+
+## Git policy
+
+DEBUG does not inspect Git globally before/after a run. N02 performs Git observations only when N02 is explicitly selected.
+A dirty worktree in N02 is advisory in DEBUG.
+
+RELEASE retains tracked-state mutation protection because release/finalization provenance is a separate concern.
+
+## kOA-specific validation commands
+
+Default commands are still the canonical public kOA-Linux vectors:
+
+```text
+Documentation  uv run --frozen python docs/tools/validate_docs.py
+Contracts      uv run --frozen python ci/scripts/run-contracts.py
+Components     uv run --frozen python ci/scripts/run-components.py
+Profiles       uv run --frozen pytest -q tests/profiles
+Security       uv run --frozen python ci/scripts/run-security.py
+Offline        uv run --frozen python ci/scripts/run-offline.py
+System         uv run --frozen python ci/scripts/run-system-tests.py
+```
+
+Koali gate markers such as `security: blocked`, `offline: blocked`, and `system: blocked` remain local level verdicts. In DEBUG they do not prevent independent levels from running.
+
+## Evidence
+
+Evidence remains under the target repository:
 
 ```text
 .levelupdiag/
+├── runs/<run-id>/
+│   ├── effective_config.json
+│   ├── summary.json
+│   ├── summary.txt
+│   └── levels/Nxx/result.json
+└── latest/
 ```
 
-This directory contains execution state, logs, and local reports. It is not intended to be shipped with kOA-Linux.
+Commands use `shell=false`; output is bounded and redacted; target mutation remains disabled by configuration.
 
-## Project status
+## Version 2.3.0
 
-LevelUpDiag-Koali is a specialized adaptation of LevelUpDiag designed to support kOA-Linux development without merging the two repositories.
+2.3.0 keeps the 2.2 core-stabilization policy and adds opt-in N06 diagnostics for modular product user interfaces. The new check validates only explicitly configured product roots, standalone/integration markers, and private-dependency tokens; it does not define the Koali UI architecture itself. Optional product absence is accepted as a valid independent-removal state.
 
+It also fixes the desktop console's **DEBUG COMPLET** preset so it selects the `debug` campaign rather than `stabilization`.
 
-================================================================================================
-FILE: SECURITY.md
-AUTHORITY: canonical
-================================================================================================
+## Version 2.2.0
 
-# Security
-
-LevelUpDiag-Koali runs external processes and handles local paths. Its main security surface is therefore command execution and output collection.
-
-## Principles
-
-- never place secrets in `levelupdiag.config.example.json`;
-- limit commands to those declared in the manifest or configuration;
-- prefer commands represented as argument lists;
-- avoid shell interpretation when it is not required;
-- validate paths before reading or writing;
-- never write outside explicitly configured directories;
-- treat kOA-Linux as read-only by default;
-- filter sensitive values before writing logs;
-- never convert an infrastructure error into PASS.
-
-## Sensitive data
-
-Logs may contain:
-
-- local paths;
-- process output;
-- local user names;
-- environment variables;
-- information about installed tools.
-
-Levels must not copy the full environment into their reports.
-
-Values that look like secrets, tokens, passwords, or keys must be masked before persistence.
-
-## Commands
-
-Commands loaded from a local configuration file are treated as limited-trust inputs.
-
-The runner must:
-
-1. know the command that is actually executed;
-2. record its working directory;
-3. apply a timeout;
-4. capture the exit code;
-5. distinguish timeout, missing executable, and target failure.
-
-## Reporting
-
-A vulnerability involving command execution, path escape, secret leakage, or unexpected writes to the target must be treated as high priority.
+2.2.0 changed the default workflow from broad debug to explicit **Koali core stabilization before subsystem integration**. It also requires the core Rust/native toolchain in N01 (`git`, `cargo`, `rustc`, `cc`), adds qualification-scope metadata to campaign summaries, and provides compatibility aliases plus `scripts/run_level.py` for older Koali Control Panel integrations.

@@ -2,7 +2,7 @@
 
 repository: Rejean-McCormick/Orgo
 source_path: C:\mycode\Orgo\Orgo
-source_commit: 2b13ac5c28e04aff107ade9bf76d476467c56ad0
+source_commit: fba068aa8008771b72e41b39370564c5287d0a91
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -11,17 +11,17 @@ wiki_source_path: C:\mycode\Orgo\Orgo.wiki
 wiki_source_commit: 05d4ed6e021761e7b8762563b571fb1ac989f7b5
 wiki_working_tree_markdown: clean
 policy_version: 2026-09-01.11
-repo_files: 34
+repo_files: 48
 wiki_files: 20
-source_files: 54
-included_files: 48
-excluded_files: 6
-duplicate_files: 1
-content_bytes: 376305
-authority_counts: {"canonical":48}
-generated_at: 2026-09-01T13:52:52-04:00
-files: 48
-content_sha256: fa813ce2d7b6251529456d8573258904cab4cd80c13cedc02c0b1b81aad06a53
+source_files: 68
+included_files: 63
+excluded_files: 5
+duplicate_files: 0
+content_bytes: 499503
+authority_counts: {"canonical":63}
+generated_at: 2026-09-10T10:44:59-04:00
+files: 63
+content_sha256: 572ab52d0d8ad56a65e6013dcc63acd5c75c4eb1c83adb6ecd472f3745245850
 
 ================================================================================================
 FILE INDEX
@@ -29,52 +29,67 @@ FILE INDEX
 
 01. [canonical] apps/api/README.md
 02. [canonical] apps/web/README.md
-03. [canonical] Docs/README.md
-04. [canonical] Docs/Technical-Reference/Boilerplate_Turborepo.md
-05. [canonical] Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
-06. [canonical] Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
-07. [canonical] Docs/Technical-Reference/CONTRACTS.md
-08. [canonical] Docs/Technical-Reference/GLOSSARY.md
-09. [canonical] Docs/Technical-Reference/Semantic-Charters.md
-10. [canonical] Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md
-11. [canonical] Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md
-12. [canonical] Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md
-13. [canonical] Docs/Technical-Reference/v3/2-orgo-documentation-index.md
-14. [canonical] Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md
-15. [canonical] Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md
-16. [canonical] Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md
-17. [canonical] Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md
-18. [canonical] Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md
-19. [canonical] Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md
-20. [canonical] Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md
-21. [canonical] Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md
-22. [canonical] Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md
-23. [canonical] Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md
-24. [canonical] Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md
-25. [canonical] Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md
-26. [canonical] Docs/Technical-Reference/WikiData-Orgo_Chart.md
-27. [canonical] packages/tsconfig/README.md
-28. [canonical] README.md
-29. [canonical] wiki/_Footer.md
-30. [canonical] wiki/_Sidebar.md
-31. [canonical] wiki/Cases-and-Tasks.md
-32. [canonical] wiki/Cyclic-Overview-and-Insights.md
-33. [canonical] wiki/Domains-and-Use-Cases.md
-34. [canonical] wiki/Example-Scenarios.md
-35. [canonical] wiki/FAQ.md
-36. [canonical] wiki/Glossary.md
-37. [canonical] wiki/Home.md
-38. [canonical] wiki/How-Orgo-Works.md
-39. [canonical] wiki/Interoperability.md
-40. [canonical] wiki/Offline-and-Resilience.md
-41. [canonical] wiki/Organizations-People-and-Privacy.md
-42. [canonical] wiki/Profiles-and-Adaptability.md
-43. [canonical] wiki/Reactivity-and-Escalation.md
-44. [canonical] wiki/Resources.md
-45. [canonical] wiki/Routing-and-Labels.md
-46. [canonical] wiki/Semantic-Charters.md
-47. [canonical] wiki/Signals-and-Workflows.md
-48. [canonical] wiki/What-is-Orgo.md
+03. [canonical] CODE_SNAPSHOT_MANIFEST.md
+04. [canonical] Docs/README.md
+05. [canonical] Docs/status/2026-09-10-beta-status.md
+06. [canonical] Docs/Technical-Reference/API_IMPLEMENTED.md
+07. [canonical] Docs/Technical-Reference/ARCHITECTURE_TO_CODE.md
+08. [canonical] Docs/Technical-Reference/Boilerplate_Turborepo.md
+09. [canonical] Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
+10. [canonical] Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
+11. [canonical] Docs/Technical-Reference/COMPLETION_DECISIONS.md
+12. [canonical] Docs/Technical-Reference/CONTRACTS.md
+13. [canonical] Docs/Technical-Reference/GLOSSARY.md
+14. [canonical] Docs/Technical-Reference/IMPLEMENTATION_DECISIONS.md
+15. [canonical] Docs/Technical-Reference/IMPLEMENTATION_STATUS.md
+16. [canonical] Docs/Technical-Reference/INTEGRATION_BRIDGE.md
+17. [canonical] Docs/Technical-Reference/LOCAL_VALIDATION.md
+18. [canonical] Docs/Technical-Reference/Semantic-Charters.md
+19. [canonical] Docs/Technical-Reference/TARGET_ARCHITECTURE.md
+20. [canonical] Docs/Technical-Reference/UI_AND_KOALI_INTEGRATION.md
+21. [canonical] Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md
+22. [canonical] Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md
+23. [canonical] Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md
+24. [canonical] Docs/Technical-Reference/v3/2-orgo-documentation-index.md
+25. [canonical] Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md
+26. [canonical] Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md
+27. [canonical] Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md
+28. [canonical] Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md
+29. [canonical] Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md
+30. [canonical] Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md
+31. [canonical] Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md
+32. [canonical] Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md
+33. [canonical] Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md
+34. [canonical] Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md
+35. [canonical] Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md
+36. [canonical] Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md
+37. [canonical] Docs/Technical-Reference/WikiData-Orgo_Chart.md
+38. [canonical] legacy/README.md
+39. [canonical] packages/README.md
+40. [canonical] packages/tsconfig/README.md
+41. [canonical] README.md
+42. [canonical] validation/completion/STATUS.md
+43. [canonical] validation/README.md
+44. [canonical] wiki/_Footer.md
+45. [canonical] wiki/_Sidebar.md
+46. [canonical] wiki/Cases-and-Tasks.md
+47. [canonical] wiki/Cyclic-Overview-and-Insights.md
+48. [canonical] wiki/Domains-and-Use-Cases.md
+49. [canonical] wiki/Example-Scenarios.md
+50. [canonical] wiki/FAQ.md
+51. [canonical] wiki/Glossary.md
+52. [canonical] wiki/Home.md
+53. [canonical] wiki/How-Orgo-Works.md
+54. [canonical] wiki/Interoperability.md
+55. [canonical] wiki/Offline-and-Resilience.md
+56. [canonical] wiki/Organizations-People-and-Privacy.md
+57. [canonical] wiki/Profiles-and-Adaptability.md
+58. [canonical] wiki/Reactivity-and-Escalation.md
+59. [canonical] wiki/Resources.md
+60. [canonical] wiki/Routing-and-Labels.md
+61. [canonical] wiki/Semantic-Charters.md
+62. [canonical] wiki/Signals-and-Workflows.md
+63. [canonical] wiki/What-is-Orgo.md
 
 
 ================================================================================================
@@ -86,7 +101,6 @@ EXCLUDED FILES
 - [proposal] Docs/Technical-Reference/Architecture upgrade(to do)/RFC-001_Nervous_System_Upgrade.md (repo:Docs/Technical-Reference/Architecture upgrade(to do)/**)
 - [proposal] Docs/Technical-Reference/Architecture upgrade(to do)/SPEC-001_Input_SenTient_ACL.md (repo:Docs/Technical-Reference/Architecture upgrade(to do)/**)
 - [proposal] Docs/Technical-Reference/Architecture upgrade(to do)/SPEC-002_Output_Architect_Outbox.md (repo:Docs/Technical-Reference/Architecture upgrade(to do)/**)
-- [duplicate] TO-Do___CODE_ALIGNMENT_NOTES.md (same content as Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md)
 
 
 ================================================================================================
@@ -94,79 +108,9 @@ FILE: apps/api/README.md
 AUTHORITY: canonical
 ================================================================================================
 
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# Orgo API and worker
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+See the root README for setup and `docs/Technical-Reference/API_IMPLEMENTED.md` for the active HTTP contract. The API and worker share RuntimeModule, PostgreSQL and the same release.
 
 
 ================================================================================================
@@ -174,36 +118,273 @@ FILE: apps/web/README.md
 AUTHORITY: canonical
 ================================================================================================
 
-## Getting Started
+# Orgo web
 
-First, run the development server:
+One owner-managed React application, served standalone by Next. Profiles compose routes in `src/orgo/profiles.ts`; `hosted-entry.tsx` exports the same component for a host that supplies routing. Native Koali admission is a separate integration validation. See the root README.
 
-```bash
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+================================================================================================
+FILE: CODE_SNAPSHOT_MANIFEST.md
+AUTHORITY: canonical
+================================================================================================
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+> Historical inventory of the uploaded snapshot. Active sources have since changed; use DELIVERY_MANIFEST.json and IMPLEMENTATION_STATUS.md.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# Code snapshot
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- generated_at: 2026-09-08T16:53:23.196958
+- repository: Orgo
+- archive_layout: repository-relative paths
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Snapshot files
+- `.dockerignore` (241 bytes)
+- `.github/workflows/api.yaml` (1277 bytes)
+- `.github/workflows/web.yaml` (1116 bytes)
+- `.gitignore` (449 bytes)
+- `apps/api/.eslintrc.js` (688 bytes)
+- `apps/api/.prettierrc` (54 bytes)
+- `apps/api/Dockerfile` (1370 bytes)
+- `apps/api/nest-cli.json` (68 bytes)
+- `apps/api/package.json` (2946 bytes)
+- `apps/api/prisma/migrations/20220307034109_initial_migrate/migration.sql` (241 bytes)
+- `apps/api/prisma/migrations/20251127134632_init/migration.sql` (69937 bytes)
+- `apps/api/prisma/migrations/migration_lock.toml` (128 bytes)
+- `apps/api/prisma/schema.prisma` (59543 bytes)
+- `apps/api/README.md` (3412 bytes)
+- `apps/api/src/app.controller.spec.ts` (791 bytes)
+- `apps/api/src/app.controller.ts` (320 bytes)
+- `apps/api/src/app.module.ts` (2627 bytes)
+- `apps/api/src/app.service.ts` (190 bytes)
+- `apps/api/src/config/environment-variables.ts` (229 bytes)
+- `apps/api/src/main.ts` (860 bytes)
+- `apps/api/src/orgo/backbone/identity/dto/link-user-person.dto.ts` (1066 bytes)
+- `apps/api/src/orgo/backbone/identity/identity-link.controller.ts` (6636 bytes)
+- `apps/api/src/orgo/backbone/identity/identity-link.module.ts` (890 bytes)
+- `apps/api/src/orgo/backbone/identity/identity-link.service.ts` (19091 bytes)
+- `apps/api/src/orgo/backbone/organizations/dto/create-organization.dto.ts` (2971 bytes)
+- `apps/api/src/orgo/backbone/organizations/dto/update-organization.dto.ts` (2915 bytes)
+- `apps/api/src/orgo/backbone/organizations/organization.controller.ts` (3382 bytes)
+- `apps/api/src/orgo/backbone/organizations/organization.module.ts` (1114 bytes)
+- `apps/api/src/orgo/backbone/organizations/organization.service.ts` (18102 bytes)
+- `apps/api/src/orgo/backbone/persons/dto/upsert-person-profile.dto.ts` (2288 bytes)
+- `apps/api/src/orgo/backbone/persons/person-profile.controller.ts` (11977 bytes)
+- `apps/api/src/orgo/backbone/persons/person-profile.module.ts` (709 bytes)
+- `apps/api/src/orgo/backbone/persons/person-profile.service.ts` (11024 bytes)
+- `apps/api/src/orgo/backbone/rbac/dto/assign-permission.dto.ts` (857 bytes)
+- `apps/api/src/orgo/backbone/rbac/dto/create-role.dto.ts` (1645 bytes)
+- `apps/api/src/orgo/backbone/rbac/permission.service.ts` (7586 bytes)
+- `apps/api/src/orgo/backbone/rbac/rbac.controller.ts` (10827 bytes)
+- `apps/api/src/orgo/backbone/rbac/rbac.module.ts` (1330 bytes)
+- `apps/api/src/orgo/backbone/rbac/role.service.ts` (6374 bytes)
+- `apps/api/src/orgo/config/config.controller.ts` (10865 bytes)
+- `apps/api/src/orgo/config/config.module.ts` (987 bytes)
+- `apps/api/src/orgo/config/config.service.ts` (22876 bytes)
+- `apps/api/src/orgo/config/feature-flag.controller.ts` (11395 bytes)
+- `apps/api/src/orgo/config/feature-flag.service.ts` (24522 bytes)
+- `apps/api/src/orgo/config/org-profile.controller.ts` (12376 bytes)
+- `apps/api/src/orgo/config/org-profile.service.ts` (36849 bytes)
+- `apps/api/src/orgo/core/alerts/alerting.service.ts` (11912 bytes)
+- `apps/api/src/orgo/core/cases/case.controller.ts` (14451 bytes)
+- `apps/api/src/orgo/core/cases/case.module.ts` (788 bytes)
+- `apps/api/src/orgo/core/cases/case.service.ts` (15902 bytes)
+- `apps/api/src/orgo/core/cases/dto/create-case.dto.ts` (5748 bytes)
+- `apps/api/src/orgo/core/cases/dto/update-case-status.dto.ts` (939 bytes)
+- `apps/api/src/orgo/core/database/database.service.ts` (10819 bytes)
+- `apps/api/src/orgo/core/database/repository-factory.service.ts` (10787 bytes)
+- `apps/api/src/orgo/core/email/email-ingest.service.ts` (27711 bytes)
+- `apps/api/src/orgo/core/email/email-parser.service.ts` (20208 bytes)
+- `apps/api/src/orgo/core/email/email-router.service.ts` (33688 bytes)
+- `apps/api/src/orgo/core/email/email-validator.service.ts` (10616 bytes)
+- `apps/api/src/orgo/core/email/email.controller.ts` (9657 bytes)
+- `apps/api/src/orgo/core/email/email.module.ts` (1956 bytes)
+- `apps/api/src/orgo/core/email/email.service.ts` (15865 bytes)
+- `apps/api/src/orgo/core/functional-ids.ts` (14065 bytes)
+- `apps/api/src/orgo/core/health/health.controller.ts` (3641 bytes)
+- `apps/api/src/orgo/core/health/worker-health.service.ts` (8624 bytes)
+- `apps/api/src/orgo/core/labels/label-routing.service.ts` (10509 bytes)
+- `apps/api/src/orgo/core/labels/label.service.ts` (11260 bytes)
+- `apps/api/src/orgo/core/labels/labels.module.ts` (515 bytes)
+- `apps/api/src/orgo/core/labels/routing-rule.service.ts` (11961 bytes)
+- `apps/api/src/orgo/core/logging/log.service.ts` (25894 bytes)
+- `apps/api/src/orgo/core/logging/logger.module.ts` (1462 bytes)
+- `apps/api/src/orgo/core/metrics/metrics.service.ts` (17956 bytes)
+- `apps/api/src/orgo/core/notifications/notification.controller.ts` (7002 bytes)
+- `apps/api/src/orgo/core/notifications/notification.module.ts` (841 bytes)
+- `apps/api/src/orgo/core/notifications/notification.service.ts` (40229 bytes)
+- `apps/api/src/orgo/core/offline/offline-sync.module.ts` (716 bytes)
+- `apps/api/src/orgo/core/offline/sync.service.ts` (19601 bytes)
+- `apps/api/src/orgo/core/signals/dto/create-signal.dto.ts` (6108 bytes)
+- `apps/api/src/orgo/core/signals/signal-ingest.service.ts` (20108 bytes)
+- `apps/api/src/orgo/core/signals/signal.controller.ts` (3791 bytes)
+- `apps/api/src/orgo/core/signals/signals.module.ts` (599 bytes)
+- `apps/api/src/orgo/core/tasks/dto/create-task.dto.ts` (5785 bytes)
+- `apps/api/src/orgo/core/tasks/dto/update-task-status.dto.ts` (1251 bytes)
+- `apps/api/src/orgo/core/tasks/task-events.gateway.ts` (10833 bytes)
+- `apps/api/src/orgo/core/tasks/task-events.service.ts` (13927 bytes)
+- `apps/api/src/orgo/core/tasks/task.controller.ts` (9449 bytes)
+- `apps/api/src/orgo/core/tasks/task.module.ts` (388 bytes)
+- `apps/api/src/orgo/core/tasks/task.service.ts` (36897 bytes)
+- `apps/api/src/orgo/core/validation/config-validation.service.ts` (8937 bytes)
+- `apps/api/src/orgo/core/validation/metadata.service.ts` (7906 bytes)
+- `apps/api/src/orgo/core/validation/payload-validation.pipe.ts` (12286 bytes)
+- `apps/api/src/orgo/core/workflow/escalation.service.ts` (32655 bytes)
+- `apps/api/src/orgo/core/workflow/workflow-engine.service.ts` (36604 bytes)
+- `apps/api/src/orgo/core/workflow/workflow.controller.ts` (5957 bytes)
+- `apps/api/src/orgo/core/workflow/workflow.module.ts` (652 bytes)
+- `apps/api/src/orgo/domain/domain-task.factory.ts` (7711 bytes)
+- `apps/api/src/orgo/domain/domain-workflow.service.ts` (17516 bytes)
+- `apps/api/src/orgo/domain/education/education.controller.ts` (12104 bytes)
+- `apps/api/src/orgo/domain/education/education.module.ts` (342 bytes)
+- `apps/api/src/orgo/domain/education/education.service.ts` (29771 bytes)
+- `apps/api/src/orgo/domain/hr/hr.controller.ts` (6971 bytes)
+- `apps/api/src/orgo/domain/hr/hr.module.ts` (551 bytes)
+- `apps/api/src/orgo/domain/hr/hr.service.ts` (24680 bytes)
+- `apps/api/src/orgo/domain/hr/hr.service.ts.BAK` (29187 bytes)
+- `apps/api/src/orgo/domain/maintenance/maintenance.controller.ts` (2634 bytes)
+- `apps/api/src/orgo/domain/maintenance/maintenance.module.ts` (5329 bytes)
+- `apps/api/src/orgo/domain/maintenance/maintenance.service.ts` (19075 bytes)
+- `apps/api/src/orgo/insights/cache/insights-cache-warmup.service.ts` (8155 bytes)
+- `apps/api/src/orgo/insights/export/analytics-export.service.ts` (10912 bytes)
+- `apps/api/src/orgo/insights/insights-cache-warmup.service.ts` (10855 bytes)
+- `apps/api/src/orgo/insights/insights.module.ts` (1417 bytes)
+- `apps/api/src/orgo/insights/pattern-detection.service.ts` (26889 bytes)
+- `apps/api/src/orgo/insights/patterns/pattern-detection.service.ts` (26394 bytes)
+- `apps/api/src/orgo/insights/reports/reports.controller.ts` (5979 bytes)
+- `apps/api/src/orgo/insights/reports/reports.service.ts` (19965 bytes)
+- `apps/api/src/orgo/orgo.module.ts` (1496 bytes)
+- `apps/api/src/orgo/security/audit/audit-trail.service.ts` (7357 bytes)
+- `apps/api/src/orgo/security/auth/auth.guard.ts` (7632 bytes)
+- `apps/api/src/orgo/security/auth/auth.module.ts` (2286 bytes)
+- `apps/api/src/orgo/security/auth/auth.service.ts` (15032 bytes)
+- `apps/api/src/orgo/security/compliance/compliance-export.service.ts` (13754 bytes)
+- `apps/api/src/orgo/security/logging/log-query.service.ts` (12925 bytes)
+- `apps/api/src/orgo/security/privacy/privacy.service.ts` (12846 bytes)
+- `apps/api/src/orgo/security/rbac/rbac.service.ts` (10735 bytes)
+- `apps/api/src/persistence/persistence.module.ts` (212 bytes)
+- `apps/api/src/persistence/prisma/prisma.service.spec.ts` (478 bytes)
+- `apps/api/src/persistence/prisma/prisma.service.ts` (262 bytes)
+- `apps/api/test/app.e2e-spec.ts` (654 bytes)
+- `apps/api/test/jest-e2e.json` (192 bytes)
+- `apps/api/tsconfig.build.json` (153 bytes)
+- `apps/api/tsconfig.json` (119 bytes)
+- `apps/api/webpack-hmr.config.js` (739 bytes)
+- `apps/web/.env.example` (0 bytes)
+- `apps/web/.eslintrc.js` (51 bytes)
+- `apps/web/Dockerfile` (1085 bytes)
+- `apps/web/jest.config.js` (769 bytes)
+- `apps/web/jest.setup.js` (306 bytes)
+- `apps/web/next-env.d.ts` (206 bytes)
+- `apps/web/next.config.js` (119 bytes)
+- `apps/web/package.json` (1015 bytes)
+- `apps/web/pages/_app.tsx` (1034 bytes)
+- `apps/web/pages/index.tsx` (364 bytes)
+- `apps/web/postcss.config.js` (52 bytes)
+- `apps/web/README.md` (1399 bytes)
+- `apps/web/src/common/.gitkeep` (0 bytes)
+- `apps/web/src/orgo/core/functional-ids.ts` (4861 bytes)
+- `apps/web/src/orgo/hooks/useTaskEventStream.ts` (10335 bytes)
+- `apps/web/src/orgo/types/case.ts` (2876 bytes)
+- `apps/web/src/orgo/types/insights.ts` (11796 bytes)
+- `apps/web/src/orgo/types/organization.ts` (7892 bytes)
+- `apps/web/src/orgo/types/permission.ts` (3596 bytes)
+- `apps/web/src/orgo/types/person.ts` (2670 bytes)
+- `apps/web/src/orgo/types/profile.ts` (10024 bytes)
+- `apps/web/src/orgo/types/role.ts` (4382 bytes)
+- `apps/web/src/orgo/types/task.ts` (4196 bytes)
+- `apps/web/src/providers/AppProviders.tsx` (530 bytes)
+- `apps/web/src/screens/admin/.gitkeep` (0 bytes)
+- `apps/web/src/screens/admin/cases/AdminCaseOverviewPage.tsx` (22076 bytes)
+- `apps/web/src/screens/admin/insights/InsightsOverviewPage.tsx` (13230 bytes)
+- `apps/web/src/screens/admin/org/OrgProfileSettingsPage.tsx` (15068 bytes)
+- `apps/web/src/screens/admin/profiles/OrgProfileSettingsPage.tsx` (16563 bytes)
+- `apps/web/src/screens/admin/tasks/AdminTaskOverviewPage.tsx` (26129 bytes)
+- `apps/web/src/screens/auth/login/login.test.tsx` (165 bytes)
+- `apps/web/src/screens/auth/login/login.tsx` (1752 bytes)
+- `apps/web/src/screens/common/.gitkeep` (0 bytes)
+- `apps/web/src/screens/employee/.gitkeep` (0 bytes)
+- `apps/web/src/screens/insights/InsightsOverviewPage.tsx` (19550 bytes)
+- `apps/web/src/store/index.ts` (719 bytes)
+- `apps/web/src/store/services/api.ts` (412 bytes)
+- `apps/web/src/store/services/orgoApi.ts` (31562 bytes)
+- `apps/web/src/styles/global.css` (62 bytes)
+- `apps/web/tailwind.config.js` (53 bytes)
+- `apps/web/tsconfig.json` (148 bytes)
+- `charters/care.json` (2455 bytes)
+- `charters/care_hospital.json` (1700 bytes)
+- `charters/care_nursing_home.json` (986 bytes)
+- `charters/care_school.json` (1285 bytes)
+- `charters/care_social_services.json` (852 bytes)
+- `charters/general.json` (4051 bytes)
+- `charters/groups.json` (971 bytes)
+- `charters/groups_associations.json` (617 bytes)
+- `charters/groups_sports.json` (796 bytes)
+- `charters/incidents.json` (1535 bytes)
+- `charters/incidents_it_helpdesk.json` (591 bytes)
+- `charters/incidents_sst.json` (594 bytes)
+- `charters/operations.json` (2409 bytes)
+- `charters/operations_facilities.json` (900 bytes)
+- `charters/operations_manufacturing.json` (840 bytes)
+- `charters/operations_transport_logistics.json` (1028 bytes)
+- `charters/programs.json` (1734 bytes)
+- `charters/programs_government.json` (1149 bytes)
+- `charters/programs_humanitarian.json` (1521 bytes)
+- `concat_orgo.py` (8319 bytes)
+- `docker-compose.yml` (1557 bytes)
+- `docs/README.md` (3628 bytes)
+- `docs/Technical-Reference/Architecture upgrade(to do)/OPS-001_AI_Resilience_Strategy.md` (6356 bytes)
+- `docs/Technical-Reference/Architecture upgrade(to do)/REF-001_Configuration_Manifest.md` (5200 bytes)
+- `docs/Technical-Reference/Architecture upgrade(to do)/RFC-001_Nervous_System_Upgrade.md` (7988 bytes)
+- `docs/Technical-Reference/Architecture upgrade(to do)/SPEC-001_Input_SenTient_ACL.md` (6937 bytes)
+- `docs/Technical-Reference/Architecture upgrade(to do)/SPEC-002_Output_Architect_Outbox.md` (8052 bytes)
+- `docs/Technical-Reference/Boilerplate_Turborepo.md` (2348 bytes)
+- `docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md` (5599 bytes)
+- `docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md` (19210 bytes)
+- `docs/Technical-Reference/CONTRACTS.md` (6444 bytes)
+- `docs/Technical-Reference/eliteUserList_clean.csv` (39039 bytes)
+- `docs/Technical-Reference/GENERALinstructionsForAI.txt` (4190 bytes)
+- `docs/Technical-Reference/Glossary-Letters.txt` (2905 bytes)
+- `docs/Technical-Reference/GLOSSARY.md` (5487 bytes)
+- `docs/Technical-Reference/HowToStartAndEnter.txt` (1212 bytes)
+- `docs/Technical-Reference/Semantic-Charters.md` (7138 bytes)
+- `docs/Technical-Reference/TARGET_ARCHITECTURE.md` (17058 bytes)
+- `docs/Technical-Reference/UI_AND_KOALI_INTEGRATION.md` (11697 bytes)
+- `docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md` (5612 bytes)
+- `docs/Technical-Reference/v3/1-orgo-database-schema-reference.md` (47606 bytes)
+- `docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md` (8752 bytes)
+- `docs/Technical-Reference/v3/2-orgo-documentation-index.md` (31142 bytes)
+- `docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md` (5841 bytes)
+- `docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md` (28392 bytes)
+- `docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md` (3091 bytes)
+- `docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md` (46327 bytes)
+- `docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md` (1931 bytes)
+- `docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md` (40973 bytes)
+- `docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md` (1969 bytes)
+- `docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md` (29951 bytes)
+- `docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md` (3481 bytes)
+- `docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md` (21619 bytes)
+- `docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md` (1543 bytes)
+- `docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md` (29606 bytes)
+- `docs/Technical-Reference/WikiData-Orgo_Chart.md` (6970 bytes)
+- `LICENSE` (688 bytes)
+- `package-scripts.js` (1998 bytes)
+- `package.json` (681 bytes)
+- `packages/config/eslint-preset.js` (240 bytes)
+- `packages/config/nginx.conf` (1491 bytes)
+- `packages/config/package.json` (281 bytes)
+- `packages/config/postcss.config.js` (89 bytes)
+- `packages/config/tailwind.config.js` (221 bytes)
+- `packages/tsconfig/base.json` (541 bytes)
+- `packages/tsconfig/nestjs.json` (604 bytes)
+- `packages/tsconfig/nextjs.json` (590 bytes)
+- `packages/tsconfig/package.json` (178 bytes)
+- `packages/tsconfig/react-library.json` (245 bytes)
+- `packages/tsconfig/README.md` (109 bytes)
+- `packages/ui/components/Button/Button.tsx` (98 bytes)
+- `packages/ui/index.tsx` (45 bytes)
+- `packages/ui/package.json` (479 bytes)
+- `packages/ui/tsconfig.json` (120 bytes)
+- `README.md` (7111 bytes)
+- `turbo.json` (455 bytes)
 
 
 ================================================================================================
@@ -211,42 +392,292 @@ FILE: Docs/README.md
 AUTHORITY: canonical
 ================================================================================================
 
+> Current delivery: [Implementation status](Technical-Reference/IMPLEMENTATION_STATUS.md), [adopted decisions](Technical-Reference/IMPLEMENTATION_DECISIONS.md), [implemented API](Technical-Reference/API_IMPLEMENTED.md).
+
 # Orgo — Documentation
 
 ## Scope
 
-Orgo is an **ecosystem system** in the kOA Digital Ecosystem. It is a multi-tenant workflow and coordination system that turns signals into governed operational work through Organizations, Cases, Tasks, labels, profiles, workflows, audit and insights.
+Orgo is a **proprietary integrated subsystem/application** in the kOA Digital Ecosystem. It is a multi-tenant workflow and coordination system that turns signals into governed operational work through Organizations, Cases, Tasks, labels, profiles, workflows, audit and insights. Its target implementation style is a modular monolith centered on Intake, Work and Orchestration.
 
-Orgo owns **workflow state**. It does not absorb the business state of Konnaxion, the epistemic state of Kristal, the linguistic runtime of SemantiK Architect, or the host/platform state of kOA-Linux.
+Orgo owns **workflow state, business authorization and its business UI**. It can run standalone. When hosted by Koali Spaces it is contributed as a `local_module_surface`; Koali hosts/composes Orgo but does not become the owner of Orgo's Tasks, Cases, Signals, Workflows, tenant rules, RBAC or UI. Orgo does not absorb the business state of Konnaxion, the epistemic state of Kristal, the linguistic runtime of SemantiK Architect, or the host/platform state of kOA-Linux.
 
 ## Canonical reading order
 
-1. `Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md`
-2. `Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md`
-3. `Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md`
-4. `Technical-Reference/v3/4-Orgo v3 - Domain Modules.md`
-5. `Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md`
-6. `Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md`
-7. `Technical-Reference/v3/7-Orgo v3 - API Surface.md`
-8. `Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md`
-9. `Technical-Reference/GLOSSARY.md`
-10. `Technical-Reference/CODE_ALIGNMENT_NOTES.md`
+1. `Technical-Reference/TARGET_ARCHITECTURE.md` — canonical target architecture and migration strategy.
+2. `Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md` — current physical schema reference.
+3. `Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md`
+4. `Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md`
+5. `Technical-Reference/v3/4-Orgo v3 - Domain Modules.md`
+6. `Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md`
+7. `Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md`
+8. `Technical-Reference/v3/7-Orgo v3 - API Surface.md`
+9. `Technical-Reference/UI_AND_KOALI_INTEGRATION.md`
+10. `Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md`
+11. `Technical-Reference/GLOSSARY.md`
+12. `Technical-Reference/CODE_ALIGNMENT_NOTES.md`
 
 ## Core invariants
 
 - `Organization` is the tenant boundary.
-- `Task` is the canonical unit of work.
-- `Case` is the durable container for related work/context.
+- `Work` is the central operational bounded context; it owns canonical Case/Task mutations.
+- `Task` is the canonical executable unit of work.
+- `Case` is the durable situation/context and primary operational workspace.
+- `Signal` is a first-class accepted input/evidence object in the target architecture; the current schema still requires this persistence model to be added.
 - Domain modules refine the Task/Case engine; they do not create competing core lifecycles.
 - Canonical labels drive routing/classification but do not replace domain state.
 - Broadcast labels are informational by default unless an explicit workflow creates work.
-- Insights are read/analysis projections; actionable patterns re-enter the core as Cases/Tasks.
+- Workflow evaluation is deterministic and side-effect free; an Action Executor applies resolved actions through owner services.
+- Durable external/long-running effects use idempotency, an outbox/worker boundary and explicit receipts.
+- Insights are read/analysis projections; actionable patterns re-enter Work as Cases/Tasks.
 - External systems are orchestrated through explicit contracts; Orgo does not write their internal stores.
 - Workflow state is not epistemic, civic, linguistic or platform state.
+- Orgo remains standalone-capable; Koali hosting is an integration mode, not a required business dependency.
+- Koali capability projections may influence presentation but never replace Orgo authorization.
+- Orgo presentation profiles compose shared UI capabilities; reduced surfaces are not implemented by cloning or merely hiding a monolithic Control Panel.
 
 ## Current code reference
 
 The supplied code snapshot contains the real Prisma schema, migrations, NestJS services/controllers, domain modules, charters and web application. The physical schema and executable code are the implementation reference; this documentation defines the aligned architecture those surfaces should implement.
+
+## Completion delivery reference — 2026-09-09
+
+The active implementation and its remaining external-contract boundaries are recorded in `IMPLEMENTATION_STATUS.md`. See `COMPLETION_DECISIONS.md` for durable processes, receipt predicates, Work scopes, identity and evidence semantics; `ARCHITECTURE_TO_CODE.md` for source ownership; `LOCAL_VALIDATION.md` for the final acceptance to run locally. Historical validation results do not validate the completion changes.
+
+
+================================================================================================
+FILE: Docs/status/2026-09-10-beta-status.md
+AUTHORITY: canonical
+================================================================================================
+
+# Orgo — Rapport de statut du 10 septembre 2026
+
+## Décision : bêta
+
+Le niveau recommandé est **bêta**, pas encore release candidate (RC). Les campagnes `deep` et `browser` ont réussi selon les résultats communiqués dans la conversation. Ces résultats permettent de poursuivre les essais fonctionnels ; ils ne démontrent pas encore la complétude du périmètre de livraison.
+
+Ce rapport est établi à partir des résultats transmis, sans nouvelle exécution ni inspection du dépôt. Le commit testé, la branche et les tags existants restent à identifier. Aucun tag n’a été créé ou poussé dans le cadre de ce rapport.
+
+## Éléments de validation disponibles
+
+| Campagne | Résultat communiqué | Périmètre |
+| --- | --- | --- |
+| `deep` | PASS — 12 niveaux sur 12 | Intégrité du diagnostic, contexte et inventaire du dépôt, hygiène, outils, sécurité, preflight Orgo, schéma/architecture/types, tests métier, intégration PostgreSQL native, builds API/web, audit des dépendances au seuil moderate+ |
+| `browser` / N15 | PASS — 7 tests réussis, 0 échec, 0 ignoré | Parcours Playwright avec la vraie API et PostgreSQL |
+
+Référence de la campagne `deep` : `20260910T015821Z-e0b2ce01`.
+Rapport local communiqué : `C:\mycode\Orgo\LevelUpDiag-Orgo\.levelupdiag\runs\20260910T015821Z-e0b2ce01\summary.json`.
+La référence précise du rapport final `browser` et les SHA Git associés ne sont pas disponibles dans le contexte fourni. Le succès de N15 provient du compte rendu de lecture du rapport dans la conversation.
+
+Les sept scénarios navigateur couvrent :
+
+1. Le refus d’identifiants invalides.
+2. La connexion, la recherche clavier et la déconnexion.
+3. La création, la recherche et la réouverture d’un dossier.
+4. La création, la recherche et la réouverture d’une tâche.
+5. La création, la recherche et la réouverture d’un signal.
+6. Les transitions d’une tâche.
+7. Une recherche sans résultat.
+
+## Incidents résolus pendant la validation
+
+- PostgreSQL indisponible : après remise en disponibilité, les campagnes `database` puis `deep` ont passé.
+- Sélecteur d’alerte Playwright ambigu avec l’annonceur Next.js : correction du test.
+- Détection de disponibilité du lanceur : lecture corrigée de `data.status` dans la réponse de l’API.
+- Connexion HTTP 401 : mot de passe du compte de test non concordant ; le succès final des sept scénarios confirme que le blocage de connexion est levé.
+
+La console LevelUpDiag a reçu des paramètres navigateur et des commandes de démarrage/arrêt de la pile de test. Ces changements appartiennent à l’outil de diagnostic séparé ; leur présence dans une version d’Orgo ne doit pas être supposée.
+
+## Conditions proposées pour une RC
+
+- Définir le périmètre fonctionnel de la version et vérifier chaque fonctionnalité attendue par rapport à la documentation.
+- Compléter la validation des permissions et de l’isolation entre organisations, des pièces jointes, des workflows et des autres parcours retenus pour la livraison.
+- Établir la liste des anomalies connues et confirmer l’absence de défaut bloquant dans ce périmètre.
+- Vérifier l’installation et les migrations dans un environnement représentatif de la livraison.
+- Rattacher les rapports `deep` et `browser` au même état de code destiné au tag ; relancer les contrôles concernés si le code ou ses dépendances ont changé.
+
+Ces points sont des validations restant à documenter, pas des défauts constatés.
+
+## Préparation du tag GitHub
+
+Utiliser un tag de préversion bêta conforme aux conventions du dépôt. **`v0.1.0-beta.1` est une proposition conditionnelle**, à retenir uniquement si la prochaine version visée est bien `0.1.0` et si ce tag n’existe pas déjà. Les mentions `api@0.1.0` et `web@0.1.0` dans les journaux ne suffisent pas à établir la version de livraison.
+
+Avant le push : identifier le dépôt, sa branche de livraison, les versions et tags existants ; intégrer ce rapport dans `docs/status` ; vérifier les modifications locales et le commit à publier ; rattacher les preuves de tests à cet état. Créer ensuite un tag annoté sur le commit retenu et pousser uniquement ce tag. Ne pas remplacer un tag existant.
+
+Si une GitHub Release est créée, la marquer comme préversion et reprendre les limites de couverture ci-dessus.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/API_IMPLEMENTED.md
+AUTHORITY: canonical
+================================================================================================
+
+# Orgo — Implemented HTTP routes
+
+Generated from active controllers for the completion delivery, 2026-09-09. Route implementation is distinct from final runtime acceptance; see `LOCAL_VALIDATION.md`.
+
+Health, login/recovery/reset and OIDC initiation/completion are explicitly public. Other routes require authentication. Product mutations generally require `Idempotency-Key`; password/login/SSO have their own security lifecycle. Tenant identity always comes from authentication. CSV and metrics routes return their declared content type; other routes use the Orgo JSON envelope.
+
+| Method | Route | Owner file |
+| --- | --- | --- |
+| GET | `/api/v3/organizations` | `admin.controller.ts` |
+| GET | `/api/v3/people` | `admin.controller.ts` |
+| POST | `/api/v3/people` | `admin.controller.ts` |
+| GET | `/api/v3/users` | `admin.controller.ts` |
+| POST | `/api/v3/users` | `admin.controller.ts` |
+| GET | `/api/v3/roles` | `admin.controller.ts` |
+| POST | `/api/v3/roles` | `admin.controller.ts` |
+| PUT | `/api/v3/users/:id/roles` | `admin.controller.ts` |
+| GET | `/api/v3/config/profile` | `admin.controller.ts` |
+| PUT | `/api/v3/config/profile` | `admin.controller.ts` |
+| GET | `/api/v3/maintenance/assets` | `admin.controller.ts` |
+| POST | `/api/v3/maintenance/assets` | `admin.controller.ts` |
+| POST | `/api/v3/maintenance/tasks` | `admin.controller.ts` |
+| POST | `/api/v3/hr/cases` | `admin.controller.ts` |
+| GET | `/api/v3/education/groups` | `admin.controller.ts` |
+| POST | `/api/v3/education/groups` | `admin.controller.ts` |
+| POST | `/api/v3/education/tasks` | `admin.controller.ts` |
+| POST | `/api/v3/auth/login` | `auth.controller.ts` |
+| GET | `/api/v3/auth/me` | `auth.controller.ts` |
+| POST | `/api/v3/auth/logout` | `auth.controller.ts` |
+| GET | `/api/v3/work/:type/:id/attachments` | `completion.controller.ts` |
+| POST | `/api/v3/work/:type/:id/attachments` | `completion.controller.ts` |
+| GET | `/api/v3/attachments/:id` | `completion.controller.ts` |
+| DELETE | `/api/v3/attachments/:id` | `completion.controller.ts` |
+| GET | `/api/v3/work/:type/:id/timeline` | `completion.controller.ts` |
+| GET | `/api/v3/work/:type/:id/relations` | `completion.controller.ts` |
+| POST | `/api/v3/work/:type/:id/relations` | `completion.controller.ts` |
+| POST | `/api/v3/processes` | `completion.controller.ts` |
+| GET | `/api/v3/processes` | `completion.controller.ts` |
+| GET | `/api/v3/processes/:id` | `completion.controller.ts` |
+| POST | `/api/v3/processes/:id/decision` | `completion.controller.ts` |
+| POST | `/api/v3/processes/:id/adopt` | `completion.controller.ts` |
+| POST | `/api/v3/processes/:id/compensate` | `completion.controller.ts` |
+| POST | `/api/v3/integration-operations/:id/receipt` | `completion.controller.ts` |
+| GET | `/api/v3/identity/tokens` | `completion.controller.ts` |
+| POST | `/api/v3/identity/tokens` | `completion.controller.ts` |
+| DELETE | `/api/v3/identity/tokens/:id` | `completion.controller.ts` |
+| POST | `/api/v3/identity/users/:id/invite` | `completion.controller.ts` |
+| PUT | `/api/v3/identity/users/:id/status` | `completion.controller.ts` |
+| POST | `/api/v3/auth/password` | `completion.controller.ts` |
+| POST | `/api/v3/auth/recover` | `completion.controller.ts` |
+| POST | `/api/v3/auth/reset` | `completion.controller.ts` |
+| GET | `/api/v3/maintenance/calendar` | `completion.controller.ts` |
+| POST | `/api/v3/maintenance/calendar` | `completion.controller.ts` |
+| PUT | `/api/v3/maintenance/calendar/:id/status` | `completion.controller.ts` |
+| GET | `/api/v3/hr/cases` | `completion.controller.ts` |
+| GET | `/api/v3/hr/cases/:id` | `completion.controller.ts` |
+| POST | `/api/v3/hr/cases/:id/participants` | `completion.controller.ts` |
+| PUT | `/api/v3/hr/cases/:id/review` | `completion.controller.ts` |
+| POST | `/api/v3/hr/wellbeing` | `completion.controller.ts` |
+| GET | `/api/v3/education/groups/:id/members` | `completion.controller.ts` |
+| POST | `/api/v3/education/groups/:id/members` | `completion.controller.ts` |
+| DELETE | `/api/v3/education/members/:id` | `completion.controller.ts` |
+| GET | `/api/v3/identity/users/:id/scopes` | `completion.controller.ts` |
+| POST | `/api/v3/identity/users/:id/scopes` | `completion.controller.ts` |
+| DELETE | `/api/v3/identity/scopes/:id` | `completion.controller.ts` |
+| POST | `/api/v3/identity/invitations` | `completion.controller.ts` |
+| GET | `/health/live` | `health.controller.ts` |
+| GET | `/health/ready` | `health.controller.ts` |
+| GET | `/health/dependencies` | `health.controller.ts` |
+| POST | `/api/v3/ingress/email` | `ingress.controller.ts` |
+| GET | `/api/v3/ingress/email/:signalId` | `ingress.controller.ts` |
+| GET | `/api/v3/ingress/email/:signalId/attachments/:index` | `ingress.controller.ts` |
+| POST | `/api/v3/ingress/webhook` | `ingress.controller.ts` |
+| POST | `/api/v3/integration-operations` | `operations.controller.ts` |
+| GET | `/api/v3/integration-operations/:id` | `operations.controller.ts` |
+| GET | `/api/v3/integration-operations` | `operations.controller.ts` |
+| GET | `/api/v3/notifications` | `operations.controller.ts` |
+| POST | `/api/v3/notifications` | `operations.controller.ts` |
+| GET | `/api/v3/outbox` | `operations.controller.ts` |
+| POST | `/api/v3/outbox/:id/redrive` | `operations.controller.ts` |
+| GET | `/api/v3/insights/overview` | `operations.controller.ts` |
+| GET | `/api/v3/audit` | `operations.controller.ts` |
+| GET | `/api/v3/signals` | `process.controller.ts` |
+| GET | `/api/v3/signals/:id` | `process.controller.ts` |
+| POST | `/api/v3/signals` | `process.controller.ts` |
+| POST | `/api/v3/signals/:id/process` | `process.controller.ts` |
+| GET | `/api/v3/workflows` | `process.controller.ts` |
+| POST | `/api/v3/workflows/:code/versions` | `process.controller.ts` |
+| POST | `/api/v3/workflows/:code/import` | `process.controller.ts` |
+| GET | `/api/v3/workflow-versions/:id/export` | `process.controller.ts` |
+| POST | `/api/v3/workflow-versions/:id/simulate` | `process.controller.ts` |
+| POST | `/api/v3/workflow-versions/:id/execute` | `process.controller.ts` |
+| GET | `/api/v3/communications/templates` | `product-operations.controller.ts` |
+| PUT | `/api/v3/communications/templates/:code` | `product-operations.controller.ts` |
+| POST | `/api/v3/communications/templates/:code/send` | `product-operations.controller.ts` |
+| PUT | `/api/v3/notifications/:id/read` | `product-operations.controller.ts` |
+| GET | `/api/v3/reports/tasks.csv` | `product-operations.controller.ts` |
+| GET | `/api/v3/system/overview` | `product-operations.controller.ts` |
+| GET | `/api/v3/system/metrics` | `product-operations.controller.ts` |
+| POST | `/api/v3/system/retention` | `product-operations.controller.ts` |
+| GET | `/api/v3/routing/rules` | `routing.controller.ts` |
+| POST | `/api/v3/routing/rules` | `routing.controller.ts` |
+| POST | `/api/v3/routing/tasks/:id` | `routing.controller.ts` |
+| GET | `/api/v3/auth/sso/config` | `sso.controller.ts` |
+| POST | `/api/v3/auth/sso/start` | `sso.controller.ts` |
+| POST | `/api/v3/auth/sso/complete` | `sso.controller.ts` |
+| GET | `/api/v3/identity/sso` | `sso.controller.ts` |
+| POST | `/api/v3/identity/sso` | `sso.controller.ts` |
+| DELETE | `/api/v3/identity/sso/:id` | `sso.controller.ts` |
+| POST | `/api/v3/sync/replay` | `sync.controller.ts` |
+| GET | `/api/v3/tasks` | `work.controller.ts` |
+| GET | `/api/v3/tasks/:id` | `work.controller.ts` |
+| POST | `/api/v3/tasks` | `work.controller.ts` |
+| PATCH | `/api/v3/tasks/:id/status` | `work.controller.ts` |
+| PATCH | `/api/v3/tasks/:id/assignment` | `work.controller.ts` |
+| PATCH | `/api/v3/tasks/:id` | `work.controller.ts` |
+| POST | `/api/v3/tasks/:id/comments` | `work.controller.ts` |
+| GET | `/api/v3/cases` | `work.controller.ts` |
+| GET | `/api/v3/cases/:id` | `work.controller.ts` |
+| POST | `/api/v3/cases` | `work.controller.ts` |
+| PATCH | `/api/v3/cases/:id/status` | `work.controller.ts` |
+| PATCH | `/api/v3/cases/:id` | `work.controller.ts` |
+| PATCH | `/api/v3/tasks/:id/case` | `work.controller.ts` |
+
+Total: **114 routes**.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/ARCHITECTURE_TO_CODE.md
+AUTHORITY: canonical
+================================================================================================
+
+# Target architecture → active code → local acceptance
+
+Paths are relative to `apps/api/src/orgo/` unless otherwise specified. This is an architecture coverage map, not a claim of exhaustive acceptance for every historical draft.
+
+| Requirement | Active implementation | UI/API entry | Local verification |
+| --- | --- | --- | --- |
+| Transactional core / Work owner | `modules/work/work.service.ts`, `platform/database.ts` | Cases, Tasks | Tenant, revision, lifecycle tests |
+| Persist Signal before effects | `modules/intake/intake.service.ts` | Signals, ingress | Durable acceptance / rollback tests |
+| Pure evaluator | `modules/orchestration/evaluator.ts` | Workflow simulation | Pure unit tests, architecture rule |
+| Frozen runtime versions | `modules/orchestration/workflow.service.ts` | Workflow versions | Version pinning / immutable SQL trigger |
+| Internal and external action split | `modules/orchestration/actions.ts` | Workflow execution | Transaction rollback / queued operation tests |
+| Durable process managers | `modules/orchestration/process-manager.service.ts` | Processes; `START_PROCESS` | Human revision / async callback tests; timers/restarts locally |
+| External ACLs | `integrations/*`, `modules/integrations/operations.service.ts` | Operations / receipts | Bridge tests; native provider contracts still required |
+| Tenant + actor context | `platform/contracts.ts`, `modules/identity/*` | Auth boundary | Spoofed tenant and revoked actor tests |
+| Scoped Work authorization | `WorkService` filters/assertions; `IdentityService.workGrants` | Access / Work scope fields | Team alpha/beta regression test |
+| Idempotency | `platform/database.ts` | Mutation keys / offline command IDs | Repeated/concurrent commands, conflicts |
+| Outbox reliability | `platform/outbox/worker.service.ts` | System / redrive | Lease fencing, native skip-locked test |
+| Signal/email evidence | HTTP ingress + `scripts/email-ingress.py` | Signal inspector | Attachment isolation test; IMAP/mbox fixture runs locally |
+| Work evidence/history | `modules/work/evidence.service.ts` | Work inspector | Upload/replay/tenant/tombstone tests |
+| Operational relationships | `WorkService.linkCase`, `EvidenceService.relate` | Work editor / relations | Scope, visibility and revision checks locally |
+| Routing and SLA | `modules/orchestration/routing.service.ts`, `escalation.service.ts` | Routing / worker | Routing / canonical escalation tests |
+| Identity administration | `modules/identity/identity-admin.service.ts` | Access, account page | Token/recovery/revocation acceptance locally |
+| Optional SSO | `modules/identity/oidc.service.ts` | Login / subject enrollment | Provider + negative JWT/state/nonce cases locally |
+| Notifications/templates | `modules/communications/*` | Messages / notifications | In-app and template tests; SMTP/gateway locally |
+| Maintenance | `modules/domains/domain-management.service.ts`, `domains.service.ts` | Maintenance | Task-link and overlap tests |
+| HR | Same domain owner services | HR | Atomic creation tests; review/participants locally |
+| Education | Same domain owner services | Education | Extension tests; membership lifecycle locally |
+| Read queries and export | `modules/insights/*`, operations HTTP controller | Insights, Reports | Visibility tests; CSV boundary/browser locally |
+| Offline resilience | `apps/web/src/orgo/offline.ts`, HTTP sync | Offline | Replay tests; browser disconnect/conflicts locally |
+| Optional hosted composition | `apps/web/src/orgo/hosted-entry.tsx`, `public-contract.ts` | Shared Orgo app | Real host + CSS/bundling/admission when contracts supplied |
+| Observability | `platform/telemetry.ts`, worker heartbeat, system endpoints | System / metrics | Collector/failure/load acceptance locally |
+| Lifecycle / preservation | SQL migrations, retention endpoint, operations scripts | Admin commands / deployment | Native migrations + backup/restore locally |
+| Packaging / enforcement | RuntimeModule, package scripts, Dockerfiles, CI | Same-release API/worker/web | `validate:local`, Compose and browser locally |
+
+`API_IMPLEMENTED.md` inventories routes. `COMPLETION_DECISIONS.md` defines process, scope, account, bridge and evidence semantics. `LOCAL_VALIDATION.md` is the owner's executable acceptance procedure.
 
 
 ================================================================================================
@@ -353,6 +784,7 @@ Orgo owns:
 
 - organizations and organization profiles;
 - Orgo user/person/RBAC state;
+- accepted/persisted Signals (target architecture; model not yet present in current Prisma snapshot);
 - Cases;
 - Tasks;
 - assignments/comments/events;
@@ -364,9 +796,11 @@ Orgo owns:
 - domain-extension records that are explicitly part of Orgo;
 - insights/read models derived from Orgo operational state.
 
-## 2. Task/Case ownership
+## 2. Work / Task / Case ownership
 
-`Task` is the shared work backbone. `Case` is the shared durable context/work container.
+`Work` is the central operational bounded context. `Task` is the canonical executable unit of work. `Case` is the shared durable situation/context container.
+
+`Work` owns canonical Case/Task mutations, assignments/comments and work events. It is an ownership boundary, not a replacement database object.
 
 Domain modules must not create a second competing Task/Case lifecycle. Domain tables may extend a Task/Case through explicit foreign keys/links.
 
@@ -436,7 +870,32 @@ No SemantiK Architect adapter is implemented in the current Orgo snapshot.
 
 A future boundary should pass semantic generation requests/results without making Architect the owner of Orgo Tasks/Cases and without encoding Architect internal planner objects in the Orgo core.
 
-## 7. Orgo ↔ kOA-Linux
+## 7. Orgo ↔ Koali Spaces
+
+Orgo is an owner-managed subsystem/application. It can run standalone. When installed in Koali Spaces, it is exposed as a `local_module_surface` through the canonical module/interface manifest mechanism.
+
+Koali owns:
+
+- the `GlobalShell`;
+- Space composition;
+- module selection and outer navigation;
+- module hosting;
+- capability projection used for presentation.
+
+Orgo retains ownership of:
+
+- Cases, Tasks, Signals, Workflows and Routing;
+- tenant/business rules and Orgo RBAC;
+- Orgo routes and inner navigation;
+- the Orgo Control Panel, Inspector, commands and presentation profiles.
+
+Capability snapshots/projections are non-authoritative. Koali may use them to show/hide/enable/disable UI or choose a safe route, but Orgo must revalidate identity, tenant, RBAC and policy before every protected mutation.
+
+Do not assume that a Koali session is automatically an authorized Orgo session unless an explicit SSO/identity contract establishes that mapping.
+
+Do not create a second global Koali shell inside Orgo. Koali outer navigation and Orgo inner navigation intentionally coexist.
+
+## 8. Orgo ↔ kOA-Linux
 
 When Orgo is hosted/integrated by kOA-Linux:
 
@@ -445,9 +904,27 @@ When Orgo is hosted/integrated by kOA-Linux:
 
 Host/platform state must not be represented as ordinary Orgo business state unless a real use case requires an Orgo Task to track that operation.
 
-## 8. External system rule
 
-Orgo may orchestrate an external system but does not absorb it.
+## 9. Durable effects and integration ownership
+
+Orgo distinguishes the decision to perform an effect from the execution of a remote/long-running effect.
+
+```text
+owner business transaction
++ OutboxMessage
+→ commit
+→ Orgo worker
+→ adapter
+→ receipt/result
+```
+
+`OutboxMessage` is delivery infrastructure. `IntegrationOperation` is Orgo-owned operational state for a request to an external system. Neither replaces the external system's authoritative state.
+
+External operation status must not be folded into Task/Case lifecycle by implication.
+
+## 10. Integration boundary rule
+
+Use one explicit port/adapter/Anti-Corruption Layer per independently owned external system. External provider/domain types stop at that boundary.
 
 The boundary should carry only what is needed:
 
@@ -455,7 +932,7 @@ The boundary should carry only what is needed:
 - intended operation;
 - organization/tenant mapping when required;
 - actor/authorization context;
-- correlation/idempotency identity;
+- correlation/causation/idempotency identity;
 - result/error/receipt;
 - provenance/audit references.
 
@@ -467,9 +944,13 @@ AUTHORITY: canonical
 
 # Orgo — Code Alignment Notes
 
+> **Implementation update (2026-09-09):** The detailed findings below describe the supplied pre-migration snapshot, now retained under `legacy/`. They are not a list of defects claimed to remain in the new active runtime. See `IMPLEMENTATION_STATUS.md`, `IMPLEMENTATION_DECISIONS.md` and `API_IMPLEMENTED.md` for current delivery evidence.
+
 ## Purpose
 
 This note identifies code areas that should be changed so the implementation matches the current Orgo architecture. It is not a project-management log.
+
+The canonical target is `TARGET_ARCHITECTURE.md`. Migration is incremental: repair the existing snapshot first, then establish module boundaries and introduce new durable primitives without a rewrite.
 
 ## 1. Repair the Nest module/import graph first
 
@@ -599,11 +1080,11 @@ Add a clear executor/dispatcher layer:
 ```text
 resolved action
 → action executor
-→ TaskService / CaseService / NotificationService / external adapter
-→ receipt/result
+   ├── internal action -> Work/owner service -> ACID transaction
+   └── external/long action -> OutboxMessage -> worker -> adapter -> receipt
 ```
 
-Do not put persistence side effects back into the pure evaluator.
+Do not put persistence side effects back into the pure evaluator and do not synchronously couple a Work transaction to a remote integration.
 
 ## 8. Reconcile filesystem workflow rules with DB workflow models
 
@@ -617,14 +1098,15 @@ WorkflowTransitionEvent
 
 while the active Workflow Engine loads rules from the filesystem/YAML.
 
-Define the relationship explicitly:
+Converge on the target relationship:
 
-- which representation is configuration/source;
-- what is persisted runtime state;
-- how versions are pinned;
-- how a running instance refers to the exact ruleset used.
+```text
+WorkflowDefinition
+→ immutable WorkflowVersion
+→ WorkflowInstance pins exact version/hash
+```
 
-Do not keep two unrelated workflow sources of truth.
+Use YAML/filesystem definitions for authoring/import/export/seed/test fixtures. Do not keep them as an unrelated mutable runtime source of truth.
 
 ## 9. Fix Maintenance before treating it as an active domain module
 
@@ -726,11 +1208,25 @@ Offline operation is not exempt from core invariants. Ensure synchronized Task c
 
 If direct persistence is necessary for replay, isolate it behind a dedicated replay/import boundary with equivalent validation.
 
-## 15. Frontend scope is currently small
+## 15. Build the frontend as an Orgo-owned application with composable presentation profiles
 
-The supplied web route tree currently has a root page that renders `InsightsOverviewPage`; it does not evidence a complete UI route set for Tasks, Cases, admin, HR, Education, etc.
+The supplied web route tree currently has a root page that renders `InsightsOverviewPage`; it does not evidence a complete UI route set for Tasks, Cases, admin, HR, Education, etc. Keep current-state documentation truthful while implementing the target architecture.
 
-Keep docs truthful and add UI routes only when implemented.
+The target is one Orgo UI codebase with two entry modes:
+
+```text
+Orgo UI
+├── standalone entry
+└── Koali module entry -> local_module_surface
+```
+
+Do not create separate standalone and Koali page implementations.
+
+Internally, compose the UI from shared routes/components/actions/panels into Orgo presentation profiles (Full Control Panel, Operations, My Work, Supervisor, Intake, Workflow Admin, Executive, Embedded). A reduced profile must not be implemented merely by mounting the full Control Panel and hiding most of it.
+
+Treat `Case` as the primary operational workspace and Tasks/Signals as first-class transverse views. Add a contextual Orgo Inspector for quick context/actions, with deep links to full workspaces for complex work.
+
+Konnaxion may be reused selectively for layout mechanics, sidebar/header/drawer/page-shell patterns and ergonomics. Do not extract Konnaxion into a new global Koali shell; Koali already owns `GlobalShell`.
 
 Also verify `_app.tsx` style import and other web imports against files actually present in the repo.
 
@@ -739,6 +1235,12 @@ Also verify `_app.tsx` style import and other web imports against files actually
 No concrete Konnaxion, Kristal or SemantiK Architect adapter is present in the current snapshot.
 
 When added:
+
+### Koali Spaces
+
+Integrate Orgo as a removable/standalone-capable owner-managed module surface. Use the canonical Module Interface Manifest and `local_module_surface` model. Preserve Orgo routing, state and business authorization.
+
+Koali capability projections may influence presentation only. Every protected mutation must be reauthorized by Orgo. Do not assume global SSO unless an explicit identity contract exists. Do not build a second `KoaliShell`.
 
 ### Konnaxion
 
@@ -770,14 +1272,226 @@ Treat host trust/resources/lifecycle as platform concerns. Track them in Orgo on
 - Prisma schema linking domain extensions back to canonical Tasks/Cases.
 - Insights as a distinct read/analytics layer.
 
+## 18. Refactor physical boundaries toward Intake / Work / Orchestration
+
+The current `Backbone / Core / Domain / Insights` tree is useful documentation but does not enforce ownership strongly enough in code. Migrate incrementally toward these logical boundaries:
+
+```text
+Intake        -> Signals and inbound normalization
+Work          -> Cases + Tasks + assignments/comments/events
+Orchestration -> Workflow + routing + escalation + action dispatch
+```
+
+Do not perform a repository-wide rewrite. Move ownership/public APIs first, then relocate files only when it clarifies dependency direction.
+
+## 19. Persist Signal as a first-class intake object
+
+The current snapshot contains Signal ingestion code but no canonical Prisma `Signal` model. Add an organization-scoped persisted Signal model with source/external reference/idempotency identity, normalized classification, payload/reference, processing status and timestamps.
+
+Target intake flow:
+
+```text
+raw source
+→ adapter/normalize
+→ deduplicate/idempotency
+→ persist Signal
+→ orchestration evaluation
+→ explicit Work actions
+```
+
+Link Signal to the Case/Tasks/actions it creates or enriches. Several Signals may relate to one Case.
+
+## 20. Introduce one ExecutionContext boundary
+
+Controllers and adapters currently resolve organization/actor context inconsistently. Add a common application context carrying at least organization, actor, authorization reference, correlation/causation IDs, source and optional idempotency key.
+
+Resolve it once at the entry boundary and pass it into application services. Do not allow DTO/body tenancy to become authorization.
+
+## 21. Add first-class idempotency for retry-prone operations
+
+Apply stable idempotency semantics to:
+
+- Signal/email/webhook intake;
+- offline replay;
+- outbox consumers;
+- external integration operations;
+- workflow actions that can be retried.
+
+Prefer unique constraints/records scoped by organization + operation/source + idempotency key. Retries must not create duplicate Work or external effects.
+
+## 22. Add a transactional outbox and Orgo worker
+
+External or long-running effects should not run inline inside the Work transaction. Introduce an `OutboxMessage` model and worker process sharing the same Orgo code/release/database contract.
+
+```text
+business mutation + outbox row
+→ commit
+→ worker claim/process
+→ retry/backoff
+→ completed or terminal/manual state
+```
+
+Start with a Postgres-backed poller (`FOR UPDATE SKIP LOCKED` or equivalent). Do not introduce Kafka/RabbitMQ/Redis solely to satisfy the pattern.
+
+## 23. Add IntegrationOperation and per-system ACLs
+
+Add an Orgo-owned external-operation record for provider, operation, Work subject, idempotency/correlation, status, external reference, receipt/error and timestamps.
+
+Implement separate ports/adapters/Anti-Corruption Layers for Kristal, Konnaxion, Architect and other independently owned systems. External SDK/domain models must stop at the adapter boundary.
+
+Never overload Task/Case status with external lifecycle state.
+
+## 24. Separate inbound email from outbound communications
+
+The current Email area mixes ingestion and delivery concerns. Target split:
+
+```text
+inbound email -> Intake adapter -> Signal
+Notification -> outbound email channel adapter
+```
+
+This removes avoidable coupling between parsing/intake and notification delivery.
+
+## 25. Normalize event semantics
+
+The snapshot contains TaskEvent, WorkflowTransitionEvent, ActivityLog, SecurityEvent and logger-only event recording patterns. Define and enforce three categories:
+
+```text
+domain/work event
+audit/security event
+integration message
+```
+
+Unify important Task/Case transition persistence so equivalent mutations do not sometimes create durable events and sometimes only write logs.
+
+## 26. Keep Insights as light CQRS/read projections
+
+Consolidate the current duplicate Insights implementations and define a read/projection interface. Do not require a separate ORM/warehouse for architectural purity. Use the existing database/materialized views first when sufficient; separate storage is an optimization when measured needs justify it.
+
+Read models may optimize My Work, Supervisor, Operations dashboards and reporting, but must never write operational state directly.
+
+## 27. Apply resilience only at faillible boundaries
+
+For external/async adapters use, as appropriate:
+
+- timeouts;
+- bounded retry;
+- exponential backoff with jitter;
+- circuit breakers;
+- concurrency/bulkhead limits;
+- DLQ/manual redrive for poison/permanent async failures.
+
+Fallback/degradation must preserve semantics. Required validation/recognition may become waiting/blocked/degraded, never silently approved.
+
+## 28. Add structured observability and health semantics
+
+Propagate request/correlation/causation and relevant organization/Signal/Case/Task/workflow/integration-operation identifiers across logs and traces. Add metrics for queues/outbox, failures, retries and workflow/integration latency.
+
+Expose distinct liveness/readiness semantics. Optional hosts such as Koali Spaces must not make standalone Orgo unhealthy when absent.
+
+## 29. Enforce architecture boundaries in CI
+
+Documentation alone will not preserve a modular monolith. Add dependency tests/lint rules that reject patterns such as:
+
+```text
+domain -> raw Task/Case persistence
+Insights -> operational mutation
+integration -> Prisma mutation of Orgo core
+Work -> domain-internal implementation
+core -> external provider model
+```
+
+Permit modules to depend on explicit public contracts/APIs rather than internal implementation paths.
+
+## 30. Do not prematurely distribute the monolith
+
+Do not introduce Task, Case, Workflow or Notification network services, Event Sourcing, mandatory broker infrastructure, service mesh, sharding or cell architecture as part of the current alignment. Reconsider them only after measured scale/reliability requirements show that the modular monolith is the limiting factor.
+
+## Recommended implementation order
+
+```text
+0  build/test/boot truth + imports/routes/config
+1  Work ownership + module dependency enforcement
+2  ExecutionContext + persisted Signal + idempotency
+3  ActionExecutor + WorkflowVersion + Outbox/worker
+4  IntegrationOperation + ACL adapters
+5  Insights/read projections + observability/resilience
+6  Case-centered product UI + external ecosystem workflows
+```
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/COMPLETION_DECISIONS.md
+AUTHORITY: canonical
+================================================================================================
+
+# Orgo — completion implementation decisions (2026-09-09)
+
+This document records concrete refinements to the target architecture. It accompanies executable source; it is not a replacement target or a claim of completed local acceptance.
+
+## Durable orchestration
+
+`WorkflowService` still evaluates a frozen workflow version and commits its internal actions and external intents in a transaction. `ACTIONS_COMMITTED` does not mean external validation succeeded. The new `START_PROCESS` action creates a `DurableProcess` in that same transaction. The process also has its own authenticated HTTP creation endpoint.
+
+A process freezes a plan and its hash, subject and tenant. Its worker executes ordered integration, human-approval and timer steps. The durable states are `RUNNING`, `WAITING_EXTERNAL`, `WAITING_HUMAN`, `WAITING_TIMER`, `BLOCKED`, `COMPLETED`, `CANCELLED`. Steps record results; transitions increment an optimistic revision. Polling rotation touches `updated_at` without continually invalidating a human's revision. Process locks serialize decisions and advancement.
+
+Each integration step can declare `expect`, a map of paths within the final receipt's `data` to primitive expected values. A validation requirement must explicitly state its predicate, for example `{"expect":{"validated":true}}`. A transport success alone is not an approval. Predicate mismatch blocks the process. The supplied validate/publish example requires both a positive validation receipt and human approval.
+
+The integration bridge can return `accepted` or `succeeded`. `accepted` leaves the operation running until an authenticated final callback. Callbacks require both `integrations:callback` and the provider permission, such as `kristal:callback`. Use a dedicated tenant token with these permissions, not an administrator session. Conflicting terminal receipts are rejected. `REQUEST_INTEGRATION` remains available independently of processes.
+
+External timeouts block. Retrying an outbox failure preserves the original operation identity. A callback that explicitly reports a final failure requires a deliberate new process if the operator wishes to make a new external request. Pending operations are never automatically duplicated. Cancelling a process stops its orchestration; it cannot undo or retract an already-dispatched external request. A compensation is a separate reversed plan assembled only from successful steps that explicitly declare compensation requests. A still-pending external request must settle before compensation. Compensation requests must be supported by the configured provider adapter; none are fabricated.
+
+The initiating user's or API token's current permissions are reloaded when the worker advances. A revoked principal blocks the process. An authorized operator with `workflows:manage` may adopt a blocked process, with a reason and revision; adoption does not implicitly approve or retry a step.
+
+## Work scope and evidence
+
+Global roles keep their existing meaning. Existing scoped `UserRoleAssignment` rows now contribute explicit `workGrants` for team, location, unit or custom references. Only explicit `work:*` permissions are activated from scoped roles; a scoped wildcard never grants administration rights. Scope assignment APIs require the role to contain `work:read`. Role grants and scopes are included in idempotency fingerprints.
+
+Tasks and Cases have dedicated `access_scope_type` and `access_scope_reference` columns. They are not authorization fields hidden inside arbitrary metadata. Both must be present or both absent. Read filters, restricted visibility and parent visibility are enforced together. Each mutation checks its permission against the actual subject scope. Task and parent Case scopes must match. Scope references are administrator-defined identifiers, not a claim that a separate organizational hierarchy engine has been implemented.
+
+Evidence uses a Work-owned table with bounded database content (1 MiB per file), a SHA-256 digest, filename, media type and audit event. Downloads require current subject access and are forced to file download by the UI. Deletion is a tombstone. Explicit retention can purge tombstoned bytes while retaining the digest and immutable audit trail. Large-file object storage and antivirus services are extension points, not bundled services.
+
+Typed Work relations are references. `blocks` is visible relationship data; it does not silently introduce a new Task lifecycle rule. Task reparenting preserves restricted visibility when leaving a restricted Case. Archived Cases and terminal Tasks reject applicable edits. Title/description edits, case edits, paged timelines and attachment UI are connected.
+
+## Identity and account lifecycle
+
+Local login uses scrypt and hashed opaque sessions. Password creation/reset never caches plaintext secrets in command responses. Account-creation idempotency fingerprints the identity fields, not the password; replaying account creation does not change its original credentials. Password changes have a separate authenticated endpoint and terminate existing sessions.
+
+API-token secrets are returned only in the initial successful response and are not stored in the idempotency response. If that response is lost, the caller can see the token metadata, revoke it, and issue another token. Invitations and recovery links are single-use, hashed at rest in the challenge table and expire after one hour. The delivery queue necessarily holds the link while it is being delivered; retention and access to notification storage must reflect that. The browser receives the challenge in a URL fragment, removes it from browser history, and submits it over the API.
+
+OIDC is optional: one configured HTTPS issuer, authorization code flow, S256 PKCE, browser-bound HttpOnly state cookie, nonce, RS256 signatures using discovered JWKS, issuer/audience/authorized-party/time checks, and explicit tenant + issuer + subject enrollment. No email-based auto-linking occurs. Unknown subjects are rejected. Supported deployments use the web's same-origin API proxy and HTTPS. Provider logout, SAML, SCIM and automatic enrollment are not implied.
+
+References for the implemented protocol subset:
+- https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation
+- https://www.rfc-editor.org/rfc/rfc7636.html
+
+Login, recovery and SSO limits use PostgreSQL buckets shared across API instances. Expired buckets and OIDC attempts are cleaned by the worker.
+
+## Domains, communication and read side
+
+Maintenance exposes assets, task creation and non-overlapping asset reservations with explicit calendar transitions. HR exposes restricted Case/Task creation, participants, review transitions and wellbeing records. HR review status remains separate from the operational Case lifecycle. Education exposes groups, scoped person validation, membership lifecycle and linked support tasks. No new domain code writes raw Task/Case tables.
+
+Notification templates use plain-text interpolation with required named values and no expression evaluation. In-app and SMTP remain native channels. SMS and webhook delivery use optional, fixed operator-configured gateway endpoints with stable idempotency keys; these are gateway contracts, not compatibility claims for a chosen vendor. The gateway must report delivery explicitly. Browser push is not represented as implemented.
+
+The Python MIME adapter supports individual EML files, mbox imports and IMAP polling using TLS. Messages are bounded before parsing/fetching; attachments are bounded and are never executed or rendered as trusted HTML. A message is marked Seen only after durable Orgo acceptance. Failures remain available for retry. Tenant authority comes only from the API token, never mail headers. Intake stores a compact Signal plus a separate immutable normalized email envelope/attachments, rather than passing attachment bytes into the workflow evaluator.
+
+Insights retains one PostgreSQL/Prisma read side with visibility-aware queries. CSV export, indexed pagination, operational gauges and structured request spans are implemented. A materialized warehouse is unnecessary for correctness and is not presented as completed merely because a target diagram mentions projections.
+
+## UI and ecosystem
+
+Additional routes use shared forms and product-owned components. Workflow plans, permission arrays and free-form integration payloads retain structured JSON editors where their values are inherently structured. Ordinary domain/account fields have labeled controls. An explicit per-account local command queue supports preview, export, delivery and conflict correction; it never stores authentication tokens and does not silently replace a failed online mutation with apparent success.
+
+The hosted entry exports `OrgoApp`, `orgoSurface` and a permission-filtered command inventory. `orgo-surface/v1` is an Orgo-owned contract, not an invented Koali standard. A host imports the entry and Orgo styles and supplies routing. Actual Koali/Capsule contract packages and native provider protocols were not supplied in this workspace. Their final adapters/manifests must be based on those real contracts, not guessed names or shapes.
+
 
 ================================================================================================
 FILE: Docs/Technical-Reference/CONTRACTS.md
 AUTHORITY: canonical
 ================================================================================================
 
-# Orgo — Current Contract Surface
+# Orgo — Contract Surface
 
+> **Delivery reference (2026-09-09):** `IMPLEMENTATION_STATUS.md` distinguishes implemented behavior from the remaining target; `IMPLEMENTATION_DECISIONS.md` defines the adopted action syntax and migration refinements.
 ## 1. Public Task JSON boundary
 
 The intended public JSON contract uses snake_case:
@@ -943,6 +1657,137 @@ Any Task/Case mutation or sensitive lookup must resolve an organization explicit
 A caller-provided header/body organization ID is an input to tenant scoping, not proof of authorization by itself.
 
 
+## 8. Koali hosting and capability-projection contract
+
+Orgo must support standalone operation and Koali-hosted presentation without duplicating the business application.
+
+When hosted by Koali:
+
+```text
+installed/admitted module manifest
+  -> Koali GlobalShell
+  -> Orgo local_module_surface
+  -> Orgo router/UI
+```
+
+Koali capability projections are presentation data, not mutation authorization. A protected Orgo command must independently resolve and validate:
+
+```text
+identity
+organization/tenant
+RBAC
+policy
+```
+
+The Orgo-to-Koali boundary may contribute routes, sidebar entries, widgets, required capability references and surface references using the canonical Koali module interface. It must not redefine a parallel global `Product/SurfaceProfile/Capability` taxonomy.
+
+## 9. Orgo presentation-profile contract
+
+Presentation profiles are Orgo-internal UX compositions. They may select:
+
+- a home route;
+- navigation groups;
+- exposed actions/widgets;
+- search or command scopes;
+- Inspector policy;
+- density/presentation defaults.
+
+They do not grant business permission.
+
+Canonical initial profile vocabulary:
+
+```text
+Full Control Panel
+Operations
+My Work
+Supervisor
+Intake
+Workflow Admin
+Executive
+Embedded
+```
+
+Exact profile names/configuration may evolve, but the composition-vs-authorization separation is invariant.
+## 10. Execution-context contract
+
+Protected entry paths resolve a common application context before invoking owner services:
+
+```text
+organization_id
+actor_user_id / actor_type
+authorization reference
+correlation_id
+causation_id
+idempotency_key (when applicable)
+source
+```
+
+The exact transport representation may differ by adapter. The semantic context must not be independently reconstructed with different rules in every controller.
+
+## 11. Target Signal contract
+
+Signal is a first-class accepted intake object in the target architecture. The delivered Prisma schema now provides the canonical model; the historical snapshot did not.
+
+Target public/internal mappings should preserve at least:
+
+```text
+signal_id
+organization_id
+source
+external_reference
+idempotency_key
+type/classification/severity
+title/description
+payload or payload_ref
+status
+received_at
+processed_at
+```
+
+Acceptance flow:
+
+```text
+normalize -> idempotency/deduplication -> persist -> orchestrate
+```
+
+## 12. Reliable-effect contract
+
+Internal transactional effects execute through owner services. External or long-running effects are committed durably before execution.
+
+```text
+business mutation + OutboxMessage
+→ commit
+→ worker
+→ adapter
+→ receipt
+```
+
+An `IntegrationOperation` tracks the Orgo-side lifecycle of an external request independently of Task/Case status.
+
+## 13. Event taxonomy contract
+
+Do not conflate:
+
+- domain/work event — accepted business fact;
+- audit/security event — actor/compliance/security evidence;
+- integration message — durable request/result across an async/external boundary.
+
+## 14. Workflow-version contract
+
+The target runtime truth is persisted and version-pinned:
+
+```text
+WorkflowDefinition -> WorkflowVersion -> WorkflowInstance
+```
+
+A WorkflowInstance identifies the exact immutable version/hash used. YAML/filesystem definitions are import/export/authoring/seed artifacts, not a second runtime authority.
+
+
+## Completion delivery reference — 2026-09-09
+
+The active implementation and its remaining external-contract boundaries are recorded in `IMPLEMENTATION_STATUS.md`. See `COMPLETION_DECISIONS.md` for durable processes, receipt predicates, Work scopes, identity and evidence semantics; `ARCHITECTURE_TO_CODE.md` for source ownership; `LOCAL_VALIDATION.md` for the final acceptance to run locally. Historical validation results do not validate the completion changes.
+
+
 ================================================================================================
 FILE: Docs/Technical-Reference/GLOSSARY.md
 AUTHORITY: canonical
@@ -978,11 +1823,15 @@ The tenant/operational boundary. Orgo work belongs to an organization unless a c
 
 These identities are not interchangeable.
 
+## Work
+
+The central operational bounded context that owns canonical Cases, Tasks, assignments, comments and work events. `Work` is an architecture/ownership boundary, not a new database row replacing Case or Task.
+
 ## Signal
 
-An incoming fact/request/envelope that may lead to work. Examples include API input, email, UI input, offline synchronization or system/timer events.
+An accepted incoming fact/request/evidence object that may lead to or enrich work. Examples include API input, email, UI input, offline synchronization or system/timer events.
 
-A signal is not automatically a Task or Case until the Orgo workflow/core accepts and maps it.
+In the target architecture Signal is persisted as a first-class Orgo object before retry-prone orchestration. The current Prisma snapshot does not yet contain that canonical Signal model. A Signal is not automatically a Task or Case.
 
 ## Task
 
@@ -1059,6 +1908,285 @@ A reference to an artifact owned by another system. Orgo may store the reference
 ## Receipt
 
 Structured evidence that an operation was accepted, rejected or executed. A receipt supports workflow reconciliation; it is not the external system's authoritative state.
+
+
+## ExecutionContext
+
+The resolved tenant/actor/request context passed into protected application operations. It carries organization identity, actor identity/type, authorization reference, correlation/causation identifiers, source and optional idempotency key.
+
+## OutboxMessage
+
+A durable infrastructure record written atomically with a business transaction so a post-commit action/event can be processed reliably by the Orgo worker. It is not the business status of the external operation.
+
+## IntegrationOperation
+
+An Orgo-owned operational record for a request to an external system, including provider/operation, Orgo subject, idempotency/correlation identity, status, receipt and error. It prevents external lifecycle states from being folded into Task/Case status.
+
+## Domain event
+
+A business fact emitted after an accepted Orgo state transition, such as `TaskAssigned` or `CaseResolved`. Domain events are distinct from audit/security evidence and integration messages.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/IMPLEMENTATION_DECISIONS.md
+AUTHORITY: canonical
+================================================================================================
+
+# Orgo — Implementation decisions, 2026-09-09
+
+This file refines `TARGET_ARCHITECTURE.md` for the delivered code. It does not replace product ownership or lifecycle contracts.
+
+## 1. Replace broken runtime slices; preserve physical state
+
+The user authorized prioritizing documentation over negligible legacy code. The snapshot's active Nest graph referenced nonexistent modules, mixed two persistence stacks and exposed incompatible tenant/DTO conventions. Instead of preserving those as live parallel code, the supplied API/web source is retained under `legacy/`; new active modules use the **same Task, Case, organization, role and domain-extension tables**. This is an authorized implementation change from the earlier repair-first migration sequence, not a second operational model.
+
+Root workspaces now contain `apps/api` and `apps/web`. The former starter `packages/*` remain reference material and are not runtime dependencies. The shared application UI is owned by Orgo.
+
+## 2. Signal acceptance is a separate committed transaction
+
+`POST /signals` persists the normalized Signal and, when requested, an outbox message containing an immutable workflow-version reference. It does not synchronously execute workflow effects. This ensures a later invalid action cannot erase accepted input.
+
+The worker re-resolves the initiating user's current permissions, or the initiating API token's current scopes. A deactivated principal cannot execute an old privilege snapshot. Intake processing locks the Signal, creates Work/instance/link rows and acknowledges the message in one transaction. A failed action rolls these back; the accepted Signal remains `RECEIVED` and the message exposes its retry/dead state. `REJECTED` is reserved; there is currently no rejection endpoint.
+
+External-reference uniqueness is organization + source + external reference. Reusing that identity with changed normalized input returns a conflict rather than silently changing evidence.
+
+## 3. A workflow can start before any Task exists
+
+The old `WorkflowInstance.task_id` was required. It is now nullable; new instances always pin `workflow_version_id`, and may also refer to a Signal. Existing rows retain nullable version references for explicit legacy migration. No version is fabricated from an incompatible old YAML/blob.
+
+A definition's `definition_blob` remains a compatibility mirror of its latest publication. Runtime evaluation reads `WorkflowVersion.content` only. Published versions have an SQL immutability trigger. Definitions use organization-scoped codes; global workflow inheritance is not implemented.
+
+Instance `completed / ACTIONS_COMMITTED` means internal actions committed and external requests were queued. It **does not mean** an external validation approved anything. Long-running business process managers that wait for external receipts remain separate future work.
+
+## 4. Idempotency and concurrency
+
+All ordinary mutation routes require `Idempotency-Key`; login/logout do not. Email may fall back to its message identity; offline replay supplies a UUID for each command.
+
+Commands take a transaction-scoped PostgreSQL advisory lock on organization + operation + key. The request fingerprint includes input, principal and current authorization context. A replay returns the stored response; different input or a changed authorization context conflicts. Task/Case mutation routes also recheck current visibility before replay.
+
+Work status/assignment/edit operations require `revision`. Compare-and-update prevents lost updates; accepted updates increment it. Case archival and task attachment share a Case lock. Case reopening and Task terminal states follow the canonical transition tables.
+
+The outbox uses `FOR UPDATE SKIP LOCKED`, a 60-second lease, a token that fences acknowledgements, heartbeat renewal, eight attempts and bounded exponential backoff with jitter. Dead messages can be manually redriven. Delivery is at least once; an external adapter must implement durable deduplication with the supplied operation identity. SMTP cannot guarantee exactly-once delivery; a crash after SMTP acceptance can produce a duplicate despite the stable Message-ID.
+
+## 5. Authorization and confidentiality
+
+One HTTP guard resolves the identity and organization from an opaque session token or organization-scoped API token. Headers/body values never grant tenancy. Sessions are stored by token hash; user roles and permissions are resolved from the database for every protected request. Local passwords use scrypt; legacy password hashes are not automatically converted.
+
+The initial authorization implementation admits organization-wide roles only (`global` or absent scope). It fails closed for unimplemented team/location/custom scopes. `work:restricted` gates restricted Cases and sensitive people. Restricted Tasks additionally admit their assigned user/role, subject to their parent Case remaining visible. HR creation forces restricted Case and Task visibility.
+
+The API returns 404 for inaccessible Work references. Composite tenant foreign keys protect Task Case/owner/requester references and Signal links. Cross-organization dirty legacy references must be corrected before the additive migration can apply; the migration does not silently reassign them.
+
+Login throttling is per API process and IP. Distributed rate limiting, SSO, password recovery and user invitations are not included. Seed supplies initial administration. Existing credentials are never overwritten implicitly.
+
+## 6. Workflow authoring and action syntax
+
+The implemented version payload is `{ "rules": [...] }`. Rules have unique `id`, optional `enabled` (default true), strict match criteria and ordered `actions`. Each action is `{ "type": "...", "target": "...", "input": {...} }`.
+
+Supported actions: `CREATE_CASE`, `CREATE_TASK`, `UPDATE_TASK` (status only), `ASSIGN_TASK`, `ROUTE`, `ESCALATE`, `SET_METADATA`, `ATTACH_TEMPLATE`, `ADD_LABEL`, `NOTIFY`, `REQUEST_INTEGRATION`.
+
+`ROUTE` with empty input applies persisted routing rules; an explicit owner input uses the same Work assignment API. Routing resolves matching non-fallback rules first, then fallback rules; weight descending and ID break ties deterministically. `ADD_LABEL` adds an EntityLabel and leaves the primary classification label unchanged. `ATTACH_TEMPLATE` records a template reference; it does not call a document-generation engine.
+
+References are exact strings: `$signal.id`, `$signal.source`, `$signal.title`, `$signal.description`, `$signal.label`, `$signal.type`, `$signal.category`, `$signal.severity`, `$signal.payload`, `$case`, `$task`. The latter two refer to the latest result (or linked Case). They are explicit bindings, never evaluated code. An unavailable binding rejects execution. Simulation evaluates matches and returns action intents without invoking handlers or writing state; it is not a promise that every eventual effect will succeed.
+
+JSON publication and YAML import normalize into the same persisted contract. Historical action syntax must be explicitly converted; it is not silently interpreted as the new shape.
+
+## 7. Presentation and optional hosting
+
+The React component is the same application in standalone and hosted modes. A host supplies path/navigation through `OrgoAppProps`; the component retains Orgo login and authorization. Profiles select a home and a composition of routes. They do not grant permissions or replace backend checks.
+
+`hosted-entry.tsx` is a code-level embedding boundary. The supplied files do not contain the executable canonical Koali/Capsule schema packages; no native manifest compatibility or admission is claimed. Wiring the exported surface into those actual contracts remains an integration step. No second global shell, private provider frontend import, or required Spaces dependency was introduced.
+
+## 8. Data and deployment
+
+The new migration is additive to the supplied migration history. Test it against a restored copy of any existing database before applying it there. Historical migrations are preserved as provided, including their original legacy User-table removal; they are not a recommended import path for an unrelated existing database.
+
+API and worker use the same Prisma schema, modules and release. Insights reads grouped operational data through Prisma and cannot mutate it. The existing star schema remains available for later projections; no second ORM, broker or mandatory warehouse is introduced. Observability currently supplies correlation identifiers, history, error logs and liveness/readiness; full metrics/tracing export remains a documented gap.
+
+## Completion supersession
+
+For the 2026-09-09 completion delivery, `COMPLETION_DECISIONS.md` supersedes earlier limitations concerning global-only Work permissions, completed-only bridges, missing process managers, identity administration, email ingress, offline UI and supplemental domain screens. The original architectural boundaries remain unchanged. Do not treat historical test counts as acceptance of the new code.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/IMPLEMENTATION_STATUS.md
+AUTHORITY: canonical
+================================================================================================
+
+# Orgo — implementation ledger, completion delivery 2026-09-09
+
+This ledger describes active source in this archive. The user will perform final validation locally. Implemented source and supplied tests are distinct from executed acceptance results.
+
+## Active capabilities
+
+| Area | Implemented source and connected behavior |
+| --- | --- |
+| Architecture | One Nest API/worker release, one PostgreSQL database, modular Intake / Work / Orchestration; active imports enforced by architecture checks |
+| Work | Canonical Cases/Tasks, lifecycle and optimistic revisions, assignment, comments, edits, Case attachment/detachment, additive labels, scoped reads and mutations, immutable events |
+| Evidence | Work-owned file storage, content hashes, authorized download, tombstones, optional byte purge, typed relations, paged timelines and connected inspector controls |
+| Intake | Durable Signals, deduplication/fingerprint conflicts, pinned workflow version, email/webhook/offline adapters |
+| Email | EML and mbox import, TLS IMAP poller, bounded MIME parsing and attachments, durable normalized envelope, authorized attachment retrieval and UI; mark Seen after acceptance |
+| Workflow | Immutable JSON/YAML versions, pure evaluation/simulation, synchronous actions, outbox integration/notifications and `START_PROCESS` |
+| Long processes | Frozen plans, ordered external/human/timer steps, explicit receipt predicates, deadlines, blocking, revision-protected decisions, current-principal reauthorization, adoption, declared compensation processes |
+| External operations | Per-provider bridge ports, accepted versus succeeded receipts, authenticated final callbacks, terminal-receipt conflict detection and preserved operation identity on retry |
+| Worker | PostgreSQL claims/leases/heartbeats/fenced commit, bounded retries/dead messages/redrive, process advancement, SLA escalation, fleet heartbeat and housekeeping |
+| Authentication | Local scrypt, opaque sessions, logout, password change/recovery/invitation, single-use links, token issuance/revocation and account disablement |
+| SSO | Optional OIDC HTTPS authorization-code/PKCE flow, browser binding, nonce/issuer/audience/signature/time validation and explicit tenant/issuer/subject enrollment |
+| Permissions | Global roles plus existing scoped assignments activated as explicit Work grants for team/location/unit/custom; dedicated Task/Case scope fields and parent constraints |
+| Communications | In-app/SMTP, plain-text versioned templates, read state, optional fixed SMS/webhook gateways with explicit delivery receipt and idempotency key |
+| Maintenance | Assets, linked Work tasks, calendar reservations, overlap rejection and status transitions; product forms and calendar view |
+| HR | Restricted Work creation, participant lifecycle additions, review transitions, wellbeing records, product forms and detail view |
+| Education | Groups, member add/remove with tenant checks, linked support tasks, product forms and member view |
+| Read side | Scoped overview/workload queries, timeline/list pagination, bounded CSV export with formula neutralization and supporting database indexes |
+| Operations | Authenticated fleet/backlog/process overview, Prometheus gauges, structured HTTP spans, explicit retention, backup/empty-database restore scripts and legacy preflight |
+| Web | Shared product routes, profiles, operational forms, inspectors, identity/domains/process/communications/system/report views, account recovery and SSO entry |
+| Offline | Explicit browser-local per-account/API queue, preview/export/replay, stable command IDs, visible conflicts and correction using new command IDs; tokens never stored in the queue |
+| Public surface | Product-owned hosted entry, Orgo surface/route/profile export and permission-filtered command inventory; standalone has no Spaces dependency |
+| Delivery | New additive migration, endpoint inventory, architecture-to-code map, runnable local validation command and examples |
+
+## Checks and acceptance status
+
+The implementation work includes Prisma client generation, TypeScript checking for API/tests/web, architecture dependency checks and Python/shell syntax checking. Current check output is under `validation/completion/`.
+
+**Final tests, application execution against the new migration, Docker builds/runs, browser acceptance, real provider delivery, OIDC interoperability, load/recovery and restoration validation have not been run for this completion delivery.** They are intentionally left to the user. Run `npm run validate:local` with an isolated `TEST_DATABASE_URL` and follow `LOCAL_VALIDATION.md`.
+
+The previous archive had 12 passing unit tests and 24 passing integration tests, with one native PostgreSQL test skipped in PGlite. Those are historical results only; they must not be read as results for the changes in this archive. New regression tests have been added for attachments, process gates/callbacks, scopes, maintenance overlap, MIME attachments and safe templates.
+
+## Concrete boundaries
+
+- Native Kristal/Konnaxion/Architect/kOA schemas and SDKs, and canonical Koali/Capsule contract packages, are absent from the supplied workspace. The shipped bridges and `orgo-surface/v1` are explicit Orgo contracts. Their existence does not assert native compatibility or host admission.
+- A gateway must implement delivery/idempotency semantics for the chosen SMS or webhook provider. Browser push, a vendor-specific gateway and a built-in SMTP server are not claimed. The supplied email adapter consumes an existing IMAP server or mail archives.
+- Core workflows, domain operations and UI are implemented to the documented generic contracts. Organization-specific HR/education processes, provider receipt predicates, routing rules and compensation operations must be configured with actual policy/content. Example plans are examples, not automatic deployment policy.
+- Work scope identifiers are explicit authorization perimeters. A separate team/location hierarchy catalog or arbitrary policy language is not implied.
+- Evidence is bounded to 1 MiB per Work file and 1 MiB total attachments per incoming message. Mail source parsing is bounded to 2 MiB. Large-file object storage is not bundled.
+- The read side uses scoped operational queries and indexes. A separate analytical warehouse/materialized projection fleet is not required for this delivery and is not presented as implemented.
+- Legacy data may require reconciliation and credential reenrollment. The preflight and migration notes address this; no blind automatic repair mutates existing business data.
+
+These are the actual integration/configuration and acceptance boundaries. No endpoint fabricates external success or depends on Spaces to keep Orgo functional.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/INTEGRATION_BRIDGE.md
+AUTHORITY: canonical
+================================================================================================
+
+# Orgo — Explicit integration bridge protocol
+
+The concrete APIs of Kristal, Konnaxion, Architect and kOA are not supplied. The adapters in `apps/api/src/orgo/integrations` implement the following **Orgo-owned bridge protocol**, not assumed native provider endpoints. A provider-side adapter must translate it and enforce its own authorization. Never point this code at a native API without an explicit compatible adapter.
+
+Configure one exact endpoint per provider: `KRISTAL_BRIDGE_URL`, `KONNAXION_BRIDGE_URL`, `ARCHITECT_BRIDGE_URL`, `KOA_BRIDGE_URL`, with the corresponding optional `_TOKEN`. Production requires HTTPS. Development permits HTTP on localhost/127.0.0.1 only. URLs come from deployment configuration, never request payloads; redirects are rejected.
+
+The worker POSTs JSON with a stable `Idempotency-Key`, `X-Correlation-ID` and optional bearer authorization:
+
+```json
+{
+  "operation_id": "uuid",
+  "organization_id": "uuid",
+  "operation": "validate",
+  "idempotency_key": "organization-uuid:operation-uuid",
+  "correlation_id": "correlation",
+  "subject": { "type": "case", "id": "uuid" },
+  "input": {}
+}
+```
+
+Configured operation allowlists:
+
+| Adapter | Operations |
+| --- | --- |
+| Kristal | `validate` |
+| Konnaxion | `publish`, `distribute` |
+| Architect | `generate` |
+| kOA | `execute` |
+
+A successful, completed response is:
+
+```json
+{
+  "status": "succeeded",
+  "external_reference": "provider-owned-reference",
+  "data": { "valid": false }
+}
+```
+
+Here `succeeded` means the operation returned a receipt. `valid: false` remains false; delivery success is never approval, publication or a Work lifecycle transition by implication. The bridge must durably deduplicate operation IDs and return the same completed result on retries.
+
+The bridge may alternatively return `{"status":"accepted","external_reference":"ref","data":{}}`. This acknowledges durable acceptance only. The operation remains RUNNING until a final authenticated callback to `POST /api/v3/integration-operations/:id/receipt` with `Idempotency-Key` and a tenant API token carrying `integrations:callback` plus the provider-specific permission (for example `kristal:callback`). The final callback shape is `{"status":"succeeded"|"failed","external_reference":"ref","data":{},"error":"optional failure code"}`. Contradictory terminal receipts are rejected.
+
+`DurableProcess` waits for these receipts with an explicit deadline. To require a business predicate, declare `expect` on the integration step. Paths are relative to receipt `data`, for example `{"expect":{"validated":true}}`. A successful transport without that required value blocks the process. A completed workflow's `ACTIONS_COMMITTED` and a completed process still never mutate Work status by implication. Unsupported compensation operations are rejected by the same adapter allowlist.
+
+The adapter has a 10-second deadline, a 256 KB response limit, a circuit opening after five failures for 30 seconds, and a per-process limit of four active requests per adapter. The worker normally handles one delivery at a time. HTTP 408/409/425/429 and 5xx retry; other failed responses are terminal. No response body, bearer token or configured URL is copied into an error log.
+
+Outbox delivery is at least once. Retries use the same external identity. No external network effect runs inside a Work transaction. IntegrationOperation holds request metadata, receipt, external reference and errors independently of Case/Task status.
+
+For notifications, `in_app` delivery is implemented; email uses configured `SMTP_URL` and `SMTP_FROM`. SMS and webhook delivery can use fixed `SMS_GATEWAY_URL` / `WEBHOOK_GATEWAY_URL` endpoints and corresponding `_TOKEN` variables. The endpoint is configured by the operator, never taken from a recipient address. POST payload: `{id, organization_id, recipient, subject, body, correlation_id, channel}` with stable organization/notification Idempotency-Key. A gateway must durably deduplicate and return `{"status":"delivered"}` only when its delivery contract is satisfied. A generic gateway is not a native SMS vendor adapter. Browser push is not implemented. SMTP uses a stable Message-ID but does not provide exactly-once guarantees.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/LOCAL_VALIDATION.md
+AUTHORITY: canonical
+================================================================================================
+
+# Validation locale — à exécuter par le propriétaire
+
+Les nouveaux tests sont livrés sans exécution finale dans cet environnement, conformément à la demande. Les résultats de l'archive précédente restent historiques. Cette livraison fait l'objet de contrôles statiques, pas d'une certification fonctionnelle ou de déploiement.
+
+## Base de validation neuve
+
+Utiliser Node 22+, npm et PostgreSQL 16. Extraire l'archive dans un répertoire neuf. Créer une base isolée `orgo_test`, jamais une base de production.
+
+```bash
+npm ci
+export TEST_DATABASE_URL='postgresql://USER:PASSWORD@localhost:5432/orgo_test?connection_limit=5'
+npm run validate:local
+```
+
+Le script génère Prisma, applique les migrations, contrôle les frontières et les types, puis exécute les tests unitaires/d'intégration et les builds. Il s'arrête au premier échec et écrit les résultats dans `validation/local-<date>/`. Les identifiants de connexion réels restent dans votre environnement. Sous Windows, utiliser WSL pour les scripts shell et ce lanceur.
+
+Le test natif `FOR UPDATE SKIP LOCKED` doit être exécuté sur PostgreSQL, pas seulement PGlite. Les nouveaux scénarios couvrent fichiers/tenants, étapes humaines/révisions, réception asynchrone, périmètres Work, chevauchements de calendrier et pièces jointes email. Le test de template est purement local.
+
+## Démarrage et navigateur
+
+Configurer `.env` depuis `.env.example`, puis suivre le README pour Compose, migration et création du compte initial. Vérifier les parcours avec au moins deux organisations et un utilisateur limité à un périmètre.
+
+- Connexion/déconnexion ; rôles et droits révoqués pris en compte à la requête suivante.
+- Création et édition de Case/Task ; transitions et conflits de révision ; rattachement à un Case ; visibilité restreinte et périmètres cohérents.
+- Upload/téléchargement/retrait d'une pièce jointe ; historique paginé et relations ; aucun accès depuis un autre tenant.
+- Signal manuel et email, version de workflow épinglée, redémarrage API/worker entre acceptation et traitement.
+- Processus en attente humaine, minuterie et reçu externe ; refus/predicate négatif/timeout ; reprise et adoption ; compensation uniquement lorsqu'elle est déclarée et applicable.
+- Gestion utilisateurs/rôles/jetons, invitation et mot de passe oublié via un SMTP de test. Vérifier qu'un secret de jeton n'est pas réaffiché lors d'un rejeu.
+- OIDC sur une origine HTTPS et un fournisseur de test : subject explicitement inscrit, state/nonce invalide, mauvais issuer/audience/signature, compte désactivé, code réutilisé.
+- Maintenance : réservation concurrente du même équipement ; RH : participants/revue/confidentialité ; éducation : ajout/retrait d'un membre et tâche de soutien.
+- Notifications, templates, lecture, SMTP et gateways choisies.
+- File hors ligne : commande créée sans réseau, reconnexion, rejeu, conflit de révision et correction explicite ; changer de compte ne doit pas exposer la file d'un autre compte.
+- CSV (y compris un titre commençant par `=`), pagination, navigation clavier et petits écrans.
+- Mode standalone sans Spaces ; mode hébergé avec les vrais contrats Koali lorsqu'ils seront disponibles.
+
+## Reprise de données existantes
+
+Les anciennes migrations du snapshot sont conservées. Certaines migrations historiques remplacent d'anciennes tables : ne pas les rejouer aveuglément sur une base déjà peuplée. Faire une sauvegarde et vérifier l'historique Prisma avant migration.
+
+```bash
+export DATABASE_URL='postgresql://.../orgo_existing'
+npm run migration:preflight
+bash scripts/operations/backup.sh /chemin/prive/orgo-before.dump
+```
+
+Le précontrôle ne modifie rien et signale les liens de tenant incohérents, intervalles invalides et comptes nécessitant une réinscription de leurs credentials. Il expose uniquement des identifiants échantillonnés, pas les mots de passe. Réconcilier les données et l'historique avant `prisma migrate deploy`. Les contraintes nouvelles sur des tables historiques marquées `NOT VALID` contrôlent les nouvelles écritures mais nécessitent `VALIDATE CONSTRAINT` après réconciliation des anciennes lignes.
+
+Restaurer dans une base dédiée vide et vérifier fonctionnellement la restauration :
+
+```bash
+export RESTORE_DATABASE_URL='postgresql://.../orgo_restore_test'
+bash scripts/operations/restore.sh --restore-to-empty-database /chemin/prive/orgo-before.dump
+```
+
+## Exploitation et contrats externes
+
+Tester une panne SMTP/fournisseur, des callbacks tardifs/dupliqués/contradictoires, la mort d'un worker après envoi mais avant acquittement, et le redémarrage avec backlog. L'idempotence côté fournisseur reste nécessaire pour des effets externes effectivement uniques.
+
+`GET /api/v3/system/overview` donne l'état des files/processus/workers. `GET /api/v3/system/metrics` fournit des gauges Prometheus avec authentification et permissions d'exploitation. Les logs HTTP sont des spans JSON sur stdout. Collecteur, alertes, sauvegardes planifiées et politique de rétention sont à configurer dans l'environnement de déploiement.
+
+Les contrats natifs Kristal/Konnaxion/Architect/kOA et Koali/Capsule sont à fournir et à vérifier séparément. Les bridges et le contrat public Orgo livrés sont explicites ; ils ne déclarent pas une compatibilité native non démontrée.
 
 
 ================================================================================================
@@ -1312,6 +2440,1041 @@ Domains already drafted:
 
 
 ================================================================================================
+FILE: Docs/Technical-Reference/TARGET_ARCHITECTURE.md
+AUTHORITY: canonical
+================================================================================================
+
+# Orgo — Target Architecture
+
+> **Delivery reference (2026-09-09):** `IMPLEMENTATION_STATUS.md` distinguishes implemented behavior from the remaining target; `IMPLEMENTATION_DECISIONS.md` defines the adopted action syntax and migration refinements.
+**Status:** Canonical target architecture for Orgo vNext.
+
+**Relationship to the current snapshot:** this document defines the desired architecture. It does not claim that every module, model, route or worker described here already exists. Current implementation gaps are tracked in `CODE_ALIGNMENT_NOTES.md`; the physical database remains authoritative for what is actually persisted today.
+
+## 1. Architectural thesis
+
+Orgo should evolve as a **modular monolith oriented around operational work**, with a deterministic transactional core and durable asynchronous boundaries for long-running or external effects.
+
+```text
+                         ORGO
+                    Modular Monolith
+                           │
+       ┌───────────────────┼────────────────────┐
+       │                   │                    │
+     INTAKE               WORK             ORCHESTRATION
+     Signals           Cases + Tasks          Workflow
+     normalization     assignments            Routing
+     deduplication     comments               Escalation
+       │               work events            Actions
+       └───────────────────┼────────────────────┘
+                           │
+                   Domain events + Outbox
+                           │
+              ┌────────────┼─────────────┐
+              │            │             │
+       Communications   Integrations   Insights
+       notifications    Kristal        projections
+       channels         Konnaxion      reports
+                        Architect
+                        kOA
+```
+
+Cross-cutting platform capabilities:
+
+```text
+Tenancy / Identity / RBAC
+ExecutionContext
+Configuration
+Persistence / transactions
+Idempotency
+Audit
+Observability
+```
+
+The target is **not** a network of Task/Case/Workflow microservices. Internal module boundaries are code and ownership boundaries first.
+
+## 2. Primary bounded contexts
+
+### 2.1 Intake
+
+Intake owns receiving and normalizing incoming facts/requests before they become work.
+
+Responsibilities:
+
+- accept input from HTTP/UI, email, webhooks, timers, offline replay and external integrations;
+- normalize source-specific envelopes into an Orgo Signal contract;
+- enforce idempotency/deduplication;
+- persist accepted Signals;
+- invoke orchestration/evaluation without directly mutating Task/Case tables.
+
+Target flow:
+
+```text
+external input
+→ inbound adapter
+→ normalize
+→ deduplicate / idempotency
+→ persist Signal
+→ evaluate / route
+→ explicit work actions
+```
+
+### 2.2 Work
+
+`Work` is the central operational bounded context.
+
+```text
+Work
+├── Cases
+├── Tasks
+├── Assignments
+├── Comments
+└── Work Events
+```
+
+`Case` and `Task` remain distinct concepts:
+
+- **Case** = durable situation/context and primary operational workspace;
+- **Task** = canonical executable unit of work.
+
+They are grouped because they share transactional rules, tenant boundaries, actors, lifecycle evidence and domain-module integration.
+
+### 2.3 Orchestration
+
+Orchestration owns process decisions, not the work records themselves.
+
+```text
+Orchestration
+├── Workflow evaluation
+├── Workflow instances/versions
+├── Routing
+├── Escalation/SLA
+└── Action dispatch
+```
+
+The Workflow evaluator remains deterministic and side-effect free:
+
+```text
+WorkflowContext
+→ matching/version-pinned rules
+→ ResolvedWorkflowAction[]
+```
+
+An Action Executor/Dispatcher applies the resolved actions through the owning modules.
+
+### 2.4 Communications
+
+Communications owns outbound notification intent and delivery coordination. Delivery channels are adapters.
+
+```text
+Notification
+→ channel adapter
+   ├── email
+   ├── push
+   └── other future channels
+```
+
+Inbound email does **not** belong to the same responsibility: inbound email is an Intake adapter that produces Signals.
+
+### 2.5 Domain modules
+
+Maintenance, HR, Education and future domains refine Work. They may own extension state but must enter canonical work mutations through Work public APIs.
+
+```text
+domain request
+→ domain validation/context
+→ Work public API
+→ Case/Task
+→ domain extension/link rows
+```
+
+### 2.6 Insights
+
+Insights is a read/projection boundary. It may use materialized views, reporting tables or a separate warehouse when justified, but it is never the write authority for operational state.
+
+### 2.7 Integrations
+
+Each external system receives its own explicit port/adapter and Anti-Corruption Layer (ACL).
+
+```text
+Orgo core
+  ↓ port
+KristalPort
+  ↓ adapter + mapper
+Kristal
+```
+
+The same rule applies to Konnaxion, SemantiK Architect and kOA-facing operational integrations.
+
+## 3. Signal becomes a first-class persisted object
+
+The supplied historical snapshot lacked a canonical persisted `Signal`. The delivered runtime now adds it; see `IMPLEMENTATION_STATUS.md` for tested coverage.
+
+A Signal represents accepted incoming evidence/input before or alongside the work it causes.
+
+Target logical fields include:
+
+```text
+id
+organization_id
+source
+external_reference
+idempotency_key
+type / classification / severity
+title / description
+payload or payload_ref
+received_at
+processed_at
+status
+```
+
+Relationships should make the operational chain visible:
+
+```text
+Signal ──► Case
+   └─────► resulting Tasks (directly or through Case/action evidence)
+```
+
+A Case may accumulate several Signals over time. A Signal need not always create a new Case.
+
+## 4. Workflow source of truth and versioning
+
+The target source of runtime truth is persisted, version-pinned workflow configuration.
+
+```text
+WorkflowDefinition
+  └── WorkflowVersion 1
+  └── WorkflowVersion 2
+  └── WorkflowVersion 3
+             │
+             └── WorkflowInstance pins version 3
+```
+
+Filesystem/YAML remains useful as:
+
+- authoring format;
+- import/export format;
+- seed/configuration artifact;
+- test fixture.
+
+It must not remain an unrelated second runtime source of truth.
+
+A running WorkflowInstance must be able to identify the exact immutable ruleset/version/hash it used.
+
+## 5. Action execution model
+
+Resolved workflow actions are classified by effect type.
+
+### 5.1 Internal transactional actions
+
+Examples:
+
+```text
+CREATE_CASE
+CREATE_TASK
+UPDATE_TASK
+ASSIGN_TASK
+SET_METADATA
+ADD_LABEL
+```
+
+These normally execute synchronously inside Orgo through owner services and, when required, one database transaction.
+
+### 5.2 Durable asynchronous actions
+
+Examples:
+
+```text
+NOTIFY
+KRISTAL_*
+KONNAXION_*
+ARCHITECT_*
+publish/distribute
+other long-running external effects
+```
+
+These use the transactional outbox pattern:
+
+```text
+business mutation
++ OutboxMessage
+      │ same DB transaction
+      ▼
+commit
+      ↓
+Orgo worker
+      ↓
+external/channel adapter
+      ↓
+receipt / retry / terminal failure
+```
+
+Do not perform a remote side effect between an operational database mutation and its commit.
+
+## 6. OutboxMessage and IntegrationOperation are different concepts
+
+### OutboxMessage
+
+Infrastructure delivery record answering:
+
+> What must be delivered/processed reliably after this transaction commits?
+
+Target fields include event/message type, aggregate reference, payload, status, attempt count, availability time, correlation/causation IDs and timestamps.
+
+### IntegrationOperation
+
+Operational record answering:
+
+> What external operation did Orgo request and what happened to it?
+
+Target fields include:
+
+```text
+organization_id
+provider
+operation
+subject_type / subject_id
+external_reference
+status
+idempotency_key
+correlation_id
+request metadata
+receipt/error
+started_at / completed_at
+```
+
+This prevents external states from leaking into `Task.status` or `Case.status`.
+
+## 7. ExecutionContext is a platform primitive
+
+Every protected entry path resolves one execution context before application logic:
+
+```text
+ExecutionContext
+  organizationId
+  actorUserId / actor type
+  permissions or authorization reference
+  correlationId
+  causationId
+  idempotencyKey
+  source
+```
+
+Rules:
+
+- caller-supplied organization IDs are never authorization by themselves;
+- application services receive tenant/actor context explicitly;
+- controllers/adapters do not invent different tenant resolution rules per endpoint;
+- correlation/causation identity propagates into work events, audit and integration operations.
+
+## 8. Idempotency is a first-class invariant
+
+Idempotency is required at retry-prone boundaries:
+
+- Signal ingestion;
+- email/webhook ingestion;
+- offline replay;
+- workflow external actions;
+- outbox consumers;
+- external integration operations.
+
+The effective uniqueness boundary should normally include organization + operation/source + idempotency key.
+
+Retries must not create duplicate business effects.
+
+## 9. Event taxonomy
+
+Do not collapse every record into one generic event stream.
+
+### Domain event
+
+A business fact produced by an accepted state transition.
+
+Examples:
+
+```text
+SignalReceived
+TaskAssigned
+CaseResolved
+```
+
+### Audit/security event
+
+Evidence of who/what performed or attempted an operation, including compliance/security context.
+
+### Integration message
+
+A durable request/result crossing an asynchronous or external boundary.
+
+Examples:
+
+```text
+KristalValidationRequested
+NotificationDeliveryRequested
+```
+
+Orgo may persist all three categories, but they have different semantics and retention/processing rules.
+
+## 10. Persistence and CQRS policy
+
+Orgo remains state-oriented, not Event-Sourced.
+
+Canonical operational state lives in PostgreSQL/Prisma-backed models, with immutable history where useful.
+
+Use **light CQRS** only where read shapes differ materially from write shapes:
+
+```text
+operational Work state
+      ↓ events/projection update
+read projections
+      ├── My Work
+      ├── Supervisor workload
+      ├── Operations dashboard
+      └── Insights/reporting
+```
+
+A separate warehouse, ORM or broker is an implementation option, not an architectural requirement.
+
+## 11. Runtime/deployment shape
+
+The expected deployment may contain multiple processes without becoming microservices:
+
+```text
+orgo-web
+orgo-api
+orgo-worker
+postgres
+```
+
+`orgo-api` and `orgo-worker` share:
+
+- the same domain/application code;
+- the same module ownership rules;
+- the same release/version;
+- the same operational database contract.
+
+The worker handles outbox processing, retries, scheduled escalation, projection updates and long-running integrations.
+
+Start with a PostgreSQL-backed outbox worker. Introduce Redis/RabbitMQ/Kafka only when measured scale or delivery requirements justify a broker.
+
+## 12. Resilience policy
+
+Apply resilience at faillible boundaries, not indiscriminately inside the monolith:
+
+```text
+timeout
+bounded retry
+exponential backoff + jitter
+circuit breaker
+concurrency/bulkhead limits
+idempotency
+DLQ/manual intervention when async processing cannot progress
+```
+
+Graceful degradation must preserve business meaning. Example: failure of a required Kristal validation cannot be converted into implicit approval; the workflow must remain waiting/blocked/degraded according to policy.
+
+## 13. Observability policy
+
+Operational flows should propagate structured identifiers when available:
+
+```text
+request_id
+correlation_id
+causation_id
+organization_id
+actor_id
+signal_id
+case_id
+task_id
+workflow_instance_id
+integration_operation_id
+```
+
+Use three complementary signals:
+
+- logs explain individual behavior;
+- metrics detect system behavior;
+- traces connect distributed/async behavior.
+
+Health must distinguish at least liveness and readiness. Optional hosts such as Koali Spaces must not make standalone Orgo unhealthy merely because the host is absent.
+
+## 14. Selective hexagonal architecture
+
+Do not create ports/repositories/facades for every CRUD table.
+
+Use explicit ports/adapters where they protect a meaningful boundary:
+
+- inbound HTTP/email/webhook/offline replay;
+- Kristal/Konnaxion/Architect/kOA integrations;
+- notification delivery channels;
+- persistence interfaces where domain tests/transaction ownership benefit;
+- optional infrastructure such as broker/warehouse implementations.
+
+External SDK/domain types must stop at the ACL/adapter boundary.
+
+## 15. Dependency rules
+
+The dependency graph is more important than the folder names.
+
+```text
+Domains ───────► Work public API
+Intake ────────► Orchestration public API
+Orchestration ─► Work public API
+Insights ──────► read/projection interfaces
+Integrations ──► Orgo application ports
+```
+
+Forbidden examples:
+
+```text
+domain module ─X→ raw Task/Case persistence
+integration    ─X→ Orgo DB mutation
+Insights       ─X→ operational state mutation
+Work           ─X→ HR/Maintenance/Education internals
+Orgo core      ─X→ external provider model
+```
+
+Enforce these rules with architecture tests/linting, not documentation alone.
+
+## 16. Target code organization
+
+A possible physical layout:
+
+```text
+apps/api/src/orgo/
+  platform/
+    execution-context/
+    persistence/
+    transaction/
+    observability/
+    idempotency/
+    outbox/
+    config/
+
+  modules/
+    tenancy/
+    identity/
+    intake/
+      signals/
+    work/
+      cases/
+      tasks/
+      assignments/
+      comments/
+      events/
+    orchestration/
+      workflow/
+      routing/
+      escalation/
+      actions/
+    communications/
+      notifications/
+    domains/
+      maintenance/
+      hr/
+      education/
+    sync/
+    insights/
+
+  adapters/
+    inbound/
+      http/
+      email/
+      webhook/
+    outbound/
+      email/
+
+  integrations/
+    kristal/
+    konnaxion/
+    architect/
+    koa/
+```
+
+This tree is illustrative. Ownership and dependency rules are normative; exact folder names may change during migration.
+
+## 17. Patterns selected from the Senior Architect corpus
+
+| Pattern | Decision |
+|---|---|
+| Modular Monolith | **Primary architecture** |
+| Hexagonal Architecture | **Selective at meaningful boundaries** |
+| Anti-Corruption Layer | **Required for external systems** |
+| Idempotency | **Required at retry-prone boundaries** |
+| Transactional Outbox | **Required for durable post-commit effects** |
+| CQRS | **Light/read-side only** |
+| Circuit Breaker / timeout / backoff | **External/faillible boundaries** |
+| Bulkhead | **External/AI/high-cost workloads when needed** |
+| Graceful Degradation | **When semantically safe** |
+| DLQ/manual redrive | **Async poison/permanent failures when needed** |
+| Saga/process manager | **Only for long-running cross-system workflows** |
+| Broker Pub/Sub | **Not required initially** |
+| Event Sourcing | **Not selected** |
+| Microservices | **Not selected at current scale/shape** |
+| BFF as separate service | **Not selected currently** |
+| Sharding / Cell architecture / Service mesh | **Not selected currently** |
+
+## 18. Migration strategy
+
+Use incremental replacement rather than a rewrite.
+
+### Phase 0 — Make the snapshot truthful
+
+- repair imports/module graph/dependencies/config;
+- establish build/test/boot baseline;
+- normalize API routing;
+- remove/retire phantom and duplicate active implementations.
+
+### Phase 1 — Establish module boundaries
+
+- group Task/Case under Work ownership;
+- establish Intake and Orchestration public APIs;
+- prevent domain modules from bypassing Work;
+- introduce architecture tests.
+
+### Phase 2 — Durable intake/platform primitives
+
+- add persisted Signal;
+- add ExecutionContext;
+- add idempotency records/constraints where required;
+- propagate correlation/causation identifiers.
+
+### Phase 3 — Reliable effects
+
+- add Action Executor/Dispatcher;
+- add OutboxMessage + worker;
+- reconcile WorkflowDefinition/Version/Instance;
+- make YAML import/export rather than competing runtime truth.
+
+### Phase 4 — External integrations
+
+- add IntegrationOperation;
+- implement per-system ACL/ports/adapters;
+- add retry/circuit/resilience policy according to external semantics.
+
+### Phase 5 — Read projections and product UI
+
+- consolidate Insights/read projections;
+- build Case-centered Orgo UI from composable presentation profiles;
+- preserve standalone + Koali-hosted modes.
+
+## 19. Non-negotiable architectural invariants
+
+1. Orgo stays organization/tenant scoped.
+2. Work owns canonical Case/Task mutations.
+3. Signal is accepted/persisted before retry-prone orchestration causes duplicate effects.
+4. Workflow evaluation stays deterministic and side-effect free.
+5. Internal ACID transactions are preferred over internal sagas.
+6. External/long-running effects are durable, idempotent and receipt-driven.
+7. External state never becomes Orgo Task/Case status by implication.
+8. Insights/read models cannot mutate operational state directly.
+9. Koali hosting remains optional; Orgo stays standalone-capable.
+10. Module dependency rules are enforced in code/CI.
+
+## Completion delivery reference — 2026-09-09
+
+The active implementation and its remaining external-contract boundaries are recorded in `IMPLEMENTATION_STATUS.md`. See `COMPLETION_DECISIONS.md` for durable processes, receipt predicates, Work scopes, identity and evidence semantics; `ARCHITECTURE_TO_CODE.md` for source ownership; `LOCAL_VALIDATION.md` for the final acceptance to run locally. Historical validation results do not validate the completion changes.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/UI_AND_KOALI_INTEGRATION.md
+AUTHORITY: canonical
+================================================================================================
+
+# Orgo — UI Architecture and Koali Integration
+
+**Status:** Canonical direction for the Orgo vNext frontend and Koali hosting boundary.
+
+**Delivery update:** The active frontend implements shared OrgoApp composition and a code-level hosted entry. Native Koali manifest admission and host execution remain unverified because those contract packages are not supplied. See `IMPLEMENTATION_STATUS.md`.
+
+This document defines the intended architecture. The current Orgo web snapshot is smaller than this target and must be aligned incrementally. The UI composition is backed by the same operational model defined in `TARGET_ARCHITECTURE.md`: Signal intake, Case-centered Work, Tasks and Orchestration.
+
+## 1. Ownership invariant
+
+Orgo is a proprietary integrated subsystem/application. It owns its operational domain and its business UI.
+
+Orgo owns:
+
+- Cases, Tasks, Signals and Workflows;
+- routing, escalation and operational actions;
+- Orgo tenant rules and business authorization;
+- Orgo routes and inner navigation;
+- the Orgo Control Panel, inspectors and commands;
+- Orgo presentation profiles.
+
+Koali owns the outer hosting/composition environment when Orgo is installed there. Koali does not become the owner of Orgo business state, business authorization or UI behavior.
+
+Required invariant:
+
+```text
+Koali --hosts--> Orgo
+
+Koali -X-> owns Orgo business/UI
+Orgo  -X-> requires Koali to function
+```
+
+Orgo must remain installable/removable as a subsystem and must remain usable standalone.
+
+## 2. Two runtime presentation modes, one Orgo application
+
+Orgo supports two presentation modes over the same application code and business APIs:
+
+```text
+ORGO UI
+├── standalone
+└── hosted by Koali
+```
+
+The hosted mode is not a second frontend. It mounts/contributes the Orgo application through the canonical Koali module interface.
+
+Conceptual structure:
+
+```text
+orgo-ui/
+  app/
+  routes/
+  features/
+  shell/
+  inspectors/
+  commands/
+  presentation/
+
+  standalone-entry
+  koali-module-entry
+```
+
+## 3. Koali hosting boundary
+
+Koali Spaces already has an outer `GlobalShell`. Orgo must not introduce a second global Koali shell.
+
+Canonical relationship:
+
+```text
+Koali Spaces
+└── GlobalShell
+    ├── ModuleSelector
+    ├── SharedTopBar
+    ├── ActiveModuleSidebar
+    └── MainPageSurface
+            │
+            └── Orgo local_module_surface
+                    │
+                    └── Orgo application
+```
+
+The canonical Koali application route family is `/apps/[moduleId]/...`. Orgo contributes through the installed/admitted module manifest mechanism rather than hard-coding itself into a global product switcher.
+
+The Koali integration concepts are the existing Koali concepts:
+
+```text
+Space
+  └── module_instance
+        └── Module Interface Manifest
+              ├── routes
+              ├── sidebar
+              ├── widgets
+              ├── required capabilities
+              └── surface references
+```
+
+Do not create a parallel Koali taxonomy named `Product`, `SurfaceProfile` or `Capability`.
+
+For Koali integration, use the canonical concepts such as `module`, `moduleInstance`, `surface`, `capabilityProjection` and `presentationPolicy`.
+
+When hosted, Orgo is presented as a `local_module_surface`: a complete owner-managed application surface rendered inside the Koali environment.
+
+## 4. Outer navigation vs inner navigation
+
+Two navigation layers are intentional:
+
+```text
+OUTER — KOALI
+ModuleSelector
+Space navigation
+SharedTopBar
+context shortcuts
+
+        ↓
+
+INNER — ORGO
+My Work
+Cases
+Tasks
+Signals
+Workflows
+Routing
+People
+Organizations
+Insights
+Integrations
+Audit
+System
+```
+
+The outer shell knows which module is active. Orgo knows how work is performed inside Orgo. Do not merge both layers into one large Koali sidebar.
+
+## 5. Orgo UI composition model
+
+The canonical UI principle is not “build the full Control Panel and hide items for smaller interfaces.”
+
+It is:
+
+```text
+shared Orgo UI primitives
+        ↓
+routes / capabilities / panels / actions
+        ↓
+presentation composition
+        ↓
+Orgo presentation profile
+```
+
+The full Control Panel is the maximal composition, not the physical parent of every reduced UI.
+
+Orgo presentation profiles may include:
+
+```text
+Full Control Panel
+Operations
+My Work
+Supervisor
+Intake
+Workflow Admin
+Executive
+Embedded
+```
+
+These are internal Orgo UX profiles, not Koali surface categories.
+
+A presentation profile may control:
+
+- its home route;
+- navigation groups;
+- exposed product capabilities;
+- available actions;
+- widgets;
+- search/command scopes;
+- inspector behavior;
+- density and other presentation policy.
+
+Presentation is not authorization. Backend authorization remains authoritative.
+
+## 6. Authorization boundary
+
+Koali may consume non-authoritative capability projections to decide presentation behavior such as:
+
+```text
+show / hide
+enable / disable
+choose a safe route
+show unavailable
+```
+
+An Orgo mutation must still be authorized by Orgo:
+
+```text
+Koali capability projection
+        ↓
+presentation decision
+        ↓
+Orgo receives command
+        ↓
+Orgo revalidates
+  identity
+  RBAC
+  tenant
+  policy
+        ↓
+mutation
+```
+
+Do not replace Orgo RBAC with Koali RBAC. Do not assume that a Koali login/session is automatically an authorized Orgo session unless a separate SSO contract explicitly establishes that mapping.
+
+## 7. Case-centered operational UX
+
+`Case` is the primary operational workspace. `Task` and `Signal` remain first-class entities and transverse views, but they should not read as three unrelated applications.
+
+```text
+Signals ───────┐
+Signals ───────┼──> Case
+               │     ├── Tasks
+               │     ├── Workflow
+               │     ├── People / ownership
+               │     ├── Evidence / attachments
+               │     ├── Timeline
+               │     └── Audit
+               │
+               └── contextual evolution
+```
+
+A Case workspace should make these relationships visible.
+
+Transverse views serve different operational questions:
+
+- **Cases:** where are situations and durable contexts?
+- **Tasks:** what work must be executed?
+- **Signals:** what is arriving or changing?
+- **My Work:** what requires the current user's attention?
+
+A Signal may enrich an existing Case; it is not only a one-time Case creation trigger.
+
+## 8. Orgo Control Panel
+
+The maximal Orgo presentation remains a large operational control panel:
+
+```text
+┌──────────────┬──────────────────────────────┬──────────────┐
+│ ORGO NAV     │                              │ INSPECTOR    │
+│              │                              │              │
+│ My Work      │                              │ selected     │
+│ Cases        │          WORKSPACE           │ entity       │
+│ Tasks        │                              │              │
+│ Signals      │                              │ context      │
+│              │                              │ relations    │
+│ Workflows    │                              │ quick actions│
+│ Routing      │                              │              │
+│              │                              │              │
+│ People       │                              │              │
+│ Insights     │                              │              │
+│ Audit        │                              │              │
+└──────────────┴──────────────────────────────┴──────────────┘
+```
+
+The exact inner navigation is presentation-profile dependent. Technical/admin entries such as Integrations, System, Organizations or workflow configuration should not appear to operators unless their Orgo profile and permissions require them.
+
+There is no universal `Overview` route. Home is a presentation-profile property, for example:
+
+```text
+Operations  -> Operations Dashboard
+Supervisor  -> Team Overview
+My Work     -> Work Queue
+Executive   -> Situation Overview
+Admin       -> System Overview
+```
+
+## 9. Inspector rule
+
+The Inspector is initially an Orgo-owned primitive. Do not modify the Koali `GlobalShell` merely to make the Inspector universal. If multiple modules later need the same contract, promotion into Koali can be considered separately.
+
+Use three levels of depth:
+
+```text
+Row / Card
+  -> summary
+
+Inspector
+  -> context
+  -> quick edit
+  -> quick action
+  -> related entities
+  -> deep link
+
+Full Page / Workspace
+  -> complex work
+  -> full history
+  -> structured configuration
+```
+
+The Inspector must not reproduce an entire full page in a narrow panel. It should provide a deep link to the full workspace when deeper work is required.
+
+## 10. Command system
+
+Orgo should have an internal command/action system suitable for fast operational work. A command registry may power buttons, context actions, bulk actions and an Orgo command launcher.
+
+Examples:
+
+```text
+Open case…
+Create case…
+Assign task…
+Escalate…
+Search signal…
+Go to workflow…
+Run action…
+```
+
+Koali's `SharedTopBar` may accept module command references through its existing contracts. A global Koali `Ctrl+K` behavior is a separate architecture decision and must not be assumed by Orgo.
+
+## 11. Konnaxion reuse rule
+
+Konnaxion is a useful implementation reference for layout mechanics and UI patterns, including sidebar, header, mobile drawer, page shells, navigation ergonomics and dashboard density.
+
+Do not use Konnaxion to redefine Koali's global architecture.
+
+Correct direction:
+
+```text
+Konnaxion frame/patterns
+        ↓ selective reuse/adaptation
+Orgo-owned shell and UI primitives
+        ↓
+Orgo application
+```
+
+Incorrect direction:
+
+```text
+Konnaxion
+  ↓
+new KoaliShell
+  ↓
+Orgo
+```
+
+## 12. Integration with Kristal and other systems
+
+UI integration does not change ownership boundaries. Orgo may expose actions/workflows that invoke Kristal or another external system through explicit adapters, operations and receipts.
+
+Do not represent external epistemic/platform/civic state as Orgo Task/Case status merely because it is visible in the Orgo Control Panel.
+
+The UI should display external state as referenced/provenanced external state and route mutations through the owning system's contract.
+
+## 13. Implementation direction
+
+Target organization (names may be adjusted to the actual framework/repository layout):
+
+```text
+apps/web/src/orgo/
+├── app/
+│   ├── OrgoApp
+│   ├── standalone-entry
+│   └── koali-module-entry
+├── shell/
+│   ├── OrgoShell
+│   ├── OrgoNavigation
+│   ├── OrgoHeader
+│   ├── OrgoWorkspace
+│   └── OrgoInspectorHost
+├── presentation/
+│   ├── full
+│   ├── operations
+│   ├── my-work
+│   ├── supervisor
+│   ├── intake
+│   ├── workflow-admin
+│   ├── executive
+│   └── embedded
+├── cases/
+├── tasks/
+├── signals/
+├── workflows/
+├── routing/
+├── organization/
+├── insights/
+├── inspectors/
+├── commands/
+├── actions/
+└── integration/koali/
+```
+
+Do not force this target directory structure mechanically if the current framework layout has a cleaner equivalent. The architectural boundaries are normative; exact filenames are not.
+
+## 14. Current-state note
+
+The current Orgo web snapshot is not yet this application. It contains useful types/screens/hooks but a small effective route tree. Build/runtime repair and core-domain stabilization should precede or accompany the UI composition work.
+
+
+================================================================================================
 FILE: Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md
 AUTHORITY: canonical
 ================================================================================================
@@ -1537,6 +3700,31 @@ SyncResolutionStrategy
 ```
 
 Public JSON casing may differ at explicit boundaries, but each enum has one semantic vocabulary.
+## 14. Target architecture additions (not yet physical schema authority)
+
+The target architecture requires several models/records that are **not present as canonical Prisma models in the supplied snapshot**. They must be introduced by explicit migrations before code/docs may treat them as implemented.
+
+### `Signal`
+
+First-class accepted intake/evidence record, organization-scoped and idempotent at retry-prone boundaries. It should be linkable to the Case/Tasks/actions it caused or enriched.
+
+### `WorkflowVersion`
+
+Immutable/versioned runtime ruleset linked to `WorkflowDefinition`. `WorkflowInstance` should pin the exact version/hash used. YAML remains import/export/authoring material.
+
+### `OutboxMessage`
+
+Durable post-commit message written atomically with a business mutation. Used by the Orgo worker for notifications, integrations, retries and projection work.
+
+### `IntegrationOperation`
+
+Orgo-owned record of an external request/result/receipt. External lifecycle status must not be encoded into `Task.status` or `Case.status`.
+
+### Idempotency storage
+
+A dedicated record or equivalent unique constraints are required where a stable `(organization, operation/source, idempotency_key)` boundary cannot be enforced directly on the target aggregate.
+
+`ExecutionContext` is primarily an application/platform contract and need not be a single database table; correlation/causation/idempotency fields should be persisted on the records that require durable traceability.
 
 
 ================================================================================================
@@ -1544,7 +3732,9 @@ FILE: Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md
 AUTHORITY: canonical
 ================================================================================================
 
-Preface
+> **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
+
+﻿Preface
 1.1 Scope
 1.2 Technology & naming assumptions
 1.3 Multi‑tenancy conventions
@@ -2644,133 +4834,260 @@ AUTHORITY: canonical
 
 # Orgo v3 — Architecture and Invariants
 
+**Status:** Canonical architectural summary. For the complete target design and migration sequence, see `../TARGET_ARCHITECTURE.md`.
+
 ## 1. Identity
 
-Orgo is a multi-tenant workflow and coordination system.
+Orgo is a multi-tenant workflow and operational coordination system.
 
-Its job is to turn incoming signals and existing operational state into structured, auditable work.
+Its job is to turn accepted Signals and existing operational state into governed, auditable Work.
 
 ```text
-signals
+input/evidence
   ↓
-classification / routing / workflow evaluation
+Intake / Signal
   ↓
-Cases + Tasks
+Orchestration evaluation
+  ↓
+Work = Cases + Tasks
   ↓
 assign / execute / escalate / review
   ↓
-events / receipts / insights
+events / receipts / projections
 ```
 
-## 2. Core architecture
+## 2. Primary architecture
+
+Orgo evolves as a **modular monolith**, not as a Task/Case/Workflow microservice mesh.
 
 ```text
                          Orgo
                           │
         ┌─────────────────┼──────────────────┐
         │                 │                  │
-    Backbone           Core work          Insights
- organization          Task / Case        read models
- identity/RBAC         Workflow           patterns
- profiles              Labels             exports
-        │                 │                  │
-        └────────── domain adapters ─────────┘
-                   Maintenance / HR / Education
+      Intake             Work           Orchestration
+      Signals        Cases + Tasks       Workflow
+      adapters       assignments         Routing
+      normalize      comments            Escalation
+        │            work events          Actions
+        └─────────────────┼──────────────────┘
+                          │
+                  Domain events + Outbox
+                          │
+              ┌───────────┼────────────┐
+              │           │            │
+       Communications  Integrations  Insights
 ```
 
-## 3. Multi-tenancy
+Cross-cutting platform capabilities include tenancy, identity/RBAC, ExecutionContext, persistence/transactions, configuration, idempotency, audit and observability.
+
+## 3. Work is the central operational bounded context
+
+`Work` owns canonical Case/Task mutations and the evidence directly attached to those lifecycles.
+
+```text
+Work
+├── Case
+├── Task
+├── Assignment
+├── Comment
+└── Work Event
+```
+
+`Work` is an ownership boundary, not a replacement table.
+
+## 4. Task is the executable unit of work
+
+Task is defined once and reused everywhere.
+
+Domain modules may add domain metadata or extension rows but they do not create competing status/priority/severity/visibility systems for canonical work.
+
+## 5. Case is durable situation/context
+
+Case groups related work, Signals and operational context over time. It is the primary operational workspace in the target UX.
+
+A Case can hold several Tasks and may accumulate several Signals. It can reference an external subject/object without becoming that external object's owner.
+
+## 6. Signal is a first-class accepted input
+
+A Signal may originate from:
+
+- email;
+- API/UI input;
+- webhook/external integration;
+- system/timer event;
+- offline/sync replay.
+
+The target flow is:
+
+```text
+source input
+→ inbound adapter
+→ normalization
+→ idempotency/deduplication
+→ persist Signal
+→ orchestration
+→ explicit Case/Task/action effects
+```
+
+**Current-state note:** the supplied Prisma snapshot does not yet contain the canonical persisted Signal model; adding it is part of the migration plan.
+
+## 7. Multi-tenancy and ExecutionContext
 
 Every operational access is scoped to an Organization.
+
+Protected entry paths resolve a common execution context before application logic:
+
+```text
+organization
+actor
+permissions/authorization reference
+correlation_id
+causation_id
+idempotency_key when applicable
+source
+```
 
 Tenant rules:
 
 - organization identity is resolved before sensitive access;
 - data queries include organization scope;
 - cross-organization IDs do not bypass scope;
-- a body/header organization ID is validated against authentication/authorization context;
+- a body/header organization ID is validated against authenticated/authorized context;
 - analytics and exports preserve organization isolation.
 
-## 4. Task is the unit of work
+## 8. Workflow Engine stays deterministic and pure
 
-Task is defined once and reused everywhere.
-
-Domain modules may add domain metadata or extension rows but they do not create competing status/priority/severity/visibility systems for work.
-
-## 5. Case is durable context
-
-Case groups related work over time.
-
-A Case can hold several Tasks and domain extensions. It can reference an external subject/object without becoming that external object's owner.
-
-## 6. Signals become work through explicit evaluation
-
-A signal may be:
-
-- email;
-- API/UI input;
-- system/timer event;
-- offline/sync input;
-- external integration event.
-
-The signal itself is not yet a Task or Case. Workflow/routing rules determine what work is created.
-
-## 7. Workflow Engine
-
-The current core Workflow Engine is best treated as a deterministic rule evaluator:
+The Workflow Engine resolves decisions:
 
 ```text
 WorkflowContext
-→ matching rules
+→ version-pinned rules
 → ordered ResolvedWorkflowActions
 ```
 
-The engine should not directly absorb every side effect. Side-effect executors call TaskService, CaseService, NotificationService or external adapters as appropriate.
+It does not directly absorb all side effects. An Action Executor/Dispatcher applies resolved actions through Work, Communications or integration ports.
 
-This separation makes simulation meaningful: `simulate` uses the same evaluation rules but applies no side effects.
+Simulation uses the same evaluator and persists nothing.
 
-## 8. Labels
+## 9. Workflow runtime truth is persisted/versioned
 
-Labels combine a vertical base, category/subcategory and optional horizontal role.
+Target relationship:
 
-They support routing/classification but do not replace authorization.
+```text
+WorkflowDefinition
+  └── WorkflowVersion
+         └── WorkflowInstance pins exact version/hash
+```
+
+YAML/filesystem rules remain valid as authoring/import/export/seed artifacts, but they must not remain an unrelated second runtime source of truth.
+
+## 10. Internal actions vs durable external actions
+
+Internal actions such as Case/Task creation or assignment normally execute synchronously through owner services and ACID transactions.
+
+External or long-running effects use a durable post-commit boundary:
+
+```text
+business transaction + OutboxMessage
+→ commit
+→ Orgo worker
+→ adapter
+→ receipt/result
+```
+
+External operation state is tracked separately through `IntegrationOperation`; it must not be encoded implicitly into Task or Case status.
+
+## 11. Events are typed by purpose
+
+Keep distinct:
+
+- **domain events** — business facts such as TaskAssigned or CaseResolved;
+- **audit/security events** — actor/compliance/security evidence;
+- **integration messages** — durable cross-boundary requests/results.
+
+Orgo is state-oriented and does not use Event Sourcing as the canonical persistence model.
+
+## 12. Labels and profiles
+
+Labels support routing/classification but do not replace authorization.
 
 Broadcast bases `10`, `100`, `1000` are informational by default.
 
-## 9. Profiles
+Organization profiles tune defaults such as SLA/reactivity, transparency, pattern sensitivity, retention and automation. Profile defaults flow through owner services; they do not fork the schema.
 
-Organization profiles tune defaults such as:
+## 13. Domain modules
 
-- reactivity/SLA;
-- transparency;
-- pattern sensitivity;
-- retention;
-- automation/review cadence.
-
-Profile defaults flow into Tasks/Cases through core services. They do not fork the schema.
-
-## 10. Domain modules
-
-Domain modules are thin around the core in the architectural sense:
+Domain modules are extensions around Work:
 
 ```text
 domain request
 → domain validation/context
-→ TaskService / CaseService
-→ canonical Task/Case
+→ Work public API
+→ canonical Case/Task
 → domain extension/link rows
 ```
 
-A domain module may be substantial in business logic; "thin" means it does not own a parallel work engine.
+A domain module may be substantial in business logic, but it does not own a parallel work engine and does not mutate raw Task/Case persistence directly.
 
-## 11. Insights
+## 14. Insights uses light CQRS/read projections
 
 Insights is read/analysis oriented.
 
-Pattern detection becomes operational only by creating governed Cases/Tasks through core services.
+Operational state remains authoritative. Read projections may support My Work, Supervisor workload, dashboards and analytical reporting.
 
-## 12. External systems
+A separate warehouse/ORM/broker is an implementation option, not an invariant. Pattern detection becomes operational only by re-entering Work through explicit Case/Task actions.
 
-Orgo orchestrates rather than absorbs. Konnaxion, Kristal, SemantiK Architect and kOA-Linux remain external owners of their domains.
+## 15. External systems use ports + Anti-Corruption Layers
+
+Konnaxion, Kristal, SemantiK Architect and kOA remain independent owners of their domains.
+
+Each integration should have an explicit port/adapter/mapper boundary. External provider/domain types must not leak into Orgo core models.
+
+## 16. Runtime shape
+
+Orgo may run multiple processes while remaining one modular monolith/release:
+
+```text
+orgo-web
+orgo-api
+orgo-worker
+postgres
+```
+
+The worker handles outbox processing, retries, scheduled work, integration operations and projection updates. A separate message broker is not required initially.
+
+## 17. Resilience and observability
+
+Apply timeout, bounded retry, exponential backoff/jitter, circuit breaker, concurrency limits and DLQ/manual redrive where external/asynchronous boundaries justify them.
+
+Graceful degradation must preserve semantics; a required external validation cannot silently become approval.
+
+Propagate structured correlation/causation and entity IDs through logs, metrics and traces. Distinguish liveness and readiness.
+
+## 18. UI ownership and presentation
+
+Orgo owns its business UI and inner navigation. The frontend is composed from shared Orgo primitives, routes, actions and panels into internal presentation profiles such as Operations, My Work, Supervisor, Intake, Workflow Admin, Executive and Embedded.
+
+The maximal Control Panel is one composition, not the physical parent of every smaller surface. `Case` is the primary operational workspace; Task and Signal remain first-class transverse views.
+
+## 19. Koali hosting invariant
+
+Orgo can run standalone and can be hosted by Koali Spaces as a `local_module_surface` inside the existing Koali `GlobalShell`.
+
+Koali hosting/capability projections never replace Orgo business authorization. Orgo revalidates identity, organization/tenant, RBAC and policy for protected mutations.
+
+See `../UI_AND_KOALI_INTEGRATION.md`.
+
+## 20. Patterns explicitly not selected now
+
+Do not introduce these as default Orgo architecture without a measured requirement and a new decision record:
+
+- Task/Case/Workflow microservices;
+- Event Sourcing;
+- mandatory Kafka/RabbitMQ/Redis broker;
+- separate BFF service;
+- sharding/cell architecture/service mesh.
 
 
 ================================================================================================
@@ -2778,7 +5095,9 @@ FILE: Docs/Technical-Reference/v3/2-orgo-documentation-index.md
 AUTHORITY: canonical
 ================================================================================================
 
-<!-- INDEX: Doc 2 – Foundations, Locked Variables & Operational Checklists -->
+> **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
+
+﻿<!-- INDEX: Doc 2 – Foundations, Locked Variables & Operational Checklists -->
 Index
 
 Role of this document in the Orgo set
@@ -3638,9 +5957,27 @@ FILE: Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md
 AUTHORITY: canonical
 ================================================================================================
 
-# Orgo v3 — Task, Case and Workflow Contract
+# Orgo v3 — Signal, Work and Workflow Contract
 
-## 1. Task contract
+> **Delivery reference (2026-09-09):** `IMPLEMENTATION_STATUS.md` distinguishes implemented behavior from the remaining target; `IMPLEMENTATION_DECISIONS.md` defines the adopted action syntax and migration refinements.
+**Status:** Canonical semantic contract. Current code/schema gaps are explicitly marked.
+
+## 1. Work boundary
+
+`Work` is the ownership boundary for canonical Cases and Tasks.
+
+```text
+Work
+├── Cases
+├── Tasks
+├── Assignments
+├── Comments
+└── Work Events
+```
+
+This does not merge Case and Task into one model. It defines where their canonical mutations belong.
+
+## 2. Task contract
 
 Task classification:
 
@@ -3671,24 +6008,20 @@ Terminal states:
 COMPLETED | FAILED | CANCELLED
 ```
 
-## 2. Task creation
+## 3. Task creation/mutation
 
-The core service owns:
+The Work owner controls:
 
 - initial status;
 - enum normalization;
 - profile-derived SLA/defaults;
 - timestamps;
-- event recording;
-- organization scoping.
+- assignment/owner invariants;
+- organization scoping;
+- domain/work event creation;
+- required outbox messages in the same transaction when a durable post-commit effect is requested.
 
-Domain/API callers provide intention and domain context, not derived core state.
-
-## 3. Task mutation
-
-All paths that change Task lifecycle, owner, assignment, deadline or core classification should execute the same invariants and emit the appropriate TaskEvent/audit evidence.
-
-Offline sync and domain modules are not exemptions.
+All paths that change Task lifecycle, owner, assignment, deadline or core classification execute the same invariants. Offline replay and domain modules are not exemptions.
 
 ## 4. Case contract
 
@@ -3711,34 +6044,90 @@ resolved
 archived → terminal
 ```
 
-Case is organization-scoped and can contain Tasks.
+Case is organization-scoped, contains/relates Tasks and is the primary operational workspace.
 
-## 5. Case creation
+## 5. Signal contract
 
-The current core service exposes an internal `createCaseFromSignal(...)` path. Case creation normalizes source/severity, applies profile defaults and persists through the core owner.
+A Signal is an accepted input/evidence object that may create or enrich work.
 
-Public HTTP exposure is separate from the existence of the service operation.
+Target logical contract:
 
-## 6. Task events
+```text
+signal_id
+organization_id
+source
+external_reference
+idempotency_key
+type / classification / severity
+title
+description
+payload or payload_ref
+status
+received_at
+processed_at
+```
 
-Important Task transitions create Task events. Event history records facts about Task evolution and supports reconciliation/audit.
+Target invariant:
 
-An event does not mutate the Task by itself; the mutation is committed by the Task owner service.
+```text
+normalize
+→ deduplicate/idempotency check
+→ persist Signal
+→ workflow/orchestration evaluation
+```
 
-## 7. Workflow context
+A Signal is not automatically a Task or Case. Several Signals may relate to one Case.
+
+**Implementation update:** the delivered Prisma schema persists Signal. The historical snapshot under `legacy/` did not.
+
+## 6. Execution context
+
+Protected Work/Intake operations receive resolved context rather than trusting request payload tenancy:
+
+```text
+organizationId
+actorUserId / actor type
+authorization reference
+correlationId
+causationId
+idempotencyKey when applicable
+source
+```
+
+The context is resolved at the entry boundary and propagated into owner services/events/audit.
+
+## 7. Work/domain events
+
+Important accepted transitions produce business facts such as:
+
+```text
+SignalReceived
+TaskCreated
+TaskAssigned
+TaskStatusChanged
+CaseCreated
+CaseStatusChanged
+```
+
+Domain/work events are distinct from audit/security evidence and from integration messages.
+
+An event does not independently mutate Task/Case; the owner mutation is authoritative.
+
+## 8. Workflow evaluation context
 
 Canonical evaluation input includes:
 
 - `organizationId`;
-- source `EMAIL | API | SYSTEM | TIMER`;
+- Signal reference when evaluation originates from persisted intake;
+- source `EMAIL | API | SYSTEM | TIMER` plus future normalized adapters;
 - optional type/category/severity/label;
 - title/description;
-- email fields where applicable;
-- metadata/payload.
+- source-specific normalized metadata;
+- correlation/causation identity.
 
-## 8. Workflow actions
+## 9. Workflow actions
 
-Current rule vocabulary:
+Current rule vocabulary includes:
 
 ```text
 CREATE_TASK
@@ -3750,22 +6139,81 @@ SET_METADATA
 NOTIFY
 ```
 
-The evaluator resolves actions. A dispatcher/executor is responsible for applying them through the correct service.
+The target Action Executor may add explicit actions such as Case creation/assignment and external integration actions as contracts become implemented.
 
-## 9. Simulation
+The evaluator resolves actions; the executor applies them through the correct owner/port.
 
-Simulation uses the same rule evaluation semantics but produces no state mutation.
+## 10. Internal vs external effects
+
+### Internal transactional effects
+
+Case/Task mutations, assignment, routing metadata and similar internal actions normally use owner services and ACID transactions.
+
+### Durable external/long-running effects
+
+Notifications and ecosystem operations should follow:
 
 ```text
-same rules + same context
+business mutation
++ OutboxMessage
+→ commit
+→ worker
+→ adapter
+→ receipt/result
+```
+
+No remote operation should be required to succeed inside the same transaction that persists canonical Work state.
+
+## 11. IntegrationOperation
+
+Track an external operation independently from Work status.
+
+```text
+provider
+operation
+organization
+Orgo subject
+idempotency/correlation
+status
+external reference
+receipt/error
+```
+
+Examples:
+
+```text
+Orgo Task.status ≠ Kristal validation status
+Orgo Case.status ≠ external publication status
+```
+
+## 12. Workflow versioning
+
+Target runtime relationship:
+
+```text
+WorkflowDefinition
+→ immutable WorkflowVersion
+→ WorkflowInstance pins exact version/hash
+```
+
+YAML/filesystem rules are authoring/import/export/seed material, not a parallel mutable runtime truth.
+
+## 13. Simulation
+
+Simulation uses the same version-pinned evaluation semantics and produces no state mutation, outbox message or integration operation.
+
+```text
+same version + same context
 → same resolved actions
 ```
 
-subject to the same pinned configuration/ruleset.
+## 14. Cases from workflow/patterns
 
-## 10. Cases from workflow/patterns
+If a rule/pattern needs to open a Case, that operation is explicit in the action/executor contract and performed through Work/Case ownership. It must not be hidden inside arbitrary metadata or direct SQL.
 
-If a rule/pattern needs to open a Case, that operation must be explicit in the action/executor contract and performed through CaseService. It must not be hidden inside arbitrary metadata or direct SQL.
+## 15. Idempotency
+
+Retry-prone entry/effect paths require stable idempotency identity. Replaying the same accepted command/message must not create duplicate Work or duplicate external effects.
 
 
 ================================================================================================
@@ -3773,7 +6221,9 @@ FILE: Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md
 AUTHORITY: canonical
 ================================================================================================
 
-<!-- INDEX: Doc 3 – Domain Modules (Orgo v3) -->
+> **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
+
+﻿<!-- INDEX: Doc 3 – Domain Modules (Orgo v3) -->
 Index
 
 Canonical Concepts (shared with other docs)
@@ -4628,7 +7078,7 @@ AUTHORITY: canonical
 
 ## 1. Purpose
 
-Domain modules adapt specialized work to the common Orgo Task/Case engine.
+Domain modules adapt specialized work to the common Orgo **Work** bounded context (Case + Task ownership).
 
 Implemented domain families in the current snapshot include Maintenance, HR and Education.
 
@@ -4639,7 +7089,7 @@ domain work object
 ≠ independent Task lifecycle
 ```
 
-A domain module may own domain-specific extension tables, validation and projections. The canonical unit of work remains `Task`; durable shared context remains `Case` when used.
+A domain module may own domain-specific extension tables, validation and projections. The canonical executable unit remains `Task`; durable shared context remains `Case` when used. Canonical mutations enter through Work public APIs.
 
 ## 3. DomainTask
 
@@ -4673,7 +7123,7 @@ Correct architectural flow:
 
 ```text
 maintenance request
-→ TaskService creates canonical Task(type=maintenance)
+→ Work/Task public API creates canonical Task(type=maintenance)
 → maintenance link/asset/calendar extension
 → Task lifecycle remains core-owned
 ```
@@ -4704,7 +7154,7 @@ Correct flow:
 
 ```text
 education incident/support request
-→ TaskService
+→ Work/Task public API
 → canonical Task(type=education_support)
 → EducationTaskLink + learning-group/person context
 ```
@@ -4726,12 +7176,27 @@ A new domain module declares:
 It does not declare a new global Task status enum.
 
 
+## 8. Dependency rule
+
+Domain modules must not import raw Work persistence or external integration implementations.
+
+```text
+Domain module -> Work public API
+Domain module -X-> Prisma Task/Case writes
+Work -X-> domain-internal service/model
+```
+
+When a domain operation must atomically create canonical Work and domain extension state, define an explicit transaction/application boundary rather than passing arbitrary Prisma clients through mismatched service signatures.
+
+
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md
 AUTHORITY: canonical
 ================================================================================================
 
-<!-- INDEX: Doc 4 – Functional Code‑Name Inventory (Services & Hooks) -->
+> **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
+
+﻿<!-- INDEX: Doc 4 – Functional Code‑Name Inventory (Services & Hooks) -->
 Index
 
 Document role (mapping product features → code artifacts)
@@ -5164,7 +7629,9 @@ FILE: Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md
 AUTHORITY: canonical
 ================================================================================================
 
-Updated Doc 5 with the requested changes is below.
+> **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
+
+﻿Updated Doc 5 with the requested changes is below.
 
 ````markdown
 ﻿<!-- INDEX: Doc 5 – Core Services Specification -->
@@ -6444,11 +8911,23 @@ Pattern code must not create an alternative Case/Task persistence path.
 
 The current Next.js web entrypoint routes `/` to `InsightsOverviewPage`. The supplied snapshot does not contain a mature route tree for all Orgo functions; documentation must not present unimplemented pages as active routes.
 
-## 6. Data warehouse connection
+## 6. Current data-access implementation
 
-The current `AppModule` configures a TypeORM datasource for Insights using `INSIGHTS_WAREHOUSE_URL` with `DATABASE_URL` fallback, while operational core persistence is Prisma-based.
+The current `AppModule` configures a TypeORM datasource for Insights using `INSIGHTS_WAREHOUSE_URL` with `DATABASE_URL` fallback, while operational core persistence is Prisma-based. This is a current implementation choice, not a required architectural split.
 
-This is a deliberate read/analytics separation if both paths are wired consistently.
+## 7. Target read-side architecture
+
+Use light CQRS where read shapes materially differ from operational writes:
+
+```text
+Work/Intake operational state
+→ events/projection update
+→ My Work / Supervisor / dashboards / reports
+```
+
+The target contract is an `InsightsQuery`/projection boundary. A separate warehouse, TypeORM datasource, cache or broker is optional and should be justified by scale/latency requirements.
+
+Insights may never mutate Work directly; actionable patterns re-enter through explicit Work actions.
 
 
 ================================================================================================
@@ -6456,7 +8935,9 @@ FILE: Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md
 AUTHORITY: canonical
 ================================================================================================
 
-<!-- INDEX: Doc 6 – Insights Module Config Parameters (Orgo v3) -->
+> **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
+
+﻿<!-- INDEX: Doc 6 – Insights Module Config Parameters (Orgo v3) -->
 Index
 
 Scope, dependencies and baseline
@@ -7183,6 +9664,8 @@ AUTHORITY: canonical
 
 # Orgo v3 — API Surface
 
+> **Historical snapshot route inventory.** The active API now uses a single `/api/v3` prefix. Use `../API_IMPLEMENTED.md` for the implemented routes; the older mixed-route analysis below is retained for migration reference.
+
 ## 1. Routing note
 
 The current NestJS application has no global `api` prefix in `main.ts`. Controller decorators therefore matter directly. Some controllers already include `api/v3`, while others use shorter paths and assume reverse-proxy mapping.
@@ -7274,12 +9757,39 @@ Their existence in source does not mean the current `AppModule` exposes every co
 Every Task/Case API operation must resolve and enforce the organization consistently. Public API DTO casing and internal service casing must be explicitly mapped rather than passed through `as any`.
 
 
+## 5. Frontend and hosted-module route boundary
+
+Orgo owns its application routes and inner navigation in both standalone and Koali-hosted modes.
+
+Koali's canonical outer application route family is `/apps/[moduleId]/...`; this is a hosting/navigation boundary, not a replacement for Orgo's internal router or business authorization.
+
+The hosted Orgo entry must expose the same business application through the canonical Koali module/interface manifest as a `local_module_surface`. Do not maintain a second Koali-specific implementation of Orgo pages.
+
+See `../UI_AND_KOALI_INTEGRATION.md` for the UI composition and authorization boundary.
+
+
+## 6. Target application boundary
+
+As the modular-monolith migration proceeds, controllers/adapters should enter application modules rather than owning tenant/workflow semantics themselves:
+
+```text
+HTTP/email/webhook/offline adapter
+→ ExecutionContext + DTO mapping
+→ Intake / Work / Orchestration public API
+→ owner transaction
+```
+
+Signal persistence, idempotency, outbox processing and integration-operation APIs are target contracts and must not be advertised as implemented until their schema/services/routes exist.
+
+
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md
 AUTHORITY: canonical
 ================================================================================================
 
-<!-- INDEX: Doc 7 – Organization Profiles & Behavioural Archetypes (profiles YAML) (Use YAML comments only so the file stays valid.) -->
+> **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
+
+﻿<!-- INDEX: Doc 7 – Organization Profiles & Behavioural Archetypes (profiles YAML) (Use YAML comments only so the file stays valid.) -->
 INDEX
 1. _template – Schema template (reference only)
 2. default – Balanced default organizational profile
@@ -7925,11 +10435,15 @@ AUTHORITY: canonical
 
 # Orgo v3 — Documentation Index
 
+## Canonical target
+
+- `../TARGET_ARCHITECTURE.md` — target modular-monolith architecture, selected Senior Architect patterns and migration plan.
+
 ## Core
 
 - `1-Orgo v3 - Database Schema Reference.md` — physical ownership/model families.
 - `2-Orgo v3 - Architecture and Invariants.md` — Orgo identity and global invariants.
-- `3-Orgo v3 - Task Case and Workflow Contract.md` — core lifecycle and workflow semantics.
+- `3-Orgo v3 - Task Case and Workflow Contract.md` — Signal, Work (Case/Task), lifecycle and workflow semantics.
 - `4-Orgo v3 - Domain Modules.md` — Maintenance/HR/Education adapters.
 - `5-Orgo v3 - Labels Profiles and Cyclic Overview.md` — routing and behavioral configuration.
 - `6-Orgo v3 - Insights and Analytics.md` — read/analytics layer.
@@ -7938,6 +10452,7 @@ AUTHORITY: canonical
 ## Cross-cutting
 
 - `../GLOSSARY.md`
+- `../UI_AND_KOALI_INTEGRATION.md` — standalone/hosted UI ownership, presentation profiles, Koali boundary.
 - `../BOUNDARIES_AND_OWNERSHIP.md`
 - `../CONTRACTS.md`
 - `../CODE_ALIGNMENT_NOTES.md`
@@ -7951,12 +10466,19 @@ AUTHORITY: canonical
 - `../eliteUserList_clean.csv`
 
 
+## Legacy/reference v3 documents
+
+Files with parallel lower-case/older titles remain historical/reference material where present. When they conflict with `TARGET_ARCHITECTURE.md` or the concise canonical v3 documents above, the target architecture and current physical code/schema take precedence according to their stated authority.
+
+
 ================================================================================================
 FILE: Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md
 AUTHORITY: canonical
 ================================================================================================
 
-<!-- INDEX: Doc 8 – Cyclic Overview, Labels & Universal Flow Rules (Orgo v3) -->
+> **Legacy/reference document.** This file is retained for historical detail and may describe earlier implementation assumptions. For current architecture, use `../TARGET_ARCHITECTURE.md` plus the concise canonical v3 files whose names begin with `1-Orgo`, `2-Orgo`, etc. When this document conflicts with those sources or the physical code/schema authority, it is non-canonical.
+
+﻿<!-- INDEX: Doc 8 – Cyclic Overview, Labels & Universal Flow Rules (Orgo v3) -->
 Index
 
 8.1 Purpose & scope
@@ -8976,6 +11498,26 @@ Domains already drafted:
 
 
 ================================================================================================
+FILE: legacy/README.md
+AUTHORITY: canonical
+================================================================================================
+
+# Historical snapshot source
+
+Original API and web source retained as reference, excluded from active compilation and deployment. The root README and IMPLEMENTATION_STATUS.md identify the new runtime. Do not import legacy services into active modules.
+
+
+================================================================================================
+FILE: packages/README.md
+AUTHORITY: canonical
+================================================================================================
+
+# Historical starter packages
+
+These packages are retained from the supplied snapshot. They are not members of the active npm workspace or runtime dependencies. Shared active Orgo UI primitives are composed in apps/web/src/orgo.
+
+
+================================================================================================
 FILE: packages/tsconfig/README.md
 AUTHORITY: canonical
 ================================================================================================
@@ -8990,219 +11532,100 @@ FILE: README.md
 AUTHORITY: canonical
 ================================================================================================
 
-# Orgo
+# Orgo dependency security update
 
-> Multi-tenant “nervous system” for organizations: capture signals, turn them into structured Cases and Tasks, route work by labels & roles, and surface patterns over time.
+This is a source overlay for the Orgo repository at:
 
------
+`C:\mycode\Orgo\Orgo`
 
-## Status
+It is not a complete repository and it does not modify LevelUpDiag-Orgo.
+Create a commit or backup first, then merge the archive into the Orgo root.
 
-**Experimental / Pre-Alpha.**
-APIs, schema, and UI are subject to change. Do not treat this as a stable product yet.
+## Files
 
------
+- `package.json`: forces the patched Multer release used below NestJS.
+- `apps/api/package.json`: upgrades NestJS, Express types, js-yaml and Nodemailer.
+- `apps/api/src/orgo/platform/outbox/worker.service.ts`: adapts SMTP transport
+  timeout configuration to Nodemailer 10.
 
-## What Orgo does
+`package-lock.json` is intentionally not included. It must be regenerated by npm
+on the destination system so its resolved URLs and integrity hashes correspond
+exactly to the packages fetched from the configured registry.
 
-Orgo is a shared backbone for operational work across many organizations and domains.
+## Apply in PowerShell
 
-It:
+After merging the three files:
 
-  - **Ingests signals** from email, APIs, UIs, and offline imports.
-  - **Normalizes** everything into a strict **Case** (situation) and **Task** (action) schema.
-  - **Routes work** using a standardized **Label** + **Role** system.
-  - **Tracks** escalation, visibility, and review cycles against configurable "Reactivity Time".
-  - **Feeds Insights** (Star Schema + ETL) for analytics and cyclic pattern detection.
-
-Instead of every department reinventing its own ticketing spreadsheet or inbox rules, Orgo provides one schema-driven engine that multiple domains can plug into.
-
------
-
-## When you would use Orgo
-
-Typical use-cases:
-
-  - **Operations:** Incident / safety / maintenance tracking across many sites.
-  - **Care:** HR & wellbeing cases that must stay auditable and privacy-aware.
-  - **Community:** Education or NGO workflows (student wellbeing, community incidents, campaigns).
-  - **Pattern Detection:** Cross-cutting analysis (repeated harassment, safety issues, failure modes).
-
-Use Orgo when you want:
-
-  - A single Case/Task model.
-  - Strong routing and escalation rules.
-  - Clear review loops and analytics.
-
------
-
-## Core concepts
-
-  - **Multi-tenant backbone**
-    One deployment can serve many organizations. Everything is scoped by `organization_id` and governed by RBAC (roles, permissions, profiles).
-
-  - **Signals → Cases → Tasks**
-    Messy input (email, API call, form, offline import) becomes a structured Case plus one or more Tasks. Tasks are the atomic unit of work; Cases are long-lived containers for situations, incidents, audits, or patterns.
-
-  - **Labels & routing**
-    A structured label encodes "where this lives in the org" and "what kind of signal it is".
-
-      * **Format:** `BASE.CATEGORY.SUBCATEGORY.HORIZONTAL_ROLE`
-      * **Example:** `1001.91.Operations.Safety`
-        The label drives routing, default visibility, and how analytics are grouped.
-
-  - **Profiles**
-    Profiles tune behavior per org type (e.g., "Friend Group" vs. "Hospital" vs. "Retail Chain"). They control:
-
-      * Reactivity / Escalation timing (e.g., 1 hour vs. 3 days).
-      * Privacy defaults (Open vs. Need-to-know).
-      * Notification scope.
-      * Pattern sensitivity.
-
-  - **Insights & cyclic overview**
-    A read-optimized layer (star schema + ETL jobs) powers dashboards and scheduled reviews (weekly / monthly / yearly). Thresholds (e.g., "≥ 5 similar incidents in 30 days") can automatically open new audit or review Cases instead of just generating charts.
-
------
-
-## High-level architecture
-
-Orgo is implemented as a TypeScript monorepo:
-
-  - **API (`apps/api`)** – NestJS backend with modules for:
-
-      - Multi-tenant orgs, users, and persons.
-      - Email gateway & Workflow engine.
-      - Task and Case services.
-      - Notifications, Logging, and Configuration.
-
-  - **Web UI (`apps/web`)** – Next.js frontend using RTK Query:
-
-      - Queues / Views over Tasks and Cases.
-      - Org / Profile administration screens.
-      - Insights and review dashboards.
-
-  - **Database / Config** – Relational database (PostgreSQL/SQLite) plus YAML-driven configuration under `config/` for environments, organizations, domain modules, and insights.
-
-  - **Insights** – ETL jobs hydrate `insights.dim_*` and `insights.fact_*` tables used by reports and cyclic review logic.
-
------
-
-## Repository layout
-
-  - `apps/api/` – NestJS API (core services, domain modules)
-  - `apps/web/` – Next.js web UI (queues, cases, tasks, insights)
-  - `Docs/` – Orgo v3 specification (DB schema, invariants, services, insights, profiles)
-  - `charters/` – Wikidata-based property definitions (`properties_core.json`, etc.)
-  - `config/` – Environment/org/module configuration (YAML), validated on startup
-  - `package-scripts.js` – Monorepo scripts (dev, build, test)
-  - `turbo.json` – Turbo configuration for orchestrating tasks
-  - `docker-compose.yml` – Draft Docker orchestration
-
------
-
-## Getting started (local dev)
-
-### Prerequisites
-
-  - Node.js (recent LTS)
-  - Yarn classic 1.x (repo is wired to `yarn@1.22.x`)
-  - A running PostgreSQL or SQLite instance
-  - Git
-
-### 1\. Clone and install
-
-```bash
-git clone https://github.com/Rejean-McCormick/Orgo.git
-cd Orgo
-
-# Install dependencies with Yarn 1.x
-yarn install
+```powershell
+cd "C:\mycode\Orgo\Orgo"
+npm install
 ```
 
-### 2\. Run everything in dev
+Use `npm install` once, not `npm ci`: the lock file still describes the old
+dependency graph. Review the resulting `package-lock.json` and commit it together
+with these source changes. Subsequent clean installations should use `npm ci`.
 
-From the repo root:
+Then open `C:\mycode\Orgo\LevelUpDiag-Orgo` and run, in order:
 
-```bash
-# API + web in parallel (via Turbo)
-yarn dev
-```
+1. `quick`
+2. `embedded`
+3. `build`
+4. `security`
 
-This runs the monorepo dev scripts (Turbo) which start:
+Expected security result: zero moderate, high or critical vulnerabilities.
+Treat the actual LevelUpDiag N13 report as authoritative. Do not use
+`npm audit fix --force`.
 
-  - API on `http://localhost:5002`
-  - Web UI on `http://localhost:3000`
+## Changes
 
-Then:
+- NestJS `10.4.20` → `12.0.1`
+- Nodemailer `7.0.11` → `10.0.1`
+- js-yaml `4.1.0` → `4.3.2`
+- Express added as an explicit API dependency at `5.2.1`
+- Express types `4.17.23` → `5.0.6`
+- `@types/nodemailer` removed because Nodemailer 10 bundles its declarations
+- Multer overridden to `2.3.0` at the workspace root
 
-  - Open the web app: `http://localhost:3000/`
-  - Open the API docs (Swagger): `http://localhost:5002/docs`
+## Preparation validation
 
-### 3\. Run apps separately (optional)
+Completed against the supplied Orgo snapshot after the source migration:
 
-If you prefer separate terminals:
+- Prisma generation: PASS
+- architecture boundaries: PASS
+- API and web type checking: PASS
+- API production build: PASS
+- 13 unit tests: PASS
+- PGlite integration: 33 PASS, 0 FAIL, 1 expected native-PostgreSQL SKIP
 
-**API (NestJS):**
+The web production build cannot be rerun in the preparation container because
+that container does not expose the process-memory primitive Next.js requests.
+Your previous Windows build was successful; rerun `build` after installation.
 
-```bash
-cd apps/api
-yarn dev
-```
+The final Multer override and regenerated lock file must be validated on Windows
+by the `security` campaign. Do not deploy until quick, embedded, build and
+security have completed with no unexpected failures.
 
-**Web UI (Next.js):**
 
-```bash
-cd apps/web
-yarn dev
-```
+================================================================================================
+FILE: validation/completion/STATUS.md
+AUTHORITY: canonical
+================================================================================================
 
------
+# Static checks for completion delivery
 
-## Configuration & environments
+API/tests/web TypeScript checks and architecture checks exited successfully. Prisma client was generated. Python email adapter, Node operational scripts and shell backup/restore scripts passed syntax checks.
 
-Orgo treats configuration as code and uses YAML files per environment and organization.
+Final runtime, migrations against a database, tests, Docker/browser and provider acceptance were not executed for this delivery, as requested. Run the supplied local validation procedure.
 
-  - **Environments**: `dev`, `staging`, `prod`, `offline`
-  - **Layers:**
-    1.  Global defaults (logging, timezones).
-    2.  Environment overrides.
-    3.  Per-organization config (profile selection, label sets).
-    4.  Domain module config.
 
-Validation scripts enforce allowed environments, version ranges, and required metadata on startup.
+================================================================================================
+FILE: validation/README.md
+AUTHORITY: canonical
+================================================================================================
 
------
+# Validation records
 
-## Extending Orgo
-
-You can extend Orgo without forking the whole engine.
-
-### New domain workflow
-
-1.  **Define labels & task types:** Decide which label patterns and task types/subtypes the domain cares about.
-2.  **Add domain config:** Specify label matches, default severity, and assignment rules in `domain_modules/<domain>/rules/*.yaml`.
-3.  **Hook into core services (optional):** Implement callbacks like `on_task_create` if the domain needs extra behavior.
-4.  **Templates:** Add email/report templates.
-
-### New profile
-
-1.  **Start from reference:** Copy an existing profile (e.g., "Hospital").
-2.  **Override:** Change reactivity windows, privacy defaults, and pattern sensitivity.
-3.  **Attach:** Link the profile to an organization via its org config.
-
------
-
-## Documentation & Wiki
-
-  - **Docs bundle (`Docs/`)**: Formal technical specs (schema, invariants, enums).
-  - **Wiki (Online)**: Narrative overview of concepts and architecture.
-  - **Charters (`charters/`)**: The JSON definitions of the semantic graph properties (Wikidata standards).
-
------
-
-## License
-
-MIT. See [`LICENSE`](https://www.google.com/search?q=./LICENSE).
+`completion/` records current static checks only. `previous-delivery/` contains the previous version’s unit/integration/build logs; they do not validate the completion changes. Run `npm run validate:local` with `TEST_DATABASE_URL` to produce a new local result directory.
 
 
 ================================================================================================

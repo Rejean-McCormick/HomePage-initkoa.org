@@ -2,7 +2,7 @@
 
 repository: Rejean-McCormick/Kristal_Farms
 source_path: C:\mycode\Kristal_Farms\kristal-farms
-source_commit: 047ea74e30d2596597805b80a09214966f78cad7
+source_commit: 1a542833e81ee1d4297dc9e0fc18368133f8188c
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -11,17 +11,17 @@ wiki_source_path: C:\mycode\Kristal_Farms\Kristal_Farms.wiki
 wiki_source_commit: excluded-by-policy
 wiki_working_tree_markdown: excluded
 policy_version: 2026-09-01.11
-repo_files: 132
+repo_files: 136
 wiki_files: 0
-source_files: 132
-included_files: 132
+source_files: 136
+included_files: 136
 excluded_files: 0
 duplicate_files: 0
-content_bytes: 307918
-authority_counts: {"canonical":20,"reference":112}
-generated_at: 2026-09-01T13:52:57-04:00
-files: 132
-content_sha256: a0a2327bc83eb3050753465e8d1866328628ec1ce39700cbd433b4e2264dae31
+content_bytes: 336464
+authority_counts: {"canonical":20,"reference":116}
+generated_at: 2026-09-10T10:57:19-04:00
+files: 136
+content_sha256: 1c99b544aaf3e8188b00c9a0b1ac35403e9fbba877d0fdbf8ee9ee20914c337a
 
 ================================================================================================
 FILE INDEX
@@ -33,32 +33,32 @@ FILE INDEX
 004. [canonical] docs/00-control/PROJECT_STATE.md
 005. [canonical] docs/00-control/STRATEGIC_PRINCIPLES.md
 006. [canonical] docs/00-control/SCOPE_BOUNDARIES.md
-007. [reference] docs/10-core/Kristal_Farms_Reference_Architecture_EN.md
-008. [reference] docs/10-core/Architecture_de_reference_Kristal_Farms_FR.md
-009. [reference] docs/10-core/deployment/DEPLOYMENT_STRATEGY_EN.md
-010. [reference] docs/10-core/tenancy/BLACK_BOX_TENANCY_MODEL_EN.md
-011. [reference] docs/architecture/overview.md
-012. [reference] docs/architecture/workspace-boundaries.md
-013. [reference] docs/domain/kristal-farms-principles.md
-014. [reference] docs/product/vision.md
-015. [reference] docs/data/data-model.md
-016. [reference] docs/data/evidence-model.md
-017. [reference] contracts/policy/kristal-farms-policy.yaml
-018. [canonical] AGENTS.md
-019. [reference] contracts/api/kristal-farms-api.openapi.yaml
-020. [reference] contracts/ingestion/import-manifest.schema.json
-021. [reference] contracts/layers/layer-catalog.example.yaml
-022. [reference] contracts/layers/layer-catalog.schema.json
-023. [reference] contracts/policy/international-tenant-governance.yaml
-024. [reference] contracts/policy/jurisdiction-eligibility.yaml
-025. [reference] contracts/reference/data-classification.yaml
-026. [reference] contracts/reference/status-enums.yaml
-027. [reference] contracts/releases/release-manifest.example.json
-028. [reference] contracts/releases/release-manifest.schema.json
-029. [reference] contracts/schemas/evidence.schema.json
-030. [reference] contracts/schemas/observation.schema.json
-031. [reference] contracts/schemas/scenario.schema.json
-032. [reference] contracts/schemas/source.schema.json
+007. [reference] docs/10-core/deployment/DEPLOYMENT_STRATEGY_EN.md
+008. [reference] docs/10-core/tenancy/BLACK_BOX_TENANCY_MODEL_EN.md
+009. [reference] docs/architecture/overview.md
+010. [reference] docs/architecture/workspace-boundaries.md
+011. [reference] docs/domain/kristal-farms-principles.md
+012. [reference] docs/product/vision.md
+013. [reference] docs/data/data-model.md
+014. [reference] docs/data/evidence-model.md
+015. [reference] contracts/policy/kristal-farms-policy.yaml
+016. [canonical] AGENTS.md
+017. [reference] contracts/api/kristal-farms-api.openapi.yaml
+018. [reference] contracts/ingestion/import-manifest.schema.json
+019. [reference] contracts/layers/layer-catalog.example.yaml
+020. [reference] contracts/layers/layer-catalog.schema.json
+021. [reference] contracts/policy/international-tenant-governance.yaml
+022. [reference] contracts/policy/jurisdiction-eligibility.yaml
+023. [reference] contracts/reference/data-classification.yaml
+024. [reference] contracts/reference/status-enums.yaml
+025. [reference] contracts/releases/release-manifest.example.json
+026. [reference] contracts/releases/release-manifest.schema.json
+027. [reference] contracts/schemas/electrical-projects.schema.json
+028. [reference] contracts/schemas/evidence.schema.json
+029. [reference] contracts/schemas/observation.schema.json
+030. [reference] contracts/schemas/scenario.schema.json
+031. [reference] contracts/schemas/source.schema.json
+032. [reference] contracts/schemas/target-village-dossier.schema.json
 033. [reference] contracts/schemas/tenant-eligibility-record.schema.json
 034. [reference] contracts/story/showcase-story.example.yaml
 035. [reference] contracts/story/showcase-story.schema.json
@@ -70,65 +70,65 @@ FILE INDEX
 041. [canonical] docs/00-control/RELEASE_STATUS.md
 042. [canonical] docs/00-control/SOURCE_TRACEABILITY.md
 043. [canonical] docs/00-control/WORKSTREAMS.md
-044. [reference] docs/10-core/deployment/STRATEGIE_DE_DEPLOIEMENT_FR.md
-045. [reference] docs/10-core/strategy/KRISTAL_FARMS_VISION_EN.md
-046. [reference] docs/10-core/strategy/PLAN_MOBILISATION_INTERNATIONALE_KRISTAL_FARMS_FR.md
-047. [reference] docs/10-core/strategy/VISION_KRISTAL_FARMS_FR.md
-048. [reference] docs/10-core/tenancy/MODELE_LOCATION_BLACK_BOX_FR.md
-049. [reference] docs/60-application-data/APPLICATION_DATA_MODEL.md
-050. [reference] docs/60-application-data/ECONOMIC_DATA_CONTRACT.md
-051. [reference] docs/60-application-data/ECONOMIC_METHOD.md
-052. [reference] docs/60-application-data/EVIDENCE_MATRIX.md
-053. [reference] docs/60-application-data/EXPLORER_DATA_CONTRACT.md
-054. [reference] docs/60-application-data/HYDROLOGY_DATA_CONTRACT.md
-055. [reference] docs/60-application-data/HYDROLOGY_DERIVATION_POLICY.md
-056. [reference] docs/60-application-data/HYDROLOGY_OBSERVATION_PIPELINE.md
-057. [reference] docs/60-application-data/HYDROLOGY_SOURCE_VERSIONING_AND_TIME.md
-058. [reference] docs/60-application-data/INTEGRATED_ATLAS.md
-059. [reference] docs/60-application-data/INTEGRATED_ATLAS_DATA_CONTRACT.md
-060. [reference] docs/60-application-data/SHOWCASE_DATA_CONTRACT.md
-061. [reference] docs/adr/0000-template.md
-062. [reference] docs/adr/0001-maplibre-primary-renderer.md
-063. [reference] docs/adr/0002-postgis-source-of-truth.md
-064. [reference] docs/adr/0003-evidence-separated-from-geometry.md
-065. [reference] docs/adr/0004-open-geospatial-interoperability.md
-066. [reference] docs/adr/0005-immutable-public-data-releases.md
-067. [reference] docs/adr/0006-ranking-disabled-by-policy.md
-068. [reference] docs/adr/0007-cesium-deferred.md
-069. [reference] docs/adr/0008-canonical-entity-supertype.md
-070. [reference] docs/adr/0009-natural-features-for-hydrology.md
-071. [reference] docs/adr/0010-research-layers-are-ingest-artifacts-not-domain-model.md
-072. [reference] docs/adr/0011-hydrology-series-are-versioned-source-objects.md
-073. [reference] docs/adr/0012-measurement-time-and-knowledge-time-are-distinct.md
-074. [reference] docs/adr/0013-design-flow-is-never-an-automatic-hydat-derivation.md
-075. [reference] docs/adr/0014-integrated-atlas-uses-relations-not-synthetic-geometry.md
-076. [reference] docs/adr/0015-legacy-screening-is-provenance-not-governance.md
-077. [reference] docs/adr/0016-public-release-is-immutable-snapshot.md
-078. [reference] docs/adr/0017-economic-benchmarks-are-not-site-costs.md
-079. [reference] docs/adr/0018-break-even-frontier-before-bankable-economics.md
-080. [reference] docs/adr/0019-common-generation-and-tenant-hardware-not-avoided-costs.md
-081. [reference] docs/adr/0020-one-monorepo-three-logical-systems.md
-082. [reference] docs/adr/0021-content-blind-tenant-environments.md
-083. [reference] docs/adr/0022-counterparty-screening-before-tenancy.md
-084. [reference] docs/adr/0023-offline-satellite-snapshots.md
-085. [reference] docs/adr/README.md
-086. [reference] docs/api/authentication.md
-087. [reference] docs/api/errors.md
-088. [reference] docs/api/kristal-farms-api.md
-089. [reference] docs/api/ogc-api.md
-090. [reference] docs/api/overview.md
-091. [reference] docs/api/tiles.md
-092. [reference] docs/architecture/backend.md
-093. [reference] docs/architecture/data-architecture.md
-094. [reference] docs/architecture/deployment.md
-095. [reference] docs/architecture/frontend.md
-096. [reference] docs/architecture/observability.md
-097. [reference] docs/architecture/performance.md
-098. [reference] docs/architecture/repository-structure.md
-099. [reference] docs/architecture/security.md
-100. [reference] docs/architecture/technology-stack.md
-101. [reference] docs/data/data-quality.md
-102. [reference] docs/data/ingestion.md
+044. [reference] docs/10-core/Architecture_de_reference_du_projet_Kristal_Farms_FR.md
+045. [reference] docs/10-core/deployment/STRATEGIE_DE_DEPLOIEMENT_FR.md
+046. [reference] docs/10-core/Kristal_Farms_Project_Reference_Architecture_EN.md
+047. [reference] docs/10-core/strategy/KRISTAL_FARMS_VISION_EN.md
+048. [reference] docs/10-core/strategy/PLAN_MOBILISATION_INTERNATIONALE_KRISTAL_FARMS_FR.md
+049. [reference] docs/10-core/strategy/VISION_KRISTAL_FARMS_FR.md
+050. [reference] docs/10-core/tenancy/MODELE_LOCATION_BLACK_BOX_FR.md
+051. [reference] docs/adr/0000-template.md
+052. [reference] docs/adr/0001-maplibre-primary-renderer.md
+053. [reference] docs/adr/0002-postgis-source-of-truth.md
+054. [reference] docs/adr/0003-evidence-separated-from-geometry.md
+055. [reference] docs/adr/0004-open-geospatial-interoperability.md
+056. [reference] docs/adr/0005-immutable-public-data-releases.md
+057. [reference] docs/adr/0006-ranking-disabled-by-policy.md
+058. [reference] docs/adr/0007-cesium-deferred.md
+059. [reference] docs/adr/0008-canonical-entity-supertype.md
+060. [reference] docs/adr/0009-natural-features-for-hydrology.md
+061. [reference] docs/adr/0010-research-layers-are-ingest-artifacts-not-domain-model.md
+062. [reference] docs/adr/0011-hydrology-series-are-versioned-source-objects.md
+063. [reference] docs/adr/0012-measurement-time-and-knowledge-time-are-distinct.md
+064. [reference] docs/adr/0013-design-flow-is-never-an-automatic-hydat-derivation.md
+065. [reference] docs/adr/0014-integrated-atlas-uses-relations-not-synthetic-geometry.md
+066. [reference] docs/adr/0015-legacy-screening-is-provenance-not-governance.md
+067. [reference] docs/adr/0016-public-release-is-immutable-snapshot.md
+068. [reference] docs/adr/0017-economic-benchmarks-are-not-site-costs.md
+069. [reference] docs/adr/0018-break-even-frontier-before-bankable-economics.md
+070. [reference] docs/adr/0019-common-generation-and-tenant-hardware-not-avoided-costs.md
+071. [reference] docs/adr/0020-one-monorepo-three-logical-systems.md
+072. [reference] docs/adr/0021-content-blind-tenant-environments.md
+073. [reference] docs/adr/0022-counterparty-screening-before-tenancy.md
+074. [reference] docs/adr/0023-offline-satellite-snapshots.md
+075. [reference] docs/adr/README.md
+076. [reference] docs/api/authentication.md
+077. [reference] docs/api/errors.md
+078. [reference] docs/api/kristal-farms-api.md
+079. [reference] docs/api/ogc-api.md
+080. [reference] docs/api/overview.md
+081. [reference] docs/api/tiles.md
+082. [reference] docs/architecture/backend.md
+083. [reference] docs/architecture/data-architecture.md
+084. [reference] docs/architecture/deployment.md
+085. [reference] docs/architecture/frontend.md
+086. [reference] docs/architecture/information-architecture.md
+087. [reference] docs/architecture/observability.md
+088. [reference] docs/architecture/performance.md
+089. [reference] docs/architecture/repository-structure.md
+090. [reference] docs/architecture/security.md
+091. [reference] docs/architecture/technology-stack.md
+092. [reference] docs/data/application-data-model.md
+093. [reference] docs/data/data-quality.md
+094. [reference] docs/data/DATA_VALIDATION_PASS_2026-09-01.md
+095. [reference] docs/data/economic-data-contract.md
+096. [reference] docs/data/evidence-matrix.md
+097. [reference] docs/data/hydrology-data-contract.md
+098. [reference] docs/data/hydrology-derivation-policy.md
+099. [reference] docs/data/hydrology-observation-pipeline.md
+100. [reference] docs/data/hydrology-source-versioning-and-time.md
+101. [reference] docs/data/ingestion.md
+102. [reference] docs/data/integrated-atlas-data-contract.md
 103. [reference] docs/data/provenance.md
 104. [reference] docs/data/publishing.md
 105. [reference] docs/data/release-versioning.md
@@ -144,21 +144,25 @@ FILE INDEX
 115. [reference] docs/frontend/offline-satellite.md
 116. [reference] docs/frontend/state-and-permalinks.md
 117. [canonical] docs/index.md
-118. [reference] docs/product/explorer.md
-119. [reference] docs/product/scenario-studio.md
-120. [reference] docs/product/showcase.md
-121. [reference] docs/reference/source-quality.md
-122. [reference] docs/reference/status-enums.md
-123. [reference] docs/reference/units.md
-124. [reference] docs/scenarios/engine-contract.md
-125. [reference] docs/scenarios/reproducibility.md
-126. [reference] docs/scenarios/scenario-model.md
-127. [reference] docs/security/TENANT_CONFIDENTIALITY_BOUNDARY.md
-128. [reference] docs/security/threat-model.md
-129. [canonical] GOVERNANCE.md
-130. [canonical] ORCHESTRATION.md
-131. [canonical] RELEASE_MANIFEST.json
-132. [canonical] SECURITY.md
+118. [reference] docs/product/explorer-data-contract.md
+119. [reference] docs/product/explorer.md
+120. [reference] docs/product/integrated-atlas.md
+121. [reference] docs/product/scenario-studio.md
+122. [reference] docs/product/showcase-data-contract.md
+123. [reference] docs/product/showcase.md
+124. [reference] docs/reference/source-quality.md
+125. [reference] docs/reference/status-enums.md
+126. [reference] docs/reference/units.md
+127. [reference] docs/scenarios/economic-method.md
+128. [reference] docs/scenarios/engine-contract.md
+129. [reference] docs/scenarios/reproducibility.md
+130. [reference] docs/scenarios/scenario-model.md
+131. [reference] docs/security/TENANT_CONFIDENTIALITY_BOUNDARY.md
+132. [reference] docs/security/threat-model.md
+133. [canonical] GOVERNANCE.md
+134. [canonical] ORCHESTRATION.md
+135. [canonical] RELEASE_MANIFEST.json
+136. [canonical] SECURITY.md
 
 
 ================================================================================================
@@ -176,7 +180,7 @@ The project focuses on northern Québec and Labrador, where hydro resources, mar
 
 ## What Kristal Farms is
 
-Kristal Farms combines six infrastructure and governance layers:
+Kristal Farms combines seven infrastructure and governance layers:
 
 1. **Remote renewable generation** — primarily hydro where technically, environmentally and socially justified.
 2. **Protected community interface** — community and critical loads have priority over flexible compute.
@@ -239,7 +243,8 @@ kristal-farms/
 ├── data/                   # Raw, processed/current and immutable publish artifacts
 ├── apps/                   # Product applications, including Observatory
 ├── services/               # Domain API, OGC API and tile services
-├── docs/                   # Project, research, architecture and product documentation
+├── docs/                   # Project/domain + software/data-platform documentation
+├── tools/                  # Specialist local/developer utilities
 ├── sources/                # Controlled source material and project-direction records
 ├── tests/                  # Automated model/data/economic/architecture tests
 ├── infra/                  # Deployment configuration
@@ -252,8 +257,8 @@ kristal-farms/
 
 - [Project state](docs/00-control/PROJECT_STATE.md)
 - [Strategic principles](docs/00-control/STRATEGIC_PRINCIPLES.md)
-- [Reference architecture — English](docs/10-core/Kristal_Farms_Reference_Architecture_EN.md)
-- [Architecture de référence — français](docs/10-core/Architecture_de_reference_Kristal_Farms_FR.md)
+- [Project reference architecture — English](docs/10-core/Kristal_Farms_Project_Reference_Architecture_EN.md)
+- [Architecture de référence du projet — français](docs/10-core/Architecture_de_reference_du_projet_Kristal_Farms_FR.md)
 - [Deployment strategy — English](docs/10-core/deployment/DEPLOYMENT_STRATEGY_EN.md)
 - [Stratégie de déploiement — français](docs/10-core/deployment/STRATEGIE_DE_DEPLOIEMENT_FR.md)
 - [Corridor dossier strategy](docs/00-control/CORRIDOR_DOSSIER_STRATEGY.md)
@@ -266,7 +271,8 @@ kristal-farms/
 
 - [Documentation index](docs/index.md)
 - [Product vision](docs/product/vision.md)
-- [Architecture overview](docs/architecture/overview.md)
+- [Software & data platform architecture](docs/architecture/overview.md)
+- [Information architecture](docs/architecture/information-architecture.md)
 - [Data model](docs/data/data-model.md)
 - [Evidence model](docs/data/evidence-model.md)
 - [Explorer](docs/product/explorer.md)
@@ -305,7 +311,7 @@ Optional human-infrastructure, learning and education concepts are isolated unde
 
 After repository files change, double-click `REBUILD_OBSERVATORY.pyw`. It is the controlled Windows rebuild path: it safely stops the current Kristal dev server, cleans generated caches, creates or repairs `.venv` from `requirements-dev.txt`, republishes governed artifacts, runs `pytest`, runs the web TypeScript typecheck and production build, then starts the Observatory only when all checks pass.
 
-Use `START_OBSERVATORY.bat` only for a quick start when repository files have not changed. `DIAG_OBSERVATORY.pyw`, the Sentinel/watershed fetchers, and the PMTiles installer remain specialist tools.
+Use `START_OBSERVATORY.bat` only for a quick start when repository files have not changed. Specialist diagnostics, Sentinel/watershed acquisition and PMTiles helpers live under `tools/`; see [`tools/README.md`](tools/README.md).
 
 
 ================================================================================================
@@ -322,8 +328,8 @@ This model prevents polished, older or derived documents from overriding current
 | Class | Meaning | Location / examples |
 |---|---|---|
 | **C0 — Project control** | Current scope, principles, state, decisions and release interpretation. | `docs/00-control/` |
-| **C1 — Reference architecture** | Current physical/commercial project architecture and deployment strategy. | `docs/10-core/*Reference_Architecture*`, current project vision, deployment and tenancy reference files |
-| **C2 — Application contracts** | Product, data, API, scenario, frontend and architecture rules. | `docs/product/`, `docs/architecture/`, `docs/data/`, `contracts/` |
+| **C1 — Project reference architecture** | Current physical/commercial project architecture and deployment strategy. | `docs/10-core/*Project_Reference_Architecture*`, current project vision, deployment and tenancy reference files |
+| **C2 — Software/data-platform contracts** | Product, data, API, scenario, frontend and software/data-platform architecture rules. | `docs/product/`, `docs/architecture/`, `docs/data/`, `docs/scenarios/`, `contracts/` |
 | **C3 — Structured evidence** | Controlled datasets and observations, authoritative only for what their sources support. | `data/`, `sources/` |
 | **C4 — Working research** | Research methods, screening, cost studies and source analyses requiring validation before project claims. | `docs/30-site-screening/`, `docs/40-economics/`, `docs/50-research/` including commercial prospect research |
 | **C4O — Project direction** | Recorded owner/project intent; authoritative for intent, not independent factual evidence. | `sources/owner-direction/` |
@@ -335,7 +341,7 @@ This model prevents polished, older or derived documents from overriding current
 When materials conflict:
 
 1. current project-control documents govern intent and interpretation;
-2. current reference architecture governs the physical/commercial model;
+2. current project reference architecture governs the physical/commercial model;
 3. source evidence governs factual claims within its scope and date;
 4. assumptions remain assumptions;
 5. archived material never silently overrides active state.
@@ -343,6 +349,10 @@ When materials conflict:
 ## Promotion rule
 
 A research statement becomes an external project claim only when its source, scope, date, uncertainty and required technical/community/environmental validation are clear.
+
+## Documentation axes
+
+The numbered project/domain folders (`00-control`, `10-core`, `30-site-screening`, `40-economics`, `50-research`, `70-long-horizon`) describe project authority and research maturity. Software/data-platform documentation lives in responsibility-based folders such as `architecture/`, `data/`, `product/`, `frontend/`, `api/` and `scenarios/`. See [Information Architecture](../architecture/information-architecture.md).
 
 
 ================================================================================================
@@ -365,10 +375,10 @@ AUTHORITY: canonical
 - [Corridor Dossier Strategy](CORRIDOR_DOSSIER_STRATEGY.md)
 - [Responsible International Tenant Governance](INTERNATIONAL_TENANT_GOVERNANCE.md)
 
-## Reference architecture
+## Project reference architecture
 
-- [Kristal Farms Reference Architecture — EN](../10-core/Kristal_Farms_Reference_Architecture_EN.md)
-- [Architecture de référence Kristal Farms — FR](../10-core/Architecture_de_reference_Kristal_Farms_FR.md)
+- [Kristal Farms Project Reference Architecture — EN](../10-core/Kristal_Farms_Project_Reference_Architecture_EN.md)
+- [Architecture de référence du projet Kristal Farms — FR](../10-core/Architecture_de_reference_du_projet_Kristal_Farms_FR.md)
 - [Kristal Farms Vision — EN](../10-core/strategy/KRISTAL_FARMS_VISION_EN.md)
 - [Vision Kristal Farms — FR](../10-core/strategy/VISION_KRISTAL_FARMS_FR.md)
 - [Plan de mobilisation internationale — FR](../10-core/strategy/PLAN_MOBILISATION_INTERNATIONALE_KRISTAL_FARMS_FR.md)
@@ -395,26 +405,27 @@ AUTHORITY: canonical
 - [Economic Benchmark Register](../40-economics/ECONOMIC_BENCHMARK_REGISTER.md)
 - [Scenario Policy](../40-economics/SCENARIO_POLICY.md)
 
-## Application data
+## Software / data-platform contracts
 
-- [Application Data Model](../60-application-data/APPLICATION_DATA_MODEL.md)
-- [Hydrology Observation Pipeline](../60-application-data/HYDROLOGY_OBSERVATION_PIPELINE.md)
-- [Hydrology Data Contract](../60-application-data/HYDROLOGY_DATA_CONTRACT.md)
-- [Hydrology Derivation Policy](../60-application-data/HYDROLOGY_DERIVATION_POLICY.md)
-- [Hydrology Source Versioning](../60-application-data/HYDROLOGY_SOURCE_VERSIONING_AND_TIME.md)
-- [Evidence Matrix](../60-application-data/EVIDENCE_MATRIX.md)
-- [Integrated Atlas](../60-application-data/INTEGRATED_ATLAS.md)
-- [Integrated Atlas Data Contract](../60-application-data/INTEGRATED_ATLAS_DATA_CONTRACT.md)
-- [Explorer Data Contract](../60-application-data/EXPLORER_DATA_CONTRACT.md)
-- [Showcase Data Contract](../60-application-data/SHOWCASE_DATA_CONTRACT.md)
-- [Economic Data Contract](../60-application-data/ECONOMIC_DATA_CONTRACT.md)
-- [Economic Method](../60-application-data/ECONOMIC_METHOD.md)
+- [Application Data Model](../data/application-data-model.md)
+- [Hydrology Observation Pipeline](../data/hydrology-observation-pipeline.md)
+- [Hydrology Data Contract](../data/hydrology-data-contract.md)
+- [Hydrology Derivation Policy](../data/hydrology-derivation-policy.md)
+- [Hydrology Source Versioning](../data/hydrology-source-versioning-and-time.md)
+- [Evidence Matrix](../data/evidence-matrix.md)
+- [Integrated Atlas](../product/integrated-atlas.md)
+- [Integrated Atlas Data Contract](../data/integrated-atlas-data-contract.md)
+- [Explorer Data Contract](../product/explorer-data-contract.md)
+- [Showcase Data Contract](../product/showcase-data-contract.md)
+- [Economic Data Contract](../data/economic-data-contract.md)
+- [Economic Method](../scenarios/economic-method.md)
 
-## Application implementation
+## Software / product implementation
 
 - [Documentation Home](../index.md)
 - [Product Vision](../product/vision.md)
-- [Architecture Overview](../architecture/overview.md)
+- [Software & Data Platform Architecture](../architecture/overview.md)
+- [Information Architecture](../architecture/information-architecture.md)
 - [Data Model](../data/data-model.md)
 - [Evidence Model](../data/evidence-model.md)
 - [Layer Catalog](../frontend/layer-catalog.md)
@@ -726,146 +737,6 @@ See [Responsible International Tenancy and Counterparty Governance](INTERNATIONA
 
 
 ================================================================================================
-FILE: docs/10-core/Kristal_Farms_Reference_Architecture_EN.md
-AUTHORITY: reference
-================================================================================================
-
-# Kristal Farms Reference Architecture
-
-## Core thesis
-
-Kristal Farms is a northern hydro/renewable resource-access architecture. Its central inversion is:
-
-> **bring flexible compute to remote energy and export digital value by fibre, rather than defaulting to long roads and long high-voltage electrical export corridors.**
-
-Avoiding or materially reducing long roads and HV corridors is a primary structural value proposition because it may open remote hydro resources that are unattractive under the conventional delivery model. The economic advantage is **not assumed universal**; it must be demonstrated per corridor/site.
-
-## Geography
-
-- Côte-Nord is the preferred pilot/learning geography because it can combine northern conditions with more practical access and logistics.
-- The long-term resource thesis extends farther north through Québec and Labrador, where road/HV remoteness creates the strongest structural contrast.
-
-## Physical architecture
-
-Three compute layouts remain valid:
-
-1. generation/dam-adjacent compute;
-2. village/port-adjacent compute;
-3. hybrid split architecture.
-
-Selection depends on electrical distance, heat value, fibre, marine/ground logistics, maintenance, environment, security and community choice.
-
-## Compute commercial model
-
-Kristal Farms can provide leaseable serviced compute sites/pads rather than owning every server. The shared infrastructure can provide power handoff, cooling interface, fibre handoff, security, metering/telemetry, logistics and maintenance access. Tenants retain sovereignty over their hardware, operating systems, models, data, keys and internal telemetry.
-
-## Community energy rule
-
-Existing village grids are protected community infrastructure, not assumed multi-megawatt compute supplies. The architecture under research is primarily:
-
-> **new generation → protected community interface → flexible compute → fibre export**
-
-Community/critical loads have priority over interruptible compute.
-
-## Heat
-
-Heat is a valuable co-product, not a universal siting rule. Recover/use it where useful heat value exceeds recovery/distribution cost and complexity.
-
-## Modularity and network
-
-The program can use small, medium and larger hydro/renewable projects where justified, scaling compute pad by pad. Successful nodes may form a coastal/watershed chain linked primarily by fibre and marine logistics, with shorter electrical interties where useful for resilience.
-
-## Commercial/data sovereignty boundary
-
-Shared physical-service interfaces and tenant-controlled digital systems are a core commercial boundary: Kristal Farms can meter and operate physical services without requiring access to tenant application data.
-
-## International tenant governance
-
-Kristal Farms is intended to be internationally marketable while remaining selective about counterparties. Tenant eligibility is determined before access through the jurisdiction schedule, ownership/control, sanctions/trade-control, downstream-customer exposure and responsible-business due diligence.
-
-This commercial exclusion does not itself create a technology-origin embargo.
-
-## Content-blind tenancy
-
-The normal tenant environment is a **tenant-controlled encrypted environment** (commercial shorthand: black-box tenancy). Kristal Farms operates the shared physical-service plane; the tenant controls private compute. Routine operations do not require operator access to private models, datasets, application payloads or tenant cryptographic keys.
-
-Compliance is therefore counterparty- and contract-based rather than content-inspection-based. See `docs/00-control/INTERNATIONAL_TENANT_GOVERNANCE.md` and `docs/security/TENANT_CONFIDENTIALITY_BOUNDARY.md`.
-
-## Governance / anti-capture
-
-Capital may finance infrastructure, but capital should not automatically acquire control over community land, housing, energy, port, fibre, employment and governance. The project should preserve shared interfaces with separated authority and design anti-capture mechanisms before land/infrastructure appreciation creates incentives for concentration.
-
-## Current screening rule
-
-There is **no active site rank**. Future prioritization requires transparent evidence across hydrology, terrain/head, environment, Indigenous/community governance, logistics, telecom, electrical architecture and current economics.
-
-
-================================================================================================
-FILE: docs/10-core/Architecture_de_reference_Kristal_Farms_FR.md
-AUTHORITY: reference
-================================================================================================
-
-# Architecture de référence Kristal Farms
-
-## Thèse centrale
-
-Kristal Farms est une architecture d’accès aux ressources énergétiques nordiques. L’inversion centrale est :
-
-> **amener une charge de calcul flexible à l’énergie éloignée et exporter la valeur numérique par fibre, plutôt que dépendre par défaut de longues routes et de longs corridors électriques haute tension.**
-
-La réduction ou l’évitement des longues routes et lignes HV est une proposition de valeur structurelle primaire. Elle n’est pas présumée universellement avantageuse : l’économie doit être démontrée corridor par corridor et site par site.
-
-## Géographie
-
-- Côte-Nord : géographie de pilote/apprentissage.
-- Québec nordique et Labrador : territoire de déploiement à long terme où l’éloignement des routes/HV peut créer le contraste structurel le plus fort.
-
-## Architecture physique
-
-Trois dispositions restent valides : calcul près de la centrale, calcul près du village/port, ou architecture hybride. Le choix dépend de la distance électrique, de la valeur de la chaleur, de la fibre, de la logistique, de l’environnement, de la maintenance, de la sécurité et du choix communautaire.
-
-## Modèle commercial du calcul
-
-Kristal Farms peut offrir des sites/pads de calcul viabilisés plutôt que posséder tous les serveurs. L’infrastructure commune peut fournir alimentation électrique, interface de refroidissement, fibre, sécurité, comptage/télémétrie et accès logistique. Les locataires gardent la souveraineté sur leur matériel, OS, modèles, données, clés et télémétrie interne.
-
-## Priorité énergétique communautaire
-
-Les réseaux villageois existants sont une infrastructure communautaire protégée; ils ne sont pas présumés fournir plusieurs MW disponibles au calcul. L’architecture étudiée est principalement :
-
-> **nouvelle production → interface communautaire protégée → calcul flexible → export par fibre**
-
-Les charges communautaires/critiques ont priorité sur le calcul interruptible.
-
-## Chaleur
-
-La chaleur est un coproduit utile, pas une règle universelle de localisation. Elle est récupérée lorsque sa valeur utile dépasse le coût et la complexité de récupération/distribution.
-
-## Réseau et modularité
-
-Le programme peut utiliser des projets hydro/renouvelables petits, moyens ou plus grands lorsque justifiés, avec une croissance du calcul pad par pad. Des nœuds réussis peuvent former un chapelet côtier/de bassins relié principalement par fibre et logistique maritime, avec des interconnexions électriques plus courtes lorsqu’elles apportent de la résilience.
-
-## Gouvernance internationale des locataires
-
-Kristal Farms vise un marché international tout en restant sélectif sur ses contreparties. L'admissibilité est établie avant l'accès à partir de la juridiction, de la propriété effective et du contrôle, des sanctions/contrôles commerciaux et d'une diligence raisonnable de conduite responsable. La politique actuelle du propriétaire exclut les contreparties établies ou contrôlées aux États-Unis des rôles de locataire, acheteur ferme principal (*anchor offtaker*) et opérateur-locataire.
-
-Cette exclusion commerciale ne constitue pas, à elle seule, un embargo sur l'origine technologique.
-
-## Location aveugle au contenu
-
-L'environnement normal est un **environnement chiffré sous contrôle du locataire** (raccourci commercial : location « black box »). Kristal Farms exploite le plan des services physiques partagés; le locataire contrôle le calcul privé. L'exploitation normale n'exige pas l'accès de Kristal Farms aux modèles privés, jeux de données, contenus applicatifs ou clés cryptographiques du locataire.
-
-La conformité repose donc sur la contrepartie et le contrat plutôt que sur l'inspection du contenu. Voir `docs/00-control/INTERNATIONAL_TENANT_GOVERNANCE.md` et `docs/security/TENANT_CONFIDENTIALITY_BOUNDARY.md`.
-
-## Gouvernance et anti-capture
-
-Le capital peut financer l’infrastructure sans acquérir automatiquement le contrôle de la terre, du logement, de l’énergie, du port, de la fibre, de l’emploi et de la gouvernance communautaire.
-
-## État du screening
-
-Il n’existe **aucun classement actif de sites**. Toute priorisation future exige des preuves transparentes en hydrologie, terrain/head, environnement, gouvernance communautaire/autochtone, logistique, télécom, architecture électrique et économie actuelle.
-
-
-================================================================================================
 FILE: docs/10-core/deployment/DEPLOYMENT_STRATEGY_EN.md
 AUTHORITY: reference
 ================================================================================================
@@ -1017,7 +888,7 @@ FILE: docs/architecture/overview.md
 AUTHORITY: reference
 ================================================================================================
 
-# Architecture overview
+# Software & data platform architecture
 
 ## Target architecture
 
@@ -1680,6 +1551,12 @@ Visual design may be expressive, but uncertainty and hypothesis must remain visi
 
 AI-generated implementation is acceptable, but generated code must obey the same tests, typing, schema, migration, and review expectations as human-written code. Avoid large opaque generated modules when a declarative configuration or reusable abstraction is clearer.
 
+## Active-state search discipline
+
+Treat `archive/` as historical provenance, not active implementation context. Do not search, summarize or copy architecture from `archive/` unless the task explicitly asks for history, migration provenance or superseded behavior. The root `.ignore` excludes `archive/` from common local search/index tools by default.
+
+When documentation location is ambiguous, use the two-axis model in `docs/architecture/information-architecture.md`: numbered folders are project/domain authority and research maturity; responsibility folders (`architecture`, `data`, `product`, `frontend`, `api`, `scenarios`, etc.) are software/data-platform documentation.
+
 
 ================================================================================================
 FILE: contracts/api/kristal-farms-api.openapi.yaml
@@ -2162,206 +2039,316 @@ FILE: contracts/policy/jurisdiction-eligibility.yaml
 AUTHORITY: reference
 ================================================================================================
 
-policy_version: "2026.08.31-r2-proposed"
+policy_version: 2026.09.01-r3-proposed-sourced
 policy_name: jurisdiction_eligibility_schedule
 policy_status: PROPOSED_C0_ADOPTION
-
 default_nonlisted_state: ENHANCED_DUE_DILIGENCE
-
 jurisdictions:
-  - code: US
-    name: United States
-    state: INELIGIBLE
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: owner_policy_commercial_positioning
-    rationale_codes: [owner_directed_exclusion]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: RU
-    name: Russia
-    state: INELIGIBLE
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_values_policy
-    rationale_codes: [armed_conflict, sanctions_exposure, human_rights_risk, state_security_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: BY
-    name: Belarus
-    state: INELIGIBLE
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_values_policy
-    rationale_codes: [armed_conflict_support, sanctions_exposure, political_repression_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: CN
-    name: China
-    state: INELIGIBLE
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_values_policy
-    rationale_codes: [state_surveillance_risk, forced_labour_risk, human_rights_risk, control_transparency_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: IR
-    name: Iran
-    state: INELIGIBLE
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_values_policy
-    rationale_codes: [state_repression_risk, sanctions_exposure, state_security_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: KP
-    name: North Korea
-    state: INELIGIBLE
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_values_policy
-    rationale_codes: [state_repression_risk, sanctions_exposure, proliferation_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: SY
-    name: Syria
-    state: INELIGIBLE
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_values_policy
-    rationale_codes: [armed_conflict, atrocity_risk, sanctions_exposure]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: MM
-    name: Myanmar
-    state: INELIGIBLE
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_values_policy
-    rationale_codes: [military_rule, political_repression_risk, human_rights_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: AF
-    name: Afghanistan
-    state: SUSPENDED
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_precautionary_hold
-    rationale_codes: [governance_uncertainty, human_rights_risk, sanctions_exposure, control_verification_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: LY
-    name: Libya
-    state: SUSPENDED
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_precautionary_hold
-    rationale_codes: [political_instability, sanctions_exposure, control_verification_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: NI
-    name: Nicaragua
-    state: SUSPENDED
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_precautionary_hold
-    rationale_codes: [political_repression_risk, sanctions_exposure, governance_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: SO
-    name: Somalia
-    state: SUSPENDED
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_precautionary_hold
-    rationale_codes: [state_fragility, security_risk, control_verification_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: SD
-    name: Sudan
-    state: SUSPENDED
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_precautionary_hold
-    rationale_codes: [armed_conflict, atrocity_risk, control_verification_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: SS
-    name: South Sudan
-    state: SUSPENDED
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_precautionary_hold
-    rationale_codes: [armed_conflict, state_fragility, control_verification_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: VE
-    name: Venezuela
-    state: SUSPENDED
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_precautionary_hold
-    rationale_codes: [governance_risk, human_rights_risk, sanctions_exposure, control_transparency_risk]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: YE
-    name: Yemen
-    state: SUSPENDED
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_precautionary_hold
-    rationale_codes: [armed_conflict, state_fragility, sanctions_exposure]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
-  - code: ZW
-    name: Zimbabwe
-    state: SUSPENDED
-    scope: [tenant, anchor_offtaker, tenant_operator]
-    basis: proposed_owner_precautionary_hold
-    rationale_codes: [governance_risk, human_rights_risk, sanctions_exposure]
-    effective_on_adoption: "2026-08-31"
-    legal_prohibition_claimed: false
-    technology_origin_embargo_implied: false
-    review_requires_explicit_c0_decision: true
-
+- code: US
+  name: United States
+  state: INELIGIBLE
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: owner_policy_commercial_positioning
+  rationale_codes:
+  - owner_directed_exclusion
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: RU
+  name: Russia
+  state: INELIGIBLE
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_values_policy
+  rationale_codes:
+  - armed_conflict
+  - sanctions_exposure
+  - human_rights_risk
+  - state_security_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: BY
+  name: Belarus
+  state: INELIGIBLE
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_values_policy
+  rationale_codes:
+  - armed_conflict_support
+  - sanctions_exposure
+  - political_repression_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: CN
+  name: China
+  state: INELIGIBLE
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_values_policy
+  rationale_codes:
+  - state_surveillance_risk
+  - forced_labour_risk
+  - human_rights_risk
+  - control_transparency_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: IR
+  name: Iran
+  state: INELIGIBLE
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_values_policy
+  rationale_codes:
+  - state_repression_risk
+  - sanctions_exposure
+  - state_security_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: KP
+  name: North Korea
+  state: INELIGIBLE
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_values_policy
+  rationale_codes:
+  - state_repression_risk
+  - sanctions_exposure
+  - proliferation_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: SY
+  name: Syria
+  state: INELIGIBLE
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_values_policy
+  rationale_codes:
+  - armed_conflict
+  - atrocity_risk
+  - sanctions_exposure
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: MM
+  name: Myanmar
+  state: INELIGIBLE
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_values_policy
+  rationale_codes:
+  - military_rule
+  - political_repression_risk
+  - human_rights_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: AF
+  name: Afghanistan
+  state: SUSPENDED
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_precautionary_hold
+  rationale_codes:
+  - governance_uncertainty
+  - human_rights_risk
+  - sanctions_exposure
+  - control_verification_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: LY
+  name: Libya
+  state: SUSPENDED
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_precautionary_hold
+  rationale_codes:
+  - political_instability
+  - sanctions_exposure
+  - control_verification_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: NI
+  name: Nicaragua
+  state: SUSPENDED
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_precautionary_hold
+  rationale_codes:
+  - political_repression_risk
+  - sanctions_exposure
+  - governance_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: SO
+  name: Somalia
+  state: SUSPENDED
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_precautionary_hold
+  rationale_codes:
+  - state_fragility
+  - security_risk
+  - control_verification_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: SD
+  name: Sudan
+  state: SUSPENDED
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_precautionary_hold
+  rationale_codes:
+  - armed_conflict
+  - atrocity_risk
+  - control_verification_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: SS
+  name: South Sudan
+  state: SUSPENDED
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_precautionary_hold
+  rationale_codes:
+  - armed_conflict
+  - state_fragility
+  - control_verification_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: VE
+  name: Venezuela
+  state: SUSPENDED
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_precautionary_hold
+  rationale_codes:
+  - governance_risk
+  - human_rights_risk
+  - sanctions_exposure
+  - control_transparency_risk
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: YE
+  name: Yemen
+  state: SUSPENDED
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_precautionary_hold
+  rationale_codes:
+  - armed_conflict
+  - state_fragility
+  - sanctions_exposure
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
+- code: ZW
+  name: Zimbabwe
+  state: SUSPENDED
+  scope:
+  - tenant
+  - anchor_offtaker
+  - tenant_operator
+  basis: proposed_owner_precautionary_hold
+  rationale_codes:
+  - governance_risk
+  - human_rights_risk
+  - sanctions_exposure
+  effective_on_adoption: '2026-08-31'
+  legal_prohibition_claimed: false
+  technology_origin_embargo_implied: false
+  review_requires_explicit_c0_decision: true
 notes:
-  - "This overlay is a proposed C0 update; applying it should be treated as explicit project-control adoption."
-  - "Absence from this schedule does not mean automatic eligibility."
-  - "Country-level status is a counterparty-risk control and not a judgment about individuals or populations."
-  - "The schedule is project policy and may be stricter than minimum legal eligibility; transaction-specific Canadian legal review still applies."
-  - "Technology-origin restrictions are separate from counterparty eligibility and are not implied by this schedule."
+- This overlay is a proposed C0 update; applying it should be treated as explicit project-control adoption.
+- Absence from this schedule does not mean automatic eligibility.
+- Country-level status is a counterparty-risk control and not a judgment about individuals or populations.
+- The schedule is project policy and may be stricter than minimum legal eligibility; transaction-specific Canadian legal review still applies.
+- Technology-origin restrictions are separate from counterparty eligibility and are not implied by this schedule.
+legal_reference_sources:
+- id: canada-sanctions-index
+  title: Canadian sanctions
+  publisher: Global Affairs Canada
+  url: https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/index.aspx?lang=eng
+  retrieved_on: '2026-09-01'
+  use: Current sanctions framework and links to governing regulations; not a substitute for transaction-specific legal review.
+- id: canada-consolidated-autonomous-sanctions
+  title: Consolidated Canadian Autonomous Sanctions List
+  publisher: Global Affairs Canada
+  url: https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng
+  retrieved_on: '2026-09-01'
+  use: Administrative screening aid only; the Government of Canada states that the consolidated list is not a regulation and has no force of law.
+- id: canada-eipa
+  title: Export and Import Permits Act
+  publisher: Justice Laws Website, Government of Canada
+  url: https://laws-lois.justice.gc.ca/eng/acts/E-19/index.html
+  retrieved_on: '2026-09-01'
+  use: Statutory framework for Canadian export/import controls.
+- id: canada-export-control-list
+  title: Export Control List (SOR/89-202)
+  publisher: Justice Laws Website, Government of Canada
+  url: https://laws-lois.justice.gc.ca/eng/Regulations/SOR-89-202/index.html
+  retrieved_on: '2026-09-01'
+  use: Current regulatory list for controlled exports; technology-origin review remains separate from counterparty policy.
 
 
 ================================================================================================
@@ -2532,6 +2519,54 @@ AUTHORITY: reference
     }
   },
   "additionalProperties": false
+}
+
+
+================================================================================================
+FILE: contracts/schemas/electrical-projects.schema.json
+AUTHORITY: reference
+================================================================================================
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kristal.farms/schemas/electrical-projects.schema.json",
+  "title": "Kristal external electrical projects research registry",
+  "type": "object",
+  "required": ["schema", "version", "ranking_allowed", "sources", "projects"],
+  "properties": {
+    "schema": {"const": "kristal-electrical-projects-research/v1"},
+    "version": {"type": "string"},
+    "ranking_allowed": {"const": false},
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_key", "title", "publisher", "source_type", "url", "retrieved_at"],
+        "properties": {
+          "source_key": {"type": "string"}, "title": {"type": "string"}, "publisher": {"type": "string"},
+          "source_type": {"type": "string"}, "url": {"type": "string", "pattern": "^https://"},
+          "publication_date": {"type": ["string", "null"]}, "retrieved_at": {"type": "string"},
+          "document_reference": {"type": ["string", "null"]}, "metadata": {"type": "object"}
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["canonical_key", "name", "project_type", "project_status", "technology", "communities", "source_keys", "evidence"],
+        "properties": {
+          "canonical_key": {"type": "string", "pattern": "^project:external:"}, "name": {"type": "string"},
+          "project_type": {"type": "string"}, "project_status": {"type": "string"}, "technology": {"type": "string"},
+          "capacity_mw": {"type": ["number", "null"]}, "developer": {"type": ["string", "null"]},
+          "operator": {"type": ["string", "null"]}, "geometry": {"type": "null"},
+          "communities": {"type": "array", "items": {"type": "object", "required": ["name"], "properties": {"name": {"type": "string"}, "entity_key": {"type": ["string", "null"]}, "relation_type": {"type": ["string", "null"]}}}},
+          "metadata": {"type": "object"}, "source_keys": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "evidence": {"type": "object", "required": ["evidence_type", "claim", "confidence"], "properties": {"evidence_type": {"type": "string"}, "claim": {"type": "string"}, "confidence": {"type": "string"}, "published_at": {"type": ["string", "null"]}, "metadata": {"type": "object"}}}
+        }
+      }
+    }
+  }
 }
 
 
@@ -2833,6 +2868,162 @@ AUTHORITY: reference
     },
     "metadata": {
       "type": "object"
+    }
+  },
+  "additionalProperties": false
+}
+
+
+================================================================================================
+FILE: contracts/schemas/target-village-dossier.schema.json
+AUTHORITY: reference
+================================================================================================
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kristal-farms.local/contracts/target-village-dossier.schema.json",
+  "title": "Kristal Farms target village research dossier",
+  "type": "object",
+  "required": [
+    "schema",
+    "slug",
+    "community_name",
+    "kf_status",
+    "screening_role",
+    "reviewed_at",
+    "development_thesis",
+    "air",
+    "marine",
+    "logistics_envelope",
+    "open_gates",
+    "sources"
+  ],
+  "properties": {
+    "schema": { "const": "kristal-target-village-research/v1" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "community_name": { "type": "string", "minLength": 1 },
+    "kf_status": { "enum": ["TARGET_SCREENING", "REFERENCE_ONLY", "PAUSED"] },
+    "screening_role": { "type": "string", "minLength": 1 },
+    "reviewed_at": { "type": "string", "format": "date" },
+    "development_thesis": { "type": "string", "minLength": 1 },
+    "air": {
+      "type": "object",
+      "required": ["access_pattern", "load_status", "pavement_strength", "max_aircraft_mass_kg", "operational_constraints"],
+      "properties": {
+        "access_pattern": { "type": "string" },
+        "load_status": { "enum": ["published_reference", "not_verified", "unknown"] },
+        "pavement_strength": { "type": ["string", "null"] },
+        "max_aircraft_mass_kg": { "type": ["number", "null"], "minimum": 0 },
+        "operational_constraints": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "marine": {
+      "type": "object",
+      "required": [
+        "access_mode",
+        "commercial_access",
+        "facilities",
+        "approach_depth_m",
+        "anchorage_depth_m",
+        "berth_depth_range_m",
+        "depth_status",
+        "ro_ro",
+        "laydown_available",
+        "load_limits",
+        "seasonality",
+        "constraints",
+        "source_ids"
+      ],
+      "properties": {
+        "access_mode": { "type": "string" },
+        "commercial_access": { "enum": ["seasonal", "year_round", "not_verified"] },
+        "facilities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "label"],
+            "properties": {
+              "type": { "type": "string" },
+              "label": { "type": "string" },
+              "length_m": { "type": ["number", "null"], "minimum": 0 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "approach_depth_m": { "type": ["number", "null"], "minimum": 0 },
+        "anchorage_depth_m": { "type": ["number", "null"], "minimum": 0 },
+        "berth_depth_range_m": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "array",
+              "prefixItems": [
+                { "type": "number", "minimum": 0 },
+                { "type": "number", "minimum": 0 }
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            }
+          ]
+        },
+        "depth_status": { "enum": ["published_reference", "partial_reference", "not_verified"] },
+        "ro_ro": { "type": ["boolean", "null"] },
+        "laydown_available": { "type": ["boolean", "null"] },
+        "load_limits": {
+          "type": "object",
+          "required": ["status", "deck_load_t_m2", "axle_load_t", "max_unit_mass_t", "crane_swl_t"],
+          "properties": {
+            "status": { "enum": ["published_reference", "not_verified", "unknown"] },
+            "deck_load_t_m2": { "type": ["number", "null"], "minimum": 0 },
+            "axle_load_t": { "type": ["number", "null"], "minimum": 0 },
+            "max_unit_mass_t": { "type": ["number", "null"], "minimum": 0 },
+            "crane_swl_t": { "type": ["number", "null"], "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "seasonality": {
+          "type": "object",
+          "required": ["service_type", "start_month", "end_month", "status"],
+          "properties": {
+            "service_type": { "type": "string" },
+            "start_month": { "type": ["integer", "null"], "minimum": 1, "maximum": 12 },
+            "end_month": { "type": ["integer", "null"], "minimum": 1, "maximum": 12 },
+            "status": { "enum": ["published_schedule_context", "general_operating_context", "not_verified"] }
+          },
+          "additionalProperties": false
+        },
+        "constraints": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "source_ids": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "logistics_envelope": {
+      "type": "object",
+      "required": ["marine_delivery", "air_delivery", "heavy_module_status", "assessment_status"],
+      "properties": {
+        "marine_delivery": { "type": "string" },
+        "air_delivery": { "type": "string" },
+        "heavy_module_status": { "enum": ["favourable", "constrained", "diligence_required", "unknown"] },
+        "assessment_status": { "enum": ["partial", "research_ready", "diligence_required"] }
+      },
+      "additionalProperties": false
+    },
+    "open_gates": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "publisher", "url", "role"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "publisher": { "type": "string" },
+          "url": { "type": "string" },
+          "role": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
     }
   },
   "additionalProperties": false
@@ -3626,6 +3817,71 @@ Every workstream should have an owner, current status, next decision, evidence l
 
 
 ================================================================================================
+FILE: docs/10-core/Architecture_de_reference_du_projet_Kristal_Farms_FR.md
+AUTHORITY: reference
+================================================================================================
+
+# Architecture de référence du projet Kristal Farms
+
+## Thèse centrale
+
+Kristal Farms est une architecture d’accès aux ressources énergétiques nordiques. L’inversion centrale est :
+
+> **amener une charge de calcul flexible à l’énergie éloignée et exporter la valeur numérique par fibre, plutôt que dépendre par défaut de longues routes et de longs corridors électriques haute tension.**
+
+La réduction ou l’évitement des longues routes et lignes HV est une proposition de valeur structurelle primaire. Elle n’est pas présumée universellement avantageuse : l’économie doit être démontrée corridor par corridor et site par site.
+
+## Géographie
+
+- Côte-Nord : géographie de pilote/apprentissage.
+- Québec nordique et Labrador : territoire de déploiement à long terme où l’éloignement des routes/HV peut créer le contraste structurel le plus fort.
+
+## Architecture physique
+
+Trois dispositions restent valides : calcul près de la centrale, calcul près du village/port, ou architecture hybride. Le choix dépend de la distance électrique, de la valeur de la chaleur, de la fibre, de la logistique, de l’environnement, de la maintenance, de la sécurité et du choix communautaire.
+
+## Modèle commercial du calcul
+
+Kristal Farms peut offrir des sites/pads de calcul viabilisés plutôt que posséder tous les serveurs. L’infrastructure commune peut fournir alimentation électrique, interface de refroidissement, fibre, sécurité, comptage/télémétrie et accès logistique. Les locataires gardent la souveraineté sur leur matériel, OS, modèles, données, clés et télémétrie interne.
+
+## Priorité énergétique communautaire
+
+Les réseaux villageois existants sont une infrastructure communautaire protégée; ils ne sont pas présumés fournir plusieurs MW disponibles au calcul. L’architecture étudiée est principalement :
+
+> **nouvelle production → interface communautaire protégée → calcul flexible → export par fibre**
+
+Les charges communautaires/critiques ont priorité sur le calcul interruptible.
+
+## Chaleur
+
+La chaleur est un coproduit utile, pas une règle universelle de localisation. Elle est récupérée lorsque sa valeur utile dépasse le coût et la complexité de récupération/distribution.
+
+## Réseau et modularité
+
+Le programme peut utiliser des projets hydro/renouvelables petits, moyens ou plus grands lorsque justifiés, avec une croissance du calcul pad par pad. Des nœuds réussis peuvent former un chapelet côtier/de bassins relié principalement par fibre et logistique maritime, avec des interconnexions électriques plus courtes lorsqu’elles apportent de la résilience.
+
+## Gouvernance internationale des locataires
+
+Kristal Farms vise un marché international tout en restant sélectif sur ses contreparties. L'admissibilité est établie avant l'accès à partir de la juridiction, de la propriété effective et du contrôle, des sanctions/contrôles commerciaux et d'une diligence raisonnable de conduite responsable. La politique actuelle du propriétaire exclut les contreparties établies ou contrôlées aux États-Unis des rôles de locataire, acheteur ferme principal (*anchor offtaker*) et opérateur-locataire.
+
+Cette exclusion commerciale ne constitue pas, à elle seule, un embargo sur l'origine technologique.
+
+## Location aveugle au contenu
+
+L'environnement normal est un **environnement chiffré sous contrôle du locataire** (raccourci commercial : location « black box »). Kristal Farms exploite le plan des services physiques partagés; le locataire contrôle le calcul privé. L'exploitation normale n'exige pas l'accès de Kristal Farms aux modèles privés, jeux de données, contenus applicatifs ou clés cryptographiques du locataire.
+
+La conformité repose donc sur la contrepartie et le contrat plutôt que sur l'inspection du contenu. Voir `docs/00-control/INTERNATIONAL_TENANT_GOVERNANCE.md` et `docs/security/TENANT_CONFIDENTIALITY_BOUNDARY.md`.
+
+## Gouvernance et anti-capture
+
+Le capital peut financer l’infrastructure sans acquérir automatiquement le contrôle de la terre, du logement, de l’énergie, du port, de la fibre, de l’emploi et de la gouvernance communautaire.
+
+## État du screening
+
+Il n’existe **aucun classement actif de sites**. Toute priorisation future exige des preuves transparentes en hydrologie, terrain/head, environnement, gouvernance communautaire/autochtone, logistique, télécom, architecture électrique et économie actuelle.
+
+
+================================================================================================
 FILE: docs/10-core/deployment/STRATEGIE_DE_DEPLOIEMENT_FR.md
 AUTHORITY: reference
 ================================================================================================
@@ -3710,6 +3966,81 @@ La décision suivante doit être explicite :
 ## Croissance
 
 Le calcul doit croître pad par pad et la production seulement lorsqu'elle est justifiée. Des nœuds réussis peuvent éventuellement former un chapelet hydro/calcul/fibre/port, avec la mer comme corridor logistique majeur et des interconnexions électriques plus courtes lorsqu'elles améliorent la résilience. Un seul grand corridor haute tension vers le sud n'est pas l'architecture présumée par défaut.
+
+
+================================================================================================
+FILE: docs/10-core/Kristal_Farms_Project_Reference_Architecture_EN.md
+AUTHORITY: reference
+================================================================================================
+
+# Kristal Farms Project Reference Architecture
+
+## Core thesis
+
+Kristal Farms is a northern hydro/renewable resource-access architecture. Its central inversion is:
+
+> **bring flexible compute to remote energy and export digital value by fibre, rather than defaulting to long roads and long high-voltage electrical export corridors.**
+
+Avoiding or materially reducing long roads and HV corridors is a primary structural value proposition because it may open remote hydro resources that are unattractive under the conventional delivery model. The economic advantage is **not assumed universal**; it must be demonstrated per corridor/site.
+
+## Geography
+
+- Côte-Nord is the preferred pilot/learning geography because it can combine northern conditions with more practical access and logistics.
+- The long-term resource thesis extends farther north through Québec and Labrador, where road/HV remoteness creates the strongest structural contrast.
+
+## Physical architecture
+
+Three compute layouts remain valid:
+
+1. generation/dam-adjacent compute;
+2. village/port-adjacent compute;
+3. hybrid split architecture.
+
+Selection depends on electrical distance, heat value, fibre, marine/ground logistics, maintenance, environment, security and community choice.
+
+## Compute commercial model
+
+Kristal Farms can provide leaseable serviced compute sites/pads rather than owning every server. The shared infrastructure can provide power handoff, cooling interface, fibre handoff, security, metering/telemetry, logistics and maintenance access. Tenants retain sovereignty over their hardware, operating systems, models, data, keys and internal telemetry.
+
+## Community energy rule
+
+Existing village grids are protected community infrastructure, not assumed multi-megawatt compute supplies. The architecture under research is primarily:
+
+> **new generation → protected community interface → flexible compute → fibre export**
+
+Community/critical loads have priority over interruptible compute.
+
+## Heat
+
+Heat is a valuable co-product, not a universal siting rule. Recover/use it where useful heat value exceeds recovery/distribution cost and complexity.
+
+## Modularity and network
+
+The program can use small, medium and larger hydro/renewable projects where justified, scaling compute pad by pad. Successful nodes may form a coastal/watershed chain linked primarily by fibre and marine logistics, with shorter electrical interties where useful for resilience.
+
+## Commercial/data sovereignty boundary
+
+Shared physical-service interfaces and tenant-controlled digital systems are a core commercial boundary: Kristal Farms can meter and operate physical services without requiring access to tenant application data.
+
+## International tenant governance
+
+Kristal Farms is intended to be internationally marketable while remaining selective about counterparties. Tenant eligibility is determined before access through the jurisdiction schedule, ownership/control, sanctions/trade-control, downstream-customer exposure and responsible-business due diligence.
+
+This commercial exclusion does not itself create a technology-origin embargo.
+
+## Content-blind tenancy
+
+The normal tenant environment is a **tenant-controlled encrypted environment** (commercial shorthand: black-box tenancy). Kristal Farms operates the shared physical-service plane; the tenant controls private compute. Routine operations do not require operator access to private models, datasets, application payloads or tenant cryptographic keys.
+
+Compliance is therefore counterparty- and contract-based rather than content-inspection-based. See `docs/00-control/INTERNATIONAL_TENANT_GOVERNANCE.md` and `docs/security/TENANT_CONFIDENTIALITY_BOUNDARY.md`.
+
+## Governance / anti-capture
+
+Capital may finance infrastructure, but capital should not automatically acquire control over community land, housing, energy, port, fibre, employment and governance. The project should preserve shared interfaces with separated authority and design anti-capture mechanisms before land/infrastructure appreciation creates incentives for concentration.
+
+## Current screening rule
+
+There is **no active site rank**. Future prioritization requires transparent evidence across hydrology, terrain/head, environment, Indigenous/community governance, logistics, telecom, electrical architecture and current economics.
 
 
 ================================================================================================
@@ -4121,363 +4452,6 @@ Voir :
 - `docs/00-control/INTERNATIONAL_TENANT_GOVERNANCE.md`
 - `docs/security/TENANT_CONFIDENTIALITY_BOUNDARY.md`
 - ADR-0021 et ADR-0022
-
-
-================================================================================================
-FILE: docs/60-application-data/APPLICATION_DATA_MODEL.md
-AUTHORITY: reference
-================================================================================================
-
-# Kristal Farms application data model
-
-The application uses a canonical relational/geospatial model rather than treating each research file as a permanent map layer.
-
-## Core refinements
-
-1. `core.entity` provides a shared canonical identity.
-2. `core.natural_feature` represents rivers, watersheds and research reaches.
-3. Source, evidence and observation records are normalized and linked explicitly.
-4. Screening dimensions are evidence/status/open-question records, not numeric scores.
-5. Extraction windows and processing jobs live under `system.ingestion_job` rather than masquerading as domain geography.
-6. Public Web layers are derived from `publish` views and immutable releases.
-
-The current fixture contains 24 river natural features and 24 WSC hydrometric-station assets. Only the official station positions have physical geometry in the current canonical fixture; river and watershed geometry remains null until authoritative geometry is ingested and accepted.
-
-## Mine-reuse research boundary
-
-Mine-reuse records remain exploratory until a source-backed inventory and stable semantics justify promotion. During research, mines should normally use existing `asset`/`project` entity patterns plus explicit metadata for lifecycle, mine method, underground condition, pit/reservoir geometry, restoration status and enabling infrastructure. Do not add `available_compute_mw`, pumped-storage capacity or security claims by inference.
-
-If mine-reuse fields become routinely queried or published, promote them through migrations/contracts/tests rather than leaving core semantics only in JSONB.
-
-
-================================================================================================
-FILE: docs/60-application-data/ECONOMIC_DATA_CONTRACT.md
-AUTHORITY: reference
-================================================================================================
-
-# Economic data contract
-
-## Evidence
-
-`research.economic_benchmark` stores externally sourced ratios and context. Every benchmark is marked `usable_as_site_estimate=false`.
-
-## Assumptions
-
-`scenario.assumption` is the explicit bridge from benchmark/context to a scenario. Unknown site costs are stored as `UNPRICED`, never silently treated as zero.
-
-## Results
-
-`scenario.result` stores derived outputs with algorithm key/version and completeness state.
-
-## Sensitivity
-
-`scenario.sensitivity_case` stores non-site distance stress cases.
-
-## Forbidden automatic outputs
-
-The generic economic workflow does not produce project IRR, bankable NPV, net project savings, site rank, project MW/head/design flow or a winning-site conclusion. Those require a project-specific dossier with engineering and commercial evidence.
-
-
-================================================================================================
-FILE: docs/60-application-data/ECONOMIC_METHOD.md
-AUTHORITY: reference
-================================================================================================
-
-# Economic architecture method
-
-## Question
-
-For the **same remote generation opportunity**, what enabling-infrastructure burden is associated with:
-
-A. long electrical export plus long road access; versus
-B. local digital-value export, initially represented by northern fibre funding-intensity proxies, with Kristal Farms-specific local infrastructure left explicitly unpriced?
-
-## Evidence band
-
-The current model uses completed-project and public-program references for transmission, roads and northern fibre. These references are **not interchangeable unit construction costs** and are not promoted to site estimates.
-
-## Frontier
-
-For each generic non-site stress case:
-
-`conventional_low = HV_km × transmission_low + road_km × road_low`
-
-`conventional_high = HV_km × transmission_high + road_km × road_high`
-
-`fibre_proxy_low/high = fibre_km × fibre_funding_proxy_low/high`
-
-`conservative remaining budget = conventional_low − fibre_proxy_high`
-
-`optimistic remaining budget = conventional_high − fibre_proxy_low`
-
-A positive value is **not savings**. It is only the remaining reference-component envelope available for still-unpriced Kristal Farms-specific infrastructure before parity on those compared components.
-
-
-================================================================================================
-FILE: docs/60-application-data/EVIDENCE_MATRIX.md
-AUTHORITY: reference
-================================================================================================
-
-# Hydrology evidence matrix
-
-All 24 Hydro Resource Atlas river references currently remain `hydrology = partial`.
-
-This means:
-
-- an official WSC station entity exists;
-- official HYDAT collection/source metadata is registered;
-- station-filtered ingestion jobs exist;
-- full raw flow series are not materialized in the current fixture;
-- real-data climatology has therefore not been published from those series;
-- design flow and MW remain prohibited automatic outputs.
-
-Additional source depth for individual rivers improves evidence coverage but does not create a rank or preferred-site conclusion.
-
-
-================================================================================================
-FILE: docs/60-application-data/EXPLORER_DATA_CONTRACT.md
-AUTHORITY: reference
-================================================================================================
-
-# Explorer data contract
-
-## Primary entity flows
-
-- select community → show marine/telecom/energy context and evidence;
-- select hydrometric station → show source/observations and related river;
-- select river → show evidence dimensions, monitoring station and contextual relations;
-- select external reference project → show role/status/source and linked context.
-
-## API targets
-
-- `GET /catalog`
-- `GET /entities/{id}`
-- `GET /entities/{id}/evidence`
-- `GET /entities/{id}/screening`
-- `GET /search`
-- `GET /showcase/stories/kristal-farms-core-thesis`
-
-## No implicit ranking
-
-List order defaults to name/type/relevance, never site merit. Marker size is not a merit signal. Evidence status is visually distinct from opportunity quality.
-
-
-================================================================================================
-FILE: docs/60-application-data/HYDROLOGY_DATA_CONTRACT.md
-AUTHORITY: reference
-================================================================================================
-
-# Hydrology data contract
-
-## Operational model
-
-Hydrology is stored as provenance-rich observations rather than pasted onto river geometry.
-
-```text
-research.source
-  ↓
-research.evidence
-  ↓
-research.observation_series
-  ↓
-research.observation
-  ↓
-research.observation_derivation   # derived values only
-```
-
-A series is materialized only after raw source rows are actually retrieved. In the current research runtime, full HYDAT series have not been materialized; empty placeholders are not published as data.
-
-## Source observations
-
-Examples include:
-
-- `daily_mean_discharge_m3s`;
-- `monthly_mean_discharge_m3s`;
-- annual maximum/minimum daily-mean discharge.
-
-Source values preserve record identity, measurement time, source release, retrieval time, quality/provisional flags when available and raw-artifact lineage.
-
-## Derived observations
-
-Derived hydrology must preserve:
-
-- derivation type;
-- algorithm key and semantic version;
-- source series IDs;
-- coverage start/end;
-- raw value count;
-- completeness fraction;
-- parameters.
-
-The current research statistic `hydrology.climatological_monthly_mean@1.0.0` is completeness-gated and is not an engineering design-flow selector.
-
-## Forbidden automatic outputs
-
-The hydrology pipeline must not automatically produce:
-
-- `design_flow_m3s`;
-- `project_gross_head_m`;
-- `project_net_head_m`;
-- `capacity_mw`;
-- `validated_hosting_capacity_kw`;
-- site score/rank.
-
-Those values require later engineering, utility/service validation or governance decisions.
-
-
-================================================================================================
-FILE: docs/60-application-data/HYDROLOGY_DERIVATION_POLICY.md
-AUTHORITY: reference
-================================================================================================
-
-# Hydrology derivation policy
-
-## Research statistics are not engineering selections
-
-A climatological monthly mean may be derived automatically when source coverage satisfies a documented QA gate. A **design flow cannot**.
-
-The initial algorithm `hydrology.climatological_monthly_mean@1.0.0` uses configurable defaults:
-
-- minimum 10 sufficiently complete calendar years;
-- minimum annual completeness fraction 0.90;
-- minimum month completeness fraction 0.80.
-
-These are Kristal Farms research-QA defaults, not universal hydrology standards and not evidence of engineering sufficiency. Parameter changes require a versioned algorithm/configuration record.
-
-Low-flow frequency metrics, firm-energy selection, environmental flow, design flood and turbine design flow are deferred to project-specific hydrology and engineering work.
-
-
-================================================================================================
-FILE: docs/60-application-data/HYDROLOGY_OBSERVATION_PIPELINE.md
-AUTHORITY: reference
-================================================================================================
-
-# Hydrology observation pipeline
-
-## Source model
-
-Official hydrometric data is ingested into a source-preserving workflow:
-
-`raw response → staging normalized rows → research source/evidence → research observation`
-
-Raw API rows are never written directly into `core` entities.
-
-## Metrics
-
-- `daily_mean_discharge_m3s` — source observation;
-- `monthly_mean_discharge_m3s` — source observation;
-- seasonal/climatological statistics — derived observations with algorithm version;
-- `design_flow_m3s` — engineering value and therefore never auto-created from daily/monthly observations.
-
-## Current runtime state
-
-Hydrology ingestion jobs are registered for the canonical WSC stations, but the full source series were not materialized in the research runtime because the external hosts were not reachable from that execution environment. No flow values were fabricated to fill the gap.
-
-
-================================================================================================
-FILE: docs/60-application-data/HYDROLOGY_SOURCE_VERSIONING_AND_TIME.md
-AUTHORITY: reference
-================================================================================================
-
-# Hydrology source versioning and time
-
-Hydrology uses two separate clocks.
-
-## Measurement time
-
-`valid_from`, `valid_to` and source date identify when a hydrologic value applies.
-
-## Knowledge time
-
-`retrieved_at`, `source_release`, evidence publication date and raw-artifact hash identify what the project knew and from which release.
-
-This distinction matters because official metadata can change. Natashquan station 02WB003 currently retains both the WSC `gross_drainage_area_km2 = 15400` observation and the CEHQ `station_basin_area_km2 = 15693` observation under separate metrics/evidence; neither silently overwrites the other.
-
-The current HYDAT source manifest records release `HYDAT_20260717`.
-
-
-================================================================================================
-FILE: docs/60-application-data/INTEGRATED_ATLAS.md
-AUTHORITY: reference
-================================================================================================
-
-# Integrated Atlas
-
-**Release date:** 2026-08-30
-
-## Purpose
-
-The integrated atlas connects hydrology, communities, marine logistics, telecom, energy references, environment context and screening state through canonical IDs, relations, evidence and observations. It does not force every piece of knowledge into map geometry.
-
-## Current integrated content
-
-- 24 river references and 24 WSC hydrometric stations;
-- community reference points explicitly marked as approximate centroids where applicable;
-- conceptual research corridors with `geometry = NULL` and `not_route = true`;
-- Nunavik marine-management context without facility-specific heavy-lift inference;
-- operating/planned telecom relationships without invented cable geometry;
-- North Labrador ferry/service context without project-cargo certification;
-- selected external renewable-energy reference projects;
-- legacy environmental records retained only as unverified historical evidence.
-
-## Public release
-
-Release `2026.08.30` is immutable and publishes only controlled public-safe context. Legacy screening tiers are not included in public community properties.
-
-## Showcase / Explorer
-
-- `packages/catalog/catalog.json` defines the data-driven layer catalog;
-- `packages/showcase/story.json` defines the guided narrative without custom site logic;
-- `data/publish/current/` contains current public artifacts.
-
-## Remaining gaps
-
-The atlas does not establish authoritative environment or rights/governance coverage for candidate projects. It also does not automatically materialize official river/basin geometry, full HYDAT flow series, project head, design flow, MW or site ranking.
-
-
-================================================================================================
-FILE: docs/60-application-data/INTEGRATED_ATLAS_DATA_CONTRACT.md
-AUTHORITY: reference
-================================================================================================
-
-# Integrated Atlas data contract
-
-## Purpose
-
-Connect canonical hydrology to community, logistics, telecom, energy and evidence context without inventing geometry or site merit.
-
-## Domain rules
-
-- approximate community centroids are not port/project coordinates;
-- conceptual research corridors use `geometry = NULL` and are not routes/boundaries;
-- marine/fibre/service context may be related to communities without route geometry;
-- external projects use `role = external_reference`;
-- legacy screening classifications are provenance only;
-- `rights_governance` remains research-required unless specific authoritative evidence is attached;
-- legacy river/community links do not imply site proximity, consent or project selection;
-- no public property or visual style may encode site rank or merit while ranking is disabled.
-
-
-================================================================================================
-FILE: docs/60-application-data/SHOWCASE_DATA_CONTRACT.md
-AUTHORITY: reference
-================================================================================================
-
-# Showcase data contract
-
-The Showcase is configuration-driven through `packages/showcase/story.json`. Scenes select catalog layers and narrative keys; they do not contain custom site logic.
-
-Required interpretation rules:
-
-1. existing remote systems are community infrastructure, not spare multi-MW compute supply;
-2. marine/fibre context matters, but route/capacity claims require evidence;
-3. WSC station points are monitoring assets, not dam sites;
-4. missing geometry remains missing;
-5. Kristal Farms architecture is explanatory: new generation → protected community interface → flexible compute → fibre;
-6. economic frontier outputs are not project savings;
-7. the final action opens the Explorer/Evidence Panel.
-
-The conceptual corridor illustration is a design reference only and is not a data source.
 
 
 ================================================================================================
@@ -5526,6 +5500,64 @@ Explorer and Showcase share the interaction model defined in [Map observatory in
 
 
 ================================================================================================
+FILE: docs/architecture/information-architecture.md
+AUTHORITY: reference
+================================================================================================
+
+# Information architecture
+
+Kristal Farms uses two complementary information axes. They are intentionally separated so a reader can distinguish **project/domain authority** from **software/data-platform implementation** without guessing from filenames.
+
+## Project and domain axis
+
+| Area | Purpose | Authority tendency |
+|---|---|---|
+| `docs/00-control/` | Current project state, principles, decisions and release interpretation | C0 |
+| `docs/10-core/` | Physical/commercial **project reference architecture**, deployment and tenancy | C1 |
+| `docs/30-site-screening/` | Site/corridor screening methods and technical research | C4 |
+| `docs/40-economics/` | Economic research and benchmark methods | C4 |
+| `docs/50-research/` | Active domain/commercial/governance research | C4 |
+| `docs/70-long-horizon/` | Optional long-horizon concepts | C4L |
+
+## Software and data-platform axis
+
+| Area | Purpose |
+|---|---|
+| `docs/architecture/` | Software/data-platform architecture and system boundaries |
+| `docs/data/` | Application data model, evidence, provenance, hydrology/economic data contracts and publishing semantics |
+| `docs/product/` | Product surfaces and product-facing data contracts |
+| `docs/frontend/` | Interaction, cartography, accessibility and UI implementation rules |
+| `docs/api/` | Service/API contracts and behavior |
+| `docs/scenarios/` | Scenario-engine contracts and economic scenario method |
+| `docs/operations/`, `docs/security/`, `docs/testing/` | Operational controls |
+| `docs/adr/` | Durable technical decision history |
+
+The former `docs/60-application-data/` bucket was removed because it mixed this second axis back into the numbered project/domain axis. Its documents now live under `data/`, `product/` or `scenarios/` according to responsibility.
+
+## Repository information flow
+
+```text
+sources / research
+        ↓ promotion + validation
+pipelines / database / contracts / packages
+        ↓ governed publish/API/tiles
+apps / services
+```
+
+`archive/` is historical provenance, not active authority. It remains versioned but is excluded from default local search/index behavior through the root `.ignore`; historical work should opt into `archive/` explicitly.
+
+## Observatory workspace model
+
+The top-level Observatory remains a flat six-workspace cockpit for speed, but the workspaces have a stable conceptual grouping:
+
+- **Explore** — Northern Atlas, Villages, Corridors.
+- **Evaluate** — Economics.
+- **Govern** — Evidence, International Portfolio.
+
+The grouping describes user intent; URLs remain stable (`section=atlas|villages|corridors|economics|evidence|international`). The International Portfolio may currently contain twelve planning slots, but the count is state, not navigation taxonomy.
+
+
+================================================================================================
 FILE: docs/architecture/observability.md
 AUTHORITY: reference
 ================================================================================================
@@ -5635,6 +5667,7 @@ kristal-farms/
 │   ├── ogc-api/
 │   └── tiles/
 ├── docs/
+├── tools/                  # Specialist local/developer utilities
 ├── sources/
 ├── tests/
 ├── infra/
@@ -5646,7 +5679,7 @@ kristal-farms/
 
 - `research/`: active exploratory code, notebooks, candidate analysis and methodological experiments.
 - `sources/`: controlled source material and owner-direction records.
-- `docs/00-control` through `docs/50-research`: active project/research documentation.
+- `docs/00-control`, `docs/10-core`, `docs/30-site-screening`, `docs/40-economics`, `docs/50-research` and `docs/70-long-horizon`: project/domain documentation organized by authority and maturity.
 - `archive/`: superseded/historical research that must not control active state.
 
 Research can be incomplete. It is not a runtime dependency and it is not publishable merely because it is committed.
@@ -5668,9 +5701,9 @@ This system turns research into reproducible, governed data.
 
 - `apps/web/`: Showcase, Explorer/Observatory and Scenario Studio implementation.
 - `services/`: domain API, OGC API and tile delivery.
-- `docs/architecture`, `docs/data`, `docs/product`, etc.: product/application implementation documentation.
+- `docs/architecture`, `docs/data`, `docs/product`, `docs/frontend`, `docs/api`, `docs/scenarios`, etc.: software/data-platform implementation documentation organized by responsibility.
 
-Product code consumes governed APIs/tiles, stable packages/contracts or immutable publish artifacts. It must not import or execute `research/` or `pipelines/`.
+Product code consumes governed APIs/tiles, stable packages/contracts or immutable publish artifacts. It must not import or execute `research/` or `pipelines/`. Specialist local utilities live under `tools/`; only the canonical rebuild and quick-start launchers remain at repository root.
 
 ## Direction of dependency
 
@@ -5682,7 +5715,7 @@ data platform + contracts
 product
 ```
 
-See [Workspace boundaries](workspace-boundaries.md) and [ADR-020](../adr/0020-one-monorepo-three-logical-systems.md).
+See [Information architecture](information-architecture.md), [Workspace boundaries](workspace-boundaries.md) and [ADR-020](../adr/0020-one-monorepo-three-logical-systems.md).
 
 ## Separate wiki
 
@@ -5791,6 +5824,33 @@ A technology decision should be revisited when a measurable requirement changes:
 
 
 ================================================================================================
+FILE: docs/data/application-data-model.md
+AUTHORITY: reference
+================================================================================================
+
+# Kristal Farms application data model
+
+The application uses a canonical relational/geospatial model rather than treating each research file as a permanent map layer.
+
+## Core refinements
+
+1. `core.entity` provides a shared canonical identity.
+2. `core.natural_feature` represents rivers, watersheds and research reaches.
+3. Source, evidence and observation records are normalized and linked explicitly.
+4. Screening dimensions are evidence/status/open-question records, not numeric scores.
+5. Extraction windows and processing jobs live under `system.ingestion_job` rather than masquerading as domain geography.
+6. Public Web layers are derived from `publish` views and immutable releases.
+
+The current fixture contains 24 river natural features and 24 WSC hydrometric-station assets. Only the official station positions have physical geometry in the current canonical fixture; river and watershed geometry remains null until authoritative geometry is ingested and accepted.
+
+## Mine-reuse research boundary
+
+Mine-reuse records remain exploratory until a source-backed inventory and stable semantics justify promotion. During research, mines should normally use existing `asset`/`project` entity patterns plus explicit metadata for lifecycle, mine method, underground condition, pit/reservoir geometry, restoration status and enabling infrastructure. Do not add `available_compute_mw`, pumped-storage capacity or security claims by inference.
+
+If mine-reuse fields become routinely queried or published, promote them through migrations/contracts/tests rather than leaving core semantics only in JSONB.
+
+
+================================================================================================
 FILE: docs/data/data-quality.md
 AUTHORITY: reference
 ================================================================================================
@@ -5837,6 +5897,350 @@ Critical QA failures must block publication. Warnings may be allowed only when d
 ## Current fixture baseline
 
 The active fixture under `data/fixtures/current/` is cumulative and validated by the repository test suite. Historical migration counts are preserved in `archive/research-snapshots/` and are not product acceptance criteria.
+
+
+================================================================================================
+FILE: docs/data/DATA_VALIDATION_PASS_2026-09-01.md
+AUTHORITY: reference
+================================================================================================
+
+# Data validation pass — 2026-09-01
+
+## Scope
+
+This pass focuses on governed/current data and factual public surfaces in the Kristal Farms snapshot, with special attention to AI-generated claims that could be hallucinated, over-precise, stale, or insufficiently sourced.
+
+Included:
+
+- canonical research provenance fixtures (`research_source`, `research_evidence`, evidence/source links, observations, economic benchmarks);
+- current public evidence, community infrastructure, grid-reach and economic benchmark artifacts;
+- the International Portfolio research portfolio and its public interface;
+- current legal/reference context attached to the jurisdiction policy.
+
+Not certified by this pass:
+
+- legacy/raw/internal research archives that are not promoted as canonical evidence;
+- commercial willingness, future delivery, or actual available capacity of third parties;
+- legal eligibility of any transaction or counterparty;
+- engineering-grade geometry or site-specific cost estimates.
+
+## Executive findings
+
+### 1. Canonical provenance graph: structurally sound
+
+The canonical fixture layer had no broken evidence/source references in the reviewed current snapshot:
+
+- 46 research sources after this pass;
+- 127 evidence records;
+- 274 evidence↔source links after this pass;
+- 100 observations, all with a valid `source_evidence_id`;
+- 10 economic benchmarks, all with a valid `source_evidence_id`.
+
+The existing evidence/observation/scenario separation is a strong anti-hallucination control because scenarios are not silently promoted to observations.
+
+### 2. Public economic provenance: broken chain fixed
+
+Before this pass, all 10 public economic benchmarks exposed a `source_evidence_id`, but the corresponding economic evidence records were omitted from `evidence_records_public.json`. The IDs therefore did not resolve in the public evidence ledger.
+
+Fix:
+
+- `build_observatory_public.py` now includes evidence referenced by `economic_benchmarks_public.json`;
+- the public evidence ledger increased from 115 to 125 records;
+- all 10 public benchmark evidence IDs now resolve to public evidence and source records.
+
+### 3. Northern Labrador road benchmark: numeric correction
+
+The source study states a ROM construction estimate of approximately **CAD 2,089,790,000** for 809 km of gravel road and **CAD 602,393,000** for 809 km of paving, with ROM accuracy of ±50% and costs based on 2023 pricing. The previous fixture metadata rounded these to CAD 2.1B and CAD 600M, and the published per-km benchmarks were calculated from those rounded amounts.
+
+Source: [Newfoundland and Labrador House of Assembly / Allnorth — Final Draft Project Summary Report, Pre-Feasibility Study for a Road into Northern Labrador](https://www.assembly.nl.ca/business/electronicdocuments/Allnorth-ProjectSummaryReport-RoadToTheNorth.pdf)
+
+Corrected values:
+
+| Benchmark | Previous | Corrected |
+| --- | ---: | ---: |
+| Gravel-road ROM / km | 2,595,797.280593 CAD/km | **2,583,176.761434 CAD/km** |
+| Construction + paving / km | 3,337,453.646477 CAD/km | **3,327,791.100124 CAD/km** |
+| Annual maintenance / km-year | 16,069.221261 CAD/km-year | unchanged |
+
+A source-arithmetic validator now recomputes all 10 governed economic benchmarks from their source metadata.
+
+### 4. International Portfolio (12 planning slots): missing attribution fixed
+
+The International Portfolio public artifact previously published factual rationales without any visible source references. This was the largest hallucination risk on an otherwise governed public research surface.
+
+Fixes:
+
+- all 12 candidates now have attributable primary sources;
+- 18 candidate source references were added;
+- the public JSON carries those sources;
+- the web inspector displays clickable references and what each source supports;
+- every candidate is marked `PRIMARY_SOURCE_CONFIRMED_NOT_INDEPENDENTLY_AUDITED`;
+- the interface explicitly warns that first-party attribution is not independent verification of capacity, commercial appetite, legal eligibility, or future delivery.
+
+Two time-sensitive descriptions were tightened:
+
+- **NAVER Cloud:** a June 2026 announcement says initial 55 MW operations are planned for 2027, with a gigawatt-scale objective; a July 2026 update expanded the planned GAK Sejong deployment from 55 MW to 200 MW. These are plans/future milestones, not 2026 operating capacity. Sources: [NAVER, 2026-06-08](https://navercorp.com/en/media/pressReleasesDetail?seq=10034386) and [NAVER, 2026-07-25](https://www.navercorp.com/en/media/pressReleasesDetail?seq=10034518).
+- **SK Telecom / SK Hyper:** SKT announced an up-to-15-GW Korean AIDC program in July 2026, with the first 5 GW staged from 2029, and separately approved SK Hyper as its dedicated AIDC development company. Sources: [SK Telecom, 2026-07-05](https://news.sktelecom.com/en/3155) and [SK Telecom, 2026-07-23](https://news.sktelecom.com/en/3192).
+
+Other primary-source checks added to the portfolio include:
+
+- [OVHcloud AI Training capabilities](https://docs.ovhcloud.com/en/guides/public-cloud/ai-machine-learning/ai-training-capabilities) — BHS/Beauharnois is an active AI Training region; current hardware availability differs from GRA;
+- [KDDI, 2026-04-30](https://news.kddi.com/kddi/corporate/csr-topic/2026/04/30/7739.html) — company-reported renewable-electricity procurement, liquid cooling and Telehouse footprint;
+- [Verda, 2026-06-02](https://verda.com/blog/nvidia-vr200-r200-early-deployments) — announced Rubin deployments and expected 2027 capacity;
+- [Civo sovereign AI](https://www.civo.com/ai/sovereign) — public/private sovereign-AI architecture and residency controls;
+- [Sakura Internet, 2026-02-25](https://vip1b.www.sakura.ad.jp/corporate/information/newsreleases/2026/02/25/1968223641/) — company-announced operation of ~1,100 Blackwell GPUs in a containerized Ishikari facility;
+- [IONOS service catalog](https://docs.ionos.com/cloud/support/general-information/service-catalog) and [IONOS AI Model Hub governance](https://docs.ionos.com/cloud/ai/ai-model-hub/governance-and-compliance/eu-ai-act) — H200 GPU VMs and German/EU data-residency positioning;
+- [Firmus Southgate](https://firmus.co/infrastructure/southgate) and [Firmus 600 MW energy agreement](https://firmus.co/newsroom/firmus-secures-600-mw-energy-supply-agreement-in-south-australia-linked-to-1-2-gw-of-new-renewable-generation-and-battery-storage) — company-described energy-aligned/liquid-cooled infrastructure and energy agreement;
+- [Deutsche Telekom / T-Systems Industrial AI Cloud](https://www.telekom.com/en/media/media-information/archive/t-systems-brings-ai-into-the-supply-chain-1105624) — company-reported operation since February 2026 with 10,000 Blackwell GPUs;
+- [Nebius infrastructure partners](https://nebius.com/infrastructure-partners), [Meta agreement](https://nebius.com/newsroom/nebius-signs-new-ai-infrastructure-agreement-with-meta), and [Microsoft agreement](https://assets.nebius.com/assets/86625727-9e66-46c1-af79-c27d57434e3c/25-25580-1_Nebius%2520Group%2520N.V._6-K.pdf%3Fcache-buster%3D2025-09-08T21%3A23%3A09.625Z) — partner model and large U.S. counterparties;
+- [Scaleway H100](https://www.scaleway.com/en/h100/) — H100 availability in Paris/Warsaw and explicit European-jurisdiction positioning.
+
+### 5. Hydro-Québec data-centre tariff: proposal status qualified with current regulator source
+
+The 0.13 CAD/kWh figure is a **proposed** average price, not a final approved tariff. The canonical evidence already treated it as context-only and non-final. This pass adds the live Régie proceeding as a qualifying source so the current status is traceable.
+
+- [Hydro-Québec proposal](https://nouvelles.hydroquebec.com/nouvelles/communiques/tout-quebec/tarifs-centres-donnees-chaines-blocs-refleteront-valeur-electricite-renouvelable.html)
+- [Régie de l’énergie — R-4333-2026](https://www.regie-energie.qc.ca/fr/participants/dossiers/r-4333-2026) — status `En cours` at retrieval on 2026-09-01.
+
+### 6. Jurisdiction policy: legal references added without converting policy into law
+
+The country schedule remains a proposed owner/project policy and explicitly does **not** claim that every listed country is legally prohibited. Four Canadian legal/reference sources were added so reviewers can distinguish internal eligibility policy from Canadian sanctions/export-control law:
+
+- [Global Affairs Canada — Canadian sanctions](https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/index.aspx?lang=eng)
+- [Global Affairs Canada — Consolidated Canadian Autonomous Sanctions List](https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng)
+- [Justice Laws — Export and Import Permits Act](https://laws-lois.justice.gc.ca/eng/acts/E-19/index.html)
+- [Justice Laws — Export Control List (SOR/89-202)](https://laws-lois.justice.gc.ca/eng/Regulations/SOR-89-202/index.html)
+
+Important: the Government of Canada itself states that the consolidated autonomous sanctions list is an administrative aid, is not a regulation, and has no force of law. Governing regulations and transaction-specific legal review remain controlling.
+
+## Additional current-source spot checks
+
+These high-value active claims were checked against authoritative/current sources and did not require correction in this pass:
+
+- **Nunavik EAUFON-3:** current Kativik Regional Government material targets cable landings/activation in 2027; the canonical evidence correctly treats the phase as planned/under development rather than complete. [KRG EAUFON project update](https://www.krg.ca/en-CA/eaufon-mapping-tools-in-Ungava-Bay)
+- **Nunavik fibre funding benchmark:** CRTC Decision 2024-163 authorizes up to CAD 79,419,117 for a 933 km KRG transport-fibre project; the benchmark is correctly labeled a funding-intensity proxy, not a total construction unit cost. [CRTC 2024-163](https://crtc.gc.ca/eng/archive/2024/2024-163.pdf)
+- **Nunavut fibre funding benchmark:** CRTC Decision 2024-149 authorizes up to CAD 271,937,242 for approximately 1,300 km; again, the model correctly treats the ratio as a contribution proxy. [CRTC 2024-149](https://web.crtc.gc.ca/eng/archive/2024/2024-149.htm)
+- **PUE context:** the Uptime Institute 2025 survey reports average PUE values of 1.48 for facilities commissioned within five years and 1.44 for 20 MW+ facilities; the model correctly labels these as context only, not Kristal Farms site assumptions. [Uptime Institute Global Data Center Survey 2025](https://datacenter.uptimeinstitute.com/rs/711-RIA-145/images/2025.Annual.Survey.Report.pdf?version=0)
+- **Lac-Robertson:** Hydro-Québec documentation supports 21 MW hydro plus 4.8 MW diesel and states the system is not connected to the main transmission grid. [Hydro-Québec](https://nouvelles.hydroquebec.com/nouvelles/communiques/montreal/une-entente-visant-a-soutenir-les-initiatives-futures-de-pakua-shipi.html)
+
+## Automated controls added/strengthened
+
+- `pipelines/validate/validate_public_references.py`
+  - validates canonical evidence↔source relationships;
+  - requires valid evidence references for observations and benchmarks;
+  - requires International Portfolio candidate sources and HTTPS URLs;
+  - validates community infrastructure source URLs;
+  - validates grid `source_ids` against the source registry;
+  - validates public evidence source records;
+  - requires every public economic benchmark to resolve to public evidence.
+- `pipelines/validate/validate_economics.py`
+  - now recomputes all 10 benchmark values from source metadata and fails on arithmetic drift.
+- publication tests now require candidate references, policy/legal lookup references, UI source exposure, and public benchmark evidence resolution.
+
+## Test result
+
+`pytest -q`: **94 passed**.
+
+The TypeScript typecheck was not run because this snapshot does not contain `apps/web/node_modules`; no dependency installation was performed during the validation pass.
+
+## Remaining risk / next-pass priorities
+
+1. **Primary-source bias:** the International Portfolio sources are mostly company/first-party sources. They prove attribution, not independent truth. A second pass should add independent corroboration for capacity, operating status, ownership/control and customer concentration where it affects decisions.
+2. **Legacy internal evidence:** public evidence still contains explicitly typed `internal_legacy_research` records without public URLs. These remain historical context only and should never be treated as current authority.
+3. **Source freshness:** fast-changing project schedules, tariffs, sanctions and infrastructure status need a `valid_through`/freshness policy or scheduled revalidation.
+4. **Legal status:** sanctions/export-control references are lookup aids; legal screening must resolve the governing regulations and facts for the specific counterparty and transaction.
+5. **Publication release discipline:** this work updates the current working publication artifacts but does not create a newly signed/immutable formal release bundle.
+
+## Validation rule of thumb adopted in this pass
+
+A factual statement is not considered decision-ready merely because it has a URL. The minimum acceptable chain is:
+
+**claim → evidence record → attributable source → explicit scope/status/date → publication reference**
+
+For company-announced future capacity, the status must remain **planned/announced** until independently supported as operational.
+
+
+================================================================================================
+FILE: docs/data/economic-data-contract.md
+AUTHORITY: reference
+================================================================================================
+
+# Economic data contract
+
+## Evidence
+
+`research.economic_benchmark` stores externally sourced ratios and context. Every benchmark is marked `usable_as_site_estimate=false`.
+
+## Assumptions
+
+`scenario.assumption` is the explicit bridge from benchmark/context to a scenario. Unknown site costs are stored as `UNPRICED`, never silently treated as zero.
+
+## Results
+
+`scenario.result` stores derived outputs with algorithm key/version and completeness state.
+
+## Sensitivity
+
+`scenario.sensitivity_case` stores non-site distance stress cases.
+
+## Forbidden automatic outputs
+
+The generic economic workflow does not produce project IRR, bankable NPV, net project savings, site rank, project MW/head/design flow or a winning-site conclusion. Those require a project-specific dossier with engineering and commercial evidence.
+
+
+================================================================================================
+FILE: docs/data/evidence-matrix.md
+AUTHORITY: reference
+================================================================================================
+
+# Hydrology evidence matrix
+
+All 24 Hydro Resource Atlas river references currently remain `hydrology = partial`.
+
+This means:
+
+- an official WSC station entity exists;
+- official HYDAT collection/source metadata is registered;
+- station-filtered ingestion jobs exist;
+- full raw flow series are not materialized in the current fixture;
+- real-data climatology has therefore not been published from those series;
+- design flow and MW remain prohibited automatic outputs.
+
+Additional source depth for individual rivers improves evidence coverage but does not create a rank or preferred-site conclusion.
+
+
+================================================================================================
+FILE: docs/data/hydrology-data-contract.md
+AUTHORITY: reference
+================================================================================================
+
+# Hydrology data contract
+
+## Operational model
+
+Hydrology is stored as provenance-rich observations rather than pasted onto river geometry.
+
+```text
+research.source
+  ↓
+research.evidence
+  ↓
+research.observation_series
+  ↓
+research.observation
+  ↓
+research.observation_derivation   # derived values only
+```
+
+A series is materialized only after raw source rows are actually retrieved. In the current research runtime, full HYDAT series have not been materialized; empty placeholders are not published as data.
+
+## Source observations
+
+Examples include:
+
+- `daily_mean_discharge_m3s`;
+- `monthly_mean_discharge_m3s`;
+- annual maximum/minimum daily-mean discharge.
+
+Source values preserve record identity, measurement time, source release, retrieval time, quality/provisional flags when available and raw-artifact lineage.
+
+## Derived observations
+
+Derived hydrology must preserve:
+
+- derivation type;
+- algorithm key and semantic version;
+- source series IDs;
+- coverage start/end;
+- raw value count;
+- completeness fraction;
+- parameters.
+
+The current research statistic `hydrology.climatological_monthly_mean@1.0.0` is completeness-gated and is not an engineering design-flow selector.
+
+## Forbidden automatic outputs
+
+The hydrology pipeline must not automatically produce:
+
+- `design_flow_m3s`;
+- `project_gross_head_m`;
+- `project_net_head_m`;
+- `capacity_mw`;
+- `validated_hosting_capacity_kw`;
+- site score/rank.
+
+Those values require later engineering, utility/service validation or governance decisions.
+
+
+================================================================================================
+FILE: docs/data/hydrology-derivation-policy.md
+AUTHORITY: reference
+================================================================================================
+
+# Hydrology derivation policy
+
+## Research statistics are not engineering selections
+
+A climatological monthly mean may be derived automatically when source coverage satisfies a documented QA gate. A **design flow cannot**.
+
+The initial algorithm `hydrology.climatological_monthly_mean@1.0.0` uses configurable defaults:
+
+- minimum 10 sufficiently complete calendar years;
+- minimum annual completeness fraction 0.90;
+- minimum month completeness fraction 0.80.
+
+These are Kristal Farms research-QA defaults, not universal hydrology standards and not evidence of engineering sufficiency. Parameter changes require a versioned algorithm/configuration record.
+
+Low-flow frequency metrics, firm-energy selection, environmental flow, design flood and turbine design flow are deferred to project-specific hydrology and engineering work.
+
+
+================================================================================================
+FILE: docs/data/hydrology-observation-pipeline.md
+AUTHORITY: reference
+================================================================================================
+
+# Hydrology observation pipeline
+
+## Source model
+
+Official hydrometric data is ingested into a source-preserving workflow:
+
+`raw response → staging normalized rows → research source/evidence → research observation`
+
+Raw API rows are never written directly into `core` entities.
+
+## Metrics
+
+- `daily_mean_discharge_m3s` — source observation;
+- `monthly_mean_discharge_m3s` — source observation;
+- seasonal/climatological statistics — derived observations with algorithm version;
+- `design_flow_m3s` — engineering value and therefore never auto-created from daily/monthly observations.
+
+## Current runtime state
+
+Hydrology ingestion jobs are registered for the canonical WSC stations, but the full source series were not materialized in the research runtime because the external hosts were not reachable from that execution environment. No flow values were fabricated to fill the gap.
+
+
+================================================================================================
+FILE: docs/data/hydrology-source-versioning-and-time.md
+AUTHORITY: reference
+================================================================================================
+
+# Hydrology source versioning and time
+
+Hydrology uses two separate clocks.
+
+## Measurement time
+
+`valid_from`, `valid_to` and source date identify when a hydrologic value applies.
+
+## Knowledge time
+
+`retrieved_at`, `source_release`, evidence publication date and raw-artifact hash identify what the project knew and from which release.
+
+This distinction matters because official metadata can change. Natashquan station 02WB003 currently retains both the WSC `gross_drainage_area_km2 = 15400` observation and the CEHQ `station_basin_area_km2 = 15693` observation under separate metrics/evidence; neither silently overwrites the other.
+
+The current HYDAT source manifest records release `HYDAT_20260717`.
 
 
 ================================================================================================
@@ -5893,6 +6297,29 @@ code_version
 ## Manual review
 
 Ambiguous entity matches, regulatory interpretation, or source conflicts should enter a review queue/state rather than being guessed by automation.
+
+
+================================================================================================
+FILE: docs/data/integrated-atlas-data-contract.md
+AUTHORITY: reference
+================================================================================================
+
+# Integrated Atlas data contract
+
+## Purpose
+
+Connect canonical hydrology to community, logistics, telecom, energy and evidence context without inventing geometry or site merit.
+
+## Domain rules
+
+- approximate community centroids are not port/project coordinates;
+- conceptual research corridors use `geometry = NULL` and are not routes/boundaries;
+- marine/fibre/service context may be related to communities without route geometry;
+- external projects use `role = external_reference`;
+- legacy screening classifications are provenance only;
+- `rights_governance` remains research-required unless specific authoritative evidence is attached;
+- legacy river/community links do not imply site proximity, consent or project selection;
+- no public property or visual style may encode site rank or merit while ranking is disabled.
 
 
 ================================================================================================
@@ -6454,7 +6881,7 @@ Related documents:
 - [Accessibility](accessibility.md)
 - [State and permalinks](state-and-permalinks.md)
 - [Frontend architecture](../architecture/frontend.md)
-- [Explorer data contract](../60-application-data/EXPLORER_DATA_CONTRACT.md)
+- [Explorer data contract](../product/explorer-data-contract.md)
 - [ADR-014 — Integrated atlas uses relations, not synthetic geometry](../adr/0014-integrated-atlas-uses-relations-not-synthetic-geometry.md)
 
 ---
@@ -6783,7 +7210,6 @@ It SHOULD NOT render the complete entity record.
 ### 7.2 Example: hydrometric station
 
 Illustrative structure:
-
 ```text
 HYDROMETRIC STATION                       VERIFIED
 
@@ -7835,24 +8261,25 @@ This documentation covers the **Kristal Farms infrastructure project** and the a
 
 1. [Project state](00-control/PROJECT_STATE.md)
 2. [Strategic principles](00-control/STRATEGIC_PRINCIPLES.md)
-3. [Reference architecture — English](10-core/Kristal_Farms_Reference_Architecture_EN.md) or [français](10-core/Architecture_de_reference_Kristal_Farms_FR.md)
-4. [Deployment strategy — English](10-core/deployment/DEPLOYMENT_STRATEGY_EN.md) or [français](10-core/deployment/STRATEGIE_DE_DEPLOIEMENT_FR.md)
+3. [Project reference architecture — English](10-core/Kristal_Farms_Project_Reference_Architecture_EN.md) or [architecture de référence du projet — français](10-core/Architecture_de_reference_du_projet_Kristal_Farms_FR.md)
+4. [Deployment strategy — English](10-core/deployment/DEPLOYMENT_STRATEGY_EN.md) or [stratégie de déploiement — français](10-core/deployment/STRATEGIE_DE_DEPLOIEMENT_FR.md)
 5. [Corridor dossier strategy](00-control/CORRIDOR_DOSSIER_STRATEGY.md)
 6. [Responsible international tenant governance](00-control/INTERNATIONAL_TENANT_GOVERNANCE.md)
 7. [Plan de mobilisation internationale — français](10-core/strategy/PLAN_MOBILISATION_INTERNATIONALE_KRISTAL_FARMS_FR.md)
-8. [Tenant-controlled encrypted environment — English](10-core/tenancy/BLACK_BOX_TENANCY_MODEL_EN.md) or [français](10-core/tenancy/MODELE_LOCATION_BLACK_BOX_FR.md)
+8. [Tenant-controlled encrypted environment — English](10-core/tenancy/BLACK_BOX_TENANCY_MODEL_EN.md) or [environnement chiffré sous contrôle du locataire — français](10-core/tenancy/MODELE_LOCATION_BLACK_BOX_FR.md)
 
 ### Application and data
 
 1. [Application product vision](product/vision.md)
-2. [Architecture overview](architecture/overview.md)
-3. [Kristal Farms domain principles](domain/kristal-farms-principles.md)
-4. [Data model](data/data-model.md)
-5. [Evidence model](data/evidence-model.md)
-6. [Map observatory interaction](frontend/map-observatory-interaction.md)
-7. [Layer catalog](frontend/layer-catalog.md)
-8. [API overview](api/overview.md)
-9. [Implementation plan](roadmap/implementation-plan.md)
+2. [Software & data platform architecture](architecture/overview.md)
+3. [Information architecture](architecture/information-architecture.md)
+4. [Kristal Farms domain principles](domain/kristal-farms-principles.md)
+5. [Data model](data/data-model.md)
+6. [Evidence model](data/evidence-model.md)
+7. [Map observatory interaction](frontend/map-observatory-interaction.md)
+8. [Layer catalog](frontend/layer-catalog.md)
+9. [API overview](api/overview.md)
+10. [Implementation plan](roadmap/implementation-plan.md)
 
 ### Mine infrastructure reuse and storage
 
@@ -7874,7 +8301,7 @@ This documentation covers the **Kristal Farms infrastructure project** and the a
 The active authority order is defined in [Document Authority](00-control/DOCUMENT_AUTHORITY.md). In short:
 
 - current project-control documents govern intent and interpretation;
-- current reference architecture governs the physical/commercial model;
+- current project reference architecture governs the physical/commercial model;
 - source evidence governs factual claims within its actual scope;
 - assumptions remain assumptions;
 - archived material never silently overrides active state.
@@ -7896,6 +8323,34 @@ The `contracts/` directory contains schemas and policy files intended to be cons
 ## Long-horizon material
 
 Optional human-infrastructure, learning and education concepts are isolated under [Long-Horizon Concepts](70-long-horizon/README.md). They are not prerequisites or commitments for the first energy/compute deployment.
+
+
+================================================================================================
+FILE: docs/product/explorer-data-contract.md
+AUTHORITY: reference
+================================================================================================
+
+# Explorer data contract
+
+## Primary entity flows
+
+- select community → show marine/telecom/energy context and evidence;
+- select hydrometric station → show source/observations and related river;
+- select river → show evidence dimensions, monitoring station and contextual relations;
+- select external reference project → show role/status/source and linked context.
+
+## API targets
+
+- `GET /catalog`
+- `GET /entities/{id}`
+- `GET /entities/{id}/evidence`
+- `GET /entities/{id}/screening`
+- `GET /search`
+- `GET /showcase/stories/kristal-farms-core-thesis`
+
+## No implicit ranking
+
+List order defaults to name/type/relevance, never site merit. Marker size is not a merit signal. Evidence status is visually distinct from opportunity quality.
 
 
 ================================================================================================
@@ -7948,6 +8403,45 @@ Explorer uses the shared [Map observatory interaction](../frontend/map-observato
 
 
 ================================================================================================
+FILE: docs/product/integrated-atlas.md
+AUTHORITY: reference
+================================================================================================
+
+# Integrated Atlas
+
+**Release date:** 2026-08-30
+
+## Purpose
+
+The integrated atlas connects hydrology, communities, marine logistics, telecom, energy references, environment context and screening state through canonical IDs, relations, evidence and observations. It does not force every piece of knowledge into map geometry.
+
+## Current integrated content
+
+- 24 river references and 24 WSC hydrometric stations;
+- community reference points explicitly marked as approximate centroids where applicable;
+- conceptual research corridors with `geometry = NULL` and `not_route = true`;
+- Nunavik marine-management context without facility-specific heavy-lift inference;
+- operating/planned telecom relationships without invented cable geometry;
+- North Labrador ferry/service context without project-cargo certification;
+- selected external renewable-energy reference projects;
+- legacy environmental records retained only as unverified historical evidence.
+
+## Public release
+
+Release `2026.08.30` is immutable and publishes only controlled public-safe context. Legacy screening tiers are not included in public community properties.
+
+## Showcase / Explorer
+
+- `packages/catalog/catalog.json` defines the data-driven layer catalog;
+- `packages/showcase/story.json` defines the guided narrative without custom site logic;
+- `data/publish/current/` contains current public artifacts.
+
+## Remaining gaps
+
+The atlas does not establish authoritative environment or rights/governance coverage for candidate projects. It also does not automatically materialize official river/basin geometry, full HYDAT flow series, project head, design flow, MW or site ranking.
+
+
+================================================================================================
 FILE: docs/product/scenario-studio.md
 AUTHORITY: reference
 ================================================================================================
@@ -7985,6 +8479,28 @@ A scenario is a controlled hypothesis over a known dataset version. It is never 
 ## UX
 
 The scenario UI should show assumptions next to outputs. It should be difficult to screenshot a result without also exposing that the result is scenario-derived.
+
+
+================================================================================================
+FILE: docs/product/showcase-data-contract.md
+AUTHORITY: reference
+================================================================================================
+
+# Showcase data contract
+
+The Showcase is configuration-driven through `packages/showcase/story.json`. Scenes select catalog layers and narrative keys; they do not contain custom site logic.
+
+Required interpretation rules:
+
+1. existing remote systems are community infrastructure, not spare multi-MW compute supply;
+2. marine/fibre context matters, but route/capacity claims require evidence;
+3. WSC station points are monitoring assets, not dam sites;
+4. missing geometry remains missing;
+5. Kristal Farms architecture is explanatory: new generation → protected community interface → flexible compute → fibre;
+6. economic frontier outputs are not project savings;
+7. the final action opens the Explorer/Evidence Panel.
+
+The conceptual corridor illustration is a design reference only and is not a data source.
 
 
 ================================================================================================
@@ -8178,6 +8694,41 @@ Preserve original source unit in import metadata when conversion occurs. Record 
 ## Percentages
 
 Store/display conventions must be explicit: `80%` should not ambiguously appear as numeric `80` in one system and `0.8` in another without schema definition.
+
+
+================================================================================================
+FILE: docs/scenarios/economic-method.md
+AUTHORITY: reference
+================================================================================================
+
+# Economic architecture method
+
+## Question
+
+For the **same remote generation opportunity**, what enabling-infrastructure burden is associated with:
+
+A. long electrical export plus long road access; versus
+B. local digital-value export, initially represented by northern fibre funding-intensity proxies, with Kristal Farms-specific local infrastructure left explicitly unpriced?
+
+## Evidence band
+
+The current model uses completed-project and public-program references for transmission, roads and northern fibre. These references are **not interchangeable unit construction costs** and are not promoted to site estimates.
+
+## Frontier
+
+For each generic non-site stress case:
+
+`conventional_low = HV_km × transmission_low + road_km × road_low`
+
+`conventional_high = HV_km × transmission_high + road_km × road_high`
+
+`fibre_proxy_low/high = fibre_km × fibre_funding_proxy_low/high`
+
+`conservative remaining budget = conventional_low − fibre_proxy_high`
+
+`optimistic remaining budget = conventional_high − fibre_proxy_low`
+
+A positive value is **not savings**. It is only the remaining reference-component envelope available for still-unpriced Kristal Farms-specific infrastructure before parity on those compared components.
 
 
 ================================================================================================
@@ -8639,6 +9190,10 @@ See `docs/00-control/` and `docs/adr/`.
 `REBUILD_OBSERVATORY.pyw` is the canonical local post-update launcher. A successful run means governed publishers completed, the Python test suite passed, the TypeScript typecheck passed, the Next.js production build passed, and the development Observatory was health-checked before browser launch. Generated caches may be cleaned automatically; source data, `.venv`, `node_modules`, and Git history are never part of that cleanup.
 
 `START_OBSERVATORY.bat` is intentionally a quick-start path and does not substitute for post-update validation.
+
+## Repository information architecture
+
+Project/domain authority is organized in the numbered documentation families, while software/data-platform implementation is organized by responsibility (`docs/architecture`, `docs/data`, `docs/product`, `docs/frontend`, `docs/api`, `docs/scenarios`). Historical material under `archive/` is provenance only and is excluded from default local search/index behavior. Specialist utilities live under `tools/`; the root retains only canonical launchers and repository-level control files.
 
 
 ================================================================================================

@@ -2,7 +2,7 @@
 
 repository: Rejean-McCormick/kOA-Linux
 source_path: C:\mycode\kOA-Linux\koa-linux
-source_commit: 254eb115659f7b7f7951417b1b448a00e1a04cab
+source_commit: abe6915e607aff70f080cb686f15212002a2d109
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -17,11 +17,11 @@ source_files: 56
 included_files: 56
 excluded_files: 0
 duplicate_files: 0
-content_bytes: 1759632
+content_bytes: 1772568
 authority_counts: {"canonical":39,"reference":17}
-generated_at: 2026-09-01T13:52:46-04:00
+generated_at: 2026-09-10T10:57:09-04:00
 files: 56
-content_sha256: 069b435a7b5e86b418f7e0202d80d43d374be6059d6961ed4dba1f3fca0bd955
+content_sha256: f90d85cc0dc0ddda26f51c05f755415be8239ce6c508a12ebe3dafa7020d58be
 
 ================================================================================================
 FILE INDEX
@@ -167,6 +167,10 @@ This is the single entry point for AI-assisted work.
 
 11. When the task concerns remote resilience, asynchronous failure, a multi-owner transition, large media in messages, experience aggregation, a read projection, or a cache, load `contracts/architecture-patterns.contract.json`, `02-system/34-architecture-patterns.md`, and the applicable artifact schema. Treat adapters, projections, and caches as non-authoritative; require terminal evidence for workflows and dead-letter closure.
 
+## Product UI portability context
+
+When reasoning about Koali interfaces, preserve product autonomy: a product UI can be standalone and can also contribute to an optional integrated host. Do not assume kOA Spaces owns product pages or is required for standalone operation. Treat surface profiles as projections of one product implementation, and treat removal of one product as independent from unrelated product interfaces.
+
 
 ================================================================================================
 FILE: docs/contracts/ai-navigation.contract.json
@@ -213,7 +217,11 @@ AUTHORITY: canonical
       "04-components/subsystems/koa-spaces.md",
       "contracts/artifact-contracts/space-definition.schema.json",
       "contracts/artifact-contracts/module-interface-manifest.schema.json",
-      "contracts/artifact-contracts/space-activation-receipt.schema.json"
+      "contracts/artifact-contracts/space-activation-receipt.schema.json",
+      "02-system/24-koa-spaces-design-system.md",
+      "contracts/artifact-contracts/interface-theme.schema.json",
+      "contracts/artifact-contracts/interface-asset-manifest.schema.json",
+      "11-recipes/user-lightweight/koa-spaces-reference-frontend.md"
     ],
     "architecture_pattern_sources": [
       "contracts/architecture-patterns.contract.json",
@@ -257,7 +265,10 @@ AUTHORITY: canonical
     "dead_letter_silent_discard_allowed": false,
     "distributed_workflow_hidden_partial_success_allowed": false,
     "large_payload_may_be_embedded_above_profile_limit": false,
-    "experience_view_adapter_may_own_business_logic": false
+    "experience_view_adapter_may_own_business_logic": false,
+    "koa_spaces_may_duplicate_contributing_business_functions": false,
+    "web_technology_implies_public_internet_dependency": false,
+    "offline_capable_interface_requires_local_runtime_assets": true
   }
 }
 
@@ -283,7 +294,7 @@ AUTHORITY: reference
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:dbb47ea5117b470c526155011874dd34e2fa37cb6bfdb8b02e50828fd3d0e7e2",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "koa-navigation",
   "scope": {
     "kind": "global",
@@ -327,7 +338,7 @@ AUTHORITY: reference
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:dbb47ea5117b470c526155011874dd34e2fa37cb6bfdb8b02e50828fd3d0e7e2",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "subsystem-ariane",
   "scope": {
     "kind": "subsystem_boundary",
@@ -373,7 +384,7 @@ AUTHORITY: reference
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:dbb47ea5117b470c526155011874dd34e2fa37cb6bfdb8b02e50828fd3d0e7e2",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "subsystem-koa_spaces",
   "scope": {
     "kind": "subsystem_boundary",
@@ -419,7 +430,7 @@ AUTHORITY: reference
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:dbb47ea5117b470c526155011874dd34e2fa37cb6bfdb8b02e50828fd3d0e7e2",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "subsystem-konnaxion",
   "scope": {
     "kind": "subsystem_boundary",
@@ -465,7 +476,7 @@ AUTHORITY: reference
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:dbb47ea5117b470c526155011874dd34e2fa37cb6bfdb8b02e50828fd3d0e7e2",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "subsystem-orgo",
   "scope": {
     "kind": "subsystem_boundary",
@@ -511,7 +522,7 @@ AUTHORITY: reference
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:dbb47ea5117b470c526155011874dd34e2fa37cb6bfdb8b02e50828fd3d0e7e2",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "subsystem-semantik_architect",
   "scope": {
     "kind": "subsystem_boundary",
@@ -557,7 +568,7 @@ AUTHORITY: reference
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:dbb47ea5117b470c526155011874dd34e2fa37cb6bfdb8b02e50828fd3d0e7e2",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "subsystem-sentient",
   "scope": {
     "kind": "subsystem_boundary",
@@ -3518,6 +3529,17 @@ AUTHORITY: reference
         "LOCK-CODE-FS-008",
         "LOCK-CODE-FS-009",
         "LOCK-CODE-FS-010"
+      ],
+      "decision_ids": []
+    },
+    {
+      "path": "02-system/24-koa-spaces-design-system.md",
+      "doc_id": "DOC-SYS-035",
+      "document_class": "normative_markdown",
+      "status": "active",
+      "requirement_ids": [],
+      "assertion_ids": [
+        "LOCK-SPACES-001"
       ],
       "decision_ids": []
     },
@@ -15766,6 +15788,17 @@ AUTHORITY: reference
       "decision_ids": []
     },
     {
+      "path": "11-recipes/user-lightweight/koa-spaces-reference-frontend.md",
+      "doc_id": "DOC-REC-KOA-SPACES-003",
+      "document_class": "recipe",
+      "status": "active",
+      "requirement_ids": [],
+      "assertion_ids": [
+        "LOCK-SPACES-001"
+      ],
+      "decision_ids": []
+    },
+    {
       "path": "11-recipes/user-lightweight/koa-spaces-school-example.md",
       "doc_id": "DOC-REC-KOA-SPACES-002",
       "document_class": "non_normative_recipe",
@@ -16139,6 +16172,33 @@ AUTHORITY: reference
       "decision_ids": []
     },
     {
+      "path": "status/2026-08-28-technical-maturity-assessment.md",
+      "doc_id": "DOC-STATUS-002",
+      "document_class": "explanatory_markdown",
+      "status": "active",
+      "requirement_ids": [],
+      "assertion_ids": [],
+      "decision_ids": []
+    },
+    {
+      "path": "status/2026-09-04-technical-progress-and-maturity-assessment.md",
+      "doc_id": "DOC-STATUS-003",
+      "document_class": "explanatory_markdown",
+      "status": "active",
+      "requirement_ids": [],
+      "assertion_ids": [],
+      "decision_ids": []
+    },
+    {
+      "path": "status/2026-09-08-technical-progress-and-maturity-assessment.md",
+      "doc_id": "DOC-STATUS-004",
+      "document_class": "explanatory_markdown",
+      "status": "active",
+      "requirement_ids": [],
+      "assertion_ids": [],
+      "decision_ids": []
+    },
+    {
       "path": "status/README.md",
       "doc_id": "DOC-STATUS-000",
       "document_class": "explanatory_markdown",
@@ -16239,21 +16299,21 @@ AUTHORITY: reference
       "path": "contracts/subsystems/koa-spaces.subsystem.json",
       "title": "kOA Spaces",
       "status": "active",
-      "version": "1.0.0"
+      "version": "1.1.0"
     },
     {
       "id": "konnaxion",
       "path": "contracts/subsystems/konnaxion.subsystem.json",
       "title": "Konnaxion",
       "status": "active",
-      "version": "1.1.0"
+      "version": "1.2.0"
     },
     {
       "id": "orgo",
       "path": "contracts/subsystems/orgo.subsystem.json",
       "title": "Orgo",
       "status": "active",
-      "version": "1.1.0"
+      "version": "1.3.0"
     },
     {
       "id": "semantik_architect",
@@ -52784,6 +52844,9 @@ AUTHORITY: canonical
         "LOCK-SPACES-001",
         "LOCK-LIFE-001",
         "LOCK-LIFE-002"
+      ],
+      "supporting_schema_refs": [
+        "contracts/artifact-contracts/interface-theme.schema.json"
       ]
     },
     "module_interface_manifest": {
@@ -52795,7 +52858,9 @@ AUTHORITY: canonical
       "supporting_schema_refs": [
         "contracts/artifact-contracts/route-contribution.schema.json",
         "contracts/artifact-contracts/sidebar-navigation.schema.json",
-        "contracts/artifact-contracts/topbar-widget.schema.json"
+        "contracts/artifact-contracts/topbar-widget.schema.json",
+        "contracts/artifact-contracts/interface-asset-manifest.schema.json",
+        "contracts/artifact-contracts/interface-theme.schema.json"
       ],
       "example_refs": [],
       "lifecycle_profile": "versioned_configuration",
@@ -67161,6 +67226,14 @@ AUTHORITY: canonical
       ],
       "degraded_behavior": "Container-dependent capabilities are unavailable; core local operation continues without silent substitution.",
       "rationale": "When containers are used, the user-lightweight profile prefers a rootless OCI-compatible runtime and does not make containers a baseline requirement."
+    },
+    "user.native_workspace": {
+      "state": "required",
+      "conditions": [
+        "The local graphical session and native workspace admission policy are available."
+      ],
+      "degraded_behavior": "Native applications are unavailable; Koali and other local declared capabilities continue without silent substitution or desktop fallback.",
+      "rationale": "The user-lightweight endpoint admits policy-controlled native desktop applications through the unprivileged user-session broker."
     }
   },
   "components": {
@@ -69281,12 +69354,12 @@ AUTHORITY: canonical
   "subsystem_id": "koa_spaces",
   "title": "kOA Spaces",
   "status": "active",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "relationship_to_koa": "integrated_optional_subsystem",
   "optional": true,
   "replaceable": true,
   "offline_capable": true,
-  "koa_role": "Independent contextual experience subsystem that composes navigation and interface contributions without owning business authority.",
+  "koa_role": "Independent optional integrated experience-composition host that assembles admitted product interface contributions without owning product standalone runtimes or business authority.",
   "official_documentation": {
     "mount_path": "subsystems/koa-spaces",
     "mount_kind": "directory_junction_or_symbolic_link",
@@ -69312,7 +69385,9 @@ AUTHORITY: canonical
     "media authority",
     "authorization decisions",
     "module-specific page implementation",
-    "direct cross-subsystem writes"
+    "direct cross-subsystem writes",
+    "duplicate business functions of contributing systems",
+    "public Internet dependency for locally declared offline-capable presentation"
   ],
   "presentation_model": {
     "public_name": "kOA Spaces",
@@ -69322,7 +69397,17 @@ AUTHORITY: canonical
     "main_surface": "single_shared_page_surface",
     "sidebar_visible_depth": 2,
     "public_module_aliases_allowed": true,
-    "stable_module_ids_required": true
+    "stable_module_ids_required": true,
+    "technology_alignment": "shared_visual_and_interaction_patterns_allowed_without_business_function_duplication",
+    "web_technology_implies_internet_dependency": false,
+    "offline_local_assets": "required_for_declared_offline_capable_surfaces",
+    "composition_host_role": "optional_integrated_host",
+    "product_registry_source": "installed_and_admitted_product_manifests",
+    "hard_coded_product_registry": false,
+    "product_standalone_operation_preserved": true,
+    "shared_shell_contract": "reusable_koali_ui_primitives_not_spaces_business_authority",
+    "surface_profiles": "product_owned_projections",
+    "context_inspector_content_owner": "active_product"
   },
   "artifact_contracts": [
     "contracts/artifact-contracts/space-definition.schema.json",
@@ -69330,7 +69415,12 @@ AUTHORITY: canonical
     "contracts/artifact-contracts/sidebar-navigation.schema.json",
     "contracts/artifact-contracts/topbar-widget.schema.json",
     "contracts/artifact-contracts/route-contribution.schema.json",
-    "contracts/artifact-contracts/space-activation-receipt.schema.json"
+    "contracts/artifact-contracts/space-activation-receipt.schema.json",
+    "contracts/artifact-contracts/interface-theme.schema.json",
+    "contracts/artifact-contracts/interface-asset-manifest.schema.json",
+    "contracts/artifact-contracts/product-surface-profile.schema.json",
+    "contracts/artifact-contracts/presentation-preferences.schema.json",
+    "contracts/artifact-contracts/accent-palette.schema.json"
   ],
   "boundary_rules": {
     "direct_cross_subsystem_writes": "prohibited",
@@ -69343,18 +69433,27 @@ AUTHORITY: canonical
     "space_alias_changes_module_identity": false,
     "interface_manifest_may_bypass_module_authorization": false,
     "module_routes_are_contributions_not_authority": true,
-    "replacement_preserves_business_state": true
+    "replacement_preserves_business_state": true,
+    "frontend_alignment_transfers_business_authority": false,
+    "duplicate_subsystem_business_functions": "prohibited",
+    "public_internet_required_for_local_offline_surface": false,
+    "product_standalone_operation_depends_on_koa_spaces": false,
+    "private_cross_product_ui_imports_for_shell_behavior": "prohibited",
+    "product_removal_requires_unrelated_ui_source_changes": false,
+    "integrated_product_registry_hard_coded": "prohibited"
   },
   "documentation": {
     "koa_boundary_document": "04-components/subsystems/koa-spaces.md",
     "system_layer_document": "02-system/21-koa-spaces-experience-layer.md",
     "composition_document": "02-system/22-koa-spaces-interface-composition.md",
-    "activation_recipe": "11-recipes/user-lightweight/koa-spaces-activation.md"
+    "activation_recipe": "11-recipes/user-lightweight/koa-spaces-activation.md",
+    "design_system_document": "02-system/24-koa-spaces-design-system.md",
+    "reference_frontend_recipe": "11-recipes/user-lightweight/koa-spaces-reference-frontend.md"
   },
   "authority": "non_authoritative_presentation",
   "core_dependency": "declared_interfaces_only",
   "activation_model": "profile_conditioned_atomic_activation",
-  "deactivation_effect": "presentation_unavailable_business_and_core_authority_preserved"
+  "deactivation_effect": "integrated_composition_unavailable_product_standalone_and_business_authority_preserved"
 }
 
 
@@ -69368,9 +69467,9 @@ AUTHORITY: canonical
   "subsystem_id": "konnaxion",
   "title": "Konnaxion",
   "status": "active",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "relationship_to_koa": "integrated_subsystem",
-  "koa_role": "Independent Konnaxion ecosystem system integrated into kOA-Linux through a host-relative subsystem boundary.",
+  "koa_role": "Independent civic-participation owner application integrated into kOA-Linux through a host-relative subsystem boundary.",
   "official_documentation": {
     "mount_path": "subsystems/konnaxion",
     "mount_kind": "directory_junction_or_symbolic_link",
@@ -69395,17 +69494,38 @@ AUTHORITY: canonical
     "internal state machine",
     "complete subsystem API",
     "internal user interface",
-    "subsystem-specific validation logic"
+    "subsystem-specific validation logic",
+    "internal navigation and page composition",
+    "standalone interface runtime",
+    "product surface-profile definitions"
   ],
   "boundary_rules": {
     "direct_cross_subsystem_writes": "prohibited",
     "undeclared_substitution": "prohibited",
     "internal_behavior_duplication": "prohibited",
     "official_documentation_mount": "subsystems/konnaxion",
-    "host_relative_subsystem_classification_transfers_internal_authority": false
+    "host_relative_subsystem_classification_transfers_internal_authority": false,
+    "presentation_visibility_is_business_authorization": false,
+    "host_may_replace_internal_navigation": false,
+    "standalone_operation_requires_koa_spaces": false,
+    "private_cross_product_ui_imports_for_shell_behavior": "prohibited",
+    "removal_requires_unrelated_product_source_changes": false
   },
   "documentation": {
     "koa_boundary_document": "04-components/subsystems/konnaxion.md"
+  },
+  "presentation_boundary": {
+    "standalone_interface_owned_by": "konnaxion",
+    "standalone_operation_without_koa_spaces": true,
+    "integrated_composition_host": "optional_and_replaceable",
+    "integrated_surface_kind": "local_module_surface",
+    "surface_profiles_owned_by": "konnaxion",
+    "navigation_and_page_implementation_owned_by": "konnaxion",
+    "manifest_contract": "module_interface_manifest",
+    "capability_projection": "presentation_only",
+    "owner_reauthorization_required": true,
+    "shared_shell_private_cross_product_dependency": "prohibited",
+    "removal_must_not_break_unrelated_products": true
   }
 }
 
@@ -69420,9 +69540,9 @@ AUTHORITY: canonical
   "subsystem_id": "orgo",
   "title": "Orgo",
   "status": "active",
-  "version": "1.1.0",
+  "version": "1.3.0",
   "relationship_to_koa": "integrated_subsystem",
-  "koa_role": "Independent Orgo ecosystem system integrated into kOA-Linux through a host-relative subsystem boundary.",
+  "koa_role": "Independent task, organization, scheduling owner application integrated into kOA-Linux through a host-relative subsystem boundary.",
   "official_documentation": {
     "mount_path": "subsystems/orgo",
     "mount_kind": "directory_junction_or_symbolic_link",
@@ -69447,17 +69567,38 @@ AUTHORITY: canonical
     "internal state machine",
     "complete subsystem API",
     "internal user interface",
-    "subsystem-specific validation logic"
+    "subsystem-specific validation logic",
+    "internal navigation and page composition",
+    "standalone interface runtime",
+    "product surface-profile definitions"
   ],
   "boundary_rules": {
     "direct_cross_subsystem_writes": "prohibited",
     "undeclared_substitution": "prohibited",
     "internal_behavior_duplication": "prohibited",
     "official_documentation_mount": "subsystems/orgo",
-    "host_relative_subsystem_classification_transfers_internal_authority": false
+    "host_relative_subsystem_classification_transfers_internal_authority": false,
+    "presentation_visibility_is_business_authorization": false,
+    "host_may_replace_internal_navigation": false,
+    "standalone_operation_requires_koa_spaces": false,
+    "private_cross_product_ui_imports_for_shell_behavior": "prohibited",
+    "removal_requires_unrelated_product_source_changes": false
   },
   "documentation": {
     "koa_boundary_document": "04-components/subsystems/orgo.md"
+  },
+  "presentation_boundary": {
+    "standalone_interface_owned_by": "orgo",
+    "standalone_operation_without_koa_spaces": true,
+    "integrated_composition_host": "optional_and_replaceable",
+    "integrated_surface_kind": "local_module_surface",
+    "surface_profiles_owned_by": "orgo",
+    "navigation_and_page_implementation_owned_by": "orgo",
+    "manifest_contract": "module_interface_manifest",
+    "capability_projection": "presentation_only",
+    "owner_reauthorization_required": true,
+    "shared_shell_private_cross_product_dependency": "prohibited",
+    "removal_must_not_break_unrelated_products": true
   }
 }
 
@@ -69572,7 +69713,7 @@ AUTHORITY: canonical
 
 {
   "$schema": "../schemas/system.contract.schema.json",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "status": "active",
   "language": "en",
   "effective_at": "2026-08-05T19:14:00-04:00",
@@ -69655,7 +69796,9 @@ AUTHORITY: canonical
       "contract_driven_integration",
       "safe_degradation",
       "selective_audit",
-      "portable_artifacts"
+      "portable_artifacts",
+      "modular_product_interfaces",
+      "dynamic_experience_composition"
     ],
     "global_non_goals": [
       "making every deployment an appliance",
@@ -69673,7 +69816,11 @@ AUTHORITY: canonical
       "treating menu visibility, route presence, or a top-bar widget as authorization",
       "requiring one user interface or one Space definition for every deployment",
       "allowing a Space definition to own or mutate business authority",
-      "treating integrated ecosystem systems as native kOA-Linux components"
+      "treating integrated ecosystem systems as native kOA-Linux components",
+      "making an optional experience-composition host mandatory for independently operable product interfaces",
+      "hard-coding installed product identities into shared shell implementation",
+      "requiring private cross-product UI imports for ordinary shell or navigation behavior",
+      "implementing reduced surface profiles as duplicate product frontends"
     ],
     "ecosystem_scope": "koa_digital_ecosystem"
   },
@@ -69713,7 +69860,10 @@ AUTHORITY: canonical
         "safe_degradation",
         "release_and_artifact_identity",
         "optional_experience_subsystems",
-        "contextual_interface_composition"
+        "contextual_interface_composition",
+        "portable_product_interfaces",
+        "dynamic_product_registry",
+        "surface_profile_composition"
       ]
     },
     {
@@ -70581,7 +70731,11 @@ AUTHORITY: canonical
       "cross_subsystem_writes",
       "view_adapter_business_logic",
       "projection_authority",
-      "cache_authority"
+      "cache_authority",
+      "duplicate_module_business_functions",
+      "public_internet_dependency_for_local_offline_capabilities",
+      "module_internal_navigation",
+      "subsystem_standalone_interface_runtime"
     ],
     "inputs": [
       "space_definition",
@@ -70592,7 +70746,9 @@ AUTHORITY: canonical
       "experience_view_adapter",
       "cqrs_projection",
       "cache_policy",
-      "integration_resilience_policy"
+      "integration_resilience_policy",
+      "interface_theme",
+      "interface_asset_manifest"
     ],
     "activation": {
       "model": "validate_stage_activate_atomically",
@@ -70603,7 +70759,9 @@ AUTHORITY: canonical
     "degradation": {
       "missing_or_failed_subsystem": "native_interfaces_or_administrative_fallback_remain_available",
       "invalid_space_definition": "reject_and_preserve_previous_valid_space",
-      "missing_module": "hide_or_mark_unavailable_without_reassigning_authority"
+      "missing_module": "hide_or_mark_unavailable_without_reassigning_authority",
+      "missing_remote_network": "preserve_local_frame_and_declared_local_module_capabilities",
+      "missing_remote_presentation_asset": "invalid_for_a_surface_claiming_local_offline_availability"
     },
     "lock_refs": [
       "LOCK-SPACES-001",
@@ -70611,7 +70769,14 @@ AUTHORITY: canonical
       "LOCK-CQRS-001",
       "LOCK-CACHE-001",
       "LOCK-RES-001"
-    ]
+    ],
+    "composition_boundary": {
+      "global_shell_scope": "outer_koali_navigation_and_composition",
+      "local_module_surface_preserves_owner_internal_navigation": true,
+      "presentation_capability_snapshot_is_authorization": false,
+      "removing_one_product_requires_unrelated_ui_source_changes": false,
+      "experience_host_required_for_subsystem_standalone_ui": false
+    }
   },
   "architecture_patterns": {
     "contract_ref": "contracts/architecture-patterns.contract.json",
@@ -70693,7 +70858,7 @@ AUTHORITY: canonical
 
 {
   "$schema": "../schemas/terminology.contract.schema.json",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "status": "active",
   "language": "en",
   "effective_at": "2026-08-05T19:14:00-04:00",
@@ -71055,6 +71220,18 @@ AUTHORITY: canonical
       "left_term_id": "TERM-ART-MODULE-INTERFACE-MANIFEST",
       "right_term_id": "TERM-COMP-COMPONENT-CONTRACT",
       "required_distinction": "An interface manifest contributes presentation metadata; a component or subsystem contract owns architecture, authority, behavior, and integration boundaries."
+    },
+    {
+      "rule_id": "TERM-DIST-018",
+      "left_term_id": "TERM-UI-PRODUCT-INTERFACE",
+      "right_term_id": "TERM-SUBSYSTEM-KOA-SPACES",
+      "required_distinction": "A product interface is product-owned and may remain standalone; kOA Spaces is an optional integrated composition host and does not own the product interface."
+    },
+    {
+      "rule_id": "TERM-DIST-019",
+      "left_term_id": "TERM-UI-SURFACE-PROFILE",
+      "right_term_id": "TERM-PROFILE-PROFILE",
+      "required_distinction": "A surface profile projects product UI capabilities and navigation; a deployment profile defines system membership, resources, security, offline claims, and conformance."
     }
   ],
   "terms": [
@@ -73237,7 +73414,7 @@ AUTHORITY: canonical
       "canonical_name": "module interface manifest",
       "canonical_identifier": "module_interface_manifest",
       "category": "artifact_class",
-      "definition": "A module-owned manifest that contributes routes, sidebar entries, top-bar widgets, labels, capability requirements, and offline presentation behavior to kOA Spaces.",
+      "definition": "A product/module-owned manifest that contributes routes, surface profiles, navigation, commands, contextual inspectors, widgets, capability requirements, and offline presentation behavior to an admitted Koali composition host while preserving standalone product operation.",
       "semantic_owner_ref": "contracts/artifact-classes.contract.json#/artifact_classes/module_interface_manifest",
       "scope": [
         "global"
@@ -73258,7 +73435,7 @@ AUTHORITY: canonical
       "canonical_name": "module selector",
       "canonical_identifier": "module_selector",
       "category": "interface_element",
-      "definition": "The upper-left control rendered by kOA Spaces for choosing among installed, activated, visible, and permitted interface modules.",
+      "definition": "The product/module selector rendered by kOA Spaces when it is selected as the integrated composition host; entries are derived from installed and admitted manifests.",
       "semantic_owner_ref": "02-system/22-koa-spaces-interface-composition.md",
       "scope": [
         "global"
@@ -73460,6 +73637,91 @@ AUTHORITY: canonical
       ],
       "status": "active",
       "first_use_rule": "use_canonical_name_then_registered_alias"
+    },
+    {
+      "term_id": "TERM-UI-KOALI-SHELL",
+      "canonical_name": "Koali shell",
+      "canonical_identifier": "koali_shell",
+      "category": "interface_architecture",
+      "definition": "Reusable presentation primitives and contracts for product switching, surface navigation, context header, workspace, contextual inspector, responsive layout, and accessibility. The shell is not a business application and is not owned by an optional product host.",
+      "semantic_owner_ref": "02-system/22-koa-spaces-interface-composition.md",
+      "scope": [
+        "global"
+      ],
+      "case_sensitive": false,
+      "accepted_aliases": [],
+      "deprecated_aliases": [],
+      "forbidden_aliases": [],
+      "status": "active",
+      "first_use_rule": "canonical_name"
+    },
+    {
+      "term_id": "TERM-UI-PRODUCT-INTERFACE",
+      "canonical_name": "product interface",
+      "canonical_identifier": "product_interface",
+      "category": "interface_architecture",
+      "definition": "The product-owned user interface implementation that can expose a standalone entry point and optional integrated contributions without transferring product authority.",
+      "semantic_owner_ref": "02-system/21-koa-spaces-experience-layer.md",
+      "scope": [
+        "global"
+      ],
+      "case_sensitive": false,
+      "accepted_aliases": [],
+      "deprecated_aliases": [],
+      "forbidden_aliases": [],
+      "status": "active",
+      "first_use_rule": "canonical_name"
+    },
+    {
+      "term_id": "TERM-UI-SURFACE-PROFILE",
+      "canonical_name": "surface profile",
+      "canonical_identifier": "surface_profile",
+      "category": "interface_architecture",
+      "definition": "A declared projection of one product interface that selects routes, navigation, commands, inspectors, search scopes, or density without creating a separate frontend implementation.",
+      "semantic_owner_ref": "02-system/22-koa-spaces-interface-composition.md",
+      "scope": [
+        "global"
+      ],
+      "case_sensitive": false,
+      "accepted_aliases": [],
+      "deprecated_aliases": [],
+      "forbidden_aliases": [],
+      "status": "active",
+      "first_use_rule": "canonical_name"
+    },
+    {
+      "term_id": "TERM-UI-PRODUCT-REGISTRY",
+      "canonical_name": "installed product registry",
+      "canonical_identifier": "installed_product_registry",
+      "category": "interface_architecture",
+      "definition": "The runtime projection of installed and admitted product manifests used by an integrated composition host to discover available products without a hard-coded product list.",
+      "semantic_owner_ref": "02-system/21-koa-spaces-experience-layer.md",
+      "scope": [
+        "global"
+      ],
+      "case_sensitive": false,
+      "accepted_aliases": [],
+      "deprecated_aliases": [],
+      "forbidden_aliases": [],
+      "status": "active",
+      "first_use_rule": "canonical_name"
+    },
+    {
+      "term_id": "TERM-UI-CONTEXT-INSPECTOR",
+      "canonical_name": "contextual inspector",
+      "canonical_identifier": "contextual_inspector",
+      "category": "interface_element",
+      "definition": "A bounded shell panel whose content is product-owned and used for selected-object context, quick actions, relations, and navigation to a full product page.",
+      "semantic_owner_ref": "02-system/22-koa-spaces-interface-composition.md",
+      "scope": [
+        "global"
+      ],
+      "case_sensitive": false,
+      "accepted_aliases": [],
+      "deprecated_aliases": [],
+      "forbidden_aliases": [],
+      "status": "active",
+      "first_use_rule": "canonical_name"
     }
   ],
   "validation": {

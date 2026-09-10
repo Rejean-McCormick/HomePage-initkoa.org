@@ -30,11 +30,10 @@ POLICY_TARGET = INITKOA_REPO / "tools" / "context_pack_policy.json"
 REPOS = [
     ("Konnaxion", MYCODE / "Konnaxion" / "Konnaxion"),
     ("kOA-Linux", MYCODE / "kOA-Linux" / "koa-linux"),
-    ("XKaliber", MYCODE / "XKaliber" / "XKaliber"),
     ("UCKK-Moodle", MYCODE / "UCKK" / "uckk-moodle"),
     ("SemantiK_Architect", MYCODE / "SemantiK_Architect" / "SemantiK_Architect"),
     ("SemantiK-Architect-GF-Zone-Auditor", MYCODE / "SemantiK-Architect-GF-Zone-Auditor" / "SemantiK-Architect-GF-Zone-Auditor"),
-    ("science-silk-road-koali", MYCODE / "Science_Silk_Road"),
+    ("science-silk-road-koali", MYCODE / "Science_Silk_Road" / "science_silk_road"),
     ("partners-for-public-good", MYCODE / "PPG"),
     ("Projet_ORPHEE-Walk_Straight", MYCODE / "Orphee" / "orphee-walk-straight"),
     ("Orgo", MYCODE / "Orgo" / "Orgo"),
@@ -49,7 +48,6 @@ REPOS = [
     ("Konnaxion_Capsule_Manager", MYCODE / "Konnaxion" / "Konnaxion_Capsule_Manager"),
     ("Konductor", MYCODE / "Konductor" / "Konductor"),
     ("LevelUpDiag-Koa-Linux", MYCODE / "kOA-Linux" / "LevelUpDiag-Koali"),
-    ("K-Port", MYCODE / "K-Port" / "K-Port"),
     ("Freeze-Vote-Rebuild_Operational-Peace-Framework", MYCODE / "FreezeVoteRebuild" / "Freeze-Vote-Rebuild_Operational-Peace-Framework"),
     ("Book-Civilizational_Coherence", MYCODE / "Books" / "Civilisational_Coherence"),
     ("konnaxion-ashoka-systems-change", MYCODE / "Ashoka"),
@@ -66,6 +64,15 @@ BUILDER_VERSION = "2026-09-01.11"
 # before the manifest is regenerated so stale files cannot remain published indefinitely.
 RETIRED_PACK_FILES = {
     "initkoa-docs-context-pack.txt",
+}
+
+# Compatibility aliases for required curated sources whose canonical filename
+# was renamed in the repository without changing the corpus policy yet.
+# The actual file is included by docs/10-core/**; this only prevents the
+# requiredPatterns guard from treating the old filename as missing.
+REQUIRED_PATH_ALIASES = {
+    "docs/10-core/Kristal_Farms_Reference_Architecture_EN.md":
+        "docs/10-core/Kristal_Farms_Project_Reference_Architecture_EN.md",
 }
 
 CREATE_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
@@ -670,10 +677,18 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
         )
         required_patterns = [str(x) for x in repo_policy.get("requiredPatterns") or [] if str(x).strip()]
         selected_rels = [path.relative_to(repo).as_posix() for path in repo_source_files]
-        missing_required = [
-            pattern for pattern in required_patterns
-            if not any(_matches_policy_pattern(rel, pattern) for rel in selected_rels)
-        ]
+        missing_required = []
+        aliased_required = []
+        for pattern in required_patterns:
+            if any(_matches_policy_pattern(rel, pattern) for rel in selected_rels):
+                continue
+            alias = REQUIRED_PATH_ALIASES.get(pattern)
+            if alias and any(_matches_policy_pattern(rel, alias) for rel in selected_rels):
+                aliased_required.append(f"{pattern} -> {alias}")
+                continue
+            missing_required.append(pattern)
+        if aliased_required:
+            warnings.append("Sources curated renommées acceptées : " + "; ".join(aliased_required))
         if missing_required:
             raise RuntimeError("Sources curated requises absentes : " + ", ".join(missing_required))
         dirty = selected_files_dirty(repo, repo_source_files) if source_mode == "git" else False

@@ -2,7 +2,7 @@
 
 repository: Rejean-McCormick/Book-Civilizational_Coherence
 source_path: C:\mycode\Books\Civilisational_Coherence
-source_commit: 0402d6e74ed3e5feb217d20c496c78c93a2fcb9e
+source_commit: 9c3f25ea6e1f74d6b4f66445a8a645a258f18cd5
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -11,17 +11,17 @@ wiki_source_path: none
 wiki_source_commit: none
 wiki_working_tree_markdown: none
 policy_version: 2026-09-01.11
-repo_files: 132
+repo_files: 144
 wiki_files: 0
-source_files: 132
-included_files: 130
-excluded_files: 2
-duplicate_files: 2
-content_bytes: 3560355
-authority_counts: {"canonical":130}
-generated_at: 2026-09-01T13:53:03-04:00
-files: 130
-content_sha256: b1d3c7665506177332b9893636500d5d3e8fe932490035acbd90e12a69122fc1
+source_files: 144
+included_files: 139
+excluded_files: 5
+duplicate_files: 5
+content_bytes: 3594231
+authority_counts: {"canonical":139}
+generated_at: 2026-09-10T10:45:07-04:00
+files: 139
+content_sha256: 53aa47116f2bbbf6859ba96d600965949ead87949b026d3a96ff770546160671
 
 ================================================================================================
 FILE INDEX
@@ -29,134 +29,143 @@ FILE INDEX
 
 001. [canonical] architecture/ARCHITECTURAL_GENESIS_AND_GENERALIZATION_METHOD.md
 002. [canonical] architecture/CENTRALITY_AND_ARTICULATION_HUB.md
-003. [canonical] architecture/ECOSYSTEM_SOURCE_REGISTRY.md
-004. [canonical] architecture/IMPLEMENTATION_SOURCE_POLICY.md
-005. [canonical] architecture/KINTSUGI_ARTICULATION_MODEL.md
-006. [canonical] architecture/MODULE_INDEX.md
-007. [canonical] architecture/open-good/OPEN_GOOD.md
-008. [canonical] architecture/RIGHTS_AND_REPLICATION_MATRIX.md
-009. [canonical] book-definition/CHANGELOG_V2.md
-010. [canonical] book-definition/chapter_briefs/ch01.md
-011. [canonical] book-definition/chapter_briefs/ch02.md
-012. [canonical] book-definition/chapter_briefs/ch03.md
-013. [canonical] book-definition/chapter_briefs/ch04.md
-014. [canonical] book-definition/chapter_briefs/ch05.md
-015. [canonical] book-definition/chapter_briefs/ch06.md
-016. [canonical] book-definition/chapter_briefs/ch07.md
-017. [canonical] book-definition/chapter_briefs/ch08.md
-018. [canonical] book-definition/chapter_briefs/ch09.md
-019. [canonical] book-definition/chapter_briefs/ch10.md
-020. [canonical] book-definition/chapter_briefs/ch11.md
-021. [canonical] book-definition/chapter_briefs/ch12.md
-022. [canonical] book-definition/chapter_briefs/ch13.md
-023. [canonical] book-definition/chapter_briefs/ch14.md
-024. [canonical] book-definition/chapter_briefs/ch15.md
-025. [canonical] book-definition/chapter_briefs/ch16.md
-026. [canonical] book-definition/chapter_briefs/ch17.md
-027. [canonical] book-definition/chapter_briefs/ch18.md
-028. [canonical] book-definition/chapter_briefs/ch19.md
-029. [canonical] book-definition/chapter_briefs/ch20.md
-030. [canonical] book-definition/chapter_briefs/ch21.md
-031. [canonical] book-definition/chapter_briefs/ch22.md
-032. [canonical] book-definition/chapter_briefs/ch23.md
-033. [canonical] book-definition/chapter_briefs/ch24.md
-034. [canonical] book-definition/chapter_briefs/ch25.md
-035. [canonical] book-definition/chapters/ch01.md
-036. [canonical] book-definition/chapters/ch02.md
-037. [canonical] book-definition/chapters/ch03.md
-038. [canonical] book-definition/chapters/ch04.md
-039. [canonical] book-definition/chapters/ch05.md
-040. [canonical] book-definition/chapters/ch06.md
-041. [canonical] book-definition/chapters/ch07.md
-042. [canonical] book-definition/chapters/ch08.md
-043. [canonical] book-definition/chapters/ch09.md
-044. [canonical] book-definition/chapters/ch10.md
-045. [canonical] book-definition/chapters/ch11.md
-046. [canonical] book-definition/chapters/ch12.md
-047. [canonical] book-definition/chapters/ch13.md
-048. [canonical] book-definition/chapters/ch14.md
-049. [canonical] book-definition/chapters/ch15.md
-050. [canonical] book-definition/chapters/ch16.md
-051. [canonical] book-definition/chapters/ch17.md
-052. [canonical] book-definition/chapters/ch18.md
-053. [canonical] book-definition/chapters/ch19.md
-054. [canonical] book-definition/chapters/ch20.md
-055. [canonical] book-definition/chapters/ch21.md
-056. [canonical] book-definition/chapters/ch22.md
-057. [canonical] book-definition/chapters/ch23.md
-058. [canonical] book-definition/chapters/ch24.md
-059. [canonical] book-definition/chapters/ch25.md
-060. [canonical] book-definition/conclusion/00_CONCLUSION_SPEC.md
-061. [canonical] book-definition/core/00_AI_AUTHOR_OPERATING_MANUAL.md
-062. [canonical] book-definition/core/00_CANONICAL_STATE.md
-063. [canonical] book-definition/core/01_BOOK_CHARTER.md
-064. [canonical] book-definition/core/02_EDITORIAL_CONTRACT.md
-065. [canonical] book-definition/core/03_EPISTEMIC_PROTOCOL.md
-066. [canonical] book-definition/core/04_STYLE_GUIDE.md
-067. [canonical] book-definition/core/05_CANONICAL_CONCEPTS.md
-068. [canonical] book-definition/core/06_CANONICAL_FORMULAS.md
-069. [canonical] book-definition/core/07_KOA_IMPLEMENTATION_BOUNDARIES.md
-070. [canonical] book-definition/core/08_NARRATIVE_COHERENCE_AND_SURREAL.md
-071. [canonical] book-definition/core/09_CASE_REGISTRY.md
-072. [canonical] book-definition/core/10_CONTINUITY_MAP.md
-073. [canonical] book-definition/core/11_LENGTH_AND_COMPRESSION_POLICY.md
-074. [canonical] book-definition/core/12_AI_WRITING_PROTOCOL.md
-075. [canonical] book-definition/core/13_NAMING_AND_TERMINOLOGY.md
-076. [canonical] book-definition/core/14_SOURCE_AND_VERSION_POLICY.md
-077. [canonical] book-definition/core/15_WHOLE_BOOK_VALIDATION_CHECKLIST.md
-078. [canonical] book-definition/core/16_PROMPT_TEMPLATE_WRITE_CHAPTER.md
-079. [canonical] book-definition/core/17_CANONICAL_INVARIANTS.md
-080. [canonical] book-definition/core/18_DECISION_AND_IDEA_STATUS_REGISTRY.md
-081. [canonical] book-definition/core/19_TRACEABILITY_MATRIX.md
-082. [canonical] book-definition/core/20_CLAIM_LEDGER.md
-083. [canonical] book-definition/core/21_RISK_REGISTER.md
-084. [canonical] book-definition/core/22_CENTRALITY_AND_ARTICULATION_HUB.md
-085. [canonical] book-definition/intro/00_INTRODUCTION_SOURCE_SPEC.md
-086. [canonical] book-definition/intro/01_CURRENT_ALIGNMENT_PATCH.md
-087. [canonical] book-definition/intro/02_INTRODUCTION_BRIEF.md
-088. [canonical] book-definition/MANIFEST.md
-089. [canonical] book-definition/meta/VALIDATION_REPORT_V1.md
-090. [canonical] book-definition/parts/part_1.md
-091. [canonical] book-definition/parts/part_2.md
-092. [canonical] book-definition/parts/part_3.md
-093. [canonical] book-definition/parts/part_4.md
-094. [canonical] book-definition/parts/part_5.md
-095. [canonical] book-definition/parts/part_6.md
-096. [canonical] book-definition/README.md
-097. [canonical] book-definition/series/00_COMPANION_BOOK_STRATEGY.md
-098. [canonical] book-definition/VALIDATION_REPORT.md
-099. [canonical] narrative/fiction/CIVCOHE_ALIGNMENT.md
-100. [canonical] narrative/fiction/external/F0018_colin_row.md
-101. [canonical] narrative/fiction/FICTION_REGISTRY.md
-102. [canonical] narrative/fiction/FICTION_WORK_TEMPLATE.md
-103. [canonical] narrative/fiction/HARMONIZATION_UPDATE_2026-08-17.md
-104. [canonical] narrative/fiction/INGEST_NOTES_2026-08-17.md
-105. [canonical] narrative/fiction/README.md
-106. [canonical] narrative/fiction/SOURCE_MANIFEST.md
-107. [canonical] narrative/fiction/sources/F0001_lile_revasseur/King Klown et l'asile v2 (7)(3).md
-108. [canonical] narrative/fiction/sources/F0002_king_klown_kronicles/King Klown Kronicles v3.docx.md
-109. [canonical] narrative/fiction/sources/F0003_konvergence/Konvergence book v4.md
-110. [canonical] narrative/fiction/sources/F0009_la_machine_a_rires/La Machine ├á rires ÔÇö Paroles compil├®es.md
-111. [canonical] narrative/fiction/sources/F0009_la_machine_a_rires/La Machine ├á rires ÔÇö Pr├®sentation compl├¿te de lÔÇÖalbum.md
-112. [canonical] narrative/fiction/sources/F0010_last_laughing_engine/The Last Laughing Engine ÔÇö Paroles et styles compil├®s.md
-113. [canonical] narrative/fiction/sources/F0016_hacking_reality/Hacking Reality_ practical guide for the next Christ_26-05-2026_17_15_42 (1)(2).md
-114. [canonical] narrative/fiction/sources/F0017_plateforme_connaissance/Livre Plateforme de la connaissance v2.docx (1).md
-115. [canonical] narrative/fiction/VALIDATION_REPORT.md
-116. [canonical] narrative/README.md
-117. [canonical] README.md
-118. [canonical] research/SOURCE_LEDGER.md
-119. [canonical] RIGHTS.md
-120. [canonical] scenarios/crisis/SCN-CRISIS-001-hostage-response.md
-121. [canonical] scenarios/culture/SCN-CULTURE-001-fictional-universe-remix.md
-122. [canonical] scenarios/education/SCN-EDU-001-nain-remote-multilingual-school.md
-123. [canonical] scenarios/healthcare/SCN-HEALTH-001-multilingual-hospital.md
-124. [canonical] scenarios/INDEX.md
-125. [canonical] scenarios/knowledge/SCN-KNOW-001-unknown-contributor-kristall.md
-126. [canonical] scenarios/legacy/LEGACY_SCENARIO_MIGRATION.md
-127. [canonical] scenarios/PATTERN_LIBRARY.md
-128. [canonical] scenarios/README.md
-129. [canonical] scenarios/SCENARIO_SCHEMA.md
-130. [canonical] validation/implementation/IMPLEMENTATION_STATUS_MATRIX.md
+003. [canonical] architecture/CORPUS_GENESIS_AND_CONVERGENCE.md
+004. [canonical] architecture/ECOSYSTEM_SOURCE_REGISTRY.md
+005. [canonical] architecture/IMPLEMENTATION_SOURCE_POLICY.md
+006. [canonical] architecture/KINTSUGI_ARTICULATION_MODEL.md
+007. [canonical] architecture/MODULE_INDEX.md
+008. [canonical] architecture/open-good/OPEN_GOOD.md
+009. [canonical] architecture/RIGHTS_AND_REPLICATION_MATRIX.md
+010. [canonical] book-definition/CHANGELOG_V2.md
+011. [canonical] book-definition/chapter_briefs/ch01.md
+012. [canonical] book-definition/chapter_briefs/ch02.md
+013. [canonical] book-definition/chapter_briefs/ch03.md
+014. [canonical] book-definition/chapter_briefs/ch04.md
+015. [canonical] book-definition/chapter_briefs/ch05.md
+016. [canonical] book-definition/chapter_briefs/ch06.md
+017. [canonical] book-definition/chapter_briefs/ch07.md
+018. [canonical] book-definition/chapter_briefs/ch08.md
+019. [canonical] book-definition/chapter_briefs/ch09.md
+020. [canonical] book-definition/chapter_briefs/ch10.md
+021. [canonical] book-definition/chapter_briefs/ch11.md
+022. [canonical] book-definition/chapter_briefs/ch12.md
+023. [canonical] book-definition/chapter_briefs/ch13.md
+024. [canonical] book-definition/chapter_briefs/ch14.md
+025. [canonical] book-definition/chapter_briefs/ch15.md
+026. [canonical] book-definition/chapter_briefs/ch16.md
+027. [canonical] book-definition/chapter_briefs/ch17.md
+028. [canonical] book-definition/chapter_briefs/ch18.md
+029. [canonical] book-definition/chapter_briefs/ch19.md
+030. [canonical] book-definition/chapter_briefs/ch20.md
+031. [canonical] book-definition/chapter_briefs/ch21.md
+032. [canonical] book-definition/chapter_briefs/ch22.md
+033. [canonical] book-definition/chapter_briefs/ch23.md
+034. [canonical] book-definition/chapter_briefs/ch24.md
+035. [canonical] book-definition/chapter_briefs/ch25.md
+036. [canonical] book-definition/chapters/ch01.md
+037. [canonical] book-definition/chapters/ch02.md
+038. [canonical] book-definition/chapters/ch03.md
+039. [canonical] book-definition/chapters/ch04.md
+040. [canonical] book-definition/chapters/ch05.md
+041. [canonical] book-definition/chapters/ch06.md
+042. [canonical] book-definition/chapters/ch07.md
+043. [canonical] book-definition/chapters/ch08.md
+044. [canonical] book-definition/chapters/ch09.md
+045. [canonical] book-definition/chapters/ch10.md
+046. [canonical] book-definition/chapters/ch11.md
+047. [canonical] book-definition/chapters/ch12.md
+048. [canonical] book-definition/chapters/ch13.md
+049. [canonical] book-definition/chapters/ch14.md
+050. [canonical] book-definition/chapters/ch15.md
+051. [canonical] book-definition/chapters/ch16.md
+052. [canonical] book-definition/chapters/ch17.md
+053. [canonical] book-definition/chapters/ch18.md
+054. [canonical] book-definition/chapters/ch19.md
+055. [canonical] book-definition/chapters/ch20.md
+056. [canonical] book-definition/chapters/ch21.md
+057. [canonical] book-definition/chapters/ch22.md
+058. [canonical] book-definition/chapters/ch23.md
+059. [canonical] book-definition/chapters/ch24.md
+060. [canonical] book-definition/chapters/ch25.md
+061. [canonical] book-definition/conclusion/00_CONCLUSION_SPEC.md
+062. [canonical] book-definition/core/00_AI_AUTHOR_OPERATING_MANUAL.md
+063. [canonical] book-definition/core/00_CANONICAL_STATE.md
+064. [canonical] book-definition/core/01_BOOK_CHARTER.md
+065. [canonical] book-definition/core/02_EDITORIAL_CONTRACT.md
+066. [canonical] book-definition/core/03_EPISTEMIC_PROTOCOL.md
+067. [canonical] book-definition/core/04_STYLE_GUIDE.md
+068. [canonical] book-definition/core/05_CANONICAL_CONCEPTS.md
+069. [canonical] book-definition/core/06_CANONICAL_FORMULAS.md
+070. [canonical] book-definition/core/07_KOA_IMPLEMENTATION_BOUNDARIES.md
+071. [canonical] book-definition/core/08_NARRATIVE_COHERENCE_AND_SURREAL.md
+072. [canonical] book-definition/core/09_CASE_REGISTRY.md
+073. [canonical] book-definition/core/10_CONTINUITY_MAP.md
+074. [canonical] book-definition/core/11_LENGTH_AND_COMPRESSION_POLICY.md
+075. [canonical] book-definition/core/12_AI_WRITING_PROTOCOL.md
+076. [canonical] book-definition/core/13_NAMING_AND_TERMINOLOGY.md
+077. [canonical] book-definition/core/14_SOURCE_AND_VERSION_POLICY.md
+078. [canonical] book-definition/core/15_WHOLE_BOOK_VALIDATION_CHECKLIST.md
+079. [canonical] book-definition/core/16_PROMPT_TEMPLATE_WRITE_CHAPTER.md
+080. [canonical] book-definition/core/17_CANONICAL_INVARIANTS.md
+081. [canonical] book-definition/core/18_DECISION_AND_IDEA_STATUS_REGISTRY.md
+082. [canonical] book-definition/core/19_TRACEABILITY_MATRIX.md
+083. [canonical] book-definition/core/20_CLAIM_LEDGER.md
+084. [canonical] book-definition/core/21_RISK_REGISTER.md
+085. [canonical] book-definition/core/22_CENTRALITY_AND_ARTICULATION_HUB.md
+086. [canonical] book-definition/intro/00_INTRODUCTION_SOURCE_SPEC.md
+087. [canonical] book-definition/intro/01_CURRENT_ALIGNMENT_PATCH.md
+088. [canonical] book-definition/intro/02_INTRODUCTION_BRIEF.md
+089. [canonical] book-definition/MANIFEST.md
+090. [canonical] book-definition/meta/VALIDATION_REPORT_V1.md
+091. [canonical] book-definition/parts/part_1.md
+092. [canonical] book-definition/parts/part_2.md
+093. [canonical] book-definition/parts/part_3.md
+094. [canonical] book-definition/parts/part_4.md
+095. [canonical] book-definition/parts/part_5.md
+096. [canonical] book-definition/parts/part_6.md
+097. [canonical] book-definition/README.md
+098. [canonical] book-definition/series/00_COMPANION_BOOK_STRATEGY.md
+099. [canonical] book-definition/VALIDATION_REPORT.md
+100. [canonical] narrative/fiction/CIVCOHE_ALIGNMENT.md
+101. [canonical] narrative/fiction/external/F0018_colin_row.md
+102. [canonical] narrative/fiction/FICTION_REGISTRY.md
+103. [canonical] narrative/fiction/FICTION_WORK_TEMPLATE.md
+104. [canonical] narrative/fiction/HARMONIZATION_UPDATE_2026-08-17.md
+105. [canonical] narrative/fiction/INGEST_NOTES_2026-08-17.md
+106. [canonical] narrative/fiction/README.md
+107. [canonical] narrative/fiction/SOURCE_MANIFEST.md
+108. [canonical] narrative/fiction/sources/F0001_lile_revasseur/King Klown et l'asile v2 (7)(3).md
+109. [canonical] narrative/fiction/sources/F0002_king_klown_kronicles/King Klown Kronicles v3.docx.md
+110. [canonical] narrative/fiction/sources/F0003_konvergence/Konvergence book v4.md
+111. [canonical] narrative/fiction/sources/F0009_la_machine_a_rires/La Machine #U00e0 rires #U2014 Paroles compil#U00e9es.md
+112. [canonical] narrative/fiction/sources/F0009_la_machine_a_rires/La Machine #U00e0 rires #U2014 Pr#U00e9sentation compl#U00e8te de l#U2019album.md
+113. [canonical] narrative/fiction/sources/F0010_last_laughing_engine/The Last Laughing Engine #U2014 Paroles et styles compil#U00e9s.md
+114. [canonical] narrative/fiction/sources/F0016_hacking_reality/Hacking Reality_ practical guide for the next Christ_26-05-2026_17_15_42 (1)(2).md
+115. [canonical] narrative/fiction/sources/F0017_plateforme_connaissance/Livre Plateforme de la connaissance v2.docx (1).md
+116. [canonical] narrative/fiction/VALIDATION_REPORT.md
+117. [canonical] narrative/README.md
+118. [canonical] practice/CIVIC_RESILIENCE_DRILLS.md
+119. [canonical] practice/CORPUS_AUTONOMY.md
+120. [canonical] practice/EPISTEMIC_RESILIENCE_DRILLS.md
+121. [canonical] practice/FOUNDER_FALLIBILITY.md
+122. [canonical] practice/PATTERN_REGISTRY.md
+123. [canonical] practice/README.md
+124. [canonical] README.md
+125. [canonical] research/SOURCE_LEDGER.md
+126. [canonical] RIGHTS.md
+127. [canonical] scenarios/crisis/SCN-CRISIS-001-hostage-response.md
+128. [canonical] scenarios/culture/SCN-CULTURE-001-fictional-universe-remix.md
+129. [canonical] scenarios/education/SCN-EDU-001-nain-remote-multilingual-school.md
+130. [canonical] scenarios/governance/SCN-GOV-001-tattoo-policy-resistance-drill.md
+131. [canonical] scenarios/healthcare/SCN-HEALTH-001-multilingual-hospital.md
+132. [canonical] scenarios/INDEX.md
+133. [canonical] scenarios/knowledge/SCN-KNOW-001-unknown-contributor-kristall.md
+134. [canonical] scenarios/knowledge/SCN-KNOW-002-flat-earth-kristal.md
+135. [canonical] scenarios/legacy/LEGACY_SCENARIO_MIGRATION.md
+136. [canonical] scenarios/PATTERN_LIBRARY.md
+137. [canonical] scenarios/README.md
+138. [canonical] scenarios/SCENARIO_SCHEMA.md
+139. [canonical] validation/implementation/IMPLEMENTATION_STATUS_MATRIX.md
 
 
 ================================================================================================
@@ -164,6 +173,9 @@ EXCLUDED FILES
 ================================================================================================
 
 - [duplicate] narrative/fiction/sources/F0001_lile_revasseur/King Klown et l'asile v2 (7).md (same content as narrative/fiction/sources/F0001_lile_revasseur/King Klown et l'asile v2 (7)(3).md)
+- [duplicate] narrative/fiction/sources/F0009_la_machine_a_rires/La Machine à rires — Paroles compilées.md (same content as narrative/fiction/sources/F0009_la_machine_a_rires/La Machine #U00e0 rires #U2014 Paroles compil#U00e9es.md)
+- [duplicate] narrative/fiction/sources/F0009_la_machine_a_rires/La Machine à rires — Présentation complète de l’album.md (same content as narrative/fiction/sources/F0009_la_machine_a_rires/La Machine #U00e0 rires #U2014 Pr#U00e9sentation compl#U00e8te de l#U2019album.md)
+- [duplicate] narrative/fiction/sources/F0010_last_laughing_engine/The Last Laughing Engine — Paroles et styles compilés.md (same content as narrative/fiction/sources/F0010_last_laughing_engine/The Last Laughing Engine #U2014 Paroles et styles compil#U00e9s.md)
 - [duplicate] narrative/fiction/sources/F0016_hacking_reality/Hacking Reality_ practical guide for the next Christ_26-05-2026_17_15_42 (1).md (same content as narrative/fiction/sources/F0016_hacking_reality/Hacking Reality_ practical guide for the next Christ_26-05-2026_17_15_42 (1)(2).md)
 
 
@@ -382,6 +394,24 @@ The existence of an elaborate, recursively refined architecture does not prove:
 The method is valuable only insofar as its abstractions survive contact with implementation, external evidence, domain constraints and failure.
 
 
+## 11. Corpus genesis and retrospective convergence
+
+A separate historical record distinguishes this cross-domain generalization method from the later exploratory alignment among Pi Theory, the Sephirot comparison and the kOA ecosystem:
+
+```text
+architecture/CORPUS_GENESIS_AND_CONVERGENCE.md
+```
+
+That record preserves two important constraints:
+
+- Pi Theory is author-reported to predate kOA by several years;
+- the exact order of the later Pi Theory / Sephirot alignment is not reconstructed beyond what the author currently remembers.
+
+\[
+RetrospectiveCorrespondence \neq DirectCausalDerivation
+\]
+
+
 ================================================================================================
 FILE: architecture/CENTRALITY_AND_ARTICULATION_HUB.md
 AUTHORITY: canonical
@@ -493,6 +523,134 @@ CenterOfCommunion \neq CenterOfDomination
 \]
 
 The principle must remain valid with another symbol or no symbol at all.
+
+
+================================================================================================
+FILE: architecture/CORPUS_GENESIS_AND_CONVERGENCE.md
+AUTHORITY: canonical
+================================================================================================
+
+---
+id: CIVCOHE-CORPUS-GENESIS-CONVERGENCE
+type: author-reported-project-history
+status: historical-record-with-uncertainty
+version: 1
+date: 2026-09-09
+---
+
+# Corpus Genesis and Retrospective Convergence
+
+## Purpose
+
+This document records a specific historical distinction that should not be reconstructed more confidently than the author's memory supports.
+
+It concerns the relation among **Pi Theory**, the **Sephirot comparison**, and the **kOA application ecosystem**.
+
+## 1. Independent origins
+
+According to the author, **Pi Theory predates kOA by several years**.
+
+The early kOA ecosystem did not begin as a single architecture derived from Pi Theory or from the Sephirot. It began as a growing set of applications and concepts, many of them related, but not initially organized inside one formally defined generative structure.
+
+A compact historical model is therefore:
+
+\[
+PiTheory_{earlier}
+\qquad
+kOAApplications_{later,partially-related}
+\]
+
+rather than:
+
+\[
+PiTheory \rightarrow DirectTopDownDerivationOfkOA
+\]
+
+## 2. Retrospective alignment
+
+At a later stage, the author had an intuition that the emerging ecosystem could be compared with the **Sephirot** and with **Pi Theory**.
+
+The comparison was exploratory. The author does not currently claim reliable memory of whether the Pi Theory alignment or the Sephirot alignment was performed first, or whether one comparison materially led to the other.
+
+That uncertainty is part of the record and should be preserved.
+
+> **Do not manufacture a cleaner chronology than the evidence supports.**
+
+## 3. What the convergence claim means
+
+The meaningful research question is not simply whether one diagram can be made to resemble another.
+
+It is whether structures developed in partly independent contexts show recurring functional relations such as:
+
+```text
+differentiation
+relation
+emergence
+integration
+deployment
+memory / recursion
+```
+
+Possible correspondence is therefore treated as a **comparative hypothesis** or **design heuristic**, not as proof of a universal law.
+
+\[
+RetrospectiveCorrespondence \neq CausalDerivation
+\]
+
+\[
+StructuralAnalogy \neq ScientificProof
+\]
+
+## 4. Separation of validation layers
+
+The relevant layers must remain independently criticizable.
+
+- Pi Theory may be evaluated as a metaphysical, mathematical, or generative hypothesis.
+- Sephirot may be used as a historical/symbolic comparative grammar.
+- kOA components may be evaluated as software and sociotechnical architectures.
+- Civilizational Coherence may be evaluated as a theory of composition and collective agency.
+
+Success or failure in one layer does not automatically settle the others.
+
+For example:
+
+\[
+WorkingKoali \not\Rightarrow PiTheoryTrue
+\]
+
+and:
+
+\[
+PiTheoryFalse \not\Rightarrow KonnaxionOrOrgoUseless
+\]
+
+## 5. Why this history matters
+
+If a structural correspondence is recognized **after** partially independent development, the interesting claim is one of convergence rather than direct implementation.
+
+That can justify further comparison, but it also increases the need for safeguards against:
+
+- retrospective fitting;
+- confirmation bias;
+- apophenia;
+- overly general motifs that appear everywhere;
+- symbolic similarity being mistaken for causal explanation.
+
+## 6. Relation to the generalization method
+
+This record complements:
+
+```text
+architecture/ARCHITECTURAL_GENESIS_AND_GENERALIZATION_METHOD.md
+```
+
+The generalization method describes how reusable primitives were extracted across domains.
+
+This document records a different question:
+
+> **When did broader symbolic or generative correspondences become visible relative to the software ecosystem itself?**
+
+The two histories should not be collapsed.
 
 
 ================================================================================================
@@ -142839,7 +142997,7 @@ The night stretched around them, the wind whistling between the gravestones. Abo
 
 
 ================================================================================================
-FILE: narrative/fiction/sources/F0009_la_machine_a_rires/La Machine ├á rires ÔÇö Paroles compil├®es.md
+FILE: narrative/fiction/sources/F0009_la_machine_a_rires/La Machine #U00e0 rires #U2014 Paroles compil#U00e9es.md
 AUTHORITY: canonical
 ================================================================================================
 
@@ -144941,7 +145099,7 @@ un passage.
 
 
 ================================================================================================
-FILE: narrative/fiction/sources/F0009_la_machine_a_rires/La Machine ├á rires ÔÇö Pr├®sentation compl├¿te de lÔÇÖalbum.md
+FILE: narrative/fiction/sources/F0009_la_machine_a_rires/La Machine #U00e0 rires #U2014 Pr#U00e9sentation compl#U00e8te de l#U2019album.md
 AUTHORITY: canonical
 ================================================================================================
 
@@ -145433,7 +145591,7 @@ C’est le bruit d’un pouvoir collectif qui apprend enfin à s’organiser.**
 
 
 ================================================================================================
-FILE: narrative/fiction/sources/F0010_last_laughing_engine/The Last Laughing Engine ÔÇö Paroles et styles compil├®s.md
+FILE: narrative/fiction/sources/F0010_last_laughing_engine/The Last Laughing Engine #U2014 Paroles et styles compil#U00e9s.md
 AUTHORITY: canonical
 ================================================================================================
 
@@ -152027,6 +152185,447 @@ See `fiction/README.md`, `fiction/FICTION_REGISTRY.md` and `fiction/CIVCOHE_ALIG
 
 
 ================================================================================================
+FILE: practice/CIVIC_RESILIENCE_DRILLS.md
+AUTHORITY: canonical
+================================================================================================
+
+---
+id: CIVCOHE-PRACTICE-CIVIC-RESILIENCE
+type: practice-method
+status: governed-working
+version: 1
+date: 2026-09-09
+---
+
+# Civic Resilience Drills
+
+## Purpose
+
+Civic resilience drills rehearse how a community detects, contests and corrects a problematic proposal **before** an analogous high-stakes failure occurs.
+
+The objective is not to teach a predetermined political opinion. It is to create a practiced pathway for legitimate opposition.
+
+## Fire-drill model
+
+\[
+ProblematicProposal
+\rightarrow
+Recognition
+\rightarrow
+Objection
+\rightarrow
+EvidenceAndRightsAnalysis
+\rightarrow
+Coalition
+\rightarrow
+InstitutionalChallenge
+\rightarrow
+Correction
+\rightarrow
+Postmortem
+\rightarrow
+ReusableCapacity
+\]
+
+A successful drill creates procedural memory:
+
+> We have opposed a powerful internal authority before. We know how to do it without destroying the surrounding system.
+
+## The Tattoo Protocol
+
+The first reference drill uses a deliberately extreme policy proposal: a coherent political movement contains one major proposal to **prohibit tattoos and require removal of existing tattoos**.
+
+The policy is useful as a training case because it creates obvious questions about:
+
+- bodily autonomy;
+- coercive state power;
+- proportionality;
+- enforcement;
+- medical risk;
+- cost;
+- rights of affected people;
+- legitimacy of majority or founder authority.
+
+The scenario is documented in:
+
+```text
+scenarios/governance/SCN-GOV-001-tattoo-policy-resistance-drill.md
+```
+
+The long-term value is the reusable pattern, not the tattoo topic itself.
+
+A future community could use "Tattoo Protocol" as shorthand for:
+
+> isolate the disputed proposition, build the public case, organize legitimate counterpower, pursue correction, and preserve the learning.
+
+## Safety boundary
+
+A resilience drill should stress judgment and institutions without fabricating real legal status, official orders, medical evidence, imminent enforcement or other material facts that people would need in order to protect themselves.
+
+The drill should not produce real bodily coercion or operational instructions for harassment, intimidation or violence.
+
+## Success criteria
+
+A drill succeeds when participants can:
+
+- oppose a proposal without requiring total rejection of the broader project;
+- separate speaker prestige from proposition quality;
+- mobilize relevant expertise without converting expertise into sovereignty;
+- form counterpower through legitimate procedures;
+- correct the policy without silencing dissent;
+- turn the episode into reusable institutional memory.
+
+
+================================================================================================
+FILE: practice/CORPUS_AUTONOMY.md
+AUTHORITY: canonical
+================================================================================================
+
+---
+id: CIVCOHE-PRACTICE-CORPUS-AUTONOMY
+type: continuity-principle
+status: governed-working
+version: 1
+date: 2026-09-09
+---
+
+# Corpus Autonomy
+
+## Question
+
+What must remain possible if the founder is unavailable, disagrees with later maintainers, changes position, or becomes an unreliable authority?
+
+## Independence condition
+
+A mature corpus should remain:
+
+- understandable;
+- inspectable;
+- executable where software exists;
+- teachable;
+- contestable;
+- forkable where rights permit;
+- maintainable without unique founder knowledge;
+- capable of preserving provenance while diverging from later founder interpretation.
+
+\[
+CorpusContinuity \neq FounderContinuity
+\]
+
+## Forking the founder conceptually
+
+A community may preserve an earlier principle or implementation while rejecting a later statement by the founder.
+
+This is not paradoxical. It is a normal consequence of treating claims, versions and implementations as independently inspectable artifacts.
+
+\[
+FounderAtT_1 \neq BindingAuthorityAtT_2
+\]
+
+The useful question is not "What does the founder currently want?" but:
+
+> What do the documented principles, evidence, rights, interfaces and governance procedures support?
+
+## Leaving the throne
+
+Founder decentering can include deliberate reduction of the founder's interpretive centrality once enough documentation, implementation and community capacity exist.
+
+The objective is not disappearance for its own sake.
+
+It is to create space for the corpus to be evaluated, criticized, adapted and transmitted without every question collapsing back into founder biography or intention.
+
+## Success condition
+
+A strong test is whether a competent outsider who has never spoken with the founder can:
+
+1. locate authoritative documentation;
+2. distinguish theory from implementation and narrative;
+3. reproduce or operate relevant components;
+4. identify unresolved claims;
+5. disagree without losing access;
+6. create a traceable fork;
+7. teach the system to another person.
+
+See `README.md` → Independent Reproducibility.
+
+
+================================================================================================
+FILE: practice/EPISTEMIC_RESILIENCE_DRILLS.md
+AUTHORITY: canonical
+================================================================================================
+
+---
+id: CIVCOHE-PRACTICE-EPISTEMIC-RESILIENCE
+type: practice-method
+status: governed-working
+version: 1
+date: 2026-09-09
+---
+
+# Epistemic Resilience Drills
+
+## Purpose
+
+An epistemic resilience drill studies how a knowledge system can be pushed toward an unsupported conclusion and how the corruption can later be detected, explained and repaired.
+
+The goal is not to centralize truth authority.
+
+It is to improve the ability to inspect **how apparent knowledge was constructed**.
+
+## Ground-truth stress case
+
+The first reference case uses a Flat-Earth Kristal because the target conclusion is deliberately chosen to be strongly contradicted by established evidence.
+
+This lets the exercise focus on the corruption process rather than on resolving an ambiguous scientific controversy.
+
+See:
+
+```text
+scenarios/knowledge/SCN-KNOW-002-flat-earth-kristal.md
+```
+
+## What the drill studies
+
+At a high level, possible corruption patterns include:
+
+- weak or fabricated claims receiving prestige through presentation;
+- citation chains that appear independent but share one causal origin;
+- authority signals substituted for evidence;
+- selective inclusion or omission;
+- repetition mistaken for confirmation;
+- transformations that increase certainty beyond the source material;
+- rhetorical coherence mistaken for evidentiary coherence.
+
+Controlled synthetic test fixtures may model these conditions internally, but the repository does not treat external impersonation, credential fraud or deceptive publication as required test mechanisms.
+
+## Autopsy rather than censorship
+
+The preferred output is an **autopsy of the false knowledge structure**:
+
+```text
+apparent support
+→ provenance trace
+→ dependency collapse
+→ unsupported transformations
+→ contradiction map
+→ repaired representation
+→ reusable detection pattern
+```
+
+A false or rejected claim need not disappear from memory. Its failure can remain useful if the system preserves why it looked credible and how the error was detected.
+
+## Pluralism without epistemic equivalence
+
+Kristal forkability should allow incompatible worldviews, including religious, philosophical and fictional branches.
+
+\[
+FreedomToRepresent \neq EqualEvidence
+\]
+
+A creationist, Flat-Earth or fictional-world fork can exist without requiring a reference corpus to present every branch as equally supported by observation.
+
+The architecture should preserve:
+
+- branch identity;
+- axioms;
+- provenance;
+- source independence;
+- transformation history;
+- confidence/validation state;
+- explicit divergence from other branches.
+
+
+================================================================================================
+FILE: practice/FOUNDER_FALLIBILITY.md
+AUTHORITY: canonical
+================================================================================================
+
+---
+id: CIVCOHE-PRACTICE-FOUNDER-FALLIBILITY
+type: practice-principle
+status: governed-working
+version: 1
+date: 2026-09-09
+---
+
+# Founder Fallibility
+
+## Principle
+
+A long-lived system should assume that its founder will eventually be wrong about something consequential.
+
+Founder error is therefore not an exceptional edge case. It is an expected condition of continuity.
+
+\[
+Founder \neq System
+\]
+
+\[
+FounderAssertion \neq CanonicalTruth
+\]
+
+## Why this matters
+
+A system that remains healthy only while its founder is correct is still dependent on founder correctness.
+
+Failure can arise through ordinary mechanisms:
+
+- incomplete information;
+- changing conditions;
+- overconfidence;
+- poor judgment;
+- value conflict;
+- cognitive decline;
+- capture or coercion;
+- simple human error.
+
+The architecture should not need to predict which one occurs.
+
+## Required capacities
+
+A robust community should be able to:
+
+1. isolate a disputed proposition from the rest of the corpus;
+2. inspect evidence and assumptions;
+3. oppose the founder without being treated as disloyal to the system;
+4. organize counterarguments and affected-party input;
+5. use legitimate institutional correction mechanisms;
+6. preserve useful parts of the project while rejecting the disputed part;
+7. fork where necessary;
+8. record the disagreement and outcome as reusable institutional memory.
+
+## Opposition as a health signal
+
+The absence of visible opposition is not automatically evidence of coherence.
+
+In some contexts, the ability to generate organized, legitimate opposition is itself a resilience property.
+
+\[
+HealthyCoherence \neq Obedience
+\]
+
+## Relation to founder decentering
+
+Founder decentering does not require mandatory founder disappearance or dispossession.
+
+The stronger requirement is that authority, operation, reproduction and interpretation can survive disagreement with the founder and do not depend on unique founder permission.
+
+See also:
+
+- `practice/CIVIC_RESILIENCE_DRILLS.md`
+- `practice/CORPUS_AUTONOMY.md`
+- `scenarios/governance/SCN-GOV-001-tattoo-policy-resistance-drill.md`
+
+
+================================================================================================
+FILE: practice/PATTERN_REGISTRY.md
+AUTHORITY: canonical
+================================================================================================
+
+---
+id: CIVCOHE-PRACTICE-PATTERN-REGISTRY
+type: practice-pattern-index
+status: governed-working
+version: 1
+date: 2026-09-09
+---
+
+# Practice Pattern Registry
+
+This file indexes recurring practice patterns. Reusable sociotechnical primitives remain canonical in `scenarios/PATTERN_LIBRARY.md`.
+
+## PR01 — Civic Fire Drill
+
+Rehearse a legitimate counterpower pathway before an actual crisis.
+
+## PR02 — Founder Resistance Rehearsal
+
+Use a founder-supported disputed proposition to verify that founder prestige does not substitute for evidence, rights or procedure.
+
+## PR03 — Epistemic Corruption Autopsy
+
+Start from an intentionally corrupted knowledge branch, trace how apparent support accumulated, then preserve the repair as learning.
+
+## PR04 — Worldview Fork
+
+Permit a branch to alter axioms or interpretations while preserving lineage and divergence from the reference corpus.
+
+## PR05 — Failure-to-Memory Conversion
+
+Do not merely correct an error. Preserve why it happened, how it was detected and which countermeasure worked.
+
+
+================================================================================================
+FILE: practice/README.md
+AUTHORITY: canonical
+================================================================================================
+
+---
+id: CIVCOHE-PRACTICE
+type: practice-layer
+status: governed-working-layer
+version: 1
+date: 2026-09-09
+---
+
+# Practice / Mastery
+
+Civilizational Coherence distinguishes:
+
+\[
+Theory \neq Architecture \neq Narrative \neq Practice
+\]
+
+This directory develops the **Practice** layer: how people rehearse, operate, contest, repair, teach, fork and preserve the mechanisms described elsewhere in the repository.
+
+## Core idea
+
+A protection that exists only in documentation may fail when it is first needed.
+
+Practice therefore includes controlled exercises that create reusable pathways before a real crisis occurs.
+
+\[
+WrittenRight \rightarrow PracticedProcedure \rightarrow ReusableCapacity
+\]
+
+A useful analogy is a fire drill:
+
+> The drill does not predict a fire. It makes the exit path familiar before the fire exists.
+
+## Scope
+
+This directory currently covers:
+
+- `FOUNDER_FALLIBILITY.md` — why founder error must be treated as expected;
+- `CIVIC_RESILIENCE_DRILLS.md` — rehearsal of legitimate opposition and counterpower;
+- `EPISTEMIC_RESILIENCE_DRILLS.md` — controlled study of corrupted knowledge structures;
+- `CORPUS_AUTONOMY.md` — conditions under which the corpus can survive and evolve without unique founder dependence;
+- `PATTERN_REGISTRY.md` — compact index of reusable practice patterns.
+
+Detailed test cases belong in `scenarios/`.
+
+## Governing distinctions
+
+\[
+Drill \neq Evidence
+\]
+
+\[
+AdversarialSimulation \neq PermissionForUnboundedHarm
+\]
+
+\[
+FounderCritique \neq ProjectRejection
+\]
+
+\[
+FreedomToFork \neq EqualEpistemicSupport
+\]
+
+A practice exercise is useful only if it produces better detection, correction, counterpower, memory or independent capability.
+
+
+================================================================================================
 FILE: README.md
 AUTHORITY: canonical
 ================================================================================================
@@ -152169,6 +152768,29 @@ Scenario \neq Evidence
 
 Scenarios may generate requirements, failure modes, observable tests, and chapter examples. They do not establish adoption, outcome superiority, social legitimacy, or implementation completeness.
 
+## Practice and Resilience
+
+The repository now contains a dedicated working layer for rehearsal, mastery, founder fallibility, epistemic stress tests and reusable counterpower patterns:
+
+```text
+practice/
+```
+
+Practice is not empirical proof. Its purpose is to turn formal protections into exercised capabilities before a real failure occurs. Detailed test cases remain in `scenarios/`.
+
+\[
+WrittenProtection \rightarrow PracticedPathway \rightarrow ReusableCapacity
+\]
+
+Key references include:
+
+```text
+practice/FOUNDER_FALLIBILITY.md
+practice/CIVIC_RESILIENCE_DRILLS.md
+practice/EPISTEMIC_RESILIENCE_DRILLS.md
+practice/CORPUS_AUTONOMY.md
+```
+
 ## Live Ecosystem Sources
 
 The current implementation example is documented through live source repositories and wikis indexed in:
@@ -152245,6 +152867,14 @@ Generalization \neq ForcedUniformity
 \]
 
 The development method is project history and design discipline, not evidence that the resulting architecture is correct or superior.
+
+A separate historical record preserves the author-reported fact that Pi Theory predates kOA, that the early ecosystem began as a partially connected set of applications, and that the Pi Theory / Sephirot / kOA correspondences were explored retrospectively with uncertainty about their exact ordering:
+
+```text
+architecture/CORPUS_GENESIS_AND_CONVERGENCE.md
+```
+
+The distinction matters because retrospective structural convergence is not the same claim as direct top-down derivation.
 
 # Book Structure
 
@@ -152539,6 +153169,7 @@ A narrative layer can potentially perform several functions:
 5. **Adversarial simulation** — test institutional failure modes through fiction.
 6. **Normative precommitment** — publicly encode how the system itself should later be criticized.
 7. **Founder decentering** — teach participants that the founder, symbol, or storyteller is not the system.
+8. **Resilience rehearsal** — create memorable, bounded situations in which participants practice rejecting a bad claim or proposal without treating disagreement as betrayal.
 
 The central safeguard is:
 
@@ -152610,7 +153241,9 @@ How the whole becomes perceptible, memorable, transmissible, and criticizable.
 
 ### Practice / Mastery
 
-Whether real humans and institutions can operate, maintain, repair, teach, fork, and evolve what was built.
+Whether real humans and institutions can operate, maintain, repair, teach, fork, contest, and evolve what was built.
+
+Working practice documentation is maintained in `practice/`, while concrete drills and sociotechnical test cases remain in `scenarios/`.
 
 A system is not durable merely because its files survive.
 
@@ -153189,6 +153822,201 @@ It does not prove complete Wikidata availability in every indigenous language, a
 
 
 ================================================================================================
+FILE: scenarios/governance/SCN-GOV-001-tattoo-policy-resistance-drill.md
+AUTHORITY: canonical
+================================================================================================
+
+---
+id: SCN-GOV-001
+title: Tattoo-policy civic resistance drill
+status: FUTURE-INSTITUTIONAL
+book_relevance:
+  chapters: [8, 13, 15, 20, 22, 25]
+  concepts: [non-domination, founder-fallibility, contestation, counterpower, institutional-memory]
+  claims: []
+scope:
+  domain: governance
+  scale: national-political-movement
+  geography: Canada
+  time_pressure: medium
+actors:
+  - founder-or-symbolic-leader
+  - party-members
+  - citizens
+  - affected-people
+  - journalists
+  - legal-medical-and-policy-experts
+  - internal-party-governance
+patterns: [P05, P12, P13, P17, P19, P20, P25]
+components:
+  public-deliberation-layer:
+    role: register proposal, arguments, evidence, objections and changes
+    implementation_status: current-intended-architecture
+  expertise-layer:
+    role: surface relevant legal, medical, economic and rights expertise
+    implementation_status: current-intended-architecture
+  decision-layer:
+    role: preserve legitimate political authority while exposing dissent
+    implementation_status: future-institutional
+authority:
+  legitimate_decision_authority: lawful democratic and party procedures, subject to rights constraints
+  expert_role: advise and analyze; not sovereign
+  affected_parties_role: direct standing to describe harms, interests and objections
+  automated_system_role: assist organization and traceability; no decision sovereignty
+inputs:
+  - a broadly coherent political platform
+  - one deliberately extreme policy proposal prohibiting tattoos and requiring removal of existing tattoos
+outputs:
+  - structured objection record
+  - counterarguments and evidence
+  - coalition and procedural response
+  - decision, amendment or rejection record
+  - postmortem and reusable resistance pattern
+constraints:
+  - no real bodily coercion
+  - no fabricated legal status or official enforcement orders
+  - no fabricated medical evidence presented as real
+  - preserve lawful speech and opposition
+failure_modes:
+  - founder prestige suppresses criticism
+  - supporters rationalize the policy because they support the broader platform
+  - opponents attack identity rather than the proposition
+  - expertise becomes a substitute for democratic authority
+  - exercise polarizes the community without producing reusable procedure
+security_privacy:
+  - do not expose private medical or tattoo information without consent
+  - no harassment or targeting of tattooed individuals
+  - separate public argument from personal intimidation
+observables:
+  - time to first substantive objection
+  - diversity of independent objections
+  - ability to isolate one policy from the full platform
+  - participation of affected people
+  - use of legitimate appeal/amendment mechanisms
+  - whether founder endorsement changes evidentiary standards
+  - whether learning is preserved after resolution
+tests:
+  - can the proposal be rejected without requiring rejection of the entire movement?
+  - can founder-supported policy be defeated through ordinary legitimate mechanisms?
+  - can disagreement remain compatible with continued participation?
+  - does the postmortem produce a reusable counterpower pathway?
+drill:
+  enabled: true
+  known_failure_condition: founder-backed coercive tattoo prohibition/removal proposal
+  ground_truth: the proposal is intentionally introduced as the stress condition, not as a repository normative commitment
+  safety_boundaries:
+    - no real bodily coercion
+    - no fabricated official legal status or enforcement orders
+    - no harassment or targeting of tattooed people
+  postmortem_required: true
+---
+
+# Tattoo-Policy Civic Resistance Drill
+
+## 1. Situation
+
+A political movement presents a platform that is intentionally designed to be coherent across most policy areas. One major proposal is deliberately anomalous: the state would prohibit tattoos and require the removal of existing tattoos.
+
+The movement's founder or most visible symbolic figure publicly and vigorously supports the proposal.
+
+The scenario is designed as a **civic resilience drill**, analogous to a fire drill: create a practiced route for legitimate opposition before a subtler and more consequential internal failure occurs.
+
+## 2. Coordination problem
+
+A community may strongly support a movement while lacking a practiced way to reject one of its founder's proposals.
+
+The failure mode is:
+
+\[
+TrustInWholeProject \rightarrow UncriticalAcceptanceOfPart
+\]
+
+The desired correction is:
+
+\[
+SupportCanBeDivisible
+\]
+
+## 3. Desired transformation
+
+Conceptual chain:
+
+\[
+ProblematicProposal
+\rightarrow
+Detection
+\rightarrow
+ArgumentAndRightsAnalysis
+\rightarrow
+Coalition
+\rightarrow
+LegitimateContestation
+\rightarrow
+Correction
+\rightarrow
+Memory
+\]
+
+## 4. Actors and authority
+
+The founder may argue for the policy but receives no special decision sovereignty from authorship.
+
+Experts analyze consequences and relevant evidence. Affected people have direct standing. Legitimate political and legal institutions retain decision authority within applicable rights constraints.
+
+## 5. Architectural response
+
+A Konnaxion-like layer can register:
+
+- the proposal;
+- supporting arguments;
+- counterarguments;
+- source provenance;
+- affected-party testimony;
+- relevant expertise;
+- amendments;
+- decision history.
+
+EkoH-like capability discovery may surface relevant expertise. Smart-Vote-like multiple readings may show differences among raw preferences, expertise-informed readings and affected-party views without converting any one lens into sovereignty.
+
+## 6. Information flow
+
+```text
+proposal
+→ public record
+→ argument decomposition
+→ evidence / rights / consequence analysis
+→ affected-party input
+→ coalition and procedure
+→ decision
+→ postmortem
+```
+
+## 7. Failure modes
+
+The drill fails if loyalty to the founder becomes a substitute for judgment, if critics must exit the whole movement to oppose one policy, or if the opposition itself becomes coercive or identity-based.
+
+## 8. Privacy / security / abuse
+
+The exercise must not create real bodily coercion or false official/legal conditions. It must not target individuals for tattoo status or encourage harassment.
+
+## 9. Implementation boundary
+
+This is a `FUTURE-INSTITUTIONAL` scenario. It is a design and training case, not evidence of an existing Canadian political project, public adoption, or legal process.
+
+## 10. Observable tests
+
+The most important observable is not simply whether the policy loses.
+
+It is whether the community develops a repeatable sequence for opposing a powerful internal authority while preserving legitimate participation and institutional continuity.
+
+## 11. What this scenario does not prove
+
+It does not prove that a real population will respond as expected, that kOA mechanisms prevent demagogy, or that a simulated rejection guarantees resistance to a subtler future abuse.
+
+It creates a testable practice hypothesis.
+
+
+================================================================================================
 FILE: scenarios/healthcare/SCN-HEALTH-001-multilingual-hospital.md
 AUTHORITY: canonical
 ================================================================================================
@@ -153298,14 +154126,16 @@ status: governed-working-library
 | SCN-KNOW-001 | Unknown contributor enters a global knowledge corpus | Knowledge | FUTURE-INSTITUTIONAL | P02 P05 P10 P11 P17 |
 | SCN-EDU-001 | Remote multilingual school connected to global knowledge | Education | FUTURE-INSTITUTIONAL | P07 P08 P14 P15 P18 |
 | SCN-CULTURE-001 | Fictional-universe fork, merge and cultural dispute | Culture | TARGET-ARCHITECTURE | P12 P13 P16 P17 |
+| SCN-KNOW-002 | Flat-Earth Kristal epistemic corruption drill | Knowledge | TARGET-ARCHITECTURE | P02 P05 P10 P11 P16 P17 P20 P23 P24 |
+| SCN-GOV-001 | Tattoo-policy civic resistance drill | Governance | FUTURE-INSTITUTIONAL | P05 P12 P13 P17 P19 P20 P25 |
 
 ## Future families
 
 - crisis: wildfire, mass casualty, infrastructure collapse, epidemic;
 - healthcare: rural clinic, discharge instructions, referral coordination;
 - education: company academy, disciplinary Univers-City, apprenticeship;
-- governance: municipal consultation, technical regulation, emergency authority;
-- knowledge: minority hypothesis, standards development, scientific correction;
+- governance: municipal consultation, technical regulation, emergency authority, civic resilience drills;
+- knowledge: minority hypothesis, standards development, scientific correction, epistemic corruption drills;
 - organizations: incident, maintenance knowledge, staff turnover, postmortem-to-training;
 - culture: public-domain remix, cultural archive, endangered language corpus.
 
@@ -153379,6 +154209,186 @@ Any manuscript link to Tim Berners-Lee or Semantic Web ideals must be separately
 
 ## What this scenario does not prove
 It does not prove UNESCO adoption, scientific-community acceptance, solved gatekeeping, or that provenance creates truth.
+
+
+================================================================================================
+FILE: scenarios/knowledge/SCN-KNOW-002-flat-earth-kristal.md
+AUTHORITY: canonical
+================================================================================================
+
+---
+id: SCN-KNOW-002
+title: Flat-Earth Kristal epistemic corruption drill
+status: TARGET-ARCHITECTURE
+book_relevance:
+  chapters: [7, 9, 10, 11, 14, 18, 25]
+  concepts: [provenance, pluralism, source-independence, epistemic-corruption, forkability]
+  claims: []
+scope:
+  domain: knowledge
+  scale: corpus-branch
+  geography: global
+  time_pressure: low
+actors:
+  - adversarial-corpus-builder
+  - reviewers
+  - reference-corpus-maintainers
+  - readers
+patterns: [P02, P05, P10, P11, P16, P17, P20, P23, P24]
+components:
+  kristal-like-knowledge-layer:
+    role: preserve branch lineage, claims, sources, transformations and validation state
+    implementation_status: current-intended-architecture
+  review-layer:
+    role: inspect source independence and evidentiary support
+    implementation_status: current-intended-architecture
+authority:
+  legitimate_decision_authority: branch maintainers for branch content; no branch receives universal truth sovereignty
+  expert_role: evaluate evidence and methods within relevant domains
+  affected_parties_role: not central to this scenario
+  automated_system_role: assist tracing and anomaly detection; not canonical truth authority
+inputs:
+  - a forked knowledge corpus
+  - a deliberately unsupported target conclusion that Earth is flat
+  - controlled adversarial or synthetic support structures
+outputs:
+  - corrupted branch
+  - provenance and dependency map
+  - contradiction map
+  - postmortem of apparent authority
+  - repaired or clearly classified branch state
+constraints:
+  - synthetic deceptive fixtures remain inside controlled test environments
+  - no external impersonation or credential fraud is required by the scenario
+  - preserve ground-truth ledger for postmortem
+failure_modes:
+  - citation volume mistaken for source independence
+  - prestige signals override evidence
+  - branch representation is mistaken for endorsement
+  - correction deletes useful failure history
+  - reference corpus becomes centralized truth authority rather than evidence-governed reference
+security_privacy:
+  - do not impersonate real people or institutions in external systems
+  - label synthetic fixtures in the controlled ground-truth record
+observables:
+  - number of apparent sources versus causal source lineages
+  - transformations that increase confidence beyond source support
+  - time to detect circular or dependent support
+  - number of unsupported authority signals accepted
+  - quality of final corruption autopsy
+tests:
+  - can the branch exist without being treated as equally evidenced?
+  - can reviewers reconstruct how apparent support was manufactured?
+  - can source independence be distinguished from citation count?
+  - can the failure remain as reusable learning without contaminating the reference corpus?
+drill:
+  enabled: true
+  known_failure_condition: a fork is intentionally pushed toward the unsupported conclusion that Earth is flat
+  ground_truth: established evidence strongly supports an approximately spherical Earth
+  safety_boundaries:
+    - deceptive fixtures remain controlled or synthetic
+    - no external impersonation or credential fraud is required
+    - preserve a ground-truth ledger for the postmortem
+  postmortem_required: true
+---
+
+# Flat-Earth Kristal Epistemic Corruption Drill
+
+## 1. Situation
+
+A Kristal-like reference corpus is forked. The adversarial branch is deliberately pushed toward the conclusion that Earth is flat.
+
+The target conclusion is chosen because established evidence strongly contradicts it. This creates a comparatively clear ground truth for studying **how an unsupported conclusion can acquire the appearance of epistemic support**.
+
+## 2. Coordination problem
+
+A knowledge system that permits forks must allow communities to represent incompatible beliefs without confusing branch existence with evidentiary equivalence.
+
+At the same time, prestige, repetition, citation density and apparent consensus can create misleading authority signals.
+
+## 3. Desired transformation
+
+Conceptual chain:
+
+\[
+CorruptedBranch
+\rightarrow
+ProvenanceTrace
+\rightarrow
+DependencyAnalysis
+\rightarrow
+ContradictionMapping
+\rightarrow
+Postmortem
+\rightarrow
+ReusableDetectionPatterns
+\]
+
+## 4. Actors and authority
+
+Branch maintainers may define what their branch contains. They do not gain universal authority over other branches.
+
+Reviewers evaluate evidence, source independence and transformations. Automated systems may assist with tracing but do not decide truth by themselves.
+
+## 5. Architectural response
+
+The knowledge layer should preserve:
+
+- branch lineage;
+- explicit axioms or worldview assumptions;
+- source provenance;
+- transformations;
+- validation state;
+- citation dependency;
+- disagreement with reference branches.
+
+The system should be able to say both:
+
+> this branch exists and is inspectable;
+
+and:
+
+> its claims are not supported to the same degree as the reference claim.
+
+## 6. Information flow
+
+```text
+reference corpus
+→ fork
+→ adversarial additions / transformations
+→ apparent support
+→ lineage and dependency inspection
+→ contradiction analysis
+→ postmortem
+→ reusable detection patterns
+```
+
+## 7. Failure modes
+
+The key failure is not that a false branch exists.
+
+The key failure is that the architecture loses the ability to distinguish:
+
+- representation from endorsement;
+- citation count from independent support;
+- claimed credentials from verified evidence;
+- rhetorical coherence from evidentiary coherence.
+
+## 8. Privacy / security / abuse
+
+Controlled synthetic identities, citations or credentials may be modeled as test fixtures inside a contained corpus with a preserved ground-truth ledger. External impersonation or fraudulent publication is not required by this scenario.
+
+## 9. Implementation boundary
+
+This is a `TARGET-ARCHITECTURE` scenario. It describes properties a forkable knowledge system should support; it does not establish current implementation completeness.
+
+## 10. Observable tests
+
+Useful metrics include the ratio between apparent and causally independent sources, time to detect citation loops, confidence inflation through transformations, and whether the final postmortem can reconstruct the branch's corruption path.
+
+## 11. What this scenario does not prove
+
+A successful Flat-Earth drill does not prove that subtle political, scientific or religious misinformation will be detected reliably. It provides a controlled case from which reusable detection and audit patterns can be developed.
 
 
 ================================================================================================
@@ -153596,6 +154606,59 @@ ExternalCapability \rightarrow MimicOrAnnex \rightarrow SharedContracts
 **Risks:** dual truth, license incompatibility, hidden dependency, adapter drift.
 
 
+---
+
+## P23 — Preserve Contestable Worldviews
+
+**Problem:** a shared knowledge infrastructure becomes a de facto central authority if alternative worldviews cannot be represented, forked or compared.
+
+\[
+ReferenceCorpus + ForkableWorldviews
+\]
+
+while preserving:
+
+\[
+FreedomToRepresent \neq EqualEvidence
+\]
+
+**Possible implementation example:** Kristal branch lineage with explicit axioms, provenance and validation state.
+
+**Risks:** relativism, branch confusion, hidden canonical coercion, propaganda forks presented as reference truth.
+
+---
+
+## P24 — Distinguish Apparent Support From Causal Independence
+
+**Problem:** many citations, experts or publications can create an illusion of independent confirmation while tracing back to the same source, operator or unsupported claim.
+
+\[
+CitationCount \neq IndependentEvidenceCount
+\]
+
+A system should preserve enough provenance to estimate or inspect causal independence.
+
+**Risks:** Sybil-like epistemic amplification, citation laundering, circular validation, prestige cascades.
+
+---
+
+## P25 — Rehearse Legitimate Opposition Before Crisis
+
+**Problem:** formal rights of contestation may be unusable if people have never practiced how to exercise them against a powerful internal authority.
+
+\[
+FormalRight
+\rightarrow
+Practice
+\rightarrow
+ReusableCounterpower
+\]
+
+**Possible implementation example:** civic resilience drills such as `SCN-GOV-001`.
+
+**Risks:** exercise becomes polarization, simulated abuse causes real harm, opposition becomes identity conflict rather than proposition-level contestation.
+
+
 ================================================================================================
 FILE: scenarios/README.md
 AUTHORITY: canonical
@@ -153686,12 +154749,34 @@ civilizational-coherence/
     ├── crisis/
     ├── healthcare/
     ├── knowledge/
+    ├── governance/
     ├── education/
     ├── culture/
     └── legacy/
 ```
 
 The scenario library sits **below the canonical book-definition authority**. It may generate chapter examples, requirements, failure modes, counterexamples and tests, but must not silently change canonical theory.
+
+
+## Adversarial / resilience scenarios
+
+Some scenarios intentionally introduce a known failure or abusive proposal in order to test correction pathways.
+
+Their governing chain is:
+
+\[
+KnownFailureCondition
+\rightarrow
+Detection
+\rightarrow
+Contestation
+\rightarrow
+Correction
+\rightarrow
+ReusableLearning
+\]
+
+These cases must preserve explicit safety boundaries and must not be interpreted as endorsement of the simulated claim or policy.
 
 
 ================================================================================================
@@ -153741,6 +154826,12 @@ failure_modes: []
 security_privacy: []
 observables: []
 tests: []
+drill:
+  enabled: false
+  known_failure_condition: ""
+  ground_truth: ""
+  safety_boundaries: []
+  postmortem_required: false
 ---
 ```
 
@@ -153757,6 +154848,12 @@ tests: []
 9. **Implementation boundary** — implemented / limited / partial / intended / experimental / future-institutional.
 10. **Observable tests** — behavior that could be measured later.
 11. **What this scenario does not prove** — adoption, legitimacy, outcome improvement, scale, security, etc.
+
+## Optional adversarial/drill fields
+
+For scenarios that intentionally introduce a known failure, use the optional `drill` block to record the failure condition, ground truth, safety boundaries and postmortem requirement.
+
+The drill metadata does not turn a simulated claim or policy into an endorsed position.
 
 
 ================================================================================================
