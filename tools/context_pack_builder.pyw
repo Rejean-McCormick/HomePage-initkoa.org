@@ -742,13 +742,17 @@ def make_pack(label: str, repo: Path, policy: dict | None = None):
     read_first = [str(x) for x in repo_policy.get("readFirst") or [] if str(x).strip()]
 
     def candidate_sort_key(item: tuple[str, Path, str]):
-        rel = item[0]
+        rel, _path, source_kind = item
+        # In merged Markdown packs, present the wiki first as the orientation/context
+        # layer, then the repository documentation. readFirst still controls ordering
+        # inside each source group.
+        source_priority = 0 if source_kind == "wiki" else 1
         priority = len(read_first)
         for index, pattern in enumerate(read_first):
             if _matches_policy_pattern(rel, pattern):
                 priority = index
                 break
-        return (priority, rel.casefold(), rel)
+        return (source_priority, priority, rel.casefold(), rel)
 
     candidates.sort(key=candidate_sort_key)
 

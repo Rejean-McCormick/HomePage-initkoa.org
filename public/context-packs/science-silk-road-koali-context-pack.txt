@@ -19,64 +19,1697 @@ excluded_files: 0
 duplicate_files: 0
 content_bytes: 196281
 authority_counts: {"canonical":50}
-generated_at: 2026-09-10T10:57:12-04:00
+generated_at: 2026-09-10T11:09:10-04:00
 files: 50
-content_sha256: 6841392d0c8356e8af000e40a5b82f2946d50c0c352476ca2b0a296cfa1caf17
+content_sha256: dcf5cfa1248953087a2a8361db6e410834754818d2af0e2335d42b2bf6d0de05
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-01. [canonical] CHANGELOG.md
-02. [canonical] docs/01-core-thesis.md
-03. [canonical] docs/02-theory-from-construction.md
-04. [canonical] docs/03-science-silk-road-fit.md
-05. [canonical] docs/04-capability-trajectories.md
-06. [canonical] docs/05-authority-provenance-transitions.md
-07. [canonical] docs/06-dialogue-han-cheng.md
-08. [canonical] docs/07-dialogue-anna-ahlers.md
-09. [canonical] docs/08-dialogue-hang-zhou.md
-10. [canonical] docs/09-research-design.md
-11. [canonical] docs/10-current-system-status.md
-12. [canonical] docs/11-conceptual-foundations.md
-13. [canonical] docs/12-articulation-architecture.md
-14. [canonical] docs/13-pressure-test-method.md
-15. [canonical] evidence/CHRONOLOGY_AND_PRIORITY.md
-16. [canonical] evidence/CLAIM_EVIDENCE_MATRIX.md
-17. [canonical] evidence/KOA_SOURCE_MAP.md
-18. [canonical] LINK_CHECK.md
-19. [canonical] MANIFEST.md
-20. [canonical] OUTREACH_EMAIL.md
-21. [canonical] README.md
-22. [canonical] references/ACADEMIC_BRIDGE.md
-23. [canonical] references/LINKS.md
-24. [canonical] references/SELECTED_BIBLIOGRAPHY.md
-25. [canonical] SUBMISSION_NOTE.md
-26. [canonical] submissions/300-word-pitch.md
-27. [canonical] submissions/750-word-research-proposal.md
-28. [canonical] submissions/article-3000-words.md
-29. [canonical] submissions/README.md
-30. [canonical] wiki/_Footer.md
-31. [canonical] wiki/_Sidebar.md
-32. [canonical] wiki/Academic-Bridges.md
-33. [canonical] wiki/Articulation-and-Conversion-Loss.md
-34. [canonical] wiki/Author-and-Contact.md
-35. [canonical] wiki/Authority-Provenance-and-Semantics.md
-36. [canonical] wiki/Capability-and-Dependency.md
-37. [canonical] wiki/Claims-Evidence-and-Status.md
-38. [canonical] wiki/Composition-Centrality-and-Terminal-Dependency.md
-39. [canonical] wiki/Dialogue-with-Science-Silk-Road-Team.md
-40. [canonical] wiki/Home.md
-41. [canonical] wiki/Koali-as-Architecture.md
-42. [canonical] wiki/Koali-Components.md
-43. [canonical] wiki/Pressure-Test-and-Falsifiability.md
-44. [canonical] wiki/Research-Design.md
-45. [canonical] wiki/Research-Question-and-Propositions.md
-46. [canonical] wiki/Science-Silk-Road-as-Test-Environment.md
-47. [canonical] wiki/Source-and-Chronology.md
-48. [canonical] wiki/Start-Here.md
-49. [canonical] wiki/Submission-Materials.md
-50. [canonical] wiki/Transition-Integrity.md
+01. [canonical] wiki/_Footer.md
+02. [canonical] wiki/_Sidebar.md
+03. [canonical] wiki/Academic-Bridges.md
+04. [canonical] wiki/Articulation-and-Conversion-Loss.md
+05. [canonical] wiki/Author-and-Contact.md
+06. [canonical] wiki/Authority-Provenance-and-Semantics.md
+07. [canonical] wiki/Capability-and-Dependency.md
+08. [canonical] wiki/Claims-Evidence-and-Status.md
+09. [canonical] wiki/Composition-Centrality-and-Terminal-Dependency.md
+10. [canonical] wiki/Dialogue-with-Science-Silk-Road-Team.md
+11. [canonical] wiki/Home.md
+12. [canonical] wiki/Koali-as-Architecture.md
+13. [canonical] wiki/Koali-Components.md
+14. [canonical] wiki/Pressure-Test-and-Falsifiability.md
+15. [canonical] wiki/Research-Design.md
+16. [canonical] wiki/Research-Question-and-Propositions.md
+17. [canonical] wiki/Science-Silk-Road-as-Test-Environment.md
+18. [canonical] wiki/Source-and-Chronology.md
+19. [canonical] wiki/Start-Here.md
+20. [canonical] wiki/Submission-Materials.md
+21. [canonical] wiki/Transition-Integrity.md
+22. [canonical] CHANGELOG.md
+23. [canonical] docs/01-core-thesis.md
+24. [canonical] docs/02-theory-from-construction.md
+25. [canonical] docs/03-science-silk-road-fit.md
+26. [canonical] docs/04-capability-trajectories.md
+27. [canonical] docs/05-authority-provenance-transitions.md
+28. [canonical] docs/06-dialogue-han-cheng.md
+29. [canonical] docs/07-dialogue-anna-ahlers.md
+30. [canonical] docs/08-dialogue-hang-zhou.md
+31. [canonical] docs/09-research-design.md
+32. [canonical] docs/10-current-system-status.md
+33. [canonical] docs/11-conceptual-foundations.md
+34. [canonical] docs/12-articulation-architecture.md
+35. [canonical] docs/13-pressure-test-method.md
+36. [canonical] evidence/CHRONOLOGY_AND_PRIORITY.md
+37. [canonical] evidence/CLAIM_EVIDENCE_MATRIX.md
+38. [canonical] evidence/KOA_SOURCE_MAP.md
+39. [canonical] LINK_CHECK.md
+40. [canonical] MANIFEST.md
+41. [canonical] OUTREACH_EMAIL.md
+42. [canonical] README.md
+43. [canonical] references/ACADEMIC_BRIDGE.md
+44. [canonical] references/LINKS.md
+45. [canonical] references/SELECTED_BIBLIOGRAPHY.md
+46. [canonical] SUBMISSION_NOTE.md
+47. [canonical] submissions/300-word-pitch.md
+48. [canonical] submissions/750-word-research-proposal.md
+49. [canonical] submissions/article-3000-words.md
+50. [canonical] submissions/README.md
+
+
+================================================================================================
+FILE: wiki/_Footer.md
+AUTHORITY: canonical
+================================================================================================
+
+---
+**Koali × China’s Science Silk Road** · Research dossier by Réjean McCormick  · [Home](Home) · [Claims & Status](Claims-Evidence-and-Status)
+
+
+================================================================================================
+FILE: wiki/_Sidebar.md
+AUTHORITY: canonical
+================================================================================================
+
+### Koali × Science Silk Road
+
+**Orientation**
+- [Home](Home)
+- [Start Here](Start-Here)
+- [Research Question & Propositions](Research-Question-and-Propositions)
+
+**Core framework**
+- [Articulation & Conversion Loss](Articulation-and-Conversion-Loss)
+- [Transition Integrity](Transition-Integrity)
+- [Capability & Dependency](Capability-and-Dependency)
+- [Authority, Provenance & Semantics](Authority-Provenance-and-Semantics)
+- [Composition, Centrality & Terminal Dependency](Composition-Centrality-and-Terminal-Dependency)
+
+**Koali**
+- [Koali as Architecture](Koali-as-Architecture)
+- [Koali Components](Koali-Components)
+- [Claims, Evidence & Status](Claims-Evidence-and-Status)
+- [Pressure Test & Falsifiability](Pressure-Test-and-Falsifiability)
+
+**Science Silk Road**
+- [Science Silk Road as Test Environment](Science-Silk-Road-as-Test-Environment)
+- [Research Design](Research-Design)
+- [Dialogue with the Project Team](Dialogue-with-Science-Silk-Road-Team)
+
+**Scholarly basis**
+- [Academic Bridges](Academic-Bridges)
+- [Source & Chronology](Source-and-Chronology)
+
+**Outputs**
+- [Submission Materials](Submission-Materials)
+- [Author & Contact](Author-and-Contact)
+
+
+================================================================================================
+FILE: wiki/Academic-Bridges.md
+AUTHORITY: canonical
+================================================================================================
+
+# Academic Bridges
+
+The constituent problems addressed by this dossier are not new. Its proposed contribution is to treat several of them as **recurring transition problems across a longer knowledge-to-action-to-memory chain**.
+
+## Where the contribution begins
+
+Existing literatures already establish that:
+
+- external knowledge must be recognized, assimilated, and applied;
+- knowledge transfer can be sticky;
+- knowledge crossing boundaries may require translation and transformation;
+- productive assets are not the same as technological capabilities;
+- maintenance and repair are constitutive of infrastructure;
+- organizations can fail to retain and retrieve learning;
+- expertise is distinct from legitimate political authority;
+- capability and dependency can coexist.
+
+The integrative move proposed here is:
+
+> **treat the interface as a recurring analytical object and ask which properties must survive each transition for distributed potential to become cumulative collective capability.**
+
+## Knowledge absorption
+
+**Cohen & Levinthal (1990)** — absorptive capacity: organizations need the ability to recognize, assimilate, and apply external knowledge.
+
+Bridge: external information does not automatically become usable capability.
+
+## Sticky transfer
+
+**Szulanski (1996)** — even best practices can be difficult to transfer because of causal ambiguity, weak absorptive capacity, and source-recipient relations.
+
+Bridge: the existence of useful knowledge does not guarantee successful transition.
+
+## Knowledge across boundaries
+
+**Carlile (2004)** — distinguishes transfer, translation, and transformation across syntactic, semantic, and pragmatic boundaries.
+
+Bridge: “movement” is not a single process.
+
+## Boundary objects
+
+**Star & Griesemer (1989)** — heterogeneous communities can cooperate through objects that are locally adaptable yet retain recognizable identity.
+
+Bridge: identity preservation across contextual variation.
+
+## Technological capability
+
+**Bell & Pavitt (1993)** — productive capacity is distinct from technological capability to generate and manage technical change.
+
+Bridge: infrastructure acquisition does not imply mastery or reconfiguration capacity.
+
+## Maintenance and repair
+
+**Graham & Thrift (2007)** — repair and maintenance reveal otherwise invisible infrastructures of continuity.
+
+Bridge: breakdowns are empirical windows into capability and dependency.
+
+## Organizational memory
+
+**Walsh & Ungson (1991)** — organizational memory involves acquisition, retention, and retrieval rather than mere storage.
+
+Bridge: outcome does not automatically become reusable learning.
+
+## Capability lifecycles
+
+**Helfat & Peteraf (2003)** — capabilities evolve over time rather than existing as static assets.
+
+Bridge: capability trajectories should be studied dynamically.
+
+## Expertise and legitimacy
+
+**Collins & Evans (2002)** — expertise should be analytically distinguished from rights to decide.
+
+**Guston (2001)** — boundary organizations connect science and policy while preserving differentiated roles.
+
+Bridge: expertise, validation, and authority should not be collapsed.
+
+## Digital Silk Road and dependency
+
+**El-Kadi (2024)** — technology-transfer linkages in North Africa can expand infrastructure and technical connections without equivalent domestic upgrading, while creating new forms of dependency.
+
+Bridge: capability gain and dependency reduction are separate propositions.
+
+## Global China and the Science Silk Road team
+
+**Han Cheng** — geographies of knowledge production, translation, circulation, reproduction, world-writing, and relational infrastructure.
+
+**Anna Lisa Ahlers** — political steering, professional science, metrics, organizational complexity, and differentiated authority.
+
+**Hang Zhou** — everyday practice, bureaucracy, infrastructure, local agency, and the lived operation of transnational cooperation.
+
+See [Dialogue with the Science Silk Road Team](Dialogue-with-Science-Silk-Road-Team).
+
+## Core references
+
+- Bell, Martin, and Keith Pavitt. 1993. “Technological Accumulation and Industrial Growth: Contrasts Between Developed and Developing Countries.” *Industrial and Corporate Change* 2(2): 157–210. https://doi.org/10.1093/icc/2.2.157
+- Carlile, Paul R. 2004. “Transferring, Translating, and Transforming: An Integrative Framework for Managing Knowledge Across Boundaries.” *Organization Science* 15(5): 555–568. https://doi.org/10.1287/orsc.1040.0094
+- Cohen, Wesley M., and Daniel A. Levinthal. 1990. “Absorptive Capacity: A New Perspective on Learning and Innovation.” *Administrative Science Quarterly* 35(1): 128–152. https://doi.org/10.2307/2393553
+- Collins, H. M., and Robert Evans. 2002. “The Third Wave of Science Studies: Studies of Expertise and Experience.” *Social Studies of Science* 32(2): 235–296. https://doi.org/10.1177/0306312702032002003
+- El-Kadi, Tin Hinane. 2024. “Learning along the Digital Silk Road? Technology Transfer, Power, and Chinese ICT Corporations in North Africa.” *The Information Society* 40(2): 136–153. https://doi.org/10.1080/01972243.2024.2317060
+- Graham, Stephen, and Nigel Thrift. 2007. “Out of Order: Understanding Repair and Maintenance.” *Theory, Culture & Society* 24(3): 1–25. https://doi.org/10.1177/0263276407075954
+- Guston, David H. 2001. “Boundary Organizations in Environmental Policy and Science: An Introduction.” *Science, Technology, & Human Values* 26(4): 399–408. https://doi.org/10.1177/016224390102600401
+- Helfat, Constance E., and Margaret A. Peteraf. 2003. “The Dynamic Resource-Based View: Capability Lifecycles.” *Strategic Management Journal* 24(10): 997–1010. https://doi.org/10.1002/smj.332
+- Star, Susan Leigh, and James R. Griesemer. 1989. “Institutional Ecology, ‘Translations’ and Boundary Objects.” *Social Studies of Science* 19(3): 387–420. https://doi.org/10.1177/030631289019003001
+- Szulanski, Gabriel. 1996. “Exploring Internal Stickiness: Impediments to the Transfer of Best Practice within the Firm.” *Strategic Management Journal* 17(S2): 27–43. https://doi.org/10.1002/smj.4250171105
+- Walsh, James P., and Gerardo Rivera Ungson. 1991. “Organizational Memory.” *Academy of Management Review* 16(1): 57–91. https://doi.org/10.5465/AMR.1991.4278992
+
+
+================================================================================================
+FILE: wiki/Articulation-and-Conversion-Loss.md
+AUTHORITY: canonical
+================================================================================================
+
+# Articulation & Conversion Loss
+
+## The general problem
+
+A system can contain useful capacity without being able to use it collectively.
+
+```text
+Capability exists ≠ capability is mobilized
+Missing capacity ≠ conversion loss
+```
+
+**Conversion loss** occurs when potential that already exists fails to remain available, intelligible, legitimate, composable, or actionable across the transitions required for collective action.
+
+The capacity itself does not need to disappear. It can simply become unavailable to the system.
+
+## Examples
+
+- relevant expertise exists but is never discovered;
+- a claim loses provenance while being summarized or translated;
+- a technically correct judgment reaches no legitimate decision channel;
+- an approved decision has no operational owner;
+- a working procedure remains dependent on one person’s tacit knowledge;
+- a successful project leaves no reusable institutional memory.
+
+The domains differ. The transition problem recurs.
+
+## Articulation
+
+**Articulation** is the mechanism by which distinct capabilities are related strongly enough to produce a joint effect without requiring them to become one thing.
+
+```text
+Discoverable ≠ composable
+Connection ≠ interoperability
+Interoperability ≠ uniformity
+Composition ≠ absorption
+```
+
+A useful articulation architecture therefore has to solve more than connectivity. It may need to preserve:
+
+- identity;
+- provenance;
+- semantic relationships;
+- authority boundaries;
+- permissions;
+- responsibility;
+- evidence of transition;
+- memory and lineage.
+
+## Why interfaces matter
+
+Organizations are often optimized by improving nodes: better databases, better laboratories, better experts, better project tools.
+
+But if the transition between two capable nodes fails, the larger system can remain ineffective.
+
+```text
+Node A ──X──> Node B
+```
+
+The analytical move in this dossier is therefore:
+
+> **Study the interface as a first-class object.**
+
+This does not imply that interfaces always dominate outcomes. That is an empirical proposition to test.
+
+
+================================================================================================
+FILE: wiki/Author-and-Contact.md
+AUTHORITY: canonical
+================================================================================================
+
+# Author & Contact
+
+## Réjean McCormick
+
+**Réjean McCormick** is an independent systems architect based in Québec, Canada.
+
+His work on Koali focuses on knowledge-to-action transitions, provenance, differentiated authority, semantic interoperability, institutional memory, and the composition of distributed capabilities.
+
+## Contact
+
+**Réjean McCormick**  
+Québec, Canada
+
+- rejean.mccormick@initkoa.org
+
+
+## Public links
+
+- https://initkoa.org/
+- https://github.com/Rejean-McCormick
+
+
+================================================================================================
+FILE: wiki/Authority-Provenance-and-Semantics.md
+AUTHORITY: canonical
+================================================================================================
+
+# Authority, Provenance & Semantics
+
+## “Control” is too coarse
+
+Scientific cooperation distributes several forms of authority that should not be collapsed into one variable.
+
+```text
+Scientific expertise
+≠ validation authority
+≠ data authority
+≠ agenda authority
+≠ institutional authority
+≠ political authority
+≠ operational permission
+```
+
+These forms of authority can move in different directions within the same collaboration.
+
+## Evidence, advice, and decision
+
+A central invariant is:
+
+```text
+Evidence ≠ Advice
+Advice ≠ Authority
+Judgment ≠ Decision
+Decision ≠ Execution
+```
+
+The point is not to weaken expertise. It is to clarify **how expertise enters legitimate action**.
+
+## Provenance
+
+Provenance is not merely archival metadata. It supports reconstructibility:
+
+```text
+source
+→ transformation
+→ validation
+→ version
+→ use
+→ revision
+```
+
+In transnational science this can matter for datasets, models, protocols, standards, claims, and institutional decisions.
+
+## Stable evidence + revisable interpretation
+
+A useful epistemic principle is:
+
+```text
+Stable evidence + revisable interpretation
+```
+
+The same underlying record may support multiple explicit readings without requiring a single permanent interpretation.
+
+```text
+Facts ≠ Readings
+One record → multiple scoped interpretations
+```
+
+This is intended to avoid both universal truth authority and relativistic equivalence.
+
+## Semantic integrity
+
+Scientific cooperation crosses languages, disciplines, classifications, institutional categories, and technical ontologies.
+
+```text
+Word ≠ Concept
+Translation ≠ Equivalence
+Mapping ≠ Identity
+Semantic coherence ≠ Universal ontology
+```
+
+The empirical question is not whether all actors use the same vocabulary, but whether relevant meaning can remain sufficiently intelligible and composable **without erasing legitimate non-equivalence**.
+
+## Research implication
+
+For each transnational interface ask:
+
+- Which categories became authoritative?
+- Which local categories were translated, mapped, ignored, or absorbed?
+- Which validation practices traveled with the data or method?
+- Which actor could revise the shared representation?
+- Could disagreement remain legible rather than being normalized away?
+
+
+================================================================================================
+FILE: wiki/Capability-and-Dependency.md
+AUTHORITY: canonical
+================================================================================================
+
+# Capability & Dependency
+
+## Why a single capacity score is insufficient
+
+Scientific capability is multidimensional. An institution may be able to operate a system without being able to maintain it, validate its outputs, modify its protocols, train successors, or continue after a supplier change.
+
+A useful analytical vector is:
+
+```text
+C = [Operate, Maintain, Adapt, Validate, Govern, Transmit, Reconfigure]
+```
+
+The purpose is not to rank institutions. It is to make functional differences visible.
+
+## Capability trajectories
+
+Instead of asking whether a project “built capacity,” trace a function through time:
+
+```text
+access
+→ practice
+→ competence
+→ validation
+→ institutionalization
+→ transmission
+→ reproduction
+→ reconfiguration
+```
+
+This is **not** a universal developmental ladder. Different institutions may rationally specialize in different functions.
+
+## Discoverability comes first
+
+A partnership may create capability, but it may also simply make pre-existing local capability newly visible or mobilizable.
+
+The empirical baseline should therefore ask:
+
+- What capabilities existed before cooperation?
+- Who knew they existed?
+- Which actors could access them?
+- Which were institutionally recognized?
+- Which were already connected to decision or operational channels?
+
+## Capability and dependency are separate variables
+
+```text
+Capability gain ≠ dependency reduction
+```
+
+A collaboration may increase local scientific capacity while simultaneously increasing reliance on:
+
+```text
+Finance · Hardware · Software · Data · Standards · Expertise · Authority
+```
+
+The relevant object is therefore a **capability–dependency configuration**, not a single axis from dependence to autonomy.
+
+## Reconfigurability
+
+The strongest durability question may be:
+
+> **Can the scientific activity survive meaningful change?**
+
+Examples:
+
+- a supplier leaves;
+- a key expert departs;
+- funding ends;
+- software or standards change;
+- data access rules change;
+- the research agenda shifts.
+
+Interdependence with meaningful reconfiguration is analytically different from interdependence with rigid lock-in.
+
+
+================================================================================================
+FILE: wiki/Claims-Evidence-and-Status.md
+AUTHORITY: canonical
+================================================================================================
+
+# Claims, Evidence & Implementation Status
+
+## The central evidence rule
+
+The dossier separates four different things:
+
+```text
+Conceptual architecture
+≠ documented design
+≠ implemented component
+≠ externally validated social claim
+```
+
+A detailed specification is not evidence that the architecture works socially, institutionally, or empirically.
+
+## What the dossier claims
+
+1. Distributed potential does not automatically become collective capability.
+2. Interfaces can become consequential bottlenecks.
+3. Capability is multidimensional.
+4. Capability and dependency are separate variables.
+5. Authority is differentiated.
+6. Outcomes are not automatically cumulative.
+7. Composition without absorption is a testable design proposition.
+8. Useful centrality does not automatically imply domination.
+
+## What it does not claim
+
+- Koali has empirically solved the Science Silk Road.
+- China uniquely produces dependency.
+- Local autonomy is always preferable to interdependence.
+- Decentralization is inherently superior.
+- Every institution should reproduce every scientific function locally.
+- More provenance or audit is always better regardless of administrative burden.
+- All semantic differences must be preserved.
+- Every Koali component is fully implemented or independently tested.
+- Scenario coverage is empirical validation.
+- Public code proves functional reproducibility.
+- Internal conceptual coherence proves external validity.
+
+## Status vocabulary
+
+```text
+DESIGN AMBITION
+DOCUMENTED ARCHITECTURE
+IMPLEMENTED / REPORTED IMPLEMENTED
+TESTED
+BENCHMARKED
+EXTERNALLY VALIDATED
+```
+
+Use the most conservative defensible status.
+
+## Current safe framing
+
+> **Koali is a documented and partially implemented sociotechnical architecture whose components are at different stages of development and verification.**
+
+The research argument does not depend on full production readiness. It depends on enough architectural specificity to derive testable propositions.
+
+## Examples of cautious wording
+
+- **Kristal:** provenance-bearing / portable knowledge architecture; portability requires actual portability tests.
+- **Konnaxion:** documented coordination and discovery architecture; integration status varies by component.
+- **EkoH:** proposed contextual competence / credibility mechanism; do not present as validated expertise ranking.
+- **Smart Vote:** multiple-reading design; do not claim governance superiority without evaluation.
+- **Orgo:** decision-to-execution / routing architecture; end-to-end claims require test evidence.
+- **Offline continuity:** design target unless a specific workflow has been verified.
+- **Replicable whole:** architectural target; independent reproduction requires deployment, knowledge, rights, and human mastery tests.
+
+## Scenario and rights rules
+
+```text
+Scenario ≠ Evidence
+Architecturally forkable ≠ legally reusable
+```
+
+## Verification before “implemented”
+
+Record at minimum:
+
+- repository and version/commit;
+- source/code inspection;
+- reproducible procedure or direct observation;
+- observed result;
+- explicit limitations.
+
+
+================================================================================================
+FILE: wiki/Composition-Centrality-and-Terminal-Dependency.md
+AUTHORITY: canonical
+================================================================================================
+
+# Composition, Centrality & Terminal Dependency
+
+## Composition without absorption
+
+The core principle is:
+
+```text
+Composition ≠ Absorption
+```
+
+Heterogeneous systems may need common interfaces, standards, or shared infrastructure in order to cooperate. The question is whether cooperation requires one system to become the unquestioned semantic, technical, or institutional authority for the rest.
+
+This is an empirical and design question, not a presumption that every difference should be preserved.
+
+## Centrality is not inherently a problem
+
+Large scientific systems often require central facilities, shared standards, common data infrastructures, or coordination hubs.
+
+```text
+Functional centrality ≠ domination
+Centralized access ≠ centralized truth
+Strong center ≠ total sovereignty
+```
+
+The useful distinction is between **centrality that increases collective capability** and **centrality that creates non-credible continuation without one actor**.
+
+## Terminal dependency
+
+A dependency becomes **terminal** when failure, refusal, capture, or disappearance of one center makes practical continuation non-credible.
+
+Examples may include dependence on:
+
+- one data platform;
+- one maintenance team;
+- one proprietary standard;
+- one authentication authority;
+- one supplier;
+- one institution’s permission;
+- one body of tacit founder knowledge.
+
+## Design heuristic
+
+```text
+Maximum useful centrality + minimum terminal dependency
+```
+
+This is a heuristic, not a calibrated optimization formula.
+
+The aim is to permit a strong articulation layer while preserving meaningful possibilities for:
+
+```text
+Verification + Contestation + Substitution + Exit
+```
+
+## Independent reproducibility
+
+```text
+Repository clone ≠ functional reproduction
+Documentation ≠ mastery
+```
+
+A stronger test asks whether an independent institution can, where rights permit, operate, understand, maintain, teach, adapt, or reconstruct the relevant function without unique continuing permission from the original operator.
+
+## Science Silk Road questions
+
+- Which shared infrastructures are useful precisely because they are central?
+- Which dependencies are accepted because specialization is efficient?
+- Which dependencies become strategic bottlenecks?
+- Can partner institutions substitute, renegotiate, or reconfigure critical dependencies?
+- Is the shared capability still usable when the original partnership changes?
+
+
+================================================================================================
+FILE: wiki/Dialogue-with-Science-Silk-Road-Team.md
+AUTHORITY: canonical
+================================================================================================
+
+# Dialogue with the Science Silk Road Team
+
+This page identifies intellectual bridges rather than claiming that the project investigators endorse the framework.
+
+## Han Cheng — knowledge trajectories and world-writing
+
+### Strongest bridge
+
+Cheng’s work treats knowledge production as institutionally and geopolitically situated and directs attention toward production, translation, circulation, consumption, and reproduction.
+
+The dossier extends this trajectory one step further:
+
+```text
+Knowledge trajectory
+→ capability trajectory
+```
+
+The question becomes not only where knowledge travels, but **what the movement changes in the ability of institutions to validate, act, maintain, teach, and reconfigure scientific practice**.
+
+### Semantic authority
+
+Cheng’s work on world-writing also makes semantic and institutional framing central. This creates a direct bridge to:
+
+```text
+Translation ≠ Equivalence
+Semantic coherence ≠ Universal ontology
+```
+
+The research can ask which classifications, standards, categories, and research framings become authoritative in transnational collaboration.
+
+### Guardrail
+
+Avoid turning capability trajectories into a developmental ladder. Cheng’s critique of geopolitical and temporal ordering makes that especially important.
+
+---
+
+## Anna Lisa Ahlers — differentiated authority and science systems
+
+### Strongest bridge
+
+Ahlers’s work on China’s science, technology, and innovation system shows why “state control vs scientific autonomy” is too simple.
+
+The dossier similarly separates:
+
+```text
+political steering
+scientific expertise
+validation authority
+data authority
+organizational authority
+operational permission
+```
+
+These may coexist, conflict, or change independently.
+
+### Metrics are not capability
+
+Ahlers and Christmann-Budian’s work on university rankings shows how measurement systems can become governing instruments rather than neutral descriptions.
+
+This supports the distinction:
+
+```text
+Evidence ≠ Metric
+Output ≠ Outcome ≠ Learning ≠ Capability gain
+```
+
+### Research opportunity
+
+Science Silk Road cases can reveal how authority becomes redistributed through standards, funding, data infrastructure, evaluation regimes, and technical dependence.
+
+---
+
+## Hang Zhou — everyday operation and local agency
+
+### Strongest bridge
+
+Zhou’s empirical orientation toward China–Africa cooperation, infrastructure, bureaucracy, and everyday governance is crucial because the transition framework must be observed in practice.
+
+The relevant questions are often mundane:
+
+- Who actually maintains the system?
+- Who calls whom when it fails?
+- Which approval blocks repair?
+- Which workarounds become normal?
+- Which local actors reinterpret or redirect the project?
+- What knowledge survives staff turnover?
+
+### Breakdowns as empirical windows
+
+Maintenance failures, procurement delays, personnel changes, and policy shifts are analytically valuable because they expose hidden authority and dependency structures.
+
+### Research opportunity
+
+Zhou’s perspective prevents the framework from treating partner institutions as passive recipients of “transfer.” Local actors may reshape, appropriate, resist, or repurpose scientific cooperation.
+
+---
+
+## Combined value
+
+The three bridges correspond to different layers of the same problem:
+
+```text
+Cheng  → knowledge, space, translation, reproduction
+Ahlers → authority, steering, evaluation, institutional differentiation
+Zhou   → practice, implementation, local agency, everyday infrastructure
+```
+
+The transition framework is strongest if it can connect these levels without flattening them.
+
+
+================================================================================================
+FILE: wiki/Home.md
+AUTHORITY: canonical
+================================================================================================
+
+# Koali × China’s Science Silk Road
+## Articulation, transition integrity, and cumulative scientific capability
+
+**Research wiki · Réjean McCormick· 2026-09-02**
+
+---
+
+## The problem in 30 seconds
+
+Scientific cooperation is often described through what moves: **funding, infrastructure, data, standards, expertise, training, and knowledge**.
+
+This dossier asks a different question:
+
+> **What has to remain intact when those capabilities cross institutional, technical, semantic, and authority boundaries if cooperation is to become cumulative rather than episodic?**
+
+The underlying proposition is simple:
+
+```text
+Distributed potential ≠ collective capability
+```
+
+A system may already contain excellent researchers, tools, institutions, and knowledge yet still lose value at the transitions between them.
+
+---
+
+## The distinctive move
+
+The proposed analytical object is not only the **node**—laboratory, university, platform, country, or infrastructure—but the **interface through which capability changes form**.
+
+```text
+potential
+→ discovery
+→ interpretation
+→ qualification
+→ composition
+→ authorized action
+→ outcome
+→ memory
+→ future capability
+```
+
+At each transition, ask:
+
+```text
+What survives?
+identity · provenance · meaning · evidence · uncertainty
+attribution · authority · legitimacy · contestability · memory
+```
+
+I call failures across these transitions **conversion loss**.
+
+---
+
+## Where Koali fits
+
+Koali is not proposed as a replacement for specialized scientific systems, institutions, or expertise.
+
+> **Koali competes less with existing systems than with the fragmentation between them.**
+
+It is better understood as a **sociotechnical articulation architecture**: an attempt to make heterogeneous capabilities discoverable and composable while preserving the distinctions that should remain distinct.
+
+```text
+Composition ≠ Absorption
+Translation ≠ Equivalence
+Expertise ≠ Authority
+Connection ≠ Interoperability
+Functional centrality ≠ Domination
+```
+
+The architectural target is therefore not “one platform for everything,” but:
+
+```text
+strong articulation
++ distributed capability
++ explicit boundaries
++ independent continuation
+```
+
+---
+
+## Why the Science Silk Road is a strong empirical test
+
+China’s expanding international cooperation in science, technology, and innovation creates dense interfaces among laboratories, universities, data infrastructures, vendors, standards, public authorities, languages, and knowledge systems.
+
+That makes it possible to test questions such as:
+
+- Which capabilities already exist but remain undiscovered or underused?
+- Which new capabilities are co-produced through cooperation rather than simply transferred?
+- What is lost or preserved when knowledge crosses semantic and institutional boundaries?
+- Which forms of authority move, and which remain separate?
+- Which capabilities increase while which dependencies deepen?
+- When does useful centrality become terminal dependency?
+- Can scientific systems compose without one technical, semantic, or institutional order absorbing the others?
+- Do outcomes become reusable institutional memory and future capability?
+
+These are **research questions**, not conclusions built into the framework.
+
+---
+
+## Five propositions to test
+
+1. **Interface bottlenecks matter.** Highly capable nodes can still produce weak collective capability when transitions fail.
+2. **Capability and dependency can grow together.** They should be measured as separate variables.
+3. **Durability requires more than access or training.** Maintenance, transmission, institutional memory, and reconfiguration matter.
+4. **Composition does not require absorption.** Cooperation may be possible through explicit interfaces while relevant institutional differences remain intact.
+5. **Centrality is not the same as domination.** The key distinction is between useful centrality and terminal dependency.
+
+Each proposition can be narrowed, revised, or rejected by empirical evidence.
+
+---
+
+## Read by intent
+
+### I have 5 minutes
+1. [Start Here](Start-Here)
+2. [Research Question & Propositions](Research-Question-and-Propositions)
+3. [Science Silk Road as Test Environment](Science-Silk-Road-as-Test-Environment)
+
+### I want the conceptual framework
+1. [Articulation & Conversion Loss](Articulation-and-Conversion-Loss)
+2. [Transition Integrity](Transition-Integrity)
+3. [Capability & Dependency](Capability-and-Dependency)
+4. [Authority, Provenance & Semantics](Authority-Provenance-and-Semantics)
+5. [Composition, Centrality & Terminal Dependency](Composition-Centrality-and-Terminal-Dependency)
+
+### I want to evaluate Koali rather than accept it
+1. [Koali as Architecture](Koali-as-Architecture)
+2. [Claims, Evidence & Implementation Status](Claims-Evidence-and-Status)
+3. [Pressure Test & Falsifiability](Pressure-Test-and-Falsifiability)
+4. [Academic Bridges](Academic-Bridges)
+
+### I want the empirical programme
+1. [Research Design](Research-Design)
+2. [Dialogue with the Science Silk Road Team](Dialogue-with-Science-Silk-Road-Team)
+3. [Submission Materials](Submission-Materials)
+
+---
+
+## Scope
+
+This wiki does **not** claim that Koali empirically explains the Science Silk Road in advance. It does not claim that China uniquely creates dependency, that decentralization is inherently superior, or that every scientific function should be localized.
+
+The framework is intended to make specific mechanisms visible enough to be **observed, compared, falsified, and revised**.
+
+
+================================================================================================
+FILE: wiki/Koali-as-Architecture.md
+AUTHORITY: canonical
+================================================================================================
+
+# Koali as Architecture
+
+## The central correction
+
+Koali should not be read as an attempt to build the best specialized system for every domain.
+
+It is better understood as an **articulation architecture**:
+
+> **a system for making heterogeneous capabilities discoverable, composable, governable, actionable, and cumulative while allowing specialized systems and institutions to remain distinct.**
+
+## The fragmentation problem
+
+Most institutions already use different systems for:
+
+- knowledge and documentation;
+- expertise discovery;
+- learning and training;
+- collaboration and deliberation;
+- decisions and governance;
+- project and operational execution;
+- reporting and institutional memory.
+
+The recurring failure is loss of continuity between them:
+
+```text
+knowledge | discussion | decision | work | outcome | memory
+```
+
+Koali’s target is the continuity:
+
+```text
+knowledge
+→ interpretation
+→ deliberation
+→ judgment
+→ decision
+→ mandate
+→ execution
+→ outcome
+→ memory
+→ renewed knowledge
+```
+
+An external specialized system may perform any of these functions.
+
+## Centralize coherence, not necessarily capability
+
+Koali may provide shared mechanisms for:
+
+- discovery and navigation;
+- identity and permissions;
+- provenance and lineage;
+- interface contracts;
+- routing;
+- transition records;
+- rationale and responsibility;
+- memory retrieval.
+
+It does not follow that Koali must own:
+
+- every source;
+- every dataset;
+- every scientific validation process;
+- every expert;
+- every institution;
+- every operational system;
+- every political decision.
+
+## Kintsugi / Kompendio
+
+The integration logic distinguishes:
+
+### Mimic
+Reimplement a useful pattern natively when coherent ownership, auditability, sovereignty, UX, or long-term control justify doing so.
+
+### Annex
+Integrate a mature external capability through explicit adapters or sidecars when separation and replaceability are preferable.
+
+```text
+Integration ≠ merger
+One coherent environment ≠ one monolithic codebase
+```
+
+## Why this matters academically
+
+Building an operational architecture forces questions that prose can leave ambiguous:
+
+- What object is authoritative?
+- Who can change its state?
+- What evidence permits the transition?
+- What context must survive?
+- Who may contest it?
+- How is the result returned to memory?
+- What happens if a provider disappears?
+
+These design constraints generate hypotheses. They do **not** validate the hypotheses.
+
+
+================================================================================================
+FILE: wiki/Koali-Components.md
+AUTHORITY: canonical
+================================================================================================
+
+# Koali Components
+
+Koali’s components are best understood as **roles in a composition**, not a claim that every specialized function must be rebuilt inside one platform.
+
+## Kristal — portable epistemic memory
+
+Kristal is concerned with knowledge artifacts that can preserve claim, evidence, provenance, status, uncertainty, authority, scope, version, and lineage.
+
+```text
+Knowledge artifact ≠ platform
+```
+
+Its relevance to the research framework is the possibility of preserving epistemic context while knowledge moves between systems.
+
+## Konnaxion — discovery and collective work
+
+Konnaxion connects people to knowledge, learning, contribution, collaboration, consultation, deliberation, and shared artifacts.
+
+Its conceptual role is to increase **discoverability and composition**, not to become the sole source of knowledge or expertise.
+
+## EkoH — contextual competence signals
+
+EkoH is intended to represent evidence of contextual competence and credibility.
+
+```text
+Reputation ≠ truth
+Competence ≠ mandate
+```
+
+An expertise signal may help route attention or advice without acquiring scientific or political sovereignty.
+
+## Smart Vote — plural readings
+
+Smart Vote separates a participation record from derived interpretations or lenses.
+
+```text
+Facts ≠ readings
+One record → multiple explicit readings
+```
+
+Its conceptual value is to reveal the structure of agreement and disagreement without collapsing all perspectives into one scalar.
+
+## Orgo — continuity into execution
+
+Orgo is concerned with turning signals and decisions into accountable operational work.
+
+```text
+Signal → Case → Responsibility → Tasks → Escalation → Closure
+```
+
+The relevant properties are ownership, timing, evidence, status, outcome, and return to institutional memory.
+
+## Kintsugi / Kompendio — composition logic
+
+These components make dependencies, interfaces, ownership boundaries, and Mimic/Annex decisions explicit.
+
+Their theoretical relevance is **composition without absorption** and replaceability.
+
+## Simplified closed loop
+
+```text
+Kristal
+→ Konnaxion
+→ deliberation / judgment / decision
+→ Orgo
+→ execution / outcome
+→ Kristal
+```
+
+The important property is not the module sequence itself. It is the **continuity between capabilities**, including when external systems perform one or more stages.
+
+
+================================================================================================
+FILE: wiki/Pressure-Test-and-Falsifiability.md
+AUTHORITY: canonical
+================================================================================================
+
+# Pressure Test & Falsifiability
+
+## Purpose
+
+Koali is useful as a research generator only if its propositions can fail.
+
+The pressure-test discipline is:
+
+```text
+Claim
+→ Expected observation
+→ Test
+→ Possible failure
+→ Revision or rejection
+```
+
+## Example pressure tests
+
+### Interface integrity matters
+**Prediction:** better-preserved handoffs should improve continuity or reconstructibility under otherwise comparable conditions.
+
+**Failure signal:** node-level resources explain outcomes while interface differences add little explanatory value.
+
+### Explicit authority separation helps
+**Prediction:** clearer boundaries between expertise, validation, decision authority, and operational permission should reduce silent authority transfer.
+
+**Failure signal:** formal separation creates administrative burden without improving legitimacy, quality, or accountability.
+
+### Provenance improves reconstructibility
+**Prediction:** preserved lineage should make disputed or failed processes easier to reconstruct and revise.
+
+**Failure signal:** provenance cost exceeds practical value or is routinely bypassed without meaningful consequence.
+
+### Composition without absorption is desirable
+**Prediction:** explicit interfaces can support cooperation while preserving useful local variation and replaceability.
+
+**Failure signal:** common work repeatedly requires deeper standardization or institutional integration than the model allows.
+
+### Reconfigurability matters
+**Prediction:** systems capable of adapting after supplier, funding, personnel, or technical change should exhibit more durable capability.
+
+**Failure signal:** continuity depends mainly on stable external support and reconfiguration adds little explanatory value.
+
+### Independent reproduction indicates durability
+**Prediction:** external actors who can operate, maintain, teach, and adapt a function without unique founder knowledge demonstrate deeper capability than those who can merely use it.
+
+**Failure signal:** such reproduction is unnecessary, inefficient, or irrelevant for the studied function.
+
+## Governance burden
+
+Any architectural intervention should be evaluated as:
+
+```text
+Governance benefit − administrative burden
+```
+
+More traceability, more explicit authority, and more interfaces are not automatically better.
+
+## Anti-confirmation rule
+
+The framework should never interpret every outcome as proof of Koali.
+
+```text
+Scenario ≠ evidence
+Implementation ≠ validation
+Internal coherence ≠ external truth
+```
+
+
+================================================================================================
+FILE: wiki/Research-Design.md
+AUTHORITY: canonical
+================================================================================================
+
+# Research Design
+
+## Unit of analysis
+
+The preferred unit is a **scientific function moving through transitions**, rather than a whole country or partnership assigned one “capacity” score.
+
+Examples:
+
+- instrument maintenance;
+- data hosting and validation;
+- protocol adaptation;
+- staff training and succession;
+- research-agenda setting;
+- technical procurement and substitution;
+- model or standard adoption;
+- collaborative claim validation.
+
+## Comparative logic
+
+Compare functions or cases across variation in:
+
+- institutional arrangement;
+- technical architecture;
+- funding structure;
+- authority distribution;
+- local expertise;
+- maintenance model;
+- data governance;
+- language and standards;
+- supplier dependence;
+- partnership duration.
+
+The objective is mechanism identification, not national ranking.
+
+## Methods
+
+### Process tracing
+Reconstruct critical transitions and the causal sequence connecting inputs, decisions, actions, breakdowns, and outcomes.
+
+### Semi-structured interviews
+Interview researchers, technical staff, administrators, funders, local partners, vendors, maintainers, and decision authorities.
+
+### Ethnographic observation
+Observe routine work, breakdowns, troubleshooting, handoffs, training, and informal coordination where access permits.
+
+### Document analysis
+Use agreements, procurement files, protocols, training materials, governance rules, maintenance records, standards, and policy documents.
+
+### Technical artifact analysis
+Where appropriate, inspect software dependencies, data formats, access-control structures, interoperability requirements, or maintenance procedures.
+
+### Scientometrics as context
+Publication and collaboration networks may help contextualize cases but should not be treated as direct evidence of durable capability.
+
+## Transition evidence template
+
+| Dimension | Question |
+|---|---|
+| Discoverability | Was relevant local expertise visible and reachable? |
+| Provenance | Could claims, data, or decisions be reconstructed? |
+| Semantics | What changed in translation or standardization? |
+| Authority | Who could validate, decide, authorize, or veto? |
+| Operation | Who could perform the function? |
+| Maintenance | Who could diagnose and restore failure? |
+| Transmission | Who could train successors? |
+| Reconfiguration | Could the activity survive supplier, funding, or personnel change? |
+| Dependency | Which external actors remained indispensable? |
+| Memory | Did outcomes alter future institutional starting conditions? |
+
+## Evaluation strategy
+
+The research should compare both **successful and unsuccessful transitions**. A framework that only explains failures risks becoming tautological.
+
+The strongest evidence would show that transition-level variables explain meaningful differences that node-level descriptions alone do not.
+
+
+================================================================================================
+FILE: wiki/Research-Question-and-Propositions.md
+AUTHORITY: canonical
+================================================================================================
+
+# Research Question & Propositions
+
+## Primary research question
+
+> **Under what conditions do transnational scientific arrangements convert distributed capabilities into durable collective capability while preserving the distinctions, authorities, and forms of independence necessary for continued adaptation?**
+
+This question deliberately avoids assuming that capability must be transferred from one actor to another. Scientific capability may instead be **discovered, combined, redistributed, co-produced, institutionalized, or reconfigured** through the relationship.
+
+## Secondary questions
+
+1. Which capabilities existed before the partnership, and which became newly discoverable or mobilizable?
+2. Where do provenance, meaning, evidence, uncertainty, or attribution degrade across institutional transitions?
+3. How are scientific expertise, validation authority, data authority, agenda authority, political authority, and operational permission distributed?
+4. Which capabilities increase while which dependencies emerge or deepen?
+5. Which dependencies are productive and negotiable, and which become terminal?
+6. What survives personnel turnover, supplier change, funding change, or technical disruption?
+7. Under what conditions can heterogeneous systems compose without one absorbing the others?
+8. Which outcomes become institutional memory and future capability?
+
+## Six candidate propositions
+
+### P1 — Interface bottlenecks
+Capable nodes can still produce weak collective outcomes when critical transitions fail.
+
+**Observable test:** compare cases with similar resource levels but different handoff, maintenance, validation, or coordination arrangements.
+
+### P2 — Capability–dependency co-production
+Scientific cooperation can increase capability and dependency at the same time.
+
+**Observable test:** trace gains in operation, validation, adaptation, teaching, or agenda-setting alongside reliance on external funding, hardware, data, standards, expertise, or authority.
+
+### P3 — Reproduction requires more than training
+Access and training are insufficient indicators of durable capability.
+
+**Observable test:** examine whether institutions can maintain, teach, adapt, and continue functions after turnover or external change.
+
+### P4 — Reconfigurability is a stronger durability test than nominal ownership
+Ownership does not guarantee practical continuation.
+
+**Observable test:** introduce or observe supplier, software, funding, or personnel change and examine whether the activity can be reconfigured.
+
+### P5 — Composition without absorption is possible but conditional
+Heterogeneous systems may cooperate through explicit interfaces while preserving distinct authorities and local knowledge structures.
+
+**Observable test:** identify which differences remain locally governed, which are standardized, and where standardization becomes a precondition for participation.
+
+### P6 — Centrality is not equivalent to domination
+A strong shared infrastructure may increase coordination without becoming the terminal source of truth, authority, or continuation.
+
+**Observable test:** distinguish functional centrality from dependency on one actor’s continued permission or operation.
+
+## What would make the framework fail?
+
+The framework should be narrowed or rejected where:
+
+- node-level capacity explains outcomes without significant interface effects;
+- durable capability does not depend on memory, transmission, maintenance, or reconfiguration in the studied function;
+- explicit authority differentiation creates more cost than benefit;
+- composition without absorption proves impractical or undesirable in relevant cases;
+- terminal dependency has no meaningful explanatory value beyond ordinary interdependence.
+
+See [Pressure Test & Falsifiability](Pressure-Test-and-Falsifiability).
+
+
+================================================================================================
+FILE: wiki/Science-Silk-Road-as-Test-Environment.md
+AUTHORITY: canonical
+================================================================================================
+
+# Science Silk Road as Test Environment
+
+## Why the fit is structural
+
+The connection between Koali and the Science Silk Road is not simply that both concern technology or collaboration.
+
+They approach the same historical transformation from different directions:
+
+> **scientific capability is increasingly distributed across institutions, infrastructures, jurisdictions, standards, languages, and technical systems, while meaningful outcomes depend on those heterogeneous capabilities becoming usable together.**
+
+The Science Silk Road studies this transformation empirically. Koali emerged from trying to build an architecture capable of operating under comparable conditions of fragmentation.
+
+## Beyond transfer
+
+A transfer model asks:
+
+```text
+What moved from A to B?
+```
+
+An articulation model also asks:
+
+- What capabilities already existed in A and B?
+- What became newly discoverable?
+- Which capabilities were co-produced?
+- What had to be translated or standardized?
+- Which authorities were redistributed?
+- Which dependencies emerged?
+- What could no longer continue if one actor disappeared?
+
+Scientific capability is often **relationally produced**, not transferred intact.
+
+## From nodes to interfaces
+
+Potential empirical chains include:
+
+```text
+procurement → installation → training → practice → maintenance → adaptation
+```
+
+```text
+collection → hosting → access → analysis → validation → publication → reuse
+```
+
+```text
+observation → claim → collaborative validation → publication → policy use → revision
+```
+
+These chains make breakdowns, handoffs, staff turnover, and supplier changes analytically valuable because they reveal hidden dependencies and tacit capability.
+
+## Three particularly strong empirical bridges
+
+### Knowledge trajectories
+How do knowledge production, translation, circulation, consumption, and reproduction reshape who can act scientifically?
+
+### Authority configurations
+How do political steering, professional science, data governance, standards, validation, and operational permission interact without collapsing into one notion of “control”?
+
+### Everyday implementation
+How do apparently high-level cooperation agreements become concrete routines, maintenance practices, bureaucratic work, local adaptations, and institutional memory?
+
+## Why this is a test rather than an application
+
+The Science Silk Road is not treated as a place to “deploy Koali.”
+
+It is an external empirical environment in which the architecture’s propositions can be:
+
+```text
+supported · narrowed · revised · rejected
+```
+
+That separation is essential to the research design.
+
+
+================================================================================================
+FILE: wiki/Source-and-Chronology.md
+AUTHORITY: canonical
+================================================================================================
+
+# Source & Chronology
+
+## Purpose
+
+This page separates **conceptual existence**, **implementation evidence**, and **historical priority**.
+
+These are not interchangeable.
+
+```text
+Conceptual existence ≠ implementation ≠ historical priority
+```
+
+## Koali source families
+
+### General architecture
+- kOA public hub: https://initkoa.org/
+- GitHub profile: https://github.com/Rejean-McCormick
+- kOA Digital Ecosystem: https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem
+
+### Knowledge and provenance
+- Kristal Framework: https://github.com/Rejean-McCormick/kristal-framework
+
+### Discovery and coordination
+- Konnaxion: https://github.com/Rejean-McCormick/Konnaxion
+- Konnaxion overview: https://initkoa.org/platforms/konnaxion
+
+### Execution and routing
+- Orgo: https://github.com/Rejean-McCormick/Orgo
+
+### Semantic interoperability
+- SemantiK Architect: https://github.com/Rejean-McCormick/SemantiK_Architect
+- SenTient: https://github.com/Rejean-McCormick/SenTient
+
+### Replication / deployment
+- Konnaxion Capsule Manager: https://github.com/Rejean-McCormick/Konnaxion_Capsule_Manager
+
+## Science Silk Road sources
+
+- Project website: https://sciencesilkroad.mpiwg-berlin.mpg.de/
+- MPIWG: https://www.mpiwg-berlin.mpg.de/
+- Université Laval: https://www.ulaval.ca/
+
+## Historical claims
+
+A repository timestamp proves only what that repository proves.
+
+Strong priority claims should be supported by dated material such as:
+
+1. commits with preserved history;
+2. releases or tags;
+3. externally archived pages;
+4. dated correspondence or publications;
+5. contemporaneous design documents with verifiable provenance.
+
+## Recommended wording until priority is fully audited
+
+Prefer:
+
+> “The framework emerged through the development of Koali and has been progressively formalized in public architecture and documentation.”
+
+Use stronger chronology only where dated evidence supports it.
+
+
+================================================================================================
+FILE: wiki/Start-Here.md
+AUTHORITY: canonical
+================================================================================================
+
+# Start Here
+
+This page is the shortest route through the dossier.
+
+## The thesis in one paragraph
+
+Scientific systems increasingly depend on capabilities distributed across people, institutions, infrastructures, jurisdictions, languages, and software. Yet distributed capability does not automatically become collective capability. The decisive failures often occur at the **interfaces** where something must change form: a competence must become discoverable; a claim must become interpretable and validatable; expertise must become advice without automatically becoming authority; a decision must become executable work; an outcome must become reusable memory. Koali was developed around these recurring transition problems. The Science Silk Road provides an external empirical environment in which the resulting propositions can be tested rather than assumed.
+
+## The core chain
+
+```text
+Distributed Potential
+→ Discoverability
+→ Articulation
+→ Collective Agency
+→ Outcome
+→ Memory
+→ Future Capability
+```
+
+The theory is primarily about the **arrows**.
+
+## The key correction
+
+A transfer-centered model asks:
+
+```text
+What moved from A to B?
+```
+
+An articulation-centered model asks:
+
+```text
+What capabilities already existed?
+What became newly discoverable?
+What had to be translated, qualified, or authorized?
+What new combinations became possible?
+What was lost at the interfaces?
+What became durable, transmissible, and reconfigurable?
+```
+
+## What Koali is not
+
+Koali is not a claim that one system should absorb every specialized tool or institution.
+
+```text
+Composition ≠ Absorption
+```
+
+It is an attempt to preserve continuity **between** heterogeneous capabilities while allowing those capabilities to remain independently governed.
+
+## Recommended path
+
+**5 minutes:** [Research Question & Propositions](Research-Question-and-Propositions) → [Science Silk Road as Test Environment](Science-Silk-Road-as-Test-Environment)
+
+**15 minutes:** add [Articulation & Conversion Loss](Articulation-and-Conversion-Loss) → [Transition Integrity](Transition-Integrity) → [Capability & Dependency](Capability-and-Dependency)
+
+**Critical review:** [Academic Bridges](Academic-Bridges) → [Claims, Evidence & Status](Claims-Evidence-and-Status) → [Pressure Test & Falsifiability](Pressure-Test-and-Falsifiability)
+
+
+================================================================================================
+FILE: wiki/Submission-Materials.md
+AUTHORITY: canonical
+================================================================================================
+
+# Submission Materials
+
+The current dossier has three submission-facing forms of the same argument.
+
+## 300-word pitch
+
+**Purpose:** editorial selection.
+
+The pitch should communicate one intellectual move quickly:
+
+> **Scientific cooperation should be studied not only through what moves, but through the interfaces that determine whether heterogeneous capabilities become cumulative.**
+
+Main-repository file:
+
+```text
+submissions/Science_Silk_Road_300_Word_Pitch_Rejean_McCormick_v2.docx
+```
+
+## 750-word research proposal
+
+**Purpose:** fellowship / research evaluation.
+
+The proposal adds:
+
+- research question;
+- hypotheses;
+- empirical strategy;
+- falsifiability;
+- fit with the Science Silk Road programme.
+
+Main-repository file:
+
+```text
+submissions/Science_Silk_Road_750_Word_Research_Proposal_Rejean_McCormick_v2.docx
+```
+
+## Article-length manuscript
+
+**Purpose:** developed scholarly argument.
+
+The article connects the framework to existing literatures on knowledge transfer, technological capability, organizational memory, infrastructure, expertise, and Global China.
+
+Main-repository file:
+
+```text
+submissions/Science_Silk_Road_Articulation_Conversion_Loss_Rejean_McCormick_v2.docx
+```
+
+## Framing invariant across all three
+
+```text
+Koali is not the empirical answer.
+Koali is the architecture from which testable distinctions were derived.
+The Science Silk Road is the external empirical environment in which they can fail.
+```
+
+
+================================================================================================
+FILE: wiki/Transition-Integrity.md
+AUTHORITY: canonical
+================================================================================================
+
+# Transition Integrity
+
+## Definition
+
+**Transition integrity** is the preservation of the properties required for one stage of collective activity to remain meaningful and usable after it becomes another.
+
+A generic chain is:
+
+```text
+Potential
+→ Discovery
+→ Interpretation
+→ Qualification
+→ Coordination
+→ Decision
+→ Execution
+→ Evaluation
+→ Memory
+```
+
+Not every case follows this sequence, and many loops start in the middle. The point is that each arrow can preserve or destroy different properties.
+
+## What may need to survive
+
+### Identity and attribution
+Who or what produced the contribution? Can the originator still be identified after reuse or transformation?
+
+### Provenance
+Which sources, transformations, versions, and validation events produced the current object?
+
+### Meaning
+Did translation or standardization preserve the relevant conceptual distinctions?
+
+```text
+Translation ≠ Equivalence
+Fluent text ≠ faithful meaning
+```
+
+### Evidence and uncertainty
+Did a concise output erase the evidence, scope, uncertainty, or contestation attached to the original claim?
+
+### Authority
+Did expertise become advice, or was it silently converted into decision power?
+
+```text
+Evidence ≠ Advice
+Advice ≠ Authority
+Expertise ≠ Decision Authority
+```
+
+### Legitimacy and contestability
+Can those affected challenge the interpretation, rule, classification, or decision in a consequential way?
+
+### Operational ownership
+Can an authorized decision become assigned, resourced, and verifiable work?
+
+```text
+Decision ≠ Execution
+```
+
+### Memory
+Did the result become reusable knowledge, or merely stored data?
+
+```text
+Storage ≠ Memory
+Experience ≠ Learning
+Documentation ≠ Mastery
+```
+
+## Empirical method
+
+For every critical transition, record:
+
+| Question | Example evidence |
+|---|---|
+| What entered the transition? | document, dataset, expert judgment, mandate |
+| What left it? | translated object, validated result, task, policy |
+| What changed? | format, meaning, authority, ownership, access |
+| What survived? | provenance, evidence, lineage, responsibility |
+| Who could contest it? | reviewer, partner institution, affected actor |
+| What dependency was created? | software, supplier, standard, expertise, permission |
+| Could another actor reconstruct the transition? | records, logs, documentation, interviews |
+
+This turns “transition integrity” into a process-tracing programme rather than a metaphor.
 
 
 ================================================================================================
@@ -2858,1636 +4491,3 @@ All three texts treat Koali as an **articulation architecture**, not as a platfo
 The common thesis is:
 
 > **Distributed scientific potential becomes cumulative capability only through interfaces that preserve enough meaning, provenance, authority, practical mastery, and institutional memory for heterogeneous systems to compose.**
-
-
-================================================================================================
-FILE: wiki/_Footer.md
-AUTHORITY: canonical
-================================================================================================
-
----
-**Koali × China’s Science Silk Road** · Research dossier by Réjean McCormick  · [Home](Home) · [Claims & Status](Claims-Evidence-and-Status)
-
-
-================================================================================================
-FILE: wiki/_Sidebar.md
-AUTHORITY: canonical
-================================================================================================
-
-### Koali × Science Silk Road
-
-**Orientation**
-- [Home](Home)
-- [Start Here](Start-Here)
-- [Research Question & Propositions](Research-Question-and-Propositions)
-
-**Core framework**
-- [Articulation & Conversion Loss](Articulation-and-Conversion-Loss)
-- [Transition Integrity](Transition-Integrity)
-- [Capability & Dependency](Capability-and-Dependency)
-- [Authority, Provenance & Semantics](Authority-Provenance-and-Semantics)
-- [Composition, Centrality & Terminal Dependency](Composition-Centrality-and-Terminal-Dependency)
-
-**Koali**
-- [Koali as Architecture](Koali-as-Architecture)
-- [Koali Components](Koali-Components)
-- [Claims, Evidence & Status](Claims-Evidence-and-Status)
-- [Pressure Test & Falsifiability](Pressure-Test-and-Falsifiability)
-
-**Science Silk Road**
-- [Science Silk Road as Test Environment](Science-Silk-Road-as-Test-Environment)
-- [Research Design](Research-Design)
-- [Dialogue with the Project Team](Dialogue-with-Science-Silk-Road-Team)
-
-**Scholarly basis**
-- [Academic Bridges](Academic-Bridges)
-- [Source & Chronology](Source-and-Chronology)
-
-**Outputs**
-- [Submission Materials](Submission-Materials)
-- [Author & Contact](Author-and-Contact)
-
-
-================================================================================================
-FILE: wiki/Academic-Bridges.md
-AUTHORITY: canonical
-================================================================================================
-
-# Academic Bridges
-
-The constituent problems addressed by this dossier are not new. Its proposed contribution is to treat several of them as **recurring transition problems across a longer knowledge-to-action-to-memory chain**.
-
-## Where the contribution begins
-
-Existing literatures already establish that:
-
-- external knowledge must be recognized, assimilated, and applied;
-- knowledge transfer can be sticky;
-- knowledge crossing boundaries may require translation and transformation;
-- productive assets are not the same as technological capabilities;
-- maintenance and repair are constitutive of infrastructure;
-- organizations can fail to retain and retrieve learning;
-- expertise is distinct from legitimate political authority;
-- capability and dependency can coexist.
-
-The integrative move proposed here is:
-
-> **treat the interface as a recurring analytical object and ask which properties must survive each transition for distributed potential to become cumulative collective capability.**
-
-## Knowledge absorption
-
-**Cohen & Levinthal (1990)** — absorptive capacity: organizations need the ability to recognize, assimilate, and apply external knowledge.
-
-Bridge: external information does not automatically become usable capability.
-
-## Sticky transfer
-
-**Szulanski (1996)** — even best practices can be difficult to transfer because of causal ambiguity, weak absorptive capacity, and source-recipient relations.
-
-Bridge: the existence of useful knowledge does not guarantee successful transition.
-
-## Knowledge across boundaries
-
-**Carlile (2004)** — distinguishes transfer, translation, and transformation across syntactic, semantic, and pragmatic boundaries.
-
-Bridge: “movement” is not a single process.
-
-## Boundary objects
-
-**Star & Griesemer (1989)** — heterogeneous communities can cooperate through objects that are locally adaptable yet retain recognizable identity.
-
-Bridge: identity preservation across contextual variation.
-
-## Technological capability
-
-**Bell & Pavitt (1993)** — productive capacity is distinct from technological capability to generate and manage technical change.
-
-Bridge: infrastructure acquisition does not imply mastery or reconfiguration capacity.
-
-## Maintenance and repair
-
-**Graham & Thrift (2007)** — repair and maintenance reveal otherwise invisible infrastructures of continuity.
-
-Bridge: breakdowns are empirical windows into capability and dependency.
-
-## Organizational memory
-
-**Walsh & Ungson (1991)** — organizational memory involves acquisition, retention, and retrieval rather than mere storage.
-
-Bridge: outcome does not automatically become reusable learning.
-
-## Capability lifecycles
-
-**Helfat & Peteraf (2003)** — capabilities evolve over time rather than existing as static assets.
-
-Bridge: capability trajectories should be studied dynamically.
-
-## Expertise and legitimacy
-
-**Collins & Evans (2002)** — expertise should be analytically distinguished from rights to decide.
-
-**Guston (2001)** — boundary organizations connect science and policy while preserving differentiated roles.
-
-Bridge: expertise, validation, and authority should not be collapsed.
-
-## Digital Silk Road and dependency
-
-**El-Kadi (2024)** — technology-transfer linkages in North Africa can expand infrastructure and technical connections without equivalent domestic upgrading, while creating new forms of dependency.
-
-Bridge: capability gain and dependency reduction are separate propositions.
-
-## Global China and the Science Silk Road team
-
-**Han Cheng** — geographies of knowledge production, translation, circulation, reproduction, world-writing, and relational infrastructure.
-
-**Anna Lisa Ahlers** — political steering, professional science, metrics, organizational complexity, and differentiated authority.
-
-**Hang Zhou** — everyday practice, bureaucracy, infrastructure, local agency, and the lived operation of transnational cooperation.
-
-See [Dialogue with the Science Silk Road Team](Dialogue-with-Science-Silk-Road-Team).
-
-## Core references
-
-- Bell, Martin, and Keith Pavitt. 1993. “Technological Accumulation and Industrial Growth: Contrasts Between Developed and Developing Countries.” *Industrial and Corporate Change* 2(2): 157–210. https://doi.org/10.1093/icc/2.2.157
-- Carlile, Paul R. 2004. “Transferring, Translating, and Transforming: An Integrative Framework for Managing Knowledge Across Boundaries.” *Organization Science* 15(5): 555–568. https://doi.org/10.1287/orsc.1040.0094
-- Cohen, Wesley M., and Daniel A. Levinthal. 1990. “Absorptive Capacity: A New Perspective on Learning and Innovation.” *Administrative Science Quarterly* 35(1): 128–152. https://doi.org/10.2307/2393553
-- Collins, H. M., and Robert Evans. 2002. “The Third Wave of Science Studies: Studies of Expertise and Experience.” *Social Studies of Science* 32(2): 235–296. https://doi.org/10.1177/0306312702032002003
-- El-Kadi, Tin Hinane. 2024. “Learning along the Digital Silk Road? Technology Transfer, Power, and Chinese ICT Corporations in North Africa.” *The Information Society* 40(2): 136–153. https://doi.org/10.1080/01972243.2024.2317060
-- Graham, Stephen, and Nigel Thrift. 2007. “Out of Order: Understanding Repair and Maintenance.” *Theory, Culture & Society* 24(3): 1–25. https://doi.org/10.1177/0263276407075954
-- Guston, David H. 2001. “Boundary Organizations in Environmental Policy and Science: An Introduction.” *Science, Technology, & Human Values* 26(4): 399–408. https://doi.org/10.1177/016224390102600401
-- Helfat, Constance E., and Margaret A. Peteraf. 2003. “The Dynamic Resource-Based View: Capability Lifecycles.” *Strategic Management Journal* 24(10): 997–1010. https://doi.org/10.1002/smj.332
-- Star, Susan Leigh, and James R. Griesemer. 1989. “Institutional Ecology, ‘Translations’ and Boundary Objects.” *Social Studies of Science* 19(3): 387–420. https://doi.org/10.1177/030631289019003001
-- Szulanski, Gabriel. 1996. “Exploring Internal Stickiness: Impediments to the Transfer of Best Practice within the Firm.” *Strategic Management Journal* 17(S2): 27–43. https://doi.org/10.1002/smj.4250171105
-- Walsh, James P., and Gerardo Rivera Ungson. 1991. “Organizational Memory.” *Academy of Management Review* 16(1): 57–91. https://doi.org/10.5465/AMR.1991.4278992
-
-
-================================================================================================
-FILE: wiki/Articulation-and-Conversion-Loss.md
-AUTHORITY: canonical
-================================================================================================
-
-# Articulation & Conversion Loss
-
-## The general problem
-
-A system can contain useful capacity without being able to use it collectively.
-
-```text
-Capability exists ≠ capability is mobilized
-Missing capacity ≠ conversion loss
-```
-
-**Conversion loss** occurs when potential that already exists fails to remain available, intelligible, legitimate, composable, or actionable across the transitions required for collective action.
-
-The capacity itself does not need to disappear. It can simply become unavailable to the system.
-
-## Examples
-
-- relevant expertise exists but is never discovered;
-- a claim loses provenance while being summarized or translated;
-- a technically correct judgment reaches no legitimate decision channel;
-- an approved decision has no operational owner;
-- a working procedure remains dependent on one person’s tacit knowledge;
-- a successful project leaves no reusable institutional memory.
-
-The domains differ. The transition problem recurs.
-
-## Articulation
-
-**Articulation** is the mechanism by which distinct capabilities are related strongly enough to produce a joint effect without requiring them to become one thing.
-
-```text
-Discoverable ≠ composable
-Connection ≠ interoperability
-Interoperability ≠ uniformity
-Composition ≠ absorption
-```
-
-A useful articulation architecture therefore has to solve more than connectivity. It may need to preserve:
-
-- identity;
-- provenance;
-- semantic relationships;
-- authority boundaries;
-- permissions;
-- responsibility;
-- evidence of transition;
-- memory and lineage.
-
-## Why interfaces matter
-
-Organizations are often optimized by improving nodes: better databases, better laboratories, better experts, better project tools.
-
-But if the transition between two capable nodes fails, the larger system can remain ineffective.
-
-```text
-Node A ──X──> Node B
-```
-
-The analytical move in this dossier is therefore:
-
-> **Study the interface as a first-class object.**
-
-This does not imply that interfaces always dominate outcomes. That is an empirical proposition to test.
-
-
-================================================================================================
-FILE: wiki/Author-and-Contact.md
-AUTHORITY: canonical
-================================================================================================
-
-# Author & Contact
-
-## Réjean McCormick
-
-**Réjean McCormick** is an independent systems architect based in Québec, Canada.
-
-His work on Koali focuses on knowledge-to-action transitions, provenance, differentiated authority, semantic interoperability, institutional memory, and the composition of distributed capabilities.
-
-## Contact
-
-**Réjean McCormick**  
-Québec, Canada
-
-- rejean.mccormick@initkoa.org
-
-
-## Public links
-
-- https://initkoa.org/
-- https://github.com/Rejean-McCormick
-
-
-================================================================================================
-FILE: wiki/Authority-Provenance-and-Semantics.md
-AUTHORITY: canonical
-================================================================================================
-
-# Authority, Provenance & Semantics
-
-## “Control” is too coarse
-
-Scientific cooperation distributes several forms of authority that should not be collapsed into one variable.
-
-```text
-Scientific expertise
-≠ validation authority
-≠ data authority
-≠ agenda authority
-≠ institutional authority
-≠ political authority
-≠ operational permission
-```
-
-These forms of authority can move in different directions within the same collaboration.
-
-## Evidence, advice, and decision
-
-A central invariant is:
-
-```text
-Evidence ≠ Advice
-Advice ≠ Authority
-Judgment ≠ Decision
-Decision ≠ Execution
-```
-
-The point is not to weaken expertise. It is to clarify **how expertise enters legitimate action**.
-
-## Provenance
-
-Provenance is not merely archival metadata. It supports reconstructibility:
-
-```text
-source
-→ transformation
-→ validation
-→ version
-→ use
-→ revision
-```
-
-In transnational science this can matter for datasets, models, protocols, standards, claims, and institutional decisions.
-
-## Stable evidence + revisable interpretation
-
-A useful epistemic principle is:
-
-```text
-Stable evidence + revisable interpretation
-```
-
-The same underlying record may support multiple explicit readings without requiring a single permanent interpretation.
-
-```text
-Facts ≠ Readings
-One record → multiple scoped interpretations
-```
-
-This is intended to avoid both universal truth authority and relativistic equivalence.
-
-## Semantic integrity
-
-Scientific cooperation crosses languages, disciplines, classifications, institutional categories, and technical ontologies.
-
-```text
-Word ≠ Concept
-Translation ≠ Equivalence
-Mapping ≠ Identity
-Semantic coherence ≠ Universal ontology
-```
-
-The empirical question is not whether all actors use the same vocabulary, but whether relevant meaning can remain sufficiently intelligible and composable **without erasing legitimate non-equivalence**.
-
-## Research implication
-
-For each transnational interface ask:
-
-- Which categories became authoritative?
-- Which local categories were translated, mapped, ignored, or absorbed?
-- Which validation practices traveled with the data or method?
-- Which actor could revise the shared representation?
-- Could disagreement remain legible rather than being normalized away?
-
-
-================================================================================================
-FILE: wiki/Capability-and-Dependency.md
-AUTHORITY: canonical
-================================================================================================
-
-# Capability & Dependency
-
-## Why a single capacity score is insufficient
-
-Scientific capability is multidimensional. An institution may be able to operate a system without being able to maintain it, validate its outputs, modify its protocols, train successors, or continue after a supplier change.
-
-A useful analytical vector is:
-
-```text
-C = [Operate, Maintain, Adapt, Validate, Govern, Transmit, Reconfigure]
-```
-
-The purpose is not to rank institutions. It is to make functional differences visible.
-
-## Capability trajectories
-
-Instead of asking whether a project “built capacity,” trace a function through time:
-
-```text
-access
-→ practice
-→ competence
-→ validation
-→ institutionalization
-→ transmission
-→ reproduction
-→ reconfiguration
-```
-
-This is **not** a universal developmental ladder. Different institutions may rationally specialize in different functions.
-
-## Discoverability comes first
-
-A partnership may create capability, but it may also simply make pre-existing local capability newly visible or mobilizable.
-
-The empirical baseline should therefore ask:
-
-- What capabilities existed before cooperation?
-- Who knew they existed?
-- Which actors could access them?
-- Which were institutionally recognized?
-- Which were already connected to decision or operational channels?
-
-## Capability and dependency are separate variables
-
-```text
-Capability gain ≠ dependency reduction
-```
-
-A collaboration may increase local scientific capacity while simultaneously increasing reliance on:
-
-```text
-Finance · Hardware · Software · Data · Standards · Expertise · Authority
-```
-
-The relevant object is therefore a **capability–dependency configuration**, not a single axis from dependence to autonomy.
-
-## Reconfigurability
-
-The strongest durability question may be:
-
-> **Can the scientific activity survive meaningful change?**
-
-Examples:
-
-- a supplier leaves;
-- a key expert departs;
-- funding ends;
-- software or standards change;
-- data access rules change;
-- the research agenda shifts.
-
-Interdependence with meaningful reconfiguration is analytically different from interdependence with rigid lock-in.
-
-
-================================================================================================
-FILE: wiki/Claims-Evidence-and-Status.md
-AUTHORITY: canonical
-================================================================================================
-
-# Claims, Evidence & Implementation Status
-
-## The central evidence rule
-
-The dossier separates four different things:
-
-```text
-Conceptual architecture
-≠ documented design
-≠ implemented component
-≠ externally validated social claim
-```
-
-A detailed specification is not evidence that the architecture works socially, institutionally, or empirically.
-
-## What the dossier claims
-
-1. Distributed potential does not automatically become collective capability.
-2. Interfaces can become consequential bottlenecks.
-3. Capability is multidimensional.
-4. Capability and dependency are separate variables.
-5. Authority is differentiated.
-6. Outcomes are not automatically cumulative.
-7. Composition without absorption is a testable design proposition.
-8. Useful centrality does not automatically imply domination.
-
-## What it does not claim
-
-- Koali has empirically solved the Science Silk Road.
-- China uniquely produces dependency.
-- Local autonomy is always preferable to interdependence.
-- Decentralization is inherently superior.
-- Every institution should reproduce every scientific function locally.
-- More provenance or audit is always better regardless of administrative burden.
-- All semantic differences must be preserved.
-- Every Koali component is fully implemented or independently tested.
-- Scenario coverage is empirical validation.
-- Public code proves functional reproducibility.
-- Internal conceptual coherence proves external validity.
-
-## Status vocabulary
-
-```text
-DESIGN AMBITION
-DOCUMENTED ARCHITECTURE
-IMPLEMENTED / REPORTED IMPLEMENTED
-TESTED
-BENCHMARKED
-EXTERNALLY VALIDATED
-```
-
-Use the most conservative defensible status.
-
-## Current safe framing
-
-> **Koali is a documented and partially implemented sociotechnical architecture whose components are at different stages of development and verification.**
-
-The research argument does not depend on full production readiness. It depends on enough architectural specificity to derive testable propositions.
-
-## Examples of cautious wording
-
-- **Kristal:** provenance-bearing / portable knowledge architecture; portability requires actual portability tests.
-- **Konnaxion:** documented coordination and discovery architecture; integration status varies by component.
-- **EkoH:** proposed contextual competence / credibility mechanism; do not present as validated expertise ranking.
-- **Smart Vote:** multiple-reading design; do not claim governance superiority without evaluation.
-- **Orgo:** decision-to-execution / routing architecture; end-to-end claims require test evidence.
-- **Offline continuity:** design target unless a specific workflow has been verified.
-- **Replicable whole:** architectural target; independent reproduction requires deployment, knowledge, rights, and human mastery tests.
-
-## Scenario and rights rules
-
-```text
-Scenario ≠ Evidence
-Architecturally forkable ≠ legally reusable
-```
-
-## Verification before “implemented”
-
-Record at minimum:
-
-- repository and version/commit;
-- source/code inspection;
-- reproducible procedure or direct observation;
-- observed result;
-- explicit limitations.
-
-
-================================================================================================
-FILE: wiki/Composition-Centrality-and-Terminal-Dependency.md
-AUTHORITY: canonical
-================================================================================================
-
-# Composition, Centrality & Terminal Dependency
-
-## Composition without absorption
-
-The core principle is:
-
-```text
-Composition ≠ Absorption
-```
-
-Heterogeneous systems may need common interfaces, standards, or shared infrastructure in order to cooperate. The question is whether cooperation requires one system to become the unquestioned semantic, technical, or institutional authority for the rest.
-
-This is an empirical and design question, not a presumption that every difference should be preserved.
-
-## Centrality is not inherently a problem
-
-Large scientific systems often require central facilities, shared standards, common data infrastructures, or coordination hubs.
-
-```text
-Functional centrality ≠ domination
-Centralized access ≠ centralized truth
-Strong center ≠ total sovereignty
-```
-
-The useful distinction is between **centrality that increases collective capability** and **centrality that creates non-credible continuation without one actor**.
-
-## Terminal dependency
-
-A dependency becomes **terminal** when failure, refusal, capture, or disappearance of one center makes practical continuation non-credible.
-
-Examples may include dependence on:
-
-- one data platform;
-- one maintenance team;
-- one proprietary standard;
-- one authentication authority;
-- one supplier;
-- one institution’s permission;
-- one body of tacit founder knowledge.
-
-## Design heuristic
-
-```text
-Maximum useful centrality + minimum terminal dependency
-```
-
-This is a heuristic, not a calibrated optimization formula.
-
-The aim is to permit a strong articulation layer while preserving meaningful possibilities for:
-
-```text
-Verification + Contestation + Substitution + Exit
-```
-
-## Independent reproducibility
-
-```text
-Repository clone ≠ functional reproduction
-Documentation ≠ mastery
-```
-
-A stronger test asks whether an independent institution can, where rights permit, operate, understand, maintain, teach, adapt, or reconstruct the relevant function without unique continuing permission from the original operator.
-
-## Science Silk Road questions
-
-- Which shared infrastructures are useful precisely because they are central?
-- Which dependencies are accepted because specialization is efficient?
-- Which dependencies become strategic bottlenecks?
-- Can partner institutions substitute, renegotiate, or reconfigure critical dependencies?
-- Is the shared capability still usable when the original partnership changes?
-
-
-================================================================================================
-FILE: wiki/Dialogue-with-Science-Silk-Road-Team.md
-AUTHORITY: canonical
-================================================================================================
-
-# Dialogue with the Science Silk Road Team
-
-This page identifies intellectual bridges rather than claiming that the project investigators endorse the framework.
-
-## Han Cheng — knowledge trajectories and world-writing
-
-### Strongest bridge
-
-Cheng’s work treats knowledge production as institutionally and geopolitically situated and directs attention toward production, translation, circulation, consumption, and reproduction.
-
-The dossier extends this trajectory one step further:
-
-```text
-Knowledge trajectory
-→ capability trajectory
-```
-
-The question becomes not only where knowledge travels, but **what the movement changes in the ability of institutions to validate, act, maintain, teach, and reconfigure scientific practice**.
-
-### Semantic authority
-
-Cheng’s work on world-writing also makes semantic and institutional framing central. This creates a direct bridge to:
-
-```text
-Translation ≠ Equivalence
-Semantic coherence ≠ Universal ontology
-```
-
-The research can ask which classifications, standards, categories, and research framings become authoritative in transnational collaboration.
-
-### Guardrail
-
-Avoid turning capability trajectories into a developmental ladder. Cheng’s critique of geopolitical and temporal ordering makes that especially important.
-
----
-
-## Anna Lisa Ahlers — differentiated authority and science systems
-
-### Strongest bridge
-
-Ahlers’s work on China’s science, technology, and innovation system shows why “state control vs scientific autonomy” is too simple.
-
-The dossier similarly separates:
-
-```text
-political steering
-scientific expertise
-validation authority
-data authority
-organizational authority
-operational permission
-```
-
-These may coexist, conflict, or change independently.
-
-### Metrics are not capability
-
-Ahlers and Christmann-Budian’s work on university rankings shows how measurement systems can become governing instruments rather than neutral descriptions.
-
-This supports the distinction:
-
-```text
-Evidence ≠ Metric
-Output ≠ Outcome ≠ Learning ≠ Capability gain
-```
-
-### Research opportunity
-
-Science Silk Road cases can reveal how authority becomes redistributed through standards, funding, data infrastructure, evaluation regimes, and technical dependence.
-
----
-
-## Hang Zhou — everyday operation and local agency
-
-### Strongest bridge
-
-Zhou’s empirical orientation toward China–Africa cooperation, infrastructure, bureaucracy, and everyday governance is crucial because the transition framework must be observed in practice.
-
-The relevant questions are often mundane:
-
-- Who actually maintains the system?
-- Who calls whom when it fails?
-- Which approval blocks repair?
-- Which workarounds become normal?
-- Which local actors reinterpret or redirect the project?
-- What knowledge survives staff turnover?
-
-### Breakdowns as empirical windows
-
-Maintenance failures, procurement delays, personnel changes, and policy shifts are analytically valuable because they expose hidden authority and dependency structures.
-
-### Research opportunity
-
-Zhou’s perspective prevents the framework from treating partner institutions as passive recipients of “transfer.” Local actors may reshape, appropriate, resist, or repurpose scientific cooperation.
-
----
-
-## Combined value
-
-The three bridges correspond to different layers of the same problem:
-
-```text
-Cheng  → knowledge, space, translation, reproduction
-Ahlers → authority, steering, evaluation, institutional differentiation
-Zhou   → practice, implementation, local agency, everyday infrastructure
-```
-
-The transition framework is strongest if it can connect these levels without flattening them.
-
-
-================================================================================================
-FILE: wiki/Home.md
-AUTHORITY: canonical
-================================================================================================
-
-# Koali × China’s Science Silk Road
-## Articulation, transition integrity, and cumulative scientific capability
-
-**Research wiki · Réjean McCormick· 2026-09-02**
-
----
-
-## The problem in 30 seconds
-
-Scientific cooperation is often described through what moves: **funding, infrastructure, data, standards, expertise, training, and knowledge**.
-
-This dossier asks a different question:
-
-> **What has to remain intact when those capabilities cross institutional, technical, semantic, and authority boundaries if cooperation is to become cumulative rather than episodic?**
-
-The underlying proposition is simple:
-
-```text
-Distributed potential ≠ collective capability
-```
-
-A system may already contain excellent researchers, tools, institutions, and knowledge yet still lose value at the transitions between them.
-
----
-
-## The distinctive move
-
-The proposed analytical object is not only the **node**—laboratory, university, platform, country, or infrastructure—but the **interface through which capability changes form**.
-
-```text
-potential
-→ discovery
-→ interpretation
-→ qualification
-→ composition
-→ authorized action
-→ outcome
-→ memory
-→ future capability
-```
-
-At each transition, ask:
-
-```text
-What survives?
-identity · provenance · meaning · evidence · uncertainty
-attribution · authority · legitimacy · contestability · memory
-```
-
-I call failures across these transitions **conversion loss**.
-
----
-
-## Where Koali fits
-
-Koali is not proposed as a replacement for specialized scientific systems, institutions, or expertise.
-
-> **Koali competes less with existing systems than with the fragmentation between them.**
-
-It is better understood as a **sociotechnical articulation architecture**: an attempt to make heterogeneous capabilities discoverable and composable while preserving the distinctions that should remain distinct.
-
-```text
-Composition ≠ Absorption
-Translation ≠ Equivalence
-Expertise ≠ Authority
-Connection ≠ Interoperability
-Functional centrality ≠ Domination
-```
-
-The architectural target is therefore not “one platform for everything,” but:
-
-```text
-strong articulation
-+ distributed capability
-+ explicit boundaries
-+ independent continuation
-```
-
----
-
-## Why the Science Silk Road is a strong empirical test
-
-China’s expanding international cooperation in science, technology, and innovation creates dense interfaces among laboratories, universities, data infrastructures, vendors, standards, public authorities, languages, and knowledge systems.
-
-That makes it possible to test questions such as:
-
-- Which capabilities already exist but remain undiscovered or underused?
-- Which new capabilities are co-produced through cooperation rather than simply transferred?
-- What is lost or preserved when knowledge crosses semantic and institutional boundaries?
-- Which forms of authority move, and which remain separate?
-- Which capabilities increase while which dependencies deepen?
-- When does useful centrality become terminal dependency?
-- Can scientific systems compose without one technical, semantic, or institutional order absorbing the others?
-- Do outcomes become reusable institutional memory and future capability?
-
-These are **research questions**, not conclusions built into the framework.
-
----
-
-## Five propositions to test
-
-1. **Interface bottlenecks matter.** Highly capable nodes can still produce weak collective capability when transitions fail.
-2. **Capability and dependency can grow together.** They should be measured as separate variables.
-3. **Durability requires more than access or training.** Maintenance, transmission, institutional memory, and reconfiguration matter.
-4. **Composition does not require absorption.** Cooperation may be possible through explicit interfaces while relevant institutional differences remain intact.
-5. **Centrality is not the same as domination.** The key distinction is between useful centrality and terminal dependency.
-
-Each proposition can be narrowed, revised, or rejected by empirical evidence.
-
----
-
-## Read by intent
-
-### I have 5 minutes
-1. [Start Here](Start-Here)
-2. [Research Question & Propositions](Research-Question-and-Propositions)
-3. [Science Silk Road as Test Environment](Science-Silk-Road-as-Test-Environment)
-
-### I want the conceptual framework
-1. [Articulation & Conversion Loss](Articulation-and-Conversion-Loss)
-2. [Transition Integrity](Transition-Integrity)
-3. [Capability & Dependency](Capability-and-Dependency)
-4. [Authority, Provenance & Semantics](Authority-Provenance-and-Semantics)
-5. [Composition, Centrality & Terminal Dependency](Composition-Centrality-and-Terminal-Dependency)
-
-### I want to evaluate Koali rather than accept it
-1. [Koali as Architecture](Koali-as-Architecture)
-2. [Claims, Evidence & Implementation Status](Claims-Evidence-and-Status)
-3. [Pressure Test & Falsifiability](Pressure-Test-and-Falsifiability)
-4. [Academic Bridges](Academic-Bridges)
-
-### I want the empirical programme
-1. [Research Design](Research-Design)
-2. [Dialogue with the Science Silk Road Team](Dialogue-with-Science-Silk-Road-Team)
-3. [Submission Materials](Submission-Materials)
-
----
-
-## Scope
-
-This wiki does **not** claim that Koali empirically explains the Science Silk Road in advance. It does not claim that China uniquely creates dependency, that decentralization is inherently superior, or that every scientific function should be localized.
-
-The framework is intended to make specific mechanisms visible enough to be **observed, compared, falsified, and revised**.
-
-
-================================================================================================
-FILE: wiki/Koali-as-Architecture.md
-AUTHORITY: canonical
-================================================================================================
-
-# Koali as Architecture
-
-## The central correction
-
-Koali should not be read as an attempt to build the best specialized system for every domain.
-
-It is better understood as an **articulation architecture**:
-
-> **a system for making heterogeneous capabilities discoverable, composable, governable, actionable, and cumulative while allowing specialized systems and institutions to remain distinct.**
-
-## The fragmentation problem
-
-Most institutions already use different systems for:
-
-- knowledge and documentation;
-- expertise discovery;
-- learning and training;
-- collaboration and deliberation;
-- decisions and governance;
-- project and operational execution;
-- reporting and institutional memory.
-
-The recurring failure is loss of continuity between them:
-
-```text
-knowledge | discussion | decision | work | outcome | memory
-```
-
-Koali’s target is the continuity:
-
-```text
-knowledge
-→ interpretation
-→ deliberation
-→ judgment
-→ decision
-→ mandate
-→ execution
-→ outcome
-→ memory
-→ renewed knowledge
-```
-
-An external specialized system may perform any of these functions.
-
-## Centralize coherence, not necessarily capability
-
-Koali may provide shared mechanisms for:
-
-- discovery and navigation;
-- identity and permissions;
-- provenance and lineage;
-- interface contracts;
-- routing;
-- transition records;
-- rationale and responsibility;
-- memory retrieval.
-
-It does not follow that Koali must own:
-
-- every source;
-- every dataset;
-- every scientific validation process;
-- every expert;
-- every institution;
-- every operational system;
-- every political decision.
-
-## Kintsugi / Kompendio
-
-The integration logic distinguishes:
-
-### Mimic
-Reimplement a useful pattern natively when coherent ownership, auditability, sovereignty, UX, or long-term control justify doing so.
-
-### Annex
-Integrate a mature external capability through explicit adapters or sidecars when separation and replaceability are preferable.
-
-```text
-Integration ≠ merger
-One coherent environment ≠ one monolithic codebase
-```
-
-## Why this matters academically
-
-Building an operational architecture forces questions that prose can leave ambiguous:
-
-- What object is authoritative?
-- Who can change its state?
-- What evidence permits the transition?
-- What context must survive?
-- Who may contest it?
-- How is the result returned to memory?
-- What happens if a provider disappears?
-
-These design constraints generate hypotheses. They do **not** validate the hypotheses.
-
-
-================================================================================================
-FILE: wiki/Koali-Components.md
-AUTHORITY: canonical
-================================================================================================
-
-# Koali Components
-
-Koali’s components are best understood as **roles in a composition**, not a claim that every specialized function must be rebuilt inside one platform.
-
-## Kristal — portable epistemic memory
-
-Kristal is concerned with knowledge artifacts that can preserve claim, evidence, provenance, status, uncertainty, authority, scope, version, and lineage.
-
-```text
-Knowledge artifact ≠ platform
-```
-
-Its relevance to the research framework is the possibility of preserving epistemic context while knowledge moves between systems.
-
-## Konnaxion — discovery and collective work
-
-Konnaxion connects people to knowledge, learning, contribution, collaboration, consultation, deliberation, and shared artifacts.
-
-Its conceptual role is to increase **discoverability and composition**, not to become the sole source of knowledge or expertise.
-
-## EkoH — contextual competence signals
-
-EkoH is intended to represent evidence of contextual competence and credibility.
-
-```text
-Reputation ≠ truth
-Competence ≠ mandate
-```
-
-An expertise signal may help route attention or advice without acquiring scientific or political sovereignty.
-
-## Smart Vote — plural readings
-
-Smart Vote separates a participation record from derived interpretations or lenses.
-
-```text
-Facts ≠ readings
-One record → multiple explicit readings
-```
-
-Its conceptual value is to reveal the structure of agreement and disagreement without collapsing all perspectives into one scalar.
-
-## Orgo — continuity into execution
-
-Orgo is concerned with turning signals and decisions into accountable operational work.
-
-```text
-Signal → Case → Responsibility → Tasks → Escalation → Closure
-```
-
-The relevant properties are ownership, timing, evidence, status, outcome, and return to institutional memory.
-
-## Kintsugi / Kompendio — composition logic
-
-These components make dependencies, interfaces, ownership boundaries, and Mimic/Annex decisions explicit.
-
-Their theoretical relevance is **composition without absorption** and replaceability.
-
-## Simplified closed loop
-
-```text
-Kristal
-→ Konnaxion
-→ deliberation / judgment / decision
-→ Orgo
-→ execution / outcome
-→ Kristal
-```
-
-The important property is not the module sequence itself. It is the **continuity between capabilities**, including when external systems perform one or more stages.
-
-
-================================================================================================
-FILE: wiki/Pressure-Test-and-Falsifiability.md
-AUTHORITY: canonical
-================================================================================================
-
-# Pressure Test & Falsifiability
-
-## Purpose
-
-Koali is useful as a research generator only if its propositions can fail.
-
-The pressure-test discipline is:
-
-```text
-Claim
-→ Expected observation
-→ Test
-→ Possible failure
-→ Revision or rejection
-```
-
-## Example pressure tests
-
-### Interface integrity matters
-**Prediction:** better-preserved handoffs should improve continuity or reconstructibility under otherwise comparable conditions.
-
-**Failure signal:** node-level resources explain outcomes while interface differences add little explanatory value.
-
-### Explicit authority separation helps
-**Prediction:** clearer boundaries between expertise, validation, decision authority, and operational permission should reduce silent authority transfer.
-
-**Failure signal:** formal separation creates administrative burden without improving legitimacy, quality, or accountability.
-
-### Provenance improves reconstructibility
-**Prediction:** preserved lineage should make disputed or failed processes easier to reconstruct and revise.
-
-**Failure signal:** provenance cost exceeds practical value or is routinely bypassed without meaningful consequence.
-
-### Composition without absorption is desirable
-**Prediction:** explicit interfaces can support cooperation while preserving useful local variation and replaceability.
-
-**Failure signal:** common work repeatedly requires deeper standardization or institutional integration than the model allows.
-
-### Reconfigurability matters
-**Prediction:** systems capable of adapting after supplier, funding, personnel, or technical change should exhibit more durable capability.
-
-**Failure signal:** continuity depends mainly on stable external support and reconfiguration adds little explanatory value.
-
-### Independent reproduction indicates durability
-**Prediction:** external actors who can operate, maintain, teach, and adapt a function without unique founder knowledge demonstrate deeper capability than those who can merely use it.
-
-**Failure signal:** such reproduction is unnecessary, inefficient, or irrelevant for the studied function.
-
-## Governance burden
-
-Any architectural intervention should be evaluated as:
-
-```text
-Governance benefit − administrative burden
-```
-
-More traceability, more explicit authority, and more interfaces are not automatically better.
-
-## Anti-confirmation rule
-
-The framework should never interpret every outcome as proof of Koali.
-
-```text
-Scenario ≠ evidence
-Implementation ≠ validation
-Internal coherence ≠ external truth
-```
-
-
-================================================================================================
-FILE: wiki/Research-Design.md
-AUTHORITY: canonical
-================================================================================================
-
-# Research Design
-
-## Unit of analysis
-
-The preferred unit is a **scientific function moving through transitions**, rather than a whole country or partnership assigned one “capacity” score.
-
-Examples:
-
-- instrument maintenance;
-- data hosting and validation;
-- protocol adaptation;
-- staff training and succession;
-- research-agenda setting;
-- technical procurement and substitution;
-- model or standard adoption;
-- collaborative claim validation.
-
-## Comparative logic
-
-Compare functions or cases across variation in:
-
-- institutional arrangement;
-- technical architecture;
-- funding structure;
-- authority distribution;
-- local expertise;
-- maintenance model;
-- data governance;
-- language and standards;
-- supplier dependence;
-- partnership duration.
-
-The objective is mechanism identification, not national ranking.
-
-## Methods
-
-### Process tracing
-Reconstruct critical transitions and the causal sequence connecting inputs, decisions, actions, breakdowns, and outcomes.
-
-### Semi-structured interviews
-Interview researchers, technical staff, administrators, funders, local partners, vendors, maintainers, and decision authorities.
-
-### Ethnographic observation
-Observe routine work, breakdowns, troubleshooting, handoffs, training, and informal coordination where access permits.
-
-### Document analysis
-Use agreements, procurement files, protocols, training materials, governance rules, maintenance records, standards, and policy documents.
-
-### Technical artifact analysis
-Where appropriate, inspect software dependencies, data formats, access-control structures, interoperability requirements, or maintenance procedures.
-
-### Scientometrics as context
-Publication and collaboration networks may help contextualize cases but should not be treated as direct evidence of durable capability.
-
-## Transition evidence template
-
-| Dimension | Question |
-|---|---|
-| Discoverability | Was relevant local expertise visible and reachable? |
-| Provenance | Could claims, data, or decisions be reconstructed? |
-| Semantics | What changed in translation or standardization? |
-| Authority | Who could validate, decide, authorize, or veto? |
-| Operation | Who could perform the function? |
-| Maintenance | Who could diagnose and restore failure? |
-| Transmission | Who could train successors? |
-| Reconfiguration | Could the activity survive supplier, funding, or personnel change? |
-| Dependency | Which external actors remained indispensable? |
-| Memory | Did outcomes alter future institutional starting conditions? |
-
-## Evaluation strategy
-
-The research should compare both **successful and unsuccessful transitions**. A framework that only explains failures risks becoming tautological.
-
-The strongest evidence would show that transition-level variables explain meaningful differences that node-level descriptions alone do not.
-
-
-================================================================================================
-FILE: wiki/Research-Question-and-Propositions.md
-AUTHORITY: canonical
-================================================================================================
-
-# Research Question & Propositions
-
-## Primary research question
-
-> **Under what conditions do transnational scientific arrangements convert distributed capabilities into durable collective capability while preserving the distinctions, authorities, and forms of independence necessary for continued adaptation?**
-
-This question deliberately avoids assuming that capability must be transferred from one actor to another. Scientific capability may instead be **discovered, combined, redistributed, co-produced, institutionalized, or reconfigured** through the relationship.
-
-## Secondary questions
-
-1. Which capabilities existed before the partnership, and which became newly discoverable or mobilizable?
-2. Where do provenance, meaning, evidence, uncertainty, or attribution degrade across institutional transitions?
-3. How are scientific expertise, validation authority, data authority, agenda authority, political authority, and operational permission distributed?
-4. Which capabilities increase while which dependencies emerge or deepen?
-5. Which dependencies are productive and negotiable, and which become terminal?
-6. What survives personnel turnover, supplier change, funding change, or technical disruption?
-7. Under what conditions can heterogeneous systems compose without one absorbing the others?
-8. Which outcomes become institutional memory and future capability?
-
-## Six candidate propositions
-
-### P1 — Interface bottlenecks
-Capable nodes can still produce weak collective outcomes when critical transitions fail.
-
-**Observable test:** compare cases with similar resource levels but different handoff, maintenance, validation, or coordination arrangements.
-
-### P2 — Capability–dependency co-production
-Scientific cooperation can increase capability and dependency at the same time.
-
-**Observable test:** trace gains in operation, validation, adaptation, teaching, or agenda-setting alongside reliance on external funding, hardware, data, standards, expertise, or authority.
-
-### P3 — Reproduction requires more than training
-Access and training are insufficient indicators of durable capability.
-
-**Observable test:** examine whether institutions can maintain, teach, adapt, and continue functions after turnover or external change.
-
-### P4 — Reconfigurability is a stronger durability test than nominal ownership
-Ownership does not guarantee practical continuation.
-
-**Observable test:** introduce or observe supplier, software, funding, or personnel change and examine whether the activity can be reconfigured.
-
-### P5 — Composition without absorption is possible but conditional
-Heterogeneous systems may cooperate through explicit interfaces while preserving distinct authorities and local knowledge structures.
-
-**Observable test:** identify which differences remain locally governed, which are standardized, and where standardization becomes a precondition for participation.
-
-### P6 — Centrality is not equivalent to domination
-A strong shared infrastructure may increase coordination without becoming the terminal source of truth, authority, or continuation.
-
-**Observable test:** distinguish functional centrality from dependency on one actor’s continued permission or operation.
-
-## What would make the framework fail?
-
-The framework should be narrowed or rejected where:
-
-- node-level capacity explains outcomes without significant interface effects;
-- durable capability does not depend on memory, transmission, maintenance, or reconfiguration in the studied function;
-- explicit authority differentiation creates more cost than benefit;
-- composition without absorption proves impractical or undesirable in relevant cases;
-- terminal dependency has no meaningful explanatory value beyond ordinary interdependence.
-
-See [Pressure Test & Falsifiability](Pressure-Test-and-Falsifiability).
-
-
-================================================================================================
-FILE: wiki/Science-Silk-Road-as-Test-Environment.md
-AUTHORITY: canonical
-================================================================================================
-
-# Science Silk Road as Test Environment
-
-## Why the fit is structural
-
-The connection between Koali and the Science Silk Road is not simply that both concern technology or collaboration.
-
-They approach the same historical transformation from different directions:
-
-> **scientific capability is increasingly distributed across institutions, infrastructures, jurisdictions, standards, languages, and technical systems, while meaningful outcomes depend on those heterogeneous capabilities becoming usable together.**
-
-The Science Silk Road studies this transformation empirically. Koali emerged from trying to build an architecture capable of operating under comparable conditions of fragmentation.
-
-## Beyond transfer
-
-A transfer model asks:
-
-```text
-What moved from A to B?
-```
-
-An articulation model also asks:
-
-- What capabilities already existed in A and B?
-- What became newly discoverable?
-- Which capabilities were co-produced?
-- What had to be translated or standardized?
-- Which authorities were redistributed?
-- Which dependencies emerged?
-- What could no longer continue if one actor disappeared?
-
-Scientific capability is often **relationally produced**, not transferred intact.
-
-## From nodes to interfaces
-
-Potential empirical chains include:
-
-```text
-procurement → installation → training → practice → maintenance → adaptation
-```
-
-```text
-collection → hosting → access → analysis → validation → publication → reuse
-```
-
-```text
-observation → claim → collaborative validation → publication → policy use → revision
-```
-
-These chains make breakdowns, handoffs, staff turnover, and supplier changes analytically valuable because they reveal hidden dependencies and tacit capability.
-
-## Three particularly strong empirical bridges
-
-### Knowledge trajectories
-How do knowledge production, translation, circulation, consumption, and reproduction reshape who can act scientifically?
-
-### Authority configurations
-How do political steering, professional science, data governance, standards, validation, and operational permission interact without collapsing into one notion of “control”?
-
-### Everyday implementation
-How do apparently high-level cooperation agreements become concrete routines, maintenance practices, bureaucratic work, local adaptations, and institutional memory?
-
-## Why this is a test rather than an application
-
-The Science Silk Road is not treated as a place to “deploy Koali.”
-
-It is an external empirical environment in which the architecture’s propositions can be:
-
-```text
-supported · narrowed · revised · rejected
-```
-
-That separation is essential to the research design.
-
-
-================================================================================================
-FILE: wiki/Source-and-Chronology.md
-AUTHORITY: canonical
-================================================================================================
-
-# Source & Chronology
-
-## Purpose
-
-This page separates **conceptual existence**, **implementation evidence**, and **historical priority**.
-
-These are not interchangeable.
-
-```text
-Conceptual existence ≠ implementation ≠ historical priority
-```
-
-## Koali source families
-
-### General architecture
-- kOA public hub: https://initkoa.org/
-- GitHub profile: https://github.com/Rejean-McCormick
-- kOA Digital Ecosystem: https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem
-
-### Knowledge and provenance
-- Kristal Framework: https://github.com/Rejean-McCormick/kristal-framework
-
-### Discovery and coordination
-- Konnaxion: https://github.com/Rejean-McCormick/Konnaxion
-- Konnaxion overview: https://initkoa.org/platforms/konnaxion
-
-### Execution and routing
-- Orgo: https://github.com/Rejean-McCormick/Orgo
-
-### Semantic interoperability
-- SemantiK Architect: https://github.com/Rejean-McCormick/SemantiK_Architect
-- SenTient: https://github.com/Rejean-McCormick/SenTient
-
-### Replication / deployment
-- Konnaxion Capsule Manager: https://github.com/Rejean-McCormick/Konnaxion_Capsule_Manager
-
-## Science Silk Road sources
-
-- Project website: https://sciencesilkroad.mpiwg-berlin.mpg.de/
-- MPIWG: https://www.mpiwg-berlin.mpg.de/
-- Université Laval: https://www.ulaval.ca/
-
-## Historical claims
-
-A repository timestamp proves only what that repository proves.
-
-Strong priority claims should be supported by dated material such as:
-
-1. commits with preserved history;
-2. releases or tags;
-3. externally archived pages;
-4. dated correspondence or publications;
-5. contemporaneous design documents with verifiable provenance.
-
-## Recommended wording until priority is fully audited
-
-Prefer:
-
-> “The framework emerged through the development of Koali and has been progressively formalized in public architecture and documentation.”
-
-Use stronger chronology only where dated evidence supports it.
-
-
-================================================================================================
-FILE: wiki/Start-Here.md
-AUTHORITY: canonical
-================================================================================================
-
-# Start Here
-
-This page is the shortest route through the dossier.
-
-## The thesis in one paragraph
-
-Scientific systems increasingly depend on capabilities distributed across people, institutions, infrastructures, jurisdictions, languages, and software. Yet distributed capability does not automatically become collective capability. The decisive failures often occur at the **interfaces** where something must change form: a competence must become discoverable; a claim must become interpretable and validatable; expertise must become advice without automatically becoming authority; a decision must become executable work; an outcome must become reusable memory. Koali was developed around these recurring transition problems. The Science Silk Road provides an external empirical environment in which the resulting propositions can be tested rather than assumed.
-
-## The core chain
-
-```text
-Distributed Potential
-→ Discoverability
-→ Articulation
-→ Collective Agency
-→ Outcome
-→ Memory
-→ Future Capability
-```
-
-The theory is primarily about the **arrows**.
-
-## The key correction
-
-A transfer-centered model asks:
-
-```text
-What moved from A to B?
-```
-
-An articulation-centered model asks:
-
-```text
-What capabilities already existed?
-What became newly discoverable?
-What had to be translated, qualified, or authorized?
-What new combinations became possible?
-What was lost at the interfaces?
-What became durable, transmissible, and reconfigurable?
-```
-
-## What Koali is not
-
-Koali is not a claim that one system should absorb every specialized tool or institution.
-
-```text
-Composition ≠ Absorption
-```
-
-It is an attempt to preserve continuity **between** heterogeneous capabilities while allowing those capabilities to remain independently governed.
-
-## Recommended path
-
-**5 minutes:** [Research Question & Propositions](Research-Question-and-Propositions) → [Science Silk Road as Test Environment](Science-Silk-Road-as-Test-Environment)
-
-**15 minutes:** add [Articulation & Conversion Loss](Articulation-and-Conversion-Loss) → [Transition Integrity](Transition-Integrity) → [Capability & Dependency](Capability-and-Dependency)
-
-**Critical review:** [Academic Bridges](Academic-Bridges) → [Claims, Evidence & Status](Claims-Evidence-and-Status) → [Pressure Test & Falsifiability](Pressure-Test-and-Falsifiability)
-
-
-================================================================================================
-FILE: wiki/Submission-Materials.md
-AUTHORITY: canonical
-================================================================================================
-
-# Submission Materials
-
-The current dossier has three submission-facing forms of the same argument.
-
-## 300-word pitch
-
-**Purpose:** editorial selection.
-
-The pitch should communicate one intellectual move quickly:
-
-> **Scientific cooperation should be studied not only through what moves, but through the interfaces that determine whether heterogeneous capabilities become cumulative.**
-
-Main-repository file:
-
-```text
-submissions/Science_Silk_Road_300_Word_Pitch_Rejean_McCormick_v2.docx
-```
-
-## 750-word research proposal
-
-**Purpose:** fellowship / research evaluation.
-
-The proposal adds:
-
-- research question;
-- hypotheses;
-- empirical strategy;
-- falsifiability;
-- fit with the Science Silk Road programme.
-
-Main-repository file:
-
-```text
-submissions/Science_Silk_Road_750_Word_Research_Proposal_Rejean_McCormick_v2.docx
-```
-
-## Article-length manuscript
-
-**Purpose:** developed scholarly argument.
-
-The article connects the framework to existing literatures on knowledge transfer, technological capability, organizational memory, infrastructure, expertise, and Global China.
-
-Main-repository file:
-
-```text
-submissions/Science_Silk_Road_Articulation_Conversion_Loss_Rejean_McCormick_v2.docx
-```
-
-## Framing invariant across all three
-
-```text
-Koali is not the empirical answer.
-Koali is the architecture from which testable distinctions were derived.
-The Science Silk Road is the external empirical environment in which they can fail.
-```
-
-
-================================================================================================
-FILE: wiki/Transition-Integrity.md
-AUTHORITY: canonical
-================================================================================================
-
-# Transition Integrity
-
-## Definition
-
-**Transition integrity** is the preservation of the properties required for one stage of collective activity to remain meaningful and usable after it becomes another.
-
-A generic chain is:
-
-```text
-Potential
-→ Discovery
-→ Interpretation
-→ Qualification
-→ Coordination
-→ Decision
-→ Execution
-→ Evaluation
-→ Memory
-```
-
-Not every case follows this sequence, and many loops start in the middle. The point is that each arrow can preserve or destroy different properties.
-
-## What may need to survive
-
-### Identity and attribution
-Who or what produced the contribution? Can the originator still be identified after reuse or transformation?
-
-### Provenance
-Which sources, transformations, versions, and validation events produced the current object?
-
-### Meaning
-Did translation or standardization preserve the relevant conceptual distinctions?
-
-```text
-Translation ≠ Equivalence
-Fluent text ≠ faithful meaning
-```
-
-### Evidence and uncertainty
-Did a concise output erase the evidence, scope, uncertainty, or contestation attached to the original claim?
-
-### Authority
-Did expertise become advice, or was it silently converted into decision power?
-
-```text
-Evidence ≠ Advice
-Advice ≠ Authority
-Expertise ≠ Decision Authority
-```
-
-### Legitimacy and contestability
-Can those affected challenge the interpretation, rule, classification, or decision in a consequential way?
-
-### Operational ownership
-Can an authorized decision become assigned, resourced, and verifiable work?
-
-```text
-Decision ≠ Execution
-```
-
-### Memory
-Did the result become reusable knowledge, or merely stored data?
-
-```text
-Storage ≠ Memory
-Experience ≠ Learning
-Documentation ≠ Mastery
-```
-
-## Empirical method
-
-For every critical transition, record:
-
-| Question | Example evidence |
-|---|---|
-| What entered the transition? | document, dataset, expert judgment, mandate |
-| What left it? | translated object, validated result, task, policy |
-| What changed? | format, meaning, authority, ownership, access |
-| What survived? | provenance, evidence, lineage, responsibility |
-| Who could contest it? | reviewer, partner institution, affected actor |
-| What dependency was created? | software, supplier, standard, expertise, permission |
-| Could another actor reconstruct the transition? | records, logs, documentation, interviews |
-
-This turns “transition integrity” into a process-tracing programme rather than a metaphor.

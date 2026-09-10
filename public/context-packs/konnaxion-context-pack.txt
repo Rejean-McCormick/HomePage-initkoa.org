@@ -19,136 +19,136 @@ excluded_files: 119
 duplicate_files: 57
 content_bytes: 1748961
 authority_counts: {"canonical":122}
-generated_at: 2026-09-10T10:44:54-04:00
+generated_at: 2026-09-10T11:09:06-04:00
 files: 122
-content_sha256: 601d71421f9ce157a7d135696545e2eedb7911adbfd9e25b126d027ba7651a30
+content_sha256: 0bd3b06bfed5ad51e94d04489ddc9e3a1572931747b60fa64efab8d474b83354
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-001. [canonical] _BUG_HARVEST_REVIEW/docs/Konnaxion_User_Workflows.md
-002. [canonical] _BUG_HARVEST_REVIEW/docs/status/2026-08-28-technical-maturity-assessment.md
-003. [canonical] _BUG_HARVEST_REVIEW/docs/status/ETHIKOS_EKOH_SMARTVOTE_DELIVERY_WORKFLOW.md
-004. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH - System Overview.md
-005. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Data Model.md
-006. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Technical Specification.md
-007. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-module-file-architecture.md
-008. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-canonical-db-schema-v1-1.md
-009. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-definitive-module-documentation-set-v1-0.md
-010. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-system-overview-smart-vote-ecosystem.md
-011. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/konnaxion-smart-vote-weighted-voting-system-structure-and-logic-internal-white-paper.md
-012. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/Smart Vote - Reading Contract.md
-013. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-consultation-simulations.md
-014. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-empower-ux-naming-guidelines.md
-015. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-system-in-konnaxion-technical-specification.md
-016. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos-kintsugi-upgrade-plan-v1.md
-017. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/00_KINTSUGI_START_HERE.md
-018. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/01_ETHIKOS_KINTSUGI_EXECUTION_STRATEGY.md
-019. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/02_SOURCE_OF_TRUTH_AND_DRIFT_CONTROL.md
-020. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/03_BOUNDARIES_AND_OWNERSHIP_CONTRACTS.md
-021. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/04_CANONICAL_NAMING_AND_VARIABLES.md
-022. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/05_CURRENT_STATE_BASELINE.md
-023. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/06_ROUTE_BY_ROUTE_ETHIKOS_UPGRADE_PLAN.md
-024. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/07_API_AND_SERVICE_CONTRACTS.md
-025. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/08_DATA_MODEL_AND_MIGRATION_PLAN.md
-026. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/09_SMART_VOTE_EKOH_READING_CONTRACT.md
-027. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/10_FIRST_PASS_INTEGRATION_MATRIX.md
-028. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/11_MIMIC_VS_ANNEX_RULEBOOK.md
-029. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/12_CANONICAL_OBJECTS_AND_EVENTS.md
-030. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/13_PAYLOAD_SHAPES_AND_SERIALIZER_CONTRACTS.md
-031. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/14_FRONTEND_ALIGNMENT_CONTRACT.md
-032. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/15_BACKEND_ALIGNMENT_CONTRACT.md
-033. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/16_TEST_AND_SMOKE_CONTRACT.md
-034. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/17_KNOWN_BUGS_AND_NON_KINTSUGI_ITEMS.md
-035. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/18_ADR_REGISTER.md
-036. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/19_OSS_CODE_READING_PLAN.md
-037. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/20_AI_GENERATION_GUARDRAILS.md
-038. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/21_KIALO_STYLE_ARGUMENT_MAPPING_CONTRACT.md
-039. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/22_IMPLEMENTATION_BACKLOG_TEMPLATE.md
-040. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/23_WAVE1_IMPLEMENTATION_BACKLOG.md
-041. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/24_WAVE1_SLICE_REGISTER.md
-042. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/25_WAVE1_QA_CHECKLIST.md
-043. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/27_EKOH_RATING_VISIBILITY_AND_ACCESS_CONTRACT.md
-044. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kintsugi-upgrade-v1.md.md
-045. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kompendio-v1.md.md
-046. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/Konnaxion-kintsugi-and-kompendio-open-source-integration-map-v1.md
-047. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kintsugi-upgrade-plan-v1.md
-048. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kompendio-upgrade-plan-v1.md
-049. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/SmartVote-EkoH-kintsugi-upgrade-v1.md
-050. [canonical] _BUG_HARVEST_REVIEW/LevelUpDiag/README.md
-051. [canonical] backend/konnaxion/ethikos_20260903_131935_Dump/00_START_HERE.instructions.md
-052. [canonical] backend/locale/README.md
-053. [canonical] backend/README.md
-054. [canonical] docs/demo-scenarios/ethikos/ETHIKOS_DEMO_IMPORTER.md
-055. [canonical] docs/demo-scenarios/ethikos/README.md
-056. [canonical] docs/KONNAXION_UPGRADE_TO_DO(credentialAnalyser).md
-057. [canonical] docs/Konnaxion_UserWorkflow_Documentation_v0_1.md
-058. [canonical] docs/README.md
-059. [canonical] docs/status/2026-08-27-technical-maturity-assessment.md
-060. [canonical] docs/status/2026-09-05-bug-harvest-mass-audit.md
-061. [canonical] docs/status/2026-09-05-technical-maturity-assessment.md
-062. [canonical] docs/status/2026-09-06-bug-harvest-real-findings.md
-063. [canonical] docs/status/2026-09-06-bug-harvest-wave2a-mass-update.md
-064. [canonical] docs/status/2026-09-06-bug-harvest-wave2b-mass-update.md
-065. [canonical] docs/status/2026-09-06-bug-harvest-wave2c.md
-066. [canonical] docs/status/2026-09-06-bug-harvest-wave2d.md
-067. [canonical] docs/status/2026-09-06-bug-harvest-wave2e-context-isolation.md
-068. [canonical] docs/status/2026-09-06-technical-status-report-aligned.md
-069. [canonical] docs/status/2026-09-06-technical-status-report-wave2-closed.md
-070. [canonical] docs/status/2026-09-08-technical-maturity-assessment.md
-071. [canonical] docs/status/README.md
-072. [canonical] docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
-073. [canonical] docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
-074. [canonical] docs/Technical-Reference/DEV_DOCKER_CHEATSHEET.md
-075. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference (Custom Tables).md
-076. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference.md
-077. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Documentation Index.md
-078. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Full-Stack Technical Specification.md
-079. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Insights UI Reference.md
-080. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Site Navigation Map.md
-081. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Full-Stack Technical Specification.md
-082. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Functional Code-Name Inventory (Services & Hooks).md
-083. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Global Parameter Reference.md
-084. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module Config Parameters.md
-085. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module UI Spec (Reporting & Analytics Frontend).md
-086. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Site Navigation Map (Top-Level Routes).md
-087. [canonical] docs/Technical-Reference/DocV14/Konnaxion  v14 - Documentation INDEX.docx.md
-088. [canonical] docs/Technical-Reference/GLOSSARY.md
-089. [canonical] docs/Technical-Reference/HowToNest-wrap-shell.md
-090. [canonical] docs/Technical-Reference/Konnaxion_Frontend_Deployment_Runbook.md
-091. [canonical] docs/Technical-Reference/namecheap-vps.md
-092. [canonical] docs/Technical-Reference/sub-modules_description/CertifiKation (Skills & Certification) — sub‑module under KonnectED.md
-093. [canonical] docs/Technical-Reference/sub-modules_description/EkoH (Reputation & Expertise) — first sub‑module under Kollective Intelligence.md
-094. [canonical] docs/Technical-Reference/sub-modules_description/Knowledge (Collaborative Learning Library) — sub‑module under KonnectED.md
-095. [canonical] docs/Technical-Reference/sub-modules_description/Konservation (Creative Content & Cultural Preservation) — sub‑module under Kreative.md
-096. [canonical] docs/Technical-Reference/sub-modules_description/Konstruct (Project Collaboration Spaces) — first sub‑module under keenKonnect.md
-097. [canonical] docs/Technical-Reference/sub-modules_description/Konsultations (Public Consultations & Feedback) — sub‑module under ethiKos.md
-098. [canonical] docs/Technical-Reference/sub-modules_description/Kontact (Collaboration & Networking) — sub‑module under Kreative.md
-099. [canonical] docs/Technical-Reference/sub-modules_description/Korum (Structured Debates) — sub‑module under ethiKos.md
-100. [canonical] docs/Technical-Reference/sub-modules_description/Smart Vote (Weighted Voting System) — second sub‑module under Kollective Intelligence.md
-101. [canonical] docs/Technical-Reference/sub-modules_description/Stockage (Secure Repository & Versioned Storage) — second sub‑module under keenKonnect.md
-102. [canonical] docs/Technical-Reference/UpdateBackendAndMigrateAndDocker.md
-103. [canonical] frontend/app/ethikos_20260903_132014_Dump/00_START_HERE.instructions.md
-104. [canonical] frontend/README.md
-105. [canonical] README.md
-106. [canonical] seed-data/ethikos/canada_quebec_public_debates_2026_inventory.md
-107. [canonical] wiki/CertifiKation.md
-108. [canonical] wiki/EkoH.md
-109. [canonical] wiki/Glossary.md
-110. [canonical] wiki/Home.md
-111. [canonical] wiki/Implementation-Alignment.md
-112. [canonical] wiki/Knowledge.md
-113. [canonical] wiki/Konnaxion-Technical-Architecture-&-Services.md
-114. [canonical] wiki/Konservation.md
-115. [canonical] wiki/Konstruct.md
-116. [canonical] wiki/Konsultations.md
-117. [canonical] wiki/Kontact.md
-118. [canonical] wiki/Kontrol.md
-119. [canonical] wiki/Korum.md
-120. [canonical] wiki/Smart-Vote.md
-121. [canonical] wiki/Stockage.md
-122. [canonical] wiki/TeamBuilder.md
+001. [canonical] wiki/CertifiKation.md
+002. [canonical] wiki/EkoH.md
+003. [canonical] wiki/Glossary.md
+004. [canonical] wiki/Home.md
+005. [canonical] wiki/Implementation-Alignment.md
+006. [canonical] wiki/Knowledge.md
+007. [canonical] wiki/Konnaxion-Technical-Architecture-&-Services.md
+008. [canonical] wiki/Konservation.md
+009. [canonical] wiki/Konstruct.md
+010. [canonical] wiki/Konsultations.md
+011. [canonical] wiki/Kontact.md
+012. [canonical] wiki/Kontrol.md
+013. [canonical] wiki/Korum.md
+014. [canonical] wiki/Smart-Vote.md
+015. [canonical] wiki/Stockage.md
+016. [canonical] wiki/TeamBuilder.md
+017. [canonical] _BUG_HARVEST_REVIEW/docs/Konnaxion_User_Workflows.md
+018. [canonical] _BUG_HARVEST_REVIEW/docs/status/2026-08-28-technical-maturity-assessment.md
+019. [canonical] _BUG_HARVEST_REVIEW/docs/status/ETHIKOS_EKOH_SMARTVOTE_DELIVERY_WORKFLOW.md
+020. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH - System Overview.md
+021. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Data Model.md
+022. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/EkoH and Smart Vote - Technical Specification.md
+023. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-module-file-architecture.md
+024. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-canonical-db-schema-v1-1.md
+025. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-smart-vote-definitive-module-documentation-set-v1-0.md
+026. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/ekoh-system-overview-smart-vote-ecosystem.md
+027. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/konnaxion-smart-vote-weighted-voting-system-structure-and-logic-internal-white-paper.md
+028. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/Smart Vote - Reading Contract.md
+029. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-consultation-simulations.md
+030. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-empower-ux-naming-guidelines.md
+031. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/EkoH Smart Vote/smart-vote-system-in-konnaxion-technical-specification.md
+032. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos-kintsugi-upgrade-plan-v1.md
+033. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/00_KINTSUGI_START_HERE.md
+034. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/01_ETHIKOS_KINTSUGI_EXECUTION_STRATEGY.md
+035. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/02_SOURCE_OF_TRUTH_AND_DRIFT_CONTROL.md
+036. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/03_BOUNDARIES_AND_OWNERSHIP_CONTRACTS.md
+037. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/04_CANONICAL_NAMING_AND_VARIABLES.md
+038. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/05_CURRENT_STATE_BASELINE.md
+039. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/06_ROUTE_BY_ROUTE_ETHIKOS_UPGRADE_PLAN.md
+040. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/07_API_AND_SERVICE_CONTRACTS.md
+041. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/08_DATA_MODEL_AND_MIGRATION_PLAN.md
+042. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/09_SMART_VOTE_EKOH_READING_CONTRACT.md
+043. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/10_FIRST_PASS_INTEGRATION_MATRIX.md
+044. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/11_MIMIC_VS_ANNEX_RULEBOOK.md
+045. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/12_CANONICAL_OBJECTS_AND_EVENTS.md
+046. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/13_PAYLOAD_SHAPES_AND_SERIALIZER_CONTRACTS.md
+047. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/14_FRONTEND_ALIGNMENT_CONTRACT.md
+048. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/15_BACKEND_ALIGNMENT_CONTRACT.md
+049. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/16_TEST_AND_SMOKE_CONTRACT.md
+050. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/17_KNOWN_BUGS_AND_NON_KINTSUGI_ITEMS.md
+051. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/18_ADR_REGISTER.md
+052. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/19_OSS_CODE_READING_PLAN.md
+053. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/20_AI_GENERATION_GUARDRAILS.md
+054. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/21_KIALO_STYLE_ARGUMENT_MAPPING_CONTRACT.md
+055. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/22_IMPLEMENTATION_BACKLOG_TEMPLATE.md
+056. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/23_WAVE1_IMPLEMENTATION_BACKLOG.md
+057. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/24_WAVE1_SLICE_REGISTER.md
+058. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/25_WAVE1_QA_CHECKLIST.md
+059. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/ethiKos_Kintsugi_Update/27_EKOH_RATING_VISIBILITY_AND_ACCESS_CONTRACT.md
+060. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kintsugi-upgrade-v1.md.md
+061. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/keenKonnect-kompendio-v1.md.md
+062. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/Konnaxion-kintsugi-and-kompendio-open-source-integration-map-v1.md
+063. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kintsugi-upgrade-plan-v1.md
+064. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kompendio-upgrade-plan-v1.md
+065. [canonical] _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/SmartVote-EkoH-kintsugi-upgrade-v1.md
+066. [canonical] _BUG_HARVEST_REVIEW/LevelUpDiag/README.md
+067. [canonical] backend/konnaxion/ethikos_20260903_131935_Dump/00_START_HERE.instructions.md
+068. [canonical] backend/locale/README.md
+069. [canonical] backend/README.md
+070. [canonical] docs/demo-scenarios/ethikos/ETHIKOS_DEMO_IMPORTER.md
+071. [canonical] docs/demo-scenarios/ethikos/README.md
+072. [canonical] docs/KONNAXION_UPGRADE_TO_DO(credentialAnalyser).md
+073. [canonical] docs/Konnaxion_UserWorkflow_Documentation_v0_1.md
+074. [canonical] docs/README.md
+075. [canonical] docs/status/2026-08-27-technical-maturity-assessment.md
+076. [canonical] docs/status/2026-09-05-bug-harvest-mass-audit.md
+077. [canonical] docs/status/2026-09-05-technical-maturity-assessment.md
+078. [canonical] docs/status/2026-09-06-bug-harvest-real-findings.md
+079. [canonical] docs/status/2026-09-06-bug-harvest-wave2a-mass-update.md
+080. [canonical] docs/status/2026-09-06-bug-harvest-wave2b-mass-update.md
+081. [canonical] docs/status/2026-09-06-bug-harvest-wave2c.md
+082. [canonical] docs/status/2026-09-06-bug-harvest-wave2d.md
+083. [canonical] docs/status/2026-09-06-bug-harvest-wave2e-context-isolation.md
+084. [canonical] docs/status/2026-09-06-technical-status-report-aligned.md
+085. [canonical] docs/status/2026-09-06-technical-status-report-wave2-closed.md
+086. [canonical] docs/status/2026-09-08-technical-maturity-assessment.md
+087. [canonical] docs/status/README.md
+088. [canonical] docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md
+089. [canonical] docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md
+090. [canonical] docs/Technical-Reference/DEV_DOCKER_CHEATSHEET.md
+091. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference (Custom Tables).md
+092. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Database Schema Reference.md
+093. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Documentation Index.md
+094. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Full-Stack Technical Specification.md
+095. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Insights UI Reference.md
+096. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 - Site Navigation Map.md
+097. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Full-Stack Technical Specification.md
+098. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Functional Code-Name Inventory (Services & Hooks).md
+099. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Global Parameter Reference.md
+100. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module Config Parameters.md
+101. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Insights Module UI Spec (Reporting & Analytics Frontend).md
+102. [canonical] docs/Technical-Reference/DocV14/Konnaxion v14 – Site Navigation Map (Top-Level Routes).md
+103. [canonical] docs/Technical-Reference/DocV14/Konnaxion  v14 - Documentation INDEX.docx.md
+104. [canonical] docs/Technical-Reference/GLOSSARY.md
+105. [canonical] docs/Technical-Reference/HowToNest-wrap-shell.md
+106. [canonical] docs/Technical-Reference/Konnaxion_Frontend_Deployment_Runbook.md
+107. [canonical] docs/Technical-Reference/namecheap-vps.md
+108. [canonical] docs/Technical-Reference/sub-modules_description/CertifiKation (Skills & Certification) — sub‑module under KonnectED.md
+109. [canonical] docs/Technical-Reference/sub-modules_description/EkoH (Reputation & Expertise) — first sub‑module under Kollective Intelligence.md
+110. [canonical] docs/Technical-Reference/sub-modules_description/Knowledge (Collaborative Learning Library) — sub‑module under KonnectED.md
+111. [canonical] docs/Technical-Reference/sub-modules_description/Konservation (Creative Content & Cultural Preservation) — sub‑module under Kreative.md
+112. [canonical] docs/Technical-Reference/sub-modules_description/Konstruct (Project Collaboration Spaces) — first sub‑module under keenKonnect.md
+113. [canonical] docs/Technical-Reference/sub-modules_description/Konsultations (Public Consultations & Feedback) — sub‑module under ethiKos.md
+114. [canonical] docs/Technical-Reference/sub-modules_description/Kontact (Collaboration & Networking) — sub‑module under Kreative.md
+115. [canonical] docs/Technical-Reference/sub-modules_description/Korum (Structured Debates) — sub‑module under ethiKos.md
+116. [canonical] docs/Technical-Reference/sub-modules_description/Smart Vote (Weighted Voting System) — second sub‑module under Kollective Intelligence.md
+117. [canonical] docs/Technical-Reference/sub-modules_description/Stockage (Secure Repository & Versioned Storage) — second sub‑module under keenKonnect.md
+118. [canonical] docs/Technical-Reference/UpdateBackendAndMigrateAndDocker.md
+119. [canonical] frontend/app/ethikos_20260903_132014_Dump/00_START_HERE.instructions.md
+120. [canonical] frontend/README.md
+121. [canonical] README.md
+122. [canonical] seed-data/ethikos/canada_quebec_public_debates_2026_inventory.md
 
 
 ================================================================================================
@@ -274,6 +274,1057 @@ EXCLUDED FILES
 - [duplicate] docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kintsugi-upgrade-plan-v1.md (same content as _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kintsugi-upgrade-plan-v1.md)
 - [duplicate] docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kompendio-upgrade-plan-v1.md (same content as _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/KonnectED-kompendio-upgrade-plan-v1.md)
 - [duplicate] docs/Technical-Reference/Kintsugi_Kompendio/SmartVote-EkoH-kintsugi-upgrade-v1.md (same content as _BUG_HARVEST_REVIEW/docs/Technical-Reference/Kintsugi_Kompendio/SmartVote-EkoH-kintsugi-upgrade-v1.md)
+
+
+================================================================================================
+FILE: wiki/CertifiKation.md
+AUTHORITY: canonical
+================================================================================================
+
+# CertifiKation — KonnectED Certification Capability
+
+CertifiKation is the certification/credential capability inside **KonnectED**. It is not a separate ecosystem system.
+
+Canonical backend:
+
+```text
+backend/konnaxion/konnected/
+```
+
+## Current model families
+
+- `CertificationPath`;
+- `Evaluation`;
+- `PeerValidation`;
+- `Portfolio`;
+- `InteropMapping`.
+
+## Responsibilities
+
+- define certification/learning paths;
+- record evaluation attempts/results;
+- support peer validation;
+- maintain user portfolio evidence;
+- map internal certification concepts to external systems when required.
+
+## Current UI
+
+Certification surfaces live under:
+
+```text
+/konnected/certifications/*
+```
+
+including programs, exam preparation/registration and result dashboards.
+
+## Ownership
+
+Certification state remains KonnectED-owned. An external attestation or interoperability mapping can be referenced without becoming a second source of certification truth.
+
+
+================================================================================================
+FILE: wiki/EkoH.md
+AUTHORITY: canonical
+================================================================================================
+
+# EkoH — Expertise, Ethics and Rating Access
+
+EkoH is a Konnaxion **domain/service boundary**, not a global reputation authority and not a voting engine.
+
+Canonical backend:
+
+```text
+backend/konnaxion/ekoh/
+```
+
+## Current data model
+
+- `ExpertiseCategory` — hierarchical expertise taxonomy;
+- `UserExpertiseScore` — user/domain expertise score;
+- `UserEthicsScore` — governed ethics/reliability context;
+- `ScoreConfiguration` — scoring configuration;
+- `ScoreHistory` — score-change trace;
+- `ConfidentialitySetting` — identity privacy;
+- `RatingVisibilitySetting` — rating visibility policy;
+- `RatingAccessScope` — hierarchical disclosure scope;
+- `RatingScopeSubject` — subject membership in a scope;
+- `RatingAccessGrant` — viewer grant;
+- `ContextAnalysisLog` — contextual analysis record.
+
+## Expertise semantics
+
+Expertise is **domain-bounded**. A high score in one category is not universal authority in another category.
+
+The multidimensional scoring path normalizes evidence axes and stores bounded domain scores. Lack of expertise is neutral rather than negative merit.
+
+## Context analysis
+
+The current contextual-analysis path is deliberately **non-authoritative**: analysis can be recorded without silently modifying `UserExpertiseScore`.
+
+## Privacy and disclosure
+
+Rating visibility is decided server-side. The current access resolver applies a deterministic order including self, staff, scoped grants, public policy and deny behavior.
+
+Identity confidentiality and rating visibility are separate policies.
+
+## Smart Vote relationship
+
+```text
+EkoH context
+    ↓
+explicit consultation/lens context
+    ↓
+Smart Vote reading
+```
+
+EkoH may influence a declared advisory reading. It does not own the source vote/stance and does not assign a universal personal voting power.
+
+## K-Port
+
+K-Port is an **EkoH evidence application/gateway**. It can normalize/qualify evidence entering the EkoH boundary; it is not a peer system of Konnaxion and does not own EkoH scores.
+
+
+================================================================================================
+FILE: wiki/Glossary.md
+AUTHORITY: canonical
+================================================================================================
+
+# Konnaxion Glossary
+
+## Konnaxion
+
+An **ecosystem system** in the kOA Digital Ecosystem and a **platform** in its own scope.
+
+When hosted by kOA-Linux, it can be described as an **integrated subsystem from the kOA-Linux scope**. That host-relative term does not transfer Konnaxion domain authority.
+
+## Module
+
+`module` is a convenient product/UI word, not a precise architecture category.
+
+When the category matters, use:
+
+```text
+module
+→ domain
+→ application
+→ service
+→ component
+→ gateway
+→ interface surface
+```
+
+Examples:
+
+- Konnaxion — ecosystem system/platform.
+- EkoH — Konnaxion domain/service boundary.
+- Smart Vote — Konnaxion reading/aggregation boundary.
+- K-Port — EkoH evidence application/gateway, not a peer of Konnaxion.
+- kOA Spaces — subsystem of kOA-Linux, not a Konnaxion owner.
+
+## Source fact
+
+Authoritative state owned by the domain that captured it.
+
+Examples:
+
+- an `EthikosStance`;
+- a formal consultation ballot.
+
+## Baseline
+
+A direct declared aggregation/view of source facts without a contextual Smart Vote lens silently replacing it.
+
+## Reading
+
+A derived interpretation of source facts under an explicit lens.
+
+```text
+Reading = f(SourceFacts, LensDeclaration, SnapshotContext?)
+```
+
+## Lens
+
+A declared method and contextual policy used to compute a reading. A lens is not truth and does not own source facts.
+
+## EkoH snapshot
+
+The identifiable EkoH contextual inputs used by a reading. A durable/replayable published reading requires those inputs to be recoverable, not merely hashed.
+
+## Korum
+
+Logical structured-deliberation sub-domain inside ethiKos. It is implemented primarily in `konnaxion.ethikos`, not as a separate Django app.
+
+## Konsultations
+
+Logical consultation/intake/formal-decision source boundary. It is not identical to an Orgo Task or to a Smart Vote reading.
+
+## EkoH
+
+Konnaxion domain for expertise taxonomy/scores, ethics/reliability context, privacy and rating access.
+
+## Smart Vote
+
+Konnaxion domain for declared derived readings and related aggregation/lens semantics.
+
+## Kollective Intelligence
+
+A product/navigation umbrella and compatibility area. It is **not the canonical backend owner** of EkoH or Smart Vote state.
+
+## Gateway
+
+A controlled boundary that validates, normalizes, qualifies or routes data. A gateway does not become owner of the destination domain merely by controlling passage.
+
+
+================================================================================================
+FILE: wiki/Home.md
+AUTHORITY: canonical
+================================================================================================
+
+# Konnaxion
+
+Konnaxion is an **ecosystem system** in the **kOA Digital Ecosystem** and a **platform** in its own product scope. It coordinates civic deliberation, consultation, contextual expertise, learning, collaboration, creative work, administration and related application surfaces.
+
+Konnaxion keeps authority over its own domain state even when it is deployed as a subsystem under kOA-Linux.
+
+## Core architecture rule
+
+> **Single Truth, Multiple Readings.**
+
+A source fact remains owned by the domain that captured it. A derived reading can interpret that source under an explicit lens, but it does not rewrite the source.
+
+```text
+source fact
+    ↓
+baseline
+    ↓
+optional lens + contextual snapshot
+    ↓
+derived reading
+```
+
+## Main Konnaxion areas
+
+### Civic / ethiKos
+
+- **Korum** — structured deliberation: topics, stances, arguments, evidence, argument impact, participation roles and visibility.
+- **Konsultations** — consultation/intake/formal decision source boundary.
+- **Smart Vote** — derived readings and contextual aggregation.
+- **EkoH** — expertise, ethics/reliability context, privacy and rating access.
+
+### Learning and credentials
+
+- **Knowledge** — knowledge resources and learning-library capabilities in KonnectED.
+- **CertifiKation** — certification paths, evaluations, peer validation, portfolios and interoperability in KonnectED.
+
+### Collaboration and creation
+
+- **Konstruct** — project collaboration capabilities implemented in keenKonnect.
+- **Stockage** — project/document repository capabilities implemented in keenKonnect.
+- **Kontact** — networking/opportunity UI surface.
+- **Konservation** — creative/cultural archive and preservation capabilities implemented in Kreative.
+- **TeamBuilder** — problem/team formation and builder sessions.
+
+### Administration
+
+- **Kontrol** — Konnaxion administration, moderation, users/roles, audit and configuration views.
+
+## Architecture pages
+
+- [[Konnaxion – Technical Architecture & Services|Konnaxion-#U2013-Technical-Architecture-&-Services]]
+- [[Glossary]]
+- [[Implementation Alignment|Implementation-Alignment]]
+
+## Civic pages
+
+- [[Korum]]
+- [[Konsultations]]
+- [[EkoH]]
+- [[Smart Vote|Smart-Vote]]
+
+## Learning/collaboration pages
+
+- [[Knowledge]]
+- [[CertifiKation]]
+- [[Konstruct]]
+- [[Stockage]]
+- [[Kontact]]
+- [[Konservation]]
+- [[TeamBuilder]]
+- [[Kontrol]]
+
+## External ecosystem systems
+
+Orgo, Kristal, SemantiK Architect and kOA-Linux are **separate ecosystem systems**, not Konnaxion modules.
+
+No active Orgo, Kristal or SemantiK Architect adapter is present in the supplied Konnaxion code snapshot. Future integration must use explicit contracts rather than shared internal tables.
+
+
+================================================================================================
+FILE: wiki/Implementation-Alignment.md
+AUTHORITY: canonical
+================================================================================================
+
+# Konnaxion — Implementation Alignment
+
+This page lists the current code areas that should change so implementation and architecture use the same ownership model. It is a technical reference, not a project-management log.
+
+## 1. EkoH expertise taxonomy
+
+`EthikosTopic.expertise_category` currently references a compatibility taxonomy under `kollective_intelligence`. New canonical references should use `ekoh.ExpertiseCategory`, with the required data/schema migration.
+
+## 2. `kollective_intelligence` compatibility paths
+
+The codebase still contains the `konnaxion.kollective_intelligence` package and compatibility vote APIs. New EkoH and Smart Vote functionality should use:
+
+```text
+konnaxion.ekoh
+konnaxion.smart_vote
+```
+
+rather than creating new canonical state in the compatibility package.
+
+## 3. Konsensus vote API
+
+Current Konsensus frontend code still uses the compatibility `kollective/votes/` route and can submit `weighted_value`.
+
+Target rule:
+
+```text
+source ballot
+≠ derived reading weight
+```
+
+The client should submit source participation only. Smart Vote should calculate a contextual reading separately.
+
+## 4. Smart Vote persisted weighted values
+
+The current Smart Vote ballot path persists `Vote.weighted_value` and aggregates `VoteResult.sum_weighted_value`.
+
+This path must be reconciled with the reading architecture so the source ballot and the derived contextual interpretation are not one authoritative object.
+
+## 5. Preserve the ethiKos reading path
+
+`smart_vote/services/reading_service.py` already follows the correct direction:
+
+- reads ethiKos source stances;
+- uses explicit `SourceConsultationBinding`;
+- keeps baseline separate;
+- hashes the lens;
+- hashes EkoH contextual inputs;
+- supports advisory-only exclusions without deleting source participation;
+- filters participant detail through EkoH rating access.
+
+Do not collapse this behavior back into ballot-level weighted state.
+
+## 6. Durable reading snapshots
+
+The current `snapshot_ref` identifies the EkoH inputs used for an on-demand reading. If a reading is treated as durable/published/replayable, add recoverable snapshot/materialized-reading storage so those exact inputs can be retrieved.
+
+## 7. Consultation relevance validation
+
+Validate the full `ConsultationRelevance` vector according to the lens policy: non-negative values plus the declared normalization/sum rule.
+
+## 8. Remove global voting-power UI semantics
+
+The current EkoH UI contains a `current-voting-weight` page that presents a person's global Smart Vote influence. Replace this with domain expertise or consultation-specific reading context. There is no universal personal Smart Vote weight in the aligned model.
+
+## 9. Analytics/Pulse source typing
+
+Do not mix ethiKos stances, Smart Vote source ballots and Smart Vote derived readings into one untyped participation source. Analytics should declare which source/event type it is counting.
+
+## 10. External ecosystem adapters
+
+No active Konnaxion adapter is present for Orgo, Kristal or SemantiK Architect in the supplied snapshot. Add dedicated boundary/adapters only when a concrete use case is implemented; do not import their internal persistence models into Konnaxion.
+
+
+================================================================================================
+FILE: wiki/Knowledge.md
+AUTHORITY: canonical
+================================================================================================
+
+# Knowledge — KonnectED Learning Resources
+
+Knowledge is a **capability inside KonnectED**, not an independent ecosystem system.
+
+Canonical backend:
+
+```text
+backend/konnaxion/konnected/
+```
+
+## Current models
+
+- `KnowledgeResource`;
+- `KnowledgeRecommendation`;
+- `LearningProgress`;
+- `OfflinePackage`.
+
+KonnectED also contains certification, portfolio, mentorship, co-creation and forum capabilities.
+
+## Current UI
+
+Current route families include:
+
+```text
+/konnected/knowledge/contribute
+/konnected/learning-library/*
+/konnected/learning-paths/*
+```
+
+## Offline packages
+
+A KonnectED `OfflinePackage` is a Konnaxion learning/content package. It must not be called a Kristal Runtime Pack unless an explicit Kristal integration contract adopts that semantics.
+
+## Ownership
+
+KonnectED owns the learning-resource/progress state. Search or recommendation surfaces are projections/capabilities over that state, not alternate sources of truth.
+
+
+================================================================================================
+FILE: wiki/Konnaxion-Technical-Architecture-&-Services.md
+AUTHORITY: canonical
+================================================================================================
+
+# Konnaxion – Technical Architecture & Services
+
+## 1. System identity
+
+Konnaxion is a shared full-stack ecosystem system/platform.
+
+Current implementation stack:
+
+- Next.js + React + TypeScript frontend;
+- Django + Django REST Framework backend;
+- PostgreSQL;
+- Celery + Redis for asynchronous execution;
+- OpenAPI/drf-spectacular for API description.
+
+## 2. Responsibility map
+
+```text
+Konnaxion
+│
+├── shared platform
+│   ├── users/auth
+│   ├── moderation/audit
+│   ├── navigation/search
+│   └── shared frontend/runtime infrastructure
+│
+├── ethiKos civic domain
+│   ├── Korum
+│   └── Konsultations
+│
+├── contextual intelligence
+│   ├── EkoH
+│   └── Smart Vote
+│
+├── keenKonnect
+├── KonnectED
+├── Kreative
+├── TeamBuilder
+├── Kontrol
+├── Konsensus UI
+└── Reports / Insights
+```
+
+Logical responsibility does not require a separate Django app for every named product area.
+
+## 3. Global invariants
+
+1. One authoritative owner per state.
+2. No direct cross-domain database write as an integration mechanism.
+3. Source facts and derived readings remain distinct.
+4. EkoH context does not become a civic vote.
+5. Smart Vote does not silently replace the baseline.
+6. UI/reporting does not acquire ownership of the data it presents.
+7. External ecosystem systems integrate through explicit contracts.
+
+## 4. ethiKos / Korum
+
+Canonical backend package:
+
+```text
+backend/konnaxion/ethikos/
+```
+
+Implemented source objects include:
+
+- `EthikosCategory`;
+- `EthikosTopic`;
+- `EthikosStance`;
+- `EthikosArgument`;
+- `ArgumentSource`;
+- `ArgumentImpactVote`;
+- `ArgumentSuggestion`;
+- `DiscussionParticipantRole`;
+- `DiscussionVisibilitySetting`.
+
+Korum is the logical structured-deliberation capability over these ethiKos-owned records.
+
+## 5. EkoH
+
+Canonical backend package:
+
+```text
+backend/konnaxion/ekoh/
+```
+
+Implemented state includes:
+
+- `ExpertiseCategory`;
+- `UserExpertiseScore`;
+- `UserEthicsScore`;
+- `ScoreConfiguration`;
+- `ScoreHistory`;
+- `ConfidentialitySetting`;
+- `RatingVisibilitySetting`;
+- `RatingAccessScope`;
+- `RatingScopeSubject`;
+- `RatingAccessGrant`;
+- `ContextAnalysisLog`.
+
+EkoH expertise is domain-bounded. Its contextual-analysis service records non-authoritative analysis rather than silently mutating expertise scores. Rating disclosure is resolved server-side by the EkoH rating-access service.
+
+## 6. Smart Vote
+
+Canonical backend package:
+
+```text
+backend/konnaxion/smart_vote/
+```
+
+Important current objects:
+
+- `Consultation`;
+- `ConsultationRelevance`;
+- `SourceConsultationBinding`;
+- `VoteModality`;
+- `Vote`;
+- `VoteResult`;
+- `VoteLedger`.
+
+Current API entry points:
+
+```text
+POST /api/v1/smart-vote/cast/
+GET  /api/v1/smart-vote/readings/ethikos-topic/<topic_id>/
+```
+
+The ethiKos reading path is the canonical architecture pattern to preserve:
+
+```text
+EthikosTopic / EthikosStance
+        ↓ read only
+SourceConsultationBinding
+        ↓
+ConsultationRelevance + EkoH context
+        ↓
+Smart Vote reading
+        ↓
+baseline + advisory reading
+```
+
+## 7. keenKonnect
+
+Canonical backend package:
+
+```text
+backend/konnaxion/keenkonnect/
+```
+
+Current model families:
+
+- `Project`;
+- `ProjectResource`;
+- `ProjectMessage`;
+- `ProjectTask`;
+- `ProjectTeam`;
+- `ProjectRating`;
+- `Tag`.
+
+## 8. KonnectED
+
+Canonical backend package:
+
+```text
+backend/konnaxion/konnected/
+```
+
+Current model families include certification paths/evaluations, peer validation, portfolio/interoperability, knowledge resources/recommendations, learning progress, offline packages, mentorship, co-creation and forums.
+
+## 9. Kreative
+
+Canonical backend package:
+
+```text
+backend/konnaxion/kreative/
+```
+
+Current model families include artworks, galleries, collaboration sessions, traditions, virtual exhibitions, digital archives/documents, AI catalogue entries and cultural partners.
+
+## 10. TeamBuilder
+
+Canonical backend package:
+
+```text
+backend/konnaxion/teambuilder/
+```
+
+Current core state:
+
+- `Problem`;
+- `ProblemChangeEvent`;
+- `BuilderSession`;
+- `Team`;
+- `TeamMember`.
+
+## 11. Kontrol
+
+Canonical backend package:
+
+```text
+backend/konnaxion/kontrol/
+```
+
+Current state includes `AuditLog`, `ModerationTicket` and `KonsensusConfig`, plus administrative/reporting views.
+
+## 12. Frontend route families
+
+Current App Router families include:
+
+```text
+/ethikos/*
+/ekoh/*
+/keenkonnect/*
+/konnected/*
+/kreative/*
+/konsensus/*
+/kontrol/*
+/reports/*
+/teambuilder/*
+/search
+```
+
+A route is a presentation surface, not an ownership declaration.
+
+## 13. External boundaries
+
+### Orgo
+
+No active adapter is present in the current snapshot. Future integration must use command/query/event/artifact/receipt semantics. `Orgo Case ≠ EthikosTopic` and `Orgo Task ≠ Konnaxion consultation`.
+
+### Kristal
+
+No active adapter is present. If Konnaxion consumes Kristal artifacts, it must preserve Kristal epistemic semantics and must not take ownership of kOA-Linux local Runtime Pack activation.
+
+### SemantiK Architect
+
+No active adapter is present. A future integration is a generation/presentation boundary; Architect does not own Konnaxion source state.
+
+### kOA-Linux
+
+When Konnaxion is deployed under kOA-Linux, kOA-Linux owns host/platform responsibilities while Konnaxion retains domain authority.
+
+
+================================================================================================
+FILE: wiki/Konservation.md
+AUTHORITY: canonical
+================================================================================================
+
+# Konservation — Kreative Preservation and Archives
+
+Konservation is the cultural-preservation/archive capability inside **Kreative**. It is a product capability, not a separate ecosystem system.
+
+Canonical backend:
+
+```text
+backend/konnaxion/kreative/
+```
+
+## Current preservation/creative models
+
+- `KreativeArtwork`;
+- `Gallery`;
+- `CollabSession`;
+- `TraditionEntry`;
+- `VirtualExhibition`;
+- `DigitalArchive`;
+- `ArchiveDocument`;
+- `AICatalogueEntry`;
+- `CulturalPartner`;
+- `Tag`.
+
+## Current UI
+
+Relevant surfaces include:
+
+```text
+/kreative/traditions-archive
+/kreative/community-showcases/*
+/kreative/creative-hub/*
+/kreative/collaborative-spaces/*
+```
+
+## Ownership
+
+Archive/catalogue/presentation metadata remains Kreative-owned. AI catalogue assistance or external storage does not silently become the source authority for the cultural object.
+
+
+================================================================================================
+FILE: wiki/Konstruct.md
+AUTHORITY: canonical
+================================================================================================
+
+# Konstruct — keenKonnect Project Collaboration
+
+Konstruct is the project-collaboration capability implemented in **keenKonnect**. It is a product capability, not a separate backend owner.
+
+Canonical backend:
+
+```text
+backend/konnaxion/keenkonnect/
+```
+
+## Current core models
+
+- `Project`;
+- `ProjectResource`;
+- `ProjectMessage`;
+- `ProjectTask`;
+- `ProjectTeam`;
+- `ProjectRating`;
+- `Tag`.
+
+## Current UI
+
+Project/workspace surfaces include:
+
+```text
+/keenkonnect/projects/*
+/keenkonnect/workspaces/*
+/keenkonnect/ai-team-matching/*
+```
+
+## Task terminology
+
+`ProjectTask` is a keenKonnect/Konnaxion project object. It is **not an Orgo Task** unless a future explicit integration contract maps a particular workflow use case.
+
+## EkoH relationship
+
+keenKonnect can display or consume declared EkoH context, but EkoH does not become the project owner.
+
+
+================================================================================================
+FILE: wiki/Konsultations.md
+AUTHORITY: canonical
+================================================================================================
+
+# Konsultations — Consultation and Formal Participation
+
+Konsultations is Konnaxion's logical consultation/intake/formal-participation boundary.
+
+The current snapshot contains a dedicated frontend `konsultations` module and ethiKos demo-import structures for consultations and consultation votes. The architecture rule is more important than physical placement: **formal source participation must remain distinct from Smart Vote derived readings and from Korum topic stances.**
+
+## Responsibilities
+
+Konsultations covers product capabilities such as:
+
+- consultation intake and listing;
+- consultation detail;
+- suggestions;
+- formal participation/vote capture where the protocol calls for it;
+- result presentation;
+- impact/accountability timeline.
+
+## Source ownership
+
+A formal consultation ballot is a source fact of its consultation protocol.
+
+```text
+consultation ballot
+≠ EthikosStance
+≠ Smart Vote reading
+≠ Orgo Task
+```
+
+## Smart Vote relationship
+
+A consultation can be bound to Smart Vote through an explicit source/consultation mapping. Smart Vote may calculate a contextual reading, but the reading does not overwrite the source ballot.
+
+## Orgo relationship
+
+No active Orgo adapter is implemented in the current Konnaxion snapshot. A future workflow integration must treat Orgo Case/Task as external workflow objects, not as aliases for Konnaxion consultations.
+
+
+================================================================================================
+FILE: wiki/Kontact.md
+AUTHORITY: canonical
+================================================================================================
+
+# Kontact — Networking and Opportunities Surface
+
+Kontact is a **Konnaxion application/interface capability**, not a separate ecosystem system.
+
+The current snapshot contains a frontend module under:
+
+```text
+frontend/modules/kontact/
+```
+
+with profile/opportunity UI including:
+
+- `ProfileCard`;
+- `OpportunityList`;
+- `ConnectCenter`;
+- `PublicProfile`;
+- profile/opportunity hooks.
+
+## Architecture rule
+
+Kontact is a presentation/interaction surface. It must use the authoritative Konnaxion owner for profile, opportunity, project or EkoH data rather than creating a parallel backend truth simply because the UI groups those concepts.
+
+If a dedicated backend capability is added later, its ownership must be declared explicitly rather than inferred from the frontend module name.
+
+
+================================================================================================
+FILE: wiki/Kontrol.md
+AUTHORITY: canonical
+================================================================================================
+
+# Kontrol — Administration and Moderation
+
+Kontrol is Konnaxion's administrative application surface.
+
+Canonical backend:
+
+```text
+backend/konnaxion/kontrol/
+```
+
+## Current state
+
+- `AuditLog`;
+- `ModerationTicket`;
+- `KonsensusConfig`.
+
+The backend also exposes administration/reporting views for usage, performance and Smart Vote reporting.
+
+## Current UI
+
+```text
+/kontrol/dashboard
+/kontrol/audit-log
+/kontrol/moderation/*
+/kontrol/users/all
+/kontrol/roles
+/kontrol/konsensus
+```
+
+## Ownership rule
+
+Kontrol may present and administrate multiple Konnaxion domains, but the existence of an admin screen does not transfer the underlying domain ownership to Kontrol.
+
+
+================================================================================================
+FILE: wiki/Korum.md
+AUTHORITY: canonical
+================================================================================================
+
+# Korum — Structured Deliberation
+
+Korum is the logical structured-deliberation capability inside the ethiKos domain. It is implemented primarily in `konnaxion.ethikos`; it is not a separate source-of-truth database.
+
+## Current source state
+
+- `EthikosTopic` — deliberation topic;
+- `EthikosStance` — user's topic-level stance;
+- `EthikosArgument` — argument/reply node;
+- `ArgumentSource` — evidence/source material attached to an argument;
+- `ArgumentImpactVote` — argument-level impact evaluation;
+- `ArgumentSuggestion` — proposed contribution/change;
+- `DiscussionParticipantRole` — participant role;
+- `DiscussionVisibilitySetting` — visibility policy.
+
+## Important separations
+
+```text
+ArgumentImpactVote ≠ EthikosStance
+EthikosStance ≠ Smart Vote reading
+EthikosArgument ≠ Orgo Task
+EthikosTopic ≠ Orgo Case
+```
+
+Topic stance and argument impact represent different participation semantics.
+
+## API ownership
+
+The current API is under the ethiKos boundary (`/api/ethikos/*`) with compatibility UI-facing aliases under `/api/deliberate/*` where present. Those aliases do not create another owner.
+
+## UI
+
+The main current deliberation surface is under:
+
+```text
+/ethikos/deliberate/*
+```
+
+including topic views, guidelines and elite/read-only variants.
+
+## Smart Vote relationship
+
+Korum source state can be an input to a Smart Vote reading. Smart Vote reads the source and returns a separate reading; it does not rewrite `EthikosStance` or the argument graph.
+
+
+================================================================================================
+FILE: wiki/Smart-Vote.md
+AUTHORITY: canonical
+================================================================================================
+
+# Smart Vote — Contextual Readings
+
+Smart Vote owns **declared derived readings**, lens semantics and related aggregation. It does not own the source facts it interprets.
+
+Canonical backend:
+
+```text
+backend/konnaxion/smart_vote/
+```
+
+## Core rule
+
+```text
+source participation
+≠ baseline
+≠ contextual reading
+```
+
+For ethiKos:
+
+```text
+EthikosTopic + EthikosStance
+        ↓ source facts
+baseline aggregation
+        ↓
+SourceConsultationBinding
+ConsultationRelevance
+EkoH context
+        ↓
+Smart Vote advisory reading
+```
+
+## Current API
+
+```text
+POST /api/v1/smart-vote/cast/
+GET  /api/v1/smart-vote/readings/ethikos-topic/<topic_id>/
+```
+
+The reading endpoint exposes a baseline and a separate `ekoh_weighted_v1` reading when a binding exists.
+
+## Current reading metadata
+
+The reading service produces, among other fields:
+
+- `reading_key`;
+- `lens_hash`;
+- `snapshot_ref`;
+- `computed_at`;
+- result payload;
+- participant-level trace/detail when allowed by rating-access policy.
+
+## Contextual weight
+
+A Smart Vote weight is specific to the declared consultation/lens/context. It is **not a permanent global voting power attached to the user**.
+
+## Advisory exclusions
+
+A declared advisory exclusion can set a participant's reading weight to zero while leaving the source stance in the baseline. This preserves source history and makes the advisory transformation explicit.
+
+## Reproducibility
+
+The current service hashes the EkoH input snapshot used for a reading. If a reading is treated as durable/published/replayable, the corresponding inputs must also be recoverable; a hash alone identifies data but does not store it.
+
+## Implementation alignment
+
+The older ballot path still contains `Vote.weighted_value` and `VoteResult.sum_weighted_value`. These should not become the architecture model for source participation. See [[Implementation Alignment|Implementation-Alignment]].
+
+
+================================================================================================
+FILE: wiki/Stockage.md
+AUTHORITY: canonical
+================================================================================================
+
+# Stockage — keenKonnect Knowledge and Project Resources
+
+Stockage is the project/document repository capability inside **keenKonnect**. It is not a separate system or database owner.
+
+Current physical owner:
+
+```text
+backend/konnaxion/keenkonnect/
+```
+
+## Current core objects
+
+- `ProjectResource` — resource/document reference attached to a project;
+- `Project` — project/workspace context;
+- `ProjectTeam` — membership/role context;
+- `Tag` — classification.
+
+## Current UI
+
+The current product exposes knowledge/document surfaces under:
+
+```text
+/keenkonnect/knowledge/browse-repository
+/keenkonnect/knowledge/document-management
+/keenkonnect/knowledge/search-filter-documents
+/keenkonnect/knowledge/upload-new-document
+```
+
+## Ownership
+
+A search index, preview, cache or document browser remains a projection over the resource owner. It does not become a second source of project/document truth.
+
+Do not invent versioning/ACL persistence tables unless they exist in the code/schema being updated.
+
+
+================================================================================================
+FILE: wiki/TeamBuilder.md
+AUTHORITY: canonical
+================================================================================================
+
+# TeamBuilder — Problem and Team Formation
+
+TeamBuilder is a Konnaxion application/domain capability for problem framing, builder sessions and team formation.
+
+Canonical backend:
+
+```text
+backend/konnaxion/teambuilder/
+```
+
+## Current core models
+
+- `Problem`;
+- `ProblemChangeEvent`;
+- `BuilderSession`;
+- `Team`;
+- `TeamMember`.
+
+## Current UI
+
+```text
+/teambuilder
+/teambuilder/create
+/teambuilder/problems/*
+/teambuilder/[sessionId]
+/teambuilder/humans/*
+```
+
+## Orgo boundary
+
+A TeamBuilder `Problem`, `BuilderSession` or team is not an Orgo Case/Task by identity. A future integration may create Orgo-governed work through an explicit boundary, but the Konnaxion objects keep their own semantics.
 
 
 ================================================================================================
@@ -57036,1054 +58087,3 @@ Débat sur la commercialisation de la recherche, la propriété intellectuelle, 
 - `cci_innovation_power_2026` — **Council of Canadian Innovators**, *Innovation as Power: The Choices That Will Define 2026* (2026-01-16) — https://www.canadianinnovators.org/content/innovation-as-power-the-choices-that-will-define-2026
 - `cci_quebec_election_2026` — **Council of Canadian Innovators**, *2026 Quebec Election Primer: What Innovators Need to Scale* (2026-07-16) — https://www.canadianinnovators.org/content/2026-quebec-election-primer-what-innovators-need-to-scale
 - `cci_public_procurement` — **Council of Canadian Innovators**, *Buying What We Build: A CCI Policy Report on Public Buying for Canadian Innovation and Prosperity* (date non fixée dans le sidecar) — https://www.canadianinnovators.org/content/buying-what-we-build-a-cci-policy-report-on-public-buying-for-canadian-innovation-and-prosperity
-
-
-================================================================================================
-FILE: wiki/CertifiKation.md
-AUTHORITY: canonical
-================================================================================================
-
-# CertifiKation — KonnectED Certification Capability
-
-CertifiKation is the certification/credential capability inside **KonnectED**. It is not a separate ecosystem system.
-
-Canonical backend:
-
-```text
-backend/konnaxion/konnected/
-```
-
-## Current model families
-
-- `CertificationPath`;
-- `Evaluation`;
-- `PeerValidation`;
-- `Portfolio`;
-- `InteropMapping`.
-
-## Responsibilities
-
-- define certification/learning paths;
-- record evaluation attempts/results;
-- support peer validation;
-- maintain user portfolio evidence;
-- map internal certification concepts to external systems when required.
-
-## Current UI
-
-Certification surfaces live under:
-
-```text
-/konnected/certifications/*
-```
-
-including programs, exam preparation/registration and result dashboards.
-
-## Ownership
-
-Certification state remains KonnectED-owned. An external attestation or interoperability mapping can be referenced without becoming a second source of certification truth.
-
-
-================================================================================================
-FILE: wiki/EkoH.md
-AUTHORITY: canonical
-================================================================================================
-
-# EkoH — Expertise, Ethics and Rating Access
-
-EkoH is a Konnaxion **domain/service boundary**, not a global reputation authority and not a voting engine.
-
-Canonical backend:
-
-```text
-backend/konnaxion/ekoh/
-```
-
-## Current data model
-
-- `ExpertiseCategory` — hierarchical expertise taxonomy;
-- `UserExpertiseScore` — user/domain expertise score;
-- `UserEthicsScore` — governed ethics/reliability context;
-- `ScoreConfiguration` — scoring configuration;
-- `ScoreHistory` — score-change trace;
-- `ConfidentialitySetting` — identity privacy;
-- `RatingVisibilitySetting` — rating visibility policy;
-- `RatingAccessScope` — hierarchical disclosure scope;
-- `RatingScopeSubject` — subject membership in a scope;
-- `RatingAccessGrant` — viewer grant;
-- `ContextAnalysisLog` — contextual analysis record.
-
-## Expertise semantics
-
-Expertise is **domain-bounded**. A high score in one category is not universal authority in another category.
-
-The multidimensional scoring path normalizes evidence axes and stores bounded domain scores. Lack of expertise is neutral rather than negative merit.
-
-## Context analysis
-
-The current contextual-analysis path is deliberately **non-authoritative**: analysis can be recorded without silently modifying `UserExpertiseScore`.
-
-## Privacy and disclosure
-
-Rating visibility is decided server-side. The current access resolver applies a deterministic order including self, staff, scoped grants, public policy and deny behavior.
-
-Identity confidentiality and rating visibility are separate policies.
-
-## Smart Vote relationship
-
-```text
-EkoH context
-    ↓
-explicit consultation/lens context
-    ↓
-Smart Vote reading
-```
-
-EkoH may influence a declared advisory reading. It does not own the source vote/stance and does not assign a universal personal voting power.
-
-## K-Port
-
-K-Port is an **EkoH evidence application/gateway**. It can normalize/qualify evidence entering the EkoH boundary; it is not a peer system of Konnaxion and does not own EkoH scores.
-
-
-================================================================================================
-FILE: wiki/Glossary.md
-AUTHORITY: canonical
-================================================================================================
-
-# Konnaxion Glossary
-
-## Konnaxion
-
-An **ecosystem system** in the kOA Digital Ecosystem and a **platform** in its own scope.
-
-When hosted by kOA-Linux, it can be described as an **integrated subsystem from the kOA-Linux scope**. That host-relative term does not transfer Konnaxion domain authority.
-
-## Module
-
-`module` is a convenient product/UI word, not a precise architecture category.
-
-When the category matters, use:
-
-```text
-module
-→ domain
-→ application
-→ service
-→ component
-→ gateway
-→ interface surface
-```
-
-Examples:
-
-- Konnaxion — ecosystem system/platform.
-- EkoH — Konnaxion domain/service boundary.
-- Smart Vote — Konnaxion reading/aggregation boundary.
-- K-Port — EkoH evidence application/gateway, not a peer of Konnaxion.
-- kOA Spaces — subsystem of kOA-Linux, not a Konnaxion owner.
-
-## Source fact
-
-Authoritative state owned by the domain that captured it.
-
-Examples:
-
-- an `EthikosStance`;
-- a formal consultation ballot.
-
-## Baseline
-
-A direct declared aggregation/view of source facts without a contextual Smart Vote lens silently replacing it.
-
-## Reading
-
-A derived interpretation of source facts under an explicit lens.
-
-```text
-Reading = f(SourceFacts, LensDeclaration, SnapshotContext?)
-```
-
-## Lens
-
-A declared method and contextual policy used to compute a reading. A lens is not truth and does not own source facts.
-
-## EkoH snapshot
-
-The identifiable EkoH contextual inputs used by a reading. A durable/replayable published reading requires those inputs to be recoverable, not merely hashed.
-
-## Korum
-
-Logical structured-deliberation sub-domain inside ethiKos. It is implemented primarily in `konnaxion.ethikos`, not as a separate Django app.
-
-## Konsultations
-
-Logical consultation/intake/formal-decision source boundary. It is not identical to an Orgo Task or to a Smart Vote reading.
-
-## EkoH
-
-Konnaxion domain for expertise taxonomy/scores, ethics/reliability context, privacy and rating access.
-
-## Smart Vote
-
-Konnaxion domain for declared derived readings and related aggregation/lens semantics.
-
-## Kollective Intelligence
-
-A product/navigation umbrella and compatibility area. It is **not the canonical backend owner** of EkoH or Smart Vote state.
-
-## Gateway
-
-A controlled boundary that validates, normalizes, qualifies or routes data. A gateway does not become owner of the destination domain merely by controlling passage.
-
-
-================================================================================================
-FILE: wiki/Home.md
-AUTHORITY: canonical
-================================================================================================
-
-# Konnaxion
-
-Konnaxion is an **ecosystem system** in the **kOA Digital Ecosystem** and a **platform** in its own product scope. It coordinates civic deliberation, consultation, contextual expertise, learning, collaboration, creative work, administration and related application surfaces.
-
-Konnaxion keeps authority over its own domain state even when it is deployed as a subsystem under kOA-Linux.
-
-## Core architecture rule
-
-> **Single Truth, Multiple Readings.**
-
-A source fact remains owned by the domain that captured it. A derived reading can interpret that source under an explicit lens, but it does not rewrite the source.
-
-```text
-source fact
-    ↓
-baseline
-    ↓
-optional lens + contextual snapshot
-    ↓
-derived reading
-```
-
-## Main Konnaxion areas
-
-### Civic / ethiKos
-
-- **Korum** — structured deliberation: topics, stances, arguments, evidence, argument impact, participation roles and visibility.
-- **Konsultations** — consultation/intake/formal decision source boundary.
-- **Smart Vote** — derived readings and contextual aggregation.
-- **EkoH** — expertise, ethics/reliability context, privacy and rating access.
-
-### Learning and credentials
-
-- **Knowledge** — knowledge resources and learning-library capabilities in KonnectED.
-- **CertifiKation** — certification paths, evaluations, peer validation, portfolios and interoperability in KonnectED.
-
-### Collaboration and creation
-
-- **Konstruct** — project collaboration capabilities implemented in keenKonnect.
-- **Stockage** — project/document repository capabilities implemented in keenKonnect.
-- **Kontact** — networking/opportunity UI surface.
-- **Konservation** — creative/cultural archive and preservation capabilities implemented in Kreative.
-- **TeamBuilder** — problem/team formation and builder sessions.
-
-### Administration
-
-- **Kontrol** — Konnaxion administration, moderation, users/roles, audit and configuration views.
-
-## Architecture pages
-
-- [[Konnaxion – Technical Architecture & Services|Konnaxion-#U2013-Technical-Architecture-&-Services]]
-- [[Glossary]]
-- [[Implementation Alignment|Implementation-Alignment]]
-
-## Civic pages
-
-- [[Korum]]
-- [[Konsultations]]
-- [[EkoH]]
-- [[Smart Vote|Smart-Vote]]
-
-## Learning/collaboration pages
-
-- [[Knowledge]]
-- [[CertifiKation]]
-- [[Konstruct]]
-- [[Stockage]]
-- [[Kontact]]
-- [[Konservation]]
-- [[TeamBuilder]]
-- [[Kontrol]]
-
-## External ecosystem systems
-
-Orgo, Kristal, SemantiK Architect and kOA-Linux are **separate ecosystem systems**, not Konnaxion modules.
-
-No active Orgo, Kristal or SemantiK Architect adapter is present in the supplied Konnaxion code snapshot. Future integration must use explicit contracts rather than shared internal tables.
-
-
-================================================================================================
-FILE: wiki/Implementation-Alignment.md
-AUTHORITY: canonical
-================================================================================================
-
-# Konnaxion — Implementation Alignment
-
-This page lists the current code areas that should change so implementation and architecture use the same ownership model. It is a technical reference, not a project-management log.
-
-## 1. EkoH expertise taxonomy
-
-`EthikosTopic.expertise_category` currently references a compatibility taxonomy under `kollective_intelligence`. New canonical references should use `ekoh.ExpertiseCategory`, with the required data/schema migration.
-
-## 2. `kollective_intelligence` compatibility paths
-
-The codebase still contains the `konnaxion.kollective_intelligence` package and compatibility vote APIs. New EkoH and Smart Vote functionality should use:
-
-```text
-konnaxion.ekoh
-konnaxion.smart_vote
-```
-
-rather than creating new canonical state in the compatibility package.
-
-## 3. Konsensus vote API
-
-Current Konsensus frontend code still uses the compatibility `kollective/votes/` route and can submit `weighted_value`.
-
-Target rule:
-
-```text
-source ballot
-≠ derived reading weight
-```
-
-The client should submit source participation only. Smart Vote should calculate a contextual reading separately.
-
-## 4. Smart Vote persisted weighted values
-
-The current Smart Vote ballot path persists `Vote.weighted_value` and aggregates `VoteResult.sum_weighted_value`.
-
-This path must be reconciled with the reading architecture so the source ballot and the derived contextual interpretation are not one authoritative object.
-
-## 5. Preserve the ethiKos reading path
-
-`smart_vote/services/reading_service.py` already follows the correct direction:
-
-- reads ethiKos source stances;
-- uses explicit `SourceConsultationBinding`;
-- keeps baseline separate;
-- hashes the lens;
-- hashes EkoH contextual inputs;
-- supports advisory-only exclusions without deleting source participation;
-- filters participant detail through EkoH rating access.
-
-Do not collapse this behavior back into ballot-level weighted state.
-
-## 6. Durable reading snapshots
-
-The current `snapshot_ref` identifies the EkoH inputs used for an on-demand reading. If a reading is treated as durable/published/replayable, add recoverable snapshot/materialized-reading storage so those exact inputs can be retrieved.
-
-## 7. Consultation relevance validation
-
-Validate the full `ConsultationRelevance` vector according to the lens policy: non-negative values plus the declared normalization/sum rule.
-
-## 8. Remove global voting-power UI semantics
-
-The current EkoH UI contains a `current-voting-weight` page that presents a person's global Smart Vote influence. Replace this with domain expertise or consultation-specific reading context. There is no universal personal Smart Vote weight in the aligned model.
-
-## 9. Analytics/Pulse source typing
-
-Do not mix ethiKos stances, Smart Vote source ballots and Smart Vote derived readings into one untyped participation source. Analytics should declare which source/event type it is counting.
-
-## 10. External ecosystem adapters
-
-No active Konnaxion adapter is present for Orgo, Kristal or SemantiK Architect in the supplied snapshot. Add dedicated boundary/adapters only when a concrete use case is implemented; do not import their internal persistence models into Konnaxion.
-
-
-================================================================================================
-FILE: wiki/Knowledge.md
-AUTHORITY: canonical
-================================================================================================
-
-# Knowledge — KonnectED Learning Resources
-
-Knowledge is a **capability inside KonnectED**, not an independent ecosystem system.
-
-Canonical backend:
-
-```text
-backend/konnaxion/konnected/
-```
-
-## Current models
-
-- `KnowledgeResource`;
-- `KnowledgeRecommendation`;
-- `LearningProgress`;
-- `OfflinePackage`.
-
-KonnectED also contains certification, portfolio, mentorship, co-creation and forum capabilities.
-
-## Current UI
-
-Current route families include:
-
-```text
-/konnected/knowledge/contribute
-/konnected/learning-library/*
-/konnected/learning-paths/*
-```
-
-## Offline packages
-
-A KonnectED `OfflinePackage` is a Konnaxion learning/content package. It must not be called a Kristal Runtime Pack unless an explicit Kristal integration contract adopts that semantics.
-
-## Ownership
-
-KonnectED owns the learning-resource/progress state. Search or recommendation surfaces are projections/capabilities over that state, not alternate sources of truth.
-
-
-================================================================================================
-FILE: wiki/Konnaxion-Technical-Architecture-&-Services.md
-AUTHORITY: canonical
-================================================================================================
-
-# Konnaxion – Technical Architecture & Services
-
-## 1. System identity
-
-Konnaxion is a shared full-stack ecosystem system/platform.
-
-Current implementation stack:
-
-- Next.js + React + TypeScript frontend;
-- Django + Django REST Framework backend;
-- PostgreSQL;
-- Celery + Redis for asynchronous execution;
-- OpenAPI/drf-spectacular for API description.
-
-## 2. Responsibility map
-
-```text
-Konnaxion
-│
-├── shared platform
-│   ├── users/auth
-│   ├── moderation/audit
-│   ├── navigation/search
-│   └── shared frontend/runtime infrastructure
-│
-├── ethiKos civic domain
-│   ├── Korum
-│   └── Konsultations
-│
-├── contextual intelligence
-│   ├── EkoH
-│   └── Smart Vote
-│
-├── keenKonnect
-├── KonnectED
-├── Kreative
-├── TeamBuilder
-├── Kontrol
-├── Konsensus UI
-└── Reports / Insights
-```
-
-Logical responsibility does not require a separate Django app for every named product area.
-
-## 3. Global invariants
-
-1. One authoritative owner per state.
-2. No direct cross-domain database write as an integration mechanism.
-3. Source facts and derived readings remain distinct.
-4. EkoH context does not become a civic vote.
-5. Smart Vote does not silently replace the baseline.
-6. UI/reporting does not acquire ownership of the data it presents.
-7. External ecosystem systems integrate through explicit contracts.
-
-## 4. ethiKos / Korum
-
-Canonical backend package:
-
-```text
-backend/konnaxion/ethikos/
-```
-
-Implemented source objects include:
-
-- `EthikosCategory`;
-- `EthikosTopic`;
-- `EthikosStance`;
-- `EthikosArgument`;
-- `ArgumentSource`;
-- `ArgumentImpactVote`;
-- `ArgumentSuggestion`;
-- `DiscussionParticipantRole`;
-- `DiscussionVisibilitySetting`.
-
-Korum is the logical structured-deliberation capability over these ethiKos-owned records.
-
-## 5. EkoH
-
-Canonical backend package:
-
-```text
-backend/konnaxion/ekoh/
-```
-
-Implemented state includes:
-
-- `ExpertiseCategory`;
-- `UserExpertiseScore`;
-- `UserEthicsScore`;
-- `ScoreConfiguration`;
-- `ScoreHistory`;
-- `ConfidentialitySetting`;
-- `RatingVisibilitySetting`;
-- `RatingAccessScope`;
-- `RatingScopeSubject`;
-- `RatingAccessGrant`;
-- `ContextAnalysisLog`.
-
-EkoH expertise is domain-bounded. Its contextual-analysis service records non-authoritative analysis rather than silently mutating expertise scores. Rating disclosure is resolved server-side by the EkoH rating-access service.
-
-## 6. Smart Vote
-
-Canonical backend package:
-
-```text
-backend/konnaxion/smart_vote/
-```
-
-Important current objects:
-
-- `Consultation`;
-- `ConsultationRelevance`;
-- `SourceConsultationBinding`;
-- `VoteModality`;
-- `Vote`;
-- `VoteResult`;
-- `VoteLedger`.
-
-Current API entry points:
-
-```text
-POST /api/v1/smart-vote/cast/
-GET  /api/v1/smart-vote/readings/ethikos-topic/<topic_id>/
-```
-
-The ethiKos reading path is the canonical architecture pattern to preserve:
-
-```text
-EthikosTopic / EthikosStance
-        ↓ read only
-SourceConsultationBinding
-        ↓
-ConsultationRelevance + EkoH context
-        ↓
-Smart Vote reading
-        ↓
-baseline + advisory reading
-```
-
-## 7. keenKonnect
-
-Canonical backend package:
-
-```text
-backend/konnaxion/keenkonnect/
-```
-
-Current model families:
-
-- `Project`;
-- `ProjectResource`;
-- `ProjectMessage`;
-- `ProjectTask`;
-- `ProjectTeam`;
-- `ProjectRating`;
-- `Tag`.
-
-## 8. KonnectED
-
-Canonical backend package:
-
-```text
-backend/konnaxion/konnected/
-```
-
-Current model families include certification paths/evaluations, peer validation, portfolio/interoperability, knowledge resources/recommendations, learning progress, offline packages, mentorship, co-creation and forums.
-
-## 9. Kreative
-
-Canonical backend package:
-
-```text
-backend/konnaxion/kreative/
-```
-
-Current model families include artworks, galleries, collaboration sessions, traditions, virtual exhibitions, digital archives/documents, AI catalogue entries and cultural partners.
-
-## 10. TeamBuilder
-
-Canonical backend package:
-
-```text
-backend/konnaxion/teambuilder/
-```
-
-Current core state:
-
-- `Problem`;
-- `ProblemChangeEvent`;
-- `BuilderSession`;
-- `Team`;
-- `TeamMember`.
-
-## 11. Kontrol
-
-Canonical backend package:
-
-```text
-backend/konnaxion/kontrol/
-```
-
-Current state includes `AuditLog`, `ModerationTicket` and `KonsensusConfig`, plus administrative/reporting views.
-
-## 12. Frontend route families
-
-Current App Router families include:
-
-```text
-/ethikos/*
-/ekoh/*
-/keenkonnect/*
-/konnected/*
-/kreative/*
-/konsensus/*
-/kontrol/*
-/reports/*
-/teambuilder/*
-/search
-```
-
-A route is a presentation surface, not an ownership declaration.
-
-## 13. External boundaries
-
-### Orgo
-
-No active adapter is present in the current snapshot. Future integration must use command/query/event/artifact/receipt semantics. `Orgo Case ≠ EthikosTopic` and `Orgo Task ≠ Konnaxion consultation`.
-
-### Kristal
-
-No active adapter is present. If Konnaxion consumes Kristal artifacts, it must preserve Kristal epistemic semantics and must not take ownership of kOA-Linux local Runtime Pack activation.
-
-### SemantiK Architect
-
-No active adapter is present. A future integration is a generation/presentation boundary; Architect does not own Konnaxion source state.
-
-### kOA-Linux
-
-When Konnaxion is deployed under kOA-Linux, kOA-Linux owns host/platform responsibilities while Konnaxion retains domain authority.
-
-
-================================================================================================
-FILE: wiki/Konservation.md
-AUTHORITY: canonical
-================================================================================================
-
-# Konservation — Kreative Preservation and Archives
-
-Konservation is the cultural-preservation/archive capability inside **Kreative**. It is a product capability, not a separate ecosystem system.
-
-Canonical backend:
-
-```text
-backend/konnaxion/kreative/
-```
-
-## Current preservation/creative models
-
-- `KreativeArtwork`;
-- `Gallery`;
-- `CollabSession`;
-- `TraditionEntry`;
-- `VirtualExhibition`;
-- `DigitalArchive`;
-- `ArchiveDocument`;
-- `AICatalogueEntry`;
-- `CulturalPartner`;
-- `Tag`.
-
-## Current UI
-
-Relevant surfaces include:
-
-```text
-/kreative/traditions-archive
-/kreative/community-showcases/*
-/kreative/creative-hub/*
-/kreative/collaborative-spaces/*
-```
-
-## Ownership
-
-Archive/catalogue/presentation metadata remains Kreative-owned. AI catalogue assistance or external storage does not silently become the source authority for the cultural object.
-
-
-================================================================================================
-FILE: wiki/Konstruct.md
-AUTHORITY: canonical
-================================================================================================
-
-# Konstruct — keenKonnect Project Collaboration
-
-Konstruct is the project-collaboration capability implemented in **keenKonnect**. It is a product capability, not a separate backend owner.
-
-Canonical backend:
-
-```text
-backend/konnaxion/keenkonnect/
-```
-
-## Current core models
-
-- `Project`;
-- `ProjectResource`;
-- `ProjectMessage`;
-- `ProjectTask`;
-- `ProjectTeam`;
-- `ProjectRating`;
-- `Tag`.
-
-## Current UI
-
-Project/workspace surfaces include:
-
-```text
-/keenkonnect/projects/*
-/keenkonnect/workspaces/*
-/keenkonnect/ai-team-matching/*
-```
-
-## Task terminology
-
-`ProjectTask` is a keenKonnect/Konnaxion project object. It is **not an Orgo Task** unless a future explicit integration contract maps a particular workflow use case.
-
-## EkoH relationship
-
-keenKonnect can display or consume declared EkoH context, but EkoH does not become the project owner.
-
-
-================================================================================================
-FILE: wiki/Konsultations.md
-AUTHORITY: canonical
-================================================================================================
-
-# Konsultations — Consultation and Formal Participation
-
-Konsultations is Konnaxion's logical consultation/intake/formal-participation boundary.
-
-The current snapshot contains a dedicated frontend `konsultations` module and ethiKos demo-import structures for consultations and consultation votes. The architecture rule is more important than physical placement: **formal source participation must remain distinct from Smart Vote derived readings and from Korum topic stances.**
-
-## Responsibilities
-
-Konsultations covers product capabilities such as:
-
-- consultation intake and listing;
-- consultation detail;
-- suggestions;
-- formal participation/vote capture where the protocol calls for it;
-- result presentation;
-- impact/accountability timeline.
-
-## Source ownership
-
-A formal consultation ballot is a source fact of its consultation protocol.
-
-```text
-consultation ballot
-≠ EthikosStance
-≠ Smart Vote reading
-≠ Orgo Task
-```
-
-## Smart Vote relationship
-
-A consultation can be bound to Smart Vote through an explicit source/consultation mapping. Smart Vote may calculate a contextual reading, but the reading does not overwrite the source ballot.
-
-## Orgo relationship
-
-No active Orgo adapter is implemented in the current Konnaxion snapshot. A future workflow integration must treat Orgo Case/Task as external workflow objects, not as aliases for Konnaxion consultations.
-
-
-================================================================================================
-FILE: wiki/Kontact.md
-AUTHORITY: canonical
-================================================================================================
-
-# Kontact — Networking and Opportunities Surface
-
-Kontact is a **Konnaxion application/interface capability**, not a separate ecosystem system.
-
-The current snapshot contains a frontend module under:
-
-```text
-frontend/modules/kontact/
-```
-
-with profile/opportunity UI including:
-
-- `ProfileCard`;
-- `OpportunityList`;
-- `ConnectCenter`;
-- `PublicProfile`;
-- profile/opportunity hooks.
-
-## Architecture rule
-
-Kontact is a presentation/interaction surface. It must use the authoritative Konnaxion owner for profile, opportunity, project or EkoH data rather than creating a parallel backend truth simply because the UI groups those concepts.
-
-If a dedicated backend capability is added later, its ownership must be declared explicitly rather than inferred from the frontend module name.
-
-
-================================================================================================
-FILE: wiki/Kontrol.md
-AUTHORITY: canonical
-================================================================================================
-
-# Kontrol — Administration and Moderation
-
-Kontrol is Konnaxion's administrative application surface.
-
-Canonical backend:
-
-```text
-backend/konnaxion/kontrol/
-```
-
-## Current state
-
-- `AuditLog`;
-- `ModerationTicket`;
-- `KonsensusConfig`.
-
-The backend also exposes administration/reporting views for usage, performance and Smart Vote reporting.
-
-## Current UI
-
-```text
-/kontrol/dashboard
-/kontrol/audit-log
-/kontrol/moderation/*
-/kontrol/users/all
-/kontrol/roles
-/kontrol/konsensus
-```
-
-## Ownership rule
-
-Kontrol may present and administrate multiple Konnaxion domains, but the existence of an admin screen does not transfer the underlying domain ownership to Kontrol.
-
-
-================================================================================================
-FILE: wiki/Korum.md
-AUTHORITY: canonical
-================================================================================================
-
-# Korum — Structured Deliberation
-
-Korum is the logical structured-deliberation capability inside the ethiKos domain. It is implemented primarily in `konnaxion.ethikos`; it is not a separate source-of-truth database.
-
-## Current source state
-
-- `EthikosTopic` — deliberation topic;
-- `EthikosStance` — user's topic-level stance;
-- `EthikosArgument` — argument/reply node;
-- `ArgumentSource` — evidence/source material attached to an argument;
-- `ArgumentImpactVote` — argument-level impact evaluation;
-- `ArgumentSuggestion` — proposed contribution/change;
-- `DiscussionParticipantRole` — participant role;
-- `DiscussionVisibilitySetting` — visibility policy.
-
-## Important separations
-
-```text
-ArgumentImpactVote ≠ EthikosStance
-EthikosStance ≠ Smart Vote reading
-EthikosArgument ≠ Orgo Task
-EthikosTopic ≠ Orgo Case
-```
-
-Topic stance and argument impact represent different participation semantics.
-
-## API ownership
-
-The current API is under the ethiKos boundary (`/api/ethikos/*`) with compatibility UI-facing aliases under `/api/deliberate/*` where present. Those aliases do not create another owner.
-
-## UI
-
-The main current deliberation surface is under:
-
-```text
-/ethikos/deliberate/*
-```
-
-including topic views, guidelines and elite/read-only variants.
-
-## Smart Vote relationship
-
-Korum source state can be an input to a Smart Vote reading. Smart Vote reads the source and returns a separate reading; it does not rewrite `EthikosStance` or the argument graph.
-
-
-================================================================================================
-FILE: wiki/Smart-Vote.md
-AUTHORITY: canonical
-================================================================================================
-
-# Smart Vote — Contextual Readings
-
-Smart Vote owns **declared derived readings**, lens semantics and related aggregation. It does not own the source facts it interprets.
-
-Canonical backend:
-
-```text
-backend/konnaxion/smart_vote/
-```
-
-## Core rule
-
-```text
-source participation
-≠ baseline
-≠ contextual reading
-```
-
-For ethiKos:
-
-```text
-EthikosTopic + EthikosStance
-        ↓ source facts
-baseline aggregation
-        ↓
-SourceConsultationBinding
-ConsultationRelevance
-EkoH context
-        ↓
-Smart Vote advisory reading
-```
-
-## Current API
-
-```text
-POST /api/v1/smart-vote/cast/
-GET  /api/v1/smart-vote/readings/ethikos-topic/<topic_id>/
-```
-
-The reading endpoint exposes a baseline and a separate `ekoh_weighted_v1` reading when a binding exists.
-
-## Current reading metadata
-
-The reading service produces, among other fields:
-
-- `reading_key`;
-- `lens_hash`;
-- `snapshot_ref`;
-- `computed_at`;
-- result payload;
-- participant-level trace/detail when allowed by rating-access policy.
-
-## Contextual weight
-
-A Smart Vote weight is specific to the declared consultation/lens/context. It is **not a permanent global voting power attached to the user**.
-
-## Advisory exclusions
-
-A declared advisory exclusion can set a participant's reading weight to zero while leaving the source stance in the baseline. This preserves source history and makes the advisory transformation explicit.
-
-## Reproducibility
-
-The current service hashes the EkoH input snapshot used for a reading. If a reading is treated as durable/published/replayable, the corresponding inputs must also be recoverable; a hash alone identifies data but does not store it.
-
-## Implementation alignment
-
-The older ballot path still contains `Vote.weighted_value` and `VoteResult.sum_weighted_value`. These should not become the architecture model for source participation. See [[Implementation Alignment|Implementation-Alignment]].
-
-
-================================================================================================
-FILE: wiki/Stockage.md
-AUTHORITY: canonical
-================================================================================================
-
-# Stockage — keenKonnect Knowledge and Project Resources
-
-Stockage is the project/document repository capability inside **keenKonnect**. It is not a separate system or database owner.
-
-Current physical owner:
-
-```text
-backend/konnaxion/keenkonnect/
-```
-
-## Current core objects
-
-- `ProjectResource` — resource/document reference attached to a project;
-- `Project` — project/workspace context;
-- `ProjectTeam` — membership/role context;
-- `Tag` — classification.
-
-## Current UI
-
-The current product exposes knowledge/document surfaces under:
-
-```text
-/keenkonnect/knowledge/browse-repository
-/keenkonnect/knowledge/document-management
-/keenkonnect/knowledge/search-filter-documents
-/keenkonnect/knowledge/upload-new-document
-```
-
-## Ownership
-
-A search index, preview, cache or document browser remains a projection over the resource owner. It does not become a second source of project/document truth.
-
-Do not invent versioning/ACL persistence tables unless they exist in the code/schema being updated.
-
-
-================================================================================================
-FILE: wiki/TeamBuilder.md
-AUTHORITY: canonical
-================================================================================================
-
-# TeamBuilder — Problem and Team Formation
-
-TeamBuilder is a Konnaxion application/domain capability for problem framing, builder sessions and team formation.
-
-Canonical backend:
-
-```text
-backend/konnaxion/teambuilder/
-```
-
-## Current core models
-
-- `Problem`;
-- `ProblemChangeEvent`;
-- `BuilderSession`;
-- `Team`;
-- `TeamMember`.
-
-## Current UI
-
-```text
-/teambuilder
-/teambuilder/create
-/teambuilder/problems/*
-/teambuilder/[sessionId]
-/teambuilder/humans/*
-```
-
-## Orgo boundary
-
-A TeamBuilder `Problem`, `BuilderSession` or team is not an Orgo Case/Task by identity. A future integration may create Orgo-governed work through an explicit boundary, but the Konnaxion objects keep their own semantics.
