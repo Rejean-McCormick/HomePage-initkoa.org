@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/why/index.html.md
 > Route: /why
 > Source: app\why\page.tsx
-> Generated: 2026-09-11T11:37:24.069Z
+> Generated: 2026-09-11T11:53:57.766Z
 
 [Open the HTML page](https://initkoa.org/why)
 

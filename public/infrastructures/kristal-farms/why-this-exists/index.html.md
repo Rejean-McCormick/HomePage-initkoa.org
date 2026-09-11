@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/why-this-exists/index.html.md
 > Route: /infrastructures/kristal-farms/why-this-exists
 > Source: app\infrastructures\kristal-farms\why-this-exists\page.mdx
-> Generated: 2026-09-11T11:37:24.069Z
+> Generated: 2026-09-11T11:53:57.766Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/why-this-exists)
 

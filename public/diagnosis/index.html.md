@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/diagnosis/index.html.md
 > Route: /diagnosis
 > Source: app\diagnosis\page.js
-> Generated: 2026-09-11T11:37:24.069Z
+> Generated: 2026-09-11T11:53:57.766Z
 
 [Open the HTML page](https://initkoa.org/diagnosis)
 

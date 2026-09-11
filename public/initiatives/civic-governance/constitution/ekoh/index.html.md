@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/initiatives/civic-governance/constitution/ekoh/index.html.md
 > Route: /initiatives/civic-governance/constitution/ekoh
 > Source: app\initiatives\civic-governance\constitution\ekoh\page.tsx
-> Generated: 2026-09-11T11:37:24.069Z
+> Generated: 2026-09-11T11:53:57.766Z
 
 [Open the HTML page](https://initkoa.org/initiatives/civic-governance/constitution/ekoh)
 

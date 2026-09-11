@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/technology/kristal/what-it-does/index.html.md
 > Route: /technology/kristal/what-it-does
 > Source: app\technology\kristal\what-it-does\page.mdx
-> Generated: 2026-09-11T11:37:24.069Z
+> Generated: 2026-09-11T11:53:57.766Z
 
 [Open the HTML page](https://initkoa.org/technology/kristal/what-it-does)
 

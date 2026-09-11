@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/transparency-and-accountability/index.html.md
 > Route: /principles/civic-principles-ethics/transparency-and-accountability
 > Source: app\principles\civic-principles-ethics\transparency-and-accountability\page.js
-> Generated: 2026-09-11T11:37:24.069Z
+> Generated: 2026-09-11T11:53:57.766Z
 
 [Open the HTML page](https://initkoa.org/principles/civic-principles-ethics/transparency-and-accountability)
 

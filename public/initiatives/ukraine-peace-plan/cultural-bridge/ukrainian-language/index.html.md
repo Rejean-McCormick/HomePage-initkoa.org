@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/ukrainian-language/index.html.md
 > Route: /initiatives/ukraine-peace-plan/cultural-bridge/ukrainian-language
 > Source: app\initiatives\ukraine-peace-plan\cultural-bridge\ukrainian-language\page.mdx
-> Generated: 2026-09-11T11:37:24.069Z
+> Generated: 2026-09-11T11:53:57.766Z
 
 [Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/ukrainian-language)
 

@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/kollective-intelligence/smart-vote/index.html.md
 > Route: /platforms/konnaxion/kollective-intelligence/smart-vote
 > Source: app\platforms\konnaxion\kollective-intelligence\smart-vote\page.mdx
-> Generated: 2026-09-11T11:37:24.069Z
+> Generated: 2026-09-11T11:53:57.766Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/kollective-intelligence/smart-vote)
 

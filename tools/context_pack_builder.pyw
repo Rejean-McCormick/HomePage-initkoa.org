@@ -68,7 +68,7 @@ REPOS = [
 ]
 
 COMMIT_MESSAGE = "Update context packs"
-BUILDER_VERSION = "2026-09-11.2"
+BUILDER_VERSION = "2026-09-11.4"
 
 # Packs intentionally retired from this builder. They are removed from public/context-packs
 # before the manifest is regenerated so stale files cannot remain published indefinitely.
@@ -1336,45 +1336,170 @@ def regenerate_ai_assets(log) -> list[str]:
     return sorted(generated_paths, key=str.casefold)
 
 
+def _unique_repo_paths(paths: list[str]) -> list[str]:
+    """Normalize repository-relative pathspecs."""
+    return sorted(
+        {str(path).replace("\\", "/").strip().lstrip("/") for path in paths if str(path).strip()},
+        key=str.casefold,
+    )
+
+
+def _tracked_repo_paths(repo: Path) -> set[str]:
+    """Return every path known by the Git index, including tracked deletions."""
+    result = git(repo, "ls-files", "-z")
+    return {item.replace("\\", "/") for item in result.stdout.split("\0") if item}
+
+
+def _ignored_untracked_repo_paths(
+    repo: Path,
+    paths: list[str],
+    tracked: set[str],
+) -> set[str]:
+    """Return existing managed paths that are ignored and not already tracked.
+
+    ``git add`` fails when an explicitly supplied path is ignored. Generated assets
+    such as ``public/llms.txt`` and ``public/ai-corpus.txt`` are intentionally ignored
+    because the Next.js build regenerates them. They must therefore be excluded from
+    the explicit staging pathspec unless Git already tracks them.
+
+    The check is batched through ``git check-ignore --stdin -z`` so hundreds of
+    generated mirror paths do not require hundreds of Git subprocesses.
+    """
+    candidates: list[str] = []
+    for rel in _unique_repo_paths(paths):
+        prefix = rel.rstrip("/") + "/"
+        tracked_by_git = rel in tracked or any(item.startswith(prefix) for item in tracked)
+        if tracked_by_git:
+            continue
+        if (repo / Path(rel)).exists():
+            candidates.append(rel)
+
+    if not candidates:
+        return set()
+
+    payload = b"\0".join(path.encode("utf-8") for path in candidates) + b"\0"
+    result = subprocess.run(
+        ["git", "-C", str(repo), "check-ignore", "--stdin", "-z"],
+        input=payload,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        creationflags=CREATE_NO_WINDOW,
+    )
+    # git check-ignore returns 0 when at least one path is ignored and 1 when none are.
+    if result.returncode not in (0, 1):
+        details = result.stderr.decode("utf-8", errors="replace").strip()
+        raise CommandError(
+            "Impossible de vérifier les fichiers ignorés par Git."
+            + (f"\n{details}" if details else "")
+        )
+
+    return {
+        item.decode("utf-8", errors="replace").replace("\\", "/")
+        for item in result.stdout.split(b"\0")
+        if item
+    }
+
+
+def _matchable_managed_paths(repo: Path, paths: list[str]) -> list[str]:
+    """Keep only managed pathspecs that Git can safely stage.
+
+    Rules:
+    - keep tracked files, including tracked deletions;
+    - keep existing untracked files only when they are not ignored;
+    - drop stale generated paths that no longer exist and were never tracked;
+    - drop ignored + untracked generated assets (for example ``public/llms.txt``),
+      because explicitly passing one to ``git add`` makes Git fail.
+
+    This preserves intentional ``.gitignore`` behavior while still staging every
+    versioned AI artifact and every real deletion.
+    """
+    unique_paths = _unique_repo_paths(paths)
+    tracked = _tracked_repo_paths(repo)
+    ignored_untracked = _ignored_untracked_repo_paths(repo, unique_paths, tracked)
+
+    matched: list[str] = []
+    for rel in unique_paths:
+        prefix = rel.rstrip("/") + "/"
+        tracked_by_git = rel in tracked or any(item.startswith(prefix) for item in tracked)
+
+        if tracked_by_git:
+            matched.append(rel)
+            continue
+
+        absolute = repo / Path(rel)
+        if absolute.exists() and rel not in ignored_untracked:
+            matched.append(rel)
+
+    return matched
+
+
+def _write_git_pathspec_file(paths: list[str]) -> Path:
+    """Write a NUL-delimited pathspec file safe for Git and Windows."""
+    handle = tempfile.NamedTemporaryFile(
+        mode="wb",
+        prefix="initkoa-context-pack-pathspec-",
+        suffix=".txt",
+        delete=False,
+    )
+    try:
+        for path in paths:
+            handle.write(path.encode("utf-8") + b"\0")
+        return Path(handle.name)
+    finally:
+        handle.close()
+
+
 def git_add_paths(repo: Path, paths: list[str]):
-    """Stage only the managed paths, in chunks safe for Windows command lines."""
-    unique = sorted({str(path).replace("\\", "/") for path in paths if str(path).strip()}, key=str.casefold)
-    for chunk in _chunk_git_pathspecs(unique):
-        git(repo, "add", "-A", "--", *chunk)
+    """Stage managed paths without a giant Windows command line.
+
+    ``--pathspec-from-file`` avoids CreateProcess/cmd length limits. Filtering first
+    also prevents stale, never-tracked mirror names from turning an otherwise valid
+    sync into Git exit code 128.
+    """
+    matched = _matchable_managed_paths(repo, paths)
+    if not matched:
+        return
+
+    pathspec_file = _write_git_pathspec_file(matched)
+    try:
+        git(
+            repo,
+            "add",
+            "-A",
+            f"--pathspec-from-file={pathspec_file}",
+            "--pathspec-file-nul",
+        )
+    finally:
+        try:
+            pathspec_file.unlink(missing_ok=True)
+        except OSError:
+            pass
 
 
 def staged_changes_for_paths(repo: Path, paths: list[str]) -> bool:
     """Return True when at least one managed path has a staged change."""
-    unique = sorted({str(path).replace("\\", "/") for path in paths if str(path).strip()}, key=str.casefold)
-    for chunk in _chunk_git_pathspecs(unique):
+    matched = _matchable_managed_paths(repo, paths)
+    for chunk in _chunk_git_pathspecs(matched):
         diff = git(repo, "diff", "--cached", "--quiet", "--", *chunk, check=False)
         if diff.returncode == 1:
             return True
         if diff.returncode not in (0, 1):
-            raise CommandError("Impossible de déterminer les changements Git.")
+            details = (diff.stderr or diff.stdout or "").strip()
+            raise CommandError(
+                "Impossible de déterminer les changements Git."
+                + (f"\n{details}" if details else "")
+            )
     return False
 
 
 def git_commit_only_paths(repo: Path, message: str, paths: list[str]):
     """Commit managed paths only without swallowing unrelated staged changes."""
-    unique = sorted({str(path).replace("\\", "/") for path in paths if str(path).strip()}, key=str.casefold)
-    if not unique:
+    matched = _matchable_managed_paths(repo, paths)
+    if not matched:
         return
 
-    pathspec_file = None
+    pathspec_file = _write_git_pathspec_file(matched)
     try:
-        with tempfile.NamedTemporaryFile(
-            mode="w",
-            encoding="utf-8",
-            newline="\n",
-            prefix="initkoa-context-pack-pathspec-",
-            suffix=".txt",
-            delete=False,
-        ) as handle:
-            pathspec_file = Path(handle.name)
-            for path in unique:
-                handle.write(path + "\n")
-
         git(
             repo,
             "commit",
@@ -1382,13 +1507,13 @@ def git_commit_only_paths(repo: Path, message: str, paths: list[str]):
             "-m",
             message,
             f"--pathspec-from-file={pathspec_file}",
+            "--pathspec-file-nul",
         )
     finally:
-        if pathspec_file:
-            try:
-                pathspec_file.unlink(missing_ok=True)
-            except OSError:
-                pass
+        try:
+            pathspec_file.unlink(missing_ok=True)
+        except OSError:
+            pass
 
 
 def sync_initkoa(log, pull_first=True):

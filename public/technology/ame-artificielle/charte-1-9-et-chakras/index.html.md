@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/technology/ame-artificielle/charte-1-9-et-chakras/index.html.md
 > Route: /technology/ame-artificielle/charte-1-9-et-chakras
 > Source: app\technology\ame-artificielle\charte-1-9-et-chakras\page.mdx
-> Generated: 2026-09-11T11:37:24.069Z
+> Generated: 2026-09-11T11:53:57.766Z
 
 [Open the HTML page](https://initkoa.org/technology/ame-artificielle/charte-1-9-et-chakras)
 
