@@ -56,12 +56,14 @@ REPOS = [
 ]
 
 COMMIT_MESSAGE = "Update context packs"
-BUILDER_VERSION = "2026-09-10.13"
+BUILDER_VERSION = "2026-09-11.1"
 
 # Packs intentionally retired from this builder. They are removed from public/context-packs
 # before the manifest is regenerated so stale files cannot remain published indefinitely.
 RETIRED_PACK_FILES = {
     "initkoa-docs-context-pack.txt",
+    "k-port-context-pack.txt",
+    "xkaliber-context-pack.txt",
     # Standalone wiki packs were retired: their committed Markdown is now merged
     # into the parent project pack, wiki first.
     "king-klown-canon-wiki-context-pack.txt",
@@ -1133,20 +1135,43 @@ def write_context_pack_sitemap(log=None) -> bool:
     return True
 
 
+def expected_pack_filenames() -> set[str]:
+    """Return the exact pack filenames managed by the current REPOS configuration."""
+    expected: set[str] = set()
+    for label, repo in included_repos():
+        repo_is_git = is_git_repo(repo)
+        remote_name = github_repo_from_remote(repo, label) if repo_is_git else label
+        expected.add(f"{slugify(remote_name)}-context-pack.txt".casefold())
+    return expected
+
+
 def cleanup_retired_packs(log=None) -> int:
-    """Delete context packs that are no longer managed/published by this builder."""
+    """Reconcile public/context-packs with the repositories managed by this builder.
+
+    Every .txt file in OUTPUT_DIR is treated as a generated Context Pack because
+    write_manifest() publishes every .txt file it finds there. A pack therefore
+    must not survive merely because its source repository was removed from REPOS.
+    """
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    expected = expected_pack_filenames()
+    explicitly_retired = {name.casefold() for name in RETIRED_PACK_FILES}
     removed = 0
-    for file_name in sorted(RETIRED_PACK_FILES):
-        path = OUTPUT_DIR / file_name
-        if not path.exists():
+
+    for path in sorted(OUTPUT_DIR.glob("*.txt"), key=lambda p: p.name.casefold()):
+        file_name = path.name
+        normalized = file_name.casefold()
+        if normalized in expected and normalized not in explicitly_retired:
             continue
+
         try:
             path.unlink()
             removed += 1
             if log:
-                log(f"Pack retiré : {file_name}")
+                reason = "retrait explicite" if normalized in explicitly_retired else "source absente de REPOS"
+                log(f"Pack retiré : {file_name} ({reason})")
         except OSError as exc:
             raise RuntimeError(f"Impossible de retirer le pack obsolète {path}: {exc}") from exc
+
     return removed
 
 

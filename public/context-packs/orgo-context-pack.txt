@@ -1,7 +1,7 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Orgo
-source_commit: fba068aa8008771b72e41b39370564c5287d0a91
+source_commit: a7ea7cba6b409e2b1b6b0eb0af871f0931c54094
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -9,18 +9,18 @@ selection_mode: markdown
 wiki_source_commit: 05d4ed6e021761e7b8762563b571fb1ac989f7b5
 wiki_working_tree_markdown: clean
 policy_version: 2026-09-10.13
-repo_files: 48
+repo_files: 49
 wiki_files: 20
-source_files: 68
-included_files: 63
+source_files: 69
+included_files: 64
 excluded_files: 5
 duplicate_files: 0
-content_bytes: 499503
-authority_counts: {"reference":63}
-content_role_counts: {"knowledge":43,"navigation":20}
-generated_at: 2026-09-10T13:04:14-04:00
-files: 63
-content_sha256: 6ae71f9e373f132de26800d7bbacdffdecd1d716e2af9c61265ab25458f201d8
+content_bytes: 506233
+authority_counts: {"reference":64}
+content_role_counts: {"knowledge":44,"navigation":20}
+generated_at: 2026-09-11T06:29:42-04:00
+files: 64
+content_sha256: 9420bfe37eddf9ea6e5440612392531248caf518a9055bf9fd6870d827f07268
 
 ================================================================================================
 FILE INDEX
@@ -51,44 +51,45 @@ FILE INDEX
 23. [reference] [knowledge] CODE_SNAPSHOT_MANIFEST.md | bytes=15646 | sha256=3adeddce2bb6fc26e6bb2013744bed7c12bb464ac4c50f953d1cde7a7a28a728
 24. [reference] [knowledge] Docs/README.md | bytes=4316 | sha256=cde22c1b878242baf6d6111bc50491319a6d90e1dc3101d6b330c5c4e7f48208
 25. [reference] [knowledge] Docs/status/2026-09-10-beta-status.md | bytes=4381 | sha256=5b6cf02af37f3ead67ae17b025754834afe977721c6c97ed884dca3f687044a5
-26. [reference] [knowledge] Docs/Technical-Reference/API_IMPLEMENTED.md | bytes=8057 | sha256=d210e31589cc6f69f31c1b396322c6ec8cf33885c4f4aa53a8a58bc593169121
-27. [reference] [knowledge] Docs/Technical-Reference/ARCHITECTURE_TO_CODE.md | bytes=4304 | sha256=0c1a272d26262c0ccab0b8eaadc34347c0ec7bb48db9aecc0a39bd54b408f67a
-28. [reference] [knowledge] Docs/Technical-Reference/Boilerplate_Turborepo.md | bytes=2263 | sha256=adbb8be266bc9663242de812e2cd4f878f9d5011c3b52c5bd8c760d2fa026899
-29. [reference] [knowledge] Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md | bytes=5598 | sha256=c4205b4cd0f877ee5e731532564340460e2dbc62ca46e63a433176dcef348a0e
-30. [reference] [knowledge] Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md | bytes=19550 | sha256=19e1f2ab22b3857288043d92d0496c169eb673f4c1f5031d04ca324e4040071e
-31. [reference] [knowledge] Docs/Technical-Reference/COMPLETION_DECISIONS.md | bytes=9200 | sha256=4ef41a73829d18a5c7b99ccfbe74bb1e8b693b7843d1533d566fa492143030e6
-32. [reference] [knowledge] Docs/Technical-Reference/CONTRACTS.md | bytes=7155 | sha256=41d8aa0a6d96ad8a3cd973c8cec981b28ac062622c9898e1dad5fdb938edcebe
-33. [reference] [knowledge] Docs/Technical-Reference/GLOSSARY.md | bytes=5487 | sha256=5c8356720877b3bb21330e7d6811f80782c54a2064f811bd596250d1083dce25
-34. [reference] [knowledge] Docs/Technical-Reference/IMPLEMENTATION_DECISIONS.md | bytes=9038 | sha256=0fe33a3a2e70e8fc5bb05ad3745bf025e7ee39e2304785455eb20de796e220f3
-35. [reference] [knowledge] Docs/Technical-Reference/IMPLEMENTATION_STATUS.md | bytes=6763 | sha256=ce086cef2e1c743c027689741cf9b661bd13923c4f39127ecc392764838cba1c
-36. [reference] [knowledge] Docs/Technical-Reference/INTEGRATION_BRIDGE.md | bytes=4218 | sha256=0da629b20f824ea1745da1cf040cd397e8863e3449827fa8174ce887a6365762
-37. [reference] [knowledge] Docs/Technical-Reference/LOCAL_VALIDATION.md | bytes=5403 | sha256=2773d9d3298d4fc43b442cdf88d5b806ee8bca0fd7fbabcce2f8d53118e7acbc
-38. [reference] [knowledge] Docs/Technical-Reference/Semantic-Charters.md | bytes=7137 | sha256=ecb6cd50387aadf9821ba0a9faa2b111257038c0393a6a70814081f36c0ee7ca
-39. [reference] [knowledge] Docs/Technical-Reference/TARGET_ARCHITECTURE.md | bytes=17758 | sha256=ddb637b0e2b09ee3be3b9ba961bbaf1e5a47ad4192d49221f4d6ae68e9b2f453
-40. [reference] [knowledge] Docs/Technical-Reference/UI_AND_KOALI_INTEGRATION.md | bytes=11959 | sha256=dc142c599a095d89cd95f60640634fc9f855d5cd47b5293c6b0fd6971a0186ca
-41. [reference] [knowledge] Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md | bytes=5611 | sha256=216f9cc8d5b655953ccff79c7a6e6a3b38d76b8b1399ae4e4e738144f4480c2e
-42. [reference] [knowledge] Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md | bytes=47606 | sha256=1d5d33ee1859e5dbb0ab4349c8118de6358c23a8575400c3495382c382b29cbb
-43. [reference] [knowledge] Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md | bytes=8752 | sha256=32fb353b996b3127d47b1c506182aef0d9b7ea36179d2bbb880db4997570d0f8
-44. [reference] [knowledge] Docs/Technical-Reference/v3/2-orgo-documentation-index.md | bytes=31141 | sha256=4f9b300feae5109e99738b92e7eea956ab7f3af220f77ad0c3a7cce1c5b8d79b
-45. [reference] [knowledge] Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md | bytes=6078 | sha256=58731c133f3be8823076978de7ec658c33ad8d3fd63a45f200511aeaae775cf2
-46. [reference] [knowledge] Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md | bytes=28392 | sha256=153f921c269a3b6e2dd83fbbfcd2380f765edd3d23bfa9f2104f275b6732723d
-47. [reference] [knowledge] Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md | bytes=3091 | sha256=3218eca4e4b8dddca16a36b73ee7efdad46f77865605e396deb9f04381785daf
-48. [reference] [knowledge] Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md | bytes=46326 | sha256=162a126d2383a66547e8bcde7bccdd1db3ed56c27d98d8670a04b1d354a3d04e
-49. [reference] [knowledge] Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md | bytes=1931 | sha256=17f1b6c211135258ad1eb5b6d128e52855a45542b9bafa0221a492d9273a9281
-50. [reference] [knowledge] Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md | bytes=40973 | sha256=1f78e6f73f4c1aa21715d2f3b74c81c0fbfa5de1656649f53728c6b6d2e7d02d
-51. [reference] [knowledge] Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md | bytes=1969 | sha256=629c53ebcab194b0a908102faa7abb93c0a3bf0e91d9d2bc7475bb1f1715af37
-52. [reference] [knowledge] Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md | bytes=29951 | sha256=7183935cc369671486769060758e2baa7ff46b591147659bcfa89f0dc5250d3e
-53. [reference] [knowledge] Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md | bytes=3706 | sha256=85155be5e53283eb4c1bc983ad0c01a85cffc561d68032cbc5a8694b33f73d7b
-54. [reference] [knowledge] Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md | bytes=21619 | sha256=01ec9e77a8968bcd78a8fab691ce6f42ca3fd9e0d5d2fba5fd8acd138fdfa4e5
-55. [reference] [knowledge] Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md | bytes=1543 | sha256=5bc04cd7a75ca6980a603a7f44b857c474de2f5c82213c058d9546c5e0e976c7
-56. [reference] [knowledge] Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md | bytes=29606 | sha256=f144c92bf18d6fc23f730bd829d35ebbbf5fa54ce5878967ba4649fea2c61282
-57. [reference] [knowledge] Docs/Technical-Reference/WikiData-Orgo_Chart.md | bytes=6733 | sha256=61469f1577eb077a6a5ac0318980c39075d7e9bc65df07524185931cf653dd77
-58. [reference] [knowledge] legacy/README.md | bytes=252 | sha256=95c071ccbff8226ae71f49e8406dc307247e46eabd54619974767616a8dfdc44
-59. [reference] [knowledge] packages/README.md | bytes=229 | sha256=3194cfb55b18cd7fc9bec28fe853673f13e24090ce37e6eba1505be95d5767cb
-60. [reference] [knowledge] packages/tsconfig/README.md | bytes=106 | sha256=d39b75548339193750b127f369063e86a96897a6e5753bd3a73a233f2ac4f1f7
-61. [reference] [knowledge] README.md | bytes=2503 | sha256=a60f3bf4ad60e9aab52da73b6b684a886be5a6d398aaf6381c8e6a77acff3810
-62. [reference] [knowledge] validation/completion/STATUS.md | bytes=438 | sha256=f6c47d66c878ada27597ec5d566515a525c11e0ff281b50d93293687a463bcf3
-63. [reference] [knowledge] validation/README.md | bytes=296 | sha256=bbb8609f65d9da277774b5461f9b7abff436cdd80898360c74c0cc0a6ce385d3
+26. [reference] [knowledge] Docs/status/2026-09-10-rc1-status.md | bytes=6730 | sha256=1a6ce34895ff134d32739e2e3d8e113a644ee8698e5edc55f4815e4e4df3f920
+27. [reference] [knowledge] Docs/Technical-Reference/API_IMPLEMENTED.md | bytes=8057 | sha256=d210e31589cc6f69f31c1b396322c6ec8cf33885c4f4aa53a8a58bc593169121
+28. [reference] [knowledge] Docs/Technical-Reference/ARCHITECTURE_TO_CODE.md | bytes=4304 | sha256=0c1a272d26262c0ccab0b8eaadc34347c0ec7bb48db9aecc0a39bd54b408f67a
+29. [reference] [knowledge] Docs/Technical-Reference/Boilerplate_Turborepo.md | bytes=2263 | sha256=adbb8be266bc9663242de812e2cd4f878f9d5011c3b52c5bd8c760d2fa026899
+30. [reference] [knowledge] Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md | bytes=5598 | sha256=c4205b4cd0f877ee5e731532564340460e2dbc62ca46e63a433176dcef348a0e
+31. [reference] [knowledge] Docs/Technical-Reference/CODE_ALIGNMENT_NOTES.md | bytes=19550 | sha256=19e1f2ab22b3857288043d92d0496c169eb673f4c1f5031d04ca324e4040071e
+32. [reference] [knowledge] Docs/Technical-Reference/COMPLETION_DECISIONS.md | bytes=9200 | sha256=4ef41a73829d18a5c7b99ccfbe74bb1e8b693b7843d1533d566fa492143030e6
+33. [reference] [knowledge] Docs/Technical-Reference/CONTRACTS.md | bytes=7155 | sha256=41d8aa0a6d96ad8a3cd973c8cec981b28ac062622c9898e1dad5fdb938edcebe
+34. [reference] [knowledge] Docs/Technical-Reference/GLOSSARY.md | bytes=5487 | sha256=5c8356720877b3bb21330e7d6811f80782c54a2064f811bd596250d1083dce25
+35. [reference] [knowledge] Docs/Technical-Reference/IMPLEMENTATION_DECISIONS.md | bytes=9038 | sha256=0fe33a3a2e70e8fc5bb05ad3745bf025e7ee39e2304785455eb20de796e220f3
+36. [reference] [knowledge] Docs/Technical-Reference/IMPLEMENTATION_STATUS.md | bytes=6763 | sha256=ce086cef2e1c743c027689741cf9b661bd13923c4f39127ecc392764838cba1c
+37. [reference] [knowledge] Docs/Technical-Reference/INTEGRATION_BRIDGE.md | bytes=4218 | sha256=0da629b20f824ea1745da1cf040cd397e8863e3449827fa8174ce887a6365762
+38. [reference] [knowledge] Docs/Technical-Reference/LOCAL_VALIDATION.md | bytes=5403 | sha256=2773d9d3298d4fc43b442cdf88d5b806ee8bca0fd7fbabcce2f8d53118e7acbc
+39. [reference] [knowledge] Docs/Technical-Reference/Semantic-Charters.md | bytes=7137 | sha256=ecb6cd50387aadf9821ba0a9faa2b111257038c0393a6a70814081f36c0ee7ca
+40. [reference] [knowledge] Docs/Technical-Reference/TARGET_ARCHITECTURE.md | bytes=17758 | sha256=ddb637b0e2b09ee3be3b9ba961bbaf1e5a47ad4192d49221f4d6ae68e9b2f453
+41. [reference] [knowledge] Docs/Technical-Reference/UI_AND_KOALI_INTEGRATION.md | bytes=11959 | sha256=dc142c599a095d89cd95f60640634fc9f855d5cd47b5293c6b0fd6971a0186ca
+42. [reference] [knowledge] Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md | bytes=5611 | sha256=216f9cc8d5b655953ccff79c7a6e6a3b38d76b8b1399ae4e4e738144f4480c2e
+43. [reference] [knowledge] Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md | bytes=47606 | sha256=1d5d33ee1859e5dbb0ab4349c8118de6358c23a8575400c3495382c382b29cbb
+44. [reference] [knowledge] Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md | bytes=8752 | sha256=32fb353b996b3127d47b1c506182aef0d9b7ea36179d2bbb880db4997570d0f8
+45. [reference] [knowledge] Docs/Technical-Reference/v3/2-orgo-documentation-index.md | bytes=31141 | sha256=4f9b300feae5109e99738b92e7eea956ab7f3af220f77ad0c3a7cce1c5b8d79b
+46. [reference] [knowledge] Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md | bytes=6078 | sha256=58731c133f3be8823076978de7ec658c33ad8d3fd63a45f200511aeaae775cf2
+47. [reference] [knowledge] Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md | bytes=28392 | sha256=153f921c269a3b6e2dd83fbbfcd2380f765edd3d23bfa9f2104f275b6732723d
+48. [reference] [knowledge] Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md | bytes=3091 | sha256=3218eca4e4b8dddca16a36b73ee7efdad46f77865605e396deb9f04381785daf
+49. [reference] [knowledge] Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md | bytes=46326 | sha256=162a126d2383a66547e8bcde7bccdd1db3ed56c27d98d8670a04b1d354a3d04e
+50. [reference] [knowledge] Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md | bytes=1931 | sha256=17f1b6c211135258ad1eb5b6d128e52855a45542b9bafa0221a492d9273a9281
+51. [reference] [knowledge] Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md | bytes=40973 | sha256=1f78e6f73f4c1aa21715d2f3b74c81c0fbfa5de1656649f53728c6b6d2e7d02d
+52. [reference] [knowledge] Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md | bytes=1969 | sha256=629c53ebcab194b0a908102faa7abb93c0a3bf0e91d9d2bc7475bb1f1715af37
+53. [reference] [knowledge] Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md | bytes=29951 | sha256=7183935cc369671486769060758e2baa7ff46b591147659bcfa89f0dc5250d3e
+54. [reference] [knowledge] Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md | bytes=3706 | sha256=85155be5e53283eb4c1bc983ad0c01a85cffc561d68032cbc5a8694b33f73d7b
+55. [reference] [knowledge] Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md | bytes=21619 | sha256=01ec9e77a8968bcd78a8fab691ce6f42ca3fd9e0d5d2fba5fd8acd138fdfa4e5
+56. [reference] [knowledge] Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md | bytes=1543 | sha256=5bc04cd7a75ca6980a603a7f44b857c474de2f5c82213c058d9546c5e0e976c7
+57. [reference] [knowledge] Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md | bytes=29606 | sha256=f144c92bf18d6fc23f730bd829d35ebbbf5fa54ce5878967ba4649fea2c61282
+58. [reference] [knowledge] Docs/Technical-Reference/WikiData-Orgo_Chart.md | bytes=6733 | sha256=61469f1577eb077a6a5ac0318980c39075d7e9bc65df07524185931cf653dd77
+59. [reference] [knowledge] legacy/README.md | bytes=252 | sha256=95c071ccbff8226ae71f49e8406dc307247e46eabd54619974767616a8dfdc44
+60. [reference] [knowledge] packages/README.md | bytes=229 | sha256=3194cfb55b18cd7fc9bec28fe853673f13e24090ce37e6eba1505be95d5767cb
+61. [reference] [knowledge] packages/tsconfig/README.md | bytes=106 | sha256=d39b75548339193750b127f369063e86a96897a6e5753bd3a73a233f2ac4f1f7
+62. [reference] [knowledge] README.md | bytes=2503 | sha256=a60f3bf4ad60e9aab52da73b6b684a886be5a6d398aaf6381c8e6a77acff3810
+63. [reference] [knowledge] validation/completion/STATUS.md | bytes=438 | sha256=f6c47d66c878ada27597ec5d566515a525c11e0ff281b50d93293687a463bcf3
+64. [reference] [knowledge] validation/README.md | bytes=296 | sha256=bbb8609f65d9da277774b5461f9b7abff436cdd80898360c74c0cc0a6ce385d3
 
 
 ================================================================================================
@@ -1729,6 +1730,181 @@ Utiliser un tag de préversion bêta conforme aux conventions du dépôt. **`v0.
 Avant le push : identifier le dépôt, sa branche de livraison, les versions et tags existants ; intégrer ce rapport dans `docs/status` ; vérifier les modifications locales et le commit à publier ; rattacher les preuves de tests à cet état. Créer ensuite un tag annoté sur le commit retenu et pousser uniquement ce tag. Ne pas remplacer un tag existant.
 
 Si une GitHub Release est créée, la marquer comme préversion et reprendre les limites de couverture ci-dessus.
+
+
+================================================================================================
+FILE: Docs/status/2026-09-10-rc1-status.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1a6ce34895ff134d32739e2e3d8e113a644ee8698e5edc55f4815e4e4df3f920
+CONTENT_BYTES: 6730
+================================================================================================
+
+# Orgo — Rapport de statut RC1 du 10 septembre 2026
+
+## Décision : Release Candidate 1
+
+Orgo est **validé comme Release Candidate 1 (RC1)** pour le périmètre local automatisé retenu.
+
+La référence officielle de cette RC est le tag Git annoté :
+
+- **Tag :** `v0.1.0-rc.1`
+- **Commit RC :** `60e3a250f98252735839816c8e0143bbdd7546bf`
+- **Message :** `validation: archive RC1 automated validation evidence`
+- **Date du tag :** 10 septembre 2026
+- **Branche de développement :** `master`
+
+Le tag `v0.1.0-rc.1` a été poussé sur le dépôt distant et pointe sur le commit qui contient les preuves de validation automatisée.
+
+Après création du tag, `master` a avancé au commit `5f5c57e` à la suite d'une modification de `apps/web/next-env.d.ts`. Le tag RC n'a pas été déplacé. Par conséquent, **la référence RC officielle demeure `v0.1.0-rc.1` / `60e3a25`**, qui correspond à l'état effectivement validé.
+
+## Résumé des validations
+
+| Gate | Résultat | Détail |
+| --- | --- | --- |
+| Git avant validation | PASS | Working tree propre avant le gate RC |
+| Browser Chromium — run 1 | PASS | 22/22 tests, `workers=1`, `retries=0` |
+| Browser Chromium — run 2 | PASS | 22/22 tests, `workers=1`, `retries=0` |
+| Browser total | PASS | 44 exécutions consécutives réussies |
+| `db:generate` | PASS | Prisma Client généré avec succès |
+| `db:migrate` | PASS | Migrations appliquées sur PostgreSQL 16 isolé |
+| `check:architecture` | PASS | Contrôles d'architecture réussis |
+| `typecheck` | PASS | Vérification TypeScript réussie |
+| `test` | PASS | Tests automatisés réussis |
+| `test:integration` | PASS | Intégration PostgreSQL native réussie |
+| `build` | PASS | Builds automatisés réussis |
+| `npm audit --audit-level=high` | PASS | 0 vulnérabilité détectée |
+| PostgreSQL de validation | PASS | PostgreSQL 16, base jetable `orgo_validation_rc` |
+
+## Preuve de validation versionnée
+
+La validation locale finale a produit le dossier :
+
+`validation/local-2026-09-10T22-02-00-042Z/`
+
+Ce dossier a été ajouté au dépôt dans le commit RC et contient :
+
+- `db-generate.log`
+- `db-migrate.log`
+- `check-architecture.log`
+- `typecheck.log`
+- `test.log`
+- `test-integration.log`
+- `build.log`
+- `results.json`
+
+Ces fichiers constituent la preuve automatisée versionnée associée à RC1.
+
+## Validation navigateur
+
+La suite Playwright étendue a été exécutée deux fois consécutivement dans Chromium avec :
+
+- `workers=1`
+- `retries=0`
+- API réelle
+- instance de test autorisant explicitement les écritures
+
+Les deux campagnes ont obtenu :
+
+- **Run 1 : 22/22 PASS**
+- **Run 2 : 22/22 PASS**
+- **Total : 44/44 PASS**
+
+La couverture comprend notamment :
+
+- modification d'une tâche et rejet d'une révision obsolète ;
+- création de tâche liée depuis un dossier ;
+- affichage sécurisé des commentaires contenant du markup ;
+- attribution d'une tâche et affichage dans « My Work » ;
+- ajout, téléchargement et suppression d'une pièce jointe ;
+- rejet d'une pièce jointe dépassant 1 Mio ;
+- publication et simulation de versions de workflows ;
+- rejet d'un workflow JSON invalide ;
+- file hors ligne et replay idempotent ;
+- export CSV sûr ;
+- permissions utilisateur en lecture seule ;
+- isolation par équipe ;
+- parcours maintenance ;
+- parcours éducation ;
+- dossier RH confidentiel ;
+- scénarios de connexion, recherche, persistance et cycle de vie des objets de travail.
+
+## Incident Playwright résolu
+
+Une première campagne étendue avait présenté des échecs intermittents sur E03, E04, E05 et E06.
+
+L'analyse a montré que la cause se trouvait dans le **harness Playwright de LevelUpDiag-Orgo**, plus précisément dans la synchronisation du helper `openWork()` avec la recherche débouncée de l'interface.
+
+Le helper a été renforcé afin de synchroniser explicitement les transitions de recherche avant l'ouverture du détail.
+
+Après cette correction du harness :
+
+- E03 : PASS
+- E04 : PASS
+- E05 : PASS
+- E06 : PASS
+- suite complète : 22/22 PASS deux fois consécutivement
+
+**Aucun patch applicatif Orgo n'a été requis pour cet incident.**
+
+La correction appartient à `LevelUpDiag-Orgo`, dépôt de diagnostic séparé.
+
+## Incident Prisma résolu pendant le gate RC
+
+Le premier lancement du gate RC a échoué sur `db:generate` avec :
+
+`EPERM: operation not permitted, unlink ... query_engine-windows.dll.node`
+
+La DLL Prisma était verrouillée par des processus Node Orgo encore actifs.
+
+Les processus concernés ont été arrêtés, le client Prisma généré a été supprimé puis régénéré. `npm run db:generate` a ensuite réussi normalement.
+
+Cet incident était lié à l'environnement Windows et au verrouillage du moteur Prisma, pas au schéma, aux migrations ni à la base.
+
+## Environnement du gate RC
+
+Le gate final a été exécuté avec une base PostgreSQL 16 dédiée et jetable :
+
+- conteneur : `orgo-rc-postgres`
+- base : `orgo_validation_rc`
+- port local utilisé : `55432`
+
+`TEST_DATABASE_URL` pointait uniquement vers cette base de validation.
+
+La base de validation a été supprimée après l'exécution du gate. La base Orgo courante n'a pas été utilisée par cette validation.
+
+## Limites connues du statut RC1
+
+`npm run validate:local` indique explicitement que certains contrôles restent en dehors de son périmètre automatisé :
+
+- browser ;
+- fournisseurs externes ;
+- restauration.
+
+Le contrôle **browser** a été couvert séparément par les deux campagnes Chromium 22/22 décrites ci-dessus.
+
+Les contrôles **external-provider** et **restore** restent hors du périmètre de cette validation RC locale. Ils ne constituent pas des défauts constatés ; ils doivent être exécutés si le contexte de déploiement ou de livraison les rend obligatoires.
+
+## État Git publié
+
+État observé après publication :
+
+- `v0.1.0-rc.1` → `60e3a25`
+- `master` / `origin/master` → `5f5c57e`
+- working tree : propre
+- branche locale `master` : synchronisée avec `origin/master`
+
+Le commit `5f5c57e` a été créé après le tag RC et contient uniquement le changement alors présent dans `apps/web/next-env.d.ts`.
+
+Pour toute reproduction, comparaison ou diagnostic de RC1, utiliser **le tag `v0.1.0-rc.1`**, et non la tête courante de `master`.
+
+## Verdict
+
+**Orgo v0.1.0-rc.1 est accepté comme RC1 pour le périmètre local automatisé et navigateur décrit dans ce rapport.**
+
+Les validations principales sont vertes, les preuves locales sont versionnées dans le dépôt, le tag RC est publié et l'état testé est identifiable de manière reproductible.
+
+La prochaine phase peut être l'**injection contrôlée des données**, en conservant `v0.1.0-rc.1` comme baseline immuable de référence.
 
 
 ================================================================================================

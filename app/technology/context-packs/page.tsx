@@ -100,11 +100,6 @@ const PRESENTATION: Record<string, PackPresentation> = {
     scope: 'Operating system architecture',
     description: 'Architecture, components, contracts, integrations, lifecycle, governance, and operational documentation for kOA Linux.',
   },
-  xkaliber: {
-    title: 'XKaliber Context Pack',
-    scope: 'Competency measurement',
-    description: 'Reference bundle for XKaliber architecture, evaluation, governance, integration, product, UX, and supporting research.',
-  },
   'uckk-moodle': {
     title: 'UCKK Moodle Context Pack',
     scope: 'Learning platform',
@@ -129,11 +124,6 @@ const PRESENTATION: Record<string, PackPresentation> = {
     title: 'LevelUpDiag kOA Linux Context Pack',
     scope: 'Development and validation tooling',
     description: 'Reference bundle for LevelUpDiag tooling, launchers, levels, schemas, scripts, tests, and kOA Linux integration.',
-  },
-  'k-port': {
-    title: 'K-Port Context Pack',
-    scope: 'Verified intake layer',
-    description: 'Reference bundle for K-Port, the EkoH intake layer for verified inputs and associated documentation.',
   },
   'freeze-vote-rebuild-operational-peace-framework': {
     title: 'Freeze · Vote · Rebuild Context Pack',
