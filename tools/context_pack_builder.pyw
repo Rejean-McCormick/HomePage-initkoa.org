@@ -9,6 +9,7 @@ import re
 import shutil
 import subprocess
 import threading
+import tempfile
 from datetime import datetime
 from pathlib import Path
 from tkinter import Tk, StringVar, BOTH, END, LEFT, RIGHT, X, Y
@@ -26,6 +27,17 @@ SITEMAP_PATH = OUTPUT_DIR / "sitemap.xml"
 CONTEXT_PACK_BASE_URL = "https://initkoa.org/context-packs"
 TOOL_TARGET = INITKOA_REPO / "tools" / "context_pack_builder.pyw"
 POLICY_TARGET = INITKOA_REPO / "tools" / "context_pack_policy.json"
+AI_GENERATOR_SCRIPT = INITKOA_REPO / "scripts" / "generate-ai-assets.mjs"
+GENERATED_MD_STATE_PATH = INITKOA_REPO / "public" / ".generated-md-mirrors.json"
+AI_ARTIFACT_RELATIVE_PATHS = (
+    "public/.generated-md-mirrors.json",
+    "public/ai-corpus.txt",
+    "public/llms.txt",
+    "public/llms-full.txt",
+    "public/ai-sitemap.json",
+    "public/md-manifest.json",
+    "public/md-sitemap.xml",
+)
 
 REPOS = [
     ("Konnaxion", MYCODE / "Konnaxion" / "Konnaxion"),
@@ -56,7 +68,7 @@ REPOS = [
 ]
 
 COMMIT_MESSAGE = "Update context packs"
-BUILDER_VERSION = "2026-09-11.1"
+BUILDER_VERSION = "2026-09-11.2"
 
 # Packs intentionally retired from this builder. They are removed from public/context-packs
 # before the manifest is regenerated so stale files cannot remain published indefinitely.
@@ -1209,6 +1221,19 @@ def install_policy_into_initkoa():
     return True
 
 
+def failed_repo_labels(results) -> list[str]:
+    """Return repository labels that failed during the build, in scan order."""
+    return [str(result.get("label") or result.get("path") or "repo inconnu") for result in results if result.get("error")]
+
+
+def log_failed_repos(log, results) -> list[str]:
+    """Write a final, easy-to-spot summary of repositories that failed."""
+    failed = failed_repo_labels(results)
+    if failed:
+        log("REPOS EN ERREUR : " + ", ".join(failed))
+    return failed
+
+
 def build_all(log):
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     if install_self_into_initkoa():
@@ -1245,6 +1270,127 @@ def build_all(log):
     return results
 
 
+
+def generated_markdown_mirror_paths() -> set[str]:
+    """Return repo-relative paths currently owned by the AI mirror generator."""
+    if not GENERATED_MD_STATE_PATH.exists():
+        return set()
+    try:
+        raw = json.loads(GENERATED_MD_STATE_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return set()
+    if not isinstance(raw, list):
+        return set()
+
+    paths: set[str] = set()
+    public_root = INITKOA_REPO / "public"
+    for item in raw:
+        if not isinstance(item, str):
+            continue
+        rel = item.strip().replace("\\", "/").lstrip("/")
+        if not rel or rel.startswith("../") or "/../" in f"/{rel}/":
+            continue
+        abs_path = (public_root / rel).resolve()
+        try:
+            abs_path.relative_to(public_root.resolve())
+        except ValueError:
+            continue
+        paths.add(f"public/{rel}")
+    return paths
+
+
+def regenerate_ai_assets(log) -> list[str]:
+    """Regenerate AI discovery surfaces after Context Pack reconciliation.
+
+    The generated-path list includes both the old and new Markdown mirror sets so
+    deleted mirrors are staged as deletions instead of surviving in Git.
+    """
+    if not AI_GENERATOR_SCRIPT.exists():
+        raise RuntimeError(f"Générateur d'artefacts IA introuvable : {AI_GENERATOR_SCRIPT}")
+
+    node = shutil.which("node")
+    if not node:
+        raise RuntimeError("Node.js introuvable dans PATH; impossible de régénérer llms.txt.")
+
+    old_mirrors = generated_markdown_mirror_paths()
+    log("IA : régénération de llms.txt et des surfaces de découverte...")
+    result = run_command([node, AI_GENERATOR_SCRIPT], cwd=INITKOA_REPO, check=False)
+
+    for line in (result.stdout or "").splitlines():
+        if line.strip():
+            log(f"    {line}")
+    for line in (result.stderr or "").splitlines():
+        if line.strip():
+            log(f"    {line}")
+
+    if result.returncode != 0:
+        details = (result.stderr or result.stdout or "").strip()
+        raise CommandError(f"Échec de la génération des artefacts IA.\n{details}")
+
+    new_mirrors = generated_markdown_mirror_paths()
+    generated_paths = set(AI_ARTIFACT_RELATIVE_PATHS) | old_mirrors | new_mirrors
+    log(
+        "IA : surfaces synchronisées "
+        f"({len(new_mirrors)} miroir(s) Markdown; llms.txt inclus)."
+    )
+    return sorted(generated_paths, key=str.casefold)
+
+
+def git_add_paths(repo: Path, paths: list[str]):
+    """Stage only the managed paths, in chunks safe for Windows command lines."""
+    unique = sorted({str(path).replace("\\", "/") for path in paths if str(path).strip()}, key=str.casefold)
+    for chunk in _chunk_git_pathspecs(unique):
+        git(repo, "add", "-A", "--", *chunk)
+
+
+def staged_changes_for_paths(repo: Path, paths: list[str]) -> bool:
+    """Return True when at least one managed path has a staged change."""
+    unique = sorted({str(path).replace("\\", "/") for path in paths if str(path).strip()}, key=str.casefold)
+    for chunk in _chunk_git_pathspecs(unique):
+        diff = git(repo, "diff", "--cached", "--quiet", "--", *chunk, check=False)
+        if diff.returncode == 1:
+            return True
+        if diff.returncode not in (0, 1):
+            raise CommandError("Impossible de déterminer les changements Git.")
+    return False
+
+
+def git_commit_only_paths(repo: Path, message: str, paths: list[str]):
+    """Commit managed paths only without swallowing unrelated staged changes."""
+    unique = sorted({str(path).replace("\\", "/") for path in paths if str(path).strip()}, key=str.casefold)
+    if not unique:
+        return
+
+    pathspec_file = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            newline="\n",
+            prefix="initkoa-context-pack-pathspec-",
+            suffix=".txt",
+            delete=False,
+        ) as handle:
+            pathspec_file = Path(handle.name)
+            for path in unique:
+                handle.write(path + "\n")
+
+        git(
+            repo,
+            "commit",
+            "--only",
+            "-m",
+            message,
+            f"--pathspec-from-file={pathspec_file}",
+        )
+    finally:
+        if pathspec_file:
+            try:
+                pathspec_file.unlink(missing_ok=True)
+            except OSError:
+                pass
+
+
 def sync_initkoa(log, pull_first=True):
     if not is_git_repo(INITKOA_REPO):
         raise RuntimeError(f"Repo initkoa introuvable ou non Git : {INITKOA_REPO}")
@@ -1256,28 +1402,33 @@ def sync_initkoa(log, pull_first=True):
         log("Git : pull --rebase --autostash...")
         git(INITKOA_REPO, "pull", "--rebase", "--autostash")
 
-    # Keep the published directory and manifest coherent even when the user runs Sync only.
+    # Keep published Context Packs and all AI discovery surfaces coherent even
+    # when the user runs Sync only.
     cleanup_retired_packs(log)
     write_manifest(log, policy)
     write_context_pack_sitemap(log)
+    ai_generated_paths = regenerate_ai_assets(log)
 
     relative_output = OUTPUT_DIR.relative_to(INITKOA_REPO).as_posix()
     relative_tool = TOOL_TARGET.relative_to(INITKOA_REPO).as_posix()
     relative_policy = POLICY_TARGET.relative_to(INITKOA_REPO).as_posix()
+    managed_paths = [
+        relative_output,
+        relative_tool,
+        relative_policy,
+        *ai_generated_paths,
+    ]
 
-    log("Git : staging des Context Packs, du builder et de la politique...")
-    git(INITKOA_REPO, "add", "--", relative_output, relative_tool, relative_policy)
-    diff = git(INITKOA_REPO, "diff", "--cached", "--quiet", "--", relative_output, relative_tool, relative_policy, check=False)
+    log("Git : staging des Context Packs, du builder, de la politique et des artefacts IA...")
+    git_add_paths(INITKOA_REPO, managed_paths)
 
-    if diff.returncode == 0:
+    if not staged_changes_for_paths(INITKOA_REPO, managed_paths):
         log("Git : aucun changement à committer.")
-    elif diff.returncode == 1:
+    else:
         stamp = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M")
         message = f"{COMMIT_MESSAGE} ({stamp})"
         log(f"Git : commit « {message} »")
-        git(INITKOA_REPO, "commit", "--only", "-m", message, "--", relative_output, relative_tool, relative_policy)
-    else:
-        raise CommandError("Impossible de déterminer les changements Git.")
+        git_commit_only_paths(INITKOA_REPO, message, managed_paths)
 
     log("Git : push...")
     git(INITKOA_REPO, "push")
@@ -1406,6 +1557,10 @@ class ContextPackApp(Tk):
                     else:
                         self.status_var.set(f"{name} terminé.")
                         self._append_log(f"{name} terminé.")
+                        if isinstance(result, list):
+                            failed = failed_repo_labels(result)
+                            if failed:
+                                self._append_log("REPOS EN ERREUR : " + ", ".join(failed))
                     self.refresh_repo_status()
         except queue.Empty:
             pass
@@ -1488,9 +1643,13 @@ class ContextPackApp(Tk):
             changed = sum(1 for r in results if r.get("changed"))
             errors = sum(1 for r in results if r.get("error"))
             self.log(f"Build terminé : {changed} pack(s) modifié(s), {errors} erreur(s).")
+            failed = failed_repo_labels(results)
             if errors:
                 self.log("Sync annulé : au moins un repo a échoué.")
-                raise RuntimeError(f"{errors} repo(s) en erreur; aucun push automatique.")
+                raise RuntimeError(
+                    f"{errors} repo(s) en erreur; aucun push automatique. "
+                    f"REPOS EN ERREUR : {', '.join(failed)}"
+                )
             sync_initkoa(self.log, pull_first=False)
             return results
         self._run_background("Build + Sync", task)
