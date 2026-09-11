@@ -1,12 +1,12 @@
 # What “Kompendio” means in Konnaxion
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/ethikos/kompendio
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/ethikos/kompendio/index.html.md
+> Canonical HTML: https://initkoa.org/platforms/konnaxion/ethikos/kompendio
+> Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/kompendio/index.html.md
 > Route: /platforms/konnaxion/ethikos/kompendio
 > Source: app\platforms\konnaxion\ethikos\kompendio\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/ethikos/kompendio)
+[Open the HTML page](https://initkoa.org/platforms/konnaxion/ethikos/kompendio)
 
 {/* FILE: page.mdx
 Path: app/platforms/konnaxion/ethikos/kompendio/page.mdx */}

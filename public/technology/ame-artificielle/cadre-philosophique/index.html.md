@@ -1,12 +1,12 @@
 # Cadre philosophique
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/cadre-philosophique
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/cadre-philosophique/index.html.md
+> Canonical HTML: https://initkoa.org/technology/ame-artificielle/cadre-philosophique
+> Markdown mirror: https://initkoa.org/technology/ame-artificielle/cadre-philosophique/index.html.md
 > Route: /technology/ame-artificielle/cadre-philosophique
 > Source: app\technology\ame-artificielle\cadre-philosophique\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/cadre-philosophique)
+[Open the HTML page](https://initkoa.org/technology/ame-artificielle/cadre-philosophique)
 
 "Horizon intellectuel de l’me Artificielle : structure, nombre, verticalité, transformation, couche de sens et hypothèse philosophique.",
 

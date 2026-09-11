@@ -1,12 +1,12 @@
 # Konsultations
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/ethikos/konsultations
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/ethikos/konsultations/index.html.md
+> Canonical HTML: https://initkoa.org/platforms/konnaxion/ethikos/konsultations
+> Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/konsultations/index.html.md
 > Route: /platforms/konnaxion/ethikos/konsultations
 > Source: app\platforms\konnaxion\ethikos\konsultations\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/ethikos/konsultations)
+[Open the HTML page](https://initkoa.org/platforms/konnaxion/ethikos/konsultations)
 
 {/* FILE: page.mdx
 Path: app/platforms/konnaxion/ethikos/konsultations/page.mdx */}

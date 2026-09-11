@@ -1,12 +1,12 @@
 # Power & Grid
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/power-and-grid
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/power-and-grid/index.html.md
+> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/power-and-grid
+> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/power-and-grid/index.html.md
 > Route: /infrastructures/kristal-farms/power-and-grid
 > Source: app\infrastructures\kristal-farms\power-and-grid\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/power-and-grid)
+[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/power-and-grid)
 
 "How Kristal Farms turns local hydro power into dependable compute and community heat: short-distance distribution, metered interfaces, grid-safe operations, and emergency resilience.",
 

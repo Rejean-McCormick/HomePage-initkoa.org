@@ -1,12 +1,12 @@
 # /principles/cosmic-etherism/faq
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/principles/cosmic-etherism/faq
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/principles/cosmic-etherism/faq/index.html.md
+> Canonical HTML: https://initkoa.org/principles/cosmic-etherism/faq
+> Markdown mirror: https://initkoa.org/principles/cosmic-etherism/faq/index.html.md
 > Route: /principles/cosmic-etherism/faq
 > Source: app\principles\cosmic-etherism\faq\page.js
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/principles/cosmic-etherism/faq)
+[Open the HTML page](https://initkoa.org/principles/cosmic-etherism/faq)
 
 Cosmic Etherism FAQ
 

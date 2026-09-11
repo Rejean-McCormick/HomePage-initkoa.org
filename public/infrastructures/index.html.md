@@ -1,12 +1,12 @@
 # /infrastructures
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/index.html.md
+> Canonical HTML: https://initkoa.org/infrastructures
+> Markdown mirror: https://initkoa.org/infrastructures/index.html.md
 > Route: /infrastructures
 > Source: app\infrastructures\page.tsx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures)
+[Open the HTML page](https://initkoa.org/infrastructures)
 
 Infrastructures
 

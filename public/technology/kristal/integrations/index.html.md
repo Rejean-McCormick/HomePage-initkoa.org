@@ -1,12 +1,12 @@
 # Kristal — Integrations
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/kristal/integrations
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/kristal/integrations/index.html.md
+> Canonical HTML: https://initkoa.org/technology/kristal/integrations
+> Markdown mirror: https://initkoa.org/technology/kristal/integrations/index.html.md
 > Route: /technology/kristal/integrations
 > Source: app\technology\kristal\integrations\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/kristal/integrations)
+[Open the HTML page](https://initkoa.org/technology/kristal/integrations)
 
 "How Kristals plug into the kOA ecosystem as portable epistemic artifacts with explicit provenance, scope, certainty, authority, validation, and reader-policy labels.",
 

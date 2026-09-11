@@ -1,12 +1,12 @@
 # Metrics & Dashboard
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/metrics-and-dashboard
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/metrics-and-dashboard/index.html.md
+> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/metrics-and-dashboard
+> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/metrics-and-dashboard/index.html.md
 > Route: /infrastructures/kristal-farms/metrics-and-dashboard
 > Source: app\infrastructures\kristal-farms\metrics-and-dashboard\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/metrics-and-dashboard)
+[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/metrics-and-dashboard)
 
 "How Kristal Farms stays accountable: the public dashboard, the core metrics (heat, energy, environment, reliability), and the governance loops that act on them.",
 

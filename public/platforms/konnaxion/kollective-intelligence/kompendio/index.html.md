@@ -1,12 +1,12 @@
 # /platforms/konnaxion/kollective-intelligence/kompendio
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/kompendio
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/kompendio/index.html.md
+> Canonical HTML: https://initkoa.org/platforms/konnaxion/kollective-intelligence/kompendio
+> Markdown mirror: https://initkoa.org/platforms/konnaxion/kollective-intelligence/kompendio/index.html.md
 > Route: /platforms/konnaxion/kollective-intelligence/kompendio
 > Source: app\platforms\konnaxion\kollective-intelligence\kompendio\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/kollective-intelligence/kompendio)
+[Open the HTML page](https://initkoa.org/platforms/konnaxion/kollective-intelligence/kompendio)
 
 'Planned reference layer for Smart Vote + EkoH: definitions, charts, and governance patterns. Not yet published as a complete Kompendio module.',
 

@@ -1,12 +1,12 @@
 # Validation
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/validation
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/validation/index.html.md
+> Canonical HTML: https://initkoa.org/technology/ame-artificielle/validation
+> Markdown mirror: https://initkoa.org/technology/ame-artificielle/validation/index.html.md
 > Route: /technology/ame-artificielle/validation
 > Source: app\technology\ame-artificielle\validation\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/validation)
+[Open the HTML page](https://initkoa.org/technology/ame-artificielle/validation)
 
 "Comment valider l’me Artificielle : cohérence interne, reproductibilité, lisibilité des réactions, stabilité des structures et distinction entre noyau opératoire et couches interprétatives.",
 

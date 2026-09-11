@@ -1,12 +1,12 @@
 # Tenancy model
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/tenancy-model
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/tenancy-model/index.html.md
+> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/tenancy-model
+> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/tenancy-model/index.html.md
 > Route: /infrastructures/kristal-farms/tenancy-model
 > Source: app\infrastructures\kristal-farms\tenancy-model\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/tenancy-model)
+[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/tenancy-model)
 
 "How Kristal Farms hosts compute without becoming a surveillance platform: the black-box boundary, what the host provides, what the tenant controls, and how contracts enforce safety and public benefit.",
 

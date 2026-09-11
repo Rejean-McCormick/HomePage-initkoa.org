@@ -1,12 +1,12 @@
 # Standard invocation pattern
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/voting-machine/integration
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/voting-machine/integration/index.html.md
+> Canonical HTML: https://initkoa.org/technology/voting-machine/integration
+> Markdown mirror: https://initkoa.org/technology/voting-machine/integration/index.html.md
 > Route: /technology/voting-machine/integration
 > Source: app\technology\voting-machine\integration\page.tsx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/voting-machine/integration)
+[Open the HTML page](https://initkoa.org/technology/voting-machine/integration)
 
 Back to VM-ENGINE Overview
 

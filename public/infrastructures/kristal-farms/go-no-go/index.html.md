@@ -1,12 +1,12 @@
 # /infrastructures/kristal-farms/go-no-go
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/go-no-go
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/go-no-go/index.html.md
+> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/go-no-go
+> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/go-no-go/index.html.md
 > Route: /infrastructures/kristal-farms/go-no-go
 > Source: app\infrastructures\kristal-farms\go-no-go\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/go-no-go)
+[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/go-no-go)
 
 ClipboardCheck,
 CheckCircle2,

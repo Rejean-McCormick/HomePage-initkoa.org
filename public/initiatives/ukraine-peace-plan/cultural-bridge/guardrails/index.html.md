@@ -1,12 +1,12 @@
 # Governance, Guardrails, and Anti-Propaganda Rules
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/cultural-bridge/guardrails
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/cultural-bridge/guardrails/index.html.md
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/guardrails
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/guardrails/index.html.md
 > Route: /initiatives/ukraine-peace-plan/cultural-bridge/guardrails
 > Source: app\initiatives\ukraine-peace-plan\cultural-bridge\guardrails\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/cultural-bridge/guardrails)
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/guardrails)
 
 # Governance, Guardrails, and Anti-Propaganda Rules
 

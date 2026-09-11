@@ -1,12 +1,12 @@
 # Fiber & Network
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/fiber-and-network
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/fiber-and-network/index.html.md
+> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/fiber-and-network
+> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/fiber-and-network/index.html.md
 > Route: /infrastructures/kristal-farms/fiber-and-network
 > Source: app\infrastructures\kristal-farms\fiber-and-network\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/fiber-and-network)
+[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/fiber-and-network)
 
 "How Kristal Farms exports computation by fiber: resilient connectivity, traffic separation (tenant vs community), monitored performance, and a black-box networking posture.",
 

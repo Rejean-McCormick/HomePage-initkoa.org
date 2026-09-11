@@ -1,12 +1,12 @@
 # /principles/civic-principles-ethics/institutions
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/principles/civic-principles-ethics/institutions
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/principles/civic-principles-ethics/institutions/index.html.md
+> Canonical HTML: https://initkoa.org/principles/civic-principles-ethics/institutions
+> Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/institutions/index.html.md
 > Route: /principles/civic-principles-ethics/institutions
 > Source: app\principles\civic-principles-ethics\institutions\page.js
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/principles/civic-principles-ethics/institutions)
+[Open the HTML page](https://initkoa.org/principles/civic-principles-ethics/institutions)
 
 Institutions
 

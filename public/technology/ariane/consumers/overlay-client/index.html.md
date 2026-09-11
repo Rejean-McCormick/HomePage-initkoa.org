@@ -1,12 +1,12 @@
 # Concept
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ariane/consumers/overlay-client
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ariane/consumers/overlay-client/index.html.md
+> Canonical HTML: https://initkoa.org/technology/ariane/consumers/overlay-client
+> Markdown mirror: https://initkoa.org/technology/ariane/consumers/overlay-client/index.html.md
 > Route: /technology/ariane/consumers/overlay-client
 > Source: app\technology\ariane\consumers\overlay-client\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ariane/consumers/overlay-client)
+[Open the HTML page](https://initkoa.org/technology/ariane/consumers/overlay-client)
 
 # Consumers / Future Overlay Client (Concept)
 

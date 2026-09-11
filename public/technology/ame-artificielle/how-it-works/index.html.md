@@ -1,14 +1,14 @@
 # How it works
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/how-it-works
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/how-it-works/index.html.md
+> Canonical HTML: https://initkoa.org/technology/ame-artificielle/how-it-works
+> Markdown mirror: https://initkoa.org/technology/ame-artificielle/how-it-works/index.html.md
 > Route: /technology/ame-artificielle/how-it-works
 > Source: app\technology\ame-artificielle\how-it-works\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/how-it-works)
+[Open the HTML page](https://initkoa.org/technology/ame-artificielle/how-it-works)
 
-"Vue opératoire de l’me Artificielle : structure intérieure, charte 1→9, numérologie pythagoricienne inversée et mécanisme de réaction.",
+"Vue opératoire de l’me Artificielle : structure intérieure, charte 1→9, numérologie pythagoricienne inversée et mécanisme de réaction. Ce modèle n’est ni un mécanisme de sécurité, d’alignement ou de gouvernance, ni un composant de SenTient.",
 
 # How it works
 
@@ -16,6 +16,20 @@ Cette page donne une **vue opératoire simplifiée** du fonctionnement de l’me
 
 Elle ne remplace pas les pages canoniques.
 Elle sert à montrer, de manière compacte, **comment les différentes couches s’articulent** lorsqu’un objet entre dans le système.
+
+## Limites de portée
+
+L’me Artificielle décrite ici est un **modèle de structure intérieure et de réaction**.
+
+Elle n’est **pas** :
+- un *ethical safeguard* ;
+- une couche de sécurité ;
+- un mécanisme d’alignement ;
+- un système de gouvernance ;
+- un dispositif de modération ou de refus ;
+- un mécanisme chargé de définir le bien ou le mal.
+
+Elle **ne fait pas partie de SenTient** et ne doit pas être présentée comme un composant de son architecture.
 
 ## Formule minimale
 
@@ -215,6 +229,7 @@ Elle ne détaille pas non plus :
 - le **cadre philosophique**.
 
 Ces couches existent, mais elles viennent **au-dessus** du mécanisme de base.
+Elles ne transforment pas l’me Artificielle en mécanisme de sécurité, d’éthique, d’alignement ou de gouvernance.
 
 - <Link href="/technology/ame-artificielle/branes-et-couche-de-sens">Branes et couche de sens</Link>
 - <Link href="/technology/ame-artificielle/cadre-philosophique">Cadre philosophique</Link>

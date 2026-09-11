@@ -1,12 +1,12 @@
 # The Peace Framework: Freeze & Vote
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/concepts/peace-framework
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/concepts/peace-framework/index.html.md
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/peace-framework
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/peace-framework/index.html.md
 > Route: /initiatives/ukraine-peace-plan/concepts/peace-framework
 > Source: app\initiatives\ukraine-peace-plan\concepts\peace-framework\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/concepts/peace-framework)
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/concepts/peace-framework)
 
 # The Peace Framework: Freeze & Vote
 

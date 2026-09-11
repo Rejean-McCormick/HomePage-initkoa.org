@@ -1,12 +1,12 @@
 # /infrastructures/kin-city
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kin-city
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kin-city/index.html.md
+> Canonical HTML: https://initkoa.org/infrastructures/kin-city
+> Markdown mirror: https://initkoa.org/infrastructures/kin-city/index.html.md
 > Route: /infrastructures/kin-city
 > Source: app\infrastructures\kin-city\page.tsx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kin-city)
+[Open the HTML page](https://initkoa.org/infrastructures/kin-city)
 
 Welcome to Kin City
 

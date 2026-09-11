@@ -1,12 +1,12 @@
 # Glossary
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ariane/concepts/glossary
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ariane/concepts/glossary/index.html.md
+> Canonical HTML: https://initkoa.org/technology/ariane/concepts/glossary
+> Markdown mirror: https://initkoa.org/technology/ariane/concepts/glossary/index.html.md
 > Route: /technology/ariane/concepts/glossary
 > Source: app\technology\ariane\concepts\glossary\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ariane/concepts/glossary)
+[Open the HTML page](https://initkoa.org/technology/ariane/concepts/glossary)
 
 # Glossary
 

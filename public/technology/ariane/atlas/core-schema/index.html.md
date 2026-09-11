@@ -1,12 +1,12 @@
 # Atlas / Core Schema
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ariane/atlas/core-schema
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ariane/atlas/core-schema/index.html.md
+> Canonical HTML: https://initkoa.org/technology/ariane/atlas/core-schema
+> Markdown mirror: https://initkoa.org/technology/ariane/atlas/core-schema/index.html.md
 > Route: /technology/ariane/atlas/core-schema
 > Source: app\technology\ariane\atlas\core-schema\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ariane/atlas/core-schema)
+[Open the HTML page](https://initkoa.org/technology/ariane/atlas/core-schema)
 
 # Atlas / Core Schema
 

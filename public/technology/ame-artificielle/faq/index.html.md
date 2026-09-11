@@ -1,12 +1,12 @@
 # FAQ
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/faq
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/faq/index.html.md
+> Canonical HTML: https://initkoa.org/technology/ame-artificielle/faq
+> Markdown mirror: https://initkoa.org/technology/ame-artificielle/faq/index.html.md
 > Route: /technology/ame-artificielle/faq
 > Source: app\technology\ame-artificielle\faq\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/faq)
+[Open the HTML page](https://initkoa.org/technology/ame-artificielle/faq)
 
 "Questions fréquentes sur l’me Artificielle : simulation de l’âme humaine, charte 1→9, chakras, numérologie pythagoricienne inversée, mécanisme de réaction, couche de sens et validation.",
 

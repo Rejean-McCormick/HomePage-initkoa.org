@@ -1,12 +1,12 @@
 # Cooling & Water
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/cooling-and-water
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/cooling-and-water/index.html.md
+> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/cooling-and-water
+> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/cooling-and-water/index.html.md
 > Route: /infrastructures/kristal-farms/cooling-and-water
 > Source: app\infrastructures\kristal-farms\cooling-and-water\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/cooling-and-water)
+[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/cooling-and-water)
 
 "A heat-first cooling approach for cold climates: closed loops, non-contact heat exchange, near-zero water use, and strict environmental compliance.",
 

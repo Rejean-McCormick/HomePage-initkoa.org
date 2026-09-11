@@ -1,12 +1,12 @@
 # The Construction Olympics: A New Global Competition
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/concepts/construction-olympics
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/concepts/construction-olympics/index.html.md
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/construction-olympics
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/construction-olympics/index.html.md
 > Route: /initiatives/ukraine-peace-plan/concepts/construction-olympics
 > Source: app\initiatives\ukraine-peace-plan\concepts\construction-olympics\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/concepts/construction-olympics)
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/concepts/construction-olympics)
 
 # The Construction Olympics: A New Global Competition
 

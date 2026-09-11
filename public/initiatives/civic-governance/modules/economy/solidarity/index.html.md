@@ -1,12 +1,12 @@
 # 1. The Operational Model: "Turnkey Autonomy"
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/economy/solidarity
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/economy/solidarity/index.html.md
+> Canonical HTML: https://initkoa.org/initiatives/civic-governance/modules/economy/solidarity
+> Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/economy/solidarity/index.html.md
 > Route: /initiatives/civic-governance/modules/economy/solidarity
 > Source: app\initiatives\civic-governance\modules\economy\solidarity\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/economy/solidarity)
+[Open the HTML page](https://initkoa.org/initiatives/civic-governance/modules/economy/solidarity)
 
 # The Solution: The Solidarity Network (Les Ateliers Solidaires)
 

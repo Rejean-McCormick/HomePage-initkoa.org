@@ -1,12 +1,12 @@
 # /principles
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/principles
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/principles/index.html.md
+> Canonical HTML: https://initkoa.org/principles
+> Markdown mirror: https://initkoa.org/principles/index.html.md
 > Route: /principles
 > Source: app\principles\page.js
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/principles)
+[Open the HTML page](https://initkoa.org/principles)
 
 Principles
 

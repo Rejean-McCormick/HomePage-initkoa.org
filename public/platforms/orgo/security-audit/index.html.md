@@ -1,12 +1,12 @@
 # Security & auditability
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/orgo/security-audit
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/orgo/security-audit/index.html.md
+> Canonical HTML: https://initkoa.org/platforms/orgo/security-audit
+> Markdown mirror: https://initkoa.org/platforms/orgo/security-audit/index.html.md
 > Route: /platforms/orgo/security-audit
 > Source: app\platforms\orgo\security-audit\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/orgo/security-audit)
+[Open the HTML page](https://initkoa.org/platforms/orgo/security-audit)
 
 ShieldCheck,
 ScanEye,

@@ -1,12 +1,12 @@
 # /technology/ame-artificielle
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/index.html.md
+> Canonical HTML: https://initkoa.org/technology/ame-artificielle
+> Markdown mirror: https://initkoa.org/technology/ame-artificielle/index.html.md
 > Route: /technology/ame-artificielle
 > Source: app\technology\ame-artificielle\page.tsx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ame-artificielle)
+[Open the HTML page](https://initkoa.org/technology/ame-artificielle)
 
 me Artificielle
 

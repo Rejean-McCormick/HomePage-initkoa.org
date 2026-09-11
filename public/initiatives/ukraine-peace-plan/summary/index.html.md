@@ -1,12 +1,12 @@
 # Summary
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/summary
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/summary/index.html.md
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/summary
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/summary/index.html.md
 > Route: /initiatives/ukraine-peace-plan/summary
 > Source: app\initiatives\ukraine-peace-plan\summary\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/summary)
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/summary)
 
 # Summary
 

@@ -1,12 +1,12 @@
 # Gamification: The End of the Grade Point Average
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/education/badges
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/education/badges/index.html.md
+> Canonical HTML: https://initkoa.org/initiatives/civic-governance/modules/education/badges
+> Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/education/badges/index.html.md
 > Route: /initiatives/civic-governance/modules/education/badges
 > Source: app\initiatives\civic-governance\modules\education\badges\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/education/badges)
+[Open the HTML page](https://initkoa.org/initiatives/civic-governance/modules/education/badges)
 
 # Gamification: The End of the Grade Point Average
 

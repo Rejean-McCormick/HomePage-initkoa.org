@@ -1,12 +1,12 @@
 # FAQ
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/faq
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/faq/index.html.md
+> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/faq
+> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/faq/index.html.md
 > Route: /infrastructures/kristal-farms/faq
 > Source: app\infrastructures\kristal-farms\faq\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/faq)
+[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/faq)
 
 "Frequently asked questions about Kristal Farms: what it is, who it serves, privacy boundaries, heat reuse, environmental safeguards, governance, and rollout phases.",
 

@@ -1,12 +1,12 @@
 # /why
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/why
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/why/index.html.md
+> Canonical HTML: https://initkoa.org/why
+> Markdown mirror: https://initkoa.org/why/index.html.md
 > Route: /why
 > Source: app\why\page.tsx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/why)
+[Open the HTML page](https://initkoa.org/why)
 
 kOA / The Diagnosis
 

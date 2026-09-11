@@ -1,12 +1,12 @@
 # /research
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/research
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/research/index.html.md
+> Canonical HTML: https://initkoa.org/research
+> Markdown mirror: https://initkoa.org/research/index.html.md
 > Route: /research
 > Source: app\research\page.js
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/research)
+[Open the HTML page](https://initkoa.org/research)
 
 Working Theory
 

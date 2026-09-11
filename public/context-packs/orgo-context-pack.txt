@@ -1,7 +1,7 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Orgo
-source_commit: a7ea7cba6b409e2b1b6b0eb0af871f0931c54094
+source_commit: a4a982488769b7b0ae8a1a548075c97a9b46e27a
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -9,18 +9,18 @@ selection_mode: markdown
 wiki_source_commit: 05d4ed6e021761e7b8762563b571fb1ac989f7b5
 wiki_working_tree_markdown: clean
 policy_version: 2026-09-10.13
-repo_files: 49
+repo_files: 52
 wiki_files: 20
-source_files: 69
-included_files: 64
+source_files: 72
+included_files: 67
 excluded_files: 5
 duplicate_files: 0
-content_bytes: 506233
-authority_counts: {"reference":64}
-content_role_counts: {"knowledge":44,"navigation":20}
-generated_at: 2026-09-11T06:29:42-04:00
-files: 64
-content_sha256: 9420bfe37eddf9ea6e5440612392531248caf518a9055bf9fd6870d827f07268
+content_bytes: 515064
+authority_counts: {"reference":67}
+content_role_counts: {"knowledge":47,"navigation":20}
+generated_at: 2026-09-11T07:37:03-04:00
+files: 67
+content_sha256: fdb67af0cf672a2eb9fea306d12df03337a9ad5e685129627c7467034768b3c9
 
 ================================================================================================
 FILE INDEX
@@ -64,32 +64,35 @@ FILE INDEX
 36. [reference] [knowledge] Docs/Technical-Reference/IMPLEMENTATION_STATUS.md | bytes=6763 | sha256=ce086cef2e1c743c027689741cf9b661bd13923c4f39127ecc392764838cba1c
 37. [reference] [knowledge] Docs/Technical-Reference/INTEGRATION_BRIDGE.md | bytes=4218 | sha256=0da629b20f824ea1745da1cf040cd397e8863e3449827fa8174ce887a6365762
 38. [reference] [knowledge] Docs/Technical-Reference/LOCAL_VALIDATION.md | bytes=5403 | sha256=2773d9d3298d4fc43b442cdf88d5b806ee8bca0fd7fbabcce2f8d53118e7acbc
-39. [reference] [knowledge] Docs/Technical-Reference/Semantic-Charters.md | bytes=7137 | sha256=ecb6cd50387aadf9821ba0a9faa2b111257038c0393a6a70814081f36c0ee7ca
-40. [reference] [knowledge] Docs/Technical-Reference/TARGET_ARCHITECTURE.md | bytes=17758 | sha256=ddb637b0e2b09ee3be3b9ba961bbaf1e5a47ad4192d49221f4d6ae68e9b2f453
-41. [reference] [knowledge] Docs/Technical-Reference/UI_AND_KOALI_INTEGRATION.md | bytes=11959 | sha256=dc142c599a095d89cd95f60640634fc9f855d5cd47b5293c6b0fd6971a0186ca
-42. [reference] [knowledge] Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md | bytes=5611 | sha256=216f9cc8d5b655953ccff79c7a6e6a3b38d76b8b1399ae4e4e738144f4480c2e
-43. [reference] [knowledge] Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md | bytes=47606 | sha256=1d5d33ee1859e5dbb0ab4349c8118de6358c23a8575400c3495382c382b29cbb
-44. [reference] [knowledge] Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md | bytes=8752 | sha256=32fb353b996b3127d47b1c506182aef0d9b7ea36179d2bbb880db4997570d0f8
-45. [reference] [knowledge] Docs/Technical-Reference/v3/2-orgo-documentation-index.md | bytes=31141 | sha256=4f9b300feae5109e99738b92e7eea956ab7f3af220f77ad0c3a7cce1c5b8d79b
-46. [reference] [knowledge] Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md | bytes=6078 | sha256=58731c133f3be8823076978de7ec658c33ad8d3fd63a45f200511aeaae775cf2
-47. [reference] [knowledge] Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md | bytes=28392 | sha256=153f921c269a3b6e2dd83fbbfcd2380f765edd3d23bfa9f2104f275b6732723d
-48. [reference] [knowledge] Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md | bytes=3091 | sha256=3218eca4e4b8dddca16a36b73ee7efdad46f77865605e396deb9f04381785daf
-49. [reference] [knowledge] Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md | bytes=46326 | sha256=162a126d2383a66547e8bcde7bccdd1db3ed56c27d98d8670a04b1d354a3d04e
-50. [reference] [knowledge] Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md | bytes=1931 | sha256=17f1b6c211135258ad1eb5b6d128e52855a45542b9bafa0221a492d9273a9281
-51. [reference] [knowledge] Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md | bytes=40973 | sha256=1f78e6f73f4c1aa21715d2f3b74c81c0fbfa5de1656649f53728c6b6d2e7d02d
-52. [reference] [knowledge] Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md | bytes=1969 | sha256=629c53ebcab194b0a908102faa7abb93c0a3bf0e91d9d2bc7475bb1f1715af37
-53. [reference] [knowledge] Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md | bytes=29951 | sha256=7183935cc369671486769060758e2baa7ff46b591147659bcfa89f0dc5250d3e
-54. [reference] [knowledge] Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md | bytes=3706 | sha256=85155be5e53283eb4c1bc983ad0c01a85cffc561d68032cbc5a8694b33f73d7b
-55. [reference] [knowledge] Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md | bytes=21619 | sha256=01ec9e77a8968bcd78a8fab691ce6f42ca3fd9e0d5d2fba5fd8acd138fdfa4e5
-56. [reference] [knowledge] Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md | bytes=1543 | sha256=5bc04cd7a75ca6980a603a7f44b857c474de2f5c82213c058d9546c5e0e976c7
-57. [reference] [knowledge] Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md | bytes=29606 | sha256=f144c92bf18d6fc23f730bd829d35ebbbf5fa54ce5878967ba4649fea2c61282
-58. [reference] [knowledge] Docs/Technical-Reference/WikiData-Orgo_Chart.md | bytes=6733 | sha256=61469f1577eb077a6a5ac0318980c39075d7e9bc65df07524185931cf653dd77
-59. [reference] [knowledge] legacy/README.md | bytes=252 | sha256=95c071ccbff8226ae71f49e8406dc307247e46eabd54619974767616a8dfdc44
-60. [reference] [knowledge] packages/README.md | bytes=229 | sha256=3194cfb55b18cd7fc9bec28fe853673f13e24090ce37e6eba1505be95d5767cb
-61. [reference] [knowledge] packages/tsconfig/README.md | bytes=106 | sha256=d39b75548339193750b127f369063e86a96897a6e5753bd3a73a233f2ac4f1f7
-62. [reference] [knowledge] README.md | bytes=2503 | sha256=a60f3bf4ad60e9aab52da73b6b684a886be5a6d398aaf6381c8e6a77acff3810
-63. [reference] [knowledge] validation/completion/STATUS.md | bytes=438 | sha256=f6c47d66c878ada27597ec5d566515a525c11e0ff281b50d93293687a463bcf3
-64. [reference] [knowledge] validation/README.md | bytes=296 | sha256=bbb8609f65d9da277774b5461f9b7abff436cdd80898360c74c0cc0a6ce385d3
+39. [reference] [knowledge] Docs/Technical-Reference/SCENARIO_INJECTOR.md | bytes=1619 | sha256=2e2955eb20f5d9bd159b50a14f9084ff512111a6c97bcfb3b1c2553ee8496f47
+40. [reference] [knowledge] Docs/Technical-Reference/Semantic-Charters.md | bytes=7137 | sha256=ecb6cd50387aadf9821ba0a9faa2b111257038c0393a6a70814081f36c0ee7ca
+41. [reference] [knowledge] Docs/Technical-Reference/TARGET_ARCHITECTURE.md | bytes=17758 | sha256=ddb637b0e2b09ee3be3b9ba961bbaf1e5a47ad4192d49221f4d6ae68e9b2f453
+42. [reference] [knowledge] Docs/Technical-Reference/UI_AND_KOALI_INTEGRATION.md | bytes=11959 | sha256=dc142c599a095d89cd95f60640634fc9f855d5cd47b5293c6b0fd6971a0186ca
+43. [reference] [knowledge] Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md | bytes=5611 | sha256=216f9cc8d5b655953ccff79c7a6e6a3b38d76b8b1399ae4e4e738144f4480c2e
+44. [reference] [knowledge] Docs/Technical-Reference/v3/1-orgo-database-schema-reference.md | bytes=47606 | sha256=1d5d33ee1859e5dbb0ab4349c8118de6358c23a8575400c3495382c382b29cbb
+45. [reference] [knowledge] Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md | bytes=8752 | sha256=32fb353b996b3127d47b1c506182aef0d9b7ea36179d2bbb880db4997570d0f8
+46. [reference] [knowledge] Docs/Technical-Reference/v3/2-orgo-documentation-index.md | bytes=31141 | sha256=4f9b300feae5109e99738b92e7eea956ab7f3af220f77ad0c3a7cce1c5b8d79b
+47. [reference] [knowledge] Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md | bytes=6078 | sha256=58731c133f3be8823076978de7ec658c33ad8d3fd63a45f200511aeaae775cf2
+48. [reference] [knowledge] Docs/Technical-Reference/v3/3-orgo-full-stack-technical-spec.md | bytes=28392 | sha256=153f921c269a3b6e2dd83fbbfcd2380f765edd3d23bfa9f2104f275b6732723d
+49. [reference] [knowledge] Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md | bytes=3091 | sha256=3218eca4e4b8dddca16a36b73ee7efdad46f77865605e396deb9f04381785daf
+50. [reference] [knowledge] Docs/Technical-Reference/v3/4-orgo-functional-code-name-inventory.md | bytes=46326 | sha256=162a126d2383a66547e8bcde7bccdd1db3ed56c27d98d8670a04b1d354a3d04e
+51. [reference] [knowledge] Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md | bytes=1931 | sha256=17f1b6c211135258ad1eb5b6d128e52855a45542b9bafa0221a492d9273a9281
+52. [reference] [knowledge] Docs/Technical-Reference/v3/5-orgo-Core-Services-Specification.md | bytes=40973 | sha256=1f78e6f73f4c1aa21715d2f3b74c81c0fbfa5de1656649f53728c6b6d2e7d02d
+53. [reference] [knowledge] Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md | bytes=1969 | sha256=629c53ebcab194b0a908102faa7abb93c0a3bf0e91d9d2bc7475bb1f1715af37
+54. [reference] [knowledge] Docs/Technical-Reference/v3/6-orgo-insights-module-config-parameters.md | bytes=29951 | sha256=7183935cc369671486769060758e2baa7ff46b591147659bcfa89f0dc5250d3e
+55. [reference] [knowledge] Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md | bytes=3706 | sha256=85155be5e53283eb4c1bc983ad0c01a85cffc561d68032cbc5a8694b33f73d7b
+56. [reference] [knowledge] Docs/Technical-Reference/v3/7-orgo-organization-profiles-and-cyclic-overview.md | bytes=21619 | sha256=01ec9e77a8968bcd78a8fab691ce6f42ca3fd9e0d5d2fba5fd8acd138fdfa4e5
+57. [reference] [knowledge] Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md | bytes=1543 | sha256=5bc04cd7a75ca6980a603a7f44b857c474de2f5c82213c058d9546c5e0e976c7
+58. [reference] [knowledge] Docs/Technical-Reference/v3/8-orgo-cyclic-overview-labels-and-flow-rules.md | bytes=29606 | sha256=f144c92bf18d6fc23f730bd829d35ebbbf5fa54ce5878967ba4649fea2c61282
+59. [reference] [knowledge] Docs/Technical-Reference/WikiData-Orgo_Chart.md | bytes=6733 | sha256=61469f1577eb077a6a5ac0318980c39075d7e9bc65df07524185931cf653dd77
+60. [reference] [knowledge] legacy/README.md | bytes=252 | sha256=95c071ccbff8226ae71f49e8406dc307247e46eabd54619974767616a8dfdc44
+61. [reference] [knowledge] packages/README.md | bytes=229 | sha256=3194cfb55b18cd7fc9bec28fe853673f13e24090ce37e6eba1505be95d5767cb
+62. [reference] [knowledge] packages/tsconfig/README.md | bytes=106 | sha256=d39b75548339193750b127f369063e86a96897a6e5753bd3a73a233f2ac4f1f7
+63. [reference] [knowledge] README.md | bytes=2503 | sha256=a60f3bf4ad60e9aab52da73b6b684a886be5a6d398aaf6381c8e6a77acff3810
+64. [reference] [knowledge] tools/scenario-injector/AI_TEMPLATE.md | bytes=4013 | sha256=633d3b16879c9e841e050b55b0e2ec6af1ffcfa5e760642920babff24ee8ec78
+65. [reference] [knowledge] tools/scenario-injector/README.md | bytes=3199 | sha256=0587c40e8d685b742222b972f22a7e533e253136adc228d273c728c22e74ad29
+66. [reference] [knowledge] validation/completion/STATUS.md | bytes=438 | sha256=f6c47d66c878ada27597ec5d566515a525c11e0ff281b50d93293687a463bcf3
+67. [reference] [knowledge] validation/README.md | bytes=296 | sha256=bbb8609f65d9da277774b5461f9b7abff436cdd80898360c74c0cc0a6ce385d3
 
 
 ================================================================================================
@@ -3623,6 +3626,48 @@ Tester une panne SMTP/fournisseur, des callbacks tardifs/dupliqués/contradictoi
 `GET /api/v3/system/overview` donne l'état des files/processus/workers. `GET /api/v3/system/metrics` fournit des gauges Prometheus avec authentification et permissions d'exploitation. Les logs HTTP sont des spans JSON sur stdout. Collecteur, alertes, sauvegardes planifiées et politique de rétention sont à configurer dans l'environnement de déploiement.
 
 Les contrats natifs Kristal/Konnaxion/Architect/kOA et Koali/Capsule sont à fournir et à vérifier séparément. Les bridges et le contrat public Orgo livrés sont explicites ; ils ne déclarent pas une compatibilité native non démontrée.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/SCENARIO_INJECTOR.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2e2955eb20f5d9bd159b50a14f9084ff512111a6c97bcfb3b1c2553ee8496f47
+CONTENT_BYTES: 1619
+================================================================================================
+
+# Scenario Injector — note d'architecture
+
+## But
+
+Fournir une frontière explicite entre une IA qui **propose une simulation** et Orgo qui **persiste des faits synthétiques**.
+
+L'IA n'obtient pas un accès direct à Orgo. Elle produit un document `orgo.scenario.v1` limité à une liste d'opérations autorisées. L'injecteur valide ce document, résout les références locales en UUID runtime, puis utilise uniquement l'API publique Orgo v3.
+
+## Invariants
+
+1. Aucun SQL cross-boundary.
+2. Aucun UUID runtime généré par l'IA.
+3. Aucune route HTTP arbitraire.
+4. Dry-run par défaut; `--apply` est obligatoire pour écrire.
+5. Idempotency-Key déterministe par opération.
+6. Correlation ID commun au scénario.
+7. Les fixtures v1 sont toujours marquées synthétiques.
+8. Les Signals possèdent un `external_reference` stable.
+9. Une attente de worker ne transforme jamais un timeout en faux succès.
+10. Le rapport d'import conserve les UUID réellement créés/résolus.
+
+## Frontière IA
+
+Le template généré par `scenario.ps1 template` est le contrat à fournir à l'IA avec le brief du scénario. La réponse attendue est uniquement du JSON.
+
+## Frontière Orgo
+
+L'injecteur utilise les routes existantes : workflows, cases, tasks, signals et transitions. Il n'ajoute aucun endpoint au serveur Orgo et ne modifie pas le schéma Prisma.
+
+## Évolution
+
+Le schéma est versionné (`orgo.scenario.v1`). Toute extension future (personnes, rôles, domaines spécialisés, pièces jointes) doit ajouter des opérations explicites et des validateurs dédiés plutôt qu'un mécanisme d'appel HTTP générique.
 
 
 ================================================================================================
@@ -13112,6 +13157,254 @@ Your previous Windows build was successful; rerun `build` after installation.
 The final Multer override and regenerated lock file must be validated on Windows
 by the `security` campaign. Do not deploy until quick, embedded, build and
 security have completed with no unexpected failures.
+
+
+================================================================================================
+FILE: tools/scenario-injector/AI_TEMPLATE.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 633d3b16879c9e841e050b55b0e2ec6af1ffcfa5e760642920babff24ee8ec78
+CONTENT_BYTES: 4013
+================================================================================================
+
+# Orgo Scenario Injector — contrat IA v1
+
+Tu simules un scénario destiné à être injecté dans Orgo RC via un outil contrôlé.
+
+## Règles absolues
+
+1. Réponds avec **un seul objet JSON**, sans bloc Markdown et sans texte avant/après.
+2. Utilise exactement "schema_version": "orgo.scenario.v1".
+3. Le scénario est fictif : "synthetic": true et "epistemic_status": "synthetic_demo_fixture".
+4. N'invente jamais d'UUID Orgo. Utilise des références locales stables comme "case.main", "task.review30", "workflow.main".
+5. N'écris jamais de SQL, d'URL arbitraire, de token, de mot de passe ou de secret.
+6. Ne produis pas de PII réelle. Les noms éventuels doivent être explicitement fictifs et placés dans metadata/payload.
+7. Les Signals Orgo utilisent source en minuscules: email | api | manual | sync.
+8. Dans les règles workflow, match.source utilise les valeurs majuscules: EMAIL | API | SYSTEM | TIMER.
+9. Un label Orgo est obligatoire pour Case/Task/Signal et suit le format ex. "2.11".
+10. SET_METADATA cible actuellement une Task, pas un Case. Pour un Case, mets metadata directement dans CREATE_CASE.
+11. Chaque Signal doit avoir external_reference stable.
+12. Ordonne les opérations afin qu'une référence soit créée avant son utilisation.
+
+## Opérations autorisées
+
+publish_workflow, simulate_workflow, execute_workflow, create_case, create_task, create_signal, queue_signal, wait_signal, comment_task, transition_task, transition_case.
+
+## Enveloppe obligatoire
+
+{
+  "schema_version": "orgo.scenario.v1",
+  "scenario": {
+    "id": "scenario-id-stable",
+    "title": "Titre",
+    "description": "But de la simulation",
+    "synthetic": true,
+    "epistemic_status": "synthetic_demo_fixture",
+    "correlation_id": "scenario.scenario-id-stable"
+  },
+  "operations": []
+}
+
+## Formes utiles
+
+### Créer un Case
+{
+  "op": "create_case",
+  "ref": "case.main",
+  "input": {
+    "title": "...",
+    "description": "...",
+    "label": "2.11",
+    "severity": "MODERATE",
+    "visibility": "INTERNAL",
+    "metadata": { "synthetic": true }
+  }
+}
+
+### Créer une Task liée
+{
+  "op": "create_task",
+  "ref": "task.one",
+  "case_ref": "case.main",
+  "input": {
+    "title": "...",
+    "description": "...",
+    "type": "scenario",
+    "category": "request",
+    "label": "2.11",
+    "priority": "MEDIUM",
+    "metadata": { "synthetic": true }
+  }
+}
+
+### Créer un Signal
+{
+  "op": "create_signal",
+  "ref": "signal.event1",
+  "input": {
+    "source": "api",
+    "external_reference": "scenario:scenario-id-stable:event1:v1",
+    "type": "scenario_event",
+    "category": "update",
+    "severity": "MODERATE",
+    "label": "2.11",
+    "title": "...",
+    "description": "...",
+    "payload": { "synthetic": true }
+  }
+}
+
+### Workflow
+{
+  "op": "publish_workflow",
+  "ref": "workflow.main",
+  "code": "scenario_workflow",
+  "content": {
+    "rules": [{
+      "id": "event_v1",
+      "enabled": true,
+      "match": { "source": "API", "type": "scenario_event" },
+      "actions": [{
+        "type": "CREATE_CASE",
+        "input": {
+          "title": "$signal.title",
+          "description": "$signal.description",
+          "label": "$signal.label",
+          "severity": "$signal.severity",
+          "metadata": { "synthetic": true }
+        }
+      }]
+    }]
+  }
+}
+
+Un create_signal peut contenir "workflow_ref": "workflow.main" pour que le Signal soit accepté et mis en file pour traitement par le worker Orgo. Ajoute ensuite {"op":"wait_signal","signal_ref":"signal.event1","timeout_seconds":30} si le scénario exige que les effets du workflow soient visibles avant de poursuivre.
+
+## Qualité attendue
+
+- scénario cohérent et déterministe;
+- titres lisibles par un humain;
+- metadata/payload contenant scenario_id et synthetic:true;
+- pas de succès scientifique ou institutionnel inventé;
+- distinguer observation, décision, tâche et résultat;
+- préférer peu d'opérations significatives à un grand volume artificiel.
+
+## Brief à simuler
+
+[COLLER ICI LE BRIEF DU SCÉNARIO]
+
+
+================================================================================================
+FILE: tools/scenario-injector/README.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0587c40e8d685b742222b972f22a7e533e253136adc228d273c728c22e74ad29
+CONTENT_BYTES: 3199
+================================================================================================
+
+# Orgo Scenario Injector
+
+Outil local contrôlé pour transformer un scénario produit par une IA en écritures Orgo traçables via l'API v3.
+
+## Flux
+
+```text
+brief humain
+  ↓
+scenario.ps1 template
+  ↓
+prompt IA
+  ↓
+JSON orgo.scenario.v1
+  ↓
+validate
+  ↓
+plan / dry-run
+  ↓
+inject --apply
+  ↓
+API Orgo + idempotency + correlation
+  ↓
+rapport JSON d'import
+```
+
+L'outil ne fait **aucun SQL direct** et n'accepte pas d'endpoint arbitraire.
+
+## 1. Générer le template IA
+
+```powershell
+cd C:\mycode\Orgo\Orgo
+.\tools\scenario-injector\scenario.ps1 template --out .\scenario-prompt.md
+```
+
+Avec un brief Markdown :
+
+```powershell
+.\tools\scenario-injector\scenario.ps1 template `
+  --brief C:\chemin\scenario.md `
+  --out .\scenario-prompt.md
+```
+
+Donner `scenario-prompt.md` à l'IA. Sa réponse doit être enregistrée en JSON, par exemple `scenario-a014.json`.
+
+## 2. Valider
+
+```powershell
+.\tools\scenario-injector\scenario.ps1 validate .\scenario-a014.json
+```
+
+## 3. Voir le plan sans toucher Orgo
+
+```powershell
+.\tools\scenario-injector\scenario.ps1 plan .\scenario-a014.json
+.\tools\scenario-injector\scenario.ps1 inject .\scenario-a014.json
+```
+
+Sans `--apply`, `inject` reste un dry-run.
+
+## 4. Injection réelle
+
+L'API Orgo doit être active. Le worker doit aussi être actif si le scénario utilise `workflow_ref` sur un Signal et `wait_signal`.
+
+```powershell
+$env:ORGO_SCENARIO_API_URL      = 'http://127.0.0.1:4000/api/v3'
+$env:ORGO_SCENARIO_ORGANIZATION = 'orgo-e2e'
+$env:ORGO_SCENARIO_EMAIL         = 'e2e@example.test'
+$env:ORGO_SCENARIO_PASSWORD      = '<mot-de-passe>'
+
+.\tools\scenario-injector\scenario.ps1 inject `
+  .\tools\scenario-injector\examples\uckk-a014.scenario.json `
+  --apply
+```
+
+Un token peut remplacer l'authentification email/password :
+
+```powershell
+$env:ORGO_SCENARIO_TOKEN = '<bearer-token>'
+```
+
+## Sécurité et déterminisme
+
+- le format v1 exige `synthetic: true`;
+- aucun UUID runtime n'est fourni par l'IA;
+- chaque mutation reçoit une `Idempotency-Key` déterministe;
+- toutes les opérations utilisent le même `correlation_id` de scénario sauf override explicite;
+- les metadata/payload injectés sont marqués `synthetic` et `epistemic_status`;
+- le même fichier peut être rejoué sans dupliquer les commandes si son contenu et l'identité d'exécution restent identiques;
+- un `external_reference` stable est obligatoire pour chaque Signal;
+- aucune route arbitraire ni SQL direct n'est autorisé.
+
+## Opérations v1
+
+`publish_workflow`, `simulate_workflow`, `execute_workflow`, `create_case`, `create_task`, `create_signal`, `queue_signal`, `wait_signal`, `comment_task`, `transition_task`, `transition_case`.
+
+## Important — worker Orgo
+
+`create_signal` avec `workflow_ref` persiste le Signal et met le traitement en file. `wait_signal` attend que le worker le marque `PROCESSED`. Si le worker n'est pas actif, le rapport indiquera `pending_worker` au lieu d'inventer un succès.
+
+## RC utilisée comme contrat
+
+Le template reflète le contrat du snapshot RC inspecté : `source` des Signals en minuscules, `match.source` des workflows en majuscules, labels Orgo obligatoires et `SET_METADATA` non utilisé sur un Case.
 
 
 ================================================================================================

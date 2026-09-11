@@ -1,12 +1,12 @@
 # Pi Theory: The Mathematical Genesis
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/research/pi-theory
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/research/pi-theory/index.html.md
+> Canonical HTML: https://initkoa.org/research/pi-theory
+> Markdown mirror: https://initkoa.org/research/pi-theory/index.html.md
 > Route: /research/pi-theory
 > Source: app\research\pi-theory\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/research/pi-theory)
+[Open the HTML page](https://initkoa.org/research/pi-theory)
 
 # Pi Theory: The Mathematical Genesis
 

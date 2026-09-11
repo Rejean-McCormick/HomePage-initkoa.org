@@ -1,12 +1,12 @@
 # The Diagnostic: Everyday Extraction
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/economy/extraction
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/economy/extraction/index.html.md
+> Canonical HTML: https://initkoa.org/initiatives/civic-governance/modules/economy/extraction
+> Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/economy/extraction/index.html.md
 > Route: /initiatives/civic-governance/modules/economy/extraction
 > Source: app\initiatives\civic-governance\modules\economy\extraction\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/civic-governance/modules/economy/extraction)
+[Open the HTML page](https://initkoa.org/initiatives/civic-governance/modules/economy/extraction)
 
 # The Diagnostic: Everyday Extraction
 

@@ -1,12 +1,12 @@
 # Distribution & versioning
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/kristal/distribution-and-versioning
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/kristal/distribution-and-versioning/index.html.md
+> Canonical HTML: https://initkoa.org/technology/kristal/distribution-and-versioning
+> Markdown mirror: https://initkoa.org/technology/kristal/distribution-and-versioning/index.html.md
 > Route: /technology/kristal/distribution-and-versioning
 > Source: app\technology\kristal\distribution-and-versioning\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/kristal/distribution-and-versioning)
+[Open the HTML page](https://initkoa.org/technology/kristal/distribution-and-versioning)
 
 "How Kristals are published, updated, activated, rolled back, and distributed safely, including offline and federated use.",
 

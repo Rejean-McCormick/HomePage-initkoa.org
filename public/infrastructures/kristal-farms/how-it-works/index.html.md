@@ -1,12 +1,12 @@
 # How it works
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/how-it-works
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/how-it-works/index.html.md
+> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/how-it-works
+> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/how-it-works/index.html.md
 > Route: /infrastructures/kristal-farms/how-it-works
 > Source: app\infrastructures\kristal-farms\how-it-works\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/how-it-works)
+[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/how-it-works)
 
 "A plain-language walkthrough of how Kristal Farms convert clean power into useful compute and useful heat, with a tenancy model designed for privacy, safety, and reversibility.",
 

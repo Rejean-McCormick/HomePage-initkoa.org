@@ -1,12 +1,12 @@
 # Semantik Architect
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/architect
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/architect/index.html.md
+> Canonical HTML: https://initkoa.org/technology/architect
+> Markdown mirror: https://initkoa.org/technology/architect/index.html.md
 > Route: /technology/architect
 > Source: app\technology\architect\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/architect)
+[Open the HTML page](https://initkoa.org/technology/architect)
 
 "A deterministic multilingual rendering layer for structured knowledge, Kristal query results, and auditable natural-language generation.",
 

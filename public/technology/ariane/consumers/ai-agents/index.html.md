@@ -1,12 +1,12 @@
 # Consumers / AI Agent Integration
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ariane/consumers/ai-agents
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ariane/consumers/ai-agents/index.html.md
+> Canonical HTML: https://initkoa.org/technology/ariane/consumers/ai-agents
+> Markdown mirror: https://initkoa.org/technology/ariane/consumers/ai-agents/index.html.md
 > Route: /technology/ariane/consumers/ai-agents
 > Source: app\technology\ariane\consumers\ai-agents\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ariane/consumers/ai-agents)
+[Open the HTML page](https://initkoa.org/technology/ariane/consumers/ai-agents)
 
 # Consumers / AI Agent Integration
 

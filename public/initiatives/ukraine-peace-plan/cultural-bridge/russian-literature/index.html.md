@@ -1,12 +1,12 @@
 # Russian Literature Dignity Program
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/cultural-bridge/russian-literature
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/cultural-bridge/russian-literature/index.html.md
+> Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/russian-literature
+> Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/russian-literature/index.html.md
 > Route: /initiatives/ukraine-peace-plan/cultural-bridge/russian-literature
 > Source: app\initiatives\ukraine-peace-plan\cultural-bridge\russian-literature\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/initiatives/ukraine-peace-plan/cultural-bridge/russian-literature)
+[Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/russian-literature)
 
 # Russian Literature Dignity Program
 

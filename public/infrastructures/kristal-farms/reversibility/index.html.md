@@ -1,12 +1,12 @@
 # Reversibility
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/reversibility
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/reversibility/index.html.md
+> Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/reversibility
+> Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/reversibility/index.html.md
 > Route: /infrastructures/kristal-farms/reversibility
 > Source: app\infrastructures\kristal-farms\reversibility\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/infrastructures/kristal-farms/reversibility)
+[Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/reversibility)
 
 "A non-negotiable design commitment: Kristal Farms must be removable, restorable, and accountable over its full lifecycle—not a permanent scar on land or governance.",
 

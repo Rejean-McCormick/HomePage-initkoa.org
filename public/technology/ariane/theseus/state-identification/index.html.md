@@ -1,12 +1,12 @@
 # Theseus / State Identification
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ariane/theseus/state-identification
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ariane/theseus/state-identification/index.html.md
+> Canonical HTML: https://initkoa.org/technology/ariane/theseus/state-identification
+> Markdown mirror: https://initkoa.org/technology/ariane/theseus/state-identification/index.html.md
 > Route: /technology/ariane/theseus/state-identification
 > Source: app\technology\ariane\theseus\state-identification\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ariane/theseus/state-identification)
+[Open the HTML page](https://initkoa.org/technology/ariane/theseus/state-identification)
 
 # Theseus / State Identification
 

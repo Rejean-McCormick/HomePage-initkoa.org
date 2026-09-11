@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "policyVersion": "2026-09-10.13",
-  "generatedAt": "2026-09-11T06:36:28-04:00",
+  "generatedAt": "2026-09-11T07:37:19-04:00",
   "packs": [
     {
       "slug": "ame-artificielle",
@@ -121,9 +121,9 @@
       "file": "koa-linux-context-pack.txt",
       "repository": "Rejean-McCormick/kOA-Linux",
       "sourceCommit": "abe6915e607aff70f080cb686f15212002a2d109",
-      "generatedAt": "2026-09-11T06:36:07-04:00",
+      "generatedAt": "2026-09-11T07:36:58-04:00",
       "fileCount": 132,
-      "sha256": "67cf405dd6d4b61b50099e1f7ac790158b96449b9fa99aa0a15a11b765a62f6e",
+      "sha256": "09c71909bd1f0ef186e4b832c9d52bebc797fb60db6ab0dec9ce5027eab82a00",
       "category": "system",
       "policyVersion": "2026-09-10.13",
       "sourceFileCount": 132,
@@ -235,9 +235,9 @@
       "file": "kristal-farms-context-pack.txt",
       "repository": "Rejean-McCormick/Kristal_Farms",
       "sourceCommit": "1a542833e81ee1d4297dc9e0fc18368133f8188c",
-      "generatedAt": "2026-09-11T06:36:16-04:00",
+      "generatedAt": "2026-09-11T07:37:07-04:00",
       "fileCount": 199,
-      "sha256": "6463cc847fd2373cfcfc2ce9393c13388d4435b6b8b3b5d980cd49a8eb504c85",
+      "sha256": "0d44e553bb2d4eed64efb0b1809cea3b38d36f96230d65616c576133f1320679",
       "category": "system",
       "policyVersion": "2026-09-10.13",
       "sourceFileCount": 199,
@@ -349,22 +349,22 @@
       "slug": "orgo",
       "file": "orgo-context-pack.txt",
       "repository": "Rejean-McCormick/Orgo",
-      "sourceCommit": "a7ea7cba6b409e2b1b6b0eb0af871f0931c54094",
-      "generatedAt": "2026-09-11T06:29:42-04:00",
-      "fileCount": 64,
-      "sha256": "e175cd84c8ca0671a8fb0bcd53ef319bdc410fa76aa3d0ed7a482921520ab5c1",
+      "sourceCommit": "a4a982488769b7b0ae8a1a548075c97a9b46e27a",
+      "generatedAt": "2026-09-11T07:37:03-04:00",
+      "fileCount": 67,
+      "sha256": "47097638630680a9e64558000931e98de6fead85639d60c34eee99651fe04149",
       "category": "system",
       "policyVersion": "2026-09-10.13",
-      "sourceFileCount": 69,
-      "includedFileCount": 64,
+      "sourceFileCount": 72,
+      "includedFileCount": 67,
       "excludedFileCount": 5,
       "duplicateFileCount": 0,
-      "contentBytes": 506233,
+      "contentBytes": 515064,
       "authorityCounts": {
-        "reference": 64
+        "reference": 67
       },
       "contentRoleCounts": {
-        "knowledge": 44,
+        "knowledge": 47,
         "navigation": 20
       }
     },

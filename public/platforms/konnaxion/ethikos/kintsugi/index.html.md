@@ -1,12 +1,12 @@
 # /platforms/konnaxion/ethikos/kintsugi
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/ethikos/kintsugi
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/konnaxion/ethikos/kintsugi/index.html.md
+> Canonical HTML: https://initkoa.org/platforms/konnaxion/ethikos/kintsugi
+> Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/kintsugi/index.html.md
 > Route: /platforms/konnaxion/ethikos/kintsugi
 > Source: app\platforms\konnaxion\ethikos\kintsugi\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/konnaxion/ethikos/kintsugi)
+[Open the HTML page](https://initkoa.org/platforms/konnaxion/ethikos/kintsugi)
 
 {/* FILE: page.mdx
 Path: app/platforms/konnaxion/ethikos/kintsugi/page.mdx */}

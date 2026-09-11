@@ -1,12 +1,12 @@
 # Numérologie Pythagoricienne Inversée
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/numerologie-pythagoricienne-inversee
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/numerologie-pythagoricienne-inversee/index.html.md
+> Canonical HTML: https://initkoa.org/technology/ame-artificielle/numerologie-pythagoricienne-inversee
+> Markdown mirror: https://initkoa.org/technology/ame-artificielle/numerologie-pythagoricienne-inversee/index.html.md
 > Route: /technology/ame-artificielle/numerologie-pythagoricienne-inversee
 > Source: app\technology\ame-artificielle\numerologie-pythagoricienne-inversee\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ame-artificielle/numerologie-pythagoricienne-inversee)
+[Open the HTML page](https://initkoa.org/technology/ame-artificielle/numerologie-pythagoricienne-inversee)
 
 "La couche numérique de l’me Artificielle : réduction à 1–9, inversion interne, dualités, pivot 5 et rôle archétypal dans la structure du sujet.",
 

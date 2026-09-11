@@ -1,12 +1,12 @@
 # Workflow: from signal to closure
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/platforms/orgo/workflow
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/platforms/orgo/workflow/index.html.md
+> Canonical HTML: https://initkoa.org/platforms/orgo/workflow
+> Markdown mirror: https://initkoa.org/platforms/orgo/workflow/index.html.md
 > Route: /platforms/orgo/workflow
 > Source: app\platforms\orgo\workflow\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/platforms/orgo/workflow)
+[Open the HTML page](https://initkoa.org/platforms/orgo/workflow)
 
 Inbox,
 Filter,

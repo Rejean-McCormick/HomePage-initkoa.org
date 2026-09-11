@@ -1,12 +1,12 @@
 # Atlas / Ontology Vocabulary
 
-> Canonical HTML: [https://initkoa.org](https://initkoa.org)/technology/ariane/atlas/ontology
-> Markdown mirror: [https://initkoa.org](https://initkoa.org)/technology/ariane/atlas/ontology/index.html.md
+> Canonical HTML: https://initkoa.org/technology/ariane/atlas/ontology
+> Markdown mirror: https://initkoa.org/technology/ariane/atlas/ontology/index.html.md
 > Route: /technology/ariane/atlas/ontology
 > Source: app\technology\ariane\atlas\ontology\page.mdx
-> Generated: 2026-06-13T00:42:18.184Z
+> Generated: 2026-09-11T11:37:24.069Z
 
-[Open the HTML page]([https://initkoa.org](https://initkoa.org)/technology/ariane/atlas/ontology)
+[Open the HTML page](https://initkoa.org/technology/ariane/atlas/ontology)
 
 # Atlas / Ontology Vocabulary
 
