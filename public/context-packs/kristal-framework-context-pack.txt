@@ -1,7 +1,7 @@
 # INITKOA CONTEXT PACK
 
-repository: Rejean-McCormick/kristal-framework
-source_commit: bad7346b387ad61fa141ecba0031c5859c6b15d0
+repository: Rejean-McCormick/Kristal-Framework
+source_commit: 21e0761d3935fa91bf8044da254a1ec5ff694cf2
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -9,18 +9,18 @@ selection_mode: markdown
 wiki_source_commit: 917d33f25ede7ed795dc8fa9cce0df6ccdb02861
 wiki_working_tree_markdown: clean
 policy_version: 2026-09-10.13
-repo_files: 41
+repo_files: 46
 wiki_files: 31
-source_files: 72
-included_files: 72
+source_files: 77
+included_files: 77
 excluded_files: 0
 duplicate_files: 0
-content_bytes: 955443
-authority_counts: {"reference":72}
-content_role_counts: {"knowledge":41,"navigation":31}
-generated_at: 2026-09-10T13:04:18-04:00
-files: 72
-content_sha256: efc0a03029e01223bad6889ce457603030a224ec3e205e0ee23082ce54a59646
+content_bytes: 972289
+authority_counts: {"reference":77}
+content_role_counts: {"knowledge":46,"navigation":31}
+generated_at: 2026-09-16T12:59:08-04:00
+files: 77
+content_sha256: 3bb75a0b5fd41e308723204613ddd21ec40163009a9cc3a58f8f84cbcac94588
 
 ================================================================================================
 FILE INDEX
@@ -57,47 +57,52 @@ FILE INDEX
 29. [reference] [navigation] wiki/Workflow-Publish-and-Distribute.md | bytes=1772 | sha256=b48a409981714d4f7caf23dcc385c0741de09cc319aeb15b010552c5a97b8f92
 30. [reference] [navigation] wiki/Workflow-Subsets-Recipes.md | bytes=1166 | sha256=02c617261ccd96e1e33cee525ebb6d2291f2c48f3d5b4ef44cc9bf90875d1a09
 31. [reference] [navigation] wiki/Workflows.md | bytes=804 | sha256=a7e012eab49b4fc647ea0f9792cde36df7f21d576da02152350b60f186c9cd1d
-32. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md | bytes=31478 | sha256=868c13e4207b3b98925576b28e0d2ec730dd6b86ec11fc74ab11d06356e302e9
-33. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md | bytes=20791 | sha256=13405e3a454d01fb573eef646aa3a830d273754fad1ef2728db7ea7c918a5fcc
-34. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/plural-validation-and-federated-authority.md | bytes=23543 | sha256=23abec00a9c0080b2cb06b4aa01d2b55721d528ae191a76e4c2e3e2737ac34fd
-35. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/sharding-and-federation.md | bytes=22714 | sha256=a8a6448250795810e93102c3452cfd407a774ebe3636db195d186f6628c81285
-36. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/validation-certainty-and-authority.md | bytes=31234 | sha256=880b957e3131f873e310cf5ae6ee174f7388803317c8e615fb47ddc5d1778961
-37. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/vision-and-scope.md | bytes=14352 | sha256=f089bd8040b44255f4e87c19a4f7670221c15bcc51019c33680b3afd5b7b5277
-38. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md | bytes=19322 | sha256=768f6ba8e631a6939eb815a7004a409b1bf8256b5a010c8b2cdec2130074a51c
-39. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md | bytes=23605 | sha256=a1ba7150fb191072f180a466981814dfce0febc6bd18172f3559507b61f9ba3b
-40. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/authority-recognition.md | bytes=31949 | sha256=8866a6734bfb8104e708b923e7bc304a96dcd86c876d505b293b1c64e21cc6c0
-41. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md | bytes=18295 | sha256=3ddb4d61f65626b20ecfeab50e87fe4654d537db8b7e88b7639e2b2f56220f82
-42. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md | bytes=37172 | sha256=bc72aa851ab76e87267909e56fd211bece9f57c48050f280597f9a1cfd93b9d1
-43. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/signatures-trust.md | bytes=24824 | sha256=addfef32fe4a4dc333765d5a7c3873374b95dbddf24148399d21c30300d22915
-44. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md | bytes=26224 | sha256=1b5a8cee5441750d8be4ea61bb51f591e9aecf9f43ccf6a94a1650c12d62d848
-45. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/allowed-runtime-pack-policies.md | bytes=17660 | sha256=fb6ecb79f8a14959bf01a78d83272b6d6a08e677223b83868d0e38d942dea738
-46. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/deterministic-build-rules.md | bytes=24855 | sha256=8e1f51617806527401409df40b583ad305d2950c11224ff80d3afe796e4a3003
-47. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/reproducibility-acceptance-tests.md | bytes=7664 | sha256=e6c1606ec47ad0dc859c7040c3c63dc5adf3d0994ebeb1747c3abd91701b934f
-48. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/subset-recipes.md | bytes=24844 | sha256=f000a72fcd813af5dc07c5f0e34f36a777b4fb97fd35147cf6eaaf4d3624be53
-49. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/04-query/query-contract.md | bytes=23100 | sha256=b5d6dd1ebf797b4413a0342133e3f1d686190e277856536e6355cc5179ca93dc
-50. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/04-query/reader-policy-profiles.md | bytes=35065 | sha256=842d34e26275c883facef1587d986f824fefeada8af6027647c7781cc321a54c
-51. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-jsonld-export.md | bytes=21737 | sha256=98c5c181f1efc9a0eec0977779b6654486069c5a5255a65f2983c96a7b9f2002
-52. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-provenance-nanopub-provo.md | bytes=21643 | sha256=70557871cac751431e2e52f50094818686e8b276740db4295af07a035133f9ee
-53. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-query-tpf-pagination.md | bytes=17536 | sha256=e2b5b38c9a202b9c758d5cf431e5e51b4ce091d2d465ac6da8a3091cea98cccb
-54. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-integrity-rdfc.md | bytes=15351 | sha256=de464e3adc45e57a7b2cb97c71f5ef37f740e44933837cbe4572c63cff92162d
-55. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-wdqs-export.md | bytes=21797 | sha256=074f5c4f0ed246458a81cc09c3c28e2208c3f2c6c4652b203b631fe294d49d31
-56. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-transparency-log.md | bytes=23075 | sha256=298c5502f2112184f7daf167dfa1b27cdc0608188526c44588265c068ee29272
-57. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shacl.md | bytes=15436 | sha256=bfefe3b21fe67baecdc4986c1246326e505d502202ce319bb87eec7c957ef360
-58. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shex.md | bytes=16461 | sha256=d9b2ba5015229c3ff7835467c07c5a0771189da6fa9ad8139301cf4ff8385b53
-59. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/architect-rendering-contract.md | bytes=19872 | sha256=a62dcc49161e9e26695f92fcad7aaa6b2f9a463e9e83601c49a89cbd6906ffae
-60. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/konnaxion-distribution-contract.md | bytes=26896 | sha256=40db942447b0fd6fb8fa4eaa01164e256c4fc0a8e3b9c4c7073331075d77c579
-61. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/orgo-workflow-contract.md | bytes=26071 | sha256=4e731d48dfc6b7baa487cbcdd9ed343edbca11b98e097ad82fbd4da881456395
-62. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/sentient-resolution-contract.md | bytes=14245 | sha256=16f8a698aa307c314ca70b0fcf7da8cbe350d778258bcb31993c8f58babc2fab
-63. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/downgrade-rollback-policy.md | bytes=31834 | sha256=68bfd17416322c560d63057dee3270e0c3855ec0df07df3fca03d1f644ee5c32
-64. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/key-management-and-trust-roots.md | bytes=24199 | sha256=dc7c0c24e986d3bdb37f442258bb284958dbdb18ca1d522641c7095b21b538ab
-65. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/multi-tenancy-boundaries.md | bytes=21462 | sha256=e43224762570b0a87f8ebd47e2dedd31e820ae5bd94a9bbbab99f4faeb1e4b1f
-66. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/failure-paths-and-resilience.md | bytes=20490 | sha256=daa1c41d09989163a88476fdaec26548c878731a6d878547b4b6b29afcfff07a
-67. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/logging-and-correlation-ids.md | bytes=21269 | sha256=5fa31a29c003bee8eb15e1fd9f1fbd6ec2ad8a39d083322613fa16a0af8b4c3d
-68. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/operational-guidance-template.md | bytes=11284 | sha256=87c1554362da757293d3100a9db4ba179706a90a719ddb3d00279d25699cc0fc
-69. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/release-strategies.md | bytes=21035 | sha256=5e1131a07dac092e88890eb0e409cd586f665c73757efd9fcc2baf73f95c3189
-70. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md | bytes=11847 | sha256=e42d124fe179ed79b4c11e09f0097a693f0f05199477964479994394ded82cfd
-71. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/rdfc/README.md | bytes=16859 | sha256=2a42c4fba2781e85270288f39fec5cd5704c0bf0fc0b06667aa3049ef739b2dd
-72. [reference] [knowledge] README.md | bytes=13736 | sha256=538b0fd843696298c6559d8fc09b7c44ef6ae0bedf6ccd93db2c4a99293e187f
+32. [reference] [knowledge] CHANGELOG.md | bytes=1266 | sha256=4ab8eadcc483f227a234e9bf3ac48d1aa437dcd51bdab43fa6e53a135e6646e1
+33. [reference] [knowledge] docs/index.md | bytes=839 | sha256=a7884c4827fd1b06b1f771509b8d8e4bf95c9116d9aa5e66f653fa9b0dee9cec
+34. [reference] [knowledge] docs/status/2026-09-14-v5.0.0-rc.1.md | bytes=5321 | sha256=fa7666089ae6ba492b23e220efeb10a446fbb71054503bfea887c5a74caa0aa5
+35. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md | bytes=31478 | sha256=868c13e4207b3b98925576b28e0d2ec730dd6b86ec11fc74ab11d06356e302e9
+36. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md | bytes=20791 | sha256=13405e3a454d01fb573eef646aa3a830d273754fad1ef2728db7ea7c918a5fcc
+37. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/plural-validation-and-federated-authority.md | bytes=23543 | sha256=23abec00a9c0080b2cb06b4aa01d2b55721d528ae191a76e4c2e3e2737ac34fd
+38. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/sharding-and-federation.md | bytes=22714 | sha256=a8a6448250795810e93102c3452cfd407a774ebe3636db195d186f6628c81285
+39. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/specification-status.md | bytes=3665 | sha256=443da2d9c0dec6faba49004345d591a25df9fb33b39da33995ad189f41b7369a
+40. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/validation-certainty-and-authority.md | bytes=31234 | sha256=880b957e3131f873e310cf5ae6ee174f7388803317c8e615fb47ddc5d1778961
+41. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/vision-and-scope.md | bytes=14352 | sha256=f089bd8040b44255f4e87c19a4f7670221c15bcc51019c33680b3afd5b7b5277
+42. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md | bytes=19322 | sha256=768f6ba8e631a6939eb815a7004a409b1bf8256b5a010c8b2cdec2130074a51c
+43. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md | bytes=23605 | sha256=a1ba7150fb191072f180a466981814dfce0febc6bd18172f3559507b61f9ba3b
+44. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/authority-recognition.md | bytes=31949 | sha256=8866a6734bfb8104e708b923e7bc304a96dcd86c876d505b293b1c64e21cc6c0
+45. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md | bytes=18295 | sha256=3ddb4d61f65626b20ecfeab50e87fe4654d537db8b7e88b7639e2b2f56220f82
+46. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md | bytes=37172 | sha256=bc72aa851ab76e87267909e56fd211bece9f57c48050f280597f9a1cfd93b9d1
+47. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/signatures-trust.md | bytes=24824 | sha256=addfef32fe4a4dc333765d5a7c3873374b95dbddf24148399d21c30300d22915
+48. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md | bytes=26224 | sha256=1b5a8cee5441750d8be4ea61bb51f591e9aecf9f43ccf6a94a1650c12d62d848
+49. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/allowed-runtime-pack-policies.md | bytes=17660 | sha256=fb6ecb79f8a14959bf01a78d83272b6d6a08e677223b83868d0e38d942dea738
+50. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/deterministic-build-rules.md | bytes=24855 | sha256=8e1f51617806527401409df40b583ad305d2950c11224ff80d3afe796e4a3003
+51. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/reproducibility-acceptance-tests.md | bytes=7664 | sha256=be98c07d457f26e3e3158970d4b07afbfa24890248174924c0f1b528319e968a
+52. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/subset-recipes.md | bytes=24844 | sha256=f000a72fcd813af5dc07c5f0e34f36a777b4fb97fd35147cf6eaaf4d3624be53
+53. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/04-query/query-contract.md | bytes=23100 | sha256=b5d6dd1ebf797b4413a0342133e3f1d686190e277856536e6355cc5179ca93dc
+54. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/04-query/reader-policy-profiles.md | bytes=35065 | sha256=842d34e26275c883facef1587d986f824fefeada8af6027647c7781cc321a54c
+55. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-jsonld-export.md | bytes=21737 | sha256=98c5c181f1efc9a0eec0977779b6654486069c5a5255a65f2983c96a7b9f2002
+56. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-provenance-nanopub-provo.md | bytes=21643 | sha256=70557871cac751431e2e52f50094818686e8b276740db4295af07a035133f9ee
+57. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-query-tpf-pagination.md | bytes=17536 | sha256=e2b5b38c9a202b9c758d5cf431e5e51b4ce091d2d465ac6da8a3091cea98cccb
+58. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-integrity-rdfc.md | bytes=15351 | sha256=de464e3adc45e57a7b2cb97c71f5ef37f740e44933837cbe4572c63cff92162d
+59. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-wdqs-export.md | bytes=21797 | sha256=074f5c4f0ed246458a81cc09c3c28e2208c3f2c6c4652b203b631fe294d49d31
+60. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-transparency-log.md | bytes=23075 | sha256=298c5502f2112184f7daf167dfa1b27cdc0608188526c44588265c068ee29272
+61. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shacl.md | bytes=15436 | sha256=bfefe3b21fe67baecdc4986c1246326e505d502202ce319bb87eec7c957ef360
+62. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shex.md | bytes=16461 | sha256=d9b2ba5015229c3ff7835467c07c5a0771189da6fa9ad8139301cf4ff8385b53
+63. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/architect-rendering-contract.md | bytes=19872 | sha256=a62dcc49161e9e26695f92fcad7aaa6b2f9a463e9e83601c49a89cbd6906ffae
+64. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/konnaxion-distribution-contract.md | bytes=26896 | sha256=40db942447b0fd6fb8fa4eaa01164e256c4fc0a8e3b9c4c7073331075d77c579
+65. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/orgo-workflow-contract.md | bytes=26071 | sha256=4e731d48dfc6b7baa487cbcdd9ed343edbca11b98e097ad82fbd4da881456395
+66. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/sentient-resolution-contract.md | bytes=14245 | sha256=16f8a698aa307c314ca70b0fcf7da8cbe350d778258bcb31993c8f58babc2fab
+67. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/downgrade-rollback-policy.md | bytes=31834 | sha256=68bfd17416322c560d63057dee3270e0c3855ec0df07df3fca03d1f644ee5c32
+68. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/key-management-and-trust-roots.md | bytes=24199 | sha256=dc7c0c24e986d3bdb37f442258bb284958dbdb18ca1d522641c7095b21b538ab
+69. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/multi-tenancy-boundaries.md | bytes=21462 | sha256=e43224762570b0a87f8ebd47e2dedd31e820ae5bd94a9bbbab99f4faeb1e4b1f
+70. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/failure-paths-and-resilience.md | bytes=20490 | sha256=daa1c41d09989163a88476fdaec26548c878731a6d878547b4b6b29afcfff07a
+71. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/logging-and-correlation-ids.md | bytes=21269 | sha256=5fa31a29c003bee8eb15e1fd9f1fbd6ec2ad8a39d083322613fa16a0af8b4c3d
+72. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/operational-guidance-template.md | bytes=11284 | sha256=87c1554362da757293d3100a9db4ba179706a90a719ddb3d00279d25699cc0fc
+73. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/release-strategies.md | bytes=21035 | sha256=5e1131a07dac092e88890eb0e409cd586f665c73757efd9fcc2baf73f95c3189
+74. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md | bytes=11967 | sha256=a38ae97adf64f7ffe10fc559af5495985332e238f222c29db9608754a8b27c23
+75. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/rdfc/README.md | bytes=16859 | sha256=2a42c4fba2781e85270288f39fec5cd5704c0bf0fc0b06667aa3049ef739b2dd
+76. [reference] [knowledge] README.md | bytes=16408 | sha256=d378249661554bbc75c5dd7357ae0be1508b0d8e0a7a9aea82a9b16545ac6df4
+77. [reference] [knowledge] RELEASE.md | bytes=2963 | sha256=d029d1e0742da83b8754782ca28d676691e948f01534ef3a4a48230adc6b0e22
 
 
 ================================================================================================
@@ -2806,6 +2811,217 @@ Validation and authority recognition assign scoped status.
 Reader policy controls visibility.
 
 No workflow should confuse these layers.
+
+
+================================================================================================
+FILE: CHANGELOG.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 4ab8eadcc483f227a234e9bf3ac48d1aa437dcd51bdab43fa6e53a135e6646e1
+CONTENT_BYTES: 1266
+================================================================================================
+
+# Changelog
+
+All notable changes to the Kristal Framework contract set are recorded here.
+
+## 5.0.0-rc.1 — stabilization release candidate
+
+### Added
+
+- machine-readable release identity (`kristal-release.json`);
+- curated contract-surface index (`contract-set.manifest.json`);
+- explicit normativity classification;
+- release validation tooling and CI gates;
+- MkDocs navigation aligned to the actual v5 documentation tree;
+- release and pinning guidance for downstream consumers.
+
+### Simplified
+
+- Git tag + commit SHA are the authoritative immutable release identity;
+- removed generated per-file release hashes and exhaustive schema/file manifests;
+- release validation checks contract surfaces and conformance, not a byte-for-byte repository inventory;
+- annotated Git tags are the default release mechanism; signed tags remain optional.
+
+### Fixed
+
+- v4 wording remaining in the v5 reproducibility acceptance-test document;
+- Claim-IR example fields that did not conform to the published v5 Claim-IR schema;
+- obsolete MkDocs paths and placeholder repository URL.
+
+### Compatibility
+
+This stabilization release does not intentionally change the Kristal v5 epistemic model. It formalizes the existing v5 contract surfaces for release and downstream pinning.
+
+
+================================================================================================
+FILE: docs/index.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: a7884c4827fd1b06b1f771509b8d8e4bf95c9116d9aa5e66f653fa9b0dee9cec
+CONTENT_BYTES: 839
+================================================================================================
+
+# Kristal Framework v5
+
+Kristal v5 is a deterministic, portable epistemic artifact framework.
+
+Start with:
+
+1. [Release status — v5.0.0-rc.1](status/2026-09-14-v5.0.0-rc.1.md)
+2. [Specification status](Technical-Reference/kristal-docs-v5/00-overview/specification-status.md)
+3. [What is Kristal v5?](Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md)
+4. [Core specification](Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md)
+5. [Canonicalization and hashing](Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md)
+6. [Conformance and alignment](Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md)
+
+Release metadata is published at the repository root in `kristal-release.json`, `contract-set.manifest.json`, and `schema-set.manifest.json`.
+
+
+================================================================================================
+FILE: docs/status/2026-09-14-v5.0.0-rc.1.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fa7666089ae6ba492b23e220efeb10a446fbb71054503bfea887c5a74caa0aa5
+CONTENT_BYTES: 5321
+================================================================================================
+
+# Kristal Framework 5.0.0-rc.1 — release status
+
+**Status:** Release Candidate  
+**Date:** 2026-09-14  
+**Release tag:** `v5.0.0-rc.1`  
+**Resolved release commit:** `af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19`  
+**Tag type:** annotated Git tag  
+**Core schema line:** `5.0`  
+**Canonicalization:** `kristal.v5:jcs-rfc8785`
+
+## Executive status
+
+Kristal Framework 5.0.0-rc.1 stabilizes the v5 corpus as a pinnable Git release while keeping the release machinery deliberately small.
+
+The epistemic model remains Kristal v5. Release identity is based on **semantic version + Git tag + resolved immutable commit SHA**. The repository does not maintain a perfect inventory of every file and does not add a second repository-wide content-hash identity system on top of Git.
+
+`contract-set.manifest.json` is a curated map of the public normative, profile, conformance, and informative surfaces. It exists so integrators know what constitutes the public Kristal contract; it is not a generated checksum catalog.
+
+## Verified Git release identity
+
+The release tag and commit were verified on 2026-09-14 from an up-to-date working clone after:
+
+```powershell
+git pull --ff-only
+git fetch --all --tags --prune
+git tag -l "v5.0.0-rc.1"
+git show v5.0.0-rc.1 --no-patch
+```
+
+Observed identity:
+
+```text
+tag:     v5.0.0-rc.1
+commit:  af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19
+branch:  main
+origin:  origin/main at the same commit
+```
+
+The tag object identifies the release as **Kristal Framework 5.0.0-rc.1**.
+
+This resolves the earlier pre-tag limitation: the RC tag exists and the immutable release commit can now be recorded by downstream consumers.
+
+## Stabilization changes completed
+
+- Added `VERSION` and `kristal-release.json` as machine-readable release metadata.
+- Added a small `contract-set.manifest.json` describing public contract surfaces.
+- Added release governance in `RELEASE.md` and history in `CHANGELOG.md`.
+- Added release validation and GitHub Actions conformance gates.
+- Realigned MkDocs navigation to the actual v5 documentation tree.
+- Classified normative, profile, integration, conformance, and informative material.
+- Removed stale Kristal v4 wording from v5 reproducibility documentation.
+- Corrected the Claim-IR example so it validates against the v5 schema.
+- Normalized JCS golden vectors and expected hashes used by Kristal's own content-addressing contract.
+
+## Validation status
+
+The release candidate passes the release gates implemented by `tools/validate_release.py`:
+
+| Gate | Result |
+|---|---|
+| Required release files | PASS |
+| JSON parsing | PASS |
+| Draft 2020-12 JSON Schema metaschema validation | PASS |
+| Schema `$id` alignment | PASS |
+| Examples against declared schemas | PASS |
+| JCS golden vectors | PASS |
+| v5 version-alignment checks | PASS |
+| MkDocs navigation targets and local Markdown links | PASS |
+| Release metadata and declared contract surfaces | PASS |
+
+Current conformance corpus:
+
+- 13 JSON Schemas;
+- 18 schema-mapped examples;
+- 9 JCS golden vectors.
+
+## Release identity model
+
+A Kristal framework release is pinned by:
+
+```text
+semantic version
++ Git tag
++ resolved immutable Git commit SHA
++ canonicalization profile/version
+```
+
+For this RC:
+
+```text
+version: 5.0.0-rc.1
+tag: v5.0.0-rc.1
+commit: af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19
+canonicalization: kristal.v5:jcs-rfc8785
+```
+
+The tag names the release. The commit SHA identifies the exact repository tree. This is sufficient for Da'at, kOA, Konnaxion, Orgo, and IK to pin the framework without duplicating Git with a second repository-wide hashing system.
+
+Kristal's own SHA-256/JCS rules remain normative where they belong: **artifact/content identity inside the Kristal protocol**.
+
+## Downstream lock
+
+A downstream integration SHOULD record:
+
+```json
+{
+  "version": "5.0.0-rc.1",
+  "git_tag": "v5.0.0-rc.1",
+  "git_commit": "af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19",
+  "canonicalization_profile": "kristal.v5:jcs-rfc8785"
+}
+```
+
+Floating dependencies such as `main`, `latest`, or `5.x` are not valid release locks.
+
+## Known release-candidate limitations
+
+1. Remote publication of the tag should be checked explicitly with `git ls-remote --tags origin v5.0.0-rc.1` when release automation requires proof that the remote ref is published; the local annotated tag and release commit are verified.
+2. `mkdocs build --strict` should run in the authoritative Git/CI environment with the declared documentation dependencies installed.
+3. The release remains an RC until Da'at integration tests pass and no incompatible contract defect is found.
+
+## Promotion criteria for v5.0.0
+
+Promote this RC to stable when:
+
+- the RC commit remains identifiable as `af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19`;
+- the annotated `v5.0.0-rc.1` tag is published on the authoritative remote;
+- CI passes from the tagged commit;
+- Da'at integration tests pass against the pinned RC;
+- no incompatible contract defect is found;
+- `VERSION`, `kristal-release.json`, `contract-set.manifest.json`, and `CHANGELOG.md` are updated to `5.0.0`;
+- the final `v5.0.0` tag is created and pushed.
+
+## Recommended next action
+
+Verify the remote tag ref, pin Da'at / Interaction Kernel to the exact RC identity above, run the Da'at integration tests against that pinned release, and promote only after the remaining RC gates are green.
 
 
 ================================================================================================
@@ -6424,6 +6640,92 @@ A reader policy answers:
 The core Kristal v5 rule is:
 
 > Federation preserves disagreement without silent merging.
+
+
+================================================================================================
+FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/specification-status.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 443da2d9c0dec6faba49004345d591a25df9fb33b39da33995ad189f41b7369a
+CONTENT_BYTES: 3665
+================================================================================================
+
+# Kristal v5 specification status
+
+**Release candidate:** `5.0.0-rc.1`  
+**RC Git tag:** `v5.0.0-rc.1`  
+**RC resolved commit:** `af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19`  
+**Core schema line:** `5.0`  
+**Canonicalization profile:** `kristal.v5:jcs-rfc8785` / version `1`
+
+## Purpose
+
+This file defines the release and normativity boundary for the Kristal v5 framework. It does not change the epistemic model. It makes the existing v5 contract set releasable, pinnable, testable, and immutable once published.
+
+## Normativity classes
+
+| Class | Meaning |
+|---|---|
+| `core-normative` | Required for Kristal v5 core conformance. |
+| `schema-normative` | Published JSON Schema contract. Published versions are immutable. |
+| `reproducibility-normative` | Determinism, build, and reproducibility requirements. |
+| `query-normative` | Required query-contract behavior. |
+| `profile-normative` | Required only when the named optional profile is claimed. |
+| `integration-normative` | Boundary contract for the named ecosystem integration. |
+| `security-normative` | Trust, key, rollback, downgrade, and tenancy requirements. |
+| `test-vector-normative` | Golden vectors required by the conformance claim they cover. |
+| `informative` | Guidance, examples, operational notes, or explanatory material. |
+
+The machine-readable classification is published in `contract-set.manifest.json`.
+
+## Release identity
+
+A published Kristal framework release is identified by all of the following:
+
+1. semantic release version;
+2. Git tag naming the release;
+3. full immutable Git commit SHA resolved from that tag;
+4. canonicalization profile and version declared by the release metadata.
+
+An annotated or signed tag MAY be required by repository/release policy, but tag signing is not a separate Kristal protocol identity field.
+
+The repository does **not** define `contract_set_digest` or `schema_set_digest` as additional release-identity requirements. `contract-set.manifest.json` classifies the public contract surface; it is not a second repository-wide checksum identity system.
+
+The Git commit is intentionally **not embedded** into a file inside the same commit. Consumers resolve the release tag to the commit and record that commit in their own lock file.
+
+### Current RC identity
+
+```text
+version: 5.0.0-rc.1
+tag: v5.0.0-rc.1
+commit: af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19
+canonicalization: kristal.v5:jcs-rfc8785 / 1
+```
+
+## Immutability rule
+
+After a stable release is tagged, files classified as normative for that release MUST NOT be changed in place. A semantic change produces a new release version. A published schema identified by its `$id` MUST remain byte-stable within a release.
+
+## Release candidate rule
+
+`5.0.0-rc.1` is a stabilization release candidate. The tag exists and resolves to commit `af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19`.
+
+An RC remains immutable once used as a pinned interoperability baseline. Corrections required after an RC is published SHOULD produce a new release-candidate version rather than moving the existing tag.
+
+The stable `5.0.0` tag MUST be cut only after all release validation and required downstream integration gates pass and the contract set is intentionally frozen.
+
+## Consumer pinning
+
+Da'at, kOA, Konnaxion, Orgo, and other consumers SHOULD pin:
+
+- `version`;
+- Git tag;
+- resolved full Git commit SHA;
+- canonicalization profile/version.
+
+Consumers MUST NOT use floating references such as `main`, `latest`, or `5.x` for high-assurance interoperability.
+
+Kristal artifact/content hashes governed by JCS/SHA-256 remain separate protocol-level identities and MUST NOT be confused with framework release identity.
 
 
 ================================================================================================
@@ -16213,17 +16515,17 @@ revoked
 FILE: docs/Technical-Reference/kristal-docs-v5/03-reproducibility/reproducibility-acceptance-tests.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: e6c1606ec47ad0dc859c7040c3c63dc5adf3d0994ebeb1747c3abd91701b934f
+CONTENT_SHA256: be98c07d457f26e3e3158970d4b07afbfa24890248174924c0f1b528319e968a
 CONTENT_BYTES: 7664
 ================================================================================================
 
-# Reproducibility Acceptance Tests (Kristal v4)
+# Reproducibility Acceptance Tests (Kristal v5)
 
 ## Status
 Draft (normative acceptance criteria)
 
 ## Purpose
-Define the **acceptance tests** that determine whether a Kristal v4 implementation produces **reproducible** artifacts.
+Define the **acceptance tests** that determine whether a Kristal v5 implementation produces **reproducible** artifacts.
 
 In v3, reproducibility is a first-class requirement:
 - Exchange rebuilds MUST produce identical `kristal_id` given the same inputs and rules.
@@ -16473,7 +16775,7 @@ See `09-test-vectors/` and `10-examples/`.
 
 # 7. Definition of done (reproducibility)
 
-A Kristal v4 implementation passes reproducibility if:
+A Kristal v5 implementation passes reproducibility if:
 - All Exchange tests EX-1 through EX-4 pass (mandatory).
 - All Runtime Pack tests RP-1 through RP-6 pass (mandatory).
 - Cross-platform test XP-1 is run for at least one release candidate (recommended).
@@ -33700,8 +34002,8 @@ Release strategy does not decide what is universally true. It decides which immu
 FILE: docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: e42d124fe179ed79b4c11e09f0097a693f0f05199477964479994394ded82cfd
-CONTENT_BYTES: 11847
+CONTENT_SHA256: a38ae97adf64f7ffe10fc559af5495985332e238f222c29db9608754a8b27c23
+CONTENT_BYTES: 11967
 ================================================================================================
 
 # JCS Test Vectors (Kristal v5)
@@ -33749,7 +34051,7 @@ Each entry in `vectors.json` SHOULD use the following shape:
   "profile": "kristal.v5:jcs-rfc8785",
   "artifact_type": "generic_json",
   "content_boundary": {
-    "exclude_fields": []
+    "exclude_json_pointers": []
   },
   "input": {
     "...": "original JSON object"
@@ -33764,12 +34066,12 @@ Notes:
 * `profile` SHOULD be `kristal.v5:jcs-rfc8785`.
 * `expected_canonical` MUST be the exact UTF-8 string output of JCS.
 * `expected_sha256_hex` MUST be the SHA-256 digest of `expected_canonical` bytes, represented as lower-case hexadecimal.
-* `content_boundary.exclude_fields` SHOULD declare any excluded fields, such as signatures or tenant-local control metadata.
-* Implementations MAY split `expected_sha256_hex` into `expected-hashes.txt` instead of embedding it in JSON, but the correspondence MUST be unambiguous.
+* `content_boundary.exclude_json_pointers` SHOULD declare excluded JSON Pointers, such as signatures or tenant-local control metadata.
+* Vectors MUST embed `expected_sha256_hex` and `expected-hashes.txt` MUST repeat the same digest keyed by stable vector `id`.
 
 ## Required coverage
 
-The vector set MUST include cases covering the following areas.
+The normative release vector set MUST include cases covering the following areas. The release validator checks the committed vectors with the ECMAScript reference serialization used by RFC 8785.
 
 ### 1. Object key ordering
 
@@ -34785,13 +35087,15 @@ To finalize:
 FILE: README.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 538b0fd843696298c6559d8fc09b7c44ef6ae0bedf6ccd93db2c4a99293e187f
-CONTENT_BYTES: 13736
+CONTENT_SHA256: d378249661554bbc75c5dd7357ae0be1508b0d8e0a7a9aea82a9b16545ac6df4
+CONTENT_BYTES: 16408
 ================================================================================================
 
 # Kristal docs (v5)
 
-This repository contains the documentation set for **Kristal v5**, a deterministic, portable epistemic artifact system.
+> **Release status:** `5.0.0-rc.1` — stabilization release candidate. See [`VERSION`](VERSION), [`kristal-release.json`](kristal-release.json), the [release status report](docs/status/2026-09-14-v5.0.0-rc.1.md), and the [specification status](docs/Technical-Reference/kristal-docs-v5/00-overview/specification-status.md).
+
+This repository contains the **Kristal v5 specification, normative contract set, conformance vectors, and release metadata** for a deterministic, portable epistemic artifact system.
 
 Kristal v5 defines how **Structured Epistemic States** are compiled into immutable, portable, queryable, and verifiable artifacts while separating:
 
@@ -34807,33 +35111,50 @@ Kristal is designed for portable, verifiable, offline-capable knowledge operatio
 
 ---
 
+## Release identity
+
+The current release candidate is `v5.0.0-rc.1`. The release identity is deliberately small:
+
+```text
+version: 5.0.0-rc.1
+git tag: v5.0.0-rc.1
+git commit: resolved from the tag after the release commit exists
+canonicalization: kristal.v5:jcs-rfc8785
+```
+
+Git tag + commit SHA pin the exact repository content. [`contract-set.manifest.json`](contract-set.manifest.json) only identifies the public contract surfaces; it is not an exhaustive file inventory and does not duplicate Git with per-file release hashes.
+
+Kristal still uses JCS/SHA-256 where it is part of the **Kristal artifact identity protocol**. That domain-level hashing is separate from framework release versioning. See the [release status report](docs/status/2026-09-14-v5.0.0-rc.1.md) and [`RELEASE.md`](RELEASE.md).
+
+---
+
 ## Start here
 
-1. `00-overview/what-is-kristal-v5.md`
-2. `00-overview/vision-and-scope.md`
-3. `00-overview/validation-certainty-and-authority.md`
-4. `00-overview/plural-validation-and-federated-authority.md`
-5. `00-overview/conformance-and-alignment.md`
-6. `01-core-spec/kristal-v5-core-spec.md`
+1. `docs/Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md`
+2. `docs/Technical-Reference/kristal-docs-v5/00-overview/vision-and-scope.md`
+3. `docs/Technical-Reference/kristal-docs-v5/00-overview/validation-certainty-and-authority.md`
+4. `docs/Technical-Reference/kristal-docs-v5/00-overview/plural-validation-and-federated-authority.md`
+5. `docs/Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md`
+6. `docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md`
 
 If you are implementing specific surfaces:
 
-* Core model, artifact lifecycle, and validation boundaries → `01-core-spec/kristal-v5-core-spec.md`
-* Structured Epistemic State → `01-core-spec/structured-epistemic-state.md`
-* Assertion status and certainty → `01-core-spec/assertion-status-and-certainty.md`
-* Authority recognition → `01-core-spec/authority-recognition.md`
-* IDs, technical canonicalization, and hashing → `01-core-spec/ids-canonicalization-hashing.md`
-* Signatures and trust roots → `01-core-spec/signatures-trust.md`
-* Normative JSON Schemas → `02-schemas/`
-* Reproducibility and build surfaces → `03-reproducibility/`
-* Offline query surface → `04-query/query-contract.md`
-* Reader policy profiles → `04-query/reader-policy-profiles.md`
-* Optional interoperability profiles → `05-profiles/`
-* Ecosystem contracts: Orgo, SenTient, Architect, Konnaxion → `06-integration/`
-* Security, trust roots, downgrade policy, rollback policy, and multi-tenancy → `07-security/`
-* Operational guidance → `08-ops/`
-* Golden vectors and fixtures → `09-test-vectors/`
-* Worked examples → `10-examples/`
+* Core model, artifact lifecycle, and validation boundaries → `docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md`
+* Structured Epistemic State → `docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md`
+* Assertion status and certainty → `docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md`
+* Authority recognition → `docs/Technical-Reference/kristal-docs-v5/01-core-spec/authority-recognition.md`
+* IDs, technical canonicalization, and hashing → `docs/Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md`
+* Signatures and trust roots → `docs/Technical-Reference/kristal-docs-v5/01-core-spec/signatures-trust.md`
+* Normative JSON Schemas → `docs/Technical-Reference/kristal-docs-v5/02-schemas/`
+* Reproducibility and build surfaces → `docs/Technical-Reference/kristal-docs-v5/03-reproducibility/`
+* Offline query surface → `docs/Technical-Reference/kristal-docs-v5/04-query/query-contract.md`
+* Reader policy profiles → `docs/Technical-Reference/kristal-docs-v5/04-query/reader-policy-profiles.md`
+* Optional interoperability profiles → `docs/Technical-Reference/kristal-docs-v5/05-profiles/`
+* Ecosystem contracts: Orgo, SenTient, Architect, Konnaxion → `docs/Technical-Reference/kristal-docs-v5/06-integration/`
+* Security, trust roots, downgrade policy, rollback policy, and multi-tenancy → `docs/Technical-Reference/kristal-docs-v5/07-security/`
+* Operational guidance → `docs/Technical-Reference/kristal-docs-v5/08-ops/`
+* Golden vectors and fixtures → `docs/Technical-Reference/kristal-docs-v5/09-test-vectors/`
+* Worked examples → `docs/Technical-Reference/kristal-docs-v5/10-examples/`
 
 ---
 
@@ -35080,11 +35401,11 @@ Implementations claiming **Kristal v5 Core** conformance must, at minimum:
 * preserve validation labels, certainty labels, authority labels, scope labels, and lineage
 * produce manifests recording build-affecting configuration, policy, source identity, and compiler identity
 * enforce required verification where hashes, signatures, trust roots, revocation checks, or runtime activation rules are declared as mandatory
-* pass the core test vectors in `09-test-vectors/`
+* pass the core test vectors in `docs/Technical-Reference/kristal-docs-v5/09-test-vectors/`
 
 ### Profiles
 
-Advanced capabilities are expressed as explicit profiles in `05-profiles/`.
+Advanced capabilities are expressed as explicit profiles in `docs/Technical-Reference/kristal-docs-v5/05-profiles/`.
 
 Implementations may claim profile conformance individually, including profiles such as:
 
@@ -35109,17 +35430,17 @@ Profiles must:
 
 ## Repository structure
 
-* `00-overview/` — scope, concepts, conformance, federation, authority, and ecosystem placement
-* `01-core-spec/` — normative core specification, artifact model, status model, authority model, signatures, IDs, and hashing
-* `02-schemas/` — normative JSON Schemas for v5 artifacts
-* `03-reproducibility/` — deterministic compilation rules, identity surfaces, runtime pack policies, and acceptance tests
-* `04-query/` — offline query contract and reader policy profiles
-* `05-profiles/` — optional standardized profiles
-* `06-integration/` — inter-system contracts for Orgo, SenTient, Architect, and Konnaxion
-* `07-security/` — trust roots, key management, downgrade and rollback policy, and multi-tenancy boundaries
-* `08-ops/` — operational guidance and release patterns
-* `09-test-vectors/` — golden vectors for canonicalization, hashing, manifests, and identity-bearing surfaces
-* `10-examples/` — worked examples for implementers
+* `docs/Technical-Reference/kristal-docs-v5/00-overview/` — scope, concepts, conformance, federation, authority, and ecosystem placement
+* `docs/Technical-Reference/kristal-docs-v5/01-core-spec/` — normative core specification, artifact model, status model, authority model, signatures, IDs, and hashing
+* `docs/Technical-Reference/kristal-docs-v5/02-schemas/` — normative JSON Schemas for v5 artifacts
+* `docs/Technical-Reference/kristal-docs-v5/03-reproducibility/` — deterministic compilation rules, identity surfaces, runtime pack policies, and acceptance tests
+* `docs/Technical-Reference/kristal-docs-v5/04-query/` — offline query contract and reader policy profiles
+* `docs/Technical-Reference/kristal-docs-v5/05-profiles/` — optional standardized profiles
+* `docs/Technical-Reference/kristal-docs-v5/06-integration/` — inter-system contracts for Orgo, SenTient, Architect, and Konnaxion
+* `docs/Technical-Reference/kristal-docs-v5/07-security/` — trust roots, key management, downgrade and rollback policy, and multi-tenancy boundaries
+* `docs/Technical-Reference/kristal-docs-v5/08-ops/` — operational guidance and release patterns
+* `docs/Technical-Reference/kristal-docs-v5/09-test-vectors/` — golden vectors for canonicalization, hashing, manifests, and identity-bearing surfaces
+* `docs/Technical-Reference/kristal-docs-v5/10-examples/` — worked examples for implementers
 
 ---
 
@@ -35145,7 +35466,7 @@ Profiles must:
 
 Any change that affects hashes, IDs, deterministic outputs, schema semantics, validation semantics, authority recognition, reader policy behavior, runtime activation, or trust-surface behavior requires:
 
-* updated test vectors in `09-test-vectors/`
+* updated test vectors in `docs/Technical-Reference/kristal-docs-v5/09-test-vectors/`
 * an explicit version bump in the relevant schema, profile, policy, or artifact identifier
 * compatibility guidance where applicable
 * clear notes explaining the affected conformance surface
@@ -35164,3 +35485,129 @@ Major-version changes are required for changes that alter:
 ## One-sentence definition
 
 > Kristal v5 is a deterministic, portable epistemic artifact system that compiles Structured Epistemic States into verifiable artifacts while keeping validation scoped, authority plural, certainty explicit, reader policy selectable, and disagreement preserved.
+
+
+================================================================================================
+FILE: RELEASE.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: d029d1e0742da83b8754782ca28d676691e948f01534ef3a4a48230adc6b0e22
+CONTENT_BYTES: 2963
+================================================================================================
+
+# Kristal Framework release process
+
+Kristal uses **Git as the release identity**. The release tag names the version and the resolved commit SHA pins the exact repository content. `contract-set.manifest.json` is only a curated index of public contract surfaces; it is not a file inventory and it carries no per-file hashes.
+
+## Release gate
+
+From a clean checkout:
+
+```bash
+python -m pip install -r requirements-dev.txt
+python tools/validate_release.py
+mkdocs build --strict
+```
+
+All commands MUST pass before tagging a stable release.
+
+## Release metadata
+
+When changing the release version, update together:
+
+- `VERSION`
+- `kristal-release.json`
+- `contract-set.manifest.json` (`release` field only when the version changes)
+- `CHANGELOG.md`
+- the corresponding status report under `docs/status/`
+
+`contract-set.manifest.json` lists contract **surfaces** (directories/files), not every file in the repository.
+
+## Tagging
+
+The release manifest does not self-embed the Git commit SHA. After the release commit exists, create an annotated tag and resolve it to the immutable commit.
+
+### PowerShell 7
+
+Run this as one block from the authoritative repository root:
+
+```powershell
+$ErrorActionPreference = "Stop"
+$Version = (Get-Content ./VERSION -Raw).Trim()
+$Tag = "v$Version"
+
+if (-not (Test-Path .git)) {
+    throw "Run this from the root of the Kristal Git repository."
+}
+
+python ./tools/validate_release.py
+if ($LASTEXITCODE -ne 0) {
+    throw "Kristal release validation failed."
+}
+
+$Dirty = git status --porcelain
+if ($Dirty) {
+    throw "Working tree is not clean. Commit the release changes first."
+}
+
+if (git tag --list $Tag) {
+    throw "Tag $Tag already exists locally."
+}
+
+git tag -a $Tag -m "Kristal Framework $Version"
+if ($LASTEXITCODE -ne 0) {
+    throw "Tag creation failed."
+}
+
+$Commit = (git rev-list -n 1 $Tag).Trim()
+if (-not $Commit) {
+    throw "Unable to resolve $Tag to a commit."
+}
+
+Write-Host "Kristal release ready"
+Write-Host "Version : $Version"
+Write-Host "Tag     : $Tag"
+Write-Host "Commit  : $Commit"
+
+git push origin HEAD
+if ($LASTEXITCODE -ne 0) {
+    throw "Branch push failed."
+}
+
+git push origin $Tag
+if ($LASTEXITCODE -ne 0) {
+    throw "Tag push failed."
+}
+```
+
+### Optional signed tag
+
+If Git signing is configured and you specifically want a cryptographically signed Git tag, replace:
+
+```powershell
+git tag -a $Tag -m "Kristal Framework $Version"
+```
+
+with:
+
+```powershell
+git tag -s $Tag -m "Kristal Framework $Version"
+git tag --verify $Tag
+```
+
+A signed tag is optional for the framework release process. Do not block a release candidate merely because local GPG signing is not configured.
+
+## Downstream lock
+
+Consumers SHOULD record the small release identity:
+
+```json
+{
+  "version": "5.0.0-rc.1",
+  "git_tag": "v5.0.0-rc.1",
+  "git_commit": "<full SHA resolved from tag>",
+  "canonicalization_profile": "kristal.v5:jcs-rfc8785"
+}
+```
+
+Floating dependencies (`main`, `latest`, `5.x`) are not valid release locks.
