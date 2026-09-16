@@ -1,7 +1,7 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/LevelUpDiag-Koa-Linux
-source_commit: bfdb935861ab83bb4f4bf6d210c81db93acee888
+source_commit: 6b964de01ed27c4364b328532921dc905a4f8bee
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -15,33 +15,33 @@ source_files: 8
 included_files: 8
 excluded_files: 0
 duplicate_files: 0
-content_bytes: 20309
+content_bytes: 22993
 authority_counts: {"reference":8}
 content_role_counts: {"knowledge":8}
-generated_at: 2026-09-10T13:04:20-04:00
+generated_at: 2026-09-16T12:59:11-04:00
 files: 8
-content_sha256: 3f08f2acdbb292bfd016a25d8c1a26eb1ae8020f2fee1567c27615a9a03cb0b5
+content_sha256: 03854cb3e11bca03ee3b90e31d50356483ee9f82b577d41ad0dc45b521f69f8f
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-1. [reference] [knowledge] docs/ARCHITECTURE.md | bytes=2201 | sha256=f27974dcaa1d83065f1e3e528ea626a91ad4051207b7f70bd9b16d6461903a22
+1. [reference] [knowledge] docs/ARCHITECTURE.md | bytes=3298 | sha256=112fea3900b83380d5d5e8552e61328380b1ec6306212971e9b9314e294d5415
 2. [reference] [knowledge] docs/KOALI_SEQUENCE.md | bytes=1860 | sha256=5250504654d0e3f25bd6e2295cfd353ec2db095b205a90ab3bec2f9baa12967a
 3. [reference] [knowledge] docs/MIGRATION_FROM_V1.md | bytes=939 | sha256=f322541d47fea81a45bb2b11fc1371d289f7dbc129adf130c6f7c44ad575365c
 4. [reference] [knowledge] docs/README.md | bytes=505 | sha256=b398a84dc066940915d535c8e2d9ee1925c2c69431ca9b06e29ec11ffecde331
 5. [reference] [knowledge] docs/RESULT_MODEL.md | bytes=1641 | sha256=9b4497138697abd4c398361e4f7a6f9f94bc975f585f5b465c58981c2d813de7
 6. [reference] [knowledge] docs/SECURITY_MODEL.md | bytes=797 | sha256=b8cf498f59c451104f4d8bdc5dba9524477b95100313ce214bca861732f806a3
 7. [reference] [knowledge] docs/UI_MODULARITY.md | bytes=2668 | sha256=0ef0d3068065a42f96b6383ec9182a0cb2ff211553eea07aa23642baaf04910b
-8. [reference] [knowledge] README.md | bytes=9698 | sha256=c511f8fbb9d5799ab14aea2c53f791f36b13ca943ff09d5d5801dbf7363a80c1
+8. [reference] [knowledge] README.md | bytes=11285 | sha256=f44eede654e40a44971d8e313c05672badb786d9b92866df59f0b0554ae07137
 
 
 ================================================================================================
 FILE: docs/ARCHITECTURE.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: f27974dcaa1d83065f1e3e528ea626a91ad4051207b7f70bd9b16d6461903a22
-CONTENT_BYTES: 2201
+CONTENT_SHA256: 112fea3900b83380d5d5e8552e61328380b1ec6306212971e9b9314e294d5415
+CONTENT_BYTES: 3298
 ================================================================================================
 
 # Architecture — Debug-first policy
@@ -74,6 +74,17 @@ Repository conformance is no longer a functional prerequisite. N04 depends on N0
 LevelUpDiag is an observer of Koali product-UI modularity, not the owner of that architecture. N06 can consume an explicit local `ui_modularity` policy and test product availability, product-owned standalone markers, public integrated-contribution markers, and explicitly forbidden private cross-product UI dependency tokens.
 
 The check is intentionally configuration-driven so LevelUpDiag does not hard-code product frameworks or manifest names. Optional product absence is a valid state and reports `PASS` for the removal observation; required product absence can report `BLOCKED`. The core `stabilization` campaign does not select N06, so UI-product lifecycle remains outside core stabilization.
+
+## Desktop execution backend
+
+The desktop console separates the Windows UI host from the Linux qualification runtime. `desktop_console.execution_backend = "auto"` means WSL on Windows and native execution elsewhere. WSL launch uses argument arrays (`wsl.exe --exec`), not a shell command string. If WSL is unavailable, AUTO fails explicitly rather than silently reinterpreting Linux toolchain absence as target failure.
+
+The `audit-total` campaign selects N00-N10 under DEBUG semantics so every independent level can produce evidence in one pass. It is diagnostic evidence, not a conformance or delivery claim.
+
+
+## Windows desktop / WSL tool PATH
+
+The Windows desktop console executes Linux qualification through WSL. Because `wsl.exe --exec` may expose a narrower PATH than an interactive WSL terminal, the backend probes WSL `HOME` and `PATH` using the selected Python interpreter, prepends the configured `desktop_console.wsl_path_prepend` entries (default: `~/.local/bin`, `~/.cargo/bin`), and launches LevelUpDiag through `/usr/bin/env`. No login shell or shell command string is required.
 
 
 ================================================================================================
@@ -314,11 +325,11 @@ The check is read-only. It reads only explicit marker paths and explicit scan fi
 FILE: README.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: c511f8fbb9d5799ab14aea2c53f791f36b13ca943ff09d5d5801dbf7363a80c1
-CONTENT_BYTES: 9698
+CONTENT_SHA256: f44eede654e40a44971d8e313c05672badb786d9b92866df59f0b0554ae07137
+CONTENT_BYTES: 11285
 ================================================================================================
 
-# LevelUpDiag-Koali v2.3
+# LevelUpDiag-Koali v2.4
 
 LevelUpDiag-Koali 2.3 is a **core-stabilization-first** diagnostic suite for kOA-Linux. The primary development objective is to stabilize the Koali environment and native core before independent subsystems are integrated.
 
@@ -421,7 +432,7 @@ Both now default to the `stabilization` campaign.
 
 ## Console
 
-`LEVELUPDIAG_CONSOLE.pyw` exposes three policies:
+`LEVELUPDIAG_CONSOLE.pyw` exposes three policies and an execution backend. With `desktop_console.execution_backend = "auto"`, Windows uses WSL automatically; Linux/macOS use the native interpreter. The Windows UI does not silently fall back to native Python if WSL is unavailable.
 
 - **DEBUG — non bloquant**
 - **VALIDATION — conformité**
@@ -432,6 +443,7 @@ Presets:
 - **STABILISATION KOALI**: N00, N01, N04, N05
 - **RUNTIME CORE**: N00, N01, N04, N05, N08, N09, N10
 - **DEBUG COMPLET**: N00, N01, N04-N10
+- **AUDIT TOTAL**: N00-N10 in DEBUG non-blocking mode, one-pass complete diagnostic evidence without a conformance or delivery claim
 - **STRUCTURE**: N00-N03
 - **VALIDATION**: N00-N10
 - **RELEASE**: N00-N11
@@ -464,6 +476,7 @@ Functional levels no longer depend transitively on N02. Selecting `N08,N09,N10` 
 - `stabilization` — primary pre-subsystem Koali core stabilization, mode DEBUG.
 - `stabilization-runtime` — core runtime qualification when image/QEMU context exists, mode DEBUG.
 - `debug` — broader development diagnosis including integration/profile/runtime levels, mode DEBUG.
+- `audit-total` — N00-N10 in one non-blocking DEBUG pass, scope `full_target_diagnostic`.
 - `structure` — repository/documentation checks, mode VALIDATION.
 - `validation` — N00-N10, mode VALIDATION.
 - `release` — N00-N11, mode RELEASE.
@@ -569,6 +582,16 @@ Evidence remains under the target repository:
 ```
 
 Commands use `shell=false`; output is bounded and redacted; target mutation remains disabled by configuration.
+
+## Version 2.4.1
+
+2.4.1 fixes the WSL environment inherited by the Windows desktop console. A direct `wsl.exe --exec` launch can expose a narrower `PATH` than an interactive WSL session, which made user-installed `uv`, Cargo, Rust and rustup disappear even though the run was correctly executing under WSL.
+
+The WSL backend now probes `HOME` and `PATH` with the selected WSL Python interpreter, prepends the configurable `desktop_console.wsl_path_prepend` entries (default: `~/.local/bin` and `~/.cargo/bin`), and launches LevelUpDiag through `/usr/bin/env`. The Windows subprocess still uses `shell=false`; no login shell or profile-script dependency is introduced.
+
+## Version 2.4.0
+
+2.4.0 made desktop execution environment-aware. On Windows, the console `auto` backend launches LevelUpDiag through `wsl.exe --exec` and resolves the script path with `wslpath`, preventing Windows Python from producing misleading Linux-toolchain failures. It also added **AUDIT TOTAL**, a named N00-N10 DEBUG campaign for complete one-pass evidence collection, and aligned `levelupdiag_manifest.json` suite version with the package/UI version.
 
 ## Version 2.3.0
 

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "policyVersion": "2026-09-10.13",
-  "generatedAt": "2026-09-11T07:53:53-04:00",
+  "generatedAt": "2026-09-16T12:59:24-04:00",
   "packs": [
     {
       "slug": "ame-artificielle",
@@ -97,40 +97,40 @@
       "slug": "koa-digital-ecosystem",
       "file": "koa-digital-ecosystem-context-pack.txt",
       "repository": "Rejean-McCormick/kOA_Digital_Ecosystem",
-      "sourceCommit": "0ea910d8eeb38b962f0de8e7deefc3327cd770e6",
-      "generatedAt": "2026-09-10T13:04:24-04:00",
-      "fileCount": 100,
-      "sha256": "a3d335143aff118e194e73180dad740adc589f5cec75c31bff4a168ef5a85ca5",
+      "sourceCommit": "b34e8c73743397ff5b13a2187d75cdcef99e6655",
+      "generatedAt": "2026-09-16T12:59:16-04:00",
+      "fileCount": 142,
+      "sha256": "90d73f8416798b0066d3a4f511c7122482a154bff3a06cfee828aee97544fafd",
       "category": "system",
       "policyVersion": "2026-09-10.13",
-      "sourceFileCount": 100,
-      "includedFileCount": 100,
-      "excludedFileCount": 0,
-      "duplicateFileCount": 0,
-      "contentBytes": 603988,
+      "sourceFileCount": 176,
+      "includedFileCount": 142,
+      "excludedFileCount": 34,
+      "duplicateFileCount": 34,
+      "contentBytes": 558637,
       "authorityCounts": {
-        "reference": 100
+        "reference": 142
       },
       "contentRoleCounts": {
-        "knowledge": 71,
-        "navigation": 29
+        "knowledge": 105,
+        "navigation": 37
       }
     },
     {
       "slug": "koa-linux",
       "file": "koa-linux-context-pack.txt",
       "repository": "Rejean-McCormick/kOA-Linux",
-      "sourceCommit": "abe6915e607aff70f080cb686f15212002a2d109",
-      "generatedAt": "2026-09-11T07:53:33-04:00",
+      "sourceCommit": "22066f29e1d645b0ab0503a2178bf5fafdf1f9aa",
+      "generatedAt": "2026-09-16T12:58:58-04:00",
       "fileCount": 132,
-      "sha256": "f8f43f77aefc33db9e0480bf175f1f70e5a75c89c8b0a491a4a2d17f3236fe04",
+      "sha256": "91c99030fae6aff2f1ffae5a3549a1c5aa85821e85ebdd6fcf43c150f1d1abd6",
       "category": "system",
       "policyVersion": "2026-09-10.13",
       "sourceFileCount": 132,
       "includedFileCount": 132,
       "excludedFileCount": 0,
       "duplicateFileCount": 0,
-      "contentBytes": 1942889,
+      "contentBytes": 1943100,
       "authorityCounts": {
         "canonical": 39,
         "reference": 93
@@ -234,10 +234,10 @@
       "slug": "kristal-farms",
       "file": "kristal-farms-context-pack.txt",
       "repository": "Rejean-McCormick/Kristal_Farms",
-      "sourceCommit": "1a542833e81ee1d4297dc9e0fc18368133f8188c",
-      "generatedAt": "2026-09-11T07:53:41-04:00",
+      "sourceCommit": "e2bb98a5096f6759c2d05615d7b7506a8342d4e5",
+      "generatedAt": "2026-09-16T12:59:07-04:00",
       "fileCount": 199,
-      "sha256": "7bba111122cfe1ae49ee0619b3e147f85e26ebc7f38f6f6f6298f31fd3cf10c2",
+      "sha256": "d2f2bb0709d6842fd62805e7b530ac615a66d19af20c0f7e5bd020ae5e3c1150",
       "category": "system",
       "policyVersion": "2026-09-10.13",
       "sourceFileCount": 199,
@@ -258,23 +258,23 @@
     {
       "slug": "kristal-framework",
       "file": "kristal-framework-context-pack.txt",
-      "repository": "Rejean-McCormick/kristal-framework",
-      "sourceCommit": "bad7346b387ad61fa141ecba0031c5859c6b15d0",
-      "generatedAt": "2026-09-10T13:04:18-04:00",
-      "fileCount": 72,
-      "sha256": "b7b4a8dba829bd7b0388d82caf35a66196e589e4341e308697f37eff6a75aa9f",
+      "repository": "Rejean-McCormick/Kristal-Framework",
+      "sourceCommit": "21e0761d3935fa91bf8044da254a1ec5ff694cf2",
+      "generatedAt": "2026-09-16T12:59:08-04:00",
+      "fileCount": 77,
+      "sha256": "485e9c1763b4eeb1a69a728fdd9f911663a2bbbf7e15176ef4760b16d68b3912",
       "category": "system",
       "policyVersion": "2026-09-10.13",
-      "sourceFileCount": 72,
-      "includedFileCount": 72,
+      "sourceFileCount": 77,
+      "includedFileCount": 77,
       "excludedFileCount": 0,
       "duplicateFileCount": 0,
-      "contentBytes": 955443,
+      "contentBytes": 972289,
       "authorityCounts": {
-        "reference": 72
+        "reference": 77
       },
       "contentRoleCounts": {
-        "knowledge": 41,
+        "knowledge": 46,
         "navigation": 31
       }
     },
@@ -282,17 +282,17 @@
       "slug": "levelupdiag-koa-linux",
       "file": "levelupdiag-koa-linux-context-pack.txt",
       "repository": "Rejean-McCormick/LevelUpDiag-Koa-Linux",
-      "sourceCommit": "bfdb935861ab83bb4f4bf6d210c81db93acee888",
-      "generatedAt": "2026-09-10T13:04:20-04:00",
+      "sourceCommit": "6b964de01ed27c4364b328532921dc905a4f8bee",
+      "generatedAt": "2026-09-16T12:59:11-04:00",
       "fileCount": 8,
-      "sha256": "55e69b96c15a4474b3cdc684c4699b35de19a3080d82abfaea98359d7e0d37b1",
+      "sha256": "c323e980f44143b16680b3e4829d20e5fbb7b2ddd6c3821c0f35bf3f0e972e46",
       "category": "system",
       "policyVersion": "2026-09-10.13",
       "sourceFileCount": 8,
       "includedFileCount": 8,
       "excludedFileCount": 0,
       "duplicateFileCount": 0,
-      "contentBytes": 20309,
+      "contentBytes": 22993,
       "authorityCounts": {
         "reference": 8
       },
