@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "policyVersion": "2026-09-10.13",
+  "policyVersion": "2026-09-18.3",
   "publicBuild": {
     "committedOnly": true,
     "requireCleanMarkdown": true,
@@ -22,7 +22,11 @@
     "_pipeline-plan-diag_*/**",
     "_diagnostics/**",
     "tmp/**",
-    ".tmp/**"
+    ".tmp/**",
+    "node_modules/**",
+    "**/node_modules/**",
+    ".koali-ks4-backup/**",
+    "**/.koali-ks4-backup/**"
   ],
   "repositories": {
     "Konnaxion": {
@@ -314,6 +318,11 @@
           "include": false
         }
       ]
+    },
+    "Power_Dynamics": {
+      "selectionMode": "markdown",
+      "includeWiki": false,
+      "sourceMode": "directory"
     },
     "UCKK-Moodle": {
       "rules": [

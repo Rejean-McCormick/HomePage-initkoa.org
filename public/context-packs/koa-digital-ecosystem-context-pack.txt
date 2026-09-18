@@ -1,26 +1,26 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/kOA_Digital_Ecosystem
-source_commit: b34e8c73743397ff5b13a2187d75cdcef99e6655
+source_commit: 3bca7f7043570aa28d672eeebfb89ad3b9b0a3ef
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
 wiki_source_commit: b724098ea139fd540e6e2b87f88f90291cb78831
 wiki_working_tree_markdown: clean
-policy_version: 2026-09-10.13
-repo_files: 138
+policy_version: 2026-09-18.3
+repo_files: 139
 wiki_files: 38
-source_files: 176
-included_files: 142
-excluded_files: 34
-duplicate_files: 34
-content_bytes: 558637
-authority_counts: {"reference":142}
-content_role_counts: {"knowledge":105,"navigation":37}
-generated_at: 2026-09-16T12:59:16-04:00
-files: 142
-content_sha256: d62bcbc1116b964e4c4c730af94d47afd4ed7497974b7fd6544f7292e5d39734
+source_files: 177
+included_files: 151
+excluded_files: 26
+duplicate_files: 26
+content_bytes: 593183
+authority_counts: {"reference":151}
+content_role_counts: {"knowledge":114,"navigation":37}
+generated_at: 2026-09-18T18:41:15-04:00
+files: 151
+content_sha256: 86c6761d9d2f02a6d763478047836177b820086f9eb95e41041731497dc201bb
 
 ================================================================================================
 FILE INDEX
@@ -65,109 +65,118 @@ FILE INDEX
 037. [reference] [navigation] wiki/Validation-UCKK-A014-2026-09-12.md | bytes=6824 | sha256=5642654c7866c9eff9c0bde485c6dd024c7c220c37367b9bbd7ced80b1570bfd
 038. [reference] [knowledge] ALIGNEMENT_HISTORICAL_2026-09-12.md | bytes=78593 | sha256=d048ddd211d43d864dbfab44d3dc4d32403481066a02384b9933de2af19ed0aa
 039. [reference] [knowledge] ALIGNEMENT_UPDATED_2026-09-12.md | bytes=78546 | sha256=e89562da40830b4a44b6a8f66ebb7ca60f537a1a15bfb6b58f4b15b65c6cf13d
-040. [reference] [knowledge] docs/1-Overview/Integration-Kristal-v4.md | bytes=485 | sha256=d899d7dff25e3706c43b41b3e0031e9e87a4b6df885347b60262e492a94fac59
-041. [reference] [knowledge] docs/2-Technical-Reference/00-overview/faq.md | bytes=950 | sha256=694edea0ababce936974ff50560155522ebe8d4cf3b04f1c685607d03252bb1d
-042. [reference] [knowledge] docs/2-Technical-Reference/00-overview/glossary.md | bytes=1100 | sha256=52e095c0b0ff1a31fb84a3165d6caeaf5770707339b087b588828770c6ea0aa3
-043. [reference] [knowledge] docs/2-Technical-Reference/00-overview/scope.md | bytes=775 | sha256=dd7b205690eda6f41a46a067cc612a03a6c60d42b3648f3ec9281a8951a13c33
-044. [reference] [knowledge] docs/2-Technical-Reference/00-overview/system-at-a-glance.md | bytes=865 | sha256=873a786db4a0c533413dff7d8ee773d6f419fbd5294e508c329b88985906d73c
-045. [reference] [knowledge] docs/2-Technical-Reference/10-system/architecture.md | bytes=2377 | sha256=57fd03fb7e6d3b321bb2725b25a2c82e44439357d91c696332625ee5a2ef6474
-046. [reference] [knowledge] docs/2-Technical-Reference/10-system/components.md | bytes=1533 | sha256=2027c72ddd93eaf64e7139d942924ac0c610257613e9374bd9614f4691ad0110
-047. [reference] [knowledge] docs/2-Technical-Reference/10-system/determinism.md | bytes=1349 | sha256=955791c5908d6152c3aec389a1430950707cba18e25b24b291cbe3b017a9d320
-048. [reference] [knowledge] docs/2-Technical-Reference/10-system/failure-modes.md | bytes=1343 | sha256=0a557a329ed40955d73ad70eaf64a01c08041bd428ebfddef821bd07d1798467
-049. [reference] [knowledge] docs/2-Technical-Reference/10-system/lifecycle.md | bytes=1565 | sha256=b85defb7cd6251a432e0fe42fbbf40246e59f56be76afb6c33e81f468810bd44
-050. [reference] [knowledge] docs/2-Technical-Reference/10-system/trust-boundaries.md | bytes=1182 | sha256=4ead2590bc6478d140cc63dee18b617ff9f874a56ee8a2436232e5acac4a71b1
-051. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/binah-blueprint.md | bytes=4517 | sha256=c40cac420d19b8a4318e853e9a56943f3a286e69a85120e04c54c9feaa8eea2b
-052. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/chesed-konnaxion.md | bytes=1311 | sha256=41339ec66e684e6c94224f6cef9d12c5939a962eaabe419c85d0d766b2e5b1e1
-053. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/chokmah-inputs.md | bytes=6714 | sha256=b527d6f0e606db828121848d8a21579b3edb9c1406bbbdd12464cea14943d776
-054. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/daat-kristal-bridge.md | bytes=1314 | sha256=f2b2e7c7c3f15ccb8fd29586ef95f2613c4ec63771dac539a32f1f1b00640432
-055. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/gevurah-orgo.md | bytes=1452 | sha256=2811506aec927d58b9bff87452ada727e0b6cb881c8e7b3a9525726b9a7392b1
-056. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/hod-architect-render.md | bytes=637 | sha256=a02f5c1376e78ab1f55bb5656b2325d9963402af6be5ed9e6f8da8d2b9067a6e
-057. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/index.md | bytes=954 | sha256=b452e094515d26337d851138c32ed76665fac03e47d482cfc9641d532190f3ee
-058. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/keter-mandate.md | bytes=3771 | sha256=90b8a357ae8ec7a80ad6729ab7388111c5b3fd9da9ca76adf07d3dbb402f02a0
-059. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/malkuth-runtime.md | bytes=655 | sha256=105c2585636aeb0999a2f084649df33d4e78a8ea304f78c812bb3b30c9b54368
-060. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/netzach-architect-strategy.md | bytes=535 | sha256=638c4ca1b1e16b36f330ba97edf93299e623afb513bbecf10fd0f073b3e0dffb
-061. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/tiferet-sentient.md | bytes=842 | sha256=dd48b265ee03eb55e6a5c6dd9d19a469d2f5eb55e15743c401a49c42bea2ecd1
-062. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/yesod-compiler.md | bytes=841 | sha256=866b5fa8b1fce05aed9e530afd66fb8fb27f956416fa745d4830ec4ac8989d48
-063. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/build-record.md | bytes=1820 | sha256=eb8b03fd37eb25e7cce79f868a693272c3d7a2dbf63b39be230db8f7d05f1da1
-064. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/index.md | bytes=1330 | sha256=a1f3f52599cf8e3b119f8e2039c115e1b45ca1a92459ef86377ccf787158d9f4
-065. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/konnaxion-state.md | bytes=661 | sha256=31ac893dff29f990e911748033a4378f355b4899d7479116fbc6e3cff687b337
-066. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/kristal-runtime-state.md | bytes=767 | sha256=d6714c3bb2927a2dbbbc0b3c56b992d1d179fc8576dd1816eacb8c1439336ae2
-067. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/mandate-bundle.md | bytes=849 | sha256=fb8dd6061fd39ba86ce45da51a420a9b56341806e7b21f67d633c6518874ae5f
-068. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/orgo-case.md | bytes=4871 | sha256=4207aaef60960972d312f0852a3b5adb21eb981ad36908fca71642d7141a61f4
-069. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/orgo-task.md | bytes=7150 | sha256=0f1bf58334facc73b1898613adaa0e9ad05833948de7f809454765d2bd98223d
-070. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/release-record.md | bytes=872 | sha256=b44743934f009120fd83e27f755ac74a59dbdc0718e5bf262d80a0909cfa2180
-071. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/release-set-reference.md | bytes=823 | sha256=97f6a65eebc3d5ed181e90c9b3b1fed914d7346f7e5f4a12f6ded4d7f99b99b9
-072. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/runtime-activation-state.md | bytes=928 | sha256=3194d2d1a0df6d483c631914fc867f30a1cd73ab9502497811ea577b4c7d5728
-073. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/application-profiles.md | bytes=1640 | sha256=3890374849a7f5e40842abdad0d13a0aa2c652893d17549d6953802355c661ab
-074. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/identity-model.md | bytes=1215 | sha256=96627861c5dbc17aae4d2946209e470d34fba8df30570b17ff89d7f5448ff6f6
-075. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/index.md | bytes=2356 | sha256=f1efcd52c26f4c0a18e3755b35ac52d696aa55e183657689808645e03917836b
-076. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/local-authorization.md | bytes=936 | sha256=76e5e8d466ba1bfbe3911b606541dd0ba59495a97820963cad6ab81649099ec6
-077. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/oidc-profile.md | bytes=1577 | sha256=a90886b2785572d1946bb088f78403227b8ad195e17f126da425ce05ba1a990a
-078. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/principles.md | bytes=1369 | sha256=eb33cb419780a61eabe0197cae1b2b50434a0960d65f1cd3add9de55c29d9628
-079. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/provisioning-lifecycle.md | bytes=1348 | sha256=67770525db0a2e1647942b68266d21c94e2fc3a9175197a8fbf68871280519b1
-080. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/security-conformance.md | bytes=1315 | sha256=02cf8dff8355dd44f8cfb282c3898e052cbe7e70ca37d9ad60ea857368933955
-081. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/standalone-resilience.md | bytes=1218 | sha256=068ec7c5e100d02e0b99d9461a3f599b05c7eaa3f916823e938cfd79131d169f
-082. [reference] [knowledge] docs/2-Technical-Reference/40-integration/interaction-kernel/index.md | bytes=2269 | sha256=9578df88a575b1327f1a5c8d6d1f2c94c7a624297f7b99696d5b0a09f57b61c3
-083. [reference] [knowledge] docs/2-Technical-Reference/40-integration/interaction-kernel/status.md | bytes=898 | sha256=513382da67a0ddfb82527d2fda0997286d2959e170b4876c48ef9433eb359414
-084. [reference] [knowledge] docs/2-Technical-Reference/40-integration/koali-spaces/index.md | bytes=1043 | sha256=069f0c222239b91205600614d9f4de2573461b4f4ea594488885869d6eeea2f6
-085. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v4/conformance.md | bytes=5301 | sha256=a78154a3eca1435d3571614e063387872a20e3c26cccc8621e425b873cf86579
-086. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v4/contract-pointers.md | bytes=5268 | sha256=d4e5323712507dc868edf837d3851f7264ddcca6a13ef6bc0bee80bd14bd93d1
-087. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v4/index.md | bytes=2170 | sha256=9cfefde0bea5750b75db28ca6c03df624c871409a861763a96015a5872f4e79b
-088. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v4/koa-profile.md | bytes=7235 | sha256=c1987d64d4adb8e6b3981f2412f092f8bffc2d71a96292442e1248c920e96213
-089. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v4/legacy-compat.md | bytes=4483 | sha256=be490101ddad56f0650ae471d9b3a291605dcb92d2c6b051a3b5f20e18384d5b
-090. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v4/pinned-dependency.md | bytes=2931 | sha256=b4b06d2af7c37ed28b29859b4276f1b113ff0be9eddd1b803c625fff626b146b
-091. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v5/conformance.md | bytes=1094 | sha256=2d86ce22d09b7b8e9faae649d28cb44f89d058e073fd15824fbe5f4702abdb93
-092. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v5/contract-pointers.md | bytes=1308 | sha256=53497e3f71ceb61803483708a91e75ab9dd45fdbce1bd7269424faf1630bf066
-093. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v5/index.md | bytes=1002 | sha256=300340b0a69744b118316ddd1fdd679a2afe7be918ee217bc744d5aca56c625f
-094. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v5/koa-profile.md | bytes=1303 | sha256=ed4a589a58d260b7929828429b68d991f986114b6227ce3108354f88742ddbf5
-095. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v5/legacy-compat.md | bytes=1112 | sha256=da5cea2e07db6f7790b46fe3fc53cd59c7186880ba81d80be0914f5bb5f1d3fd
-096. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v5/pinned-dependency.md | bytes=688 | sha256=163d29ced65734b27499a316580b1a0ee9aab8e2b2d4850006fa83fc3be051d6
-097. [reference] [knowledge] docs/2-Technical-Reference/40-integration/orgo-konnaxion/index.md | bytes=11604 | sha256=93bb0f9b82eb52b3ec6bb6c41b763b7622ab7a4d727f250bd7ce1b214108a479
-098. [reference] [knowledge] docs/2-Technical-Reference/40-integration/orgo-konnaxion/uckk-a014-validation-2026-09-12.md | bytes=7141 | sha256=eaab652bf44e0050039e4e06265e9734a206d476328481b742a512f2bda0fcaa
-099. [reference] [knowledge] docs/2-Technical-Reference/50-operations/incident-response.md | bytes=692 | sha256=ae3d856b0338ea7197cb228b5d9e8512be1370fda48970e7bce3b992f258b952
-100. [reference] [knowledge] docs/2-Technical-Reference/50-operations/key-management.md | bytes=5586 | sha256=df1ae1fc0f0083870e9ee7cea4bebf0c0125146f66dba207cc2d81867c418ba2
-101. [reference] [knowledge] docs/2-Technical-Reference/50-operations/pipeline.md | bytes=1452 | sha256=ab24014d2606e5fb901f8576d4b93730f568d5b4a4775f9eacd63207e9e770c7
-102. [reference] [knowledge] docs/2-Technical-Reference/50-operations/releases.md | bytes=938 | sha256=2418dd5f0bca2a3c24a59c259efb1f46cf9f6451cc8aeefa0b47f94e9f656b45
-103. [reference] [knowledge] docs/2-Technical-Reference/50-operations/rollback.md | bytes=514 | sha256=30a7c0b55d17bad512ec36262f6604df561509e6f509e93075d5f7788b26c696
-104. [reference] [knowledge] docs/2-Technical-Reference/60-guides/implementers.md | bytes=1044 | sha256=4efa77cb8239d49b8b4f2f10808b2fcddbe935dba517b0c274175933afaf670c
-105. [reference] [knowledge] docs/2-Technical-Reference/60-guides/integrators.md | bytes=939 | sha256=4645fe44aaf249b550362499b7581e637d576f9a25396c579dd6a6d75bf88a94
-106. [reference] [knowledge] docs/2-Technical-Reference/60-guides/testing.md | bytes=1230 | sha256=8ad6c8445f67ea744cc4cbb49ae7feae930c035a3b52c075cb4ef5057603efb3
-107. [reference] [knowledge] docs/2-Technical-Reference/60-guides/tooling.md | bytes=898 | sha256=a6750a5356026d4c204990107e7b4f0b105601f4c07e799d8ae705b9dd18aee1
-108. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0001-truth-boundary.md | bytes=800 | sha256=001c933eb1fb7992550ccd917e1f16d825b535819d9880e3ccd6a7b0bd853a2c
-109. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0002-determinism-policy.md | bytes=1277 | sha256=04be7739c1e39453dc9d6995e3c7b7c9be4acc74bdc9d84e3718e9c155868402
-110. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0003-konnaxion-activation-rollback.md | bytes=656 | sha256=0a0c0285560650883ed967ef6d755aafe63b8ded82230c182c991444075e7419
-111. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0004-architect-split.md | bytes=767 | sha256=3f1c984569008a6940f64c42f347fdf6c15a91d5ec8246a51c3e02c8a7f5d67b
-112. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0005-compatibility-versioning.md | bytes=3962 | sha256=3e20d374e9a0cb258374af2f126ce873e71ce11a63cd1a0c298cd3e3cf0aceb4
-113. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0006-common-identity-oidc.md | bytes=2246 | sha256=8c7a8ce0385b54bcfc8fe62ae731c1a90c06dce8b2140bee2ef8cfe451ed5bc6
-114. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0007-konnaxion-ethikos-decision-authority.md | bytes=3318 | sha256=9d8ac745c9253ba0d897e30320e16b870f6502cb172dceb5d026711718d27464
-115. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0008-kristal-v5-epistemic-lifecycle.md | bytes=1522 | sha256=3b0b92fb056871b87101ab58f5b55918e1b166494fa82ffb218e1af7665007e8
-116. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0009-runtime-pack-activation-owner.md | bytes=1506 | sha256=a8b0faf270e7ce8db04c0fc815ecda721108a3beaab9a6c5f5a1b3b993b5f05a
-117. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0010-interaction-kernel-boundary.md | bytes=947 | sha256=b347adc84834cf46e8d624beadcbae61577cded44fb3d3e4c1146218e30e92ff
-118. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/index.md | bytes=770 | sha256=238587a3bfa549af63781d88934930b08e064a3715bf603a222c4b0f691cb052
-119. [reference] [knowledge] docs/2-Technical-Reference/90-reference/terminology.md | bytes=1467 | sha256=4289ee5b156e03aab18069d00ef906ac062c8c4669344b5f0194687038483f09
-120. [reference] [knowledge] docs/2-Technical-Reference/index.md | bytes=1607 | sha256=dcbc0d3e329c906785d1d9d8c95f587bc4a92dd8a6255afc4b8e7dfae20a4d5f
-121. [reference] [knowledge] docs/3-Layer-Model/LAYER_INDEX.md | bytes=13319 | sha256=195c523429c644b4fdce0a9559951d2de82c9ccc907ab79034646424c3746606
-122. [reference] [knowledge] docs/3-Layer-Model/LAYER_MODEL.md | bytes=17891 | sha256=d78518dac1435d708af6de62a8a62cfeed16929d763bca2bf3741fd7bebd6833
-123. [reference] [knowledge] docs/3-Layer-Model/LAYER_TEMPLATE.md | bytes=8929 | sha256=c326e65cc270f12e69d5716fca873eb30a50ed1c82ae974d7429debf2895f9d1
-124. [reference] [knowledge] docs/3-Layer-Model/layers/00_separation_of_functions.md | bytes=8107 | sha256=7343afd22c2ea6319529204126604b53dc21c9fa5846de2db6b968ad9ef9e282
-125. [reference] [knowledge] docs/3-Layer-Model/layers/01_orientation_mandate.md | bytes=5797 | sha256=897c670a46f43eb211e079e34b33957fc7535e5fdd29b9cf4c476af82ca31583
-126. [reference] [knowledge] docs/3-Layer-Model/layers/02_semantics_meaning.md | bytes=12469 | sha256=099f65f9fb48cadee9668b04c5e471d7569fc61e45d7dc2000810361c5e6d8cd
-127. [reference] [knowledge] docs/3-Layer-Model/layers/03_provenance_ingestion.md | bytes=9581 | sha256=c65f358d46b135d851b1a6ddfe6a9a05c681a4b66f0ae93d35369260dd4cc052
-128. [reference] [knowledge] docs/3-Layer-Model/layers/04_structured_knowledge.md | bytes=1673 | sha256=b0fdc6126bf6b9d195fe7b9a0c0ded683a5e75d42d6e58ab5bf17d0d1970b54a
-129. [reference] [knowledge] docs/3-Layer-Model/layers/05_validation_canon.md | bytes=1840 | sha256=4eac810b530383569a77f889523dca8949c93a708f2042f9b6355d911e933cde
-130. [reference] [knowledge] docs/3-Layer-Model/layers/06_deliberation.md | bytes=11615 | sha256=d78a5e1779cd1b03ad56b98ea5fa17d45ee7b072ce04062bca0ceb1cb75954e6
-131. [reference] [knowledge] docs/3-Layer-Model/layers/07_decision_legitimacy.md | bytes=11269 | sha256=ba344cf605f4f70f0cf0196d0b8fc742d43eb2091dea75bcee76c04b8b92af33
-132. [reference] [knowledge] docs/3-Layer-Model/layers/08_execution.md | bytes=730 | sha256=eb76ed8117580386edfcc40573ad314ea61c886dd9594973c7b4d8562ef4e9c7
-133. [reference] [knowledge] docs/3-Layer-Model/layers/09_memory_learning.md | bytes=8929 | sha256=c4458f5242c9e57ca8820e2b6560661b477a2639bf5d00fb2e089822114c16dc
-134. [reference] [knowledge] docs/3-Layer-Model/layers/10_resilience_autonomy.md | bytes=975 | sha256=a75c498d76463ce843ecc4f3446f7297bc91a6821d9af42f49a01429f05b64ed
-135. [reference] [knowledge] docs/3-Layer-Model/layers/11_learning_interface.md | bytes=9346 | sha256=c682c6b0d51e95a4afc74245efde1865f0005de3c263ae216de6dd341c99b782
-136. [reference] [knowledge] docs/3-Layer-Model/layers/12_narrative_adoption.md | bytes=15266 | sha256=380ebde72252be27f271f61997f37e1b35e0416c6f3cd22cafd674d918574244
-137. [reference] [knowledge] docs/3-Layer-Model/layers/13_deployment_translation.md | bytes=14473 | sha256=eee30e8b41a0dab8397206ec38ebe05d47562a6dd50be6c57e1e2cf5f1a84ccc
-138. [reference] [knowledge] docs/3-Layer-Model/README.md | bytes=5103 | sha256=d88d47efcfcf6bae2fa9bdce65777a6fbe43e78a2c79fe67c84c858fd98ade3e
-139. [reference] [knowledge] docs/index.md | bytes=2090 | sha256=e33d1b78e9d27933bc0d083b1a492c4d5f2b987fe4e5da7cfcbca5b0334adc5d
-140. [reference] [knowledge] docs/status/2026-09-12.md | bytes=2145 | sha256=0231465b70ef603656b66c946244eb4aab9bcee18339c31f6407705c8b6aab0e
-141. [reference] [knowledge] README.md | bytes=5123 | sha256=6ad62f297ca2bac787d7b19c449115563efa66ce9a99d0e562c0915dd949d02c
-142. [reference] [knowledge] UPDATE_NOTES_2026-09-16.md | bytes=1414 | sha256=2edce6ee8036cdaa093ef4b79920741c6ef566821412b83125a43c4668740125
+040. [reference] [knowledge] ALIGNEMENT_UPDATED_2026-09-16.md | bytes=6664 | sha256=13de30107d18150e27bb311468e46ff0cc3a7ba9e3c47952fc16367fa18508dc
+041. [reference] [knowledge] docs/1-Overview/Artifacts-Kristal.md | bytes=2498 | sha256=fc5c7db897092512d72a7c2ea0cb60da18b7456dd10e7bcc4bc325ba5de66324
+042. [reference] [knowledge] docs/1-Overview/Artifacts-Operational.md | bytes=2581 | sha256=91f1d7a0b1bfa8448983a5d694b3bc9932d94d167674d3acb568615302ec5a59
+043. [reference] [knowledge] docs/1-Overview/Artifacts.md | bytes=3028 | sha256=0780c9beff7d6cdbbce1a3afb1b0368a5af9ae50cbf312d5a6345f2e976caea7
+044. [reference] [knowledge] docs/1-Overview/Components-Kristal-and-Daat.md | bytes=2996 | sha256=e954e05c2395f33bb98459ac92ab185edf2371f0ef80119b432618315736634a
+045. [reference] [knowledge] docs/1-Overview/Integration-Interaction-Kernel.md | bytes=1793 | sha256=e15770a5fcc087f48b58cb31d86098add7b44d3f666783b98dd0235bb740e008
+046. [reference] [knowledge] docs/1-Overview/Integration-Kristal-v4.md | bytes=485 | sha256=d899d7dff25e3706c43b41b3e0031e9e87a4b6df885347b60262e492a94fac59
+047. [reference] [knowledge] docs/1-Overview/Integration-Kristal-v5.md | bytes=2304 | sha256=9867bb06685180be952723c9b809b76de9895eb1d0747f9e09c366cadccb6234
+048. [reference] [knowledge] docs/1-Overview/Principles-and-invariants.md | bytes=2829 | sha256=202f0ac1e4b2a649f3d59150a8df2ecde03002f9b33aabf7f8f29ab55aa4c29c
+049. [reference] [knowledge] docs/2-Technical-Reference/00-overview/faq.md | bytes=950 | sha256=694edea0ababce936974ff50560155522ebe8d4cf3b04f1c685607d03252bb1d
+050. [reference] [knowledge] docs/2-Technical-Reference/00-overview/glossary.md | bytes=1100 | sha256=52e095c0b0ff1a31fb84a3165d6caeaf5770707339b087b588828770c6ea0aa3
+051. [reference] [knowledge] docs/2-Technical-Reference/00-overview/scope.md | bytes=775 | sha256=dd7b205690eda6f41a46a067cc612a03a6c60d42b3648f3ec9281a8951a13c33
+052. [reference] [knowledge] docs/2-Technical-Reference/00-overview/system-at-a-glance.md | bytes=865 | sha256=873a786db4a0c533413dff7d8ee773d6f419fbd5294e508c329b88985906d73c
+053. [reference] [knowledge] docs/2-Technical-Reference/10-system/architecture.md | bytes=3219 | sha256=c0d1dc471c453dafb4bf20fd041d9640fbad17d22ef8c29f45d132a6cae156bd
+054. [reference] [knowledge] docs/2-Technical-Reference/10-system/components.md | bytes=1533 | sha256=2027c72ddd93eaf64e7139d942924ac0c610257613e9374bd9614f4691ad0110
+055. [reference] [knowledge] docs/2-Technical-Reference/10-system/determinism.md | bytes=1349 | sha256=955791c5908d6152c3aec389a1430950707cba18e25b24b291cbe3b017a9d320
+056. [reference] [knowledge] docs/2-Technical-Reference/10-system/failure-modes.md | bytes=1343 | sha256=0a557a329ed40955d73ad70eaf64a01c08041bd428ebfddef821bd07d1798467
+057. [reference] [knowledge] docs/2-Technical-Reference/10-system/lifecycle.md | bytes=1565 | sha256=b85defb7cd6251a432e0fe42fbbf40246e59f56be76afb6c33e81f468810bd44
+058. [reference] [knowledge] docs/2-Technical-Reference/10-system/trust-boundaries.md | bytes=1943 | sha256=074ad9b699137d6b4b3a610c1ee9fbb9628069c08cac58bf569e0d2fbdfa6a78
+059. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/binah-blueprint.md | bytes=4517 | sha256=c40cac420d19b8a4318e853e9a56943f3a286e69a85120e04c54c9feaa8eea2b
+060. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/chesed-konnaxion.md | bytes=1311 | sha256=41339ec66e684e6c94224f6cef9d12c5939a962eaabe419c85d0d766b2e5b1e1
+061. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/chokmah-inputs.md | bytes=6714 | sha256=b527d6f0e606db828121848d8a21579b3edb9c1406bbbdd12464cea14943d776
+062. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/daat-kristal-bridge.md | bytes=1592 | sha256=93a6f99931a2cde525693c610b9e90105c5cb91ca1924e7ed32850fc6a611bf5
+063. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/gevurah-orgo.md | bytes=1452 | sha256=2811506aec927d58b9bff87452ada727e0b6cb881c8e7b3a9525726b9a7392b1
+064. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/hod-architect-render.md | bytes=637 | sha256=a02f5c1376e78ab1f55bb5656b2325d9963402af6be5ed9e6f8da8d2b9067a6e
+065. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/index.md | bytes=954 | sha256=b452e094515d26337d851138c32ed76665fac03e47d482cfc9641d532190f3ee
+066. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/keter-mandate.md | bytes=3771 | sha256=90b8a357ae8ec7a80ad6729ab7388111c5b3fd9da9ca76adf07d3dbb402f02a0
+067. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/malkuth-runtime.md | bytes=655 | sha256=105c2585636aeb0999a2f084649df33d4e78a8ea304f78c812bb3b30c9b54368
+068. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/netzach-architect-strategy.md | bytes=535 | sha256=638c4ca1b1e16b36f330ba97edf93299e623afb513bbecf10fd0f073b3e0dffb
+069. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/tiferet-sentient.md | bytes=842 | sha256=dd48b265ee03eb55e6a5c6dd9d19a469d2f5eb55e15743c401a49c42bea2ecd1
+070. [reference] [knowledge] docs/2-Technical-Reference/20-nodes/yesod-compiler.md | bytes=841 | sha256=866b5fa8b1fce05aed9e530afd66fb8fb27f956416fa745d4830ec4ac8989d48
+071. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/build-record.md | bytes=1820 | sha256=eb8b03fd37eb25e7cce79f868a693272c3d7a2dbf63b39be230db8f7d05f1da1
+072. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/index.md | bytes=1865 | sha256=a373f4d10453ac9f246a17f9a3d5b0ce77adee54ef4290fbf3f64591497164b9
+073. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/konnaxion-state.md | bytes=661 | sha256=31ac893dff29f990e911748033a4378f355b4899d7479116fbc6e3cff687b337
+074. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/kristal-runtime-state.md | bytes=767 | sha256=d6714c3bb2927a2dbbbc0b3c56b992d1d179fc8576dd1816eacb8c1439336ae2
+075. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/mandate-bundle.md | bytes=849 | sha256=fb8dd6061fd39ba86ce45da51a420a9b56341806e7b21f67d633c6518874ae5f
+076. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/orgo-case.md | bytes=4871 | sha256=4207aaef60960972d312f0852a3b5adb21eb981ad36908fca71642d7141a61f4
+077. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/orgo-task.md | bytes=7150 | sha256=0f1bf58334facc73b1898613adaa0e9ad05833948de7f809454765d2bd98223d
+078. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/release-record.md | bytes=872 | sha256=b44743934f009120fd83e27f755ac74a59dbdc0718e5bf262d80a0909cfa2180
+079. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/release-set-reference.md | bytes=823 | sha256=97f6a65eebc3d5ed181e90c9b3b1fed914d7346f7e5f4a12f6ded4d7f99b99b9
+080. [reference] [knowledge] docs/2-Technical-Reference/30-artifacts/runtime-activation-state.md | bytes=928 | sha256=3194d2d1a0df6d483c631914fc867f30a1cd73ab9502497811ea577b4c7d5728
+081. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/application-profiles.md | bytes=1640 | sha256=3890374849a7f5e40842abdad0d13a0aa2c652893d17549d6953802355c661ab
+082. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/identity-model.md | bytes=1215 | sha256=96627861c5dbc17aae4d2946209e470d34fba8df30570b17ff89d7f5448ff6f6
+083. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/index.md | bytes=2356 | sha256=f1efcd52c26f4c0a18e3755b35ac52d696aa55e183657689808645e03917836b
+084. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/local-authorization.md | bytes=936 | sha256=76e5e8d466ba1bfbe3911b606541dd0ba59495a97820963cad6ab81649099ec6
+085. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/oidc-profile.md | bytes=1577 | sha256=a90886b2785572d1946bb088f78403227b8ad195e17f126da425ce05ba1a990a
+086. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/principles.md | bytes=1369 | sha256=eb33cb419780a61eabe0197cae1b2b50434a0960d65f1cd3add9de55c29d9628
+087. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/provisioning-lifecycle.md | bytes=1348 | sha256=67770525db0a2e1647942b68266d21c94e2fc3a9175197a8fbf68871280519b1
+088. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/security-conformance.md | bytes=1315 | sha256=02cf8dff8355dd44f8cfb282c3898e052cbe7e70ca37d9ad60ea857368933955
+089. [reference] [knowledge] docs/2-Technical-Reference/40-integration/identity-oidc/standalone-resilience.md | bytes=1218 | sha256=068ec7c5e100d02e0b99d9461a3f599b05c7eaa3f916823e938cfd79131d169f
+090. [reference] [knowledge] docs/2-Technical-Reference/40-integration/interaction-kernel/index.md | bytes=2782 | sha256=004c8ebfbb97da72fc705beaeaa5a1f2af7bed5c0bfd45e172cb271c1f9b1f2b
+091. [reference] [knowledge] docs/2-Technical-Reference/40-integration/interaction-kernel/status.md | bytes=898 | sha256=513382da67a0ddfb82527d2fda0997286d2959e170b4876c48ef9433eb359414
+092. [reference] [knowledge] docs/2-Technical-Reference/40-integration/koali-spaces/index.md | bytes=1043 | sha256=069f0c222239b91205600614d9f4de2573461b4f4ea594488885869d6eeea2f6
+093. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v4/conformance.md | bytes=5301 | sha256=a78154a3eca1435d3571614e063387872a20e3c26cccc8621e425b873cf86579
+094. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v4/contract-pointers.md | bytes=5268 | sha256=d4e5323712507dc868edf837d3851f7264ddcca6a13ef6bc0bee80bd14bd93d1
+095. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v4/index.md | bytes=2170 | sha256=9cfefde0bea5750b75db28ca6c03df624c871409a861763a96015a5872f4e79b
+096. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v4/koa-profile.md | bytes=7235 | sha256=c1987d64d4adb8e6b3981f2412f092f8bffc2d71a96292442e1248c920e96213
+097. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v4/legacy-compat.md | bytes=4483 | sha256=be490101ddad56f0650ae471d9b3a291605dcb92d2c6b051a3b5f20e18384d5b
+098. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v4/pinned-dependency.md | bytes=2931 | sha256=b4b06d2af7c37ed28b29859b4276f1b113ff0be9eddd1b803c625fff626b146b
+099. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v5/conformance.md | bytes=1094 | sha256=2d86ce22d09b7b8e9faae649d28cb44f89d058e073fd15824fbe5f4702abdb93
+100. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v5/contract-pointers.md | bytes=1308 | sha256=53497e3f71ceb61803483708a91e75ab9dd45fdbce1bd7269424faf1630bf066
+101. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v5/index.md | bytes=1373 | sha256=fba1ca9829541958800ec53e52c4bf27fde1466a4ee607ef7fa898f2fbf0704f
+102. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v5/koa-profile.md | bytes=2567 | sha256=b17e2b64f596a3577180a7b11647101f474361a6176a2f90854aaebdd937d809
+103. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v5/legacy-compat.md | bytes=1112 | sha256=da5cea2e07db6f7790b46fe3fc53cd59c7186880ba81d80be0914f5bb5f1d3fd
+104. [reference] [knowledge] docs/2-Technical-Reference/40-integration/kristal-v5/pinned-dependency.md | bytes=688 | sha256=163d29ced65734b27499a316580b1a0ee9aab8e2b2d4850006fa83fc3be051d6
+105. [reference] [knowledge] docs/2-Technical-Reference/40-integration/orgo-konnaxion/index.md | bytes=11604 | sha256=93bb0f9b82eb52b3ec6bb6c41b763b7622ab7a4d727f250bd7ce1b214108a479
+106. [reference] [knowledge] docs/2-Technical-Reference/40-integration/orgo-konnaxion/uckk-a014-validation-2026-09-12.md | bytes=7141 | sha256=eaab652bf44e0050039e4e06265e9734a206d476328481b742a512f2bda0fcaa
+107. [reference] [knowledge] docs/2-Technical-Reference/50-operations/incident-response.md | bytes=692 | sha256=ae3d856b0338ea7197cb228b5d9e8512be1370fda48970e7bce3b992f258b952
+108. [reference] [knowledge] docs/2-Technical-Reference/50-operations/key-management.md | bytes=5586 | sha256=df1ae1fc0f0083870e9ee7cea4bebf0c0125146f66dba207cc2d81867c418ba2
+109. [reference] [knowledge] docs/2-Technical-Reference/50-operations/pipeline.md | bytes=1452 | sha256=ab24014d2606e5fb901f8576d4b93730f568d5b4a4775f9eacd63207e9e770c7
+110. [reference] [knowledge] docs/2-Technical-Reference/50-operations/releases.md | bytes=938 | sha256=2418dd5f0bca2a3c24a59c259efb1f46cf9f6451cc8aeefa0b47f94e9f656b45
+111. [reference] [knowledge] docs/2-Technical-Reference/50-operations/rollback.md | bytes=514 | sha256=30a7c0b55d17bad512ec36262f6604df561509e6f509e93075d5f7788b26c696
+112. [reference] [knowledge] docs/2-Technical-Reference/60-guides/implementers.md | bytes=1044 | sha256=4efa77cb8239d49b8b4f2f10808b2fcddbe935dba517b0c274175933afaf670c
+113. [reference] [knowledge] docs/2-Technical-Reference/60-guides/integrators.md | bytes=939 | sha256=4645fe44aaf249b550362499b7581e637d576f9a25396c579dd6a6d75bf88a94
+114. [reference] [knowledge] docs/2-Technical-Reference/60-guides/testing.md | bytes=1230 | sha256=8ad6c8445f67ea744cc4cbb49ae7feae930c035a3b52c075cb4ef5057603efb3
+115. [reference] [knowledge] docs/2-Technical-Reference/60-guides/tooling.md | bytes=898 | sha256=a6750a5356026d4c204990107e7b4f0b105601f4c07e799d8ae705b9dd18aee1
+116. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0001-truth-boundary.md | bytes=800 | sha256=001c933eb1fb7992550ccd917e1f16d825b535819d9880e3ccd6a7b0bd853a2c
+117. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0002-determinism-policy.md | bytes=1277 | sha256=04be7739c1e39453dc9d6995e3c7b7c9be4acc74bdc9d84e3718e9c155868402
+118. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0003-konnaxion-activation-rollback.md | bytes=656 | sha256=0a0c0285560650883ed967ef6d755aafe63b8ded82230c182c991444075e7419
+119. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0004-architect-split.md | bytes=767 | sha256=3f1c984569008a6940f64c42f347fdf6c15a91d5ec8246a51c3e02c8a7f5d67b
+120. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0005-compatibility-versioning.md | bytes=3962 | sha256=3e20d374e9a0cb258374af2f126ce873e71ce11a63cd1a0c298cd3e3cf0aceb4
+121. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0006-common-identity-oidc.md | bytes=2246 | sha256=8c7a8ce0385b54bcfc8fe62ae731c1a90c06dce8b2140bee2ef8cfe451ed5bc6
+122. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0007-konnaxion-ethikos-decision-authority.md | bytes=3318 | sha256=9d8ac745c9253ba0d897e30320e16b870f6502cb172dceb5d026711718d27464
+123. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0008-kristal-v5-epistemic-lifecycle.md | bytes=1522 | sha256=3b0b92fb056871b87101ab58f5b55918e1b166494fa82ffb218e1af7665007e8
+124. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0009-runtime-pack-activation-owner.md | bytes=1506 | sha256=a8b0faf270e7ce8db04c0fc815ecda721108a3beaab9a6c5f5a1b3b993b5f05a
+125. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0010-interaction-kernel-boundary.md | bytes=947 | sha256=b347adc84834cf46e8d624beadcbae61577cded44fb3d3e4c1146218e30e92ff
+126. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/adr-0011-operational-kristal-materialization-boundary.md | bytes=3810 | sha256=5fdad8080e736cd525d177894e39fffda21204dc18d27c2b9b3d0af5dad293ef
+127. [reference] [knowledge] docs/2-Technical-Reference/90-reference/adr/index.md | bytes=918 | sha256=669750a4cffb341743f58bf7d51e1d7aae687a555e050030c45cbdb421d5474e
+128. [reference] [knowledge] docs/2-Technical-Reference/90-reference/terminology.md | bytes=1467 | sha256=4289ee5b156e03aab18069d00ef906ac062c8c4669344b5f0194687038483f09
+129. [reference] [knowledge] docs/2-Technical-Reference/index.md | bytes=1607 | sha256=dcbc0d3e329c906785d1d9d8c95f587bc4a92dd8a6255afc4b8e7dfae20a4d5f
+130. [reference] [knowledge] docs/3-Layer-Model/LAYER_INDEX.md | bytes=13319 | sha256=195c523429c644b4fdce0a9559951d2de82c9ccc907ab79034646424c3746606
+131. [reference] [knowledge] docs/3-Layer-Model/LAYER_MODEL.md | bytes=17891 | sha256=d78518dac1435d708af6de62a8a62cfeed16929d763bca2bf3741fd7bebd6833
+132. [reference] [knowledge] docs/3-Layer-Model/LAYER_TEMPLATE.md | bytes=8929 | sha256=c326e65cc270f12e69d5716fca873eb30a50ed1c82ae974d7429debf2895f9d1
+133. [reference] [knowledge] docs/3-Layer-Model/layers/00_separation_of_functions.md | bytes=8107 | sha256=7343afd22c2ea6319529204126604b53dc21c9fa5846de2db6b968ad9ef9e282
+134. [reference] [knowledge] docs/3-Layer-Model/layers/01_orientation_mandate.md | bytes=5797 | sha256=897c670a46f43eb211e079e34b33957fc7535e5fdd29b9cf4c476af82ca31583
+135. [reference] [knowledge] docs/3-Layer-Model/layers/02_semantics_meaning.md | bytes=12469 | sha256=099f65f9fb48cadee9668b04c5e471d7569fc61e45d7dc2000810361c5e6d8cd
+136. [reference] [knowledge] docs/3-Layer-Model/layers/03_provenance_ingestion.md | bytes=9581 | sha256=c65f358d46b135d851b1a6ddfe6a9a05c681a4b66f0ae93d35369260dd4cc052
+137. [reference] [knowledge] docs/3-Layer-Model/layers/04_structured_knowledge.md | bytes=1673 | sha256=b0fdc6126bf6b9d195fe7b9a0c0ded683a5e75d42d6e58ab5bf17d0d1970b54a
+138. [reference] [knowledge] docs/3-Layer-Model/layers/05_validation_canon.md | bytes=1840 | sha256=4eac810b530383569a77f889523dca8949c93a708f2042f9b6355d911e933cde
+139. [reference] [knowledge] docs/3-Layer-Model/layers/06_deliberation.md | bytes=11615 | sha256=d78a5e1779cd1b03ad56b98ea5fa17d45ee7b072ce04062bca0ceb1cb75954e6
+140. [reference] [knowledge] docs/3-Layer-Model/layers/07_decision_legitimacy.md | bytes=11269 | sha256=ba344cf605f4f70f0cf0196d0b8fc742d43eb2091dea75bcee76c04b8b92af33
+141. [reference] [knowledge] docs/3-Layer-Model/layers/08_execution.md | bytes=730 | sha256=eb76ed8117580386edfcc40573ad314ea61c886dd9594973c7b4d8562ef4e9c7
+142. [reference] [knowledge] docs/3-Layer-Model/layers/09_memory_learning.md | bytes=8929 | sha256=c4458f5242c9e57ca8820e2b6560661b477a2639bf5d00fb2e089822114c16dc
+143. [reference] [knowledge] docs/3-Layer-Model/layers/10_resilience_autonomy.md | bytes=975 | sha256=a75c498d76463ce843ecc4f3446f7297bc91a6821d9af42f49a01429f05b64ed
+144. [reference] [knowledge] docs/3-Layer-Model/layers/11_learning_interface.md | bytes=9346 | sha256=c682c6b0d51e95a4afc74245efde1865f0005de3c263ae216de6dd341c99b782
+145. [reference] [knowledge] docs/3-Layer-Model/layers/12_narrative_adoption.md | bytes=15266 | sha256=380ebde72252be27f271f61997f37e1b35e0416c6f3cd22cafd674d918574244
+146. [reference] [knowledge] docs/3-Layer-Model/layers/13_deployment_translation.md | bytes=14473 | sha256=eee30e8b41a0dab8397206ec38ebe05d47562a6dd50be6c57e1e2cf5f1a84ccc
+147. [reference] [knowledge] docs/3-Layer-Model/README.md | bytes=5103 | sha256=d88d47efcfcf6bae2fa9bdce65777a6fbe43e78a2c79fe67c84c858fd98ade3e
+148. [reference] [knowledge] docs/index.md | bytes=2090 | sha256=e33d1b78e9d27933bc0d083b1a492c4d5f2b987fe4e5da7cfcbca5b0334adc5d
+149. [reference] [knowledge] docs/status/2026-09-12.md | bytes=2145 | sha256=0231465b70ef603656b66c946244eb4aab9bcee18339c31f6407705c8b6aab0e
+150. [reference] [knowledge] README.md | bytes=6001 | sha256=4c59a0070958d50da0ad3c55ad6b2ebec00028108eceb703bae3b401229c6c5a
+151. [reference] [knowledge] UPDATE_NOTES_2026-09-16.md | bytes=1867 | sha256=862ee19805c2b732a7cdcbc9dc629dc618fccf1067b0903c74081d76056a44e8
 
 
 ================================================================================================
@@ -175,16 +184,11 @@ EXCLUDED FILES
 ================================================================================================
 
 - [duplicate] wiki/Status.md (same content as wiki/Status-2026-09-16.md)
-- [duplicate] ALIGNEMENT_UPDATED_2026-09-16.md (same content as wiki/Status-2026-09-16.md)
-- [duplicate] docs/1-Overview/Artifacts-Kristal.md (same content as wiki/Artifacts-Kristal.md)
-- [duplicate] docs/1-Overview/Artifacts-Operational.md (same content as wiki/Artifacts-Operational.md)
-- [duplicate] docs/1-Overview/Artifacts.md (same content as wiki/Artifacts.md)
 - [duplicate] docs/1-Overview/Components-Architect.md (same content as wiki/Components-Architect.md)
 - [duplicate] docs/1-Overview/Components-Binah.md (same content as wiki/Components-Binah.md)
 - [duplicate] docs/1-Overview/Components-Chokmah.md (same content as wiki/Components-Chokmah.md)
 - [duplicate] docs/1-Overview/Components-Koali-Spaces.md (same content as wiki/Components-Koali-Spaces.md)
 - [duplicate] docs/1-Overview/Components-Konnaxion-and-Malkuth.md (same content as wiki/Components-Konnaxion-and-Malkuth.md)
-- [duplicate] docs/1-Overview/Components-Kristal-and-Daat.md (same content as wiki/Components-Kristal-and-Daat.md)
 - [duplicate] docs/1-Overview/Components-Orgo.md (same content as wiki/Components-Orgo.md)
 - [duplicate] docs/1-Overview/Components-SenTient.md (same content as wiki/Components-SenTient.md)
 - [duplicate] docs/1-Overview/Components-SwarmCraft.md (same content as wiki/Components-SwarmCraft.md)
@@ -193,9 +197,7 @@ EXCLUDED FILES
 - [duplicate] docs/1-Overview/Glossary.md (same content as wiki/Glossary.md)
 - [duplicate] docs/1-Overview/index.md (same content as wiki/Home.md)
 - [duplicate] docs/1-Overview/Integration-External-systems.md (same content as wiki/Integration-External-systems.md)
-- [duplicate] docs/1-Overview/Integration-Interaction-Kernel.md (same content as wiki/Integration-Interaction-Kernel.md)
 - [duplicate] docs/1-Overview/Integration-Koali-Spaces.md (same content as wiki/Integration-Koali-Spaces.md)
-- [duplicate] docs/1-Overview/Integration-Kristal-v5.md (same content as wiki/Integration-Kristal-v5.md)
 - [duplicate] docs/1-Overview/Integration.md (same content as wiki/Integration.md)
 - [duplicate] docs/1-Overview/Lifecycle.md (same content as wiki/Lifecycle.md)
 - [duplicate] docs/1-Overview/Non-goals.md (same content as wiki/Non-goals.md)
@@ -205,8 +207,7 @@ EXCLUDED FILES
 - [duplicate] docs/1-Overview/Operations-Releases.md (same content as wiki/Operations-Releases.md)
 - [duplicate] docs/1-Overview/Operations-Rollbacks.md (same content as wiki/Operations-Rollbacks.md)
 - [duplicate] docs/1-Overview/Operations.md (same content as wiki/Operations.md)
-- [duplicate] docs/1-Overview/Principles-and-invariants.md (same content as wiki/Principles-and-invariants.md)
-- [duplicate] docs/status/2026-09-16.md (same content as wiki/Status-2026-09-16.md)
+- [duplicate] docs/status/2026-09-16.md (same content as ALIGNEMENT_UPDATED_2026-09-16.md)
 - [duplicate] docs/status/index.md (same content as wiki/Status-2026-09-16.md)
 
 
@@ -7717,6 +7718,407 @@ No model fusion by convenience.
 
 
 ================================================================================================
+FILE: ALIGNEMENT_UPDATED_2026-09-16.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 13de30107d18150e27bb311468e46ff0cc3a7ba9e3c47952fc16367fa18508dc
+CONTENT_BYTES: 6664
+================================================================================================
+
+# kOA Digital Ecosystem alignment status — 2026-09-16
+
+This page records ecosystem alignment against the supplied Konnaxion, Orgo, Kristal, Interaction Kernel, current kOA-Linux docs/contracts snapshot and current Koali Spaces docs snapshot.
+
+## Overall result
+
+The ecosystem documentation is aligned at the ownership/contract level, but adoption and implementation evidence remain system-specific.
+
+| Area | Ecosystem documentation | Current evidence / remaining work |
+|---|---|---|
+| Kristal v5 epistemic model | Aligned | Structured Epistemic State, Working/Reference separation, Reader Policy and non-universal validation gate are preserved |
+| Operational DB / Kristal / Runtime Pack boundary | Aligned | Product DBs remain mutable authorities; Kristal consumes immutable source artifacts; query/runtime stores are derived and rebuildable |
+| kOA-Linux Runtime Pack ownership | Corrected | `kristal_runtime` owns verification/compatibility/active-state/activation+rollback receipts/runtime health; Node Agent is the narrow privileged host-transition path |
+| kOA-Linux release model | Corrected | Release Set binds compatible `system`, `services`, `governance`, `knowledge` channel versions; Digital Ecosystem Release Record is deprecated as authority |
+| Runtime Activation State | Corrected | Digital Ecosystem no longer creates a parallel authoritative state beside `kristal_runtime` |
+| Koali Spaces ecosystem placement | Added | Optional presentation/composition subsystem; no product, epistemic or host authority |
+| Koali Space activation vs Runtime Pack activation | Aligned | Explicitly separate lifecycles |
+| Koali↔Konnaxion UI pilot | Later evidence present | 2026-09-08 notice records adapter 15/15, Konnaxion backend 148/148, Koali UI 29/29, readiness HTTP 200 and browser navigation verification |
+| Koali current-reference docs | Drift remains in owner repo | `01-product/04-current-vs-target.md` and `15-reference/04-current-implementation-snapshot.md` still say first Konnaxion onboarding is pending |
+| Interaction Kernel | Target architecture | Must not be presented as replacing current kOA-Linux internal/component contracts until explicit adoption/mapping is published |
+| Konnaxion↔Orgo IK handoff | Target/migration | Direct finalized DecisionRecord→Orgo path still requires explicit implementation/conformance evidence |
+| Orgo→Konnaxion durable publication | Target mapping + historical evidence | Product-level IK Profile conformance still required |
+| Da’at→Kristal v5 | Target mapping | Migration/conformance evidence remains owner-repository work |
+
+## Operational state → knowledge → materialization boundary
+
+ADR-0011 establishes the cross-system storage/authority model:
+
+```text
+Orgo/Konnaxion operational database
+  mutable + transactional + product-owned
+        │ immutable export/snapshot + provenance
+        ▼
+Da’at mapping boundary
+        ▼
+Kristal Exchange / epistemic artifacts
+  content-addressed + Kristal-owned
+        │ deterministic build
+        ▼
+Runtime Pack / query materialization
+  read-oriented + non-authoritative + rebuildable
+```
+
+This explicitly rejects cross-system dual-write authority, bidirectional operational-DB↔Kristal synchronization, and treating a Runtime Pack query database/index as an independent source of truth. IK carries versioned interactions and ArtifactRefs/ExportManifests; it is not the database or Kristal storage owner.
+
+## Precise kOA-Linux ownership model
+
+```text
+kOA-Linux platform
+  owns profiles, trust/policy/resource boundaries,
+  artifact admission and release-channel contracts
+
+Release Set
+  binds compatible versions across
+  system / services / governance / knowledge channels
+
+kristal_runtime
+  owns Runtime Pack verification/compatibility,
+  active Runtime Pack record,
+  activation/rollback receipts,
+  runtime health
+
+kOA Node Agent
+  executes narrow authorized privileged node-local
+  activation/recovery transitions when required
+```
+
+This supersedes the coarser earlier wording that “kOA-Linux owns physical Runtime Pack activation” and supersedes the Digital Ecosystem-created Runtime Activation State as an authority.
+
+## Koali Spaces placement
+
+Koali Spaces is an optional global experience/presentation subsystem. It composes admitted application surfaces and owns Space lifecycle/presentation state only.
+
+```text
+Koali Space activation
+≠ product business activation
+≠ kOA-Linux release-channel activation
+≠ Kristal Runtime Pack activation
+```
+
+A Koali view of Kristal/Runtime Pack material must preserve relevant status, certainty, authority and Reader Policy labels. Rendering does not compile, validate or recognize authority.
+
+## Interaction Kernel status
+
+Interaction Kernel remains the target cross-system protocol/Profile layer for selected ecosystem boundaries. Current kOA-Linux documentation already defines its own canonical interaction types and contracts; therefore Digital Ecosystem treats IK adoption as explicit and system-specific rather than already universal.
+
+Claims such as `governance.decision.execute` or `accountability.impact.publish` describe target/mapped Profiles until the owning product/platform contracts publish matching conformance evidence.
+
+## Deprecated Digital Ecosystem authorities
+
+The following are retained only for compatibility/history:
+
+- `Release Record v2` as an authoritative release object — use kOA-Linux Release Set and owner receipts instead;
+- `Runtime Activation State` as a kOA-Linux authoritative record — use `kristal_runtime` owner records instead;
+- `Konnaxion State` as universal Runtime Pack activation state;
+- active Kristal v4 integration pages — retained as historical migration documentation only.
+
+## Product-repository updates still required
+
+1. **Koali Spaces:** update the two current-state reference pages that still say first real Konnaxion onboarding is pending; replace “Kristal: verrou de vérité” / “assertion canonique” terminology with v5 epistemic/authority language.
+2. **kOA-Linux:** mount/link official subsystem documentation at reserved subsystem paths; continue contract/code convergence items already identified in `CODE_ALIGNMENT_NOTES.md` (including language-pack discriminator compatibility and generator/validator alignment).
+3. **Konnaxion + Orgo:** publish explicit IK Profile adoption/conformance for the intended handoff/publication paths.
+4. **Da’at:** publish verified Kristal v5 mapping/conformance against the pinned release.
+5. **Digital Ecosystem:** future updates should reference owner contracts rather than introduce new authority records when a product/platform already owns the state.
+
+
+================================================================================================
+FILE: docs/1-Overview/Artifacts-Kristal.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: fc5c7db897092512d72a7c2ea0cb60da18b7456dd10e7bcc4bc325ba5de66324
+CONTENT_BYTES: 2498
+================================================================================================
+
+# Kristal v5 artifacts
+
+The kOA ecosystem consumes Kristal v5 artifacts without collapsing their epistemic distinctions.
+
+| Artifact | Purpose |
+|---|---|
+| Structured Epistemic State | structured input/state with provenance and epistemic labels |
+| Claim-IR / Resolved Claim-IR | optional extractor/resolution profiles |
+| Working Exchange | deterministic compiled Exchange; not necessarily validated/recognized |
+| Validation Report | scoped validation decision/findings |
+| Authority Recognition | scoped authority recognition decision |
+| Reference Exchange | authority-recognized reference artifact for declared scope |
+| Reader Policy | controls which labeled material a consumer may read |
+| Runtime Pack | offline/runtime projection with explicit source artifact status |
+
+Validation, recognition, publication and activation are separate transitions. A failed or incomplete validation does not universally mean that no Working Exchange may exist.
+
+## What belongs in Kristal
+
+Kristal is the ecosystem's portable epistemic/knowledge artifact layer, not a shared application database. Kristal artifacts are appropriate for knowledge that needs explicit provenance, assertion status, certainty, validation/recognition state, authority scope, reader policy, conflicts/revocations or reproducible content addressing.
+
+Mutable product state remains with its product owner. Orgo Cases/Tasks/Workflow state and Konnaxion consultations/participants/votes/DecisionRecords do not move into Kristal merely because a knowledge artifact is produced from them. The source owner exports an immutable snapshot or referenced artifact; Da’at maps that input to Kristal-native semantics.
+
+## Derived query materializations
+
+A Runtime Pack may contain deterministic structures optimized for local reading/querying, including tables, dictionaries, indexes, columnar data and, when an adopted profile defines it, a read-only database representation. Such structures are **derived and non-authoritative**:
+
+- they are tied to a source Exchange/content digest;
+- they must not be a writable operational store;
+- they must not redefine epistemic status;
+- they must be rebuildable deterministically from the referenced Kristal artifact and declared build inputs.
+
+For production deployment, the kOA Profile may impose stricter eligibility rules (for example recognized/reference material only). Those rules must be declared as kOA deployment policy rather than attributed to Kristal's universal compile semantics.
+
+
+================================================================================================
+FILE: docs/1-Overview/Artifacts-Operational.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 91f1d7a0b1bfa8448983a5d694b3bc9932d94d167674d3acb568615302ec5a59
+CONTENT_BYTES: 2581
+================================================================================================
+
+# Operational integration artifacts
+
+Operational state is mutable, transactional state owned by the product/component responsible for the domain. It remains outside Kristal even when knowledge is derived from it.
+
+Examples include Orgo Signal/WorkflowVersion/Case/Task/IntegrationOperation state, Konnaxion consultations/participants/votes/DecisionRecords, product identity/session state, outbox/retry/idempotency state and local activation/job state.
+
+Cross-system flows use owner APIs, versioned contracts, immutable exports/snapshots and ArtifactRefs. They do not implement a bidirectional database synchronization model and do not dual-write the same authoritative domain record into Kristal.
+
+## Build Record
+
+A Build Record may remain as **ecosystem correlation/reproducibility evidence**. It must not replace Kristal artifacts, kOA-Linux Release Sets, component active-state records or lifecycle receipts.
+
+It should keep independent statuses for compilation, validation, recognition, publication and activation and reference the owning artifacts rather than re-declaring them.
+
+## Source-owned export/snapshot
+
+An operational owner may publish an immutable export/snapshot for knowledge compilation or cross-system processing. The export remains evidence of source state at a declared revision/digest; it does not transfer ownership of the live source record.
+
+Da’at may transform such an export into Structured Epistemic State or another explicitly supported Kristal input. The resulting Kristal artifact is a new knowledge artifact with provenance back to the source export, not a replacement operational record.
+
+## kOA-Linux Release Set
+
+Release Set is the platform release compatibility artifact. It binds versions across independent release channels and carries compatibility/activation metadata under the kOA-Linux contract.
+
+Digital Ecosystem's former `Release Record v2` is deprecated as an authority. If retained for analytics/audit compatibility, it is only a projection that references `release_set_id` and owner receipts.
+
+## Runtime Pack local state
+
+For kOA-Linux deployments, `kristal_runtime` owns:
+
+- Runtime Pack verification/compatibility record;
+- active Runtime Pack record;
+- activation receipt;
+- rollback receipt;
+- runtime health state.
+
+kOA Node Agent may execute the narrow privileged host transition required by the profile. A receipt does not replace the owner component's active-state record.
+
+## Koali Space state
+
+Koali Space activation/rollback/deactivation belongs to Koali Spaces and is unrelated to Kristal Runtime Pack active state.
+
+
+================================================================================================
+FILE: docs/1-Overview/Artifacts.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0780c9beff7d6cdbbce1a3afb1b0368a5af9ae50cbf312d5a6345f2e976caea7
+CONTENT_BYTES: 3028
+================================================================================================
+
+# Ecosystem artifacts
+
+Artifacts remain authoritative at their owning system/component.
+
+| Family | Owner | Examples |
+|---|---|---|
+| Civic/governance | Konnaxion | DecisionRecord, consultations, readings |
+| Operational/work | Orgo | Signal, WorkflowVersion, Case, Task, IntegrationOperation |
+| Epistemic/reference | Kristal | Structured Epistemic State, Working Exchange, Validation Report, Authority Recognition, Reference Exchange, Reader Policy, Runtime Pack manifest |
+| Platform release | kOA-Linux | Release Set; registered channel/artifact contracts; lifecycle receipts |
+| Runtime Pack local state | `kristal_runtime` | verification record, active Runtime Pack record, activation/rollback receipts, runtime health |
+| Privileged node lifecycle | kOA Node Agent | privileged-operation/activation/recovery receipts under its contract |
+| Presentation | Koali Spaces | Space definition, presentation/runtime registration, surface descriptors and Space lifecycle state |
+| Cross-system reference | source + adopted integration contract | ArtifactRef, ExportManifest or equivalent source-owned references |
+| Ecosystem build evidence | kOA integration layer | Build Record, when used as non-authoritative correlation/reproducibility evidence |
+
+## Three storage/artifact layers
+
+kOA distinguishes three layers that must not be collapsed:
+
+```text
+1. Operational state
+   mutable, transactional, product-owned
+   Orgo / Konnaxion / other owner database
+        │
+        │ immutable source-owned export/snapshot
+        ▼
+2. Kristal knowledge artifact
+   content-addressed epistemic representation
+   Working / Reference Exchange and related artifacts
+        │
+        │ deterministic derivation
+        ▼
+3. Query/runtime materialization
+   Runtime Pack tables/indexes/columnar data/read-only database profile
+   non-authoritative and rebuildable
+```
+
+A record does not become Kristal-owned merely because knowledge is derived from it. For example, a Konnaxion DecisionRecord remains Konnaxion-owned; a Kristal assertion derived from a pinned DecisionRecord export is a separate Kristal-owned knowledge artifact with provenance back to the source.
+
+A Runtime Pack materialization must not become a second writable source of truth. If a query database or index is included, deleting and deterministically rebuilding it from the referenced Kristal source artifact must preserve the authoritative knowledge state.
+
+## Release Set
+
+Digital Ecosystem uses the **kOA-Linux Release Set** as the platform release compatibility artifact rather than inventing a competing Release Record authority. Release Sets bind tested-compatible versions across independent `system`, `services`, `governance` and `knowledge` channels.
+
+## Runtime Pack activation state
+
+Digital Ecosystem does **not** define a new authoritative Runtime Activation State for kOA-Linux. The active Runtime Pack state is owned by `kristal_runtime`; privileged node operations can be executed by kOA Node Agent where the active profile requires them.
+
+
+================================================================================================
+FILE: docs/1-Overview/Components-Kristal-and-Daat.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e954e05c2395f33bb98459ac92ab185edf2371f0ef80119b432618315736634a
+CONTENT_BYTES: 2996
+================================================================================================
+
+# Kristal and Da'at
+
+Kristal is the ecosystem's **structured epistemic/reference system**. Da'at is the **Kristal integration boundary** used by the kOA ecosystem. Kristal is not the shared transactional database for Orgo, Konnaxion or other products.
+
+## Kristal v5 lifecycle
+
+The active model is not a single “truth pipeline”. The principal lifecycle is:
+
+```text
+source / native input
+        ↓
+Structured Epistemic State
+        ↓
+Working Exchange
+        ↓
+validation / review / authority recognition
+        ↓
+Reference Exchange (when recognized for a declared scope)
+        ↓
+Runtime Pack (policy-dependent)
+```
+
+Claim-IR and Resolved Claim-IR remain supported extractor/resolution profiles, but they are not mandatory universal stages.
+
+## Epistemic distinctions
+
+Kristal v5 keeps these concepts separate:
+
+- assertion status;
+- certainty level;
+- validation status;
+- `validated_as` classification;
+- authority channel and scope;
+- recognition status;
+- reader policy.
+
+A signature proves integrity/authorship under its key context; it does not automatically mean that content is validated, certain or authority-recognized.
+
+## Working vs Reference
+
+A **Working Exchange** is deterministic and content-addressed but may contain unreviewed, disputed or rejected material with explicit labels.
+
+A **Reference Exchange** is an Exchange recognized as a reference by declared authority channel(s) for a declared scope.
+
+Validation is not a universal compile blocker. Production policies may require validation/recognition before reference publication, distribution or activation.
+
+## Operational-to-knowledge boundary
+
+The normal write path is one-way with respect to authoritative state:
+
+```text
+product-owned mutable state
+        ↓ immutable export/snapshot + provenance
+Da'at
+        ↓ Kristal-native mapping
+Structured Epistemic State / Exchange
+        ↓ deterministic derivation
+Runtime Pack / query materialization
+```
+
+Products may retain ArtifactRefs and local caches/projections, but they do not synchronize a Kristal representation bidirectionally with the live operational record. A Kristal assertion derived from an Orgo/Konnaxion record is a distinct artifact with lineage, not the same record under a second owner.
+
+## Da'at responsibilities
+
+Da'at:
+
+- maps ecosystem/IK requests to Kristal-native contracts;
+- preserves source ownership and provenance;
+- preserves epistemic labels and authority scope;
+- returns ArtifactRefs/status rather than transferring domain ownership;
+- must not collapse Working and Reference status;
+- must not turn a source export into a writable shared database or introduce a second authoritative owner.
+
+Da'at does not turn an Orgo or Konnaxion record into “truth” merely because it crosses the boundary.
+
+## Pinned dependency
+
+The current ecosystem baseline pins Kristal `5.0.0-rc.1`, tag `v5.0.0-rc.1`, commit `af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19`, canonicalization profile `kristal.v5:jcs-rfc8785` version `1`.
+
+
+================================================================================================
+FILE: docs/1-Overview/Integration-Interaction-Kernel.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: e15770a5fcc087f48b58cb31d86098add7b44d3f666783b98dd0235bb740e008
+CONTENT_BYTES: 1793
+================================================================================================
+
+# Integration — Interaction Kernel
+
+Interaction Kernel (IK) is the **target system-of-systems interoperability protocol/Profile layer** for cross-product interactions such as Konnaxion↔Orgo and ecosystem↔Da’at. IK is transport/protocol semantics, not a participant database or Kristal artifact store.
+
+## Status boundary
+
+Digital Ecosystem must distinguish:
+
+```text
+IK target cross-system architecture
+≠
+kOA-Linux canonical internal/component communication contracts
+```
+
+The current kOA-Linux snapshot already defines its own registered command/query/event/job/artifact/receipt/gateway patterns. IK must not be described as having replaced those contracts until kOA-Linux and the product owners explicitly publish adoption/mapping.
+
+## Target use
+
+Planned/mapped Profiles include:
+
+- `governance.decision.execute/1.0.0`;
+- `accountability.impact.publish/1.0.0`;
+- Kristal build/artifact/revision/distribution Profiles through Da’at.
+
+## Rules
+
+- Konnaxion↔Orgo is direct by default; no forced Kristal hop.
+- Da’at remains the anti-corruption/mapping boundary for IK-facing Kristal work.
+- Profile admission does not imply Kristal validation/recognition.
+- Source-owned artifacts remain source-owned; ArtifactRef/ExportManifest identify immutable boundary artifacts without moving the live database record.
+- IK must not create a distributed transaction spanning product databases and Kristal; owners commit locally and reconcile durable cross-system effects asynchronously.
+- Durable interactions preserve idempotency identity and reconciliation.
+
+## Adoption claim
+
+A product/platform may claim IK conformance only when its owning contracts and evidence identify the Profile/version and required behavior. General build/runtime qualification is not IK conformance evidence.
+
+
+================================================================================================
 FILE: docs/1-Overview/Integration-Kristal-v4.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
@@ -7731,6 +8133,93 @@ CONTENT_BYTES: 485
 This page is retained only so historical links continue to resolve. It is not an active integration contract.
 
 The active ecosystem baseline uses Kristal `5.0.0-rc.1`, Structured Epistemic State, Working/Reference Exchange separation, scoped validation/recognition and Reader Policy. See the v5 integration page and technical `40-integration/kristal-v5/` section.
+
+
+================================================================================================
+FILE: docs/1-Overview/Integration-Kristal-v5.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 9867bb06685180be952723c9b809b76de9895eb1d0747f9e09c366cadccb6234
+CONTENT_BYTES: 2304
+================================================================================================
+
+# Integration — Kristal v5
+
+kOA integrates against a pinned Kristal v5 release candidate. Kristal remains the sole normative authority for its schemas and epistemic semantics.
+
+## Pin
+
+- version: `5.0.0-rc.1`
+- tag: `v5.0.0-rc.1`
+- commit: `af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19`
+- canonicalization: `kristal.v5:jcs-rfc8785`
+- canonicalization version: `1`
+- schema-set digest used by Interaction Kernel: `sha256:7a94a1e8a91d5c5267b73b7f1e98977faa548324bc937bb491cd08d49fdc8c92`
+
+## Core model
+
+Kristal v5 separates:
+
+```text
+artifact existence
+integrity
+assertion status
+certainty
+validation
+recognition
+reader visibility
+publication
+activation
+```
+
+The normative structured input is **Structured Epistemic State**. Claim-IR remains available as an optional extractor proposal profile rather than a universal mandatory stage.
+
+A Structured Epistemic State may compile to a **Working Exchange** before final validation/recognition. A **Reference Exchange** is a recognized reference artifact under declared authority/scope.
+
+## Runtime Packs
+
+A Runtime Pack declares at minimum its source Exchange reference and `source_artifact_status`. Packs derived from working and reference artifacts are not equivalent.
+
+Reader Policy and Query Contract determine how eligible content is exposed; they do not rewrite the underlying epistemic status. Runtime Packs may include deterministic query-oriented materializations. Under the kOA profile, any table/index/columnar/read-only database representation embedded for performance is derived, non-authoritative and rebuildable from the referenced Kristal source artifact; it must not become the mutable application source of truth.
+
+## Operational ownership rule
+
+Orgo, Konnaxion and other products keep their mutable operational state in their own stores. Knowledge compilation starts from immutable source-owned exports/snapshots and produces separate Kristal artifacts with provenance. kOA does not require or permit a bidirectional operational-DB↔Kristal synchronization model as the authority boundary.
+
+## kOA profile rule
+
+kOA may apply stricter deployment policies. For example, a production/reference channel may require reference-derived packs before publication or activation. Such a restriction is a kOA/kOA-Linux policy, not a Kristal core rule.
+
+
+================================================================================================
+FILE: docs/1-Overview/Principles-and-invariants.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 202f0ac1e4b2a649f3d59150a8df2ecde03002f9b33aabf7f8f29ab55aa4c29c
+CONTENT_BYTES: 2829
+================================================================================================
+
+# Principles and invariants
+
+1. **Unique authoritative owner.** Every authoritative state has one declared logical owner.
+2. **No direct cross-system writes.** Integrations use explicit versioned contracts and owner APIs.
+3. **Presentation is not authority.** Koali rendering, routing or Space activation does not transfer business, epistemic or host authority.
+4. **Integrity is not authority.** Valid bytes/signatures do not imply validation, recognition or activation eligibility.
+5. **Workflow state is not epistemic state.** Orgo statuses do not replace Kristal assertion/validation/recognition states.
+6. **Compilation is not validation.** Kristal v5 may compile Working Exchanges before final validation/recognition where policy permits.
+7. **Recognition is scoped.** Reference status is authority/scope-specific, not universal truth.
+8. **Reader Policy does not rewrite underlying state.** Visibility preserves labels and lineage.
+9. **Runtime Pack state has a precise owner.** On kOA-Linux, `kristal_runtime` owns verification/compatibility/active Runtime Pack state and activation/rollback receipts; Node Agent performs only the narrow privileged host transition when required.
+10. **Release Set is not activation state.** It binds compatible release-channel versions; it does not replace component active-state records.
+11. **Space activation is not Runtime Pack activation.** Koali Space lifecycle is presentation/application composition.
+12. **`accepted != succeeded`.** Durable asynchronous operations require terminal reconciliation.
+13. **Idempotency survives retry/redrive.** Same logical key with different semantic content is a conflict.
+14. **IK adoption is explicit.** Interaction Kernel is the target cross-system Profile layer, but it does not silently replace kOA-Linux internal/component contracts.
+15. **No forced Kristal hop.** Konnaxion↔Orgo remains direct unless an adopted Profile explicitly requires Kristal.
+16. **Operational databases remain product-owned.** Kristal is not a shared transactional store and no integration creates a second writable authority for an Orgo/Konnaxion record.
+17. **Operational-to-Kristal flow is snapshot/export based.** Knowledge compilation consumes immutable source-owned exports/references with provenance; it does not rely on cross-system database writes or distributed commits.
+18. **Runtime query stores are materializations.** Any Runtime Pack table/index/columnar/read-only database representation is derived, non-authoritative and deterministically rebuildable from the referenced Kristal artifact and declared build inputs.
+19. **No bidirectional authority synchronization.** Product state may produce knowledge and consume ArtifactRefs/projections, but the product database, Kristal Exchange and Runtime Pack do not form peer writable sources of truth.
 
 
 ================================================================================================
@@ -7857,8 +8346,8 @@ IK target architecture       ≠ current kOA-Linux internal contract unless adop
 FILE: docs/2-Technical-Reference/10-system/architecture.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 57fd03fb7e6d3b321bb2725b25a2c82e44439357d91c696332625ee5a2ef6474
-CONTENT_BYTES: 2377
+CONTENT_SHA256: c0d1dc471c453dafb4bf20fd041d9640fbad17d22ef8c29f45d132a6cae156bd
+CONTENT_BYTES: 3219
 ================================================================================================
 
 # Architecture
@@ -7880,6 +8369,24 @@ kOA is a system of independently owned systems and platform components. Integrat
 | presentation composition and Space lifecycle | Koali Spaces |
 | target cross-system protocol/Profile semantics | Interaction Kernel, where explicitly adopted |
 | ecosystem-to-Kristal mapping/ACL | Da’at |
+
+## State and artifact planes
+
+kOA separates mutable operational state, epistemic artifacts and runtime/query materializations:
+
+```text
+Operational state (product-owned, mutable, transactional)
+        │ immutable export/snapshot + digest/revision
+        ▼
+Da’at mapping / ACL boundary
+        ▼
+Kristal knowledge artifact (content-addressed epistemic state/Exchange)
+        │ deterministic build
+        ▼
+Runtime Pack / query materialization (derived, read-oriented, rebuildable)
+```
+
+Ownership does not move upward through this pipeline. Orgo/Konnaxion remain authoritative for the live domain record. Kristal owns the resulting epistemic artifact. Runtime/query structures do not become a third authoritative copy. There is no required distributed transaction or bidirectional database synchronization across these layers.
 
 ## Release architecture
 
@@ -8088,8 +8595,8 @@ Where IK is adopted, command/query/event delivery status remains separate from t
 FILE: docs/2-Technical-Reference/10-system/trust-boundaries.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 4ead2590bc6478d140cc63dee18b617ff9f874a56ee8a2436232e5acac4a71b1
-CONTENT_BYTES: 1182
+CONTENT_SHA256: 074ad9b699137d6b4b3a610c1ee9fbb9628069c08cac58bf569e0d2fbdfa6a78
+CONTENT_BYTES: 1943
 ================================================================================================
 
 # Trust and authority boundaries
@@ -8097,7 +8604,13 @@ CONTENT_BYTES: 1182
 Identity, authentication, policy authorization, resource admission, artifact verification, epistemic validation/recognition, release compatibility, privileged host operation and presentation state are distinct.
 
 ## Cross-system protocol
-Where IK is adopted, the receiver authenticates/authorizes/adopts locally. IK admission is not Kristal validation and does not replace platform admission.
+Where IK is adopted, the receiver authenticates/authorizes/adopts locally. IK admission is not Kristal validation and does not replace platform admission. IK transports protocol records and artifact references; it is not an authority database or artifact store.
+
+## Operational/epistemic ownership boundary
+Operational owners commit mutable domain state locally. An immutable export/snapshot may cross to Da’at for epistemic compilation, but the live record remains owned by its source product. Kristal owns the derived epistemic artifact, not the source operational record. No boundary requires a cross-system distributed commit.
+
+## Materialization boundary
+Runtime Pack query structures are consumption materializations. They may optimize reads but cannot silently become writable operational authority or change assertion/validation/recognition state independently of their referenced Kristal source artifact.
 
 ## kOA-Linux release boundary
 Release Set/channel compatibility is a platform release decision. It does not make an artifact epistemically valid or active.
@@ -8440,8 +8953,8 @@ Chokmah SHOULD emit:
 FILE: docs/2-Technical-Reference/20-nodes/daat-kristal-bridge.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: f2b2e7c7c3f15ccb8fd29586ef95f2613c4ec63771dac539a32f1f1b00640432
-CONTENT_BYTES: 1314
+CONTENT_SHA256: 93a6f99931a2cde525693c610b9e90105c5cb91ca1924e7ed32850fc6a611bf5
+CONTENT_BYTES: 1592
 ================================================================================================
 
 # Da’at — Interaction Kernel to Kristal v5 boundary
@@ -8464,7 +8977,7 @@ canonicalization_version 1
 
 - verify the exact Kristal pin expected by the active Profile;
 - validate the IK-side request/profile/admission requirements;
-- map source-owned exports into Kristal-native Structured Epistemic State or other explicitly supported inputs;
+- map immutable source-owned exports/snapshots into Kristal-native Structured Epistemic State or other explicitly supported inputs;
 - invoke Kristal-native contracts/tools;
 - validate produced artifacts against the pinned schemas/contracts;
 - return receipts/events with Kristal-owned ArtifactRefs;
@@ -8478,7 +8991,10 @@ Da’at does not:
 - collapse compilation, validation and recognition into one gate;
 - interpret a signature as epistemic recognition;
 - turn Working Exchange into Reference Exchange;
-- own physical Runtime Pack activation.
+- own physical Runtime Pack activation;
+- read/write another product's live operational database as part of Kristal compilation;
+- maintain bidirectional authority synchronization between a product database and Kristal;
+- treat an optional Runtime Pack query database/index as authoritative state.
 
 
 ================================================================================================
@@ -8877,8 +9393,8 @@ Schema: `schemas/build-record.schema.json`.
 FILE: docs/2-Technical-Reference/30-artifacts/index.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: a1f3f52599cf8e3b119f8e2039c115e1b45ca1a92459ef86377ccf787158d9f4
-CONTENT_BYTES: 1330
+CONTENT_SHA256: a373f4d10453ac9f246a17f9a3d5b0ce77adee54ef4290fbf3f64591497164b9
+CONTENT_BYTES: 1865
 ================================================================================================
 
 # kOA-owned and referenced cross-system artifacts
@@ -8899,7 +9415,9 @@ The ecosystem should prefer owner-system artifacts over duplicate integration-la
 - `Runtime Activation State` — deprecated for kOA-Linux; do not create a parallel active-state authority beside `kristal_runtime`.
 - `Konnaxion State` — historical compatibility artifact from the older universal-Konnaxion activation model.
 
-Kristal artifacts are referenced according to the pinned Kristal v5 contracts and are not redefined here.
+Kristal artifacts are referenced according to the pinned Kristal v5 contracts and are not redefined here. Source product databases are not ecosystem artifacts and remain authoritative at their product owner. Immutable source exports/snapshots may be referenced by ArtifactRef/ExportManifest for compilation and provenance.
+
+Runtime Pack tables/indexes/columnar data/read-only database representations, when present under an adopted profile, are **derived query materializations** rather than new authoritative artifacts. They must remain tied to the source Kristal artifact and be rebuildable without changing authoritative knowledge state.
 
 
 ================================================================================================
@@ -9944,16 +10462,16 @@ This profile extends kOA's Resilience / Autonomy principle: shared convenience m
 FILE: docs/2-Technical-Reference/40-integration/interaction-kernel/index.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 9578df88a575b1327f1a5c8d6d1f2c94c7a624297f7b99696d5b0a09f57b61c3
-CONTENT_BYTES: 2269
+CONTENT_SHA256: 004c8ebfbb97da72fc705beaeaa5a1f2af7bed5c0bfd45e172cb271c1f9b1f2b
+CONTENT_BYTES: 2782
 ================================================================================================
 
 # Interaction Kernel integration
 
-**Normative for kOA ecosystem mapping:** YES  
+**Normative for kOA ecosystem mapping:** YES
 **Protocol authority:** Interaction Kernel supplied documentation/contracts
 
-Interaction Kernel (IK) is the distributed cross-system protocol used by the target ecosystem architecture. It is not a central server and does not replace participant-owned domain APIs or stores.
+Interaction Kernel (IK) is the distributed cross-system protocol used by the target ecosystem architecture. It is not a central server and does not replace participant-owned domain APIs or stores. It is not an operational database and it is not the storage location for Kristal artifacts.
 
 ## Core protocol
 
@@ -9973,7 +10491,7 @@ Boundary objects:
 - ArtifactRef
 - ExportManifest
 
-An ArtifactRef never transfers ownership, authority or validation status.
+An ArtifactRef never transfers ownership, authority or validation status. An ExportManifest identifies source-owned immutable boundary material; it is not permission to mutate the source database.
 
 ## Reliability
 
@@ -9994,6 +10512,8 @@ same key + different fingerprint  => IK_IDEMPOTENCY_CONFLICT
 - Durable commands/queries resolve to a concrete receiver.
 - Published Profile/schema versions are immutable.
 - Known incompatibility is rejected explicitly.
+- Product owners commit mutable state locally; IK does not require a distributed transaction spanning Orgo/Konnaxion/Kristal.
+- Kristal build/revision flows carry source exports/references to Da’at and return Kristal ArtifactRefs/events; they do not dual-write the same domain record into Kristal.
 
 ## Current Profiles
 
@@ -10912,16 +11432,16 @@ The normative Kristal v5 corpus is under `docs/Technical-Reference/kristal-docs-
 FILE: docs/2-Technical-Reference/40-integration/kristal-v5/index.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 300340b0a69744b118316ddd1fdd679a2afe7be918ee217bc744d5aca56c625f
-CONTENT_BYTES: 1002
+CONTENT_SHA256: fba1ca9829541958800ec53e52c4bf27fde1466a4ee607ef7fa898f2fbf0704f
+CONTENT_BYTES: 1373
 ================================================================================================
 
 # Kristal v5 integration
 
-**External normative authority:** Kristal v5 specification  
+**External normative authority:** Kristal v5 specification
 **Pinned release:** `5.0.0-rc.1`
 
-kOA does not duplicate Kristal schemas. It pins and references the Kristal release, then defines only ecosystem/deployment policy around those contracts.
+kOA does not duplicate Kristal schemas. It pins and references the Kristal release, then defines only ecosystem/deployment policy around those contracts. Kristal is the epistemic/knowledge artifact authority, not the transactional database authority for Orgo, Konnaxion or other products.
 
 ## Core semantic changes from the old kOA model
 
@@ -10932,6 +11452,8 @@ kOA does not duplicate Kristal schemas. It pins and references the Kristal relea
 - Reference Exchange means recognized reference under declared authority/scope, not universal truth.
 - Runtime Packs preserve `source_artifact_status` and Reader Policy metadata.
 - Validation must not be treated as a universal compile blocker.
+- Product-owned mutable state enters Kristal only through immutable exports/snapshots or other explicit source artifacts with provenance.
+- Runtime/query materializations may optimize consumption but remain derived and non-authoritative.
 
 See `pinned-dependency.md`, `contract-pointers.md`, `koa-profile.md`, `conformance.md` and `legacy-compat.md`.
 
@@ -10940,8 +11462,8 @@ See `pinned-dependency.md`, `contract-pointers.md`, `koa-profile.md`, `conforman
 FILE: docs/2-Technical-Reference/40-integration/kristal-v5/koa-profile.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: ed4a589a58d260b7929828429b68d991f986114b6227ce3108354f88742ddbf5
-CONTENT_BYTES: 1303
+CONTENT_SHA256: b17e2b64f596a3577180a7b11647101f474361a6176a2f90854aaebdd937d809
+CONTENT_BYTES: 2567
 ================================================================================================
 
 # kOA profile for Kristal v5
@@ -10951,6 +11473,22 @@ This document defines kOA-specific integration constraints without changing Kris
 ## Compilation and epistemic state
 
 Keep compilation, validation, recognition, publication and activation separate. A Working Exchange may exist before final validation/recognition where policy permits.
+
+## Operational ownership and ingestion
+
+Under the kOA profile, Orgo/Konnaxion/other owner databases remain authoritative for mutable product state. Kristal ingestion uses immutable source-owned exports/snapshots or explicitly referenced source artifacts with revision/digest and provenance. Da’at performs the mapping into Kristal-native semantics.
+
+The profile does not define operational-DB↔Kristal bidirectional synchronization and does not require a distributed transaction across those owners. Products consume returned ArtifactRefs, events and derived projections without transferring ownership of their live domain records.
+
+## Derived query/runtime materializations
+
+A Runtime Pack may include query-optimized physical structures under the pinned Kristal contract and adopted kOA profile. Any tables, indexes, columnar files or read-only database representation are materializations, not authoritative knowledge or operational state. They must:
+
+- reference the source Kristal artifact/content identity;
+- preserve source artifact status and Reader Policy semantics;
+- be immutable for a given build identity;
+- be deterministically rebuildable from declared inputs;
+- never accept operational writes that would create an independent source of truth.
 
 ## Runtime Pack on kOA-Linux
 
@@ -12499,11 +13037,71 @@ However:
 
 
 ================================================================================================
+FILE: docs/2-Technical-Reference/90-reference/adr/adr-0011-operational-kristal-materialization-boundary.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5fdad8080e736cd525d177894e39fffda21204dc18d27c2b9b3d0af5dad293ef
+CONTENT_BYTES: 3810
+================================================================================================
+
+# ADR-0011: Operational state, Kristal knowledge, and runtime materialization boundary
+
+- **Status:** Accepted
+- **Date:** 2026-09-16
+- **Scope:** cross-system state ownership and Kristal ingestion/materialization; does not redefine Kristal schemas
+
+## Context
+
+The ecosystem needs a stable rule for deciding which data remains in normal product databases, which data becomes a Kristal artifact, and whether database-like structures may be packaged with Kristal Runtime Packs.
+
+Without an explicit boundary, implementations could drift toward dual writes, bidirectional database synchronization or treating a Runtime Pack query store as a second authority.
+
+## Decision
+
+1. **Product operational state remains product-owned.** Orgo, Konnaxion and other systems keep mutable transactional/domain state in their own authoritative stores.
+2. **No cross-system dual-write authority.** A product does not make the same live domain record authoritative in both its operational database and Kristal.
+3. **Kristal ingestion is artifact-based.** Knowledge compilation consumes immutable source-owned exports/snapshots or explicitly referenced source artifacts with revision/digest and provenance.
+4. **Da’at is the mapping boundary.** Da’at maps source artifacts into Kristal-native epistemic structures; Interaction Kernel may transport the request, references and resulting events/receipts but owns neither database nor Kristal storage.
+5. **The resulting Kristal artifact is distinct from its source record.** It may assert knowledge derived from that record and preserve lineage to it, but does not transfer ownership of the live record.
+6. **Runtime/query stores are derived materializations.** A Runtime Pack may contain deterministic tables, indexes, columnar data or a profile-defined read-only database representation for efficient consumption.
+7. **A materialization is never authoritative.** For a given build identity it is immutable, tied to the source Kristal artifact, and deterministically rebuildable from declared inputs. Removing/rebuilding it must not change authoritative knowledge state.
+8. **No bidirectional authority synchronization.** Operational database → source artifact → Kristal artifact → Runtime Pack is the authority direction. Products may consume ArtifactRefs/projections, but the three layers do not become peer writable sources of truth.
+9. **No distributed transaction is required across owners.** Each owner commits locally and durable cross-system effects use the adopted asynchronous/idempotent/reconciliation contracts.
+
+## Reference model
+
+```text
+Operational DB / product state
+  mutable + transactional + product-owned
+        │
+        │ immutable export/snapshot + provenance
+        ▼
+Da’at mapping boundary
+        ▼
+Kristal Exchange / epistemic artifacts
+  content-addressed + epistemic + Kristal-owned
+        │
+        │ deterministic derivation
+        ▼
+Runtime Pack / query materialization
+  read-oriented + non-authoritative + rebuildable
+```
+
+## Consequences
+
+- Orgo Cases/Tasks and Konnaxion consultations/votes/DecisionRecords remain in their product stores.
+- Kristal carries assertions, provenance, certainty/status, validation/recognition, authority scope, Reader Policy and related epistemic state derived from source artifacts.
+- ArtifactRef/ExportManifest can connect layers without copying ownership.
+- SQLite or another database-like file may be supported only as an explicitly profiled **read-only derived Runtime Pack materialization**, not as the mutable product database or canonical Kristal state unless a future Kristal normative contract explicitly says otherwise.
+- Schemas do not need to change merely to document this boundary; a concrete SQLite/profile contract would require its own later specification/adoption.
+
+
+================================================================================================
 FILE: docs/2-Technical-Reference/90-reference/adr/index.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 238587a3bfa549af63781d88934930b08e064a3715bf603a222c4b0f691cb052
-CONTENT_BYTES: 770
+CONTENT_SHA256: 669750a4cffb341743f58bf7d51e1d7aae687a555e050030c45cbdb421d5474e
+CONTENT_BYTES: 918
 ================================================================================================
 
 # Architecture Decision Records
@@ -12518,6 +13116,7 @@ CONTENT_BYTES: 770
 - `adr-0008-kristal-v5-epistemic-lifecycle.md` — Working/Reference separation and stage-specific gates
 - `adr-0009-runtime-pack-activation-owner.md` — precise kOA-Linux Runtime Pack ownership: kristal_runtime state + Node Agent privileged transition
 - `adr-0010-interaction-kernel-boundary.md` — target distributed cross-system protocol; adoption is explicit/system-specific
+- `adr-0011-operational-kristal-materialization-boundary.md` — operational DB vs Kristal knowledge vs derived Runtime Pack/query materializations
 
 ## Superseded
 
@@ -19191,17 +19790,17 @@ No passwords, bearer tokens or full credential-bearing database URLs are recorde
 FILE: README.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 6ad62f297ca2bac787d7b19c449115563efa66ce9a99d0e562c0915dd949d02c
-CONTENT_BYTES: 5123
+CONTENT_SHA256: 4c59a0070958d50da0ad3c55ad6b2ebec00028108eceb703bae3b401229c6c5a
+CONTENT_BYTES: 6001
 ================================================================================================
 
 # kOA Digital Ecosystem
 
 > System-of-systems documentation for the kOA ecosystem. This repository describes cross-system ownership, integration contracts, release/activation boundaries, and implementation-status evidence. Product repositories remain authoritative for their internal models and implementation status.
 
-**Alignment baseline:** 2026-09-16  
-**Kristal baseline:** `5.0.0-rc.1` / tag `v5.0.0-rc.1` / commit `af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19`  
-**kOA-Linux baseline:** current supplied docs/contracts snapshot generated 2026-09-16  
+**Alignment baseline:** 2026-09-16
+**Kristal baseline:** `5.0.0-rc.1` / tag `v5.0.0-rc.1` / commit `af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19`
+**kOA-Linux baseline:** current supplied docs/contracts snapshot generated 2026-09-16
 **Koali Spaces baseline:** current supplied docs snapshot generated 2026-09-16
 
 ## Purpose
@@ -19231,6 +19830,9 @@ kOA is a system of independently owned systems. This documentation answers:
 
 - **One authoritative owner per state.** Hosting, rendering, transport or projection does not transfer ownership.
 - **No cross-system database writes.** Receivers mutate only their own authoritative state.
+- **Operational state stays with its product owner.** Orgo/Konnaxion databases remain the source of truth for mutable workflow, civic, identity and application state; Kristal is not a shared transactional database.
+- **Knowledge crosses the Kristal boundary as an immutable snapshot/export.** Da’at maps source-owned exports to Kristal-native epistemic artifacts; products retain ArtifactRefs/lineage rather than dual-writing the same authoritative record into Kristal.
+- **Runtime query materializations are derived.** A Runtime Pack may carry deterministic read/query structures (for example tables, indexes, Parquet, or a profile-defined read-only database), but they are non-authoritative and rebuildable from the pinned Kristal source artifact.
 - **Kristal v5 compilation is distinct from validation and recognition.** A Working Exchange can exist before final validation/recognition where policy permits.
 - **Release channels are distinct.** kOA-Linux separates `system`, `services`, `governance` and `knowledge` channels and binds compatible versions through a Release Set.
 - **Runtime Pack activation state is not a new Digital Ecosystem artifact.** In kOA-Linux deployments, `kristal_runtime` owns Runtime Pack verification/active-state/rollback records; kOA Node Agent can execute the narrow privileged host transition where required.
@@ -19253,7 +19855,10 @@ Konnaxion-owned accountability / impact state
 ```
 
 ```text
-source / dataset / proposal
+Orgo/Konnaxion operational state
+        │ source-owned immutable export/snapshot
+        ▼
+Da’at mapping boundary
         ▼
 Structured Epistemic State
         ▼
@@ -19263,7 +19868,7 @@ validation / review / authority recognition as applicable
         ▼
 Reference Exchange when recognized
         ▼
-Runtime Pack
+Runtime Pack / deterministic query materializations
         ▼
 kOA-Linux knowledge channel + Release Set compatibility
         ▼
@@ -19293,8 +19898,8 @@ See [`docs/status/2026-09-16.md`](docs/status/2026-09-16.md).
 FILE: UPDATE_NOTES_2026-09-16.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 2edce6ee8036cdaa093ef4b79920741c6ef566821412b83125a43c4668740125
-CONTENT_BYTES: 1414
+CONTENT_SHA256: 862ee19805c2b732a7cdcbc9dc629dc618fccf1067b0903c74081d76056a44e8
+CONTENT_BYTES: 1867
 ================================================================================================
 
 # Update notes — 2026-09-16
@@ -19312,3 +19917,5 @@ This update starts from the supplied `kOA_Digital_Ecosystem.wiki(2).zip` version
 7. Reframed Interaction Kernel as the target cross-system protocol/Profile layer whose adoption must be explicit; it does not automatically replace kOA-Linux internal/component contracts.
 8. Kept Kristal v4 pages only as historical link targets; v5 remains active.
 9. Updated ADR-0009 and ADR-0010 to reflect the refined ownership/adoption model.
+10. Added ADR-0011 to formalize the three-layer authority boundary: product-owned operational state → immutable source export/Da’at mapping → Kristal knowledge artifact → derived Runtime Pack/query materialization.
+11. Clarified that IK is not a database/artifact store, Kristal is not a shared transactional database, and any database-like Runtime Pack representation must be read-only/derived/rebuildable rather than a second source of truth.

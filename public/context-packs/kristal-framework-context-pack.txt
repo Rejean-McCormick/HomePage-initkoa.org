@@ -1,26 +1,26 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Kristal-Framework
-source_commit: 21e0761d3935fa91bf8044da254a1ec5ff694cf2
+source_commit: 455ca77bc4257c2ce179f097f3a859e896b6a499
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
 selection_mode: markdown
 wiki_source_commit: 917d33f25ede7ed795dc8fa9cce0df6ccdb02861
 wiki_working_tree_markdown: clean
-policy_version: 2026-09-10.13
-repo_files: 46
+policy_version: 2026-09-18.3
+repo_files: 57
 wiki_files: 31
-source_files: 77
-included_files: 77
+source_files: 88
+included_files: 88
 excluded_files: 0
 duplicate_files: 0
-content_bytes: 972289
-authority_counts: {"reference":77}
-content_role_counts: {"knowledge":46,"navigation":31}
-generated_at: 2026-09-16T12:59:08-04:00
-files: 77
-content_sha256: 3bb75a0b5fd41e308723204613ddd21ec40163009a9cc3a58f8f84cbcac94588
+content_bytes: 1058211
+authority_counts: {"reference":88}
+content_role_counts: {"knowledge":57,"navigation":31}
+generated_at: 2026-09-18T18:41:09-04:00
+files: 88
+content_sha256: a6c0962090d001bbf1465d94f671c6df33a73e78f630da99ce7f647cbe00a3c9
 
 ================================================================================================
 FILE INDEX
@@ -57,52 +57,63 @@ FILE INDEX
 29. [reference] [navigation] wiki/Workflow-Publish-and-Distribute.md | bytes=1772 | sha256=b48a409981714d4f7caf23dcc385c0741de09cc319aeb15b010552c5a97b8f92
 30. [reference] [navigation] wiki/Workflow-Subsets-Recipes.md | bytes=1166 | sha256=02c617261ccd96e1e33cee525ebb6d2291f2c48f3d5b4ef44cc9bf90875d1a09
 31. [reference] [navigation] wiki/Workflows.md | bytes=804 | sha256=a7e012eab49b4fc647ea0f9792cde36df7f21d576da02152350b60f186c9cd1d
-32. [reference] [knowledge] CHANGELOG.md | bytes=1266 | sha256=4ab8eadcc483f227a234e9bf3ac48d1aa437dcd51bdab43fa6e53a135e6646e1
-33. [reference] [knowledge] docs/index.md | bytes=839 | sha256=a7884c4827fd1b06b1f771509b8d8e4bf95c9116d9aa5e66f653fa9b0dee9cec
-34. [reference] [knowledge] docs/status/2026-09-14-v5.0.0-rc.1.md | bytes=5321 | sha256=fa7666089ae6ba492b23e220efeb10a446fbb71054503bfea887c5a74caa0aa5
-35. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md | bytes=31478 | sha256=868c13e4207b3b98925576b28e0d2ec730dd6b86ec11fc74ab11d06356e302e9
-36. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md | bytes=20791 | sha256=13405e3a454d01fb573eef646aa3a830d273754fad1ef2728db7ea7c918a5fcc
-37. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/plural-validation-and-federated-authority.md | bytes=23543 | sha256=23abec00a9c0080b2cb06b4aa01d2b55721d528ae191a76e4c2e3e2737ac34fd
-38. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/sharding-and-federation.md | bytes=22714 | sha256=a8a6448250795810e93102c3452cfd407a774ebe3636db195d186f6628c81285
-39. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/specification-status.md | bytes=3665 | sha256=443da2d9c0dec6faba49004345d591a25df9fb33b39da33995ad189f41b7369a
-40. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/validation-certainty-and-authority.md | bytes=31234 | sha256=880b957e3131f873e310cf5ae6ee174f7388803317c8e615fb47ddc5d1778961
-41. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/vision-and-scope.md | bytes=14352 | sha256=f089bd8040b44255f4e87c19a4f7670221c15bcc51019c33680b3afd5b7b5277
-42. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md | bytes=19322 | sha256=768f6ba8e631a6939eb815a7004a409b1bf8256b5a010c8b2cdec2130074a51c
-43. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md | bytes=23605 | sha256=a1ba7150fb191072f180a466981814dfce0febc6bd18172f3559507b61f9ba3b
-44. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/authority-recognition.md | bytes=31949 | sha256=8866a6734bfb8104e708b923e7bc304a96dcd86c876d505b293b1c64e21cc6c0
-45. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md | bytes=18295 | sha256=3ddb4d61f65626b20ecfeab50e87fe4654d537db8b7e88b7639e2b2f56220f82
-46. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md | bytes=37172 | sha256=bc72aa851ab76e87267909e56fd211bece9f57c48050f280597f9a1cfd93b9d1
-47. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/signatures-trust.md | bytes=24824 | sha256=addfef32fe4a4dc333765d5a7c3873374b95dbddf24148399d21c30300d22915
-48. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md | bytes=26224 | sha256=1b5a8cee5441750d8be4ea61bb51f591e9aecf9f43ccf6a94a1650c12d62d848
-49. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/allowed-runtime-pack-policies.md | bytes=17660 | sha256=fb6ecb79f8a14959bf01a78d83272b6d6a08e677223b83868d0e38d942dea738
-50. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/deterministic-build-rules.md | bytes=24855 | sha256=8e1f51617806527401409df40b583ad305d2950c11224ff80d3afe796e4a3003
-51. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/reproducibility-acceptance-tests.md | bytes=7664 | sha256=be98c07d457f26e3e3158970d4b07afbfa24890248174924c0f1b528319e968a
-52. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/subset-recipes.md | bytes=24844 | sha256=f000a72fcd813af5dc07c5f0e34f36a777b4fb97fd35147cf6eaaf4d3624be53
-53. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/04-query/query-contract.md | bytes=23100 | sha256=b5d6dd1ebf797b4413a0342133e3f1d686190e277856536e6355cc5179ca93dc
-54. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/04-query/reader-policy-profiles.md | bytes=35065 | sha256=842d34e26275c883facef1587d986f824fefeada8af6027647c7781cc321a54c
-55. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-jsonld-export.md | bytes=21737 | sha256=98c5c181f1efc9a0eec0977779b6654486069c5a5255a65f2983c96a7b9f2002
-56. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-provenance-nanopub-provo.md | bytes=21643 | sha256=70557871cac751431e2e52f50094818686e8b276740db4295af07a035133f9ee
-57. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-query-tpf-pagination.md | bytes=17536 | sha256=e2b5b38c9a202b9c758d5cf431e5e51b4ce091d2d465ac6da8a3091cea98cccb
-58. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-integrity-rdfc.md | bytes=15351 | sha256=de464e3adc45e57a7b2cb97c71f5ef37f740e44933837cbe4572c63cff92162d
-59. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-wdqs-export.md | bytes=21797 | sha256=074f5c4f0ed246458a81cc09c3c28e2208c3f2c6c4652b203b631fe294d49d31
-60. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-transparency-log.md | bytes=23075 | sha256=298c5502f2112184f7daf167dfa1b27cdc0608188526c44588265c068ee29272
-61. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shacl.md | bytes=15436 | sha256=bfefe3b21fe67baecdc4986c1246326e505d502202ce319bb87eec7c957ef360
-62. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shex.md | bytes=16461 | sha256=d9b2ba5015229c3ff7835467c07c5a0771189da6fa9ad8139301cf4ff8385b53
-63. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/architect-rendering-contract.md | bytes=19872 | sha256=a62dcc49161e9e26695f92fcad7aaa6b2f9a463e9e83601c49a89cbd6906ffae
-64. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/konnaxion-distribution-contract.md | bytes=26896 | sha256=40db942447b0fd6fb8fa4eaa01164e256c4fc0a8e3b9c4c7073331075d77c579
-65. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/orgo-workflow-contract.md | bytes=26071 | sha256=4e731d48dfc6b7baa487cbcdd9ed343edbca11b98e097ad82fbd4da881456395
-66. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/sentient-resolution-contract.md | bytes=14245 | sha256=16f8a698aa307c314ca70b0fcf7da8cbe350d778258bcb31993c8f58babc2fab
-67. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/downgrade-rollback-policy.md | bytes=31834 | sha256=68bfd17416322c560d63057dee3270e0c3855ec0df07df3fca03d1f644ee5c32
-68. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/key-management-and-trust-roots.md | bytes=24199 | sha256=dc7c0c24e986d3bdb37f442258bb284958dbdb18ca1d522641c7095b21b538ab
-69. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/multi-tenancy-boundaries.md | bytes=21462 | sha256=e43224762570b0a87f8ebd47e2dedd31e820ae5bd94a9bbbab99f4faeb1e4b1f
-70. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/failure-paths-and-resilience.md | bytes=20490 | sha256=daa1c41d09989163a88476fdaec26548c878731a6d878547b4b6b29afcfff07a
-71. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/logging-and-correlation-ids.md | bytes=21269 | sha256=5fa31a29c003bee8eb15e1fd9f1fbd6ec2ad8a39d083322613fa16a0af8b4c3d
-72. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/operational-guidance-template.md | bytes=11284 | sha256=87c1554362da757293d3100a9db4ba179706a90a719ddb3d00279d25699cc0fc
-73. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/release-strategies.md | bytes=21035 | sha256=5e1131a07dac092e88890eb0e409cd586f665c73757efd9fcc2baf73f95c3189
-74. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md | bytes=11967 | sha256=a38ae97adf64f7ffe10fc559af5495985332e238f222c29db9608754a8b27c23
-75. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/rdfc/README.md | bytes=16859 | sha256=2a42c4fba2781e85270288f39fec5cd5704c0bf0fc0b06667aa3049ef739b2dd
-76. [reference] [knowledge] README.md | bytes=16408 | sha256=d378249661554bbc75c5dd7357ae0be1508b0d8e0a7a9aea82a9b16545ac6df4
-77. [reference] [knowledge] RELEASE.md | bytes=2963 | sha256=d029d1e0742da83b8754782ca28d676691e948f01534ef3a4a48230adc6b0e22
+32. [reference] [knowledge] CHANGELOG.md | bytes=4646 | sha256=28d6dde43c1540065e44f004f1c598d852d4e7ff43209914c28ee95a5b6e04d3
+33. [reference] [knowledge] docs/index.md | bytes=1129 | sha256=6d3259d2e589e2d72837c467f931958a8d9fc44c65a949238316e4bbb32ce8c9
+34. [reference] [knowledge] docs/status/2026-09-14-v5.0.0-rc.1.md | bytes=5558 | sha256=59e0f899a0582191eb8e0038afcc3c69016e9e74637eae50a22b12b0a9f50e51
+35. [reference] [knowledge] docs/status/2026-09-16-v5-conformance-suite.md | bytes=4263 | sha256=c549da06adf54257dde2c9fbd8842cc049f1a7919788d270fadfe6a060b93053
+36. [reference] [knowledge] docs/status/2026-09-16-v5-runtime-pack-portable-conformance.md | bytes=1674 | sha256=714d5374f444d8ca47286ef9b22784917c560bbe3a41bf3ec34801f19603c87b
+37. [reference] [knowledge] docs/status/2026-09-16-v5-validation-status.md | bytes=8486 | sha256=644f56f2cfb65238f4153c5627597dfc4b885c5997948c4d782be1745c1b10f5
+38. [reference] [knowledge] docs/status/2026-09-16-v5.0.0-rc.2-candidate.md | bytes=3277 | sha256=0747367852fb22ad1f90e53696d2bfe1daa5cd15c53c56de91693ad589b61607
+39. [reference] [knowledge] docs/status/2026-09-16-v5.0.0-rc.2-validation-status.md | bytes=11804 | sha256=71e0a84d064c8e3d16685240f6a4ee17db3b866b9896f92b373df5f14c84c005
+40. [reference] [knowledge] docs/status/2026-09-17-kristal-ecosystem-e2e-qualification-plan-TODO.md | bytes=9328 | sha256=605b19c9ffa9a58f5c8338ab207bbed1c5b368c836d508e194b4f649ed17822a
+41. [reference] [knowledge] docs/status/2026-09-17-v5.0.0-rc.2-final-local-conformance.md | bytes=11775 | sha256=f50766239fb9c5681ea3116f5089eb9465d4f5d4a3f74bdd6bd03aa254152734
+42. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md | bytes=32941 | sha256=b489fe68191615ce57b9363d655a47ea70a5fa84aa1960ecf0c35bd6fd563464
+43. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md | bytes=22170 | sha256=e9e770f3e685eceb25f35a1536d0a67e555379c94a9915e89e33be6f17d9a4cb
+44. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/plural-validation-and-federated-authority.md | bytes=23543 | sha256=23abec00a9c0080b2cb06b4aa01d2b55721d528ae191a76e4c2e3e2737ac34fd
+45. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/sharding-and-federation.md | bytes=22714 | sha256=a8a6448250795810e93102c3452cfd407a774ebe3636db195d186f6628c81285
+46. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/specification-status.md | bytes=4105 | sha256=c619403417b352e7648127107bdc89c91fbd8d3611a7abfb92d4bb2bc1010f00
+47. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/validation-certainty-and-authority.md | bytes=31234 | sha256=880b957e3131f873e310cf5ae6ee174f7388803317c8e615fb47ddc5d1778961
+48. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/vision-and-scope.md | bytes=14352 | sha256=f089bd8040b44255f4e87c19a4f7670221c15bcc51019c33680b3afd5b7b5277
+49. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md | bytes=20768 | sha256=169c411f2da739ba9a3555599ce9d9409973e9fd98d818068a456fb937443528
+50. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/assertion-status-and-certainty.md | bytes=23605 | sha256=a1ba7150fb191072f180a466981814dfce0febc6bd18172f3559507b61f9ba3b
+51. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/authority-recognition.md | bytes=31949 | sha256=8866a6734bfb8104e708b923e7bc304a96dcd86c876d505b293b1c64e21cc6c0
+52. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md | bytes=19922 | sha256=6cebcb7dcd7118f4982a782798384c89c409a328b8c80d75c09335925f6f1afb
+53. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md | bytes=37684 | sha256=348a982f020ad5869fef84e5e18fd1bc379bb29101ba47a1be2cb23931978bd4
+54. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/signatures-trust.md | bytes=24824 | sha256=addfef32fe4a4dc333765d5a7c3873374b95dbddf24148399d21c30300d22915
+55. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/01-core-spec/structured-epistemic-state.md | bytes=26224 | sha256=1b5a8cee5441750d8be4ea61bb51f591e9aecf9f43ccf6a94a1650c12d62d848
+56. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/allowed-runtime-pack-policies.md | bytes=19193 | sha256=6d6bd6479edcbc9c355febe87a3b11c8a04126776442f57ada258a8592bdd9c8
+57. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/deterministic-build-rules.md | bytes=26935 | sha256=4eefd40cf40f544952a51d8ec55b9f0efb36cb0d91ea79005996acb70601dd3f
+58. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/reproducibility-acceptance-tests.md | bytes=9554 | sha256=a29fe65f41e967f86787264e6111eb7e2ed8f1210cae6dfeb207dbffd914a8f8
+59. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/03-reproducibility/subset-recipes.md | bytes=24844 | sha256=f000a72fcd813af5dc07c5f0e34f36a777b4fb97fd35147cf6eaaf4d3624be53
+60. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/04-query/query-contract.md | bytes=23435 | sha256=f6392c7be79b6380481f05de9f525070219d3078c01e6acd6dbdac753f40da1a
+61. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/04-query/reader-policy-profiles.md | bytes=35065 | sha256=842d34e26275c883facef1587d986f824fefeada8af6027647c7781cc321a54c
+62. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-jsonld-export.md | bytes=21737 | sha256=98c5c181f1efc9a0eec0977779b6654486069c5a5255a65f2983c96a7b9f2002
+63. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-provenance-nanopub-provo.md | bytes=21643 | sha256=70557871cac751431e2e52f50094818686e8b276740db4295af07a035133f9ee
+64. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-query-tpf-pagination.md | bytes=17536 | sha256=e2b5b38c9a202b9c758d5cf431e5e51b4ce091d2d465ac6da8a3091cea98cccb
+65. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-integrity-rdfc.md | bytes=15351 | sha256=de464e3adc45e57a7b2cb97c71f5ef37f740e44933837cbe4572c63cff92162d
+66. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-rdf-wdqs-export.md | bytes=21797 | sha256=074f5c4f0ed246458a81cc09c3c28e2208c3f2c6c4652b203b631fe294d49d31
+67. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-runtime-pack-portable-conformance.md | bytes=8166 | sha256=2bfe1ffd514aa5484b6bd358e2b286db4edb9a9b689da945a2b1f32cc8a3b287
+68. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-transparency-log.md | bytes=23075 | sha256=298c5502f2112184f7daf167dfa1b27cdc0608188526c44588265c068ee29272
+69. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shacl.md | bytes=15436 | sha256=bfefe3b21fe67baecdc4986c1246326e505d502202ce319bb87eec7c957ef360
+70. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-validation-shex.md | bytes=16461 | sha256=d9b2ba5015229c3ff7835467c07c5a0771189da6fa9ad8139301cf4ff8385b53
+71. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/architect-rendering-contract.md | bytes=19872 | sha256=a62dcc49161e9e26695f92fcad7aaa6b2f9a463e9e83601c49a89cbd6906ffae
+72. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/konnaxion-distribution-contract.md | bytes=27798 | sha256=afcbcb9ab0ea3e27e3dccb79aac19426a5778a57ba1970555303184125260cd2
+73. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/orgo-workflow-contract.md | bytes=27087 | sha256=37b712582b3910d2a835c25e71dffdde1bb7aed36fdcad1dd2ea4a7d72f17ebf
+74. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/06-integration/sentient-resolution-contract.md | bytes=14245 | sha256=16f8a698aa307c314ca70b0fcf7da8cbe350d778258bcb31993c8f58babc2fab
+75. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/downgrade-rollback-policy.md | bytes=31834 | sha256=68bfd17416322c560d63057dee3270e0c3855ec0df07df3fca03d1f644ee5c32
+76. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/key-management-and-trust-roots.md | bytes=24199 | sha256=dc7c0c24e986d3bdb37f442258bb284958dbdb18ca1d522641c7095b21b538ab
+77. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/07-security/multi-tenancy-boundaries.md | bytes=21462 | sha256=e43224762570b0a87f8ebd47e2dedd31e820ae5bd94a9bbbab99f4faeb1e4b1f
+78. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/failure-paths-and-resilience.md | bytes=20490 | sha256=daa1c41d09989163a88476fdaec26548c878731a6d878547b4b6b29afcfff07a
+79. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/logging-and-correlation-ids.md | bytes=21269 | sha256=5fa31a29c003bee8eb15e1fd9f1fbd6ec2ad8a39d083322613fa16a0af8b4c3d
+80. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/operational-guidance-template.md | bytes=11284 | sha256=87c1554362da757293d3100a9db4ba179706a90a719ddb3d00279d25699cc0fc
+81. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/08-ops/release-strategies.md | bytes=21035 | sha256=5e1131a07dac092e88890eb0e409cd586f665c73757efd9fcc2baf73f95c3189
+82. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/exchange/README.md | bytes=1173 | sha256=48b211be40559c5864c045185fa46f4d8ee54197b60daa8cab75db59c3ab4bd6
+83. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md | bytes=11967 | sha256=a38ae97adf64f7ffe10fc559af5495985332e238f222c29db9608754a8b27c23
+84. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/rdfc/README.md | bytes=16859 | sha256=2a42c4fba2781e85270288f39fec5cd5704c0bf0fc0b06667aa3049ef739b2dd
+85. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/runtime-pack/README.md | bytes=1820 | sha256=5845780fb7523bbf4bca25198d5a5a296eab91c99e0f3b853388d2f6d51fd376
+86. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/TCK.md | bytes=3007 | sha256=1cbaeb97527537761e37bfeae0654904831d9eb91967bad1e638d0f865f65757
+87. [reference] [knowledge] README.md | bytes=17539 | sha256=35c8a7950eb4ddde722ff5e996592e71a959570df4d9120209a39adb3aff9f03
+88. [reference] [knowledge] RELEASE.md | bytes=4451 | sha256=9394194014953014416e47ebc5ddcf1d74b18a8e3fec44639a0a5a971f8d8d87
 
 
 ================================================================================================
@@ -2817,13 +2828,58 @@ No workflow should confuse these layers.
 FILE: CHANGELOG.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 4ab8eadcc483f227a234e9bf3ac48d1aa437dcd51bdab43fa6e53a135e6646e1
-CONTENT_BYTES: 1266
+CONTENT_SHA256: 28d6dde43c1540065e44f004f1c598d852d4e7ff43209914c28ee95a5b6e04d3
+CONTENT_BYTES: 4646
 ================================================================================================
 
 # Changelog
 
 All notable changes to the Kristal Framework contract set are recorded here.
+
+## 5.0.0-rc.2 — release-integrity and identity-boundary corrections
+
+### Corrected
+
+- retired the stale per-file `schema-set.manifest.json` release model and legacy `tools/build_manifests.py` generator;
+- made canonicalization profile **and version** explicit in framework release metadata and downstream lock examples;
+- hardened JSON Schema example validation to enforce declared `format` constraints;
+- made format validation fail closed by requiring `jsonschema[format-nongpl]` and probing active `date-time`/`uri` enforcement before repository example validation;
+- changed source release archives to use Git-tracked files only and exclude local snapshot metadata;
+- clarified that Exchange content identity is independent of compiler/build-run identity while build provenance remains recorded separately;
+- aligned Reference Exchange lifecycle rules with authority-recognition requirements;
+- aligned Runtime Pack format version examples on `5.0.0` and distribution artifact type on `runtime_pack_manifest`;
+- expanded CI to validate on Linux and Windows;
+- aligned Runtime Pack policy enums/required parameters between the normative policy document and JSON Schema;
+- added `kristal.v5:runtime-pack-portable-conformance@1` with exact RP-2 ordering, RP-3 row-group, RP-4 KBF1 Bloom, and RP-5 canonical Roaring portable bytes;
+- added executable golden vectors for RP-2 through RP-5.
+
+### Qualification
+
+- rc.2 remains a candidate until the complete framework gate passes and the release commit/tag exist;
+- compiler/verifier implementation conformance, cryptographic signature vectors, and full EX/RP cross-implementation proof remain separate promotion gates.
+
+## 2026-09-16 — executable conformance suite
+
+- Added Exchange identity and Runtime Pack identity/integrity golden vectors.
+- Added `tools/kristal_tck.mjs`, `tools/validate_conformance.py`, and `tools/validate_all.py`.
+- Added the `kristal.v5:runtime-pack-id-core@1` TCK identity profile.
+- Added explicit PASS/NOT TESTED separation between framework-vector and implementation conformance.
+- Corrected stale v3 wording in the v5 reproducibility acceptance criteria.
+- Made the full validation suite the GitHub Actions conformance gate.
+
+## Unreleased — operational/Kristal materialization boundary clarification
+
+### Clarified
+
+- Kristal is the portable epistemic artifact layer, not a shared mutable application database.
+- Product-owned operational state remains authoritative in the owning product; Kristal ingestion uses immutable source snapshots/artifact references with provenance.
+- In the kOA deployment profile, Da’at is the mapping boundary from source-owned artifacts into Kristal-native epistemic structures; Interaction Kernel transports references/requests but owns neither operational state nor Kristal storage.
+- Runtime Packs may contain deterministic query-oriented materializations, but those materializations are derived, immutable for a build identity, non-authoritative, and rebuildable from declared Kristal inputs.
+- Core v5 does not standardize a writable SQLite/application-database profile. A future database-like Runtime Pack representation requires an explicit profile and must remain read-only/derived unless a future normative contract states otherwise.
+
+### Compatibility
+
+This clarification does not change the published JSON Schemas or the Kristal v5 epistemic model.
 
 ## 5.0.0-rc.1 — stabilization release candidate
 
@@ -2858,8 +2914,8 @@ This stabilization release does not intentionally change the Kristal v5 epistemi
 FILE: docs/index.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: a7884c4827fd1b06b1f771509b8d8e4bf95c9116d9aa5e66f653fa9b0dee9cec
-CONTENT_BYTES: 839
+CONTENT_SHA256: 6d3259d2e589e2d72837c467f931958a8d9fc44c65a949238316e4bbb32ce8c9
+CONTENT_BYTES: 1129
 ================================================================================================
 
 # Kristal Framework v5
@@ -2868,25 +2924,29 @@ Kristal v5 is a deterministic, portable epistemic artifact framework.
 
 Start with:
 
-1. [Release status — v5.0.0-rc.1](status/2026-09-14-v5.0.0-rc.1.md)
-2. [Specification status](Technical-Reference/kristal-docs-v5/00-overview/specification-status.md)
-3. [What is Kristal v5?](Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md)
-4. [Core specification](Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md)
-5. [Canonicalization and hashing](Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md)
-6. [Conformance and alignment](Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md)
+1. [v5.0.0-rc.2 candidate status — 2026-09-16](status/2026-09-16-v5.0.0-rc.2-candidate.md)
+2. [Current validation status — 2026-09-16](status/2026-09-16-v5-validation-status.md)
+3. [Historical v5.0.0-rc.1 release status](status/2026-09-14-v5.0.0-rc.1.md)
+4. [Specification status](Technical-Reference/kristal-docs-v5/00-overview/specification-status.md)
+5. [What is Kristal v5?](Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md)
+6. [Core specification](Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md)
+7. [Canonicalization and hashing](Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md)
+8. [Conformance and alignment](Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md)
 
-Release metadata is published at the repository root in `kristal-release.json`, `contract-set.manifest.json`, and `schema-set.manifest.json`.
+Release metadata is published at the repository root in `kristal-release.json` and `contract-set.manifest.json`. Git tag + resolved commit SHA pin the exact release bytes; no generated per-file schema manifest is part of the release identity.
 
 
 ================================================================================================
 FILE: docs/status/2026-09-14-v5.0.0-rc.1.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: fa7666089ae6ba492b23e220efeb10a446fbb71054503bfea887c5a74caa0aa5
-CONTENT_BYTES: 5321
+CONTENT_SHA256: 59e0f899a0582191eb8e0038afcc3c69016e9e74637eae50a22b12b0a9f50e51
+CONTENT_BYTES: 5558
 ================================================================================================
 
 # Kristal Framework 5.0.0-rc.1 — release status
+
+> Historical release-status record. For the current distinction between framework/release integrity, implementation conformance, and ecosystem integration, see [`2026-09-16-v5-validation-status.md`](2026-09-16-v5-validation-status.md).
 
 **Status:** Release Candidate  
 **Date:** 2026-09-14  
@@ -3025,11 +3085,1705 @@ Verify the remote tag ref, pin Da'at / Interaction Kernel to the exact RC identi
 
 
 ================================================================================================
+FILE: docs/status/2026-09-16-v5-conformance-suite.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: c549da06adf54257dde2c9fbd8842cc049f1a7919788d270fadfe6a060b93053
+CONTENT_BYTES: 4263
+================================================================================================
+
+# Kristal v5 — conformance suite status
+
+**Date:** 2026-09-16  
+**Framework candidate:** `5.0.0-rc.2` (not published until tagged)  
+**Suite state:** framework vectors executable  
+**Implementation conformance:** not yet claimed
+
+## Current verdict
+
+The repository now has two distinct validation layers:
+
+1. `tools/validate_release.py` validates framework/release integrity;
+2. `tools/validate_conformance.py` validates the executable Kristal v5 TCK corpus.
+
+Run both plus the strict documentation build with:
+
+```bash
+python tools/validate_all.py
+```
+
+For a local environment without MkDocs installed:
+
+```bash
+python tools/validate_all.py --skip-doc-build
+```
+
+The skip flag is a local convenience only. Authoritative CI requires `mkdocs build --strict`.
+
+## Automated framework-vector coverage
+
+| Surface | Status | Evidence |
+|---|---:|---|
+| Release files / metadata | PASS-capable | `tools/validate_release.py` |
+| JSON Schema metaschema | PASS-capable | `tools/validate_release.py` |
+| Examples vs schemas | PASS-capable | `tools/validate_release.py` |
+| RFC 8785 / JCS vectors | PASS-capable | `09-test-vectors/jcs/` |
+| Exchange ID golden vector | PASS-capable | `09-test-vectors/exchange/` |
+| Exchange signature-envelope invariance | PASS-capable | `EX-003` |
+| Exchange declared-hash tamper rejection | PASS-capable | `EX-004` |
+| Status-bearing Exchange identity change | PASS-capable | `EX-STATUS-001` |
+| Runtime Pack identity profile vector | PASS-capable | `09-test-vectors/runtime-pack/` |
+| Runtime Pack payload hash/size verification | PASS-capable | `RP-001`, `RP-006` |
+| Runtime Pack ordering bytes | PASS-capable | `RP-002` |
+| Runtime Pack row-group boundaries | PASS-capable | `RP-003` |
+| Runtime Pack Bloom bytes + pruning | PASS-capable | `RP-004` |
+| Runtime Pack Roaring portable bytes | PASS-capable | `RP-005`, `RP-005-NORUN` |
+| Strict docs build | CI gate | `.github/workflows/conformance.yml` |
+
+## What this does not prove
+
+A PASS of the framework suite does not prove that an external Kristal implementation is conformant.
+
+The following still require a concrete compiler/verifier or a byte-format-specific profile:
+
+- EX-1 rebuild determinism against a production compiler;
+- EX-2 convergence of two independent implementations;
+- EX-4 cryptographic signature failure handling against a real verifier;
+- RP-1 full Runtime Pack compiler rebuild determinism;
+- RP-2 through RP-5 against arbitrary production storage profiles that do not claim `kristal.v5:runtime-pack-portable-conformance@1`;
+- RP-6 loader rejection against a production Runtime Pack loader;
+- cross-platform XP-1.
+
+These must remain `NOT TESTED` rather than being inferred from framework-vector success.
+
+## Exchange identity profile
+
+The Exchange TCK uses `kristal.v5:exchange-id-core@1`. Its vectors are stable payload/hash-target fixtures; they are not complete Exchange Manifest objects. Compiler identity and build-run metadata remain reproducibility evidence outside `kristal_id`.
+
+## Runtime Pack identity profile
+
+The TCK now pins the first executable Runtime Pack identity profile:
+
+`kristal.v5:runtime-pack-id-core@1`
+
+It excludes only explicitly volatile or self-referential fields from the Runtime Pack ID target:
+
+- `runtime_pack_id`;
+- `created_at`;
+- `build.build_id`;
+- `compiler.build_platform`;
+- pack/manifest integrity hashes that would otherwise self-reference;
+- signatures and attestations.
+
+The remaining stable manifest material is identity-bearing for this TCK profile.
+
+## Promotion path
+
+Before claiming **reference implementation conformance**, connect a compiler/verifier adapter to the TCK and make EX-1..EX-4 and RP-1..RP-6 executable against that implementation.
+
+Before claiming **ecosystem integration validated**, additionally run the Da'at + Interaction Kernel lifecycle end-to-end and verify ArtifactRef return/consumption without shared-database writes.
+
+## Portable Runtime Pack materialization profile
+
+The framework now publishes `kristal.v5:runtime-pack-portable-conformance@1`. Under that profile, RP-2 through RP-5 have exact golden bytes and are executable framework-vector surfaces. External implementations must independently reproduce the vectors before claiming implementation conformance to the profile.
+
+
+================================================================================================
+FILE: docs/status/2026-09-16-v5-runtime-pack-portable-conformance.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 714d5374f444d8ca47286ef9b22784917c560bbe3a41bf3ec34801f19603c87b
+CONTENT_BYTES: 1674
+================================================================================================
+
+# Kristal v5 — Runtime Pack Portable Conformance Status
+
+**Date:** 2026-09-16  
+**Framework candidate:** `5.0.0-rc.2`  
+**Profile:** `kristal.v5:runtime-pack-portable-conformance@1`
+
+## Status
+
+The framework now publishes executable byte-level fixtures for the previously open Runtime Pack acceptance surfaces RP-2 through RP-5.
+
+| Acceptance test | Framework vector | Status |
+|---|---|---:|
+| RP-2 stable ordering | `RP-002` | PASS-capable |
+| RP-3 row-group boundaries | `RP-003` | PASS-capable |
+| RP-4 membership filter determinism + pruning | `RP-004` | PASS-capable |
+| RP-5 Roaring run-optimized bytes | `RP-005` | PASS-capable |
+| RP-5 Roaring non-run bytes | `RP-005-NORUN` | PASS-capable |
+
+The profile fixes exact comparison, grouping, KBF1 Bloom, and canonical 32-bit Roaring portable serialization rules so these tests no longer depend on host/library defaults.
+
+## Validation
+
+The native framework TCK recomputes all golden bytes and SHA-256 values. An independent Python cross-check was also used during preparation to recompute the same five payloads from the written profile rules.
+
+Reference implementation conformance remains a separate claim: an external implementation must independently reproduce the official vectors. `kristal-reference >= 0.2.0` provides such an adapter surface for LevelUpDiag K15.
+
+## Qualification impact
+
+Once the external adapter passes RP-002 through RP-005-NORUN, the previous RP-2..RP-5 implementation-conformance warning can be removed. Production storage profiles that do not claim this portable profile still require their own byte-level reproducibility contract where physical bytes are part of the conformance claim.
+
+
+================================================================================================
+FILE: docs/status/2026-09-16-v5-validation-status.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 644f56f2cfb65238f4153c5627597dfc4b885c5997948c4d782be1745c1b10f5
+CONTENT_BYTES: 8486
+================================================================================================
+
+# Kristal Framework v5 — validation status
+
+**Date:** 2026-09-16  
+**Current candidate:** `5.0.0-rc.2`  
+**Current candidate tag:** pending; do not claim a release until `v5.0.0-rc.2` is created  
+**Previous published baseline:** `v5.0.0-rc.1` at `af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19`  
+**Overall status:** **FRAMEWORK / RELEASE INTEGRITY + FRAMEWORK-VECTOR CONFORMANCE PASS LOCALLY; IMPLEMENTATION CONFORMANCE PENDING**
+
+## 1. Executive status
+
+The rc.2 candidate corrects release-tooling drift and cross-document identity/lifecycle inconsistencies discovered after rc.1. The published rc.1 baseline remains immutable; these corrected bytes require the new rc.2 identity if released.
+
+The current repository has two executable validation layers:
+
+1. `tools/validate_release.py` — framework/release integrity;
+2. `tools/validate_conformance.py` / `tools/kristal_tck.mjs` — executable framework-vector conformance.
+
+Run both, plus the strict documentation build, with:
+
+```bash
+python tools/validate_all.py
+```
+
+A framework-vector PASS proves that the published vector corpus and framework rules exercised by that corpus are executable and self-consistent. It does **not** prove that an external compiler/verifier implementation is conformant.
+
+| Validation layer | Current status |
+|---|---|
+| Framework / release integrity | **PASS locally** |
+| JSON Schema corpus | **PASS** |
+| JSON Schema declared formats | **PASS for mapped examples/TCK Runtime Pack fixtures** |
+| Published examples against schemas | **PASS** |
+| JCS golden vectors | **PASS** |
+| Exchange framework vectors | **PASS** |
+| Runtime Pack framework vectors | **PASS** |
+| Documentation navigation/local links | **PASS** |
+| Strict MkDocs build | **CI gate configured; not executed in this review environment** |
+| Linux + Windows CI matrix | **configured; CI execution evidence pending** |
+| Exchange implementation reproducibility | **NOT YET PROVEN** |
+| Runtime Pack implementation reproducibility | **NOT YET PROVEN** |
+| Independent implementation convergence | **NOT YET PROVEN** |
+| Real cryptographic signature/trust fail-closed | **NOT YET PROVEN** |
+| Da’at / IK end-to-end | **PENDING** |
+| Orgo / Konnaxion end-to-end | **PARTIAL / NOT YET FULLY PROVEN** |
+
+## 2. Release-integrity corrections validated in rc.2 candidate
+
+The candidate now enforces the intended Git-based release identity:
+
+```text
+semantic version
++ immutable Git tag
++ resolved full commit SHA
++ canonicalization profile/version
+```
+
+`contract-set.manifest.json` is a curated public-surface index, not a repository checksum inventory.
+
+The retired per-file release model is intentionally removed:
+
+```text
+schema-set.manifest.json
+tools/build_manifests.py
+```
+
+`validate_release.py` fails if either file remains present.
+
+The release metadata and consumer lock now record both:
+
+```text
+canonicalization_profile = kristal.v5:jcs-rfc8785
+canonicalization_version = 1
+```
+
+## 3. Schema and lifecycle corrections
+
+Example validation now uses JSON Schema `FormatChecker`, so declared formats such as `date-time` and `uri` are actually enforced instead of being silently ignored.
+
+The Exchange lifecycle is aligned as follows:
+
+- `working_exchange` may be `draft`, `working`, `under_review`, `recognized`, `deprecated`, `superseded`, or `revoked`;
+- `reference_exchange` requires at least one `authority_recognition_ref`;
+- a current Reference Exchange is issued with `artifact_status = reference`;
+- an already-issued Reference Exchange may later become `deprecated`, `superseded`, or `revoked`;
+- validation references alone cannot create a Reference Exchange.
+
+The mapped Reference Exchange example passes the corrected schema. A reference artifact with no authority-recognition reference is rejected.
+
+## 4. Exchange identity boundary
+
+The core Exchange identity profile is now named:
+
+```text
+kristal.v5:exchange-id-core@1
+```
+
+`kristal_id` identifies the stable Exchange payload. Compiler name/version/revision, host platform, build correlation ID, wall-clock metadata, and `build.config_hash` remain reproducibility/build evidence and do not define `kristal_id` merely because they are present in an Exchange Manifest or package envelope.
+
+This preserves the EX-2 requirement that two independent conforming compilers can converge on the same Exchange identity when they produce the same stable payload.
+
+The current Exchange TCK fixtures are payload/hash-target fixtures, not complete `exchange-manifest.schema.json` instances. Full implementation conformance still requires a concrete compiler/verifier adapter.
+
+## 5. Runtime Pack corrections
+
+Core Runtime Pack format examples and TCK fixtures use:
+
+```text
+runtime_pack_version = 5.0.0
+artifact_type = runtime_pack_manifest
+```
+
+The Runtime Pack format version is intentionally independent of the framework release-candidate suffix. Publishing `5.0.0-rc.2` therefore does not mechanically alter Runtime Pack content identity solely because the framework RC number changed.
+
+The current framework TCK exercises Runtime Pack identity/inventory vectors and fail-closed payload hash/size verification. Byte-level compiler behavior for ordering, row groups, membership filters, and bitmap encodings still requires a concrete implementation/profile.
+
+## 6. Source archive qualification
+
+`tools/build_release_archive.py` now builds from Git-tracked files only and refuses a dirty working tree by default.
+
+Local validation confirmed:
+
+- two builds from the same clean commit produced identical ZIP SHA-256 values;
+- untracked `.levelupdiag/` evidence and an arbitrary untracked temporary file did not alter the archive when diagnostic `--allow-dirty` mode was used;
+- those untracked files were absent from the archive;
+- `CODE_SNAPSHOT_MANIFEST.md` is intentionally excluded from framework release archives;
+- the retired schema-set manifest and manifest generator were absent from the archive.
+
+This closes the previously observed local-evidence contamination path.
+
+## 7. Executed local gates
+
+Executed successfully in the review environment:
+
+```text
+python tools/validate_release.py                         PASS
+python tools/validate_conformance.py                    PASS
+python tools/validate_all.py --skip-doc-build           PASS
+node tools/kristal_tck.mjs                              PASS
+Python bytecode compilation of tools                    PASS
+archive determinism / untracked contamination checks    PASS
+```
+
+The local environment did not contain MkDocs, so `mkdocs build --strict` was not executed here. The authoritative CI workflow installs `requirements-dev.txt` and keeps the strict docs build as a required gate.
+
+## 8. What remains before stronger claims
+
+### Reference implementation conformance
+
+Still required:
+
+```text
+EX-1 production compiler rebuild determinism
+EX-2 convergence of independent implementations
+EX-3 signature-envelope invariance through the real verifier
+EX-4 fail-closed content/signature verification through the real verifier
+RP-1 production Runtime Pack rebuild determinism
+RP-2 deterministic record ordering
+RP-3 deterministic row-group boundaries
+RP-4 deterministic membership-filter bytes
+RP-5 deterministic bitmap bytes when claimed
+RP-6 fail-closed production Runtime Pack loader/verifier
+```
+
+### Security qualification
+
+Still required with real cryptographic material:
+
+- valid signature acceptance;
+- wrong signature rejection;
+- wrong key rejection;
+- payload/signature tamper rejection;
+- expired/revoked key behavior;
+- trust-root rotation behavior;
+- downgrade/rollback policy integration.
+
+### Ecosystem qualification
+
+Still required end-to-end:
+
+```text
+operational owner
+→ immutable export/snapshot
+→ Interaction Kernel request
+→ Da’at mapping/compilation
+→ Kristal artifact verification
+→ optional Runtime Pack derivation
+→ kristal.artifact.ready / ArtifactRef
+→ operational consumer linkage
+```
+
+Retries, duplicate messages, crash recovery, idempotency, timeout-before-receipt, revocation, and rollback scenarios must also be exercised.
+
+## 9. Promotion rule
+
+The candidate may be tagged as `v5.0.0-rc.2` only after the complete repository gate is green from a clean committed tree, including strict MkDocs and the Linux/Windows CI matrix.
+
+A green rc.2 framework gate should be described as:
+
+```text
+FRAMEWORK / RELEASE INTEGRITY VALIDATED
+FRAMEWORK-VECTOR CONFORMANCE VALIDATED
+IMPLEMENTATION CONFORMANCE PENDING
+```
+
+Do not shorten that to “Kristal v5 is production-qualified.”
+
+
+================================================================================================
+FILE: docs/status/2026-09-16-v5.0.0-rc.2-candidate.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0747367852fb22ad1f90e53696d2bfe1daa5cd15c53c56de91693ad589b61607
+CONTENT_BYTES: 3277
+================================================================================================
+
+# Kristal v5.0.0-rc.2 — candidate status
+
+**Date:** 2026-09-16  
+**Candidate version:** `5.0.0-rc.2`  
+**Tag:** not created yet  
+**Resolved commit:** pending until release commit/tag  
+**Qualification state:** framework candidate; not production-qualified
+
+## Why rc.2 exists
+
+The published `v5.0.0-rc.1` baseline is immutable. Post-rc.1 validation exposed release-tooling drift and several cross-document identity/lifecycle inconsistencies. Because the corrections touch normative release, reproducibility, schema, and conformance surfaces, they require a new release-candidate identity rather than reuse of rc.1.
+
+## Corrections in this candidate
+
+- Retire `schema-set.manifest.json` and `tools/build_manifests.py`; Git tag + resolved commit SHA remain the byte-level framework release identity.
+- Record both `canonicalization_profile` and `canonicalization_version` in release metadata and consumer locks.
+- Enforce JSON Schema `format` validation for examples and Runtime Pack vectors.
+- Build source release archives from Git-tracked files only; untracked diagnostics cannot contaminate release bytes.
+- Exclude `CODE_SNAPSHOT_MANIFEST.md` from framework release archives.
+- Define `kristal.v5:exchange-id-core@1` as the stable Exchange payload identity boundary and explicitly separate it from compiler/build-run identity.
+- Require authority-recognition evidence for `reference_exchange` and align recognized/reference lifecycle semantics.
+- Normalize Runtime Pack format version examples/vectors to `5.0.0`; the Runtime Pack format version is not the framework RC version.
+- Use `artifact_type = "runtime_pack_manifest"` consistently for the distributed Runtime Pack manifest.
+- Run the framework validation matrix on Linux and Windows in CI.
+
+## Required local cleanup
+
+Before the release gate can pass, remove these retired files from the repository:
+
+```text
+schema-set.manifest.json
+tools/build_manifests.py
+```
+
+The companion cleanup launcher supplied with this overlay performs only those deletions.
+
+## Validation target
+
+The candidate must pass:
+
+```bash
+python -m pip install -r requirements-dev.txt
+python tools/validate_all.py
+```
+
+The release archive must also be shown deterministic from a clean Git work tree:
+
+```bash
+python tools/build_release_archive.py
+```
+
+Re-running the archive command from the same clean commit must reproduce identical bytes. Untracked files must not change the archive.
+
+## Claims not yet established
+
+A green rc.2 framework gate does **not** by itself establish production qualification. The following remain separate evidence requirements:
+
+- external compiler/verifier implementation conformance for EX-1..EX-4;
+- complete Runtime Pack implementation conformance for RP-1..RP-6;
+- cryptographic signature/trust fail-closed vectors using real keys/signatures;
+- convergence of independent implementations;
+- Da’at + Interaction Kernel + producer/consumer end-to-end integration;
+- operational load, retry, crash-recovery, rollback, and observability qualification.
+
+## Promotion rule
+
+Do not create or move `v5.0.0-rc.2` until the corrected tree is committed and the complete framework gate is green. After tagging, resolve the tag to its immutable full commit SHA and record that SHA in downstream consumer lock files.
+
+
+================================================================================================
+FILE: docs/status/2026-09-16-v5.0.0-rc.2-validation-status.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 71e0a84d064c8e3d16685240f6a4ee17db3b866b9896f92b373df5f14c84c005
+CONTENT_BYTES: 11804
+================================================================================================
+
+# Kristal v5.0.0-rc.2 — Validation Status
+
+**Date:** 2026-09-16  
+**Release candidate:** `5.0.0-rc.2`  
+**Status:** Framework/release integrity validated; implementation conformance pending.
+
+## Executive Summary
+
+Kristal `v5.0.0-rc.2` has reached a stable framework-validation state.
+
+The framework, release metadata, schemas, canonicalization rules, documentation, framework TCK vectors, negative/adversarial validation, and deterministic release-archive behavior are passing the current validation suite.
+
+The latest LevelUpDiag Deep Split campaign reports:
+
+| Result | Count |
+|---|---:|
+| PASS | 19 |
+| WARN | 1 |
+| BLOCKED | 2 |
+| FAIL | 0 |
+| ERROR | 0 |
+
+The remaining non-PASS items do not currently indicate a framework defect:
+
+- `K21` is a release-state warning because the `rc.2` changes have not yet been committed/tagged as a clean release candidate.
+- `K15` is blocked until an executable compiler/verifier implementation adapter is supplied.
+- `K24` is blocked until an executable cryptographic trust/signature verifier is supplied.
+
+Kristal must therefore **not yet be described as production-qualified**. The correct current claim is:
+
+> **Kristal framework/release integrity is validated for `v5.0.0-rc.2`; implementation, cryptographic trust, and ecosystem E2E conformance remain separate pending claims.**
+
+---
+
+## Validation Matrix
+
+| Area | Status | Notes |
+|---|---|---|
+| Required release files | PASS | Required release surfaces present |
+| Retired release artifacts | PASS | Legacy manifest tooling remains absent |
+| JSON parsing / metaschema | PASS | Schemas parse and validate |
+| Schema IDs | PASS | IDs aligned |
+| JSON Schema format enforcement | PASS | `date-time` and `uri` checks fail closed |
+| Examples against schemas | PASS | Examples validate with format checking |
+| JCS / RFC 8785 vectors | PASS | 9/9 vectors pass |
+| JCS golden hashes | PASS | Canonical hashes aligned |
+| Version alignment | PASS | Framework version surfaces aligned |
+| Documentation navigation / links | PASS | Local documentation links valid |
+| Release metadata / contract surfaces | PASS | Release model aligned |
+| Cross-document invariants | PASS | Normative contract relationships aligned |
+| Exchange framework vectors | PASS | Golden vectors pass |
+| Runtime Pack framework vectors | PASS | Golden vectors pass |
+| Exchange tamper rejection | PASS | Modified payloads rejected |
+| Runtime Pack tamper rejection | PASS | Modified payloads rejected |
+| Strict documentation build | PASS | `mkdocs build --strict` passes |
+| Deterministic release archive | PASS | Git-tracked archive construction validated |
+| Untracked-file isolation | PASS | Diagnostic/untracked files do not contaminate release archive |
+| Release commit cleanliness | WARN | `rc.2` changes still need a clean release commit before tagging |
+| Implementation conformance | BLOCKED | No external compiler/verifier adapter supplied |
+| Crypto/trust conformance | BLOCKED | No executable crypto/trust verifier supplied |
+| Da'at integration E2E | NOT TESTED | Requires implementation layer |
+| Interaction Kernel E2E | NOT TESTED | Requires implementation layer |
+| Orgo → Kristal E2E | NOT TESTED | Requires implementation layer |
+| Konnaxion → Kristal E2E | NOT TESTED | Requires implementation layer |
+| Production qualification | NOT YET | Requires implementation + trust + E2E evidence |
+
+---
+
+## Native Validation Result
+
+The native framework suite currently passes:
+
+```text
+== release integrity ==
+PASS: required release files
+PASS: retired release artifacts absent
+PASS: JSON parsing and schema metaschema
+PASS: schema IDs
+PASS: JSON Schema format checker enforcement
+PASS: examples against schemas + formats
+PASS: JCS golden hashes
+PASS: version alignment
+PASS: documentation navigation and links
+PASS: release metadata and contract surfaces
+PASS: cross-document contract invariants
+Kristal framework/release integrity validation: PASS
+
+== framework-vector conformance ==
+PASS: Exchange vector declarations
+PASS: Runtime Pack vector schema + format conformance
+PASS: Runtime Pack identity profile lock
+PASS: v5 acceptance-test version alignment
+PASS: executable TCK golden vectors
+Kristal framework-vector conformance: PASS
+
+== strict documentation build ==
+Documentation built successfully.
+
+Kristal framework validation suite: PASS
+```
+
+The suite intentionally reports:
+
+```text
+Kristal implementation conformance: NOT TESTED
+```
+
+This is correct and must remain distinct from framework conformance.
+
+---
+
+## LevelUpDiag Deep Validation
+
+The latest Deep Split campaign confirms the following levels as passing:
+
+- `K10` — Release model integrity
+- `K11` — Negative release-gate mutations
+- `K12` — Git archive reproducibility and untracked-file isolation
+- `K13` — Schema negative cases
+- `K14` — JCS fail-closed behavior
+- `K16` — Strict documentation build
+- `K17` — Retired release-model guard
+- `K18` — Normative hygiene
+- `K19` — JSON Schema format fail-closed enforcement
+- `K20` — Cross-document contract mutation tests
+- `K22` — TCK/profile consistency
+- `K23` — Runtime Pack contract checks
+
+No LevelUpDiag level currently reports `FAIL` or `ERROR`.
+
+### K21 — Release Identity
+
+`K21` currently reports `WARN`.
+
+This is expected while the `v5.0.0-rc.2` changes remain in an uncommitted or otherwise dirty working tree.
+
+Before publishing or tagging `v5.0.0-rc.2`:
+
+```powershell
+git status
+git add -A
+git commit -m "Prepare Kristal v5.0.0-rc.2"
+python tools\validate_all.py
+```
+
+Then rerun LevelUpDiag Deep Split on the clean commit.
+
+The release tag should only be created after the clean-commit validation run passes.
+
+---
+
+## Remaining Blockers
+
+### K15 — Implementation Conformance
+
+**Status:** BLOCKED
+
+The normative EX/RP cases and executable framework TCK are present, but no external implementation adapter has yet been supplied.
+
+The next implementation layer must expose equivalent operations for:
+
+```text
+build_exchange
+verify_exchange
+build_runtime_pack
+verify_runtime_pack
+```
+
+LevelUpDiag should then execute the official Kristal vectors against that implementation rather than treating the framework vectors themselves as implementation proof.
+
+A future successful result may support the claim:
+
+> **Kristal reference implementation conforms to the declared Exchange and Runtime Pack contracts.**
+
+That claim is not yet established.
+
+### K24 — Cryptographic Trust Conformance
+
+**Status:** BLOCKED
+
+The framework defines signature/trust surfaces, but no executable verifier is currently available to prove the required fail-closed behavior.
+
+The crypto/trust test suite should eventually cover at least:
+
+- valid Ed25519 signature;
+- invalid signature;
+- wrong verification key;
+- payload modified after signing;
+- signature bytes modified;
+- revoked key;
+- expired or otherwise rejected trust state;
+- trust-root/key rotation behavior where applicable.
+
+Until those tests execute successfully against a real verifier, cryptographic trust conformance remains unproven.
+
+---
+
+## Release Model
+
+The `v5.0.0-rc.2` release model now follows these principles:
+
+1. Git tag + commit identify the immutable published release.
+2. `contract-set.manifest.json` is a curated public-surface index, not a per-file hash inventory.
+3. The retired `schema-set.manifest.json` and `tools/build_manifests.py` must remain absent.
+4. Release archives are built from Git-tracked files.
+5. Untracked diagnostics, temporary files, or external LevelUpDiag evidence must not affect release bytes.
+6. `canonicalization_profile` and `canonicalization_version` are validated explicitly.
+7. JSON Schema format checking must fail closed rather than silently accepting unsupported format checks.
+
+---
+
+## Identity and Conformance Boundary
+
+Kristal distinguishes framework conformance from implementation conformance.
+
+The current validated chain is:
+
+```text
+Normative documentation
+        ↓
+Schemas / identity profiles
+        ↓
+Golden vectors / framework TCK
+        ↓
+Framework validation
+        ↓
+PASS
+```
+
+The next required chain is:
+
+```text
+Official Kristal vectors
+        ↓
+External compiler/verifier implementation
+        ↓
+Exchange build + verification
+        ↓
+Runtime Pack build + verification
+        ↓
+Tamper / rebuild / determinism tests
+        ↓
+Implementation conformance
+```
+
+After implementation conformance, ecosystem validation can proceed through:
+
+```text
+Operational owner
+        ↓
+immutable snapshot/export
+        ↓
+Interaction Kernel
+        ↓
+Da'at
+        ↓
+Kristal Exchange
+        ↓
+Runtime Pack
+        ↓
+ArtifactRef / receipt
+        ↓
+operational consumer
+```
+
+These ecosystem E2E flows are not yet part of the current validation claim.
+
+---
+
+## Current Qualification Statement
+
+### Valid claims
+
+- Kristal `v5.0.0-rc.2` framework/release integrity is validated.
+- The normative schemas and declared JSON Schema formats are validated fail-closed.
+- JCS/RFC 8785 canonicalization vectors pass.
+- Exchange and Runtime Pack framework golden vectors pass.
+- Negative/tamper tests for the framework surfaces pass.
+- Strict documentation validation passes.
+- Release archive construction is deterministic under the declared Git-based model.
+
+### Claims not yet established
+
+- Reference implementation conformance.
+- Production compiler/verifier conformance.
+- Cryptographic trust implementation conformance.
+- Da'at E2E conformance.
+- Interaction Kernel E2E conformance.
+- Orgo/Konnaxion ecosystem E2E conformance.
+- Production qualification.
+
+---
+
+## Next Promotion Gates
+
+The recommended promotion sequence is:
+
+### 1. Clean rc.2 release candidate
+
+- commit all intended `rc.2` changes;
+- ensure clean working tree;
+- rerun `python tools\validate_all.py`;
+- rerun LevelUpDiag Deep Split;
+- require K21 to pass;
+- only then create/push `v5.0.0-rc.2`.
+
+### 2. Implementation conformance
+
+Provide an external implementation adapter and make K15 executable.
+
+Target result:
+
+```text
+K15 — PASS
+```
+
+### 3. Crypto/trust conformance
+
+Provide an executable cryptographic verifier/trust adapter and make K24 executable.
+
+Target result:
+
+```text
+K24 — PASS
+```
+
+### 4. Ecosystem E2E
+
+Run at least one real producer/consumer vertical slice:
+
+```text
+Orgo snapshot/export
+→ IK request
+→ Da'at compilation
+→ Kristal Exchange
+→ Runtime Pack
+→ artifact.ready / ArtifactRef
+→ Orgo linkage
+```
+
+Test success and failure scenarios, including idempotency, retries, duplicated messages, bad digests, timeouts, and interrupted receipt delivery.
+
+### 5. Production qualification
+
+A production-qualified claim should only be considered after:
+
+- framework validation remains green;
+- implementation conformance passes;
+- crypto/trust conformance passes;
+- at least one complete ecosystem E2E path passes;
+- failure/retry/idempotency scenarios pass;
+- cross-platform determinism evidence is retained;
+- release artifacts are generated from a clean immutable release commit.
+
+---
+
+## Current Verdict
+
+```text
+FRAMEWORK / RELEASE INTEGRITY        PASS
+DOCUMENTATION                        PASS
+SCHEMA CONFORMANCE                   PASS
+FORMAT FAIL-CLOSED                   PASS
+JCS / CANONICALIZATION               PASS
+FRAMEWORK TCK                        PASS
+NEGATIVE / ADVERSARIAL TESTS         PASS
+RELEASE ARCHIVE REPRODUCIBILITY      PASS
+
+CLEAN RC.2 RELEASE COMMIT            PENDING
+IMPLEMENTATION CONFORMANCE           BLOCKED
+CRYPTO / TRUST CONFORMANCE           BLOCKED
+ECOSYSTEM E2E                        NOT TESTED
+PRODUCTION QUALIFICATION             NOT YET
+```
+
+**Overall:** `v5.0.0-rc.2` is ready to proceed from framework validation into implementation conformance testing. Further normative specification changes should be avoided unless implementation or E2E testing reveals a concrete defect.
+
+
+================================================================================================
+FILE: docs/status/2026-09-17-kristal-ecosystem-e2e-qualification-plan-TODO.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 605b19c9ffa9a58f5c8338ab207bbed1c5b368c836d508e194b4f649ed17822a
+CONTENT_BYTES: 9328
+================================================================================================
+
+# Kristal Ecosystem End-to-End Qualification Plan
+
+**Status:** TODO  
+**Scope:** Local ecosystem integration qualification  
+**Applies to:** Kristal v5 / Interaction Kernel / Da’at / Orgo integration  
+**Purpose:** Define the mandatory end-to-end test campaign required after framework and reference-implementation conformance.
+
+---
+
+## 1. Objective
+
+Validate the complete local artifact-production and delivery flow across the Kristal ecosystem:
+
+```text
+Orgo
+  ↓ immutable operational snapshot/export
+Interaction Kernel
+  ↓ kristal.build.request
+Da’at
+  ↓ mapping / compilation
+Kristal
+  ↓ Exchange + Runtime Pack
+Interaction Kernel
+  ↓ kristal.artifact.ready
+Orgo
+  ↓ ArtifactRef persisted
+```
+
+The campaign must prove that the ecosystem can produce, verify, deliver, retry, recover, and reference immutable Kristal artifacts without violating identity, integrity, trust, determinism, idempotency, or operational ownership boundaries.
+
+---
+
+## 2. Qualification Boundary
+
+This campaign is separate from Kristal framework conformance.
+
+The following are already covered by framework/reference validation and are prerequisites to this plan:
+
+- Kristal schema and contract validation;
+- JCS / RFC 8785 canonicalization;
+- Exchange identity and verification;
+- Runtime Pack identity and verification;
+- RP-2 through RP-5 portable byte-level conformance;
+- signature verification;
+- trust and revocation handling;
+- adversarial framework tests;
+- release integrity and reproducibility.
+
+This E2E campaign validates how those guarantees behave across real component boundaries.
+
+---
+
+## 3. Required Components
+
+The local qualification environment must include:
+
+- Orgo;
+- Interaction Kernel;
+- Da’at;
+- Kristal framework contracts;
+- a Kristal implementation/compiler/verifier;
+- persistent operational storage used by Orgo;
+- local artifact storage;
+- test evidence output.
+
+Component versions and configuration must be recorded for every run.
+
+---
+
+## 4. Mandatory Test Scenarios
+
+### E2E-001 — Happy Path
+
+Create an immutable operational snapshot in Orgo.
+
+Submit a valid `kristal.build.request` through the Interaction Kernel.
+
+Da’at must transform/compile the request into valid Kristal artifacts.
+
+Kristal must produce and validate:
+
+- Exchange artifact;
+- Runtime Pack artifact;
+- manifests;
+- declared identities and hashes.
+
+The Interaction Kernel must deliver `kristal.artifact.ready`.
+
+Orgo must persist the resulting ArtifactRef.
+
+**Expected result:** PASS.
+
+---
+
+### E2E-002 — Deterministic Rebuild
+
+Execute the same build from:
+
+- the same immutable snapshot;
+- the same build configuration;
+- the same declared profiles.
+
+Verify that all identity-relevant outputs are identical.
+
+Where byte-level determinism is declared, payload bytes must also be identical.
+
+**Expected result:** PASS with no identity drift.
+
+---
+
+### E2E-003 — Idempotent Request Replay
+
+Submit the same logical request twice using the same idempotency key.
+
+The system must not create conflicting builds or duplicate logical artifacts.
+
+**Expected result:** one logical outcome.
+
+---
+
+### E2E-004 — Equivalent Requests With Different Transport IDs
+
+Submit semantically identical build requests using different transport/request identifiers.
+
+Transport metadata must not alter Kristal artifact identity.
+
+**Expected result:** stable artifact identity.
+
+---
+
+### E2E-005 — Duplicate `kristal.artifact.ready`
+
+Deliver the same ready event more than once.
+
+Orgo must not create duplicate operational references.
+
+**Expected result:** idempotent persistence.
+
+---
+
+### E2E-006 — Timeout Before Receipt
+
+Allow the build to complete but simulate loss or timeout before the caller receives confirmation.
+
+Retry the request.
+
+**Expected result:** recovery of the existing logical result without conflicting duplicate artifacts.
+
+---
+
+### E2E-007 — Da’at Failure Before Artifact Completion
+
+Stop or fail Da’at before a valid artifact is fully produced.
+
+No incomplete artifact may be reported as ready.
+
+**Expected result:** fail closed.
+
+---
+
+### E2E-008 — Failure After Build, Before Ready Event
+
+Complete artifact production, then fail before `kristal.artifact.ready` is delivered.
+
+Retry or recover the workflow.
+
+**Expected result:** existing valid immutable artifacts are rediscovered or reused safely.
+
+---
+
+### E2E-009 — Tampered Exchange
+
+Modify Exchange content after build.
+
+Verification must fail.
+
+The artifact must not reach the accepted ArtifactRef path.
+
+**Expected result:** rejection.
+
+---
+
+### E2E-010 — Tampered Runtime Pack
+
+Modify a Runtime Pack payload file without updating the manifest.
+
+**Expected result:** rejection by hash/size verification.
+
+---
+
+### E2E-011 — Incorrect Declared Digest
+
+Provide an incorrect digest for an otherwise valid artifact.
+
+Receiving components must not trust transport metadata over artifact verification.
+
+**Expected result:** rejection.
+
+---
+
+### E2E-012 — Invalid Signature
+
+Test:
+
+- invalid signature;
+- wrong public key;
+- modified signed payload.
+
+**Expected result:** rejection.
+
+---
+
+### E2E-013 — Trust / Revocation Failure
+
+Test:
+
+- revoked key;
+- expired key;
+- unknown key;
+- not-yet-valid key.
+
+**Expected result:** fail closed according to Kristal trust rules.
+
+---
+
+### E2E-014 — Artifact Supersession
+
+Produce a valid artifact for snapshot A.
+
+Produce a later valid artifact for snapshot B.
+
+The original Kristal artifact must remain immutable.
+
+Operational references may move only through explicit lifecycle behavior.
+
+**Expected result:** no mutation of previously issued immutable artifacts.
+
+---
+
+### E2E-015 — Invalid Build Request
+
+Submit malformed or contract-invalid `kristal.build.request` payloads.
+
+**Expected result:** rejection at the appropriate admission boundary before artifact production.
+
+---
+
+### E2E-016 — Unsupported Profile or Policy
+
+Request an unsupported Kristal profile, compiler profile, or Runtime Pack policy.
+
+**Expected result:** explicit deterministic failure; no silent fallback.
+
+---
+
+### E2E-017 — ArtifactRef Integrity
+
+Verify that the final ArtifactRef:
+
+- resolves the intended immutable Kristal artifact;
+- includes sufficient identity information;
+- does not embed mutable operational state that belongs to Orgo;
+- cannot resolve ambiguously to multiple artifacts.
+
+**Expected result:** PASS.
+
+---
+
+### E2E-018 — Ownership Boundary
+
+Verify that:
+
+- Orgo owns operational state;
+- Interaction Kernel owns admission/routing/coordination behavior;
+- Da’at owns transformation/compilation work;
+- Kristal owns immutable semantic/export artifacts.
+
+No component may silently persist or redefine another component’s operational responsibility.
+
+**Expected result:** PASS.
+
+---
+
+## 5. Evidence Requirements
+
+Every E2E scenario must produce machine-readable evidence containing at least:
+
+```text
+scenario_id
+run_id
+component_versions
+input_snapshot_id
+request_id
+idempotency_key
+build_id
+exchange_id
+runtime_pack_id
+artifact_ref
+expected_result
+actual_result
+verdict
+```
+
+Where applicable, evidence must also include:
+
+- SHA-256 digests;
+- manifest paths;
+- signature verification result;
+- trust decision;
+- retry count;
+- timestamps;
+- error code;
+- recovery action;
+- emitted Interaction Kernel envelopes.
+
+---
+
+## 6. Acceptance Gate
+
+The baseline ecosystem E2E qualification is successful only when all mandatory scenarios pass.
+
+Target:
+
+```text
+0 FAIL
+0 ERROR
+0 unexpected duplicate artifacts
+0 integrity bypasses
+0 trust bypasses
+0 non-deterministic rebuilds
+0 ownership-boundary violations
+```
+
+Warnings must be reviewed explicitly before the campaign can be considered complete.
+
+---
+
+## 7. Qualification Claim
+
+A successful campaign establishes the following local qualification claim:
+
+> Given an immutable operational snapshot and fixed build configuration, the Kristal ecosystem can deterministically produce, verify, deliver, reference, retry, and recover immutable Exchange and Runtime Pack artifacts without corrupting artifact identity, integrity, trust semantics, idempotency, or operational ownership boundaries.
+
+This claim applies only to the tested local component versions and configurations.
+
+---
+
+## 8. Out of Scope for This Baseline
+
+The first E2E qualification does not yet establish:
+
+- production deployment readiness;
+- large-scale concurrency;
+- sustained load behavior;
+- multi-region operation;
+- federation across independent operators;
+- disaster recovery;
+- long-duration soak behavior;
+- arbitrary third-party compiler interoperability.
+
+These belong to later qualification phases.
+
+---
+
+## 9. Follow-Up Qualification Phases
+
+After the baseline E2E campaign passes, later work should cover:
+
+1. concurrency and race conditions;
+2. multi-consumer artifact delivery;
+3. high-volume rebuild campaigns;
+4. recovery after partial infrastructure failure;
+5. federation;
+6. long-running replay/recovery;
+7. operational observability;
+8. production deployment qualification.
+
+---
+
+## 10. Current Status
+
+```text
+Framework conformance          PASS
+Reference implementation       PASS
+Runtime Pack conformance       PASS
+Signature / trust              PASS
+LevelUpDiag Deep Split         PASS
+
+Ecosystem E2E                  TODO
+Production qualification       NOT YET
+```
+
+This document is the official TODO plan for the next Kristal qualification phase.
+
+
+================================================================================================
+FILE: docs/status/2026-09-17-v5.0.0-rc.2-final-local-conformance.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: f50766239fb9c5681ea3116f5089eb9465d4f5d4a3f74bdd6bd03aa254152734
+CONTENT_BYTES: 11775
+================================================================================================
+
+# Kristal v5.0.0-rc.2 — Final Local Conformance Status
+
+**Date:** 2026-09-17  
+**Framework candidate:** `5.0.0-rc.2`  
+**Validation scope:** local framework, reference implementation, adversarial diagnostics, release integrity, crypto/trust, and Runtime Pack portable conformance  
+**Overall status:** PASS
+
+## Executive Summary
+
+Kristal `v5.0.0-rc.2` has completed the current local framework and reference-implementation conformance phase.
+
+The final LevelUpDiag Deep Split campaign completed successfully with:
+
+| Verdict | Count |
+|---|---:|
+| PASS | 22 |
+| WARN | 0 |
+| BLOCKED | 0 |
+| FAIL | 0 |
+| ERROR | 0 |
+
+Final campaign result:
+
+```text
+DEEP SPLIT OVERALL: PASS
+```
+
+All required diagnostic levels from `N00` through `N06` and `K10` through `K24` passed.
+
+The previous gaps have been closed:
+
+- clean release identity is validated;
+- the external implementation adapter is connected and executable;
+- Exchange implementation vectors pass;
+- Runtime Pack core vectors pass;
+- RP-2 through RP-5 portable byte-level conformance passes;
+- Ed25519 signature verification passes;
+- trust/revocation fail-closed behavior passes;
+- adversarial and mutation tests pass;
+- deterministic release archive behavior passes.
+
+No framework-level blocker or warning remains in the current local validation campaign.
+
+---
+
+## Final Deep Split Result
+
+```text
+N00  PASS  Diagnostic Integrity
+N01  PASS  Target Context
+N02  PASS  Repository Inventory
+N03  PASS  Repository Hygiene
+N04  PASS  Tooling Discovery
+N05  PASS  Declared Validations
+N06  PASS  Security Hygiene
+
+K10  PASS  Kristal Release Model Integrity
+K11  PASS  Kristal Negative Release Gate
+K12  PASS  Kristal Git Release Archive Reproducibility
+K13  PASS  Kristal Schema Negative Cases
+K14  PASS  Kristal JCS Fail-Closed
+K15  PASS  Kristal Implementation Adapter Conformance
+K16  PASS  Kristal Strict Docs Build
+K17  PASS  Kristal Retired Release Model Guard
+K18  PASS  Kristal v5 Normative Hygiene
+K19  PASS  Kristal Schema Format Fail-Closed
+K20  PASS  Kristal Cross-Document Contract Mutation
+K21  PASS  Kristal Git Release Identity
+K22  PASS  Kristal TCK Profile Consistency
+K23  PASS  Kristal Runtime Pack Contract
+K24  PASS  Kristal Signature and Trust
+```
+
+Overall:
+
+```text
+22 PASS
+0 WARN
+0 BLOCKED
+0 FAIL
+0 ERROR
+```
+
+---
+
+## Native Framework Validation
+
+The native Kristal validation suite passes release integrity, schema validation, canonicalization, documentation checks, framework-vector conformance, and strict documentation build.
+
+Validated areas include:
+
+- required release surfaces;
+- retired release artifacts absent;
+- JSON parsing and metaschema validation;
+- schema IDs;
+- JSON Schema `date-time` and `uri` fail-closed format enforcement;
+- examples against schemas and formats;
+- RFC 8785 / JCS vectors;
+- version alignment;
+- documentation navigation and local links;
+- release metadata and contract surfaces;
+- cross-document invariants;
+- Exchange framework vectors;
+- Runtime Pack framework vectors;
+- strict MkDocs build.
+
+The native framework suite intentionally keeps implementation conformance separate from framework conformance. The external implementation claim is established through LevelUpDiag K15 and `kristal-reference`.
+
+---
+
+## JCS / Canonicalization
+
+The full JCS vector set passes:
+
+```text
+jcs-001  PASS
+jcs-002  PASS
+jcs-003  PASS
+jcs-004  PASS
+jcs-005  PASS
+jcs-006  PASS
+jcs-007  PASS
+jcs-008  PASS
+jcs-009  PASS
+```
+
+Validated properties include:
+
+- deterministic key ordering;
+- nested-object canonicalization;
+- Unicode and escaping behavior;
+- hash-reference shapes;
+- structured epistemic-state hash targets;
+- revocation hash targets;
+- array-order preservation;
+- RFC 8785 primitive/number behavior;
+- UTF-16 property ordering behavior.
+
+---
+
+## Exchange Conformance
+
+Framework and reference implementation vectors pass for:
+
+```text
+EX-001          PASS
+EX-003          PASS
+EX-STATUS-001   PASS
+EX-004          PASS
+EX-003-REL      PASS
+EX-STATUS-REL   PASS
+```
+
+Validated properties include:
+
+- stable Exchange identity;
+- signature envelope exclusion from identity where required;
+- status-bearing semantic content affecting identity;
+- tampered Exchange payload rejection;
+- expected same-ID relations;
+- expected different-ID relations.
+
+The current Exchange identity profile remains:
+
+```text
+kristal.v5:exchange-id-core@1
+```
+
+---
+
+## Runtime Pack Core Conformance
+
+The reference implementation passes the core Runtime Pack vectors:
+
+```text
+RP-001  PASS
+RP-006  PASS
+```
+
+Validated properties include:
+
+- deterministic Runtime Pack identity;
+- deterministic build behavior;
+- payload inventory verification;
+- SHA-256 verification;
+- size verification;
+- tampered payload rejection.
+
+The Runtime Pack identity profile remains:
+
+```text
+kristal.v5:runtime-pack-id-core@1
+```
+
+---
+
+## RP-2 through RP-5 Portable Conformance
+
+The former Runtime Pack byte-level gap is now closed under:
+
+```text
+kristal.v5:runtime-pack-portable-conformance@1
+```
+
+Executable golden vectors now pass for:
+
+```text
+RP-002         PASS
+RP-003         PASS
+RP-004         PASS
+RP-005         PASS
+RP-005-NORUN   PASS
+```
+
+### RP-2 — Stable ordering
+
+The implementation independently reproduces deterministic ordered JSONL bytes using the declared portable comparison rules.
+
+### RP-3 — Row-group boundaries
+
+`fixed_rows_100k` boundaries are deterministic and independently reproducible.
+
+### RP-4 — Membership filter
+
+KBF1 Bloom-filter bytes are deterministic.
+
+The profile also verifies that Bloom false positives are only prefilter hits and are pruned against the authoritative store before semantic membership is accepted.
+
+### RP-5 — Roaring bitmap
+
+Canonical 32-bit Roaring portable serialization is deterministic with both:
+
+- run optimization enabled;
+- run optimization disabled.
+
+The profile fixes deterministic container selection so semantically equivalent but byte-different serializations do not satisfy the same reproducibility claim.
+
+---
+
+## Reference Implementation
+
+`kristal-reference` passes its complete current test suite.
+
+Covered executable surfaces include:
+
+- JCS vectors;
+- Exchange identity;
+- Exchange verification;
+- Runtime Pack identity;
+- Runtime Pack payload verification;
+- RP-2 through RP-5 portable materialization;
+- Ed25519 valid signatures;
+- wrong-key rejection;
+- tampered-message rejection;
+- valid trust root;
+- revoked-key rejection;
+- future-revocation handling;
+- expired-key rejection.
+
+Current qualification statement:
+
+> The Kristal reference implementation conforms to the currently declared executable Exchange, Runtime Pack core, Runtime Pack portable, signature, and trust test surfaces.
+
+This does not imply production qualification of arbitrary third-party storage encoders or ecosystem deployments that do not claim the same byte-level profiles.
+
+---
+
+## Signature and Trust
+
+K24 is fully PASS.
+
+Validated behavior includes:
+
+- Ed25519 as mandatory baseline;
+- valid signature acceptance;
+- invalid signature rejection;
+- wrong-key rejection;
+- payload-tamper rejection;
+- valid trust-root acceptance;
+- effective revocation rejection;
+- future revocation not yet active;
+- expired-key rejection;
+- fail-closed trust behavior.
+
+The crypto/trust surface is therefore no longer blocked.
+
+---
+
+## Release Integrity
+
+K21 passes.
+
+The release candidate is validated against the declared Git-based release model:
+
+- clean worktree;
+- `VERSION` aligned with `5.0.0-rc.2`;
+- declared tag name aligned with `v5.0.0-rc.2`;
+- `kristal-release.json` leaves `git.commit` unresolved by design;
+- release bytes are tied to the immutable commit/tag model rather than a self-embedded commit field.
+
+The release archive model also passes deterministic-build and hygiene checks:
+
+- Git-tracked files define archive contents;
+- untracked diagnostic files do not contaminate release bytes;
+- dirty tracked state is rejected for normal release construction;
+- archive timestamps are deterministic;
+- repeated clean builds are byte-identical.
+
+---
+
+## Retired Release Model
+
+The retired per-file manifest model remains rejected.
+
+These files must remain absent:
+
+```text
+schema-set.manifest.json
+tools/build_manifests.py
+```
+
+`contract-set.manifest.json` remains a curated public-contract surface index rather than a legacy exhaustive file-hash inventory.
+
+---
+
+## Adversarial / Negative Validation
+
+The final campaign includes passing checks for:
+
+- release-version drift;
+- schema-version drift;
+- malformed schema IDs;
+- broken documentation links;
+- missing contract surfaces;
+- tampered JCS hashes;
+- unsupported canonicalization versions;
+- reappearance of retired release artifacts;
+- schema mutation;
+- format-checking fail-closed behavior;
+- Runtime Pack policy/schema drift;
+- cross-document invariant drift;
+- Exchange tampering;
+- Runtime Pack tampering;
+- signature failure;
+- wrong keys;
+- trust revocation;
+- key expiration.
+
+No current adversarial level reports WARN, BLOCKED, FAIL, or ERROR.
+
+---
+
+## Qualification Matrix
+
+| Area | Status |
+|---|---|
+| Framework integrity | PASS |
+| Release integrity | PASS |
+| Schema conformance | PASS |
+| JSON Schema format fail-closed | PASS |
+| JCS / RFC 8785 | PASS |
+| Exchange framework vectors | PASS |
+| Exchange implementation vectors | PASS |
+| Runtime Pack core vectors | PASS |
+| RP-2..RP-5 portable conformance | PASS |
+| Tamper rejection | PASS |
+| Signature verification | PASS |
+| Trust / revocation | PASS |
+| Negative/adversarial validation | PASS |
+| Strict documentation build | PASS |
+| Release archive reproducibility | PASS |
+| Clean release identity | PASS |
+| LevelUpDiag Deep Split | PASS |
+| Ecosystem E2E | NOT YET QUALIFIED |
+| Production deployment | NOT YET QUALIFIED |
+
+---
+
+## Current Boundary
+
+The current validation establishes a strong local framework and reference-implementation conformance claim.
+
+It does **not** yet establish complete ecosystem E2E behavior across operational systems.
+
+The next qualification boundary is therefore:
+
+```text
+Operational producer
+    ↓
+immutable snapshot/export
+    ↓
+Interaction Kernel
+    ↓
+kristal.build.request
+    ↓
+Da'at
+    ↓
+Kristal build / verification
+    ↓
+Exchange + Runtime Pack
+    ↓
+kristal.artifact.ready
+    ↓
+Interaction Kernel
+    ↓
+ArtifactRef
+    ↓
+operational consumer
+```
+
+---
+
+## Next Phase — Local Ecosystem E2E
+
+The next test campaign should validate at least:
+
+- happy path;
+- duplicate build request;
+- idempotency-key replay;
+- duplicate `artifact.ready`;
+- retry after timeout;
+- build succeeds but receipt delivery fails;
+- Da'at crash after artifact construction;
+- invalid digest;
+- artifact tampering;
+- deterministic rebuild;
+- signature rejection;
+- trust rejection;
+- stale/revoked artifact handling;
+- ArtifactRef persistence;
+- operational owner linkage to immutable artifacts.
+
+The framework specification should remain stable during this phase unless E2E execution reveals a concrete contract defect.
+
+---
+
+## Final Verdict
+
+```text
+KRISTAL FRAMEWORK                    PASS
+RELEASE INTEGRITY                    PASS
+SCHEMA / FORMAT VALIDATION           PASS
+JCS / CANONICALIZATION               PASS
+EXCHANGE CONFORMANCE                 PASS
+RUNTIME PACK CORE                    PASS
+RUNTIME PACK RP-2..RP-5              PASS
+REFERENCE IMPLEMENTATION             PASS
+SIGNATURE / TRUST                    PASS
+NEGATIVE / ADVERSARIAL TESTING       PASS
+STRICT DOCS                          PASS
+ARCHIVE REPRODUCIBILITY              PASS
+GIT RELEASE IDENTITY                 PASS
+LEVELUPDIAG DEEP SPLIT               PASS
+
+LOCAL CONFORMANCE CAMPAIGN           PASS
+
+ECOSYSTEM E2E                        NEXT PHASE
+PRODUCTION QUALIFICATION             NOT YET
+```
+
+**Final local validation result: 22 PASS, 0 WARN, 0 BLOCKED, 0 FAIL, 0 ERROR.**
+
+
+================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/conformance-and-alignment.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 868c13e4207b3b98925576b28e0d2ec730dd6b86ec11fc74ab11d06356e302e9
-CONTENT_BYTES: 31478
+CONTENT_SHA256: b489fe68191615ce57b9363d655a47ea70a5fa84aa1960ecf0c35bd6fd563464
+CONTENT_BYTES: 32941
 ================================================================================================
 
 # Conformance and Alignment (Kristal v5)
@@ -3111,7 +4865,7 @@ Runtime Packs SHOULD use:
 
 ```json
 {
-  "runtime_pack_version": "5.0"
+  "runtime_pack_version": "5.0.0"
 }
 ```
 
@@ -3655,8 +5409,9 @@ reference_exchange
 
 Rules:
 
-* A `working_exchange` exists before or without reference recognition.
-* A `reference_exchange` is recognized under one or more authority channels and reader policies.
+* A `working_exchange` exists before or without reference issuance. It MAY carry `artifact_status = "recognized"` when scoped authority recognition exists but explicit reference promotion has not occurred.
+* A `reference_exchange` is an explicitly issued reference artifact under one or more authority channels and reader policies. On issuance it uses `artifact_status = "reference"`; a previously issued reference artifact MAY later become `deprecated`, `superseded`, or `revoked`.
+* A `reference_exchange` MUST carry at least one `authority_recognition_ref`; validation evidence alone is not sufficient to establish reference status.
 * An Exchange MUST preserve provenance, source references, validation references, recognition references, and scope.
 * An Exchange MUST NOT be described as a truth object.
 * An Exchange MUST NOT be described as universally canonical.
@@ -3693,6 +5448,9 @@ Rules:
 * Runtime Packs MUST declare their source artifact status.
 * Runtime Packs MUST preserve validation, certainty, authority, scope, provenance, and lineage labels required by their query contract or reader policy.
 * Runtime Packs MAY materialize full source data or filtered reader-policy views.
+* Runtime Pack tables, indexes, columnar files, and profile-defined database-like query stores are derived materializations and MUST NOT become independent writable authorities.
+* Materializations that affect query results MUST be bound to the declared source/build identity and reproducibility surface, and MUST be rebuildable from declared inputs.
+* Core v5 does not define a general-purpose writable SQLite/application-database profile; any database-like representation requires an explicit profile and remains read-only/derived unless a future normative contract states otherwise.
 * Filtered Runtime Packs MUST NOT present themselves as containing the full source artifact.
 * Runtime Pack signatures prove package integrity, not universal truth.
 * Runtime Pack activation is governed by activation policy, trust roots, signatures, revocation, downgrade policy, compatibility, and reader-policy requirements.
@@ -3704,7 +5462,7 @@ Recommended fields:
   "schema_version": "5.0",
   "artifact_type": "runtime_pack_manifest",
   "runtime_pack_id": "sha256:<hex>",
-  "runtime_pack_version": "5.0",
+  "runtime_pack_version": "5.0.0",
   "source_exchange_ref": {},
   "source_artifact_status": "working",
   "reader_policy_refs": [],
@@ -4173,6 +5931,8 @@ Public-facing descriptions SHOULD NOT imply that Kristal guarantees:
 
 Kristal v5 implementations MAY claim conformance at different levels.
 
+A repository-level framework/release validation PASS is not an implementation-conformance claim. An implementation claiming one of the classes below MUST provide executable evidence for the mandatory schemas, vectors, reproducibility tests, integrity checks, and profile/integration tests applicable to that class. Documentation that describes an acceptance test is not evidence that the test has passed.
+
 ## 30.1 Schema conformant
 
 An implementation is schema conformant if it:
@@ -4299,8 +6059,8 @@ The final invariant is:
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/ecosystem-integration.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 13405e3a454d01fb573eef646aa3a830d273754fad1ef2728db7ea7c918a5fcc
-CONTENT_BYTES: 20791
+CONTENT_SHA256: e9e770f3e685eceb25f35a1536d0a67e555379c94a9915e89e33be6f17d9a4cb
+CONTENT_BYTES: 22170
 ================================================================================================
 
 # Kristals in the Ecosystem: Konnaxion × Orgo × Architect × SenTient
@@ -4359,6 +6119,21 @@ The Kristal stack turns inputs into structured artifacts:
 
 Compilation and validation are distinct. A system may compile a working artifact before final recognition. Reader policies then decide which artifacts or assertions are visible in a given context.
 
+### Operational-state boundary
+
+Kristal does not replace the operational databases of ecosystem products. Mutable product state remains owned by the product responsible for that domain. Knowledge compilation consumes immutable source-owned exports/snapshots or stable artifact references carrying revision/digest and provenance.
+
+The authority direction is one-way:
+
+```text
+product operational state
+  -> immutable source artifact / snapshot
+  -> Kristal epistemic artifact
+  -> deterministic Runtime Pack materialization
+```
+
+The layers are linked by references and lineage, not by bidirectional database synchronization or distributed dual writes. In the **kOA deployment profile**, Da’at is the mapping boundary that translates source-owned artifacts into Kristal-native epistemic structures; Interaction Kernel may transport requests, ArtifactRefs, receipts, and completion events, but owns neither product state nor Kristal artifact storage.
+
 ### C. Consumers in the ecosystem
 
 * **Konnaxion** consumes Kristals to power discovery, search, navigation, knowledge delivery, education, civic workflows, collective curation, and offline-oriented user experiences.
@@ -4393,6 +6168,8 @@ Kristal owns:
 * Kristal is not a workflow engine.
 * Kristal is not a voting system.
 * Kristal is not a user interface.
+* Kristal is not a shared mutable application database or operational system of record.
+* Kristal is not a bidirectional database synchronization layer between products.
 * Kristal is not a monopoly over truth.
 * Kristal Runtime Packs do not need full SPARQL semantics; they intentionally constrain query execution to remain offline, predictable, and portable.
 
@@ -4462,7 +6239,7 @@ Orgo handles:
 * feedback loops;
 * sync conflicts.
 
-Orgo does not own the Kristal knowledge payload. It orchestrates the work around that payload.
+Orgo does not own the Kristal knowledge payload. It orchestrates the work around that payload. Conversely, Kristal does not own Orgo Cases, Tasks, Workflow state, outbox/retry state, or other mutable Orgo operational records. Orgo contributes knowledge through immutable snapshots/artifact references rather than dual-writing live records into Kristal.
 
 ## 4) The place of Kristals inside each product
 
@@ -6646,15 +8423,15 @@ The core Kristal v5 rule is:
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/specification-status.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 443da2d9c0dec6faba49004345d591a25df9fb33b39da33995ad189f41b7369a
-CONTENT_BYTES: 3665
+CONTENT_SHA256: c619403417b352e7648127107bdc89c91fbd8d3611a7abfb92d4bb2bc1010f00
+CONTENT_BYTES: 4105
 ================================================================================================
 
 # Kristal v5 specification status
 
-**Release candidate:** `5.0.0-rc.1`  
-**RC Git tag:** `v5.0.0-rc.1`  
-**RC resolved commit:** `af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19`  
+**Candidate version:** `5.0.0-rc.2`  
+**Candidate Git tag:** `v5.0.0-rc.2` — pending until release  
+**Candidate resolved commit:** pending until the release tag exists  
 **Core schema line:** `5.0`  
 **Canonicalization profile:** `kristal.v5:jcs-rfc8785` / version `1`
 
@@ -6693,12 +8470,14 @@ The repository does **not** define `contract_set_digest` or `schema_set_digest` 
 
 The Git commit is intentionally **not embedded** into a file inside the same commit. Consumers resolve the release tag to the commit and record that commit in their own lock file.
 
+Generated per-file release manifests are not part of the v5 release identity. In particular, `schema-set.manifest.json` and the legacy `tools/build_manifests.py` generator are retired. Schema and normative-document bytes are frozen by the Git commit referenced by the release tag.
+
 ### Current RC identity
 
 ```text
-version: 5.0.0-rc.1
-tag: v5.0.0-rc.1
-commit: af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19
+version: 5.0.0-rc.2
+tag: v5.0.0-rc.2 (pending)
+commit: resolve from the immutable tag after release
 canonicalization: kristal.v5:jcs-rfc8785 / 1
 ```
 
@@ -6708,9 +8487,9 @@ After a stable release is tagged, files classified as normative for that release
 
 ## Release candidate rule
 
-`5.0.0-rc.1` is a stabilization release candidate. The tag exists and resolves to commit `af703bf02ee04a69a5f2ad6694fa8b8e56ae2b19`.
+`5.0.0-rc.2` is the current candidate version under validation. It is not a published release identity until the corrected tree is committed and the immutable `v5.0.0-rc.2` tag is created.
 
-An RC remains immutable once used as a pinned interoperability baseline. Corrections required after an RC is published SHOULD produce a new release-candidate version rather than moving the existing tag.
+The published `v5.0.0-rc.1` baseline remains immutable. An RC remains immutable once used as a pinned interoperability baseline. Corrections required after an RC is published MUST produce a new release-candidate version rather than moving the existing tag.
 
 The stable `5.0.0` tag MUST be cut only after all release validation and required downstream integration gates pass and the contract set is intentionally frozen.
 
@@ -8255,8 +10034,8 @@ Operational patterns such as circuit breakers, DLQs, CQRS framing, canary/blue-g
 FILE: docs/Technical-Reference/kristal-docs-v5/00-overview/what-is-kristal-v5.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 768f6ba8e631a6939eb815a7004a409b1bf8256b5a010c8b2cdec2130074a51c
-CONTENT_BYTES: 19322
+CONTENT_SHA256: 169c411f2da739ba9a3555599ce9d9409973e9fd98d818068a456fb937443528
+CONTENT_BYTES: 20768
 ================================================================================================
 
 # What is Kristal v5?
@@ -8286,7 +10065,9 @@ Integrity protects artifacts.
 
 A **Kristal** is a portable, verifiable, offline-executable unit of structured epistemic knowledge.
 
-A Kristal is **not** a document, article, database dump, free-text file, or model output. It is a compiled artifact with deterministic identity, explicit provenance, queryable structure, and machine-readable epistemic metadata.
+A Kristal is **not** a document, article, mutable application database, raw database dump, free-text file, or model output. It is a compiled artifact with deterministic identity, explicit provenance, queryable structure, and machine-readable epistemic metadata.
+
+Operational records remain authoritative in the system that owns their lifecycle. A source system may publish an immutable snapshot/export or stable artifact reference for Kristal compilation; the resulting Kristal artifact is a distinct knowledge artifact with provenance back to that source, not a transfer of ownership of the live record.
 
 A Kristal can contain:
 
@@ -8374,6 +10155,8 @@ Kristal v5 is not:
 
 * a universal truth authority;
 * a single global fact database;
+* a shared mutable transactional database for Orgo, Konnaxion, or other applications;
+* a bidirectional synchronization mechanism between product databases and Kristal artifacts;
 * a replacement for scientific, legal, cultural, or institutional review;
 * a claim that all included assertions are true;
 * a guarantee that all authorities agree;
@@ -8686,6 +10469,10 @@ A Runtime Pack declares:
 
 A Runtime Pack derived from a Working Exchange is not equivalent to one derived from a Reference Exchange.
 
+Runtime Pack payloads are **derived query materializations**. They MAY use tables, indexes, dictionaries, columnar files, or other profile-defined read-oriented structures. Such materializations MUST NOT become a second writable authority for the source knowledge. For a declared build identity they are immutable and reproducible from the declared source artifact and build inputs.
+
+Kristal v5 core does not standardize a writable SQLite or general-purpose application-database representation. A database-like file MAY be introduced by an explicit Runtime Pack profile only when it is bound to the source artifact/build identity, treated as read-only derived state, and does not alter the authoritative epistemic state.
+
 ### 9.5 Shard
 
 A scoped Exchange artifact representing part of a corpus.
@@ -8896,6 +10683,8 @@ Kristal Runtime Packs are designed for offline and low-bandwidth environments.
 
 Runtime Packs:
 
+* are derived from declared Kristal source artifacts and do not replace those source artifacts;
+* do not become writable operational stores for consuming applications;
 * do not require live SPARQL endpoints;
 * do not require network access for normal local queries;
 * do not require LLMs for execution;
@@ -11547,8 +13336,8 @@ Recognition is not universal truth.
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/ids-canonicalization-hashing.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 3ddb4d61f65626b20ecfeab50e87fe4654d537db8b7e88b7639e2b2f56220f82
-CONTENT_BYTES: 18295
+CONTENT_SHA256: 6cebcb7dcd7118f4982a782798384c89c409a328b8c80d75c09335925f6f1afb
+CONTENT_BYTES: 19922
 ================================================================================================
 
 # 01-core-spec/ids-canonicalization-hashing.md
@@ -11801,6 +13590,31 @@ If `artifact_status`, `validation_refs`, `authority_recognition_refs`, `certaint
 This means that a Working Exchange and a Reference Exchange MAY have different `kristal_id` values even when they share the same underlying assertions.
 
 That difference is intentional when recognition, validation, or status metadata is part of the artifact’s stable identity.
+
+### 5.5 Core Exchange identity boundary
+
+The v5 core Exchange identity profile is:
+
+```text
+kristal.v5:exchange-id-core@1
+```
+
+`kristal_id` identifies the **stable Exchange payload**. It does not identify the compiler process or the Exchange Manifest as a whole.
+
+An `exchange-manifest.schema.json` object may record `created_at`, `manifest_id`, `build`, `inputs`, human-facing references, signatures, and other reproducibility or package metadata around the Exchange. Those manifest/build fields MUST NOT be added to the Exchange payload hash target merely because they coexist in the same package or implementation envelope.
+
+In particular, the following are build/provenance metadata rather than Exchange payload identity material unless a future explicit identity profile says otherwise:
+
+* compiler name, version, source revision, or host platform;
+* build correlation IDs;
+* wall-clock timestamps;
+* `build.config_hash`;
+* CI/job/host telemetry;
+* manifest-only integrity or publication metadata.
+
+A compiler MUST record build-affecting metadata needed for reproducibility in the Exchange Manifest/build record, while keeping `kristal_id` a content identity for the stable Exchange payload. Therefore two independent conforming compilers that emit the same stable Exchange payload MUST compute the same `kristal_id` even when compiler identities or build-run metadata differ.
+
+The framework TCK Exchange vectors are **payload/hash-target fixtures**, not complete `exchange-manifest.schema.json` instances. Full compiler/verifier conformance remains a separate claim until a concrete implementation adapter is exercised.
 
 ---
 
@@ -12072,8 +13886,8 @@ This document defines only the stable identity, canonicalization, and hashing ru
 FILE: docs/Technical-Reference/kristal-docs-v5/01-core-spec/kristal-v5-core-spec.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: bc72aa851ab76e87267909e56fd211bece9f57c48050f280597f9a1cfd93b9d1
-CONTENT_BYTES: 37172
+CONTENT_SHA256: 348a982f020ad5869fef84e5e18fd1bc379bb29101ba47a1be2cb23931978bd4
+CONTENT_BYTES: 37684
 ================================================================================================
 
 # Kristal v5 Core Specification
@@ -12529,6 +14343,8 @@ reference_exchange
 
 A Working Exchange is compiled, structured, queryable, and reproducible, but not necessarily recognized as reference material.
 
+A Working Exchange MAY have `artifact_status = "recognized"` when one or more authority channels recognize the artifact but it has not been issued as a Reference Exchange. Recognition alone does not change `artifact_type`; promotion to a Reference Exchange is an explicit lifecycle action.
+
 A Reference Exchange is a Working Exchange or equivalent compiled artifact that has been recognized by one or more authority channels under declared validation policies and scopes.
 
 A minimal Exchange SHOULD include:
@@ -12561,7 +14377,7 @@ An Exchange MAY be a structured reference, a working artifact, a research artifa
 A Reference Exchange MUST declare:
 
 * `artifact_type = "reference_exchange"`;
-* `artifact_status = "reference"`;
+* `artifact_status = "reference"` when issued as a current reference artifact; a previously issued Reference Exchange MAY later carry `deprecated`, `superseded`, or `revoked` lifecycle status without ceasing to be identifiable as a `reference_exchange`;
 * at least one `authority_recognition_ref`;
 * the scope of recognition;
 * the validation or recognition policy used;
@@ -12593,7 +14409,7 @@ A minimal Runtime Pack manifest SHOULD include:
   "schema_version": "5.0",
   "artifact_type": "runtime_pack_manifest",
   "runtime_pack_id": "sha256:<hex>",
-  "runtime_pack_version": "5.0",
+  "runtime_pack_version": "5.0.0",
   "source_exchange_ref": {},
   "source_artifact_status": "working",
   "reader_policy_refs": [],
@@ -15343,8 +17159,8 @@ Integrity protects artifacts.
 FILE: docs/Technical-Reference/kristal-docs-v5/03-reproducibility/allowed-runtime-pack-policies.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: fb6ecb79f8a14959bf01a78d83272b6d6a08e677223b83868d0e38d942dea738
-CONTENT_BYTES: 17660
+CONTENT_SHA256: 6d6bd6479edcbc9c355febe87a3b11c8a04126776442f57ada258a8592bdd9c8
+CONTENT_BYTES: 19193
 ================================================================================================
 
 # Allowed Runtime Pack Policies (Kristal v5)
@@ -15359,6 +17175,8 @@ Kristal v5 keeps the **determinism surface area small** while enabling high-perf
 
 A Runtime Pack is a deployable offline package derived from a Kristal Exchange or shard set. It may support strict reference use, validated-only use, research use, creative use, or custom reader policies. The pack must make its construction policies explicit so another implementation can compare, reproduce, or reject it under the same declared constraints.
 
+Runtime Pack storage structures are query/execution materializations. They are not a second source of epistemic truth and are not mutable application databases. A profile MAY define additional read-oriented physical representations (for example a database-like file) only when the manifest/schema/profile can declare them, bind them to the build/source identity, and preserve deterministic rebuildability. Core v5 does not currently define a writable SQLite profile.
+
 A Kristal v5 Runtime Pack MUST:
 
 1. Select policy values from the allowed sets below.
@@ -15370,6 +17188,8 @@ Anything outside these policies is either:
 
 * a **non-normative implementation detail**, or
 * an **optional profile extension** that MUST be explicitly declared and MUST NOT change core IDs unless included in the declared reproducibility surface.
+
+A physical storage representation that can influence query bytes/results, integrity verification, or portability is not merely an invisible implementation detail: the applicable profile and reproducibility surface MUST make the relevant representation/version/configuration constraints explicit.
 
 ## Normative language
 
@@ -15449,6 +17269,11 @@ A Runtime Pack MUST NOT flatten scoped validation into universal truth.
 A Runtime Pack MUST NOT remove the fact that an assertion is hypothetical, disputed, fictional, mythological, rejected, revoked, or validated only under a specific authority channel.
 
 ---
+
+
+## 1.5 Portable byte-level conformance profile
+
+The allowed policy names in this document define semantic choices. For RP-2 through RP-5, exact portable fixture bytes are additionally fixed by `05-profiles/profile-runtime-pack-portable-conformance.md` (`kristal.v5:runtime-pack-portable-conformance@1`). Implementations claiming that profile MUST follow its comparison, row-boundary, Bloom serialization, and Roaring container-selection rules exactly.
 
 # 2. Data ordering policies
 
@@ -15704,6 +17529,8 @@ If the source is filtered during pack construction, the Runtime Pack manifest MU
 
 A filtered Runtime Pack MUST NOT present itself as containing the full source artifact.
 
+Regardless of source materialization policy, the materialized store is non-authoritative relative to its declared source artifact. Consumers MUST NOT treat local mutations to Runtime Pack storage as edits to the Exchange. A changed knowledge state requires a new source/epistemic input and a new derived build.
+
 ---
 
 # 8. Reader-policy materialization
@@ -15869,7 +17696,7 @@ For Kristal v5:
 
 ```text
 schema_version = 5.0
-runtime_pack_version = 5.0
+runtime_pack_version = 5.0.0
 ```
 
 Any change to enumerations or semantics MUST bump the relevant schema or profile version.
@@ -15911,8 +17738,8 @@ The purpose is not to guarantee that all data is final, universally true, or max
 FILE: docs/Technical-Reference/kristal-docs-v5/03-reproducibility/deterministic-build-rules.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 8e1f51617806527401409df40b583ad305d2950c11224ff80d3afe796e4a3003
-CONTENT_BYTES: 24855
+CONTENT_SHA256: 4eefd40cf40f544952a51d8ec55b9f0efb36cb0d91ea79005996acb70601dd3f
+CONTENT_BYTES: 26935
 ================================================================================================
 
 # Deterministic build rules (Kristal v5)
@@ -16235,6 +18062,16 @@ revoked
 
 9.5 A Runtime Pack MUST NOT present unrecognized or unvalidated assertions as recognized reference material unless the active reader policy explicitly allows that interpretation.
 
+9.6 Runtime Pack tables, indexes, dictionaries, columnar files, search structures, and profile-defined database-like files are derived materializations, not independent authorities.
+
+9.7 For a declared Runtime Pack build identity, every materialization that affects query results MUST be immutable and bound to the declared source artifact, compiler/configuration identity, and applicable materialization policies.
+
+9.8 A conforming materialization MUST be deterministically rebuildable from the declared Kristal source artifact and build inputs. Deleting and rebuilding the materialization MUST NOT change the authoritative epistemic state.
+
+9.9 Runtime Pack payloads MUST NOT be used as writable operational databases whose mutations are expected to flow back into the source Exchange or a product database. Changes originate as new source artifacts/epistemic inputs and produce new artifact/build identities.
+
+9.10 Core v5 does not define a general-purpose writable SQLite profile. A database-like representation is an optional profile extension and MUST remain read-only/derived unless a future normative Kristal contract explicitly defines otherwise.
+
 ### 10) Reader policy determinism
 
 10.1 If a Runtime Pack or query surface applies a reader policy during compilation, the reader policy MUST be included in the input snapshot.
@@ -16392,11 +18229,13 @@ revoked
 * equivalent attestation overlays;
 * non-identity timestamps unless explicitly included by a profile.
 
-16.3 Working Exchange hashed material MUST include the declared source state references, scope, compilation policy, compiler identity, config hash, and compiled payload.
+16.3 Working Exchange `kristal_id` MUST identify the stable Exchange payload, not the build run that produced it. Stable epistemic payload fields, including declared scope, source-state lineage when carried as payload content, validation/recognition references when carried as payload content, reader-policy references when carried as payload content, and compiled payload content, are identity-bearing under the Exchange ID profile. Compiler identity, host/platform identity, wall-clock build metadata, build correlation IDs, and `build.config_hash` belong to reproducibility/build records and MUST NOT be injected into the Exchange payload solely to change `kristal_id`.
 
-16.4 Reference Exchange hashed material MUST include the recognition and validation references that are part of its reference status.
+16.4 A conforming compiler MUST still record compiler identity, configuration hash, source snapshot identity, and other build-affecting inputs in the Exchange manifest/build record so the production process can be reproduced and audited. Two independent conforming compilers that produce the same stable Exchange payload MUST converge on the same `kristal_id` even when their compiler identities differ.
 
-16.5 A Reference Exchange with different authority recognition records MUST have a different content-addressed identity unless the recognition records are deliberately stored outside the hashed material by a declared profile.
+16.5 Reference Exchange hashed material MUST include the recognition and validation references that are part of its stable reference payload status.
+
+16.6 A Reference Exchange with different authority recognition records MUST have a different content-addressed identity unless the recognition records are deliberately stored outside the hashed material by a declared profile.
 
 ### 17) Time, randomness, and environment constraints
 
@@ -16515,8 +18354,8 @@ revoked
 FILE: docs/Technical-Reference/kristal-docs-v5/03-reproducibility/reproducibility-acceptance-tests.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: be98c07d457f26e3e3158970d4b07afbfa24890248174924c0f1b528319e968a
-CONTENT_BYTES: 7664
+CONTENT_SHA256: a29fe65f41e967f86787264e6111eb7e2ed8f1210cae6dfeb207dbffd914a8f8
+CONTENT_BYTES: 9554
 ================================================================================================
 
 # Reproducibility Acceptance Tests (Kristal v5)
@@ -16527,9 +18366,9 @@ Draft (normative acceptance criteria)
 ## Purpose
 Define the **acceptance tests** that determine whether a Kristal v5 implementation produces **reproducible** artifacts.
 
-In v3, reproducibility is a first-class requirement:
+In v5, reproducibility is a first-class requirement:
 - Exchange rebuilds MUST produce identical `kristal_id` given the same inputs and rules.
-- Runtime Pack rebuilds MUST produce identical `pack_id` (or equivalent) and identical declared payload hashes given the same inputs, compiler, configuration, and policy selections.
+- Runtime Pack rebuilds MUST produce identical `runtime_pack_id` (legacy alias: `pack_id`) and identical declared payload hashes given the same inputs, compiler, configuration, and policy selections.
 
 These tests are designed to prevent “works on my machine” builds and to ensure artifacts are comparable across toolchains.
 
@@ -16544,15 +18383,17 @@ The key words **MUST**, **MUST NOT**, **SHOULD**, **SHOULD NOT**, and **MAY** ar
 An **Input Snapshot** is a content-addressed reference to the exact source inputs used for a build (datasets, Claim-IR sets, resolved Claim-IR sets, configuration files, etc.).
 
 ## 1.2 Build determinism surface
-The determinism surface for a build is defined by:
+The determinism surface for reproducing a **build process** is defined by:
 - the declared input snapshots,
 - the compiler identity and version,
 - the full build configuration (identified by `config_hash`),
 - and the recorded `policy_selections` (see `03-reproducibility/allowed-runtime-pack-policies.md`).
 
+This build-process surface is broader than Exchange content identity. Under `kristal.v5:exchange-id-core@1`, compiler/build-run identity is recorded for reproducibility but does not become part of `kristal_id` merely because a particular compiler produced the payload.
+
 ## 1.3 Artifact hashes
-- `kristal_id`: content hash of Exchange (signatures excluded).
-- `pack_id`: content hash of Runtime Pack (as defined by Runtime Pack contract).
+- `kristal_id`: content hash of the stable Exchange payload under `kristal.v5:exchange-id-core@1` (signatures excluded).
+- `runtime_pack_id`: content hash of Runtime Pack identity material under the applicable Runtime Pack identity profile (`pack_id` MAY be accepted only as a compatibility alias).
 - `payload_hashes`: hashes of pack payload components (Parquet files, index files, etc.), as declared in the pack manifest.
 
 ---
@@ -16581,11 +18422,13 @@ The determinism surface for a build is defined by:
 **Goal:** Independent implementations converge on the same ID.
 
 **Given**
-- a published Exchange fixture + expected `kristal_id`
+- a published stable Exchange payload fixture + expected `kristal_id`
+- the `kristal.v5:exchange-id-core@1` identity boundary
 - canonicalization defined as RFC 8785 (JCS)
 
 **Then**
-- any v3 core conformant implementation MUST compute the expected `kristal_id`.
+- any v5 core conformant implementation MUST compute the expected `kristal_id`;
+- two independent conforming implementations MUST converge on that ID even when their compiler names, versions, build IDs, host platforms, or CI metadata differ, provided they emit the same stable Exchange payload.
 
 **Failure**
 - mismatch → FAIL (interop-breaking).
@@ -16639,7 +18482,7 @@ The determinism surface for a build is defined by:
 
 **Then**
 - rebuilt Runtime Pack MUST produce identical:
-  - `pack_id`
+  - `runtime_pack_id`
   - `payload_hashes` (for each payload component)
   - `policy_selections` recorded in manifest
 
@@ -16713,6 +18556,13 @@ The determinism surface for a build is defined by:
 
 ---
 
+
+## RP-2 through RP-5 portable byte profile
+
+Kristal v5 publishes the normative profile `kristal.v5:runtime-pack-portable-conformance@1` in `05-profiles/profile-runtime-pack-portable-conformance.md`. The profile fixes the byte-level semantics needed to execute RP-2, RP-3, RP-4, and RP-5 without relying on host-specific sort behavior, row-group heuristics, probabilistic-filter library defaults, or implementation-specific Roaring run optimization.
+
+The corresponding golden fixtures are `09-test-vectors/runtime-pack/portable-vectors.json` and are mandatory framework-vector coverage for this profile.
+
 ## RP-6: Fail-closed verification (Runtime Pack)
 **Goal:** declared integrity cannot be ignored.
 
@@ -16740,7 +18590,7 @@ The determinism surface for a build is defined by:
 
 **Then**
 - Exchange `kristal_id` MUST match.
-- Runtime Pack `pack_id` and payload hashes SHOULD match.
+- Runtime Pack `runtime_pack_id` and payload hashes SHOULD match.
 
 **Note**
 If exact Runtime Pack bit identity is not feasible cross-OS due to dependency formats, the implementation MUST:
@@ -16765,7 +18615,7 @@ If recorded, these MUST NOT affect core identity unless explicitly included in t
 
 Implementations MUST provide:
 - Exchange fixtures + expected `kristal_id`
-- Runtime Pack fixtures + expected `pack_id` + expected payload hashes
+- Runtime Pack fixtures + expected `runtime_pack_id` + expected payload hashes
 - JCS canonicalization vectors + expected hashes
 - Query fixtures for stable paging (cursor/offset), join caps, and error modes
 
@@ -16780,7 +18630,18 @@ A Kristal v5 implementation passes reproducibility if:
 - All Runtime Pack tests RP-1 through RP-6 pass (mandatory).
 - Cross-platform test XP-1 is run for at least one release candidate (recommended).
 
-Failure of any mandatory test blocks release of v3 artifacts.
+Failure of any mandatory test blocks release of v5 artifacts.
+
+
+## Executable TCK mapping
+
+The executable framework-vector surface is `09-test-vectors/TCK.md` and is run by:
+
+```bash
+python tools/validate_conformance.py
+```
+
+A framework-vector PASS proves that the published vectors, hash-target rules, and fail-closed fixture expectations are internally executable. It does **not** by itself prove conformance of a production compiler or verifier. Tests that require a concrete implementation remain `NOT TESTED` until an implementation adapter is connected to the TCK.
 
 
 ================================================================================================
@@ -17806,8 +19667,8 @@ The following example is non-normative.
 FILE: docs/Technical-Reference/kristal-docs-v5/04-query/query-contract.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: b5d6dd1ebf797b4413a0342133e3f1d686190e277856536e6355cc5179ca93dc
-CONTENT_BYTES: 23100
+CONTENT_SHA256: f6392c7be79b6380481f05de9f525070219d3078c01e6acd6dbdac753f40da1a
+CONTENT_BYTES: 23435
 ================================================================================================
 
 # Query Contract
@@ -18531,6 +20392,8 @@ Test fixtures SHOULD include at least:
 
 ## 17. Non-normative implementation notes
 
+* Query engines may use Parquet, deterministic indexes, or a profile-defined read-only database-like materialization internally, provided observable query semantics remain conformant.
+* Treat all Runtime Pack query stores as derived from the declared source artifact; do not accept local write-back as a mutation of Kristal knowledge.
 * Prefer cursor paging over offset for large packs.
 * Enforce resource limits early to protect offline devices.
 * Keep query wrappers small and deterministic.
@@ -23439,6 +25302,290 @@ The RDF export is a deterministic projection of selected Kristal artifacts under
 
 
 ================================================================================================
+FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-runtime-pack-portable-conformance.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2bfe1ffd514aa5484b6bd358e2b286db4edb9a9b689da945a2b1f32cc8a3b287
+CONTENT_BYTES: 8166
+================================================================================================
+
+# Runtime Pack Portable Conformance Profile
+
+## Status
+
+Draft — normative profile for Kristal v5 conformance testing
+
+## Profile identifier
+
+```text
+kristal.v5:runtime-pack-portable-conformance@1
+```
+
+## Purpose
+
+This profile fixes the byte-level semantics needed to make Runtime Pack acceptance tests **RP-2 through RP-5 executable and portable**. It does not require every production Runtime Pack to use these fixture encodings. A production implementation MAY use another declared storage profile, but it MUST provide equivalent deterministic byte-level rules and vectors before claiming full Runtime Pack compiler conformance for that profile.
+
+The profile covers four reproducibility surfaces:
+
+- deterministic record ordering (`RP-2`);
+- deterministic fixed-row group boundaries (`RP-3`);
+- deterministic Bloom-filter bytes and false-positive pruning (`RP-4`);
+- deterministic 32-bit Roaring portable serialization (`RP-5`).
+
+## Normative language
+
+The key words **MUST**, **MUST NOT**, **SHOULD**, **SHOULD NOT**, and **MAY** are normative requirements.
+
+---
+
+## 1. Common byte rules
+
+1. Text is UTF-8 without a byte-order mark.
+2. Integer fields in binary fixture formats are unsigned unless explicitly stated otherwise.
+3. Multi-byte integers in Kristal-defined binary fixture formats are little-endian.
+4. SHA-256 digests are lowercase hexadecimal.
+5. A JSON Lines payload is a sequence of RFC 8785/JCS canonical JSON objects, each followed by one LF byte (`0x0a`).
+6. Source row order MUST NOT affect output when an ordering policy other than `none` is selected.
+7. Locale, host collation, filesystem order, CPU count, and thread scheduling MUST NOT affect bytes.
+
+---
+
+## 2. RP-2 — ordered triples fixture
+
+### 2.1 Supported ordering policy
+
+The profile's required RP-2 vector uses:
+
+```text
+qid_pid_statement_id_asc
+```
+
+Rows MUST contain string fields:
+
+```text
+subject
+predicate
+object
+statement_id
+```
+
+### 2.2 Comparison
+
+Rows are ordered by this tuple:
+
+1. `subject` UTF-8 bytes;
+2. `predicate` UTF-8 bytes;
+3. `statement_id` UTF-8 bytes;
+4. JCS bytes of the complete row as a final deterministic tie-breaker.
+
+Each tuple component is compared as an unsigned byte sequence. No locale collation or Unicode normalization is applied by this profile.
+
+### 2.3 Output
+
+The ordered fixture payload is `data/triples.jsonl` encoded according to the common JSON Lines rule above.
+
+Two builds given the same row set MUST emit byte-identical output and the published golden SHA-256.
+
+---
+
+## 3. RP-3 — fixed-row grouping fixture
+
+The required profile vector uses:
+
+```text
+fixed_rows_100k
+```
+
+Let `N` be the total ordered row count. Group `i`, zero-based, is:
+
+```text
+start_row = i * 100000
+row_count = min(100000, N - start_row)
+```
+
+Groups with `row_count <= 0` do not exist.
+
+The portable fixture representation is the JCS object:
+
+```json
+{
+  "policy": "fixed_rows_100k",
+  "row_count": 200005,
+  "groups": [
+    {"index": 0, "start_row": 0, "row_count": 100000},
+    {"index": 1, "start_row": 100000, "row_count": 100000},
+    {"index": 2, "start_row": 200000, "row_count": 5}
+  ]
+}
+```
+
+followed by LF and stored as `metadata/row-groups.json` for the TCK fixture.
+
+The fixture representation proves the row-to-group assignment rule without requiring a 200,005-row payload in the repository.
+
+---
+
+## 4. RP-4 — deterministic Bloom filter fixture
+
+### 4.1 Policy
+
+The required vector uses:
+
+```text
+kind = bloom
+```
+
+and MUST declare:
+
+- `seed`;
+- `bits_per_key`;
+- `hash_functions`.
+
+### 4.2 Bit count
+
+For `n` keys:
+
+```text
+bit_count = max(8, ceil(n * bits_per_key / 8) * 8)
+```
+
+The bitset therefore always occupies a whole number of bytes.
+
+### 4.3 Key hashing
+
+For each UTF-8 key, compute:
+
+```text
+SHA-256(
+  UTF8("kristal-bloom-v1\0") ||
+  uint32_le(seed) ||
+  uint32_le(key_byte_length) ||
+  key_bytes
+)
+```
+
+Interpret digest bytes `0..7` as unsigned `h1` little-endian and bytes `8..15` as unsigned `h2` little-endian. If `h2 == 0`, use `h2 = 1`.
+
+For `i = 0 .. hash_functions-1`:
+
+```text
+position_i = (h1 + i * h2) mod bit_count
+```
+
+Bit numbering inside each byte is least-significant-bit first.
+
+Input keys MUST be de-duplicated by exact UTF-8 byte equality and then sorted by UTF-8 bytes before insertion. Duplicate input keys therefore do not alter the filter.
+
+### 4.4 KBF1 serialization
+
+The TCK serializes the filter as:
+
+| Offset | Size | Field |
+|---:|---:|---|
+| 0 | 4 | ASCII `KBF1` |
+| 4 | 1 | format version = `1` |
+| 5 | 1 | hash method = `1` (SHA-256 double-hash defined above) |
+| 6 | 2 | reserved = `0` |
+| 8 | 4 | seed |
+| 12 | 4 | bit_count |
+| 16 | 2 | hash_functions |
+| 18 | 2 | reserved = `0` |
+| 20 | 4 | unique key count |
+| 24 | variable | bitset bytes |
+
+The file role is `membership_filter`.
+
+### 4.5 Semantic pruning
+
+A Bloom hit is only a prefilter result. Final membership MUST be computed as:
+
+```text
+bloom_maybe_contains(key) AND authoritative_store_contains(key)
+```
+
+The RP-4 vector includes an absent key that is a deterministic Bloom false positive. The profile requires that its final semantic result be `false`.
+
+---
+
+## 5. RP-5 — deterministic Roaring bitmap fixture
+
+### 5.1 External wire format
+
+The wire format is the standard **32-bit Roaring portable serialization** defined by the Roaring Format Specification. Multi-byte words are little-endian. The TCK uses the standard cookies:
+
+```text
+SERIAL_COOKIE_NO_RUNCONTAINER = 12346
+SERIAL_COOKIE = 12347
+NO_OFFSET_THRESHOLD = 4
+```
+
+Reference specification:
+
+```text
+https://github.com/RoaringBitmap/RoaringFormatSpec
+```
+
+### 5.2 Canonical container selection
+
+Input values are unsigned 32-bit integers, de-duplicated and sorted ascending.
+
+Values are partitioned by their high 16 bits. Containers are emitted in ascending high-key order.
+
+When `run_optimize = false`:
+
+- run containers MUST NOT be emitted;
+- cardinality `<= 4096` uses an array container;
+- cardinality `> 4096` uses a bitset container;
+- serialization MUST use `SERIAL_COOKIE_NO_RUNCONTAINER`.
+
+When `run_optimize = true`:
+
+1. Compute the base container size:
+   - array: `2 * cardinality` bytes when cardinality `<= 4096`;
+   - bitset: `8192` bytes when cardinality `> 4096`.
+2. Compute maximal contiguous runs of low-16 values.
+3. Run-container size is `2 + 4 * run_count` bytes.
+4. Use a run container only when its size is **strictly smaller** than the base container size. Ties use the base container.
+5. If at least one run container is selected, serialize with `SERIAL_COOKIE`; otherwise serialize canonically with `SERIAL_COOKIE_NO_RUNCONTAINER`.
+
+This rule removes implementation-specific run-optimization heuristics from the reproducibility surface.
+
+### 5.3 Standard portable serialization
+
+After canonical container selection, headers, offsets, array containers, bitset containers, and run containers MUST follow the Roaring portable format specification exactly.
+
+The profile intentionally forbids alternate but semantically equivalent Roaring serializations for RP-5 conformance. A conforming build MUST match the published golden bytes.
+
+---
+
+## 6. Conformance fixtures
+
+Golden vectors are published in:
+
+```text
+09-test-vectors/runtime-pack/portable-vectors.json
+```
+
+The framework TCK MUST verify exact output bytes and SHA-256 for RP-2 through RP-5.
+
+A compiler/verifier implementation claiming this profile MUST independently reproduce those bytes. Merely reading the expected bytes from the vector file is not conformance.
+
+---
+
+## 7. Relationship to Runtime Pack identity
+
+This profile tests byte-producing materializations. The resulting payload hashes MAY participate in `kristal.v5:runtime-pack-id-core@1` through the manifest `files` inventory.
+
+The profile does not change the Runtime Pack identity exclusions defined by `kristal.v5:runtime-pack-id-core@1`.
+
+---
+
+## 8. Portability claim
+
+A PASS of RP-2 through RP-5 under this profile establishes deterministic byte production for these portable fixture surfaces. It does not by itself prove that arbitrary Parquet encoders, third-party Bloom implementations, or every Roaring library emit identical bytes unless they are constrained by this profile or another declared byte-level profile.
+
+
+================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/05-profiles/profile-transparency-log.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
@@ -26223,8 +28370,8 @@ The core invariant is:
 FILE: docs/Technical-Reference/kristal-docs-v5/06-integration/konnaxion-distribution-contract.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 40db942447b0fd6fb8fa4eaa01164e256c4fc0a8e3b9c4c7073331075d77c579
-CONTENT_BYTES: 26896
+CONTENT_SHA256: afcbcb9ab0ea3e27e3dccb79aac19426a5778a57ba1970555303184125260cd2
+CONTENT_BYTES: 27798
 ================================================================================================
 
 # Konnaxion distribution contract (Kristal v5 integration)
@@ -26246,6 +28393,8 @@ Konnaxion’s responsibilities in the ecosystem are to:
 * support user-facing and application-facing reader policies, including reference-only, validated-only, high-certainty-only, research, creative, all-with-labels, and custom views.
 
 Konnaxion distributes and activates Runtime Packs. It does not decide universal truth. It enforces declared distribution policy, artifact integrity, compatibility, reader-policy behavior, and channel-specific authority requirements.
+
+Konnaxion's own mutable operational/domain state remains Konnaxion-owned and is not stored in Kristal merely because a Runtime Pack is present. Consultations, participants, votes, DecisionRecords, session state, delivery jobs, and other application records remain outside the Runtime Pack unless represented as immutable source evidence or derived epistemic knowledge under an explicit contract.
 
 Normative keywords: MUST, MUST NOT, SHOULD, SHOULD NOT, MAY.
 
@@ -26278,7 +28427,8 @@ This contract does not define:
 * how facts, claims, myths, hypotheses, or disputed positions are debated;
 * full device management or MDM integration;
 * user interface design;
-* Runtime Pack internal query semantics, except where query-contract compatibility affects activation.
+* Runtime Pack internal query semantics, except where query-contract compatibility affects activation;
+* Konnaxion's transactional/domain database schema or write model.
 
 Build workflows are owned by Orgo and the Kristal compiler. Validation and recognition are represented by Kristal validation decisions and authority recognition records. Konnaxion consumes those records according to distribution policy and reader policy.
 
@@ -26302,6 +28452,8 @@ A distributable Runtime Pack bundle MUST include:
 * optional authority recognition records;
 * optional transparency log entries.
 
+Pack payload files are derived, read-oriented materializations. A Runtime Pack MAY contain a profile-defined database-like query file only when the applicable profile declares it and the file is bound to the pack/source identity. Konnaxion MUST treat such a file as immutable/read-only for that pack build and MUST NOT use it as its authoritative mutable application database or write back local mutations as Kristal knowledge.
+
 The Runtime Pack Manifest MUST conform to:
 
 ```text
@@ -26319,7 +28471,7 @@ runtime-pack-manifest.json
 Each Runtime Pack bundle intended for distribution MUST be uniquely and unambiguously identified by the following metadata, carried either in the Runtime Pack Manifest, channel index, or both:
 
 * `schema_version = "5.0"`;
-* `artifact_type = "runtime_pack"`;
+* `artifact_type = "runtime_pack_manifest"`;
 * `runtime_pack_id`;
 * `runtime_pack_version`;
 * `release_id`;
@@ -27079,8 +29231,8 @@ Federation-related distribution tests SHOULD verify that Konnaxion:
 FILE: docs/Technical-Reference/kristal-docs-v5/06-integration/orgo-workflow-contract.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 4e731d48dfc6b7baa487cbcdd9ed343edbca11b98e097ad82fbd4da881456395
-CONTENT_BYTES: 26071
+CONTENT_SHA256: 37b712582b3910d2a835c25e71dffdde1bb7aed36fdcad1dd2ea4a7d72f17ebf
+CONTENT_BYTES: 27087
 ================================================================================================
 
 # Orgo Workflow Contract
@@ -27172,6 +29324,7 @@ Kristal owns:
 
 Orgo owns:
 
+* its mutable operational database/state and transactional lifecycle;
 * workflow lifecycle;
 * operational cases and tasks;
 * review routing;
@@ -27185,6 +29338,10 @@ Orgo owns:
 * tenant-scoped audit logs;
 * feedback handling;
 * operational remediation.
+
+Orgo MUST NOT make a live domain record simultaneously authoritative in both its operational store and Kristal. When Orgo-originated state contributes to Kristal compilation, Orgo SHOULD provide an immutable source snapshot/export or stable source artifact reference with revision/digest and provenance. The resulting Kristal artifact is a separate knowledge artifact and MUST preserve lineage to that source.
+
+In the kOA deployment profile, Da’at MAY perform the mapping from the Orgo-owned source artifact into Kristal-native Structured Epistemic State or another supported Kristal input. Transport through Interaction Kernel does not transfer state ownership to Interaction Kernel.
 
 ---
 
@@ -27882,6 +30039,8 @@ Orgo MUST represent feedback as:
 * new Claim-IR proposals where extraction is involved.
 
 Orgo MUST NOT edit Exchange artifacts in place due to votes, curation, user edits, operator comments, or feedback signals.
+
+Orgo MUST also NOT write those changes into a Runtime Pack query/materialization store as a substitute for producing a new source/epistemic artifact and derived build. Runtime Pack state is read-oriented derived state, not Orgo's transactional write model.
 
 ## 9.2 Feedback-to-build linkage
 
@@ -33999,6 +36158,39 @@ Release strategy does not decide what is universally true. It decides which immu
 
 
 ================================================================================================
+FILE: docs/Technical-Reference/kristal-docs-v5/09-test-vectors/exchange/README.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 48b211be40559c5864c045185fa46f4d8ee54197b60daa8cab75db59c3ab4bd6
+CONTENT_BYTES: 1173
+================================================================================================
+
+# Exchange identity vectors
+
+These vectors test the Kristal v5 core Exchange identity profile `kristal.v5:exchange-id-core@1` from `01-core-spec/ids-canonicalization-hashing.md`.
+
+
+These are deliberately **Exchange payload/hash-target fixtures**, not complete Exchange Manifest instances. Manifest-only fields such as compiler/build-run metadata are outside `kristal_id`; the manifest records them separately for reproducibility and audit.
+
+For these Exchange **payload** fixtures, the hash target is produced by:
+
+1. removing the output `kristal_id` field;
+2. removing top-level `content_hash` when it stores the digest being computed;
+3. removing every field named `signatures` or `attestations`, including nested defensive-compatibility occurrences;
+4. applying no other implicit exclusions;
+5. canonicalizing with RFC 8785 / `kristal.v5:jcs-rfc8785@1`;
+6. hashing the canonical UTF-8 bytes with SHA-256.
+
+The vectors deliberately omit volatile operational fields. `EX-003` adds a signature envelope to the same stable payload and MUST preserve the ID. `EX-004` changes status-bearing stable content and MUST change the ID.
+
+Run:
+
+```bash
+node tools/kristal_tck.mjs
+```
+
+
+================================================================================================
 FILE: docs/Technical-Reference/kristal-docs-v5/09-test-vectors/jcs/README.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
@@ -35084,16 +37276,121 @@ To finalize:
 
 
 ================================================================================================
+FILE: docs/Technical-Reference/kristal-docs-v5/09-test-vectors/runtime-pack/README.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 5845780fb7523bbf4bca25198d5a5a296eab91c99e0f3b853388d2f6d51fd376
+CONTENT_BYTES: 1820
+================================================================================================
+
+# Runtime Pack identity and integrity vectors
+
+These vectors define the first executable Runtime Pack identity profile for the Kristal v5 TCK:
+
+`kristal.v5:runtime-pack-id-core@1`
+
+Runtime Pack format version used by these core vectors is `5.0.0`; it is not coupled to the framework release-candidate suffix.
+
+The profile applies RFC 8785 / JCS to a Runtime Pack Manifest after removing only the explicitly non-identity fields below plus all `signatures` / `attestations` fields:
+
+- `/runtime_pack_id`
+- `/created_at`
+- `/build/build_id`
+- `/compiler/build_platform`
+- `/integrity/pack_hash`
+- `/integrity/manifest_hash`
+
+All remaining fields are identity-bearing for this profile. In particular, the source Exchange reference, source status, compiler name/version/revision, deterministic config, policies, reader-policy references, query-contract reference, and deterministic file inventory remain in the hash target.
+
+This closes the test-vector gap required by deterministic-build rule 15.5 without making local wall-clock time or host platform part of pack identity.
+
+The payload-integrity vectors also verify that every declared file hash and size is checked fail-closed.
+
+This TCK does **not** yet claim byte-level conformance for Roaring encoding, membership-filter construction, Parquet row-group bytes, or a complete Runtime Pack compiler. Those require implementation adapters and/or more narrowly pinned byte-format profiles.
+
+
+## Portable materialization vectors
+
+`portable-vectors.json` makes RP-2 through RP-5 executable under `kristal.v5:runtime-pack-portable-conformance@1`. It covers exact ordered JSONL bytes, fixed-row group boundary bytes, deterministic KBF1 Bloom-filter bytes including false-positive pruning, and canonical 32-bit Roaring portable bytes with deterministic run-container selection.
+
+
+================================================================================================
+FILE: docs/Technical-Reference/kristal-docs-v5/09-test-vectors/TCK.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 1cbaeb97527537761e37bfeae0654904831d9eb91967bad1e638d0f865f65757
+CONTENT_BYTES: 3007
+================================================================================================
+
+# Kristal v5 Test Compatibility Kit (TCK)
+
+## Purpose
+
+The Kristal TCK separates two claims that MUST NOT be conflated:
+
+1. **framework-vector conformance** — the published contracts and golden vectors are internally executable and self-consistent;
+2. **implementation conformance** — a concrete compiler/verifier produces the required artifacts and rejects invalid ones.
+
+`node tools/kristal_tck.mjs` currently proves the first claim for the implemented vector surfaces.
+
+The Exchange vectors use the payload identity profile `kristal.v5:exchange-id-core@1`. They are payload/hash-target fixtures rather than complete Exchange Manifest instances; compiler/build-run identity is recorded by the manifest and does not define `kristal_id`.
+
+The Runtime Pack vectors use `runtime_pack_version = "5.0.0"`. Runtime Pack format version is independent of the framework release-candidate suffix (`rc.N`).
+
+## Current automated coverage
+
+| Acceptance criterion | Framework vector | Implementation proof |
+|---|---:|---:|
+| EX-1 same-toolchain Exchange identity determinism | PASS-capable | adapter/compiler required |
+| EX-2 cross-toolchain expected Exchange ID | PASS-capable | second implementation required |
+| EX-3 signature-envelope invariance | PASS-capable | adapter/compiler required |
+| EX-4 fail-closed Exchange integrity | partial: hash-target vectors | verifier/signature adapter required |
+| RP-1 Runtime Pack identity + inventory determinism | PASS-capable | compiler adapter required |
+| RP-2 stable ordering bytes | contract only | compiler adapter required |
+| RP-3 row-group determinism | contract only | compiler adapter required |
+| RP-4 membership-filter determinism | contract only | byte-format profile + compiler required |
+| RP-5 bitmap determinism | contract only | byte-format profile + compiler required |
+| RP-6 fail-closed payload verification | PASS-capable | loader/verifier adapter required |
+
+A framework-vector PASS therefore MUST NOT be reported as full implementation conformance.
+
+## Commands
+
+Run release integrity and TCK vectors:
+
+```bash
+python tools/validate_all.py --skip-doc-build
+```
+
+Authoritative CI SHOULD run without `--skip-doc-build` so `mkdocs build --strict` is also required.
+
+## Next adapter surface
+
+A later TCK revision SHOULD add a process adapter for a concrete compiler/verifier with these logical operations:
+
+- `exchange_id`
+- `verify_exchange`
+- `build_runtime_pack`
+- `verify_runtime_pack`
+
+That adapter will allow the same fixture corpus to score EX-1..EX-4 and RP-1..RP-6 against real implementations without embedding implementation logic in the framework repo.
+
+### Runtime Pack portable materialization profile
+
+RP-2 through RP-5 use `kristal.v5:runtime-pack-portable-conformance@1` and `runtime-pack/portable-vectors.json`. The TCK compares exact output bytes, not only semantic values. This closes the framework-vector gap for ordering, row-group boundaries, Bloom-filter construction/pruning, and canonical Roaring portable serialization.
+
+
+================================================================================================
 FILE: README.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: d378249661554bbc75c5dd7357ae0be1508b0d8e0a7a9aea82a9b16545ac6df4
-CONTENT_BYTES: 16408
+CONTENT_SHA256: 35c8a7950eb4ddde722ff5e996592e71a959570df4d9120209a39adb3aff9f03
+CONTENT_BYTES: 17539
 ================================================================================================
 
 # Kristal docs (v5)
 
-> **Release status:** `5.0.0-rc.1` — stabilization release candidate. See [`VERSION`](VERSION), [`kristal-release.json`](kristal-release.json), the [release status report](docs/status/2026-09-14-v5.0.0-rc.1.md), and the [specification status](docs/Technical-Reference/kristal-docs-v5/00-overview/specification-status.md).
+> **Release status:** `5.0.0-rc.2` — candidate under validation. The `v5.0.0-rc.2` tag and resolved commit do not exist until the corrected tree passes the release gate and is committed/tagged. See [`VERSION`](VERSION), [`kristal-release.json`](kristal-release.json), the [rc.2 candidate status](docs/status/2026-09-16-v5.0.0-rc.2-candidate.md), and the [specification status](docs/Technical-Reference/kristal-docs-v5/00-overview/specification-status.md).
 
 This repository contains the **Kristal v5 specification, normative contract set, conformance vectors, and release metadata** for a deterministic, portable epistemic artifact system.
 
@@ -35109,22 +37406,24 @@ Kristal v5 defines how **Structured Epistemic States** are compiled into immutab
 
 Kristal is designed for portable, verifiable, offline-capable knowledge operation across toolchains, authority channels, reader policies, and runtime environments.
 
+Kristal is **not** a shared mutable application database. Product-owned operational state remains authoritative in the owning product and enters Kristal through immutable source artifacts/snapshots with provenance. Runtime Packs are derived query/execution materializations; they may use profile-defined read-oriented storage structures, but those structures remain non-authoritative and rebuildable from declared Kristal inputs.
+
 ---
 
 ## Release identity
 
-The current release candidate is `v5.0.0-rc.1`. The release identity is deliberately small:
+The current candidate version is `5.0.0-rc.2`. It becomes a published release candidate only after an immutable `v5.0.0-rc.2` tag is created. The release identity is deliberately small:
 
 ```text
-version: 5.0.0-rc.1
-git tag: v5.0.0-rc.1
+version: 5.0.0-rc.2
+git tag: v5.0.0-rc.2 (pending until release)
 git commit: resolved from the tag after the release commit exists
-canonicalization: kristal.v5:jcs-rfc8785
+canonicalization: kristal.v5:jcs-rfc8785 / 1
 ```
 
 Git tag + commit SHA pin the exact repository content. [`contract-set.manifest.json`](contract-set.manifest.json) only identifies the public contract surfaces; it is not an exhaustive file inventory and does not duplicate Git with per-file release hashes.
 
-Kristal still uses JCS/SHA-256 where it is part of the **Kristal artifact identity protocol**. That domain-level hashing is separate from framework release versioning. See the [release status report](docs/status/2026-09-14-v5.0.0-rc.1.md) and [`RELEASE.md`](RELEASE.md).
+Kristal still uses JCS/SHA-256 where it is part of the **Kristal artifact identity protocol**. That domain-level hashing is separate from framework release versioning. See the [rc.2 candidate status](docs/status/2026-09-16-v5.0.0-rc.2-candidate.md) and [`RELEASE.md`](RELEASE.md).
 
 ---
 
@@ -35487,12 +37786,23 @@ Major-version changes are required for changes that alter:
 > Kristal v5 is a deterministic, portable epistemic artifact system that compiles Structured Epistemic States into verifiable artifacts while keeping validation scoped, authority plural, certainty explicit, reader policy selectable, and disagreement preserved.
 
 
+## Validation suite
+
+Run the complete framework validation suite with:
+
+```bash
+python tools/validate_all.py
+```
+
+This validates release integrity, executable TCK vectors, and `mkdocs build --strict`. A framework-suite PASS is not a claim that an external Kristal compiler/verifier is conformant; implementation conformance requires running the TCK against that implementation. See `docs/status/2026-09-16-v5-conformance-suite.md`.
+
+
 ================================================================================================
 FILE: RELEASE.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: d029d1e0742da83b8754782ca28d676691e948f01534ef3a4a48230adc6b0e22
-CONTENT_BYTES: 2963
+CONTENT_SHA256: 9394194014953014416e47ebc5ddcf1d74b18a8e3fec44639a0a5a971f8d8d87
+CONTENT_BYTES: 4451
 ================================================================================================
 
 # Kristal Framework release process
@@ -35505,11 +37815,12 @@ From a clean checkout:
 
 ```bash
 python -m pip install -r requirements-dev.txt
-python tools/validate_release.py
-mkdocs build --strict
+python tools/validate_all.py
 ```
 
-All commands MUST pass before tagging a stable release.
+The complete validation command MUST pass before tagging any release candidate or stable release.
+
+This command validates **framework/release integrity**, executable framework-vector conformance, and the strict documentation build. They do not, by themselves, establish that an Exchange compiler, Runtime Pack builder/verifier, Da’at implementation, or ecosystem integration is implementation-conformant. Any implementation conformance claimed for a release MUST also satisfy the applicable executable acceptance tests and the current status report under `docs/status/`.
 
 ## Release metadata
 
@@ -35518,10 +37829,18 @@ When changing the release version, update together:
 - `VERSION`
 - `kristal-release.json`
 - `contract-set.manifest.json` (`release` field only when the version changes)
+- `release-lock.example.json`
 - `CHANGELOG.md`
 - the corresponding status report under `docs/status/`
 
 `contract-set.manifest.json` lists contract **surfaces** (directories/files), not every file in the repository.
+
+Deprecated generated manifest artifacts MUST be absent before release:
+
+- `schema-set.manifest.json`;
+- `tools/build_manifests.py`.
+
+They belong to the retired per-file-hash release model and MUST NOT be regenerated. Schema bytes are pinned by the Git tag + commit SHA, while `contract-set.manifest.json` remains a curated surface index.
 
 ## Tagging
 
@@ -35540,9 +37859,9 @@ if (-not (Test-Path .git)) {
     throw "Run this from the root of the Kristal Git repository."
 }
 
-python ./tools/validate_release.py
+python ./tools/validate_all.py
 if ($LASTEXITCODE -ne 0) {
-    throw "Kristal release validation failed."
+    throw "Kristal complete validation suite failed."
 }
 
 $Dirty = git status --porcelain
@@ -35603,11 +37922,18 @@ Consumers SHOULD record the small release identity:
 
 ```json
 {
-  "version": "5.0.0-rc.1",
-  "git_tag": "v5.0.0-rc.1",
+  "version": "5.0.0-rc.2",
+  "git_tag": "v5.0.0-rc.2",
   "git_commit": "<full SHA resolved from tag>",
-  "canonicalization_profile": "kristal.v5:jcs-rfc8785"
+  "canonicalization_profile": "kristal.v5:jcs-rfc8785",
+  "canonicalization_version": "1"
 }
 ```
 
 Floating dependencies (`main`, `latest`, `5.x`) are not valid release locks.
+
+## Source archive hygiene
+
+`tools/build_release_archive.py` builds release archives from **Git-tracked files only**. Untracked diagnostics, local notes, `.levelupdiag/`, virtual environments, build output, and other workstation state MUST NOT affect release bytes. `CODE_SNAPSHOT_MANIFEST.md` is a local/export snapshot aid and is intentionally excluded from framework release archives.
+
+The archive builder MUST refuse to run outside a Git work tree. For a release build, the working tree SHOULD be clean and the release tag MUST ultimately resolve to the committed bytes being archived.

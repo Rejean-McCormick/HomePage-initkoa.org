@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import atexit
 import hashlib
 import json
 import os
@@ -10,6 +11,7 @@ import shutil
 import subprocess
 import threading
 import tempfile
+import traceback
 from datetime import datetime
 from pathlib import Path
 from tkinter import Tk, StringVar, BOTH, END, LEFT, RIGHT, X, Y
@@ -65,10 +67,11 @@ REPOS = [
     ("kOA_Digital_Ecosystem", MYCODE / "kOA" / "kOA_Digital_Ecosystem"),
     ("SenTient", MYCODE / "SenTient" / "SenTient"),
     ("VotingMachine", MYCODE / "VotingMachine" / "VotingMachine"),
+    ("Power_Dynamics", MYCODE / "Power_Dynamics"),
 ]
 
 COMMIT_MESSAGE = "Update context packs"
-BUILDER_VERSION = "2026-09-11.4"
+BUILDER_VERSION = "2026-09-18.3"
 
 # Packs intentionally retired from this builder. They are removed from public/context-packs
 # before the manifest is regenerated so stale files cannot remain published indefinitely.
@@ -92,6 +95,116 @@ REQUIRED_PATH_ALIASES = {
 }
 
 CREATE_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+
+# Single-instance state. A newly launched builder may terminate only the PID
+# explicitly registered by the previous instance of this exact script path.
+# We deliberately do NOT scan all python/pyw processes: a launcher process can
+# be the parent of the new instance, and taskkill /T on that parent would kill
+# the newly launched builder itself.
+INSTANCE_STATE_PATH = Path(tempfile.gettempdir()) / "initkoa-context-pack-builder.instance.json"
+
+
+def _terminate_process_tree(pid: int) -> bool:
+    """Force-stop a previous builder process tree. Returns True when taskkill succeeds."""
+    if pid <= 0 or pid == os.getpid():
+        return False
+    if os.name == "nt":
+        result = subprocess.run(
+            ["taskkill", "/PID", str(pid), "/T", "/F"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            creationflags=CREATE_NO_WINDOW,
+        )
+        return result.returncode == 0
+    try:
+        os.kill(pid, 15)
+        return True
+    except (OSError, ProcessLookupError):
+        return False
+
+
+def _pid_is_same_builder(pid: int, script_path: Path) -> bool:
+    """Verify that PID still belongs to this exact builder script before killing it."""
+    if pid <= 0 or pid == os.getpid():
+        return False
+    if os.name != "nt":
+        try:
+            os.kill(pid, 0)
+            return True
+        except OSError:
+            return False
+
+    powershell = shutil.which("powershell") or shutil.which("pwsh")
+    if not powershell:
+        # Safety first: never kill a possibly recycled PID without verification.
+        return False
+
+    target = str(script_path.resolve()).replace("'", "''")
+    command = (
+        f"$p=Get-CimInstance Win32_Process -Filter \"ProcessId = {pid}\" "
+        "-ErrorAction SilentlyContinue; "
+        "if ($null -eq $p) { exit 3 }; "
+        "$cmd=[string]$p.CommandLine; "
+        f"$target='{target}'; "
+        "if ($cmd.IndexOf($target,[System.StringComparison]::OrdinalIgnoreCase) -ge 0) "
+        "{ exit 0 } else { exit 4 }"
+    )
+    result = subprocess.run(
+        [powershell, "-NoProfile", "-NonInteractive", "-Command", command],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        creationflags=CREATE_NO_WINDOW,
+    )
+    return result.returncode == 0
+
+
+def _release_instance_state() -> None:
+    """Remove the instance file only when it still belongs to this process."""
+    try:
+        state = json.loads(INSTANCE_STATE_PATH.read_text(encoding="utf-8"))
+        if int(state.get("pid") or -1) == os.getpid():
+            INSTANCE_STATE_PATH.unlink(missing_ok=True)
+    except (OSError, ValueError, TypeError, json.JSONDecodeError):
+        pass
+
+
+def enforce_single_instance() -> list[int]:
+    """Terminate only the previously registered instance of this exact builder."""
+    current_pid = os.getpid()
+    current_script = Path(__file__).resolve()
+    terminated: list[int] = []
+
+    try:
+        previous = json.loads(INSTANCE_STATE_PATH.read_text(encoding="utf-8"))
+        previous_pid = int(previous.get("pid") or 0)
+        previous_script = Path(str(previous.get("script") or "")).resolve()
+        same_script = os.path.normcase(str(previous_script)) == os.path.normcase(str(current_script))
+        if (
+            same_script
+            and previous_pid > 0
+            and previous_pid != current_pid
+            and _pid_is_same_builder(previous_pid, current_script)
+            and _terminate_process_tree(previous_pid)
+        ):
+            terminated.append(previous_pid)
+    except (OSError, ValueError, TypeError, json.JSONDecodeError):
+        pass
+
+    state = {
+        "pid": current_pid,
+        "script": str(current_script),
+        "startedAt": datetime.now().astimezone().isoformat(),
+        "builderVersion": BUILDER_VERSION,
+    }
+    try:
+        INSTANCE_STATE_PATH.write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8")
+    except OSError:
+        pass
+    atexit.register(_release_instance_state)
+    return terminated
 
 
 # GitHub owners whose repositories must never be included or synchronized.
@@ -367,7 +480,7 @@ def included_repos():
 # Keep this builder-level default so an older/stale policy cannot accidentally make
 # the King_Klown parent folder go through the Git guard again. The policy may still
 # state sourceMode=directory explicitly; both mechanisms intentionally agree.
-DIRECTORY_SOURCE_LABELS = set()
+DIRECTORY_SOURCE_LABELS = {"power_dynamics"}
 
 
 def source_mode_for(label: str, repo_policy: dict | None = None) -> str:
@@ -478,21 +591,48 @@ def git_all_text_files(repo: Path) -> tuple[list[Path], list[Path]]:
     return text_files, binary_files
 
 
-def directory_files(root: Path, patterns: list[str] | None = None) -> list[Path]:
-    """Return regular files from a plain local directory, excluding Git metadata.
+DIRECTORY_SKIP_NAMES = {".git", "node_modules"}
+REPARSE_POINT_ATTRIBUTE = 0x0400
 
-    This source mode is intentionally filesystem-based rather than Git-based. It is
-    used for container folders such as ``C:\\mycode\\King_Klown`` that are not
-    repositories themselves but contain useful material (and possibly nested repos).
-    Nested ``.git`` metadata is never embedded in Context Packs.
+
+def _is_link_or_reparse(path: Path) -> bool:
+    """Return True for symlinks and Windows junction/reparse-point directories."""
+    try:
+        if path.is_symlink():
+            return True
+        is_junction = getattr(path, "is_junction", None)
+        if callable(is_junction) and is_junction():
+            return True
+        attrs = getattr(os.stat(path, follow_symlinks=False), "st_file_attributes", 0)
+        return bool(attrs & REPARSE_POINT_ATTRIBUTE)
+    except OSError:
+        # An unreadable directory is safer to prune than to recurse into.
+        return True
+
+
+def directory_files(root: Path, patterns: list[str] | None = None) -> list[Path]:
+    """Return regular files from a plain local directory safely.
+
+    Git metadata, node_modules, symlinks and Windows junction/reparse points are
+    pruned before descent. This prevents recursive npm/file: links from walking
+    back into the repository indefinitely.
     """
     files: list[Path] = []
-    for current_root, dirnames, filenames in os.walk(root):
-        dirnames[:] = [name for name in dirnames if name.casefold() != ".git"]
+    for current_root, dirnames, filenames in os.walk(root, followlinks=False):
         current = Path(current_root)
+        kept_dirs: list[str] = []
+        for name in dirnames:
+            if name.casefold() in DIRECTORY_SKIP_NAMES:
+                continue
+            child = current / name
+            if _is_link_or_reparse(child):
+                continue
+            kept_dirs.append(name)
+        dirnames[:] = kept_dirs
+
         for filename in filenames:
             path = current / filename
-            if not path.is_file():
+            if path.is_symlink() or not path.is_file():
                 continue
             rel = path.relative_to(root).as_posix()
             if patterns and not any(_matches_policy_pattern(rel, pattern) for pattern in patterns):
@@ -1803,15 +1943,46 @@ class ContextPackApp(Tk):
             messagebox.showerror("Erreur", str(exc))
 
 
+def _report_startup_failure(exc: BaseException) -> None:
+    """Persist otherwise-invisible .pyw startup failures and try to show a dialog."""
+    log_path = Path(tempfile.gettempdir()) / "context_pack_builder_startup_error.log"
+    details = "".join(traceback.format_exception(type(exc), exc, exc.__traceback__))
+    try:
+        log_path.write_text(details, encoding="utf-8")
+    except OSError:
+        pass
+    try:
+        root = Tk()
+        root.withdraw()
+        messagebox.showerror(
+            "Context Pack Builder - erreur de démarrage",
+            f"Le builder n'a pas pu démarrer.\n\n{exc}\n\nDiagnostic : {log_path}",
+        )
+        root.destroy()
+    except Exception:
+        pass
+
+
 def main():
+    terminated_pids = enforce_single_instance()
     if shutil.which("git") is None:
         root = Tk()
         root.withdraw()
         messagebox.showerror("Git introuvable", "Git n'est pas disponible dans le PATH Windows.")
         root.destroy()
         return
-    ContextPackApp().mainloop()
+    app = ContextPackApp()
+    if terminated_pids:
+        app._append_log(
+            "Instance précédente terminée automatiquement : PID "
+            + ", ".join(str(pid) for pid in terminated_pids)
+        )
+    app.mainloop()
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except BaseException as exc:
+        _report_startup_failure(exc)
+        raise
