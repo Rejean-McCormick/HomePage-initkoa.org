@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "policyVersion": "2026-09-18.3",
-  "generatedAt": "2026-09-18T18:41:22-04:00",
+  "generatedAt": "2026-09-18T21:02:26-04:00",
   "packs": [
     {
       "slug": "ame-artificielle",
@@ -121,9 +121,9 @@
       "file": "koa-linux-context-pack.txt",
       "repository": "Rejean-McCormick/kOA-Linux",
       "sourceCommit": "7fecdeaed7d5b3bd9471c01316701e37e4d89127",
-      "generatedAt": "2026-09-18T18:41:01-04:00",
+      "generatedAt": "2026-09-18T21:02:06-04:00",
       "fileCount": 132,
-      "sha256": "4bb217d0331ed4e9381d4a81da835649ed15979ebca6138c647f800c6bfde913",
+      "sha256": "c29359054b87a8871348248cd8a293bfe80ed5ca1c1f90d1cee913498053ff3a",
       "category": "system",
       "policyVersion": "2026-09-18.3",
       "sourceFileCount": 132,
@@ -235,9 +235,9 @@
       "file": "kristal-farms-context-pack.txt",
       "repository": "Rejean-McCormick/Kristal_Farms",
       "sourceCommit": "e2bb98a5096f6759c2d05615d7b7506a8342d4e5",
-      "generatedAt": "2026-09-18T18:41:09-04:00",
+      "generatedAt": "2026-09-18T21:02:13-04:00",
       "fileCount": 199,
-      "sha256": "b77a9527538234c2f47d0187e589731666da0025c66a27282a8b7678d68b526c",
+      "sha256": "8f347ee0de4aeb23b5804874e1fd77bf685703d2f72e2852b740cf6613c3cc0e",
       "category": "system",
       "policyVersion": "2026-09-18.3",
       "sourceFileCount": 199,
@@ -349,23 +349,23 @@
       "slug": "orgo",
       "file": "orgo-context-pack.txt",
       "repository": "Rejean-McCormick/Orgo",
-      "sourceCommit": "a4a982488769b7b0ae8a1a548075c97a9b46e27a",
-      "generatedAt": "2026-09-11T07:37:03-04:00",
-      "fileCount": 67,
-      "sha256": "47097638630680a9e64558000931e98de6fead85639d60c34eee99651fe04149",
+      "sourceCommit": "30ef38de3b6f591236625a4b22bc5ebbdb1ec40d",
+      "generatedAt": "2026-09-18T19:06:21-04:00",
+      "fileCount": 71,
+      "sha256": "fc283ef298d664279784d0137d87f69287431e20d5ca97e9d99e22e5dc7c5739",
       "category": "system",
-      "policyVersion": "2026-09-10.13",
-      "sourceFileCount": 72,
-      "includedFileCount": 67,
+      "policyVersion": "2026-09-18.3",
+      "sourceFileCount": 76,
+      "includedFileCount": 71,
       "excludedFileCount": 5,
       "duplicateFileCount": 0,
-      "contentBytes": 515064,
+      "contentBytes": 323566,
       "authorityCounts": {
-        "reference": 67
+        "reference": 71
       },
       "contentRoleCounts": {
-        "knowledge": 47,
-        "navigation": 20
+        "knowledge": 50,
+        "navigation": 21
       }
     },
     {
@@ -460,46 +460,24 @@
     {
       "slug": "semantik-architect",
       "file": "semantik-architect-context-pack.txt",
-      "repository": "Rejean-McCormick/SemantiK_Architect",
-      "sourceCommit": "3fcaa9132ac1c0a3bd5ca3d7bc10ea118d2ae386",
-      "generatedAt": "2026-09-17T21:35:55-04:00",
-      "fileCount": 56,
-      "sha256": "ad2adba9a87050c0ea0b3f8390f07482d6b1537dd7d6a1aee34366ff45f0fadc",
+      "repository": "Rejean-McCormick/SemantiK-Architect",
+      "sourceCommit": "e2ef3dbdecf1582c1cdf2113f65138a695106d85",
+      "generatedAt": "2026-09-18T19:06:17-04:00",
+      "fileCount": 53,
+      "sha256": "2e5d3bae1dc4dcfca1121af63e23cab0ca22bb41e444216dc2f6b9756248cb73",
       "category": "system",
-      "policyVersion": "2026-09-10.13",
-      "sourceFileCount": 56,
-      "includedFileCount": 56,
+      "policyVersion": "2026-09-18.3",
+      "sourceFileCount": 53,
+      "includedFileCount": 53,
       "excludedFileCount": 0,
       "duplicateFileCount": 0,
-      "contentBytes": 275422,
+      "contentBytes": 111435,
       "authorityCounts": {
-        "reference": 56
+        "reference": 53
       },
       "contentRoleCounts": {
-        "knowledge": 31,
+        "knowledge": 28,
         "navigation": 25
-      }
-    },
-    {
-      "slug": "semantik-architect-gf-zone-auditor",
-      "file": "semantik-architect-gf-zone-auditor-context-pack.txt",
-      "repository": "Rejean-McCormick/SemantiK-Architect-GF-Zone-Auditor",
-      "sourceCommit": "4afe1d65acdc252fe738450f3876c57cb29f0c0e",
-      "generatedAt": "2026-09-10T13:04:11-04:00",
-      "fileCount": 12,
-      "sha256": "906b2706d57e84d71f4e2ab4c284b0d39c9218f5da4ab78bf19083d789ff546c",
-      "category": "system",
-      "policyVersion": "2026-09-10.13",
-      "sourceFileCount": 12,
-      "includedFileCount": 12,
-      "excludedFileCount": 0,
-      "duplicateFileCount": 0,
-      "contentBytes": 244568,
-      "authorityCounts": {
-        "reference": 12
-      },
-      "contentRoleCounts": {
-        "knowledge": 12
       }
     },
     {
