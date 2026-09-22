@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/initiatives/civic-governance/constitution/rights/index.html.md
 > Route: /initiatives/civic-governance/constitution/rights
 > Source: app\initiatives\civic-governance\constitution\rights\page.tsx
-> Generated: 2026-09-11T11:53:57.766Z
+> Generated: 2026-09-22T19:18:32.402Z
 
 [Open the HTML page](https://initkoa.org/initiatives/civic-governance/constitution/rights)
 

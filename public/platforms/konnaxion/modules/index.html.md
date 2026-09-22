@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/modules/index.html.md
 > Route: /platforms/konnaxion/modules
 > Source: app\platforms\konnaxion\modules\page.tsx
-> Generated: 2026-09-11T11:53:57.766Z
+> Generated: 2026-09-22T19:18:32.402Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/modules)
 

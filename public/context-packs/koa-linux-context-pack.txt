@@ -1,7 +1,7 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/kOA-Linux
-source_commit: 7fecdeaed7d5b3bd9471c01316701e37e4d89127
+source_commit: 83e98c9830b65594fd4368c236e6beee6d76eaca
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -15,12 +15,12 @@ source_files: 132
 included_files: 132
 excluded_files: 0
 duplicate_files: 0
-content_bytes: 1943100
+content_bytes: 1943141
 authority_counts: {"canonical":39,"reference":93}
 content_role_counts: {"generated":16,"knowledge":39,"navigation":77}
-generated_at: 2026-09-18T21:02:06-04:00
+generated_at: 2026-09-22T15:18:01-04:00
 files: 132
-content_sha256: 0f0c6112677c18273a65c5c5a02d20cda7e71ff7587c6d1b2c5ba1c7fda088ea
+content_sha256: 5d193b2ad1d64f34e01476549f84bc80736d6786f27e35676ace668c2639bf02
 
 ================================================================================================
 FILE INDEX
@@ -104,16 +104,16 @@ FILE INDEX
 076. [reference] [navigation] wiki/What-kOA-Linux-Does.md | bytes=1593 | sha256=b2e464f484dd0941218331723dcd65c94c8184938d0a027d1a7650ba3004ccc4
 077. [reference] [navigation] docs/AI_CONTEXT.md | bytes=4126 | sha256=f317f4afb6baffb1571338a8ffde44185372269b0cad2a38f6edf79d24cda13b
 078. [canonical] [knowledge] docs/contracts/ai-navigation.contract.json | bytes=4400 | sha256=3ae23d52c3199a675ff6b352e6da41fb2b5ab9824596f544800bb2310c3f76f3
-079. [reference] [generated] docs/generated/ai-context/koa-navigation.json | bytes=957 | sha256=09a1126488f82190aa354f4c30d1a22f10aed6072ec6ae0c662b7ff43cb0d646
-080. [reference] [generated] docs/generated/ai-context/subsystem-ariane.json | bytes=1008 | sha256=9f67d983b57bc2f4e5dc8a18cb3a1679940d1c4682fc1f93a3c316a729287964
-081. [reference] [generated] docs/generated/ai-context/subsystem-koa_spaces.json | bytes=1040 | sha256=cba5eaa710104feec363b69832095d267ccc8856baf2ea1b1a533922dc4108ca
-082. [reference] [generated] docs/generated/ai-context/subsystem-konnaxion.json | bytes=1032 | sha256=eeeac2f8a2c8472e81382bcb11bc7c259660a0b1646bcbbf8ec89b5ab4b1ed4e
-083. [reference] [generated] docs/generated/ai-context/subsystem-orgo.json | bytes=992 | sha256=1509f7e311fbdbd30f265f56425c3d3ad36951a80d0834ff229e9d9849cef2d0
-084. [reference] [generated] docs/generated/ai-context/subsystem-semantik_architect.json | bytes=1104 | sha256=515057831247c1bbb1c44264ee9bcf4eb4deb17ee29436e2bf15174d636dfc21
-085. [reference] [generated] docs/generated/ai-context/subsystem-sentient.json | bytes=1024 | sha256=e074f821e1dee9f1b5d330aac31b76a516fe0e66d3a5d6345d257bd93f37e383
+079. [reference] [generated] docs/generated/ai-context/koa-navigation.json | bytes=957 | sha256=7c7a72c581df8d5fab457d8941a5dfa6f1b77486ce9c027e91812ab207b6f5c1
+080. [reference] [generated] docs/generated/ai-context/subsystem-ariane.json | bytes=1008 | sha256=35810c29fc21160538c0facfd6b762447c506908d5a39a5ff7756fcfaf91840b
+081. [reference] [generated] docs/generated/ai-context/subsystem-koa_spaces.json | bytes=1040 | sha256=168e9063d7668d8866f10f37c909af64a263087afbd5300513f3dbb994a6c67c
+082. [reference] [generated] docs/generated/ai-context/subsystem-konnaxion.json | bytes=1032 | sha256=da630f0088a4120f0231b7b027d7bf7c7c0d5291a41f38ac7821d904ded3c48a
+083. [reference] [generated] docs/generated/ai-context/subsystem-orgo.json | bytes=992 | sha256=9c1206f2a06b460f4b751f16f50f52ead0b80102815b2f65ed42ee2a7f386857
+084. [reference] [generated] docs/generated/ai-context/subsystem-semantik_architect.json | bytes=1104 | sha256=44f65500b9fd9f8d184d8b24b94cb463991d31038d9b0065b65516e9dda58f13
+085. [reference] [generated] docs/generated/ai-context/subsystem-sentient.json | bytes=1024 | sha256=9cf09c794eb654bea50d3728eff707a2c1038de1c23c6a7d70eb3b05176e4ba7
 086. [reference] [generated] docs/generated/ai-context/subsystem-uckk.json | bytes=992 | sha256=c267c19d6efb1d1d4ff5e22b373e0b799fa1586b393453bd99e8c4331df05fac
 087. [reference] [generated] docs/generated/authority-manifest.json | bytes=387 | sha256=647a30f29cae65f71b58e9802c1bb02e20364b5ed41b9b44cf8410ed561e1e25
-088. [reference] [generated] docs/generated/document-index.json | bytes=407941 | sha256=dbdac7466686fd0f3b39d6577b078e79b96d9ed8314d9b52bc62f9d8b6b68f94
+088. [reference] [generated] docs/generated/document-index.json | bytes=407730 | sha256=11caf6805ab9c2ebf849c0d90e3a9ae775e8f7a61630ed25ec2efcd7ece96b62
 089. [reference] [generated] docs/generated/component-catalog.json | bytes=1691 | sha256=4510eeb42b3b86046591571e37c0eaa410a71de66d9804d54d99fa00841fb2b4
 090. [reference] [generated] docs/generated/subsystem-catalog.json | bytes=1126 | sha256=010cda5c1d75a873db1e27aad03390e4628af0c854adb32182937e3801775cb7
 091. [reference] [generated] docs/generated/profile-catalog.json | bytes=2047 | sha256=cd0e7cbb4b30560a3abb67b09b05aedead5fc3f015c318bb634d4808dc54319e
@@ -144,7 +144,7 @@ FILE INDEX
 116. [canonical] [knowledge] docs/contracts/profiles/developer-windows-wsl.profile.json | bytes=24184 | sha256=fb02469b0e43529f5a25dfd012257e77bf49240bac75ece6790816d79bde7dee
 117. [canonical] [knowledge] docs/contracts/profiles/high-assurance.profile.json | bytes=19099 | sha256=551f327c58a8ab5ab73e968c87e9c6e170500ffb82b81fc9c2d855a44a319381
 118. [canonical] [knowledge] docs/contracts/profiles/sovereign-hub.profile.json | bytes=16682 | sha256=4b1dc59e58f5a560dacb4fde0359df1713e09b68f0b30cf68f46ac2b4b40de65
-119. [canonical] [knowledge] docs/contracts/profiles/sovereign-linux-node.profile.json | bytes=19038 | sha256=d38428b22e5c91c91eb0e3f605075f53a4ec7fa394b6fad2e8b5963a38c13c71
+119. [canonical] [knowledge] docs/contracts/profiles/sovereign-linux-node.profile.json | bytes=19290 | sha256=1410ae6bd6f89541149c685bae98cb95831e4da399de9225cfad8dca5c2ea01d
 120. [canonical] [knowledge] docs/contracts/profiles/sovereign-offline.profile.json | bytes=26170 | sha256=74ebe9bb3334480e168c48bbe1587c653649abf054c20a48ef513b13bccf265a
 121. [canonical] [knowledge] docs/contracts/profiles/user-lightweight.profile.json | bytes=19131 | sha256=28befeb29fe3c71d9a69a1c1a99e564aa83c1c8c42689c6c0e5097c4f3b60016
 122. [canonical] [knowledge] docs/contracts/release-channels.contract.json | bytes=8553 | sha256=b12b03ad029219c402718a0070b319672046673cb109253dfd49819cb6fcd2a6
@@ -3929,7 +3929,7 @@ CONTENT_BYTES: 4400
 FILE: docs/generated/ai-context/koa-navigation.json
 AUTHORITY: reference
 CONTENT_ROLE: generated
-CONTENT_SHA256: 09a1126488f82190aa354f4c30d1a22f10aed6072ec6ae0c662b7ff43cb0d646
+CONTENT_SHA256: 7c7a72c581df8d5fab457d8941a5dfa6f1b77486ce9c027e91812ab207b6f5c1
 CONTENT_BYTES: 957
 ================================================================================================
 
@@ -3949,7 +3949,7 @@ CONTENT_BYTES: 957
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:0888304369d474eaf0841f2a661dc2fe6cca94828e5dac98518797fbff744c4c",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "koa-navigation",
   "scope": {
     "kind": "global",
@@ -3976,7 +3976,7 @@ CONTENT_BYTES: 957
 FILE: docs/generated/ai-context/subsystem-ariane.json
 AUTHORITY: reference
 CONTENT_ROLE: generated
-CONTENT_SHA256: 9f67d983b57bc2f4e5dc8a18cb3a1679940d1c4682fc1f93a3c316a729287964
+CONTENT_SHA256: 35810c29fc21160538c0facfd6b762447c506908d5a39a5ff7756fcfaf91840b
 CONTENT_BYTES: 1008
 ================================================================================================
 
@@ -3996,7 +3996,7 @@ CONTENT_BYTES: 1008
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:0888304369d474eaf0841f2a661dc2fe6cca94828e5dac98518797fbff744c4c",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "subsystem-ariane",
   "scope": {
     "kind": "subsystem_boundary",
@@ -4025,7 +4025,7 @@ CONTENT_BYTES: 1008
 FILE: docs/generated/ai-context/subsystem-koa_spaces.json
 AUTHORITY: reference
 CONTENT_ROLE: generated
-CONTENT_SHA256: cba5eaa710104feec363b69832095d267ccc8856baf2ea1b1a533922dc4108ca
+CONTENT_SHA256: 168e9063d7668d8866f10f37c909af64a263087afbd5300513f3dbb994a6c67c
 CONTENT_BYTES: 1040
 ================================================================================================
 
@@ -4045,7 +4045,7 @@ CONTENT_BYTES: 1040
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:0888304369d474eaf0841f2a661dc2fe6cca94828e5dac98518797fbff744c4c",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "subsystem-koa_spaces",
   "scope": {
     "kind": "subsystem_boundary",
@@ -4074,7 +4074,7 @@ CONTENT_BYTES: 1040
 FILE: docs/generated/ai-context/subsystem-konnaxion.json
 AUTHORITY: reference
 CONTENT_ROLE: generated
-CONTENT_SHA256: eeeac2f8a2c8472e81382bcb11bc7c259660a0b1646bcbbf8ec89b5ab4b1ed4e
+CONTENT_SHA256: da630f0088a4120f0231b7b027d7bf7c7c0d5291a41f38ac7821d904ded3c48a
 CONTENT_BYTES: 1032
 ================================================================================================
 
@@ -4094,7 +4094,7 @@ CONTENT_BYTES: 1032
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:0888304369d474eaf0841f2a661dc2fe6cca94828e5dac98518797fbff744c4c",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "subsystem-konnaxion",
   "scope": {
     "kind": "subsystem_boundary",
@@ -4123,7 +4123,7 @@ CONTENT_BYTES: 1032
 FILE: docs/generated/ai-context/subsystem-orgo.json
 AUTHORITY: reference
 CONTENT_ROLE: generated
-CONTENT_SHA256: 1509f7e311fbdbd30f265f56425c3d3ad36951a80d0834ff229e9d9849cef2d0
+CONTENT_SHA256: 9c1206f2a06b460f4b751f16f50f52ead0b80102815b2f65ed42ee2a7f386857
 CONTENT_BYTES: 992
 ================================================================================================
 
@@ -4143,7 +4143,7 @@ CONTENT_BYTES: 992
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:0888304369d474eaf0841f2a661dc2fe6cca94828e5dac98518797fbff744c4c",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "subsystem-orgo",
   "scope": {
     "kind": "subsystem_boundary",
@@ -4172,7 +4172,7 @@ CONTENT_BYTES: 992
 FILE: docs/generated/ai-context/subsystem-semantik_architect.json
 AUTHORITY: reference
 CONTENT_ROLE: generated
-CONTENT_SHA256: 515057831247c1bbb1c44264ee9bcf4eb4deb17ee29436e2bf15174d636dfc21
+CONTENT_SHA256: 44f65500b9fd9f8d184d8b24b94cb463991d31038d9b0065b65516e9dda58f13
 CONTENT_BYTES: 1104
 ================================================================================================
 
@@ -4192,7 +4192,7 @@ CONTENT_BYTES: 1104
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:0888304369d474eaf0841f2a661dc2fe6cca94828e5dac98518797fbff744c4c",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "subsystem-semantik_architect",
   "scope": {
     "kind": "subsystem_boundary",
@@ -4221,7 +4221,7 @@ CONTENT_BYTES: 1104
 FILE: docs/generated/ai-context/subsystem-sentient.json
 AUTHORITY: reference
 CONTENT_ROLE: generated
-CONTENT_SHA256: e074f821e1dee9f1b5d330aac31b76a516fe0e66d3a5d6345d257bd93f37e383
+CONTENT_SHA256: 9cf09c794eb654bea50d3728eff707a2c1038de1c23c6a7d70eb3b05176e4ba7
 CONTENT_BYTES: 1024
 ================================================================================================
 
@@ -4241,7 +4241,7 @@ CONTENT_BYTES: 1024
     "generator_version": "1.3.1",
     "manual_editing": "prohibited"
   },
-  "source_state": "sha256:0888304369d474eaf0841f2a661dc2fe6cca94828e5dac98518797fbff744c4c",
+  "source_state": "sha256:289e39dad5fe406bccff37b017ccd64dda03dfb9ec81e7529ab0f8d991e230cb",
   "context_package_id": "subsystem-sentient",
   "scope": {
     "kind": "subsystem_boundary",
@@ -4342,8 +4342,8 @@ CONTENT_BYTES: 387
 FILE: docs/generated/document-index.json
 AUTHORITY: reference
 CONTENT_ROLE: generated
-CONTENT_SHA256: dbdac7466686fd0f3b39d6577b078e79b96d9ed8314d9b52bc62f9d8b6b68f94
-CONTENT_BYTES: 407941
+CONTENT_SHA256: 11caf6805ab9c2ebf849c0d90e3a9ae775e8f7a61630ed25ec2efcd7ece96b62
+CONTENT_BYTES: 407730
 ================================================================================================
 
 {
@@ -19795,15 +19795,6 @@ CONTENT_BYTES: 407941
       "doc_id": "DOC-ROOT-CODE-ALIGNMENT",
       "document_class": "explanatory_markdown",
       "status": "active",
-      "requirement_ids": [],
-      "assertion_ids": [],
-      "decision_ids": []
-    },
-    {
-      "path": "CODE_SNAPSHOT_MANIFEST.md",
-      "doc_id": null,
-      "document_class": null,
-      "status": null,
       "requirement_ids": [],
       "assertion_ids": [],
       "decision_ids": []
@@ -69553,8 +69544,8 @@ CONTENT_BYTES: 16682
 FILE: docs/contracts/profiles/sovereign-linux-node.profile.json
 AUTHORITY: canonical
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: d38428b22e5c91c91eb0e3f605075f53a4ec7fa394b6fad2e8b5963a38c13c71
-CONTENT_BYTES: 19038
+CONTENT_SHA256: 1410ae6bd6f89541149c685bae98cb95831e4da399de9225cfad8dca5c2ea01d
+CONTENT_BYTES: 19290
 ================================================================================================
 
 {
@@ -69857,11 +69848,13 @@ CONTENT_BYTES: 19038
       "failure_behavior": "None"
     },
     "ariane": {
-      "state": "required",
-      "activation": "always_on",
-      "conditions": [],
-      "data_authority": "component_owned",
-      "failure_behavior": "Ariane-owned navigation and interaction subsystem integrated through the kOA-Linux platform boundary."
+      "state": "excluded",
+      "activation": "not_installed",
+      "conditions": [
+        "Ariane is intentionally deferred and retained as an integration stub for a future profile or release."
+      ],
+      "data_authority": "none",
+      "failure_behavior": "Ariane is not activated by sovereign-linux-node; its unresolved source lock remains fail-closed until a future profile explicitly admits it."
     },
     "konnaxion": {
       "state": "required",
@@ -69878,11 +69871,13 @@ CONTENT_BYTES: 19038
       "failure_behavior": "Orgo-owned workflow and orchestration."
     },
     "semantik_architect": {
-      "state": "required",
-      "activation": "always_on",
-      "conditions": [],
-      "data_authority": "component_owned",
-      "failure_behavior": "SemantiK Architect-owned planner-first multilingual generation runtime; kOA-Linux owns only deployment, trust, resources, health, and artifact admission at the local boundary."
+      "state": "excluded",
+      "activation": "not_installed",
+      "conditions": [
+        "SemantiK Architect is intentionally deferred and retained as an integration stub for a future profile or release."
+      ],
+      "data_authority": "none",
+      "failure_behavior": "SemantiK Architect is not activated by sovereign-linux-node; its unresolved source lock remains fail-closed until a future profile explicitly admits it."
     },
     "sentient": {
       "state": "excluded",

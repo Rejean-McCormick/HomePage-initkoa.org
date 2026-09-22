@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "policyVersion": "2026-09-18.3",
-  "generatedAt": "2026-09-18T21:02:26-04:00",
+  "generatedAt": "2026-09-22T15:18:26-04:00",
   "packs": [
     {
       "slug": "ame-artificielle",
@@ -97,22 +97,22 @@
       "slug": "koa-digital-ecosystem",
       "file": "koa-digital-ecosystem-context-pack.txt",
       "repository": "Rejean-McCormick/kOA_Digital_Ecosystem",
-      "sourceCommit": "3bca7f7043570aa28d672eeebfb89ad3b9b0a3ef",
-      "generatedAt": "2026-09-18T18:41:15-04:00",
-      "fileCount": 151,
-      "sha256": "4d169e9da2321807359630084e2baa3af4d361d8e8c46eb92b1ffefd0ae42840",
+      "sourceCommit": "a1dea9a40d650353378154d2642e7400fab4b64f",
+      "generatedAt": "2026-09-22T15:18:19-04:00",
+      "fileCount": 157,
+      "sha256": "2c27745657258528ef1275617f01196a80eb398681e69b1a96bc3f41f81819b9",
       "category": "system",
       "policyVersion": "2026-09-18.3",
-      "sourceFileCount": 177,
-      "includedFileCount": 151,
-      "excludedFileCount": 26,
-      "duplicateFileCount": 26,
-      "contentBytes": 593183,
+      "sourceFileCount": 181,
+      "includedFileCount": 157,
+      "excludedFileCount": 24,
+      "duplicateFileCount": 24,
+      "contentBytes": 628868,
       "authorityCounts": {
-        "reference": 151
+        "reference": 157
       },
       "contentRoleCounts": {
-        "knowledge": 114,
+        "knowledge": 120,
         "navigation": 37
       }
     },
@@ -120,17 +120,17 @@
       "slug": "koa-linux",
       "file": "koa-linux-context-pack.txt",
       "repository": "Rejean-McCormick/kOA-Linux",
-      "sourceCommit": "7fecdeaed7d5b3bd9471c01316701e37e4d89127",
-      "generatedAt": "2026-09-18T21:02:06-04:00",
+      "sourceCommit": "83e98c9830b65594fd4368c236e6beee6d76eaca",
+      "generatedAt": "2026-09-22T15:18:01-04:00",
       "fileCount": 132,
-      "sha256": "c29359054b87a8871348248cd8a293bfe80ed5ca1c1f90d1cee913498053ff3a",
+      "sha256": "dc12a7fba6c7d29ffb4c71a5fabd88926c44663a89aefb1f3b2ed9dba20e2c90",
       "category": "system",
       "policyVersion": "2026-09-18.3",
       "sourceFileCount": 132,
       "includedFileCount": 132,
       "excludedFileCount": 0,
       "duplicateFileCount": 0,
-      "contentBytes": 1943100,
+      "contentBytes": 1943141,
       "authorityCounts": {
         "canonical": 39,
         "reference": 93
@@ -211,22 +211,22 @@
       "slug": "konnaxion",
       "file": "konnaxion-context-pack.txt",
       "repository": "Rejean-McCormick/Konnaxion",
-      "sourceCommit": "ed2b3076541674b31973e05a68827a898e81d4b5",
-      "generatedAt": "2026-09-18T18:41:01-04:00",
-      "fileCount": 133,
-      "sha256": "cdbf52f11683b4b5bb241608a11ac9df65e3ff3115595aad58e7e0dcd04cb685",
+      "sourceCommit": "6ecdeb52b32e17d4201a9836f5c209997d166687",
+      "generatedAt": "2026-09-22T15:18:00-04:00",
+      "fileCount": 166,
+      "sha256": "983c6996e6a0baff462c5eb4799d01f77bdc83910649b23462283664d536802e",
       "category": "system",
       "policyVersion": "2026-09-18.3",
-      "sourceFileCount": 265,
-      "includedFileCount": 133,
-      "excludedFileCount": 132,
-      "duplicateFileCount": 70,
-      "contentBytes": 1905398,
+      "sourceFileCount": 308,
+      "includedFileCount": 166,
+      "excludedFileCount": 142,
+      "duplicateFileCount": 80,
+      "contentBytes": 2209923,
       "authorityCounts": {
-        "reference": 133
+        "reference": 166
       },
       "contentRoleCounts": {
-        "knowledge": 117,
+        "knowledge": 150,
         "navigation": 16
       }
     },
@@ -235,9 +235,9 @@
       "file": "kristal-farms-context-pack.txt",
       "repository": "Rejean-McCormick/Kristal_Farms",
       "sourceCommit": "e2bb98a5096f6759c2d05615d7b7506a8342d4e5",
-      "generatedAt": "2026-09-18T21:02:13-04:00",
+      "generatedAt": "2026-09-22T15:18:10-04:00",
       "fileCount": 199,
-      "sha256": "8f347ee0de4aeb23b5804874e1fd77bf685703d2f72e2852b740cf6613c3cc0e",
+      "sha256": "cd52f678fdc12b32202ab4f869f17c741d46cc48cab4e99fcb5b94c4218ab8c6",
       "category": "system",
       "policyVersion": "2026-09-18.3",
       "sourceFileCount": 199,
@@ -259,22 +259,22 @@
       "slug": "kristal-framework",
       "file": "kristal-framework-context-pack.txt",
       "repository": "Rejean-McCormick/Kristal-Framework",
-      "sourceCommit": "455ca77bc4257c2ce179f097f3a859e896b6a499",
-      "generatedAt": "2026-09-18T18:41:09-04:00",
-      "fileCount": 88,
-      "sha256": "c0b2f92605bd612aaf3bb983ec6dfcdeb03b4a64d35d5d74fb4b94a76f3c9040",
+      "sourceCommit": "8571087483eafa157df1c9a2fbb2d73f727d1bc9",
+      "generatedAt": "2026-09-22T15:18:11-04:00",
+      "fileCount": 89,
+      "sha256": "cfdab9d6d808db9275eaf1b61689a3b19f47b52952a23dea20b847f9ecbb60e5",
       "category": "system",
       "policyVersion": "2026-09-18.3",
-      "sourceFileCount": 88,
-      "includedFileCount": 88,
+      "sourceFileCount": 89,
+      "includedFileCount": 89,
       "excludedFileCount": 0,
       "duplicateFileCount": 0,
-      "contentBytes": 1058211,
+      "contentBytes": 1060695,
       "authorityCounts": {
-        "reference": 88
+        "reference": 89
       },
       "contentRoleCounts": {
-        "knowledge": 57,
+        "knowledge": 58,
         "navigation": 31
       }
     },
@@ -282,44 +282,44 @@
       "slug": "levelupdiag-koa-linux",
       "file": "levelupdiag-koa-linux-context-pack.txt",
       "repository": "Rejean-McCormick/LevelUpDiag-Koa-Linux",
-      "sourceCommit": "6b964de01ed27c4364b328532921dc905a4f8bee",
-      "generatedAt": "2026-09-18T18:41:12-04:00",
-      "fileCount": 8,
-      "sha256": "b30482162954c42fcced6c65a1b0dbaf8845860e0c7b83df4a6f4f0b9053a9c0",
+      "sourceCommit": "db00cf04c684dcb7eb802ad366bb7323cb694f84",
+      "generatedAt": "2026-09-22T15:18:14-04:00",
+      "fileCount": 12,
+      "sha256": "97f502a5effe482d5e8a2f3647a90f10fbb58f22ff0780d49484a39a19a04ea5",
       "category": "system",
       "policyVersion": "2026-09-18.3",
-      "sourceFileCount": 8,
-      "includedFileCount": 8,
+      "sourceFileCount": 12,
+      "includedFileCount": 12,
       "excludedFileCount": 0,
       "duplicateFileCount": 0,
-      "contentBytes": 22993,
+      "contentBytes": 40659,
       "authorityCounts": {
-        "reference": 8
+        "reference": 12
       },
       "contentRoleCounts": {
-        "knowledge": 8
+        "knowledge": 12
       }
     },
     {
       "slug": "medikristal",
       "file": "medikristal-context-pack.txt",
       "repository": "Rejean-McCormick/MediKristal",
-      "sourceCommit": "245f5a3007d538aea65e0fba0020ee8178079353",
-      "generatedAt": "2026-09-18T18:41:06-04:00",
-      "fileCount": 22,
-      "sha256": "bd5529ee99e4e8cef4aee1c0c756db472e066cea5fa49b95378189074610f2f8",
+      "sourceCommit": "10b3e1144ce7cabdb40f24dd11d7174a337d0485",
+      "generatedAt": "2026-09-22T15:18:07-04:00",
+      "fileCount": 61,
+      "sha256": "f7302ecc38595deedaba19ef8e49480be582f9f524a5a2ccf95e28f59021542b",
       "category": "system",
       "policyVersion": "2026-09-18.3",
-      "sourceFileCount": 22,
-      "includedFileCount": 22,
+      "sourceFileCount": 61,
+      "includedFileCount": 61,
       "excludedFileCount": 0,
       "duplicateFileCount": 0,
-      "contentBytes": 90031,
+      "contentBytes": 271385,
       "authorityCounts": {
-        "reference": 22
+        "reference": 61
       },
       "contentRoleCounts": {
-        "knowledge": 3,
+        "knowledge": 42,
         "navigation": 19
       }
     },
@@ -349,22 +349,22 @@
       "slug": "orgo",
       "file": "orgo-context-pack.txt",
       "repository": "Rejean-McCormick/Orgo",
-      "sourceCommit": "30ef38de3b6f591236625a4b22bc5ebbdb1ec40d",
-      "generatedAt": "2026-09-18T19:06:21-04:00",
-      "fileCount": 71,
-      "sha256": "fc283ef298d664279784d0137d87f69287431e20d5ca97e9d99e22e5dc7c5739",
+      "sourceCommit": "f146303c7e8ca62a65b1c1a3687d8d3ad3fa5f7d",
+      "generatedAt": "2026-09-22T15:18:06-04:00",
+      "fileCount": 74,
+      "sha256": "c1dc3d2bc03a063b27434cd90d9e0b92ad7655fac27e938fc6d266efcc20c163",
       "category": "system",
       "policyVersion": "2026-09-18.3",
-      "sourceFileCount": 76,
-      "includedFileCount": 71,
+      "sourceFileCount": 79,
+      "includedFileCount": 74,
       "excludedFileCount": 5,
       "duplicateFileCount": 0,
-      "contentBytes": 323566,
+      "contentBytes": 330955,
       "authorityCounts": {
-        "reference": 71
+        "reference": 74
       },
       "contentRoleCounts": {
-        "knowledge": 50,
+        "knowledge": 53,
         "navigation": 21
       }
     },
@@ -395,21 +395,21 @@
       "file": "power-dynamics-context-pack.txt",
       "repository": "Power_Dynamics",
       "sourceCommit": "local-directory",
-      "generatedAt": "2026-09-18T18:41:17-04:00",
-      "fileCount": 274,
-      "sha256": "6575de4837eb6cb457986526cd6912a3867fe6b736af54c435d14a65c05db5b7",
+      "generatedAt": "2026-09-22T15:18:21-04:00",
+      "fileCount": 292,
+      "sha256": "9e81ae4a2ee33aa4f5ba2304852af8e602b0e6405b62e7994903e6bca89772cb",
       "category": "system",
       "policyVersion": "2026-09-18.3",
-      "sourceFileCount": 274,
-      "includedFileCount": 274,
+      "sourceFileCount": 292,
+      "includedFileCount": 292,
       "excludedFileCount": 0,
       "duplicateFileCount": 0,
-      "contentBytes": 713546,
+      "contentBytes": 771830,
       "authorityCounts": {
-        "reference": 274
+        "reference": 292
       },
       "contentRoleCounts": {
-        "knowledge": 274
+        "knowledge": 292
       }
     },
     {
@@ -461,17 +461,17 @@
       "slug": "semantik-architect",
       "file": "semantik-architect-context-pack.txt",
       "repository": "Rejean-McCormick/SemantiK-Architect",
-      "sourceCommit": "e2ef3dbdecf1582c1cdf2113f65138a695106d85",
-      "generatedAt": "2026-09-18T19:06:17-04:00",
+      "sourceCommit": "01a0c60095f3151983f876892dd7466a12cf6012",
+      "generatedAt": "2026-09-22T15:18:03-04:00",
       "fileCount": 53,
-      "sha256": "2e5d3bae1dc4dcfca1121af63e23cab0ca22bb41e444216dc2f6b9756248cb73",
+      "sha256": "95499e7a33ecf33998b7b1510b36f7df70de04cafafb2cfaf9468fc7d5c2134d",
       "category": "system",
       "policyVersion": "2026-09-18.3",
       "sourceFileCount": 53,
       "includedFileCount": 53,
       "excludedFileCount": 0,
       "duplicateFileCount": 0,
-      "contentBytes": 111435,
+      "contentBytes": 112553,
       "authorityCounts": {
         "reference": 53
       },

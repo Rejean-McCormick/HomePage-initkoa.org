@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/platforms/orgo/workflow/index.html.md
 > Route: /platforms/orgo/workflow
 > Source: app\platforms\orgo\workflow\page.mdx
-> Generated: 2026-09-11T11:53:57.766Z
+> Generated: 2026-09-22T19:18:32.402Z
 
 [Open the HTML page](https://initkoa.org/platforms/orgo/workflow)
 

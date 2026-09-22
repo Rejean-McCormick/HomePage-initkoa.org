@@ -1,7 +1,7 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/LevelUpDiag-Koa-Linux
-source_commit: 6b964de01ed27c4364b328532921dc905a4f8bee
+source_commit: db00cf04c684dcb7eb802ad366bb7323cb694f84
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -9,31 +9,118 @@ selection_mode: markdown
 wiki_source_commit: none
 wiki_working_tree_markdown: none
 policy_version: 2026-09-18.3
-repo_files: 8
+repo_files: 12
 wiki_files: 0
-source_files: 8
-included_files: 8
+source_files: 12
+included_files: 12
 excluded_files: 0
 duplicate_files: 0
-content_bytes: 22993
-authority_counts: {"reference":8}
-content_role_counts: {"knowledge":8}
-generated_at: 2026-09-18T18:41:12-04:00
-files: 8
-content_sha256: 03854cb3e11bca03ee3b90e31d50356483ee9f82b577d41ad0dc45b521f69f8f
+content_bytes: 40659
+authority_counts: {"reference":12}
+content_role_counts: {"knowledge":12}
+generated_at: 2026-09-22T15:18:14-04:00
+files: 12
+content_sha256: d492cff039cd318e02f11dff480e7828a2cdd5244215f3369add075fee838420
 
 ================================================================================================
 FILE INDEX
 ================================================================================================
 
-1. [reference] [knowledge] docs/ARCHITECTURE.md | bytes=3298 | sha256=112fea3900b83380d5d5e8552e61328380b1ec6306212971e9b9314e294d5415
-2. [reference] [knowledge] docs/KOALI_SEQUENCE.md | bytes=1860 | sha256=5250504654d0e3f25bd6e2295cfd353ec2db095b205a90ab3bec2f9baa12967a
-3. [reference] [knowledge] docs/MIGRATION_FROM_V1.md | bytes=939 | sha256=f322541d47fea81a45bb2b11fc1371d289f7dbc129adf130c6f7c44ad575365c
-4. [reference] [knowledge] docs/README.md | bytes=505 | sha256=b398a84dc066940915d535c8e2d9ee1925c2c69431ca9b06e29ec11ffecde331
-5. [reference] [knowledge] docs/RESULT_MODEL.md | bytes=1641 | sha256=9b4497138697abd4c398361e4f7a6f9f94bc975f585f5b465c58981c2d813de7
-6. [reference] [knowledge] docs/SECURITY_MODEL.md | bytes=797 | sha256=b8cf498f59c451104f4d8bdc5dba9524477b95100313ce214bca861732f806a3
-7. [reference] [knowledge] docs/UI_MODULARITY.md | bytes=2668 | sha256=0ef0d3068065a42f96b6383ec9182a0cb2ff211553eea07aa23642baaf04910b
-8. [reference] [knowledge] README.md | bytes=11285 | sha256=f44eede654e40a44971d8e313c05672badb786d9b92866df59f0b0554ae07137
+01. [reference] [knowledge] CODE_SNAPSHOT_MANIFEST.md | bytes=2853 | sha256=936bd5b29334c6c720d46e2e612ae4f1bd5367ca365732d813fdee315efbe2a8
+02. [reference] [knowledge] docs/ARCHITECTURE.md | bytes=3298 | sha256=112fea3900b83380d5d5e8552e61328380b1ec6306212971e9b9314e294d5415
+03. [reference] [knowledge] docs/KOALI_SEQUENCE.md | bytes=1654 | sha256=6b2d8834c6edcb814db841f476cb82e9f834b30d723412da49ff463154e99dfa
+04. [reference] [knowledge] docs/KOALI_SYSTEM_TESTS.md | bytes=1514 | sha256=447c3d4d1a586f10464722395928e49821f4d4fbd73fea9c5d68b9f52dbfb6a9
+05. [reference] [knowledge] docs/MIGRATION_FROM_V1.md | bytes=939 | sha256=f322541d47fea81a45bb2b11fc1371d289f7dbc129adf130c6f7c44ad575365c
+06. [reference] [knowledge] docs/README.md | bytes=659 | sha256=6d165d77710d285f103422ac9b3d2ae37b1274b360795c8e4cf6a09d6fc7ae3f
+07. [reference] [knowledge] docs/RESULT_MODEL.md | bytes=1641 | sha256=9b4497138697abd4c398361e4f7a6f9f94bc975f585f5b465c58981c2d813de7
+08. [reference] [knowledge] docs/SECURITY_MODEL.md | bytes=797 | sha256=b8cf498f59c451104f4d8bdc5dba9524477b95100313ce214bca861732f806a3
+09. [reference] [knowledge] docs/STORE_TESTS.md | bytes=5151 | sha256=994e25f981796411c6d1c6f4e2cd1d9d5669464f06d50d2c28d615c249e0eddb
+10. [reference] [knowledge] docs/UI_MODULARITY.md | bytes=2668 | sha256=0ef0d3068065a42f96b6383ec9182a0cb2ff211553eea07aa23642baaf04910b
+11. [reference] [knowledge] README.md | bytes=15163 | sha256=a3e15147bfd92b073ef9268391a9de84477cdae32bbca56f5f0245fbd84a5d75
+12. [reference] [knowledge] UPDATE_20260919.md | bytes=4322 | sha256=2b8fa977ee4ef1f93a8230184f115489ca289feec79c74e8df27f5e1c82add3a
+
+
+================================================================================================
+FILE: CODE_SNAPSHOT_MANIFEST.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 936bd5b29334c6c720d46e2e612ae4f1bd5367ca365732d813fdee315efbe2a8
+CONTENT_BYTES: 2853
+================================================================================================
+
+# Code snapshot
+
+- generated_at: 2026-09-19T07:51:28.756911
+- repository: LevelUpDiag-Koali
+- archive_layout: repository-relative paths
+
+## Snapshot files
+- `.gitignore` (80 bytes)
+- `.smartignore` (14 bytes)
+- `docs/ARCHITECTURE.md` (3298 bytes)
+- `docs/KOALI_SEQUENCE.md` (1654 bytes)
+- `docs/KOALI_SYSTEM_TESTS.md` (1514 bytes)
+- `docs/MIGRATION_FROM_V1.md` (939 bytes)
+- `docs/README.md` (659 bytes)
+- `docs/RESULT_MODEL.md` (1641 bytes)
+- `docs/SECURITY_MODEL.md` (797 bytes)
+- `docs/STORE_TESTS.md` (5151 bytes)
+- `docs/UI_MODULARITY.md` (2668 bytes)
+- `levels/__init__.py` (0 bytes)
+- `levels/koali_support.py` (20629 bytes)
+- `levels/koali_system_support.py` (26854 bytes)
+- `levels/n00_diagnostic_integrity.py` (4587 bytes)
+- `levels/n01_environment.py` (4531 bytes)
+- `levels/n02_repository.py` (4058 bytes)
+- `levels/n03_documentation.py` (264 bytes)
+- `levels/n04_contracts.py` (268 bytes)
+- `levels/n05_components.py` (275 bytes)
+- `levels/n06_integrations.py` (391 bytes)
+- `levels/n07_profiles.py` (538 bytes)
+- `levels/n08_security.py` (340 bytes)
+- `levels/n09_offline.py` (337 bytes)
+- `levels/n10_system.py` (334 bytes)
+- `levels/n11_delivery.py` (3418 bytes)
+- `levels/n12_koali_system.py` (139 bytes)
+- `levels/n13_store.py` (118 bytes)
+- `levels/store_support.py` (12155 bytes)
+- `levelupdiag.config.json` (4700 bytes)
+- `levelupdiag.config.local.example.json` (1069 bytes)
+- `levelupdiag.py` (310 bytes)
+- `LEVELUPDIAG_CONSOLE.pyw` (16166 bytes)
+- `levelupdiag_core/__init__.py` (134 bytes)
+- `levelupdiag_core/cli.py` (5333 bytes)
+- `levelupdiag_core/commands.py` (2025 bytes)
+- `levelupdiag_core/config.py` (1788 bytes)
+- `levelupdiag_core/execution_backend.py` (7532 bytes)
+- `levelupdiag_core/manifest.py` (2130 bytes)
+- `levelupdiag_core/modes.py` (1534 bytes)
+- `levelupdiag_core/report.py` (2162 bytes)
+- `levelupdiag_core/runner.py` (13669 bytes)
+- `levelupdiag_core/util.py` (1479 bytes)
+- `levelupdiag_core/vcs.py` (844 bytes)
+- `levelupdiag_core/verdicts.py` (2401 bytes)
+- `levelupdiag_core/worker.py` (1680 bytes)
+- `levelupdiag_manifest.json` (14445 bytes)
+- `pyproject.toml` (281 bytes)
+- `README.md` (13484 bytes)
+- `RUN_KOALI_SYSTEM_DIAG.cmd` (104 bytes)
+- `RUN_LEVELUPDIAG.bat` (197 bytes)
+- `RUN_LEVELUPDIAG.sh` (187 bytes)
+- `schemas/campaign-summary.schema.json` (1097 bytes)
+- `schemas/report.schema.json` (778 bytes)
+- `scripts/run_level.py` (1365 bytes)
+- `tests/__init__.py` (0 bytes)
+- `tests/test_commands.py` (588 bytes)
+- `tests/test_delivery.py` (558 bytes)
+- `tests/test_execution_backend.py` (6017 bytes)
+- `tests/test_koali_support.py` (1468 bytes)
+- `tests/test_koali_system.py` (8396 bytes)
+- `tests/test_manifest.py` (3119 bytes)
+- `tests/test_modes.py` (1850 bytes)
+- `tests/test_stabilization.py` (2153 bytes)
+- `tests/test_store.py` (6668 bytes)
+- `tests/test_ui_modularity.py` (4303 bytes)
 
 
 ================================================================================================
@@ -91,50 +178,95 @@ The Windows desktop console executes Linux qualification through WSL. Because `w
 FILE: docs/KOALI_SEQUENCE.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 5250504654d0e3f25bd6e2295cfd353ec2db095b205a90ab3bec2f9baa12967a
-CONTENT_BYTES: 1860
+CONTENT_SHA256: 6b2d8834c6edcb814db841f476cb82e9f834b30d723412da49ff463154e99dfa
+CONTENT_BYTES: 1654
 ================================================================================================
 
-# Koali sequence — LevelUpDiag 2.2
+# Koali sequence — LevelUpDiag 2.5
 
-## Phase 1: stabilize Koali core
+## Primary path: live Koali product system
 
-Run `stabilization` first. It validates diagnostic integrity, the complete host/build environment, canonical contracts, and native component validations. Independent subsystems are intentionally deferred and must not be marked pinned or activable unless their real source authority has been integrated and verified.
+Start Koali with its managed launcher, wait for the Shell to become available, then run:
 
 ```text
-PREPARE DEVELOPMENT ENVIRONMENT
-→ LevelUpDiag stabilization
-→ build/verify native Koali components
-→ repeat until the environment is stable
+RUN_KOALI.cmd
+→ LevelUpDiag koali-system
+→ N00 Diagnostic Integrity
+→ N12 Koali Product System
+→ N13 Store and Third-Party Applications
 ```
 
-Deferred during this phase:
+N12 consumes the runtime evidence produced by Koali itself:
 
-- Konnaxion: placeholder until real integration.
-- Ariane: integrate and test next.
-- Orgo: draft/not admitted.
-- Semantik Architect: deferred/not admitted.
+```text
+.koali-dev/state/ecosystem-status.json
+.koali-dev/state/surface-runtime.json
+.koali-dev/state/active-state.json
+        ↓
+owner contracts + surface projection + module health
+        ↓
+/api/shell-state + independent loopback probes
+```
 
-## Phase 2: core runtime
+The expected KS4.4 policy is:
 
-When a bootable image exists, run `stabilization-runtime`. N08/N09/N10 remain diagnostic in DEBUG; final-profile blockers remain visible but do not redefine the core-stabilization scope.
+- Konnaxion, Orgo and Médiathèque kOA are Shell-critical and must be ready.
+- SemantiK Architect remains linked/projected but its current runtime outage is accepted and must not degrade the global Shell.
+- Kristal, kOA Linux, Koali Control Panel and kOA Digital Ecosystem remain source-only discoveries.
+- Koali must not expose repository paths, commands, PIDs or other orchestration-private fields through the public Shell state.
+- Hosted applications keep their own internal navigation; Koali must not recreate a redundant product sidebar.
 
-## Phase 3: subsystem integration
+## Legacy path: kOA core stabilization
 
-Integrate each independent subsystem with real source pins, digests, license/documentation evidence, adapter tests, and activation evidence.
+The historical campaigns remain available unchanged for the underlying kOA-Linux target:
 
-For products that expose a UI, preserve the Koali modularity boundary during this phase:
+```text
+stabilization
+stabilization-runtime
+audit-total
+validation
+release
+```
 
-- standalone product operation remains product-owned;
-- integrated UI contributions are declared explicitly rather than copied into another product;
-- optional product removal is a supported state;
-- private cross-product UI imports are not used as a substitute for shared Koali UI primitives or public integration contracts.
+These continue to use N01-N11 and the WSL/native toolchain rules documented by the kOA-Linux qualification flow.
 
-N06 can diagnose these properties only when their concrete markers and dependency scan inputs are configured locally. It does not define the UI contract itself.
+N13 checks koa-linux store sources by default; Linux session checks are opt-in. See [Store tests](STORE_TESTS.md).
 
-## Phase 4: final target
 
-Use `validation` and `release` against the unchanged canonical `sovereign-linux-node` target. No partial conformance is claimed.
+================================================================================================
+FILE: docs/KOALI_SYSTEM_TESTS.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 447c3d4d1a586f10464722395928e49821f4d4fbd73fea9c5d68b9f52dbfb6a9
+CONTENT_BYTES: 1514
+================================================================================================
+
+# N12 — Koali Product System
+
+N12 is a read-only live-system diagnostic for the KS4.x Koali composition layer.
+
+It verifies:
+
+1. the Koali repository and managed launcher are present;
+2. `ecosystem-status.json`, `surface-runtime.json`, and `active-state.json` exist and are fresh;
+3. every expected application remains in its owner repository with a discoverable `koali.integration.json`;
+4. Konnaxion, Orgo, and Médiathèque are ready;
+5. SemantiK Architect may be unready while remaining linked and visible;
+6. every product has a runtime registration and resolved local embed target;
+7. owner application manifests expose routes but no redundant Koali sidebar;
+8. presentation authority remains presentation-only and does not grant capabilities or perform direct domain writes;
+9. the global Shell is `ready` and `online` when all Shell-critical products are ready;
+10. `/api/shell-state` matches the canonical active projection and does not expose orchestration-private fields;
+11. required runtime probes are independently rechecked over loopback only.
+
+N12 refuses non-loopback HTTP targets. It does not turn `allow_network=false` into general network access.
+
+## Changes in 2.6
+
+Optional runtime outages now report WARN, not PASS. Disabled HTTP checks and
+products without independently testable required HTTP probes report PARTIAL.
+Loopback restrictions apply to redirects too, and environment HTTP proxies are
+disabled for these probes. `koali-system` also runs N13; see [Store tests](STORE_TESTS.md).
 
 
 ================================================================================================
@@ -167,18 +299,22 @@ Historical campaign names remain available for compatibility, but new automation
 FILE: docs/README.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: b398a84dc066940915d535c8e2d9ee1925c2c69431ca9b06e29ec11ffecde331
-CONTENT_BYTES: 505
+CONTENT_SHA256: 6d165d77710d285f103422ac9b3d2ae37b1274b360795c8e4cf6a09d6fc7ae3f
+CONTENT_BYTES: 659
 ================================================================================================
 
 # LevelUpDiag-Koali documentation
 
 - `ARCHITECTURE.md` — DEBUG / VALIDATION / RELEASE separation and dependency topology.
-- `KOALI_SEQUENCE.md` — N00-N11 roles and DEBUG principal selection.
+- `KOALI_SEQUENCE.md` — live Koali N12 path plus legacy kOA campaigns.
 - `RESULT_MODEL.md` — local verdicts and campaign aggregation.
 - `SECURITY_MODEL.md` — bounded execution and mode-scoped Git protection.
 - `MIGRATION_FROM_V1.md` — migration to the v2.1 debug-first model.
 - `UI_MODULARITY.md` — optional N06 diagnostics for standalone/integrated product UI boundaries.
+
+- `KOALI_SYSTEM_TESTS.md` — exact N12 live-system checks and KS4.4 readiness policy.
+
+- [N13 — Store and third-party applications](STORE_TESTS.md)
 
 
 ================================================================================================
@@ -248,6 +384,116 @@ Git tracked-state protection is now **mode-scoped**:
 - RELEASE: enabled and tracked-state mutation during diagnostics is an error.
 
 This keeps release provenance strict without making Git formalities part of ordinary system debugging.
+
+
+================================================================================================
+FILE: docs/STORE_TESTS.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 994e25f981796411c6d1c6f4e2cd1d9d5669464f06d50d2c28d615c249e0eddb
+CONTENT_BYTES: 5151
+================================================================================================
+
+# N13 — Store et applications tierces (2.6)
+
+N13 cible **koa-linux**, où se trouve `host/store/`. Ce n'est pas un dépôt de
+store supplémentaire. Il accompagne N12 dans `koali-system` et
+`koali-system-debug`, avec une campagne `store` indépendante et un bouton STORE.
+
+## Trois preuves différentes
+
+| Couverture | Exécution | Ce que cela prouve |
+|---|---|---|
+| Sources | Windows ou Linux | Catalogue exact, syntaxe Python, raccourcis, politiques, paquets requis et projection dans l'image |
+| Session Linux | Dans la session graphique cible | Outils présents, greffon Flatpak détecté, bus/portail, raccourcis installés correspondant au script source, dépôt et inventaire Flatpak |
+| Fonctionnement réel | Essai explicite dans une VM jetable | Ouverture des fenêtres, installation, utilisation et reprise après panne |
+
+Les tests de sources n'importent ni n'exécutent le code du dépôt cible.
+La présence du fichier de tests est un contrôle distinct de leur exécution.
+N13 ne télécharge rien, ne configure pas de dépôt et n'installe aucun logiciel.
+Il ne certifie ni les signatures du dépôt, ni le fonctionnement du greffon à
+partir de sa seule présence, ni le fonctionnement des applications installées.
+
+## Lancer depuis le dépôt LevelUpDiag-Koali
+
+```sh
+python levelupdiag.py run store
+```
+
+Le chemin par défaut est `../koa-linux`. Pour le modifier, fusionner dans
+`levelupdiag.config.local.json` (sans remplacer ses autres paramètres) :
+
+```json
+{
+  "store": {
+    "root": "../koa-linux",
+    "runtime_checks": false
+  }
+}
+```
+
+Sous Linux, mettre `runtime_checks` à `true` et lancer le diagnostic **dans la
+session utilisateur graphique de la VM**, sans sudo. Le bouton Windows reste
+sur Python natif ; il ne valide pas implicitement une VM ni une session WSL.
+Si des contrôles Linux sont demandés sous Windows, N13 rapporte `BLOCKED`.
+
+Le module autonome permet de tester cette mise à jour même sans le dépôt complet
+de LevelUpDiag (se placer dans `overlays/LevelUpDiag-Koali` pour cette archive) :
+
+```sh
+python -m levels.store_support --root /chemin/koa-linux
+python -m levels.store_support --root /chemin/koa-linux --runtime
+```
+
+Il imprime un rapport JSON. Son code de sortie vaut 1 en présence de FAIL,
+BLOCKED ou erreur de configuration ; 0 indique seulement l'absence de ces erreurs,
+pas une qualification de bout en bout. Les points non exécutés restent PARTIAL.
+Le moteur historique agrège les verdicts selon le mode de campagne.
+
+## Tests du code de l'installateur
+
+Depuis le dépôt **koa-linux** corrigé, exécuter explicitement :
+
+```sh
+python tests/system/test_third_party_store.py
+```
+
+Cette suite utilise des simulations et couvre annulation, sélection fermée,
+dépôt inattendu, applications déjà présentes, échecs partiels et portée utilisateur.
+Elle ne prouve pas qu'une installation réelle aboutit. N13 ne l'exécute pas
+implicitement pendant une inspection en lecture seule.
+
+## Scénario d'acceptation dans une VM jetable
+
+Préparer un instantané et un compte utilisateur graphique ; installer les prérequis
+système via l'adaptateur de distribution. Utiliser un dépôt koa-linux contenant
+la livraison du store. Consigner la version de l'image, le commit, la date,
+l'architecture et les versions des logiciels. Ne pas utiliser le compte principal.
+
+1. Exécuter N13 avec `--runtime`, conserver le JSON. Un dépôt absent avant le
+   premier lancement est un WARN attendu ; une URL différente est un FAIL.
+2. Ouvrir « Installer les essentiels », annuler, puis comparer `flatpak remotes
+   --user` et `flatpak list --user --app` à l'état initial : aucun ajout.
+3. Ouvrir « Store — applications tierces », accepter la configuration. Vérifier
+   la fenêtre GNOME Logiciels, le catalogue Flathub et la recherche de Firefox.
+4. Sélectionner une seule application manquante (par exemple PeaZip), installer,
+   vérifier son apparition dans `flatpak list --user --app`, son ouverture et
+   l'accès à un fichier via le portail. Les autres applications restent absentes.
+5. Relancer la même sélection : application déjà présente, aucune réinstallation.
+6. Installer le reste de la présélection ; vérifier une page web Firefox, un média
+   VLC avec audio, le démarrage de Thunderbird, une archive PeaZip, un fichier
+   Notepad Next, un document LibreOffice et une base de test KeePassXC.
+   Ne pas ajouter de vrais comptes ni de mots de passe personnels.
+7. Sur un second instantané, couper le réseau pendant un téléchargement : échec
+   visible, journal utile, pas de faux succès. Rétablir le réseau et relancer :
+   les applications installées sont ignorées, les manquantes sont réessayées.
+8. Lancer deux raccourcis d'installation simultanément : une seule opération.
+9. Relancer N13. Conserver le rapport, le journal et les résultats par application.
+   Restaurer l'instantané pour nettoyer l'essai.
+
+Cette version n'ingère pas de déclaration manuelle de réussite pour transformer
+le verdict en PASS : `end_to_end_validated` reste false. Le procès-verbal de VM
+constitue une preuve séparée. Cela évite un faux PASS global.
 
 
 ================================================================================================
@@ -325,27 +571,40 @@ The check is read-only. It reads only explicit marker paths and explicit scan fi
 FILE: README.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: f44eede654e40a44971d8e313c05672badb786d9b92866df59f0b0554ae07137
-CONTENT_BYTES: 11285
+CONTENT_SHA256: a3e15147bfd92b073ef9268391a9de84477cdae32bbca56f5f0245fbd84a5d75
+CONTENT_BYTES: 15163
 ================================================================================================
 
-# LevelUpDiag-Koali v2.4
+# LevelUpDiag-Koali v2.5
 
-LevelUpDiag-Koali 2.3 is a **core-stabilization-first** diagnostic suite for kOA-Linux. The primary development objective is to stabilize the Koali environment and native core before independent subsystems are integrated.
+LevelUpDiag-Koali 2.5 is the diagnostic suite for the **live Koali product system**, while preserving the historical kOA-Linux stabilization and release campaigns.
 
-Its primary rules are:
+Its primary default is now `koali-system`: it observes the Koali shell that is actually running on the Windows host, reads the canonical `.koali-dev/state` projection, validates linked owner contracts without copying application repositories, independently probes required runtimes, and verifies that optional modules do not incorrectly degrade the global Shell.
 
-> If a formality does not materially prevent observation or execution of the system, it must not block DEBUG.
->
-> Missing independent subsystems must not be falsified as admitted dependencies merely to advance core stabilization.
+Current KS4.4 product policy:
 
-Repository cleanliness, frozen architecture conformance, documentation conformance, delivery residue, signatures, and release provenance remain available as validation/finalization evidence, but they are no longer prerequisites for the main debug path.
+```text
+Konnaxion          shell-critical / must be ready
+Orgo               shell-critical / must be ready
+Médiathèque kOA    shell-critical / must be ready
+SemantiK Architect linked + projected / runtime outage currently accepted
+Kristal / kOA Linux / Control Panel / Digital Ecosystem   source-only
+```
+
+Run it after starting Koali with `RUN_KOALI.cmd`:
+
+```powershell
+python levelupdiag.py run koali-system
+# or
+RUN_KOALI_SYSTEM_DIAG.cmd
+```
+
+The desktop console automatically uses **native Windows Python** for `koali-system`, because it must inspect the Windows-hosted Koali process/state and loopback endpoints. Legacy kOA-Linux campaigns keep the existing WSL-aware backend policy.
 
 
+## Legacy kOA core stabilization scope
 
-## Koali core stabilization scope
-
-The default campaign is now `stabilization`:
+The legacy core campaign remains `stabilization`:
 
 ```text
 N00 Diagnostic Integrity
@@ -428,7 +687,7 @@ Linux/macOS launcher default:
 ./RUN_LEVELUPDIAG.sh
 ```
 
-Both now default to the `stabilization` campaign.
+Both now default to the `koali-system` campaign.
 
 ## Console
 
@@ -440,13 +699,12 @@ Both now default to the `stabilization` campaign.
 
 Presets:
 
-- **STABILISATION KOALI**: N00, N01, N04, N05
-- **RUNTIME CORE**: N00, N01, N04, N05, N08, N09, N10
-- **DEBUG COMPLET**: N00, N01, N04-N10
-- **AUDIT TOTAL**: N00-N10 in DEBUG non-blocking mode, one-pass complete diagnostic evidence without a conformance or delivery claim
-- **STRUCTURE**: N00-N03
-- **VALIDATION**: N00-N10
-- **RELEASE**: N00-N11
+- **KOALI SYSTEM**: N00 + N12, strict live product-system validation.
+- **KOALI DEBUG**: N00 + N12, same evidence with non-blocking DEBUG aggregation.
+- **STABILISATION kOA**: N00, N01, N04, N05.
+- **AUDIT TOTAL**: legacy N00-N10 in DEBUG non-blocking mode.
+- **VALIDATION kOA**: legacy N00-N10.
+- **RELEASE**: legacy N00-N11.
 
 N02 Repository and N03 Documentation are intentionally absent from DEBUG PRINCIPAL.
 
@@ -465,6 +723,7 @@ N08 Security Runtime
 N09 Offline Runtime
 N10 System Runtime
 N11 Delivery
+N12 Koali Product System
 ```
 
 All levels remain serial for stable evidence ordering.
@@ -473,6 +732,8 @@ Functional levels no longer depend transitively on N02. Selecting `N08,N09,N10` 
 
 ## Campaigns
 
+- `koali-system` — default live Koali qualification, N00 + N12 in VALIDATION mode.
+- `koali-system-debug` — non-blocking live Koali diagnosis, N00 + N12 in DEBUG mode.
 - `stabilization` — primary pre-subsystem Koali core stabilization, mode DEBUG.
 - `stabilization-runtime` — core runtime qualification when image/QEMU context exists, mode DEBUG.
 - `debug` — broader development diagnosis including integration/profile/runtime levels, mode DEBUG.
@@ -583,6 +844,12 @@ Evidence remains under the target repository:
 
 Commands use `shell=false`; output is bounded and redacted; target mutation remains disabled by configuration.
 
+## Version 2.5.0
+
+2.5.0 adds N12 **Koali Product System**. It validates the KS4.x multi-repository composition layer from its canonical runtime evidence instead of treating integrated applications as copied dependencies. N12 checks live state freshness, owner-contract discovery, runtime readiness, surface registrations, active Space projection, Shell-critical versus optional health semantics, public `/api/shell-state` privacy, and independent loopback probes. SemantiK Architect may remain unavailable without failing Koali while its catalog entry has `affectsShellState=false`.
+
+The `koali-system` desktop campaign is forced to the native Windows backend; legacy kOA-Linux campaigns retain WSL-aware execution.
+
 ## Version 2.4.1
 
 2.4.1 fixes the WSL environment inherited by the Windows desktop console. A direct `wsl.exe --exec` launch can expose a narrower `PATH` than an interactive WSL session, which made user-installed `uv`, Cargo, Rust and rustup disappear even though the run was correctly executing under WSL.
@@ -602,3 +869,121 @@ It also fixes the desktop console's **DEBUG COMPLET** preset so it selects the `
 ## Version 2.2.0
 
 2.2.0 changed the default workflow from broad debug to explicit **Koali core stabilization before subsystem integration**. It also requires the core Rust/native toolchain in N01 (`git`, `cargo`, `rustc`, `cc`), adds qualification-scope metadata to campaign summaries, and provides compatibility aliases plus `scripts/run_level.py` for older Koali Control Panel integrations.
+
+## 2.6 — Store coverage and honest partial results
+
+In version 2.6, `koali-system` ran N00 + N12 + N13. Version 2.7 separates the Store again. The **STORE** button
+and `python levelupdiag.py run store` run N00 + N13 independently. N13 targets
+`../koa-linux`, not the Spaces repository. Linux session probes are opt-in with
+`store.runtime_checks=true`; Windows source checks do not certify the Linux store.
+No packages are installed by this diagnostic. See [N13 setup and VM acceptance](docs/STORE_TESTS.md).
+
+N12 reports accepted optional outages as WARN, disabled/missing live checks as
+PARTIAL, and refuses redirects away from loopback. HTTP proxy environment variables
+are ignored for local probes. Version 2.7 restores the Windows-only N00 + N12 campaign.
+
+
+## Version 2.7 — Independent diagnostic scopes
+
+The console now provides **AUDIT SANS VM** (`audit-local`) and **AUDIT QEMU**
+(`audit-qemu`). Select the preset, then **LANCER SÉLECTION**. **AUDIT TOTAL**
+keeps both scopes and documentation: missing VM prerequisites remain visible,
+while available local tests still execute. **KOALI SYSTEM** remains native Windows,
+N00 + N12. **STORE** remains an independent N00 + N13 campaign; its PARTIAL result
+honestly means no end-to-end installation has been validated.
+
+WSL probes and launches explicitly select `desktop_console.wsl_distro`
+(default `Ubuntu-24.04`) and pass `--target` from `wsl_target_root`
+(default `~/work/koa-linux`). On Rejean's configured distro this expands to
+`/home/rejean/work/koa-linux`. The execution banner shows the distro and target.
+The log button follows the report emitted by the completed run, including WSL paths.
+
+Install this update together with the kOA-Linux gate-scope update. Use the Control
+Panel's development preparation to refresh the imported Linux workspace after
+copying the updated sources. Preserve existing `levelupdiag.config.local.json`;
+check that it does not override `commands.offline` or `commands.system` with empty
+arrays, or override the WSL distro/workspace with stale values.
+
+`audit-local` covers configured source tests, including Store source tests in N10.
+It does not validate a running Linux desktop. `audit-qemu` retains its prerequisite
+levels and selects VM tests in N08–N10. RELEASE always selects the full runtime
+scope. Scope and omitted commands are recorded in kOA gate reports.
+
+See `UPDATE_20260919.md` for verification results and remaining image prerequisites.
+
+
+================================================================================================
+FILE: UPDATE_20260919.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 2b8fa977ee4ef1f93a8230184f115489ca289feec79c74e8df27f5e1c82add3a
+CONTENT_BYTES: 4322
+================================================================================================
+
+# Mise à jour du 19 septembre 2026
+
+## Installation
+
+Copier les fichiers de chaque archive par-dessus son dépôt existant : koa-linux
+et LevelUpDiag-Koali. Ne pas supprimer le dépôt ou les fichiers absents du snapshot.
+Conserver les réglages locaux et les ressources non exportées, notamment les SVG.
+Fermer puis rouvrir la console LevelUpDiag après copie. Dans le Control Panel,
+relancer la préparation du développement pour réimporter le checkout kOA modifié
+vers Ubuntu-24.04, /home/rejean/work/koa-linux.
+
+Dans LevelUpDiag : KOALI SYSTEM puis LANCER SÉLECTION pour Windows natif ;
+AUDIT SANS VM puis LANCER SÉLECTION pour les sources Linux ; AUDIT TOTAL pour
+collecter aussi la documentation et les blocages VM. AUDIT QEMU cible les essais
+VM après les niveaux prérequis. STORE reste la campagne indépendante du Store.
+La ligne Backend doit afficher Ubuntu-24.04 et /home/rejean/work/koa-linux pour
+les audits Linux. Adapter desktop_console.wsl_distro et wsl_target_root dans
+levelupdiag.config.local.json si nécessaire. Un ancien override commands.offline
+ou commands.system égal à [] désactive encore ces essais : retirer cet override
+pour utiliser les commandes du fichier de base.
+
+## Changements
+
+- kOA : séparation --scope all/local/qemu dans les gates sécurité, hors-ligne,
+  système ; les groupes pytest locaux sont exécutés même sans image VM.
+- Les échecs restent dans le verdict ; ils n'interrompent plus les commandes suivantes.
+- Rapports avec scope, full_gate et omitted_commands. Une VM non exécutée est
+  BLOCKED et n'est jamais comptée comme un test réussi. Le mode par défaut reste all.
+- N10 couvre aussi les sources du Store, le workspace natif, les paquets,
+  la matérialisation rootfs et la construction d'image.
+- docs/CODE_SNAPSHOT_MANIFEST.md est un inventaire d'export, exclu exactement
+  du corpus normatif. Les autres documents restent contrôlés. Index régénérés.
+- LevelUpDiag 2.7 : campagnes audit-local/audit-qemu, sélection conservée dans
+  l'interface, distribution WSL explicite pour chaque sonde, cible Linux explicite,
+  timeout des sondes, bouton des logs suivant le rapport de l'exécution.
+- Koali System N00/N12 reste sous Windows ; N13 reste dans STORE avec une
+  couverture PARTIAL tant que l'installation réelle n'est pas vérifiée.
+- RELEASE force la portée runtime all ; aucun prérequis produit n'est inventé.
+
+## Vérification effectuée ici
+
+- LevelUpDiag : 57 tests unittest réussis, dont routage WSL simulé et sélection UI.
+- kOA scripts : 3 tests de régression réussis (partition sans perte, poursuite
+  après échec documentaire et VM absente, exclusion exacte du manifeste).
+- Suite kOA étendue : 1 075 réussis, 1 échec existant du snapshot :
+  integrations/koa-spaces/tests/test_boundary.py::test_only_declared_bundle_files_exist.
+  Les neuf SVG attendus dans integrations/koa-spaces/interface/icons/ sont absents
+  de l'archive d'entrée. Aucun assouplissement de ce contrôle ni icône inventée.
+- Scripts réels : sécurité all = 5 contrôles statiques + 34 tests locaux réussis,
+  puis BLOCKED pour QEMU absent ; système local = 64 tests réussis ; hors-ligne
+  local = réussi. Les rapports conservent explicitement la couverture manquante.
+- Environnement de vérification : Linux, Python 3.12.14, pytest 9.1.1 et
+  jsonschema 4.26.0 installés isolément. Ce n'est pas le frozen environnement
+  Python 3.13/pytest 9.0.3 du poste Windows/WSL. Aucune VM ni installation
+  Flatpak interactive n'a été exécutée ici.
+
+## Image QEMU : prérequis réels encore absents
+
+packaging/system/image.toml référence generated/assembly/B-0092/bundle.json,
+qui n'est pas fourni, et des entrypoints générés. Les projections
+resolved-plan/effective-profile et l'image système générée sont également absentes.
+Le pipeline build.image existant demande un rootfs, un noyau, un initramfs,
+du matériel de boot, un rootfs de récupération et leurs identités/provenances.
+Ses tests de construction passent, mais les données binaires et les bundles admis
+ne peuvent pas être déduits d'un snapshot de code. activation_ready reste false.
+Les regex de session, de confinement et de navigation doivent provenir du runtime
+réel de l'image. QEMU restera NOT READY tant que ces prérequis ne sont pas produits.

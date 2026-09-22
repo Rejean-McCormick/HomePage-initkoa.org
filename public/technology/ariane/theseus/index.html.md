@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/technology/ariane/theseus/index.html.md
 > Route: /technology/ariane/theseus
 > Source: app\technology\ariane\theseus\page.tsx
-> Generated: 2026-09-11T11:53:57.766Z
+> Generated: 2026-09-22T19:18:32.402Z
 
 [Open the HTML page](https://initkoa.org/technology/ariane/theseus)
 

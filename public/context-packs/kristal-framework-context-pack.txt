@@ -1,7 +1,7 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Kristal-Framework
-source_commit: 455ca77bc4257c2ce179f097f3a859e896b6a499
+source_commit: 8571087483eafa157df1c9a2fbb2d73f727d1bc9
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -9,18 +9,18 @@ selection_mode: markdown
 wiki_source_commit: 917d33f25ede7ed795dc8fa9cce0df6ccdb02861
 wiki_working_tree_markdown: clean
 policy_version: 2026-09-18.3
-repo_files: 57
+repo_files: 58
 wiki_files: 31
-source_files: 88
-included_files: 88
+source_files: 89
+included_files: 89
 excluded_files: 0
 duplicate_files: 0
-content_bytes: 1058211
-authority_counts: {"reference":88}
-content_role_counts: {"knowledge":57,"navigation":31}
-generated_at: 2026-09-18T18:41:09-04:00
-files: 88
-content_sha256: a6c0962090d001bbf1465d94f671c6df33a73e78f630da99ce7f647cbe00a3c9
+content_bytes: 1060695
+authority_counts: {"reference":89}
+content_role_counts: {"knowledge":58,"navigation":31}
+generated_at: 2026-09-22T15:18:11-04:00
+files: 89
+content_sha256: 035ba49187e7bb599b22278c30bec255cd64aab06667f707ba9a7ec902af5cf3
 
 ================================================================================================
 FILE INDEX
@@ -114,6 +114,7 @@ FILE INDEX
 86. [reference] [knowledge] docs/Technical-Reference/kristal-docs-v5/09-test-vectors/TCK.md | bytes=3007 | sha256=1cbaeb97527537761e37bfeae0654904831d9eb91967bad1e638d0f865f65757
 87. [reference] [knowledge] README.md | bytes=17539 | sha256=35c8a7950eb4ddde722ff5e996592e71a959570df4d9120209a39adb3aff9f03
 88. [reference] [knowledge] RELEASE.md | bytes=4451 | sha256=9394194014953014416e47ebc5ddcf1d74b18a8e3fec44639a0a5a971f8d8d87
+89. [reference] [knowledge] SENIOR_ARCHITECTURE_PATTERNS.md | bytes=2484 | sha256=0b0a80958c9ca87b12b1696660c653b8aa5292fa55230225dacb47d63528ee4d
 
 
 ================================================================================================
@@ -37937,3 +37938,43 @@ Floating dependencies (`main`, `latest`, `5.x`) are not valid release locks.
 `tools/build_release_archive.py` builds release archives from **Git-tracked files only**. Untracked diagnostics, local notes, `.levelupdiag/`, virtual environments, build output, and other workstation state MUST NOT affect release bytes. `CODE_SNAPSHOT_MANIFEST.md` is a local/export snapshot aid and is intentionally excluded from framework release archives.
 
 The archive builder MUST refuse to run outside a Git work tree. For a release build, the working tree SHOULD be clean and the release tag MUST ultimately resolve to the committed bytes being archived.
+
+
+================================================================================================
+FILE: SENIOR_ARCHITECTURE_PATTERNS.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 0b0a80958c9ca87b12b1696660c653b8aa5292fa55230225dacb47d63528ee4d
+CONTENT_BYTES: 2484
+================================================================================================
+
+# Senior Architecture Pattern Alignment
+
+Kristal is primarily a **specification and conformance repository for immutable epistemic artifacts**. The senior architecture patterns below apply to the **build, validation, distribution and runtime-pack operational plane**. Unless a profile explicitly says otherwise, they are operational guidance and are **not part of Kristal artifact conformance**.
+
+| Pattern | Kristal alignment |
+|---|---|
+| Circuit Breaker | **Operational guidance** for fallible SenTient/resolver calls. |
+| Dead Letter Queue (DLQ) | **Operational guidance** for poison/repeatedly failing ingestion and build work, with triage/ownership expectations. |
+| Exponential Backoff + Jitter | **Operational guidance** for retryable pipeline/distribution failures. |
+| Timeout Budgets / Cancellation | **Operational guidance** with hard timeouts and cancellation by pipeline stage. |
+| Rate Limiting / Throttling | **Operational guidance** for bounded tenant/resource usage. |
+| Graceful Degradation | **Operational guidance** for reader-policy and rendering failure paths without changing epistemic meaning. |
+| Blue-Green Deployment | **Operational guidance** for Runtime Pack release/activation. |
+| Canary Release | **Operational guidance** for staged Runtime Pack rollout. |
+| Distributed Tracing | **Operational guidance** through recommended `trace_id`, `span_id`, correlation propagation and structured operational events. |
+| Metrics & Alerting | **Operational guidance** through recommended dashboards, health signals and actionable alerts. |
+| CQRS framing | **Non-normative guidance** where read/query materializations are separated from authoritative artifact inputs. |
+
+## Important non-claims
+
+- **Artifact immutability is not the same thing as the “Immutable Infrastructure” deployment pattern.**
+- These patterns do not change Kristal's normative separation of artifact integrity, validation, authority recognition, reader visibility and runtime activation.
+- A pattern listed here is not automatically implemented by every Kristal deployment; this repository defines guidance/contracts and conformance surfaces.
+
+## Evidence anchors
+
+- `docs/Technical-Reference/kristal-docs-v5/00-overview/vision-and-scope.md`
+- `docs/Technical-Reference/kristal-docs-v5/08-ops/failure-paths-and-resilience.md`
+- `docs/Technical-Reference/kristal-docs-v5/08-ops/logging-and-correlation-ids.md`
+- `docs/Technical-Reference/kristal-docs-v5/08-ops/release-strategies.md`

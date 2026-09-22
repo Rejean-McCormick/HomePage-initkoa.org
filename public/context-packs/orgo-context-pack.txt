@@ -1,7 +1,7 @@
 # INITKOA CONTEXT PACK
 
 repository: Rejean-McCormick/Orgo
-source_commit: 30ef38de3b6f591236625a4b22bc5ebbdb1ec40d
+source_commit: f146303c7e8ca62a65b1c1a3687d8d3ad3fa5f7d
 source_mode: git
 working_tree_markdown: clean
 working_tree_selected: clean
@@ -9,18 +9,18 @@ selection_mode: markdown
 wiki_source_commit: b89ca31f268c521cbd70ab1c736338a8c5039df7
 wiki_working_tree_markdown: clean
 policy_version: 2026-09-18.3
-repo_files: 55
+repo_files: 58
 wiki_files: 21
-source_files: 76
-included_files: 71
+source_files: 79
+included_files: 74
 excluded_files: 5
 duplicate_files: 0
-content_bytes: 323566
-authority_counts: {"reference":71}
-content_role_counts: {"knowledge":50,"navigation":21}
-generated_at: 2026-09-18T19:06:21-04:00
-files: 71
-content_sha256: eea9bee7793275a8350d0c8e7ba8e57f9a1d0bc97bcf669aad865650508856d0
+content_bytes: 330955
+authority_counts: {"reference":74}
+content_role_counts: {"knowledge":53,"navigation":21}
+generated_at: 2026-09-22T15:18:06-04:00
+files: 74
+content_sha256: bce9c87981002d9ab66be67a0ab1074381ab7ca269b6626730da7c1dc2de287d
 
 ================================================================================================
 FILE INDEX
@@ -62,7 +62,7 @@ FILE INDEX
 34. [reference] [knowledge] Docs/status/2026-09-16-ecosystem-integration-alignment.md | bytes=1506 | sha256=c893842fa3cde21c80e60a1ed509a9f5ab982789ccd1e0006c3527f2a1bd6a48
 35. [reference] [knowledge] Docs/status/2026-09-17-acceptance-status.md | bytes=6208 | sha256=86440ef7f88abe85b74cf55c20bdb8795b02e38f596defd6366eebf9c0c7c5de
 36. [reference] [knowledge] Docs/status/2026-09-17-interaction-surfaces.md | bytes=3017 | sha256=bc6dda4176d02b0bbd21cbbddc322866e12a0c825f0201e1279d0ea72cac4e1f
-37. [reference] [knowledge] Docs/Technical-Reference/API_IMPLEMENTED.md | bytes=8057 | sha256=d210e31589cc6f69f31c1b396322c6ec8cf33885c4f4aa53a8a58bc593169121
+37. [reference] [knowledge] Docs/Technical-Reference/API_IMPLEMENTED.md | bytes=8496 | sha256=d81edfd77ef5a55d3f3a1e5fe28da210686b29c0cc553d42c99f147584109d78
 38. [reference] [knowledge] Docs/Technical-Reference/ARCHITECTURE_TO_CODE.md | bytes=4304 | sha256=0c1a272d26262c0ccab0b8eaadc34347c0ec7bb48db9aecc0a39bd54b408f67a
 39. [reference] [knowledge] Docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md | bytes=7497 | sha256=d08a27b4eb78b35c6abe8f87b7fb97c1631fed8b5a81f1aa2f86c7cff9edd6f2
 40. [reference] [knowledge] Docs/Technical-Reference/COMMON_IDENTITY.md | bytes=3761 | sha256=b5d5a14b19d83c9f6c52c88dd457e00d45f337f945014cbf8b83aef4dd7d5af7
@@ -70,33 +70,36 @@ FILE INDEX
 42. [reference] [knowledge] Docs/Technical-Reference/CONTRACTS.md | bytes=8057 | sha256=f78df74984f83aa01a355721be5dafccdea0a280acc7618e17fb32f0b15d706e
 43. [reference] [knowledge] Docs/Technical-Reference/GLOSSARY.md | bytes=5487 | sha256=5c8356720877b3bb21330e7d6811f80782c54a2064f811bd596250d1083dce25
 44. [reference] [knowledge] Docs/Technical-Reference/IMPLEMENTATION_DECISIONS.md | bytes=7397 | sha256=897868478c961de8a8d08adf912ac191ddb3abdf20339bddc04f03985a83beda
-45. [reference] [knowledge] Docs/Technical-Reference/IMPLEMENTATION_STATUS.md | bytes=9049 | sha256=2e628fb2ac5197066fa284637abd2c65627be0e3773a121b0cd581401db4f411
-46. [reference] [knowledge] Docs/Technical-Reference/INTEGRATION_BRIDGE.md | bytes=5047 | sha256=ccfeda8397c19f862a9de4ddeb4745475a4a888e9628b197988d2b7fc07ca3d8
-47. [reference] [knowledge] Docs/Technical-Reference/LOCAL_VALIDATION.md | bytes=4505 | sha256=97cbf501eb88e3ceb79c2dcd336fa0adc1a4d5e2d1d9f609db248e92cbe0fb51
-48. [reference] [knowledge] Docs/Technical-Reference/ORGO_INTERACTION_MODEL.md | bytes=55691 | sha256=f8f2088b8084326170117dd697d6118250fce51bcca6b9e52df7350e755d3c41
-49. [reference] [knowledge] Docs/Technical-Reference/SCENARIO_INJECTOR.md | bytes=2733 | sha256=bae7380e9e12dbfdce765370ed9c5255c00d3678383cf13f0b3a5a33134c3ab2
-50. [reference] [knowledge] Docs/Technical-Reference/Semantic-Charters.md | bytes=7137 | sha256=ecb6cd50387aadf9821ba0a9faa2b111257038c0393a6a70814081f36c0ee7ca
-51. [reference] [knowledge] Docs/Technical-Reference/TARGET_ARCHITECTURE.md | bytes=19294 | sha256=9cdff147865d112ac2fa96e61cc81cb204cf90c992f172bbc29be889b61ddc8f
-52. [reference] [knowledge] Docs/Technical-Reference/UI_AND_KOALI_INTEGRATION.md | bytes=12556 | sha256=c0b2b46a8604ecfef48b135baba8098fb1cd0c10ded38c469239e86867ec7963
-53. [reference] [knowledge] Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md | bytes=5611 | sha256=216f9cc8d5b655953ccff79c7a6e6a3b38d76b8b1399ae4e4e738144f4480c2e
-54. [reference] [knowledge] Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md | bytes=8752 | sha256=32fb353b996b3127d47b1c506182aef0d9b7ea36179d2bbb880db4997570d0f8
-55. [reference] [knowledge] Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md | bytes=6121 | sha256=07b9e69fd6c1d2d96afa0e17a0d9ee91d031d7f8fc4b9e82031864cc681778ed
-56. [reference] [knowledge] Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md | bytes=3091 | sha256=3218eca4e4b8dddca16a36b73ee7efdad46f77865605e396deb9f04381785daf
-57. [reference] [knowledge] Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md | bytes=1931 | sha256=17f1b6c211135258ad1eb5b6d128e52855a45542b9bafa0221a492d9273a9281
-58. [reference] [knowledge] Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md | bytes=1969 | sha256=629c53ebcab194b0a908102faa7abb93c0a3bf0e91d9d2bc7475bb1f1715af37
-59. [reference] [knowledge] Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md | bytes=3564 | sha256=e28fee1554d90061145236fa6853bb956ccba3dbab1150cc53e02a29f889b212
-60. [reference] [knowledge] Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md | bytes=1759 | sha256=ed7bc772cf62b5d9e2c031a4c898a9cdd462b76f680a22ad34d346a283b14417
-61. [reference] [knowledge] Docs/Technical-Reference/WikiData-Orgo_Chart.md | bytes=6733 | sha256=61469f1577eb077a6a5ac0318980c39075d7e9bc65df07524185931cf653dd77
-62. [reference] [knowledge] ENGINEERING_PROFILE.md | bytes=3241 | sha256=97776bf0756f3ab1f1c4d4d7150b8cb63b5c9eca83accd36c8aab80f3fa08307
-63. [reference] [knowledge] OIM_INTERFACES_OVERLAY.md | bytes=553 | sha256=3023814230e95664e70e12447742deb2756b5b6325375b8c3539f13264c45d8f
-64. [reference] [knowledge] OVERLAY_BACKUP_RESTORE_URL.md | bytes=781 | sha256=dd22cff797f54cf2333bb48ec85378c63d6c1c3937a4057899a61e665deb9636
-65. [reference] [knowledge] OVERLAY_COMPOSE_DYNAMIC_PORTS.md | bytes=420 | sha256=9e52772e11f529e77882bd3031acbc3a32cda86581bd07072228546fc807b739
-66. [reference] [knowledge] README.md | bytes=3814 | sha256=069501a4194158a9b4a692d555be5228ba1fe22abca961b1359c53ebb1f46a6e
-67. [reference] [knowledge] tools/docs-screenshots/README.md | bytes=1667 | sha256=29b72c9aef2f253f2fbe249e319e6fe840b9a9442c9b638511bab24d771d2494
-68. [reference] [knowledge] tools/scenario-injector/AI_TEMPLATE.md | bytes=5169 | sha256=9054e5376ac66255f78f568b1d4249f97b6f58c067e37db8e2624425b04b1f4b
-69. [reference] [knowledge] tools/scenario-injector/README.md | bytes=4063 | sha256=b1d67bdff3960dfe8b673021b90289bbca1b81c0dc07fade09e1fadd1dfca626
-70. [reference] [knowledge] validation/completion/STATUS.md | bytes=438 | sha256=f6c47d66c878ada27597ec5d566515a525c11e0ff281b50d93293687a463bcf3
-71. [reference] [knowledge] validation/README.md | bytes=296 | sha256=bbb8609f65d9da277774b5461f9b7abff436cdd80898360c74c0cc0a6ce385d3
+45. [reference] [knowledge] Docs/Technical-Reference/IMPLEMENTATION_STATUS.md | bytes=9556 | sha256=8ab5fde3bce92b5de7e7df1fd770c80ada5646a7394455a478e5358f550d83b5
+46. [reference] [knowledge] Docs/Technical-Reference/INTEGRATION_BRIDGE.md | bytes=5941 | sha256=5e34731d30054d327d6e158b1ed4e31cafb6b1d7e4210850a268f7af8b22a64f
+47. [reference] [knowledge] Docs/Technical-Reference/INTERACTION_KERNEL.md | bytes=1462 | sha256=48901e22be60f39b82d8ae23b4825eafc119ce4ef6ea7e1df4f7b934b49da558
+48. [reference] [knowledge] Docs/Technical-Reference/LOCAL_VALIDATION.md | bytes=4505 | sha256=97cbf501eb88e3ceb79c2dcd336fa0adc1a4d5e2d1d9f609db248e92cbe0fb51
+49. [reference] [knowledge] Docs/Technical-Reference/ORGO_INTERACTION_MODEL.md | bytes=55691 | sha256=f8f2088b8084326170117dd697d6118250fce51bcca6b9e52df7350e755d3c41
+50. [reference] [knowledge] Docs/Technical-Reference/SCENARIO_INJECTOR.md | bytes=2733 | sha256=bae7380e9e12dbfdce765370ed9c5255c00d3678383cf13f0b3a5a33134c3ab2
+51. [reference] [knowledge] Docs/Technical-Reference/Semantic-Charters.md | bytes=7137 | sha256=ecb6cd50387aadf9821ba0a9faa2b111257038c0393a6a70814081f36c0ee7ca
+52. [reference] [knowledge] Docs/Technical-Reference/TARGET_ARCHITECTURE.md | bytes=19294 | sha256=9cdff147865d112ac2fa96e61cc81cb204cf90c992f172bbc29be889b61ddc8f
+53. [reference] [knowledge] Docs/Technical-Reference/UI_AND_KOALI_INTEGRATION.md | bytes=12556 | sha256=c0b2b46a8604ecfef48b135baba8098fb1cd0c10ded38c469239e86867ec7963
+54. [reference] [knowledge] Docs/Technical-Reference/v3/1-Orgo v3 - Database Schema Reference.md | bytes=5611 | sha256=216f9cc8d5b655953ccff79c7a6e6a3b38d76b8b1399ae4e4e738144f4480c2e
+55. [reference] [knowledge] Docs/Technical-Reference/v3/2-Orgo v3 - Architecture and Invariants.md | bytes=8752 | sha256=32fb353b996b3127d47b1c506182aef0d9b7ea36179d2bbb880db4997570d0f8
+56. [reference] [knowledge] Docs/Technical-Reference/v3/3-Orgo v3 - Task Case and Workflow Contract.md | bytes=6121 | sha256=07b9e69fd6c1d2d96afa0e17a0d9ee91d031d7f8fc4b9e82031864cc681778ed
+57. [reference] [knowledge] Docs/Technical-Reference/v3/4-Orgo v3 - Domain Modules.md | bytes=3091 | sha256=3218eca4e4b8dddca16a36b73ee7efdad46f77865605e396deb9f04381785daf
+58. [reference] [knowledge] Docs/Technical-Reference/v3/5-Orgo v3 - Labels Profiles and Cyclic Overview.md | bytes=1931 | sha256=17f1b6c211135258ad1eb5b6d128e52855a45542b9bafa0221a492d9273a9281
+59. [reference] [knowledge] Docs/Technical-Reference/v3/6-Orgo v3 - Insights and Analytics.md | bytes=1969 | sha256=629c53ebcab194b0a908102faa7abb93c0a3bf0e91d9d2bc7475bb1f1715af37
+60. [reference] [knowledge] Docs/Technical-Reference/v3/7-Orgo v3 - API Surface.md | bytes=3564 | sha256=e28fee1554d90061145236fa6853bb956ccba3dbab1150cc53e02a29f889b212
+61. [reference] [knowledge] Docs/Technical-Reference/v3/8-Orgo v3 - Documentation Index.md | bytes=1759 | sha256=ed7bc772cf62b5d9e2c031a4c898a9cdd462b76f680a22ad34d346a283b14417
+62. [reference] [knowledge] Docs/Technical-Reference/WikiData-Orgo_Chart.md | bytes=6733 | sha256=61469f1577eb077a6a5ac0318980c39075d7e9bc65df07524185931cf653dd77
+63. [reference] [knowledge] ENGINEERING_PROFILE.md | bytes=3241 | sha256=97776bf0756f3ab1f1c4d4d7150b8cb63b5c9eca83accd36c8aab80f3fa08307
+64. [reference] [knowledge] OIM_INTERFACES_OVERLAY.md | bytes=553 | sha256=3023814230e95664e70e12447742deb2756b5b6325375b8c3539f13264c45d8f
+65. [reference] [knowledge] OVERLAY_BACKUP_RESTORE_URL.md | bytes=781 | sha256=dd22cff797f54cf2333bb48ec85378c63d6c1c3937a4057899a61e665deb9636
+66. [reference] [knowledge] OVERLAY_COMPOSE_DYNAMIC_PORTS.md | bytes=420 | sha256=9e52772e11f529e77882bd3031acbc3a32cda86581bd07072228546fc807b739
+67. [reference] [knowledge] README.md | bytes=3814 | sha256=069501a4194158a9b4a692d555be5228ba1fe22abca961b1359c53ebb1f46a6e
+68. [reference] [knowledge] SENIOR_ARCHITECTURE_PATTERNS.md | bytes=1551 | sha256=bc0656d9dfad706e202f65847944487f3c92b937617c82414171ef10eff33bbe
+69. [reference] [knowledge] tools/docs-screenshots/README.md | bytes=1667 | sha256=29b72c9aef2f253f2fbe249e319e6fe840b9a9442c9b638511bab24d771d2494
+70. [reference] [knowledge] tools/scenario-injector/AI_TEMPLATE.md | bytes=5169 | sha256=9054e5376ac66255f78f568b1d4249f97b6f58c067e37db8e2624425b04b1f4b
+71. [reference] [knowledge] tools/scenario-injector/README.md | bytes=4063 | sha256=b1d67bdff3960dfe8b673021b90289bbca1b81c0dc07fade09e1fadd1dfca626
+72. [reference] [knowledge] validation/completion/STATUS.md | bytes=438 | sha256=f6c47d66c878ada27597ec5d566515a525c11e0ff281b50d93293687a463bcf3
+73. [reference] [knowledge] validation/konnaxion-orgo-ik/README.md | bytes=2536 | sha256=51853561265d418fffbbe724594e0ed8f3860095bc8954d60a64bdfbc69bd963
+74. [reference] [knowledge] validation/README.md | bytes=296 | sha256=bbb8609f65d9da277774b5461f9b7abff436cdd80898360c74c0cc0a6ce385d3
 
 
 ================================================================================================
@@ -2521,8 +2524,8 @@ A real Docker/Chromium acceptance run was **not** executed in the artifact-gener
 FILE: Docs/Technical-Reference/API_IMPLEMENTED.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: d210e31589cc6f69f31c1b396322c6ec8cf33885c4f4aa53a8a58bc593169121
-CONTENT_BYTES: 8057
+CONTENT_SHA256: d81edfd77ef5a55d3f3a1e5fe28da210686b29c0cc553d42c99f147584109d78
+CONTENT_BYTES: 8496
 ================================================================================================
 
 # Orgo — Implemented HTTP routes
@@ -2649,6 +2652,13 @@ Health, login/recovery/reset and OIDC initiation/completion are explicitly publi
 | PATCH | `/api/v3/tasks/:id/case` | `work.controller.ts` |
 
 Total: **114 routes**.
+
+
+## Interaction Kernel
+
+- `POST /api/v3/ik/interactions` — authenticated machine boundary for `governance.decision.execute/1.0.0`. The authenticated organization is authoritative; the handler resolves the configured active workflow and creates an Orgo `Signal` through the existing intake/outbox path.
+
+This endpoint is implemented in the main Orgo product, not `Orgo_Worlds`. End-to-end Konnaxion↔Orgo qualification remains pending.
 
 
 ================================================================================================
@@ -3655,8 +3665,8 @@ Insights reads operational data through Prisma and cannot mutate canonical Work 
 FILE: Docs/Technical-Reference/IMPLEMENTATION_STATUS.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: 2e628fb2ac5197066fa284637abd2c65627be0e3773a121b0cd581401db4f411
-CONTENT_BYTES: 9049
+CONTENT_SHA256: 8ab5fde3bce92b5de7e7df1fd770c80ada5646a7394455a478e5358f550d83b5
+CONTENT_BYTES: 9556
 ================================================================================================
 
 # Orgo — implementation status (2026-09-15)
@@ -3741,7 +3751,7 @@ RC1 remains the official immutable tagged release baseline until a new release c
 ## Concrete boundaries
 
 
-- Native Kristal/Konnaxion/Architect/kOA schemas and SDKs, and canonical Koali/Capsule contract packages, are absent from the supplied workspace. The shipped bridges and `orgo-surface/v1` are explicit Orgo contracts. Their existence does not assert native compatibility or host admission.
+- Native Kristal/Architect/kOA schemas and SDKs, and canonical Koali/Capsule contract packages, are absent from the supplied workspace. The shipped generic bridges and `orgo-surface/v1` are explicit Orgo contracts. Konnaxion is handled separately through the implemented Interaction Kernel profile boundary; end-to-end Konnaxion↔Orgo qualification is still pending.
 - A gateway must implement delivery/idempotency semantics for the chosen SMS or webhook provider. Browser push, a vendor-specific gateway and a built-in SMTP server are not claimed. The supplied email adapter consumes an existing IMAP server or mail archives.
 - Core workflows, domain operations and UI are implemented to the documented generic contracts. Organization-specific HR/education processes, provider receipt predicates, routing rules and compensation operations must be configured with actual policy/content. Example plans are examples, not automatic deployment policy.
 - Work scope identifiers are explicit authorization perimeters. A separate team/location hierarchy catalog or arbitrary policy language is not implied.
@@ -3751,20 +3761,24 @@ RC1 remains the official immutable tagged release baseline until a new release c
 
 These are the actual integration/configuration and acceptance boundaries. No endpoint fabricates external success or depends on Spaces to keep Orgo functional.
 
+### Interaction Kernel (Konnaxion)
+
+Implemented in the main Orgo product: authenticated `POST /api/v3/ik/interactions`, `governance.decision.execute/1.0.0` admission, semantic idempotency, active workflow resolution and handoff to the existing `Signal`/outbox/workflow path. Konnaxion accountability output uses `accountability.impact.publish/1.0.0`. **Qualification state:** implementation present; cross-product E2E pending.
+
 
 ================================================================================================
 FILE: Docs/Technical-Reference/INTEGRATION_BRIDGE.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
-CONTENT_SHA256: ccfeda8397c19f862a9de4ddeb4745475a4a888e9628b197988d2b7fc07ca3d8
-CONTENT_BYTES: 5047
+CONTENT_SHA256: 5e34731d30054d327d6e158b1ed4e31cafb6b1d7e4210850a268f7af8b22a64f
+CONTENT_BYTES: 5941
 ================================================================================================
 
 # Orgo — Explicit integration bridge protocol
 
 > **Target Kristal v5 boundary:** the generic direct `Kristal validate` bridge documented here is the current compatibility path. New ecosystem integration should converge on Orgo post-commit delivery → Interaction Kernel → Da’at → Kristal, with Kristal outputs returning as opaque artifact references/receipts. This document does not claim that native IK/Da’at delivery is implemented in this Orgo snapshot.
 
-The concrete APIs of Kristal, Konnaxion, Architect and kOA are not supplied. The adapters in `apps/api/src/orgo/integrations` implement the following **Orgo-owned bridge protocol**, not assumed native provider endpoints. A provider-side adapter must translate it and enforce its own authorization. Never point this code at a native API without an explicit compatible adapter.
+The generic adapters in `apps/api/src/orgo/integrations` remain Orgo-owned compatibility bridges for providers whose native contract is not implemented here. **Konnaxion is now an explicit exception:** the main Orgo product implements the Interaction Kernel boundary `governance.decision.execute/1.0.0` and emits `accountability.impact.publish/1.0.0` through the Konnaxion adapter. Kristal, Architect and kOA remain on the generic bridge path unless their native profile is explicitly implemented.
 
 Configure one exact endpoint per provider: `KRISTAL_BRIDGE_URL`, `KONNAXION_BRIDGE_URL`, `ARCHITECT_BRIDGE_URL`, `KOA_BRIDGE_URL`, with the corresponding optional `_TOKEN`. Production requires HTTPS. Development permits HTTP on localhost/127.0.0.1 only. URLs come from deployment configuration, never request payloads; redirects are rejected.
 
@@ -3787,7 +3801,7 @@ Configured operation allowlists:
 | Adapter | Operations |
 | --- | --- |
 | Kristal | `validate` (compatibility operation; target v5 build/revision path is IK → Da’at) |
-| Konnaxion | `publish`, `distribute` |
+| Konnaxion | Interaction Kernel `accountability.impact.publish/1.0.0` (generic `publish`/`distribute` only as legacy compatibility where explicitly configured) |
 | Architect | `generate` |
 | kOA | `execute` |
 
@@ -3814,6 +3828,55 @@ Outbox delivery is at least once. Retries use the same external identity. No ext
 No bridge operation creates a distributed transaction across Orgo and a provider. For knowledge publication, Orgo sends a stable snapshot/reference after local commit and later reconciles the provider result. A returned Kristal artifact is referenced; it is not copied into the Orgo operational model as a competing source of truth.
 
 For notifications, `in_app` delivery is implemented; email uses configured `SMTP_URL` and `SMTP_FROM`. SMS and webhook delivery can use fixed `SMS_GATEWAY_URL` / `WEBHOOK_GATEWAY_URL` endpoints and corresponding `_TOKEN` variables. The endpoint is configured by the operator, never taken from a recipient address. POST payload: `{id, organization_id, recipient, subject, body, correlation_id, channel}` with stable organization/notification Idempotency-Key. A gateway must durably deduplicate and return `{"status":"delivered"}` only when its delivery contract is satisfied. A generic gateway is not a native SMS vendor adapter. Browser push is not implemented. SMTP uses a stable Message-ID but does not provide exactly-once guarantees.
+
+
+## Konnaxion Interaction Kernel boundary
+
+The main Orgo API owns `POST /api/v3/ik/interactions`. It authenticates through the normal tenant API-token boundary, validates `governance.decision.execute/1.0.0`, resolves the configured active workflow version and creates the Orgo-owned `Signal` through `IntakeService`. Existing Orgo idempotency, outbox and workflow processing remain authoritative; no parallel IK database is introduced.
+
+Outbound Konnaxion accountability delivery uses `KONNAXION_IK_URL` and `KONNAXION_IK_TOKEN`. End-to-end conformance is not claimed until replay, conflict, processing and redrive are exercised against Konnaxion.
+
+
+================================================================================================
+FILE: Docs/Technical-Reference/INTERACTION_KERNEL.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 48901e22be60f39b82d8ae23b4825eafc119ce4ef6ea7e1df4f7b934b49da558
+CONTENT_BYTES: 1462
+================================================================================================
+
+# Orgo Interaction Kernel boundary
+
+Orgo core owns the operational consequence of `governance.decision.execute/1.0.0`.
+`Orgo_Worlds` does not create Signal/Case/Task state.
+
+## Inbound
+
+`POST /api/v3/ik/interactions`
+
+The request is authenticated by the normal Orgo bearer-token boundary. The token's
+organization is authoritative; `target.organization` must match it.
+
+Accepted profile: `governance.decision.execute@1.0.0`.
+
+The boundary resolves `KONNAXION_DECISION_WORKFLOW_CODE` to the current active
+WorkflowVersion, then creates exactly one Signal and queues that workflow. Existing
+`IdempotencyRecord`, Signal and Outbox infrastructure provide replay safety.
+
+Required token permissions must cover both intake and the actions executed later by the worker.
+For the qualification workflow that creates a Case, a Task and publishes impact, use:
+`signals:write`, `signals:read`, `workflows:execute`, `work:write`, `work:read`,
+`integrations:write` and `integrations:read`. The last read scope is used by qualification
+inspection; production roles may omit it if no readback is required.
+
+For local Docker qualification only, `ORGO_ALLOW_INSECURE_LOCAL_PROVIDER_HTTP=true`
+permits `http://host.docker.internal/...` for the Konnaxion callback. It is false by
+default and does not permit arbitrary HTTP provider hosts.
+
+## Outbound
+
+The Konnaxion integration adapter emits `accountability.impact.publish@1.0.0` to
+`KONNAXION_IK_URL`, using `KONNAXION_IK_TOKEN`.
 
 
 ================================================================================================
@@ -9223,6 +9286,45 @@ Executable source, `apps/api/prisma/schema.prisma`, the current Prisma migration
 
 
 ================================================================================================
+FILE: SENIOR_ARCHITECTURE_PATTERNS.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: bc0656d9dfad706e202f65847944487f3c92b937617c82414171ef10eff33bbe
+CONTENT_BYTES: 1551
+================================================================================================
+
+# Senior Architecture Pattern Alignment
+
+Orgo already has a canonical selection in `docs/Technical-Reference/TARGET_ARCHITECTURE.md` §17. This root note makes that selection discoverable without redefining it.
+
+| Pattern | Orgo decision |
+|---|---|
+| Modular Monolith | **Primary architecture** |
+| Hexagonal Architecture | **Selective at meaningful boundaries** |
+| Anti-Corruption Layer | **Required for external systems** |
+| Idempotency | **Required at retry-prone boundaries** |
+| Transactional Outbox | **Required for durable post-commit effects** |
+| CQRS | **Light/read-side only** |
+| Circuit Breaker / Timeout / Backoff | **External/fallible boundaries** |
+| Bulkhead | **External/AI/high-cost workloads when needed** |
+| Graceful Degradation | **When semantically safe** |
+| Dead Letter Queue / manual redrive | **Async poison/permanent failures when needed** |
+| Saga / Process Manager | **Only for long-running cross-system workflows** |
+| Broker Pub/Sub | **Not required initially** |
+| Event Sourcing | **Not selected** |
+| BFF as a separate service | **Not selected currently** |
+| Sharding / Cell architecture / Service mesh | **Not selected currently** |
+
+Orgo also applies explicit health/readiness and observability conventions: correlation IDs, system metrics, worker heartbeat, and liveness/readiness separation.
+
+## Canonical references
+
+- `docs/Technical-Reference/TARGET_ARCHITECTURE.md` — especially §§12–17
+- `docs/Technical-Reference/ARCHITECTURE_TO_CODE.md`
+- `docs/Technical-Reference/BOUNDARIES_AND_OWNERSHIP.md`
+
+
+================================================================================================
 FILE: tools/docs-screenshots/README.md
 AUTHORITY: reference
 CONTENT_ROLE: knowledge
@@ -9604,6 +9706,93 @@ CONTENT_BYTES: 438
 API/tests/web TypeScript checks and architecture checks exited successfully. Prisma client was generated. Python email adapter, Node operational scripts and shell backup/restore scripts passed syntax checks.
 
 Final runtime, migrations against a database, tests, Docker/browser and provider acceptance were not executed for this delivery, as requested. Run the supplied local validation procedure.
+
+
+================================================================================================
+FILE: validation/konnaxion-orgo-ik/README.md
+AUTHORITY: reference
+CONTENT_ROLE: knowledge
+CONTENT_SHA256: 51853561265d418fffbbe724594e0ed8f3860095bc8954d60a64bdfbc69bd963
+CONTENT_BYTES: 2536
+================================================================================================
+
+# Konnaxion ↔ Orgo Interaction Kernel local qualification
+
+This kit qualifies the main-product path after the Worlds separation:
+
+`DecisionRecord -> governance.decision.execute -> Signal -> WorkflowVersion -> Case + Task -> accountability.impact.publish -> OrgoImpactPublication`
+
+It intentionally does not use `Konnaxion_Worlds` or `Orgo_Worlds` as business-runtime owners.
+
+## Prerequisites
+
+- Windows + PowerShell 7 (`pwsh`)
+- Docker Desktop running
+- repositories at:
+  - `C:\mycode\Konnaxion\Konnaxion`
+  - `C:\mycode\Orgo\Orgo`
+- existing Konnaxion local env files under `backend\.envs\.local\`
+- Orgo `.env` with the correct existing PostgreSQL password if an existing volume is reused
+
+## 1. Prepare local runtime
+
+From any directory:
+
+```powershell
+pwsh -NoProfile -File C:\mycode\Orgo\Orgo\validation\konnaxion-orgo-ik\prepare-local.ps1
+```
+
+The script:
+
+1. configures the IK routing variables;
+2. starts/migrates/seeds Orgo;
+3. publishes `konnaxion_decision_v1`;
+4. issues a dedicated Orgo API token for Konnaxion;
+5. writes the token/organization UUID to Konnaxion's existing local env;
+6. migrates/recreates Konnaxion Django + Celery;
+7. verifies container-to-container reachability through `host.docker.internal`.
+
+Secrets are written to the local environment files and are not printed.
+
+## 2. Run the E2E
+
+```powershell
+pwsh -NoProfile -File C:\mycode\Orgo\Orgo\validation\konnaxion-orgo-ik\run-e2e.ps1
+```
+
+The runner proves:
+
+- one published immutable Konnaxion DecisionRecord;
+- one durable Konnaxion InteractionEmission;
+- Orgo admission under the authenticated organization;
+- exactly one Orgo Signal;
+- worker processing to exactly one Case and one Task;
+- one Konnaxion IntegrationOperation reaching `SUCCEEDED`;
+- exactly one Konnaxion OrgoImpactPublication;
+- semantic replay does not duplicate Signal or impact;
+- divergent content with the same idempotency key returns `IK_IDEMPOTENCY_CONFLICT` / HTTP 409.
+
+The runtime script does not mark the integration qualified unless all assertions pass.
+
+## Narrow repository tests
+
+Konnaxion:
+
+```powershell
+cd C:\mycode\Konnaxion\Konnaxion\backend
+pytest konnaxion/ethikos/tests/test_interaction_kernel_contract.py konnaxion/ethikos/tests/test_interaction_kernel_runtime.py
+```
+
+Orgo (with a dedicated `TEST_DATABASE_URL` / `DATABASE_URL` as required by the repo):
+
+```powershell
+cd C:\mycode\Orgo\Orgo
+npm run test
+npm run test:integration
+npm run check:architecture
+```
+
+The cross-product E2E remains separate from the repositories' general qualification status.
 
 
 ================================================================================================

@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/technology/kristal/overview/index.html.md
 > Route: /technology/kristal/overview
 > Source: app\technology\kristal\overview\page.mdx
-> Generated: 2026-09-11T11:53:57.766Z
+> Generated: 2026-09-22T19:18:32.402Z
 
 [Open the HTML page](https://initkoa.org/technology/kristal/overview)
 

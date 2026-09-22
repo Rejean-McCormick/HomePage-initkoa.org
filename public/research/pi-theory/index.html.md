@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/research/pi-theory/index.html.md
 > Route: /research/pi-theory
 > Source: app\research\pi-theory\page.mdx
-> Generated: 2026-09-11T11:53:57.766Z
+> Generated: 2026-09-22T19:18:32.402Z
 
 [Open the HTML page](https://initkoa.org/research/pi-theory)
 

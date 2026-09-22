@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/infrastructures/kin-city/index.html.md
 > Route: /infrastructures/kin-city
 > Source: app\infrastructures\kin-city\page.tsx
-> Generated: 2026-09-11T11:53:57.766Z
+> Generated: 2026-09-22T19:18:32.402Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kin-city)
 
