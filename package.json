@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run context-packs:validate && npm run reading:ai-index && node scripts/generate-ai-assets.mjs && next build",
+    "build": "npm run architecture:validate && npm run context-packs:validate && npm run reading:ai-index && node scripts/generate-ai-assets.mjs && next build",
     "start": "next start",
     "lint": "next lint",
     "gen:ai": "node scripts/generate-ai-assets.mjs",
@@ -13,7 +13,8 @@
     "reading:validate": "node scripts/validate-reading-import.mjs",
     "reading:ai-index": "node scripts/generate-reading-ai-index.mjs",
     "reading:sync": "npm run reading:import && npm run reading:validate && npm run reading:ai-index",
-    "context-packs:validate": "node scripts/validate-context-packs.mjs"
+    "context-packs:validate": "node scripts/validate-context-packs.mjs",
+    "architecture:validate": "node scripts/validate-final-system.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

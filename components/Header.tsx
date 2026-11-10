@@ -74,6 +74,8 @@ const NAV_ITEMS: NavItem[] = [
     path: '/platforms',
     icon: <Layers className="w-4 h-4" />,
     children: [
+      { label: 'Final-system architecture', desc: '24 functional chains · 53 owners · target design', path: '/ecosystem' },
+      { label: 'Functional chains', desc: 'Complete target capability catalogue', path: '/ecosystem/functional-chains' },
       { label: 'Platforms', desc: 'Konnaxion & Orgo (Software)', path: '/platforms' },
       { label: 'Infrastructures', desc: 'Kin City & Kristal Farms', path: '/infrastructures' },
     ],
