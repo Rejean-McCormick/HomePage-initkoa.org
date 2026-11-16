@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/initiatives
 > Markdown mirror: https://initkoa.org/initiatives/index.html.md
 > Route: /initiatives
-> Source: app\initiatives\page.tsx
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/initiatives/page.tsx
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/initiatives)
 
@@ -64,9 +64,9 @@ System architecture and components (with clear separation between public explana
 
 Ariane
 
-Voting Machine
+Kristal
 
-SwarmCraft
+Orgo
 
 View stack
 

@@ -20,7 +20,6 @@ export const DEFAULT_EXCLUDE_PREFIXES = Object.freeze([
   // Excluded from AI artifacts and compact AI discovery.
   "/kreature",
   "/initiatives/ukraine-peace-plan/fvr",
-  "/technology/swarmcraft",
 ]);
 
 export const DEFAULT_INCLUDE_DYNAMIC_SEGMENTS = false;

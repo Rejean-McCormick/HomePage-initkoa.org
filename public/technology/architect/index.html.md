@@ -1,16 +1,18 @@
-# Semantik Architect
+# SemantiK Architect
 
 > Canonical HTML: https://initkoa.org/technology/architect
 > Markdown mirror: https://initkoa.org/technology/architect/index.html.md
 > Route: /technology/architect
-> Source: app\technology\architect\page.mdx
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/technology/architect/page.mdx
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/technology/architect)
 
 "A deterministic multilingual rendering layer for structured knowledge, Kristal query results, and auditable natural-language generation.",
 
-# Semantik Architect
+# SemantiK Architect
+
+> Cette présentation décrit une version de l’architecture. Pour l’état actuel du moteur, les limites et ses contrats de lecture, consulter le dépôt SemantiK Architect (https://github.com/Rejean-McCormick/SemantiK-Architect).
 
 **Semantik Architect** is a deterministic multilingual rendering and natural-language generation layer for structured knowledge.
 

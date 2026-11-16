@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/platforms/orgo/guarantees
 > Markdown mirror: https://initkoa.org/platforms/orgo/guarantees/index.html.md
 > Route: /platforms/orgo/guarantees
-> Source: app\platforms\orgo\guarantees\page.mdx
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/platforms/orgo/guarantees/page.mdx
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/platforms/orgo/guarantees)
 

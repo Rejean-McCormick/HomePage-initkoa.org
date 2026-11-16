@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/ariane/concepts/glossary
 > Markdown mirror: https://initkoa.org/technology/ariane/concepts/glossary/index.html.md
 > Route: /technology/ariane/concepts/glossary
-> Source: app\technology\ariane\concepts\glossary\page.mdx
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/technology/ariane/concepts/glossary/page.mdx
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/technology/ariane/concepts/glossary)
 

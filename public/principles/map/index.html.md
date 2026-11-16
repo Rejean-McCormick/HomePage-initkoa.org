@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/principles/map
 > Markdown mirror: https://initkoa.org/principles/map/index.html.md
 > Route: /principles/map
-> Source: app\principles\map\page.js
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/principles/map/page.js
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/principles/map)
 
@@ -38,9 +38,9 @@ A personal worldview track. Explicitly quarantined from civic design and referen
 
 Related (Technology)
 
-AI alignment, meta-cognition, and governance mechanisms are documented under Technology.
+Research on personality simulation and psycho-causal mechanisms is documented under Technology. Safety and moderation are separate topics.
 
-me artificielle (Alignement & méta-cognition) →
+me artificielle (graphe psycho-causal) →
 
 Map
 

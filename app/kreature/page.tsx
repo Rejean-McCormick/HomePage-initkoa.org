@@ -30,7 +30,7 @@ const SECTIONS = [
   {
     title: "L'Anatomie",
     subtitle: "La Structure",
-    desc: "Disséquez la bête. Découvrez ses organes : Orgo (Corps), Konnaxion (Esprit), SwarmCraft (Mémoire). Comprenez comment les pièces s'assemblent.",
+    desc: "Disséquez la bête. Découvrez ses organes : Orgo (Corps), Konnaxion (Esprit), Kristal (Connaissances). Comprenez comment les pièces s'assemblent.",
     href: "/kreature/anatomie",
     icon: <Dna className="w-8 h-8 text-rose-600" />,
     color: "bg-rose-50 border-rose-200 hover:border-rose-300",

@@ -5,7 +5,7 @@ import PageSection from '@/components/PageSection';
 export const metadata = {
   title: 'Glossary – Principles',
   description:
-    'Shared vocabulary used across Âme artificielle, Civic Principles & Ethics, Logos & Mythos, and Cosmic Etherism (optional).',
+    'Shared vocabulary used across Âme artificielle, Civic Principles & Ethics, Language & Myth, and Cosmic Etherism (optional).',
 };
 
 const TERMS = [
@@ -27,18 +27,18 @@ const TERMS = [
   },
   {
     term: 'Domain',
-    def: 'A clearly separated area of principles and practices (Âme artificielle, Civic Principles & Ethics, Logos & Mythos, Cosmic Etherism).',
+    def: 'A clearly separated area of principles and practices (Âme artificielle, Civic Principles & Ethics, Language & Myth, Cosmic Etherism).',
   },
   {
     term: 'Âme artificielle',
-    def: 'Work focused on making AI systems safe and beneficial through technical design, evaluation, governance, and deployment constraints.',
+    def: 'Experimental work on psycho-causal representations of dispositions, beliefs, memories, emotions and reactions. Safety controls belong to a separate layer.',
   },
   {
     term: 'Civic Principles & Ethics',
     def: 'Norms and structures for society: institutions, rights and duties, legitimacy, accountability, transparency, and public ethics.',
   },
   {
-    term: 'Logos & Mythos',
+    term: 'Language & Myth',
     def: 'Language as infrastructure: meaning, narrative, symbols, and speech acts—used as tools for coordination, with safeguards against manipulation.',
   },
   {

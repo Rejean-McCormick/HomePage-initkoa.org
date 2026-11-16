@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/principles
 > Markdown mirror: https://initkoa.org/principles/index.html.md
 > Route: /principles
-> Source: app\principles\page.js
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/principles/page.js
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/principles)
 
@@ -61,15 +61,15 @@ it prevents category mistakes (e.g., treating fiction as authority, or treating 
 
 me artificielle
 
-Principles for building and deploying AI responsibly: safety, control, oversight, and
-governance-by-design. This is the prototype / engineering domain.
+Experimental research on modeling personality, affects, memory and reactions through a
+psycho-causal graph. Safety mechanisms remain a separate layer.
 
 Civic Principles & Ethics
 
 Institutions, rights, duties, due process, and accountability. This is the
 law / governance domain.
 
-Logos & Mythos
+Language & Myth
 
 Language as infrastructure: narratives, symbols, speech acts, and how meaning shapes coordination.
 Used as a tool , with safeguards against manipulation.

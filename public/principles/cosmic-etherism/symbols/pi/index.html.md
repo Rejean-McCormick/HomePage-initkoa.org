@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/principles/cosmic-etherism/symbols/pi
 > Markdown mirror: https://initkoa.org/principles/cosmic-etherism/symbols/pi/index.html.md
 > Route: /principles/cosmic-etherism/symbols/pi
-> Source: app\principles\cosmic-etherism\symbols\pi\page.js
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/principles/cosmic-etherism/symbols/pi/page.js
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/principles/cosmic-etherism/symbols/pi)
 

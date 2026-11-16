@@ -170,10 +170,10 @@ export default function InitiativesPage() {
                 <Layers className="w-3 h-3 mr-2" /> Ariane
               </span>
               <span className="flex items-center text-xs font-bold uppercase tracking-widest bg-[#1e6864]/5 px-3 py-1.5 rounded text-[#1e6864] border border-[#1e6864]/20">
-                <Cpu className="w-3 h-3 mr-2" /> Voting Machine
+                <Cpu className="w-3 h-3 mr-2" /> Kristal
               </span>
               <span className="flex items-center text-xs font-bold uppercase tracking-widest bg-[#1e6864]/5 px-3 py-1.5 rounded text-[#1e6864] border border-[#1e6864]/20">
-                <Server className="w-3 h-3 mr-2" /> SwarmCraft
+                <Server className="w-3 h-3 mr-2" /> Orgo
               </span>
             </div>
             <div className="flex items-center text-[#1e6864] font-bold group-hover:translate-x-1 transition-transform">

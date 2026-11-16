@@ -3,33 +3,45 @@
 > Canonical HTML: https://initkoa.org/technology
 > Markdown mirror: https://initkoa.org/technology/index.html.md
 > Route: /technology
-> Source: app\technology\page.tsx
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/technology/page.tsx
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/technology)
 
-Technology
+kOA / TECHNOLOGIE
 
-This stack is organized around capabilities —what the system lets
-communities and organizations do—rather than internal technical mechanisms. The focus
-is: portable knowledge , legitimate decisions , and
-reliable execution , under real-world constraints (offline, auditable,
-governable).
+Un écosystème.
+Bien plus qu’une liste d’outils.
 
-Reading guide: from verifiable knowledge →
-navigation → decision & verification → execution & continuity .
+Des applications concrètes, des fondations techniques, des outils de connaissance et des recherches.
+Chaque projet a son rôle, ses limites et sa documentation — sans confondre présence sur GitHub et validation en production.
 
-Domain: Réjean McCormick
+Explorer le catalogue
 
-Context →
+Audit des applications
 
-Initiatives →
+projets présentés
 
-Principles →
+familles de technologies
 
-Glossary →
+Sources et limites explicites documentation plutôt que promesses
 
-AI-ready documentation
+Comment lire l’écosystème
+Des fonctions qui se complètent
 
-Structured reference bundles intended for AI use: retrieval, orchestration, constrained
-generation, and durable machine-readable context.
+Le catalogue distingue les responsabilités. Un outil de lecture ne devient pas une autorité de vérité ; une simulation ne devient pas un service déployé.
+
+Point d’entrée
+La connaissance n’est pas un bloc monolithique.
+
+Kristal représente des états de connaissance ; SenTient aide à interpréter ; Konstellation propose des vues ; SemantiK Architect articule le contenu dans les langues humaines. Ces rôles sont distincts et complémentaires.
+
+Explorer Kristal
+
+Sources, état des travaux et limites
+
+L’inventaire rassemble des références issues des dépôts documentés. Les niveaux de maturité et les responsabilités effectives doivent être vérifiés dans leurs sources. La carte d’architecture, l’audit public et les Context Packs remplissent des rôles différents.
+
+Context Packs
+Architecture de l’écosystème
+Source canonique

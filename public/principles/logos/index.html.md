@@ -3,14 +3,14 @@
 > Canonical HTML: https://initkoa.org/principles/logos
 > Markdown mirror: https://initkoa.org/principles/logos/index.html.md
 > Route: /principles/logos
-> Source: app\principles\logos\page.tsx
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/principles/logos/page.tsx
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/principles/logos)
 
 Operational Metaphysics
 
-The Power of the Word
+Language, Myths & Liberation
 
 Language is not merely a tool for description; it is an instrument of creation.
 From the vibration of the voice to the structure of political myths, we analyze
@@ -37,7 +37,7 @@ Even in a secular context, writing remains a form of magic: a text written centu
 
 History is not linear; it is cyclical. From the Hindu Yugas to Polybius’s Anacyclus , civilizations rise, concentrate power, corrupt, and collapse. Myths are often encoded manuals on how to navigate these cycles.
 
-The Strategy of the Outsider: The story of David vs. Goliath is not just a religious tale; it is a strategic lesson. It teaches that agility, range (the sling), and refusing to play by the oppressor's rules (heavy armor) allow the weak to defeat the strong.
+Moses and Liberation from Oppression: The Exodus narrative offers a collective path out of domination: name the injustice, organize solidarity, confront unjust authority, refuse the idea that bondage is inevitable, then build institutions that do not reproduce the oppression left behind. Its lesson is not a heroic duel, but the difficult passage from submission to shared freedom.
 
 The Trap of Tyranny: The Greek myth of Cronos devouring his children teaches that a power obsessed with its own preservation inevitably creates the alliances (Zeus and the outcasts) that will destroy it.
 

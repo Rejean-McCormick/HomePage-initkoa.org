@@ -72,17 +72,17 @@ const ORGANS = [
         color: "bg-purple-50 border-purple-100"
       },
       {
-        name: "SwarmCraft",
-        role: "La Mémoire",
-        desc: "Continuité narrative. Matrix (état), Bible (intention), RAG (preuves).",
-        href: "/kreature/anatomie/memoire/swarmcraft",
+        name: "Kristal",
+        role: "La Connaissance",
+        desc: "États, sources et traces : la connaissance reste consultable et vérifiable.",
+        href: "/technology/kristal",
         icon: <BookOpen className="w-6 h-6 text-indigo-600" />,
         color: "bg-indigo-50 border-indigo-100"
       },
       {
         name: "Âme Artificielle",
-        role: "La Verticalité",
-        desc: "La couche subtile. Teinte émotionnelle, éthique et ancrage humain.",
+        role: "La Personnalité",
+        desc: "Graphe psycho-causal : croyances, souvenirs, états affectifs et réactions simulées.",
         href: "/kreature/anatomie/ame/ame-artificielle",
         icon: <Heart className="w-6 h-6 text-rose-600" />,
         color: "bg-rose-50 border-rose-100"

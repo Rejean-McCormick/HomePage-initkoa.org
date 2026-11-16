@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/why-this-exists
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/why-this-exists/index.html.md
 > Route: /infrastructures/kristal-farms/why-this-exists
-> Source: app\infrastructures\kristal-farms\why-this-exists\page.mdx
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/infrastructures/kristal-farms/why-this-exists/page.mdx
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/why-this-exists)
 

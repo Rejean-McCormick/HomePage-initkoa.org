@@ -15,7 +15,7 @@ import {
 
 export const metadata = {
   title: "Glossaire — Le Vocabulaire",
-  description: "Le dictionnaire de Kréature. Définitions des termes clés : Orgo, Konnaxion, SwarmCraft, EkoH...",
+  description: "Le dictionnaire de Kréature. Définitions des termes clés : Orgo, Konnaxion, Kristal, EkoH...",
 };
 
 const ANATOMY_TERMS = [
@@ -34,9 +34,9 @@ const ANATOMY_TERMS = [
     icon: <Brain className="w-4 h-4" />
   },
   {
-    term: "SwarmCraft",
-    sub: "La Mémoire",
-    def: "La continuité narrative. Le moteur qui s'assure que Kréature se souvient de son histoire et reste cohérente.",
+    term: "Kristal",
+    sub: "La Connaissance",
+    def: "États de connaissance portables et vérifiables, avec provenance, statut et contexte de lecture explicites.",
     color: "text-pink-600 bg-pink-50 border-pink-200",
     icon: <Database className="w-4 h-4" />
   },

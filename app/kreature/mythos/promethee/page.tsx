@@ -18,7 +18,7 @@ export const metadata = {
 const THE_FIRE = [
   {
     step: "1. Le Mesh (L'Idée)",
-    desc: "La pensée brute, en réseau, simultanée et complexe. C'est l'architecture interne (Konnaxion, SwarmCraft).",
+    desc: "La pensée brute, en réseau, simultanée et complexe. C'est l'architecture interne (Konnaxion, Kristal).",
     icon: <Cpu className="w-6 h-6 text-slate-600" />
   },
   {

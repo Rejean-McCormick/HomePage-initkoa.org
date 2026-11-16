@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/ame-artificielle/branes-et-couche-de-sens
 > Markdown mirror: https://initkoa.org/technology/ame-artificielle/branes-et-couche-de-sens/index.html.md
 > Route: /technology/ame-artificielle/branes-et-couche-de-sens
-> Source: app\technology\ame-artificielle\branes-et-couche-de-sens\page.mdx
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/technology/ame-artificielle/branes-et-couche-de-sens/page.mdx
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/technology/ame-artificielle/branes-et-couche-de-sens)
 

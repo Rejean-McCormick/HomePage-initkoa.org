@@ -66,10 +66,10 @@ export default function PrinciplesPage() {
         <div className="mt-6 p-5 rounded-lg border border-gray-200 bg-white">
           <h3 className="text-lg font-bold mb-2">Related (Technology)</h3>
           <p className="text-gray-700 mb-3">
-            AI alignment, meta-cognition, and governance mechanisms are documented under Technology.
+            Research on personality simulation and psycho-causal mechanisms is documented under Technology. Safety and moderation are separate topics.
           </p>
           <a href="/technology/ame-artificielle" className="text-primary hover:underline font-medium">
-            Âme artificielle (Alignement & méta-cognition) →
+            Âme artificielle (graphe psycho-causal) →
           </a>
         </div>
       </section>

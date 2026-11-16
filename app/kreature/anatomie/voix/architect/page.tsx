@@ -136,8 +136,8 @@ export default function ArchitectPage() {
         <Link href="/kreature/anatomie/sens/ariane" className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors">
           ← Voir (Ariane)
         </Link>
-        <Link href="/kreature/anatomie/memoire/swarmcraft" className="text-indigo-600 hover:text-indigo-800 font-bold flex items-center gap-2 transition-colors">
-          Se Souvenir (SwarmCraft) →
+        <Link href="/technology/kristal" className="text-indigo-600 hover:text-indigo-800 font-bold flex items-center gap-2 transition-colors">
+          Consulter les connaissances (Kristal) →
         </Link>
       </div>
 

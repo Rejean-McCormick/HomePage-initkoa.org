@@ -3,74 +3,50 @@
 > Canonical HTML: https://initkoa.org/technology/ame-artificielle
 > Markdown mirror: https://initkoa.org/technology/ame-artificielle/index.html.md
 > Route: /technology/ame-artificielle
-> Source: app\technology\ame-artificielle\page.tsx
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/technology/ame-artificielle/page.tsx
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/technology/ame-artificielle)
 
-me Artificielle
+Recherche expérimentale · EL
 
-1→9
+me artificielle
 
-Réaction
+Une tentative d’ imitation fonctionnelle, non superficielle, des mécanismes de la personnalité humaine :
+dispositions, croyances, valeurs, souvenirs, raisonnement, états affectifs et réactions.
+EL représente ces interactions comme un graphe psycho-causal sémantique .
 
-Numérologie inversée
+Il ne s’agit ni d’un simple masque conversationnel, ni d’un module de modération ou de « guardrails ».
+Le projet ne prétend pas créer une âme réelle ni démontrer qu’une machine ressent des émotions.
 
-me Artificielle
+Voir le moteur et ses sources
+Retour aux technologies
 
-L’me Artificielle est une tentative de simulation de l’âme humaine.
-Elle part de l’idée qu’un sujet ne réagit pas au monde de manière brute :
-ce qu’il rencontre passe par une architecture intérieure, suit certains
-chemins, active certaines zones, puis ressort sous forme de réaction.
+Comment EL calcule une réaction
 
-Lire le mécanisme →
+Un snapshot représente le sujet à un moment donné ; son état biographique ne se modifie pas automatiquement à chaque conversation.
 
-Voir la charte 1→9
+Les transformations biographiques entre snapshots sont explicites. Les vecteurs de traits sont des projections dérivées, et non la définition de l’âme.
 
-Structure minimale du système
+me, intellect, personnalité
 
-1. Une structure intérieure
+L’âme désigne l’organisation des dispositions ; l’intellect la perception et la réévaluation ; la personnalité leur expression observable dans une histoire et un contexte.
 
-Le sujet possède une organisation interne qui détermine la manière
-dont les objets sont reçus, orientés et transformés.
+Affects modélisés
 
-2. Une cartographie verticale 1→9
+L’affect est un état calculé dans le modèle. Ce résultat ne prouve pas une expérience émotionnelle vécue par la machine.
 
-Cette structure est projetée sur une colonne intérieure allant de la
-tête à la racine.
+Sécurité séparée
 
-3. Une logique numérique inversée
+Les limites de sortie sont une couche externe. Elles ne doivent pas être confondues avec la compassion, la morale ou la causalité interne simulée.
 
-La numérologie pythagoricienne inversée sert à modéliser les
-archétypes, les polarités et certaines structures profondes.
+Documentation du moteur
 
-4. Un mécanisme de réaction
+Le README et les spécifications du dépôt définissent les mécanismes et leur protocole d’évaluation. Le profil Kristal proposé sert à représenter le graphe ; le Soul Causal Engine en exécute la propagation.
 
-Les objets entrent dans le système, y suivent un chemin, puis
-ressortent sous forme de réactions.
+Lectures symboliques et historiques
 
-Pages fondamentales
+La charte 1→9, les chakras, la numérologie inversée et les branes peuvent guider des hypothèses et des interprétations ; ils ne constituent ni la preuve scientifique du modèle ni son moteur causal.
 
-Le noyau de la section : colonne intérieure, structure archétypale,
-mécanisme de réaction, couche de sens et cadre philosophique.
-
-→
-
-Ordre de lecture
-
-me Artificielle
-
-Charte 1→9 et chakras
-
-Numérologie pythagoricienne inversée
-
-Mécanisme de réaction
-
-Branes et couche de sens
-
-Cadre philosophique
-
-Annexes techniques
-
-Pages complémentaires pour la lecture technique du système, utiles comme
-ponts de travail, mais secondaires par rapport au noyau canonique.
+Mécanisme de réaction (présentation existante)
+Validation (documentation existante)

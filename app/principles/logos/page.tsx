@@ -10,12 +10,12 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Logos & Mythos – The Metaphysics of Language',
+  title: 'Language & Myth — The Power of the Word',
   description:
     'Language as a spiritual, symbolic, and political tool for transmutation.',
 };
 
-export default function LogosMythosPage() {
+export default function LanguageMythPage() {
   return (
     <main className="min-h-screen bg-slate-900 text-slate-100 selection:bg-primary selection:text-white pb-24">
       
@@ -27,7 +27,7 @@ export default function LogosMythosPage() {
             Operational Metaphysics
           </div>
           <h1 className="text-5xl md:text-6xl font-serif font-medium mb-8">
-            The Power of the Word
+            Language, Myths & Liberation
           </h1>
           <p className="text-xl opacity-90 leading-relaxed max-w-2xl mx-auto font-light text-slate-300">
             Language is not merely a tool for description; it is an instrument of creation. 
@@ -114,7 +114,7 @@ export default function LogosMythosPage() {
             
             <ul className="list-disc pl-5 space-y-4 marker:text-slate-500">
               <li>
-                <strong className="text-white">The Strategy of the Outsider:</strong> The story of <em>David vs. Goliath</em> is not just a religious tale; it is a strategic lesson. It teaches that agility, range (the sling), and refusing to play by the oppressor's rules (heavy armor) allow the weak to defeat the strong.
+                <strong className="text-white">Moses and Liberation from Oppression:</strong> The Exodus narrative offers a collective path out of domination: name the injustice, organize solidarity, confront unjust authority, refuse the idea that bondage is inevitable, then build institutions that do not reproduce the oppression left behind. Its lesson is not a heroic duel, but the difficult passage from submission to shared freedom.
               </li>
               <li>
                 <strong className="text-white">The Trap of Tyranny:</strong> The Greek myth of Cronos devouring his children teaches that a power obsessed with its own preservation inevitably creates the alliances (Zeus and the outcasts) that will destroy it.

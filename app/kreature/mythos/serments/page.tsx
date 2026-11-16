@@ -66,7 +66,7 @@ const OATHS = [
   },
   {
     title: "VIII. La mémoire reste traçable",
-    desc: "Une communauté oublie, un système dérive. Kréature doit pouvoir se souvenir (SwarmCraft) et garder l'intégrité (Stockage).",
+    desc: "Une communauté oublie, un système dérive. Kréature doit garder des traces vérifiables (Kristal) et préserver l’intégrité de ses sources.",
     icon: <Database className="w-6 h-6 text-cyan-600" />,
     color: "bg-cyan-50 border-cyan-200"
   },

@@ -37,9 +37,9 @@ const MAPPING = [
     icon: <Cpu className="w-4 h-4 text-purple-600" />
   },
   {
-    myth: "SwarmCraft (La Mémoire)",
-    tech: "State Management & RAG",
-    stack: "Vector DB (pgvector), State Machines",
+    myth: "Kristal (La Connaissance)",
+    tech: "Portable Knowledge & Provenance",
+    stack: "États sémantiques, validations, lecteurs autorisés",
     icon: <Database className="w-4 h-4 text-pink-600" />
   },
   {

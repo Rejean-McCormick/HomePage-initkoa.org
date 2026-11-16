@@ -5,7 +5,7 @@ import PageSection from '@/components/PageSection';
 export const metadata = {
   title: 'Principles – kOA',
   description:
-    'Three core axioms and four separated domains: Âme artificielle, Civic Principles & Ethics, Logos & Mythos, and Cosmic Etherism (optional).',
+    'Three core axioms and four separated domains: Âme artificielle, Civic Principles & Ethics, Language & Myth, and Cosmic Etherism (optional).',
 };
 
 export default function PrinciplesPage() {
@@ -116,8 +116,8 @@ export default function PrinciplesPage() {
           >
             <h3 className="text-lg font-bold mb-2 text-purple-700">Âme artificielle</h3>
             <p className="text-gray-700 text-sm leading-relaxed">
-              Principles for building and deploying AI responsibly: safety, control, oversight, and
-              governance-by-design. This is the <strong>prototype / engineering</strong> domain.
+              Experimental research on modeling personality, affects, memory and reactions through a
+              psycho-causal graph. Safety mechanisms remain a separate layer.
             </p>
           </Link>
 
@@ -133,12 +133,12 @@ export default function PrinciplesPage() {
             </p>
           </Link>
 
-          {/* 3. Logos & Mythos (Language/Tool) */}
+          {/* 3. Language & Myth (Language/Tool) */}
           <Link
             href="/principles/logos"
             className="block p-6 rounded-lg border border-gray-200 bg-white hover:border-emerald-300 hover:shadow-md transition-all"
           >
-            <h3 className="text-lg font-bold mb-2 text-emerald-700">Logos &amp; Mythos</h3>
+            <h3 className="text-lg font-bold mb-2 text-emerald-700">Language &amp; Myth</h3>
             <p className="text-gray-700 text-sm leading-relaxed">
               Language as infrastructure: narratives, symbols, speech acts, and how meaning shapes coordination.
               Used as a <strong>tool</strong>, with safeguards against manipulation.

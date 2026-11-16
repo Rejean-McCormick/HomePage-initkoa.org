@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/risks
 > Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/risks/index.html.md
 > Route: /initiatives/ukraine-peace-plan/cultural-bridge/risks
-> Source: app\initiatives\ukraine-peace-plan\cultural-bridge\risks\page.mdx
-> Generated: 2026-09-22T19:18:32.402Z
+> Source: app/initiatives/ukraine-peace-plan/cultural-bridge/risks/page.mdx
+> Generated: 2026-11-16T02:05:37.894Z
 
 [Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/risks)
 

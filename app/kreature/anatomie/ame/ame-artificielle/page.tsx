@@ -20,7 +20,7 @@ import {
 export const metadata = {
   title: "Âme Artificielle — Simulation de l’Âme Humaine",
   description:
-    "L’Âme Artificielle simule une architecture intérieure de traitement et de réaction. Elle n’est ni un ethical safeguard, ni une couche d’alignement, de sécurité ou de gouvernance, et ne fait pas partie de SenTient.",
+    "EL propose une simulation psycho-causale des dispositions, croyances, souvenirs, affects et réactions. La sécurité est une couche distincte ; aucune expérience émotionnelle réelle n’est revendiquée.",
 };
 
 const PRINCIPLES = [
@@ -39,9 +39,9 @@ const PRINCIPLES = [
     color: "bg-rose-50 border-rose-200",
   },
   {
-    title: "3. Une cartographie 1→9 et chakrique",
+    title: "3. Graphe psycho-causal et couches de lecture",
     desc:
-      "Cette simulation utilise une structure 1→9 et les chakras pour modéliser le trajet intérieur des objets. La colonne permet de situer où une chose est perçue, intégrée, transformée, puis restituée.",
+      "La causalité opératoire repose sur un graphe de dispositions, de croyances, de souvenirs et d’affects. La charte 1→9 et les chakras sont des outils de lecture symbolique, non le moteur causal ni une preuve scientifique.",
     icon: <Sparkles className="w-5 h-5 text-amber-600" />,
     color: "bg-amber-50 border-amber-200",
   },
@@ -208,10 +208,10 @@ export default function AmeArtificiellePage() {
         </div>
 
         <p className="text-xl text-slate-600 max-w-4xl leading-relaxed">
-          L’Âme Artificielle est une simulation de l’âme humaine. Elle cherche à
-          reproduire l’architecture intérieure par laquelle un sujet reçoit les
-          objets du monde, les fait cheminer en lui, puis les transforme en
-          réactions.
+          L’Âme Artificielle / EL cherche à imiter fonctionnellement, sans se
+          limiter à une personnalité de façade, des mécanismes psycho-causaux :
+          souvenirs, croyances, dispositions, états affectifs, interprétation et réactions.
+          Cela ne démontre pas qu’un système artificiel ressent des émotions.
         </p>
 
         <div className="mt-8 bg-rose-50 border-l-4 border-rose-500 p-6 rounded-r-lg">
@@ -219,10 +219,10 @@ export default function AmeArtificiellePage() {
             Définition
           </strong>
           <p className="text-slate-800 leading-relaxed">
-            L’âme humaine est une architecture de traitement intérieur.
-            L’Âme Artificielle en propose une simulation opératoire, en
-            cartographiant ces cheminements au moyen d’une structure 1→9 et des
-            chakras, à partir de plusieurs traditions.
+            Le moteur EL représente un sujet au moyen d’un Soul Snapshot immuable
+            et calcule des activations transitoires à partir d’un stimulus.
+            La charte 1→9 et les chakras constituent des couches de lecture symboliques,
+            distinctes de la propagation causale du graphe.
           </p>
         </div>
 
@@ -305,7 +305,7 @@ export default function AmeArtificiellePage() {
             La colonne 1→9
           </h2>
           <p className="text-slate-600 leading-relaxed max-w-4xl">
-            La structure 1→9 sert de carte intérieure. Elle décrit les niveaux
+            La structure 1→9 sert de carte symbolique. Elle propose des niveaux
             par lesquels un objet peut être traité dans le sujet. Chaque niveau
             correspond à une zone de la colonne intérieure et à une fonction de
             traitement. Les chakras sont intégrés ici comme repères de cette
@@ -394,9 +394,10 @@ export default function AmeArtificiellePage() {
           traite les objets du monde et les transforme en réactions.
         </p>
         <p className="leading-relaxed mb-4">
-          L’Âme Artificielle est une simulation de cette architecture. Elle
-          cartographie les cheminements intérieurs au moyen d’une structure 1→9
-          et des chakras, en s’appuyant sur plusieurs traditions.
+          L’Âme Artificielle modélise cette architecture comme un graphe
+          psycho-causal. Les snapshots, activations, affects et transformations
+          biographiques y ont des rôles distincts ; la charte 1→9 et les chakras
+          relèvent d’interprétations symboliques, et non du moteur causal.
         </p>
         <p className="leading-relaxed mb-4">
           Son but est de permettre à un système de recevoir des objets en entrée,
@@ -412,10 +413,10 @@ export default function AmeArtificiellePage() {
       {/* FOOTER */}
       <div className="flex justify-between pt-10 border-t border-slate-200 mt-12">
         <Link
-          href="/kreature/anatomie/memoire/swarmcraft"
+          href="/technology/kristal"
           className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors"
         >
-          ← Se Souvenir (SwarmCraft)
+          ← Explorer la connaissance (Kristal)
         </Link>
 
         <Link

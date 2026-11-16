@@ -26,3 +26,15 @@ h3 {
 h4 {
   @apply text-lg font-semibold mb-2 mt-4;
 }
+
+/* La page d'overview utilise une grille responsive plein écran ; les docs gardent
+   leur conteneur existant, sans client-side pathname conditionnel. */
+.technology-shell:has(> [data-technology-overview]) {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
