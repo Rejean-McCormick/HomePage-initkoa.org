@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/initiatives/civic-governance/constitution/ekoh
 > Markdown mirror: https://initkoa.org/initiatives/civic-governance/constitution/ekoh/index.html.md
 > Route: /initiatives/civic-governance/constitution/ekoh
-> Source: app/initiatives/civic-governance/constitution/ekoh/page.tsx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\initiatives\civic-governance\constitution\ekoh\page.tsx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/initiatives/civic-governance/constitution/ekoh)
 

@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/environment-and-safety
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/environment-and-safety/index.html.md
 > Route: /infrastructures/kristal-farms/environment-and-safety
-> Source: app/infrastructures/kristal-farms/environment-and-safety/page.mdx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\infrastructures\kristal-farms\environment-and-safety\page.mdx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/environment-and-safety)
 

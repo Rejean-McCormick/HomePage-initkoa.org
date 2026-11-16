@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/ame-artificielle/ontology-and-traits
 > Markdown mirror: https://initkoa.org/technology/ame-artificielle/ontology-and-traits/index.html.md
 > Route: /technology/ame-artificielle/ontology-and-traits
-> Source: app/technology/ame-artificielle/ontology-and-traits/page.mdx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\technology\ame-artificielle\ontology-and-traits\page.mdx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/technology/ame-artificielle/ontology-and-traits)
 

@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/funding-partnerships
 > Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/funding-partnerships/index.html.md
 > Route: /initiatives/ukraine-peace-plan/cultural-bridge/funding-partnerships
-> Source: app/initiatives/ukraine-peace-plan/cultural-bridge/funding-partnerships/page.mdx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\initiatives\ukraine-peace-plan\cultural-bridge\funding-partnerships\page.mdx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/funding-partnerships)
 

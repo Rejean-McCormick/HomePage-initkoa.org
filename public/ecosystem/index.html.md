@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/ecosystem
 > Markdown mirror: https://initkoa.org/ecosystem/index.html.md
 > Route: /ecosystem
-> Source: app/ecosystem/page.tsx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\ecosystem\page.tsx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/ecosystem)
 

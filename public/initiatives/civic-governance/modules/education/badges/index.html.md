@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/initiatives/civic-governance/modules/education/badges
 > Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/education/badges/index.html.md
 > Route: /initiatives/civic-governance/modules/education/badges
-> Source: app/initiatives/civic-governance/modules/education/badges/page.mdx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\initiatives\civic-governance\modules\education\badges\page.mdx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/initiatives/civic-governance/modules/education/badges)
 

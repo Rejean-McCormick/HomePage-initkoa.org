@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/platforms/orgo/security-audit
 > Markdown mirror: https://initkoa.org/platforms/orgo/security-audit/index.html.md
 > Route: /platforms/orgo/security-audit
-> Source: app/platforms/orgo/security-audit/page.mdx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\platforms\orgo\security-audit\page.mdx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/platforms/orgo/security-audit)
 

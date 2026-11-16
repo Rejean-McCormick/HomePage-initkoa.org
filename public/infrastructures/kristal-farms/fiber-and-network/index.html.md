@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/fiber-and-network
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/fiber-and-network/index.html.md
 > Route: /infrastructures/kristal-farms/fiber-and-network
-> Source: app/infrastructures/kristal-farms/fiber-and-network/page.mdx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\infrastructures\kristal-farms\fiber-and-network\page.mdx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/fiber-and-network)
 

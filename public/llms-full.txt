@@ -4,9 +4,9 @@
 
 - Title: kOA INITIATIVE
 - Description: Public documentation for the kOA INITIATIVE by Réjean McCormick: civic utilities for learning, coordination, and governable decision-making (offline-first, auditable).
-- Generated: 2026-11-16T02:05:37.894Z
+- Generated: 2026-11-16T14:14:38.324Z
 - Base URL: https://initkoa.org
-- Pages included: 163
+- Pages included: 183
 
 ## Usage
 
@@ -23,7 +23,7 @@ For page-level retrieval, prefer the Markdown mirror URL listed in each page sec
 - Route: /
 - HTML: https://initkoa.org
 - Markdown mirror: https://initkoa.org/index.html.md
-- Source: app/page.tsx
+- Source: app\page.tsx
 
 Civic utilities for a fragmented world
 
@@ -177,7 +177,7 @@ Browse initiatives
 - Route: /about
 - HTML: https://initkoa.org/about
 - Markdown mirror: https://initkoa.org/about/index.html.md
-- Source: app/about/page.js
+- Source: app\about\page.js
 
 Réjean McCormick
 
@@ -231,7 +231,7 @@ github.com/Rejean-McCormick
 - Route: /diagnosis
 - HTML: https://initkoa.org/diagnosis
 - Markdown mirror: https://initkoa.org/diagnosis/index.html.md
-- Source: app/diagnosis/page.js
+- Source: app\diagnosis\page.js
 
 Radical Lucidity
 
@@ -308,7 +308,7 @@ See the Tools
 - Route: /ecosystem
 - HTML: https://initkoa.org/ecosystem
 - Markdown mirror: https://initkoa.org/ecosystem/index.html.md
-- Source: app/ecosystem/page.tsx
+- Source: app\ecosystem\page.tsx
 
 Ecosystem / architecture
 
@@ -341,7 +341,7 @@ and the documentation portal for source-attributed context.
 - Route: /ecosystem/functional-chains
 - HTML: https://initkoa.org/ecosystem/functional-chains
 - Markdown mirror: https://initkoa.org/ecosystem/functional-chains/index.html.md
-- Source: app/ecosystem/functional-chains/page.tsx
+- Source: app\ecosystem\functional-chains\page.tsx
 
 ← Final-system overview
 Functional chains
@@ -357,7 +357,7 @@ Design specification: none of these catalogue entries is a claim that the full c
 - Route: /infrastructures
 - HTML: https://initkoa.org/infrastructures
 - Markdown mirror: https://initkoa.org/infrastructures/index.html.md
-- Source: app/infrastructures/page.tsx
+- Source: app\infrastructures\page.tsx
 
 Infrastructures
 
@@ -378,7 +378,7 @@ View Platforms & Products →
 - Route: /infrastructures/kin-city
 - HTML: https://initkoa.org/infrastructures/kin-city
 - Markdown mirror: https://initkoa.org/infrastructures/kin-city/index.html.md
-- Source: app/infrastructures/kin-city/page.tsx
+- Source: app\infrastructures\kin-city\page.tsx
 
 Welcome to Kin City
 
@@ -476,7 +476,7 @@ View Full Technical Roadmap
 - Route: /infrastructures/kin-city/philosophy
 - HTML: https://initkoa.org/infrastructures/kin-city/philosophy
 - Markdown mirror: https://initkoa.org/infrastructures/kin-city/philosophy/index.html.md
-- Source: app/infrastructures/kin-city/philosophy/page.tsx
+- Source: app\infrastructures\kin-city\philosophy\page.tsx
 
 Back to Kin City Overview
 
@@ -537,7 +537,7 @@ Ideally, strangers become neighbors, and neighbors become kin.
 - Route: /infrastructures/kin-city/roadmap
 - HTML: https://initkoa.org/infrastructures/kin-city/roadmap
 - Markdown mirror: https://initkoa.org/infrastructures/kin-city/roadmap/index.html.md
-- Source: app/infrastructures/kin-city/roadmap/page.tsx
+- Source: app\infrastructures\kin-city\roadmap\page.tsx
 
 Technical Roadmap
 
@@ -647,7 +647,7 @@ Return to Kin City Overview
 - Route: /infrastructures/kin-city/zones
 - HTML: https://initkoa.org/infrastructures/kin-city/zones
 - Markdown mirror: https://initkoa.org/infrastructures/kin-city/zones/index.html.md
-- Source: app/infrastructures/kin-city/zones/page.tsx
+- Source: app\infrastructures\kin-city\zones\page.tsx
 
 Back to City Overview
 
@@ -756,7 +756,7 @@ Audit Trails: The underlying ledger that ensures all city actions are secure, fa
 - Route: /infrastructures/kristal-farms
 - HTML: https://initkoa.org/infrastructures/kristal-farms
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/index.html.md
-- Source: app/infrastructures/kristal-farms/page.tsx
+- Source: app\infrastructures\kristal-farms\page.tsx
 
 Kristal Farms
 
@@ -818,7 +818,7 @@ points from the main Kristal Farms hub.
 - Route: /infrastructures/kristal-farms/cooling-and-water
 - HTML: https://initkoa.org/infrastructures/kristal-farms/cooling-and-water
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/cooling-and-water/index.html.md
-- Source: app/infrastructures/kristal-farms/cooling-and-water/page.mdx
+- Source: app\infrastructures\kristal-farms\cooling-and-water\page.mdx
 
 "A heat-first cooling approach for cold climates: closed loops, non-contact heat exchange, near-zero water use, and strict environmental compliance.",
 
@@ -903,7 +903,7 @@ Environment & safety →
 - Route: /infrastructures/kristal-farms/ecology
 - HTML: https://initkoa.org/infrastructures/kristal-farms/ecology
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/ecology/index.html.md
-- Source: app/infrastructures/kristal-farms/ecology/page.tsx
+- Source: app\infrastructures\kristal-farms\ecology\page.tsx
 
 Back to Kristal Farms Hub
 
@@ -1000,7 +1000,7 @@ We track every liter of diesel not burned. This is our primary carbon offset met
 - Route: /infrastructures/kristal-farms/environment-and-safety
 - HTML: https://initkoa.org/infrastructures/kristal-farms/environment-and-safety
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/environment-and-safety/index.html.md
-- Source: app/infrastructures/kristal-farms/environment-and-safety/page.mdx
+- Source: app\infrastructures\kristal-farms\environment-and-safety\page.mdx
 
 "Environmental safeguards and safety guarantees: ΔT compliance, near-zero water consumption, non-contact heat loops, audits, and transparent monitoring.",
 
@@ -1085,7 +1085,7 @@ A key protection is the ability to **remove the installation and restore the sit
 - Route: /infrastructures/kristal-farms/faq
 - HTML: https://initkoa.org/infrastructures/kristal-farms/faq
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/faq/index.html.md
-- Source: app/infrastructures/kristal-farms/faq/page.mdx
+- Source: app\infrastructures\kristal-farms\faq\page.mdx
 
 "Frequently asked questions about Kristal Farms: what it is, who it serves, privacy boundaries, heat reuse, environmental safeguards, governance, and rollout phases.",
 
@@ -1206,7 +1206,7 @@ Some previously uploaded reference files in this workspace have expired; if you 
 - Route: /infrastructures/kristal-farms/fiber-and-network
 - HTML: https://initkoa.org/infrastructures/kristal-farms/fiber-and-network
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/fiber-and-network/index.html.md
-- Source: app/infrastructures/kristal-farms/fiber-and-network/page.mdx
+- Source: app\infrastructures\kristal-farms\fiber-and-network\page.mdx
 
 "How Kristal Farms exports computation by fiber: resilient connectivity, traffic separation (tenant vs community), monitored performance, and a black-box networking posture.",
 
@@ -1279,7 +1279,7 @@ Connectivity benefit can include:
 - Route: /infrastructures/kristal-farms/go-no-go
 - HTML: https://initkoa.org/infrastructures/kristal-farms/go-no-go
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/go-no-go/index.html.md
-- Source: app/infrastructures/kristal-farms/go-no-go/page.mdx
+- Source: app\infrastructures\kristal-farms\go-no-go\page.mdx
 
 ClipboardCheck,
 CheckCircle2,
@@ -1409,7 +1409,7 @@ Governance & accountability →
 - Route: /infrastructures/kristal-farms/governance
 - HTML: https://initkoa.org/infrastructures/kristal-farms/governance
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/governance/index.html.md
-- Source: app/infrastructures/kristal-farms/governance/page.mdx
+- Source: app\infrastructures\kristal-farms\governance\page.mdx
 
 "How Kristal Farms are governed: shared decision-making across community, operator, tenants, and environmental stewards—plus the agreements, reporting, and grievance paths that make it enforceable.",
 
@@ -1551,7 +1551,7 @@ Governance is the mechanism that keeps that relationship **explicit, measurable,
 - Route: /infrastructures/kristal-farms/heat-first-design
 - HTML: https://initkoa.org/infrastructures/kristal-farms/heat-first-design
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/heat-first-design/index.html.md
-- Source: app/infrastructures/kristal-farms/heat-first-design/page.mdx
+- Source: app\infrastructures\kristal-farms\heat-first-design\page.mdx
 
 "The operating principle of Kristal Farms: waste heat is a civic resource. Reuse → store → reject, with community heating prioritized over compute.",
 
@@ -1667,7 +1667,7 @@ See: <Link href="/infrastructures/kristal-farms/metrics-and-dashboard">Metrics &
 - Route: /infrastructures/kristal-farms/how-it-works
 - HTML: https://initkoa.org/infrastructures/kristal-farms/how-it-works
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/how-it-works/index.html.md
-- Source: app/infrastructures/kristal-farms/how-it-works/page.mdx
+- Source: app\infrastructures\kristal-farms\how-it-works\page.mdx
 
 "A plain-language walkthrough of how Kristal Farms convert clean power into useful compute and useful heat, with a tenancy model designed for privacy, safety, and reversibility.",
 
@@ -1786,7 +1786,7 @@ Kristal Farms optimizes for **civic outcomes**:
 - Route: /infrastructures/kristal-farms/infrastructure
 - HTML: https://initkoa.org/infrastructures/kristal-farms/infrastructure
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/infrastructure/index.html.md
-- Source: app/infrastructures/kristal-farms/infrastructure/page.tsx
+- Source: app\infrastructures\kristal-farms\infrastructure\page.tsx
 
 Back to Kristal Farms Hub
 
@@ -1880,7 +1880,7 @@ Pads and fencing are removed. The land is restored to baseline conditions define
 - Route: /infrastructures/kristal-farms/metrics-and-dashboard
 - HTML: https://initkoa.org/infrastructures/kristal-farms/metrics-and-dashboard
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/metrics-and-dashboard/index.html.md
-- Source: app/infrastructures/kristal-farms/metrics-and-dashboard/page.mdx
+- Source: app\infrastructures\kristal-farms\metrics-and-dashboard\page.mdx
 
 "How Kristal Farms stays accountable: the public dashboard, the core metrics (heat, energy, environment, reliability), and the governance loops that act on them.",
 
@@ -2034,7 +2034,7 @@ See: <Link href="/infrastructures/kristal-farms/phasing">Phasing →</Link>
 - Route: /infrastructures/kristal-farms/nain
 - HTML: https://initkoa.org/infrastructures/kristal-farms/nain
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/nain/index.html.md
-- Source: app/infrastructures/kristal-farms/nain/page.tsx
+- Source: app\infrastructures\kristal-farms\nain\page.tsx
 
 Back to Kristal Farms Hub
 
@@ -2147,7 +2147,7 @@ moving up the value chain."
 - Route: /infrastructures/kristal-farms/overview
 - HTML: https://initkoa.org/infrastructures/kristal-farms/overview
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/overview/index.html.md
-- Source: app/infrastructures/kristal-farms/overview/page.mdx
+- Source: app\infrastructures\kristal-farms\overview\page.mdx
 
 "A cold-climate, hydro-powered compute and heat-reuse infrastructure: modular compute pads, exported by fiber, with waste heat recycled into local heating and food production.",
 
@@ -2217,7 +2217,7 @@ Scaling happens only after go/no-go criteria are met (reliable fiber, safe commi
 - Route: /infrastructures/kristal-farms/phasing
 - HTML: https://initkoa.org/infrastructures/kristal-farms/phasing
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/phasing/index.html.md
-- Source: app/infrastructures/kristal-farms/phasing/page.mdx
+- Source: app\infrastructures\kristal-farms\phasing\page.mdx
 
 "How Kristal Farms rolls out safely: phased deployment from first pad + district heat pilots to full yard scale, with clear governance and go/no-go gates.",
 
@@ -2325,7 +2325,7 @@ Kristal Farms should expand only when:
 - Route: /infrastructures/kristal-farms/power-and-grid
 - HTML: https://initkoa.org/infrastructures/kristal-farms/power-and-grid
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/power-and-grid/index.html.md
-- Source: app/infrastructures/kristal-farms/power-and-grid/page.mdx
+- Source: app\infrastructures\kristal-farms\power-and-grid\page.mdx
 
 "How Kristal Farms turns local hydro power into dependable compute and community heat: short-distance distribution, metered interfaces, grid-safe operations, and emergency resilience.",
 
@@ -2425,7 +2425,7 @@ The power system is treated as civic infrastructure, not a private lab:
 - Route: /infrastructures/kristal-farms/reversibility
 - HTML: https://initkoa.org/infrastructures/kristal-farms/reversibility
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/reversibility/index.html.md
-- Source: app/infrastructures/kristal-farms/reversibility/page.mdx
+- Source: app\infrastructures\kristal-farms\reversibility\page.mdx
 
 "A non-negotiable design commitment: Kristal Farms must be removable, restorable, and accountable over its full lifecycle—not a permanent scar on land or governance.",
 
@@ -2543,7 +2543,7 @@ The governance model must define:
 - Route: /infrastructures/kristal-farms/tenancy-model
 - HTML: https://initkoa.org/infrastructures/kristal-farms/tenancy-model
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/tenancy-model/index.html.md
-- Source: app/infrastructures/kristal-farms/tenancy-model/page.mdx
+- Source: app\infrastructures\kristal-farms\tenancy-model\page.mdx
 
 "How Kristal Farms hosts compute without becoming a surveillance platform: the black-box boundary, what the host provides, what the tenant controls, and how contracts enforce safety and public benefit.",
 
@@ -2682,7 +2682,7 @@ no tenant-specific operational details and no content visibility.
 - Route: /infrastructures/kristal-farms/why-this-exists
 - HTML: https://initkoa.org/infrastructures/kristal-farms/why-this-exists
 - Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/why-this-exists/index.html.md
-- Source: app/infrastructures/kristal-farms/why-this-exists/page.mdx
+- Source: app\infrastructures\kristal-farms\why-this-exists\page.mdx
 
 "Kristal Farms exist to turn clean power and cold climate into resilient local infrastructure: compute capacity, heat recovery, food production, and connectivity—governed for public benefit.",
 
@@ -2785,7 +2785,7 @@ If you want the full project overview:
 - Route: /initiatives
 - HTML: https://initkoa.org/initiatives
 - Markdown mirror: https://initkoa.org/initiatives/index.html.md
-- Source: app/initiatives/page.tsx
+- Source: app\initiatives\page.tsx
 
 Initiatives
 
@@ -2866,7 +2866,7 @@ Explore platforms
 - Route: /initiatives/civic-governance
 - HTML: https://initkoa.org/initiatives/civic-governance
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/index.html.md
-- Source: app/initiatives/civic-governance/page.tsx
+- Source: app\initiatives\civic-governance\page.tsx
 
 Civic Governance
 
@@ -2916,7 +2916,7 @@ Diplomacy and treaty frameworks.
 - Route: /initiatives/civic-governance/constitution
 - HTML: https://initkoa.org/initiatives/civic-governance/constitution
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/constitution/index.html.md
-- Source: app/initiatives/civic-governance/constitution/page.tsx
+- Source: app\initiatives\civic-governance\constitution\page.tsx
 
 The Civic Constitution
 
@@ -2981,7 +2981,7 @@ See EkoH decision readings
 - Route: /initiatives/civic-governance/constitution/ekoh
 - HTML: https://initkoa.org/initiatives/civic-governance/constitution/ekoh
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/constitution/ekoh/index.html.md
-- Source: app/initiatives/civic-governance/constitution/ekoh/page.tsx
+- Source: app\initiatives\civic-governance\constitution\ekoh\page.tsx
 
 EkoH
 
@@ -3020,7 +3020,7 @@ How EkoH works
 - Route: /initiatives/civic-governance/constitution/rights
 - HTML: https://initkoa.org/initiatives/civic-governance/constitution/rights
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/constitution/rights/index.html.md
-- Source: app/initiatives/civic-governance/constitution/rights/page.tsx
+- Source: app\initiatives\civic-governance\constitution\rights\page.tsx
 
 The Civic Bill of Rights
 
@@ -3111,7 +3111,7 @@ there are correction pathways when evidence changes, errors are found, or power 
 - Route: /initiatives/civic-governance/modules
 - HTML: https://initkoa.org/initiatives/civic-governance/modules
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/index.html.md
-- Source: app/initiatives/civic-governance/modules/page.tsx
+- Source: app\initiatives\civic-governance\modules\page.tsx
 
 Civic Modules
 
@@ -3161,7 +3161,7 @@ Explore module
 - Route: /initiatives/civic-governance/modules/economy
 - HTML: https://initkoa.org/initiatives/civic-governance/modules/economy
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/economy/index.html.md
-- Source: app/initiatives/civic-governance/modules/economy/page.mdx
+- Source: app\initiatives\civic-governance\modules\economy\page.mdx
 
 'Moving from an economy of extraction to an economy of circulation through shared civic infrastructure and low-friction coordination.',
 
@@ -3233,7 +3233,7 @@ href="/initiatives/civic-governance/modules/economy/solidarity"
 - Route: /initiatives/civic-governance/modules/economy/extraction
 - HTML: https://initkoa.org/initiatives/civic-governance/modules/economy/extraction
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/economy/extraction/index.html.md
-- Source: app/initiatives/civic-governance/modules/economy/extraction/page.mdx
+- Source: app\initiatives\civic-governance\modules\economy\extraction\page.mdx
 
 # The Diagnostic: Everyday Extraction
 
@@ -3305,7 +3305,7 @@ href="/initiatives/civic-governance/modules/economy/solidarity"
 - Route: /initiatives/civic-governance/modules/economy/solidarity
 - HTML: https://initkoa.org/initiatives/civic-governance/modules/economy/solidarity
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/economy/solidarity/index.html.md
-- Source: app/initiatives/civic-governance/modules/economy/solidarity/page.mdx
+- Source: app\initiatives\civic-governance\modules\economy\solidarity\page.mdx
 
 # The Solution: The Solidarity Network (Les Ateliers Solidaires)
 
@@ -3372,7 +3372,7 @@ Managing this complexity without "middle management" requires powerful software.
 - Route: /initiatives/civic-governance/modules/education
 - HTML: https://initkoa.org/initiatives/civic-governance/modules/education
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/education/index.html.md
-- Source: app/initiatives/civic-governance/modules/education/page.mdx
+- Source: app\initiatives\civic-governance\modules\education\page.mdx
 
 'Replace prestige credentials with a portable competence portfolio: modular learning, mastery validation, and auditable proof of skills.',
 
@@ -3446,7 +3446,7 @@ Verified competence is the foundation for legitimate self-governance.
 - Route: /initiatives/civic-governance/modules/education/badges
 - HTML: https://initkoa.org/initiatives/civic-governance/modules/education/badges
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/education/badges/index.html.md
-- Source: app/initiatives/civic-governance/modules/education/badges/page.mdx
+- Source: app\initiatives\civic-governance\modules\education\badges\page.mdx
 
 # Gamification: The End of the Grade Point Average
 
@@ -3500,7 +3500,7 @@ The Pilot Program is launching soon. Early adopters will have the chance to earn
 - Route: /initiatives/civic-governance/modules/education/curriculum
 - HTML: https://initkoa.org/initiatives/civic-governance/modules/education/curriculum
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/education/curriculum/index.html.md
-- Source: app/initiatives/civic-governance/modules/education/curriculum/page.mdx
+- Source: app\initiatives\civic-governance\modules\education\curriculum\page.mdx
 
 # The Knowledge Path
 
@@ -3526,7 +3526,7 @@ Download Full Curriculum Structure (JSON)
 - Route: /initiatives/civic-governance/modules/education/model
 - HTML: https://initkoa.org/initiatives/civic-governance/modules/education/model
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/education/model/index.html.md
-- Source: app/initiatives/civic-governance/modules/education/model/page.mdx
+- Source: app\initiatives\civic-governance\modules\education\model\page.mdx
 
 # The Pedagogical Engine
 
@@ -3565,7 +3565,7 @@ This standardization allows for <strong>Permissionless Updates</strong>. If a ph
 - Route: /initiatives/civic-governance/modules/justice
 - HTML: https://initkoa.org/initiatives/civic-governance/modules/justice
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/justice/index.html.md
-- Source: app/initiatives/civic-governance/modules/justice/page.mdx
+- Source: app\initiatives\civic-governance\modules\justice\page.mdx
 
 'A justice workflow designed for speed, transparency, and recourse—using tools for assistance without unaccountable authority.',
 
@@ -3636,7 +3636,7 @@ Safeguards
 - Route: /initiatives/civic-governance/modules/justice/access
 - HTML: https://initkoa.org/initiatives/civic-governance/modules/justice/access
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/justice/access/index.html.md
-- Source: app/initiatives/civic-governance/modules/justice/access/page.mdx
+- Source: app\initiatives\civic-governance\modules\justice\access\page.mdx
 
 # Universal Access: The Law in Your Pocket
 
@@ -3680,7 +3680,7 @@ Our incentives are reversed.
 - Route: /initiatives/civic-governance/modules/justice/ai-model
 - HTML: https://initkoa.org/initiatives/civic-governance/modules/justice/ai-model
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/justice/ai-model/index.html.md
-- Source: app/initiatives/civic-governance/modules/justice/ai-model/page.mdx
+- Source: app\initiatives\civic-governance\modules\justice\ai-model\page.mdx
 
 # The AI Model: Blind Justice
 
@@ -3729,7 +3729,7 @@ Garbage in, garbage out. If we train the AI on historical prison data, it will l
 - Route: /initiatives/civic-governance/modules/justice/efficiency
 - HTML: https://initkoa.org/initiatives/civic-governance/modules/justice/efficiency
 - Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/justice/efficiency/index.html.md
-- Source: app/initiatives/civic-governance/modules/justice/efficiency/page.mdx
+- Source: app\initiatives\civic-governance\modules\justice\efficiency\page.mdx
 
 # Radical Efficiency: The End of the Backlog
 
@@ -3771,7 +3771,7 @@ By making justice **Fast**, we make it **Affordable**. When a trial takes 3 days
 - Route: /initiatives/ukraine-peace-plan
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\page.mdx
 
 "A comprehensive framework: Freeze the war, Vote on legitimacy, Rebuild with transparency."
 
@@ -3845,7 +3845,7 @@ A parallel non-military track focused on dignity, cultural repair, and de-escala
 - Route: /initiatives/ukraine-peace-plan/concepts/construction-olympics
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/construction-olympics
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/construction-olympics/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/concepts/construction-olympics/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\concepts\construction-olympics\page.mdx
 
 # The Construction Olympics: A New Global Competition
 
@@ -3904,7 +3904,7 @@ We call upon the leaders of the G20 and beyond to shift their contribution from 
 - Route: /initiatives/ukraine-peace-plan/concepts/future-vision
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/future-vision
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/future-vision/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/concepts/future-vision/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\concepts\future-vision\page.mdx
 
 # Future Vision: Ukraine as a Global Cultural Bridge
 
@@ -3987,7 +3987,7 @@ This model proposes a new social contract for post-conflict nations:
 - Route: /initiatives/ukraine-peace-plan/concepts/geopolitical-context
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/geopolitical-context
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/geopolitical-context/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/concepts/geopolitical-context/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\concepts\geopolitical-context\page.mdx
 
 # Geopolitical Context: Why Neutrality Matters
 
@@ -4045,7 +4045,7 @@ The current strategy—isolation, sanctions, and military escalation—has faile
 - Route: /initiatives/ukraine-peace-plan/concepts/operational-logistics
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/operational-logistics
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/operational-logistics/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/concepts/operational-logistics/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\concepts\operational-logistics\page.mdx
 
 # Operational Logistics: The Mechanics of Rebuild
 
@@ -4120,7 +4120,7 @@ To avoid bottlenecking decisions in Kyiv, we establish **Regional Coordination C
 - Route: /initiatives/ukraine-peace-plan/concepts/peace-framework
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/peace-framework
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/peace-framework/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/concepts/peace-framework/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\concepts\peace-framework\page.mdx
 
 # The Peace Framework: Freeze & Vote
 
@@ -4174,7 +4174,7 @@ While the UN has been paralyzed by Security Council vetoes, religious and humani
 - Route: /initiatives/ukraine-peace-plan/cultural-bridge/funding-partnerships
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/funding-partnerships
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/funding-partnerships/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/cultural-bridge/funding-partnerships/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\cultural-bridge\funding-partnerships\page.mdx
 
 # Implementation, Funding, and Partnerships
 
@@ -4311,7 +4311,7 @@ See: **Governance & Guardrails (/initiatives/ukraine-peace-plan/cultural-bridge/
 - Route: /initiatives/ukraine-peace-plan/cultural-bridge/guardrails
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/guardrails
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/guardrails/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/cultural-bridge/guardrails/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\cultural-bridge\guardrails\page.mdx
 
 # Governance, Guardrails, and Anti-Propaganda Rules
 
@@ -4433,7 +4433,7 @@ Pause or suspend funding if:
 - Route: /initiatives/ukraine-peace-plan/cultural-bridge/metrics
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/metrics
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/metrics/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/cultural-bridge/metrics/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\cultural-bridge\metrics\page.mdx
 
 # Metrics and Evaluation
 
@@ -4538,7 +4538,7 @@ Annual public report should include:
 - Route: /initiatives/ukraine-peace-plan/cultural-bridge/risks
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/risks
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/risks/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/cultural-bridge/risks/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\cultural-bridge\risks\page.mdx
 
 # Critiques, Risks, and Failsafes
 
@@ -4648,7 +4648,7 @@ Pause or suspend a program segment if:
 - Route: /initiatives/ukraine-peace-plan/cultural-bridge/russian-literature
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/russian-literature
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/russian-literature/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/cultural-bridge/russian-literature/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\cultural-bridge\russian-literature\page.mdx
 
 # Russian Literature Dignity Program
 
@@ -4752,7 +4752,7 @@ See: **Risks & Critiques (/initiatives/ukraine-peace-plan/cultural-bridge/risks)
 - Route: /initiatives/ukraine-peace-plan/cultural-bridge/start-here
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/start-here
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/start-here/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/cultural-bridge/start-here/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\cultural-bridge\start-here\page.mdx
 
 # Cultural Bridge Track
 
@@ -4802,7 +4802,7 @@ This track sits alongside the core operational framework but does not block or g
 - Route: /initiatives/ukraine-peace-plan/cultural-bridge/ukrainian-language
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/ukrainian-language
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/ukrainian-language/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/cultural-bridge/ukrainian-language/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\cultural-bridge\ukrainian-language\page.mdx
 
 # Ukrainian Language Worldwide Program
 
@@ -4915,7 +4915,7 @@ See: **Risks & Critiques (/initiatives/ukraine-peace-plan/cultural-bridge/risks)
 - Route: /initiatives/ukraine-peace-plan/summary
 - HTML: https://initkoa.org/initiatives/ukraine-peace-plan/summary
 - Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/summary/index.html.md
-- Source: app/initiatives/ukraine-peace-plan/summary/page.mdx
+- Source: app\initiatives\ukraine-peace-plan\summary\page.mdx
 
 # Summary
 
@@ -5019,7 +5019,7 @@ See: **Risks & Critiques (/initiatives/ukraine-peace-plan/cultural-bridge/risks)
 - Route: /platforms
 - HTML: https://initkoa.org/platforms
 - Markdown mirror: https://initkoa.org/platforms/index.html.md
-- Source: app/platforms/page.tsx
+- Source: app\platforms\page.tsx
 
 Platforms
 
@@ -5038,7 +5038,7 @@ View Technology Stack →
 - Route: /platforms/konnaxion
 - HTML: https://initkoa.org/platforms/konnaxion
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/index.html.md
-- Source: app/platforms/konnaxion/page.tsx
+- Source: app\platforms\konnaxion\page.tsx
 
 Konnaxion
 
@@ -5207,7 +5207,7 @@ Open reference →
 - Route: /platforms/konnaxion/ethikos
 - HTML: https://initkoa.org/platforms/konnaxion/ethikos
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/index.html.md
-- Source: app/platforms/konnaxion/ethikos/page.tsx
+- Source: app\platforms\konnaxion\ethikos\page.tsx
 
 Konnaxion / ethiKos
 
@@ -5293,7 +5293,7 @@ Boundaries & Contracts
 - Route: /platforms/konnaxion/ethikos/kintsugi
 - HTML: https://initkoa.org/platforms/konnaxion/ethikos/kintsugi
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/kintsugi/index.html.md
-- Source: app/platforms/konnaxion/ethikos/kintsugi/page.mdx
+- Source: app\platforms\konnaxion\ethikos\kintsugi\page.mdx
 
 {/* FILE: page.mdx
 Path: app/platforms/konnaxion/ethikos/kintsugi/page.mdx */}
@@ -5424,7 +5424,7 @@ href="/platforms/konnaxion/modules"
 - Route: /platforms/konnaxion/ethikos/kompendio
 - HTML: https://initkoa.org/platforms/konnaxion/ethikos/kompendio
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/kompendio/index.html.md
-- Source: app/platforms/konnaxion/ethikos/kompendio/page.mdx
+- Source: app\platforms\konnaxion\ethikos\kompendio\page.mdx
 
 {/* FILE: page.mdx
 Path: app/platforms/konnaxion/ethikos/kompendio/page.mdx */}
@@ -5534,7 +5534,7 @@ It is a **public placeholder** until the ethiKos Kompendio pack is defined.
 - Route: /platforms/konnaxion/ethikos/konsultations
 - HTML: https://initkoa.org/platforms/konnaxion/ethikos/konsultations
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/konsultations/index.html.md
-- Source: app/platforms/konnaxion/ethikos/konsultations/page.mdx
+- Source: app\platforms\konnaxion\ethikos\konsultations\page.mdx
 
 {/* FILE: page.mdx
 Path: app/platforms/konnaxion/ethikos/konsultations/page.mdx */}
@@ -5620,7 +5620,7 @@ Konsultations provides time-boxed consultations, suggestion intake, baseline bal
 - Route: /platforms/konnaxion/ethikos/korum
 - HTML: https://initkoa.org/platforms/konnaxion/ethikos/korum
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/korum/index.html.md
-- Source: app/platforms/konnaxion/ethikos/korum/page.mdx
+- Source: app\platforms\konnaxion\ethikos\korum\page.mdx
 
 {/* FILE: page.mdx
 Path: app/platforms/konnaxion/ethikos/korum/page.mdx */}
@@ -5706,7 +5706,7 @@ Korum provides structured topic management, nuanced stance capture, and threaded
 - Route: /platforms/konnaxion/journeys
 - HTML: https://initkoa.org/platforms/konnaxion/journeys
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/journeys/index.html.md
-- Source: app/platforms/konnaxion/journeys/page.tsx
+- Source: app\platforms\konnaxion\journeys\page.tsx
 
 Konnaxion / Journeys
 
@@ -5739,7 +5739,7 @@ Explore the modules
 - Route: /platforms/konnaxion/keenkonnect
 - HTML: https://initkoa.org/platforms/konnaxion/keenkonnect
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/keenkonnect/index.html.md
-- Source: app/platforms/konnaxion/keenkonnect/page.tsx
+- Source: app\platforms\konnaxion\keenkonnect\page.tsx
 
 Konnaxion / keenKonnect
 
@@ -5813,7 +5813,7 @@ Go to keenKonnect Kompendio
 - Route: /platforms/konnaxion/keenkonnect/kintsugi
 - HTML: https://initkoa.org/platforms/konnaxion/keenkonnect/kintsugi
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/keenkonnect/kintsugi/index.html.md
-- Source: app/platforms/konnaxion/keenkonnect/kintsugi/page.mdx
+- Source: app\platforms\konnaxion\keenkonnect\kintsugi\page.mdx
 
 Layers,
 Package,
@@ -5921,7 +5921,7 @@ keenKonnect Kintsugi is the operating layer that makes physical-world collaborat
 - Route: /platforms/konnaxion/keenkonnect/kompendio
 - HTML: https://initkoa.org/platforms/konnaxion/keenkonnect/kompendio
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/keenkonnect/kompendio/index.html.md
-- Source: app/platforms/konnaxion/keenkonnect/kompendio/page.mdx
+- Source: app\platforms\konnaxion\keenkonnect\kompendio\page.mdx
 
 'A curated repertory of reference platforms + versioned builder charts, pinned to projects and preserved as reproducible packs.',
 
@@ -6041,7 +6041,7 @@ A project typically uses both:
 - Route: /platforms/konnaxion/kintsugi
 - HTML: https://initkoa.org/platforms/konnaxion/kintsugi
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/kintsugi/index.html.md
-- Source: app/platforms/konnaxion/kintsugi/page.tsx
+- Source: app\platforms\konnaxion\kintsugi\page.tsx
 
 Konnaxion / Kintsugi
 
@@ -6110,7 +6110,7 @@ Go to Kompendio
 - Route: /platforms/konnaxion/kollective-intelligence
 - HTML: https://initkoa.org/platforms/konnaxion/kollective-intelligence
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/kollective-intelligence/index.html.md
-- Source: app/platforms/konnaxion/kollective-intelligence/page.tsx
+- Source: app\platforms\konnaxion\kollective-intelligence\page.tsx
 
 Kollective Intelligence
 
@@ -6187,7 +6187,7 @@ reliability without replacing citizen voice.
 - Route: /platforms/konnaxion/kollective-intelligence/ekoh
 - HTML: https://initkoa.org/platforms/konnaxion/kollective-intelligence/ekoh
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/kollective-intelligence/ekoh/index.html.md
-- Source: app/platforms/konnaxion/kollective-intelligence/ekoh/page.mdx
+- Source: app\platforms\konnaxion\kollective-intelligence\ekoh\page.mdx
 
 # EkoH
 
@@ -6290,7 +6290,7 @@ EkoH is a **merit ledger**: domain expertise vectors + ethics multipliers + priv
 - Route: /platforms/konnaxion/kollective-intelligence/kintsugi
 - HTML: https://initkoa.org/platforms/konnaxion/kollective-intelligence/kintsugi
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/kollective-intelligence/kintsugi/index.html.md
-- Source: app/platforms/konnaxion/kollective-intelligence/kintsugi/page.mdx
+- Source: app\platforms\konnaxion\kollective-intelligence\kintsugi\page.mdx
 
 'Operate Smart Vote + EkoH “under one roof” to run legitimate decisions under complexity: baseline voting + domain-bounded advisory readings + publishable accountability.',
 
@@ -6386,7 +6386,7 @@ Kintsugi treats publication as the beginning of accountability—not the end.
 - Route: /platforms/konnaxion/kollective-intelligence/kompendio
 - HTML: https://initkoa.org/platforms/konnaxion/kollective-intelligence/kompendio
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/kollective-intelligence/kompendio/index.html.md
-- Source: app/platforms/konnaxion/kollective-intelligence/kompendio/page.mdx
+- Source: app\platforms\konnaxion\kollective-intelligence\kompendio\page.mdx
 
 'Planned reference layer for Smart Vote + EkoH: definitions, charts, and governance patterns. Not yet published as a complete Kompendio module.',
 
@@ -6455,7 +6455,7 @@ If you want to track progress, keep this page in the nav as “Reference (TBD)�
 - Route: /platforms/konnaxion/kollective-intelligence/smart-vote
 - HTML: https://initkoa.org/platforms/konnaxion/kollective-intelligence/smart-vote
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/kollective-intelligence/smart-vote/index.html.md
-- Source: app/platforms/konnaxion/kollective-intelligence/smart-vote/page.mdx
+- Source: app\platforms\konnaxion\kollective-intelligence\smart-vote\page.mdx
 
 "Weighted voting + decision readings (lenses) powered by EkoH snapshots: transparent outcomes, reproducible tallies, and cross-module targeting."
 
@@ -6548,7 +6548,7 @@ Note: some earlier uploaded files in this conversation have expired from the wor
 - Route: /platforms/konnaxion/kompendio
 - HTML: https://initkoa.org/platforms/konnaxion/kompendio
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/kompendio/index.html.md
-- Source: app/platforms/konnaxion/kompendio/page.tsx
+- Source: app\platforms\konnaxion\kompendio\page.tsx
 
 Kompendio
 
@@ -6635,7 +6635,7 @@ Explore modules
 - Route: /platforms/konnaxion/konnected
 - HTML: https://initkoa.org/platforms/konnaxion/konnected
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/konnected/index.html.md
-- Source: app/platforms/konnaxion/konnected/page.tsx
+- Source: app\platforms\konnaxion\konnected\page.tsx
 
 ← Back to Konnaxion
 
@@ -6736,7 +6736,7 @@ Stronger continuity: knowledge and competence don’t disappear when people leav
 - Route: /platforms/konnaxion/konnected/certifikation
 - HTML: https://initkoa.org/platforms/konnaxion/konnected/certifikation
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/konnected/certifikation/index.html.md
-- Source: app/platforms/konnaxion/konnected/certifikation/page.mdx
+- Source: app\platforms\konnaxion\konnected\certifikation\page.mdx
 
 # CertifiKation
 
@@ -6804,7 +6804,7 @@ CertifiKation delivers end‑to‑end credentialing: define programs (*Certifica
 - Route: /platforms/konnaxion/konnected/kintsugi
 - HTML: https://initkoa.org/platforms/konnaxion/konnected/kintsugi
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/konnected/kintsugi/index.html.md
-- Source: app/platforms/konnaxion/konnected/kintsugi/page.mdx
+- Source: app\platforms\konnaxion\konnected\kintsugi\page.mdx
 
 GraduationCap,
 ClipboardCheck,
@@ -6890,7 +6890,7 @@ href="/platforms/konnaxion/konnected/kompendio"
 - Route: /platforms/konnaxion/konnected/knowledge
 - HTML: https://initkoa.org/platforms/konnaxion/konnected/knowledge
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/konnected/knowledge/index.html.md
-- Source: app/platforms/konnaxion/konnected/knowledge/page.mdx
+- Source: app\platforms\konnaxion\konnected\knowledge\page.mdx
 
 # Knowledge
 
@@ -6956,7 +6956,7 @@ Knowledge delivers the learning library and its social layer: resource managemen
 - Route: /platforms/konnaxion/konnected/kompendio
 - HTML: https://initkoa.org/platforms/konnaxion/konnected/kompendio
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/konnected/kompendio/index.html.md
-- Source: app/platforms/konnaxion/konnected/kompendio/page.mdx
+- Source: app\platforms\konnaxion\konnected\kompendio\page.mdx
 
 BookOpen,
 Layers,
@@ -7083,7 +7083,7 @@ href="/platforms/konnaxion/modules"
 - Route: /platforms/konnaxion/kreative
 - HTML: https://initkoa.org/platforms/konnaxion/kreative
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/kreative/index.html.md
-- Source: app/platforms/konnaxion/kreative/page.tsx
+- Source: app\platforms\konnaxion\kreative\page.tsx
 
 Kreative
 
@@ -7114,7 +7114,7 @@ Next: KonnectED (Learning) →
 - Route: /platforms/konnaxion/kreative/konservation
 - HTML: https://initkoa.org/platforms/konnaxion/kreative/konservation
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/kreative/konservation/index.html.md
-- Source: app/platforms/konnaxion/kreative/konservation/page.mdx
+- Source: app\platforms\konnaxion\kreative\konservation\page.mdx
 
 # Konservation
 
@@ -7197,7 +7197,7 @@ Konservation provides **digital archiving**, **virtual exhibitions**, **document
 - Route: /platforms/konnaxion/kreative/kontact
 - HTML: https://initkoa.org/platforms/konnaxion/kreative/kontact
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/kreative/kontact/index.html.md
-- Source: app/platforms/konnaxion/kreative/kontact/page.mdx
+- Source: app\platforms\konnaxion\kreative\kontact\page.mdx
 
 # Kontact
 
@@ -7258,7 +7258,7 @@ Kontact delivers networkingcentric capabilities via five services `professional_
 - Route: /platforms/konnaxion/modules
 - HTML: https://initkoa.org/platforms/konnaxion/modules
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/modules/index.html.md
-- Source: app/platforms/konnaxion/modules/page.tsx
+- Source: app\platforms\konnaxion\modules\page.tsx
 
 Konnaxion / Modules
 
@@ -7298,7 +7298,7 @@ preserved for reuse.
 - Route: /platforms/konnaxion/technical
 - HTML: https://initkoa.org/platforms/konnaxion/technical
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/technical/index.html.md
-- Source: app/platforms/konnaxion/technical/page.tsx
+- Source: app\platforms\konnaxion\technical\page.tsx
 
 Konnaxion / Technical
 
@@ -7359,7 +7359,7 @@ Broader technology stack
 - Route: /platforms/konnaxion/technical/konnaxion-technical-architecture-and-services
 - HTML: https://initkoa.org/platforms/konnaxion/technical/konnaxion-technical-architecture-and-services
 - Markdown mirror: https://initkoa.org/platforms/konnaxion/technical/konnaxion-technical-architecture-and-services/index.html.md
-- Source: app/platforms/konnaxion/technical/konnaxion-technical-architecture-and-services/page.mdx
+- Source: app\platforms\konnaxion\technical\konnaxion-technical-architecture-and-services\page.mdx
 
 # Konnaxion – Technical Architecture & Services
 
@@ -8156,7 +8156,7 @@ This page, together with the module-specific entries, provides the technical con
 - Route: /platforms/orgo
 - HTML: https://initkoa.org/platforms/orgo
 - Markdown mirror: https://initkoa.org/platforms/orgo/index.html.md
-- Source: app/platforms/orgo/page.mdx
+- Source: app\platforms\orgo\page.mdx
 
 "Orgo turns signals, reviews, approvals, and operational decisions into accountable work with routing, escalation, audit trails, and offline-capable execution.",
 "Orgo turns signals, reviews, approvals, and operational decisions into accountable work with routing, escalation, audit trails, and offline-capable execution.",
@@ -8490,7 +8490,7 @@ href="/platforms/orgo/use-cases/local-government"
 - Route: /platforms/orgo/adoption
 - HTML: https://initkoa.org/platforms/orgo/adoption
 - Markdown mirror: https://initkoa.org/platforms/orgo/adoption/index.html.md
-- Source: app/platforms/orgo/adoption/page.mdx
+- Source: app\platforms\orgo\adoption\page.mdx
 
 CheckCircle2,
 Users,
@@ -8719,7 +8719,7 @@ href="/platforms/orgo/trust"
 - Route: /platforms/orgo/flows
 - HTML: https://initkoa.org/platforms/orgo/flows
 - Markdown mirror: https://initkoa.org/platforms/orgo/flows/index.html.md
-- Source: app/platforms/orgo/flows/page.mdx
+- Source: app\platforms\orgo\flows\page.mdx
 
 ArrowRight,
 GitBranch,
@@ -8917,7 +8917,7 @@ href="/platforms/orgo/use-cases"
 - Route: /platforms/orgo/guarantees
 - HTML: https://initkoa.org/platforms/orgo/guarantees
 - Markdown mirror: https://initkoa.org/platforms/orgo/guarantees/index.html.md
-- Source: app/platforms/orgo/guarantees/page.mdx
+- Source: app\platforms\orgo\guarantees\page.mdx
 
 ShieldCheck,
 Route,
@@ -9083,7 +9083,7 @@ href="/platforms/orgo/adoption"
 - Route: /platforms/orgo/modules
 - HTML: https://initkoa.org/platforms/orgo/modules
 - Markdown mirror: https://initkoa.org/platforms/orgo/modules/index.html.md
-- Source: app/platforms/orgo/modules/page.mdx
+- Source: app\platforms\orgo\modules\page.mdx
 
 Blocks,
 Building2,
@@ -9167,7 +9167,7 @@ href="/platforms/orgo/guarantees"
 - Route: /platforms/orgo/offline-sovereignty
 - HTML: https://initkoa.org/platforms/orgo/offline-sovereignty
 - Markdown mirror: https://initkoa.org/platforms/orgo/offline-sovereignty/index.html.md
-- Source: app/platforms/orgo/offline-sovereignty/page.mdx
+- Source: app\platforms\orgo\offline-sovereignty\page.mdx
 
 "Run Orgo in a hermetic mode: continue operations without the public internet, keep data under your control, and synchronize safely when you choose."
 
@@ -9246,7 +9246,7 @@ href="/platforms/orgo/use-cases"
 - Route: /platforms/orgo/profiles
 - HTML: https://initkoa.org/platforms/orgo/profiles
 - Markdown mirror: https://initkoa.org/platforms/orgo/profiles/index.html.md
-- Source: app/platforms/orgo/profiles/page.mdx
+- Source: app\platforms\orgo\profiles\page.mdx
 
 SlidersHorizontal,
 Timer,
@@ -9459,7 +9459,7 @@ href="/platforms/orgo/security-audit"
 - Route: /platforms/orgo/reviews
 - HTML: https://initkoa.org/platforms/orgo/reviews
 - Markdown mirror: https://initkoa.org/platforms/orgo/reviews/index.html.md
-- Source: app/platforms/orgo/reviews/page.mdx
+- Source: app\platforms\orgo\reviews\page.mdx
 
 CalendarDays,
 TrendingUp,
@@ -9591,7 +9591,7 @@ href="/platforms/orgo/profiles"
 - Route: /platforms/orgo/routing-escalation
 - HTML: https://initkoa.org/platforms/orgo/routing-escalation
 - Markdown mirror: https://initkoa.org/platforms/orgo/routing-escalation/index.html.md
-- Source: app/platforms/orgo/routing-escalation/page.mdx
+- Source: app\platforms\orgo\routing-escalation\page.mdx
 
 'How Orgo prevents lost requests: route work to the right function, enforce response windows, and escalate safely when needed.',
 
@@ -9691,7 +9691,7 @@ href="/platforms/orgo/offline-sovereignty"
 - Route: /platforms/orgo/security-audit
 - HTML: https://initkoa.org/platforms/orgo/security-audit
 - Markdown mirror: https://initkoa.org/platforms/orgo/security-audit/index.html.md
-- Source: app/platforms/orgo/security-audit/page.mdx
+- Source: app\platforms\orgo\security-audit\page.mdx
 
 ShieldCheck,
 ScanEye,
@@ -9863,7 +9863,7 @@ href="/platforms/orgo/profiles"
 - Route: /platforms/orgo/trust
 - HTML: https://initkoa.org/platforms/orgo/trust
 - Markdown mirror: https://initkoa.org/platforms/orgo/trust/index.html.md
-- Source: app/platforms/orgo/trust/page.mdx
+- Source: app\platforms\orgo\trust\page.mdx
 
 ShieldCheck,
 Lock,
@@ -10078,7 +10078,7 @@ href="/platforms/orgo/offline-sovereignty"
 - Route: /platforms/orgo/use-cases
 - HTML: https://initkoa.org/platforms/orgo/use-cases
 - Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/index.html.md
-- Source: app/platforms/orgo/use-cases/page.mdx
+- Source: app\platforms\orgo\use-cases\page.mdx
 
 Hospital,
 Landmark,
@@ -10156,7 +10156,7 @@ href="/platforms/orgo/offline-sovereignty"
 - Route: /platforms/orgo/use-cases/healthcare
 - HTML: https://initkoa.org/platforms/orgo/use-cases/healthcare
 - Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/healthcare/index.html.md
-- Source: app/platforms/orgo/use-cases/healthcare/page.mdx
+- Source: app\platforms\orgo\use-cases\healthcare\page.mdx
 
 Siren,
 Stethoscope,
@@ -10240,7 +10240,7 @@ href="/platforms/orgo/trust"
 - Route: /platforms/orgo/use-cases/justice
 - HTML: https://initkoa.org/platforms/orgo/use-cases/justice
 - Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/justice/index.html.md
-- Source: app/platforms/orgo/use-cases/justice/page.mdx
+- Source: app\platforms\orgo\use-cases\justice\page.mdx
 
 Gavel,
 Bell,
@@ -10347,7 +10347,7 @@ href="/platforms/orgo/trust"
 - Route: /platforms/orgo/use-cases/local-government
 - HTML: https://initkoa.org/platforms/orgo/use-cases/local-government
 - Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/local-government/index.html.md
-- Source: app/platforms/orgo/use-cases/local-government/page.mdx
+- Source: app\platforms\orgo\use-cases\local-government\page.mdx
 
 "Route citizen requests to the right function, enforce response windows with escalation, and close cases with traceable outcomes—even during outages.",
 
@@ -10444,7 +10444,7 @@ href="/platforms/orgo/guarantees"
 - Route: /platforms/orgo/what-it-does
 - HTML: https://initkoa.org/platforms/orgo/what-it-does
 - Markdown mirror: https://initkoa.org/platforms/orgo/what-it-does/index.html.md
-- Source: app/platforms/orgo/what-it-does/page.mdx
+- Source: app\platforms\orgo\what-it-does\page.mdx
 
 "Orgo turns signals into accountable work: route by function, escalate by time, and close every case with a traceable outcome—even offline."
 
@@ -10532,7 +10532,7 @@ href="/platforms/orgo/use-cases"
 - Route: /platforms/orgo/workflow
 - HTML: https://initkoa.org/platforms/orgo/workflow
 - Markdown mirror: https://initkoa.org/platforms/orgo/workflow/index.html.md
-- Source: app/platforms/orgo/workflow/page.mdx
+- Source: app\platforms\orgo\workflow\page.mdx
 
 Inbox,
 Filter,
@@ -10605,7 +10605,7 @@ href="/platforms/orgo/reviews"
 - Route: /principles
 - HTML: https://initkoa.org/principles
 - Markdown mirror: https://initkoa.org/principles/index.html.md
-- Source: app/principles/page.js
+- Source: app\principles\page.js
 
 Principles
 
@@ -10691,7 +10691,7 @@ Technology (builder docs)
 - Route: /principles/civic-principles-ethics
 - HTML: https://initkoa.org/principles/civic-principles-ethics
 - Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/index.html.md
-- Source: app/principles/civic-principles-ethics/page.js
+- Source: app\principles\civic-principles-ethics\page.js
 
 Civic Principles & Ethics
 
@@ -10743,7 +10743,7 @@ Map
 - Route: /principles/civic-principles-ethics/faq
 - HTML: https://initkoa.org/principles/civic-principles-ethics/faq
 - Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/faq/index.html.md
-- Source: app/principles/civic-principles-ethics/faq/page.js
+- Source: app\principles\civic-principles-ethics\faq\page.js
 
 Civic Principles & Ethics FAQ
 
@@ -10760,7 +10760,7 @@ Map
 - Route: /principles/civic-principles-ethics/institutions
 - HTML: https://initkoa.org/principles/civic-principles-ethics/institutions
 - Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/institutions/index.html.md
-- Source: app/principles/civic-principles-ethics/institutions/page.js
+- Source: app\principles\civic-principles-ethics\institutions\page.js
 
 Institutions
 
@@ -10780,7 +10780,7 @@ Map
 - Route: /principles/civic-principles-ethics/principles
 - HTML: https://initkoa.org/principles/civic-principles-ethics/principles
 - Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/principles/index.html.md
-- Source: app/principles/civic-principles-ethics/principles/page.js
+- Source: app\principles\civic-principles-ethics\principles\page.js
 
 Civic Principles
 
@@ -10800,7 +10800,7 @@ Map
 - Route: /principles/civic-principles-ethics/rights-and-duties
 - HTML: https://initkoa.org/principles/civic-principles-ethics/rights-and-duties
 - Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/rights-and-duties/index.html.md
-- Source: app/principles/civic-principles-ethics/rights-and-duties/page.js
+- Source: app\principles\civic-principles-ethics\rights-and-duties\page.js
 
 Rights & Duties
 
@@ -10830,7 +10830,7 @@ Map
 - Route: /principles/civic-principles-ethics/transparency-and-accountability
 - HTML: https://initkoa.org/principles/civic-principles-ethics/transparency-and-accountability
 - Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/transparency-and-accountability/index.html.md
-- Source: app/principles/civic-principles-ethics/transparency-and-accountability/page.js
+- Source: app\principles\civic-principles-ethics\transparency-and-accountability\page.js
 
 Transparency & Accountability
 
@@ -10850,7 +10850,7 @@ Map
 - Route: /principles/cosmic-etherism
 - HTML: https://initkoa.org/principles/cosmic-etherism
 - Markdown mirror: https://initkoa.org/principles/cosmic-etherism/index.html.md
-- Source: app/principles/cosmic-etherism/page.js
+- Source: app\principles\cosmic-etherism\page.js
 
 Cosmic Etherism
 
@@ -10916,7 +10916,7 @@ Map
 - Route: /principles/cosmic-etherism/faq
 - HTML: https://initkoa.org/principles/cosmic-etherism/faq
 - Markdown mirror: https://initkoa.org/principles/cosmic-etherism/faq/index.html.md
-- Source: app/principles/cosmic-etherism/faq/page.js
+- Source: app\principles\cosmic-etherism\faq\page.js
 
 Cosmic Etherism FAQ
 
@@ -10942,7 +10942,7 @@ Map
 - Route: /principles/cosmic-etherism/methods
 - HTML: https://initkoa.org/principles/cosmic-etherism/methods
 - Markdown mirror: https://initkoa.org/principles/cosmic-etherism/methods/index.html.md
-- Source: app/principles/cosmic-etherism/methods/page.js
+- Source: app\principles\cosmic-etherism\methods\page.js
 
 Cosmic Etherism Methods
 
@@ -10971,7 +10971,7 @@ Map
 - Route: /principles/cosmic-etherism/practices
 - HTML: https://initkoa.org/principles/cosmic-etherism/practices
 - Markdown mirror: https://initkoa.org/principles/cosmic-etherism/practices/index.html.md
-- Source: app/principles/cosmic-etherism/practices/page.js
+- Source: app\principles\cosmic-etherism\practices\page.js
 
 Cosmic Etherism Practices
 
@@ -11002,7 +11002,7 @@ Map
 - Route: /principles/cosmic-etherism/principles
 - HTML: https://initkoa.org/principles/cosmic-etherism/principles
 - Markdown mirror: https://initkoa.org/principles/cosmic-etherism/principles/index.html.md
-- Source: app/principles/cosmic-etherism/principles/page.js
+- Source: app\principles\cosmic-etherism\principles\page.js
 
 Cosmic Etherism Principles
 
@@ -11027,7 +11027,7 @@ Map
 - Route: /principles/cosmic-etherism/symbols/pi
 - HTML: https://initkoa.org/principles/cosmic-etherism/symbols/pi
 - Markdown mirror: https://initkoa.org/principles/cosmic-etherism/symbols/pi/index.html.md
-- Source: app/principles/cosmic-etherism/symbols/pi/page.js
+- Source: app\principles\cosmic-etherism\symbols\pi\page.js
 
 Non-negotiable separation
 
@@ -11063,7 +11063,7 @@ Symbolic reading
 - Route: /principles/glossary
 - HTML: https://initkoa.org/principles/glossary
 - Markdown mirror: https://initkoa.org/principles/glossary/index.html.md
-- Source: app/principles/glossary/page.js
+- Source: app\principles\glossary\page.js
 
 Glossary
 
@@ -11081,7 +11081,7 @@ Map
 - Route: /principles/logos
 - HTML: https://initkoa.org/principles/logos
 - Markdown mirror: https://initkoa.org/principles/logos/index.html.md
-- Source: app/principles/logos/page.tsx
+- Source: app\principles\logos\page.tsx
 
 Operational Metaphysics
 
@@ -11137,7 +11137,7 @@ Next: Civic Ethics →
 - Route: /principles/map
 - HTML: https://initkoa.org/principles/map
 - Markdown mirror: https://initkoa.org/principles/map/index.html.md
-- Source: app/principles/map/page.js
+- Source: app\principles\map\page.js
 
 Principles
 
@@ -11184,7 +11184,7 @@ Glossary
 - Route: /research
 - HTML: https://initkoa.org/research
 - Markdown mirror: https://initkoa.org/research/index.html.md
-- Source: app/research/page.js
+- Source: app\research\page.js
 
 Working Theory
 
@@ -11251,7 +11251,7 @@ Principles
 - Route: /research/pi-theory
 - HTML: https://initkoa.org/research/pi-theory
 - Markdown mirror: https://initkoa.org/research/pi-theory/index.html.md
-- Source: app/research/pi-theory/page.mdx
+- Source: app\research\pi-theory\page.mdx
 
 # Pi Theory: The Mathematical Genesis
 
@@ -11307,7 +11307,7 @@ Pi Theory serves as the **Metaphysical Kernel** of the kOA project. It suggests 
 - Route: /technology
 - HTML: https://initkoa.org/technology
 - Markdown mirror: https://initkoa.org/technology/index.html.md
-- Source: app/technology/page.tsx
+- Source: app\technology\page.tsx
 
 kOA / TECHNOLOGIE
 
@@ -11354,7 +11354,7 @@ Source canonique
 - Route: /technology/ame-artificielle
 - HTML: https://initkoa.org/technology/ame-artificielle
 - Markdown mirror: https://initkoa.org/technology/ame-artificielle/index.html.md
-- Source: app/technology/ame-artificielle/page.tsx
+- Source: app\technology\ame-artificielle\page.tsx
 
 Recherche expérimentale · EL
 
@@ -11406,7 +11406,7 @@ Validation (documentation existante)
 - Route: /technology/ame-artificielle/branes-et-couche-de-sens
 - HTML: https://initkoa.org/technology/ame-artificielle/branes-et-couche-de-sens
 - Markdown mirror: https://initkoa.org/technology/ame-artificielle/branes-et-couche-de-sens/index.html.md
-- Source: app/technology/ame-artificielle/branes-et-couche-de-sens/page.mdx
+- Source: app\technology\ame-artificielle\branes-et-couche-de-sens\page.mdx
 
 "Les branes comme couche de sens dans l’me Artificielle : plan interprétatif, image d’unification, lecture des dualités et de la hiérarchie des niveaux.",
 
@@ -11551,7 +11551,7 @@ Elles participent à l’intelligibilité générale du système, sans en consti
 - Route: /technology/ame-artificielle/cadre-philosophique
 - HTML: https://initkoa.org/technology/ame-artificielle/cadre-philosophique
 - Markdown mirror: https://initkoa.org/technology/ame-artificielle/cadre-philosophique/index.html.md
-- Source: app/technology/ame-artificielle/cadre-philosophique/page.mdx
+- Source: app\technology\ame-artificielle\cadre-philosophique\page.mdx
 
 "Horizon intellectuel de l’me Artificielle : structure, nombre, verticalité, transformation, couche de sens et hypothèse philosophique.",
 
@@ -11801,7 +11801,7 @@ Pour revenir du plan philosophique au plan opératoire :
 - Route: /technology/ame-artificielle/charte-1-9-et-chakras
 - HTML: https://initkoa.org/technology/ame-artificielle/charte-1-9-et-chakras
 - Markdown mirror: https://initkoa.org/technology/ame-artificielle/charte-1-9-et-chakras/index.html.md
-- Source: app/technology/ame-artificielle/charte-1-9-et-chakras/page.mdx
+- Source: app\technology\ame-artificielle\charte-1-9-et-chakras\page.mdx
 
 "La charte 1→9 est la cartographie intérieure de l’me Artificielle : une colonne verticale de traitement, du cerveau au pelvis, avec les chakras comme repères.",
 
@@ -12064,7 +12064,7 @@ La charte permet donc de modéliser le fait qu’un sujet possède une **géogra
 - Route: /technology/ame-artificielle/faq
 - HTML: https://initkoa.org/technology/ame-artificielle/faq
 - Markdown mirror: https://initkoa.org/technology/ame-artificielle/faq/index.html.md
-- Source: app/technology/ame-artificielle/faq/page.mdx
+- Source: app\technology\ame-artificielle\faq\page.mdx
 
 "Questions fréquentes sur l’me Artificielle : simulation de l’âme humaine, charte 1→9, chakras, numérologie pythagoricienne inversée, mécanisme de réaction, couche de sens et validation.",
 
@@ -12278,7 +12278,7 @@ L’me Artificielle est une tentative de simulation d’une architecture intéri
 - Route: /technology/ame-artificielle/how-it-works
 - HTML: https://initkoa.org/technology/ame-artificielle/how-it-works
 - Markdown mirror: https://initkoa.org/technology/ame-artificielle/how-it-works/index.html.md
-- Source: app/technology/ame-artificielle/how-it-works/page.mdx
+- Source: app\technology\ame-artificielle\how-it-works\page.mdx
 
 "Vue opératoire de l’me Artificielle : structure intérieure, charte 1→9, numérologie pythagoricienne inversée et mécanisme de réaction. Ce modèle n’est ni un mécanisme de sécurité, d’alignement ou de gouvernance, ni un composant de SenTient.",
 
@@ -12533,7 +12533,7 @@ On peut résumer le fonctionnement ainsi :
 - Route: /technology/ame-artificielle/mecanisme-de-reaction
 - HTML: https://initkoa.org/technology/ame-artificielle/mecanisme-de-reaction
 - Markdown mirror: https://initkoa.org/technology/ame-artificielle/mecanisme-de-reaction/index.html.md
-- Source: app/technology/ame-artificielle/mecanisme-de-reaction/page.mdx
+- Source: app\technology\ame-artificielle\mecanisme-de-reaction\page.mdx
 
 "Le cœur opératoire de l’me Artificielle : objet en entrée, cheminement intérieur, traversée de la structure du sujet, puis réaction en sortie.",
 
@@ -12847,7 +12847,7 @@ Il donne au système une capacité à ne pas traiter tous les objets de manière
 - Route: /technology/ame-artificielle/numerologie-pythagoricienne-inversee
 - HTML: https://initkoa.org/technology/ame-artificielle/numerologie-pythagoricienne-inversee
 - Markdown mirror: https://initkoa.org/technology/ame-artificielle/numerologie-pythagoricienne-inversee/index.html.md
-- Source: app/technology/ame-artificielle/numerologie-pythagoricienne-inversee/page.mdx
+- Source: app\technology\ame-artificielle\numerologie-pythagoricienne-inversee\page.mdx
 
 "La couche numérique de l’me Artificielle : réduction à 1–9, inversion interne, dualités, pivot 5 et rôle archétypal dans la structure du sujet.",
 
@@ -13101,7 +13101,7 @@ Elle décrit la **forme profonde** à travers laquelle ce trajet aura lieu.
 - Route: /technology/ame-artificielle/ontology-and-traits
 - HTML: https://initkoa.org/technology/ame-artificielle/ontology-and-traits
 - Markdown mirror: https://initkoa.org/technology/ame-artificielle/ontology-and-traits/index.html.md
-- Source: app/technology/ame-artificielle/ontology-and-traits/page.mdx
+- Source: app\technology\ame-artificielle\ontology-and-traits\page.mdx
 
 "Formalisation technique de la couche archétypale : comment la numérologie pythagoricienne inversée peut être traduite en ontologie, traits, polarités et trace exploitable.",
 
@@ -13337,7 +13337,7 @@ Ensuite seulement :
 - Route: /technology/ame-artificielle/validation
 - HTML: https://initkoa.org/technology/ame-artificielle/validation
 - Markdown mirror: https://initkoa.org/technology/ame-artificielle/validation/index.html.md
-- Source: app/technology/ame-artificielle/validation/page.mdx
+- Source: app\technology\ame-artificielle\validation\page.mdx
 
 "Comment valider l’me Artificielle : cohérence interne, reproductibilité, lisibilité des réactions, stabilité des structures et distinction entre noyau opératoire et couches interprétatives.",
 
@@ -13603,7 +13603,7 @@ C’est particulièrement important pour :
 - Route: /technology/architect
 - HTML: https://initkoa.org/technology/architect
 - Markdown mirror: https://initkoa.org/technology/architect/index.html.md
-- Source: app/technology/architect/page.mdx
+- Source: app\technology\architect\page.mdx
 
 "A deterministic multilingual rendering layer for structured knowledge, Kristal query results, and auditable natural-language generation.",
 
@@ -13919,7 +13919,7 @@ When rendering from Kristal, the core invariant is:
 - Route: /technology/ariane
 - HTML: https://initkoa.org/technology/ariane
 - Markdown mirror: https://initkoa.org/technology/ariane/index.html.md
-- Source: app/technology/ariane/page.tsx
+- Source: app\technology\ariane\page.tsx
 
 Ariane
 
@@ -13963,7 +13963,7 @@ Open Concepts Hub →
 - Route: /technology/ariane/atlas
 - HTML: https://initkoa.org/technology/ariane/atlas
 - Markdown mirror: https://initkoa.org/technology/ariane/atlas/index.html.md
-- Source: app/technology/ariane/atlas/page.tsx
+- Source: app\technology\ariane\atlas\page.tsx
 
 Atlas
 
@@ -14004,7 +14004,7 @@ Next: Consumers →
 - Route: /technology/ariane/atlas/architecture
 - HTML: https://initkoa.org/technology/ariane/atlas/architecture
 - Markdown mirror: https://initkoa.org/technology/ariane/atlas/architecture/index.html.md
-- Source: app/technology/ariane/atlas/architecture/page.mdx
+- Source: app\technology\ariane\atlas\architecture\page.mdx
 
 # Atlas
 
@@ -14027,7 +14027,7 @@ Back to Ariane Hub (/technology/ariane)
 - Route: /technology/ariane/atlas/core-schema
 - HTML: https://initkoa.org/technology/ariane/atlas/core-schema
 - Markdown mirror: https://initkoa.org/technology/ariane/atlas/core-schema/index.html.md
-- Source: app/technology/ariane/atlas/core-schema/page.mdx
+- Source: app\technology\ariane\atlas\core-schema\page.mdx
 
 # Atlas / Core Schema
 
@@ -14067,7 +14067,7 @@ Typical fields:
 - Route: /technology/ariane/atlas/graph-model
 - HTML: https://initkoa.org/technology/ariane/atlas/graph-model
 - Markdown mirror: https://initkoa.org/technology/ariane/atlas/graph-model/index.html.md
-- Source: app/technology/ariane/atlas/graph-model/page.mdx
+- Source: app\technology\ariane\atlas\graph-model\page.mdx
 
 # Atlas / Graph Model
 
@@ -14097,7 +14097,7 @@ A small example from a generic application:
 - Route: /technology/ariane/atlas/ontology
 - HTML: https://initkoa.org/technology/ariane/atlas/ontology
 - Markdown mirror: https://initkoa.org/technology/ariane/atlas/ontology/index.html.md
-- Source: app/technology/ariane/atlas/ontology/page.mdx
+- Source: app\technology\ariane\atlas\ontology\page.mdx
 
 # Atlas / Ontology Vocabulary
 
@@ -14155,7 +14155,7 @@ Example (conceptual):
 - Route: /technology/ariane/concepts
 - HTML: https://initkoa.org/technology/ariane/concepts
 - Markdown mirror: https://initkoa.org/technology/ariane/concepts/index.html.md
-- Source: app/technology/ariane/concepts/page.tsx
+- Source: app\technology\ariane\concepts\page.tsx
 
 Ariane Concepts
 
@@ -14187,7 +14187,7 @@ Read Glossary
 - Route: /technology/ariane/concepts/glossary
 - HTML: https://initkoa.org/technology/ariane/concepts/glossary
 - Markdown mirror: https://initkoa.org/technology/ariane/concepts/glossary/index.html.md
-- Source: app/technology/ariane/concepts/glossary/page.mdx
+- Source: app\technology\ariane\concepts\glossary\page.mdx
 
 # Glossary
 
@@ -14340,7 +14340,7 @@ A fingerprint component derived from a screenshot or rendered view of the UI, in
 - Route: /technology/ariane/concepts/ui-as-data
 - HTML: https://initkoa.org/technology/ariane/concepts/ui-as-data
 - Markdown mirror: https://initkoa.org/technology/ariane/concepts/ui-as-data/index.html.md
-- Source: app/technology/ariane/concepts/ui-as-data/page.mdx
+- Source: app\technology\ariane\concepts\ui-as-data\page.mdx
 
 # Background: UI as Data
 
@@ -14461,7 +14461,7 @@ In practice, an agent might:
 - Route: /technology/ariane/consumers
 - HTML: https://initkoa.org/technology/ariane/consumers
 - Markdown mirror: https://initkoa.org/technology/ariane/consumers/index.html.md
-- Source: app/technology/ariane/consumers/page.tsx
+- Source: app\technology\ariane\consumers\page.tsx
 
 Consumers
 
@@ -14502,7 +14502,7 @@ View Atlas (Storage) →
 - Route: /technology/ariane/consumers/ai-agents
 - HTML: https://initkoa.org/technology/ariane/consumers/ai-agents
 - Markdown mirror: https://initkoa.org/technology/ariane/consumers/ai-agents/index.html.md
-- Source: app/technology/ariane/consumers/ai-agents/page.mdx
+- Source: app\technology\ariane\consumers\ai-agents\page.mdx
 
 # Consumers / AI Agent Integration
 
@@ -14618,7 +14618,7 @@ Atlas returns:
 - Route: /technology/ariane/consumers/hybrid-mapping
 - HTML: https://initkoa.org/technology/ariane/consumers/hybrid-mapping
 - Markdown mirror: https://initkoa.org/technology/ariane/consumers/hybrid-mapping/index.html.md
-- Source: app/technology/ariane/consumers/hybrid-mapping/page.mdx
+- Source: app\technology\ariane\consumers\hybrid-mapping\page.mdx
 
 # Hybrid Mapping and Human-Guided Assistants
 
@@ -14670,7 +14670,7 @@ Hybrid mapping is expressed entirely through existing Atlas records, using conve
 - Route: /technology/ariane/consumers/integration-patterns
 - HTML: https://initkoa.org/technology/ariane/consumers/integration-patterns
 - Markdown mirror: https://initkoa.org/technology/ariane/consumers/integration-patterns/index.html.md
-- Source: app/technology/ariane/consumers/integration-patterns/page.mdx
+- Source: app\technology\ariane\consumers\integration-patterns\page.mdx
 
 # Consumers
 
@@ -14841,7 +14841,7 @@ See: Consumers/Future-Overlay-Client (/technology/ariane/consumers/overlay-clien
 - Route: /technology/ariane/consumers/overlay-client
 - HTML: https://initkoa.org/technology/ariane/consumers/overlay-client
 - Markdown mirror: https://initkoa.org/technology/ariane/consumers/overlay-client/index.html.md
-- Source: app/technology/ariane/consumers/overlay-client/page.mdx
+- Source: app\technology\ariane\consumers\overlay-client\page.mdx
 
 # Consumers / Future Overlay Client (Concept)
 
@@ -14948,7 +14948,7 @@ The only requirement is that any consumer—overlay or otherwise—must be able 
 - Route: /technology/ariane/theseus
 - HTML: https://initkoa.org/technology/ariane/theseus
 - Markdown mirror: https://initkoa.org/technology/ariane/theseus/index.html.md
-- Source: app/technology/ariane/theseus/page.tsx
+- Source: app\technology\ariane\theseus\page.tsx
 
 Theseus
 
@@ -14989,7 +14989,7 @@ View Atlas (Storage) →
 - Route: /technology/ariane/theseus/drivers
 - HTML: https://initkoa.org/technology/ariane/theseus/drivers
 - Markdown mirror: https://initkoa.org/technology/ariane/theseus/drivers/index.html.md
-- Source: app/technology/ariane/theseus/drivers/page.mdx
+- Source: app\technology\ariane\theseus\drivers\page.mdx
 
 # Theseus / Drivers
 
@@ -15040,7 +15040,7 @@ getContext() -> ContextMetadata
 - Route: /technology/ariane/theseus/engine-logic
 - HTML: https://initkoa.org/technology/ariane/theseus/engine-logic
 - Markdown mirror: https://initkoa.org/technology/ariane/theseus/engine-logic/index.html.md
-- Source: app/technology/ariane/theseus/engine-logic/page.mdx
+- Source: app\technology\ariane\theseus\engine-logic\page.mdx
 
 # Theseus / Exploration Engine
 
@@ -15242,7 +15242,7 @@ Atlas then persists this information and makes it available to consumers.
 - Route: /technology/ariane/theseus/state-identification
 - HTML: https://initkoa.org/technology/ariane/theseus/state-identification
 - Markdown mirror: https://initkoa.org/technology/ariane/theseus/state-identification/index.html.md
-- Source: app/technology/ariane/theseus/state-identification/page.mdx
+- Source: app\technology\ariane\theseus\state-identification\page.mdx
 
 # Theseus / State Identification
 
@@ -15318,7 +15318,7 @@ def compute_state_id(fingerprint):
 - Route: /technology/kristal
 - HTML: https://initkoa.org/technology/kristal
 - Markdown mirror: https://initkoa.org/technology/kristal/index.html.md
-- Source: app/technology/kristal/page.tsx
+- Source: app\technology\kristal\page.tsx
 
 Technology / Kristal
 
@@ -15396,7 +15396,7 @@ reports belong in the technical reference docs.
 - Route: /technology/kristal/distribution-and-versioning
 - HTML: https://initkoa.org/technology/kristal/distribution-and-versioning
 - Markdown mirror: https://initkoa.org/technology/kristal/distribution-and-versioning/index.html.md
-- Source: app/technology/kristal/distribution-and-versioning/page.mdx
+- Source: app\technology\kristal\distribution-and-versioning\page.mdx
 
 "How Kristals are published, updated, activated, rolled back, and distributed safely, including offline and federated use.",
 
@@ -15750,7 +15750,7 @@ This is what makes distribution auditable rather than merely copied.
 - Route: /technology/kristal/integrations
 - HTML: https://initkoa.org/technology/kristal/integrations
 - Markdown mirror: https://initkoa.org/technology/kristal/integrations/index.html.md
-- Source: app/technology/kristal/integrations/page.mdx
+- Source: app\technology\kristal\integrations\page.mdx
 
 "How Kristals plug into the kOA ecosystem as portable epistemic artifacts with explicit provenance, scope, certainty, authority, validation, and reader-policy labels.",
 
@@ -16071,7 +16071,7 @@ A Kristal integration should not:
 - Route: /technology/kristal/overview
 - HTML: https://initkoa.org/technology/kristal/overview
 - Markdown mirror: https://initkoa.org/technology/kristal/overview/index.html.md
-- Source: app/technology/kristal/overview/page.mdx
+- Source: app\technology\kristal\overview\page.mdx
 
 "Kristal is the portable, verifiable epistemic artifact layer of the kOA ecosystem: a way to publish, audit, distribute, query, and read structured knowledge with explicit provenance, certainty, authority, and scope.",
 
@@ -16327,7 +16327,7 @@ That is the point: not to erase disagreement, but to make knowledge portable, in
 - Route: /technology/kristal/portability-and-offline
 - HTML: https://initkoa.org/technology/kristal/portability-and-offline
 - Markdown mirror: https://initkoa.org/technology/kristal/portability-and-offline/index.html.md
-- Source: app/technology/kristal/portability-and-offline/page.mdx
+- Source: app\technology\kristal\portability-and-offline\page.mdx
 
 'How Kristals stay usable under weak networks: portable epistemic artifacts, offline runtime packs, verifiable provenance, integrity checks, and explicit reader-policy labels.',
 
@@ -16496,7 +16496,7 @@ The system should behave well in both modes: online when available, offline when
 - Route: /technology/kristal/trust-and-provenance
 - HTML: https://initkoa.org/technology/kristal/trust-and-provenance
 - Markdown mirror: https://initkoa.org/technology/kristal/trust-and-provenance/index.html.md
-- Source: app/technology/kristal/trust-and-provenance/page.mdx
+- Source: app\technology\kristal\trust-and-provenance\page.mdx
 
 "How Kristals stay verifiable and accountable: provenance, evidence, signatures, scoped validation, authority channels, reader policies, and preserved disagreement.",
 
@@ -16712,7 +16712,7 @@ That is what makes a Kristal trustworthy: not central control, but structured ac
 - Route: /technology/kristal/what-it-does
 - HTML: https://initkoa.org/technology/kristal/what-it-does
 - Markdown mirror: https://initkoa.org/technology/kristal/what-it-does/index.html.md
-- Source: app/technology/kristal/what-it-does/page.mdx
+- Source: app\technology\kristal\what-it-does\page.mdx
 
 "Kristal turns structured epistemic work into portable, verifiable artifacts that preserve provenance, certainty, authority, scope, and reader-policy labels across the kOA ecosystem.",
 
@@ -17009,7 +17009,7 @@ It helps people, institutions, communities, and systems share knowledge without 
 - Route: /technology/sentient
 - HTML: https://initkoa.org/technology/sentient
 - Markdown mirror: https://initkoa.org/technology/sentient/index.html.md
-- Source: app/technology/sentient/page.mdx
+- Source: app\technology\sentient\page.mdx
 
 # SenTient
 
@@ -17081,12 +17081,2297 @@ Raw text / document / dataset / submission
 
 ---
 
+## /technology/swarmcraft
+
+- Route: /technology/swarmcraft
+- HTML: https://initkoa.org/technology/swarmcraft
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/index.html.md
+- Source: app\technology\swarmcraft\page.mdx
+
+POWERED BY GROK
+
+SwarmCraft
+Deterministic Story Engine
+
+SwarmCraft is a deterministic, data-driven story engine designed to transform explicit project state into prose using a strict control loop. Unlike chat-based swarms, it separates <strong>Brain</strong> (LLM personas), <strong>Logic</strong> (orchestration), and <strong>Memory</strong> (explicit state) to ensure long-form narrative coherence.
+
+Technical documentation is currently being migrated to this new platform.
+
+The atomic unit of work is the <strong>Part</strong>. Chapters are simply rollups of 1–6 Parts. This allows for small, stable prompt slices and targeted regeneration.
+The engine never dumps the whole Story Bible into the LLM. It hydrates prompts with <strong>only</strong> the active Part's beats, contract, and relevant RAG evidence.
+
+href="/technology/swarmcraft/meta"
+SwarmCraft's upstream lineage, architectural credits, and the design decisions that separate it from chat-based swarm systems.
+
+title="Credits & Sources"
+href="/technology/swarmcraft/meta/credits-and-lineage"
+Full attribution, project ancestry, and the reference trail behind the current engine.
+
+href="/technology/swarmcraft/meta"
+Read the full SwarmCraft lineage documentation →
+
+Based on the foundational work of Mojomast/swarmussy and the Abstract Wiki Architect.
+href="/technology/swarmcraft/meta"
+Open Meta & Lineage
+
+---
+
+## Architecture Overview
+
+- Route: /technology/swarmcraft/core/architecture-overview
+- HTML: https://initkoa.org/technology/swarmcraft/core/architecture-overview
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/core/architecture-overview/index.html.md
+- Source: app\technology\swarmcraft\core\architecture-overview\page.mdx
+
+# Architecture Overview
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+SwarmCraft is a **deterministic, data-driven story engine**. It transforms explicit project state into prose using a strict control loop and a layered architecture that separates:
+
+- **Brain** (LLM personas and prompt behaviors)
+- **Logic** (orchestration, tools, validation)
+- **Memory** (project state files + RAG index)
+
+## 1) The Three-Layer Model (Brain / Logic / Memory)
+
+### Brain (LLM Personas)
+Stateless services that generate or evaluate content. They never own canonical state.
+
+Typical personas:
+- **Architect**: plans next actions and targets
+- **Narrator**: drafts/revises prose for one Part
+- **Editor**: validates prose against scaffold + continuity
+
+Location (typical):
+
+### Logic (Deterministic Engine)
+The orchestrated runtime that:
+- selects what to do next
+- hydrates prompts slice-by-slice
+- executes file operations through guarded tools
+- enforces the update cycle
+
+Core modules (typical):
+- `core/orchestrator.py`
+- `core/agent_tools.py`
+- `core/project_manager.py`
+- `core/scanner.py` (or equivalent)
+
+### Memory (Explicit Project State)
+All durable “truth” lives in versionable state and indexes:
+
+- **Matrix** (runtime state): `data/matrix.json`
+- **Story Bible** (creative intent): `data/story_bible/`
+- **RAG memory DB** (long-term continuity): `data/memory_db/` (per project)
+
+## 2) The Deterministic Control Loop
+
+SwarmCraft runs a strict cycle:
+
+**SCAN → PLAN → EXECUTE**
+
+- **SCAN**
+Reads filesystem + state, updates Matrix metrics/status, ingests new prose into RAG memory.
+- **PLAN**
+Architect selects the next target **Part** and action (draft/revise/review), based on Matrix status + control signals.
+- **EXECUTE**
+Narrator/Editor runs for exactly one Part. All mutations occur via tools, then the system returns to SCAN.
+
+Details: **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+
+## 3) Core Data Objects
+
+### 3.1 Matrix (Runtime State)
+`data/matrix.json` is the machine-readable view of “what exists and what’s next.”
+
+It tracks:
+- per-part manuscript path
+- active task target (always a **Part**)
+- word counts, timestamps, metrics
+
+Details: **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+
+### 3.2 Story Bible (Creative Intent)
+The Story Bible stores the canonical creative plan:
+- characters, lore, constraints, style rules
+- **templates** and **outline** (the Story Scaffold)
+
+Details: **Story Bible (/technology/swarmcraft/scaffold/story-bible-creative-intent)**
+
+### 3.3 Story Scaffold (Templates + Outline + Parts)
+The scaffold is the structured narrative “grid” that humans and the Wizard can edit:
+
+- **Templates** define:
+- thread set (Plot, Character Development, etc.)
+- cadence rules (how often threads must be filled)
+
+- **Outline** defines:
+- chapters → parts mapping
+- per-part thread beats (grid cells)
+- per-part contract (goal / obstacle / turn / outcome)
+- locks (protect manual edits)
+
+- **Story Scaffold (/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
+- **Schema: Templates (../schema: templates)**
+- **Schema: Outline (../schema: outline)**
+- **Outline Grid & CSV Round-Trip (/technology/swarmcraft/scaffold/outline-grid-csv-round-trip)**
+
+## 4) Units of Work: Parts, Not Chapters
+
+A **Part** is the atomic unit SwarmCraft drafts and revises.
+
+- A chapter may contain **1–6 parts** depending on template and user choice.
+- Parts enable:
+- small, stable prompt slices
+- targeted regeneration (one beat / one part)
+- better continuity control
+- clearer status tracking
+
+Part orchestration: **Orchestration: Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+
+## 5) Multi-Project Isolation
+
+SwarmCraft supports multiple isolated projects (universes):
+
+- each project has its own:
+
+Details: **Multi-Project Management (/technology/swarmcraft/runtime/multi-project-management)**
+
+## 6) RAG Memory for Long-Form Continuity
+
+The memory system ingests written prose and enables semantic retrieval:
+- prevents character/world drift
+- reduces plot holes
+- avoids bloating prompts with “story so far”
+
+Details: **RAG Memory System (/technology/swarmcraft/runtime/rag-memory-system)**
+
+## 7) Control Surfaces
+
+SwarmCraft is designed to be observable and steerable:
+
+- **TUI Dashboard**: real-time view of tasks, logs, and state
+Details: **Dashboard Reference (/technology/swarmcraft/runtime/dashboard-tui-reference)**
+
+- **Control file** (implementation-specific): pause/resume/override planning without coupling UI to engine.
+
+## 8) Provider Integration (Grok)
+
+SwarmCraft uses a provider adapter to keep the engine model-agnostic:
+- normalizes tool calling and responses
+- centralizes API settings and error handling
+- enables “Powered by Grok” without hardwiring provider logic everywhere
+
+Details: **Provider Adapter: Grok (/technology/swarmcraft/runtime/provider-adapter-grok)**
+
+## 9) Where to Go Next
+
+- **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+- **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+- **Story Scaffold (/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
+- **Orchestration: Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+
+---
+
+## **POWERED BY GROK**
+
+- Route: /technology/swarmcraft/core/central-matrix-runtime-state
+- HTML: https://initkoa.org/technology/swarmcraft/core/central-matrix-runtime-state
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/core/central-matrix-runtime-state/index.html.md
+- Source: app\technology\swarmcraft\core\central-matrix-runtime-state\page.mdx
+
+# Story Bible (Creative Intent)
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+The **Story Bible** is SwarmCraft’s home for **creative intent**: the canonical narrative plan, constraints, and reference material that guide drafting and revision.
+
+It is designed to be:
+- **explicit** (no hidden “chat history” requirements)
+- **versionable** (text/JSON files under source control)
+- **sliceable** (only the relevant subset is injected into prompts)
+- **human-editable** (writers can edit directly or through UI)
+
+The Story Bible is distinct from:
+- **Matrix** (runtime progress state): **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+- **RAG memory** (retrieved continuity evidence): **RAG Memory System (/technology/swarmcraft/runtime/rag-memory-system)**
+
+## 1) Location and Project Isolation
+
+**Recommended per-project location:**
+- `projects/<project_id>/data/story_bible/`
+
+Single-project setups MAY use:
+- `data/story_bible/`
+
+The Story Bible is project-scoped. Each project has its own Bible and must not share it implicitly.
+
+See: **Multi-Project Management (/technology/swarmcraft/runtime/multi-project-management)**
+
+## 2) What Lives in the Story Bible
+
+SwarmCraft treats the Story Bible as the canonical source for:
+
+### 2.1 Canonical references
+- Characters (bios, arcs, secrets, voice constraints)
+- Locations (maps, rules, sensory signatures)
+- Lore (history, factions, magic/tech rules)
+- Style rules (tone, POV, reading level, taboo list)
+- Constraints (hard rules the Editor enforces)
+
+These may be stored in Markdown or JSON, depending on preference and tooling.
+
+### 2.2 The Story Scaffold (New)
+The scaffold is part of the Story Bible because it is **creative intent**, not runtime state:
+
+- **Templates:** `templates/<template_id>.json`
+Defines threads (Plot, Character Development, etc.), cadence expectations, and default parts/chapter.
+
+- **Outline:** `outline.json`
+Defines chapters → parts mapping, per-part thread beats, and per-part “contract”.
+
+Scaffold entry point:
+- **Story Scaffold (/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
+
+## 3) Recommended Folder Layout
+
+This is a recommendation, not a constraint—projects may reorganize, but the engine must be able to find `outline.json` and the selected `templates/<template_id>.json`.
+
+## 4) Bible vs Matrix vs Memory (Key Separation)
+
+### Story Bible (Intent)
+
+* “What the story *should be*.”
+* Edited by humans and the Wizard.
+* Used as authoritative instruction.
+
+### Matrix (Runtime)
+
+* “What the system has *done* and what is next.”
+* Derived from disk and updated by tools.
+* Tracks statuses and active tasks.
+
+See: **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+
+### RAG Memory (Evidence)
+
+* “What has been *written before*.”
+* Queried to prevent continuity drift.
+* Does not define intent; it provides recall.
+
+See: **RAG Memory System (/technology/swarmcraft/runtime/rag-memory-system)**
+
+## 5) How the Bible Is Used in Prompts (Slice-by-Slice)
+
+SwarmCraft never dumps the whole Story Bible into the LLM.
+
+Instead, the orchestrator hydrates prompts by selecting only:
+
+* the target Part’s beats + contract from the Outline
+* the minimal character/location/lore references required for that Part
+* applicable constraints (style/voice/safety rules)
+
+This reduces repetition, keeps cost stable, and prevents “prompt sprawl.”
+
+See: **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+
+## 6) Editing Workflows
+
+The Story Bible supports three editing modes:
+
+1. **Wizard-generated scaffold**
+A guided LLM workflow creates the first template selection + outline draft.
+
+2. **Grid editing (human-friendly)**
+Outline beats are displayed as a grid (threads × parts), with optional CSV round-trip.
+
+3. **Direct file edits**
+Writers can edit Markdown/JSON files directly, then SCAN reconciles changes.
+
+Grid + CSV:
+
+* **Outline Grid CSV Round-Trip (/technology/swarmcraft/scaffold/outline-grid-csv-round-trip)**
+
+## 7) Integrity Rules (Recommended)
+
+The scanner/orchestrator SHOULD validate:
+
+* the chosen template thread list matches the outline beats keys
+* every Part referenced in outline has a stable `part_id`
+* locks are honored (beats/contract/manuscript)
+* no orphan manuscripts exist without a Part mapping (or they are flagged)
+
+## 8) Related Pages
+
+* **Story Scaffold (/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
+* **Schema Templates (/technology/swarmcraft/scaffold/schema-templates)**
+* **Schema Outline (/technology/swarmcraft/scaffold/schema-outline)**
+* **Outline Grid CSV Round-Trip (/technology/swarmcraft/scaffold/outline-grid-csv-round-trip)**
+* **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+* **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+
+---
+
+## **POWERED BY GROK**
+
+- Route: /technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute
+- HTML: https://initkoa.org/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute/index.html.md
+- Source: app\technology\swarmcraft\core\deterministic-pipeline-scan-plan-execute\page.mdx
+
+# Deterministic Pipeline (SCAN-PLAN-EXECUTE)
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+SwarmCraft runs a strict, repeatable control loop that transforms explicit project state into prose:
+
+**SCAN → PLAN → EXECUTE**
+
+This loop is designed to be:
+- deterministic (same state → same next decision at the orchestration layer)
+- restart-safe (crashes recover by re-scanning truth from disk)
+- observable (each step is logged; state files are inspectable)
+
+## 0) Glossary
+
+- **Part**: the atomic unit of drafting/revision. Chapters are rollups over Parts.
+- **Matrix**: runtime state (`data/matrix.json`).
+- **Story Bible**: creative intent (`data/story_bible/`).
+- **Scaffold**: templates + outline (parts mapping + thread beats + contracts).
+
+## 1) Cycle Overview
+
+### 1.1 SCAN
+Recompute reality from disk and refresh runtime state.
+
+- refreshed `data/matrix.json`
+- optional RAG ingestion updates (per project)
+
+### 1.2 PLAN
+Select one target Part and one action.
+
+- `matrix.active_task` populated with `{ target_id, action, reason }`
+- optional “narrow queries” requested for continuity
+
+### 1.3 EXECUTE
+Run one persona on one Part, then persist results via tools.
+
+- updated manuscript file for the Part, or review notes
+- updated matrix bookkeeping
+
+### 2.1 Inputs
+SCAN reads:
+- `data/story_bible/outline.json` (Parts ordering + locks)
+- `data/story_bible/templates/<template_id>.json` (thread set + cadence)
+- manuscripts under `data/manuscripts/` (or configured root)
+- existing `data/matrix.json`
+
+### 2.2 Responsibilities
+SCAN MUST:
+1. Enumerate expected **Parts** from `outline.json`.
+2. Verify presence of each Part’s manuscript file.
+3. Compute per-part metrics:
+- word count
+- last modified time
+- status
+4. Respect locks:
+- never downgrade a `LOCKED` part
+- never infer unlocks automatically
+5. Validate integrity:
+- missing parts
+- missing beats keys (fill with empty strings in UI projection)
+- schema mismatch between template threads and outline beats
+6. Optionally ingest changed prose into RAG memory.
+7. Atomically write the updated `data/matrix.json`.
+
+### 2.3 Status derivation (Recommended)
+A scanner SHOULD classify a Part as:
+
+- `EMPTY`: file missing or below minimum threshold
+- `DRAFTING`: draft exists but incomplete
+- `REVIEW_READY`: draft is complete enough for Editor pass
+- `REVISION_NEEDED`: flagged by Editor or override
+- `LOCKED`: protected from further automated edits
+
+Matrix semantics: **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+
+### 3.1 Inputs
+PLAN reads:
+- current `data/matrix.json`
+- `outline.json` for ordering + locks
+- operator overrides (control surface), if present
+
+Absent overrides, the Architect SHOULD prioritize:
+1. Any Part with `REVISION_NEEDED`
+2. The earliest Part with `EMPTY`
+3. The earliest Part with `DRAFTING`
+4. Optional: any Part failing integrity checks (continuity, constraints, missing sections)
+
+### 3.3 Hard constraints
+PLAN MUST NOT select:
+- Matrix `LOCKED` Parts
+- Parts whose Outline locks prohibit changes (mapping depends on implementation: beats vs contract vs manuscript)
+
+### 3.4 Plan output shape
+The plan MUST specify:
+
+The orchestrator persists the plan into `matrix.active_task`.
+
+EXECUTE performs exactly one scoped operation on exactly one Part.
+
+### 4.1 Prompt hydration (Part slice)
+Before invoking a persona, the orchestrator MUST hydrate a **Part slice**:
+- the target Part’s thread beats (cells)
+- the Part contract (goal/obstacle/turn/outcome)
+- minimal continuity:
+- previous Part outcome summary (or last approved beat summary)
+- chapter-level goal/summary (if defined in outline)
+- relevant character/lore snippets (only what’s needed)
+- project-level style constraints
+
+Details: **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+
+### 4.2 Narrator execution (DRAFT / REVISE)
+- the Narrator produces prose for exactly one Part
+- prose is written to `data/manuscripts/<part_id>.md` (recommended)
+- the orchestrator updates Matrix bookkeeping and returns to SCAN
+
+### 4.3 Editor execution (REVIEW)
+If action is `REVIEW`:
+- the Editor checks the manuscript against:
+- Part beats + contract
+- continuity constraints (optionally via RAG)
+- style constraints
+- output is either:
+- approve (advance to `REVIEW_READY` / candidate for locking), or
+- revision request (set `REVISION_NEEDED` with structured notes)
+
+### 4.4 Tool safety
+All modifications MUST go through the guarded tool layer (file ops + state updates).
+No persona may mutate project files directly.
+
+## 5) Atomicity, Concurrency, and Restart Safety
+
+### 5.1 Atomic step rule
+One loop iteration = one atomic action:
+- one SCAN refresh
+- one PLAN decision
+- one EXECUTE action on one Part
+
+### 5.2 No concurrent writers
+Only one worker persona may write at a time for the active project.
+
+### 5.3 Crash recovery
+On restart:
+- SCAN re-derives truth from disk
+- Matrix is reconciled (locks respected)
+- execution resumes without reliance on chat history
+
+## 6) Observability and Control
+
+- Dashboard observes `matrix.json`, logs, and metrics without blocking the engine.
+- Control signals/overrides may affect PLAN (target selection) without breaking the deterministic loop.
+
+Dashboard: **Dashboard TUI Reference (/technology/swarmcraft/runtime/dashboard-tui-reference)**
+
+## 7) Related Pages
+
+- **Architecture Overview (/technology/swarmcraft/core/architecture-overview)**
+- **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+- **Story Bible (/technology/swarmcraft/scaffold/story-bible-creative-intent)**
+- **Story Scaffold (/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
+- **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+
+---
+
+## /technology/swarmcraft/meta
+
+- Route: /technology/swarmcraft/meta
+- HTML: https://initkoa.org/technology/swarmcraft/meta
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/meta/index.html.md
+- Source: app\technology\swarmcraft\meta\page.tsx
+
+Meta & Lineage
+
+SwarmCraft is not built in a vacuum. It is an architectural fork with a specific lineage. This section documents the credits, upstream origins, and the meta-structural decisions that define the engine.
+
+Credits & Architectural Lineage
+
+Acknowledging the **upstream foundation** (Mojomast/swarmussy) and the **meta-structural influence** of the Abstract Wiki Architect. This page details exactly what was reused, what was rewritten, and how the "Brain/Logic/Memory" separation evolved.
+
+Read Full Credits
+
+Back to SwarmCraft Hub
+
+---
+
+## Credits & Lineage
+
+- Route: /technology/swarmcraft/meta/credits-and-lineage
+- HTML: https://initkoa.org/technology/swarmcraft/meta/credits-and-lineage
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/meta/credits-and-lineage/index.html.md
+- Source: app\technology\swarmcraft\meta\credits-and-lineage\page.mdx
+
+# Credits & Lineage
+
+SwarmCraft is built on two explicit lineages:
+
+1) **Swarm foundation (upstream):** the multi-agent swarm engine patterns created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+2) **Architect meta-structure (AWA):** the deterministic “Architect-style” separation of **Brain / Logic / Memory** and state-first orchestration derived from **Abstract Wiki Architect (AWA)**.
+
+## 1) Upstream Credit: Mojomast / swarmussy
+
+SwarmCraft is an **architectural fork and deep rewrite**. The upstream project established the original swarm runtime approach and core implementation patterns.
+
+**All architectural credit** for the original **multi-agent swarm design**—including the chatroom runtime concepts, terminal dashboard pattern, and foundational orchestration/tooling modules—belongs to **Mojomast**:
+
+- Upstream author: **Mojomast (https://github.com/mojomast)**
+- Upstream repository: **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**
+
+### Upstream-derived core module lineage (examples)
+SwarmCraft acknowledges lineage (conceptual and/or code-derived depending on file history) from swarmussy patterns around:
+
+- Agent tooling gateway
+- `core/agent_tools.py`
+- Task planning / task routing
+- `core/task_manager.py`
+- Token usage tracking
+- `core/token_tracker.py`
+- Dashboard / mission control pattern (TUI)
+
+If upstream code is present in this repository, upstream license notices must be preserved alongside the derived files.
+
+## 2) What SwarmCraft Adds / Changes
+
+SwarmCraft reuses and extends the swarm foundation while introducing deterministic, story-first architecture and structured narrative state.
+
+### 2.1 Deterministic pipeline
+SwarmCraft replaces chatroom-style emergent coordination with a strict loop:
+
+**SCAN → PLAN → EXECUTE**
+
+- SCAN: reconcile truth from disk and update runtime state
+- PLAN: select the next target Part and action
+- EXECUTE: run one persona on one Part using guarded tools
+
+See: **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+
+### 2.2 State-first narrative architecture (Brain / Logic / Memory)
+SwarmCraft formalizes narrative work into explicit layers:
+
+- **Brain**: stateless LLM personas (Architect, Narrator, Editor)
+- **Logic**: orchestrator + tools + validation
+- **Memory**: Matrix + Story Bible + RAG index
+
+See: **Architecture Overview (/technology/swarmcraft/core/architecture-overview)**
+
+### 2.3 Parts-based story execution
+SwarmCraft treats a **Part** as the atomic unit of drafting/revision.
+Chapters are rollups over Parts.
+
+- **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+- **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+
+### 2.4 Story Scaffold (Templates + Outline + Grid)
+SwarmCraft introduces a structured story scaffold designed for both humans and LLMs:
+
+- Outline defines chapters→parts mapping + per-part thread beats + part contracts
+- Grid view displays the outline as a spreadsheet-like matrix, with optional CSV round-trip
+
+- **Story Scaffold (/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
+- **Schema Templates (/technology/swarmcraft/scaffold/schema-templates)**
+- **Schema Outline (/technology/swarmcraft/scaffold/schema-outline)**
+- **Outline Grid CSV Round-Trip (/technology/swarmcraft/scaffold/outline-grid-csv-round-trip)**
+
+### 2.5 Multi-project isolation
+Each project has isolated:
+- Matrix
+- Story Bible
+
+See: **Multi-Project Management (/technology/swarmcraft/runtime/multi-project-management)**
+
+### 2.6 RAG long-term continuity
+SwarmCraft integrates per-project retrieval memory to maintain coherence in long works.
+
+See: **RAG Memory System (/technology/swarmcraft/runtime/rag-memory-system)**
+
+## 3) Provider Layer (Powered by Grok)
+
+SwarmCraft is **powered by Grok** via a provider adapter that keeps the engine provider-agnostic:
+- normalized request/response
+- normalized tool calling
+- centralized retries and error handling
+
+See: **Provider Adapter Grok (/technology/swarmcraft/runtime/provider-adapter-grok)**
+
+## 4) Attribution Guidance for Derivative Works
+
+If you build on SwarmCraft, you should preserve:
+- this Credits & Lineage page (or an equivalent notice in your primary documentation)
+- upstream references to Mojomast/swarmussy
+- any third-party license notices for code you redistribute
+
+This page is the canonical place for lineage statements to avoid repeating long credit blocks throughout the wiki.
+
+---
+
+## /technology/swarmcraft/runtime
+
+- Route: /technology/swarmcraft/runtime
+- HTML: https://initkoa.org/technology/swarmcraft/runtime
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/runtime/index.html.md
+- Source: app\technology\swarmcraft\runtime\page.tsx
+
+Runtime & Operations
+
+The operational layer of SwarmCraft. These modules handle the user interface, project isolation, long-term memory retrieval, and LLM provider integration.
+
+Control Surfaces
+
+Dashboard TUI Reference
+
+The "Mission Control" interface. A terminal UI that observes the engine state (SCAN/PLAN/EXECUTE) without blocking it.
+
+View Layout Specs
+
+Multi-Project Management
+
+How SwarmCraft runs multiple isolated universes (Story Bibles + Matrices) in a single runtime without contamination.
+
+View Isolation Logic
+
+Memory & Integration
+
+RAG Memory System
+
+Long-term continuity. Indexes manuscripts and notes to provide "Evidence" during drafting, preventing character drift.
+
+Slice-by-Slice Prompt Hydration
+
+The anti-sprawl mechanism. Injecting only the active Part's beats and contract into the LLM context.
+
+Provider Adapter: Grok
+
+The normalization layer that keeps the engine model-agnostic while leveraging Grok for execution.
+
+← Back to Core Logic
+
+Next: Scaffold Schema →
+
+---
+
+## Dashboard TUI Reference
+
+- Route: /technology/swarmcraft/runtime/dashboard-tui-reference
+- HTML: https://initkoa.org/technology/swarmcraft/runtime/dashboard-tui-reference
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/runtime/dashboard-tui-reference/index.html.md
+- Source: app\technology\swarmcraft\runtime\dashboard-tui-reference\page.mdx
+
+# Dashboard TUI Reference
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> The dashboard pattern is also downstream of Mojomast’s original “mission control” approach for observing swarm activity.
+> SwarmCraft’s deterministic layering is derived from the meta-structure of **Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+The SwarmCraft Dashboard is a **Terminal UI (TUI)** that observes and steers the engine while keeping UI and execution decoupled.
+
+Key principle:
+- **Engine runs the AI work**
+- **Dashboard renders state and sends control signals**
+
+This prevents UI freezes and supports restart-safe operation.
+
+## 1) What the Dashboard Watches
+
+The dashboard should primarily read:
+- `data/matrix.json` (runtime state)
+- `data/story_bible/outline.json` (structure reference, optional)
+- logs (engine logs, tool logs)
+- token usage metrics (if tracked)
+
+The dashboard must never be the source of truth; it is a view/controller.
+
+Matrix reference: **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+
+## 2) Recommended Layout (3-Column Mission Control)
+
+A recommended high-level layout:
+
+### 2.1 Context Panel (Left)
+Shows “what the engine is currently focused on”:
+- active project (project_id)
+- active chapter + part (from `matrix.active_task`)
+- cast in scope (optional, derived from outline or tags)
+- location in scope (optional)
+- active tool (what the engine is doing right now)
+
+### 2.2 Action Panel (Center)
+Shows “what is happening”:
+- prose stream (latest generated text excerpt)
+- system log tail (planner decisions, tool calls, warnings/errors)
+- current step indicator (SCAN / PLAN / EXECUTE)
+
+### 2.3 Progress Panel (Right)
+Shows “how the project is doing”:
+- parts table (status, locks, word counts)
+- chapter rollups (optional)
+- integrity signals (missing files, schema drift)
+- cost/tokens counters
+
+## 3) Core Widgets (Recommended)
+
+### 3.1 Active Task Card
+- reason (planner rationale)
+- elapsed time
+
+### 3.2 Matrix Table
+Backed by `matrix.parts`:
+- Part ID
+- Chapter ID
+- Locked indicator
+- Word count
+- Last modified
+
+### 3.3 Integrity / Alerts
+Derived from scan validation:
+- missing manuscripts
+- outline/template mismatch (thread keys)
+- orphan manuscripts
+- locked conflicts
+
+### 3.4 Token / Cost Tracker (Optional)
+If token tracking is enabled:
+- tokens in / out per step
+- per-session totals
+- optional cost estimate
+
+## 4) Control Surface (Director Override)
+
+The dashboard may write control signals to a project-scoped control file, e.g.:
+
+- `projects/<project_id>/data/control.json`
+
+Typical fields (recommended):
+
+### 4.1 Run states
+
+### 4.2 Override behaviors (Recommended)
+
+Overrides should be applied at PLAN-time:
+
+* force focus on a specific part
+* force a specific action (review vs revise)
+* inject a short director note that becomes part of the plan rationale
+
+The deterministic loop remains intact:
+
+* overrides influence selection, not execution ordering
+
+Pipeline: **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+
+## 5) Multi-Project UX
+
+If multiple projects exist, dashboard SHOULD display:
+
+* active project id
+* quick switch mechanism (implementation dependent)
+* project health summary
+
+Multi-project: **Multi-Project Management (/technology/swarmcraft/runtime/multi-project-management)**
+
+## 6) Failure and Recovery UX
+
+The dashboard should handle:
+
+* engine crash (dashboard stays up)
+* engine restart (dashboard reconnects to state files)
+* partial writes (prefer atomic writes in engine)
+
+Recommended indicators:
+
+* “Engine heartbeat” or “last update timestamp” from Matrix
+* last SCAN time
+* last EXECUTE time
+
+Matrix includes timestamps: **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+
+## 7) What the Dashboard Should Not Do
+
+* It should not run LLM calls.
+* It should not mutate manuscripts directly.
+* It should not edit Story Bible files directly unless explicitly a dedicated editor UI (separate feature).
+
+All modifications should go through the engine tools layer.
+
+## 8) Related Pages
+
+* **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+* **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+* **Story Bible (/technology/swarmcraft/scaffold/story-bible-creative-intent)**
+* **Multi-Project Management (/technology/swarmcraft/runtime/multi-project-management)**
+
+---
+
+## Multi-Project Management
+
+- Route: /technology/swarmcraft/runtime/multi-project-management
+- HTML: https://initkoa.org/technology/swarmcraft/runtime/multi-project-management
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/runtime/multi-project-management/index.html.md
+- Source: app\technology\swarmcraft\runtime\multi-project-management\page.mdx
+
+# Multi-Project Management
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+SwarmCraft supports multiple isolated projects (“universes”) in the same repository/runtime.
+
+A **project** is an isolated unit that contains:
+- its own Story Bible (templates + outline + references)
+- its own Central Matrix (runtime state)
+- its own RAG Memory DB
+- its own manuscripts and logs (recommended)
+
+This prevents cross-story contamination and enables switching between worlds without restarting the whole engine.
+
+## 1) Project Root Structure (Recommended)
+
+SwarmCraft SHOULD use a `projects/` root:
+
+* `projects/<project_id>/data/` is the canonical project data root.
+* Manuscripts under `data/manuscripts/` is recommended to keep everything portable.
+
+## 2) Project Identity
+
+Each project is identified by its folder name:
+
+The project ID should be:
+
+* stable (do not rename casually)
+* filesystem-safe (ASCII, no spaces recommended)
+
+## 3) What Isolated Means (Normative)
+
+For correctness, projects MUST NOT share:
+
+If your implementation uses global caches, they MUST be keyed by `project_id`.
+
+## 4) Switching Projects
+
+A project manager component (implementation detail) typically supports:
+
+* list available projects
+* set active project
+* remember last active project
+
+A simple pointer file:
+
+* `projects/.last_project`
+
+On startup:
+
+* if an explicit project is not chosen, engine loads `.last_project`
+
+## 5) Per-Project Lifecycle
+
+### 5.1 Create a project (Recommended behavior)
+
+Creating a project should:
+
+1. Create `projects/<project_id>/data/`
+2. Create an initial Story Bible structure:
+
+* `story_bible/templates/`
+* `story_bible/outline.json` (blank scaffold)
+3. Initialize `matrix.json` (empty/initial state)
+4. Initialize `memory_db/` (empty DB folder)
+5. Optionally create `manuscripts/` folder
+
+### 5.2 Delete a project (Recommended behavior)
+
+Deletion should be explicit and guarded.
+Recommended to require a confirmation flag.
+
+## 6) How Multi-Project Interacts with the Pipeline
+
+In the deterministic loop, the orchestrator operates against exactly one active project:
+
+* SCAN reads/writes `projects/<id>/data/*`
+* PLAN selects the next Part within that project
+* EXECUTE writes manuscripts and updates Matrix within that project
+* RAG ingestion/retrieval is scoped to that project’s `memory_db/`
+
+Pipeline: **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+
+## 7) Dashboard Considerations
+
+The dashboard should clearly display:
+
+* active project ID
+* active part/chapter target
+* per-project token usage (session + optional totals)
+* health/integrity signals for that project only
+
+Dashboard: **Dashboard TUI Reference (/technology/swarmcraft/runtime/dashboard-tui-reference)**
+
+## 8) Related Pages
+
+* **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+* **Story Bible (/technology/swarmcraft/scaffold/story-bible-creative-intent)**
+* **RAG Memory System (/technology/swarmcraft/runtime/rag-memory-system)**
+* **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+
+---
+
+## Orchestration Slice-by-Slice Prompt Hydration
+
+- Route: /technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration
+- HTML: https://initkoa.org/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration/index.html.md
+- Source: app\technology\swarmcraft\runtime\orchestration-slice-by-slice-prompt-hydration\page.mdx
+
+# Orchestration Slice-by-Slice Prompt Hydration
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+SwarmCraft avoids “prompt sprawl” by hydrating prompts with **only the active slice of the story**.
+
+**Slice-by-slice prompt hydration** means:
+- the engine targets **one Part**
+- it injects only the **beats + contract** for that Part
+- it adds only the **minimum continuity** required to write that Part correctly
+- it runs **one persona** for **one atomic action**
+- it returns to SCAN
+
+This is the core mechanism that prevents scaffold repetition from becoming prose repetition.
+
+## 1) Inputs to Prompt Hydration
+
+Hydration assembles a prompt from four categories:
+
+1. **Part slice (required)**
+- the target Part’s thread beats (grid cells)
+- the target Part’s contract (goal/obstacle/turn/outcome)
+
+2. **Local continuity (required, minimal)**
+- previous Part outcome (or last approved summary)
+- chapter summary / chapter objective (if available)
+- any hard constraints that apply to this moment (POV/tense/reading level)
+
+3. **Global references (optional, clipped)**
+- character snippets relevant to the scene
+- location/lore snippets relevant to the scene
+
+4. **Memory retrieval (optional, bounded)**
+- top-k RAG snippets relevant to this Part’s contract/beat queries
+
+Related sources:
+- Outline: **Schema Outline (/technology/swarmcraft/scaffold/schema-outline)**
+- Template threads/cadence: **Schema Templates (/technology/swarmcraft/scaffold/schema-templates)**
+- RAG: **RAG Memory System (/technology/swarmcraft/runtime/rag-memory-system)**
+
+## 2) The Hydration Contract (Normative)
+
+The orchestrator MUST obey these constraints:
+
+### 2.1 One Part only
+Hydration MUST be for exactly one `part_id` at a time.
+
+### 2.2 Minimalism
+Hydration MUST:
+- include only beats for the target part
+- exclude beats for other parts unless explicitly requested as continuity summaries
+
+### 2.3 Bounded memory
+If RAG is enabled:
+- retrieval MUST be bounded (top-k, token-limited)
+- retrieved snippets MUST be formatted as “evidence,” not as new intent
+
+### 2.4 Locks respected
+If `outline.parts[part_id].locks.manuscript == true`:
+- orchestrator MUST NOT hydrate a drafting prompt for that part
+- only review/inspection is allowed (implementation choice)
+
+Matrix locking semantics: **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+
+## 3) Recommended Prompt Structure (Persona-Agnostic)
+
+SwarmCraft prompts are assembled in stable sections so they are debuggable and repeatable.
+
+Recommended high-level sections:
+
+1. **System / Persona role**
+2. **Task definition**
+3. **Part contract**
+4. **Part beats (thread grid cells)**
+5. **Local continuity summary**
+6. **Relevant Story Bible excerpts (clipped)**
+7. **RAG memory evidence (clipped)**
+8. **Output format requirements**
+
+## 4) Concrete Hydration Payload (Recommended Shape)
+
+This is the structured payload the orchestrator can assemble before rendering a text prompt:
+
+The persona sees a rendered version of this payload, not the entire project.
+
+## 5) How the Slice Prevents Repetition
+
+Scaffold repetition is acceptable because it is planning data. Prose repetition is not.
+
+Hydration prevents repetition by ensuring:
+
+* the model is not repeatedly asked to re-summarize all parts
+* only the current part’s obligations are active
+* continuity comes in as short “must-preserve” facts and evidence, not as broad story retellings
+
+## 6) Editor Hydration (Review Mode)
+
+Editor prompts should be even narrower:
+
+* part manuscript text (the thing being reviewed)
+* contract + beats for that part
+* any “must preserve” constraints
+* minimal memory evidence (only if needed to verify)
+
+* beats from other parts
+* unrelated lore/characters
+
+Review outputs SHOULD be structured:
+
+* pass/fail per contract field
+* pass/fail per required thread beat (cadence-driven)
+* revision directives (actionable bullets)
+* recommended status transition (`REVIEW_READY` or `REVISION_NEEDED`)
+
+## 7) Cadence Enforcement
+
+Cadence rules come from the template and influence both PLAN and REVIEW:
+
+* PLAN may select parts with missing required beats (per-part cadence)
+* REVIEW may fail a part if required beats are not reflected in prose (when configured)
+
+Template cadence: **Schema Templates (/technology/swarmcraft/scaffold/schema-templates)**
+
+## 8) Implementation Notes (Recommended)
+
+* Build the hydration payload as JSON first (for testing/logging).
+* Render to text prompt deterministically from the payload.
+* Log the hydrated payload with redactions (keys, tokens).
+* Token-limit each section to prevent prompt overflow.
+
+## 9) Related Pages
+
+* **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+* **Story Scaffold (/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
+* **Schema Templates (/technology/swarmcraft/scaffold/schema-templates)**
+* **Schema Outline (/technology/swarmcraft/scaffold/schema-outline)**
+* **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+* **RAG Memory System (/technology/swarmcraft/runtime/rag-memory-system)**
+
+---
+
+## Provider Adapter Grok
+
+- Route: /technology/swarmcraft/runtime/provider-adapter-grok
+- HTML: https://initkoa.org/technology/swarmcraft/runtime/provider-adapter-grok
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/runtime/provider-adapter-grok/index.html.md
+- Source: app\technology\swarmcraft\runtime\provider-adapter-grok\page.mdx
+
+# Provider Adapter Grok
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+SwarmCraft is powered by **Grok** through a dedicated **provider adapter** layer.
+
+- keep the engine **provider-agnostic**
+- centralize API config, retries, and error handling
+- normalize responses into a stable internal interface for personas and tools
+
+This page documents the expected behavior of the Grok adapter, without tying the rest of the codebase to Grok-specific response shapes.
+
+## 1) Responsibilities of the Provider Adapter
+
+The Grok adapter MUST:
+1. Build requests from SwarmCraft’s internal prompt format.
+2. Send requests to Grok with correct auth + model settings.
+3. Normalize responses into:
+- optional structured tool calls
+- token usage and latency metrics (if provided)
+4. Apply robust retry/backoff rules.
+5. Emit consistent errors for the orchestrator to handle deterministically.
+
+The adapter SHOULD:
+- support multiple Grok models/profiles
+- support streaming responses (optional)
+- redact secrets in logs
+
+## 2) Internal Provider Interface (Recommended)
+
+SwarmCraft should call providers through a stable interface like:
+
+Where `ProviderResult` is normalized:
+
+This allows the orchestrator to remain unchanged if you later add other providers.
+
+## 3) Configuration (Recommended)
+
+### 3.1 Environment variables
+
+Recommended keys (names may vary by implementation):
+
+### 3.2 Project-level overrides
+
+Optional per-project settings file, e.g.:
+
+* `projects/<project_id>/data/settings.json`
+
+Recommended fields:
+
+## 4) Tool Calling and Safety
+
+SwarmCraft personas must not write files directly. They request tool calls.
+
+The Grok adapter MUST support:
+
+* receiving tool calls (structured)
+* returning them to the tool executor layer
+
+Tool execution remains in SwarmCraft (not in Grok):
+
+* the engine validates and runs tools
+* tool results can be appended to the conversation as tool messages (implementation detail)
+
+This preserves deterministic safety rules:
+
+* path sandboxing
+* atomic writes
+* audit logs
+
+## 5) Retries and Error Handling (Recommended)
+
+### 5.1 Retry classes
+
+Adapter SHOULD retry on:
+
+* transient network failures
+* 5xx server errors
+* timeouts
+
+Adapter SHOULD NOT retry blindly on:
+
+* invalid request payload (4xx)
+* tool schema mismatch errors (fix required)
+
+### 5.2 Backoff
+
+Use exponential backoff with jitter.
+
+### 5.3 Deterministic surfacing
+
+Adapter errors MUST be normalized into stable error codes so the orchestrator can:
+
+* mark task as failed
+* re-plan
+* pause if needed
+
+Example normalized error:
+
+## 6) Token and Cost Tracking (Optional)
+
+If Grok provides usage metadata, the adapter SHOULD emit it in `ProviderResult.usage`.
+
+If usage is not provided, SwarmCraft MAY estimate tokens separately, but should mark them as estimates.
+
+Token tracking integrates with dashboard/cost panels:
+
+* **Dashboard TUI Reference (/technology/swarmcraft/runtime/dashboard-tui-reference)**
+
+## 7) How Grok Fits the Deterministic Pipeline
+
+The provider is invoked only during **EXECUTE** (and optional planning calls if you LLM-assist planning).
+
+The pipeline remains:
+
+* SCAN: no provider calls required
+* PLAN: deterministic selection (optionally assisted)
+* EXECUTE: provider call(s) for one Part, one action
+
+Pipeline: **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+
+## 8) Related Pages
+
+* **Architecture Overview (/technology/swarmcraft/core/architecture-overview)**
+* **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+* **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+* **Dashboard TUI Reference (/technology/swarmcraft/runtime/dashboard-tui-reference)**
+
+---
+
+## RAG Memory System
+
+- Route: /technology/swarmcraft/runtime/rag-memory-system
+- HTML: https://initkoa.org/technology/swarmcraft/runtime/rag-memory-system
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/runtime/rag-memory-system/index.html.md
+- Source: app\technology\swarmcraft\runtime\rag-memory-system\page.mdx
+
+# RAG Memory System
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+SwarmCraft uses **Retrieval Augmented Generation (RAG)** as an explicit long-term memory layer to maintain continuity across large stories.
+
+RAG is not the Story Bible (intent).
+RAG is not the Matrix (runtime state).
+RAG is **evidence**: previously written text and relevant notes that can be retrieved and injected into the current Part’s prompt.
+
+## 1) Why RAG Exists
+
+LLMs have limited context windows. Without memory, long projects drift:
+- character traits change
+- facts get contradicted
+- timeline breaks
+- names/places mutate
+
+RAG solves this by:
+- indexing written prose and notes as searchable chunks
+- retrieving only the top relevant snippets for the active Part
+- injecting them as bounded “evidence” during drafting and review
+
+## 2) What RAG Stores
+
+Recommended indexed sources:
+- Part manuscripts (`data/manuscripts/*.md`)
+- Editor notes (optional)
+- stable reference notes (optional, if you want them searchable)
+
+- optional tags (character names, location IDs)
+
+RAG MUST NOT be treated as canonical intent. If RAG conflicts with Story Bible, Story Bible wins.
+
+See: **Story Bible (/technology/swarmcraft/scaffold/story-bible-creative-intent)**
+
+## 3) Storage Location (Per Project)
+
+Recommended location:
+- `projects/<project_id>/data/memory_db/`
+
+This ensures multi-project isolation and avoids cross-story contamination.
+
+See: **Multi-Project Management (/technology/swarmcraft/runtime/multi-project-management)**
+
+Ingestion typically occurs during **SCAN**.
+
+1. Scanner detects changed manuscript files.
+2. File is chunked into semantic segments (paragraphs or sections).
+3. Each chunk is embedded (vectorized).
+4. Vectors + metadata are stored in the project’s vector database.
+
+Deterministic pipeline: **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+
+### 4.1 Chunking recommendations
+- chunk by paragraph boundaries when possible
+- target 150–500 tokens per chunk (implementation-dependent)
+- include stable headers in metadata rather than duplicating them in every chunk
+
+### 4.2 Deduplication recommendations
+- hash chunk text + source to avoid re-inserting identical chunks
+
+Retrieval occurs during **prompt hydration** for a Part.
+
+1. Orchestrator builds a query set from:
+- the Part contract fields (goal/obstacle/turn/outcome)
+- high-signal beats (Plot/Conflict)
+- explicit continuity questions (if present)
+2. Vector search returns top-k relevant chunks.
+3. Orchestrator formats them as “evidence” and injects them into the prompt.
+
+Prompt hydration: **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+
+### 5.1 Bounded retrieval (required)
+To prevent prompt bloat:
+- total evidence tokens MUST be bounded
+- prefer fewer, higher-confidence chunks over many weak chunks
+
+### 5.2 Evidence formatting (recommended)
+Format each retrieved chunk with:
+- source + part ID
+- a short excerpt
+- optional “why retrieved” hint
+
+## 6) RAG in Drafting vs Reviewing
+
+### 6.1 Narrator (Draft/Revise)
+
+Use RAG to:
+
+* preserve continuity facts
+* recall prior scene outcomes
+* maintain consistent voice and details
+
+Use RAG to:
+
+* verify consistency (“does this contradict earlier text?”)
+* confirm details (names, timeline, injuries, locations)
+
+Editor should treat RAG as evidence, not instructions.
+
+## 7) Interfaces and Tools (Recommended)
+
+Expose RAG through a small tool surface, e.g.:
+
+* optional: `memory.query_filters(part_id=..., chapter_id=...)`
+
+Recommended role rules:
+
+* Narrator can request retrieval through orchestrator hydration, but does not directly call DB.
+* Editor may call a controlled `check_memory` tool for spot checks.
+
+## 8) Failure Modes and Guards
+
+* **Hallucinated “memories”**: mitigate by only injecting retrieved text excerpts.
+* **Cross-project bleed**: mitigate with per-project DB path + required `project_id` filter.
+* **Contradicting intent**: Story Bible overrides RAG; Editor should flag conflicts.
+* **Prompt overflow**: enforce strict token budgets for evidence.
+
+## 9) Related Pages
+
+* **Architecture Overview (/technology/swarmcraft/core/architecture-overview)**
+* **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+* **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+* **Story Bible (/technology/swarmcraft/scaffold/story-bible-creative-intent)**
+* **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+
+---
+
+## Outline Grid CSV Round-Trip
+
+- Route: /technology/swarmcraft/scaffold/outline-grid-csv-round-trip
+- HTML: https://initkoa.org/technology/swarmcraft/scaffold/outline-grid-csv-round-trip
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/scaffold/outline-grid-csv-round-trip/index.html.md
+- Source: app\technology\swarmcraft\scaffold\outline-grid-csv-round-trip\page.mdx
+
+# Outline Grid CSV Round-Trip
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+SwarmCraft supports a **human-friendly grid editor** for the outline and a **CSV round-trip** workflow.
+
+- Humans can edit the scaffold like a spreadsheet.
+- Stable Part IDs preserve meaning across edits.
+
+## 1) Grid Model
+
+### 1.1 What the grid shows
+- **Columns**: Parts (ordered by chapter then part order)
+- **Rows**: Threads (from the active template)
+- **Cells**: A thread beat for that Part
+
+Source of truth:
+- Threads come from `templates/<template_id>.json`
+See: **Schema Templates (/technology/swarmcraft/scaffold/schema-templates)**
+- Beats come from `outline.json`
+See: **Schema Outline (/technology/swarmcraft/scaffold/schema-outline)**
+
+- Part contract fields (goal/obstacle/turn/outcome)
+These may be shown in a separate panel, side sheet, or a second table export format.
+- Manuscripts (prose) are not in the outline grid.
+
+## 2) Canonical Mapping: Outline → Grid
+
+- ordered parts = `for each chapter in chapters[]: chapter.part_ids[]`
+
+Cell mapping:
+
+If the key is missing, treat it as empty when projecting:
+
+## 3) CSV Export Format (Beats Grid)
+
+### 3.1 Shape
+- First column: thread name
+- Remaining columns: `Part 1`, `Part 2`, … in display order
+- Optional second header row: stable `part_id` values (recommended)
+
+The beats-only CSV is a projection of the grid (threads × parts).
+
+### 3.2 Recommended headers (two-row header)
+Row 1 (human labels):
+- column 1: empty or `Thread`
+
+Row 2 (machine IDs):
+
+This allows the CSV to remain stable even if “Part 3” is moved into a different chapter.
+
+### 3.3 Example
+
+## 4) CSV Import Rules (Beats Grid)
+
+### 4.1 Primary key: part_id row
+
+Import SHOULD use the `part_id` row as the canonical mapping.
+
+* If present, `part_id` row MUST be used.
+* If absent, importer MAY fall back to positional mapping (less safe).
+
+### 4.2 Thread name matching
+
+Rows are matched by thread name (first column).
+
+* Exact match is recommended.
+* Whitespace trimming is recommended.
+* Unknown thread names:
+
+* either reject with validation error, or
+
+### 4.3 Lock compliance (required)
+
+Importer MUST respect outline locks:
+
+Recommended behavior:
+
+* updated cells count
+* skipped due to locks
+* unknown threads
+* unknown part_ids
+
+## 5) Handling Template Changes (Thread Set Changes)
+
+If the user changes template (or template version):
+
+* The grid row set changes (threads list changes)
+* The system SHOULD provide a migration layer:
+
+* missing threads: create empty beats
+* removed threads: preserve in outline as “orphaned” beats only if explicitly enabled, otherwise drop with confirmation
+
+Recommended: do not silently delete beats.
+
+## 6) Parts/Chapter Changes (Column Reflow)
+
+If the user changes `parts_per_chapter`:
+
+* Part IDs must remain stable.
+* The UI may re-group columns under different chapters.
+
+* do not rename existing part IDs when reflowing chapters
+* generate new part IDs only when new parts are created
+
+## 7) Optional: Contract CSV Export
+
+Beats CSV is intentionally simple. If you want contract editing in CSV, use a second file:
+
+`outline_contract.csv` (recommended)
+
+## 8) Relationship to Writing and Orchestration
+
+The grid is a scaffold. The engine uses it slice-by-slice:
+
+* during PLAN to detect missing beats (cadence)
+* during EXECUTE to inject only the active Part slice
+* during REVIEW to validate manuscript coverage of beats + contract
+
+* **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+* **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+
+## 9) Related Pages
+
+* **Story Scaffold (/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
+* **Schema Templates (/technology/swarmcraft/scaffold/schema-templates)**
+* **Schema Outline (/technology/swarmcraft/scaffold/schema-outline)**
+* **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+
+---
+
+## Schema Outline
+
+- Route: /technology/swarmcraft/scaffold/schema-outline
+- HTML: https://initkoa.org/technology/swarmcraft/scaffold/schema-outline
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/scaffold/schema-outline/index.html.md
+- Source: app\technology\swarmcraft\scaffold\schema-outline\page.mdx
+
+# Schema Outline
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+`outline.json` is the canonical **story plan** for a project. It defines:
+
+- chapter ordering
+- chapter → parts mapping
+- per-part thread beats (grid cells)
+- per-part contract (goal / obstacle / turn / outcome)
+- locks to protect manual edits
+
+File location:
+- `data/story_bible/outline.json`
+
+Story scaffold overview: **Story Scaffold (/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
+
+## 1) Design Goals
+
+The outline MUST support:
+- user-chosen parts/chapter (within template bounds)
+- stable part IDs (critical for tracking and CSV round-trip)
+- different template thread sets
+- per-part beat editing in a grid UI
+- per-part contract strictness for slice-by-slice drafting
+- lock scopes (beats / contract / manuscript)
+
+The outline SHOULD:
+- be readable to humans
+- be resilient to partial data (empty beats allowed)
+- be forward-compatible (versioned)
+
+## 2) Minimal Outline Schema (Recommended)
+
+* `chapters[]` defines the ordered reading structure.
+* `parts{}` is the canonical per-part content.
+* `beats` keys should match template threads.
+
+## 3) Field Semantics
+
+Schema version for migration and validation.
+
+Must match an existing template file in:
+
+Template schema: **Schema Templates (/technology/swarmcraft/scaffold/schema-templates)**
+
+### 3.3 `settings.parts_per_chapter` (recommended)
+
+User override of parts/chapter within template bounds.
+
+Ordered list of chapters.
+
+Each chapter SHOULD contain:
+
+* optional `summary`
+* `part_ids` ordered list (critical)
+
+Map of Part IDs to Part objects.
+
+Each Part MUST contain:
+
+* `chapter_id` (must match one chapter)
+* `order_index` (global or chapter-local; implementation choice)
+* `contract` object (recommended)
+
+## 4) Part Contract (Strict Slice Anchor)
+
+The **contract** is the minimum “what must happen” spec for a Part.
+
+Recommended fields:
+
+The orchestrator uses the contract to:
+
+* hydrate slice prompts
+* give the Editor a rubric for validation
+
+* **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+
+## 5) Beat Keys and Template Compatibility
+
+Beat keys MUST align with the active template’s threads.
+
+Validation SHOULD ensure:
+
+* every `beats` key exists in `template.threads`
+* missing keys are treated as empty when projecting to grid/CSV
+* extra keys are flagged (or preserved if you support custom threads)
+
+## 6) Locks (Manual Edit Protection)
+
+Locks prevent automation from overwriting human edits.
+
+Recommended lock scopes:
+
+* `beats`: prevents automated changes to beats
+* `contract`: prevents automated changes to contract
+* `manuscript`: prevents automated changes to prose file
+
+Planner rule:
+
+* PLAN MUST NOT select a part for an action that violates locks.
+
+Matrix mapping:
+
+* locked parts should appear as `LOCKED` (or `locked=true`) in Matrix.
+
+Matrix: **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+
+## 7) ID Stability Rules (Critical)
+
+* `chapter_id` and `part_id` MUST be stable once created.
+* Grid and CSV round-trip depend on stable `part_id`.
+* Changing parts/chapter SHOULD preserve existing part IDs where possible.
+* New splits SHOULD create new part IDs instead of renaming existing parts.
+
+## 8) Relationship to Grid and CSV
+
+The outline is projected into a grid for human editing:
+
+* rows = template threads
+* columns = parts (ordered by chapters / part_ids)
+* cells = outline.parts[part_id].beats[thread_name]
+
+Round-trip rules:
+
+See: **Outline Grid CSV Round-Trip (/technology/swarmcraft/scaffold/outline-grid-csv-round-trip)**
+
+## 9) Relationship to Manuscripts and Matrix
+
+* Outline defines intent (beats + contract).
+* Manuscripts contain prose generated for each Part.
+* Matrix tracks runtime status and file metrics.
+
+* **Story Bible (/technology/swarmcraft/scaffold/story-bible-creative-intent)**
+* **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+* **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+
+---
+
+## Schema Templates
+
+- Route: /technology/swarmcraft/scaffold/schema-templates
+- HTML: https://initkoa.org/technology/swarmcraft/scaffold/schema-templates
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/scaffold/schema-templates/index.html.md
+- Source: app\technology\swarmcraft\scaffold\schema-templates\page.mdx
+
+# Schema Templates
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+Templates define the **shape and pacing rules** of the Story Scaffold.
+
+A template file lives at:
+
+- `data/story_bible/templates/<template_id>.json`
+
+It defines:
+- thread set (grid rows)
+- cadence rules (what must be filled, how often)
+- optional style/genre constraints used in prompt hydration
+
+Story scaffold overview: **Story Scaffold (/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
+
+## 1) Design Goals
+
+Templates MUST support:
+- user-chosen parts/chapter within allowed bounds
+- different thread sets per template
+- enforceable cadence (required beats per part or per chapter)
+- stable projection into a grid and CSV
+
+Templates SHOULD:
+- remain small and readable for humans
+- avoid storing story-specific content (that belongs in `outline.json`)
+
+## 2) Minimal Template Schema (Recommended)
+
+* `threads` defines the grid rows.
+* `parts_per_chapter` defines defaults and bounds; users can override within bounds.
+* `cadence` defines what the planner/editor should enforce.
+* `prompting` provides reusable style constraints (optional).
+
+## 3) Field Semantics
+
+Stable identifier used by the project config and Story Bible.
+
+Ordered list of thread names.
+
+* Thread names must match outline beat keys (see Schema Outline).
+
+Defines allowed splitting:
+
+* `min`, `max`: permitted bounds for user override
+
+Cadence is enforcement guidance for PLAN/REVIEW.
+
+Recommended keys:
+
+* `per_part_required_threads`: must be non-empty in every part (unless explicitly waived)
+* `per_chapter_required_threads`: must appear at least once per chapter (rollup check)
+* `soft_threads`: encouraged but optional
+* `min_non_empty_cells_per_part`: guard against under-specified parts
+
+Cadence is a rule set for scaffold completeness; it does not guarantee prose quality.
+
+Reusable prompt constraints and references:
+
+* reading level / audience
+* tone and voice
+* POV and tense
+* references into Story Bible Markdown files
+
+If present, prompt hydration can include these in every Part slice.
+
+## 4) Template Variants (Examples)
+
+Typical guidance:
+
+* fewer threads
+* tighter cadence (Plot + Emotion required every part)
+
+Typical guidance:
+
+* broader thread set
+* encourages symbolism/worldbuilding but doesn’t require every part
+
+Typical guidance:
+
+* strict structure cadence (inciting incident, midpoint, etc.) via outline contract usage
+
+## 5) Validation Rules (Recommended)
+
+A validator SHOULD enforce:
+
+* `threads` is non-empty and has unique strings
+* cadence thread names must exist in `threads`
+* version is present and numeric
+
+## 6) Relationship to Outline and Grid
+
+* Template defines the *thread rows* and pacing rules.
+* Outline defines the *per-part cell content*.
+
+* **Schema Outline (/technology/swarmcraft/scaffold/schema-outline)**
+* **Outline Grid CSV Round-Trip (/technology/swarmcraft/scaffold/outline-grid-csv-round-trip)**
+* **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+
+---
+
+## **POWERED BY GROK**
+
+- Route: /technology/swarmcraft/scaffold/story-bible-creative-intent
+- HTML: https://initkoa.org/technology/swarmcraft/scaffold/story-bible-creative-intent
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/scaffold/story-bible-creative-intent/index.html.md
+- Source: app\technology\swarmcraft\scaffold\story-bible-creative-intent\page.mdx
+
+# Story Bible (Creative Intent)
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+The **Story Bible** is SwarmCraft’s home for **creative intent**: the canonical narrative plan, constraints, and reference material that guide drafting and revision.
+
+It is designed to be:
+- **explicit** (no hidden “chat history” requirements)
+- **versionable** (text/JSON files under source control)
+- **sliceable** (only the relevant subset is injected into prompts)
+- **human-editable** (writers can edit directly or through UI)
+
+The Story Bible is distinct from:
+- **Matrix** (runtime progress state): **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+- **RAG memory** (retrieved continuity evidence): **RAG Memory System (/technology/swarmcraft/runtime/rag-memory-system)**
+
+## 1) Location and Project Isolation
+
+**Recommended per-project location:**
+- `projects/<project_id>/data/story_bible/`
+
+Single-project setups MAY use:
+- `data/story_bible/`
+
+The Story Bible is project-scoped. Each project has its own Bible and must not share it implicitly.
+
+See: **Multi-Project Management (/technology/swarmcraft/runtime/multi-project-management)**
+
+## 2) What Lives in the Story Bible
+
+SwarmCraft treats the Story Bible as the canonical source for:
+
+### 2.1 Canonical references
+- Characters (bios, arcs, secrets, voice constraints)
+- Locations (maps, rules, sensory signatures)
+- Lore (history, factions, magic/tech rules)
+- Style rules (tone, POV, reading level, taboo list)
+- Constraints (hard rules the Editor enforces)
+
+These may be stored in Markdown or JSON, depending on preference and tooling.
+
+### 2.2 The Story Scaffold (New)
+The scaffold is part of the Story Bible because it is **creative intent**, not runtime state:
+
+- **Templates:** `templates/<template_id>.json`
+Defines threads (Plot, Character Development, etc.), cadence expectations, and default parts/chapter.
+
+- **Outline:** `outline.json`
+Defines chapters → parts mapping, per-part thread beats, and per-part “contract”.
+
+Scaffold entry point:
+- **Story Scaffold (/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts)**
+
+## 3) Recommended Folder Layout
+
+projects/<project_id>/data/story_bible/
+├── README.md
+├── outline.json
+├── templates/
+├── characters/
+│ ├── king_klown.md
+│ └── ...
+├── locations/
+│ ├── cosmic_council_hall.md
+│ └── ...
+├── lore/
+│ ├── world_rules.md
+│ └── ...
+├── constraints/
+│ ├── hard_rules.md
+│ └── style_guide.md
+└── glossaries/
+└── terms.md
+
+---
+
+## **POWERED BY GROK**
+
+- Route: /technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts
+- HTML: https://initkoa.org/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts
+- Markdown mirror: https://initkoa.org/technology/swarmcraft/scaffold/story-scaffold-templates-outline-parts/index.html.md
+- Source: app\technology\swarmcraft\scaffold\story-scaffold-templates-outline-parts\page.mdx
+
+# Story Scaffold (Templates-Outline-Parts)
+
+> **Architectural Lineage (Credits):**
+> SwarmCraft is an **architectural fork and deep rewrite** of the multi-agent swarm engine created by **Mojomast (https://github.com/mojomast)** in **mojomast/swarmussy (https://github.com/mojomast/swarmussy)**.
+> SwarmCraft’s deterministic “Architect-style” layering is also **derived from the meta-structure of Abstract Wiki Architect (AWA)**.
+> Full details: **Credits & Lineage (/technology/swarmcraft/meta/credits-and-lineage)**
+
+## **POWERED BY GROK**
+
+The **Story Scaffold** is SwarmCraft’s structured planning layer used to generate and maintain narrative coherence. It is designed as a **human-editable grid** and a **machine-usable schema**.
+
+It combines:
+- **Templates**: what threads exist and how they should be paced
+- **Outline**: chapters → parts mapping + per-part beats + part contracts
+- **Parts**: the atomic unit the engine drafts/revises
+
+The Scaffold lives inside the Story Bible:
+- `data/story_bible/templates/<template_id>.json`
+- `data/story_bible/outline.json`
+
+See: **Story Bible (/technology/swarmcraft/scaffold/story-bible-creative-intent)**
+
+## 1) Why Parts Exist
+
+SwarmCraft drafts and revises **one Part at a time**.
+
+A Part is the atomic unit because it enables:
+- stable, small prompt slices
+- targeted regeneration (one slice)
+- better continuity control
+- precise status tracking in Matrix
+
+Chapters are **rollups** over Parts.
+
+- **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+- **Deterministic Pipeline (/technology/swarmcraft/core/deterministic-pipeline-scan-plan-execute)**
+
+## 2) Threads (Narrative Lanes)
+
+A template defines the thread set used to structure the story, e.g.:
+
+- Plot
+- Character Development
+- Philosophy
+- Conflict
+- Themes
+- World-Building
+- Emotion
+- Symbolism and Imagery
+- Structure
+- Relationships
+
+Threads are not the final prose. They are **scaffolding lanes** the engine uses to plan and draft.
+
+## 3) Templates: Thread Set + Cadence + Default Parts/Chapter
+
+A **template** defines:
+- the thread list (rows in the grid)
+- cadence rules (which threads are required per part/chapter, and at what frequency)
+- optional genre voice constraints
+
+Schema: **Schema Templates (/technology/swarmcraft/scaffold/schema-templates)**
+
+## 4) Outline: Chapters → Parts + Per-Part Beats + Part Contract
+
+The **outline** is the canonical story plan for a project.
+
+It defines:
+- chapters and their ordered parts
+- for each part:
+- beats per thread (grid cells)
+- a “part contract” (goal / obstacle / turn / outcome)
+- optional locks (protect manual edits)
+
+Schema: **Schema Outline (/technology/swarmcraft/scaffold/schema-outline)**
+
+## 5) Grid View (Human Editing)
+
+The UI projects the outline into a grid:
+
+- Rows = Threads (Plot, Character Dev, etc.)
+- Cells = the beat for that thread in that part
+
+This is designed to be:
+- quick to scan
+- easy to edit manually
+- compatible with CSV round-trip when needed
+
+Round-trip spec: **Outline Grid CSV Round-Trip (/technology/swarmcraft/scaffold/outline-grid-csv-round-trip)**
+
+## 6) How the Scaffold Drives Writing
+
+During execution, SwarmCraft hydrates prompts with **only the active Part slice**:
+
+- that Part’s thread beats
+- that Part’s contract
+- minimal continuity (previous part outcome, relevant character/lore snippets)
+- style constraints
+
+This prevents the system from “re-summarizing the whole story” every time.
+
+Details: **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+
+## 7) Parts/Chapter: User-Configurable Splitting
+
+Templates provide defaults, but the user can override:
+
+- **Children / picture book:** typically `1 part = 1 chapter`
+- **Complex long-form:** up to `6 parts/chapter` where needed
+
+Important constraint:
+- parts must have stable IDs; changing parts/chapter should preserve existing part IDs wherever possible, or explicitly create new parts with new IDs.
+
+## 8) Orchestration Expectations (Recommended)
+
+The engine SHOULD:
+- treat empty cells as “no beat required” unless cadence says otherwise
+- enforce cadence at plan-time (PLAN chooses what needs filling)
+- use Editor to verify manuscript covers the contract + beats
+- lock parts once stable to avoid regressions
+
+## 9) How This Relates to Matrix
+
+- **Outline** is creative intent.
+- **Matrix** is runtime progress.
+
+Matrix stores:
+- status per Part (EMPTY/DRAFTING/REVIEW_READY/REVISION_NEEDED/LOCKED)
+- manuscript paths and metrics
+- active_task target
+
+Matrix page: **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+
+## 10) Related Pages
+
+- **Story Bible (/technology/swarmcraft/scaffold/story-bible-creative-intent)**
+- **Schema Templates (/technology/swarmcraft/scaffold/schema-templates)**
+- **Schema Outline (/technology/swarmcraft/scaffold/schema-outline)**
+- **Outline Grid CSV Round-Trip (/technology/swarmcraft/scaffold/outline-grid-csv-round-trip)**
+- **Orchestration Slice-by-Slice Prompt Hydration (/technology/swarmcraft/runtime/orchestration-slice-by-slice-prompt-hydration)**
+- **Central Matrix (/technology/swarmcraft/core/central-matrix-runtime-state)**
+
+---
+
+## /technology/voting-machine
+
+- Route: /technology/voting-machine
+- HTML: https://initkoa.org/technology/voting-machine
+- Markdown mirror: https://initkoa.org/technology/voting-machine/index.html.md
+- Source: app\technology\voting-machine\page.tsx
+
+Core Component
+
+VM-ENGINE
+
+A deterministic electoral simulation core. It is not a "black box" in the opaque sense,
+but a pure function : it accepts canonical inputs and produces
+byte-identical outputs across any operating system or architecture.
+
+View Specifications
+
+Integration Guide
+
+The "Pure Function" Contract
+
+registry.json
+
+Universe of units & options
+
+tally.json
+
+Votes per unit/option
+
+params.json
+
+Algorithm config & variables
+
+VM-ENGINE
+
+result.json
+
+Canonical outcome & labels
+
+run_record.json
+
+Cryptographic audit trail
+
+Byte-Identical Determinism
+
+With identical inputs and seeds, the engine produces outputs that are bit-for-bit identical
+on any machine. We achieve this by enforcing a strictly canonical JSON format with
+sorted keys and stable array ordering.
+
+Offline & Hermetic
+
+The engine performs no network I/O during official runs. It is a self-contained
+binary that verifies its own input hashes and fails hard upon any spec violation.
+
+Formula ID . Changing a visual label does not change the FID; changing a
+rounding rule does.
+
+Pinned Randomness
+
+Tie-breaking is not arbitrary. When random policy is selected, the engine uses a
+frozen RNG profile seeded once per run. A k-way tie consumes exactly k draws.
+
+Technical Specifications
+
+The rigorous engineering documentation. Data models, Algorithm Flow, Gates, and the Pipeline State Machine.
+
+Read Specs
+
+Integration & Reporting
+
+How to embed VM-ENGINE in a larger system. CLI contracts, read-only reporting templates, and audit verification.
+
+View Guide
+
+---
+
+## Standard invocation pattern
+
+- Route: /technology/voting-machine/integration
+- HTML: https://initkoa.org/technology/voting-machine/integration
+- Markdown mirror: https://initkoa.org/technology/voting-machine/integration/index.html.md
+- Source: app\technology\voting-machine\integration\page.tsx
+
+Back to VM-ENGINE Overview
+
+Integration & Reporting
+
+Treat the engine as a pure function. Invoke it via CLI, consume its canonical JSON outputs,
+and render reports using read-only templates. Never re-compute allocations in the view layer.
+
+1. The CLI Contract
+
+●
+●
+●
+
+# Standard invocation pattern
+
+vm_cli \
+
+--registry ./inputs/registry.json \
+
+--tally ./inputs/tally.json \
+
+--params ./inputs/params.json \
+
+--out ./outputs/run_01
+
+Exit Code 0
+Success. All artifacts emitted and hashes verified.
+
+Exit Code 2
+Validation Error. Input schema or referential integrity failed.
+
+Exit Code 3
+Verification Failure. Post-run hash check mismatch (critical).
+
+2. Reporting Rules (Doc 7)
+
+The "Read-Only" Principle
+
+The renderer consumes result.json and run_record.json .
+It must not re-calculate shares, margins, or winners.
+Visual logic is strictly separated from business logic.
+
+Numeric Format: Percentages show one decimal (e.g., 54.5%). Round half up. No locale-specific separators in raw data.
+
+Ordering: Allocation tables typically follow Registry order, not vote count, to preserve neutrality.
+
+Presentation Toggles: Variables 060-062 control labels and language but do not affect the Formula ID (FID).
+
+Report Footer Template
+
+Formula ID: a3f9...8b21
+
+Engine Version: v1.2.0
+
+Algorithm Variant: v1 (Standard)
+
+Tie Policy: random
+
+RNG Seed: 424242 (Event count: 1)
+
+*Required disclosure block on every official report page.
+
+3. Independent Verification
+
+Any third party can verify a run by re-executing the engine with the provided inputs.
+Verification succeeds if the output hashes match exactly.
+
+Formula ID (FID) Audit
+
+The FID is a hash of the Normative Manifest (the algorithm rules + included variables).
+It proves that the logic wasn't secretly tweaked for a specific run.
+
+Included in FID
+Thresholds, Frontier logic, Rounding rules, Tie Policy
+
+Excluded from FID
+Visual labels, Language settings, Report layout options
+
+---
+
+## /technology/voting-machine/specifications
+
+- Route: /technology/voting-machine/specifications
+- HTML: https://initkoa.org/technology/voting-machine/specifications
+- Markdown mirror: https://initkoa.org/technology/voting-machine/specifications/index.html.md
+- Source: app\technology\voting-machine\specifications\page.tsx
+
+Back to VM-ENGINE Overview
+
+Technical Specifications
+
+The machine operates on a strict set of normative documents (Docs 1–7).
+Below is the condensed engineering reference for the Data Model, Algorithm, and Pipeline.
+
+1. Canonical Data Model
+
+Inputs (Consumed)
+
+DivisionRegistry: The stable universe of units and options . Defines the deterministic order_index for every option.
+
+BallotTally: Votes per unit/option. Must referentially align with the Registry.
+
+ParameterSet: The configuration map. Must explicitly set all Included VM-VARs (outcome-affecting variables).
+
+Outputs (Produced)
+
+Result: The canonical outcome. Contains allocations, aggregates, and the formula_id (FID).
+
+RunRecord: The cryptographic audit trail. Contains input hashes, engine version, effective variables, and the TieLog .
+
+FrontierMap (Optional): Per-unit diagnostics for the frontier gating model (if enabled).
+
+2. Algorithmic Step Order
+
+The engine must execute stages in this exact order to guarantee determinism.
+Ordering of units is always by ascending unit_id .
+
+3. Gates & Edge Cases
+
+Before allocation, every unit must pass a series of Gates .
+If any gate fails, the unit is marked Invalid , receives no allocation,
+and the reason is recorded in the RunRecord .
+
+Sanity Gates: Data plausibility (e.g., votes &le; ballots).
+
+Eligibility Gates: Minimum turnout or share thresholds.
+
+Validity Gates: Integrity floors (VM-VAR-031).
+
+The "Invalid" State
+
+There is no "provisional" allocation. A unit is either Valid or Invalid.
+
+4. Pipeline Contracts
+
+Exit Code 2
+Validation Error
+
+Input schema violation, referential integrity failure, or ordering precondition unmet.
+
+Exit Code 3
+Verification Failure
+
+Post-run self-check failed. The computed hash of an artifact does not match its embedded ID.
+
+Exit Code 5
+Spec Violation
+
+Internal determinism breach (e.g., RNG used when policy is not 'random').
+
+---
+
 ## /why
 
 - Route: /why
 - HTML: https://initkoa.org/why
 - Markdown mirror: https://initkoa.org/why/index.html.md
-- Source: app/why/page.tsx
+- Source: app\why\page.tsx
 
 kOA / The Diagnosis
 

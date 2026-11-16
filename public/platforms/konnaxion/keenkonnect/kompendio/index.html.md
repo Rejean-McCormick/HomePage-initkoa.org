@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/platforms/konnaxion/keenkonnect/kompendio
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/keenkonnect/kompendio/index.html.md
 > Route: /platforms/konnaxion/keenkonnect/kompendio
-> Source: app/platforms/konnaxion/keenkonnect/kompendio/page.mdx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\platforms\konnaxion\keenkonnect\kompendio\page.mdx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/keenkonnect/kompendio)
 

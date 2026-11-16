@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/principles/logos
 > Markdown mirror: https://initkoa.org/principles/logos/index.html.md
 > Route: /principles/logos
-> Source: app/principles/logos/page.tsx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\principles\logos\page.tsx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/principles/logos)
 

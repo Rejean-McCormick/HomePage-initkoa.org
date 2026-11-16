@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/kristal/distribution-and-versioning
 > Markdown mirror: https://initkoa.org/technology/kristal/distribution-and-versioning/index.html.md
 > Route: /technology/kristal/distribution-and-versioning
-> Source: app/technology/kristal/distribution-and-versioning/page.mdx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\technology\kristal\distribution-and-versioning\page.mdx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/technology/kristal/distribution-and-versioning)
 

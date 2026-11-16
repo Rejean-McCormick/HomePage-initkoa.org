@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/platforms/orgo/use-cases/healthcare
 > Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/healthcare/index.html.md
 > Route: /platforms/orgo/use-cases/healthcare
-> Source: app/platforms/orgo/use-cases/healthcare/page.mdx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\platforms\orgo\use-cases\healthcare\page.mdx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/platforms/orgo/use-cases/healthcare)
 

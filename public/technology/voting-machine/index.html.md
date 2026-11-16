@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/technology/voting-machine/index.html.md
 > Route: /technology/voting-machine
 > Source: app\technology\voting-machine\page.tsx
-> Generated: 2026-09-22T19:18:32.402Z
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/technology/voting-machine)
 

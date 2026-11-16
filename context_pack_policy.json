@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": "2026-09-18.3",
+  "publicBuild": {
+    "committedOnly": true,
+    "requireCleanMarkdown": true,
+    "plainWikiMode": "ignore",
+    "defaultAuthority": "reference",
+    "defaultContentRole": "knowledge",
+    "wikiAuthority": "reference",
+    "wikiContentRole": "navigation",
+    "publishLocalPaths": false,
+    "includedAuthorities": [
+      "canonical",
+      "reference"
+    ],
+    "warningBytes": 2000000,
+    "maxBytes": 12000000,
+    "directorySnapshotAllowlist": [
+      "power-dynamics-context-pack.txt"
+    ]
+  },
+  "globalExclusions": [
+    ".kx_deploy_backups/**",
+    "_pipeline-plan-diag_*/**",
+    "_diagnostics/**",
+    "tmp/**",
+    ".tmp/**",
+    "node_modules/**",
+    "**/node_modules/**",
+    ".koali-ks4-backup/**",
+    "**/.koali-ks4-backup/**"
+  ],
+  "repositories": {
+    "Konnaxion": {
+      "rules": [
+        {
+          "pattern": ".kx_deploy_backups/**",
+          "authority": "historical",
+          "include": false
+        }
+      ]
+    },
+    "kOA-Linux": {
+      "selectionMode": "curated",
+      "includeWiki": true,
+      "includePatterns": [
+        "docs/AI_CONTEXT.md",
+        "docs/contracts/ai-navigation.contract.json",
+        "docs/contracts/*.contract.json",
+        "docs/contracts/components/*.component.json",
+        "docs/contracts/subsystems/*.subsystem.json",
+        "docs/contracts/profiles/*.profile.json",
+        "docs/contracts/integrations/*.integration.json",
+        "docs/contracts/toolchains/*.toolchain.json",
+        "docs/generated/ai-context/*.json",
+        "docs/generated/authority-manifest.json",
+        "docs/generated/document-index.json",
+        "docs/generated/component-catalog.json",
+        "docs/generated/subsystem-catalog.json",
+        "docs/generated/profile-catalog.json",
+        "docs/generated/requirements-index.json",
+        "docs/generated/assertion-index.json",
+        "docs/generated/traceability.json"
+      ],
+      "requiredPatterns": [
+        "docs/AI_CONTEXT.md",
+        "docs/contracts/ai-navigation.contract.json",
+        "docs/generated/ai-context/*.json",
+        "docs/generated/document-index.json",
+        "docs/generated/component-catalog.json",
+        "docs/generated/subsystem-catalog.json",
+        "docs/generated/profile-catalog.json",
+        "docs/generated/requirements-index.json",
+        "docs/generated/assertion-index.json",
+        "docs/generated/traceability.json",
+        "docs/generated/ai-context/koa-navigation.json",
+        "docs/generated/authority-manifest.json",
+        "docs/contracts/*.contract.json",
+        "docs/contracts/components/*.component.json",
+        "docs/contracts/subsystems/*.subsystem.json",
+        "docs/contracts/profiles/*.profile.json",
+        "docs/contracts/integrations/*.integration.json",
+        "docs/contracts/toolchains/*.toolchain.json"
+      ],
+      "readFirst": [
+        "docs/AI_CONTEXT.md",
+        "docs/contracts/ai-navigation.contract.json",
+        "docs/generated/ai-context/koa-navigation.json",
+        "docs/generated/ai-context/*.json",
+        "docs/generated/authority-manifest.json",
+        "docs/generated/document-index.json",
+        "docs/generated/component-catalog.json",
+        "docs/generated/subsystem-catalog.json",
+        "docs/generated/profile-catalog.json",
+        "docs/generated/requirements-index.json",
+        "docs/generated/assertion-index.json",
+        "docs/generated/traceability.json"
+      ],
+      "rules": [
+        {
+          "pattern": "docs/contracts/**",
+          "authority": "canonical",
+          "contentRole": "knowledge",
+          "include": true
+        },
+        {
+          "pattern": "docs/AI_CONTEXT.md",
+          "authority": "reference",
+          "include": true,
+          "contentRole": "navigation"
+        },
+        {
+          "pattern": "docs/generated/**",
+          "authority": "reference",
+          "include": true,
+          "contentRole": "generated"
+        }
+      ],
+      "defaultAuthority": "reference",
+      "wikiAuthority": "reference",
+      "wikiContentRole": "navigation"
+    },
+    "Kristal_Farms": {
+      "selectionMode": "curated",
+      "includeWiki": true,
+      "selectionProfile": "central-authority-c0-c2",
+      "includePatterns": [
+        "README.md",
+        "AGENTS.md",
+        "GOVERNANCE.md",
+        "ORCHESTRATION.md",
+        "RELEASE_MANIFEST.json",
+        "SECURITY.md",
+        "docs/index.md",
+        "docs/00-control/**",
+        "docs/10-core/**",
+        "docs/60-application-data/**",
+        "docs/adr/**",
+        "docs/api/**",
+        "docs/architecture/**",
+        "docs/data/**",
+        "docs/domain/**",
+        "docs/frontend/**",
+        "docs/product/**",
+        "docs/reference/**",
+        "docs/scenarios/**",
+        "docs/security/**",
+        "contracts/**"
+      ],
+      "requiredPatterns": [
+        "README.md",
+        "docs/00-control/DOCUMENT_AUTHORITY.md",
+        "docs/00-control/MASTER_INDEX.md",
+        "docs/00-control/PROJECT_STATE.md",
+        "docs/00-control/STRATEGIC_PRINCIPLES.md",
+        "docs/10-core/Kristal_Farms_Reference_Architecture_EN.md",
+        "docs/architecture/overview.md",
+        "docs/architecture/workspace-boundaries.md",
+        "docs/domain/kristal-farms-principles.md",
+        "docs/product/vision.md",
+        "docs/data/data-model.md",
+        "contracts/policy/kristal-farms-policy.yaml"
+      ],
+      "readFirst": [
+        "README.md",
+        "docs/00-control/DOCUMENT_AUTHORITY.md",
+        "docs/00-control/MASTER_INDEX.md",
+        "docs/00-control/PROJECT_STATE.md",
+        "docs/00-control/STRATEGIC_PRINCIPLES.md",
+        "docs/00-control/SCOPE_BOUNDARIES.md",
+        "docs/10-core/Kristal_Farms_Reference_Architecture_EN.md",
+        "docs/10-core/Architecture_de_reference_Kristal_Farms_FR.md",
+        "docs/10-core/deployment/DEPLOYMENT_STRATEGY_EN.md",
+        "docs/10-core/tenancy/BLACK_BOX_TENANCY_MODEL_EN.md",
+        "docs/architecture/overview.md",
+        "docs/architecture/workspace-boundaries.md",
+        "docs/domain/kristal-farms-principles.md",
+        "docs/product/vision.md",
+        "docs/data/data-model.md",
+        "docs/data/evidence-model.md",
+        "contracts/policy/kristal-farms-policy.yaml"
+      ],
+      "rules": [
+        {
+          "pattern": "docs/00-control/**",
+          "authority": "canonical",
+          "include": true
+        },
+        {
+          "pattern": "docs/10-core/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "docs/60-application-data/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "docs/adr/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "docs/api/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "docs/architecture/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "docs/data/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "docs/domain/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "docs/frontend/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "docs/product/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "docs/reference/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "docs/scenarios/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "docs/security/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "contracts/**",
+          "authority": "reference",
+          "include": true
+        },
+        {
+          "pattern": "data/**",
+          "authority": "evidence",
+          "include": false
+        },
+        {
+          "pattern": "sources/**",
+          "authority": "evidence",
+          "include": false
+        },
+        {
+          "pattern": "research/**",
+          "authority": "research",
+          "include": false
+        },
+        {
+          "pattern": "docs/30-site-screening/**",
+          "authority": "research",
+          "include": false
+        },
+        {
+          "pattern": "docs/40-economics/**",
+          "authority": "research",
+          "include": false
+        },
+        {
+          "pattern": "docs/50-research/**",
+          "authority": "research",
+          "include": false
+        },
+        {
+          "pattern": "docs/70-long-horizon/**",
+          "authority": "proposal",
+          "include": false
+        },
+        {
+          "pattern": "archive/**",
+          "authority": "historical",
+          "include": false
+        },
+        {
+          "pattern": "README.md",
+          "contentRole": "navigation"
+        },
+        {
+          "pattern": "AGENTS.md",
+          "contentRole": "instruction"
+        },
+        {
+          "pattern": "ORCHESTRATION.md",
+          "contentRole": "instruction"
+        },
+        {
+          "pattern": "docs/index.md",
+          "contentRole": "navigation"
+        }
+      ],
+      "defaultAuthority": "reference",
+      "wikiAuthority": "reference",
+      "wikiContentRole": "navigation"
+    },
+    "Orgo": {
+      "rules": [
+        {
+          "pattern": "Docs/Technical-Reference/Architecture upgrade(to do)/**",
+          "authority": "proposal",
+          "include": false
+        }
+      ]
+    },
+    "Power_Dynamics": {
+      "selectionMode": "markdown",
+      "includeWiki": false,
+      "sourceMode": "directory"
+    },
+    "UCKK-Moodle": {
+      "rules": [
+        {
+          "pattern": "string_inventory/**",
+          "authority": "reference",
+          "include": false
+        }
+      ]
+    },
+    "king-clown-canon": {
+      "selectionMode": "markdown",
+      "includeWiki": true
+    }
+  },
+  "legacyExemptFiles": [
+    "grammatical-framework-context-pack--rgl-router-and-reference--v1.0.txt",
+    "senior-architect-context-pack--systems-patterns-and-resilience--v1.0.txt"
+  ]
+}

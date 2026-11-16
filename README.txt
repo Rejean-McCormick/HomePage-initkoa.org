@@ -1,47 +1,25 @@
-INITKOA Context Pack pipeline
+INITKOA — Correction Vercel context-packs:validate
 
-Primary AI entrypoint:
-- /llms.txt
+Cause : power-dynamics-context-pack.txt est un snapshot d'un dossier local,
+avec source_mode=directory et working_tree_markdown=not-applicable.
+L'ancien validateur exigeait clean meme lorsque Git ne s'applique pas.
 
-Context Pack source of truth:
-- tools/context_pack_policy.json        corpus selection/classification policy
-- public/context-packs/index.json       generated authoritative catalog
-- public/context-packs/sitemap.xml      generated crawler discovery surface
+Correctif :
+- Exige toujours clean pour les packs issus de Git.
+- Autorise uniquement les snapshots de dossier explicitement allowlistes
+  dans tools/context_pack_policy.json et portant les marqueurs coherents.
+- Laisse le contenu original, les hashes et la provenance inchanges.
 
-Builder:
-- tools/context_pack_builder.pyw
+Application depuis la racine du repository HomePage-initkoa.org :
 
-Corpus policy documentation:
-- docs/context-packs/corpus-policy.md
+  git apply fix-context-pack-directory-provenance.patch
+  npm run context-packs:validate
+  npm run build
+  git add scripts/validate-context-packs.mjs tools/context_pack_policy.json
+  git commit -m "fix: validate explicitly approved directory context packs"
+  git push
 
-Build guard:
-- scripts/validate-context-packs.mjs
-- npm run context-packs:validate
-
-Public build behavior:
-- default repositories: committed Markdown only
-- curated repositories: committed files selected by policy globs
-- clean selected source state required
-- policy exclusions/classification applied before packaging
-- exact duplicate source content removed by SHA-256
-- corpus metrics and policyVersion written into each pack and index.json
-- index.json and sitemap.xml generated from the published pack set
-- /llms.txt discovers Context Packs from index.json only
-- historical public Context Pack URLs redirect permanently to stable URLs
-- kOA-Linux uses its native AI layer instead of concatenating the full Markdown corpus:
-  docs/AI_CONTEXT.md + ai-navigation contract + declared canonical source contracts + generated AI contexts/indexes
-- two legacy general packs are explicitly exempt from builder-format checks until migrated
-
-Generated outputs (never edit manually):
-- public/context-packs/*.txt
-- public/context-packs/index.json
-- public/context-packs/sitemap.xml
-- public/llms.txt
-
-Workflow:
-1. Update tools/context_pack_policy.json when corpus rules change.
-2. Ensure Markdown working trees are clean.
-3. Run the builder's Build All (or Build All + Sync).
-4. Run npm run context-packs:validate.
-5. Commit/push the site code changes and generated Context Pack outputs.
-6. Vercel runs the validator before generating AI assets and building Next.js.
+Le patch a passe git apply --check sur l'arbre de reference.
+Le validateur a passe 25 packs; 3 avertissements de taille restent.
+Le build Next.js complet n'a pas pu etre teste dans cet environnement
+(car npm install n'a pas abouti).

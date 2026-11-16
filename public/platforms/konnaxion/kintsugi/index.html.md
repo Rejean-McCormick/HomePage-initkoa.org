@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/platforms/konnaxion/kintsugi
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/kintsugi/index.html.md
 > Route: /platforms/konnaxion/kintsugi
-> Source: app/platforms/konnaxion/kintsugi/page.tsx
-> Generated: 2026-11-16T02:05:37.894Z
+> Source: app\platforms\konnaxion\kintsugi\page.tsx
+> Generated: 2026-11-16T14:14:38.324Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/kintsugi)
 
