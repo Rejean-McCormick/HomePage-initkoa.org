@@ -92,6 +92,13 @@ const globalExclusions = Array.isArray(policy.globalExclusions) ? policy.globalE
 const legacyExemptFiles = new Set(
   Array.isArray(policy.legacyExemptFiles) ? policy.legacyExemptFiles.map(String) : []
 );
+// Git cleanliness is not a meaningful attribute of a snapshot copied from a plain directory.
+// Such snapshots must be explicitly approved by filename in the public build policy.
+const directorySnapshotAllowlist = new Set(
+  Array.isArray(buildPolicy.directorySnapshotAllowlist)
+    ? buildPolicy.directorySnapshotAllowlist.map(String)
+    : []
+);
 
 const manifest = readJson(MANIFEST_PATH, "manifest");
 if (!Array.isArray(manifest.packs)) fail("manifest.packs must be an array");
@@ -143,7 +150,23 @@ for (const pack of manifest.packs) {
   if (header.policy_version !== policy.policyVersion) {
     fail(`${file}: policy_version ${header.policy_version || "(missing)"} != ${policy.policyVersion}`);
   }
-  if (header.working_tree_markdown !== "clean") fail(`${file}: source working tree is not declared clean`);
+  if (header.source_mode === "git") {
+    if (header.working_tree_markdown !== "clean" || header.working_tree_selected !== "clean") {
+      fail(`${file}: source Git working tree is not declared clean`);
+    }
+  } else if (header.source_mode === "directory") {
+    const allowedSnapshot =
+      directorySnapshotAllowlist.has(file) &&
+      header.source_commit === "local-directory" &&
+      header.working_tree_markdown === "not-applicable" &&
+      header.working_tree_selected === "not-applicable";
+    if (!allowedSnapshot) {
+      fail(`${file}: local directory snapshot provenance is not explicitly approved`);
+    }
+    console.warn(`[context-packs] provenance notice: ${file} is a local directory snapshot (Git cleanliness not applicable)`);
+  } else {
+    fail(`${file}: unsupported source provenance: mode=${header.source_mode || "(missing)"}`);
+  }
   if (header.wiki_working_tree_markdown === "dirty") fail(`${file}: wiki working tree is dirty`);
 
   const files = parsePackFiles(text);

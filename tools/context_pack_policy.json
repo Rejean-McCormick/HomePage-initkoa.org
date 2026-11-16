@@ -15,7 +15,10 @@
       "reference"
     ],
     "warningBytes": 2000000,
-    "maxBytes": 12000000
+    "maxBytes": 12000000,
+    "directorySnapshotAllowlist": [
+      "power-dynamics-context-pack.txt"
+    ]
   },
   "globalExclusions": [
     ".kx_deploy_backups/**",
