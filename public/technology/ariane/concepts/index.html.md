@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/ariane/concepts
 > Markdown mirror: https://initkoa.org/technology/ariane/concepts/index.html.md
 > Route: /technology/ariane/concepts
-> Source: app\technology\ariane\concepts\page.tsx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/technology/ariane/concepts/page.tsx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/technology/ariane/concepts)
 

@@ -2,18 +2,17 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Civic Governance Initiatives",
+  title: "Civic Governance Proposal — kOA",
   description:
-    "Reinventing governance through modular, open-source systems.",
+    "A proposal for civic governance, with links to the models and tools that inform it.",
 };
 
 export default function CivicGovernancePage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-24 prose prose-slate">
-      <h1>Civic Governance</h1>
+      <h1>Civic Governance Proposal</h1>
       <p>
-        The core initiative of kOA is to provide a &quot;Government in a Box&quot; —
-        a complete, deployable stack for managing communities.
+        This initiative explores how communities could govern rules, decisions and participation through modular institutions and tools. Individual components and proposals have their own development status.
       </p>
 
       <h2>The Constitution</h2>
@@ -37,7 +36,7 @@ export default function CivicGovernancePage() {
         </Link>
       </p>
 
-      <h2>Active Modules</h2>
+      <h2>Proposed areas</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
         <Link
           href="/initiatives/civic-governance/modules"

@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/platforms/orgo/use-cases/local-government
 > Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/local-government/index.html.md
 > Route: /platforms/orgo/use-cases/local-government
-> Source: app\platforms\orgo\use-cases\local-government\page.mdx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/platforms/orgo/use-cases/local-government/page.mdx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/platforms/orgo/use-cases/local-government)
 

@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/principles/civic-principles-ethics/principles
 > Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/principles/index.html.md
 > Route: /principles/civic-principles-ethics/principles
-> Source: app\principles\civic-principles-ethics\principles\page.js
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/principles/civic-principles-ethics/principles/page.js
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/principles/civic-principles-ethics/principles)
 

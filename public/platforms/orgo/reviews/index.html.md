@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/platforms/orgo/reviews
 > Markdown mirror: https://initkoa.org/platforms/orgo/reviews/index.html.md
 > Route: /platforms/orgo/reviews
-> Source: app\platforms\orgo\reviews\page.mdx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/platforms/orgo/reviews/page.mdx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/platforms/orgo/reviews)
 

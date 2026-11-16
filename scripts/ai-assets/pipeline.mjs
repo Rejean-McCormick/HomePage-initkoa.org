@@ -170,14 +170,60 @@ function buildMdManifestEntries(pages, nowIso) {
   }));
 }
 
+// The JSX text cleaner discards href attributes. Keep the external CTAs on
+// the updated public entry pages discoverable in Markdown and text artifacts.
+const LINK_DISCOVERY_ROUTES = new Set([
+  "/",
+  "/evidence",
+  "/infrastructures/kin-city",
+]);
+
+function publicExternalLinks(raw, route, config) {
+  if (!LINK_DISCOVERY_ROUTES.has(route)) return [];
+
+  // Read the value rather than duplicating the navigation URL in this generator.
+  const navigationSource = fs.readFileSync(
+    path.join(config.rootDir, "lib/site-navigation.ts"),
+    "utf8"
+  );
+  const urlConstants = new Map(
+    [...navigationSource.matchAll(/export\s+const\s+([A-Z][A-Z_0-9]*)\s*=\s*["'](https?:\/\/[^"']+)["']/g)]
+      .map((match) => [match[1], match[2]])
+  );
+
+  const links = [];
+  const seen = new Set();
+  for (const match of raw.matchAll(/<(SiteLink|Link|a)\b([^>]*)>([\s\S]*?)<\/\1>/g)) {
+    const attributes = match[2];
+    const literalHref = attributes.match(/\bhref\s*=\s*["'](https?:\/\/[^"']+)["']/);
+    const namedHref = attributes.match(/\bhref\s*=\s*\{\s*([A-Z][A-Z_0-9]*)\s*\}/);
+    const url = literalHref?.[1] || urlConstants.get(namedHref?.[1]);
+    if (!url || !/^https?:\/\//.test(url)) continue;
+
+    const label = match[3]
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\{[^{}]*\}/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (!label || seen.has(url)) continue;
+    seen.add(url);
+    links.push(`- [${label}](${url})`);
+  }
+  return links;
+}
+
 function buildSinglePage({ config, nowIso, route, fileAbsPath }) {
   const raw = fs.readFileSync(fileAbsPath, "utf8");
   const ext = getSourceExt(fileAbsPath);
 
-  const cleaned = truncate(
+  const cleanedText = truncate(
     cleanContent(raw, ext, config),
     config.maxCharsPerPage
   );
+  const externalLinks = publicExternalLinks(raw, route, config);
+  const cleaned = externalLinks.length
+    ? `${cleanedText}\n\nExternal links\n\n${externalLinks.join("\n")}`
+    : cleanedText;
 
   if (!cleaned || cleaned.length < config.minCharsPerPage) {
     return null;

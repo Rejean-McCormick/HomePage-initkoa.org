@@ -11,7 +11,7 @@ import {
 } from '@/lib/technology-catalog';
 
 const normalize = (value: string) =>
-  value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('fr-CA');
+  value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('en-CA');
 
 function EntryCard({ entry }: { entry: TechnologyEntry }) {
   return (
@@ -20,20 +20,20 @@ function EntryCard({ entry }: { entry: TechnologyEntry }) {
         <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-slate-600">
           {entry.kind}
         </span>
-        {entry.internal ? <span className="text-[11px] font-medium text-teal-700">Page kOA</span> : null}
+        {entry.internal ? <span className="text-[11px] font-medium text-teal-700">kOA page</span> : null}
       </div>
       <h3 className="text-xl font-semibold tracking-tight text-slate-900">{entry.name}</h3>
       <p className="mt-2 flex-1 text-sm leading-6 text-slate-600">{entry.description}</p>
       <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-slate-100 pt-4 text-sm font-semibold">
         {entry.internal ? (
           <Link href={entry.internal} className="inline-flex items-center gap-1 text-teal-800 hover:underline">
-            Découvrir <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            Explore <ArrowRight aria-hidden="true" className="h-4 w-4" />
           </Link>
         ) : null}
         {entry.repository ? (
           <a href={entry.repository} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-slate-500 hover:text-slate-900 hover:underline">
-            <Github aria-hidden="true" className="h-4 w-4" /> Dépôt <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-            <span className="sr-only">GitHub de {entry.name}, nouvel onglet</span>
+            <Github aria-hidden="true" className="h-4 w-4" /> Repository <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+            <span className="sr-only">{entry.name} repository, opens in a new tab</span>
           </a>
         ) : null}
         {!entry.internal && !entry.repository ? (
@@ -58,19 +58,19 @@ export default function TechnologyCatalog() {
   return (
     <section id="catalogue" className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-10" aria-labelledby="catalogue-title">
       <div className="mb-10 max-w-3xl">
-        <span className="text-xs font-bold uppercase tracking-[0.22em] text-teal-700">Répertoire technologique</span>
+        <span className="text-xs font-bold uppercase tracking-[0.22em] text-teal-700">Technology catalog</span>
         <h2 id="catalogue-title" className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
-          Explorer les projets
+          Explore projects
         </h2>
         <p className="mt-4 text-base leading-7 text-slate-600">
-          Un catalogue navigable d’applications, de systèmes et d’outils issus de la documentation des dépôts.
-          Chaque carte décrit un rôle — <strong>pas</strong> une certification de déploiement.
+          Browse applications, systems and tools documented in the project repositories.
+          Each entry describes the project’s role. See the linked source for its current status.
         </p>
       </div>
 
       <div className="mb-8 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
         <label htmlFor="technology-search" className="mb-2 block text-sm font-semibold text-slate-800">
-          Rechercher par nom ou fonction
+          Search by name or function
         </label>
         <div className="relative">
           <Search aria-hidden="true" className="pointer-events-none absolute left-3.5 top-3.5 h-5 w-5 text-slate-400" />
@@ -78,16 +78,16 @@ export default function TechnologyCatalog() {
             id="technology-search"
             type="search"
             autoComplete="off"
-            placeholder="Ex. Kristal, apprentissage, identité, publication…"
+            placeholder="Try Kristal, learning, identity or publishing"
             value={search}
             onChange={(event) => setSearch(event.target.value)}
             className="w-full rounded-xl border border-slate-300 bg-slate-50 py-3 pl-11 pr-4 text-base text-slate-900 outline-none placeholder:text-slate-400 focus:border-teal-600 focus:ring-2 focus:ring-teal-100"
           />
         </div>
-        <div className="mt-4 flex flex-wrap gap-2" role="group" aria-label="Filtrer par famille">
+        <div className="mt-4 flex flex-wrap gap-2" role="group" aria-label="Filter by category">
           <button type="button" aria-pressed={category === 'all'} onClick={() => setCategory('all')}
             className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${category === 'all' ? 'bg-slate-900 text-white' : 'border border-slate-200 bg-slate-50 text-slate-700 hover:border-teal-500'}`}>
-            Tout ({TECHNOLOGY_CATALOG.length})
+            All ({TECHNOLOGY_CATALOG.length})
           </button>
           {TECHNOLOGY_CATEGORIES.map((item) => (
             <button type="button" key={item.id} aria-pressed={category === item.id} onClick={() => setCategory(item.id)}
@@ -99,10 +99,10 @@ export default function TechnologyCatalog() {
       </div>
 
       <div aria-live="polite" className="mb-5 flex min-h-8 flex-wrap items-center justify-between gap-3 text-sm text-slate-600">
-        <p><strong className="text-slate-900">{visible.length}</strong> projet{visible.length > 1 ? 's' : ''} trouvé{visible.length > 1 ? 's' : ''}</p>
+        <p><strong className="text-slate-900">{visible.length}</strong> {visible.length === 1 ? 'project' : 'projects'} found</p>
         {(search || category !== 'all') ? (
           <button type="button" onClick={() => { setSearch(''); setCategory('all'); }} className="inline-flex items-center gap-1 font-semibold text-teal-800 hover:underline">
-            <X aria-hidden="true" className="h-4 w-4" /> Effacer les filtres
+            <X aria-hidden="true" className="h-4 w-4" /> Clear filters
           </button>
         ) : null}
       </div>
@@ -113,8 +113,8 @@ export default function TechnologyCatalog() {
         </div>
       ) : (
         <div className="rounded-2xl border border-dashed border-slate-300 bg-white px-6 py-16 text-center">
-          <p className="font-semibold text-slate-800">Aucun projet ne correspond à cette recherche.</p>
-          <p className="mt-2 text-sm text-slate-500">Essaie une autre expression ou réinitialise les filtres.</p>
+          <p className="font-semibold text-slate-800">No projects match this search.</p>
+          <p className="mt-2 text-sm text-slate-500">Try another search or clear the filters.</p>
         </div>
       )}
     </section>

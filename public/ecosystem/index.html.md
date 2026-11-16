@@ -3,19 +3,26 @@
 > Canonical HTML: https://initkoa.org/ecosystem
 > Markdown mirror: https://initkoa.org/ecosystem/index.html.md
 > Route: /ecosystem
-> Source: app\ecosystem\page.tsx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/ecosystem/page.tsx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/ecosystem)
 
 Ecosystem / architecture
 
-The final kOA system
+How the kOA ecosystem fits together
 
-A federation of independently owned capabilities, connected by explicit interfaces. Knowledge acquisition,
-semantic authoring, learning, civic deliberation, operations and publication are separate responsibilities.
+The digital ecosystem connects knowledge, language, collaboration and operations. Learning environments, creative work and infrastructure give these capabilities places to be used and passed on.
 
-Target design, not deployment evidence. This catalogue describes the intended system.
+Platforms
+
+Learning & Culture
+
+Infrastructures
+
+Evidence & Documentation
+
+Target design, not deployment evidence. The catalogue below describes the intended system as of .
 A documented contract, build or code snapshot does not establish a qualified integration or public release.
 
 Functional capabilities

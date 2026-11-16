@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/initiatives/civic-governance/constitution/rights
 > Markdown mirror: https://initkoa.org/initiatives/civic-governance/constitution/rights/index.html.md
 > Route: /initiatives/civic-governance/constitution/rights
-> Source: app\initiatives\civic-governance\constitution\rights\page.tsx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/initiatives/civic-governance/constitution/rights/page.tsx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/initiatives/civic-governance/constitution/rights)
 

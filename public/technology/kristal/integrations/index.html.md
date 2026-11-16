@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/kristal/integrations
 > Markdown mirror: https://initkoa.org/technology/kristal/integrations/index.html.md
 > Route: /technology/kristal/integrations
-> Source: app\technology\kristal\integrations\page.mdx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/technology/kristal/integrations/page.mdx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/technology/kristal/integrations)
 

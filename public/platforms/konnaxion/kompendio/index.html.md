@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/platforms/konnaxion/kompendio
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/kompendio/index.html.md
 > Route: /platforms/konnaxion/kompendio
-> Source: app\platforms\konnaxion\kompendio\page.tsx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/platforms/konnaxion/kompendio/page.tsx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/kompendio)
 

@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/go-no-go
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/go-no-go/index.html.md
 > Route: /infrastructures/kristal-farms/go-no-go
-> Source: app\infrastructures\kristal-farms\go-no-go\page.mdx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/infrastructures/kristal-farms/go-no-go/page.mdx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/go-no-go)
 

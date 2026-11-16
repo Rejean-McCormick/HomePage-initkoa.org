@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/ariane/consumers/ai-agents
 > Markdown mirror: https://initkoa.org/technology/ariane/consumers/ai-agents/index.html.md
 > Route: /technology/ariane/consumers/ai-agents
-> Source: app\technology\ariane\consumers\ai-agents\page.mdx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/technology/ariane/consumers/ai-agents/page.mdx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/technology/ariane/consumers/ai-agents)
 

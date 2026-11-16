@@ -16,6 +16,8 @@ const EXCLUDED_PREFIXES = [
   "/private",
   "/initiatives/ukraine-peace-plan",
   "/kreature",
+  "/technology/swarmcraft",
+  "/technology/voting-machine",
 ];
 
 // App Router: a folder is routable when it contains page.(tsx|ts|js|jsx|mdx|md)
@@ -204,6 +206,9 @@ function priorityFor(routePath: string): number {
 
   // Boost key hubs
   const hubs = new Set([
+    "/ecosystem",
+    "/learning-and-culture",
+    "/evidence",
     "/platforms",
     "/infrastructures",
     "/initiatives",
@@ -211,6 +216,8 @@ function priorityFor(routePath: string): number {
     "/research",
     "/technology",
     "/kreature",
+  "/technology/swarmcraft",
+  "/technology/voting-machine",
   ]);
 
   if (hubs.has(routePath)) return 0.9;

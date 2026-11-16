@@ -5,7 +5,7 @@ export const DEFAULT_BASE_URL = "https://initkoa.org";
 export const DEFAULT_SITE_LABEL = "initkoa.org";
 export const DEFAULT_PROJECT_TITLE = "kOA INITIATIVE";
 export const DEFAULT_PROJECT_DESCRIPTION =
-  "Public documentation for the kOA INITIATIVE by Réjean McCormick: civic utilities for learning, coordination, and governable decision-making (offline-first, auditable).";
+  "kOA brings together tools for learning, creating, making decisions and organizing work so others can verify, adapt and build on the results.";
 
 export const DEFAULT_EXCLUDE_PREFIXES = Object.freeze([
   "/admin",
@@ -19,6 +19,8 @@ export const DEFAULT_EXCLUDE_PREFIXES = Object.freeze([
 
   // Excluded from AI artifacts and compact AI discovery.
   "/kreature",
+  "/technology/swarmcraft",
+  "/technology/voting-machine",
   "/initiatives/ukraine-peace-plan/fvr",
 ]);
 
@@ -234,6 +236,9 @@ export const TITLE_WORD_OVERRIDES = new Map([
 ]);
 
 export const PRIORITY_LLMS_ROUTES = Object.freeze([
+  "/evidence",
+  "/learning-and-culture",
+  "/ecosystem",
   // Core orientation
   "/",
   "/about",

@@ -1,438 +1,120 @@
-// components/Header.tsx
-'use client';
+"use client";
 
-import React, { useState, useEffect, useMemo, useRef } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  BookOpen,
-  Layers,
-  Cpu,
-  Heart,
-  PlayCircle,
-  TrendingUp,
-  ArrowRight,
-  CornerDownLeft,
-  Link2,
-} from 'lucide-react';
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+import { ChevronDown, Menu, Search, X } from "lucide-react";
+import SiteLink from "@/components/SiteLink";
+import { capabilities, navigation } from "@/lib/site-navigation";
 
-type NavChild = {
-  label: string;
-  desc?: string;
-  path: string;
-};
-
-type NavItem = {
-  label: string;
-  path: string;
-  icon: React.ReactNode;
-  children?: NavChild[];
-  highlight?: boolean;
-  subtitle?: string;
-  accent?: 'gold' | 'violet';
-};
-
-type SearchResult = {
-  label: string;
-  path: string;
-  desc?: string;
-  parent?: string;
-  type: 'Section' | 'Page';
-};
-
-// Define navigation structure outside to ensure stability for the search index
-const NAV_ITEMS: NavItem[] = [
-  {
-    label: 'Manifesto',
-    path: '/principles',
-    icon: <BookOpen className="w-4 h-4" />,
-    children: [
-      { label: 'Diagnosis', desc: 'The systemic crisis', path: '/diagnosis' },
-      { label: 'Why kOA?', desc: 'Our reason for being', path: '/why' },
-      { label: 'Principles', desc: 'Ethics & Civic code', path: '/principles' },
-      { label: 'Language & Myth', desc: 'Words, narrative and liberation', path: '/principles/logos' },
-      { label: 'Research', desc: 'Pi Theory & Deep analysis', path: '/research' },
-    ],
-  },
-  {
-    label: 'Initiatives',
-    path: '/initiatives',
-    icon: <TrendingUp className="w-4 h-4" />,
-    children: [
-      { label: 'Overview', desc: 'Strategic Roadmap', path: '/initiatives' },
-      { label: 'Civic Governance', desc: 'The Operating System', path: '/initiatives/civic-governance' },
-      { label: 'Ukraine Peace Plan', desc: 'Freeze-Vote-Rebuild', path: '/initiatives/ukraine-peace-plan' },
-    ],
-  },
-  {
-    label: 'Ecosystem',
-    path: '/platforms',
-    icon: <Layers className="w-4 h-4" />,
-    children: [
-      { label: 'Final-system architecture', desc: '24 functional chains · 53 owners · target design', path: '/ecosystem' },
-      { label: 'Functional chains', desc: 'Complete target capability catalogue', path: '/ecosystem/functional-chains' },
-      { label: 'Platforms', desc: 'Konnaxion & Orgo (Software)', path: '/platforms' },
-      { label: 'Infrastructures', desc: 'Kin City & Kristal Farms', path: '/infrastructures' },
-    ],
-  },
-  {
-    label: 'Technology',
-    path: '/technology',
-    icon: <Cpu className="w-4 h-4" />,
-    children: [
-      { label: 'Overview', desc: 'Applications & components', path: '/technology' },
-      { label: 'Context Packs', desc: 'AI-ready reference bundles', path: '/technology/context-packs' },
-      { label: 'Ecosystem Architecture', desc: 'System owners and contracts', path: '/ecosystem' },
-      { label: 'Kristal', desc: 'Verifiable semantic file format', path: '/technology/kristal' },
-      { label: 'Semantik Architect', desc: 'Generative Output', path: '/technology/architect' },
-      { label: 'SenTient', desc: 'Input Processing', path: '/technology/sentient' },
-      { label: 'Ariane', desc: 'UI Graph & Vision', path: '/technology/ariane' },
-      { label: 'Âme Artificielle', desc: 'Psycho-causal personality model', path: '/technology/ame-artificielle' },
-    ],
-  },
-  {
-    label: 'Kréature',
-    path: '/kreature',
-    icon: <Heart className="w-4 h-4 text-pink-500" />,
-    highlight: true,
-    subtitle: '(Français)',
-    children: [
-      { label: 'Accueil', desc: "Entrée principale", path: '/kreature' },
-      { label: 'Mythos', desc: 'Le récit fondateur', path: '/kreature/mythos' },
-      { label: 'Anatomie', desc: 'La structure', path: '/kreature/anatomie' },
-      { label: 'Rituels', desc: 'La méthode', path: '/kreature/rituels' },
-      { label: 'Parcours', desc: "Portes d'entrée", path: '/kreature/parcours' },
-      { label: 'Repères', desc: 'Hub de repérage', path: '/kreature/reperes' },
-      { label: 'Glossaire', desc: 'Définitions', path: '/kreature/reperes/glossaire' },
-      { label: 'Pont Technique', desc: 'Métaphore ↔ code', path: '/kreature/reperes/pont-technique' },
-      { label: 'FAQ', desc: 'Questions fréquentes', path: '/kreature/reperes/faq' },
-    ],
-  },
-  {
-    label: 'Play',
-    path: '/play',
-    icon: <PlayCircle className="w-4 h-4 text-amber-500" />,
-    accent: 'gold',
-    subtitle: '(EN/FR)',
-  },
-  {
-    label: 'Links',
-    path: '/links',
-    icon: <Link2 className="w-4 h-4 text-violet-500" />,
-    accent: 'violet',
-    subtitle: '(Social and Hubs)',
-  },
+const searchEntries = [
+  ...navigation.flatMap((group) => [...group.links]),
+  ...capabilities.map(({ title, href, description }) => ({ label: title, href, keywords: description })),
 ];
 
+function normalized(value: string) {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const searchInputRef = useRef<HTMLInputElement>(null);
-
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
+  const [query, setQuery] = useState("");
+  const modal = useRef<HTMLDialogElement>(null);
+  const searchInput = useRef<HTMLInputElement>(null);
+  const mobile = useRef<HTMLButtonElement>(null);
+  const triggers = useRef<Record<string, HTMLButtonElement | null>>({});
   const pathname = usePathname();
-  const router = useRouter();
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setActiveDropdown(null);
-    setIsSearchOpen(false);
+    setMobileOpen(false);
+    setActive(null);
+    modal.current?.close();
   }, [pathname]);
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault();
-        setIsSearchOpen((prev) => !prev);
-      }
-      if (e.key === 'Escape') setIsSearchOpen(false);
-    };
+  const terms = normalized(query).trim().split(/\s+/).filter(Boolean);
+  const results = terms.length ? searchEntries.filter((item) =>
+    terms.every((term) => normalized(item.label + " " + item.keywords).includes(term))
+  ) : [];
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  useEffect(() => {
-    if (isSearchOpen && searchInputRef.current) {
-      setTimeout(() => searchInputRef.current?.focus(), 50);
-    } else {
-      setSearchQuery('');
-    }
-  }, [isSearchOpen]);
-
-  const searchResults = useMemo<SearchResult[]>(() => {
-    if (!searchQuery.trim()) return [];
-
-    const query = searchQuery.toLowerCase();
-    const results: SearchResult[] = [];
-
-    NAV_ITEMS.forEach((section) => {
-      if (section.label.toLowerCase().includes(query)) {
-        results.push({
-          label: section.label,
-          path: section.path,
-          type: section.children ? 'Section' : 'Page',
-        });
-      }
-
-      if (section.children) {
-        section.children.forEach((child) => {
-          const desc = child.desc ?? '';
-          if (child.label.toLowerCase().includes(query) || desc.toLowerCase().includes(query)) {
-            results.push({
-              label: child.label,
-              path: child.path,
-              desc: child.desc,
-              parent: section.label,
-              type: 'Page',
-            });
-          }
-        });
-      }
-    });
-
-    return results;
-  }, [searchQuery]);
-
-  const handleSearchNavigate = (path: string) => {
-    router.push(path);
-    setIsSearchOpen(false);
-  };
-
-  const getNavColorClass = (item: NavItem) => {
-    if (item.accent === 'gold') return 'text-amber-600 hover:text-amber-700';
-    if (item.accent === 'violet') return 'text-violet-600 hover:text-violet-700';
-    if (item.highlight) return 'text-pink-600 hover:text-pink-700';
-    return 'text-slate-600 hover:text-slate-900';
-  };
-
-  const getMobileColorClass = (item: NavItem) => {
-    if (item.accent === 'gold') return 'text-amber-600';
-    if (item.accent === 'violet') return 'text-violet-600';
-    if (item.highlight) return 'text-pink-600';
-    return 'text-slate-900';
-  };
+  function toggleSearch() {
+    setQuery("");
+    setActive(null);
+    modal.current?.showModal();
+    searchInput.current?.focus();
+  }
 
   return (
     <>
-      <header
-        className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${
-          isScrolled ? 'bg-white/95 backdrop-blur-md border-slate-200 shadow-sm py-3' : 'bg-white border-transparent py-5'
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group z-50">
-            <div className="relative w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-105">
-              <Image src="/LogoK.svg" alt="King Klown Logo" width={40} height={40} className="object-contain" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-slate-900 leading-none text-lg tracking-tight group-hover:text-primary transition-colors">
-                The kOA
-              </span>
-              <span className="text-xs text-slate-500 tracking-widest font-medium uppercase">initiative</span>
-            </div>
-          </Link>
-
-          <nav className="hidden lg:flex items-center gap-8">
-            {NAV_ITEMS.map((item) => (
-              <div
-                key={item.label}
-                className="relative group"
-                onMouseEnter={() => setActiveDropdown(item.label)}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <Link
-                  href={item.path}
-                  className={`flex flex-col items-center text-sm font-medium transition-colors py-2 group ${getNavColorClass(item)}`}
-                >
-                  <div className="flex items-center gap-1.5">
-                    {item.icon}
-                    {item.label}
-                    {item.children && <ChevronDown className="w-3 h-3 opacity-50 transition-transform group-hover:rotate-180" />}
-                  </div>
-                  {item.subtitle && <span className="text-[10px] font-normal opacity-80 -mt-0.5">{item.subtitle}</span>}
-                </Link>
-
-                {item.children && activeDropdown === item.label && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-64">
-                    <div className="bg-white rounded-xl border border-slate-100 shadow-xl p-2 overflow-hidden ring-1 ring-slate-900/5">
-                      {item.children.map((sub) => (
-                        <Link
-                          key={sub.path}
-                          href={sub.path}
-                          className="block px-4 py-3 rounded-lg hover:bg-slate-50 transition-colors group/item"
-                        >
-                          <div className="text-sm font-bold text-slate-900 group-hover/item:text-primary">{sub.label}</div>
-                          <div className="text-xs text-slate-500 mt-0.5">{sub.desc}</div>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
+      <a className="site-skip" href="#site-content">Skip to content</a>
+      <header className="koa-header" onKeyDown={(event) => {
+        if (event.key !== "Escape") return;
+        if (active) {
+          triggers.current[active]?.focus();
+          setActive(null);
+        } else if (mobileOpen) {
+          setMobileOpen(false);
+          mobile.current?.focus();
+        }
+      }}>
+        <div className="koa-header-inner">
+          <SiteLink href="/" className="koa-brand" aria-label="kOA home">
+            <span className="koa-wordmark">kOA</span><span>The kOA Initiative</span>
+          </SiteLink>
+          <div className="koa-header-tools">
+            <button type="button" className="koa-icon" onClick={toggleSearch} aria-label="Search">
+              <Search size={20} aria-hidden="true" />
+            </button>
+            <button ref={mobile} type="button" className="koa-icon koa-mobile-toggle"
+              aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
+              aria-controls="site-navigation" aria-expanded={mobileOpen}
+              onClick={() => { setMobileOpen(!mobileOpen); setActive(null); }}>
+              {mobileOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+            </button>
+          </div>
+          <nav id="site-navigation" aria-label="Main" className="koa-nav" data-open={mobileOpen}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) setActive(null);
+            }}>
+            {navigation.map((group, index) => (
+              <div className="koa-nav-group" key={group.label}>
+                <SiteLink href={group.href} onClick={() => { setActive(null); setMobileOpen(false); }}
+                  aria-current={pathname === group.href ? "page" : undefined}>{group.label}</SiteLink>
+                <button ref={(button) => { triggers.current[group.label] = button; }}
+                  type="button" className="koa-nav-trigger" aria-label={group.label + " links"}
+                  aria-controls={"site-links-" + index} aria-expanded={active === group.label}
+                  onClick={() => setActive(active === group.label ? null : group.label)}>
+                  <ChevronDown size={15} aria-hidden="true" />
+                </button>
+                <ul id={"site-links-" + index} className="koa-subnav" hidden={active !== group.label}>
+                  {group.links.map((item) => (
+                    <li key={item.href}><SiteLink href={item.href} onClick={() => {
+                      setActive(null);
+                      setMobileOpen(false);
+                    }}>{item.label}</SiteLink></li>
+                  ))}
+                </ul>
               </div>
             ))}
           </nav>
-
-          <div className="hidden lg:flex items-center">
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className="p-2 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all group"
-              aria-label="Search"
-            >
-              <Search className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            </button>
-          </div>
-
-          <button
-            className="lg:hidden p-2 text-slate-900 hover:bg-slate-100 rounded-md transition-colors"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
-
-        {mobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 top-[72px] bg-white border-t border-slate-100 p-6 overflow-y-auto pb-20 animate-in slide-in-from-top-2 duration-200 z-40">
-            <div className="flex flex-col space-y-6">
-              {NAV_ITEMS.map((item) => (
-                <div key={item.label}>
-                  <Link href={item.path} className={`flex items-center gap-3 text-lg font-bold mb-2 ${getMobileColorClass(item)}`}>
-                    <div className="flex flex-col">
-                      <div className="flex items-center gap-2">
-                        {item.icon} {item.label}
-                      </div>
-                      {item.subtitle && <span className="text-xs font-normal opacity-70 ml-6">{item.subtitle}</span>}
-                    </div>
-                  </Link>
-
-                  {item.children && (
-                    <div className="pl-7 space-y-3 border-l-2 border-slate-100 ml-2">
-                      {item.children.map((sub) => (
-                        <Link
-                          key={sub.path}
-                          href={sub.path}
-                          className="block text-slate-600 text-sm font-medium hover:text-primary hover:translate-x-1 transition-all"
-                        >
-                          {sub.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-
-              <div className="pt-6 border-t border-slate-100">
-                <div className="flex justify-center gap-6 text-slate-500">
-                  <button
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      setIsSearchOpen(true);
-                    }}
-                    className="flex items-center gap-2 hover:text-slate-900"
-                  >
-                    <Search className="w-5 h-5" /> <span>Search</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </header>
-
-      {isSearchOpen && (
-        <div
-          className="fixed inset-0 z-[100] bg-slate-900/40 backdrop-blur-sm flex items-start justify-center pt-[15vh] px-4 animate-in fade-in duration-200"
-          onClick={() => setIsSearchOpen(false)}
-        >
-          <div
-            className="w-full max-w-xl bg-white rounded-xl shadow-2xl overflow-hidden ring-1 ring-slate-900/10 animate-in zoom-in-95 duration-200"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center border-b border-slate-100 p-4 gap-3">
-              <Search className="w-5 h-5 text-slate-400" />
-              <input
-                ref={searchInputRef}
-                type="text"
-                placeholder="Search documentation, context packs, initiatives, concepts..."
-                className="flex-1 text-lg outline-none text-slate-900 placeholder:text-slate-400"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <button onClick={() => setIsSearchOpen(false)} className="p-1 hover:bg-slate-100 rounded text-slate-400">
-                <span className="text-xs font-mono border border-slate-200 px-1.5 py-0.5 rounded">ESC</span>
-              </button>
-            </div>
-
-            <div className="max-h-[60vh] overflow-y-auto p-2">
-              {searchQuery.trim() === '' ? (
-                <div className="py-12 text-center text-slate-400">
-                  <p className="text-sm">Type to search...</p>
-                  <div className="flex justify-center gap-2 mt-4 text-xs">
-                    <span className="bg-slate-50 px-2 py-1 rounded border border-slate-100">Context Packs</span>
-                    <span className="bg-slate-50 px-2 py-1 rounded border border-slate-100">Kristal</span>
-                    <span className="bg-slate-50 px-2 py-1 rounded border border-slate-100">Pi Theory</span>
-                  </div>
-                </div>
-              ) : searchResults.length > 0 ? (
-                <div className="space-y-1">
-                  {searchResults.map((result, idx) => (
-                    <button
-                      key={`${result.path}-${idx}`}
-                      onClick={() => handleSearchNavigate(result.path)}
-                      className="w-full text-left flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 group transition-colors"
-                    >
-                      <div className="mt-1 p-1.5 bg-slate-100 text-slate-500 rounded group-hover:bg-primary group-hover:text-slate-900 transition-colors">
-                        <CornerDownLeft className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <span className="font-bold text-slate-900">{result.label}</span>
-                          {result.parent && (
-                            <span className="text-xs text-slate-400 bg-slate-100 px-1.5 py-0.5 rounded-full">
-                              {result.parent}
-                            </span>
-                          )}
-                        </div>
-                        {result.desc && <p className="text-sm text-slate-500 line-clamp-1">{result.desc}</p>}
-                      </div>
-                      <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity self-center">
-                        <ArrowRight className="w-4 h-4 text-slate-400" />
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              ) : (
-                <div className="py-8 text-center text-slate-500">
-                  <p>No results found for "{searchQuery}"</p>
-                </div>
-              )}
-            </div>
-
-            <div className="bg-slate-50 border-t border-slate-100 px-4 py-2 flex justify-between items-center text-xs text-slate-400">
-              <span>Search based on site navigation</span>
-              <div className="flex gap-2">
-                <span>↑↓ to navigate</span>
-                <span>↵ to select</span>
-              </div>
-            </div>
-          </div>
+      <dialog ref={modal} className="koa-search" aria-labelledby="site-search-title">
+        <div className="koa-search-heading">
+          <h2 id="site-search-title">Search kOA</h2>
+          <form method="dialog"><button className="koa-icon" aria-label="Close search"><X size={20} aria-hidden="true" /></button></form>
         </div>
-      )}
+        <label htmlFor="site-search">Search capabilities, systems and documentation</label>
+        <input ref={searchInput} id="site-search" type="search" placeholder="Try learning, offline or UCKK"
+          value={query} onChange={(event) => setQuery(event.target.value)} />
+        <p aria-live="polite" className="koa-result-count">{terms.length ? results.length + " results" : " "}</p>
+        <ul>
+          {results.map((result) => (
+            <li key={result.href + result.label}>
+              <SiteLink href={result.href} onClick={() => modal.current?.close()}>{result.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      </dialog>
     </>
   );
 }

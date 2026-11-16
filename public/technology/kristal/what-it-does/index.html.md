@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/kristal/what-it-does
 > Markdown mirror: https://initkoa.org/technology/kristal/what-it-does/index.html.md
 > Route: /technology/kristal/what-it-does
-> Source: app\technology\kristal\what-it-does\page.mdx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/technology/kristal/what-it-does/page.mdx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/technology/kristal/what-it-does)
 

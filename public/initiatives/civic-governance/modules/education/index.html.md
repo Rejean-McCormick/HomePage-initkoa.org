@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/initiatives/civic-governance/modules/education
 > Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/education/index.html.md
 > Route: /initiatives/civic-governance/modules/education
-> Source: app\initiatives\civic-governance\modules\education\page.mdx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/initiatives/civic-governance/modules/education/page.mdx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/initiatives/civic-governance/modules/education)
 

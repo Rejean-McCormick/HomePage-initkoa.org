@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/cooling-and-water
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/cooling-and-water/index.html.md
 > Route: /infrastructures/kristal-farms/cooling-and-water
-> Source: app\infrastructures\kristal-farms\cooling-and-water\page.mdx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/infrastructures/kristal-farms/cooling-and-water/page.mdx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/cooling-and-water)
 

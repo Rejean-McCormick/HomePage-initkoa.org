@@ -3,60 +3,39 @@
 > Canonical HTML: https://initkoa.org/infrastructures/kristal-farms
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/index.html.md
 > Route: /infrastructures/kristal-farms
-> Source: app\infrastructures\kristal-farms\page.tsx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/infrastructures/kristal-farms/page.tsx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms)
 
 Kristal Farms
 
-Compute for the world.
+Where can useful computing run, and who benefits? Kristal Farms studies the placement of flexible computing near renewable energy while protecting community and essential electricity needs.
 
-Heat for the village.
+Status: research and design. Site selection, engineering, community decisions, authorizations and measured performance belong to individual proposals.
 
-Kristal Farms is an infrastructure pattern: place modular compute
-fiber, and treat waste heat as a local public resource—heating
-buildings and supporting greenhouse food production.
+Computing connected to the network
 
-Read overview
+Some workloads need persistent connectivity. A connected site would evaluate power, cooling, fibre and logistics together. Heat recovery depends on local demand and site design.
 
-Explore the system
+Read the infrastructure design
 
-Go / No-Go checklist
+Explore fibre and connectivity
 
-Heat-first operations: reuse → store → reject.
-Community heat needs come first.
+Read the heat-reuse design
 
-Black-box tenancy: tenants keep data private;
-operators manage only infrastructure.
+Computing with intermittent connectivity
 
-Export by fiber: ship computation as data,
-not electricity as transmission lines.
+Other workloads could run in batches and transfer results later. Kristal Wink is a proposed wind-capable configuration for flexible workloads and transportable knowledge artifacts.
 
-Reversible footprint: modular pads designed
-to be removed and the site restored.
+Community priorities and site evidence
 
-What Kristal Farms delivers
+Local demand, consent, siting, energy supply and environmental conditions shape which options can proceed. The project documentation includes scenario studies and conditions for moving forward.
 
-This isn’t a “data center theme.” It’s a package of outcomes:
-reliable compute capacity, local heat security, improved
-connectivity, and a governance model designed for legitimacy.
+Read the governance proposals
 
-A simple mental model
+Review the go/no-go criteria
 
-Kristal Farms can also host community knowledge programs (e.g., a
-Kristal publishing workflow).
+Nain, Labrador — concept scenario
 
-See Kristal →
-
-Explore the system
-
-Each page is written as “what it does and why it matters,” with
-implementation details only where they clarify guarantees.
-
-FAQ
-
-Strategic extensions
-
-These pages cover adjacent questions that deserve direct entry
-points from the main Kristal Farms hub.
+See the kOA evidence and documentation guide .

@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/kristal/portability-and-offline
 > Markdown mirror: https://initkoa.org/technology/kristal/portability-and-offline/index.html.md
 > Route: /technology/kristal/portability-and-offline
-> Source: app\technology\kristal\portability-and-offline\page.mdx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/technology/kristal/portability-and-offline/page.mdx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/technology/kristal/portability-and-offline)
 

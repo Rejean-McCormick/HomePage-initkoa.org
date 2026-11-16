@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { finalArchitecture } from '@/lib/final-system';
 
 export const metadata = {
-  title: 'Final-system architecture — kOA',
+  title: 'Ecosystem — kOA',
   description: 'Explore the target functional architecture of the kOA ecosystem: 24 independently owned capabilities and their boundaries.',
 };
 
@@ -17,13 +17,18 @@ export default function EcosystemArchitecture() {
   return (
     <main lang="en" className="not-prose mx-auto max-w-5xl py-10">
       <p className="text-xs uppercase tracking-widest font-bold text-[#1e6864]">Ecosystem / architecture</p>
-      <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-900">The final kOA system</h1>
+      <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-900">How the kOA ecosystem fits together</h1>
       <p className="mt-5 text-lg leading-8 text-slate-700">
-        A federation of independently owned capabilities, connected by explicit interfaces. Knowledge acquisition,
-        semantic authoring, learning, civic deliberation, operations and publication are separate responsibilities.
+        The digital ecosystem connects knowledge, language, collaboration and operations. Learning environments, creative work and infrastructure give these capabilities places to be used and passed on.
       </p>
+      <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-[#1e6864]">
+        <li><Link href="/platforms">Platforms</Link></li>
+        <li><Link href="/learning-and-culture">Learning &amp; Culture</Link></li>
+        <li><Link href="/infrastructures">Infrastructures</Link></li>
+        <li><Link href="/evidence">Evidence &amp; Documentation</Link></li>
+      </ul>
       <p className="mt-4 text-sm border-l-4 border-[#1e6864] pl-4 text-slate-600">
-        <strong>Target design, not deployment evidence.</strong> This catalogue describes the intended system.
+        <strong>Target design, not deployment evidence.</strong> The catalogue below describes the intended system as of {finalArchitecture.as_of}.
         A documented contract, build or code snapshot does not establish a qualified integration or public release.
       </p>
       <dl className="mt-8 grid gap-4 sm:grid-cols-3" aria-label="Target architecture coverage">

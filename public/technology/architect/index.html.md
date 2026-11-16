@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/architect
 > Markdown mirror: https://initkoa.org/technology/architect/index.html.md
 > Route: /technology/architect
-> Source: app\technology\architect\page.mdx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/technology/architect/page.mdx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/technology/architect)
 

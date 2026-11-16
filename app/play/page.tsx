@@ -5,7 +5,6 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import {
   PlayCircle,
   Globe,
-  Languages,
   Youtube,
   Music2,
   Link as LinkIcon,
@@ -81,7 +80,6 @@ type Catalog = {
 };
 
 type LangFilter = "all" | "en" | "fr";
-type UiLang = "en" | "fr";
 type KingKlownMode = "all" | "only" | "exclude";
 type TopicMatchMode = "or" | "and";
 type TypeFilter = "all" | string;
@@ -113,21 +111,9 @@ const LANG_OPTIONS: Option<LangFilter>[] = [
     icon: <Globe className="w-4 h-4 text-slate-500" />,
   },
   { key: "en", label: "English only" },
-  { key: "fr", label: "Français seulement" },
+  { key: "fr", label: "French only" },
 ];
 
-const UI_LANG_OPTIONS: Option<UiLang>[] = [
-  {
-    key: "en",
-    label: "Labels EN",
-    icon: <Languages className="w-4 h-4 text-slate-500" />,
-  },
-  {
-    key: "fr",
-    label: "Étiquettes FR",
-    icon: <Languages className="w-4 h-4 text-slate-500" />,
-  },
-];
 
 const KINGKLOWN_OPTIONS: Option<KingKlownMode>[] = [
   { key: "all", label: "All" },
@@ -740,7 +726,6 @@ export default function PlayPage() {
   const [kingKlown, setKingKlown] = useState<KingKlownMode>("all");
 
   // UI label language toggle
-  const [uiLang, setUiLang] = useState<UiLang>("en");
 
   // Dynamic topic filters
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
@@ -803,20 +788,20 @@ export default function PlayPage() {
   const typeLabels = taxonomies?.type_labels;
   const albumLabels = taxonomies?.album_labels;
 
-  // Cache topic labels for current uiLang
+  // Cache topic labels for English labels
   const topicLabel = useMemo(() => {
     const labels = topicLabels ?? {};
     const cache = new Map<string, string>();
     return (topic: string) => {
       const hit = cache.get(topic);
       if (hit) return hit;
-      const lbl = labels?.[topic]?.[uiLang] ?? topic;
+      const lbl = labels?.[topic]?.en ?? topic;
       cache.set(topic, lbl);
       return lbl;
     };
-  }, [topicLabels, uiLang]);
+  }, [topicLabels]);
 
-  // Cache type labels for current uiLang
+  // Cache type labels for English labels
   const typeLabel = useMemo(() => {
     const labels = typeLabels ?? {};
     const cache = new Map<string, string>();
@@ -824,16 +809,16 @@ export default function PlayPage() {
       const hit = cache.get(typeKey);
       if (hit) return hit;
 
-      const fromJson = labels?.[typeKey]?.[uiLang];
-      const fromFallback = TYPE_LABELS_FALLBACK[typeKey]?.[uiLang];
+      const fromJson = labels?.[typeKey]?.en;
+      const fromFallback = TYPE_LABELS_FALLBACK[typeKey]?.en;
       const lbl = fromJson ?? fromFallback ?? humanizeKey(typeKey) ?? typeKey;
 
       cache.set(typeKey, lbl);
       return lbl;
     };
-  }, [typeLabels, uiLang]);
+  }, [typeLabels]);
 
-  // Cache album labels for current uiLang (fallback to humanizeKey)
+  // Cache album labels for English labels (fallback to humanizeKey)
   const albumLabel = useMemo(() => {
     const labels = albumLabels ?? {};
     const cache = new Map<string, string>();
@@ -843,12 +828,12 @@ export default function PlayPage() {
       const hit = cache.get(k);
       if (hit) return hit;
 
-      const fromJson = labels?.[k]?.[uiLang];
+      const fromJson = labels?.[k]?.en;
       const lbl = fromJson ?? humanizeKey(k);
       cache.set(k, lbl);
       return lbl;
     };
-  }, [albumLabels, uiLang]);
+  }, [albumLabels]);
 
   const allTypes = useMemo(() => {
     const set = new Set<string>();
@@ -1078,26 +1063,12 @@ export default function PlayPage() {
             </div>
             <div>
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900">
-                Play
+                Watch & Listen
               </h1>
               <p className="text-slate-500 mt-1">
                 Filters ({filtered.length} of {catalog.items.length} resources)
               </p>
             </div>
-          </div>
-
-          {/* UI language toggle (labels) */}
-          <div className="flex flex-wrap gap-2 items-center">
-            {UI_LANG_OPTIONS.map((opt) => (
-              <Pill
-                key={opt.key}
-                active={uiLang === opt.key}
-                onClick={() => setUiLang(opt.key)}
-              >
-                {opt.icon ?? null}
-                {opt.label}
-              </Pill>
-            ))}
           </div>
         </div>
       </div>
@@ -1122,11 +1093,7 @@ export default function PlayPage() {
                 id="resource-search"
                 value={resourceSearch}
                 onChange={(e) => setResourceSearch(e.target.value)}
-                placeholder={
-                  uiLang === "fr"
-                    ? "Chercher dans les ressources…"
-                    : "Search resources…"
-                }
+                placeholder="Search resources…"
                 className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm"
               />
               <button
@@ -1135,7 +1102,7 @@ export default function PlayPage() {
                 className="px-3 py-2 rounded-lg border border-slate-200 text-sm hover:bg-slate-50 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={!hasActiveFilters}
               >
-                {uiLang === "fr" ? "Réinitialiser" : "Reset"}
+                Reset
               </button>
             </div>
           </div>
@@ -1227,9 +1194,7 @@ export default function PlayPage() {
               <input
                 value={topicSearch}
                 onChange={(e) => setTopicSearch(e.target.value)}
-                placeholder={
-                  uiLang === "fr" ? "Filtrer les topics…" : "Filter topics…"
-                }
+                placeholder="Filter topics…"
                 className="px-3 py-2 rounded-lg border border-slate-200 text-sm"
               />
               <button
@@ -1238,7 +1203,7 @@ export default function PlayPage() {
                 className="px-3 py-2 rounded-lg border border-slate-200 text-sm hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={selectedTopics.length === 0}
               >
-                {uiLang === "fr" ? "Effacer les topics" : "Clear topics"}
+                Clear topics
               </button>
             </div>
           </div>

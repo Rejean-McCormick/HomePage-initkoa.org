@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/platforms/konnaxion/konnected
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/konnected/index.html.md
 > Route: /platforms/konnaxion/konnected
-> Source: app\platforms\konnaxion\konnected\page.tsx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/platforms/konnaxion/konnected/page.tsx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/konnected)
 

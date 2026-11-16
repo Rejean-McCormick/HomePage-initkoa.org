@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/infrastructures/kin-city/zones
 > Markdown mirror: https://initkoa.org/infrastructures/kin-city/zones/index.html.md
 > Route: /infrastructures/kin-city/zones
-> Source: app\infrastructures\kin-city\zones\page.tsx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/infrastructures/kin-city/zones/page.tsx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kin-city/zones)
 

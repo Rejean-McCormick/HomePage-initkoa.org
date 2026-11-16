@@ -21,26 +21,31 @@ export default function KinCityPage() {
         <div className="max-w-6xl mx-auto px-6 relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 font-serif">Welcome to Kin City</h1>
           <p className="text-xl md:text-2xl text-teal-50 max-w-3xl mx-auto mb-10 font-light">
-            A virtual interface for the Mouvement Koa. Not just a dashboard, but a 
+            A virtual city for the kOA Initiative. Explore a 
             <strong> living city </strong> where knowledge, ethics, and creativity converge.
           </p>
           
-          {/* ROBLOX CTA - Updated for "In Development" status */}
+          {/* ROBLOX PROTOTYPE CTA */}
           <div className="bg-white/95 backdrop-blur-sm text-[#1e6864] p-8 rounded-2xl shadow-xl max-w-2xl mx-auto border border-teal-100">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="bg-[#1e6864]/10 p-4 rounded-full">
                 <Construction className="w-10 h-10 text-[#1e6864]" />
               </div>
               <div className="text-left flex-1">
-                <h3 className="text-2xl font-bold mb-2">Phase 1: In Construction</h3>
+                <h3 className="text-2xl font-bold mb-2">Roblox prototype</h3>
                 <p className="text-slate-600 mb-4">
-                  We are actively prototyping our vision of a functional civic metaverse. 
+                  The prototype explores how a city can make learning, culture and collaboration easier to navigate. 
                   The initial layout is currently being built for the <strong>Roblox</strong> platform.
                 </p>
               </div>
-              <div className="bg-slate-100 text-slate-400 font-bold py-3 px-6 rounded-lg cursor-not-allowed flex items-center gap-2">
-                Coming Soon
-              </div>
+              <a
+                href="https://www.roblox.com/share?code=c3afe88847f9a64c858a379eb16dd07e&type=ExperienceDetails&stamp=1794866261456"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#1e6864] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#154d4b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e6864] flex items-center gap-2"
+              >
+                Open Kin City on Roblox <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </a>
             </div>
           </div>
         </div>
@@ -178,7 +183,7 @@ export default function KinCityPage() {
               <span className="text-[#1e6864] font-bold text-xl block mb-2">01</span>
               <h4 className="font-bold text-lg text-slate-900">Roblox Prototype</h4>
               <p className="text-slate-500 text-sm mt-2">
-                <strong>(Current Stage)</strong> Gamified alpha for community testing and engagement.
+                <strong>Prototype</strong> Early city layouts and interactions are under development.
               </p>
             </div>
 

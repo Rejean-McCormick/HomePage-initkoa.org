@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Infrastructures – The kOA Initiative',
   description:
-    'The physical and virtual foundations of the ecosystem: green compute (Kristal Farms) and a civic interface for collaboration (Kin City).',
+    'The material and virtual settings for building capabilities together, from renewable computing research to a virtual-city prototype.',
 };
 
 export default function InfrastructureIndex() {
@@ -26,12 +26,12 @@ export default function InfrastructureIndex() {
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <Card
           title="Kristal Farms"
-          description="Green compute infrastructure: modular data centers co-located with renewable hydro in cold climates—export intelligence and reuse heat for local resilience."
+          description="Research into flexible computing near renewable energy, with community demand as a priority."
           href="/infrastructures/kristal-farms"
         />
         <Card
           title="Kin City"
-          description="A civic interface: a navigable virtual city where knowledge, coordination, and governance are organized into understandable districts and workflows."
+          description="A virtual-city prototype for exploring knowledge, learning, culture and civic participation."
           href="/infrastructures/kin-city"
         />
       </div>

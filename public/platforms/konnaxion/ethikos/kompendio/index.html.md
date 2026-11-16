@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/platforms/konnaxion/ethikos/kompendio
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/kompendio/index.html.md
 > Route: /platforms/konnaxion/ethikos/kompendio
-> Source: app\platforms\konnaxion\ethikos\kompendio\page.mdx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/platforms/konnaxion/ethikos/kompendio/page.mdx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/ethikos/kompendio)
 

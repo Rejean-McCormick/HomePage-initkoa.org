@@ -11,7 +11,7 @@ module.exports = {
         primary: "#1e6864"
       },
       fontFamily: {
-        sans: ["Baskervville", "serif"]
+        sans: ["system-ui", "sans-serif"]
       }
     }
   },

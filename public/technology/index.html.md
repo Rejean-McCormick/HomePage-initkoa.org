@@ -3,45 +3,44 @@
 > Canonical HTML: https://initkoa.org/technology
 > Markdown mirror: https://initkoa.org/technology/index.html.md
 > Route: /technology
-> Source: app\technology\page.tsx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/technology/page.tsx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/technology)
 
-kOA / TECHNOLOGIE
+kOA / TECHNOLOGY
 
-Un écosystème.
-Bien plus qu’une liste d’outils.
+Technology and applications
 
-Des applications concrètes, des fondations techniques, des outils de connaissance et des recherches.
-Chaque projet a son rôle, ses limites et sa documentation — sans confondre présence sur GitHub et validation en production.
+Find the applications, foundations and research behind the kOA ecosystem.
+Each entry describes a role and links to its documentation.
 
-Explorer le catalogue
+Explore the catalog
 
-Audit des applications
+Engineering audit
 
-projets présentés
+projects listed
 
-familles de technologies
+technology categories
 
-Sources et limites explicites documentation plutôt que promesses
+Sources and scope project documentation and evidence
 
-Comment lire l’écosystème
-Des fonctions qui se complètent
+How to read the ecosystem
+Responsibilities that work together
 
-Le catalogue distingue les responsabilités. Un outil de lecture ne devient pas une autorité de vérité ; une simulation ne devient pas un service déployé.
+The catalog distinguishes what each component does and where its authority starts and ends.
 
-Point d’entrée
-La connaissance n’est pas un bloc monolithique.
+Start here
+Different roles for working with knowledge
 
-Kristal représente des états de connaissance ; SenTient aide à interpréter ; Konstellation propose des vues ; SemantiK Architect articule le contenu dans les langues humaines. Ces rôles sont distincts et complémentaires.
+Kristal represents knowledge states. SenTient helps interpret inputs, Konstellation provides views, and SemantiK Architect expresses structured content in human languages.
 
-Explorer Kristal
+Explore Kristal
 
-Sources, état des travaux et limites
+Sources and development status
 
-L’inventaire rassemble des références issues des dépôts documentés. Les niveaux de maturité et les responsabilités effectives doivent être vérifiés dans leurs sources. La carte d’architecture, l’audit public et les Context Packs remplissent des rôles différents.
+Use the architecture map for responsibilities, the engineering audit for dated evidence and the Context Packs for source-linked documentation.
 
 Context Packs
-Architecture de l’écosystème
-Source canonique
+Ecosystem architecture
+Canonical source

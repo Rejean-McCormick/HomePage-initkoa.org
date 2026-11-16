@@ -82,7 +82,7 @@ notFound();
 const html = await renderMarkdownToHtml(document.bodyMarkdown);
 const toc = extractTocFromMarkdown(document.bodyMarkdown).map(normalizeTocItem);
 
-return ( <article className="mx-auto max-w-3xl"> <header className="mb-10 border-b border-slate-200 pb-8"> <ReadingMetadata
+return ( <article lang={document.language} className="mx-auto max-w-3xl"> <header className="mb-10 border-b border-slate-200 pb-8"> <ReadingMetadata
        source={document.source}
        author={document.author}
        language={document.language}

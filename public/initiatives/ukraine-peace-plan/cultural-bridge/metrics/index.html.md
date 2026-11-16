@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/metrics
 > Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/metrics/index.html.md
 > Route: /initiatives/ukraine-peace-plan/cultural-bridge/metrics
-> Source: app\initiatives\ukraine-peace-plan\cultural-bridge\metrics\page.mdx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/initiatives/ukraine-peace-plan/cultural-bridge/metrics/page.mdx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/metrics)
 

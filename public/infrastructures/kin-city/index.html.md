@@ -3,22 +3,22 @@
 > Canonical HTML: https://initkoa.org/infrastructures/kin-city
 > Markdown mirror: https://initkoa.org/infrastructures/kin-city/index.html.md
 > Route: /infrastructures/kin-city
-> Source: app\infrastructures\kin-city\page.tsx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/infrastructures/kin-city/page.tsx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kin-city)
 
 Welcome to Kin City
 
-A virtual interface for the Mouvement Koa. Not just a dashboard, but a
+A virtual city for the kOA Initiative. Explore a
 living city where knowledge, ethics, and creativity converge.
 
-Phase 1: In Construction
+Roblox prototype
 
-We are actively prototyping our vision of a functional civic metaverse.
+The prototype explores how a city can make learning, culture and collaboration easier to navigate.
 The initial layout is currently being built for the Roblox platform.
 
-Coming Soon
+Open Kin City on Roblox
 
 The Mandala & The Island
 
@@ -83,7 +83,7 @@ Our development roadmap moves from accessibility to immersion.
 01
 Roblox Prototype
 
-(Current Stage) Gamified alpha for community testing and engagement.
+Prototype Early city layouts and interactions are under development.
 
 02
 Web Interactive
@@ -96,3 +96,7 @@ Full Immersion
 3D WebGL & AR integration for mixed reality experiences.
 
 View Full Technical Roadmap
+
+External links
+
+- [Open Kin City on Roblox](https://www.roblox.com/share?code=c3afe88847f9a64c858a379eb16dd07e&type=ExperienceDetails&stamp=1794866261456)

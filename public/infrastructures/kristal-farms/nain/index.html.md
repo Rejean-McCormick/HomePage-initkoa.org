@@ -3,111 +3,29 @@
 > Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/nain
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/nain/index.html.md
 > Route: /infrastructures/kristal-farms/nain
-> Source: app\infrastructures\kristal-farms\nain\page.tsx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/infrastructures/kristal-farms/nain/page.tsx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/nain)
 
-Back to Kristal Farms Hub
+Kristal Farms / Site concepts
 
-PILOT PROJECT
 Nain, Labrador
 
-Nain AI Compute Export Hub
+Concept scenario
 
-A publicly owned, 15MW renewable energy project exporting AI compute capacity
-via fiber instead of transmitting electricity.
+This scenario examines whether renewable generation, marine access and computing could be combined near Nain while protecting community needs. It is a starting point for evaluating feasibility and discussing priorities with the people and authorities concerned.
 
-Scope & Rationale
+Questions the scenario raises
 
-The Government of Newfoundland and Labrador is launching a nation-scale tech-energy export initiative.
-All infrastructure is publicly funded and owned .
+What energy could be available after community and essential needs are met?
 
-Generation
-New 15–20 MW run-of-river hydro plant on Fraser River.
+Which workloads would need continuous fibre, and which could run in batches?
 
-Export Trunk
-200–1000 Tbps Fiber cable to Goose Bay (300km).
+How would transport, cooling, land use and environmental conditions shape the choice?
 
-Facility
-Modular container yard at Nain port with serviced slots.
+What decisions, consent, feasibility evidence and authorizations would be required before a proposal could proceed?
 
-Business Model
-Lease "serviced slots" to tenants. No government server ownership.
+Capacity, cost, ownership and financing would need to be established through site-specific evidence and commitments.
 
-Capital Investment (~$200M)
-
-$80–100 M
-
-$40–60 M
-
-Transmission & Road
-$20–25 M
-
-Harbour & Yard Upgrades
-$12–15 M
-
-TOTAL ESTIMATE
-~$200 M
-
-*Estimates based on similar remote hydro/fiber projects (e.g. Culliton Creek, SednaLink).
-
-Timeline (5 Years)
-
-1
-Year 0–1: Planning & Enabling
-
-Feasibility studies, environmental assessments, and permits.
-Road and transmission corridor clearing begins.
-
-2
-Year 2–3: Major Construction
-
-Hydro plant civil works and powerhouse construction.
-Fiber-optic cable deployment and dock upgrades completed.
-
-4
-Year 4: Commissioning & Power-On
-
-Target Milestone: Hydro plant energized.
-Facility opens for first tenants. Initial revenue begins in Q4.
-
-5
-Year 5+: Steady Operations
-
-Ramp-up to full occupancy (15–20 MW load).
-Annual revenues stabilize between $20–30M.
-
-Financial Viability
-
-Revenue Model
-
-Leasing "serviced slots" (Power + Pipe + Space) to AI/Cloud tenants.
-
-Target Rate
-$120–$150 / kW-month
-
-Public capital investment yields steady long-term returns.
-
-Annual Revenue:
-$20–$30 M
-
-Payback Period:
-~10 Years
-
-Asset Life:
-40+ Years
-
-Strategic Impact
-
-2M+
-Liters of Diesel Avoided / Year
-
-50-100
-Construction Jobs Created
-
-~10%
-Target Annual ROI
-
-"By exporting computing, we effectively export high-tech services rather than raw materials,
-moving up the value chain."
+Review the go/no-go criteria .

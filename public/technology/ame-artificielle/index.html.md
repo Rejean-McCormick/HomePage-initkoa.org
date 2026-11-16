@@ -3,50 +3,47 @@
 > Canonical HTML: https://initkoa.org/technology/ame-artificielle
 > Markdown mirror: https://initkoa.org/technology/ame-artificielle/index.html.md
 > Route: /technology/ame-artificielle
-> Source: app\technology\ame-artificielle\page.tsx
-> Generated: 2026-11-16T14:14:38.324Z
+> Source: app/technology/ame-artificielle/page.tsx
+> Generated: 2026-11-16T22:12:29.153Z
 
 [Open the HTML page](https://initkoa.org/technology/ame-artificielle)
 
-Recherche expérimentale · EL
+Experimental research · EL
 
 me artificielle
 
-Une tentative d’ imitation fonctionnelle, non superficielle, des mécanismes de la personnalité humaine :
-dispositions, croyances, valeurs, souvenirs, raisonnement, états affectifs et réactions.
-EL représente ces interactions comme un graphe psycho-causal sémantique .
+EL explores functional models of human personality. It represents how dispositions, beliefs, values, memories, reasoning, affect and responses interact in a psycho-causal graph.
 
-Il ne s’agit ni d’un simple masque conversationnel, ni d’un module de modération ou de « guardrails ».
-Le projet ne prétend pas créer une âme réelle ni démontrer qu’une machine ressent des émotions.
+The model is evaluated by its behaviour and structure. Claims about subjective experience and moderation fall outside that evaluation.
 
-Voir le moteur et ses sources
-Retour aux technologies
+See the engine and sources
+Back to technology
 
-Comment EL calcule une réaction
+How EL computes a response
 
-Un snapshot représente le sujet à un moment donné ; son état biographique ne se modifie pas automatiquement à chaque conversation.
+A snapshot represents a subject at a specific time. Updating biographical state is a separate operation.
 
-Les transformations biographiques entre snapshots sont explicites. Les vecteurs de traits sont des projections dérivées, et non la définition de l’âme.
+Changes between biographical snapshots are explicit. Trait vectors are derived projections.
 
-me, intellect, personnalité
+Dispositions, reasoning and personality
 
-L’âme désigne l’organisation des dispositions ; l’intellect la perception et la réévaluation ; la personnalité leur expression observable dans une histoire et un contexte.
+The model distinguishes the organization of dispositions, perception and reassessment, and their observable expression in context.
 
-Affects modélisés
+Modelled affect
 
-L’affect est un état calculé dans le modèle. Ce résultat ne prouve pas une expérience émotionnelle vécue par la machine.
+Affect is a computed state in the model.
 
-Sécurité séparée
+External safeguards
 
-Les limites de sortie sont une couche externe. Elles ne doivent pas être confondues avec la compassion, la morale ou la causalité interne simulée.
+Output constraints are applied in a separate layer from the simulated causal graph.
 
-Documentation du moteur
+Engine documentation
 
-Le README et les spécifications du dépôt définissent les mécanismes et leur protocole d’évaluation. Le profil Kristal proposé sert à représenter le graphe ; le Soul Causal Engine en exécute la propagation.
+The repository describes the mechanisms and how they are evaluated. The proposed Kristal profile represents the graph, and the Soul Causal Engine runs propagation.
 
-Lectures symboliques et historiques
+Symbolic and historical readings
 
-La charte 1→9, les chakras, la numérologie inversée et les branes peuvent guider des hypothèses et des interprétations ; ils ne constituent ni la preuve scientifique du modèle ni son moteur causal.
+These source texts describe symbolic interpretations and hypotheses. The technical documentation describes the graph and how the model is evaluated.
 
-Mécanisme de réaction (présentation existante)
-Validation (documentation existante)
+Response mechanism (French original)
+Validation notes (French original)
