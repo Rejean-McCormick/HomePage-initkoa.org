@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/kompendio/index.html.md
 > Route: /platforms/konnaxion/ethikos/kompendio
 > Source: app\platforms\konnaxion\ethikos\kompendio\page.mdx
-> Generated: 2026-11-17T14:38:19.242Z
+> Generated: 2026-11-17T17:50:49.802Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/ethikos/kompendio)
 
@@ -21,7 +21,7 @@ This page **does not describe an implemented Kompendio pack for ethiKos**.
 It documents what the **ethiKos reference layer is intended to become**, so civic processes remain **portable, governable, and auditable**.
 
 > For ethiKos v2, the authoritative **Boundaries & Contracts** live in the Kintsugi page:
-> `/platforms/konnaxion/ethikos/kintsugi#boundaries`
+> Read the Boundaries & Contracts (/platforms/konnaxion/ethikos/kintsugi#boundaries)
 
 ## What “Kompendio” means in Konnaxion
 
@@ -105,6 +105,6 @@ It is a **public placeholder** until the ethiKos Kompendio pack is defined.
 
 ## Where to go next
 
-- **ethiKos (module hub):** `/platforms/konnaxion/ethikos`
-- **ethiKos Kintsugi (operate layer):** `/platforms/konnaxion/ethikos/kintsugi`
-- **Kompendio (global reference layer):** `/platforms/konnaxion/kompendio`
+- **ethiKos (module hub):** Open ethiKos (/platforms/konnaxion/ethikos)
+- **ethiKos Kintsugi (operate layer):** Open Kintsugi (/platforms/konnaxion/ethikos/kintsugi)
+- **Kompendio (global reference layer):** Open Kompendio (/platforms/konnaxion/kompendio)

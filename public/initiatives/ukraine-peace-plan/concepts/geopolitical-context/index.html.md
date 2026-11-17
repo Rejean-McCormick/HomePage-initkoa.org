@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/geopolitical-context/index.html.md
 > Route: /initiatives/ukraine-peace-plan/concepts/geopolitical-context
 > Source: app\initiatives\ukraine-peace-plan\concepts\geopolitical-context\page.mdx
-> Generated: 2026-11-17T14:38:19.242Z
+> Generated: 2026-11-17T17:50:49.802Z
 
 [Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/concepts/geopolitical-context)
 

@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/technical/konnaxion-technical-architecture-and-services/index.html.md
 > Route: /platforms/konnaxion/technical/konnaxion-technical-architecture-and-services
 > Source: app\platforms\konnaxion\technical\konnaxion-technical-architecture-and-services\page.mdx
-> Generated: 2026-11-17T14:38:19.242Z
+> Generated: 2026-11-17T17:50:49.802Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/technical/konnaxion-technical-architecture-and-services)
 

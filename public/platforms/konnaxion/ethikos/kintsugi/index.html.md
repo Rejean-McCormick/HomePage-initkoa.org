@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/kintsugi/index.html.md
 > Route: /platforms/konnaxion/ethikos/kintsugi
 > Source: app\platforms\konnaxion\ethikos\kintsugi\page.mdx
-> Generated: 2026-11-17T14:38:19.242Z
+> Generated: 2026-11-17T17:50:49.802Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/ethikos/kintsugi)
 

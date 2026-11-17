@@ -84,7 +84,7 @@ export default function DiagnosisPage() {
 
           <p className="text-xl md:text-2xl opacity-90 leading-relaxed max-w-2xl mx-auto font-light text-slate-300">
             We cannot fix what we refuse to see. Before proposing solutions, we practice{' '}
-            <span className="bg-primary text-slate-900 px-2 py-0.5 font-bold box-decoration-clone">
+            <span className="bg-primary text-white px-2 py-0.5 font-bold box-decoration-clone">
               Radical Lucidity
             </span>
             : naming failures clearly, without denial, ideology, or optimism bias.
@@ -213,7 +213,7 @@ export default function DiagnosisPage() {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link
             href="/initiatives"
-            className="px-8 py-4 bg-primary text-slate-900 rounded-lg font-bold hover:bg-yellow-400 transition-colors shadow-lg shadow-primary/20"
+            className="px-8 py-4 bg-primary text-white rounded-lg font-bold hover:bg-[#164d49] transition-colors shadow-lg shadow-primary/20"
           >
             Explore the Response
           </Link>

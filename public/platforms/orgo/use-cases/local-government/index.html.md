@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/local-government/index.html.md
 > Route: /platforms/orgo/use-cases/local-government
 > Source: app\platforms\orgo\use-cases\local-government\page.mdx
-> Generated: 2026-11-17T14:38:19.242Z
+> Generated: 2026-11-17T17:50:49.802Z
 
 [Open the HTML page](https://initkoa.org/platforms/orgo/use-cases/local-government)
 

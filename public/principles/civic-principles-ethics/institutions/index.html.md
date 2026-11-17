@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/institutions/index.html.md
 > Route: /principles/civic-principles-ethics/institutions
 > Source: app\principles\civic-principles-ethics\institutions\page.js
-> Generated: 2026-11-17T14:38:19.242Z
+> Generated: 2026-11-17T17:50:49.802Z
 
 [Open the HTML page](https://initkoa.org/principles/civic-principles-ethics/institutions)
 

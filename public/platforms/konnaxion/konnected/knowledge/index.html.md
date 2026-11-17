@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/konnected/knowledge/index.html.md
 > Route: /platforms/konnaxion/konnected/knowledge
 > Source: app\platforms\konnaxion\konnected\knowledge\page.mdx
-> Generated: 2026-11-17T14:38:19.242Z
+> Generated: 2026-11-17T17:50:49.802Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/konnected/knowledge)
 

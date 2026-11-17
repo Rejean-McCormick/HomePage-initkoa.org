@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/healthcare/index.html.md
 > Route: /platforms/orgo/use-cases/healthcare
 > Source: app\platforms\orgo\use-cases\healthcare\page.mdx
-> Generated: 2026-11-17T14:38:19.242Z
+> Generated: 2026-11-17T17:50:49.802Z
 
 [Open the HTML page](https://initkoa.org/platforms/orgo/use-cases/healthcare)
 
