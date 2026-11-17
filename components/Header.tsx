@@ -75,9 +75,16 @@ export default function Header() {
         }
       }}>
         <div className="koa-header-inner">
-          <SiteLink href="/" className="koa-brand" aria-label="kOA home">
-            <img className="koa-logo" src="/koa-mark.svg" alt="" width={82} height={36} />
-            <span className="koa-brand-copy"><strong>The kOA</strong><small>Initiative</small></span>
+          <SiteLink href="/" className="koa-brand" aria-label="The kOA Initiative — home">
+            <span className="koa-brand-mark" aria-hidden="true">
+              <img className="koa-logo koa-logo--light" src="/koa-mark.svg" alt="" width={82} height={36} />
+              <img className="koa-logo koa-logo--dark" src="/koa-mark-dark.svg" alt="" width={82} height={36} />
+              <img className="koa-logo koa-logo--neon" src="/koa-mark-neon.svg" alt="" width={82} height={36} />
+            </span>
+            <span className="koa-brand-copy">
+              <strong>The kOA</strong>
+              <small>INITIATIVE</small>
+            </span>
           </SiteLink>
           <div className="koa-header-tools">
             <div className="koa-theme-control">

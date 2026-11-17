@@ -305,7 +305,7 @@ html { scroll-padding-top: 6rem; }
 .koa-theme-control select { color: var(--koa-ink); background: transparent; border: 0; cursor: pointer; width: 5.75rem; padding: .35rem .1rem; font: 600 .78rem/1.3 var(--koa-font-ui); }
 .koa-theme-control select:focus-visible { outline: 2px solid var(--koa-focus); outline-offset: 2px; }
 .koa-theme-control select option { background: var(--koa-surface); color: var(--koa-ink); }
-:root:is([data-koa-theme="dark"],[data-koa-theme="neon"]) .koa-logo { background: #f5faf7; padding: .16rem .25rem; border-radius: .4rem; }
+/* Theme-specific logo SVGs provide their own colors: no white backdrop needed. */
 /* Legacy content with light utility classes: recolor only in alternate themes.
    Do not override text-white on dark/brand buttons or repaint all links. */
 :root:is([data-koa-theme="dark"],[data-koa-theme="neon"]) .site-shell :is(.bg-white,.bg-slate-50,.bg-gray-50,.bg-slate-100,.bg-gray-100) { background-color: var(--koa-surface); }
@@ -334,3 +334,28 @@ html { scroll-padding-top: 6rem; }
 :root[data-koa-theme="neon"] :is(.koa-directory-card,.koa-connections-list a):hover { border-color: #66dabb; box-shadow: 0 0 21px rgba(91,255,214,.14); }
 :root[data-koa-theme="neon"] .koa-button-primary { box-shadow: 0 0 17px rgba(81,255,210,.22); }
 @media (prefers-reduced-motion: reduce) { :root[data-koa-theme="neon"] * { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+/* Identity lockup: typography restored from 11151935, with the official UCKK mark. */
+.koa-brand { gap: .75rem; text-decoration: none; }
+.koa-brand-mark { display: grid; place-items: center; width: 5.125rem; height: 2.25rem; flex-shrink: 0; }
+.koa-brand-mark .koa-logo { grid-area: 1 / 1; display: block; width: 5.125rem; height: 2.25rem; max-width: none; object-fit: contain; background: transparent; padding: 0; border-radius: 0; }
+.koa-brand-mark .koa-logo--dark,
+.koa-brand-mark .koa-logo--neon { display: none; }
+.koa-brand-copy { display: flex; flex-direction: column; justify-content: center; gap: .15rem; line-height: 1; }
+.koa-header .koa-brand-copy strong { font-family: var(--koa-font-ui); font-weight: 700; font-size: 1.125rem; line-height: 1; letter-spacing: -.025em; color: var(--koa-link); }
+.koa-header .koa-brand-copy small { font-family: var(--koa-font-ui); font-weight: 500; font-size: .75rem; line-height: 1.1; letter-spacing: .1em; text-transform: uppercase; color: var(--koa-muted); }
+/* A single visible logo per theme; the browser applies this before React hydration. */
+:root[data-koa-theme="dark"] .koa-brand-mark .koa-logo--light,
+:root[data-koa-theme="neon"] .koa-brand-mark .koa-logo--light { display: none; }
+:root[data-koa-theme="dark"] .koa-brand-mark .koa-logo--dark { display: block; }
+:root[data-koa-theme="neon"] .koa-brand-mark .koa-logo--neon { display: block; }
+/* Dark text and logo both readable on a dark header. Neon uses a genuine neon-colored SVG. */
+:root[data-koa-theme="dark"] .koa-header .koa-brand-copy strong { color: #ffffff; }
+:root[data-koa-theme="neon"] .koa-header .koa-brand-copy strong { color: #7affd8; }
+:root[data-koa-theme="neon"] .koa-brand-mark .koa-logo--neon { filter: drop-shadow(0 0 5px rgba(122,255,216,.58)); }
+@media (max-width: 26rem) {
+  .koa-brand { gap: .5rem; }
+  .koa-brand-mark, .koa-brand-mark .koa-logo { width: 4.5rem; height: 2rem; }
+  .koa-header .koa-brand-copy strong { font-size: 1rem; }
+  .koa-header .koa-brand-copy small { font-size: .625rem; }
+}
