@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/concepts/operational-logistics/index.html.md
 > Route: /initiatives/ukraine-peace-plan/concepts/operational-logistics
 > Source: app\initiatives\ukraine-peace-plan\concepts\operational-logistics\page.mdx
-> Generated: 2026-11-17T17:50:49.802Z
+> Generated: 2026-11-17T19:53:58.849Z
 
 [Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/concepts/operational-logistics)
 

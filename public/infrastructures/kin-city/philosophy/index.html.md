@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/infrastructures/kin-city/philosophy/index.html.md
 > Route: /infrastructures/kin-city/philosophy
 > Source: app\infrastructures\kin-city\philosophy\page.tsx
-> Generated: 2026-11-17T17:50:49.802Z
+> Generated: 2026-11-17T19:53:58.849Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kin-city/philosophy)
 

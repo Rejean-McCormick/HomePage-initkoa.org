@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/keenkonnect/kompendio/index.html.md
 > Route: /platforms/konnaxion/keenkonnect/kompendio
 > Source: app\platforms\konnaxion\keenkonnect\kompendio\page.mdx
-> Generated: 2026-11-17T17:50:49.802Z
+> Generated: 2026-11-17T19:53:58.849Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/keenkonnect/kompendio)
 

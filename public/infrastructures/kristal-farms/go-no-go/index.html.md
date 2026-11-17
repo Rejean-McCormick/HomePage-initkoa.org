@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/go-no-go/index.html.md
 > Route: /infrastructures/kristal-farms/go-no-go
 > Source: app\infrastructures\kristal-farms\go-no-go\page.mdx
-> Generated: 2026-11-17T17:50:49.802Z
+> Generated: 2026-11-17T19:53:58.849Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/go-no-go)
 

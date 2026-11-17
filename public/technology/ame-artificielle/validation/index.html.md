@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/technology/ame-artificielle/validation/index.html.md
 > Route: /technology/ame-artificielle/validation
 > Source: app\technology\ame-artificielle\validation\page.mdx
-> Generated: 2026-11-17T17:50:49.802Z
+> Generated: 2026-11-17T19:53:58.849Z
 
 [Open the HTML page](https://initkoa.org/technology/ame-artificielle/validation)
 

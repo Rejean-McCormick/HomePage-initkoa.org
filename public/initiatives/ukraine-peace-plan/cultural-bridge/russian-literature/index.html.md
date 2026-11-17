@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/russian-literature/index.html.md
 > Route: /initiatives/ukraine-peace-plan/cultural-bridge/russian-literature
 > Source: app\initiatives\ukraine-peace-plan\cultural-bridge\russian-literature\page.mdx
-> Generated: 2026-11-17T17:50:49.802Z
+> Generated: 2026-11-17T19:53:58.849Z
 
 [Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/russian-literature)
 

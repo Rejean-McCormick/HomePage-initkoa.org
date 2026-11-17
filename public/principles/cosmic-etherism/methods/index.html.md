@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/principles/cosmic-etherism/methods/index.html.md
 > Route: /principles/cosmic-etherism/methods
 > Source: app\principles\cosmic-etherism\methods\page.js
-> Generated: 2026-11-17T17:50:49.802Z
+> Generated: 2026-11-17T19:53:58.849Z
 
 [Open the HTML page](https://initkoa.org/principles/cosmic-etherism/methods)
 
