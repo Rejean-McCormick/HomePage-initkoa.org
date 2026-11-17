@@ -94,13 +94,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
 
-      <body className="bg-white text-slate-900 antialiased min-h-screen flex flex-col">
+      <body className="koa-site bg-[var(--koa-paper)] text-[var(--koa-ink)] antialiased min-h-screen flex flex-col">
         <Header />
 
-        <div id="site-content" tabIndex={-1} className="site-shell max-w-4xl mx-auto px-6 py-12 prose prose-slate flex-grow w-full">
+        <div id="site-content" tabIndex={-1} className="site-shell koa-content-shell max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 prose prose-slate flex-grow w-full">
           {children}
 
-          <footer className="mt-24 pt-8 border-t border-slate-100 text-center text-sm text-slate-400 font-sans not-prose">
+          <footer className="mt-20 pt-8 border-t text-center text-sm text-[var(--koa-muted)] font-sans not-prose">
             <p>
               © {new Date().getFullYear()} The kOA Initiative. Architected by{" "}
               <a
