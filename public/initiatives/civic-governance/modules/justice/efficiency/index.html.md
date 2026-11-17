@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/justice/efficiency/index.html.md
 > Route: /initiatives/civic-governance/modules/justice/efficiency
 > Source: app\initiatives\civic-governance\modules\justice\efficiency\page.mdx
-> Generated: 2026-11-17T14:30:09.050Z
+> Generated: 2026-11-17T14:38:19.242Z
 
 [Open the HTML page](https://initkoa.org/initiatives/civic-governance/modules/justice/efficiency)
 

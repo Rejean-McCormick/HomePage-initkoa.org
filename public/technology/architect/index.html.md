@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/technology/architect/index.html.md
 > Route: /technology/architect
 > Source: app\technology\architect\page.mdx
-> Generated: 2026-11-17T14:30:09.050Z
+> Generated: 2026-11-17T14:38:19.242Z
 
 [Open the HTML page](https://initkoa.org/technology/architect)
 

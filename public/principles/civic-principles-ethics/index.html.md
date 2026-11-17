@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/index.html.md
 > Route: /principles/civic-principles-ethics
 > Source: app\principles\civic-principles-ethics\page.js
-> Generated: 2026-11-17T14:30:09.050Z
+> Generated: 2026-11-17T14:38:19.242Z
 
 [Open the HTML page](https://initkoa.org/principles/civic-principles-ethics)
 

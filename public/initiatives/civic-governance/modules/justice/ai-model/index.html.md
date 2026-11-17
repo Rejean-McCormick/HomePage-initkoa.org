@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/initiatives/civic-governance/modules/justice/ai-model/index.html.md
 > Route: /initiatives/civic-governance/modules/justice/ai-model
 > Source: app\initiatives\civic-governance\modules\justice\ai-model\page.mdx
-> Generated: 2026-11-17T14:30:09.050Z
+> Generated: 2026-11-17T14:38:19.242Z
 
 [Open the HTML page](https://initkoa.org/initiatives/civic-governance/modules/justice/ai-model)
 

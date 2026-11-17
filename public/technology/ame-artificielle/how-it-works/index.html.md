@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/technology/ame-artificielle/how-it-works/index.html.md
 > Route: /technology/ame-artificielle/how-it-works
 > Source: app\technology\ame-artificielle\how-it-works\page.mdx
-> Generated: 2026-11-17T14:30:09.050Z
+> Generated: 2026-11-17T14:38:19.242Z
 
 [Open the HTML page](https://initkoa.org/technology/ame-artificielle/how-it-works)
 

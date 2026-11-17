@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/about/index.html.md
 > Route: /about
 > Source: app\about\page.js
-> Generated: 2026-11-17T14:30:09.050Z
+> Generated: 2026-11-17T14:38:19.242Z
 
 [Open the HTML page](https://initkoa.org/about)
 

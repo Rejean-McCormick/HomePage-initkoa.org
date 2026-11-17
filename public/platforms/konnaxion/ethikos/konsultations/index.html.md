@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/konsultations/index.html.md
 > Route: /platforms/konnaxion/ethikos/konsultations
 > Source: app\platforms\konnaxion\ethikos\konsultations\page.mdx
-> Generated: 2026-11-17T14:30:09.050Z
+> Generated: 2026-11-17T14:38:19.242Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/ethikos/konsultations)
 

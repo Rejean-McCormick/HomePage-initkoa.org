@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/power-and-grid/index.html.md
 > Route: /infrastructures/kristal-farms/power-and-grid
 > Source: app\infrastructures\kristal-farms\power-and-grid\page.mdx
-> Generated: 2026-11-17T14:30:09.050Z
+> Generated: 2026-11-17T14:38:19.242Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/power-and-grid)
 

@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/technology/sentient/index.html.md
 > Route: /technology/sentient
 > Source: app\technology\sentient\page.mdx
-> Generated: 2026-11-17T14:30:09.050Z
+> Generated: 2026-11-17T14:38:19.242Z
 
 [Open the HTML page](https://initkoa.org/technology/sentient)
 

@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/fiber-and-network/index.html.md
 > Route: /infrastructures/kristal-farms/fiber-and-network
 > Source: app\infrastructures\kristal-farms\fiber-and-network\page.mdx
-> Generated: 2026-11-17T14:30:09.050Z
+> Generated: 2026-11-17T14:38:19.242Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/fiber-and-network)
 

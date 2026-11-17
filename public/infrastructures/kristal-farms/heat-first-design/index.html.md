@@ -4,7 +4,7 @@
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/heat-first-design/index.html.md
 > Route: /infrastructures/kristal-farms/heat-first-design
 > Source: app\infrastructures\kristal-farms\heat-first-design\page.mdx
-> Generated: 2026-11-17T14:30:09.050Z
+> Generated: 2026-11-17T14:38:19.242Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/heat-first-design)
 
