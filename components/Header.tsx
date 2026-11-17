@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, Search, X } from "lucide-react";
+import { ChevronDown, Menu, Palette, Search, X } from "lucide-react";
 import SiteLink from "@/components/SiteLink";
 import { capabilities, navigation } from "@/lib/site-navigation";
 
@@ -15,15 +15,33 @@ function normalized(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
+type KoaTheme = "light" | "dark" | "neon";
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [active, setActive] = useState<string | null>(null);
   const [query, setQuery] = useState("");
+  const [theme, setTheme] = useState<KoaTheme>("light");
   const modal = useRef<HTMLDialogElement>(null);
   const searchInput = useRef<HTMLInputElement>(null);
   const mobile = useRef<HTMLButtonElement>(null);
   const triggers = useRef<Record<string, HTMLButtonElement | null>>({});
   const pathname = usePathname();
+
+  useEffect(() => {
+    const current = document.documentElement.getAttribute("data-koa-theme");
+    if (current === "dark" || current === "neon") setTheme(current);
+  }, []);
+
+  function selectTheme(next: KoaTheme) {
+    setTheme(next);
+    if (next === "light") {
+      document.documentElement.removeAttribute("data-koa-theme");
+    } else {
+      document.documentElement.setAttribute("data-koa-theme", next);
+    }
+    try { localStorage.setItem("koa-theme", next); } catch { /* private browsing */ }
+  }
 
   useEffect(() => {
     setMobileOpen(false);
@@ -62,6 +80,15 @@ export default function Header() {
             <span className="koa-brand-copy"><strong>The kOA</strong><small>Initiative</small></span>
           </SiteLink>
           <div className="koa-header-tools">
+            <div className="koa-theme-control">
+              <Palette size={16} aria-hidden="true" />
+              <label htmlFor="koa-theme" className="sr-only">Appearance theme</label>
+              <select id="koa-theme" aria-label="Appearance theme" value={theme} onChange={(event) => selectTheme(event.target.value as KoaTheme)}>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="neon">Neon</option>
+              </select>
+            </div>
             <button type="button" className="koa-icon" onClick={toggleSearch} aria-label="Search">
               <Search size={20} aria-hidden="true" />
             </button>

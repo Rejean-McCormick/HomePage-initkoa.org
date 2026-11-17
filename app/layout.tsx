@@ -38,8 +38,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('koa-theme');if(t==='dark'||t==='neon'){document.documentElement.setAttribute('data-koa-theme',t);}}catch(e){}})();` }} />
         {/* Primary AI discovery entrypoint */}
         <link rel="help" href="/llms.txt" title="AI Access" />
 
@@ -94,13 +95,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
 
-      <body className="bg-[#faf9f5] text-[#132928] antialiased min-h-screen flex flex-col">
+      <body className="koa-site min-h-screen flex flex-col antialiased">
         <Header />
 
         <div id="site-content" tabIndex={-1} className="site-shell max-w-4xl mx-auto px-6 py-12 prose prose-slate flex-grow w-full">
           {children}
 
-          <footer className="mt-24 pt-8 border-t border-[#d3dfdb] text-center text-sm text-[#48605e] font-sans not-prose">
+          <footer className="mt-24 pt-8 border-t text-center text-sm font-sans not-prose">
             <p>
               © {new Date().getFullYear()} The kOA Initiative. Architected by{" "}
               <a

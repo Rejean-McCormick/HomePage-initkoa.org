@@ -14,9 +14,9 @@ export function Card({ title, description, children, href }: CardProps) {
   const content = children || description;
 
   const cardContent = (
-    <div className="block bg-white border border-[#d3dfdb] rounded-xl p-6 hover:border-primary hover:shadow-sm transition-colors h-full">
-      <h3 className="font-serif text-lg font-medium text-[#132928] mb-2">{title}</h3>
-      <div className="text-sm text-[#48605e] leading-relaxed">
+    <div className="block bg-[var(--koa-surface)] border border-[var(--koa-line)] rounded-xl p-6 hover:border-primary hover:shadow-sm transition-colors h-full">
+      <h3 className="font-serif text-lg font-medium text-[var(--koa-ink)] mb-2">{title}</h3>
+      <div className="text-sm text-[var(--koa-muted)] leading-relaxed">
         {content}
       </div>
     </div>
