@@ -1,7 +1,9 @@
 export const MOSAIC_URL = "https://koaliscenariomosaic.netlify.app/";
 export const UNIVERSITY_URL = "https://uckk.org/";
 export const AUDIT_URL =
-  "https://rejean-mccormick.github.io/kOA-Digital-Ecosystem-GitHub-Audit/#apps";
+  "https://rejean-mccormick.github.io/kOA-Digital-Ecosystem-GitHub-Audit/?lang=en#apps";
+export const AUDIT_MAP_URL =
+  "https://rejean-mccormick.github.io/kOA-Digital-Ecosystem-GitHub-Audit/?lang=en#cartographie";
 export const SITE_TITLE = "kOA — Build on what others know and do";
 export const SITE_DESCRIPTION =
   "Tools for learning, creating, making decisions and organizing work that others can verify, adapt and pass on.";
@@ -24,6 +26,7 @@ export const navigation = [
   ] },
   { label: "Ecosystem", href: "/ecosystem", links: [
     { label: "Systems and responsibilities", href: "/ecosystem", keywords: "architecture owners" },
+    { label: "Ecosystem Connections", href: "/connections", keywords: "koa graph cartography bridge aliases relationships journeys audit applications evidence directory" },
     { label: "Functional chains", href: "/ecosystem/functional-chains", keywords: "target design contracts" },
     { label: "Platforms", href: "/platforms", keywords: "konnaxion orgo" },
     { label: "Technology catalog", href: "/technology", keywords: "kristal semantik language software" },
@@ -37,6 +40,7 @@ export const navigation = [
     { label: "Watch & Listen", href: "/play", keywords: "videos music media play" },
   ] },
   { label: "Research & Proposals", href: "/initiatives", links: [
+    { label: "The kOA Initiative", href: "/initiative", keywords: "original vision philosophy operating loop manifesto sociotechnical infrastructure" },
     { label: "Why kOA?", href: "/why", keywords: "mission principles" },
     { label: "Research", href: "/research", keywords: "hypotheses pi" },
     { label: "Civic Governance Proposal", href: "/initiatives/civic-governance", keywords: "constitution governance" },

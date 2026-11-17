@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/ariane/atlas/ontology
 > Markdown mirror: https://initkoa.org/technology/ariane/atlas/ontology/index.html.md
 > Route: /technology/ariane/atlas/ontology
-> Source: app/technology/ariane/atlas/ontology/page.mdx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\technology\ariane\atlas\ontology\page.mdx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/technology/ariane/atlas/ontology)
 

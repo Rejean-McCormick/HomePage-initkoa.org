@@ -58,7 +58,8 @@ export default function Header() {
       }}>
         <div className="koa-header-inner">
           <SiteLink href="/" className="koa-brand" aria-label="kOA home">
-            <span className="koa-wordmark">kOA</span><span>The kOA Initiative</span>
+            <img className="koa-logo" src="/koa-mark.svg" alt="" width={82} height={36} />
+            <span className="koa-brand-copy"><strong>The kOA</strong><small>Initiative</small></span>
           </SiteLink>
           <div className="koa-header-tools">
             <button type="button" className="koa-icon" onClick={toggleSearch} aria-label="Search">

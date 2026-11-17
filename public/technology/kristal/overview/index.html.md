@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/kristal/overview
 > Markdown mirror: https://initkoa.org/technology/kristal/overview/index.html.md
 > Route: /technology/kristal/overview
-> Source: app/technology/kristal/overview/page.mdx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\technology\kristal\overview\page.mdx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/technology/kristal/overview)
 

@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/about
 > Markdown mirror: https://initkoa.org/about/index.html.md
 > Route: /about
-> Source: app/about/page.js
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\about\page.js
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/about)
 

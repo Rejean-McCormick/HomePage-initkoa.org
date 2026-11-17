@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/ame-artificielle/cadre-philosophique
 > Markdown mirror: https://initkoa.org/technology/ame-artificielle/cadre-philosophique/index.html.md
 > Route: /technology/ame-artificielle/cadre-philosophique
-> Source: app/technology/ame-artificielle/cadre-philosophique/page.mdx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\technology\ame-artificielle\cadre-philosophique\page.mdx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/technology/ame-artificielle/cadre-philosophique)
 

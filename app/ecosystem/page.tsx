@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { finalArchitecture } from '@/lib/final-system';
 
+
 export const metadata = {
   title: 'Ecosystem — kOA',
   description: 'Explore the target functional architecture of the kOA ecosystem: 24 independently owned capabilities and their boundaries.',
@@ -43,6 +44,12 @@ export default function EcosystemArchitecture() {
           </div>
         ))}
       </dl>
+      <section className="mt-10 rounded-xl border border-[#1e6864]/30 bg-[#f0f7f3] p-6" aria-labelledby="interactive-map-title">
+        <p className="text-xs font-bold uppercase tracking-widest text-[#1e6864]">Public interactive atlas</p>
+        <h2 id="interactive-map-title" className="mt-2 text-2xl font-semibold text-slate-900">Explore the ecosystem through its documented paths</h2>
+        <p className="mt-3 leading-7 text-slate-700">The kOA Graph links applications, ownership boundaries, contracts and dated documentation. Its public repository inventory is different in scope from the 24 target functional chains below. A mapped relationship does not by itself establish a live production integration.</p>
+        <p className="mt-4"><a href="/connections?type=architecture" className="inline-flex items-center rounded-md bg-[#1e6864] px-5 py-3 font-semibold text-white hover:bg-[#164d49]">Explore Ecosystem Connections →</a></p>
+      </section>
       <section className="mt-12" aria-labelledby="functional-groups">
         <div className="flex flex-wrap justify-between items-baseline gap-4">
           <h2 id="functional-groups" className="text-2xl font-semibold">Functional capabilities</h2>

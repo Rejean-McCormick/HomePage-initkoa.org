@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/infrastructures/kristal-farms/metrics-and-dashboard
 > Markdown mirror: https://initkoa.org/infrastructures/kristal-farms/metrics-and-dashboard/index.html.md
 > Route: /infrastructures/kristal-farms/metrics-and-dashboard
-> Source: app/infrastructures/kristal-farms/metrics-and-dashboard/page.mdx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\infrastructures\kristal-farms\metrics-and-dashboard\page.mdx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kristal-farms/metrics-and-dashboard)
 

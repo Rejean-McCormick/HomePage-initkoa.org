@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/start-here
 > Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/start-here/index.html.md
 > Route: /initiatives/ukraine-peace-plan/cultural-bridge/start-here
-> Source: app/initiatives/ukraine-peace-plan/cultural-bridge/start-here/page.mdx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\initiatives\ukraine-peace-plan\cultural-bridge\start-here\page.mdx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/start-here)
 

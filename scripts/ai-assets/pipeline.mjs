@@ -175,6 +175,7 @@ function buildMdManifestEntries(pages, nowIso) {
 const LINK_DISCOVERY_ROUTES = new Set([
   "/",
   "/evidence",
+  "/ecosystem",
   "/infrastructures/kin-city",
 ]);
 
@@ -212,6 +213,31 @@ function publicExternalLinks(raw, route, config) {
   return links;
 }
 
+function connectionsDirectoryForDiscovery(route, config) {
+  if (route !== "/connections") return "";
+  const pathToPublicData = path.join(config.rootDir, "public/data/koa-connections.json");
+  if (!fs.existsSync(pathToPublicData)) return "";
+  const registry = JSON.parse(fs.readFileSync(pathToPublicData, "utf8"));
+  const aliasByRepository = new Map(registry.aliases
+    .filter(item => item.entity_id)
+    .map(item => [item.entity_id, item.path]));
+  const lines = [
+    "## Shared navigation registry (snapshot only)",
+    "This is navigation, not verification of running integration or repository qualification.",
+    `Structured JSON: https://initkoa.org/data/koa-connections.json`,
+    `${registry.repositories.length} repositories in target design; ${registry.repositories.filter(r => r.in_audit_reference_inventory).length} in audit reference inventory; ${registry.chains.length} target chains; ${registry.crosswalks.length} proposed editorial mappings.`,
+    "### Public audit journeys",
+    ...registry.paths.map(p => `- [${p.title_en}](${p.audit_url}) — ${p.summary_en}`),
+    "### Application inventory",
+    ...registry.repositories.map(r => `- [${r.name}](https://initkoa.org${aliasByRepository.get(r.id) || "/connections"}) — ${r.in_audit_reference_inventory ? "audit reference" : "target design only"}; ${r.target_role}`),
+    "### Target functional chains",
+    ...registry.chains.map(c => `- [${c.id.replace("chain:", "")} — ${c.title_en}](https://initkoa.org${c.href}) — target design, not qualified`),
+    "### Proposed editorial crosswalks",
+    ...registry.crosswalks.map(c => `- ${c.from} ↔ ${c.to}: ${c.editorial_note} (editorial proposal, not implementation proof)`),
+  ];
+  return lines.join("\n");
+}
+
 function buildSinglePage({ config, nowIso, route, fileAbsPath }) {
   const raw = fs.readFileSync(fileAbsPath, "utf8");
   const ext = getSourceExt(fileAbsPath);
@@ -221,9 +247,9 @@ function buildSinglePage({ config, nowIso, route, fileAbsPath }) {
     config.maxCharsPerPage
   );
   const externalLinks = publicExternalLinks(raw, route, config);
-  const cleaned = externalLinks.length
-    ? `${cleanedText}\n\nExternal links\n\n${externalLinks.join("\n")}`
-    : cleanedText;
+  const connectionDirectory = connectionsDirectoryForDiscovery(route, config);
+  const cleaned = [cleanedText, externalLinks.length ? `External links\n\n${externalLinks.join("\n")}` : "", connectionDirectory]
+    .filter(Boolean).join("\n\n");
 
   if (!cleaned || cleaned.length < config.minCharsPerPage) {
     return null;
@@ -232,7 +258,8 @@ function buildSinglePage({ config, nowIso, route, fileAbsPath }) {
   if (
     config.skipCodeLikePages &&
     !isMarkdownLike(fileAbsPath) &&
-    codeLikenessScore(cleaned) > config.codeLikeThreshold
+    codeLikenessScore(cleaned) > config.codeLikeThreshold &&
+    route !== "/connections"
   ) {
     return { skippedAsCodeLike: true };
   }

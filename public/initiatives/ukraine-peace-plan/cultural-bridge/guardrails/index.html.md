@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/guardrails
 > Markdown mirror: https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/guardrails/index.html.md
 > Route: /initiatives/ukraine-peace-plan/cultural-bridge/guardrails
-> Source: app/initiatives/ukraine-peace-plan/cultural-bridge/guardrails/page.mdx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\initiatives\ukraine-peace-plan\cultural-bridge\guardrails\page.mdx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/initiatives/ukraine-peace-plan/cultural-bridge/guardrails)
 

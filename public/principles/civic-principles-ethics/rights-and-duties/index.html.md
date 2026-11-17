@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/principles/civic-principles-ethics/rights-and-duties
 > Markdown mirror: https://initkoa.org/principles/civic-principles-ethics/rights-and-duties/index.html.md
 > Route: /principles/civic-principles-ethics/rights-and-duties
-> Source: app/principles/civic-principles-ethics/rights-and-duties/page.js
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\principles\civic-principles-ethics\rights-and-duties\page.js
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/principles/civic-principles-ethics/rights-and-duties)
 

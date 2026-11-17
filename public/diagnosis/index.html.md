@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/diagnosis
 > Markdown mirror: https://initkoa.org/diagnosis/index.html.md
 > Route: /diagnosis
-> Source: app/diagnosis/page.js
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\diagnosis\page.js
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/diagnosis)
 

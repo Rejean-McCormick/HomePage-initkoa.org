@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/infrastructures/kin-city
 > Markdown mirror: https://initkoa.org/infrastructures/kin-city/index.html.md
 > Route: /infrastructures/kin-city
-> Source: app/infrastructures/kin-city/page.tsx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\infrastructures\kin-city\page.tsx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/infrastructures/kin-city)
 

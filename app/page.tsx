@@ -29,6 +29,16 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="koa-section koa-initiative-bridge" aria-labelledby="initiative-bridge-title">
+        <div>
+          <p className="koa-overline">The kOA Initiative</p>
+          <h2 id="initiative-bridge-title">From knowledge to coordinated action.</h2>
+          <p>The initiative begins with a simple diagnosis: societies produce knowledge faster than they can turn it into legitimate decisions, accountable execution and durable public memory.</p>
+          <p>The original vision explains the civic operating loop, its governance commitments and the wider sociotechnical ambition.</p>
+          <SiteLink className="koa-text-link" href="/initiative">Read the initiative’s original vision <ArrowRight size={17} aria-hidden="true" /></SiteLink>
+        </div>
+      </section>
+
       <section id="capabilities" className="koa-section" aria-labelledby="capabilities-title">
         <h2 id="capabilities-title">What you can do</h2>
         <ul className="koa-capabilities">
@@ -62,6 +72,13 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
+        <div className="koa-graph-callout">
+          <div>
+            <h3>Explore Ecosystem Connections</h3>
+            <p>Search the shared directory of functional chains, applications, audit journeys and provenance. Each connection keeps its original status: target design, reference inventory or proposed crosswalk.</p>
+          </div>
+          <SiteLink className="koa-button koa-button-primary" href="/connections">Explore connections <ArrowRight size={17} aria-hidden="true" /></SiteLink>
+        </div>
       </section>
     </main>
   );

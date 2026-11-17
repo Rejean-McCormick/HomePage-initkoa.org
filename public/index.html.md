@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org
 > Markdown mirror: https://initkoa.org/index.html.md
 > Route: /
-> Source: app/page.tsx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\page.tsx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org)
 
@@ -19,6 +19,16 @@ It is designed so people can take part in their own language and communities can
 Explore what you can do
 See the ecosystem
 
+The kOA Initiative
+
+From knowledge to coordinated action.
+
+The initiative begins with a simple diagnosis: societies produce knowledge faster than they can turn it into legitimate decisions, accountable execution and durable public memory.
+
+The original vision explains the civic operating loop, its governance commitments and the wider sociotechnical ambition.
+
+Read the initiative’s original vision
+
 What you can do
 
 See how the capabilities work together
@@ -30,6 +40,12 @@ Explore the scenarios
 How the pieces connect
 
 Return to a source, adapt the result to a new context and give the next person something they can build on.
+
+Explore Ecosystem Connections
+
+Search the shared directory of functional chains, applications, audit journeys and provenance. Each connection keeps its original status: target design, reference inventory or proposed crosswalk.
+
+Explore connections
 
 External links
 

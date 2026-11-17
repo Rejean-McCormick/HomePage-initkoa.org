@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/evidence
 > Markdown mirror: https://initkoa.org/evidence/index.html.md
 > Route: /evidence
-> Source: app/evidence/page.tsx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\evidence\page.tsx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/evidence)
 
@@ -18,11 +18,17 @@ The public architecture map describes the intended system and the responsibiliti
 
 Browse the functional chains · Open the Context Packs
 
+Interactive ecosystem map
+
+The public kOA Graph lets you explore dated architectural paths, owner boundaries and linked documentation. It is a navigational record, not a claim that all systems are deployed or qualified.
+
+Browse the interconnected journeys
+
 Engineering evidence
 
 The public audit links systems to scoped tests and dated records. Check the tested versions, environment and outcome before drawing conclusions about current operation.
 
-Open the public engineering audit
+Find the public engineering audit and application records
 
 Prototypes and scenario examples
 
@@ -40,5 +46,4 @@ Browse the reading library and its sources .
 
 External links
 
-- [Open the public engineering audit](https://rejean-mccormick.github.io/kOA-Digital-Ecosystem-GitHub-Audit/#apps)
 - [Explore scenario examples](https://koaliscenariomosaic.netlify.app/)

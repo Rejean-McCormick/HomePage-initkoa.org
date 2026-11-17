@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/technology/ariane/consumers/integration-patterns
 > Markdown mirror: https://initkoa.org/technology/ariane/consumers/integration-patterns/index.html.md
 > Route: /technology/ariane/consumers/integration-patterns
-> Source: app/technology/ariane/consumers/integration-patterns/page.mdx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\technology\ariane\consumers\integration-patterns\page.mdx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/technology/ariane/consumers/integration-patterns)
 

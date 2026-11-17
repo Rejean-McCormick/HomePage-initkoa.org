@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/why
 > Markdown mirror: https://initkoa.org/why/index.html.md
 > Route: /why
-> Source: app/why/page.tsx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\why\page.tsx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/why)
 

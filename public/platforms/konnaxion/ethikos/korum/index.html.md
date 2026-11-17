@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/platforms/konnaxion/ethikos/korum
 > Markdown mirror: https://initkoa.org/platforms/konnaxion/ethikos/korum/index.html.md
 > Route: /platforms/konnaxion/ethikos/korum
-> Source: app/platforms/konnaxion/ethikos/korum/page.mdx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\platforms\konnaxion\ethikos\korum\page.mdx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/platforms/konnaxion/ethikos/korum)
 

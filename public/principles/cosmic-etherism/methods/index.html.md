@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/principles/cosmic-etherism/methods
 > Markdown mirror: https://initkoa.org/principles/cosmic-etherism/methods/index.html.md
 > Route: /principles/cosmic-etherism/methods
-> Source: app/principles/cosmic-etherism/methods/page.js
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\principles\cosmic-etherism\methods\page.js
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/principles/cosmic-etherism/methods)
 

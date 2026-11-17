@@ -3,8 +3,8 @@
 > Canonical HTML: https://initkoa.org/platforms/orgo/use-cases/justice
 > Markdown mirror: https://initkoa.org/platforms/orgo/use-cases/justice/index.html.md
 > Route: /platforms/orgo/use-cases/justice
-> Source: app/platforms/orgo/use-cases/justice/page.mdx
-> Generated: 2026-11-16T22:12:29.153Z
+> Source: app\platforms\orgo\use-cases\justice\page.mdx
+> Generated: 2026-11-17T14:30:09.050Z
 
 [Open the HTML page](https://initkoa.org/platforms/orgo/use-cases/justice)
 
