@@ -1,42 +1,42 @@
-# kOA — Nos savoirs en commun
+# kOA — Knowledge in Common
 
 > Canonical HTML: https://initkoa.org
 > Route: /
 
-Une création de King Klown
+A creation by King Klown
 
-kOA est une infrastructure où des savoirs se cristallisent autour d’une question commune. Chaque Kristal garde la trace de ce qui se rejoint, de ce qui diverge et des sources de chacun.
+kOA is an infrastructure where different kinds of knowledge crystallize around a shared question. Each Kristal records where people’s accounts converge, where they differ and what each draws on.
 
-Par où veux-tu commencer ?
+Where would you like to begin?
 
-D’où vient cette idée ?
+Where does this idea come from?
 
-Dans un Kristal, une idée reste liée à ses sources, aux corrections qu’elle a reçues et aux questions qu’elle soulève encore.
+In a Kristal, an idea stays connected to its sources, the corrections made along the way and the questions still open.
 
-Qu’apprend-on en pratiquant ensemble ?
+What do we learn by practising together?
 
-Deux personnes connaissent deux façons de faire. En les essayant côte à côte, elles découvrent ce que chacune permet.
+Two people know different ways to do the same thing. Trying them side by side reveals what each method makes possible.
 
-Comment décider ensemble ?
+How do we decide together?
 
-Le parcours de décision montre comment un groupe compare ses options et documente les raisons de son choix.
+The decision workflow shows how a group compares options and records the reasons for its choice.
 
-Un scénario illustratif
+An illustrative scenario
 
-Que planter dans le jardin du quartier ?
+What should grow in the neighbourhood garden?
 
-Au printemps, des voisins hésitent entre un verger et un potager. L’une connaît le terrain depuis vingt ans. Un autre vient d’y passer son premier hiver. Que voient-ils quand ils mettent leurs observations en commun ?
+In spring, neighbours are weighing an orchard against a vegetable garden. One has known the plot for twenty years. Another has just spent his first winter there. What comes into view when they put their observations together?
 
-Rassembler les observations
+The observations come together
 
-Une voisine note les heures d’ombre. Un jardinier apporte ses relevés de sol. Chaque observation garde sa date et sa source.
+One neighbour records the hours of shade. A gardener brings soil readings. Each observation keeps its date and source.
 
-Faire apparaître une option
+An option emerges
 
-En superposant les relevés et les souvenirs de crue, le groupe repère une bande de terre ensoleillée qui reste sèche au printemps. Il propose d’y essayer un potager.
+The group overlays the readings with neighbours’ recollections of flooding. A sunny strip stays dry in spring. They propose trying a vegetable bed there.
 
-Cristalliser ce qui se dégage
+The findings crystallize
 
-Le groupe rassemble la carte, les témoignages et la proposition dans un Kristal. Une question y reste ouverte : cette bande de terre restera-t-elle assez humide en août ?
+The group brings the map, the accounts and the proposal together in a Kristal. One question stays open. Will that strip hold enough moisture in August?
 
-Poursuivre l’exploration
+Elsewhere in kOA
