@@ -1,52 +1,42 @@
-# /
+# kOA — Nos savoirs en commun
 
 > Canonical HTML: https://initkoa.org
-> Markdown mirror: https://initkoa.org/index.html.md
 > Route: /
-> Source: app\page.tsx
-> Generated: 2026-11-17T19:53:58.849Z
 
-[Open the HTML page](https://initkoa.org)
+Une création de King Klown
 
-Build on what others know and do.
+kOA est une infrastructure où des savoirs se cristallisent autour d’une question commune. Chaque Kristal garde la trace de ce qui se rejoint, de ce qui diverge et des sources de chacun.
 
-kOA brings together tools for learning, creating, making decisions and organizing work.
+Par où veux-tu commencer ?
 
-It turns knowledge, skills and results into resources others can understand, verify, adapt and pass on.
+D’où vient cette idée ?
 
-It is designed so people can take part in their own language and communities can retain control over their rules, data and tools.
+Dans un Kristal, une idée reste liée à ses sources, aux corrections qu’elle a reçues et aux questions qu’elle soulève encore.
 
-Explore what you can do
-See the ecosystem
+Qu’apprend-on en pratiquant ensemble ?
 
-The kOA Initiative
+Deux personnes connaissent deux façons de faire. En les essayant côte à côte, elles découvrent ce que chacune permet.
 
-From knowledge to coordinated action.
+Comment décider ensemble ?
 
-The initiative begins with a simple diagnosis: societies produce knowledge faster than they can turn it into legitimate decisions, accountable execution and durable public memory.
+Le parcours de décision montre comment un groupe compare ses options et documente les raisons de son choix.
 
-The original vision explains the civic operating loop, its governance commitments and the wider sociotechnical ambition.
+Un scénario illustratif
 
-Read the initiative’s original vision
+Que planter dans le jardin du quartier ?
 
-What you can do
+Au printemps, des voisins hésitent entre un verger et un potager. L’une connaît le terrain depuis vingt ans. Un autre vient d’y passer son premier hiver. Que voient-ils quand ils mettent leurs observations en commun ?
 
-See how the capabilities work together
+Rassembler les observations
 
-The Koali Scenario Mosaic illustrates possible uses across learning, culture, research, institutions and field work.
+Une voisine note les heures d’ombre. Un jardinier apporte ses relevés de sol. Chaque observation garde sa date et sa source.
 
-Explore the scenarios
+Faire apparaître une option
 
-How the pieces connect
+En superposant les relevés et les souvenirs de crue, le groupe repère une bande de terre ensoleillée qui reste sèche au printemps. Il propose d’y essayer un potager.
 
-Return to a source, adapt the result to a new context and give the next person something they can build on.
+Cristalliser ce qui se dégage
 
-Explore Ecosystem Connections
+Le groupe rassemble la carte, les témoignages et la proposition dans un Kristal. Une question y reste ouverte : cette bande de terre restera-t-elle assez humide en août ?
 
-Search the shared directory of functional chains, applications, audit journeys and provenance. Each connection keeps its original status: target design, reference inventory or proposed crosswalk.
-
-Explore connections
-
-External links
-
-- [Explore the scenarios](https://koaliscenariomosaic.netlify.app/)
+Poursuivre l’exploration

@@ -1,5 +1,5 @@
 ZmartZnap snapshot file index
-Files included: 670
+Files included: 702
 
 .env.example
 .eslintrc.json
@@ -10,11 +10,14 @@ _diagnostics/vercel-build-20260612_184211/summary.txt
 app/about/page.js
 app/admin/catalog/page.tsx
 app/api/unfurl/route.ts
+app/connections/page.tsx
 app/diagnosis/page.js
 app/ecosystem/functional-chains/[id]/page.tsx
 app/ecosystem/functional-chains/page.tsx
 app/ecosystem/page.tsx
+app/evidence/page.tsx
 app/globals.css
+app/go/[...slug]/route.ts
 app/infrastructures/kin-city/page.tsx
 app/infrastructures/kin-city/philosophy/page.tsx
 app/infrastructures/kin-city/roadmap/page.tsx
@@ -39,6 +42,7 @@ app/infrastructures/kristal-farms/reversibility/page.mdx
 app/infrastructures/kristal-farms/tenancy-model/page.mdx
 app/infrastructures/kristal-farms/why-this-exists/page.mdx
 app/infrastructures/page.tsx
+app/initiative/page.tsx
 app/initiatives/civic-governance/constitution/ekoh/page.tsx
 app/initiatives/civic-governance/constitution/page.tsx
 app/initiatives/civic-governance/constitution/rights/page.tsx
@@ -165,29 +169,38 @@ app/kreature/anatomie/esprit/konnaxion/kreative/konservation/page.tsx
 app/kreature/anatomie/esprit/konnaxion/kreative/kontact/page.tsx
 app/kreature/anatomie/esprit/konnaxion/kreative/page.tsx
 app/kreature/anatomie/esprit/konnaxion/page.tsx
+app/kreature/anatomie/layout.tsx
 app/kreature/anatomie/memoire/swarmcraft/page.tsx
 app/kreature/anatomie/page.tsx
 app/kreature/anatomie/sens/ariane/page.tsx
 app/kreature/anatomie/sens/sentient/page.tsx
 app/kreature/anatomie/voix/architect/page.tsx
+app/kreature/initiation/layout.tsx
 app/kreature/initiation/le-je/page.tsx
 app/kreature/initiation/page.tsx
 app/kreature/layout.tsx
 app/kreature/mythos/dualites/page.tsx
 app/kreature/mythos/king-klown/page.tsx
+app/kreature/mythos/layout.tsx
 app/kreature/mythos/page.tsx
 app/kreature/mythos/promethee/page.tsx
 app/kreature/mythos/serments/page.tsx
+app/kreature/original/layout.tsx
+app/kreature/original/page.tsx
 app/kreature/page.tsx
+app/kreature/parcours/layout.tsx
 app/kreature/parcours/page.tsx
 app/kreature/reperes/faq/page.tsx
 app/kreature/reperes/glossaire/page.tsx
+app/kreature/reperes/layout.tsx
 app/kreature/reperes/page.tsx
 app/kreature/reperes/pont-technique/page.tsx
+app/kreature/rituels/layout.tsx
 app/kreature/rituels/page.tsx
 app/kreature/rituels/parlement-interieur/page.tsx
 app/kreature/rituels/respiration-du-sens/page.tsx
 app/layout.tsx
+app/learning-and-culture/page.tsx
 app/links/page.js
 app/page.tsx
 app/platforms/konnaxion/ethikos/kintsugi/page.mdx
@@ -328,7 +341,9 @@ app/technology/voting-machine/integration/page.tsx
 app/technology/voting-machine/page.tsx
 app/technology/voting-machine/specifications/page.tsx
 app/why/page.tsx
+CHECKSUMS_SHA256.txt
 components/Card.tsx
+components/ConnectionsExplorer.tsx
 components/Header.tsx
 components/PageSection.js
 components/reading/ReadingCard.tsx
@@ -340,6 +355,7 @@ components/reading/ReadingProse.tsx
 components/reading/ReadingSearch.tsx
 components/reading/ReadingSourceLink.tsx
 components/reading/ReadingToc.tsx
+components/SiteLink.tsx
 content/final-system/public-architecture.v1.json
 content/medium/source/2025-11-06_PI-THEORY--FROM-A-CIRCLE-S-CUT-TO-A-COSMIC-SEQUENCE-327e675296d0.html
 content/medium/source/2026-01-25_The-Resonance-Architect-a5fdac93c1f1.html
@@ -373,6 +389,7 @@ content/medium/source/2026-05-15_Feeling-the-Other-or-Agitating-the-Self--The-Di
 content/reading-inbox/.gitkeep
 content/reading-inbox/Hacking Reality_ practical_guide_for_the_next_Christ.md
 context_pack_policy.json
+data/koa-connections.registry.json
 docs/context-packs/corpus-policy.md
 docs/FINAL_SYSTEM_ARCHITECTURE.md
 docs/reading-db-upgrade/00-overview.md
@@ -399,8 +416,12 @@ initkoa-delivery-test/old-sentient.headers.txt
 initkoa-delivery-test/robots.headers.txt
 initkoa-delivery-test/robots.txt
 initkoa-delivery-test/sitemap.headers.txt
+INSTALLATION_LOGO_THEMES_FR.md
+INSTALLATION_THEMES_FR.md
+KOA_CONNECTIONS_UPDATE_FR.md
 layoutWrap.py
 lib/final-system.ts
+lib/koa-connections-public.json
 lib/reading/chunk.ts
 lib/reading/constants.ts
 lib/reading/frontmatter.ts
@@ -413,17 +434,22 @@ lib/reading/text.ts
 lib/reading/toc.ts
 lib/reading/topics.ts
 lib/reading/types.ts
+lib/site-navigation.ts
 lib/site-url.ts
 lib/supabase/admin.ts
 lib/supabase/server.ts
 lib/technology-catalog.ts
+LIRE-EN-PREMIER.md
+LIRE-MOI-TYPOGRAPHIE.md
 mdx-components.tsx
 next-env.d.ts
 next.config.mjs
+OVERLAY_INSTALLATION_FR.md
 package.json
 postcss.config.js
 public/.generated-md-mirrors.json
 public/about/index.html.md
+public/connections/index.html.md
 public/context-packs/ame-artificielle-context-pack.txt
 public/context-packs/book-civilizational-coherence-context-pack.txt
 public/context-packs/freeze-vote-rebuild-operational-peace-framework-context-pack.txt
@@ -451,9 +477,11 @@ public/context-packs/sitemap.xml
 public/context-packs/uckk-assets-context-pack.txt
 public/context-packs/uckk-moodle-context-pack.txt
 public/context-packs/votingmachine-context-pack.txt
+public/data/koa-connections.json
 public/diagnosis/index.html.md
 public/ecosystem/functional-chains/index.html.md
 public/ecosystem/index.html.md
+public/evidence/index.html.md
 public/google6c403ef3e303c408.html
 public/index.html.md
 public/infrastructures/index.html.md
@@ -480,6 +508,7 @@ public/infrastructures/kristal-farms/power-and-grid/index.html.md
 public/infrastructures/kristal-farms/reversibility/index.html.md
 public/infrastructures/kristal-farms/tenancy-model/index.html.md
 public/infrastructures/kristal-farms/why-this-exists/index.html.md
+public/initiative/index.html.md
 public/initiatives/civic-governance/constitution/ekoh/index.html.md
 public/initiatives/civic-governance/constitution/index.html.md
 public/initiatives/civic-governance/constitution/rights/index.html.md
@@ -516,6 +545,7 @@ public/inventory.audio.catalog.json
 public/inventory.code-tech.catalog.json
 public/inventory.root.json
 public/inventory.youtube.catalog.json
+public/learning-and-culture/index.html.md
 public/llms-full.txt
 public/md-manifest.json
 public/md-sitemap.xml
@@ -655,6 +685,7 @@ scripts/ai-assets/route-utils.mjs
 scripts/ai-assets/route-walker.mjs
 scripts/ai-assets/write-artifacts.mjs
 scripts/generate-ai-assets.mjs
+scripts/generate-koa-connections.mjs
 scripts/generate-reading-ai-index.mjs
 scripts/import-medium-rss.mjs
 scripts/import-reading-md-to-db.mjs
@@ -663,6 +694,7 @@ scripts/validate-context-packs.mjs
 scripts/validate-final-system.mjs
 scripts/validate-reading-import.mjs
 SMARTDUMP_INDEX.txt
+STYLE_COHERENCE_PASS_FR.md
 styles/globals.css
 supabase/migrations/20260525_reading_core.sql
 tailwind.config.js

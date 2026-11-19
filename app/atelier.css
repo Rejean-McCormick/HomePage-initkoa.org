@@ -1,0 +1,76 @@
+.atelier {
+  --night: #062f30;
+  --paper: #f7efdf;
+  --ink: #153e39;
+  --brass: #edca84;
+  --rule: #b9a980;
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+  font-family: var(--koa-font-ui, system-ui);
+}
+.atelier *, .atelier *::before, .atelier *::after { box-sizing: border-box; }
+.atelier :is(h1,h2,h3,p,ol) { margin: 0; }
+.atelier :is(h1,h2,h3) { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.04em; line-height: 1.05; text-wrap: balance; }
+.atelier h2 { font-size: clamp(2.1rem, 4vw, 4rem); }
+.atelier p { line-height: 1.55; }
+.atelier a { color: inherit; }
+.atelier a:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
+.atelier-wrap { max-width: 95rem; margin: auto; padding: clamp(2.75rem, 5vw, 5rem) var(--gutter); }
+.atelier-hero { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; background: var(--night); color: var(--paper); border-bottom: 3px solid var(--brass); }
+.atelier-intro { padding: clamp(2.3rem, 4vw, 5rem) 1rem clamp(2.3rem, 4vw, 5rem) max(var(--gutter), calc((100vw - 85rem)/2)); z-index: 1; }
+.atelier .atelier-signature { display: flex; align-items: center; gap: .9rem; color: var(--brass); font: italic 1.12rem Georgia, serif; }
+.atelier-signature::after { content: ""; height: 1px; width: 3rem; background: currentColor; }
+.atelier h1 { max-width: 11ch; font-size: clamp(3.1rem, 5.2vw, 6rem); margin: 1.2rem 0; line-height: .99; }
+.atelier h1 em { color: var(--brass); }
+.atelier-lead { max-width: 41ch; font-size: clamp(1rem, 1.2vw, 1.18rem); }
+.atelier-actions { display: flex; align-items: center; gap: .7rem 1.5rem; flex-wrap: wrap; margin-top: 1.6rem; }
+.atelier-actions a, .atelier-case-link { display: inline-flex; gap: .6em; align-items: center; min-height: 44px; font-size: .92rem; font-weight: 650; text-underline-offset: .3em; }
+.atelier .atelier-primary { padding: .8rem 1rem; border-radius: 3px; color: var(--night); background: var(--brass); text-decoration: none; }
+.atelier .atelier-primary:hover { background: #ffe4a9; }
+.atelier .atelier-primary:focus-visible { outline-color: white; }
+.atelier-scene { aspect-ratio: 940/566; width: 100%; background-image: var(--hero-image, url('/atelier/planche.webp')); background-size: var(--hero-size, 163.4043% 180.9187%); background-position: var(--hero-position, 83.8926% 13.5371%); position: relative; }
+.atelier-scene::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--night), transparent 13%); }
+.atelier-paper { background: var(--paper); color: var(--ink); }
+.atelier-paths { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--rule); margin-top: 2rem; }
+.atelier-card { display: flex; flex-direction: column; padding: 1.5rem clamp(1rem, 2.4vw, 2.5rem); text-decoration: none; }
+.atelier-card + .atelier-card { border-left: 1px solid var(--rule); }
+.atelier-card:hover .atelier-link { text-decoration: underline; }
+.atelier-card h3 { font-size: clamp(1.65rem, 2.3vw, 2.65rem); margin: .75rem 0; }
+.atelier-card p { max-width: 40ch; font-size: .98rem; }
+.atelier-print { display: block; align-self: center; height: clamp(6rem, 10vw, 9rem); background-image: var(--print-image, url('/atelier/planche.webp')); mix-blend-mode: multiply; mask-image: linear-gradient(90deg, transparent, black 7%, black 93%, transparent), linear-gradient(0deg, transparent, black 10%, black 90%, transparent); mask-composite: intersect; }
+.art-kristal { aspect-ratio: 202/236; background-size: 760.396% 433.898%; background-position: 18.666% 82.234%; }
+.art-people { aspect-ratio: 300/235; background-size: 512% 435.745%; background-position: 56.96% 82.637%; }
+.art-vote { aspect-ratio: 277/224; background-size: 554.513% 457.143%; background-position: 99.285% 82.875%; }
+.atelier-link { display: flex; align-items: baseline; justify-content: space-between; gap: .5rem; margin-top: auto; padding-top: 1.5rem; font-size: .88rem; font-weight: 700; }
+.atelier-link b { font-size: 1.2rem; }
+.atelier-case { background: #103e3a; color: var(--paper); }
+.atelier-columns { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 8vw, 8rem); }
+.atelier-case h2 { margin: 1.1rem 0; max-width: 15ch; }
+.atelier-case p { max-width: 47ch; }
+.atelier .atelier-case-link { color: var(--brass); margin-top: .9rem; }
+.atelier-steps { list-style: none; counter-reset: steps; padding: 0; }
+.atelier-steps li { counter-increment: steps; padding: 1rem 0 1rem 2.8rem; position: relative; border-top: 1px solid #689085; }
+.atelier-steps li::before { content: counter(steps, decimal-leading-zero); position: absolute; left: 0; color: var(--brass); font: italic 1.2rem Georgia, serif; }
+.atelier-steps h3 { font-size: 1.55rem; margin-bottom: .4rem; }
+.atelier-foot { background: var(--paper); color: var(--ink); }
+.atelier-foot h2 { font-size: 2.2rem; }
+.atelier-foot nav { display: flex; flex-wrap: wrap; gap: .35rem 1.6rem; margin-top: 1rem; }
+.atelier-foot a { padding-block: .65rem; text-decoration: underline; text-underline-offset: .25rem; }
+@media (max-width: 760px) {
+  .atelier-hero, .atelier-columns, .atelier-paths { grid-template-columns: 1fr; }
+  .atelier-intro { padding: 2.5rem var(--gutter) 1.5rem; }
+  .atelier h1 { max-width: 15ch; }
+  .atelier-scene::after { background: linear-gradient(var(--night), transparent 13%); }
+  .atelier-card { padding: 1.4rem 0; display: grid; grid-template-columns: minmax(0, 1fr) 5.5rem; gap: .5rem 1rem; }
+  .atelier-card + .atelier-card { border-left: 0; border-top: 1px solid var(--rule); }
+  .atelier-print { grid-column: 2; grid-row: 1/4; width: 100%; height: auto; }
+  .atelier-card h3, .atelier-card p, .atelier-link { grid-column: 1; margin: 0; }
+  .atelier-link { padding-top: .4rem; justify-content: flex-start; }
+}
+body:has(main.atelier) .koa-header { background: #062f30; color: #fff4dc; border-bottom: 1px solid #aa905e; --koa-ink: #fff4dc; --koa-muted: #e2d6b9; --koa-link: #f0cd89; --koa-soft: #23534e; --koa-surface: #0e3a37; --koa-line: #56716a; --koa-focus: #ffdc8f; }
+body:has(main.atelier) .koa-header .koa-logo { display: none; }
+body:has(main.atelier) .koa-header .koa-logo--dark { display: block; }
+body:has(main.atelier) .koa-brand-copy small { color: #f0cd89; }
+body:has(main.atelier) .koa-header select { background: #103d38; color: #fff4dc; }
+.atelier-directory { border-top: 1px solid var(--rule); margin-top: 1.3rem; padding-top: .65rem; }
+.atelier-directory summary { width: fit-content; padding-block: .6rem; font-weight: 600; cursor: pointer; }
+.atelier-directory nav { margin-top: 0; }
