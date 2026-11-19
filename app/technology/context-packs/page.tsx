@@ -31,6 +31,7 @@ type ManifestPack = {
   file: string;
   repository?: string | null;
   sourceCommit?: string | null;
+  generatedAt?: string | null;
   fileCount?: number | null;
   sha256?: string | null;
   category?: 'system' | 'general';
@@ -46,6 +47,9 @@ type ContextPack = {
   links?: ContextPackLink[];
   category: 'system' | 'general';
   repository?: string | null;
+  sourceCommit?: string | null;
+  generatedAt?: string | null;
+  sha256?: string | null;
   fileCount?: number | null;
 };
 
@@ -240,7 +244,7 @@ function discoverContextPacks(): ContextPack[] {
       return {
         slug,
         title: presentation.title ?? entry.title ?? `${fallbackTitle} Context Pack`,
-        version: presentation.version ?? 'Current',
+        version: presentation.version ?? 'Manifest entry',
         scope: presentation.scope ?? 'Repository documentation',
         description:
           presentation.description ??
@@ -249,6 +253,9 @@ function discoverContextPacks(): ContextPack[] {
         links: presentation.links,
         category: presentation.category ?? entry.category ?? 'system',
         repository: entry.repository,
+        sourceCommit: entry.sourceCommit,
+        generatedAt: entry.generatedAt,
+        sha256: entry.sha256,
         fileCount: entry.fileCount,
       } satisfies ContextPack;
     })
@@ -383,9 +390,13 @@ function PackCard({ pack }: { pack: ContextPack }) {
 
       <p className="mt-4 text-slate-600 leading-relaxed">{pack.description}</p>
 
-      {typeof pack.fileCount === 'number' ? (
-        <p className="mt-3 text-xs font-mono text-slate-400">{pack.fileCount} Markdown files</p>
-      ) : null}
+      <dl className="mt-4 space-y-1 break-all text-xs text-slate-600">
+        {typeof pack.fileCount === 'number' ? <div><dt className="inline font-semibold">Source files: </dt><dd className="inline">{pack.fileCount}</dd></div> : null}
+        {pack.generatedAt ? <div><dt className="inline font-semibold">Generated: </dt><dd className="inline">{pack.generatedAt}</dd></div> : null}
+        {pack.sourceCommit ? <div><dt className="inline font-semibold">Source revision: </dt><dd className="inline font-mono">{pack.sourceCommit.slice(0, 12)}</dd></div> : null}
+        {pack.sha256 ? <div><dt className="inline font-semibold">SHA-256: </dt><dd className="inline font-mono" title={pack.sha256}>{pack.sha256.slice(0, 16)}…</dd></div> : null}
+        {!pack.generatedAt && !pack.sourceCommit ? <div>Provenance not recorded in this manifest</div> : null}
+      </dl>
 
       <div className="mt-5 flex flex-wrap gap-3">
         <a

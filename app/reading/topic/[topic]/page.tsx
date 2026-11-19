@@ -51,8 +51,9 @@ export async function generateMetadata({
   const label = formatTopicLabel(topic);
 
   return {
-    title: `${label} | Reading | initkOA`,
+    title: `${label} | Reading | kOA`,
     description: `Published reading documents about ${label}.`,
+    alternates: { canonical: `/reading/topic/${encodeURIComponent(topic)}` },
   };
 }
 

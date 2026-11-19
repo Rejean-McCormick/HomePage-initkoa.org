@@ -62,7 +62,9 @@ export function extractTocFromMarkdown(markdown: string): TocItem[] {
   const seen = new Map<string, number>();
   const items: TocItem[] = [];
 
-  for (const match of markdown.matchAll(HEADING_LINE_RE)) {
+  // Ignore headings inside fenced code blocks and quoted snippets.
+  const visibleMarkdown = markdown.replace(/^[ \t]*(`{3,}|~{3,})[^\n]*\n[\s\S]*?^[ \t]*\1[ \t]*$/gm, "");
+  for (const match of visibleMarkdown.matchAll(HEADING_LINE_RE)) {
     const marker = match[1];
     const rawText = match[2];
 
@@ -73,7 +75,7 @@ export function extractTocFromMarkdown(markdown: string): TocItem[] {
     const level = marker.length;
     const text = cleanHeadingText(rawText);
 
-    if (!text) {
+    if (!text || !/[\p{L}\p{N}]/u.test(text)) {
       continue;
     }
 

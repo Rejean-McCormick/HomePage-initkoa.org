@@ -20,6 +20,8 @@ export default function HomePage() {
           <div className="atelier-actions">
             <SiteLink className="atelier-primary" href="/technology/kristal">How Kristals work <span aria-hidden="true">→</span></SiteLink>
             <a href="#exemple">A worked example <span aria-hidden="true">↓</span></a>
+            <SiteLink href="/evidence">See evidence <span aria-hidden="true">→</span></SiteLink>
+            <SiteLink href="/links">Get in touch <span aria-hidden="true">→</span></SiteLink>
           </div>
         </div>
         <div className="atelier-scene" role="img" aria-label="King Klown holds out his hand beneath a crystal suspended in a brass astrolabe above a city." />

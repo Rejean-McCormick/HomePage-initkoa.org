@@ -12,6 +12,17 @@ export default function KristalFarms() {
       <h1>Kristal Farms</h1>
       <p>Where can useful computing run, and who benefits? Kristal Farms studies the placement of flexible computing near renewable energy while protecting community and essential electricity needs.</p>
       <p><strong>Status: research and design.</strong> Site selection, engineering, community decisions, authorizations and measured performance belong to individual proposals.</p>
+      <section aria-labelledby="readiness-title" className="rounded-xl border p-5 not-prose">
+        <h2 id="readiness-title" className="mt-0 text-xl font-semibold">Feasibility and evidence checklist</h2>
+        <p>Research/design status. No site-specific production capacity, cost, heat-reuse yield or community authorization is certified by this overview.</p>
+        <ul className="mb-0">
+          <li>Energy and thermal balance: site measurements and seasonal demand needed.</li>
+          <li>Cost and operations: budget, logistics and maintenance still need site-specific validation.</li>
+          <li>Community consent and environmental permitting: prerequisites, not assumptions.</li>
+          <li>Decision gate: consult the documented go/no-go criteria before any deployment claim.</li>
+        </ul>
+        <p className="mb-0"><SiteLink href="/infrastructures/kristal-farms/go-no-go">Review criteria and open questions</SiteLink>.</p>
+      </section>
       <h2>Computing connected to the network</h2>
       <p>Some workloads need persistent connectivity. A connected site would evaluate power, cooling, fibre and logistics together. Heat recovery depends on local demand and site design.</p>
       <ul>

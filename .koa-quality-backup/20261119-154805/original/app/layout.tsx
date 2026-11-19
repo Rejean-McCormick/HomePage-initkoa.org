@@ -1,0 +1,132 @@
+// app/layout.tsx
+import "./globals.css";
+import "./koa-correctoflay.css";
+import Header from "@/components/Header";
+import { ReactNode } from "react";
+import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/lib/site-navigation";
+import { getSiteUrl, toAbsoluteUrl } from "@/lib/site-url";
+
+const SITE_URL = getSiteUrl();
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+
+  alternates: {
+    canonical: "./",
+  },
+
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+
+  authors: [{ name: "Réjean McCormick", url: SITE_URL }],
+  creator: "Réjean McCormick",
+
+  icons: {
+    icon: "/koa-mark.svg",
+  },
+  manifest: "/site.webmanifest",
+
+  openGraph: {
+    url: SITE_URL,
+    title: "The kOA Initiative by Réjean McCormick",
+    description: SITE_DESCRIPTION,
+    type: "website",
+    locale: "en_CA",
+  },
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('koa-theme');if(t==='dark'||t==='neon'){document.documentElement.setAttribute('data-koa-theme',t);}}catch(e){}})();` }} />
+        {/* Primary AI discovery entrypoint */}
+        <link rel="help" href="/llms.txt" title="AI Access" />
+
+        {/* Auxiliary machine-readable artifacts */}
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="/llms-full.txt"
+          title="Full LLM Context"
+        />
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="/ai-corpus.txt"
+          title="AI Context Corpus"
+        />
+        <link
+          rel="alternate"
+          type="application/json"
+          href="/ai-sitemap.json"
+          title="AI Sitemap"
+        />
+
+        {/* Markdown mirrors */}
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href="/index.html.md"
+          title="Homepage Markdown Mirror"
+        />
+        <link
+          rel="alternate"
+          type="application/json"
+          href="/md-manifest.json"
+          title="Markdown Mirror Manifest"
+        />
+        <link
+          rel="sitemap"
+          type="application/xml"
+          href="/md-sitemap.xml"
+          title="Markdown Mirror Sitemap"
+        />
+
+        {/* Optional machine hints */}
+        <meta name="ai:llms" content={toAbsoluteUrl("/llms.txt")} />
+        <meta name="ai:llms-full" content={toAbsoluteUrl("/llms-full.txt")} />
+        <meta name="ai:corpus" content={toAbsoluteUrl("/ai-corpus.txt")} />
+        <meta name="ai:sitemap" content={toAbsoluteUrl("/ai-sitemap.json")} />
+        <meta
+          name="ai:markdown-manifest"
+          content={toAbsoluteUrl("/md-manifest.json")}
+        />
+      </head>
+
+      <body className="koa-site min-h-screen flex flex-col antialiased">
+        <Header />
+
+        <div id="site-content" tabIndex={-1} className="site-shell max-w-4xl mx-auto px-6 py-12 prose prose-slate flex-grow w-full">
+          {children}
+
+          <footer className="mt-24 pt-8 border-t text-center text-sm font-sans not-prose">
+            <p>
+              © {new Date().getFullYear()} The kOA Initiative. Architected by{" "}
+              <a
+                href="/about"
+                className="hover:text-[#1e6864] transition-colors font-medium"
+              >
+                Réjean McCormick
+              </a>
+              .
+            </p>
+
+            <p className="mt-4 text-xs">
+              <a
+                href="/llms.txt"
+                className="hover:text-[#1e6864] transition-colors"
+              >
+                AI access
+              </a>
+            </p>
+          </footer>
+        </div>
+
+        <Analytics />
+      </body>
+    </html>
+  );
+}

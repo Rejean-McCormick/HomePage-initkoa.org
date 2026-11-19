@@ -23,6 +23,7 @@ function EntryCard({ entry }: { entry: TechnologyEntry }) {
         {entry.internal ? <span className="text-[11px] font-medium text-teal-700">kOA page</span> : null}
       </div>
       <h3 className="text-xl font-semibold tracking-tight text-slate-900">{entry.name}</h3>
+      <p className="mt-2 text-xs font-medium text-slate-600">Catalogued · deployment status not verified here</p>
       <p className="mt-2 flex-1 text-sm leading-6 text-slate-600">{entry.description}</p>
       <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-slate-100 pt-4 text-sm font-semibold">
         {entry.internal ? (
@@ -64,7 +65,8 @@ export default function TechnologyCatalog() {
         </h2>
         <p className="mt-4 text-base leading-7 text-slate-600">
           Browse applications, systems and tools documented in the project repositories.
-          Each entry describes the project’s role. See the linked source for its current status.
+          Each entry describes a documented role, not a deployment certification. Check its source,
+          dated engineering evidence and release history to determine implementation maturity.
         </p>
       </div>
 

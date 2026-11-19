@@ -18,6 +18,7 @@ const EXCLUDED_PREFIXES = [
   "/kreature",
   "/technology/swarmcraft",
   "/technology/voting-machine",
+  "/reading/test-reading-document",
 ];
 
 // App Router: a folder is routable when it contains page.(tsx|ts|js|jsx|mdx|md)

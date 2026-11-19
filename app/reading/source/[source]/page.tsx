@@ -96,6 +96,7 @@ export async function generateMetadata({
   return {
     title: `${sourceLabel} documents | Reading`,
     description: `Browse published ${sourceLabel.toLowerCase()} documents in the Reading library.`,
+    alternates: { canonical: `/reading/source/${encodeURIComponent(source)}` },
   };
 }
 

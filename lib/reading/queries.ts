@@ -103,6 +103,8 @@ export type ReadingFilterOptions = {
   languages: ReadingFilterOption[];
 };
 
+// Test fixtures must never appear in public listings, metadata, facets or routes.
+export const PUBLIC_READING_EXCLUDED_SLUGS = new Set(["test-reading-document"]);
 const DEFAULT_PAGE_SIZE = 20;
 const MAX_PAGE_SIZE = 100;
 
@@ -182,7 +184,8 @@ export async function getPublishedReadingDocuments(
   let query = supabase
     .from("documents")
     .select(select, { count: "exact" })
-    .eq("status", "published");
+    .eq("status", "published")
+    .neq("slug", "test-reading-document");
 
   if (queryText) {
     query = applySearchFilter(query, queryText);
@@ -228,7 +231,7 @@ export const getPublishedReadingDocumentBySlug = cache(
     const supabase = await createSupabaseServerClient();
     const normalizedSlug = normalizeSlug(slug);
 
-    if (!normalizedSlug) {
+    if (!normalizedSlug || PUBLIC_READING_EXCLUDED_SLUGS.has(normalizedSlug)) {
       return null;
     }
 
@@ -237,6 +240,7 @@ export const getPublishedReadingDocumentBySlug = cache(
       .select(DOCUMENT_SELECT)
       .eq("slug", normalizedSlug)
       .eq("status", "published")
+    .neq("slug", "test-reading-document")
       .maybeSingle();
 
     if (error) {
@@ -258,7 +262,7 @@ export const getPublishedReadingDocumentMetadataBySlug = cache(
     const supabase = await createSupabaseServerClient();
     const normalizedSlug = normalizeSlug(slug);
 
-    if (!normalizedSlug) {
+    if (!normalizedSlug || PUBLIC_READING_EXCLUDED_SLUGS.has(normalizedSlug)) {
       return null;
     }
 
@@ -267,6 +271,7 @@ export const getPublishedReadingDocumentMetadataBySlug = cache(
       .select(INDEX_SELECT)
       .eq("slug", normalizedSlug)
       .eq("status", "published")
+    .neq("slug", "test-reading-document")
       .maybeSingle();
 
     if (error) {
@@ -290,6 +295,7 @@ export async function getAllPublishedDocumentSlugs(): Promise<string[]> {
     .from("documents")
     .select("slug")
     .eq("status", "published")
+    .neq("slug", "test-reading-document")
     .order("published_at", { ascending: false, nullsFirst: false })
     .order("updated_at", { ascending: false });
 
@@ -313,7 +319,8 @@ export async function getReadingTopics(
   let query = supabase
     .from("documents")
     .select("document_topics(topic)")
-    .eq("status", params.status ?? "published");
+    .eq("status", params.status ?? "published")
+    .neq("slug", "test-reading-document");
 
   if (params.source) {
     query = query.eq("source", params.source);
@@ -360,7 +367,8 @@ export async function getReadingSources(): Promise<ReadingSourceSummary[]> {
   const { data, error } = await supabase
     .from("documents")
     .select("source")
-    .eq("status", "published");
+    .eq("status", "published")
+    .neq("slug", "test-reading-document");
 
   if (error) {
     throw new Error(`Failed to fetch reading sources: ${error.message}`);
@@ -395,7 +403,8 @@ export async function getReadingLanguages(): Promise<ReadingFilterOption[]> {
   const { data, error } = await supabase
     .from("documents")
     .select("language")
-    .eq("status", "published");
+    .eq("status", "published")
+    .neq("slug", "test-reading-document");
 
   if (error) {
     throw new Error(`Failed to fetch reading languages: ${error.message}`);

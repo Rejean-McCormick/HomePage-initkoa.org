@@ -13,10 +13,6 @@ const SITE_URL = getSiteUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
-  alternates: {
-    canonical: "./",
-  },
-
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
 
@@ -114,14 +110,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               .
             </p>
 
-            <p className="mt-4 text-xs">
+            <nav aria-label="Site information" className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs">
+              <a href="/fr">Français</a>
+              <a href="/privacy">Privacy &amp; site data</a>
+              <a href="/links">Contact &amp; channels</a>
               <a
                 href="/llms.txt"
                 className="hover:text-[#1e6864] transition-colors"
               >
                 AI access
               </a>
-            </p>
+            </nav>
           </footer>
         </div>
 

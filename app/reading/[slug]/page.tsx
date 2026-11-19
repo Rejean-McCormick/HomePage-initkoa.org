@@ -8,7 +8,7 @@ import { ReadingProse } from "@/components/reading/ReadingProse";
 import { ReadingSourceLink } from "@/components/reading/ReadingSourceLink";
 import { ReadingToc } from "@/components/reading/ReadingToc";
 import { getPublishedReadingDocumentBySlug } from "@/lib/reading/queries";
-import { renderMarkdownToHtml } from "@/lib/reading/markdown";
+import { renderMarkdownToHtml, normalizeMarkdown } from "@/lib/reading/markdown";
 import { extractTocFromMarkdown } from "@/lib/reading/toc";
 
 type ReadingDocumentPageProps = {
@@ -45,7 +45,7 @@ title: "Document not found | Reading",
 };
 }
 
-const title = `${document.title} | Reading`;
+const title = `${document.title} | Reading — kOA`;
 const description =
 document.description ??
 document.bodyText?.slice(0, 155) ??
@@ -79,8 +79,9 @@ if (!document) {
 notFound();
 }
 
-const html = await renderMarkdownToHtml(document.bodyMarkdown);
-const toc = extractTocFromMarkdown(document.bodyMarkdown).map(normalizeTocItem);
+const normalizedBody = normalizeMarkdown(document.bodyMarkdown);
+const html = await renderMarkdownToHtml(normalizedBody);
+const toc = extractTocFromMarkdown(normalizedBody).map(normalizeTocItem);
 
 return ( <article lang={document.language} className="mx-auto max-w-3xl"> <header className="mb-10 border-b border-slate-200 pb-8"> <ReadingMetadata
        source={document.source}
@@ -112,7 +113,7 @@ return ( <article lang={document.language} className="mx-auto max-w-3xl"> <heade
   </header>
 
   {toc.length > 0 ? (
-    <aside className="mb-10 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+    <aside className="mb-10">
       <ReadingToc items={toc} />
     </aside>
   ) : null}

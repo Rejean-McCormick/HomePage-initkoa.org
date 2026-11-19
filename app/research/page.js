@@ -126,8 +126,8 @@ export default function ResearchPage() {
                 <div className="flex items-center gap-3 mb-4">
                   <Microscope className="w-10 h-10 opacity-60" />
                   <div>
-                    <div className="font-bold text-slate-800">More modules coming</div>
-                    <div className="text-xs text-slate-500">as pages are migrated from technical drafts</div>
+                    <div className="font-bold text-slate-800">Research topics under review</div>
+                    <div className="text-xs text-slate-500">Not published as reviewed papers; no release date is committed</div>
                   </div>
                 </div>
 

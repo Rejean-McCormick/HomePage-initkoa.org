@@ -14,8 +14,9 @@ import {
 } from "@/lib/reading/queries";
 
 export const metadata: Metadata = {
-  title: "Reading | initkOA",
-  description: "Full-text documents, essays, notes, and articles from initkOA.",
+  title: "Reading | kOA",
+  description: "Curated, source-linked reading selection from the kOA Initiative.",
+  alternates: { canonical: "/reading" },
 };
 
 export const revalidate = 300;
@@ -118,12 +119,12 @@ export default async function ReadingIndexPage({
           </p>
 
           <h1 className="text-4xl font-semibold tracking-tight text-slate-950">
-            Full-text document library
+            Published reading selection
           </h1>
 
           <p className="max-w-3xl text-base leading-7 text-slate-600">
-            Essays, notes, articles, and long-form documents stored in the
-            reading database and rendered as accessible server-side pages.
+            A curated selection of published essays and longer documents. The collection
+            grows as sources are reviewed; drafts and import tests are not public.
           </p>
         </div>
 
@@ -182,7 +183,7 @@ export default async function ReadingIndexPage({
           description={
             hasFilters
               ? "Try clearing the filters or using a broader search term."
-              : "Import Markdown files into the reading database to populate this page."
+              : "No reviewed reading documents are available yet. Explore the evidence and other public resources."
           }
         />
       )}

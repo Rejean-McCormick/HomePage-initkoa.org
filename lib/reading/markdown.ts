@@ -81,6 +81,10 @@ export function normalizeMarkdown(markdown: string): string {
   return markdown
     .replace(/\r\n/g, "\n")
     .replace(/\r/g, "\n")
+    // Imported material sometimes includes the closing space inside bold markup.
+    .replace(/\*\*([^*\n]*?\S)\s+\*\*/g, "**$1** ")
+    // Suppress zero-content Markdown headings, keeping actual content untouched.
+    .replace(/^#{1,6}\s*#*\s*$/gm, "")
     .trim();
 }
 

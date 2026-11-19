@@ -1,0 +1,151 @@
+{
+  "schema": 1,
+  "source_snapshot": "znapshot_HomePage_11191415.zip",
+  "files": [
+    {
+      "path": "next.config.mjs",
+      "original_exists": true,
+      "new_sha256": "453090533d99bda7bd02e930686a35ff302d5c63aa0ee4eb1a4f09a9b6f637d7"
+    },
+    {
+      "path": "components/PlayClient.tsx",
+      "original_exists": false,
+      "new_sha256": "d897f188245aa0d70124a761815bf9b93da5b79305f7feca00571f3ac0824d3f"
+    },
+    {
+      "path": "components/ConnectionsExplorer.tsx",
+      "original_exists": true,
+      "new_sha256": "a8979f89f6aaaaa2d306cc9a71d065b589484b22217152d22b46576bff44bcde"
+    },
+    {
+      "path": "lib/site-navigation.ts",
+      "original_exists": true,
+      "new_sha256": "74de7f0d2b4cc8d2566ee6d959892b59c892217d78599f728eff3db466fe3fd4"
+    },
+    {
+      "path": "public/inventory.code-tech.catalog.json",
+      "original_exists": true,
+      "new_sha256": "e668a6e729561967c2be912923c59b27bb024eb354d661afbb25872ca9707759"
+    },
+    {
+      "path": "app/layout.tsx",
+      "original_exists": true,
+      "new_sha256": "52db7b749837a9bbd134ee53fa01c4a43232aa83912cd3b98511b0db4d09fa52"
+    },
+    {
+      "path": "app/robots.ts",
+      "original_exists": true,
+      "new_sha256": "f2de6428f662012d806edd2800532d7daac67469a11538d25ee3bcf0cb0c9567"
+    },
+    {
+      "path": "app/sitemap.ts",
+      "original_exists": true,
+      "new_sha256": "69a185b512a17d0606684bb5e59dc808069f07c446d251698912a4d24e67b4ce"
+    },
+    {
+      "path": "app/page.tsx",
+      "original_exists": true,
+      "new_sha256": "5e07d80e1377c157dd43bde043800ff783c9072bf3d43f2b1b6395d2632e74e5"
+    },
+    {
+      "path": "app/koa-correctoflay.css",
+      "original_exists": true,
+      "new_sha256": "3d70bd3642d3d80c8e241b83e770a0449e79afdb5c2f098f133da5f9b735fff5"
+    },
+    {
+      "path": "scripts/quality-regression.mjs",
+      "original_exists": false,
+      "new_sha256": "dbc763e57c1ff2a4d184f6c054c5f4ee454604ec619740961d7b7243b107efda"
+    },
+    {
+      "path": "app/fr/page.tsx",
+      "original_exists": false,
+      "new_sha256": "4c86d92ee15cd86d21a41c23360324202225c91e1f7810879dc42d6791f190e7"
+    },
+    {
+      "path": "app/research/page.js",
+      "original_exists": true,
+      "new_sha256": "764c4621db45c91aa2bfc993089187a92b812e82298b9cc4bd8d29b771f7eed1"
+    },
+    {
+      "path": "app/reading/layout.tsx",
+      "original_exists": true,
+      "new_sha256": "9e97c541e18d40986be2f72c754b8423681e996965e4dbb9edbed5299f08d3c2"
+    },
+    {
+      "path": "app/reading/page.tsx",
+      "original_exists": true,
+      "new_sha256": "3988de686ccbb47e5b253d63fc35f85a73287062f5d4aeba90cf7b24183901fc"
+    },
+    {
+      "path": "app/technology/TechnologyCatalog.tsx",
+      "original_exists": true,
+      "new_sha256": "44a14c7d900d8349c26993dba6c2aaa9e917b8a194009f449e0930fb4714581c"
+    },
+    {
+      "path": "app/privacy/page.tsx",
+      "original_exists": false,
+      "new_sha256": "e7a435c4cf3ec637f92b632060e32184a8bc27255ee321cfebcaaa5f500ac25f"
+    },
+    {
+      "path": "app/play/page.tsx",
+      "original_exists": true,
+      "new_sha256": "f96a72aef242369532a9fe50a2d0d8ba37dad66cc617f61aec81d625e35a8a82"
+    },
+    {
+      "path": "app/infrastructures/kristal-farms/page.tsx",
+      "original_exists": true,
+      "new_sha256": "59565d84e8ecd1b1ea4db16da51f35c937612185c1b977e1d3f24d85e8b19862"
+    },
+    {
+      "path": "app/initiatives/ukraine-peace-plan/page.mdx",
+      "original_exists": true,
+      "new_sha256": "7f5198830cd39a0cc232fcb9148c20a66c431289af5ca4b5f6c1d6030261e2ea"
+    },
+    {
+      "path": "app/technology/context-packs/page.tsx",
+      "original_exists": true,
+      "new_sha256": "3b58123204862ec9b584b515aa8cdf6d0be2342ee8288f2de54c67c71813dd05"
+    },
+    {
+      "path": "app/reading/[slug]/page.tsx",
+      "original_exists": true,
+      "new_sha256": "ef620dbddee9df22a8f75b11163ec3b191fa5cb976562d1bb202015a992ea8df"
+    },
+    {
+      "path": "app/reading/source/[source]/page.tsx",
+      "original_exists": true,
+      "new_sha256": "5f49407065c371c97dc737ff8d3c4bc5b078b30e5bd53c9ab076a1cc747024ec"
+    },
+    {
+      "path": "app/reading/topic/[topic]/page.tsx",
+      "original_exists": true,
+      "new_sha256": "d420e4a90dd6c0706f712b7b27dd647ff9a0d1a1d82966d313fca13776dc814e"
+    },
+    {
+      "path": "lib/reading/queries.ts",
+      "original_exists": true,
+      "new_sha256": "79011d347663386ba4137415335fc6864124c226b6adcffff9685878b56bef0b"
+    },
+    {
+      "path": "lib/reading/markdown.ts",
+      "original_exists": true,
+      "new_sha256": "ab5e6ca9802f2d8883e6c99725574ece3485ac393449ee5d8f47a98a9836a3ea"
+    },
+    {
+      "path": "lib/reading/toc.ts",
+      "original_exists": true,
+      "new_sha256": "e824f8e89845d1ddfaf712a5797ef31598b06d50c577a52e9aaec043a98595d7"
+    },
+    {
+      "path": "components/reading/ReadingToc.tsx",
+      "original_exists": true,
+      "new_sha256": "52ba642d3368bfa701fd27c8f02129504d185d751e6ab3d924a3fd1450305b6a"
+    },
+    {
+      "path": "supabase/migrations/20261119_archive_test_reading_document.sql",
+      "original_exists": false,
+      "new_sha256": "e853d2a8de05c8155c37b50f46c0770e30827cb55dd19a28538ab389211d1a9a"
+    }
+  ]
+}

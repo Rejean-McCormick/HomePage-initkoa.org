@@ -4,7 +4,7 @@ export const AUDIT_URL =
   "https://rejean-mccormick.github.io/kOA-Digital-Ecosystem-GitHub-Audit/?lang=en#apps";
 export const AUDIT_MAP_URL =
   "https://rejean-mccormick.github.io/kOA-Digital-Ecosystem-GitHub-Audit/?lang=en#cartographie";
-export const SITE_TITLE = "kOA — Build on what others know and do";
+export const SITE_TITLE = "kOA — Knowledge in Common";
 export const SITE_DESCRIPTION =
   "Tools for learning, creating, making decisions and organizing work that others can verify, adapt and pass on.";
 

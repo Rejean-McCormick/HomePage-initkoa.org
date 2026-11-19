@@ -1,0 +1,158 @@
+/*
+ * kOA / CORRECTOFLAY — overlay correctif 2026-11-19
+ * Couvre l'interface React/MDX des thèmes Light, Dark et Neon.
+ * Importer APRES globals.css depuis app/layout.tsx.
+ * Aucun changement au thème de la page d'accueil Atelier ni aux couleurs
+ * de premier plan des boutons et bandeaux de marque.
+ */
+
+/* 1. Neutraliser le décalage de cascade : une classe .prose imbriquée
+ *    définit ses propres --tw-prose-* et écrase les tokens du site-shell. */
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(.prose, .prose-slate, .prose-lg) {
+  color: var(--koa-ink);
+  --tw-prose-body: var(--koa-ink);
+  --tw-prose-headings: var(--koa-ink);
+  --tw-prose-lead: var(--koa-muted);
+  --tw-prose-links: var(--koa-link);
+  --tw-prose-bold: var(--koa-ink);
+  --tw-prose-counters: var(--koa-muted);
+  --tw-prose-bullets: var(--koa-muted);
+  --tw-prose-hr: var(--koa-line);
+  --tw-prose-quotes: var(--koa-ink);
+  --tw-prose-quote-borders: var(--koa-line);
+  --tw-prose-captions: var(--koa-muted);
+  --tw-prose-code: var(--koa-link);
+  --tw-prose-pre-code: #e7f3ef;
+  --tw-prose-pre-bg: #132725;
+  --tw-prose-th-borders: var(--koa-line);
+  --tw-prose-td-borders: var(--koa-line);
+}
+/* Tailwind .prose-invert peut référencer les variables inverses quand la
+ * classe dark est activée autrement ; les mêmes tokens doivent y rester. */
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell .prose-invert {
+  --tw-prose-invert-body: var(--koa-ink);
+  --tw-prose-invert-headings: var(--koa-ink);
+  --tw-prose-invert-lead: var(--koa-muted);
+  --tw-prose-invert-links: var(--koa-link);
+  --tw-prose-invert-bold: var(--koa-ink);
+  --tw-prose-invert-counters: var(--koa-muted);
+  --tw-prose-invert-bullets: var(--koa-muted);
+  --tw-prose-invert-quotes: var(--koa-ink);
+}
+
+/* 2. Palette accessible pour les anciens composants aux utilitaires fixes.
+ * Les panneaux explicites sombres/brandés (bg-slate-900, bg-teal-300,
+ * bg-[#1e6864]) sont volontairement exclus. */
+:root[data-koa-theme="dark"] {
+  --koa-warning-panel: #322818;
+  --koa-warning-text: #ffe0a3;
+  --koa-success-panel: #14362c;
+  --koa-success-text: #b5efd3;
+  --koa-error-panel: #371e29;
+  --koa-error-text: #ffc3d1;
+  --koa-violet-panel: #2c253b;
+  --koa-violet-text: #e6d3ff;
+}
+:root[data-koa-theme="neon"] {
+  --koa-warning-panel: #302513;
+  --koa-warning-text: #ffe2a0;
+  --koa-success-panel: #11382f;
+  --koa-success-text: #a9ffe0;
+  --koa-error-panel: #391c2c;
+  --koa-error-text: #ffd0de;
+  --koa-violet-panel: #29233f;
+  --koa-violet-text: #eadbff;
+}
+
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .bg-amber-50, .bg-amber-100, .bg-yellow-50, .bg-yellow-100
+) { background-color: var(--koa-warning-panel); }
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .bg-emerald-50, .bg-emerald-100, .bg-green-50, .bg-green-100, .bg-green-200
+) { background-color: var(--koa-success-panel); }
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .bg-rose-50, .bg-rose-100
+) { background-color: var(--koa-error-panel); }
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .bg-violet-50
+) { background-color: var(--koa-violet-panel); }
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .bg-teal-50, .bg-teal-100, .bg-neutral-50, .bg-stone-100
+) { background-color: var(--koa-soft); }
+
+/* Utilitaires d'arrière-plan absents de la première passe des thèmes. */
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .bg-gray-200, .bg-slate-200, .bg-slate-300
+) { background-color: var(--koa-soft); }
+/* Deux fonds crème codés en dur et présents dans les pages Ecosystem/Technology. */
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell [class~="bg-[#f0f7f3]"] { background-color: var(--koa-soft); }
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell [class~="bg-[#f6f8f7]"] { background-color: var(--koa-paper); }
+
+/* Les titres .prose et les classes de premier plan manquantes : sans cela,
+ * p.ex. text-slate-950 conserve #020617 sur un panneau sombre. */
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .text-black, .text-slate-950, .text-gray-950, .text-teal-900, .text-teal-800,
+  .text-teal-700, .text-emerald-900, .text-green-900, .text-stone-700
+) { color: var(--koa-ink); }
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .text-slate-400, .text-gray-400, .text-teal-600, .text-emerald-700,
+  .text-emerald-800, .text-green-700, .text-green-800
+) { color: var(--koa-muted); }
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .text-amber-600, .text-amber-700, .text-amber-800, .text-amber-900,
+  .text-yellow-600, .text-yellow-700, .text-yellow-800, .text-yellow-900
+) { color: var(--koa-warning-text); }
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .text-rose-600, .text-rose-700, .text-rose-800, .text-rose-900
+) { color: var(--koa-error-text); }
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .text-emerald-600, .text-green-600
+) { color: var(--koa-success-text); }
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .text-violet-700, .text-violet-800
+) { color: var(--koa-violet-text); }
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell [class~="text-[#154d4b]"] { color: var(--koa-link); }
+
+/* Les textes d'accent sur un panneau clair codé en dur ne doivent plus être
+ * illisibles : l'overlay a foncé ces deux panneaux au point précédent. */
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .text-blue-900, .text-sky-900, .text-cyan-900
+) { color: var(--koa-ink); }
+
+/* 3. Isolation des composants techniques. Les panneaux sont teintés en mode
+ * sombre et ne doivent jamais réutiliser le texte #020617 des styles prose. */
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell .technology-shell {
+  background-color: var(--koa-surface);
+  border-color: var(--koa-line);
+  color: var(--koa-ink);
+}
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell .technology-overview {
+  background-color: var(--koa-paper);
+  color: var(--koa-ink);
+}
+/* Conserver l'intention des bandeaux explicitement sombres, des CTA et de la
+ * section hero de Technology (texte blanc sur fond #020617). */
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell :is(
+  .bg-slate-900, .bg-slate-950, .bg-emerald-900, .bg-teal-900,
+  .bg-rose-900, .bg-blue-900, .bg-blue-950
+).text-white { color: #ffffff; }
+
+/* 4. Logo : l'ancienne cascade laissait parfois deux SVG visibles.
+ * Ces sélecteurs ne ciblent que le composant Header, pas les autres images. */
+:root .koa-header .koa-brand-mark .koa-logo--light,
+:root .koa-header .koa-brand-mark .koa-logo--dark,
+:root .koa-header .koa-brand-mark .koa-logo--neon { display: none; }
+:root:not([data-koa-theme="dark"]):not([data-koa-theme="neon"]) .koa-header .koa-brand-mark .koa-logo--light { display: block; }
+:root[data-koa-theme="dark"] .koa-header .koa-brand-mark .koa-logo--dark { display: block; }
+:root[data-koa-theme="neon"] .koa-header .koa-brand-mark .koa-logo--neon { display: block; }
+
+/* 5. Des colonnes longues ne doivent jamais étirer les grilles ni masquer le
+ * texte ; les tableaux et blocs code gardent leur propre scroll horizontal. */
+.site-shell :is(.grid, .flex) > * { min-width: 0; }
+.site-shell :is(pre, table) { max-width: 100%; overflow-x: auto; }
+.site-shell :is(h1, h2, h3, h4, a, code, td, th) { overflow-wrap: anywhere; }
+@media (max-width: 48rem) {
+  .site-shell :is(img, svg, iframe, video) { max-width: 100%; }
+  .koa-header-inner { gap: .5rem; }
+  .koa-theme-control select { min-height: 2.3rem; }
+}

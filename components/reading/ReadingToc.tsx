@@ -47,7 +47,7 @@ export function ReadingToc({
   items,
   title = "On this page",
   minItems = 2,
-  maxDepth = 4,
+  maxDepth = 3,
   className = "",
 }: ReadingTocProps) {
   const tocItems = normalizeItems(items, maxDepth);
@@ -70,8 +70,12 @@ export function ReadingToc({
         {title}
       </h2>
 
-      <ol className="mt-4 space-y-2 text-sm">
-        {tocItems.map((item) => (
+      <details className="mt-4" open={tocItems.length <= 18}>
+        <summary className="cursor-pointer font-medium text-sm text-slate-700">
+          {tocItems.length} sections · {tocItems.length > 18 ? "Show / hide contents" : "Contents"}
+        </summary>
+        <ol className="mt-3 max-h-[30rem] space-y-2 overflow-y-auto pr-2 text-sm">
+          {tocItems.map((item) => (
           <li key={item.id} className={getIndentClass(item.level)}>
             <Link
               href={`#${item.id}`}
@@ -80,8 +84,9 @@ export function ReadingToc({
               {item.title}
             </Link>
           </li>
-        ))}
-      </ol>
+          ))}
+        </ol>
+      </details>
     </nav>
   );
 }

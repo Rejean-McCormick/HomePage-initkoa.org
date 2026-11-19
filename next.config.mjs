@@ -141,6 +141,14 @@ const nextConfig = {
 
   async headers() {
     return [
+      // Keep historical test fixture out of search indexes even before database cleanup.
+      {
+        source: "/reading/test-reading-document",
+        headers: [
+          ...SECURITY_HEADERS,
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+        ],
+      },
       // Inventory: always fresh, never cached
       {
         source: "/inventory/:rest*",

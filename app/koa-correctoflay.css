@@ -156,3 +156,22 @@
   .koa-header-inner { gap: .5rem; }
   .koa-theme-control select { min-height: 2.3rem; }
 }
+
+/* 2026-11-19 quality pass: Reading intentionally follows the selected theme. */
+.site-shell .koa-reading {
+  background: var(--koa-paper);
+  color: var(--koa-ink);
+}
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell .koa-reading :is(.bg-white, .bg-slate-50, .bg-slate-50\/70) {
+  background-color: var(--koa-surface);
+}
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell .koa-reading :is(.text-slate-900, .text-slate-950, .text-slate-800, .text-slate-700) {
+  color: var(--koa-ink);
+}
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell .koa-reading :is(.text-slate-600, .text-slate-500) {
+  color: var(--koa-muted);
+}
+:root:is([data-koa-theme="dark"], [data-koa-theme="neon"]) .site-shell .koa-reading :is(.border-slate-100, .border-slate-200, .border-slate-300) { border-color: var(--koa-line); }
+/* App-wide accessibility: avoid text overflowing fixed flex and grid cards. */
+.site-shell :where(.grid, .flex) > :where(article, section, div) { min-width: 0; }
+.site-shell :where(iframe, video) { max-width: 100%; }
