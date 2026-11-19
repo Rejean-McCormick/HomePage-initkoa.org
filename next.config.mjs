@@ -105,8 +105,6 @@ const nextConfig = {
 
   async redirects() {
     return [
-      { source: "/technology/swarmcraft/:path*", destination: "/technology", permanent: true },
-      { source: "/technology/voting-machine/:path*", destination: "/technology", permanent: true },
       { source: "/kreature/anatomie/memoire/swarmcraft", destination: "/technology/kristal", permanent: true },
       {
         source: "/context-packs/koa-digital-ecosystem-context-pack--architecture-and-contracts--v1.0.txt",

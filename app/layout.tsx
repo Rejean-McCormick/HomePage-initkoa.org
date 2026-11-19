@@ -1,5 +1,6 @@
 // app/layout.tsx
 import "./globals.css";
+import "./koa-correctoflay.css";
 import Header from "@/components/Header";
 import { ReactNode } from "react";
 import type { Metadata } from "next";
