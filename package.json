@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --hostname 127.0.0.1 --port 21120",
     "build": "npm run connections:generate && npm run architecture:validate && npm run context-packs:validate && npm run reading:ai-index && node scripts/generate-ai-assets.mjs && next build",
     "start": "next start",
     "lint": "next lint",

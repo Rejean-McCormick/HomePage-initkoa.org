@@ -32,6 +32,6 @@ npm run build
 npm run dev
 ```
 
-Teste les trois thèmes sur `http://localhost:3000` et sur mobile. Le thème choisi est conservé par le mécanisme existant (`localStorage`).
+Teste les trois thèmes sur `http://127.0.0.1:21120` et sur mobile. Le thème choisi est conservé par le mécanisme existant (`localStorage`).
 
 **Note :** le SVG officiel reste l'icône/favicone par défaut du site ; les variantes s'appliquent au logo visible de l'en-tête. Les styles des autres pages ne sont pas modifiés.

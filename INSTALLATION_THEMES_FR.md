@@ -12,7 +12,7 @@ npm run build
 npm run dev
 ```
 
-Visiter `http://localhost:3000`. Dans l'en-tête, choisir **Light**, **Dark** ou **Neon**. Le choix est conservé dans le stockage local du navigateur (`koa-theme`) ; par défaut, Light utilise un fond blanc neutre `#FAFBFA`.
+Visiter `http://127.0.0.1:21120`. Dans l'en-tête, choisir **Light**, **Dark** ou **Neon**. Le choix est conservé dans le stockage local du navigateur (`koa-theme`) ; par défaut, Light utilise un fond blanc neutre `#FAFBFA`.
 
 ## Modifications
 
